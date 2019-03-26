@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: 20acee16-c70c-41e9-b38f-92bfcf9a4c1c
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
 msc.type: authoredcontent
-ms.openlocfilehash: b8451d2d9e346bd5e2f51ba45e48030a5221b549
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d5c8262d48c79616ca3069c37077ba99ffafb650
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059743"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426037"
 ---
 # <a name="owin-oauth-20-authorization-server"></a>Servidor de autorização OAuth 2.0 de OWIN
 
@@ -238,7 +238,7 @@ Ver *AuthorizationServer\ResourceServer\App\_Start\Startup.WebApi.cs* no downloa
 
 - `UseCors` método permite que o CORS para todos os domínios.
 - `UseOAuthBearerAuthentication` método permite que o middleware de autenticação de token de portador OAuth que receberá e validar o token de portador no cabeçalho de autorização na solicitação.
-- `Config.SuppressDefaultHostAuthenticaiton` Suprime o padrão principal autenticado do aplicativo de host, portanto, todas as solicitações serão ser anônimas após esta chamada.
+- `Config.SuppressDefaultHostAuthentication` Suprime o padrão principal autenticado do aplicativo de host, portanto, todas as solicitações serão ser anônimas após esta chamada.
 - `HostAuthenticationFilter` Habilita a autenticação apenas para o tipo de autenticação especificado. Nesse caso, ele é o tipo de autenticação do portador.
 
 Para demonstrar a identidade autenticada, criamos um ApiController para gerar a saída de declarações do usuário atual.

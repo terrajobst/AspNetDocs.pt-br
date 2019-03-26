@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: cf025e08-48fc-4385-b176-8610aa7b5565
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 561acc9b473bac7d39e7ed4d511d8b979657131d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: afcfc92b4e0db8092f83b67c6c227af91bdc0cbb
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035743"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426036"
 ---
 <a name="batch-inserting-c"></a>Inserção em lote (C#)
 ====================
@@ -195,7 +195,7 @@ Esse código simplesmente a oculta a `DisplayInterface` painel e mostra o `Inser
 Em seguida, crie manipuladores de eventos para adicionar produtos de remessa e o botão Cancelar controles na interface de inserção. Quando um desses botões é clicado, é necessário reverter para a interface de exibição. Crie `Click` manipuladores de eventos para ambos os controles de botão para que eles chamam `ReturnToDisplayInterface`, um método, adicionaremos momentaneamente. Além de ocultação a `InsertingInterface` painel e mostrando o `DisplayInterface` painel, o `ReturnToDisplayInterface` método deve retornar os controles da Web para seu estado de edição previamente. Isso envolve a definição de DropDownLists `SelectedIndex` propriedades como 0 e apagando o `Text` propriedades dos controles de caixa de texto.
 
 > [!NOTE]
-> Considere o que poderia acontecer se podemos t retornar os controles para seu estado de edição previamente antes de retornar para a interface de exibição. Um usuário pode clicar no botão de remessa do produto de processo, insira os produtos da remessa e, em seguida, clique em Adicionar produtos de remessa. Isso seria adicionar os produtos e o usuário retornará para a interface de exibição. Neste ponto, o usuário pode querer adicionar outra remessa. Ao clicar no botão de remessa do produto de processo retornarem para a inserção interface, mas a DropDownList seleções e valores de caixa de texto ainda seriam ser populados com os valores anteriores.
+> Considere o que poderia acontecer se os controles não foram retornados para seu estado de edição previamente antes de retornar para a interface de exibição. Um usuário pode clicar no botão de remessa do produto de processo, insira os produtos da remessa e, em seguida, clique em Adicionar produtos de remessa. Isso seria adicionar os produtos e o usuário retornará para a interface de exibição. Neste ponto, o usuário pode querer adicionar outra remessa. Ao clicar no botão de remessa do produto de processo retornarem para a inserção interface, mas a DropDownList seleções e valores de caixa de texto ainda seriam ser populados com os valores anteriores.
 
 
 [!code-csharp[Main](batch-inserting-cs/samples/sample5.cs)]
@@ -215,7 +215,7 @@ Reserve um tempo para testar esta página em um navegador. Quando o primeiro vis
 
 ## <a name="step-4-adding-the-products"></a>Etapa 4: Adicionar os produtos
 
-Tudo que resta para este tutorial é para salvar os produtos no banco de dados em Adicionar produtos do botão de remessa s `Click` manipulador de eventos. Isso pode ser feito com a criação de um `ProductsDataTable` e adicionando um `ProductsRow` instância para cada um dos nomes de produto fornecidos. Uma vez que eles `ProductsRow` s foram adicionados, faremos uma chamada para o `ProductsBLL` classe s `UpdateWithTransaction` método passando o `ProductsDataTable`. Lembre-se de que o `UpdateWithTransaction` método, que foi criado na [encapsulamento de modificações de banco de dados em uma transação](wrapping-database-modifications-within-a-transaction-cs.md) passa do tutorial, o `ProductsDataTable` para o `ProductsTableAdapter` s `UpdateWithTransaction` método. A partir daí, uma transação ADO.NET é iniciada e os problemas de TableAdatper uma `INSERT` instrução no banco de dados para cada adicionado `ProductsRow` na DataTable. Supondo que todos os produtos são adicionados sem erro, que a transação é confirmada, caso contrário, ela será revertida.
+Tudo que resta para este tutorial é para salvar os produtos no banco de dados em Adicionar produtos do botão de remessa s `Click` manipulador de eventos. Isso pode ser feito com a criação de um `ProductsDataTable` e adicionando um `ProductsRow` instância para cada um dos nomes de produto fornecidos. Uma vez que eles `ProductsRow` s foram adicionados, faremos uma chamada para o `ProductsBLL` classe s `UpdateWithTransaction` método passando o `ProductsDataTable`. Lembre-se de que o `UpdateWithTransaction` método, que foi criado na [encapsulamento de modificações de banco de dados em uma transação](wrapping-database-modifications-within-a-transaction-cs.md) passa do tutorial, o `ProductsDataTable` para o `ProductsTableAdapter` s `UpdateWithTransaction` método. A partir daí, uma transação ADO.NET é iniciada e os problemas de TableAdapter uma `INSERT` instrução no banco de dados para cada adicionado `ProductsRow` na DataTable. Supondo que todos os produtos são adicionados sem erro, que a transação é confirmada, caso contrário, ela será revertida.
 
 O código para adicionar produtos do botão de remessa s `Click` manipulador de eventos também deve executar um pouco de verificação de erro. Como não há nenhum RequiredFieldValidators usado na interface de inserção, um usuário pode inserir um preço de um produto, omitindo o seu nome. Como o nome do produto s é necessário, se uma condição desse tipo é revelado precisamos alertar o usuário e não continue com as inserções. Completo `Click` código do manipulador de eventos segue:
 

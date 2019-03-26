@@ -8,12 +8,12 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: bb4704e7f4f13fab04acdbdd642174884517e18a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 91a6496e2640668c58ec0493d47d909e2de67367
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042403"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421344"
 ---
 <a name="part-7-creating-the-main-page"></a>Parte 7: Criação da página principal
 ====================
@@ -61,7 +61,7 @@ Além disso, observe o `total` propriedade no `OrderDetailsViewModel`. Esta prop
 Em seguida, adicione essas funções para `AppViewModel`:
 
 - `resetCart` Remove todos os itens do carrinho.
-- `getDetails` Obtém os detalhes de um pedido (por pusing uma nova `OrderDetailsViewModel` até o `details` lista).
+- `getDetails` Obtém os detalhes de um pedido (enviando por push uma nova `OrderDetailsViewModel` até o `details` lista).
 - `createOrder` cria um novo pedido e esvazia o carrinho.
 
 
@@ -105,7 +105,7 @@ Aqui estão as associações para os detalhes do pedido:
 
 [!code-html[Main](using-web-api-with-entity-framework-part-7/samples/sample11.html)]
 
-Isso itera sobre os itens na ordem e exibe o produto, preço e Quantity. O div ao redor é visível somente se a matriz de detalhes contém um ou mais itens.
+Isso itera sobre os itens na ordem e exibe o produto, preço e quantidade. O div ao redor é visível somente se a matriz de detalhes contém um ou mais itens.
 
 ## <a name="conclusion"></a>Conclusão
 

@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 6f81b633-9d01-4e52-ae4a-2ea6bc109475
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 28926276e183ae7cf7ed4087d8c73044741389e5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6733aa228bb96b5d34ae2770d32fe0063d7052f1
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034503"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424093"
 ---
 <a name="creating-a-customized-sorting-user-interface-c"></a>Criação de uma interface do usuário de classificação personalizada (C#)
 ====================
@@ -79,7 +79,7 @@ Quando o GridView está associado a uma fonte de dados, ele cria um `GridViewRow
 **Figura 3**: Uma técnica envolve a adição de linhas de separador à fonte de dados
 
 
-Posso usar os registros de separador de termos entre aspas, porque não há nenhum registro do separador especial; em vez disso, podemos alguma forma deve sinalizar que um registro específico na fonte de dados serve como um separador em vez de uma linha de dados normal. Para nossos exemplos, podemos re associação de um `ProductsDataTable` instância de GridView, que é composta de `ProductRows`. Podemos pode sinalizar um registro como uma linha definindo sua `CategoryID` propriedade para `-1` (uma vez que esse valor não foi t existe normalmente).
+Posso usar os registros de separador de termos entre aspas, porque não há nenhum registro do separador especial; em vez disso, podemos alguma forma deve sinalizar que um registro específico na fonte de dados serve como um separador em vez de uma linha de dados normal. Para nossos exemplos, podemos re associação de um `ProductsDataTable` instância de GridView, que é composta de `ProductRows`. Podemos pode sinalizar um registro como uma linha definindo sua `CategoryID` propriedade para `-1` (uma vez que esse valor não foi possível existe normalmente).
 
 Para utilizar essa técnica d precisamos execute as seguintes etapas:
 

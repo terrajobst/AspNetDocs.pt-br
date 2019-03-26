@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 9cad0833-486a-4474-a7f3-7715542ec4ce
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-database-update
 msc.type: authoredcontent
-ms.openlocfilehash: 5c9b0c71e2e0d35645e975e9adb7086e65bcf4c3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5145f0a9bfe615fa98a7341841f72597594de1e4
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026833"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424255"
 ---
 <a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação de uma atualização de banco de dados
 ====================
@@ -50,7 +50,7 @@ Nesta seção, você adiciona uma coluna de data de nascimento para o `Person` a
 
     [!code-powershell[Main](deploying-a-database-update/samples/sample3.ps1)]
 
-    Quando esse comando for concluído, o Visual Studio abre o arquivo de classe que define o novo `DbMIgration` classe e, no `Up` método, você pode ver o código que cria a nova coluna. O `Up` método cria a coluna quando você estiver implementando a alteração e o `Down` método exclui a coluna quando você está revertendo a alteração.
+    Quando esse comando for concluído, o Visual Studio abre o arquivo de classe que define o novo `DbMigration` classe e, no `Up` método, você pode ver o código que cria a nova coluna. O `Up` método cria a coluna quando você estiver implementando a alteração e o `Down` método exclui a coluna quando você está revertendo a alteração.
 
     ![AddBirthDate_migration_code](deploying-a-database-update/_static/image1.png)
 4. Compile a solução e, em seguida, digite o seguinte comando na **Package Manager Console** janela (Verifique se o projeto ContosoUniversity.DAL ainda está selecionado):

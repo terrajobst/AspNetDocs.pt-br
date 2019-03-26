@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: f701488025ec84a17651f9abff43f84531d35689
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b384fe08ebd6a106b9469debfb13014e87534b8f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046933"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425919"
 ---
 <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integração contínua e entrega contínua (Criando aplicativos de nuvem do mundo Real com o Azure)
 ====================
@@ -32,7 +32,7 @@ A nuvem permite minimizar o custo de manter um ambiente de teste, porque você p
 
 Em geral, recomendamos que você faça a entrega contínua para seu desenvolvimento e ambientes de preparo. A maioria das equipes, até mesmo na Microsoft, exigem um processo de revisão e aprovação manual para implantação de produção. Para uma produção implantação, que talvez você queira garantir que ele acontece quando principais pessoas com quem na equipe de desenvolvimento estão disponíveis para o suporte, ou durante os períodos de baixo tráfego. Mas não há nada para impedir que você automatizar completamente seus ambientes de desenvolvimento e teste para que tudo o que um desenvolvedor precisa fazer é verificar em um ambiente e uma alteração é configurado para o teste de aceitação.
 
-O diagrama a seguir da [um Microsoft Patterns and Practices livro eletrônico sobre a entrega contínua](http://aka.ms/ReleasePipeline) ilustra um fluxo de trabalho típico. Clique na imagem para vê-la em tamanho completo em seu contexto original.
+O diagrama a seguir da [um Microsoft Patterns and Practices livro eletrônico sobre a entrega contínua](https://aka.ms/ReleasePipeline) ilustra um fluxo de trabalho típico. Clique na imagem para vê-la em tamanho completo em seu contexto original.
 
 [![Fluxo de trabalho de entrega contínua](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
@@ -66,7 +66,7 @@ Para obter mais informações, consulte [implantar um aplicativo web no serviço
 
 Consulte também os seguintes recursos:
 
-- [Criando um Pipeline de lançamento com o Team Foundation Server 2012](http://aka.ms/ReleasePipeline). Livro eletrônico, laboratórios práticos e código de exemplo pelo Microsoft Patterns and Practices, fornece uma introdução detalhada para entrega contínua. Aborda o uso do Visual Studio Lab Management e o gerenciamento de versão do Visual Studio.
+- [Criando um Pipeline de lançamento com o Team Foundation Server 2012](https://aka.ms/ReleasePipeline). Livro eletrônico, laboratórios práticos e código de exemplo pelo Microsoft Patterns and Practices, fornece uma introdução detalhada para entrega contínua. Aborda o uso do Visual Studio Lab Management e o gerenciamento de versão do Visual Studio.
 - [ALM Rangers DevOps ferramentas e orientações](https://aka.ms/vsarsolutions/). ALM Rangers introduziu a Bancada de trabalho de DevOps exemplo complementar de solução e orientações práticas em colaboração com os padrões &amp; livro sobre práticas *criando um Pipeline de lançamento com o TFS 2012*, como uma ótima maneira de começar aprender os conceitos de DevOps &amp; Release Management para TFS 2012 e antes de se comprometer. A diretriz mostra como compilar uma vez e implantar em vários ambientes.
 - [Testando para entrega contínua com Visual Studio 2012](https://msdn.microsoft.com/library/jj159345.aspx). Livro eletrônico por Microsoft Patterns and Practices, explica como integrar testes automatizados com entrega contínua.
 - [WindowsAzureDeploymentTracker](https://github.com/RyanTBerry/WindowsAzureDeploymentTracker). Código-fonte para uma ferramenta projetada para capturar uma compilação do TFS (com base em um rótulo), compilá-lo, empacotá-lo, permitir que alguém na função de DevOps para configurar aspectos específicos dele e enviar por push para o Azure. A ferramenta acompanha o processo de implantação para permitir operações "reverter" para uma versão previamente implantada. A ferramenta não tem dependências externas e pode funcionar autônomo usando APIs do TFS e o SDK do Azure.

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f97a1145-6470-4bca-8f15-ccfb25fb903c
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 7cb9c949936c3af73d4c904d401c36d4d83f3e18
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 998191a21388d76fb18b59fca9bcea7a40507c86
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045683"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425568"
 ---
 <a name="application-lifecycle-management-from-development-to-production"></a>Gerenciamento do ciclo de vida do aplicativo: Do desenvolvimento à produção
 ====================
@@ -26,7 +26,7 @@ by [Jason Lee](https://github.com/jrjlee)
 > Este tópico foi criado para fornecer uma visão geral de alto nível para um [série de tutoriais](deploying-web-applications-in-enterprise-scenarios.md) na implantação da web na empresa. Não se preocupe se você não estiver familiarizado com alguns dos conceitos descritos aqui&#x2014;os tutoriais a seguir fornecem informações detalhadas sobre todas essas tarefas e técnicas.
 > 
 > > [!NOTE]
-> > Para não complicar, este tópico não aborda Atualizando bancos de dados como parte do processo de implantação. No entanto, fazer atualizações incrementais para os recursos de bancos de dados é um requisito de muitos cenários de implantação empresarial, e você pode encontrar diretrizes sobre como fazer isso mais tarde nessa série de tutoriais. Para obter mais informações, consulte [implantar projetos de banco de dados](../web-deployment-in-the-enterprise/deploying-database-projects.md).
+> > Para simplificar, este tópico não aborda a atualização de bancos de dados como parte do processo de implantação. No entanto, fazer atualizações incrementais para os recursos de bancos de dados é um requisito de muitos cenários de implantação empresarial, e você pode encontrar diretrizes sobre como fazer isso mais tarde nessa série de tutoriais. Para obter mais informações, consulte [implantar projetos de banco de dados](../web-deployment-in-the-enterprise/deploying-database-projects.md).
 
 
 ## <a name="overview"></a>Visão geral

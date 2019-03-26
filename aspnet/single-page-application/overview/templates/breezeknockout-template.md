@@ -8,12 +8,12 @@ ms.date: 01/30/2013
 ms.assetid: 3bd94827-3c59-448f-abc3-36e6df4858db
 msc.legacyurl: /single-page-application/overview/templates/breezeknockout-template
 msc.type: authoredcontent
-ms.openlocfilehash: 006d360748674a645ceddb82017f68b0f80f041b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 478ee9f851a395c68701347c04534bfe72d94512
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025833"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424853"
 ---
 <a name="breezeknockout-template"></a>Modelo Breeze/Knockout
 ====================
@@ -83,7 +83,7 @@ Agora você está no land do SPA. Tudo o que você vê e apresentar enquanto man
 
 A lógica de validação é executada no lado do cliente pelo Breeze. Atributos de validação nas classes de modelo de servidor são propagados para o cliente e executados automaticamente antes do cliente contata o servidor.
 
-Analise o tráfego de rede. Observe que não havia nenhuma chamada para o servidor quando a Breeze detectou um erro. Cada alteração válida resultou em uma solicitação POST para "/ api/Todo/SaveChanges". Breeze agrupa as alterações e envia-os juntos como uma única solicitação para o controlador de API da Web `SaveChanges` método. Isso é diferente do modelo KockoutJS SPA, o que torna o PUT, POST e excluir solicitações para cada item individualmente.
+Analise o tráfego de rede. Observe que não havia nenhuma chamada para o servidor quando a Breeze detectou um erro. Cada alteração válida resultou em uma solicitação POST para "/ api/Todo/SaveChanges". Breeze agrupa as alterações e envia-os juntos como uma única solicitação para o controlador de API da Web `SaveChanges` método. Isso é diferente do modelo KnockoutJS SPA, o que torna o PUT, POST e excluir solicitações para cada item individualmente.
 
 ## <a name="peek-inside"></a>Olhar dentro
 
@@ -99,7 +99,7 @@ A pilha do lado do servidor consiste em um código de desenvolvedor e três bibl
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ServerArchitecture.png)
 
-A arquitetura básica é o mesmo que o modelo do SPA KockoutJS. No entanto, a implementação é muito mais simples: Os DTOs foram excluídos, e a maioria dos detalhes do Entity Framework foram delegadas a Breeze.NET.
+A arquitetura básica é o mesmo que o modelo KnockoutJS SPA. No entanto, a implementação é muito mais simples: Os DTOs foram excluídos, e a maioria dos detalhes do Entity Framework foram delegadas a Breeze.NET.
 
 ## <a name="next-steps"></a>Próximas etapas
 

@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: f40eb338a1b6b8eebb6578dd7938e96a05b1617f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 644beb37bf893a590be03dd0929c5870af6fbe87
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055113"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425763"
 ---
 <a name="master-pages"></a>Páginas mestras
 ====================
@@ -94,7 +94,7 @@ Neste laboratório, você criará uma nova página mestra e definir três contro
 
 1. Coloque o cursor em cada célula da tabela e defina as *valign* propriedade *superior*.
 2. Na caixa de ferramentas, inserir um controle ContentPlaceHolder na célula superior da tabela (a célula de cabeçalho).
-3. Quando você insere esse controle ContentPlaceHolder, você observará que a altura da linha será levar até quase toda a página, conforme mostrado na Figura 4. Se preocupar que neste momento.
+3. Quando você insere esse controle ContentPlaceHolder, você observará que a altura da linha será levar até quase toda a página, conforme mostrado na Figura 4. Não estar preocupado que neste momento.
 
 
 ![O espaço vazio está na mesma célula como o ContentPlaceHolder](master-pages/_static/image1.gif)
@@ -127,7 +127,7 @@ Neste laboratório, você criará uma nova página mestra e definir três contro
 2. Selecione exercise1.master no, selecione uma caixa de diálogo de página mestra conforme mostrado na Figura 7.
 3. Clique em Okey para adicionar a nova página de conteúdo.
 
-Nova página de conteúdo é exibido no Visual Studio com um controle de conteúdo para cada controle ContentPlaceHolder na página mestra. Por padrão, os controles de conteúdo estão vazios, para que você possa adicionar seu próprio conteúdo. Se você deve gostar de usar o conteúdo do controle ContentPlaceHolder na página mestra, basta clicar no símbolo de marca inteligente (a pequena seta preta no canto superior direito do controle) e escolha *padrão para o conteúdo de mestres* da marca inteligente conforme mostrado na **Figura 8**. Quando você fizer isso, o item de menu muda para *criar conteúdo personalizado*. Ao clicar nesse ponto remove o conteúdo da página mestra, permitindo que você defina o conteúdo personalizado para esse determinado controle de conteúdo.
+Nova página de conteúdo é exibido no Visual Studio com um controle de conteúdo para cada controle ContentPlaceHolder na página mestra. Por padrão, os controles de conteúdo estão vazios, para que você possa adicionar seu próprio conteúdo. Se você gostaria de usar o conteúdo do controle ContentPlaceHolder na página mestra, basta clicar no símbolo de marca inteligente (a pequena seta preta no canto superior direito do controle) e escolha *padrão para o conteúdo de mestres* da marca inteligente conforme mostrado na **Figura 8**. Quando você fizer isso, o item de menu muda para *criar conteúdo personalizado*. Ao clicar nesse ponto remove o conteúdo da página mestra, permitindo que você defina o conteúdo personalizado para esse determinado controle de conteúdo.
 
 
 ![Definir um controle de conteúdo padrão para o conteúdo de páginas mestras](master-pages/_static/image4.gif)

@@ -8,12 +8,12 @@ ms.date: 01/02/2019
 ms.assetid: a585c9a2-7c8e-478b-9706-90f3739c50d1
 msc.legacyurl: /web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: c36749f82051ee8965035eca9c2e4e57a5dbd616
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d7985fcd48e1282437cc3a7d3c1b528af2e44ae0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028283"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425776"
 ---
 <a name="using-asynchronous-methods-in-aspnet-45"></a>Uso de métodos assíncronos no ASP.NET 4.5
 ====================
@@ -100,7 +100,7 @@ A imagem a seguir mostra a página de utensílios do projeto.
 
 ## <a id="CreatingAsynchGizmos"></a>  Criando uma página assíncrona utensílios
 
-O exemplo usa o novo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) palavras-chave (disponível no .NET 4.5 e Visual Studio 2012) para permitir que o compilador ser responsável por manter as complicado transformações necessárias para programação assíncrona. O compilador permite que você escreva código usando que construções fluxo de controle síncrono do # e o compilador aplica automaticamente as transformações necessárias para usar retornos de chamada para evitar o bloqueio de threads.
+O exemplo usa o novo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) palavras-chave (disponível no .NET 4.5 e Visual Studio 2012) para permitir que o compilador ser responsável por manter as complicado transformações necessárias para programação assíncrona. O compilador permite que você escreva código usando o C#do constructos de fluxo de controle síncrono e o compilador aplica automaticamente as transformações necessárias para usar retornos de chamada para evitar o bloqueio de threads.
 
 Páginas assíncronas do ASP.NET devem incluir a [página](https://msdn.microsoft.com/library/ydy4x04a.aspx) diretiva com o `Async` atributo definido como "true". O código a seguir mostra a [página](https://msdn.microsoft.com/library/ydy4x04a.aspx) diretiva com o `Async` atributo definido como "true" para o *GizmosAsync.aspx* página.
 

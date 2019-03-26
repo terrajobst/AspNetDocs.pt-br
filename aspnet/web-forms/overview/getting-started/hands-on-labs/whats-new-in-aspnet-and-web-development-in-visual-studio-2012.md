@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 263a6e0aed51a681193333b53eff8f03847fc3aa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6d5af6563bdf3872110497f4b142dd7353c8d64c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047573"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58426114"
 ---
 <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novidades no ASP.NET e desenvolvimento da Web no Visual Studio 2012
 ====================
@@ -737,7 +737,7 @@ Este apêndice mostram como criar um novo site do Portal de gerenciamento do Win
 1. Vá para o [Portal de gerenciamento do Windows Azure](https://manage.windowsazure.com/) e entre usando as credenciais da Microsoft associadas à sua assinatura.
 
     > [!NOTE]
-    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](http://aka.ms/aspnet-hol-azure).
+    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](https://aka.ms/aspnet-hol-azure).
 
     ![Faça logon no portal do Windows Azure](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image64.png "faça logon no portal do Windows Azure")
 

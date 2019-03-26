@@ -8,12 +8,12 @@ ms.date: 05/20/2012
 ms.assetid: 0dd51b30-bf5a-419f-a1b7-2817ccca3c7d
 msc.legacyurl: /web-api/overview/formats-and-model-binding/content-negotiation
 msc.type: authoredcontent
-ms.openlocfilehash: e936bdfa52f786ec86d3e84eac3cd644225b6f92
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9cfbed49c1022fbf26160e89aed3ab474f5e0fdc
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039243"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425685"
 ---
 <a name="content-negotiation-in-aspnet-web-api"></a>Negociação de conteúdo na API Web ASP.NET
 ====================
@@ -48,7 +48,7 @@ Em resposta, o servidor pode enviar:
 
 [!code-console[Main](content-negotiation/samples/sample3.cmd)]
 
-Neste exemplo, o cliente solicitou JSON, Javascript ou "nada" (\*/\*). O servidor respondido com uma representação JSON do `Product` objeto. Observe que o cabeçalho Content-Type na resposta é definido como &quot;application/json&quot;.
+Neste exemplo, o cliente solicitou JSON, Javascript ou "nada" (\*/\*). O servidor respondeu com uma representação JSON do `Product` objeto. Observe que o cabeçalho Content-Type na resposta é definido como &quot;application/json&quot;.
 
 Um controlador também pode retornar um **HttpResponseMessage** objeto. Para especificar um objeto CLR para o corpo da resposta, chame o **CreateResponse** método de extensão:
 
@@ -62,7 +62,7 @@ O objeto que serializa o recurso é chamado de um *formatador de mídia*. Format
 
 Primeiro, o pipeline obtém os **IContentNegotiator** partir a **HttpConfiguration** objeto. Ele também obtém a lista de formatadores de mídia a partir de **HttpConfiguration.Formatters** coleção.
 
-Em seguida, chama o pipeline **IContentNegotiatior.Negotiate**, passando:
+Em seguida, chama o pipeline **IContentNegotiator.Negotiate**, passando:
 
 - O tipo de objeto a ser serializado
 - A coleção de formatadores de mídia
@@ -73,7 +73,7 @@ O **Negotiate** método retorna duas informações:
 - Formatador a ser usado
 - O tipo de mídia para a resposta
 
-Se nenhum formatador for encontrado, o **Negotiate** método retorna **nulo**e o erro do cliente recebe HTTP 406 (não aceitável).
+Se nenhum formatador for encontrado, o **Negotiate** método retorna **nulo**, e o cliente recebe o erro HTTP 406 (não aceitável).
 
 O código a seguir mostra como um controlador pode invocar diretamente negociação de conteúdo:
 

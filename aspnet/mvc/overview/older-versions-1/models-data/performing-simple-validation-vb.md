@@ -8,12 +8,12 @@ ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1d0bd6917bab61b17d1cafcf0cd9eb1983275dc8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 31faf2e89e6acb25854455902c1a6fdffebd293c
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057643"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423176"
 ---
 <a name="performing-simple-validation-vb"></a>Realizar validação simples (VB)
 ====================
@@ -90,7 +90,7 @@ Há três classes de folha de estilo em cascata usadas para controlar a aparênc
 
 - entrada-erro de validação - aplicado para o &lt;entrada&gt; renderizada pelo Html.TextBox() auxiliar de marca.
 - campo--erro de validação - aplicado à &lt;span&gt; renderizada pelo Html.ValidationMessage() auxiliar de marca.
-- – Resumo – erros de validação - aplicado para o &lt;ul&gt; renderizada pelo Html.ValidationSumamry() auxiliar de marca.
+- – Resumo – erros de validação - aplicado para o &lt;ul&gt; renderizada pelo Html.ValidationSummary() auxiliar de marca.
 
 Você pode modificar essas classes de folha de estilo em cascata e, portanto, modificar a aparência dos erros de validação, modificando o arquivo CSS localizado na pasta de conteúdo.
 

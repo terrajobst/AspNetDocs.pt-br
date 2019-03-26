@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: f1173feb-11ee-4017-8f3f-86599ea6ae13
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-2-make-the-application-look-nice-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c8bbd20cb64fb27a0a6de2cdc14743f6961f4bf0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d5e12f4ec9a6e8c53ee88388355ecfbd81b100c3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057873"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422253"
 ---
 <a name="iteration-2--make-the-application-look-nice-c"></a>Iteração #2 – tornar o aplicativo parecer interessante (c#)
 ====================
@@ -112,7 +112,7 @@ A Galeria de Design do ASP.NET MVC tem uma boa seleção de estilos de design di
 
 No entanto, você talvez precise criar um design completamente exclusivo para seu site. Nesse caso, faz sentido para trabalhar com uma empresa de design do site. Decidi usar essa abordagem para o design para o aplicativo Gerenciador de contatos.
 
-Eu compactado o Gerenciador de contato de iteração n º 1 e enviadas do projeto para a empresa de design. Eles não possuía Visual Studio (que horror neles!), mas que t apresentam um problema. Eles foram capazes de baixar o Microsoft Visual Web Developer gratuitamente do [ https://www.asp.net ](https://www.asp.net) site e abra o aplicativo Gerenciador de contatos no Visual Web Developer. Em alguns dias, eles tinham produzido o design na Figura 7.
+Eu compactado o Gerenciador de contato de iteração n º 1 e enviadas do projeto para a empresa de design. Não possuem o Visual Studio (que horror neles!), mas que não apresentam um problema. Eles foram capazes de baixar o Microsoft Visual Web Developer gratuitamente do [ https://www.asp.net ](https://www.asp.net) site e abra o aplicativo Gerenciador de contatos no Visual Web Developer. Em alguns dias, eles tinham produzido o design na Figura 7.
 
 
 [![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-cs/_static/image7.jpg)](iteration-2-make-the-application-look-nice-cs/_static/image13.png)

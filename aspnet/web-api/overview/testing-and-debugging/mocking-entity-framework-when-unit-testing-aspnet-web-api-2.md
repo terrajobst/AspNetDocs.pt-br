@@ -8,12 +8,12 @@ ms.date: 12/13/2013
 ms.assetid: cd844025-ccad-41ce-8694-595f1022a49f
 msc.legacyurl: /web-api/overview/testing-and-debugging/mocking-entity-framework-when-unit-testing-aspnet-web-api-2
 msc.type: authoredcontent
-ms.openlocfilehash: f1799b3f9d698053c397e57da3f33ff900ec4013
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7ed2d543ca019e926a87e6897aa0d8a0784f4796
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026793"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422617"
 ---
 <a name="mocking-entity-framework-when-unit-testing-aspnet-web-api-2"></a>Simulação do Entity Framework quando a API Web ASP.NET 2 de teste de unidade
 ====================
@@ -138,7 +138,7 @@ Agora você está pronto para configurar o projeto de teste.
 <a id="testpackages"></a>
 ## <a name="install-nuget-packages-in-test-project"></a>Instalar os pacotes NuGet no projeto de teste
 
-Quando você usa o modelo vazio para criar um aplicativo, o projeto de teste de unidade (StoreApp.Tests) não inclui todos os pacotes NuGet instalados. Outros modelos, como o modelo de API Web incluem alguns pacotes do NuGet no projeto de teste de unidade. Para este tutorial, você deve incluir o packge do Entity Framework e o pacote Microsoft ASP.NET Web API 2 Core ao projeto de teste.
+Quando você usa o modelo vazio para criar um aplicativo, o projeto de teste de unidade (StoreApp.Tests) não inclui todos os pacotes NuGet instalados. Outros modelos, como o modelo de API Web incluem alguns pacotes do NuGet no projeto de teste de unidade. Para este tutorial, você deve incluir o pacote do Entity Framework e o pacote Microsoft ASP.NET Web API 2 Core ao projeto de teste.
 
 Clique com botão direito no projeto StoreApp.Tests e selecione **gerenciar pacotes NuGet**. Você deve selecionar o projeto StoreApp.Tests para adicionar os pacotes para o projeto.
 

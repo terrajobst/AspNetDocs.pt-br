@@ -8,12 +8,12 @@ ms.date: 05/30/2007
 ms.assetid: 84afe4ac-cc53-4f2e-a867-27eaf692c2df
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9d997cb0af8487b2a9d849f24f3bff8df8611f6d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ef0a99a1601f40995c81a12f457303e040f57e29
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026643"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424606"
 ---
 <a name="caching-data-at-application-startup-vb"></a>Armazenar dados em cache na inicialização do aplicativo (VB)
 ====================
@@ -103,7 +103,7 @@ Da mesma forma, o cache de dados pode ser usado como um armazenamento de cache, 
 
 [!code-vb[Main](caching-data-at-application-startup-vb/samples/sample5.vb)]
 
-Para adicionar um item ao cache de dados com nenhum vencimento baseada em tempo, use o `System.Web.Caching.Cache.NoAbsoluteExpiration` e `System.Web.Caching.Cache.NoSlidingExpiration` valores como parâmetros de entrada. Essa sobrecarga específica do cache de dados s `Insert` método foi selecionado para que pudéssemos especificar a *prioridade* do item de cache. A prioridade é usada para determinar quais itens serão eliminados do cache quando há pouca memória disponível. Aqui, usamos a prioridade `NotRemovable`, que garante que esse item de cache ganhou t ser eliminado.
+Para adicionar um item ao cache de dados com nenhum vencimento baseada em tempo, use o `System.Web.Caching.Cache.NoAbsoluteExpiration` e `System.Web.Caching.Cache.NoSlidingExpiration` valores como parâmetros de entrada. Essa sobrecarga específica do cache de dados s `Insert` método foi selecionado para que pudéssemos especificar a *prioridade* do item de cache. A prioridade é usada para determinar quais itens serão eliminados do cache quando há pouca memória disponível. Aqui, usamos a prioridade `NotRemovable`, que garante que esse item de cache não será eliminado.
 
 > [!NOTE]
 > Este download tutorial s implementa o `StaticCache` classe usando a abordagem de variável de membro estático. O código para as técnicas de cache de estado e os dados de aplicativo está disponível nos comentários no arquivo de classe.

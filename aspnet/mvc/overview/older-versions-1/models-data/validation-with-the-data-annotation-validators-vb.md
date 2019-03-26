@@ -8,12 +8,12 @@ ms.date: 05/29/2009
 ms.assetid: 0d23ff2b-f2ec-434a-be3b-1180beeccba3
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8159693adced7f102f6fe1457d7b103f8596d231
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6bfe11a40bbdf0cd9dfe4d81d9c7436a5adb9491
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025543"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420680"
 ---
 <a name="validation-with-the-data-annotation-validators-vb"></a>Validação com os validadores de anotação de dados (VB)
 ====================
@@ -55,7 +55,7 @@ Esta linha de código registra o DataAnnotationsModelBinder como o associador de
 Quando você usa o associador de modelo de anotações de dados, você use atributos de validador para executar a validação. O namespace DataAnnotations inclui os seguintes atributos de validador:
 
 - Intervalo de – permite que você valide se o valor de uma propriedade fica entre um intervalo de valores especificado.
-- ReqularExpression – permite que você valide se o valor de uma propriedade corresponde a um padrão de expressão regular especificada.
+- RegularExpression – permite que você valide se o valor de uma propriedade corresponde a um padrão de expressão regular especificada.
 - Obrigatório – permite marcar uma propriedade conforme necessário.
 - StringLength – permite que você especificar um comprimento máximo para uma propriedade de cadeia de caracteres.
 - Validação – a classe base para todos os atributos de validador.

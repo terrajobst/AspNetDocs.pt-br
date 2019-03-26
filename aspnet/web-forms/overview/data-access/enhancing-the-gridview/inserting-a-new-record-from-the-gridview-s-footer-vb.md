@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 528acc48-f20c-4b4e-aa16-4cc02f068ebb
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0c661190125e818d3abaf54f50a0067d0944a956
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6e56c46d1f2574b9f228190e0e0c8205240015ed
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059383"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423943"
 ---
 <a name="inserting-a-new-record-from-the-gridviews-footer-vb"></a>Inserir um novo registro do rodapé do GridView (VB)
 ====================
@@ -207,7 +207,7 @@ Portanto, para responder ao usuário clicar no botão Adicionar, precisamos cria
 [!code-vb[Main](inserting-a-new-record-from-the-gridview-s-footer-vb/samples/sample6.vb)]
 
 > [!NOTE]
-> Você pode estar se perguntando por que o manipulador de eventos incomodá-verificando o `Page.IsValid` propriedade. Afinal de contas, t obtida a postagem ser suprimidos se dados inválidos são fornecidos na interface do inserindo? Essa suposição está correta, desde que o usuário não tiver desabilitado o JavaScript ou tomou medidas para driblar a lógica de validação do lado do cliente. Em suma, um nunca dependa estritamente validação do lado do cliente; sempre deve ser executada uma verificação do lado do servidor quanto à validade antes de trabalhar com os dados.
+> Você pode estar se perguntando por que o manipulador de eventos incomodá-verificando o `Page.IsValid` propriedade. Afinal, não o postback suprimido se dados inválidos são fornecidos na interface do inserindo? Essa suposição está correta, desde que o usuário não tiver desabilitado o JavaScript ou tomou medidas para driblar a lógica de validação do lado do cliente. Em suma, um nunca dependa estritamente validação do lado do cliente; sempre deve ser executada uma verificação do lado do servidor quanto à validade antes de trabalhar com os dados.
 
 
 Na etapa 1 criamos a `ProductsDataSource` ObjectDataSource, de modo que suas `Insert()` método é mapeado para o `ProductsBLL` classe s `AddProduct` método. Para inserir o novo registro para o `Products` tabela, podemos simplesmente invocar o s ObjectDataSource `Insert()` método:

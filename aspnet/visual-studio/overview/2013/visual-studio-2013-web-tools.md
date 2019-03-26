@@ -8,18 +8,18 @@ ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
-ms.openlocfilehash: 82248efd767c1110b9a4067b7d0c0e2ecafcbef9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 54d86de49bf61305b17fc80964723c518abd467b
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049883"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423241"
 ---
 <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratório prático: Ferramentas da Web do Visual Studio 2013
 ====================
 por [Web Camps equipe](https://twitter.com/webcamps)
 
-[Baixe o Kit de treinamento do Web Camps](http://aka.ms/webcamps-training-kit)
+[Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
 
 > Visual Studio é um ambiente de desenvolvimento excelente para. Windows com base em NET e projetos da web. Ele inclui um editor de texto avançada que pode ser facilmente usado para editar arquivos autônomos sem um projeto.
 > 
@@ -27,7 +27,7 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > 
 > Toda essa capacidade também está disponível para extensões, tornando mais fácil estender os editores com novos recursos poderosos para atender às suas necessidades. Web Essentials é uma coleção de (principalmente) aprimoramentos relacionados à web para o Visual Studio. Ele inclui vários novos preenchimentos do IntelliSense (especialmente para CSS), novos recursos de Link do navegador, automático de arquivos JSHint para JavaScript, novos avisos para HTML e CSS e muitos outros recursos que são essenciais para o desenvolvimento web moderno.
 > 
-> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>

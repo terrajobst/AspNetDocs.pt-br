@@ -8,12 +8,12 @@ ms.date: 03/27/2007
 ms.assetid: 5cbeb9f8-5f92-4ba8-87ae-0b4d460ae6d4
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 50d7f8eceb4772c628f7f6ef71f110de03dd9348
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 026fce7544f40ff333a5c0a500bc53c7fd434080
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047163"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422084"
 ---
 <a name="displaying-binary-data-in-the-data-web-controls-c"></a>Exibir dados binários nos controles de dados da Web (C#)
 ====================
@@ -183,7 +183,7 @@ O código acima presume que existe s alguns chamado de arquivo de imagem `NoPict
 Essa exceção também pode ser causada se o `CategoriesTableAdapter` s `GetCategoryWithBinaryDataByCategoryID` método s `SELECT` instrução foi revertido para a lista de coluna da consulta principal s, que pode ocorrer se você estiver usando instruções SQL ad hoc e ve você execute novamente o Assistente para o s TableAdapter consulta principal. Verifique se a `GetCategoryWithBinaryDataByCategoryID` método s `SELECT` instrução ainda inclui o `Picture` coluna.
 
 > [!NOTE]
-> Sempre que o `DisplayCategoryPicture.aspx` é visitado, o banco de dados é acessado e os dados de imagem da categoria especificada s são retornados. No entanto, se t categoria s imagem tenha sido alterado desde que o usuário tiver exibido pela última vez, isso é desperdício de esforço. Felizmente, HTTP permite *condicional obtém*. Com um GET condicional, o cliente que está fazendo a solicitação HTTP envia ao longo de um [ `If-Modified-Since` cabeçalho HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) que fornece a data e hora em que o cliente recuperado pela última vez esse recurso do servidor web. Se o conteúdo não foi alterado, pois isso especificado de data, o servidor web pode responder com uma [código de status não modificado (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) e abrir mão de enviar novamente o conteúdo de recurso solicitado s. Em resumo, essa técnica alivia o servidor web de ter que enviar conteúdo para um recurso se não tiver sido modificado desde que o cliente do último acesso.
+> Sempre que o `DisplayCategoryPicture.aspx` é visitado, o banco de dados é acessado e os dados de imagem da categoria especificada s são retornados. No entanto, se a imagem de s categoria não foi alterado desde que o usuário tiver exibido pela última vez, isso é desperdício de esforço. Felizmente, HTTP permite *condicional obtém*. Com um GET condicional, o cliente que está fazendo a solicitação HTTP envia ao longo de um [ `If-Modified-Since` cabeçalho HTTP](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) que fornece a data e hora em que o cliente recuperado pela última vez esse recurso do servidor web. Se o conteúdo não foi alterado, pois isso especificado de data, o servidor web pode responder com uma [código de status não modificado (304)](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) e abrir mão de enviar novamente o conteúdo de recurso solicitado s. Em resumo, essa técnica alivia o servidor web de ter que enviar conteúdo para um recurso se não tiver sido modificado desde que o cliente do último acesso.
 
 
 Para implementar esse comportamento, no entanto, é necessário adicionar uma `PictureLastModified` coluna para o `Categories` tabela capturar quando o `Picture` coluna foi atualizada pela última vez, assim como código para verificar se há o `If-Modified-Since` cabeçalho. Para obter mais informações sobre o `If-Modified-Since` cabeçalho e o fluxo de trabalho GET condicional, consulte [HTTP GET condicional para Hackers RSS](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers) e [uma visão mais profunda na execução de solicitações de HTTP em uma página ASP.NET](http://aspnet.4guysfromrolla.com/articles/122204-1.aspx).

@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 3e8b0627-3eb7-488e-807e-067cba7cec05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 029c17d5f996f595aef1af68c3ddb9b21f99f5cf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4ea1713541c30623c0f7c8387318549dd36a125f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046793"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423579"
 ---
 <a name="strategies-for-database-development-and-deployment-c"></a>Estratégias de desenvolvimento e implantação de banco de dados (C#)
 ====================
@@ -66,7 +66,7 @@ Há várias desvantagens nessa abordagem. Para começar, não há nenhuma espera
 
 O principal benefício de documentar as alterações de banco de dados em um texto é a simplicidade. Você não a familiaridade do t necessidade com a sintaxe SQL para criar e alterar objetos de banco de dados. Em vez disso, você pode registrar as alterações em um texto e implementá-los por meio da interface gráfica do usuário do SQL Server Management Studio s.
 
-Manter seu log de alterações em um texto, sem dúvida, não é muito sofisticado e ganhas t trabalho bem com certos projetos, como aqueles que são grandes no escopo, têm alterações frequentes ao modelo de dados ou envolver vários desenvolvedores. Mas eu já vi essa abordagem funciona muito bem em pequenos, com projetos que têm somente as alterações ocasionais ao modelo de dados e onde o desenvolvedor solo não tem um plano de fundo forte na sintaxe SQL criando e alterando objetos de banco de dados.
+Manter seu log de alterações em um texto é, sem dúvida, não muito sofisticado e não funcionará bem com certos projetos, como aqueles que são grandes no escopo, têm alterações frequentes ao modelo de dados ou envolver vários desenvolvedores. Mas eu já vi essa abordagem funciona muito bem em pequenos, com projetos que têm somente as alterações ocasionais ao modelo de dados e onde o desenvolvedor solo não tem um plano de fundo forte na sintaxe SQL criando e alterando objetos de banco de dados.
 
 > [!NOTE]
 > Enquanto as informações no log de alterações são, tecnicamente, só é necessário até o momento da implantação, é recomendável manter um histórico das alterações. Mas, em vez de manter um único, crescendo cada arquivo de log de alteração, considere ter um arquivo de log de alteração diferente para cada versão do banco de dados. Normalmente você desejará versão do banco de dados cada vez que ele é implantado. Ao manter um log dos logs de alteração pode, a partir da linha de base, recriar qualquer versão do banco de dados executando os scripts de log de alteração a partir da versão 1 e continuando até que a versão que você precise recriar.

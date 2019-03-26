@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: d8e837a5d56871d271590859c2e82336111cc87a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d3bc39a37cace003c3fda6691f0dd7f893128b07
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029403"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425243"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceitos básicos do ASP.NET MVC 4
 
@@ -389,7 +389,7 @@ O arquivo **~/Views/Shared/\_layout. cshtml** permite configurar um modelo para 
    (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample7.cshtml)]
-5. Inclua um div para renderizar a seção de corpo de cada página. Substitua  <strong>@RenderBody()</strong> com o seguinte código higlighted: (C#)
+5. Inclua um div para renderizar a seção de corpo de cada página. Substitua  <strong>@RenderBody()</strong> com o seguinte código realçado: (C#)
 
     [!code-cshtml[Main](aspnet-mvc-4-fundamentals/samples/sample8.cshtml)]
 
@@ -800,7 +800,7 @@ Nesta tarefa, você irá adicionar um link no modo de exibição Store tem um li
    > 
    > Embora essa abordagem funciona, depende de uma cadeia de caracteres codificada. Se você renomear o controlador mais tarde, você precisará alterar essa instrução manualmente. Uma alternativa melhor é usar um **auxiliar HTML** método. O ASP.NET MVC inclui um método auxiliar HTML que está disponível para essas tarefas. O **Html.ActionLink()** método auxiliar torna fácil criar HTML **&lt;um&gt;** links, certificando-se de caminhos de URL sejam corretamente codificados de URL.
    > 
-   > Htlm.ActionLink tem várias sobrecargas. Neste exercício você usará uma que usa três parâmetros:
+   > HTML. ActionLink tem várias sobrecargas. Neste exercício você usará uma que usa três parâmetros:
    > 
    > 1. Texto do link, que exibirá o nome de gênero
    > 2. Nome da ação de controlador (**procurar**)
@@ -1017,7 +1017,7 @@ Este apêndice mostram como criar um novo site do Portal de gerenciamento do Win
 1. Vá para o [Portal de gerenciamento do Windows Azure](https://manage.windowsazure.com/) e entre usando as credenciais da Microsoft associadas à sua assinatura.
 
     > [!NOTE]
-    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](http://aka.ms/aspnet-hol-azure).
+    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](https://aka.ms/aspnet-hol-azure).
 
     ![Faça logon no portal do Windows Azure](aspnet-mvc-4-fundamentals/_static/image48.png "faça logon no portal do Windows Azure")
 

@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 6ecd08c1-e364-4cd7-ad4c-806521911585
 msc.legacyurl: /signalr/overview/performance/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: 22b8379fd2d97aeb85137e1cc128fe5d053f44ed
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c20341a7fa0f5c5382ce7f2f6d459c4a6bec509f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047523"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424086"
 ---
 <a name="signalr-scaleout-with-redis"></a>Expansão do SignalR com Redis
 ====================
@@ -144,7 +144,7 @@ Também incluem o serviço de gerenciamento (listados em "Ferramentas de gerenci
 
 ![](scaleout-with-redis/_static/image6.png)
 
-**Install Web implantação 3.0.** Quando você executar o Gerenciador do IIS, ele solicitará que você instale o Microsoft Web Platform, ou pode [baixar o intstaller](https://go.microsoft.com/fwlink/?LinkId=255386). No instalador da plataforma, procure implantação da Web e instale o Web Deploy 3.0
+**Install Web implantação 3.0.** Quando você executar o Gerenciador do IIS, ele solicitará que você instale o Microsoft Web Platform, ou pode [baixar o instalador](https://go.microsoft.com/fwlink/?LinkId=255386). No instalador da plataforma, procure implantação da Web e instale o Web Deploy 3.0
 
 ![](scaleout-with-redis/_static/image7.png)
 

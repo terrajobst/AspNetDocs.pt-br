@@ -8,18 +8,18 @@ ms.date: 06/09/2009
 ms.assetid: 5bc1afd5-2484-4528-b158-ab218ba150e8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d94f0a3c931100d2c79513b1ad7ae0e77d7fcff6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a8b029e7187881c14117fa813ce787b51a561382
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060703"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424503"
 ---
 <a name="processing-unhandled-exceptions-c"></a>Processamento de exceções sem tratamento (C#)
 ====================
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Exibir ou baixar código de exemplo](https://github.com/aspnet/Docs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs/samples) ([como baixar](/aspnet/core/tutorials/index#how-to-download-a-sample))
+[Exibir ou baixar código de exemplo](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs/samples) ([como baixar](/aspnet/core/tutorials/index#how-to-download-a-sample))
 
 > Quando ocorre um erro de tempo de execução em um aplicativo web em produção é importante para notificar um desenvolvedor e para registrar o erro, de modo que podem ser diagnosticado em um momento posterior no tempo. Este tutorial fornece uma visão geral de como o ASP.NET processa os erros de tempo de execução e examina uma maneira de ter o código personalizado executado sempre que um bolhas de exceção sem tratamento até o tempo de execução do ASP.NET.
 

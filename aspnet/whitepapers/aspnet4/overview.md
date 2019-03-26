@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 775286df610df9040cbf04125b1742b6befa055b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 93ee29ae125e9442ee755998768a8105dfb485c0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043153"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424294"
 ---
 <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
 ====================
@@ -945,7 +945,7 @@ O valor para *controlRenderingCompatibility* é uma cadeia de caracteres, que pe
 
 No ASP.NET 3.5 SP1 e versões anteriores, o framework renderiza os *desabilitada* atributo na marcação HTML para qualquer controle cujo *Enabled* propriedade definida como *false*. No entanto, de acordo com a especificação de HTML 4.01, apenas *entrada* elementos devem ter esse atributo.
 
-No ASP.NET 4, você pode definir as *controlRenderingCompatabilityVersion* propriedade como "3.5", como no exemplo a seguir:
+No ASP.NET 4, você pode definir as *controlRenderingCompatibilityVersion* propriedade como "3.5", como no exemplo a seguir:
 
 [!code-xml[Main](overview/samples/sample70.xml)]
 
@@ -957,7 +957,7 @@ O *rótulo* controle deve renderizar o HTML a seguir:
 
 [!code-html[Main](overview/samples/sample72.html)]
 
-No ASP.NET 4, você pode definir as *controlRenderingCompatabilityVersion* como "4.0". Nesse caso, apenas controles que processem *entrada* elementos renderizará uma *desabilitada* atributo quando o controle *habilitado* propriedade é definida como *false* . Controles que não processam HTML *entrada* elementos renderizados em vez disso, um *classe* atributo que faz referência a uma classe CSS que você pode usar para definir uma aparência desabilitada para o controle. Por exemplo, o *rótulo* controle mostrado no exemplo anterior geraria a seguinte marcação:
+No ASP.NET 4, você pode definir as *controlRenderingCompatibilityVersion* como "4.0". Nesse caso, apenas controles que processem *entrada* elementos renderizará uma *desabilitada* atributo quando o controle *habilitado* propriedade é definida como *false* . Controles que não processam HTML *entrada* elementos renderizados em vez disso, um *classe* atributo que faz referência a uma classe CSS que você pode usar para definir uma aparência desabilitada para o controle. Por exemplo, o *rótulo* controle mostrado no exemplo anterior geraria a seguinte marcação:
 
 [!code-html[Main](overview/samples/sample73.html)]
 

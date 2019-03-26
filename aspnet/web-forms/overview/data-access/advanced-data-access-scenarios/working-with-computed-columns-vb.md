@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 5811b8ff-ed56-40fc-9397-6b69ae09a8f6
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 81254408252c5e786c938d4eb8beb1c7a2b65218
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 136e4a07422d9f71ed56ac132d93f5eade273ca2
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061303"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423159"
 ---
 <a name="working-with-computed-columns-vb"></a>Trabalhar com colunas computadas (VB)
 ====================
@@ -32,7 +32,7 @@ Uma vez que um valor de coluna computada s é determinado por uma expressão, es
 
 Um desafio de usar computado colunas com um TableAdapter que usa instruções SQL ad hoc é que o TableAdapter s `INSERT` e `UPDATE` consultas forem gerados novamente automaticamente sempre que o Assistente de configuração do TableAdapter é concluído. Portanto, as colunas computadas removidos manualmente do `INSERT` e `UPDATE` consultas reaparecerá se executadas novamente o assistente. Embora TableAdapters que usam procedimentos armazenados don t sofrem esse fragilidade, eles têm suas próprias peculiaridades que serão abordados na etapa 3.
 
-Neste tutorial, adicionaremos uma coluna computada para a `Suppliers` de tabela no banco de dados Northwind e, em seguida, crie um TableAdapter correspondente para trabalhar com essa tabela e uma coluna computada. Temos nosso TableAdapter usar procedimentos armazenados, em vez de instruções SQL ad hoc para que nossa t são inválidas de personalizações perdido quando o Assistente de configuração do TableAdapter é usado.
+Neste tutorial, adicionaremos uma coluna computada para a `Suppliers` de tabela no banco de dados Northwind e, em seguida, crie um TableAdapter correspondente para trabalhar com essa tabela e uma coluna computada. Temos nosso TableAdapter usar procedimentos armazenados, em vez de instruções SQL ad hoc para que nossas personalizações não são perdidas quando o Assistente de configuração do TableAdapter é usado.
 
 Permitir que o s começar!
 

@@ -8,12 +8,12 @@ ms.date: 08/14/2010
 ms.assetid: 7ae696b9-348f-4993-8ebb-a838acbe0c28
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part8
 msc.type: authoredcontent
-ms.openlocfilehash: 22a6c4e5a07e81d5876cc442e68926094e3a243d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a014690078f113e5090f4867c2f384751f16b9f6
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033793"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425347"
 ---
 <a name="adding-a-column-to-the-model"></a>Adicionar uma coluna ao modelo
 ====================
@@ -24,7 +24,7 @@ por [Scott Hanselman](https://github.com/shanselman)
 
 Nesta seção, vamos examinar como podemos fazer alterações no esquema de nosso banco de dados e lidar com as alterações dentro do nosso aplicativo.
 
-Vamos adicionar uma coluna "Classificação" a tabela Movie. Volte para o IDE e clique em Gerenciador de banco de dados. Tabela Movie clique com botão direito e selecione Abrir definição de tabela.
+Vamos adicionar uma coluna "Classificação" à tabela de filme. Volte para o IDE e clique em Gerenciador de banco de dados. Tabela Movie clique com botão direito e selecione Abrir definição de tabela.
 
 Adicione uma coluna de "Classificação", conforme mostrado abaixo. Como não há qualquer classificações agora, a coluna pode permitir nulos. Clique em Salvar.
 

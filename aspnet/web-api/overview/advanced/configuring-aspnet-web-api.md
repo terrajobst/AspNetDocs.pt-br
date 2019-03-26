@@ -8,12 +8,12 @@ ms.date: 03/31/2014
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 57066b8ce3254caf59cf927d16d96f8bc22a8acd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 270268b77f398084169843e20b0a2bf9f1c2a011
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046473"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423150"
 ---
 <a name="configuring-aspnet-web-api-2"></a>Configurando a API Web ASP.NET 2
 ====================
@@ -30,7 +30,7 @@ Este tópico descreve como configurar a API Web do ASP.NET.
 <a id="settings"></a>
 ## <a name="configuration-settings"></a>Definições de configuração
 
-Configurações de configuração de API da Web são definidas na [HttpConfiguration](https://msdn.microsoft.com/library/system.web.http.httpconfiguration.aspx) classe.
+Definições de configuração de API da Web são definidas na [HttpConfiguration](https://msdn.microsoft.com/library/system.web.http.httpconfiguration.aspx) classe.
 
 | Membro | Descrição |
 | --- | --- |
@@ -53,7 +53,7 @@ Configurações de configuração de API da Web são definidas na [HttpConfigura
 <a id="webhost"></a>
 ## <a name="configuring-web-api-with-aspnet-hosting"></a>Configurando a API Web com a hospedagem do ASP.NET
 
-Em um aplicativo ASP.NET, configure a API da Web chamando [GlobalConfiguration.Configure](https://msdn.microsoft.com/library/system.web.http.globalconfiguration.configure.aspx) na **Application\_iniciar** método. O **configurar** leva um delegado com um único parâmetro do tipo **HttpConfiguration**. Execute todos de sua configuração dentro do delegado.
+Em um aplicativo ASP.NET, configure a API da Web chamando [GlobalConfiguration.Configure](https://msdn.microsoft.com/library/system.web.http.globalconfiguration.configure.aspx) na **Application\_iniciar** método. O **configurar** leva um delegado com um único parâmetro do tipo **HttpConfiguration**. Execute todos da sua configuração de delegado.
 
 Aqui está um exemplo que usa um delegado anônimo:
 

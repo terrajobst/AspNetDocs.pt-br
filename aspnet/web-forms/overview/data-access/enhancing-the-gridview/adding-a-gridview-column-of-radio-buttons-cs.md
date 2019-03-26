@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 32377145-ec25-4715-8370-a1c590a331d5
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e1ac64a3c5023d83259f6e2d6facd8e248768c2d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4b2e50a4ede0dfa97df6fa73dbd5b16bfde59745
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046643"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421669"
 ---
 <a name="adding-a-gridview-column-of-radio-buttons-c"></a>Adicionar uma coluna de GridView de botões de opção (C#)
 ====================
@@ -179,7 +179,7 @@ Há duas abordagens que podem ser executadas para injetar a marcação de nível
 
 [!code-aspx[Main](adding-a-gridview-column-of-radio-buttons-cs/samples/sample5.aspx)]
 
-Aqui, `GetUniqueRadioButton` e `GetRadioButtonValue` seria métodos definidos na classe code-behind que retornado apropriado `id` e `value` valores para cada botão de opção de atributo. Essa abordagem funciona bem para atribuir a `id` e `value` atributos, mas fica aquém quando precisar especificar o `checked` valor do atributo porque a sintaxe de associação de dados é executada apenas quando dados pela primeira vez são associados a GridView. Portanto, se o GridView tiver habilitado o estado de exibição, os métodos de formatação só serão acionado quando a página é carregada pela primeira vez (ou quando o GridView é reassociado explicitamente à fonte de dados) e, portanto, a função que define o `checked` atributo ganhou um t ser chamado em postback. -S um problema bastante sutil e um pouco além do escopo deste artigo, então deixarei isso. No entanto, eu fazer encorajá-lo para tentar usar a abordagem acima e funcionam por meio para o ponto em que você vai ficar preso. Embora tal um t exercício ganhou obter deixa mais próximo para uma versão de trabalho, ele ajuda a estimular uma compreensão mais profunda de GridView e o ciclo de vida de associação de dados.
+Aqui, `GetUniqueRadioButton` e `GetRadioButtonValue` seria métodos definidos na classe code-behind que retornado apropriado `id` e `value` valores para cada botão de opção de atributo. Essa abordagem funciona bem para atribuir a `id` e `value` atributos, mas fica aquém quando precisar especificar o `checked` valor do atributo porque a sintaxe de associação de dados é executada apenas quando dados pela primeira vez são associados a GridView. Portanto, se o GridView tiver habilitado o estado de exibição, os métodos de formatação só serão acionado quando a página é carregada pela primeira vez (ou quando o GridView é reassociado explicitamente à fonte de dados) e, portanto, a função que define o `checked` atributo não será chamado em postback. -S um problema bastante sutil e um pouco além do escopo deste artigo, então deixarei isso. No entanto, eu fazer encorajá-lo para tentar usar a abordagem acima e funcionam por meio para o ponto em que você vai ficar preso. Embora tal um exercício não obterá deixa mais próximo para uma versão de trabalho, ele ajudará a promover uma compreensão mais profunda de GridView e o ciclo de vida de associação de dados.
 
 A outra abordagem personalizada de injeção, marcação de nível baixo em um modelo e a abordagem que usaremos para este tutorial é adicionar um [controle Literal](https://msdn.microsoft.com/library/sz4949ks(VS.80).aspx) ao modelo. Em seguida, no s GridView `RowCreated` ou `RowDataBound` manipulador de eventos, o controle Literal pode ser acessado por meio de programação e seu `Text` propriedade definida como a marcação para emitir.
 

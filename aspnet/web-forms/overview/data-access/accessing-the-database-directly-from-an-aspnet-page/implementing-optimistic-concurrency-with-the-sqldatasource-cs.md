@@ -8,12 +8,12 @@ ms.date: 02/20/2007
 ms.assetid: df999966-ac48-460e-b82b-4877a57d6ab9
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f2590e8e7712d719eb89403ef839f03066a93d2b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6569f8e8f11bb67bc0723908225c7fd663a845b3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036073"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423946"
 ---
 <a name="implementing-optimistic-concurrency-with-the-sqldatasource-c"></a>Implementar a simultaneidade otimista com o SqlDataSource (C#)
 ====================
@@ -28,7 +28,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 O tutorial anterior, examinamos como adicionar a inserção, atualização e exclusão de recursos para o controle SqlDataSource. Em resumo, para fornecer esses recursos que precisávamos especificar correspondente `INSERT`, `UPDATE`, ou `DELETE` instrução SQL no controle s `InsertCommand`, `UpdateCommand`, ou `DeleteCommand` propriedades, junto com o apropriada parâmetros de `InsertParameters`, `UpdateParameters`, e `DeleteParameters` coleções. Embora essas propriedades e coleções podem ser especificadas manualmente, o botão Avançado do s de Assistente Configurar fonte de dados oferece um gerar `INSERT`, `UPDATE`, e `DELETE` caixa de seleção de instruções que irá criar automaticamente essas instruções com base no `SELECT` instrução.
 
-Juntamente com o gere `INSERT`, `UPDATE`, e `DELETE` instruções de caixa de seleção, a caixa de diálogo Advanced SQL Generation Options inclui uma opção de simultaneidade otimista de uso (veja a Figura 1). Quando marcada, o `WHERE` cláusulas em gerada automaticamente `UPDATE` e `DELETE` instruções são modificadas para executar apenas a atualização ou exclusão se o t de realizada de dados banco de dados subjacente foi modificada desde que o usuário pela última vez carregados os dados na grade.
+Juntamente com o gere `INSERT`, `UPDATE`, e `DELETE` instruções de caixa de seleção, a caixa de diálogo Advanced SQL Generation Options inclui uma opção de simultaneidade otimista de uso (veja a Figura 1). Quando marcada, o `WHERE` cláusulas em gerada automaticamente `UPDATE` e `DELETE` instruções são modificadas apenas para executar a atualização ou exclua se o banco de dados subjacente não tenha sido modificado desde que o usuário carregado pela última vez os dados na grade.
 
 
 ![Você pode adicionar suporte à simultaneidade otimista de avançada caixa de diálogo de opções de geração SQL](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image1.gif)
@@ -52,7 +52,7 @@ Figura 2 ilustra essa interação.
 **Figura 2**: Quando dois usuários simultaneamente atualizar um registro lá s potencial para um usuário s alterações para substituir os outros s ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image2.png))
 
 
-Para impedir que esse cenário abrindo um formulário da [controle de simultaneidade](http://en.wikipedia.org/wiki/Concurrency_control) deve ser implementado. [A simultaneidade otimista](http://en.wikipedia.org/wiki/Optimistic_concurrency_control) o foco deste tutorial funciona na suposição de que embora possa haver conflitos de simultaneidade vira e mexe, a grande maioria das vezes esses conflitos ganharam t surgir. Portanto, se ocorrer um conflito, controle de simultaneidade otimista simplesmente informa ao usuário que suas alterações pode ser salva porque outro usuário modificou os mesmos dados.
+Para impedir que esse cenário abrindo um formulário da [controle de simultaneidade](http://en.wikipedia.org/wiki/Concurrency_control) deve ser implementado. [A simultaneidade otimista](http://en.wikipedia.org/wiki/Optimistic_concurrency_control) o foco deste tutorial funciona na suposição de que, embora lá, pode ser conflitos de simultaneidade vira e mexe, a grande maioria do tempo tais conflitos não ocorrer. Portanto, se ocorrer um conflito, controle de simultaneidade otimista simplesmente informa ao usuário que suas alterações pode ser salva porque outro usuário modificou os mesmos dados.
 
 > [!NOTE]
 > Para aplicativos em que ele é presumido que haja muitos conflitos de simultaneidade ou se tais conflitos não são toleráveis, em seguida, controle de simultaneidade pessimista pode ser usado em vez disso. Voltar para o [Implementando a simultaneidade otimista](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) tutorial para uma discussão mais completa sobre o controle de simultaneidade pessimista.
@@ -66,7 +66,7 @@ Controle de simultaneidade otimista funciona, garantindo que o registro que est�
 **Figura 3**: Para a atualização ou exclusão para forem bem-sucedidas, o Original valores deve ser igual aos valores atuais do banco de dados ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image4.png))
 
 
-Há várias abordagens para implementar a simultaneidade otimista (consulte [Peter A. Bromberg](http://www.eggheadcafe.com/articles/pbrombergresume.asp) s [Optmistic simultaneidade atualizando lógica](http://www.eggheadcafe.com/articles/20050719.asp) para examinar uma série de opções). A técnica usada pelo SqlDataSource (bem como pelo ADO.NET digitado conjuntos de dados usados em nossa camada de acesso a dados) aumenta a `WHERE` cláusula para incluir uma comparação de todos os valores originais. O seguinte `UPDATE` instrução, por exemplo, atualiza o nome e o preço de um produto somente se os valores atuais do banco de dados são iguais aos valores que foram originalmente recuperados ao atualizar o registro em um GridView. O `@ProductName` e `@UnitPrice` parâmetros contêm os novos valores inseridos pelo usuário, enquanto `@original_ProductName` e `@original_UnitPrice` contêm os valores que foram carregados originalmente no GridView, quando o botão de edição foi clicado:
+Há várias abordagens para implementar a simultaneidade otimista (consulte [Peter A. Bromberg](http://www.eggheadcafe.com/articles/pbrombergresume.asp)do [lógica de atualização de simultaneidade otimista](http://www.eggheadcafe.com/articles/20050719.asp) para examinar uma série de opções). A técnica usada pelo SqlDataSource (bem como pelo ADO.NET digitado conjuntos de dados usados em nossa camada de acesso a dados) aumenta a `WHERE` cláusula para incluir uma comparação de todos os valores originais. O seguinte `UPDATE` instrução, por exemplo, atualiza o nome e o preço de um produto somente se os valores atuais do banco de dados são iguais aos valores que foram originalmente recuperados ao atualizar o registro em um GridView. O `@ProductName` e `@UnitPrice` parâmetros contêm os novos valores inseridos pelo usuário, enquanto `@original_ProductName` e `@original_UnitPrice` contêm os valores que foram carregados originalmente no GridView, quando o botão de edição foi clicado:
 
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample1.sql)]
@@ -129,7 +129,7 @@ Infelizmente, o aumentadas `UPDATE` e `DELETE` gerado automaticamente de instru�
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample6.sql)]
 
-O `UnitPrice` coluna o `Products` tabela pode ter `NULL` valores. Se um determinado registro tem um `NULL` valor para `UnitPrice`, o `WHERE` parte da cláusula `[UnitPrice] = @original_UnitPrice` serão *sempre* forem avaliadas como False, porque `NULL = NULL` sempre retorna False. Portanto, os registros que contêm `NULL` valores não podem ser editados ou excluídos, como o `UPDATE` e `DELETE` instruções `WHERE` cláusulas ganharam t retornam linhas para atualizar ou excluir.
+O `UnitPrice` coluna o `Products` tabela pode ter `NULL` valores. Se um determinado registro tem um `NULL` valor para `UnitPrice`, o `WHERE` parte da cláusula `[UnitPrice] = @original_UnitPrice` serão *sempre* forem avaliadas como False, porque `NULL = NULL` sempre retorna False. Portanto, os registros que contêm `NULL` valores não podem ser editados ou excluídos, como o `UPDATE` e `DELETE` instruções `WHERE` cláusulas não retornará nenhuma linha para atualizar ou excluir.
 
 > [!NOTE]
 > Esse bug foi reportado pela primeira vez para a Microsoft em junho de 2004 na [SqlDataSource gera instruções SQL incorretas](https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=93937) e supostamente está programado para ser corrigido na próxima versão do ASP.NET.
@@ -189,7 +189,7 @@ Quando a segunda janela do navegador atualiza o registro, o nome do produto orig
 > Exclua funciona da mesma maneira. Com duas janelas de navegador abertas, começar a edição de um determinado produto com um e, em seguida, salvando suas alterações. Depois de salvar as alterações em um navegador, clique no botão de exclusão para o mesmo produto na outra. Uma vez que o original don valores t coincidir as `DELETE` instrução s `WHERE` cláusula, a exclusão falhará silenciosamente.
 
 
-Da perspectiva do usuário final s na segunda janela do navegador, depois de clicar no botão atualizar a grade retorna ao modo de edição previamente, mas suas alterações foram perdidas. No entanto, há s sem comentários visuais que fique t de suas alterações. O ideal é que, se um alterações de usuário s são perdidas para uma violação de simultaneidade, podemos d notificá-lo e, talvez, mantenha a grade no modo de edição. Deixe o s examinar como fazer isso.
+Da perspectiva do usuário final s na segunda janela do navegador, depois de clicar no botão atualizar a grade retorna ao modo de edição previamente, mas suas alterações foram perdidas. No entanto, há s sem comentários visuais que suas alterações não fique. O ideal é que, se um alterações de usuário s são perdidas para uma violação de simultaneidade, podemos d notificá-lo e, talvez, mantenha a grade no modo de edição. Deixe o s examinar como fazer isso.
 
 ## <a name="step-3-determining-when-a-concurrency-violation-has-occurred"></a>Etapa 3: Determinando quando ocorreu uma violação de simultaneidade
 

@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
-ms.openlocfilehash: 6a6359d59a4b715e13fe2bbcef57da6d6d6294b5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 194f72ce40067e177a23b1eb70bd07ceb2225a04
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039023"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425555"
 ---
 <a name="tutorial-signalr-self-host"></a>Tutorial: Auto-hospedar SignalR
 ====================
@@ -58,7 +58,7 @@ Motivos para não hospedar no IIS:
 
 - Ambientes em que o IIS não está disponível ou desejáveis, como um farm de servidores existente sem o IIS.
 - A sobrecarga de desempenho do IIS deve ser evitado.
-- Funcionalidade do SignalR deve ser adicionado a um aplicativo de instância que é executado em um serviço do Windows, a função de trabalho do Azure ou outro processo.
+- Funcionalidade do SignalR deve ser adicionado a um aplicativo existente que é executado em um serviço do Windows, a função de trabalho do Azure ou outro processo.
 
 Se uma solução está sendo desenvolvida como hospedar internamente por motivos de desempenho, recomenda-se também teste o aplicativo hospedado no IIS para determinar o benefício de desempenho.
 

@@ -8,12 +8,12 @@ ms.date: 03/06/2007
 ms.assetid: 39253d05-75c0-41c7-b9d4-a6c58ecf69ce
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-vb
 msc.type: authoredcontent
-ms.openlocfilehash: be7fc4fe93d15e7550f873adffa15e82384d25be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bcd9bbfed6613e1ec02cbf0a6ddaf4086bc6d1c0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043903"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422461"
 ---
 <a name="adding-a-gridview-column-of-checkboxes-vb"></a>Adicionar uma coluna de GridView de caixas de seleção (VB)
 ====================

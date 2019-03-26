@@ -2,18 +2,18 @@
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 title: Classificação personalizados paginados dados (c#) | Microsoft Docs
 author: rick-anderson
-description: No tutorial anterior, aprendemos como implementar a paginação personalizada quando presentating dados em uma página da web. Neste tutorial, podemos ver como estender o anterior...
+description: No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da web. Neste tutorial, podemos ver como estender o anterior...
 ms.author: riande
 ms.date: 08/15/2006
 ms.assetid: 778baa4e-4af8-4665-947e-7a01d1a4dff2
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: cc0ca571957f29afd7e3a2657e58272f804fc6ef
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ebc6be8c41251190a0124fe5f3d2c154f1ad4450
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034703"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425635"
 ---
 <a name="sorting-custom-paged-data-c"></a>Classificação de dados personalizados paginados (C#)
 ====================
@@ -21,7 +21,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_CS.exe) ou [baixar PDF](sorting-custom-paged-data-cs/_static/datatutorial26cs1.pdf)
 
-> No tutorial anterior, aprendemos como implementar a paginação personalizada quando presentating dados em uma página da web. Neste tutorial, podemos ver como estender o exemplo anterior para incluir suporte para paginação personalizada de classificação.
+> No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da web. Neste tutorial, podemos ver como estender o exemplo anterior para incluir suporte para paginação personalizada de classificação.
 
 
 ## <a name="introduction"></a>Introdução

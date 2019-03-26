@@ -8,12 +8,12 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 757b15c34f6fa0078d0bca0dfb38d553bb73809d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 20f8d6f459cefc6c1a2e7d5f64c6df4199f8ad24
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033263"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424463"
 ---
 <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Usando métodos assíncronos no ASP.NET MVC 4
 ====================
@@ -90,7 +90,7 @@ A imagem a seguir mostra a exibição de utensílios do projeto.
 
 ## <a id="CreatingAsynchGizmos"></a>  Criando um método de ação assíncrono utensílios
 
-O exemplo usa o novo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) palavras-chave (disponível no .NET 4.5 e Visual Studio 2012) para permitir que o compilador ser responsável por manter as complicado transformações necessárias para programação assíncrona. O compilador permite que você escreva código usando que construções fluxo de controle síncrono do # e o compilador aplica automaticamente as transformações necessárias para usar retornos de chamada para evitar o bloqueio de threads.
+O exemplo usa o novo [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) e [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) palavras-chave (disponível no .NET 4.5 e Visual Studio 2012) para permitir que o compilador ser responsável por manter as complicado transformações necessárias para programação assíncrona. O compilador permite que você escreva código usando o C#do constructos de fluxo de controle síncrono e o compilador aplica automaticamente as transformações necessárias para usar retornos de chamada para evitar o bloqueio de threads.
 
 O código a seguir mostra a `Gizmos` método síncrono e o `GizmosAsync` método assíncrono. Se o navegador dá suporte a [HTML 5 `<mark>` elemento](http://www.w3.org/wiki/HTML/Elements/mark), você verá as alterações no `GizmosAsync` no realce amarelo.
 

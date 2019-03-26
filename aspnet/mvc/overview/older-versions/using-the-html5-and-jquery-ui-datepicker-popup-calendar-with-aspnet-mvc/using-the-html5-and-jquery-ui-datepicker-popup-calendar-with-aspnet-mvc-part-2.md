@@ -8,12 +8,12 @@ ms.date: 08/29/2011
 ms.assetid: 21a178de-4c5a-4211-8a9c-74ec576c0f30
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: 9b27ccc6ce26e8266947c531d299ba69bbec4fde
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5eff66b701d775a553a51437e540619b4524a58f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055823"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421551"
 ---
 <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-2"></a>Usando HTML5 e calendário jQuery UI Datepicker pop-up com o ASP.NET MVC – parte 2
 ====================
@@ -24,7 +24,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 ## <a name="adding-an-automatic-datetime-template"></a>Adicionando um modelo de data e hora automática
 
-Na primeira parte deste tutorial, você viu como você pode adicionar atributos ao modelo para especificar explicitamente a formatação, e como você pode especificar explicitamente o modelo que é usado para renderizar o modelo. Por exemplo, o [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) atributo no explicitamente de código a seguir especifica a formatação para o `ReleaseDate` propriedade.
+Na primeira parte deste tutorial, você viu como você pode adicionar atributos ao modelo para especificar explicitamente a formatação, e como você pode especificar explicitamente o modelo que é usado para renderizar o modelo. Por exemplo, o [DisplayFormat](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.displayformatattribute.aspx) atributo no código a seguir especifica explicitamente a formatação para o `ReleaseDate` propriedade.
 
 [!code-csharp[Main](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/samples/sample1.cs)]
 
@@ -104,7 +104,7 @@ Pressione CTRL+F5 para executar o aplicativo.
 
 Desta vez o `ReleaseDate` propriedade exibe uma data sem o tempo e sem a fonte vermelha em negrito. Isso ilustra que um modelo que tem o nome dos dados de tipo (nesse caso, `DateTime`) é usada automaticamente para exibir todas as propriedades de modelo desse tipo. Depois que você renomeou o *DateTime* arquivo *LoudDateTime.cshtml*, ASP.NET não será mais encontrado um modelo no *Views\Movies\DisplayTemplates* pasta, para que ele usado o *DateTime* modelo a partir de * Views\Movies\Shared\* pasta.
 
-(O modelo correspondente é diferencia maiusculas de minúsculas, portanto, você poderia ter criado o nome do arquivo de modelo com qualquer uso de maiusculas e minúsculas. Por exemplo, *DATETIME.chstml, DateTime*, e *DateTime* tudo corresponderia a `DateTime` tipo.)
+(O modelo correspondente é diferencia maiusculas de minúsculas, portanto, você poderia ter criado o nome do arquivo de modelo com qualquer uso de maiusculas e minúsculas. Por exemplo, *DateTime, DateTime*, e *DateTime* tudo corresponderia a `DateTime` tipo.)
 
 Para examinar: neste ponto, o `ReleaseDate` campo está sendo exibido usando o *Views\Movies\DisplayTemplates\DateTime.cshtml* modelo, que exibe os dados usando um formato de data abreviada, mas caso contrário, não adiciona nenhum formato especial.
 

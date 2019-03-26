@@ -8,12 +8,12 @@ ms.date: 03/08/2013
 ms.assetid: db31e909-563a-4516-aadd-62aa210ac7e4
 msc.legacyurl: /single-page-application/overview/templates/breezeangular-template
 msc.type: authoredcontent
-ms.openlocfilehash: a3e8b42cdadf99df6971a278834b1429e129ce72
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a3021f166262ee953b0cbe9ea88762a385925b88
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041183"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423094"
 ---
 <a name="breezeangular-template"></a>Modelo Breeze/Angular
 ====================
@@ -30,7 +30,7 @@ Modelo Breeze/Angular SPA é uma variação sobre o [modelo KnockoutJS SPA](../i
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/NgRunningTodoPage.png)
 
-Externamente, o aplicativo se parece muito semelhante ao modelo KnockoutJS SPA. Mas é bastante diferente nos bastidores. O modelo KnockoutJS usa o Knockout para vinculação de dados e AJAX bruto para acesso a dados. Modelo Breeze/Angular usa Angular para vinculação de dados e a Breeze para acesso a dados. Essas bibliotecas de habilitar recursos adicionais, incluindo o histórico e navegação de página.
+Externamente, o aplicativo se parece muito semelhante ao modelo KnockoutJS SPA. Mas é bastante diferente nos bastidores. O modelo KnockoutJS usa o Knockout para vinculação de dados e AJAX bruto para acesso a dados. Modelo Breeze/Angular usa Angular para vinculação de dados e a Breeze para acesso a dados. Essas bibliotecas habilitar recursos adicionais, incluindo o histórico e navegação de página.
 
 Aqui está a página sobre do aplicativo:
 
@@ -89,7 +89,7 @@ Agora você está no land do SPA. Tudo o que você vê e apresentar enquanto man
 
 A lógica de validação é executada no lado do cliente pelo Breeze. Atributos de validação nas classes de modelo de servidor são propagados para o cliente e executados automaticamente antes do cliente contata o servidor.
 
-Analise o tráfego de rede. Observe que não havia nenhuma chamada para o servidor quando a Breeze detectou um erro. Cada alteração válida resultou em uma solicitação POST para "/ api/Todo/SaveChanges". Breeze agrupa as alterações e envia-os juntos como uma única solicitação para o controlador de API da Web `SaveChanges` método. Isso é diferente do modelo KockoutJS SPA, o que torna o PUT, POST e excluir solicitações para cada item individualmente.
+Analise o tráfego de rede. Observe que não havia nenhuma chamada para o servidor quando a Breeze detectou um erro. Cada alteração válida resultou em uma solicitação POST para "/ api/Todo/SaveChanges". Breeze agrupa as alterações e envia-os juntos como uma única solicitação para o controlador de API da Web `SaveChanges` método. Isso é diferente do modelo KnockoutJS SPA, o que torna o PUT, POST e excluir solicitações para cada item individualmente.
 
 Além disso, observe que não há nenhum tráfego de rede quando você alterna entre a lista de tarefas pendentes e sobre as páginas. Isso ocorre porque a consulta tiver sido restrito para o cache local da Breeze.
 
@@ -107,7 +107,7 @@ A pilha do lado do servidor consiste em um código de desenvolvedor e três bibl
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ServerArchitecture.png)
 
-A arquitetura básica é o mesmo que o modelo do SPA KockoutJS. No entanto, a implementação é muito mais simples: Os DTOs foram excluídos, e a maioria dos detalhes do Entity Framework foram delegadas a Breeze.NET.
+A arquitetura básica é o mesmo que o modelo KnockoutJS SPA. No entanto, a implementação é muito mais simples: Os DTOs foram excluídos, e a maioria dos detalhes do Entity Framework foram delegadas a Breeze.NET.
 
 ## <a name="next-steps"></a>Próximas etapas
 

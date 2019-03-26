@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: d4998c8b739b4b1a06699a17464a7399a87a8595
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3db54a134e8f842cab1d3471c69f5a8e2039d83d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039483"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423605"
 ---
 <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratório prático: Aplicativos Web em tempo real com SignalR
 ====================
@@ -22,7 +22,7 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-[Baixe o Kit de treinamento do Web Camps](http://aka.ms/webcamps-training-kit)
+[Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
 
 > A capacidade de conteúdo por push do servidor para os clientes conectados conforme ela ocorre em tempo real de recursos de aplicativos da Web em tempo real. Para desenvolvedores do ASP.NET **SignalR do ASP.NET** é uma biblioteca para adicionar a funcionalidade da web em tempo real aos seus aplicativos. Ela tira proveito de vários transportes, selecionar automaticamente o melhor considerando o cliente e transporte disponíveis melhor do servidor de transporte disponível. Ele aproveita **WebSocket**, uma API de HTML5 que permite a comunicação bidirecional entre o navegador e o servidor.
 > 
@@ -34,7 +34,7 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > 
 > ![Arquitetura do SignalR](real-time-web-applications-with-signalr/_static/image1.png)
 > 
-> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 <a id="Overview"></a>

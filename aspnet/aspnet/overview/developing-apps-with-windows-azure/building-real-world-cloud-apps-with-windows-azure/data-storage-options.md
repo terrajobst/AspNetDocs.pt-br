@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 17e11c33d6bf2a75e99e3bda4d6ab89c5b1631f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042853"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425386"
 ---
-<a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opções de armazenamento de dados (compilando aplicativos de nuvem do mundo Real com o Azure)
-====================
+# <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opções de armazenamento de dados (compilando aplicativos de nuvem do mundo Real com o Azure)
+
 por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -62,13 +62,13 @@ Os altos volumes de dados que você pode armazenar em bancos de dados NoSQL pode
 
 No Azure, [HDInsight](https://azure.microsoft.com/services/hdinsight/) permite que você processe, analise e obtenha novas informações de big data usando o poder do Hadoop. Por exemplo, você pode usá-lo para analisar logs do servidor web:
 
-- Habilite o log do servidor web para sua conta de armazenamento. Isso configura do Azure para gravar logs para o serviço Blob para cada solicitação HTTP ao seu aplicativo. O serviço Blob é basicamente o armazenamento de arquivos de nuvem, e ele se integra perfeitamente com o HDInsight. 
+- Habilite o log do servidor web para sua conta de armazenamento. Isso configura do Azure para gravar logs para o serviço Blob para cada solicitação HTTP ao seu aplicativo. O serviço Blob é basicamente o armazenamento de arquivos de nuvem, e ele se integra perfeitamente com o HDInsight.
 
     ![Logs no armazenamento de BLOBs](data-storage-options/_static/image2.png)
-- À medida que o aplicativo obtiver o tráfego, logs IIS do servidor web são gravados no armazenamento de Blob. 
+- À medida que o aplicativo obtiver o tráfego, logs IIS do servidor web são gravados no armazenamento de Blob.
 
     ![Logs do servidor Web](data-storage-options/_static/image3.png)
-- No portal, clique em **New** - **serviços de dados** - **HDInsight** - **criação rápida**, e especifique um nome de cluster do HDInsight, o tamanho do cluster (número de nós de dados do cluster HDInsight) e um nome de usuário e senha para o cluster HDInsight. 
+- No portal, clique em **New** - **serviços de dados** - **HDInsight** - **criação rápida**, e especifique um nome de cluster do HDInsight, o tamanho do cluster (número de nós de dados do cluster HDInsight) e um nome de usuário e senha para o cluster HDInsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
 
@@ -175,7 +175,7 @@ Aguarde alguns segundos e você tiver um banco de dados no Azure pronto para uso
 
 ![Novo banco de dados SQL criado](data-storage-options/_static/image10.png)
 
-Portanto, o Azure em poucos segundos, o que pode levar você por dia ou por semana ou mais tempo para realizar no ambiente local. E desde que você pode criar facilmente bancos de dados automaticamente em um script ou usando uma API de gerenciamento, você pode aumentar de forma dinâmica, distribuindo seus dados em vários bancos de dados de < o:p >, desde que seu aplicativo tenha sido programado para fazer isso. < /o : p >
+Portanto, o Azure em poucos segundos, o que pode levar você por dia ou por semana ou mais tempo para realizar no ambiente local. E, pois você pode criar facilmente bancos de dados automaticamente em um script ou usando uma API de gerenciamento, você pode aumentar de forma dinâmica, distribuindo seus dados em vários bancos de dados, desde que seu aplicativo tenha sido programado para fazer isso.
 
 Este é um exemplo de nosso modelo de plataforma como serviço. Você não precisa gerenciar os servidores, podemos fazê-lo. Você não precisa se preocupar sobre backups, podemos fazê-lo. Ele está em execução em alta disponibilidade – os dados no banco de dados são replicados automaticamente em três servidores. Se um computador é desativado, estamos automaticamente o failover e você não perder nenhum dado. O servidor é corrigido regularmente, você não precisa se preocupar com isso.
 
@@ -267,7 +267,7 @@ Para obter mais informações, consulte os seguintes recursos.
 
 Escolher uma plataforma de banco de dados:
 
-- [Acesso a dados para soluções altamente escalonáveis: Usando SQL, NoSQL e persistência Poliglota](http://aka.ms/dag-doc). Livro eletrônico por Microsoft Patterns and Practices que entra em detalhes em diferentes tipos de dados armazena disponível para aplicativos de nuvem.
+- [Acesso a dados para soluções altamente escalonáveis: Usando SQL, NoSQL e persistência Poliglota](https://aka.ms/dag-doc). Livro eletrônico por Microsoft Patterns and Practices que entra em detalhes em diferentes tipos de dados armazena disponível para aplicativos de nuvem.
 - [Microsoft Patterns and Practices - diretrizes do Azure](https://msdn.microsoft.com/library/ff898430.aspx). Consulte Primer de consistência de dados, replicação de dados e diretrizes de sincronização, o padrão de tabela de índice, o padrão de exibição materializada.
 - [BASE: Uma alternativa de Acid](http://queue.acm.org/detail.cfm?id=1394128). O artigo sobre as compensações entre consistência de dados e a escalabilidade.
 - [Bancos de sete dados de sete semanas: Um guia para bancos de dados modernos e movimento NoSQL](https://www.amazon.com/Seven-Databases-Weeks-Modern-Movement/dp/1934356921). Livro de Eric Redmond e Jim R. Wilson. Altamente recomendada para apresentar a você mesmo a variedade de plataformas de armazenamento de dados disponíveis hoje.

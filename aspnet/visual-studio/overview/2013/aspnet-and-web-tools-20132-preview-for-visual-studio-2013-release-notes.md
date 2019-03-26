@@ -8,12 +8,12 @@ ms.date: 03/06/2014
 ms.assetid: 7ef5f73c-ca60-43c1-bdb2-702800347e7e
 msc.legacyurl: /visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: 2a22c5b686cb8e02054f421f78a8fc910af7ce28
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bbb38ddde49cdeea4255e0e05bd559ddd9e5f692
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062733"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425984"
 ---
 <a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>Notas de versão do ASP.NET and Web Tools 2013.2 para Visual Studio 2013
 ====================
@@ -112,7 +112,7 @@ O Firefox usa seu próprio repositório de certificados, portanto, ele exibirá 
 
     `<div data-bind="text: foo.bar.baz.etc" />`
 
-    O IntelilSense exibido é o IntelliSense completo do objeto JavaScript.
+    O IntelliSense exibido é o IntelliSense completo do objeto JavaScript.
 
     ![IntelliSense mostrando completa do objeto JavaScript](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image15.png)
 - **Novo seletor de URL em HTML, Razor, CSS, menos e documentos de Sass**: VS 2013 é fornecido com o seletor nenhuma URL fora de páginas de Web Forms. O novo seletor de URL para HTML, Razor, CSS, LESS e Sass editores é um seletor de digitação livre de caixa de diálogo, fluente que compreende '.. ' e listas de arquivo de filtros para obter links e marcas img adequadamente.
@@ -177,12 +177,13 @@ As capturas de tela a seguir demonstram os modelos de scaffolding.
 NuGet 2.8.1 que RTM será lançado em abril de 2014. Aqui estão os pontos de destaque das notas de versão, mas verifique se o [notas de versão completas](http://docs.nuget.org/docs/release-notes/nuget-2.8) para obter mais informações sobre essas alterações.
 
 - **Destino Windows Phone 8.1 aplicativos**: O NuGet 2.8.1 agora dá suporte ao direcionamento de aplicativos do Windows Phone 8.1 usando os monikers da estrutura de destino 'WindowsPhoneApp', 'WPA', 'WindowsPhoneApp81' e 'WPA81'.
+
 - **Resolução de patches para dependências**: Para resolver as dependências do pacote, o NuGet historicamente implementou uma estratégia de selecionar a versão mais antiga do pacote principal e secundária que satisfaça as dependências do pacote. Ao contrário da versão principal e secundária, no entanto, a versão de patch sempre foi resolvida para a versão mais recente. Embora o comportamento era bem-intencionado, ele criou uma falta de determinismo para instalar pacotes com dependências.
 - **A opção DependencyVersion**: Embora o NuGet 2.8 altera a *padrão* comportamento para resolver as dependências, ele também adiciona um controle mais preciso sobre o processo de resolução de dependência por meio da opção - DependencyVersion no console do Gerenciador de pacotes. O comutador permite resolver as dependências para a versão mais antiga possível (comportamento padrão), a versão mais alta possível, ou o mais alto minor ou versão de patch. Essa opção só funciona para o pacote de instalação no comando do powershell.
 - **Atributo DependencyVersion**: Além do comutador - DependencyVersion detalhado acima, o NuGet também permitiu a capacidade de definir um novo atributo no arquivo NuGet. config definindo o que é o valor padrão, se o comutador - DependencyVersion não for especificado em uma invocação de pacote de instalação. Esse valor também será respeitado pela caixa de diálogo Gerenciador de pacotes NuGet para operações de pacote de instalação. Para definir esse valor, adicione o atributo abaixo ao seu arquivo NuGet. config:
 
     `<config> <add key="dependencyversion" value="Highest" /> </config>`
-- **Visualizar as operações do NuGet com - whatif**: Alguns pacotes do NuGet podem ter gráficos de dependência profunda, e como tal, ele pode ser útil durante a instalação, desinstalar ou operação de atualização para o primeiro ver o que acontecerá. NuGet 2.8 adiciona o PowerShell padrão-se mudar para os comandos do pacote de atualização, desinstalar-package e install-package para habilitar a visualizar o fechamento inteiro de pacotes para o qual o comando será aplicado.
+- **Visualizar as operações do NuGet com - WhatIf**: Alguns pacotes do NuGet podem ter gráficos de dependência profunda, e como tal, ele pode ser útil durante a instalação, desinstalar ou operação de atualização para o primeiro ver o que acontecerá. NuGet 2.8 adiciona o PowerShell padrão-se mudar para os comandos do pacote de atualização, desinstalar-package e install-package para habilitar a visualizar o fechamento inteiro de pacotes para o qual o comando será aplicado.
 - **Fazer o downgrade de pacote**: Não é incomum para instalar uma versão de pré-lançamento de um pacote para investigar os novos recursos e então decidir se deseja reverter para a última versão estável. Antes do NuGet 2.8, isso era um processo de várias etapa de desinstalar o pacote de pré-lançamento e suas dependências e, em seguida, instalar a versão anterior. Com o NuGet 2.8, no entanto, o pacote de atualização agora reverterá o fechamento do pacote inteiro (por exemplo, árvore de dependência do pacote) para a versão anterior.
 - **Dependências de desenvolvimento**: Muitos tipos diferentes de recursos podem ser entregues como pacotes do NuGet – incluindo as ferramentas que são usadas para otimizar o processo de desenvolvimento. Esses componentes, embora eles podem ser muito útil no desenvolvimento de um novo pacote, não devem ser consideradas uma dependência do novo pacote quando ele é mais recente publicada. NuGet 2.8 habilita um pacote para se identificar no arquivo. NuSpec como um developmentDependency. Quando instalado, esses metadados também serão adicionados ao arquivo Packages. config do projeto no qual o pacote foi instalado. Quando esse arquivo Packages. config é posteriormente analisado para as dependências do NuGet durante nuget.exe pack, ele excluirá essas dependências marcadas como dependências de desenvolvimento.
 - **Arquivos Packages. config individuais para diferentes plataformas**: Ao desenvolver aplicativos para várias plataformas de destino, é comum ter diferentes arquivos de projeto para cada um dos ambientes de compilação respectivo. Também é comum para consumir diferentes pacotes do NuGet em arquivos de projeto diferentes, como pacotes têm diferentes níveis de suporte para plataformas diferentes. NuGet 2.8 oferece suporte aprimorado para este cenário, criando arquivos Packages. config diferente para arquivos de projeto diferente de específico da plataforma.
@@ -205,7 +206,7 @@ NuGet 2.8.1 que RTM será lançado em abril de 2014. Aqui estão os pontos de de
 - [Aprimoramentos de roteamento de atributo](../../../mvc/overview/releases/mvc51-release-notes.md#AttributeRouting)
 - [Suporte de inicialização para modelos de editor](../../../mvc/overview/releases/mvc51-release-notes.md#Bootstrap)
 - [Suporte a enum nos modos de exibição](../../../mvc/overview/releases/mvc51-release-notes.md#Enum)
-- [Suporte a Unobstrusive MinLength / MaxLength atributos](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
+- [Suporte discreto para MinLength / MaxLength atributos](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
 - [Suporte a contexto 'this' em Ajax discreto](../../../mvc/overview/releases/mvc51-release-notes.md#thisContext)
 - Vários [correções de bugs](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=MVC&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 

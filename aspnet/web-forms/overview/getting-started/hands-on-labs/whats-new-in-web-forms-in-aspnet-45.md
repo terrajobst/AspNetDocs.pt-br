@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 54e0234d6f13ce62803dbe55a836414a93a207b2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78cb6dec71e6b4974fdea4f205d1a36ebdfc3104
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026473"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424438"
 ---
 <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novidades em Web Forms no ASP.NET 4.5
 ====================
@@ -51,7 +51,7 @@ Neste laboratório prático, você aprenderá como:
 - Usar os novos recursos de associação de modelo no Web Forms
 - Usar provedores de valor para o mapeamento de dados da página para métodos de lógica
 - Use anotações de dados para validação de entrada do usuário
-- Levar advange de validação do lado do cliente unobstrusive com o jQuery em formulários da Web
+- Tirar proveito de validação não invasiva do lado do cliente com o jQuery em formulários da Web
 - Implementar a validação de solicitação granular
 - Implementar o processamento em formulários da Web de página assíncrona
 
@@ -407,13 +407,13 @@ ASP.NET 4.5 introduz a validação de anotações de dados para formulários da 
     > [EmailAddress(ErrorMessage=&quot;Invalid Email&quot;), MaxLength(56)]: Two annotations in the same line.
     > 
     > Você também pode definir suas próprias mensagens de erro dentro de cada atributo.
-3. Abra **CustomerDetails.aspx** e remover todos os RequiredFieldvalidators para os campos nome e sobrenome nas seções em EditItemTemplate e InsertItemTemplate do controle FormView.
+3. Abra **CustomerDetails.aspx** e remover todos os RequiredFieldValidators para os campos nome e sobrenome nas seções em EditItemTemplate e InsertItemTemplate do controle FormView.
 
     [!code-aspx[Main](whats-new-in-web-forms-in-aspnet-45/samples/sample24.aspx)]
 
     > [!NOTE]
     > Uma vantagem de usar anotações de dados é que a lógica de validação não está duplicada em páginas do seu aplicativo. Você defini-lo uma vez no modelo e usá-lo em todas as páginas de aplicativo que manipulam dados.
-4. Abra **CustomerDetails.aspx** code-behind e localize o método SaveCustomer. Esse método é chamado quando a inserção de um novo cliente e recebe o parâmetro de cliente entre os valores de controle FormView. Quando o mapeamento entre os controles de página e o parâmetro objeto ocorre, o ASP.NET executará a validação do modelo em relação a anotação de dados de atributos e preencher o dicionário ModelState com os erros encontrados, se houver.
+4. Abra **CustomerDetails.aspx** code-behind e localize o método SaveCustomer. Esse método é chamado quando a inserção de um novo cliente e recebe o parâmetro de cliente entre os valores de controle FormView. Quando o mapeamento entre a página de controles e o objeto de parâmetro ocorre, ASP.NET executará a validação do modelo em relação a todos os atributos de anotação de dados e preencher o dicionário ModelState com os erros encontrados, se houver.
 
     O ModelState só retornará true se todos os campos no modelo são válidos depois de executar a validação.
 
@@ -623,7 +623,7 @@ Neste laboratório prático, os conceitos a seguir foram resolvidos e demonstrad
 - Usar os novos recursos de associação de modelo no Web Forms
 - Usar provedores de valor para o mapeamento de dados da página para métodos de lógica
 - Use anotações de dados para validação de entrada do usuário
-- Levar advange de validação do lado do cliente unobstrusive com o jQuery em formulários da Web
+- Tirar proveito de validação não invasiva do lado do cliente com o jQuery em formulários da Web
 - Implementar a validação de solicitação granular
 - Implementar o processamento em formulários da Web de página assíncrona
 
@@ -678,7 +678,7 @@ Este apêndice mostram como criar um novo site do Portal do Azure e publicar o a
 1. Vá para o [Portal de gerenciamento](https://manage.windowsazure.com/) e entre usando as credenciais da Microsoft associadas à sua assinatura.
 
     > [!NOTE]
-    > Com o Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](http://aka.ms/aspnet-hol-azure).
+    > Com o Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](https://aka.ms/aspnet-hol-azure).
 
     ![Faça logon no portal do Windows Azure](whats-new-in-web-forms-in-aspnet-45/_static/image30.png "faça logon no portal do Windows Azure")
 

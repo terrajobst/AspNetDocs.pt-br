@@ -8,12 +8,12 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 94a72f22cbcd7fa84528dde502cceaa1e26dcaa1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ea149b6450cf02c993c7690752a05396802336be
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049223"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425048"
 ---
 <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Analisar e depurar seu aplicativo do ASP.NET MVC com Glimpse
 ====================
@@ -58,7 +58,7 @@ Navegue até http://localhost:&lt; a porta n º&gt;/glimpse.axd e clique no <str
 
 Se você tiver sua barra de favoritos exibida, você pode arrastar e soltar os botões de amostra e adicioná-los como bookmarklets:
 
-![IE com Glimpse boookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
+![IE com Glimpse bookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
 
 Agora, você pode navegar seu aplicativo e o **cabeças backup exibição** (HUD) é mostrada na parte inferior da página.
 
@@ -104,11 +104,11 @@ O [guia de associação de modelo](http://getglimpse.com/Docs/Model-Binding-Tab)
 <a id="da"></a>
 ## <a name="using-glimpse-on-azure"></a>Usando a amostra no Azure
 
-A política de segurança padrão Glimpse permite apenas dados de amostra a serem exibidos no host local. Você pode alterar essa política de segurança para que você possa exibir esses dados em um servidor remoto (por exemplo, um aplicativo web no Azure). Para ambientes de teste no Azure, adicione a marca realçada até a parte inferior da *web.confg* arquivo para habilitar a visão rápida:
+A política de segurança padrão Glimpse permite apenas dados de amostra a serem exibidos no host local. Você pode alterar essa política de segurança para que você possa exibir esses dados em um servidor remoto (por exemplo, um aplicativo web no Azure). Para ambientes de teste no Azure, adicione a marca realçada até a parte inferior da *Web. config* arquivo para habilitar a visão rápida:
 
 [!code-xml[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample3.xml?highlight=2-6)]
 
-Com essa alteração sozinha, qualquer usuário pode ver os dados de amostra em um site remoto. Considere adicionar a marcação acima a um perfil de publicação para que ele tem apenas implantado um aplicada quando você usa esse perfil de publicação (por exemplo, seu proifle de teste do Azure.) Para restringir os dados de amostra, adicionaremos o `canViewGlimpseData` função e só permitir que os usuários nessa função para exibir dados de amostra.
+Com essa alteração sozinha, qualquer usuário pode ver os dados de amostra em um site remoto. Considere adicionar a marcação acima a um perfil de publicação para que ele tem apenas implantado um aplicada quando você usa esse perfil de publicação (por exemplo, o perfil de teste do Azure.) Para restringir os dados de amostra, adicionaremos o `canViewGlimpseData` função e só permitir que os usuários nessa função para exibir dados de amostra.
 
 Remova os comentários do *GlimpseSecurityPolicy.cs* do arquivo e altere o [IsInRole](https://msdn.microsoft.com/library/system.security.principal.iprincipal.isinrole(v=vs.110).aspx) chamar de `Administrator` para o `canViewGlimpseData` função:
 

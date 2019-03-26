@@ -8,12 +8,12 @@ ms.date: 08/14/2010
 ms.assetid: ff03dcc0-da97-458d-838f-0823e7482642
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part2
 msc.type: authoredcontent
-ms.openlocfilehash: 9a8ecac5203234c140783bbe3a518d35f6a57675
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b593c6225c05c7405c9d8b78abfd29a087d47b04
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57057993"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421253"
 ---
 <a name="adding-a-controller"></a>Adicionando um controlador
 ====================
@@ -56,7 +56,7 @@ ASP.NET MVC invoca as diferentes classes de controlador (e diferentes métodos d
 
 / [Controller] / [nome da ação] / [parâmetros]
 
-A primeira parte da URL determina a classe de controlador para executar. Portanto, /HelloWorld mapeia para a classe HelloWorldController. A segunda parte da URL determina o método de ação na classe para executar. Portanto, /HelloWorld/Index faria com que o método Index () da classe HelloWorldcontroller para executar. Observe que só tivemos que visite /HelloWorld acima e o método que index foi indicado. Isso ocorre porque um método chamado "Index" é o método padrão que será chamado em um controlador se nenhum for especificado explicitamente.
+A primeira parte da URL determina a classe de controlador para executar. Portanto, /HelloWorld mapeia para a classe HelloWorldController. A segunda parte da URL determina o método de ação na classe para executar. Portanto, /HelloWorld/Index faria com que o método Index () da classe HelloWorldController para executar. Observe que só tivemos que visite /HelloWorld acima e o método que index foi indicado. Isso ocorre porque um método chamado "Index" é o método padrão que será chamado em um controlador se nenhum for especificado explicitamente.
 
 [![Essa é minha ação padrão](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
 

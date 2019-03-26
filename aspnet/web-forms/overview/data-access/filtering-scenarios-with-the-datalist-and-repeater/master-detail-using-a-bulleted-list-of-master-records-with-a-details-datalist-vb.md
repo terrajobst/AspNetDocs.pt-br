@@ -8,12 +8,12 @@ ms.date: 10/17/2006
 ms.assetid: ee20742f-6fb7-49a0-a009-058fe363aacb
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3a10d6e5f60efad1f88c5acc8371a24dbf8d2cb7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 73a93c93932a004e76cf4ef7be1b3308ef6b991f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061803"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422890"
 ---
 <a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb"></a>Mestre/detalhes usando uma lista com marcadores de registros mestre com um DataList de detalhes (VB)
 ====================
@@ -100,7 +100,7 @@ A marcação a seguir mostra a sintaxe declarativa para repetidor e ObjectDataSo
 [!code-aspx[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample4.aspx)]
 
 > [!NOTE]
-> Para este tutorial o Repeater deve ter seu estado de exibição habilitado (Observe a omissão do `EnableViewState="False"` da sintaxe declarativa Repeater s). Na etapa 3, criaremos um manipulador de eventos para o s Repeater `ItemCommand` eventos nos quais vamos atualizar DataList s s ObjectDataSource `SelectParameters` coleção. O Repeater s `ItemCommand`, no entanto, ganha incêndio t, se o estado de exibição está desabilitado. Ver [um desafio de uma pergunta do ASP.NET](http://scottonwriting.net/sowblog/posts/1263.aspx) e [sua solução](http://scottonwriting.net/sowBlog/posts/1268.aspx) para obter mais informações sobre por que o estado de exibição deve ser habilitado para um repetidor s `ItemCommand` evento seja acionado.
+> Para este tutorial o Repeater deve ter seu estado de exibição habilitado (Observe a omissão do `EnableViewState="False"` da sintaxe declarativa Repeater s). Na etapa 3, criaremos um manipulador de eventos para o s Repeater `ItemCommand` eventos nos quais vamos atualizar DataList s s ObjectDataSource `SelectParameters` coleção. O Repeater s `ItemCommand`, no entanto, não será acionado se o estado de exibição está desabilitado. Ver [um desafio de uma pergunta do ASP.NET](http://scottonwriting.net/sowblog/posts/1263.aspx) e [sua solução](http://scottonwriting.net/sowBlog/posts/1268.aspx) para obter mais informações sobre por que o estado de exibição deve ser habilitado para um repetidor s `ItemCommand` evento seja acionado.
 
 
 No LinkButton com o `ID` valor da propriedade de `ViewCategory` não tem seu `Text` conjunto de propriedades. Se podemos apenas quisesse exibir o nome da categoria, seria definimos a propriedade Text declarativamente, por meio da sintaxe de associação de dados, da seguinte forma:

@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: e8e0809b-25c4-4c3b-8d12-9a17048148ae
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/paging-report-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4212b7bff41d76eaef18d638cf28441b50061159
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bd66affc6ceab864ca753287f484a37c7671f20f
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024623"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423046"
 ---
 <a name="paging-report-data-in-a-datalist-or-repeater-control-c"></a>Paginação de dados de relatório em um controle DataList ou Repeater (C#)
 ====================
@@ -127,7 +127,7 @@ Uma vez que o `GetProductsAsPagedDataSource` método espera dois parâmetros de 
 
 O índice da página e os valores de tamanho de página devem ser memorizados entre postbacks. Eles podem ser armazenados no estado de exibição, persistidas querystring, armazenados em variáveis de sessão ou lembradas usando alguma outra técnica. Para este tutorial, usaremos a cadeia de consulta, que tem a vantagem de permitir que uma determinada página de dados para ser um indicador.
 
-Em particular, use a querystring campos pageIndex e pageSize para o `pageIndex` e `pageSize` parâmetros, respectivamente (veja a Figura 7). Reserve um tempo para definir os valores padrão para esses parâmetros, como os valores de querystring ganhas um t estar presente quando um usuário visita primeiro nessa página. Para `pageIndex`, defina o valor padrão como 0 (o que mostrará a primeira página de dados) e `pageSize` valor padrão de s para 4.
+Em particular, use a querystring campos pageIndex e pageSize para o `pageIndex` e `pageSize` parâmetros, respectivamente (veja a Figura 7). Reserve um tempo para definir os valores padrão para esses parâmetros, como os valores de cadeia de consulta não estarão presentes quando um usuário visita primeiro nessa página. Para `pageIndex`, defina o valor padrão como 0 (o que mostrará a primeira página de dados) e `pageSize` valor padrão de s para 4.
 
 
 [![Usar cadeia de consulta como a origem para os parâmetros pageIndex e pageSize](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-cs/_static/image13.png)

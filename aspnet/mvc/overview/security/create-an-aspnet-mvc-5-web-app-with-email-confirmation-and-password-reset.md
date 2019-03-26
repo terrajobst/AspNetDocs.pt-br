@@ -8,12 +8,12 @@ ms.date: 03/26/2015
 ms.assetid: d4911cb3-1afb-4805-b860-10818c4b1280
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 5092476c6cf59bea6fab6fa6f169ff11ec4c9c4a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 650063db25f38b02cc33955925d1e3c2f45db665
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030273"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420849"
 ---
 <a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Criar um aplicativo Web seguro do ASP.NET MVC 5 com logon, confirmação por email e redefinição de senha (C#)
 ====================
@@ -137,7 +137,7 @@ A página de logon agora mostrará um link para redefinir a senha.
 <a id="rsend"></a>
 ## <a name="resend-email-confirmation-link"></a>Reenviar link de confirmação de email
 
-Depois que um usuário cria uma nova conta local, eles são enviados por email um link de confirmação que são obrigados a usar antes que eles podem fazer logon. Se o usuário acidentalmente exclui o email de confirmação, ou o email chega nunca, será necessário o link de confirmação enviado novamente. As alterações de código a seguir mostram como habilitar isso.
+Depois que um usuário cria uma nova conta local, eles são enviados por email um link de confirmação que são obrigados a usar antes que eles podem fazer logon. Se o usuário exclui acidentalmente o email de confirmação, ou o email chega nunca, será necessário o link de confirmação enviado novamente. As alterações de código a seguir mostram como habilitar isso.
 
 Adicione o seguinte método auxiliar na parte inferior do *Controllers\AccountController.cs* arquivo:
 

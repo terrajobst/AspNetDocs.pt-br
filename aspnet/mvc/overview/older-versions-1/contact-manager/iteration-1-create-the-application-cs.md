@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: db0f160b-901c-46d3-865e-7ab6cd4ed68d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-1-create-the-application-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 78b488263fbb0c646d9bf6ee8c4ace2ff63ccf9d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8fb2481342fa309941257feae792d9aa3c7bf721
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040093"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422669"
 ---
 <a name="iteration-1--create-the-application-c"></a>Iteração #1 – criar o aplicativo (c#)
 ====================
@@ -88,7 +88,7 @@ Como alternativa à execução de cada um desses downloads individualmente, voc�
 Projeto de aplicativo Web ASP.NET MVC. Inicie o Visual Studio e selecione a opção de menu **arquivo, novo projeto**. O **novo projeto** caixa de diálogo aparece (veja a Figura 1). Selecione o **Web** tipo de projeto e o **aplicativo Web ASP.NET MVC** modelo. Nomeie seu novo projeto *ContactManager* e clique no botão Okey.
 
 
-Certifique-se de que você tenha o .NET Framework 3.5 está selecionada na lista suspensa na parte superior direita do **novo projeto** caixa de diálogo. Caso contrário, o modelo de aplicativo Web ASP.NET MVC que ganhou um t aparecer.
+Certifique-se de que você tenha o .NET Framework 3.5 está selecionada na lista suspensa na parte superior direita do **novo projeto** caixa de diálogo. Caso contrário, o modelo de aplicativo Web ASP.NET MVC não aparecerá.
 
 
 [![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image1.jpg)](iteration-1-create-the-application-cs/_static/image1.png)
@@ -96,7 +96,7 @@ Certifique-se de que você tenha o .NET Framework 3.5 está selecionada na lista
 **Figura 01**: A caixa de diálogo Novo projeto ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image2.png))
 
 
-Aplicativo ASP.NET MVC, o **criar o projeto de teste de unidade** caixa de diálogo é exibida. Você pode usar essa caixa de diálogo para indicar que você deseja criar e adicionar um projeto de teste de unidade à sua solução quando você cria seu aplicativo ASP.NET MVC. Embora ganhamos t ser criando testes de unidade nesta iteração, você deve selecionar a opção **Sim, crie um projeto de teste de unidade** porque estamos planejando adicionar testes de unidade em uma iteração posterior. Adicionar um projeto de teste quando você cria um novo projeto ASP.NET MVC é muito mais fácil do que adicionar um projeto de teste depois que o projeto ASP.NET MVC foi criado.
+Aplicativo ASP.NET MVC, o **criar o projeto de teste de unidade** caixa de diálogo é exibida. Você pode usar essa caixa de diálogo para indicar que você deseja criar e adicionar um projeto de teste de unidade à sua solução quando você cria seu aplicativo ASP.NET MVC. Embora nós não criar testes de unidade nesta iteração, você deve selecionar a opção **Sim, crie um projeto de teste de unidade** porque estamos planejando adicionar testes de unidade em uma iteração posterior. Adicionar um projeto de teste quando você cria um novo projeto ASP.NET MVC é muito mais fácil do que adicionar um projeto de teste depois que o projeto ASP.NET MVC foi criado.
 
 > [!NOTE] 
 > 
@@ -175,7 +175,7 @@ Você pode usar a janela do Gerenciador de servidores para criar novos objetos d
 | Email | nvarchar(255) | false |
 
 
-A primeira coluna, a coluna de Id é especial. Você precisa marcar a coluna de Id como uma coluna de identidade e uma coluna de chave primária. Você indica que uma coluna é uma coluna de identidade, expandindo a propriedades de coluna (procure na parte inferior da Figura 6) e rolando para baixo até a propriedade de especificação de identidade. Defina as **(é identidade)** propriedade para o valor **Sim**.
+A primeira coluna, a coluna de Id é especial. Você precisa marcar a coluna de Id como uma coluna de identidade e uma coluna de chave primária. Você indica que uma coluna é uma coluna de identidade, expandindo as propriedades da coluna (procure na parte inferior da Figura 6) e rolando para baixo até a propriedade de especificação de identidade. Defina as **(é identidade)** propriedade para o valor **Sim**.
 
 Você pode marcar uma coluna como uma coluna de chave primária, selecionando a coluna e clicando no botão com o ícone de uma chave. Depois que uma coluna está marcada como uma coluna de chave primária, um ícone de uma chave é exibido ao lado da coluna (veja a Figura 6).
 
@@ -442,7 +442,7 @@ O conteúdo da exibição de exclusão está contido na listagem 9. Essa exibiç
 
 ## <a name="changing-the-name-of-the-default-controller"></a>Alterando o nome do controlador padrão
 
-Ele pode se preocupar com você que o nome da nossa classe de controlador para trabalhar com contatos é chamado da classe HomeController. Não deve t o controlador ser denominado ContactController?
+Ele pode se preocupar com você que o nome da nossa classe de controlador para trabalhar com contatos é chamado da classe HomeController. Não deve o controlador ser denominado ContactController?
 
 Esse problema é fácil de corrigir. Primeiro, é necessário refatorar o nome do controlador Home. Abra a classe HomeController no Editor de código do Visual Studio, clique com botão direito o nome da classe e selecione a opção de menu **refatoração Renomear**. Selecionar essa opção de menu abre a caixa de diálogo de renomeação.
 

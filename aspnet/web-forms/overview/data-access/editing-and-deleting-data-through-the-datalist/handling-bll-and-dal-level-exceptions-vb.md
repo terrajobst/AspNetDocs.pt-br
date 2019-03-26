@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: ca665073-b379-4239-9404-f597663ca65e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e71ad365ecbfc1bb33117a6c93e7108a4b3866a6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d52fadc1ddcc101d5815df6f1c1bc5eeba95d9b8
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053013"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440359"
 ---
 <a name="handling-bll--and-dal-level-exceptions-vb"></a>Tratar de exceções de nível BLL e DAL (VB)
 ====================
@@ -30,7 +30,7 @@ No [visão geral de edição e exclusão de dados no DataList](an-overview-of-ed
 
 Como vimos na [tratamento BLL - e exceções de nível DAL em uma página ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) tutorial, se uma exceção for gerada das profundezas da lógica de negócios ou camadas de acesso de dados, os detalhes da exceção são retornados para o ObjectDataSource e em seguida, para o GridView. Vimos como lidar normalmente com essas exceções, criando `Updated` ou `RowUpdated` manipuladores de eventos para o ObjectDataSource ou GridView, verificando uma exceção e, em seguida, indicando que a exceção foi tratada.
 
-Nossos DataList tutoriais, no entanto, t não estão usando o ObjectDataSource para atualizar e excluir dados. Em vez disso, estamos trabalhando diretamente em relação a BLL. Para detectar exceções originadas da BLL ou DAL, precisamos implementar o código no code-behind da página ASP.NET de tratamento de exceções. Neste tutorial, veremos como mais tactfully tratar as exceções geradas durante um s DataList editável atualizando fluxo de trabalho.
+Nossos tutoriais DataList, no entanto, não estiverem usando o ObjectDataSource para atualizar e excluir dados. Em vez disso, estamos trabalhando diretamente em relação a BLL. Para detectar exceções originadas da BLL ou DAL, precisamos implementar o código no code-behind da página ASP.NET de tratamento de exceções. Neste tutorial, veremos como mais tactfully tratar as exceções geradas durante um s DataList editável atualizando fluxo de trabalho.
 
 > [!NOTE]
 > No *An de visão geral de edição e exclusão de dados no DataList* envolvido de algumas técnicas de tutorial discutimos diferentes técnicas para edição e exclusão de dados do DataList, usando um ObjectDataSource para a atualização e a exclusão. Se você usar essas técnicas, você pode tratar exceções da BLL ou DAL por meio de s ObjectDataSource `Updated` ou `Deleted` manipuladores de eventos.
@@ -131,7 +131,7 @@ O GridView e ObjectDataSource oferecem manipuladores de evento de pós-nível qu
 
 Neste tutorial vimos como adicionar tratamento de exceções para um s DataList editável atualizar o fluxo de trabalho adicionando um `Try ... Catch` bloco para o `UpdateCommand` manipulador de eventos. Se uma exceção for gerada durante o fluxo de trabalho de atualização, o `Catch` s de bloco de código é executado, exibindo informações úteis no `ExceptionDetails` rótulo.
 
-Neste ponto, DataList não faz nenhum esforço para impedir exceções aconteçam em primeiro lugar. Mesmo que nós sabemos que um preço negativo resultará em uma exceção, podemos foram t ainda qualquer funcionalidade adicionada para proativamente impedir que um usuário insira essa entrada inválida. Em nosso próximo tutorial, veremos como ajudar a reduzir as exceções causadas pela entrada de usuário inválido, adicionando controles de validação no `EditItemTemplate`.
+Neste ponto, DataList não faz nenhum esforço para impedir exceções aconteçam em primeiro lugar. Mesmo que nós sabemos que um preço negativo resultará em uma exceção, nós ainda não tenha adicionado nenhuma funcionalidade para proativamente impedir que um usuário insira essa entrada inválida. Em nosso próximo tutorial, veremos como ajudar a reduzir as exceções causadas pela entrada de usuário inválido, adicionando controles de validação no `EditItemTemplate`.
 
 Boa programação!
 

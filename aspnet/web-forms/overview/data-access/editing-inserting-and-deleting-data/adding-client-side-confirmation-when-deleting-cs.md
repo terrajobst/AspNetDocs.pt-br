@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: f6e2a12a-2b5e-48fd-8db3-1e94a500c19a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b8cca6ece2eb008170192dc1774a6f88c1b37a21
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a3e35e7b27d646569692a2eb715dcf40b7967473
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034823"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423189"
 ---
 <a name="adding-client-side-confirmation-when-deleting-c"></a>Adicionar a confirmação do lado do cliente ao excluir (C#)
 ====================
@@ -38,7 +38,7 @@ O JavaScript `confirm(string)` função exibe seu parâmetro de entrada de cadei
 **Figura 1**: O JavaScript `confirm(string)` método exibe uma caixa de mensagem Modal, no lado do cliente
 
 
-Durante o envio de um formulário, se o valor de `false` é retornado de um manipulador de eventos do lado do cliente, em seguida, o envio do formulário é cancelado. Usando esse recurso, podemos ter exclusão botão s lado do cliente `onclick` manipulador de eventos retornar o valor de uma chamada para `confirm("Are you sure you want to delete this product?")`. Se o usuário clicar em Cancelar, `confirm(string)` retornará false e, portanto, fazendo com que o envio do formulário Cancelar. Com nenhum postback, o produto cuja exclusão foi clicada ganhou um t ser excluído. Se, no entanto, o usuário clica Okey na caixa de diálogo de confirmação, o postback continua sem interrupções e o produto será excluído. Consultar [s usando JavaScript `confirm()` método de envio do formulário de controle](http://www.webreference.com/programming/javascript/confirm/) para obter mais informações sobre essa técnica.
+Durante o envio de um formulário, se o valor de `false` é retornado de um manipulador de eventos do lado do cliente, em seguida, o envio do formulário é cancelado. Usando esse recurso, podemos ter exclusão botão s lado do cliente `onclick` manipulador de eventos retornar o valor de uma chamada para `confirm("Are you sure you want to delete this product?")`. Se o usuário clicar em Cancelar, `confirm(string)` retornará false e, portanto, fazendo com que o envio do formulário Cancelar. Com nenhum postback, o produto cuja exclusão foi clicada não será excluído. Se, no entanto, o usuário clica Okey na caixa de diálogo de confirmação, o postback continua sem interrupções e o produto será excluído. Consultar [s usando JavaScript `confirm()` método de envio do formulário de controle](http://www.webreference.com/programming/javascript/confirm/) para obter mais informações sobre essa técnica.
 
 Adicionar o script do lado do cliente necessário um pouco diferente se usando modelos que ao usar um CommandField. Portanto, neste tutorial vamos examinar um FormView e GridView de exemplo.
 

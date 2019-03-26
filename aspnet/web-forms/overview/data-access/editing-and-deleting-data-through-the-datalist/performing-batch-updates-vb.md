@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 8dac22a7-91de-4e3b-888f-a4c438b03851
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 67ab034880c8140e6156721956059b7cdd3f077b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c903dd64ba7dd19a8af63224ee54629086279bf6
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034933"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425880"
 ---
 <a name="performing-batch-updates-vb"></a>Executar atualizações em lote (VB)
 ====================
@@ -126,7 +126,7 @@ Quando o usuário clica em um dos botões Atualizar tudo, o `UpdateAllSupplierAd
 
 ## <a name="updating-only-those-addresses-that-have-been-modified"></a>Atualizar apenas os endereços que foram modificados
 
-O algoritmo de atualização de lote usado para este tutorial chamadas a `UpdateSupplierAddress` método para *cada* supplier no DataList, independentemente se as informações de endereço foi alteradas. Enquanto essa blind atualiza t são inválidas normalmente um problema de desempenho, eles podem levar supérfluos registros se você está a auditoria for alterado para a tabela de banco de dados. Por exemplo, se você usar gatilhos para registrar todos os `UPDATE` s para o `Suppliers` tabela para uma tabela de auditoria, sempre que um usuário clica no botão Atualizar tudo que um novo registro de auditoria será criado para cada fornecedor no sistema, independentemente se o usuário tiver feito uma alterações.
+O algoritmo de atualização de lote usado para este tutorial chamadas a `UpdateSupplierAddress` método para *cada* supplier no DataList, independentemente se as informações de endereço foi alteradas. Enquanto essas atualizações cegas normalmente não é um problema de desempenho, eles podem levar registros supérfluos se você está a auditoria for alterado para a tabela de banco de dados. Por exemplo, se você usar gatilhos para registrar todos os `UPDATE` s para o `Suppliers` tabela para uma tabela de auditoria, sempre que um usuário clica no botão Atualizar tudo que um novo registro de auditoria será criado para cada fornecedor no sistema, independentemente se o usuário tiver feito uma alterações.
 
 As classes de DataTable do ADO.NET e DataAdapter são projetadas para dar suporte a atualizações em lotes em que registros novos, excluídos e modificados apenas resulta em qualquer comunicação de banco de dados. Cada linha na DataTable tem um [ `RowState` propriedade](https://msdn.microsoft.com/library/system.data.datarow.rowstate.aspx) que indica se a linha foi adicionada à DataTable, excluído, modificados, ou permanece inalterada. Quando um DataTable é preenchido inicialmente, todas as linhas são marcadas inalteradas. Alterar o valor de qualquer uma das colunas s linha marca a linha como modificada.
 

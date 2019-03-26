@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: f731990a-0a81-4d62-81df-87d676cdedd6
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-implement-mapping-scenarios
 msc.type: authoredcontent
-ms.openlocfilehash: f7de23ca46e6dc00fe8075e28068a8b3f95d02cd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9beddfcaf568bf374271fb9fcb3af3a38aff4b72
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053253"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424827"
 ---
 <a name="use-ajax-to-implement-mapping-scenarios"></a>Usar o AJAX para implementar cenários de mapeamento
 ====================
@@ -150,7 +150,7 @@ Para implementar isso, vamos criar uma nova classe "SearchController" clicando d
 
 [!code-csharp[Main](use-ajax-to-implement-mapping-scenarios/samples/sample10.cs)]
 
-Internamente, o método de ação do SearchController SearchByLocation chama o método de FindByLocation no DinnerRespository para obter uma lista dos próximos jantares. Em vez de retornar os objetos de jantar diretamente ao cliente, no entanto, ele retorna objetos JsonDinner. A classe JsonDinner expõe um subconjunto das propriedades de jantar (por exemplo: por razões de segurança, ele não divulga os nomes das pessoas que têm RSVP'd em um jantar). Ele também inclui uma propriedade RSVPCount que não existe no jantar – e que é dinamicamente calculado pela contagem do número de objetos RSVP associados com uma refeição específica.
+Internamente, o método de ação do SearchController SearchByLocation chama o método de FindByLocation no DinnerRepository para obter uma lista dos próximos jantares. Em vez de retornar os objetos de jantar diretamente ao cliente, no entanto, ele retorna objetos JsonDinner. A classe JsonDinner expõe um subconjunto das propriedades de jantar (por exemplo: por razões de segurança, ele não divulga os nomes das pessoas que têm RSVP'd em um jantar). Ele também inclui uma propriedade RSVPCount que não existe no jantar – e que é dinamicamente calculado pela contagem do número de objetos RSVP associados com uma refeição específica.
 
 Em seguida, usamos o método auxiliar Json() na classe base do controlador para retornar a sequência de jantares usando um formato com fio baseado em JSON. JSON é um formato de texto padrão para representar estruturas de dados simples. Abaixo está um exemplo de uma lista formatada em JSON de dois objetos JsonDinner aparência quando retornado do nosso método de ação:
 

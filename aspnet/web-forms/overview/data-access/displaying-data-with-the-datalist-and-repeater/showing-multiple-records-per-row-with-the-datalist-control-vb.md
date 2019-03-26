@@ -8,12 +8,12 @@ ms.date: 09/13/2006
 ms.assetid: f555c531-bf33-4699-9987-42dbfef23c1f
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/showing-multiple-records-per-row-with-the-datalist-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7a23e8897e4fbdf84c4d6916c22bad9687fa5ee6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e8b5493694b24e4187ecb69ca8d2eff6a8507985
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046493"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421213"
 ---
 <a name="showing-multiple-records-per-row-with-the-datalist-control-vb"></a>Exibir vários registros por linha com o controle DataList (VB)
 ====================
@@ -66,7 +66,7 @@ Reserve um tempo para visitar a página em um navegador. Como mostra a Figura 2,
 
 Enquanto o comportamento padrão para DataList é dispor seus itens verticalmente em uma tabela de coluna única, várias linhas, esse comportamento pode ser alterado facilmente por meio do DataList s [ `RepeatDirection` propriedade](https://msdn.microsoft.com/system.web.ui.webcontrols.datalist.repeatdirection.aspx). O `RepeatDirection` propriedade pode aceitar um dos dois valores possíveis: `Horizontal` ou `Vertical` (o padrão).
 
-Alterando a `RepeatDirection` propriedade de `Vertical` para `Horizontal`, DataList processa seus registros em uma única linha, a criação de uma coluna por item de fonte de dados. Para ilustrar esse efeito, clique no DataList no Designer e em seguida, na janela Propriedades, altere o `RepeatDirection` propriedade de `Vertical` para `Horiztonal`. Imediatamente após fazer isso, o Designer ajusta o layout do DataList s, criando uma interface de linha única, várias coluna (veja a Figura 3).
+Alterando a `RepeatDirection` propriedade de `Vertical` para `Horizontal`, DataList processa seus registros em uma única linha, a criação de uma coluna por item de fonte de dados. Para ilustrar esse efeito, clique no DataList no Designer e em seguida, na janela Propriedades, altere o `RepeatDirection` propriedade de `Vertical` para `Horizontal`. Imediatamente após fazer isso, o Designer ajusta o layout do DataList s, criando uma interface de linha única, várias coluna (veja a Figura 3).
 
 
 [![Os itens de RepeatDirection propriedade determina como a direção de s DataList são apresentados Out](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image8.png)](showing-multiple-records-per-row-with-the-datalist-control-vb/_static/image7.png)

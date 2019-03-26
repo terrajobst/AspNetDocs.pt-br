@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: f52c302a-1b7c-46fe-8a13-8412c95cbf6d
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 05fbc51d5341a4d3d634cbbc05c0e66a827b0394
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ec5124cb0b449db703988bdadbaa244ff72cf363
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042503"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425594"
 ---
 <a name="sorting-data-in-a-datalist-or-repeater-control-c"></a>Classificação de dados em um controle DataList ou Repeater (C#)
 ====================
@@ -135,7 +135,7 @@ Neste ponto, quando o primeiro visitando a página de produtos inicialmente ser�
 
 
 > [!NOTE]
-> Clicar no botão de atualização faz com que os dados automaticamente sejam classificados novamente porque o estado de exibição do repetidor s foi desabilitado, causando assim o Repeater reassociar a fonte de dados em cada postagem. Se você ve deixado o estado de exibição do repetidor s habilitado, alterar a classificação de lista suspensa lista ganhou um t tenha qualquer efeito sobre a ordem de classificação. Para corrigir isso, crie um manipulador de eventos para o botão Atualizar s `Click` reassociar o Repeater para sua fonte de dados e eventos (chamando o Repeater s `DataBind()` método).
+> Clicar no botão de atualização faz com que os dados automaticamente sejam classificados novamente porque o estado de exibição do repetidor s foi desabilitado, causando assim o Repeater reassociar a fonte de dados em cada postagem. Se você ve deixado o estado de exibição do repetidor s habilitado, alterar a classificação de lista suspensa lista não terá qualquer efeito sobre a ordem de classificação. Para corrigir isso, crie um manipulador de eventos para o botão Atualizar s `Click` reassociar o Repeater para sua fonte de dados e eventos (chamando o Repeater s `DataBind()` método).
 
 
 ## <a name="remembering-the-sort-expression-and-direction"></a>Lembrar-se a expressão de classificação e a direção

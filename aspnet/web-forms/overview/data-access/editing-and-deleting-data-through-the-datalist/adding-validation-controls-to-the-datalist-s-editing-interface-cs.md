@@ -8,12 +8,12 @@ ms.date: 10/30/2006
 ms.assetid: 3ecc21c5-da0e-40ab-abb4-fac1e47398ad
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2fe85d6513a229f11b3aad7c7cc6c7124c94d70f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c552dd54830152afbe100ed03fb6764ddfb590dd
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047183"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422656"
 ---
 <a name="adding-validation-controls-to-the-datalists-editing-interface-c"></a>Adicionar controles de validação à interface de edição do DataList (C#)
 ====================
@@ -156,10 +156,10 @@ Adicione o seguinte código ao início dos `UpdateCommand` manipulador de evento
 
 [!code-csharp[Main](adding-validation-controls-to-the-datalist-s-editing-interface-cs/samples/sample2.cs)]
 
-Com esse acréscimo, o produto tentará ser atualizada somente se os dados enviados são válidos. A maioria dos usuários ganharam t ser capaz de dados inválidos devido aos scripts de cliente de controles de validação de postback, mas os usuários cujos navegadores don dão suporte a t JavaScript ou que têm JavaScript dar suporte a desabilitado, podem ignorar as verificações do lado do cliente e enviar dados inválidos.
+Com esse acréscimo, o produto tentará ser atualizada somente se os dados enviados são válidos. A maioria dos usuários não conseguirá postback dados inválidos devido aos scripts do lado do cliente de controles de validação, mas os usuários cujos navegadores don t dá suporte a JavaScript ou que têm suporte a JavaScript desabilitado, pode ignorar as verificações do lado do cliente e enviar dados inválidos.
 
 > [!NOTE]
-> O leitor astuto deve se lembrar que quando a atualização de dados com o controle GridView, podemos t precisa verificar explicitamente o `Page.IsValid` propriedade na nossa classe de code-behind da página s. Isso ocorre porque a consulta de GridView de `Page.IsValid` propriedade para nós e só prossegue com a atualização somente se ele retorna um valor de `True`.
+> O leitor astuto deve se lembrar que ao atualizar dados com o GridView, precisávamos verificar explicitamente o `Page.IsValid` propriedade na nossa classe de code-behind da página s. Isso ocorre porque a consulta de GridView de `Page.IsValid` propriedade para nós e só prossegue com a atualização somente se ele retorna um valor de `True`.
 
 
 ## <a name="step-3-summarizing-data-entry-problems"></a>Etapa 3: Resumo de problemas de entrada de dados

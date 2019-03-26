@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 92c70297-4430-4e4e-919a-9c2333a8d09a
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-vb
 msc.type: authoredcontent
-ms.openlocfilehash: be6ddbdfbe8da33871355c2a7917a7ce7008d81b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a319e2eb71da1bf693b1bd14ae368c844e7daeb1
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054863"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440255"
 ---
 <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iteração #4 – tornar o aplicativo fracamente acoplado (VB)
 ====================
@@ -61,7 +61,7 @@ Por exemplo, imagine que você decidir alterar como você implementa sua camada 
 
 Quando um aplicativo está acoplado livremente, por outro lado, você pode fazer alterações em uma parte de um aplicativo sem tocar em outras partes de um aplicativo. Por exemplo, você pode alternar a tecnologias de acesso a dados sem modificar sua lógica de validação ou controlador.
 
-Nesta iteração, podemos tirar proveito dos diversos padrões de design de software que nos permitem refatorar nosso aplicativo Contact Manager em um aplicativo mais flexível. Quando são concluídas, o Gerenciador de contatos ganhou um t fazer qualquer coisa que ele t fazer antes. No entanto, ser capazes de alterar o aplicativo mais facilmente no futuro.
+Nesta iteração, podemos tirar proveito dos diversos padrões de design de software que nos permitem refatorar nosso aplicativo Contact Manager em um aplicativo mais flexível. Quando são concluídas, o Gerenciador de contatos ganhou t fazer qualquer coisa que não fiz antes. No entanto, ser capazes de alterar o aplicativo mais facilmente no futuro.
 
 > [!NOTE] 
 > 
@@ -165,7 +165,7 @@ Queremos desacoplar completamente nossa camada de serviço de camada nosso contr
 
 No entanto, nossa camada de serviço precisa ser capaz de passar mensagens de erro de validação de volta para a camada de controlador. Como podemos habilitar a camada de serviço para se comunicar mensagens de erro de validação sem acoplamento o controlador e a camada de serviço? Podemos pode tirar proveito de um padrão de design de software chamado a [padrão decorador](http://en.wikipedia.org/wiki/Decorator_pattern).
 
-Um controlador usa um ModelStateDictionary chamada ModelState para representar erros de validação. Portanto, você pode ficar tentado a passar ModelState da camada de controlador para a camada de serviço. No entanto, usar ModelState na camada de serviço tornaria sua camada de serviço dependente de um recurso de estrutura do ASP.NET MVC. Isso seria muito ruim porque, um dia, você talvez queira usar a camada de serviço com um aplicativo do WPF em vez de um aplicativo ASP.NET MVC. Nesse caso, você não explicava t deseja fazer referência a estrutura ASP.NET MVC para usar a classe ModelStateDictionary.
+Um controlador usa um ModelStateDictionary chamada ModelState para representar erros de validação. Portanto, você pode ficar tentado a passar ModelState da camada de controlador para a camada de serviço. No entanto, usar ModelState na camada de serviço tornaria sua camada de serviço dependente de um recurso de estrutura do ASP.NET MVC. Isso seria muito ruim porque, um dia, você talvez queira usar a camada de serviço com um aplicativo do WPF em vez de um aplicativo ASP.NET MVC. Nesse caso, você não deseja fazer referência a estrutura ASP.NET MVC para usar a classe ModelStateDictionary.
 
 O padrão decorador permite que você encapsule uma classe existente em uma nova classe para implementar uma interface. Nosso projeto Contact Manager inclui a classe de ModelStateWrapper contida na listagem 7. A classe ModelStateWrapper implementa a interface na listagem 8.
 

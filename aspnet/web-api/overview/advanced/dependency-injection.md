@@ -8,12 +8,12 @@ ms.date: 01/20/2014
 ms.assetid: e3d3e7ba-87f0-4032-bdd3-31f3c1aa9d9c
 msc.legacyurl: /web-api/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 318a2f1c587feb360212a390bb5de7bdc127513d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d5011d42d0c2200bc782ab548f6bfa0d952f6e72
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043863"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420914"
 ---
 <a name="dependency-injection-in-aspnet-web-api-2"></a>Injeção de dependência no ASP.NET Web API 2
 ====================
@@ -49,7 +49,7 @@ Observe que a classe de controlador depende `ProductRepository`, e podemos está
 
 - Se você quiser substituir `ProductRepository` com uma implementação diferente, você também precisará modificar a classe do controlador.
 - Se o `ProductRepository` tem dependências, você deve configurá-los dentro do controlador. Para um projeto grande com vários controladores, seu código de configuração se torna espalhado em seu projeto.
-- É difícil para o teste de unidade, porque o controlador é embutido em código para consultar o banco de dados. Para um teste de unidade, você deve usar um repositório de simulação ou stub, que não é possível com o design de currect.
+- É difícil para o teste de unidade, porque o controlador é embutido em código para consultar o banco de dados. Para um teste de unidade, você deve usar um repositório de simulação ou stub, que não é possível com o design atual.
 
 Podemos pode resolver esses problemas por *injetando* o repositório no controlador. Primeiro, refatorar o `ProductRepository` classe em uma interface:
 

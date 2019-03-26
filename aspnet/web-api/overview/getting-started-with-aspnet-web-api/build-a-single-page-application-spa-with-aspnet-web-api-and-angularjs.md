@@ -8,18 +8,18 @@ ms.date: 09/30/2015
 ms.assetid: 719727b7-bef3-45ad-bfe9-ba5bcdb2305f
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
 msc.type: authoredcontent
-ms.openlocfilehash: 3c3557bb2be2807b11874937fcc629b5b773e463
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 03409e2fda831a07bbc5321ad842633b23ec25e5
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054563"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422401"
 ---
 <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET API Web e o Angular.js
 ====================
 por [Web Camps equipe](https://twitter.com/webcamps)
 
-[Baixe o Kit de treinamento do Web Camps](http://aka.ms/webcamps-training-kit)
+[Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
 
 > Em aplicativos web tradicionais, o cliente (navegador) inicia a comunicação com o servidor, solicitando uma página. O servidor, em seguida, processa a solicitação e envia o HTML da página para o cliente. As interações subsequentes com a página – por exemplo, o usuário navega para um link ou envia um formulário com dados – uma nova solicitação é enviada ao servidor, e o fluxo será iniciado novamente: o servidor processa a solicitação e envia uma nova página para o navegador em resposta à nova solicitação de ação ED pelo cliente.
 > 
@@ -29,7 +29,7 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > 
 > Neste laboratório em mãos, você irá tirar proveito dessas tecnologias para implementar o nerd do teste, um site de desafio com base no conceito SPA. Primeiro, você implementará a camada de serviço com a API Web do ASP.NET para expor os pontos de extremidade necessários para recuperar as perguntas de teste e armazenar as respostas. Em seguida, você irá criar uma interface de usuário rica e responsiva usando efeitos de transformação do AngularJS e CSS3.
 > 
-> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
 
 ## <a name="overview"></a>Visão geral
@@ -98,7 +98,7 @@ A estrutura da API Web é parte da pilha do ASP.NET e é projetada para facilita
 <a id="Ex1Task1"></a>
 #### <a name="task-1--creating-the-initial-project-for-geek-quiz"></a>Tarefa 1 – criar o projeto inicial para teste de pau
 
-Nesta tarefa você começará criando um novo projeto ASP.NET MVC com suporte para API Web ASP.NET com base nas **One ASP.NET** tipo que vem com o Visual Studio de projeto. **One ASP.NET** unifica todas as tecnologias do ASP.NET e lhe dá a opção de misturar e combiná-los conforme desejado. Em seguida, você irá adicionar classes de modelo do Entity Framework e o initializator de banco de dados para inserir as perguntas de teste.
+Nesta tarefa você começará criando um novo projeto ASP.NET MVC com suporte para API Web ASP.NET com base nas **One ASP.NET** tipo que vem com o Visual Studio de projeto. **One ASP.NET** unifica todas as tecnologias do ASP.NET e lhe dá a opção de misturar e combiná-los conforme desejado. Em seguida, você irá adicionar classes de modelo do Entity Framework e o inicializador de banco de dados para inserir as perguntas de teste.
 
 1. Abra **Visual Studio Express 2013 para Web** e selecione **arquivo | Novo projeto...**  para iniciar uma nova solução.
 

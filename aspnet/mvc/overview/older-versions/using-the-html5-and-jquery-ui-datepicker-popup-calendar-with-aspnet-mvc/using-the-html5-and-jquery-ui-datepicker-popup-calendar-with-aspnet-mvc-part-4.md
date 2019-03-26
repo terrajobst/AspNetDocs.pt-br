@@ -8,12 +8,12 @@ ms.date: 08/29/2011
 ms.assetid: 57666c69-2b0f-423a-a61d-be49547fa585
 msc.legacyurl: /mvc/overview/older-versions/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: 6768472b0c75757c9f368cfea58d5084c26719e1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e933ca0398d99a41089b4d1e18d21dd657db4b6b
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065643"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58423345"
 ---
 <a name="using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc---part-4"></a>Usando HTML5 e calendário jQuery UI Datepicker pop-up com o ASP.NET MVC – parte 4
 ====================
@@ -86,7 +86,7 @@ Se você estiver usando o Visual Studio em vez do Visual Web Developer, do **fer
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image4.png)
 
-No **MVCMovie - gerenciar pacotes NuGet** caixa de diálogo, clique o **Online** guia à esquerda e, em seguida, insira &quot;jQuery.UI&quot; na caixa de pesquisa. Selecione j **WIdgets de interface do usuário de consulta: Datepicker**, em seguida, selecione o **instalar** botão.
+No **MVCMovie - gerenciar pacotes NuGet** caixa de diálogo, clique o **Online** guia à esquerda e, em seguida, insira &quot;jQuery.UI&quot; na caixa de pesquisa. Selecione j **Widgets de interface do usuário de consulta: Datepicker**, em seguida, selecione o **instalar** botão.
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4/_static/image5.png)
 

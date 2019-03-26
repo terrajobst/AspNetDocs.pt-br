@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: 43878bc101ef97e8bbb6c150f4125707da7660c9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cd6197a9cbed822ba874a19823521a3711be9201
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027433"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422708"
 ---
 <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Notas de versão do ASP.NET and Web Tools para Visual Studio 2013
 ====================
@@ -357,7 +357,7 @@ Em um **auto-hospedado application**, a classe de inicialização é passada com
 
 ### <a name="cross-domain-support"></a>Suporte de domínio cruzado
 
-No SignalR 1.x, solicitações de domínio cruzado foram controlado por um sinalizador EnableCrossDomain único. Esse sinalizador controlado solicitações JSONP e CORS. Para obter maior flexibilidade, suporte a todos os CORS foi removido do componente de servidor do SignalR (JavaScript lients ainda usarem CORS normalmente se ele for detectado que o navegador dá suporte a ele), e o middleware OWIN nova foi disponibilizado dar suporte a esses cenários.
+No SignalR 1.x, solicitações de domínio cruzado foram controlado por um sinalizador EnableCrossDomain único. Esse sinalizador controlado solicitações JSONP e CORS. Para obter maior flexibilidade, suporte a todos os CORS foi removido do componente de servidor do SignalR (clientes JavaScript ainda usarem CORS normalmente se ele for detectado que o navegador dá suporte a ele), e o middleware OWIN nova foi disponibilizado dar suporte a esses cenários.
 
 SignalR 2.0, JSONP se é necessário no cliente (para dar suporte a solicitações de domínio cruzado em navegadores mais antigos), ele precisará ser habilitada explicitamente definindo `EnableJSONP` sobre o `HubConfiguration` do objeto para `true`, conforme mostrado abaixo. JSONP está desabilitado por padrão, pois é menos segura do que o CORS.
 

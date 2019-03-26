@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: e1fd226f-3f8e-4575-a179-5c75b240333d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7b1700e0ccece543c381dbb4fa7d6243de57ed4d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ac502a1f57b25dd596489d1e7abaa55a77ddb6c7
+ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055003"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58440333"
 ---
 <a name="iteration-6--use-test-driven-development-vb"></a>Iteração #6 – usar desenvolvimento controlado por testes (VB)
 ====================
@@ -80,9 +80,9 @@ Vamos adicionar essa nova funcionalidade ao nosso aplicativo seguindo um process
 
 ## <a name="what-gets-tested"></a>O que é testado
 
-Conforme discutimos na iteração anterior, você normalmente não escrever testes de unidade de lógica de acesso a dados ou exibir lógica. Você não t gravar testes de unidade para lógica de acesso a dados, como acessar um banco de dados é uma operação relativamente lenta. Você não t gravar testes de unidade para a lógica de exibição porque o acesso a um modo de exibição requer bagunçar um servidor web que é uma operação relativamente lenta. Você não deve gravar um teste de unidade, a menos que o teste pode ser executado repetidamente muito rápido
+Conforme discutimos na iteração anterior, você normalmente não escrever testes de unidade de lógica de acesso a dados ou exibir lógica. Você não t gravar testes de unidade para lógica de acesso a dados, como acessar um banco de dados é uma operação relativamente lenta. Você não t gravar testes de unidade para a lógica de exibição porque o acesso a um modo de exibição requer bagunçar um servidor web que é uma operação relativamente lenta. Você não deve escrever um teste de unidade, a menos que o teste pode ser executado repetidamente muito rápido
 
-Porque o desenvolvimento controlado por teste é orientado por testes de unidade, vamos nos concentrar inicialmente em escrever a lógica de negócios e o controlador. Podemos evitar tocar o banco de dados ou exibições. Ganhamos t modificar o banco de dados ou criar nossos modos de exibição até o final deste tutorial. Vamos começar com o que pode ser testado.
+Porque o desenvolvimento controlado por teste é orientado por testes de unidade, vamos nos concentrar inicialmente em escrever a lógica de negócios e o controlador. Podemos evitar tocar o banco de dados ou exibições. Nós não modificar o banco de dados ou criar nossos modos de exibição até o final deste tutorial. Vamos começar com o que pode ser testado.
 
 ## <a name="creating-user-stories"></a>Criar histórias de usuários
 
@@ -250,7 +250,7 @@ Infelizmente, mesmo que podemos ter atendido todos os requisitos expressados por
 | Nome | nvarchar(50) | False |
 
 
-Em seguida, é preciso excluir todos os dados da tabela de contatos (caso contrário, ganhamos t ser capaz de criar uma relação entre as tabelas de contatos e grupos). Siga estas etapas:
+Em seguida, é preciso excluir todos os dados da tabela de contatos (caso contrário, nós não conseguirá criar uma relação entre as tabelas de contatos e grupos). Siga estas etapas:
 
 1. A tabela de contatos com o botão direito e selecione a opção de menu **Mostrar dados da tabela**.
 2. Exclua todas as linhas.
@@ -310,7 +310,7 @@ Em seguida, precisamos implementar nossa classe de repositório. Ao longo dessa 
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample14.vb)]
 
-Podemos realmente implementados refúgio t e qualquer um dos métodos relacionados ao trabalho com grupos de contato em nossa classe EntityContactManagerRepository real. Atualmente, a classe EntityContactManagerRepository tem métodos stub para cada um dos métodos de contato de grupo listados na interface do IContactManagerRepository. Por exemplo, o método ListGroups() no momento, esta aparência:
+Na verdade, nós ainda não implementei qualquer um dos métodos relacionados ao trabalho com grupos de contato em nossa classe EntityContactManagerRepository real. Atualmente, a classe EntityContactManagerRepository tem métodos stub para cada um dos métodos de contato de grupo listados na interface do IContactManagerRepository. Por exemplo, o método ListGroups() no momento, esta aparência:
 
 [!code-vb[Main](iteration-6-use-test-driven-development-vb/samples/sample15.vb)]
 

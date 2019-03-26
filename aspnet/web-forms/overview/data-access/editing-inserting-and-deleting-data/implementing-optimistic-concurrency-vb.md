@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 2646968c-2826-4418-b1d0-62610ed177e3
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e33e4b401d957f4aa5560193dd8af0e53ca3b631
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 06ee6f8ea415ddde4e47acacaa74a29cbf9a0478
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032693"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425581"
 ---
 <a name="implementing-optimistic-concurrency-vb"></a>Implementar a simultaneidade otimista (VB)
 ====================
@@ -60,7 +60,7 @@ Controle de simultaneidade otimista funciona, garantindo que o registro que est�
 **Figura 2**: Para a atualização ou exclusão para forem bem-sucedidas, o Original valores deve ser igual aos valores atuais do banco de dados ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image6.png))
 
 
-Há várias abordagens para implementar a simultaneidade otimista (consulte [Peter A. Bromberg](http://peterbromberg.net/)do [Optmistic simultaneidade atualizando lógica](http://www.eggheadcafe.com/articles/20050719.asp) para examinar uma série de opções). O conjunto de dados tipados do ADO.NET fornece uma implementação que pode ser configurada com a escala de uma caixa de seleção. Habilitar a simultaneidade otimista para um TableAdapter no conjunto de dados tipado aumenta o TableAdapter `UPDATE` e `DELETE` instruções para incluir uma comparação de todos os valores originais no `WHERE` cláusula. O seguinte `UPDATE` instrução, por exemplo, atualiza o nome e o preço de um produto somente se os valores atuais do banco de dados são iguais aos valores que foram originalmente recuperados ao atualizar o registro em um GridView. O `@ProductName` e `@UnitPrice` parâmetros contêm os novos valores inseridos pelo usuário, enquanto `@original_ProductName` e `@original_UnitPrice` contêm os valores que foram carregados originalmente no GridView, quando o botão de edição foi clicado:
+Há várias abordagens para implementar a simultaneidade otimista (consulte [Peter A. Bromberg](http://peterbromberg.net/)do [lógica de atualização de simultaneidade otimista](http://www.eggheadcafe.com/articles/20050719.asp) para examinar uma série de opções). O conjunto de dados tipados do ADO.NET fornece uma implementação que pode ser configurada com a escala de uma caixa de seleção. Habilitar a simultaneidade otimista para um TableAdapter no conjunto de dados tipado aumenta o TableAdapter `UPDATE` e `DELETE` instruções para incluir uma comparação de todos os valores originais no `WHERE` cláusula. O seguinte `UPDATE` instrução, por exemplo, atualiza o nome e o preço de um produto somente se os valores atuais do banco de dados são iguais aos valores que foram originalmente recuperados ao atualizar o registro em um GridView. O `@ProductName` e `@UnitPrice` parâmetros contêm os novos valores inseridos pelo usuário, enquanto `@original_ProductName` e `@original_UnitPrice` contêm os valores que foram carregados originalmente no GridView, quando o botão de edição foi clicado:
 
 
 [!code-sql[Main](implementing-optimistic-concurrency-vb/samples/sample1.sql)]

@@ -8,12 +8,12 @@ ms.date: 05/15/2013
 ms.assetid: eaa206c4-edb3-487e-8fcb-54a3261fed36
 msc.legacyurl: /signalr/overview/older-versions/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: c8aac09c3d3e06529f7834eb3f60dca2f3073922
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 311976a9d0e79083e02231ab056af3537a3d3d25
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042633"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420797"
 ---
 <a name="dependency-injection-in-signalr-1x"></a>Injeção de dependência no SignalR 1.x
 ====================
@@ -161,7 +161,7 @@ Criar uma associação para **IHubConnectionContext** da seguinte maneira:
 
 [!code-csharp[Main](dependency-injection/samples/sample18.cs)]
 
-Esse código creatres uma função anônima que retorna um **IHubConnection**. O **WhenInjectedInto** Ninject usar essa função somente durante a criação do método informa `IStockTicker` instâncias. O motivo é que o SignalR cria **IHubConnectionContext** instâncias internamente, e não queremos substituir como o SignalR cria. Essa função se aplica somente aos nossos `StockTicker` classe.
+Esse código cria uma função anônima que retorna um **IHubConnection**. O **WhenInjectedInto** Ninject usar essa função somente durante a criação do método informa `IStockTicker` instâncias. O motivo é que o SignalR cria **IHubConnectionContext** instâncias internamente, e não queremos substituir como o SignalR cria. Essa função se aplica somente aos nossos `StockTicker` classe.
 
 Passe o resolvedor de dependência para o **MapHubs** método:
 

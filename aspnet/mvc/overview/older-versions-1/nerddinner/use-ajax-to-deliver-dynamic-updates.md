@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 18700815-8e6c-4489-91af-7ea9dab6529e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-deliver-dynamic-updates
 msc.type: authoredcontent
-ms.openlocfilehash: e902881d3dab6a902cb747a197a32f317d199723
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 71e566523d658eb8198453f354a12e63a4c38495
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025983"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421031"
 ---
 <a name="use-ajax-to-deliver-dynamic-updates"></a>Usar o AJAX para fornecer atualizações dinâmicas
 ====================
@@ -78,7 +78,7 @@ Vamos usar AJAX para chamar o método de ação Register da nossa exibição de 
 
 A primeira biblioteca faz referência a biblioteca de script do lado do cliente do AJAX do ASP.NET core. Esse arquivo é de aproximadamente 24k de tamanho (compactado) e contém a funcionalidade de AJAX do lado do cliente principal. A segunda biblioteca contém funções de utilitário que se integram internos AJAX métodos auxiliares de ASP.NET MVC (que usaremos em breve).
 
-Podemos pode então o código do modelo de exibição que adicionamos anteriormente para que, em vez de outputing uma mensagem "Você não estiver registrado para este evento", em vez disso, renderizamos um link que quando enviada por push de atualização realiza uma chamada ao AJAX que invoca nosso método de ação RSVPForEvent no nosso controlador RSVP e RSVPs o usuário:
+Podemos pode então o código do modelo de exibição que adicionamos anteriormente para que, em vez de produzir uma mensagem "Você não estiver registrado para este evento", em vez disso, renderizamos um link que quando enviada por push de atualização realiza uma chamada ao AJAX que invoca nosso método de ação RSVPForEvent no nosso controlador RSVP e RSVPs o usuário:
 
 [!code-aspx[Main](use-ajax-to-deliver-dynamic-updates/samples/sample6.aspx)]
 

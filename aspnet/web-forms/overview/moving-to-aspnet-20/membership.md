@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: d7fa3cb61608ea089141931cb9362359cdc92619
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4fab68555eeb27420e60a28aca2f2c0fb9a73e3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031463"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58421512"
 ---
 <a name="membership"></a>Associação
 ====================
@@ -107,7 +107,7 @@ Os controles de Logon a seguir estão disponíveis no ASP.NET 2.0:
 
 ## <a name="login-control"></a>Controle de logon
 
-O controle de logon fornece uma interface para que alguém faça logon no seu sistema de associação. Ele fornece um nome de usuário e senha textboxt e um botão de logon. Muitos outros recursos comuns, como um link para se registrar para as pessoas que ainda não tem feito isso, uma caixa de seleção que permite que o usuário automaticamente logon em visitas subsequentes, um link para um lembrete da senha, etc. Todos os recursos do controle Login são personalizáveis por meio de propriedades do controle.
+O controle de logon fornece uma interface para que alguém faça logon no seu sistema de associação. Ele fornece uma caixa de texto nome de usuário e senha e um botão de logon. Muitos outros recursos comuns, como um link para se registrar para as pessoas que ainda não tem feito isso, uma caixa de seleção que permite que o usuário automaticamente logon em visitas subsequentes, um link para um lembrete da senha, etc. Todos os recursos do controle Login são personalizáveis por meio de propriedades do controle.
 
 No ASP.NET 1. x, os desenvolvedores tinham de gravar uma quantidade razoável de código para realizar uma pesquisa ao usar a autenticação de formulários. Com a associação do ASP.NET 2.0, você pode validar os usuários sem escrever nenhum código em todos os. ASP.NET fará automaticamente a pesquisa do usuário para você. (Se você estiver usando o controle de logon sem usar a associação do ASP.NET, você pode usar o **OnAuthenticate** método para validar o usuário.)
 

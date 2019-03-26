@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 35b40b8f-2ca8-4ab3-9c19-f361a91a3647
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 55fab6bb7a1041a14f8734a0d2ae1238b3801149
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 719999f47dea7172f32a5040c79e569d0ec41ab0
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042953"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425893"
 ---
 <a name="an-overview-of-inserting-updating-and-deleting-data-vb"></a>Uma visão geral de inserção, atualização e exclusão de dados (VB)
 ====================
@@ -179,7 +179,7 @@ O controle GridView fornece suporte interno para o nível de linha de edição e
 Os valores atribuídos para o `DeleteParameters` são os valores da `DataKeyNames` campo (s) para a linha cuja exclusão foi clicada. Portanto, é vital que um GridView `DataKeyNames` propriedade ser definida corretamente. Se ele estiver ausente, o `DeleteParameters` será atribuído um valor de `Nothing` na etapa 1, que por sua vez não resultará em quaisquer registros excluídos na etapa 2.
 
 > [!NOTE]
-> O `DataKeys` coleção é armazenada no estado do controle GridView s, o que significa que o `DataKeys` valores serão lembrados em postback, mesmo se o estado de exibição GridView s foi desabilitado. No entanto, é muito importante que o estado de exibição permanece ativado para GridViews que dão suporte à edição ou exclusão (o comportamento padrão). Se você definir o s GridView `EnableViewState` propriedade para `false`, a edição e exclusão de comportamento funcionará bem para um único usuário, mas se houver usuários simultâneos, exclusão de dados, existe a possibilidade de ocorrência que esses usuários simultâneos podem ser acidentalmente excluir ou edição de registros que eles t pretende. Consulte minha postagem do blog, [Aviso: Com o ASP.NET 2.0 GridViews/DetailsView/FormViews de emitir a simultaneidade que suporte a edição e/ou exclusão e cujo estado de exibição está desabilitado](http://scottonwriting.net/sowblog/posts/10054.aspx), para obter mais informações.
+> O `DataKeys` coleção é armazenada no estado do controle GridView s, o que significa que o `DataKeys` valores serão lembrados em postback, mesmo se o estado de exibição GridView s foi desabilitado. No entanto, é muito importante que o estado de exibição permanece ativado para GridViews que dão suporte à edição ou exclusão (o comportamento padrão). Se você definir o s GridView `EnableViewState` propriedade para `false`, a edição e exclusão de comportamento funcionará bem para um único usuário, mas se houver usuários simultâneos, exclusão de dados, existe a possibilidade de ocorrência que esses usuários simultâneos podem ser acidentalmente excluir ou editar os registros que eles não pretendem. Consulte minha postagem do blog, [Aviso: Com o ASP.NET 2.0 GridViews/DetailsView/FormViews de emitir a simultaneidade que suporte a edição e/ou exclusão e cujo estado de exibição está desabilitado](http://scottonwriting.net/sowblog/posts/10054.aspx), para obter mais informações.
 
 
 Esse aviso mesmo também se aplica a DetailsViews e FormViews.
