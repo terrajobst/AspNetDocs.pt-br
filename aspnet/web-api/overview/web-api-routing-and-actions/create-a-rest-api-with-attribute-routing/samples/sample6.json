@@ -1,0 +1,10 @@
+{
+    "BookId": 1,
+    "Title": "<span data-ttu-id=\"6c8aa-101\">Meia-noite chuva</span><span class=\"sxs-lookup\"><span data-stu-id=\"6c8aa-101\">Midnight Rain</span></span>",
+    "Genre": "Fantasy",
+    "PublishDate": "2000-12-16T00:00:00",
+    "Description": "A former architect battles an evil sorceress.",
+    "Price": 14.95,
+    "AuthorId": 1,
+    "Author": null
+}
