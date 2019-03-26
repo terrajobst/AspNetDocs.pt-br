@@ -8,18 +8,18 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: bc6de2f0c8b2cd958c198abb90fc4ad97613e973
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054533"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424242"
 ---
 <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratório prático: Sites sustentáveis do Azure: Gerenciamento da alteração e escala
 ====================
 por [Web Camps equipe](https://twitter.com/webcamps)
 
-[Baixe o Kit de treinamento do Web Camps](http://aka.ms/webcamps-training-kit)
+[Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
 
 > Microsoft Azure facilita compilar e implantar sites em produção. Mas você não ainda terminou quando seu aplicativo estiver ativo, você estiver apenas começando! Você precisará lidar com a alteração requisitos, as atualizações de banco de dados, escala e muito mais. Felizmente, o serviço de aplicativo do Azure tem cobertura completa, com muitos recursos para ajudá-lo a manter seus sites em perfeito funcionamento.
 >
@@ -31,7 +31,7 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 >
 > Com bancos de dados SQL, é importante manter o seu banco de dados produtivo atualizadas durante a implantação de novas versões do seu aplicativo. Obrigado **Entity Framework Code First Migrations**, o desenvolvimento e implantação do seu modelo de dados foi simplificado para atualizar seus ambientes em minutos. Este laboratório prático mostrará os tópicos diferentes, que você pode encontrar ao implantar seu aplicativo web em ambientes de produção no Microsoft Azure.
 >
-> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ http://aka.ms/webcamps-training-kit ](http://aka.ms/webcamps-training-kit).
+> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 >
 > Para obter mais cobertura detalhada deste tópico, consulte o [criando aplicativos de nuvem do mundo Real com o Azure de livro eletrônico](building-real-world-cloud-apps-with-windows-azure/introduction.md).
 
@@ -62,10 +62,10 @@ O exemplo a seguir é necessário para concluir este laboratório prático:
 - [Sistema de controle de versão do GIT](http://git-scm.com/download)
 - Uma assinatura do Microsoft Azure
 
-    - Inscreva-se um [avaliação gratuita](http://aka.ms/watk-freetrial)
-    - Se você for um Visual Studio Professional, o Test Professional, o Premium ou o Ultimate com MSDN ou plataformas MSDN, ativar sua [benefício do MSDN](http://aka.ms/watk-msdn) agora para começar a desenvolver e testar no Azure
-    - [BizSpark](http://aka.ms/watk-bizspark) membros recebem automaticamente o Azure benefício por meio do Visual Studio Ultimate com assinaturas do MSDN
-    - Os membros de [Microsoft Partner Network](http://aka.ms/watk-mpn) programa Cloud Essentials recebem créditos mensais do Azure sem nenhum encargo
+    - Inscreva-se um [avaliação gratuita](https://aka.ms/watk-freetrial)
+    - Se você for um Visual Studio Professional, o Test Professional, o Premium ou o Ultimate com MSDN ou plataformas MSDN, ativar sua [benefício do MSDN](https://aka.ms/watk-msdn) agora para começar a desenvolver e testar no Azure
+    - [BizSpark](https://aka.ms/watk-bizspark) membros recebem automaticamente o Azure benefício por meio do Visual Studio Ultimate com assinaturas do MSDN
+    - Os membros de [Microsoft Partner Network](https://aka.ms/watk-mpn) programa Cloud Essentials recebem créditos mensais do Azure sem nenhum encargo
 
 <a id="Setup"></a>
 ### <a name="setup"></a>Configuração

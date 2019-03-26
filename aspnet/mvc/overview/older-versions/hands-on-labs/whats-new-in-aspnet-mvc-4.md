@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 9d5a51a5887ecbbc96fce1416b88aa849bc3674e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0c4b7b2641c91cbb63ec46fa707c004f7273a303
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053493"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58422682"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novidades no ASP.NET MVC 4
 
@@ -144,7 +144,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
     *Validação do jQuery*
 
     > [!NOTE]
-    > Observe que os dois de log nas seções, na primeira seção você pode fazer logon usando uma conta de marca do site e a segunda seção, que você pode altenativelly logon usando outro serviço de autenticação, como google (desabilitado por padrão).
+    > Observe que o log de duas seções, na primeira seção, você pode fazer logon usando uma conta registrada do site e a segunda seção como alternativa, você pode fazer logon usando outro serviço de autenticação, como google (desabilitado por padrão).
 5. Feche o navegador para interromper o depurador e retorne ao Visual Studio.
 6. Abra o arquivo **AuthConfig.cs** localizado sob a **App\_iniciar** pasta.
 7. Remova o comentário da última linha para registrar o cliente do Google para *OAuth* autenticação.
@@ -429,7 +429,7 @@ Uma das principais atualizações no ASP.NET MVC 4 é o suporte para desenvolvim
 <a id="Task_2_-_Creating_Mobile_Views"></a>
 #### <a name="task-2---creating-mobile-views"></a>Tarefa 2 - Criando exibições móveis
 
-Nesta tarefa, você criará uma versão móvel do modo de exibição de índice com o conteúdo adaptado para appareance melhor em dispositivos móveis.
+Nesta tarefa, você criará uma versão móvel do modo de exibição de índice com o conteúdo adaptado para melhorar a aparência em dispositivos móveis.
 
 1. Cópia de **Views\Home\Index.cshtml** exibir e cole-o para criar uma cópia, renomeie o novo arquivo **cshtml**.
 2. Abra o novo criado **cshtml** exibir e substituir o existente &lt;ul&gt; marca com esse código. Ao fazer isso, você atualizará o &lt;ul&gt; marca com anotações de dados móveis do jQuery para usar os temas móveis do jQuery.
@@ -512,15 +512,15 @@ Nesta tarefa, você explorará a implementação de exemplo de um alternador adi
 
     A exibição parcial usa o novo método **ViewContext.HttpContext.GetOverriddenBrowser()** para determinar a origem da solicitação da web e mostrar o link correspondente para alternar entre os modos de exibição da área de trabalho ou móvel.
 
-    O **GetOverridenBrowser** método retorna um **HttpBrowserCapabilitiesBase** instância que corresponde ao agente do usuário definido atualmente para a solicitação (reais ou substituído). Você pode usar esse valor para obter as propriedades, como **IsMobileDevice**.
+    O **GetOverriddenBrowser** método retorna um **HttpBrowserCapabilitiesBase** instância que corresponde ao agente do usuário definido atualmente para a solicitação (reais ou substituído). Você pode usar esse valor para obter as propriedades, como **IsMobileDevice**.
 
     ![Modo de exibição parcial ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image30.png "ViewSwitcher de exibição parcial")
 
     *Modo de exibição parcial ViewSwitcher*
 4. Abra o **ViewSwitcherController.cs** classe localizada na **controladores** pasta. Check-out dessa ação SwitchView é chamado pelo link no componente ViewSwitcher e observe os novos métodos de HttpContext.
 
-    - O **HttpContext.ClearOverridenBrowser()** método remove qualquer agente do usuário substituído para a solicitação atual.
-    - O **HttpContext.SetOverridenBrowser()** método substitui o valor do agente de usuário real da solicitação usando o agente de usuário especificado.  
+    - O **HttpContext.ClearOverriddenBrowser()** método remove qualquer agente do usuário substituído para a solicitação atual.
+    - O **HttpContext.SetOverriddenBrowser()** método substitui o valor do agente de usuário real da solicitação usando o agente de usuário especificado.  
         ![Controlador ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViewSwitcher controlador")  
 *Controlador ViewSwitcher*
 
@@ -580,8 +580,8 @@ Depois que esse código é executado, quando um navegador do iPhone gera uma sol
 > [!NOTE]
 > Essa maneira de testar a solicitação para iPhone foi simplificado para fins de demonstração e pode não funcionar conforme o esperado para cada cadeia de caracteres de agente de usuário do iPhone (para teste de exemplo diferencia maiusculas de minúsculas).
 
-4. Criar uma cópia do  **\_cshtml** arquivo o **Views\Shared** pasta e renomeie a cópia para &quot; **\_Layout.iPhone.csthml**&quot;.
-5. Abra  **\_Layout.iPhone.csthml** criado na etapa anterior.
+4. Criar uma cópia do  **\_cshtml** arquivo o **Views\Shared** pasta e renomeie a cópia para &quot; **\_cshtml**&quot;.
+5. Abra  **\_cshtml** criado na etapa anterior.
 6. Localizar o elemento div com o atributo de função de dados definido como **página** e altere o **data-theme** atributo &quot; **um**&quot;.
 
 
@@ -904,7 +904,7 @@ Este apêndice mostram como criar um novo site do Portal de gerenciamento do Win
 1. Vá para o [Portal de gerenciamento do Windows Azure](https://manage.windowsazure.com/) e entre usando as credenciais da Microsoft associadas à sua assinatura.
 
     > [!NOTE]
-    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](http://aka.ms/aspnet-hol-azure).
+    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](https://aka.ms/aspnet-hol-azure).
 
     ![Faça logon no portal do Windows Azure](whats-new-in-aspnet-mvc-4/_static/image61.png "faça logon no portal do Windows Azure")
 

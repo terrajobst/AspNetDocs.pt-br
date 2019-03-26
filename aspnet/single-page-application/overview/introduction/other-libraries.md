@@ -8,12 +8,12 @@ ms.date: 02/05/2013
 ms.assetid: a8367c6d-ef94-4dff-a010-5eff9e6eea96
 msc.legacyurl: /single-page-application/overview/introduction/other-libraries
 msc.type: authoredcontent
-ms.openlocfilehash: 53c97580b45bb40a6c3256c8038ec5c8b861b69f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5503a00df707ee79282a32c77ed2287e93cf8f48
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025213"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425464"
 ---
 <a name="know-a-library-other-than-knockout"></a>Conhece uma biblioteca diferente do Knockout?
 ====================
@@ -48,7 +48,7 @@ O modelo de SPA Ember é uma nova implementação do modelo SPA do Knockout, usa
 
 [Modelo de hot Towel SPA](../templates/hottowel-template.md). Esse modelo traz várias bibliotecas JavaScript, incluindo a Breeze, o Knockout, o RequireJS e o Twitter Bootstrap.
 
-Em comparação com os outros modelos listados aqui, o Hot Towel teample fornece um aplicativo mais completo do qual você pode criar seus próprios. Há mais conceitos a serem consideradas, mas depois de compreendê-las, esse modelo pode ser o que você está procurando. Se você deseja criar um SPA, mas não é possível decidir onde iniciar, use o Hot Towel e, em segundos você terá um SPA e todas as ferramentas que você precisará construir sobre ele.
+Em comparação com os outros modelos listados aqui, o modelo Hot Towel fornece um aplicativo mais completo do qual você pode criar seus próprios. Há mais conceitos a serem consideradas, mas depois de compreendê-las, esse modelo pode ser o que você está procurando. Se você deseja criar um SPA, mas não é possível decidir onde iniciar, use o Hot Towel e, em segundos você terá um SPA e todas as ferramentas que você precisará construir sobre ele.
 
 ## <a name="feature-table"></a>Tabela de recursos
 
@@ -60,7 +60,7 @@ Aqui estão os recursos fornecidos por cada modelo SPA:
 |      Exemplo de tarefas pendentes       |  &#10003;   |          |    &#10003;    | &#10003;  | &#10003; |           |
 |     Modelo vazio      |             | &#10003; |                |           |          | &#10003;  |
 | Navegação e histórico |             | &#10003; |    &#10003;    |           | &#10003; | &#10003;  |
-|        Bibliotecas        |             |          |                |           |          |           |
+|        Libraries       |             |          |                |           |          |           |
 |        Angular         |             |          |    &#10003;    |           |          |           |
 |    &#8195;Backbone     |             | &#10003; |                |           |          |           |
 |         Breeze         |             |          |    &#10003;    | &#10003;  |          | &#10003;  |

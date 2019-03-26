@@ -8,12 +8,12 @@ ms.date: 01/28/2019
 ms.assetid: c39b9965-545c-4b04-8f55-21be7f28a9e5
 msc.legacyurl: /aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead
 msc.type: authoredcontent
-ms.openlocfilehash: 512d2e2b39467635390fa175546f79d8c9f89f4a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a09169327d8eed45a83b232354af74a14aa89817
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038143"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425035"
 ---
 # <a name="what-not-to-do-in-aspnet-and-what-to-do-instead"></a>O que fazer e o que não fazer em ASP.NET
 
@@ -151,7 +151,7 @@ O exemplo a seguir mostra como especificar no arquivo Web. config que a autentic
 
 Recomendação: Nunca defina como false.
 
-Por padrão, EnbableViewStateMac é definido como true. Mesmo se seu aplicativo não estiver usando o estado de exibição, não defina EnableViewStateMac como false. Definir esse valor como false fará seu aplicativo vulnerável a XSS.
+Por padrão, EnableViewStateMac está definido como true. Mesmo se seu aplicativo não estiver usando o estado de exibição, não defina EnableViewStateMac como false. Definir esse valor como false fará seu aplicativo vulnerável a XSS.
 
 A partir do ASP.NET 4.5.2, o tempo de execução impõe **EnableViewStateMac = true**. Mesmo se você defini-lo como false, o tempo de execução ignora esse valor e prossegue com o valor definido como true. Para obter mais informações, consulte [ASP.NET 4.5.2 e EnableViewStateMac](https://blogs.msdn.com/b/webdev/archive/2014/05/07/asp-net-4-5-2-and-enableviewstatemac.aspx).
 

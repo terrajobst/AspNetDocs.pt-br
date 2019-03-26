@@ -8,12 +8,12 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: acc13776840408756901e20589b9efacc83ff2a9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1bd90f0ceddee7d9e18c1cac2fadfb2c84841f19
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053643"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58424632"
 ---
 <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Criar um aplicativo de Web Forms do ASP.NET seguro com registro de usuário, confirmação por email e redefinição de senha (C#)
 ====================
@@ -152,7 +152,7 @@ Embora você confirmou a conta de email, neste momento você não precisaria cli
 <a id="rsend"></a>
 ## <a name="resend-email-confirmation-link"></a>Reenviar Link de confirmação de Email
 
-Depois que um usuário cria uma nova conta local, eles são enviados por email um link de confirmação que são obrigados a usar antes que eles podem fazer logon. Se o usuário acidentalmente exclui o email de confirmação, ou o email chega nunca, será necessário o link de confirmação enviado novamente. As alterações de código a seguir mostram como habilitar isso.
+Depois que um usuário cria uma nova conta local, eles são enviados por email um link de confirmação que são obrigados a usar antes que eles podem fazer logon. Se o usuário exclui acidentalmente o email de confirmação, ou o email chega nunca, será necessário o link de confirmação enviado novamente. As alterações de código a seguir mostram como habilitar isso.
 
 1. No Visual Studio, abra o **Login.aspx.cs** code-behind e adicione o seguinte manipulador de eventos após a `LogIn` manipulador de eventos:   
 

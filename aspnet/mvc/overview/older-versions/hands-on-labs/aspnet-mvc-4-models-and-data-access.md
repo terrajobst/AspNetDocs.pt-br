@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 634ea84b-f904-4afe-b71b-49cccef4d9cc
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 msc.type: authoredcontent
-ms.openlocfilehash: 26896e6ee3c02e8f939296ecbfb8b7d500940765
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 10c2f6379f6d3139dd3bcf1027ff456e074298c3
+ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061023"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58425087"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Acesso a dados e modelos do ASP.NET MVC 4
 
@@ -148,7 +148,7 @@ Nesta tarefa, você criará um modelo de dados para interagir com o banco de dad
     ![Adicionando o modelo de dados de entidade ADO.NET StoreDB](aspnet-mvc-4-models-and-data-access/_static/image6.png "adicionando o modelo de dados de entidade ADO.NET StoreDB")
 
     *Adicionando o modelo de dados de entidade ADO.NET StoreDB*
-2. O **Assistente de modelo de dados de entidade** será exibida. Este assistente o guiará por meio da criação da camada de modelo. Uma vez que o modelo deve ser criado com base no recentyl existente do banco de dados adicionado, selecione **gerar a partir do banco de dados** e clique em **próxima**.
+2. O **Assistente de modelo de dados de entidade** será exibida. Este assistente o guiará por meio da criação da camada de modelo. Uma vez que o modelo deve ser criado com base no banco de dados existente recentemente adicionado, selecione **gerar a partir do banco de dados** e clique em **próxima**.
 
     ![Escolhendo o conteúdo do modelo](aspnet-mvc-4-models-and-data-access/_static/image7.png "escolhendo o conteúdo do modelo")
 
@@ -280,7 +280,7 @@ Depois que o modelo é gerado, você modificará o StoreController para fornecer
 <a id="Task_1_-_Populating_Sample_Data"></a>
 #### <a name="task-1---populating-sample-data"></a>Tarefa 1 - preencher dados de exemplo
 
-Nesta tarefa, você preencherá o banco de dados com dados de exemplo quando é inicialmente criado usando o Code First.
+Nesta tarefa, você preencherá o banco de dados com dados de exemplo, quando ele é criado inicialmente usando Code First.
 
 1. Abra o **começar** solução localizado em **origem/o Ex2-CreatingADatabaseCodeFirst/início/** pasta. Caso contrário, você pode continuar usando o **final** solução obtida ao concluir o exercício anterior.
 
@@ -580,7 +580,7 @@ Este apêndice mostram como criar um novo site do Portal de gerenciamento do Win
 1. Vá para o [Portal de gerenciamento do Windows Azure](https://manage.windowsazure.com/) e entre usando as credenciais da Microsoft associadas à sua assinatura.
 
     > [!NOTE]
-    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](http://aka.ms/aspnet-hol-azure).
+    > Com o Windows Azure, você pode hospedar 10 Sites da Web ASP.NET gratuitamente e, em seguida, dimensione conforme seu tráfego aumenta. Você pode se inscrever [aqui](https://aka.ms/aspnet-hol-azure).
 
     ![Faça logon no portal do Windows Azure](aspnet-mvc-4-models-and-data-access/_static/image31.png "faça logon no portal do Windows Azure")
 
