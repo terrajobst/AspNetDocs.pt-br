@@ -2,12 +2,18 @@
 uid: web-forms/overview/data-access/introduction/index
 title: Introdução | Microsoft Docs
 author: rick-anderson
-description: 'Este conjunto introdutório de tutoriais explica como criar uma camada de acesso de dados (DAL), uma camada de lógica de negócios (BLL) e uma aparência consistente em seu site.'
+description: Este conjunto introdutório de tutoriais explica como criar uma camada de acesso de dados (DAL), uma camada de lógica de negócios (BLL) e uma aparência consistente em seu site.
 ms.author: riande
 ms.date: 11/11/2011
 ms.assetid: 74f3a86b-81fa-4d64-820a-304613f72caa
 msc.legacyurl: /web-forms/overview/data-access/introduction
 msc.type: chapter
+ms.openlocfilehash: 7f161727e5ad1dd509e308de939a11da4e061b70
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019523"
 ---
 <a name="introduction"></a>Introdução
 ====================

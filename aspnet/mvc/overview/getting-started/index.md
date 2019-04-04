@@ -8,6 +8,12 @@ ms.date: 08/31/2011
 ms.assetid: d916dbe0-1895-491b-8bb6-93f4594ce757
 msc.legacyurl: /mvc/overview/getting-started
 msc.type: chapter
+ms.openlocfilehash: a2b96388cb7408d3c5fa548d0f43cfb2287661bf
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021753"
 ---
 <a name="aspnet-mvc-getting-started"></a>Guia de Introdução do ASP.NET MVC
 ====================
