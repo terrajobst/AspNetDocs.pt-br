@@ -2,12 +2,18 @@
 uid: web-forms/overview/ajax-control-toolkit/dynamicpopulate/index
 title: DynamicPopulate | Microsoft Docs
 author: rick-anderson
-description: 'Este tutorial mostra como usar o controle de DynamicPopulate, que chama um serviço web e exibe o valor resultante em um controle na página.'
+description: Este tutorial mostra como usar o controle de DynamicPopulate, que chama um serviço web e exibe o valor resultante em um controle na página.
 ms.author: riande
 ms.date: 11/14/2011
 ms.assetid: 68c6e54f-87ed-4768-b140-d0e3e76af841
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate
 msc.type: chapter
+ms.openlocfilehash: a277d0ded0af677e7c1249de07c34521869ad576
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57021703"
 ---
 <a name="dynamicpopulate"></a><span data-ttu-id="34f3c-103">DynamicPopulate</span><span class="sxs-lookup"><span data-stu-id="34f3c-103">DynamicPopulate</span></span>
 ====================

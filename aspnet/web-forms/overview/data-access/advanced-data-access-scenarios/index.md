@@ -2,12 +2,18 @@
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/index
 title: Cenários de acesso de dados avançados | Microsoft Docs
 author: rick-anderson
-description: 'Esses tutoriais abordam como trabalhar com procedimentos armazenados e as colunas computadas, como usar junções com tabelas de banco de dados e como criptografar as informações de conexão de dados...'
+description: Esses tutoriais abordam como trabalhar com procedimentos armazenados e as colunas computadas, como usar junções com tabelas de banco de dados e como criptografar as informações de conexão de dados...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 00d198ed-fddc-4fd3-a86e-3f29c5f707cc
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios
 msc.type: chapter
+ms.openlocfilehash: 6c0abbe94f743a24541a79c6dd4144d8992cd224
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57020583"
 ---
 <a name="advanced-data-access-scenarios"></a><span data-ttu-id="373c1-103">Cenários de acesso de dados avançados</span><span class="sxs-lookup"><span data-stu-id="373c1-103">Advanced Data Access Scenarios</span></span>
 ====================

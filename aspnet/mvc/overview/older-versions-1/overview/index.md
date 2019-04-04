@@ -2,12 +2,18 @@
 uid: mvc/overview/older-versions-1/overview/index
 title: Visão geral | Microsoft Docs
 author: rick-anderson
-description: 'Saiba como criar um aplicativo ASP.NET, como ela difere do Web Forms e MVC é.'
+description: Saiba como criar um aplicativo ASP.NET, como ela difere do Web Forms e MVC é.
 ms.author: riande
 ms.date: 09/28/2011
 ms.assetid: ccca4b85-2f32-4d81-9ae5-a876f84497a7
 msc.legacyurl: /mvc/overview/older-versions-1/overview
 msc.type: chapter
+ms.openlocfilehash: ecec378ce6f50a289d78ee8fcd5c559fb2d4109a
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018703"
 ---
 <a name="overview"></a><span data-ttu-id="6cfe0-103">Visão geral</span><span class="sxs-lookup"><span data-stu-id="6cfe0-103">Overview</span></span>
 ====================

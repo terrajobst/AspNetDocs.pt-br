@@ -2,12 +2,18 @@
 uid: web-api/overview/formats-and-model-binding/index
 title: Serialização e a associação de modelo na API Web ASP.NET | Microsoft Docs
 author: rick-anderson
-description: 'Como a API Web ASP.NET associa mensagens HTTP para modelos de domínio e, em seguida, formata de como trabalhar com a mídia na API da Web.'
+description: Como a API Web ASP.NET associa mensagens HTTP para modelos de domínio e, em seguida, formata de como trabalhar com a mídia na API da Web.
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: 2d520763-3860-4b3f-8b99-ac71fb01cf37
 msc.legacyurl: /web-api/overview/formats-and-model-binding
 msc.type: chapter
+ms.openlocfilehash: fea9b9dcfa9dfbc56a724d2dab03b98a1259e3a4
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019543"
 ---
 <a name="serialization-and-model-binding-in-aspnet-web-api"></a><span data-ttu-id="14b1a-103">Serialização e a associação de modelo na API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="14b1a-103">Serialization and Model Binding in ASP.NET Web API</span></span>
 ====================

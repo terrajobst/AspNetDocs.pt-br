@@ -8,6 +8,12 @@ ms.date: 10/05/2011
 ms.assetid: b715c4ec-6f4b-4f7e-8ee3-b1613477ce61
 msc.legacyurl: /web-forms/overview/older-versions-security/admin
 msc.type: chapter
+ms.openlocfilehash: dde25fe54cf7ba56790979328e7bc8b8a3301226
+ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57019063"
 ---
 <a name="aspnet-35---security-administration"></a><span data-ttu-id="8f1b0-103">ASP.NET 3.5 – Administração de segurança</span><span class="sxs-lookup"><span data-stu-id="8f1b0-103">ASP.NET 3.5 - Security Administration</span></span>
 ====================
