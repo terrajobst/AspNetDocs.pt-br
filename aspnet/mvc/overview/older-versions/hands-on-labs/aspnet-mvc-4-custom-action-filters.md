@@ -144,7 +144,7 @@ Nesta tarefa, você criará uma classe de atributo de filtro personalizado que c
       > Uma das vantagens de usar o NuGet é que você não precisa enviar todas as bibliotecas em seu projeto, reduzindo o tamanho do projeto. Com o NuGet Power Tools, especificando as versões do pacote no arquivo Packages. config, você será capaz de baixar todas as bibliotecas necessárias na primeira vez em que você executar o projeto. É por isso você terá que executar essas etapas depois de abrir uma solução existente neste laboratório.
       > 
       > Para obter mais informações, consulte este artigo: [ http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages ](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-2. Adicionar uma nova classe c# para o **filtros** pasta e nomeie-o *CustomActionFilter.cs*. Essa pasta armazena todos os filtros personalizados.
+2. Adicionar uma nova classe C# para o **filtros** pasta e nomeie-o *CustomActionFilter.cs*. Essa pasta armazena todos os filtros personalizados.
 3. Abra **CustomActionFilter.cs** e adicione uma referência ao **System.Web.Mvc** e **MvcMusicStore.Models** namespaces:
 
     (Código de trecho de código – *filtros de ação personalizada do ASP.NET MVC 4 - Ex1 CustomActionFilterNamespaces*)
@@ -248,7 +248,7 @@ Nesta tarefa, você criará um novo filtro de ação personalizada para injetar 
         > Uma das vantagens de usar o NuGet é que você não precisa enviar todas as bibliotecas em seu projeto, reduzindo o tamanho do projeto. Com o NuGet Power Tools, especificando as versões do pacote no arquivo Packages. config, você será capaz de baixar todas as bibliotecas necessárias na primeira vez em que você executar o projeto. É por isso você terá que executar essas etapas depois de abrir uma solução existente neste laboratório.
         > 
         > Para obter mais informações, consulte este artigo: [ http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages ](http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages).
-2. Adicionar uma nova classe c# para o **filtros** pasta e nomeie-o *MyNewCustomActionFilter.cs*
+2. Adicionar uma nova classe C# para o **filtros** pasta e nomeie-o *MyNewCustomActionFilter.cs*
 3. Abra **MyNewCustomActionFilter.cs** e adicione uma referência ao **System.Web.Mvc** e o **MvcMusicStore.Models** namespace:
 
     (Código de trecho de código – *filtros de ação personalizada do ASP.NET MVC 4 - o Ex2 MyNewCustomActionFilterNamespaces*)
@@ -555,7 +555,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente c#)***
+***Para adicionar um trecho de código usando o teclado (somente C#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -575,7 +575,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.

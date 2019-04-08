@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-cs
-title: Mestre/detalhes usando uma lista com marcadores de registros mestre com um DataList de detalhes (c#) | Microsoft Docs
+title: Mestre/detalhes usando uma lista com marcadores de registros mestre com um DataList de detalhes (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial serão compactados o relatório de duas páginas mestre/detalhes do tutorial anterior em uma única página, mostrando uma lista com marcadores de nomes de categoria em t...
 ms.author: riande

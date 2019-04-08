@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs
-title: Armazenar em cache dados na inicialização do aplicativo (c#) | Microsoft Docs
+title: Armazenar em cache dados na inicialização do aplicativo (C#) | Microsoft Docs
 author: rick-anderson
 description: Em qualquer aplicativo da Web alguns dados serão usados com frequência e alguns dados serão usados com pouca frequência. Podemos melhorar o desempenho do nosso aplicativo b do ASP.NET...
 ms.author: riande

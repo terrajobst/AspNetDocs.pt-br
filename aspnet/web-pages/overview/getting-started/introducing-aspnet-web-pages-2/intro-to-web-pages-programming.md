@@ -24,7 +24,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > O que você aprenderá:
 > 
 > - A sintaxe "Razor" básica que você pode usar para a programação em páginas da Web do ASP.NET.
-> - Alguns básicas c#, que é a linguagem de programação que você usará.
+> - Alguns básicas C#, que é a linguagem de programação que você usará.
 > - Alguns conceitos fundamentais da programação para páginas da Web.
 > - Como instalar pacotes (componentes que contêm código pré-compilado) para usar com seu site.
 > - Como usar *auxiliares* para executar tarefas comuns de programação.
@@ -36,7 +36,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - O `Gravatar` auxiliar.
 
 
-Este tutorial é basicamente um exercício de apresentar a você a sintaxe de programação que você usará para páginas da Web do ASP.NET. Você saberá mais sobre *sintaxe do Razor* e linguagem de programação de código que é escrito em c#. Você tem uma ideia dessa sintaxe no tutorial anterior; Neste tutorial, explicaremos a sintaxe mais.
+Este tutorial é basicamente um exercício de apresentar a você a sintaxe de programação que você usará para páginas da Web do ASP.NET. Você saberá mais sobre *sintaxe do Razor* e linguagem de programação de código que é escrito em C#. Você tem uma ideia dessa sintaxe no tutorial anterior; Neste tutorial, explicaremos a sintaxe mais.
 
 Prometemos que este tutorial envolve mais de programação que você verá um tutorial único e que é o tutorial único que é *apenas* sobre programação. Os tutoriais restantes neste conjunto, você realmente cria páginas que fazem coisas interessantes.
 
@@ -120,11 +120,11 @@ Como você espera de sua experiência no tutorial anterior, nenhum código Razor
 > 
 > **Razor e C#.**
 > 
-> Até agora, dissemos que você está trabalhando com sintaxe do Razor. Isso é verdadeiro, mas não é a história completa. A linguagem de programação real que você está usando é chamada *c#*. C# foi criado pela Microsoft, há uma década e se tornou uma das linguagens de programação principais para a criação de aplicativos do Windows. Todas as regras que você já viu sobre como nomear uma variável e como criar instruções e assim por diante são, na verdade, todas as regras da linguagem c#.
+> Até agora, dissemos que você está trabalhando com sintaxe do Razor. Isso é verdadeiro, mas não é a história completa. A linguagem de programação real que você está usando é chamada *C#*. C# foi criado pela Microsoft, há uma década e se tornou uma das linguagens de programação principais para a criação de aplicativos do Windows. Todas as regras que você já viu sobre como nomear uma variável e como criar instruções e assim por diante são, na verdade, todas as regras da linguagem C#.
 > 
 > Razor se refere mais especificamente a um pequeno conjunto de convenções para como inserir esse código em uma página. Por exemplo, a convenção de usar para marcar o código na página e usando @ {} para inserir um bloco de código é o aspecto de uma página de Razor. Os auxiliares também são considerados parte do Razor. Sintaxe do Razor é usado em mais locais do que apenas em páginas da Web ASP.NET. (Por exemplo, ele é usado nos modos de exibição de MVC do ASP.NET.)
 > 
-> Mencionamos isso porque se você olhar para obter informações sobre programação páginas da Web ASP.NET, você encontrará muitas referências ao Razor. No entanto, muitos essas referências não se aplicam ao que você está fazendo e, portanto, pode ser confuso. E, na verdade, muitas das suas dúvidas sobre a programação realmente serão sobre o trabalho com c# ou trabalhar com o ASP.NET. Portanto, se você examinar especificamente para obter informações sobre o Razor, talvez não localize as respostas que precisa.
+> Mencionamos isso porque se você olhar para obter informações sobre programação páginas da Web ASP.NET, você encontrará muitas referências ao Razor. No entanto, muitos essas referências não se aplicam ao que você está fazendo e, portanto, pode ser confuso. E, na verdade, muitas das suas dúvidas sobre a programação realmente serão sobre o trabalho com C# ou trabalhar com o ASP.NET. Portanto, se você examinar especificamente para obter informações sobre o Razor, talvez não localize as respostas que precisa.
 
 
 ## <a name="adding-some-conditional-logic"></a>Adicionar alguma lógica condicional
@@ -230,7 +230,7 @@ Há um truque aqui, como você pode ver. Como o nome diz, a cadeia de caracteres
 > 
 > **Tipos de dados e métodos As()**
 > 
-> Já dissemos apenas até o momento que, quando você cria uma variável, você use o var de palavra-chave. Isso não é a história inteira, no entanto. Para manipular valores — para adicionar números, ou concatenar cadeias de caracteres, ou comparar datas ou de teste para verdadeiro/falso — c# tem que trabalhar com uma representação interna apropriada do valor. C# pode *geralmente* descobrir o que essa representação deve ser (ou seja, o que *tipo* os dados são) com base no que você está fazendo com os valores. Agora em seguida, no entanto, ele não pode fazer isso. Caso contrário, você precisa ajudar explicitamente indicando como c# devem representar os dados. O método AsBool faz isso — ele diz ao c# que um valor de cadeia de caracteres "true" ou "false" deve ser tratado como um valor booliano. Existem métodos semelhantes para representar cadeias de caracteres como outros tipos Além disso, como AsInt (trate como um número inteiro), AsDateTime (trate como uma data/hora), AsFloat (trate como um número de ponto flutuante) e assim por diante. Quando você usá-los como métodos (), se o c# não pode representar o valor de cadeia de caracteres conforme solicitado, você verá um erro.
+> Já dissemos apenas até o momento que, quando você cria uma variável, você use o var de palavra-chave. Isso não é a história inteira, no entanto. Para manipular valores — para adicionar números, ou concatenar cadeias de caracteres, ou comparar datas ou de teste para verdadeiro/falso — C# tem que trabalhar com uma representação interna apropriada do valor. C# pode *geralmente* descobrir o que essa representação deve ser (ou seja, o que *tipo* os dados são) com base no que você está fazendo com os valores. Agora em seguida, no entanto, ele não pode fazer isso. Caso contrário, você precisa ajudar explicitamente indicando como C# devem representar os dados. O método AsBool faz isso — ele diz ao C# que um valor de cadeia de caracteres "true" ou "false" deve ser tratado como um valor booliano. Existem métodos semelhantes para representar cadeias de caracteres como outros tipos Além disso, como AsInt (trate como um número inteiro), AsDateTime (trate como uma data/hora), AsFloat (trate como um número de ponto flutuante) e assim por diante. Quando você usá-los como métodos (), se o C# não pode representar o valor de cadeia de caracteres conforme solicitado, você verá um erro.
 
 
 Na marcação da página, remova ou comente a esse elemento (aqui é mostrado comentado):
@@ -336,7 +336,7 @@ Esse código produz algo parecido com o seguinte resultado (a imagem padrão ale
 
 ## <a name="coming-up-next"></a>Próximo
 
-Para manter esse tutorial curto, tivemos que se concentrar em apenas algumas noções básicas. Naturalmente, há uma *muito* mais Razor e c#. Você aprenderá mais ao percorrer esses tutoriais. Se você estiver interessado em aprender mais sobre os aspectos de programação do Razor e C# no momento, você pode ler uma introdução mais abrangente aqui: [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890).
+Para manter esse tutorial curto, tivemos que se concentrar em apenas algumas noções básicas. Naturalmente, há uma *muito* mais Razor e C#. Você aprenderá mais ao percorrer esses tutoriais. Se você estiver interessado em aprender mais sobre os aspectos de programação do Razor e C# no momento, você pode ler uma introdução mais abrangente aqui: [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890).
 
 O próximo tutorial apresenta a você a trabalhar com um banco de dados. Neste tutorial, você começará criando o aplicativo de exemplo que permite que você Liste seus filmes favoritos.
 

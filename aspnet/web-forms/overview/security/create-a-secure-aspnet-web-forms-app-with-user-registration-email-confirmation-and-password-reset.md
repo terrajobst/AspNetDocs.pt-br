@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
-title: Criar um aplicativo Web Forms do ASP.NET seguro com o registro de usuário, email de confirmação e redefinição de senha (c#) | Microsoft Docs
+title: Criar um aplicativo Web Forms do ASP.NET seguro com o registro de usuário, email de confirmação e redefinição de senha (C#) | Microsoft Docs
 author: Erikre
 description: Este tutorial mostra como criar um aplicativo de Web Forms do ASP.NET com o registro do usuário, confirmação por email e redefinição de senha usando o membro de identidade do ASP.NET...
 ms.author: riande

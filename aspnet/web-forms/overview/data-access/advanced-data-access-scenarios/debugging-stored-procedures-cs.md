@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-cs
-title: Depuração de procedimentos armazenados (c#) | Microsoft Docs
+title: Depuração de procedimentos armazenados (C#) | Microsoft Docs
 author: rick-anderson
 description: As edições do Visual Studio Professional e Team System permitem que você defina pontos de interrupção e etapa para procedimentos armazenados no SQL Server, facilitando a depuração armazenados...
 ms.author: riande
@@ -36,7 +36,7 @@ Neste tutorial vamos examinar intervir procedimentos armazenados do Gerenciador 
 
 ## <a name="sql-server-debugging-concepts"></a>Conceitos de depuração do SQL Server
 
-Microsoft SQL Server 2005 foi projetado para fornecer integração com o [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), que é o tempo de execução usado por todos os assemblies do .NET. Consequentemente, o SQL Server 2005 dá suporte a objetos de banco de dados gerenciado. Ou seja, você pode criar objetos de banco de dados, como procedimentos armazenados e funções definidas pelo usuário (UDFs) como métodos em uma classe c#. Isso permite que esses procedimentos armazenados e UDFs para utilizar a funcionalidade no .NET Framework e de suas próprias classes personalizadas. É claro, o SQL Server 2005 também fornece suporte para objetos de banco de dados do T-SQL.
+Microsoft SQL Server 2005 foi projetado para fornecer integração com o [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), que é o tempo de execução usado por todos os assemblies do .NET. Consequentemente, o SQL Server 2005 dá suporte a objetos de banco de dados gerenciado. Ou seja, você pode criar objetos de banco de dados, como procedimentos armazenados e funções definidas pelo usuário (UDFs) como métodos em uma classe C#. Isso permite que esses procedimentos armazenados e UDFs para utilizar a funcionalidade no .NET Framework e de suas próprias classes personalizadas. É claro, o SQL Server 2005 também fornece suporte para objetos de banco de dados do T-SQL.
 
 SQL Server 2005 oferece suporte à depuração de T-SQL e objetos de banco de dados gerenciado. No entanto, esses objetos podem ser depurados somente por meio das edições do Visual Studio 2005 Professional e sistemas de equipe. Neste tutorial, examinaremos depuração objetos de banco de dados do T-SQL. Tutorial subsequente examina os objetos de banco de dados gerenciado de depuração.
 

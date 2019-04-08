@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-cs
-title: Criar e gerenciar funções (c#) | Microsoft Docs
+title: Criar e gerenciar funções (C#) | Microsoft Docs
 author: rick-anderson
 description: Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, vamos criar páginas da web para criar e excluir funções.
 ms.author: riande

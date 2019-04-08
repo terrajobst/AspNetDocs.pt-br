@@ -19,7 +19,7 @@ ms.locfileid: "57037663"
 ====================
 por [Microsoft](https://github.com/microsoft)
 
-Este vídeo expande o tópico de procedimentos armazenados que foi introduzida atrás de várias lições. Neste vídeo, vamos explicar a sintaxe básica para criar e atualizar procedimentos armazenados, usando os parâmetros de entrada e saídos, valores de retorno, declarando variáveis e adicionando outros elementos de programação T-SQL para você procedimentos armazenados, como executar procedimentos armazenados Na janela de consulta e, finalmente, a sintaxe do Visual Basic e c# necessário para utilizar procedimentos armazenados em seus próprios aplicativos.
+Este vídeo expande o tópico de procedimentos armazenados que foi introduzida atrás de várias lições. Neste vídeo, vamos explicar a sintaxe básica para criar e atualizar procedimentos armazenados, usando os parâmetros de entrada e saídos, valores de retorno, declarando variáveis e adicionando outros elementos de programação T-SQL para você procedimentos armazenados, como executar procedimentos armazenados Na janela de consulta e, finalmente, a sintaxe do Visual Basic e C# necessário para utilizar procedimentos armazenados em seus próprios aplicativos.
 
 [&#9654;Assista ao vídeo (42 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-and-using-stored-procedures)
 

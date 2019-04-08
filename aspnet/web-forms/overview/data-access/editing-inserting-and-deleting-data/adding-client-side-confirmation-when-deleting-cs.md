@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-cs
-title: Adicionando confirmação do lado do cliente ao excluir (c#) | Microsoft Docs
+title: Adicionando confirmação do lado do cliente ao excluir (C#) | Microsoft Docs
 author: rick-anderson
 description: As interfaces que criamos até agora, um usuário pode excluir acidentalmente dados clicando no botão Excluir quando pretendiam clicar no botão Editar. Nesse t...
 ms.author: riande

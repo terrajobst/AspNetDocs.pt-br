@@ -236,7 +236,7 @@ A solução de tabela acima nos dá um layout de grade de nossos dados jantar �
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample10.aspx)]
 
-Estamos usando a palavra-chave de "var" dentro da instrução foreach acima conforme executamos um loop sobre cada jantar em nosso modelo. Aqueles familiarizados com c# 3.0 podem pensar que, usar "var" significa que o objeto de jantar é associação tardia. Em vez disso, significa que o compilador está usando inferência de tipo em relação a propriedade "Model" com rigidez de tipos (que é do tipo "IEnumerable&lt;Dinner&gt;") e compilar a variável local "Jantar" como um tipo de jantar – o que significa que podemos obter completos IntelliSense e procurando dentro de blocos de código de tempo de compilação:
+Estamos usando a palavra-chave de "var" dentro da instrução foreach acima conforme executamos um loop sobre cada jantar em nosso modelo. Aqueles familiarizados com C# 3.0 podem pensar que, usar "var" significa que o objeto de jantar é associação tardia. Em vez disso, significa que o compilador está usando inferência de tipo em relação a propriedade "Model" com rigidez de tipos (que é do tipo "IEnumerable&lt;Dinner&gt;") e compilar a variável local "Jantar" como um tipo de jantar – o que significa que podemos obter completos IntelliSense e procurando dentro de blocos de código de tempo de compilação:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image21.png)
 

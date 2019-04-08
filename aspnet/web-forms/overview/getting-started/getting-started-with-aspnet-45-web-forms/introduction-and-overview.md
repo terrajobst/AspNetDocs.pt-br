@@ -18,7 +18,7 @@ ms.locfileid: "58425711"
 <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introdução ao ASP.NET 4.5 do Web Forms e Visual Studio 2017
 ====================
 
-[Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Baixe o projeto de exemplo do Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 Esta série de tutoriais mostra como criar um aplicativo de Web Forms do ASP.NET com o ASP.NET 4.5 e do Microsoft Visual Studio 2017. 
 
@@ -39,7 +39,7 @@ Você deve ter algum conhecimento nas seguintes áreas:
 
 Para examinar essas áreas, considere a estudar o conteúdo a seguir:
 
-- [Introdução ao Visual c#](https://msdn.microsoft.com/library/a72418yk.aspx)
+- [Introdução ao Visual C#](https://msdn.microsoft.com/library/a72418yk.aspx)
 - [Web Development](https://msdn.microsoft.com/beginner/bb308760.aspx), [HTML, CSS, JavaScript, SQL, PHP, JQuery](http://w3schools.com/)
 - [Banco de dados relacional](http://en.wikipedia.org/wiki/Relational_database)
 - [Arquitetura de várias camadas](http://en.wikipedia.org/wiki/Multitier_architecture)
@@ -160,7 +160,7 @@ Depois de instalar os pré-requisitos, você está pronto para começar a criar 
 
  Você pode baixar o aplicativo de exemplo concluído na qualquer momento do site de exemplos do MSDN:
 
-[Introdução ao ASP.NET 4.5 do Web Forms e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (c#) 
+[Introdução ao ASP.NET 4.5 do Web Forms e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (C#) 
 
  Este download tem os seguintes itens:
 
@@ -171,10 +171,10 @@ O download é um *. zip* arquivo. Para ver o projeto completo que cria esta sér
 
 <strong>C:\Users&#92;</strong><strong><em>&lt;username&gt;</em></strong><strong>\source\repos</strong>
 
-Renomeie o ***c#*** pasta a ser ***WingtipToys***.
+Renomeie o ***C#*** pasta a ser ***WingtipToys***.
 
 > [!NOTE]
-> Se você já tiver uma pasta chamada *WingtipToys* na sua pasta de projetos, renomeie temporariamente essa pasta existente antes de renomear o *c#* pasta a ser *WingtipToys*.
+> Se você já tiver uma pasta chamada *WingtipToys* na sua pasta de projetos, renomeie temporariamente essa pasta existente antes de renomear o *C#* pasta a ser *WingtipToys*.
 
 Para executar o projeto concluído, abra o *WingtipToys* pasta e clique duas vezes o *WingtipToys.sln* arquivo. Visual Studio 2017 abre o projeto. Em seguida, clique com botão direito do *default. aspx* arquivo no **Gerenciador de soluções** e selecione **exibir no navegador**.
 

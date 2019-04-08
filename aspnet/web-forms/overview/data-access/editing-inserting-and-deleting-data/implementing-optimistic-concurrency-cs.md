@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs
-title: Implementando a simultaneidade otimista (c#) | Microsoft Docs
+title: Implementando a simultaneidade otimista (C#) | Microsoft Docs
 author: rick-anderson
 description: Para um aplicativo web que permite aos usuários editarem dados, há o risco de que dois usuários podem estar editando os mesmos dados ao mesmo tempo. Nesse tutori...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
-title: Uso de um ConfirmButton em um repetidor (c#) | Microsoft Docs
+title: Uso de um ConfirmButton em um repetidor (C#) | Microsoft Docs
 author: wenz
 description: O extensor ConfirmButton no AJAX Control Toolkit cria um Sim/não pop-up quando o usuário clica em um botão (incluindo um controle LinkButton). Somente se Sim for...
 ms.author: riande

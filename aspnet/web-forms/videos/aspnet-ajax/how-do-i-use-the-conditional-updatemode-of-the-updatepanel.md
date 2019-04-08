@@ -19,7 +19,7 @@ ms.locfileid: "58423826"
 ====================
 por [Joe Stagner](https://github.com/JoeStagner)
 
-O UpdatePanel do AJAX ASP.NET inclui uma propriedade UpdateMode que pode ser definida como 'Always' ou 'Condicional'. O padrão é sempre, caso em que o UpdatePanel sempre atualizar seu conteúdo durante um postback assíncrono. Neste vídeo, podemos aprender como podemos definir o UpdateMode como Conditional, nesse caso o UpdatePanel só atualizará seu conteúdo ao nosso código do lado do servidor chama seu método de atualização. Isso permite que você use a lógica condicional em seu código c# ou Visual Basic para determinar se o UpdatePanel será atualizar seu conteúdo durante o postback assíncrono atual.
+O UpdatePanel do AJAX ASP.NET inclui uma propriedade UpdateMode que pode ser definida como 'Always' ou 'Condicional'. O padrão é sempre, caso em que o UpdatePanel sempre atualizar seu conteúdo durante um postback assíncrono. Neste vídeo, podemos aprender como podemos definir o UpdateMode como Conditional, nesse caso o UpdatePanel só atualizará seu conteúdo ao nosso código do lado do servidor chama seu método de atualização. Isso permite que você use a lógica condicional em seu código C# ou Visual Basic para determinar se o UpdatePanel será atualizar seu conteúdo durante o postback assíncrono atual.
 
 [&#9654;Assista ao vídeo (13 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-conditional-updatemode-of-the-updatepanel)
 

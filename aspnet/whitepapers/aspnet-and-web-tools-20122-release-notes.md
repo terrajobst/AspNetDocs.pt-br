@@ -85,7 +85,7 @@ Esta seção descreve os recursos que foram introduzidos na versão do ASP.NET e
     - Suporte para realce de sintaxe para CoffeeScript, Mustache, Handlebars e JsRender.
     - O editor de HTML fornece o Intellisense para associações do Knockout.
     - Suportam a menos de edição e o compilador para habilitar a criação de CSS dinâmico usando o menor.
-    - Colar JSON como uma classe do .NET. Usar este comando Colar especial para colar JSON em um c# ou VB.NET arquivo de código e o Visual Studio gerará automaticamente inferidas do JSON de classes do .NET.
+    - Colar JSON como uma classe do .NET. Usar este comando Colar especial para colar JSON em um C# ou VB.NET arquivo de código e o Visual Studio gerará automaticamente inferidas do JSON de classes do .NET.
 - Suporte do emulador móvel adiciona ganchos de extensibilidade para que os emuladores de terceiros podem ser instalados como um VSIX. Os emuladores instalados serão exibida na lista suspensa F5, para que os desenvolvedores podem visualizar seus sites em uma variedade de dispositivos móveis. Leia mais sobre esse recurso na entrada no blog de Hanselman [a nova integração BrowserStack com o Visual Studio](http://www.hanselman.com/blog/CrossBrowserDebuggingIntegratedIntoVisualStudioWithBrowserStack.aspx).
 
 <a id="_Web_Publishing"></a>

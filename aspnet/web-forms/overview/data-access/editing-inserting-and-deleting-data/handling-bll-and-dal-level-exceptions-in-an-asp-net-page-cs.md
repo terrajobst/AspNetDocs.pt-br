@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs
-title: Tratamento de exceções de nível BLL e DAL em uma página ASP.NET (c#) | Microsoft Docs
+title: Tratamento de exceções de nível BLL e DAL em uma página ASP.NET (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial, veremos como exibir uma mensagem de erro informativa e amigável se uma exceção ocorrer durante uma inserção, atualização ou operação de exclusão de...
 ms.author: riande

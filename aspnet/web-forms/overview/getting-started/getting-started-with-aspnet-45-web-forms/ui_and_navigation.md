@@ -19,9 +19,9 @@ ms.locfileid: "57060923"
 ====================
 by [Erik Reitan](https://github.com/Erikre)
 
-[Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Baixe o projeto de exemplo do Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
+> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
 
 
 Neste tutorial, você modificará a interface do usuário do aplicativo da Web padrão para dar suporte a recursos do aplicativo Wingtip Toys store frontal. Além disso, você adicionará simples e dados associados a navegação. Este tutorial se baseia no tutorial anterior, "Criar a camada de acesso de dados" e faz parte da série de tutoriais de Wingtip Toys.
@@ -65,7 +65,7 @@ Web Forms do ASP.NET normalmente contêm diretivas que permitem que você especi
 
 A diretiva mais comumente usada é a `@Page` diretiva, que permite que você especificar várias opções de configuração para a página, incluindo o seguinte:
 
-1. O servidor de linguagem de código na página, como c# de programação.
+1. O servidor de linguagem de código na página, como C# de programação.
 2. Se a página é uma página com código de servidor diretamente na página, que é chamado de uma página de arquivo único, ou se é uma página com o código em um arquivo de classe separada, que é chamado de uma página code-behind.
 3. Se a página tem uma página mestra associada e, portanto, deve ser tratada como uma página de conteúdo.
 4. Opções de rastreamento e depuração.
@@ -87,7 +87,7 @@ Quando a página é executada, o ASP.NET identifica os controles de servidor e e
 
 ### <a name="server-code"></a>Código do servidor
 
-A maioria dos aplicativos de Web Forms do ASP.NET incluem o código que é executado no servidor quando a página é processada. Conforme mencionado acima, o código de servidor pode ser usado para fazer uma variedade de coisas, como adicionar dados a um controle ListView. ASP.NET oferece suporte a várias linguagens para ser executado no servidor, incluindo c#, Visual Basic, j# e outras pessoas.
+A maioria dos aplicativos de Web Forms do ASP.NET incluem o código que é executado no servidor quando a página é processada. Conforme mencionado acima, o código de servidor pode ser usado para fazer uma variedade de coisas, como adicionar dados a um controle ListView. ASP.NET oferece suporte a várias linguagens para ser executado no servidor, incluindo C#, Visual Basic, j# e outras pessoas.
 
 ASP.NET oferece suporte a dois modelos para escrever código de servidor para uma página da Web. No modelo de arquivo único, o código para a página está em um elemento de script onde a marca de abertura inclui o `runat="server"` atributo. Como alternativa, você pode criar o código para a página em um arquivo de classe separada, que é conhecido como o modelo code-behind. Nesse caso, a página de Web Forms do ASP.NET geralmente não contém nenhum código de servidor. Em vez disso, o `@Page` diretiva inclui informações que vincula-se a *. aspx* página com seu arquivo code-behind associado.
 
@@ -121,7 +121,7 @@ A imagem do logotipo mencionada acima, juntamente com todas as imagens de produt
 
 #### <a name="download-from-msdn-samples-site"></a>Baixe do site de exemplos do MSDN:
 
-[Introdução ao ASP.NET 4.5 do Web Forms e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (c#)
+[Introdução ao ASP.NET 4.5 do Web Forms e Visual Studio 2013 - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) (C#)
 
 O download inclui os recursos na *WingtipToys-ativos* pasta que são usados para criar o aplicativo de exemplo.
 
@@ -145,7 +145,7 @@ Antes de adicionar a navegação para o aplicativo Web, adicionará duas novas p
 
 1. Na **Gerenciador de soluções**, clique com botão direito **WingtipToys**, clique em **Add**e, em seguida, clique em **Novo Item**.   
  A caixa de diálogo **Adicionar Novo Item** é exibida.
-2. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, selecione **Web Form com página mestra** do meio lista e nomeie-o *ProductList. aspx*. 
+2. Selecione o **Visual C#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, selecione **Web Form com página mestra** do meio lista e nomeie-o *ProductList. aspx*. 
 
     ![Interface do usuário e navegação - diálogo Adicionar Novo Item](ui_and_navigation/_static/image3.png)
 3. Selecione **Master** anexar a página mestra recém-criado *. aspx* página. 

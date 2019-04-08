@@ -25,7 +25,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Nesta seção você irá modificar o `HelloWorldController` classe para usar a exibição de arquivos de modelo para corretamente encapsulam o processo de geração de respostas HTML para um cliente.
 
-Você criará um arquivo de modelo de exibição usando o [mecanismo de exibição Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introduzido com o ASP.NET MVC 3. Modelos de exibição baseado no Razor têm uma *. cshtml* extensão de arquivo e fornecem uma maneira elegante de criar o HTML de saída usando a linguagem c#. Razor minimiza o número de caracteres e pressionamentos de teclas necessários ao escrever um modelo de exibição e permite um rápido, fluido fluxo de trabalho de codificação.
+Você criará um arquivo de modelo de exibição usando o [mecanismo de exibição Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introduzido com o ASP.NET MVC 3. Modelos de exibição baseado no Razor têm uma *. cshtml* extensão de arquivo e fornecem uma maneira elegante de criar o HTML de saída usando a linguagem C#. Razor minimiza o número de caracteres e pressionamentos de teclas necessários ao escrever um modelo de exibição e permite um rápido, fluido fluxo de trabalho de codificação.
 
 Atualmente, o método `Index` retorna uma cadeia de caracteres com uma mensagem que é embutida em código na classe do controlador. Alterar o `Index` método para retornar um `View` do objeto, conforme mostrado no código a seguir:
 

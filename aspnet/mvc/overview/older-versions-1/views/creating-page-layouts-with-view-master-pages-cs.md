@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/creating-page-layouts-with-view-master-pages-cs
-title: Criar Layouts de página com exibir páginas mestras (c#) | Microsoft Docs
+title: Criar Layouts de página com exibir páginas mestras (C#) | Microsoft Docs
 author: microsoft
 description: Neste tutorial, você aprenderá como criar um layout de página comuns para várias páginas em seu aplicativo, tirando proveito da exibição de páginas mestras. Você pode usar um...
 ms.author: riande

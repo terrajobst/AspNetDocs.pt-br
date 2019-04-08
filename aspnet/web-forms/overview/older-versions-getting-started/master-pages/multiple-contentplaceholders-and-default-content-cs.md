@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-cs
-title: Vários ContentPlaceHolders e conteúdo padrão (c#) | Microsoft Docs
+title: Vários ContentPlaceHolders e conteúdo padrão (C#) | Microsoft Docs
 author: rick-anderson
 description: Examina como adicionar vários espaços reservados conteúdo a uma página mestra, bem como especificar o conteúdo padrão em que o conteúdo de espaços reservados.
 ms.author: riande

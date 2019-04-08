@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-cs
-title: Desabilitar ações durante a animação (c#) | Microsoft Docs
+title: Desabilitar ações durante a animação (C#) | Microsoft Docs
 author: wenz
 description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Ele também dá suporte à ação...
 ms.author: riande

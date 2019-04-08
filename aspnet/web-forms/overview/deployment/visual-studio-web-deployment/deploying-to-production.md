@@ -247,7 +247,7 @@ O processo para criar um aplicativo web de produção e implantação em produç
 
 ### <a name="edit-the-pubxml-file-to-exclude-robotstxt"></a>Edite o arquivo. pubxml para excluir robots. txt
 
-Os arquivos são nomeados de perfil de publicação &lt;profilename&gt;*. pubxml* e estão localizados na *PublishProfiles* pasta. O *PublishProfiles* pasta está sob o *propriedades* pasta em um aplicativo web c# do projeto, no *meu projeto* pasta em um projeto de aplicativo da web VB ou em um de *App\_dados* pasta em um projeto de aplicativo web. Cada *. pubxml* arquivo contém as configurações que se aplicam a um perfil de publicação. Os valores inseridos no Assistente de publicação na Web são armazenados nesses arquivos, e você pode editá-los para criar ou alterar as configurações que não estão disponíveis na IU do Visual Studio.
+Os arquivos são nomeados de perfil de publicação &lt;profilename&gt;*. pubxml* e estão localizados na *PublishProfiles* pasta. O *PublishProfiles* pasta está sob o *propriedades* pasta em um aplicativo web C# do projeto, no *meu projeto* pasta em um projeto de aplicativo da web VB ou em um de *App\_dados* pasta em um projeto de aplicativo web. Cada *. pubxml* arquivo contém as configurações que se aplicam a um perfil de publicação. Os valores inseridos no Assistente de publicação na Web são armazenados nesses arquivos, e você pode editá-los para criar ou alterar as configurações que não estão disponíveis na IU do Visual Studio.
 
 Por padrão, *. pubxml* arquivos são incluídos no projeto quando você criar um perfil de publicação, mas você pode excluí-los do projeto e Visual Studio ainda irá usá-los. O Visual Studio procura *PublishProfiles* pasta *. pubxml* arquivos, independentemente se eles são incluídos no projeto.
 

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
-title: Adicionando conteúdo dinâmico a uma página em cache (c#) | Microsoft Docs
+title: Adicionando conteúdo dinâmico a uma página em cache (C#) | Microsoft Docs
 author: microsoft
 description: Saiba como a combinação de conteúdo dinâmico e armazenados em cache na mesma página. Substituição do pós-cache de permite que você exiba o conteúdo dinâmico, como faixa anúncios s...
 ms.author: riande

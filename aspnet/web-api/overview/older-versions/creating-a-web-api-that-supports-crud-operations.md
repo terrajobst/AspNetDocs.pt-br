@@ -101,7 +101,7 @@ No Gerenciador de soluções, clique com botão direito do **modelos** pasta. Se
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image4.png)
 
-No **modelos** painel, selecione **modelos instalados** e expanda o nó do c#. Em c#, selecione **código**. Na lista de modelos de código, selecione **Interface**. Nomeie a interface &quot;IProductRepository&quot;.
+No **modelos** painel, selecione **modelos instalados** e expanda o nó do C#. Em C#, selecione **código**. Na lista de modelos de código, selecione **Interface**. Nomeie a interface &quot;IProductRepository&quot;.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image5.png)
 

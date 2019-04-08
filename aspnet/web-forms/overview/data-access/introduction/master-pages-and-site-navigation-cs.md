@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/introduction/master-pages-and-site-navigation-cs
-title: Páginas mestras e navegação no Site (c#) | Microsoft Docs
+title: Páginas mestras e navegação no Site (C#) | Microsoft Docs
 author: rick-anderson
 description: Uma característica comum de sites amigáveis é que eles têm um esquema de layout e a navegação de página consistente, todo o site. Este tutorial examina como y...
 ms.author: riande

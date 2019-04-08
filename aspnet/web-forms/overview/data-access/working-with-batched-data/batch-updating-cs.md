@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-updating-cs
-title: Lote de atualização (c#) | Microsoft Docs
+title: Lote de atualização (C#) | Microsoft Docs
 author: rick-anderson
 description: Saiba como atualizar vários registros de banco de dados em uma única operação. Na camada de Interface do usuário, criamos um GridView onde cada linha é editável. Nos dados...
 ms.author: riande

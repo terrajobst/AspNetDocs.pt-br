@@ -39,7 +39,7 @@ Visual Studio é um IDE ou ambiente de desenvolvimento integrado. Assim como usa
 
 ## <a name="create-your-first-app"></a>Criar seu primeiro aplicativo
 
-Sobre o **página inicial**, selecione **novo projeto**. No **novo projeto** caixa de diálogo, selecione o **Visual c#** categoria à esquerda, em seguida, **Web**e, em seguida, selecione o **ASP.NET Web Application (.NET Framework)**  modelo de projeto. Nomeie o projeto "como MvcMovie" e, em seguida, escolha **Okey**.
+Sobre o **página inicial**, selecione **novo projeto**. No **novo projeto** caixa de diálogo, selecione o **Visual C#** categoria à esquerda, em seguida, **Web**e, em seguida, selecione o **ASP.NET Web Application (.NET Framework)**  modelo de projeto. Nomeie o projeto "como MvcMovie" e, em seguida, escolha **Okey**.
 
 ![](getting-started/_static/image2.png)
 

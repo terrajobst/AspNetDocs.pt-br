@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/aspnet-mvc-controllers-overview-cs
-title: Visão geral do controlador ASP.NET MVC (c#) | Microsoft Docs
+title: Visão geral do controlador ASP.NET MVC (C#) | Microsoft Docs
 author: StephenWalther
 description: Neste tutorial, Stephen Walther apresenta controladores do ASP.NET MVC. Você aprenderá a criar novos controladores e retornar tipos diferentes de res de ação...
 ms.author: riande
@@ -38,7 +38,7 @@ Listagem 1 contém um controlador simples chamado ProductController.
 
 [!code-csharp[Main](aspnet-mvc-controllers-overview-cs/samples/sample1.cs)]
 
-Como você pode ver na listagem 1, um controlador é apenas uma classe (uma classe Visual Basic .NET ou c#). Um controlador é uma classe que deriva da classe Controller base. Como um controlador herda dessa classe base, um controlador herda os vários métodos úteis gratuitamente (abordaremos esses métodos em instantes).
+Como você pode ver na listagem 1, um controlador é apenas uma classe (uma classe Visual Basic .NET ou C#). Um controlador é uma classe que deriva da classe Controller base. Como um controlador herda dessa classe base, um controlador herda os vários métodos úteis gratuitamente (abordaremos esses métodos em instantes).
 
 ## <a name="understanding-controller-actions"></a>Noções básicas sobre ações do controlador
 
@@ -48,7 +48,7 @@ Um controlador expõe as ações do controlador. Uma ação é um método em um 
 
 Nesse caso, o método Index () é chamado na classe ProductController. O método Index () é um exemplo de uma ação do controlador.
 
-Uma ação do controlador deve ser um método público de uma classe de controlador. Métodos c#, por padrão, são métodos privados. Perceba que qualquer método público que você adicionar a uma classe de controlador é exposto como uma ação do controlador automaticamente (você deve ter cuidado isso vez que uma ação do controlador pode ser invocada por qualquer pessoa no universo simplesmente digitando a URL correta na barra de endereços do navegador).
+Uma ação do controlador deve ser um método público de uma classe de controlador. Métodos C#, por padrão, são métodos privados. Perceba que qualquer método público que você adicionar a uma classe de controlador é exposto como uma ação do controlador automaticamente (você deve ter cuidado isso vez que uma ação do controlador pode ser invocada por qualquer pessoa no universo simplesmente digitando a URL correta na barra de endereços do navegador).
 
 Há alguns requisitos adicionais que devem ser atendidos por uma ação do controlador. Um método usado como uma ação de controlador não pode ser sobrecarregado. Além disso, uma ação de controlador não pode ser um método estático. Além disso, você pode usar qualquer método como uma ação do controlador.
 

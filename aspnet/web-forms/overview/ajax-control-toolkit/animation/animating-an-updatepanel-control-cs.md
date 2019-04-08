@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/animating-an-updatepanel-control-cs
-title: Animar um controle UpdatePanel (c#) | Microsoft Docs
+title: Animar um controle UpdatePanel (C#) | Microsoft Docs
 author: wenz
 description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Para o conteúdo de um...
 ms.author: riande

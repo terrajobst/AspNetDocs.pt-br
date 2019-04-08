@@ -44,7 +44,7 @@ O LINQ to SQL fornece uma maneira fácil para mapear tabelas de banco de dados p
 
 O LINQ to SQL permite evitar ter que construir manualmente instruções SQL para recuperar e atualizar o jantar e RSVP objetos com o banco de dados. Em vez disso, vamos definir as classes de Dinner e RSVP, como eles são mapeados para/do banco de dados e as relações entre eles. O LINQ to SQL, em seguida, será leva o cuidado de gerar a lógica de execução de SQL apropriada para usar em tempo de execução quando podemos interagir e usá-los.
 
-Podemos usar o suporte de linguagem LINQ em VB e c# para escrever consultas expressivas que recuperam o jantar e RSVP objetos do banco de dados. Isso minimiza a quantidade de código de dados, precisamos escrever, e nos permite criar aplicativos realmente limpas.
+Podemos usar o suporte de linguagem LINQ em VB e C# para escrever consultas expressivas que recuperam o jantar e RSVP objetos do banco de dados. Isso minimiza a quantidade de código de dados, precisamos escrever, e nos permite criar aplicativos realmente limpas.
 
 ### <a name="adding-linq-to-sql-classes-to-our-project"></a>Adicionando Classes LINQ to SQL ao nosso projeto
 
@@ -92,7 +92,7 @@ Se você não gostar de como o designer tem modelada ou chamada de uma associaç
 
 Visual Studio criará automaticamente as classes do .NET que representam os modelos e as relações de banco de dados definidas usando o designer do LINQ to SQL. Uma classe LINQ to SQL DataContext também é gerado para cada arquivo LINQ to SQL designer adicionado à solução. Como nomeamos o nosso LINQ ao item de classe SQL "NerdDinner", a classe DataContext criada será chamada "NerdDinnerDataContext". Essa classe NerdDinnerDataContext é a principal maneira em que podemos irá interagir com o banco de dados.
 
-Nossa classe NerdDinnerDataContext expõe duas propriedades - "Jantares" e "RSVPs -" que representam as duas tabelas que são modeladas no banco de dados. Podemos usar c# para escrever consultas LINQ em relação a essas propriedades para consulta e recuperar objetos de jantar e RSVP do banco de dados.
+Nossa classe NerdDinnerDataContext expõe duas propriedades - "Jantares" e "RSVPs -" que representam as duas tabelas que são modeladas no banco de dados. Podemos usar C# para escrever consultas LINQ em relação a essas propriedades para consulta e recuperar objetos de jantar e RSVP do banco de dados.
 
 O código a seguir demonstra como instanciar um objeto NerdDinnerDataContext e executar uma consulta LINQ para obter uma sequência de jantares ocorrer no futuro. O Visual Studio fornece suporte total ao intellisense ao escrever a consulta LINQ, e os objetos retornados dele são fortemente tipadas e também dão suporte a intellisense:
 
@@ -197,7 +197,7 @@ Essa abordagem fornece uma estrutura simple que podemos pode integrar a validaç
 
 [!code-csharp[Main](build-a-model-with-business-rule-validations/samples/sample11.cs)]
 
-Estamos usando o recurso "yield return" do c# para retornar uma sequência de qualquer RuleViolations. O primeiro verifica seis regra acima simplesmente impõe que as propriedades de cadeia de caracteres em nosso jantar não podem ser nulo ou vazio. A última regra é um pouco mais interessante e chama um método auxiliar de PhoneValidator.IsValidNumber() que podemos adicionar ao nosso projeto para verificar se o ContactPhone número país do formato correspondências o jantar.
+Estamos usando o recurso "yield return" do C# para retornar uma sequência de qualquer RuleViolations. O primeiro verifica seis regra acima simplesmente impõe que as propriedades de cadeia de caracteres em nosso jantar não podem ser nulo ou vazio. A última regra é um pouco mais interessante e chama um método auxiliar de PhoneValidator.IsValidNumber() que podemos adicionar ao nosso projeto para verificar se o ContactPhone número país do formato correspondências o jantar.
 
 Podemos usar. Suporte a expressões regulares do NET para implementar esse suporte de validação do telefone. Abaixo está uma implementação de PhoneValidator simples que podemos adicionar ao nosso projeto que nos permite adicionar verificações de padrão de Regex específicas do país:
 

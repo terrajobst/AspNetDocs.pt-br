@@ -242,7 +242,7 @@ O novo recurso de receitas permite que o Visual Studio gerar o código específi
 
 Agora você pode escrever métodos de ação assíncrono como uma única métodos que retornam um objeto do tipo *tarefa* ou *tarefa&lt;ActionResult&gt;*.
 
-Por exemplo, se você estiver usando o Visual c# 5 (ou usando o [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), você pode criar um método de ação assíncrono que é semelhante ao seguinte:
+Por exemplo, se você estiver usando o Visual C# 5 (ou usando o [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), você pode criar um método de ação assíncrono que é semelhante ao seguinte:
 
 [!code-csharp[Main](mvc4-beta-release-notes/samples/sample8.cs)]
 
@@ -265,7 +265,7 @@ ASP.NET MVC 4 Beta suporta a versão 1.5 de setembro de 2011 do SDK do Windows A
     A solução alternativa é compilar o projeto para colocar os assemblies na pasta bin. Observe que, se você limpar o projeto que remove os assemblies da pasta bin, o problema de editor será voltar.
 
     Isso será corrigido na próxima versão.
-- **Modelos de projeto c# para Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão incorretas em Global.asax.cs.** A conexão padrão especificado no aplicativo\_método Start para projetos criados no Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão LocalDB que contém uma barra invertida sem escape (\) caractere. Isso resulta em um erro de conexão após tentativas de acessar um DbContext do Entity Framework, que gera uma SqlException.
+- **Modelos de projeto C# para Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão incorretas em Global.asax.cs.** A conexão padrão especificado no aplicativo\_método Start para projetos criados no Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão LocalDB que contém uma barra invertida sem escape (\) caractere. Isso resulta em um erro de conexão após tentativas de acessar um DbContext do Entity Framework, que gera uma SqlException.
 
     Para corrigir esse problema, escapar do caractere de barra invertida no aplicativo\_início – método de Global.asax.cs para exibi-lo da seguinte maneira:
 

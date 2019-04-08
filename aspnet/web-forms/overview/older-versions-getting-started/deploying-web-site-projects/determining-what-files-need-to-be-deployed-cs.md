@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-cs
-title: Determinando quais arquivos precisam ser implantados (c#) | Microsoft Docs
+title: Determinando quais arquivos precisam ser implantados (C#) | Microsoft Docs
 author: rick-anderson
 description: Quais arquivos precisam ser implantados do ambiente de desenvolvimento para o ambiente de produção depende em parte se o aplicativo ASP.NET tiver sido criado nos...
 ms.author: riande
@@ -32,7 +32,7 @@ Em geral, todos os arquivos de suporte do lado do cliente devem ser copiados do 
 
 ## <a name="explicit-compilation-versus-automatic-compilation"></a>Compilação explícita Versus compilação automática
 
-Páginas da web ASP.NET são divididas em código-fonte e de marcação declarativo. A parte de marcação declarativa inclui HTML, controles da Web e sintaxe de associação de dados; a parte de código contém manipuladores de eventos escritos em código Visual Basic ou c#. As partes de código e marcação normalmente são separadas em arquivos diferentes: `WebPage.aspx` contém a marcação declarativa enquanto `WebPage.aspx.cs` abriga o código.
+Páginas da web ASP.NET são divididas em código-fonte e de marcação declarativo. A parte de marcação declarativa inclui HTML, controles da Web e sintaxe de associação de dados; a parte de código contém manipuladores de eventos escritos em código Visual Basic ou C#. As partes de código e marcação normalmente são separadas em arquivos diferentes: `WebPage.aspx` contém a marcação declarativa enquanto `WebPage.aspx.cs` abriga o código.
 
 Considere uma página ASP.NET chamada Clock.aspx que contém um controle de rótulo cuja propriedade de texto é definida como a data e hora atuais no carregamento da página. A parte de marcação declarativa (no `Clock.aspx`) conteria a marcação para um controle de rótulo Web -`<asp:Label runat="server" id="TimeLabel" />` – durante a parte de código (no `Clock.aspx.cs`) teria um `Page_Load` manipulador de eventos com o código a seguir:
 

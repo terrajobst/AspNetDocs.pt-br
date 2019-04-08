@@ -57,11 +57,11 @@ Você pode adicionar páginas de ajuda para um projeto de API da Web existente u
 
 Dos **ferramentas** menu, selecione **Gerenciador de pacotes NuGet**e, em seguida, selecione **Package Manager Console**. No [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console) janela, digite um dos seguintes comandos:
 
-Para um **c#** aplicativo: `Install-Package Microsoft.AspNet.WebApi.HelpPage`
+Para um **C#** aplicativo: `Install-Package Microsoft.AspNet.WebApi.HelpPage`
 
 Para um **Visual Basic** aplicativo: `Install-Package Microsoft.AspNet.WebApi.HelpPage.VB`
 
-Há dois pacotes, um para c# e outro para o Visual Basic. Certifique-se de usar aquele que corresponde ao seu projeto.
+Há dois pacotes, um para C# e outro para o Visual Basic. Certifique-se de usar aquele que corresponde ao seu projeto.
 
 Esse comando instala os assemblies necessários e adiciona as exibições do MVC para as páginas de Ajuda (localizadas na pasta áreas/HelpPage). Você precisará adicionar manualmente um link para a página de Ajuda. O URI é /Help. Para criar um link em um modo de exibição do razor, adicione o seguinte:
 

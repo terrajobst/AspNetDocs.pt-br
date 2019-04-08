@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/custom-formatting/displaying-summary-information-in-the-gridview-s-footer-cs
-title: Exibindo informações de resumo no rodapé do GridView (c#) | Microsoft Docs
+title: Exibindo informações de resumo no rodapé do GridView (C#) | Microsoft Docs
 author: rick-anderson
 description: Muitas vezes, informações de resumo são exibidas na parte inferior do relatório em uma linha de resumo. O controle GridView pode incluir uma linha de rodapé em cujas células, podemos pr...
 ms.author: riande

@@ -39,7 +39,7 @@ Este é o primeiro tutorial de uma série de tutoriais que exploram técnicas pa
 - Limitar o acesso a uma página da web, o diretório ou a funcionalidade específica com base na função do usuário conectado
 - Personalize e estenda o ASP. Controles de Web de segurança da rede
 
-Esses tutoriais se destinam a ser concisas e fornecem instruções passo a passo com capturas de tela suficiente para orientá-lo pelo processo visualmente. Cada tutorial está disponível nas versões do Visual Basic e do c# e inclui um download do código completo usado. (Este primeiro tutorial concentra-se nos conceitos de segurança de um ponto de vista de alto nível e, portanto, não contém qualquer código associado.)
+Esses tutoriais se destinam a ser concisas e fornecem instruções passo a passo com capturas de tela suficiente para orientá-lo pelo processo visualmente. Cada tutorial está disponível nas versões do Visual Basic e do C# e inclui um download do código completo usado. (Este primeiro tutorial concentra-se nos conceitos de segurança de um ponto de vista de alto nível e, portanto, não contém qualquer código associado.)
 
 Neste tutorial, abordaremos os conceitos de segurança importantes e quais recursos estão disponíveis no ASP.NET para ajudá-lo na implementação de formulários de autenticação, autorização, contas de usuário e funções. Vamos começar!
 

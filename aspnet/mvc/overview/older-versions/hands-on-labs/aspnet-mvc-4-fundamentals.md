@@ -125,7 +125,7 @@ Neste exercício, você aprenderá como criar um aplicativo ASP.NET MVC no Visua
 
 1. Nesta tarefa, você criará um projeto de aplicativo do ASP.NET MVC vazio usando o modelo MVC Visual Studio. Inicie **VS Express para Web**.
 2. No menu **Arquivo**, clique em **Novo Projeto**.
-3. No **novo projeto** caixa de diálogo, selecione o **aplicativo Web do ASP.NET MVC 4** tipo, localizado no projeto **Visual c#** **Web** modelo lista.
+3. No **novo projeto** caixa de diálogo, selecione o **aplicativo Web do ASP.NET MVC 4** tipo, localizado no projeto **Visual C#** **Web** modelo lista.
 4. Alterar o **nome** à *MvcMusicStore*.
 5. Defina o local da solução dentro de um novo **começar** na pasta de origem neste exercício, por exemplo **\Source\Ex01-CreatingMusicStoreProject\Begin [YOUR-CHOL-PATH]**. Clique em **OK**.
 
@@ -563,7 +563,7 @@ Nesta tarefa, você atualizará o **StoreController** usar o **StoreIndexViewMod
     [!code-csharp[Main](aspnet-mvc-4-fundamentals/samples/sample13.cs)]
 
 > [!NOTE]
-> Se você estiver familiarizado com c#, você pode presumir que usar **var** significa que o **viewModel** variável é a associação tardia. Que não estiver correta – o compilador c# está usando com base em atribuir à variável de inferência de tipo para determinar que **viewModel** é do tipo **StoreIndexViewModel**. Além disso, ao compilar local **viewModel** variável como um **StoreIndexViewModel** tipo de verificação de tempo de compilação get e suporte de editor de códigos do Visual Studio.
+> Se você estiver familiarizado com C#, você pode presumir que usar **var** significa que o **viewModel** variável é a associação tardia. Que não estiver correta – o compilador C# está usando com base em atribuir à variável de inferência de tipo para determinar que **viewModel** é do tipo **StoreIndexViewModel**. Além disso, ao compilar local **viewModel** variável como um **StoreIndexViewModel** tipo de verificação de tempo de compilação get e suporte de editor de códigos do Visual Studio.
 
 <a id="Ex5Task4"></a>
 
@@ -588,7 +588,7 @@ Nesta tarefa, você criará um modelo de exibição que usará um objeto StoreIn
 
     *Adicionar caixa de diálogo de exibição*
 
-    O **\Views\Store\Index.cshtml** arquivo de modelo de exibição é criado e aberto. Com base nas informações fornecidas para o **adicionar exibição** caixa de diálogo na última etapa, a exibição de modelo espera que um **StoreIndexViewModel** instância como os dados a serem usados para gerar uma resposta HTML. Você observará que o modelo herda um `ViewPage<musicstore.viewmodels.storeindexviewmodel>` em c#.
+    O **\Views\Store\Index.cshtml** arquivo de modelo de exibição é criado e aberto. Com base nas informações fornecidas para o **adicionar exibição** caixa de diálogo na última etapa, a exibição de modelo espera que um **StoreIndexViewModel** instância como os dados a serem usados para gerar uma resposta HTML. Você observará que o modelo herda um `ViewPage<musicstore.viewmodels.storeindexviewmodel>` em C#.
 
 <a id="Ex5Task5"></a>
 
@@ -691,7 +691,7 @@ Um **StoreBrowseViewModel** será usado nessa tarefa para mostrar os álbuns que
 > [!NOTE]
 > O que é **lista&lt;álbum&gt;**  ?: Essa definição é usando o **lista&lt;T&gt;**  tipo, onde **T** restringe o tipo ao qual os elementos disso **lista** pertence, nesse caso **Álbum** (ou qualquer um dos seus descendentes).
 > 
-> Essa capacidade de criar classes e métodos que adiam a especificação de um ou mais tipos até que a classe ou método é declarado e instanciado pelo código do cliente é um recurso da linguagem c# chamado **genéricos**.
+> Essa capacidade de criar classes e métodos que adiam a especificação de um ou mais tipos até que a classe ou método é declarado e instanciado pelo código do cliente é um recurso da linguagem C# chamado **genéricos**.
 > 
 > **Lista&lt;T&gt;**  é o equivalente genérico a **ArrayList** digite e está disponível na **Collections** namespace. Um dos benefícios de usar **genéricos** é que, como o tipo é especificado, você não precisa cuidar da verificação de operações como converter os elementos de tipo **álbum** como você faria com um **ArrayList**.
 
@@ -872,7 +872,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
 #### <a name="task-1-exploring-the-aspnet-mvc-4-internet-application-template"></a>Tarefa 1: Explorando o modelo de aplicativo de Internet do ASP.NET MVC 4
 
 1. Se não estiver aberto, inicie **VS Express para Web**
-2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual c# | Web** modelo no painel à esquerda de árvore e, em seguida, escolha o **aplicativo Web do ASP.NET MVC 4**. **Nome da** o projeto *MusicStore* e atualize o **nome da solução** para *começar*, em seguida, selecione um local (ou deixe o padrão) e clique em **Okey** .
+2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual C# | Web** modelo no painel à esquerda de árvore e, em seguida, escolha o **aplicativo Web do ASP.NET MVC 4**. **Nome da** o projeto *MusicStore* e atualize o **nome da solução** para *começar*, em seguida, selecione um local (ou deixe o padrão) e clique em **Okey** .
 
     ![Criando um novo projeto ASP.NET MVC 4](aspnet-mvc-4-fundamentals/_static/image36.png "criando um novo projeto ASP.NET MVC 4")
 
@@ -1157,7 +1157,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente c#)***
+***Para adicionar um trecho de código usando o teclado (somente C#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -1177,7 +1177,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.

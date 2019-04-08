@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
-title: Configuração de um site que usa os serviços de aplicativo (c#) | Microsoft Docs
+title: Configuração de um site que usa os serviços de aplicativo (C#) | Microsoft Docs
 author: rick-anderson
 description: Versão do ASP.NET 2.0 introduziu uma série de serviços de aplicativos, que fazem parte do .NET Framework e servir como um conjunto de blocos de construção de serviços que yo...
 ms.author: riande
@@ -177,7 +177,7 @@ Lembre-se de que um tutorial anterior atualizado o aplicativo web de resenhas de
 **Figura 5**: Os administradores podem criar novas contas de usuário ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-cs/_static/image15.jpg))
 
 
-Se você precisar da funcionalidade completa do check-out no WSAT [ *sem interrupção sua própria ferramenta Web Site Administration*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), no qual o autor Dan Clem percorre o processo de criação de uma ferramenta semelhante WSAT personalizada. Dan compartilha seu código-fonte aplicativo s (em c#) e fornece instruções passo a passo para adicioná-lo ao seu site hospedado.
+Se você precisar da funcionalidade completa do check-out no WSAT [ *sem interrupção sua própria ferramenta Web Site Administration*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), no qual o autor Dan Clem percorre o processo de criação de uma ferramenta semelhante WSAT personalizada. Dan compartilha seu código-fonte aplicativo s (em C#) e fornece instruções passo a passo para adicioná-lo ao seu site hospedado.
 
 ## <a name="summary"></a>Resumo
 

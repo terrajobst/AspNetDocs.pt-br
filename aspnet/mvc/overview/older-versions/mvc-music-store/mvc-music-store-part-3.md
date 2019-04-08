@@ -144,7 +144,7 @@ Agora podemos modificar a lógica para retornar um objeto de álbum para o modo 
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample11.cs)]
 
-*Observação: Se você estiver familiarizado com o C#, você pode supor que, usando var significa que nossa variável de álbum é a associação tardia. Não está correta – o compilador do c# é usando inferência de tipo com base no qual estamos atribuindo à variável para determinar o que álbum é do tipo álbum e compilando a variável local álbum como um tipo de álbum, portanto, obtemos a verificação de tempo de compilação e o editor de códigos do Visual Studio suporte.*
+*Observação: Se você estiver familiarizado com o C#, você pode supor que, usando var significa que nossa variável de álbum é a associação tardia. Não está correta – o compilador do C# é usando inferência de tipo com base no qual estamos atribuindo à variável para determinar o que álbum é do tipo álbum e compilando a variável local álbum como um tipo de álbum, portanto, obtemos a verificação de tempo de compilação e o editor de códigos do Visual Studio suporte.*
 
 Agora, vamos criar um modelo de exibição que usa nosso álbum para gerar uma resposta HTML. Antes de fazer isso é necessário compilar o projeto para que a caixa de diálogo Adicionar modo de exibição sabe sobre nossa classe de álbum recém-criado. Você pode compilar o projeto, selecionando o Debug⇨Build MvcMusicStore item de menu (para créditos extras, você pode usar o atalho Ctrl-Shift-B para compilar o projeto).
 

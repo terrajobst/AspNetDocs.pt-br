@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-cs
-title: Adicionando mais colunas DataTable (c#) | Microsoft Docs
+title: Adicionando mais colunas DataTable (C#) | Microsoft Docs
 author: rick-anderson
 description: Ao usar o Assistente do TableAdapter para criar um conjunto de dados tipado, DataTable correspondente contém as colunas retornadas pela consulta de banco de dados principal. Lá, mas...
 ms.author: riande

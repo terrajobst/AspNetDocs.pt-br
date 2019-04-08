@@ -814,7 +814,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente c#)***
+***Para adicionar um trecho de código usando o teclado (somente C#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -834,7 +834,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.

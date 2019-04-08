@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
-title: Classificação personalizados paginados dados (c#) | Microsoft Docs
+title: Classificação personalizados paginados dados (C#) | Microsoft Docs
 author: rick-anderson
 description: No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da web. Neste tutorial, podemos ver como estender o anterior...
 ms.author: riande

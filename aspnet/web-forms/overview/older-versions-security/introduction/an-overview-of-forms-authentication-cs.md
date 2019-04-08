@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
-title: Uma visão geral da autenticação de formulários (c#) | Microsoft Docs
+title: Uma visão geral da autenticação de formulários (C#) | Microsoft Docs
 author: rick-anderson
 description: Criação de rotas personalizadas
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57063883"
 ---
-<a name="an-overview-of-forms-authentication-c"></a>Uma visão geral da autenticação de formulários (c#)
+<a name="an-overview-of-forms-authentication-c"></a>Uma visão geral da autenticação de formulários (C#)
 ====================
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
@@ -79,7 +79,7 @@ Para acessar o maior público possível, criaríamos em toda esta série de site
 > Aplicativo web de demonstração usado em cada tutorial está disponível como um download. Este aplicativo para download foi criado com o Visual Web Developer 2008 direcionado para o .NET Framework versão 3.5. Uma vez que o aplicativo se destina o .NET 3.5, o seu arquivo Web. config inclui elementos de configuração adicionais, específicos de 3.5. Encurtar a história, se você ainda precisa instalar o .NET 3.5 em seu computador, em seguida, o aplicativo web que pode ser baixado não funcionará sem primeiro remover a marcação específica do 3.5 da Web. config.
 
 
-Antes que podemos configurar autenticação de formulários, primeiro precisamos de um site ASP.NET. Comece criando um novo arquivo com base no sistema site da Web ASP.NET. Para fazer isso, inicie o Visual Web Developer e vá para o menu Arquivo e escolha o novo Site, exibindo a caixa de diálogo Novo Site da Web. Escolha o modelo de Site da Web ASP.NET, defina a lista suspensa de local para o sistema de arquivos, escolha uma pasta para colocar o site da web e definir a linguagem c#. Isso criará um novo site com uma página Default. aspx ASP.NET, um aplicativo\_pasta de dados e um arquivo Web. config.
+Antes que podemos configurar autenticação de formulários, primeiro precisamos de um site ASP.NET. Comece criando um novo arquivo com base no sistema site da Web ASP.NET. Para fazer isso, inicie o Visual Web Developer e vá para o menu Arquivo e escolha o novo Site, exibindo a caixa de diálogo Novo Site da Web. Escolha o modelo de Site da Web ASP.NET, defina a lista suspensa de local para o sistema de arquivos, escolha uma pasta para colocar o site da web e definir a linguagem C#. Isso criará um novo site com uma página Default. aspx ASP.NET, um aplicativo\_pasta de dados e um arquivo Web. config.
 
 > [!NOTE]
 > Visual Studio dá suporte a dois modos de gerenciamento de projeto: Projetos de Site e projetos de aplicativos Web. Projetos de Site não têm um arquivo de projeto, enquanto que a arquitetura do projeto no Visual Studio .NET 2002/2003 imitar a projetos de aplicativos Web – eles incluem um arquivo de projeto e compilar o código-fonte do projeto em um único assembly, que é colocado na pasta /bin. O Visual Studio 2005 inicialmente apenas sites da Web com suporte de projetos, embora o modelo de projeto de aplicativo Web foi reintroduzido com Service Pack 1. O Visual Studio 2008 oferece os dois modelos de projeto. Visual Web Developer 2005 e edições de 2008, no entanto, somente dão suporte a projetos de Site da Web. Usarei o modelo de projeto de Site. Se você estiver usando uma edição não Express e deseja usar o [modelo de projeto de aplicativo Web](https://msdn.microsoft.com/library/aa730880%28vs.80%29.aspx) em vez disso, fique à vontade para fazer isso, mas lembre-se de que pode haver algumas discrepâncias entre o que você vê na tela e as etapas que você deve tomar em comparação com o capturas de tela mostradas e instruções fornecidas nestes tutoriais.

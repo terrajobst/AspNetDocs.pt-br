@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
-title: Criação de um controle classificação (c#) | Microsoft Docs
+title: Criação de um controle classificação (C#) | Microsoft Docs
 author: wenz
 description: Muitos sites, de comércio eletrônico para sites de comunidades, oferecem seus usuários para artigos de taxa ou itens. Isso geralmente exige algum esforço de codificação, mas temos o...
 ms.author: riande

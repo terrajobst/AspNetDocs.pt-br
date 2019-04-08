@@ -37,10 +37,10 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > Este tutorial também funciona com ASP.NET Web Pages 2.
 
 
-A maioria dos exemplos de como usar páginas da Web ASP.NET com sintaxe do Razor usar c#. Mas a sintaxe do Razor também suporta Visual Basic. Para programar uma página da web ASP.NET no Visual Basic, você cria uma página da web com um *. vbhtml* extensão de nome de arquivo e, em seguida, adicione o código do Visual Basic. Este artigo fornece uma visão geral de como trabalhar com a linguagem Visual Basic e a sintaxe para criar páginas da Web ASP.NET.
+A maioria dos exemplos de como usar páginas da Web ASP.NET com sintaxe do Razor usar C#. Mas a sintaxe do Razor também suporta Visual Basic. Para programar uma página da web ASP.NET no Visual Basic, você cria uma página da web com um *. vbhtml* extensão de nome de arquivo e, em seguida, adicione o código do Visual Basic. Este artigo fornece uma visão geral de como trabalhar com a linguagem Visual Basic e a sintaxe para criar páginas da Web ASP.NET.
 
 > [!NOTE]
-> Os modelos de site padrão para o Microsoft WebMatrix (**padaria**, **Galeria de fotos**, e **Starter Site**, etc.) estão disponíveis nas versões c# e Visual Basic. Você pode instalar os modelos do Visual Basic, como pacotes NuGet. Modelos de site são instalados na pasta raiz do seu site em uma pasta chamada *Microsoft Templates*.
+> Os modelos de site padrão para o Microsoft WebMatrix (**padaria**, **Galeria de fotos**, e **Starter Site**, etc.) estão disponíveis nas versões C# e Visual Basic. Você pode instalar os modelos do Visual Basic, como pacotes NuGet. Modelos de site são instalados na pasta raiz do seu site em uma pasta chamada *Microsoft Templates*.
 
 
 ## <a name="the-top-8-programming-tips"></a>Principais dicas de programação 8
@@ -179,7 +179,7 @@ Este procedimento mostra como criar uma página que ilustra as técnicas de prog
 
 Anteriormente, você viu um exemplo básico de como criar uma página da web do ASP.NET e como você pode adicionar código de servidor a marcação HTML. Aqui você aprenderá as Noções básicas de como usar o Visual Basic para escrever código de servidor ASP.NET usando a sintaxe do Razor &#8212; ou seja, as regras linguagem de programação.
 
-Se você tiver experiência com programação (especialmente se você já usou o C, C++, c#, Visual Basic ou JavaScript), grande parte o que você leia aqui será familiar. Você provavelmente precisará familiarizar-se apenas com como o código do WebMatrix é adicionado a marcação na *. vbhtml* arquivos.
+Se você tiver experiência com programação (especialmente se você já usou o C, C++, C#, Visual Basic ou JavaScript), grande parte o que você leia aqui será familiar. Você provavelmente precisará familiarizar-se apenas com como o código do WebMatrix é adicionado a marcação na *. vbhtml* arquivos.
 
 ### <a id="BM_CombiningTextMarkupAndCode"></a>  A combinação de texto, marcação e código em blocos de código
 

@@ -34,13 +34,13 @@ No Visual Studio 2010, o processo de compilação e implantação para projetos 
 
 ## <a name="how-does-the-wpp-work"></a>Como funciona o WPP?
 
-Se você dê uma olhada no arquivo de projeto para um c# – projeto de aplicativo web com base, você pode ver que ele importa dois arquivos. targets.
+Se você dê uma olhada no arquivo de projeto para um C# – projeto de aplicativo web com base, você pode ver que ele importa dois arquivos. targets.
 
 
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
 
 
-A primeira **importação** instrução é comum a todos os projetos do Visual c#. Esse arquivo, *targets*, contém os destinos e tarefas que são específicas para o Visual c#. Por exemplo, o compilador c# (**Csc**) tarefa é invocada aqui. O *targets* importações de arquivo por sua vez as *targets* arquivo. Isso define os destinos que são comuns a todos os projetos, como **construir**, **recompilar**, **execute**, **compilar**, e **Clean** . A segunda **importação** instrução é específica para projetos de aplicativos web. O *WebApplication* importações de arquivo por sua vez as *Microsoft.Web.Publishing.targets* arquivo. O *Microsoft.Web.Publishing.targets* do arquivo essencialmente *é* o WPP. Ele define como o destino do **pacote** e **MSDeployPublish**, que invocam a implantação da Web para concluir várias tarefas de implantação.
+A primeira **importação** instrução é comum a todos os projetos do Visual C#. Esse arquivo, *targets*, contém os destinos e tarefas que são específicas para o Visual C#. Por exemplo, o compilador C# (**Csc**) tarefa é invocada aqui. O *targets* importações de arquivo por sua vez as *targets* arquivo. Isso define os destinos que são comuns a todos os projetos, como **construir**, **recompilar**, **execute**, **compilar**, e **Clean** . A segunda **importação** instrução é específica para projetos de aplicativos web. O *WebApplication* importações de arquivo por sua vez as *Microsoft.Web.Publishing.targets* arquivo. O *Microsoft.Web.Publishing.targets* do arquivo essencialmente *é* o WPP. Ele define como o destino do **pacote** e **MSDeployPublish**, que invocam a implantação da Web para concluir várias tarefas de implantação.
 
 Para entender como esses destinos adicionais são usados na solução de exemplo Contact Manager, abra o *Publish.proj* do arquivo e dê uma olhada a **BuildProjects** destino.
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs
-title: Adicionando controles de validação à DataList de edição de Interface (c#) | Microsoft Docs
+title: Adicionando controles de validação à DataList de edição de Interface (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial, veremos como é fácil adicionar controles de validação ao EditItemTemplate do DataList para fornecer um int mais infalível de usuário de edição...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-cs
-title: Especificando a página mestra programaticamente (c#) | Microsoft Docs
+title: Especificando a página mestra programaticamente (C#) | Microsoft Docs
 author: rick-anderson
 description: Examina a definir o conteúdo da página mestra programaticamente por meio do manipulador de eventos PreInit.
 ms.author: riande

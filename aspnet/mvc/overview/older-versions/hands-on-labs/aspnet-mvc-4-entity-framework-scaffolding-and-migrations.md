@@ -90,7 +90,7 @@ Neste exercício, você aprenderá a usar scaffolding do ASP.NET MVC 4 com o có
 #### <a name="task-1--creating-a-new-aspnet-mvc-4-project-using-scaffolding"></a>Projeto da tarefa 1-Criando um novo do ASP.NET MVC 4 usando o Scaffolding
 
 1. Se não estiver aberto, inicie **Visual Studio 2012**.
-2. Selecione **arquivo | Novo projeto**. No novo projeto na caixa de diálogo, o **Visual c# | Web** seção, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto para **MVC4andEFMigrations** e defina o local como **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** pasta deste laboratório. Definir a **nome da solução** para **começar** e verifique se **criar diretório para solução** é verificada. Clique em **OK**.
+2. Selecione **arquivo | Novo projeto**. No novo projeto na caixa de diálogo, o **Visual C# | Web** seção, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto para **MVC4andEFMigrations** e defina o local como **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** pasta deste laboratório. Definir a **nome da solução** para **começar** e verifique se **criar diretório para solução** é verificada. Clique em **OK**.
 
     ![Caixa de diálogo Novo projeto ASP.NET MVC 4](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image1.png "caixa de diálogo Novo projeto ASP.NET MVC 4")
 
@@ -316,7 +316,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente c#)***
+***Para adicionar um trecho de código usando o teclado (somente C#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -336,7 +336,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.

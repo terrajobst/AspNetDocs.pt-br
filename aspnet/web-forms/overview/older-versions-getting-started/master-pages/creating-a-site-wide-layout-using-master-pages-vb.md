@@ -47,7 +47,7 @@ Este é o primeiro tutorial em uma série de tutoriais que exploram o uso de pá
 - Saiba como especificar um conteúdo da página mestra em tempo de execução, e
 - Outros avançados tópicos da página mestra.
 
-Esses tutoriais se destinam a ser concisas e fornecem instruções passo a passo com capturas de tela suficiente para orientá-lo pelo processo visualmente. Cada tutorial está disponível nas versões do Visual Basic e do c# e inclui um download do código completo usado.
+Esses tutoriais se destinam a ser concisas e fornecem instruções passo a passo com capturas de tela suficiente para orientá-lo pelo processo visualmente. Cada tutorial está disponível nas versões do Visual Basic e do C# e inclui um download do código completo usado.
 
 Este tutorial inaugural começa com uma análise de Noções básicas sobre a página mestra. Discuta como páginas mestras funcionam, examinar a criação de uma página mestra e páginas de conteúdo associadas usando o Visual Web Developer e ver como as alterações a uma página mestra são refletidas imediatamente em suas páginas de conteúdo. Vamos começar!
 

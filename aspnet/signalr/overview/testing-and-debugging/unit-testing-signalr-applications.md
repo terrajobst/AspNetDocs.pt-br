@@ -63,7 +63,7 @@ Nesta seção, você adicionará um teste de unidade para o aplicativo criado na
 3. Se você estiver usando a versão de download do aplicativo de Introdução, abra **Package Manager Console** e clique em **restaurar** para adicionar o pacote de SignalR ao projeto.
 
     ![Restaurar pacotes](unit-testing-signalr-applications/_static/image1.png)
-4. Adicione um projeto à solução para o teste de unidade. Sua solução no botão direito do mouse **Gerenciador de soluções** e selecione **Add**, **novo projeto...** . Sob o **c#** nó, selecione o **Windows** nó. Selecione **biblioteca de classes**. Nomeie o novo projeto **TestLibrary** e clique em **Okey**.
+4. Adicione um projeto à solução para o teste de unidade. Sua solução no botão direito do mouse **Gerenciador de soluções** e selecione **Add**, **novo projeto...** . Sob o **C#** nó, selecione o **Windows** nó. Selecione **biblioteca de classes**. Nomeie o novo projeto **TestLibrary** e clique em **Okey**.
 
     ![Criar a biblioteca de teste](unit-testing-signalr-applications/_static/image2.png)
 5. Adicione uma referência no projeto de biblioteca de teste ao projeto SignalRChat. Clique com botão direito do **TestLibrary** do projeto e selecione **Add**, **referência...** . Selecione o **projetos** nó sob o **solução** nó e verificação **SignalRChat**. Clique em **OK**.

@@ -30,7 +30,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 >
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale o [installer WPI para ASP.NET MVC 4](https://go.microsoft.com/fwlink/?LinkId=243392) e o: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack)
 >
-> Um projeto do Visual Web Developer com código-fonte c# está disponível para acompanhar este tópico. [Baixe a versão c#](https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d/file/114480/1/MvcMovie.zip).
+> Um projeto do Visual Web Developer com código-fonte C# está disponível para acompanhar este tópico. [Baixe a versão C#](https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d/file/114480/1/MvcMovie.zip).
 >
 > No tutorial, você executar o aplicativo no Visual Studio. Você também pode fazer o aplicativo disponível na Internet, implantá-lo em um provedor de hospedagem. A Microsoft oferece a hospedagem de web gratuita para até 10 sites em uma [conta gratuita do Windows Azure](https://www.windowsazure.com/pricing/free-trial/?WT.mc_id=A443DD604). Para obter informações sobre como implantar um projeto de web do Visual Studio para um Site do Windows Azure, consulte [criar e implantar um site da web ASP.NET e o banco de dados SQL com o Visual Studio](https://docs.microsoft.com/dotnet/azure/). Esse tutorial também mostra como usar o Entity Framework Code First Migrations para implantar seu banco de dados do SQL Server no Windows Azure SQL Database (anteriormente conhecido como SQL Azure).
 >
@@ -61,7 +61,7 @@ Visual Studio é um IDE ou ambiente de desenvolvimento integrado. Assim como usa
 
 ## <a name="creating-your-first-application"></a>Criando seu primeiro aplicativo
 
-Você pode criar aplicativos usando o Visual Basic ou Visual c# como linguagem de programação. Selecione Visual c# à esquerda e, em seguida, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto &quot;MvcMovie&quot; e, em seguida, clique em **Okey**.
+Você pode criar aplicativos usando o Visual Basic ou Visual C# como linguagem de programação. Selecione Visual C# à esquerda e, em seguida, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto &quot;MvcMovie&quot; e, em seguida, clique em **Okey**.
 
 ![](intro-to-aspnet-mvc-4/_static/image4.png)
 

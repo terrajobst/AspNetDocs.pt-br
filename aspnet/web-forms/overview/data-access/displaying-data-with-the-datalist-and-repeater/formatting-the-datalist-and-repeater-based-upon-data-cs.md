@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-cs
-title: Formatação do DataList e Repeater com base nos dados (c#) | Microsoft Docs
+title: Formatação do DataList e Repeater com base nos dados (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial vamos ver exemplos de como podemos formatar a aparência dos controles DataList e Repeater, usando funções de formatação com...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
-title: Preenchendo uma lista usando o CascadingDropDown (c#) | Microsoft Docs
+title: Preenchendo uma lista usando o CascadingDropDown (C#) | Microsoft Docs
 author: wenz
 description: O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associado valores em anoth...
 ms.author: riande
@@ -46,7 +46,7 @@ Para obter essa lista, um extensor de CascadingDropDown é adicionado. Ele envia
 - `Category`: Informações de categoria que são enviadas para o método da web quando chamado
 - `PromptText`: Texto exibido quando assincronamente Carregando dados da lista do servidor
 
-Aqui está a marcação para o `CascadingDropDown` elemento. A única diferença entre c# e VB é o nome do serviço web associado:
+Aqui está a marcação para o `CascadingDropDown` elemento. A única diferença entre C# e VB é o nome do serviço web associado:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample3.aspx)]
 

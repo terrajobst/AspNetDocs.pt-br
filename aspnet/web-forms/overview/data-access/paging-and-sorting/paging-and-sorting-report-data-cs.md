@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-cs
-title: Paginação e classificação relatórios de dados (c#) | Microsoft Docs
+title: Paginação e classificação relatórios de dados (C#) | Microsoft Docs
 author: rick-anderson
 description: Paginação e classificação são dois recursos muito comuns ao exibir dados em um aplicativo online. Neste tutorial vamos dar uma primeira olhada na adição de classificação e...
 ms.author: riande

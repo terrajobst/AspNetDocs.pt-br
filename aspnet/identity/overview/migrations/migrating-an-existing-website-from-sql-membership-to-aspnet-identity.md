@@ -109,7 +109,7 @@ Para classes de identidade do ASP.NET trabalhar fora da caixa com os dados de us
 Com essas informações, podemos criar instruções SQL para criar novas tabelas. Podemos pode gravar cada instrução individualmente ou gerar todo o script usando os comandos do PowerShell do EntityFramework que, em seguida, podemos Editar conforme necessário. Para fazer isso, no VS open a **Package Manager Console** da **exibição** ou **ferramentas** menu
 
 - Execute o comando "Enable-Migrations" para habilitar migrações do EntityFramework.
-- Execute o comando "Add-migration initial", que cria o código de configuração inicial para criar o banco de dados em c# / VB.
+- Execute o comando "Add-migration initial", que cria o código de configuração inicial para criar o banco de dados em C# / VB.
 - A etapa final é executar "Update-Database – Script" comando que gera o script SQL baseado nas classes de modelo.
 
 [!INCLUDE[](../../../includes/identity/alter-command-exception.md)]

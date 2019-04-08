@@ -86,7 +86,7 @@ Vamos começar selecionando "Novo projeto" no menu arquivo no Visual Web Develop
 
 ![](mvc-music-store-part-1/_static/image5.png)
 
-Vamos selecionar Visual c# -&gt; modelos da Web de grupo à esquerda, em seguida, escolha o modelo "Aplicativo de Web do ASP.NET MVC 3" na coluna central. Nomeie o projeto MvcMusicStore e pressione o botão Okey.
+Vamos selecionar Visual C# -&gt; modelos da Web de grupo à esquerda, em seguida, escolha o modelo "Aplicativo de Web do ASP.NET MVC 3" na coluna central. Nomeie o projeto MvcMusicStore e pressione o botão Okey.
 
 ![](mvc-music-store-part-1/_static/image8.jpg)
 

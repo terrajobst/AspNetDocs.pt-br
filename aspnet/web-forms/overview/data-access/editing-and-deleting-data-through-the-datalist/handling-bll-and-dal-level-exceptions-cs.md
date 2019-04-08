@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
-title: Tratamento de exceções de nível BLL e DAL (c#) | Microsoft Docs
+title: Tratamento de exceções de nível BLL e DAL (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial, veremos como tactfully tratar as exceções geradas durante o fluxo de trabalho de atualização do DataList um editável.
 ms.author: riande

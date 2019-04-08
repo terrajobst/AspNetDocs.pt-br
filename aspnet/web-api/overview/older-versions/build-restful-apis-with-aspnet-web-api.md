@@ -84,7 +84,7 @@ Neste exercício, você implementará os métodos GET somente leitura para o Ger
 Nesta tarefa, você usará os novos modelos de projeto de web do ASP.NET para criar um aplicativo de web API da Web.
 
 1. Execute **Visual Studio 2012 Express para Web**, para fazer isso, vá para **inicie** e digite **VS Express para Web** , em seguida, pressione **Enter**.
-2. Dos **arquivo** menu, selecione **novo projeto**. Selecione o **Visual c# | Web** tipo de exibição de árvore de tipo de projeto do projeto, em seguida, selecione o **aplicativo Web do ASP.NET MVC 4** tipo de projeto. Defina o projeto **nome** para *ContactManager* e o **nome da solução** para *começar*, em seguida, clique em **Okey**.
+2. Dos **arquivo** menu, selecione **novo projeto**. Selecione o **Visual C# | Web** tipo de exibição de árvore de tipo de projeto do projeto, em seguida, selecione o **aplicativo Web do ASP.NET MVC 4** tipo de projeto. Defina o projeto **nome** para *ContactManager* e o **nome da solução** para *começar*, em seguida, clique em **Okey**.
 
     ![Criando um novo projeto de aplicativo do ASP.NET MVC 4.0 da Web](build-restful-apis-with-aspnet-web-api/_static/image1.png "criando um novo projeto de aplicativo do ASP.NET MVC 4.0 da Web")
 
@@ -440,7 +440,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 <a id="CodeSnippetUsingKeyBoard"></a>
 
 <a id="To_add_a_code_snippet_using_the_keyboard_C_only"></a>
-### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Para adicionar um trecho de código usando o teclado (somente c#)
+### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Para adicionar um trecho de código usando o teclado (somente C#)
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -463,7 +463,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 <a id="CodeSnippetUsingMouse"></a>
 
 <a id="To_add_a_code_snippet_using_the_mouse_C_Visual_Basic_and_XML"></a>
-### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)
+### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)
 
 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 2. Selecione **Inserir trecho** seguido **Meus trechos de código**.

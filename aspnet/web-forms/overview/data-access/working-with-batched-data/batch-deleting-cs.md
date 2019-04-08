@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
-title: Lote de exclusão (c#) | Microsoft Docs
+title: Lote de exclusão (C#) | Microsoft Docs
 author: rick-anderson
 description: Saiba como excluir vários registros de banco de dados em uma única operação. Na camada de Interface do usuário que criamos em um GridView aprimorado criado em uma sessão tut...
 ms.author: riande

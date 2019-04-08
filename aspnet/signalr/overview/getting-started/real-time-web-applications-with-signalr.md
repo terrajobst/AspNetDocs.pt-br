@@ -177,7 +177,7 @@ Nesta tarefa, você adicionar o SignalR para a solução e enviar atualizações
     ![Adicionar novo item](real-time-web-applications-with-signalr/_static/image11.png "adicionar novo item")
 
     *Adicionar novo item*
-6. No **Adicionar Novo Item** caixa de diálogo, selecione o **Visual c# | Web | O SignalR** nó no painel esquerdo, selecione **classe de Hub do SignalR (v2)** do painel central, nomeie o arquivo **StatisticsHub.cs** e clique em **Add**.
+6. No **Adicionar Novo Item** caixa de diálogo, selecione o **Visual C# | Web | O SignalR** nó no painel esquerdo, selecione **classe de Hub do SignalR (v2)** do painel central, nomeie o arquivo **StatisticsHub.cs** e clique em **Add**.
 
     ![Caixa de diálogo Adicionar novo item](real-time-web-applications-with-signalr/_static/image12.png "caixa de diálogo Adicionar novo item")
 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
-title: Exibindo dados binários na Web dados controles (c#) | Microsoft Docs
+title: Exibindo dados binários na Web dados controles (C#) | Microsoft Docs
 author: rick-anderson
 description: Este tutorial vamos examinar as opções para apresentar dados binários em uma página da Web, incluindo a exibição de um arquivo de imagem e o provisionamento de um link de 'Download' f...
 ms.author: riande

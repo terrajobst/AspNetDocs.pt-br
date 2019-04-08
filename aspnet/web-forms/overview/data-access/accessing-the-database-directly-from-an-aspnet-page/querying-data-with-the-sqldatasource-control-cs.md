@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
-title: Consultando dados com o controle SqlDataSource (c#) | Microsoft Docs
+title: Consultando dados com o controle SqlDataSource (C#) | Microsoft Docs
 author: rick-anderson
 description: Nos tutoriais anteriores, usamos o controle ObjectDataSource para separar totalmente a camada de apresentação da camada de acesso a dados. Iniciando com este tutorial...
 ms.author: riande

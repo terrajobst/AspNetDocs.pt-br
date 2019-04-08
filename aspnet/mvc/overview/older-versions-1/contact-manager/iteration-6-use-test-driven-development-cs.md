@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-cs
-title: 'Iteração #6 – usar desenvolvimento controlado por testes (c#) | Microsoft Docs'
+title: 'Iteração #6 – usar desenvolvimento controlado por testes (C#) | Microsoft Docs'
 author: microsoft
 description: Essa iteração sexta, adicionamos novas funcionalidades ao nosso aplicativo escrevendo testes de unidade pela primeira vez e escrever código contra os testes de unidade. Nesta iteração,...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/26/2019
 ms.locfileid: "58440320"
 ---
-<a name="iteration-6--use-test-driven-development-c"></a>Iteração #6 – usar desenvolvimento controlado por testes (c#)
+<a name="iteration-6--use-test-driven-development-c"></a>Iteração #6 – usar desenvolvimento controlado por testes (C#)
 ====================
 por [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ por [Microsoft](https://github.com/microsoft)
 > Essa iteração sexta, adicionamos novas funcionalidades ao nosso aplicativo escrevendo testes de unidade pela primeira vez e escrever código contra os testes de unidade. Essa iteração, adicionamos os grupos de contatos.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (C#)
   
 
 Esta série de tutoriais, vamos criar um aplicativo de gerenciamento de contatos inteiro do início ao fim. O aplicativo Gerenciador de contatos permite que você armazene informações de contato - nomes, números de telefone e endereços de email - para obter uma lista de pessoas.

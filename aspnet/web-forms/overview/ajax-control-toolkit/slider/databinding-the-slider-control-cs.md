@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-cs
-title: Associação de dados o controle deslizante (c#) | Microsoft Docs
+title: Associação de dados o controle deslizante (C#) | Microsoft Docs
 author: wenz
 description: O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse. É possível associar o positio atual...
 ms.author: riande

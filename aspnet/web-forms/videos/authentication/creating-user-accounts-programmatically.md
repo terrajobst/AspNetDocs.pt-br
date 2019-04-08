@@ -19,7 +19,7 @@ ms.locfileid: "57049853"
 ====================
 por [Joe Stagner](https://github.com/JoeStagner)
 
-Neste vídeo, Joe Stagner demonstra como criar um personalizado Criar formulário do usuário da web programaticamente ao não usar o Assistente para criar o usuário. Para obter informações adicionais sobre este vídeo, leia o tutorial de segurança de "Criação de contas de usuário" ([c#](../../overview/older-versions-security/membership/creating-user-accounts-cs.md), [VB](../../overview/older-versions-security/membership/creating-user-accounts-vb.md)).
+Neste vídeo, Joe Stagner demonstra como criar um personalizado Criar formulário do usuário da web programaticamente ao não usar o Assistente para criar o usuário. Para obter informações adicionais sobre este vídeo, leia o tutorial de segurança de "Criação de contas de usuário" ([C#](../../overview/older-versions-security/membership/creating-user-accounts-cs.md), [VB](../../overview/older-versions-security/membership/creating-user-accounts-vb.md)).
 
 [&#9654;Assista ao vídeo (19 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-user-accounts-programmatically)
 

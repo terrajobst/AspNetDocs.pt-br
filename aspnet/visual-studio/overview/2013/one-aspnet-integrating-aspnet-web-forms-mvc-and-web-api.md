@@ -104,7 +104,7 @@ Nesta tarefa, você começará criando um novo site no Visual Studio com base na
     ![Criando um novo projeto](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image1.png)
 
     *Criar um novo projeto*
-2. No **novo projeto** caixa de diálogo, selecione **aplicativo Web ASP.NET** sob o **Visual c# | Web** guia e verifique se **.NET Framework 4.5** está selecionado. Nomeie o projeto *MyHybridSite*, escolha um **local** e clique em **Okey**.
+2. No **novo projeto** caixa de diálogo, selecione **aplicativo Web ASP.NET** sob o **Visual C# | Web** guia e verifique se **.NET Framework 4.5** está selecionado. Nomeie o projeto *MyHybridSite*, escolha um **local** e clique em **Okey**.
 
     ![Novo projeto de aplicativo Web ASP.NET](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image2.png)
 

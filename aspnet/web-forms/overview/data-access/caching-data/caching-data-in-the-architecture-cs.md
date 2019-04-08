@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-cs
-title: Armazenar em cache dados na arquitetura (c#) | Microsoft Docs
+title: Armazenar em cache dados na arquitetura (C#) | Microsoft Docs
 author: rick-anderson
 description: No tutorial anterior, aprendemos como aplicar o cache na camada de apresentação. Neste tutorial, saiba como tirar proveito do nosso architectu em camadas...
 ms.author: riande

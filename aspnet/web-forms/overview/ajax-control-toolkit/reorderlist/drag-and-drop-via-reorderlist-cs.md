@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-cs
-title: Arrastar e soltar por meio de ReorderList (c#) | Microsoft Docs
+title: Arrastar e soltar por meio de ReorderList (C#) | Microsoft Docs
 author: wenz
 description: O controle ReorderList no AJAX Control Toolkit fornece uma lista que pode ser reordenada por usuário por meio de arrastar e soltar. O pedido atual da lista deverá...
 ms.author: riande

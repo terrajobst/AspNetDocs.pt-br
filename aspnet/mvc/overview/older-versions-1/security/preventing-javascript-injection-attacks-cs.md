@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
-title: Impedindo ataques de injeção de JavaScript (c#) | Microsoft Docs
+title: Impedindo ataques de injeção de JavaScript (C#) | Microsoft Docs
 author: StephenWalther
 description: Impedir ataques de injeção de JavaScript e ataques de scripts entre sites está acontecendo para você. Neste tutorial, Stephen Walther explica como você pode facilmente de...
 ms.author: riande

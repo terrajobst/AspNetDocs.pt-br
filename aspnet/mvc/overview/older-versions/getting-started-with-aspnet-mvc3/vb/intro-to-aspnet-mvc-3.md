@@ -27,7 +27,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o c#, alterne para o [c# versão](../cs/intro-to-aspnet-mvc-3.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o C#, alterne para o [C# versão](../cs/intro-to-aspnet-mvc-3.md) deste tutorial.
 
 
 Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se que você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no link a seguir: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar individualmente os pré-requisitos usando os links a seguir:
@@ -70,7 +70,7 @@ O Visual Web Developer é um IDE ou ambiente de desenvolvimento integrado. Assim
 
 ## <a name="creating-your-first-application"></a>Criando seu primeiro aplicativo
 
-Você pode criar aplicativos usando sua escolha do Visual Basic ou Visual c# como linguagem de programação. Para este tutorial, selecione Visual Basic à esquerda e selecione **aplicativo Web do ASP.NET MVC 3**. Nomeie o projeto "como MvcMovie" e, em seguida, clique em **Okey**.
+Você pode criar aplicativos usando sua escolha do Visual Basic ou Visual C# como linguagem de programação. Para este tutorial, selecione Visual Basic à esquerda e selecione **aplicativo Web do ASP.NET MVC 3**. Nomeie o projeto "como MvcMovie" e, em seguida, clique em **Okey**.
 
 ![1NewMVCproj_sm](intro-to-aspnet-mvc-3/_static/image7.png)
 

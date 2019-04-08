@@ -37,7 +37,7 @@ Neste tutorial, você:
 
 Esta seção mostra como usar o Visual Studio 2017 e SignalR 2 para criar um aplicativo ASP.NET MVC 5 vazio, adicione a biblioteca SignalR e criar o aplicativo de bate-papo.
 
-1. No Visual Studio, crie um aplicativo c# ASP.NET que tem como alvo o .NET Framework 4.5, nomeie-o SignalRChat e clique em Okey.
+1. No Visual Studio, crie um aplicativo C# ASP.NET que tem como alvo o .NET Framework 4.5, nomeie-o SignalRChat e clique em Okey.
 
     ![Criar web](tutorial-getting-started-with-signalr-and-mvc/_static/image1.png)
 

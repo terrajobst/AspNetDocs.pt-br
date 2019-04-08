@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-cs
-title: Trabalhando com colunas computadas (c#) | Microsoft Docs
+title: Trabalhando com colunas computadas (C#) | Microsoft Docs
 author: rick-anderson
 description: Ao criar uma tabela de banco de dados, o Microsoft SQL Server permite que você defina uma coluna computada, cujo valor é calculado a partir de uma expressão que normalmente referen...
 ms.author: riande

@@ -233,7 +233,7 @@ Se, por outro lado, você deseja criar seu próprio provedor (para armazenar as 
 
 ## <a name="creating-your-own-membership-provider"></a>Criar seu próprio provedor de associação
 
-Para criar seu próprio provedor de associação, você precisa primeiro criar uma classe que herda da classe MembershipProvider. Se você estiver usando o VB.NET, o Visual Studio 2005 adicionará os stubs para todos os métodos que você precisa substituir. Se você estiver usando c#, depende de você adicionar os stubs.
+Para criar seu próprio provedor de associação, você precisa primeiro criar uma classe que herda da classe MembershipProvider. Se você estiver usando o VB.NET, o Visual Studio 2005 adicionará os stubs para todos os métodos que você precisa substituir. Se você estiver usando C#, depende de você adicionar os stubs.
 
 Você precisará substituir o seguinte:
 
@@ -264,7 +264,7 @@ Você precisará substituir o seguinte:
 - Função UpdateUser
 - Função ValidateUser
 
-Que uma grande lista implementar como desenvolvedor em c#. Você talvez ache mais fácil de criar a classe no VB.NET sem qualquer implementação e, em seguida, usar o .NET Reflector ou uma ferramenta semelhante para converter o código em c#.
+Que uma grande lista implementar como desenvolvedor em C#. Você talvez ache mais fácil de criar a classe no VB.NET sem qualquer implementação e, em seguida, usar o .NET Reflector ou uma ferramenta semelhante para converter o código em C#.
 
 A cadeia de caracteres de conexão e outras propriedades devem ser definidas como seus padrões no método Initialize. (O método Initialize é disparado quando o provedor é carregado no tempo de execução). O segundo parâmetro para o método Initialize é do tipo NameValueCollection e é uma referência para o &lt;adicionar&gt; elemento que está associado com o provedor personalizado no arquivo Web. config. Essa entrada é semelhante ao seguinte:
 

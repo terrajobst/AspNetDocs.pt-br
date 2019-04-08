@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
-title: Disparar uma animação em outro controle (c#) | Microsoft Docs
+title: Disparar uma animação em outro controle (C#) | Microsoft Docs
 author: wenz
 description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Em geral, iniciar um...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-cs
-title: Adicionando animação a um controle (c#) | Microsoft Docs
+title: Adicionando animação a um controle (C#) | Microsoft Docs
 author: wenz
 description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Este tutorial mostra como...
 ms.author: riande

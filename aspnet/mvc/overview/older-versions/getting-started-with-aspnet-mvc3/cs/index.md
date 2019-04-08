@@ -1,8 +1,8 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/index
-title: Introdução ao ASP.NET MVC 3 (c#) | Microsoft Docs
+title: Introdução ao ASP.NET MVC 3 (C#) | Microsoft Docs
 author: rick-anderson
-description: As Noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express usando c#.
+description: As Noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express usando C#.
 ms.author: riande
 ms.date: 04/12/2012
 ms.assetid: 807b50ae-2e7c-450c-b559-e04bd56457bd
@@ -17,7 +17,7 @@ ms.locfileid: "57019563"
 ---
 <a name="getting-started-with-aspnet-mvc-3-c"></a>Introdução ao ASP.NET MVC 3 (C#)
 ====================
-> As Noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express usando c#.
+> As Noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express usando C#.
 
 
 - [Introdução ao ASP.NET MVC 3 (C#)](intro-to-aspnet-mvc-3.md)

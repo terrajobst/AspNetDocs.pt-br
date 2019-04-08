@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
-title: Uso de TextBoxWatermark em um FormView (c#) | Microsoft Docs
+title: Uso de TextBoxWatermark em um FormView (C#) | Microsoft Docs
 author: wenz
 description: O controle TextBoxWatermark do AJAX Control Toolkit estende uma caixa de texto para que um texto seja exibido dentro da caixa. Quando um usuário clica na caixa de-eu...
 ms.author: riande

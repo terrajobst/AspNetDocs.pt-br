@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/uploading-files-cs
-title: Carregando arquivos (c#) | Microsoft Docs
+title: Carregando arquivos (C#) | Microsoft Docs
 author: rick-anderson
 description: Saiba como permitir que usuários carreguem arquivos binários (como documentos do Word ou PDF) para seu site da Web onde eles podem ser armazenados no sistema de arquivos do servidor...
 ms.author: riande

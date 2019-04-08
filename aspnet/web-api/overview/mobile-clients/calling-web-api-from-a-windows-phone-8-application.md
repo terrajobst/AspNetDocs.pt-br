@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application
-title: Chamar a API da Web de um Windows Phone 8 aplicativo (c#) | Microsoft Docs
+title: Chamar a API da Web de um Windows Phone 8 aplicativo (C#) | Microsoft Docs
 author: rmcmurray
 description: Crie um cenário de ponta a ponta completo consiste em um aplicativo de API Web ASP.NET que fornece um catálogo de livros de um aplicativo do Windows Phone 8.
 ms.author: riande
@@ -47,7 +47,7 @@ A primeira etapa deste tutorial de ponta a ponta é criar um projeto de API da W
 
 1. Abra **Visual Studio 2013**.
 2. Clique em **arquivo**, em seguida, **novos**e então **projeto**.
-3. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **modelos**, em seguida, **Visual c#** e, em seguida, **Web**.
+3. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **modelos**, em seguida, **Visual C#** e, em seguida, **Web**.
 
 
    | [![](calling-web-api-from-a-windows-phone-8-application/_static/image2.png)](calling-web-api-from-a-windows-phone-8-application/_static/image1.png) |
@@ -106,7 +106,7 @@ A primeira etapa deste tutorial de ponta a ponta é criar um projeto de API da W
 É a próxima etapa deste cenário de ponta a ponta criar o aplicativo de catálogo para o Windows Phone 8. Este aplicativo usará o *Windows Phone Databound App* modelo para a interface do usuário padrão e ele usará o aplicativo de API da Web que você criou na [etapa 1](#STEP1) deste tutorial, como a fonte de dados.
 
 1. Clique com botão direito a **livraria** solução no no Gerenciador de soluções, clique em **Add**e, em seguida, **novo projeto**.
-2. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **Visual c#** e, em seguida, **Windows Phone**.
+2. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **Visual C#** e, em seguida, **Windows Phone**.
 3. Realçar **Windows Phone Databound App**, insira **BookCatalog** para o nome e, em seguida, clique **Okey**.
 4. Adicione o pacote do NuGet de Json.NET para o **BookCatalog** projeto:
 

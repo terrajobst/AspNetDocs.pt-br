@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/common-configuration-differences-between-development-and-production-cs
-title: Diferenças de configuração comuns entre desenvolvimento e produção (c#) | Microsoft Docs
+title: Diferenças de configuração comuns entre desenvolvimento e produção (C#) | Microsoft Docs
 author: rick-anderson
 description: Nos tutoriais anteriores, implantamos o nosso site, copiando todos os arquivos pertinentes do ambiente de desenvolvimento para o ambiente de produção. No entanto, eu...
 ms.author: riande

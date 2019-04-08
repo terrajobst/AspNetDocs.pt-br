@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-cs
-title: Criar uma restrição de rota personalizada (c#) | Microsoft Docs
+title: Criar uma restrição de rota personalizada (C#) | Microsoft Docs
 author: StephenWalther
 description: Stephen Walther demonstra como você pode criar uma restrição de rota personalizados. Implementamos um simples restrição personalizada que impede que uma rota que está sendo correspondido w...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-cs
-title: Estratégias de desenvolvimento de banco de dados e de implantação (c#) | Microsoft Docs
+title: Estratégias de desenvolvimento de banco de dados e de implantação (C#) | Microsoft Docs
 author: rick-anderson
 description: Ao implantar um aplicativo controlado por dados pela primeira vez você cegamente pode copiar o banco de dados no ambiente de desenvolvimento para o ambiente de produção. B...
 ms.author: riande

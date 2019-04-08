@@ -105,7 +105,7 @@ Nesta tarefa você começará criando um novo projeto ASP.NET MVC com suporte pa
     ![Criar um novo projeto](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image1.png "criando um novo projeto")
 
     *Criar um novo projeto*
-2. No **novo projeto** caixa de diálogo, selecione **aplicativo Web ASP.NET** sob o **Visual c# | Web** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie- *GeekQuiz*, escolha um **local** e clique em **Okey**.
+2. No **novo projeto** caixa de diálogo, selecione **aplicativo Web ASP.NET** sob o **Visual C# | Web** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie- *GeekQuiz*, escolha um **local** e clique em **Okey**.
 
     ![Criar um novo projeto de aplicativo Web ASP.NET](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image2.png "criando um novo projeto de aplicativo Web ASP.NET")
 

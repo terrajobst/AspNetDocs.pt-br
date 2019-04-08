@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/nested-data-web-controls-cs
-title: Dados aninhados Web controles (c#) | Microsoft Docs
+title: Dados aninhados Web controles (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial, exploraremos como usar um repetidor aninhado em outro Repeater. Os exemplos ilustrará como popular o Repeater interno ambos os d...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/older-versions/self-host-a-web-api
-title: Hospedar internamente o ASP.NET Web API 1 (c#) | Microsoft Docs
+title: Hospedar internamente o ASP.NET Web API 1 (C#) | Microsoft Docs
 author: MikeWasson
 description: API Web ASP.NET não requer o IIS. Você pode hospedar internamente uma API da web em seu próprio processo de host. Este tutorial mostra como hospedar uma API da web dentro de um console applic...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57040753"
 ---
-<a name="self-host-aspnet-web-api-1-c"></a>Hospedar internamente o ASP.NET Web API 1 (c#)
+<a name="self-host-aspnet-web-api-1-c"></a>Hospedar internamente o ASP.NET Web API 1 (C#)
 ====================
 por [Mike Wasson](https://github.com/MikeWasson)
 
@@ -34,7 +34,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 
 Inicie o Visual Studio e selecione **Novo projeto** na página **Iniciar**. Ou, no menu **Arquivo**, selecione **Novo** e, em seguida, **Projeto**.
 
-No painel **Modelos**, selecione **Modelos Instalados** e expanda o nó **Visual C#**. Sob **Visual c#**, selecione **Windows**. Na lista de modelos de projeto, selecione **aplicativo de Console**. Nomeie o projeto &quot;SelfHost&quot; e clique em **Okey**.
+No painel **Modelos**, selecione **Modelos Instalados** e expanda o nó **Visual C#**. Sob **Visual C#**, selecione **Windows**. Na lista de modelos de projeto, selecione **aplicativo de Console**. Nomeie o projeto &quot;SelfHost&quot; e clique em **Okey**.
 
 ![](self-host-a-web-api/_static/image1.png)
 
@@ -127,7 +127,7 @@ Quando tiver terminado de hospedagem interna, não se esqueça de excluir a rese
 
 [!code-console[Main](self-host-a-web-api/samples/sample6.cmd)]
 
-## <a name="call-the-web-api-from-a-client-application-c"></a>Chamar a API Web de um aplicativo cliente (c#)
+## <a name="call-the-web-api-from-a-client-application-c"></a>Chamar a API Web de um aplicativo cliente (C#)
 
 Vamos escrever um aplicativo de console simples que chama a API da web.
 

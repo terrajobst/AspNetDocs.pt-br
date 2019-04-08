@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/advanced/calling-a-web-api-from-a-net-client
-title: Chamar uma API Web de um cliente .NET (c#) | Microsoft Docs
+title: Chamar uma API Web de um cliente .NET (C#) | Microsoft Docs
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -14,7 +14,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58423125"
 ---
-<a name="call-a-web-api-from-a-net-client-c"></a>Chamar uma API Web de um cliente .NET (c#)
+<a name="call-a-web-api-from-a-net-client-c"></a>Chamar uma API Web de um cliente .NET (C#)
 ====================
 por [Mike Wasson](https://github.com/MikeWasson) e [Rick Anderson](https://twitter.com/RickAndMSFT)
 

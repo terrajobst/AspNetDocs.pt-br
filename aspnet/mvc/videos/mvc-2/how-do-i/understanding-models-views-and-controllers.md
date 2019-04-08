@@ -19,7 +19,7 @@ ms.locfileid: "57053533"
 ====================
 por [Stephen Walther](https://github.com/StephenWalther)
 
-Confuso sobre modelos, exibições e controladores? Neste tutorial, Stephen Walther apresenta as diferentes partes de um aplicativo ASP.NET MVC. Para obter informações adicionais sobre este vídeo, leia o tutorial "Noções básicas sobre modelos, exibições e controladores" ([c#](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-cs.md), [VB](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-vb.md)).
+Confuso sobre modelos, exibições e controladores? Neste tutorial, Stephen Walther apresenta as diferentes partes de um aplicativo ASP.NET MVC. Para obter informações adicionais sobre este vídeo, leia o tutorial "Noções básicas sobre modelos, exibições e controladores" ([C#](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-cs.md), [VB](../../../overview/older-versions-1/overview/understanding-models-views-and-controllers-vb.md)).
 
 [&#9654;Assista ao vídeo (13 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/understanding-models-views-and-controllers)
 

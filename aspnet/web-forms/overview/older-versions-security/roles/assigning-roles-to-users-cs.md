@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/roles/assigning-roles-to-users-cs
-title: Atribuindo funções aos usuários (c#) | Microsoft Docs
+title: Atribuindo funções aos usuários (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial, criaremos duas páginas do ASP.NET para ajudá-lo com o que os usuários pertencem a quais funções de gerenciamento. A primeira página será incluem recursos para ver o que...
 ms.author: riande

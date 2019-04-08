@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-cs
-title: Incluindo um arquivo de opção Carregar ao adicionar um novo registro (c#) | Microsoft Docs
+title: Incluindo um arquivo de opção Carregar ao adicionar um novo registro (C#) | Microsoft Docs
 author: rick-anderson
 description: Este tutorial mostra como criar uma interface da Web que permite que o usuário digite dados de texto e carregar arquivos binários. Para ilustrar o t disponível de opções...
 ms.author: riande

@@ -21,7 +21,7 @@ Web Forms do ASP.NET é uma parte da estrutura de aplicativo web ASP.NET e está
 
 Formulários da Web são páginas que os usuários solicitam usando seu navegador. Essas páginas podem ser gravadas usando uma combinação de HTML, script de cliente, os controles de servidor e código do servidor. Quando os usuários solicitam uma página, ele é compilado e executado no servidor pelo framework e, em seguida, a estrutura gera a marcação HTML que pode fazer com que o navegador. Uma página de Web Forms do ASP.NET apresenta informações para o usuário em qualquer navegador ou dispositivo cliente.
 
-Usando o Visual Studio, você pode criar Web Forms do ASP.NET. O Visual Studio Development IDE (ambiente integrado) permite arrastar e soltar os controles de servidor para dispor de sua página de Web Forms. Você pode facilmente definir propriedades, métodos e eventos para controles na página ou para a página propriamente dita. Essas propriedades, métodos e eventos são usados para definir o comportamento da página da web, e a aparência e assim por diante. Para escrever código para manipular a lógica para a página do servidor, você pode usar uma linguagem .NET como Visual Basic ou c#.
+Usando o Visual Studio, você pode criar Web Forms do ASP.NET. O Visual Studio Development IDE (ambiente integrado) permite arrastar e soltar os controles de servidor para dispor de sua página de Web Forms. Você pode facilmente definir propriedades, métodos e eventos para controles na página ou para a página propriamente dita. Essas propriedades, métodos e eventos são usados para definir o comportamento da página da web, e a aparência e assim por diante. Para escrever código para manipular a lógica para a página do servidor, você pode usar uma linguagem .NET como Visual Basic ou C#.
 
 > [!NOTE] 
 > 
@@ -32,7 +32,7 @@ Usando o Visual Studio, você pode criar Web Forms do ASP.NET. O Visual Studio D
 
 - Com base na tecnologia Microsoft ASP.NET, no qual o código que é executado no servidor dinamicamente gera saída de página da Web para o navegador ou dispositivo cliente.
 - É compatível com qualquer navegador ou dispositivo móvel. Uma página da Web do ASP.NET automaticamente renderiza o HTML em conformidade com o navegador correto para recursos, como estilos, layout e assim por diante.
-- É compatível com qualquer linguagem compatível com o .NET common language runtime, como Microsoft Visual Basic e o Microsoft Visual c#.
+- É compatível com qualquer linguagem compatível com o .NET common language runtime, como Microsoft Visual Basic e o Microsoft Visual C#.
 - Construído sobre o Microsoft .NET Framework. Isso fornece todos os benefícios do framework, incluindo um ambiente gerenciado, segurança de tipos e herança.
 - Flexível porque você pode adicionar criados pelo usuário e de controles terceirizados para eles.
 

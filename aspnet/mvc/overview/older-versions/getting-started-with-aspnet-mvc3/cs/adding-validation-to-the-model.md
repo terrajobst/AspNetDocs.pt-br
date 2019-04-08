@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model
-title: Adicionar validação ao modelo (c#) | Microsoft Docs
+title: Adicionar validação ao modelo (C#) | Microsoft Docs
 author: Rick-Anderson
 description: Criando um controlador
 ms.author: riande
@@ -31,7 +31,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte c# está disponível para acompanhar este tópico. [Baixe a versão c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte C# está disponível para acompanhar este tópico. [Baixe a versão C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
 
 
 Nesta seção, você adicionará lógica de validação para o `Movie` modelo e você vai garantir que as regras de validação são impostas sempre que um usuário tenta criar ou editar um filme usando o aplicativo.

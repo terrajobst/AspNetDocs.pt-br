@@ -187,7 +187,7 @@ Então, ter `Control.FindControl` pesquisar apenas *controle*de nomenclatura do 
 A boa notícia é que podemos criar nossos próprios `FindControl` método esse recursivamente procura todos os contêineres de nomenclatura. Na verdade, usando *métodos de extensão* podemos pode acrescentar uma `FindControlRecursive` método para o `Control` classe para acompanhar as existentes `FindControl` método.
 
 > [!NOTE]
-> Métodos de extensão são um recurso novo c# 3,0 e Visual Basic 9, quais são os idiomas que acompanham o .NET Framework versão 3.5 e o Visual Studio 2008. Em resumo, os métodos de extensão permitem que um desenvolvedor crie um novo método para um tipo de classe existente por meio de uma sintaxe especial. Para obter mais informações sobre este recurso útil, consulte meu artigo [estender funcionalidade do tipo Base com métodos de extensão](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
+> Métodos de extensão são um recurso novo C# 3,0 e Visual Basic 9, quais são os idiomas que acompanham o .NET Framework versão 3.5 e o Visual Studio 2008. Em resumo, os métodos de extensão permitem que um desenvolvedor crie um novo método para um tipo de classe existente por meio de uma sintaxe especial. Para obter mais informações sobre este recurso útil, consulte meu artigo [estender funcionalidade do tipo Base com métodos de extensão](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
 
 
 Para criar o método de extensão, adicione um novo arquivo para o `App_Code` pasta chamada `PageExtensionMethods.vb`. Adicionar um método de extensão denominado `FindControlRecursive` que usa como entrada uma `String` parâmetro chamado `controlID`. Para métodos de extensão funcione corretamente, é vital que a classe ser marcado como um `Module` e que os métodos de extensão ser prefixadas com o `<Extension()>` atributo. Além disso, todos os métodos de extensão devem aceitar como seu primeiro parâmetro um objeto do tipo ao qual o método de extensão se aplica.
@@ -211,7 +211,7 @@ Digite o seguinte código para o `SubmitButton_Click` manipulador de eventos e, 
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample13.vb)]
 
 > [!NOTE]
-> Como os métodos de extensão são novos para c# 3,0 e Visual Basic 9, se você estiver usando o Visual Studio 2005, é possível usar métodos de extensão. Em vez disso, você precisará implementar o `FindControlRecursive` método em uma classe auxiliar. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) tem um exemplo em sua postagem de blog, [páginas mestra do ASP.NET e `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
+> Como os métodos de extensão são novos para C# 3,0 e Visual Basic 9, se você estiver usando o Visual Studio 2005, é possível usar métodos de extensão. Em vez disso, você precisará implementar o `FindControlRecursive` método em uma classe auxiliar. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) tem um exemplo em sua postagem de blog, [páginas mestra do ASP.NET e `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
 
 
 ## <a name="step-4-using-the-correctidattribute-value-in-client-side-script"></a>Etapa 4: Usando o correto`id`valor no Script do lado do cliente do atributo

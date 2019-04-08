@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs
-title: Abrindo uma janela pop-up Modal do código do servidor (c#) | Microsoft Docs
+title: Abrindo uma janela pop-up Modal do código do servidor (C#) | Microsoft Docs
 author: wenz
 description: O controle ModalPopup no AJAX Control Toolkit oferece uma maneira simples de criar um pop-up modal usando meios do lado do cliente. No entanto, alguns cenários exigem que o...
 ms.author: riande

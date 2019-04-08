@@ -36,7 +36,7 @@ Contadores de desempenho do SignalR são usados para monitorar o desempenho do s
 
 2. No Visual Studio, selecione **Arquivo** > **Novo** > **Projeto**.
 
-3. No **novo projeto** caixa de diálogo, selecione o **Visual c#** > **nuvem** categoria à esquerda e, em seguida, selecione o **serviço de nuvem do Azure** modelo. Nomeie o aplicativo **SignalRPerfCounters** e selecione **Okey**.
+3. No **novo projeto** caixa de diálogo, selecione o **Visual C#** > **nuvem** categoria à esquerda e, em seguida, selecione o **serviço de nuvem do Azure** modelo. Nomeie o aplicativo **SignalRPerfCounters** e selecione **Okey**.
 
    ![Novo aplicativo de nuvem](using-signalr-performance-counters-in-an-azure-web-role/_static/image1.png)
 

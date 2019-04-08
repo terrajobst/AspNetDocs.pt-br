@@ -772,7 +772,7 @@ Agora que **AutoEscala** tiver sido configurado, você aprenderá a criar um **p
     ![Criar um novo projeto](maintainable-azure-websites-managing-change-and-scale/_static/image79.png "criando um novo projeto")
 
     *Criar um novo projeto*
-2. No **novo projeto** caixa de diálogo, selecione **projeto de teste de carga e desempenho na Web** sob o **Visual c# | Teste** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie o projeto *WebAndLoadTestProject*, escolha um **local** e clique em **Okey**.
+2. No **novo projeto** caixa de diálogo, selecione **projeto de teste de carga e desempenho na Web** sob o **Visual C# | Teste** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie o projeto *WebAndLoadTestProject*, escolha um **local** e clique em **Okey**.
 
     ![Criar um novo projeto de teste de carga e da Web](maintainable-azure-websites-managing-change-and-scale/_static/image80.png "criando um novo projeto de teste de carga e Web")
 

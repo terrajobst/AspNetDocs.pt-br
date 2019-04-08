@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/executing-animations-using-client-side-code-cs
-title: Executar animações usando o código do lado do cliente (c#) | Microsoft Docs
+title: Executar animações usando o código do lado do cliente (C#) | Microsoft Docs
 author: wenz
 description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. A execução de animação...
 ms.author: riande

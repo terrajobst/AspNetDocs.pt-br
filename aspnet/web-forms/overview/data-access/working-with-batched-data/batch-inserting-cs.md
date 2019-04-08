@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs
-title: Lote de inserção (c#) | Microsoft Docs
+title: Lote de inserção (C#) | Microsoft Docs
 author: rick-anderson
 description: Saiba como inserir vários registros de banco de dados em uma única operação. Na camada de Interface do usuário, estendemos o GridView para permitir que o usuário insira várias n...
 ms.author: riande

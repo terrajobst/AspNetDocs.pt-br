@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs
-title: Criar um aplicativo de banco de dados de filme em 15 minutos com o ASP.NET MVC (c#) | Microsoft Docs
+title: Criar um aplicativo de banco de dados de filme em 15 minutos com o ASP.NET MVC (C#) | Microsoft Docs
 author: StephenWalther
 description: Stephen Walther compila um controlado por banco de dados ASP.NET MVC aplicativo inteiro do início ao fim. Este tutorial é uma excelente introdução para as pessoas que são nova t...
 ms.author: riande
@@ -75,7 +75,7 @@ Depois de instalar o Visual Studio 2008 ou o Visual Web Developer 2008, você pr
 
 ## <a name="creating-an-aspnet-mvc-web-application-project"></a>Criar um projeto de aplicativo Web ASP.NET MVC
 
-Vamos começar criando um novo projeto de aplicativo Web ASP.NET MVC no Visual Studio 2008. Selecione a opção de menu **arquivo, novo projeto** e você verá a caixa de diálogo Novo projeto na Figura 1. Selecione c# como linguagem de programação e selecione o modelo de projeto de aplicativo Web ASP.NET MVC. Dê o nome MovieApp ao seu projeto e clique no botão Okey.
+Vamos começar criando um novo projeto de aplicativo Web ASP.NET MVC no Visual Studio 2008. Selecione a opção de menu **arquivo, novo projeto** e você verá a caixa de diálogo Novo projeto na Figura 1. Selecione C# como linguagem de programação e selecione o modelo de projeto de aplicativo Web ASP.NET MVC. Dê o nome MovieApp ao seu projeto e clique no botão Okey.
 
 
 [![A caixa de diálogo Novo projeto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs/_static/image1.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs/_static/image1.png)

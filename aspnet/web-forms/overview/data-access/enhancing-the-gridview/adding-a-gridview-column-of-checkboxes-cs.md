@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs
-title: Adicionando uma coluna de GridView de caixas de seleção (c#) | Microsoft Docs
+title: Adicionando uma coluna de GridView de caixas de seleção (C#) | Microsoft Docs
 author: rick-anderson
 description: Este tutorial explica como adicionar uma coluna de caixas de seleção a um controle GridView para fornecer ao usuário uma maneira intuitiva de seleção de várias linhas de a G....
 ms.author: riande

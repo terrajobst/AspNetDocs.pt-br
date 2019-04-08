@@ -27,7 +27,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o c#, alterne para o [c# versão](../cs/adding-a-view.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o C#, alterne para o [C# versão](../cs/adding-a-view.md) deste tutorial.
 
 
 Nesta seção, vamos modificar o `HelloWorldController` encapsular a classe para usar um arquivo de modelo de exibição para corretamente o processo de geração de respostas HTML para um cliente.

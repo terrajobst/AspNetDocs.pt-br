@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-cs
-title: Processamento de exceções sem tratamento (c#) | Microsoft Docs
+title: Processamento de exceções sem tratamento (C#) | Microsoft Docs
 author: rick-anderson
 description: Quando ocorre um erro de tempo de execução em um aplicativo web em produção é importante para notificar um desenvolvedor e para registrar o erro, de modo que podem ser diagnosticado na la...
 ms.author: riande

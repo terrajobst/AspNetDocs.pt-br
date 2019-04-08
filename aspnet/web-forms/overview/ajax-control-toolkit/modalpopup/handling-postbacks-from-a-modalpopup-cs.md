@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/modalpopup/handling-postbacks-from-a-modalpopup-cs
-title: Tratamento de Postbacks de um ModalPopup (c#) | Microsoft Docs
+title: Tratamento de Postbacks de um ModalPopup (C#) | Microsoft Docs
 author: wenz
 description: O controle ModalPopup no AJAX Control Toolkit oferece uma maneira simples de criar um pop-up modal usando meios do lado do cliente. Cuidado especial deve ser executado quando um pos...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/enhancing-the-gridview/inserting-a-new-record-from-the-gridview-s-footer-cs
-title: Inserindo um novo registro do rodapé do GridView (c#) | Microsoft Docs
+title: Inserindo um novo registro do rodapé do GridView (C#) | Microsoft Docs
 author: rick-anderson
 description: Enquanto o controle GridView não fornece suporte interno para inserir um novo registro de dados, este tutorial mostra como incrementar o GridView para incluir um...
 ms.author: riande

@@ -70,7 +70,7 @@ O código a seguir demonstra como podemos atualizar nosso método de ação Inde
 
 O método de ação Index () acima tem um parâmetro chamado "página". O parâmetro é declarado como um inteiro anulável (que é o que int? indica). Isso significa que o */Dinners? página = 2* URL fará com que um valor de "2" a ser passado como o valor do parâmetro. O */Dinners* URL (sem um valor de querystring) fará com que um valor nulo seja passado.
 
-Podemos são multiplicar o valor da página pelo tamanho da página (nesse caso, 10 linhas) para determinar quantos jantares ignorar. Estamos usando o [c# "" operador de união nulo (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) que é útil ao lidar com tipos anuláveis. O código acima atribui o valor de 0 página se o parâmetro de página é nulo.
+Podemos são multiplicar o valor da página pelo tamanho da página (nesse caso, 10 linhas) para determinar quantos jantares ignorar. Estamos usando o [C# "" operador de união nulo (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) que é útil ao lidar com tipos anuláveis. O código acima atribui o valor de 0 página se o parâmetro de página é nulo.
 
 #### <a name="using-embedded-url-values"></a>Usando valores da URL inserida
 

@@ -71,7 +71,7 @@ Crie um novo namespace do barramento de serviço, conforme descrito em [como o b
 
 Inicie o Visual Studio. Dos **arquivo** menu, clique em **novo projeto**.
 
-No **novo projeto** diálogo caixa, expanda **Visual c#**. Sob **modelos instalados**, selecione **nuvem** e, em seguida, selecione **serviço de nuvem do Windows Azure**. Mantenha o padrão do .NET Framework 4.5. Nome do aplicativo ChatService e clique em **Okey**.
+No **novo projeto** diálogo caixa, expanda **Visual C#**. Sob **modelos instalados**, selecione **nuvem** e, em seguida, selecione **serviço de nuvem do Windows Azure**. Mantenha o padrão do .NET Framework 4.5. Nome do aplicativo ChatService e clique em **Okey**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image4.png)
 

@@ -19,7 +19,7 @@ ms.locfileid: "57030013"
 ====================
 por [Joe Stagner](https://github.com/JoeStagner)
 
-Neste vídeo, Joe Stagner mostra como criar seu próprio formulário da web e o processo de solicitação de autenticação manualmente. Para obter informações adicionais sobre este vídeo, leia o tutorial de segurança de "Validar usuário as credenciais contra a associação usuário Store" ([c#](../../overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs.md), [VB](../../overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb.md)).
+Neste vídeo, Joe Stagner mostra como criar seu próprio formulário da web e o processo de solicitação de autenticação manualmente. Para obter informações adicionais sobre este vídeo, leia o tutorial de segurança de "Validar usuário as credenciais contra a associação usuário Store" ([C#](../../overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs.md), [VB](../../overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb.md)).
 
 [&#9654;Assista ao vídeo (13 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/validating-users-manually)
 

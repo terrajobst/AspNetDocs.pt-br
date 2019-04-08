@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-cs
-title: Autenticar usuários com formulários de autenticação (c#) | Microsoft Docs
+title: Autenticar usuários com formulários de autenticação (C#) | Microsoft Docs
 author: microsoft
 description: Saiba como usar o atributo [autorizar] senha proteger páginas específicas em seu aplicativo MVC. Você aprenderá a usar a administração de Site da Web também...
 ms.author: riande

@@ -1279,7 +1279,7 @@ O designer do Visual Web Developer no Visual Studio 2010 foi atualizado para mel
 
 ### <a name="html-and-javascript-snippets"></a>Trechos de JavaScript e HTML
 
-No editor de HTML, IntelliSense é preenchida automaticamente nomes de marca. O recurso de trechos de código do IntelliSense é preenchida automaticamente marcas inteiras e muito mais. No Visual Studio 2010, trechos de código do IntelliSense têm suporte para JavaScript, juntamente com o c# e Visual Basic, que foram suportados nas versões anteriores do Visual Studio.
+No editor de HTML, IntelliSense é preenchida automaticamente nomes de marca. O recurso de trechos de código do IntelliSense é preenchida automaticamente marcas inteiras e muito mais. No Visual Studio 2010, trechos de código do IntelliSense têm suporte para JavaScript, juntamente com o C# e Visual Basic, que foram suportados nas versões anteriores do Visual Studio.
 
 Visual Studio 2010 inclui mais de 200 trechos de código que ajudam você a auto-completar ASP.NET e HTML marcas comuns, incluindo os atributos necessários (como runat = "server") e específicos a uma marca de atributos comuns (como *identificação*,  *DataSourceID*, *ControlToValidate*, e *texto*).
 

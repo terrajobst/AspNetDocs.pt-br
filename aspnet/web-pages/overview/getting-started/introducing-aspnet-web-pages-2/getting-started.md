@@ -63,7 +63,7 @@ Vamos supor que você esteja familiarizado com:
 - **Folhas de estilos em cascata (CSS)**. Mesmo que com HTML.
 - **Ideias de banco de dados básico**. Se você tiver usado uma planilha de dados e classificados e filtrados de dados, que é o nível de conhecimento geralmente supondo para este conjunto de tutoriais.
 
-Vamos supor também que você está interessado em aprender programação básica. Páginas da Web ASP.NET usam uma linguagem de programação c#. Você não precisa ter qualquer experiência em programação, apenas um interesse nele. Se você já escreveu nenhum JavaScript em uma página da web antes, você tem muita em segundo plano.
+Vamos supor também que você está interessado em aprender programação básica. Páginas da Web ASP.NET usam uma linguagem de programação C#. Você não precisa ter qualquer experiência em programação, apenas um interesse nele. Se você já escreveu nenhum JavaScript em uma página da web antes, você tem muita em segundo plano.
 
 Observe que, se você estiver familiarizado com programação, você pode achar que este tutorial é definida inicialmente se move lentamente enquanto oferecemos os novos programadores a agilizar. Como podemos superar alguns tutoriais primeiro, no entanto, haverá menos básicas de programação para explicar e as coisas se moverá ao longo em um clipe mais rápido.
 

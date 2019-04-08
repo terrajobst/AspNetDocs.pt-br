@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: 'Iteração #5 – criar testes de unidade (c#) | Microsoft Docs'
+title: 'Iteração #5 – criar testes de unidade (C#) | Microsoft Docs'
 author: microsoft
 description: Na quinta iteração, podemos tornar nosso aplicativo mais fácil de manter e modificar adicionando testes de unidade. Vamos simular a nossas classes de modelo de dados e criar testes de unidade para o...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58422162"
 ---
-<a name="iteration-5--create-unit-tests-c"></a>Iteração #5 – criar testes de unidade (c#)
+<a name="iteration-5--create-unit-tests-c"></a>Iteração #5 – criar testes de unidade (C#)
 ====================
 por [Microsoft](https://github.com/microsoft)
 
@@ -24,7 +24,7 @@ por [Microsoft](https://github.com/microsoft)
 > Na quinta iteração, podemos tornar nosso aplicativo mais fácil de manter e modificar adicionando testes de unidade. Vamos simular a nossas classes de modelo de dados e criar testes de unidade para nossos controladores e lógica de validação.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (c#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (C#)
 
 Esta série de tutoriais, vamos criar um aplicativo de gerenciamento de contatos inteiro do início ao fim. O aplicativo Gerenciador de contatos permite que você armazene informações de contato - nomes, números de telefone e endereços de email - para obter uma lista de pessoas.
 

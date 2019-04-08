@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/performing-batch-updates-cs
-title: Executar atualizações em lote (c#) | Microsoft Docs
+title: Executar atualizações em lote (C#) | Microsoft Docs
 author: rick-anderson
 description: Saiba como criar um totalmente editáveis DataList onde todos os seus itens estão no modo de edição e cujos valores podem ser salvos, clicando em um botão 'Atualizar tudo' na...
 ms.author: riande

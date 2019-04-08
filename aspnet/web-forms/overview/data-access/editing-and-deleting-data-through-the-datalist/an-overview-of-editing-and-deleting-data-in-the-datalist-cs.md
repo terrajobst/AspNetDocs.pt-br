@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-cs
-title: Uma visão geral de editar e excluir dados no DataList (c#) | Microsoft Docs
+title: Uma visão geral de editar e excluir dados no DataList (C#) | Microsoft Docs
 author: rick-anderson
 description: Enquanto DataList não tiver a edição internos e excluir recursos, este tutorial veremos como criar uma DataList que dá suporte à edição e exclusão e s...
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57050353"
 ---
-<a name="an-overview-of-editing-and-deleting-data-in-the-datalist-c"></a>Uma visão geral de editar e excluir dados no DataList (c#)
+<a name="an-overview-of-editing-and-deleting-data-in-the-datalist-c"></a>Uma visão geral de editar e excluir dados no DataList (C#)
 ====================
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 

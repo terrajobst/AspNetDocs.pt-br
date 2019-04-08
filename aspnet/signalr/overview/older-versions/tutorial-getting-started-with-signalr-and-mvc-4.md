@@ -72,7 +72,7 @@ Esta seção mostra como criar um aplicativo ASP.NET MVC 4, adicione a bibliotec
 
          ![Referências da biblioteca](tutorial-getting-started-with-signalr-and-mvc-4/_static/image6.png)
       5. Na **Gerenciador de soluções**, clique com botão direito no projeto, selecione **adicionar | Nova pasta**, e adicione uma nova pasta chamada **Hubs**.
-      6. Clique com botão direito do **Hubs** pasta, clique em **adicionar | Classe**e crie uma nova classe c# denominada **ChatHub.cs**. Você usará essa classe como um hub de servidor SignalR que envia mensagens para todos os clientes.
+      6. Clique com botão direito do **Hubs** pasta, clique em **adicionar | Classe**e crie uma nova classe C# denominada **ChatHub.cs**. Você usará essa classe como um hub de servidor SignalR que envia mensagens para todos os clientes.
 
 > [!NOTE]
 > Se você usar o Visual Studio 2012 e tiver instalado o [atualização do ASP.NET e Web Tools 2012.2](../../../visual-studio/overview/2012/aspnet-and-web-tools-20122-release-notes-rtw.md#_Installation), você pode usar o novo modelo de item do SignalR para criar a classe hub. Para fazer isso, clique com botão direito do **Hubs** pasta, clique em **adicionar | Novo Item**, selecione **classe de Hub do SignalR (v1)** e nomeie a classe **ChatHub.cs**.
@@ -149,7 +149,7 @@ O código a seguir declara um proxy para um hub.
 [!code-javascript[Main](tutorial-getting-started-with-signalr-and-mvc-4/samples/sample6.js)]
 
 > [!NOTE]
-> No jQuery a referência para a classe de servidor e seus membros é em minúsculas concatenadas. O exemplo de código faz referência de c# **ChatHub** classe no jQuery como **chatHub**. Se você quiser fazer referência a `ChatHub` classe no jQuery com convencional Pascal casing, como você faria no c#, edite o arquivo de classe ChatHub.cs. Adicionar um `using` instrução para fazer referência a `Microsoft.AspNet.SignalR.Hubs` namespace. Em seguida, adicione a `HubName` de atributo para o `ChatHub` classe, por exemplo `[HubName("ChatHub")]`. Por fim, atualize sua referência de jQuery para o `ChatHub` classe.
+> No jQuery a referência para a classe de servidor e seus membros é em minúsculas concatenadas. O exemplo de código faz referência de C# **ChatHub** classe no jQuery como **chatHub**. Se você quiser fazer referência a `ChatHub` classe no jQuery com convencional Pascal casing, como você faria no C#, edite o arquivo de classe ChatHub.cs. Adicionar um `using` instrução para fazer referência a `Microsoft.AspNet.SignalR.Hubs` namespace. Em seguida, adicione a `HubName` de atributo para o `ChatHub` classe, por exemplo `[HubName("ChatHub")]`. Por fim, atualize sua referência de jQuery para o `ChatHub` classe.
 
 
 O código a seguir mostra como criar uma função de retorno de chamada no script. A classe hub no servidor chama essa função para enviar atualizações de conteúdo para cada cliente. A chamada opcional para o `htmlEncode` função mostra uma maneira para HTML codificar o conteúdo da mensagem antes de exibi-la na página, como uma maneira de evitar a injeção de script.

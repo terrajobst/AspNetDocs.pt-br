@@ -46,7 +46,7 @@ Para obter essa lista, um extensor de CascadingDropDown é adicionado. Ele envia
 - `Category`: Informações de categoria que são enviadas para o método da web quando chamado
 - `PromptText`: Texto exibido quando assincronamente Carregando dados da lista do servidor
 
-Aqui está a marcação para o `CascadingDropDown` elemento. A única diferença entre c# e VB é o nome do serviço web associado:
+Aqui está a marcação para o `CascadingDropDown` elemento. A única diferença entre C# e VB é o nome do serviço web associado:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-vb/samples/sample3.aspx)]
 

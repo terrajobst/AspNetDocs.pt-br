@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/limiting-data-modification-functionality-based-on-the-user-cs
-title: Limitando a funcionalidade de modificação de dados com base no usuário (c#) | Microsoft Docs
+title: Limitando a funcionalidade de modificação de dados com base no usuário (C#) | Microsoft Docs
 author: rick-anderson
 description: Em um aplicativo web que permite aos usuários editarem dados, contas de usuário diferentes podem ter diferentes privilégios de edição de dados. Neste tutorial, examinaremos como t...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
-title: Atualizando o TableAdapter para usar JOINs (c#) | Microsoft Docs
+title: Atualizando o TableAdapter para usar JOINs (C#) | Microsoft Docs
 author: rick-anderson
 description: Ao trabalhar com um banco de dados é comum para solicitar os dados são distribuídos entre várias tabelas. Para recuperar dados de duas tabelas diferentes, pode usar qualquer um...
 ms.author: riande

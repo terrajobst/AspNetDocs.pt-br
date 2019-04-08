@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/core-differences-between-iis-and-the-asp-net-development-server-cs
-title: Principais diferenças entre o IIS e o ASP.NET Development Server (c#) | Microsoft Docs
+title: Principais diferenças entre o IIS e o ASP.NET Development Server (C#) | Microsoft Docs
 author: rick-anderson
 description: Ao testar um aplicativo ASP.NET localmente, provavelmente que você está usando o Web do ASP.NET Development Server. No entanto, o site de produção é mais provável pow...
 ms.author: riande

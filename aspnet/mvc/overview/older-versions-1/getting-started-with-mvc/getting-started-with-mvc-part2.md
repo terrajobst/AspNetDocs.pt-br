@@ -66,7 +66,7 @@ Novamente, / [Controller] / [nome da ação] / [parâmetros] para que o controla
 
 [![Esse é o método de ação boas-vindas](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
 
-Vamos modificar nosso exemplo um pouco para que podemos passar algumas informações da URL para o nosso controlador, por exemplo, como este: / HelloWorld/Welcome? nome = Scott&amp;numtimes = 4. Altere o método de boas-vindo para incluir dois parâmetros e update-lo como abaixo. Observe que usamos o recurso de parâmetro opcional do c# para indicar que o parâmetro numTimes deve padrão como 1 se ele não for passado.
+Vamos modificar nosso exemplo um pouco para que podemos passar algumas informações da URL para o nosso controlador, por exemplo, como este: / HelloWorld/Welcome? nome = Scott&amp;numtimes = 4. Altere o método de boas-vindo para incluir dois parâmetros e update-lo como abaixo. Observe que usamos o recurso de parâmetro opcional do C# para indicar que o parâmetro numTimes deve padrão como 1 se ele não for passado.
 
 [!code-csharp[Main](getting-started-with-mvc-part2/samples/sample2.cs)]
 

@@ -54,7 +54,7 @@ Em um alto nível, aqui está a arquitetura do aplicativo:
 
 - ASP.NET MVC gera as páginas HTML para o cliente.
 - API Web ASP.NET expõe operações CRUD nos dados (produtos e pedidos).
-- Entity Framework converte os modelos de c# usados pela API da Web em entidades de banco de dados.
+- Entity Framework converte os modelos de C# usados pela API da Web em entidades de banco de dados.
 
 ![](using-web-api-with-entity-framework-part-1/_static/image3.png)
 

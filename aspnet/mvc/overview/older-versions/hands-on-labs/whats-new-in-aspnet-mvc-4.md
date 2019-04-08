@@ -97,7 +97,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
 #### <a name="task-1---exploring-the-internet-application-template"></a>Tarefa 1 - Explorando o modelo de aplicativo de Internet
 
 1. Abra **Visual Studio**.
-2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual c# | Web** modelo no painel à esquerda de árvore e escolha **aplicativo Web do ASP.NET MVC 4.** Nomeie o projeto **Galeriadefotos**, selecione um local (ou deixe o padrão) e clique em **Okey**.
+2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual C# | Web** modelo no painel à esquerda de árvore e escolha **aplicativo Web do ASP.NET MVC 4.** Nomeie o projeto **Galeriadefotos**, selecione um local (ou deixe o padrão) e clique em **Okey**.
 
     > [!NOTE]
     > Posteriormente, você irá personalizar a solução de Galeriadefotos ASP.NET MVC 4, que agora você está criando.
@@ -112,7 +112,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
     *Criando um novo aplicativo ASP.NET MVC 4 da Internet*
 
     > [!NOTE]
-    > Sintaxe do Razor foi introduzido no ASP.NET MVC 3. Sua meta é minimizar o número de caracteres e pressionamentos de teclas necessários em um arquivo, permitindo um rápido e fluido fluxo de trabalho de codificação. Aproveita o Razor existente c# / VB (ou outros) habilidades linguísticas e fornece uma sintaxe de marcação de modelo que permite que um fluxo de trabalho de construção de HTML incrível.
+    > Sintaxe do Razor foi introduzido no ASP.NET MVC 3. Sua meta é minimizar o número de caracteres e pressionamentos de teclas necessários em um arquivo, permitindo um rápido e fluido fluxo de trabalho de codificação. Aproveita o Razor existente C# / VB (ou outros) habilidades linguísticas e fornece uma sintaxe de marcação de modelo que permite que um fluxo de trabalho de construção de HTML incrível.
 4. Pressione **F5** para executar a solução e ver os modelos renovados. Você pode conferir os recursos a seguir:
 
     **Modelos de estilo moderno**
@@ -192,7 +192,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
 
 ASP.NET MVC 4 facilita o desenvolvimento de sites para dispositivos móveis e navegadores de tablet. Esse modelo tem a mesma estrutura de aplicativo como o modelo de aplicativo da Internet (Observe que o código do controlador é praticamente idêntico), mas seu estilo foi modificado para ser renderizadas corretamente em dispositivos móveis baseados em toque.
 
-1. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual c# | Web** modelo no painel à esquerda de árvore e, em seguida, escolha o **aplicativo Web do ASP.NET MVC 4.** Nomeie o projeto **PhotoGallery.Mobile**, selecione um local (ou deixe o padrão), selecione &quot;adicionar à solução&quot; e clique em **Okey**.
+1. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual C# | Web** modelo no painel à esquerda de árvore e, em seguida, escolha o **aplicativo Web do ASP.NET MVC 4.** Nomeie o projeto **PhotoGallery.Mobile**, selecione um local (ou deixe o padrão), selecione &quot;adicionar à solução&quot; e clique em **Okey**.
 2. No **novo projeto ASP.NET MVC 4** caixa de diálogo, selecione o **aplicativo móvel** modelo de projeto e clique em **Okey**. Verifique se que você tiver selecionado o Razor como mecanismo de exibição.
 
     ![Criando um novo aplicativo ASP.NET MVC 4 Mobile](whats-new-in-aspnet-mvc-4/_static/image11.png "criando um novo aplicativo ASP.NET MVC 4 Mobile")
@@ -304,7 +304,7 @@ O exercício a seguir, você irá atualizar esta solução para aprimorar o modo
 Nesta tarefa, você criará uma simulação do serviço para recuperar o conteúdo que será exibido na Galeria de fotos. Para fazer isso, você adicionará um novo controlador que retornará apenas um arquivo JSON com os dados de cada foto.
 
 1. Abra **Visual Studio** se ainda não estiver aberto.
-2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual c# | Web** modelo no painel à esquerda de árvore e escolha **aplicativo Web do ASP.NET MVC 4.** Nomeie o projeto **Galeriadefotos**, selecione um local (ou deixe o padrão) e clique em **Okey**. Como alternativa, você pode continuar trabalhando na sua existentes do ASP.NET MVC 4 **aplicativo de Internet** solução a partir **Exercício 1** e ignore a próxima etapa.
+2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual C# | Web** modelo no painel à esquerda de árvore e escolha **aplicativo Web do ASP.NET MVC 4.** Nomeie o projeto **Galeriadefotos**, selecione um local (ou deixe o padrão) e clique em **Okey**. Como alternativa, você pode continuar trabalhando na sua existentes do ASP.NET MVC 4 **aplicativo de Internet** solução a partir **Exercício 1** e ignore a próxima etapa.
 3. No **novo projeto ASP.NET MVC 4** caixa de diálogo, selecione o **aplicativo de Internet** modelo de projeto e clique em **Okey**. Verifique se que você tiver selecionado como o mecanismo de exibição do Razor.
 4. No **Gerenciador de soluções**, com o botão direito do **App\_dados** pasta do seu projeto e selecione **adicionar | Item existente**. Navegue até a **Source\Assets\App\_dados** pasta deste laboratório e adicione o **Photos.json** arquivo.
 5. Criar um novo controlador com o nome **PhotoController**. Para fazer isso, clique com botão direito no **controladores** pasta, vá para **Add** e selecione **controlador.** Complete o nome do controlador, deixe o **controlador MVC vazio** modelo e clique em **Add**.
@@ -604,7 +604,7 @@ Agora você tem 3 layouts no seu aplicativo ASP.NET MVC 4:
 <a id="Exercise_4_Using_Asynchronous_Controllers"></a>
 ### <a name="exercise-4-using-asynchronous-controllers"></a>Exercício 4: Usando controladores assíncronos
 
-Microsoft .NET Framework 4.5 introduz novos recursos de linguagem em c# e Visual Basic para fornecer uma nova base para assincronia na programação .NET. Essa nova base torna a programação assíncrona semelhante – e aproximadamente tão simples quanto - programação síncrona. Agora é possível escrever métodos de ação assíncrono no ASP.NET MVC 4 usando o **AsyncController** classe. Você pode usar métodos de ação assíncrono de longa execução, não-CPU ligado solicitações. Isso evita impedindo o servidor Web executando o trabalho enquanto a solicitação está sendo processada. A classe AsyncController normalmente é usada para chamadas de serviço Web de execução longa.
+Microsoft .NET Framework 4.5 introduz novos recursos de linguagem em C# e Visual Basic para fornecer uma nova base para assincronia na programação .NET. Essa nova base torna a programação assíncrona semelhante – e aproximadamente tão simples quanto - programação síncrona. Agora é possível escrever métodos de ação assíncrono no ASP.NET MVC 4 usando o **AsyncController** classe. Você pode usar métodos de ação assíncrono de longa execução, não-CPU ligado solicitações. Isso evita impedindo o servidor Web executando o trabalho enquanto a solicitação está sendo processada. A classe AsyncController normalmente é usada para chamadas de serviço Web de execução longa.
 
 Este exercício explica os conceitos básicos da operação assíncrona no ASP.NET MVC 4. Se você quiser se aprofundar mais, confira o artigo a seguir: [[https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)](https://msdn.microsoft.com/library/ee728598%28v=vs.100%29.aspx)
 
@@ -650,7 +650,7 @@ Este exercício explica os conceitos básicos da operação assíncrona no ASP.N
 8. Execute o aplicativo. Você não irá notar nenhuma alteração principal, mas seu código não bloqueará um thread do pool de threads, tornando um melhor uso dos recursos do servidor e melhorando o desempenho.
 
     > [!NOTE]
-    > Você pode aprender mais sobre os novos recursos de programação assíncronos no laboratório &quot; **programação assíncrona no .NET 4.5 com c# e Visual Basic** &quot; incluído no Kit de treinamento do Visual Studio.
+    > Você pode aprender mais sobre os novos recursos de programação assíncronos no laboratório &quot; **programação assíncrona no .NET 4.5 com C# e Visual Basic** &quot; incluído no Kit de treinamento do Visual Studio.
 
 <a id="Task_2_-_Handling_Time-Outs_with_Cancellation_Tokens"></a>
 #### <a name="task-2---handling-time-outs-with-cancellation-tokens"></a>Tarefa 2 - tempos limite de tratamento com Tokens de cancelamento
@@ -723,7 +723,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente c#)***
+***Para adicionar um trecho de código usando o teclado (somente C#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -743,7 +743,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)***
+***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)***
 
 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 2. Selecione **Inserir trecho** seguido **Meus trechos de código**.

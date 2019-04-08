@@ -30,7 +30,7 @@ O aplicativo, que você estará criando é um site de lista do usuário simples.
 
 ![Site de exemplo](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image1.png)
 
-Você pode baixar o projeto concluído de VB e c# [aqui](https://code.msdn.microsoft.com/Creating-a-MVC-3-28883c0f).
+Você pode baixar o projeto concluído de VB e C# [aqui](https://code.msdn.microsoft.com/Creating-a-MVC-3-28883c0f).
 
 ## <a name="creating-the-web-application"></a>Criando o aplicativo Web
 

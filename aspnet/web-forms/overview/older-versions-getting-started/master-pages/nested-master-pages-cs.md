@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-cs
-title: Aninhado páginas mestras (c#) | Microsoft Docs
+title: Aninhado páginas mestras (C#) | Microsoft Docs
 author: rick-anderson
 description: Mostra como aninhar uma página mestra dentro de outra.
 ms.author: riande

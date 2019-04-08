@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-cs
-title: Associação de dados com um Accordion (c#) | Microsoft Docs
+title: Associação de dados com um Accordion (C#) | Microsoft Docs
 author: wenz
 description: O controle Accordion no AJAX Control Toolkit fornece vários painéis e permite que o usuário exibir um por vez. Painéis são normalmente declaradas w...
 ms.author: riande

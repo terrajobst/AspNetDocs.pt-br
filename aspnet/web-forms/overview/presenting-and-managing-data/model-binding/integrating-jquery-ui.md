@@ -25,7 +25,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial se baseia no projeto criado a [primeira](retrieving-data.md) e [segundo](updating-deleting-and-creating-data.md) partes da série.
 > 
-> Você pode [baixar](https://go.microsoft.com/fwlink/?LinkId=286116) o projeto completo em c# ou VB. O código para download funciona com o Visual Studio 2012 ou Visual Studio 2013. Ele usa o modelo do Visual Studio 2012, que é ligeiramente diferente do que o modelo do Visual Studio 2013 mostrado neste tutorial.
+> Você pode [baixar](https://go.microsoft.com/fwlink/?LinkId=286116) o projeto completo em C# ou VB. O código para download funciona com o Visual Studio 2012 ou Visual Studio 2013. Ele usa o modelo do Visual Studio 2012, que é ligeiramente diferente do que o modelo do Visual Studio 2013 mostrado neste tutorial.
 
 
 ## <a name="what-youll-build"></a>O que você vai criar

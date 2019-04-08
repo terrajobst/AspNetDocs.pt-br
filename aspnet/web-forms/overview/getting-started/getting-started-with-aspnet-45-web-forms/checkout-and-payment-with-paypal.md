@@ -19,9 +19,9 @@ ms.locfileid: "57034623"
 ====================
 by [Erik Reitan](https://github.com/Erikre)
 
-[Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Baixe o projeto de exemplo do Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
+> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
 
 
 Este tutorial descreve como modificar o aplicativo de exemplo Wingtip Toys para incluir a autorização do usuário, registro e pagamento usando PayPal. Somente os usuários que estão conectados no terá autorização para adquirir produtos. Funcionalidade de registro de usuário internas do modelo de projeto Web Forms do ASP.NET 4.5 já inclui muito o que você precisa. Você adicionará a funcionalidade de check-out PayPal Express. Neste tutorial você estar usando o desenvolvedor PayPal ambiente, de teste para que nenhum fundos reais serão transferidos. No final do tutorial, você testará o aplicativo, selecionando os produtos para adicionar ao carrinho de compras, clicando no botão de check-out e transferir dados para o site de teste do PayPal. No site de web de teste do PayPal, você confirmar suas informações de envio e de pagamento e, em seguida, retornar ao aplicativo de exemplo Wingtip Toys local para confirmar e concluir a compra.
@@ -88,7 +88,7 @@ Agora você criará a *check-out* pasta e as páginas que o cliente verá durant
 
     ![Check-out e pagamento com o PayPal - Novo Item](checkout-and-payment-with-paypal/_static/image2.png)
 4. A caixa de diálogo **Adicionar Novo Item** é exibida.
-5. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, no painel central, selecione **Web Form com página mestra**e nomeie-o *CheckoutStart.aspx*. 
+5. Selecione o **Visual C#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, no painel central, selecione **Web Form com página mestra**e nomeie-o *CheckoutStart.aspx*. 
 
     ![Check-out e pagamento com o PayPal - diálogo Adicionar Novo Item](checkout-and-payment-with-paypal/_static/image3.png)
 6. Como antes, selecione a *Master* arquivo como a página mestra.
@@ -105,7 +105,7 @@ Adicionando um novo *Web. config* do arquivo para o *check-out* pasta, você pod
 
 1. Clique com botão direito do *check-out* pasta e selecione **Add**  - &gt; **Novo Item**.  
    A caixa de diálogo **Adicionar Novo Item** é exibida.
-2. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, no painel central, selecione **arquivo de configuração Web**, aceite o nome padrão de *Web. config*e, em seguida, selecione **adicionar**.
+2. Selecione o **Visual C#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, no painel central, selecione **arquivo de configuração Web**, aceite o nome padrão de *Web. config*e, em seguida, selecione **adicionar**.
 3. Substitua o conteúdo em XML existente a *Web. config* arquivo com o seguinte:  
 
     [!code-xml[Main](checkout-and-payment-with-paypal/samples/sample4.xml)]
@@ -291,7 +291,7 @@ Coloque a maioria do código PayPal em uma única classe. Essa classe contém m�
 
 1. No aplicativo de exemplo Wingtip Toys dentro do Visual Studio, clique com botão direito do **lógica** pasta e, em seguida, selecione **Add**  - &gt; **Novo Item**.   
    A caixa de diálogo **Adicionar Novo Item** é exibida.
-2. Sob **Visual c#** da **instalado** painel à esquerda, selecione **código**.
+2. Sob **Visual C#** da **instalado** painel à esquerda, selecione **código**.
 3. No painel central, selecione **classe**. Nomeie essa nova classe **PayPalFunctions.cs**.
 4. Clique em **Adicionar**.  
    O novo arquivo de classe é exibido no editor.
@@ -304,7 +304,7 @@ Coloque a maioria do código PayPal em uma única classe. Essa classe contém m�
 
 > [!NOTE] 
 > 
-> Este aplicativo de exemplo simplesmente você está adicionando as credenciais para um arquivo c# (. cs). No entanto, em uma solução implementada, você deve considerar suas credenciais em um arquivo de configuração de criptografia.
+> Este aplicativo de exemplo simplesmente você está adicionando as credenciais para um arquivo C# (. cs). No entanto, em uma solução implementada, você deve considerar suas credenciais em um arquivo de configuração de criptografia.
 
 
 A classe NVPAPICaller contém a maioria da funcionalidade PayPal. O código na classe fornece os métodos necessários para fazer um teste de compra do ambiente de teste do PayPal. As três funções PayPal a seguir são usadas para fazer compras:

@@ -204,7 +204,7 @@ Nesta tarefa, você verificará que, embora a geração de modelo tiver removido
     ![Compilações foi bem-sucedida](aspnet-mvc-4-models-and-data-access/_static/image14.png "compilações foi bem-sucedida")
 
     *Compilações com êxito*
-3. Enquanto o designer exibe as entidades em um formato de diagrama, eles são realmente as classes do c#. Expanda o **StoreDB.edmx** nó no Gerenciador de soluções e, em seguida **StoreDB.tt**, você verá as novas entidades geradas.
+3. Enquanto o designer exibe as entidades em um formato de diagrama, eles são realmente as classes do C#. Expanda o **StoreDB.edmx** nó no Gerenciador de soluções e, em seguida **StoreDB.tt**, você verá as novas entidades geradas.
 
     ![Arquivos gerados](aspnet-mvc-4-models-and-data-access/_static/image15.png "arquivos gerados")
 
@@ -716,7 +716,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente c#)***
+***Para adicionar um trecho de código usando o teclado (somente C#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -736,7 +736,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.

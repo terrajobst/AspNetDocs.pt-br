@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
-title: Validação com uma camada de serviço (c#) | Microsoft Docs
+title: Validação com uma camada de serviço (C#) | Microsoft Docs
 author: StephenWalther
 description: Aprenda a mover sua lógica de validação fora de suas ações do controlador e uma camada de serviço separado. Neste tutorial, Stephen Walther explica como você...
 ms.author: riande

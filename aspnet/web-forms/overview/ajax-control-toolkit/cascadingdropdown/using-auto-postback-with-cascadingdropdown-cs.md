@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs
-title: Uso de Postback automático com CascadingDropDown (c#) | Microsoft Docs
+title: Uso de Postback automático com CascadingDropDown (C#) | Microsoft Docs
 author: wenz
 description: O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associado valores em anoth...
 ms.author: riande

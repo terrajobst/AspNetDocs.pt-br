@@ -83,7 +83,7 @@ O SignalR usa os dois modelos de comunicação: Os hubs e PersistentConnections.
 
 [!code-javascript[Main](troubleshooting/samples/sample2.js)]
 
-**Servidor código c# que mapeia uma rota para um PersistentConnection**
+**Servidor código C# que mapeia uma rota para um PersistentConnection**
 
 [!code-csharp[Main](troubleshooting/samples/sample3.cs)]
 
@@ -151,7 +151,7 @@ Se uma conexão entre domínios (uma conexão para o qual a URL do SignalR não 
 
 Uma conexão em um aplicativo de cliente .NET que usa a segurança de domínio poderá falhar se a conexão não está configurado corretamente. Para usar o SignalR em um ambiente de domínio, defina a propriedade de conexão necessárias da seguinte maneira:
 
-**Cliente código c# que implementa as credenciais de conexão**
+**Cliente código C# que implementa as credenciais de conexão**
 
 [!code-csharp[Main](troubleshooting/samples/sample9.cs)]
 

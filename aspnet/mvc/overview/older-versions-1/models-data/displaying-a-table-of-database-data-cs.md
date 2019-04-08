@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
-title: Exibindo uma tabela de banco de dados (c#) | Microsoft Docs
+title: Exibindo uma tabela de banco de dados (C#) | Microsoft Docs
 author: microsoft
 description: Neste tutorial, demonstrarei dois métodos de exibição de um conjunto de registros do banco de dados. Eu mostro dois métodos de formatação de um conjunto de registros de banco de dados em um HTML ta...
 ms.author: riande

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs
-title: Interagindo com a página de conteúdo através da página mestra (c#) | Microsoft Docs
+title: Interagindo com a página de conteúdo através da página mestra (C#) | Microsoft Docs
 author: rick-anderson
 description: Examina como chamar métodos, definir propriedades, etc. da página de conteúdo do código na página mestra.
 ms.author: riande

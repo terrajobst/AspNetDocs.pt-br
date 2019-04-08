@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
-title: Criando uma Interface de usuário de classificação personalizada (c#) | Microsoft Docs
+title: Criando uma Interface de usuário de classificação personalizada (C#) | Microsoft Docs
 author: rick-anderson
 description: Ao exibir uma lista longa de dados classificados, pode ser muito útil para agrupar os dados relacionados com a introdução de linhas de separador. Neste tutorial, veremos como cre...
 ms.author: riande

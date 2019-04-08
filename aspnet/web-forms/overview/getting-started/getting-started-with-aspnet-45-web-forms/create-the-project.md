@@ -19,9 +19,9 @@ ms.locfileid: "57055973"
 ====================
 by [Erik Reitan](https://github.com/Erikre)
 
-[Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Baixe o projeto de exemplo do Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
+> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
 
 
 Neste tutorial você criar, revise e execute o projeto padrão no Visual Studio, o que permitirá que você se familiarizar com os recursos do ASP.NET. Além disso, você revisará o ambiente do Visual Studio.
@@ -40,7 +40,7 @@ Neste tutorial você criar, revise e execute o projeto padrão no Visual Studio,
 2. Selecione **novo projeto** da **arquivo** menu do Visual Studio. 
 
     ![Criar o projeto - novo Item de Menu do projeto](create-the-project/_static/image1.png)
-3. Selecione o **modelos**  - &gt; **Visual c#**  - &gt; **Web** grupo de modelos à esquerda.
+3. Selecione o **modelos**  - &gt; **Visual C#**  - &gt; **Web** grupo de modelos à esquerda.
 4. Escolha o **aplicativo Web ASP.NET** modelo na coluna central.  
  Esta série de tutoriais é usando o .NET Framework 4.5.2.
 5. Nomeie o projeto *WingtipToys* e escolha o **Okey** botão. 
@@ -71,7 +71,7 @@ Você pode alternar entre **Design** exibição e **origem** exibição selecion
 > O ASP.NET oferece quatro estruturas de desenvolvimento principal:
 > 
 > - [Web Forms do ASP.NET](../../../index.md)  
->  A estrutura de Web Forms destinado a desenvolvedores que preferem a programação declarativa e baseada em controle, como o Microsoft Windows Forms (WinForms) e o WPF/XAML/Silverlight. Ele oferece um modelo de WYSIWYG desenvolvimento controlado por designer, portanto, ele é popular com desenvolvedores que buscam um ambiente de desenvolvimento (RAD) do rápido de aplicativos para desenvolvimento da web. Se você for novo para programação da web e estiver familiarizado com as ferramentas de desenvolvimento de cliente Microsoft RAD tradicionais (por exemplo, para o Visual Basic e Visual c#), você pode criar rapidamente um aplicativo da web sem a necessidade de experiência em HTML e JavaScript.
+>  A estrutura de Web Forms destinado a desenvolvedores que preferem a programação declarativa e baseada em controle, como o Microsoft Windows Forms (WinForms) e o WPF/XAML/Silverlight. Ele oferece um modelo de WYSIWYG desenvolvimento controlado por designer, portanto, ele é popular com desenvolvedores que buscam um ambiente de desenvolvimento (RAD) do rápido de aplicativos para desenvolvimento da web. Se você for novo para programação da web e estiver familiarizado com as ferramentas de desenvolvimento de cliente Microsoft RAD tradicionais (por exemplo, para o Visual Basic e Visual C#), você pode criar rapidamente um aplicativo da web sem a necessidade de experiência em HTML e JavaScript.
 > - [ASP.NET MVC](../../../../mvc/index.md)  
 >  ASP.NET MVC é destinado a desenvolvedores que estejam interessados em padrões e os princípios, como desenvolvimento controlado por teste, a separação de preocupações, inversão de controle (IoC) e injeção de dependência (DI). Essa estrutura incentiva a separar a camada de lógica comercial de um aplicativo web da camada de apresentação.
 > - [Páginas da Web do ASP.NET](../../../../web-pages/index.md)  
@@ -114,7 +114,7 @@ Há três páginas principais neste aplicativo de Web padrão: *Default. aspx* (
 
 ## <a name="aspnet-web-forms-background"></a>Web Forms do ASP.NET em segundo plano
 
-Web Forms do ASP.NET são páginas que são baseadas na tecnologia do Microsoft ASP.NET, no qual o código que é executado no servidor dinamicamente gera saída de página da Web para o navegador ou dispositivo cliente. Uma página de Web Forms do ASP.NET automaticamente renderiza o HTML em conformidade com o navegador correto para recursos, como estilos, layout e assim por diante. Formulários da Web são compatíveis com qualquer linguagem compatível com o .NET common language runtime, como Microsoft Visual Basic e o Microsoft Visual c#. Além disso, os formulários da Web são criados na [Microsoft .NET Framework](https://msdn.microsoft.com/vstudio/aa496123), que fornece benefícios como um ambiente gerenciado, segurança de tipos e herança.
+Web Forms do ASP.NET são páginas que são baseadas na tecnologia do Microsoft ASP.NET, no qual o código que é executado no servidor dinamicamente gera saída de página da Web para o navegador ou dispositivo cliente. Uma página de Web Forms do ASP.NET automaticamente renderiza o HTML em conformidade com o navegador correto para recursos, como estilos, layout e assim por diante. Formulários da Web são compatíveis com qualquer linguagem compatível com o .NET common language runtime, como Microsoft Visual Basic e o Microsoft Visual C#. Além disso, os formulários da Web são criados na [Microsoft .NET Framework](https://msdn.microsoft.com/vstudio/aa496123), que fornece benefícios como um ambiente gerenciado, segurança de tipos e herança.
 
 Quando uma página de Web Forms do ASP.NET é executado, a página passa por um ciclo de vida em que ela executa uma série de etapas de processamento. Essas etapas incluem a inicialização, criando uma instância de controles, restaurando e mantendo o estado, executando o código de manipulador de eventos e renderização. Como você se familiariza com o poder do Web Forms do ASP.NET, é importante entender os [ciclo de vida de página ASP.NET](https://msdn.microsoft.com/library/ms178472(v=vs.100).aspx) para que você possa escrever o código no estágio do ciclo de vida apropriado para o efeito que pretende.
 

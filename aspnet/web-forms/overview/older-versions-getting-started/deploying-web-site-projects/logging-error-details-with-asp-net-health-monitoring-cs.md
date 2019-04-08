@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs
-title: Registro em log os detalhes do erro com a integridade do ASP.NET de monitoramento (c#) | Microsoft Docs
+title: Registro em log os detalhes do erro com a integridade do ASP.NET de monitoramento (C#) | Microsoft Docs
 author: rick-anderson
 description: Sistema de monitoramento de integridade da Microsoft fornece uma maneira fácil e personalizável para fazer logon de vários eventos da web, incluindo as exceções sem tratamento. Este tutorial orienta sua...
 ms.author: riande

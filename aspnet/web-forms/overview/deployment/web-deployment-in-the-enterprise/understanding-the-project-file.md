@@ -33,7 +33,7 @@ by [Jason Lee](https://github.com/jrjlee)
 
 ## <a name="msbuild-and-the-project-file"></a>O MSBuild e o arquivo de projeto
 
-Quando você cria e compilar soluções no Visual Studio, o Visual Studio usa o MSBuild para compilar cada projeto na solução. Cada projeto do Visual Studio inclui um arquivo de projeto do MSBuild, com uma extensão de arquivo que reflete o tipo de projeto&#x2014;por exemplo, um projeto c# (. csproj), um projeto do Visual Basic.NET (. vbproj) ou um projeto de banco de dados (. dbproj). Para criar um projeto, o MSBuild deve processar o arquivo de projeto associado ao projeto. O arquivo de projeto é um documento XML que contém todas as informações e instruções que precisa de MSBuild para compilar seu projeto, como o conteúdo a ser incluído, requisitos de plataforma, informações de controle de versão, servidor web ou configurações do servidor de banco de dados e o tarefas que devem ser executadas.
+Quando você cria e compilar soluções no Visual Studio, o Visual Studio usa o MSBuild para compilar cada projeto na solução. Cada projeto do Visual Studio inclui um arquivo de projeto do MSBuild, com uma extensão de arquivo que reflete o tipo de projeto&#x2014;por exemplo, um projeto C# (. csproj), um projeto do Visual Basic.NET (. vbproj) ou um projeto de banco de dados (. dbproj). Para criar um projeto, o MSBuild deve processar o arquivo de projeto associado ao projeto. O arquivo de projeto é um documento XML que contém todas as informações e instruções que precisa de MSBuild para compilar seu projeto, como o conteúdo a ser incluído, requisitos de plataforma, informações de controle de versão, servidor web ou configurações do servidor de banco de dados e o tarefas que devem ser executadas.
 
 Arquivos de projeto MSBuild se baseiam os [esquema XML do MSBuild](https://msdn.microsoft.com/library/5dy88c2e.aspx), e assim o processo de compilação é totalmente aberto e transparente. Além disso, você não precisa instalar o Visual Studio para usar o mecanismo do MSBuild&#x2014;executável MSBuild.exe faz parte do .NET Framework, e você pode executá-lo em um prompt de comando. Como desenvolvedor, você pode criar seus próprios arquivos de projeto do MSBuild, usando o esquema XML do MSBuild, para impor o controle refinado e sofisticado sobre como seus projetos são criados e implantados. Esses arquivos de projeto personalizados funcionam exatamente da mesma forma que os arquivos de projeto que o Visual Studio gera automaticamente.
 
@@ -155,7 +155,7 @@ Você pode criar **ItemGroup** elementos dentro do nível raiz **Project** eleme
 No esquema de MSBuild, uma [tarefa](https://msdn.microsoft.com/library/77f2hx1s.aspx) elemento representa uma instrução de compilação individual (ou tarefas). MSBuild inclui uma variedade de tarefas predefinidas. Por exemplo:
 
 - O **cópia** tarefa copia arquivos para um novo local.
-- O **Csc** tarefa chama o compilador do Visual c#.
+- O **Csc** tarefa chama o compilador do Visual C#.
 - O **Vbc** tarefa chama o compilador do Visual Basic.
 - O **Exec** tarefa executa um programa especificado.
 - O **mensagem** tarefa grava uma mensagem para um agente.

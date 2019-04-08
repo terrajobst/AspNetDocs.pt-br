@@ -113,7 +113,7 @@ Se necessário, instale o [Visual Studio Express 2013 para Web](https://go.micro
 ### <a name="create-a-new-mvc-application-project-from-template"></a>Criar um novo projeto de aplicativo do MVC de modelo
 
 1. Clique com botão direito do **AspNet.Identity.MySQL** solução e **Add**, **novo projeto**
-2. No **adicionar novo projeto** diálogo, selecione **Visual c#** à esquerda, em seguida, **Web** e, em seguida, selecione **aplicativo Web ASP.NET**. Nomeie o projeto **IdentityMySQLDemo**; e, em seguida, clique em Okey.  
+2. No **adicionar novo projeto** diálogo, selecione **Visual C#** à esquerda, em seguida, **Web** e, em seguida, selecione **aplicativo Web ASP.NET**. Nomeie o projeto **IdentityMySQLDemo**; e, em seguida, clique em Okey.  
   
     ![](implementing-a-custom-mysql-aspnet-identity-storage-provider/_static/image2.jpg)
 3. No **novo projeto ASP.NET** caixa de diálogo, selecione o modelo MVC com as opções padrão (que inclui **contas de usuário individuais** como método de autenticação) e clique em **Okey** .![](implementing-a-custom-mysql-aspnet-identity-storage-provider/_static/image3.jpg)

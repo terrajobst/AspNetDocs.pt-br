@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller
-title: Adicionando um controlador (c#) | Microsoft Docs
+title: Adicionando um controlador (C#) | Microsoft Docs
 author: Rick-Anderson
 description: Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que i...
 ms.author: riande
@@ -31,7 +31,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte c# está disponível para acompanhar este tópico. [Baixe a versão c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte C# está disponível para acompanhar este tópico. [Baixe a versão C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
 
 
 Representa o MVC *model-view-controller*. O MVC é um padrão para o desenvolvimento de aplicativos que são fáceis de manter e bem arquitetada. Aplicativos baseados no MVC contêm:
@@ -72,7 +72,7 @@ Navegue para `http://localhost:xxxx/HelloWorld/Welcome`. O método `Welcome` é 
 
 ![](adding-a-controller/_static/image7.png)
 
-Vamos modificar o exemplo um pouco para que você possa passar algumas informações de parâmetro da URL para o controlador (por exemplo, */HelloWorld/Welcome? nome = Scott&amp;numtimes = 4*). Alterar sua `Welcome` método para incluir dois parâmetros, conforme mostrado abaixo. Observe que o código usa o recurso de parâmetro opcional do c# para indicar que o `numTimes` parâmetro como padrão 1 se nenhum valor é passado para esse parâmetro.
+Vamos modificar o exemplo um pouco para que você possa passar algumas informações de parâmetro da URL para o controlador (por exemplo, */HelloWorld/Welcome? nome = Scott&amp;numtimes = 4*). Alterar sua `Welcome` método para incluir dois parâmetros, conforme mostrado abaixo. Observe que o código usa o recurso de parâmetro opcional do C# para indicar que o `numTimes` parâmetro como padrão 1 se nenhum valor é passado para esse parâmetro.
 
 [!code-csharp[Main](adding-a-controller/samples/sample2.cs)]
 

@@ -37,7 +37,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 
 Inicie o Visual Studio com privilégios de administrador. Privilégios de administrador são necessárias para depurar o aplicativo localmente, usando o emulador de computação do Azure.
 
-No **arquivo** menu, clique em **New**, em seguida, clique em **projeto**. Partir **modelos instalados**, no Visual c#, clique em **nuvem** e, em seguida, clique em **serviço de nuvem do Windows Azure**. Nomeie o projeto "AzureApp" e clique em **Okey**.
+No **arquivo** menu, clique em **New**, em seguida, clique em **projeto**. Partir **modelos instalados**, no Visual C#, clique em **nuvem** e, em seguida, clique em **serviço de nuvem do Windows Azure**. Nomeie o projeto "AzureApp" e clique em **Okey**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image2.png)](host-owin-in-an-azure-worker-role/_static/image1.png)
 

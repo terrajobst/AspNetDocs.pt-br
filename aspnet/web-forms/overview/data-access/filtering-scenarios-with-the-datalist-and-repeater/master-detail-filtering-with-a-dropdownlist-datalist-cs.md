@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-cs
-title: Mestre/detalhes filtragem com uma DropDownList (c#) | Microsoft Docs
+title: Mestre/detalhes filtragem com uma DropDownList (C#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial, podemos ver como exibir relatórios mestre/detalhes em uma única página da web usando DropDownLists para exibir os registros de 'mestres' e uma DataList para ex...
 ms.author: riande
