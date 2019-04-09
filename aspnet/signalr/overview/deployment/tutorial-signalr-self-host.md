@@ -73,7 +73,7 @@ Este tutorial contém as seções a seguir:
 
 Neste tutorial, você criará um servidor que está hospedado em um aplicativo de console, mas o servidor pode ser hospedado em qualquer tipo de processo, como um serviço do Windows ou uma função de trabalho do Azure. Para o código de exemplo para hospedar um servidor do SignalR em um serviço do Windows, consulte [Self-Hosting SignalR em um serviço Windows](https://code.msdn.microsoft.com/SignalR-self-hosted-in-6ff7e6c3).
 
-1. Abra o Visual Studio 2013 com privilégios de administrador. Selecione **arquivo**, **novo projeto**. Selecione **Windows** sob o **Visual c#** nó no **modelos** painel e selecione o **aplicativo de Console** modelo. Nomeie o novo projeto "SignalRSelfHost" e clique em **Okey**.
+1. Abra o Visual Studio 2013 com privilégios de administrador. Selecione **arquivo**, **novo projeto**. Selecione **Windows** sob o **Visual C#** nó no **modelos** painel e selecione o **aplicativo de Console** modelo. Nomeie o novo projeto "SignalRSelfHost" e clique em **Okey**.
 
     ![](tutorial-signalr-self-host/_static/image1.png)
 2. Abra o console de Gerenciador de pacotes do NuGet, selecionando **ferramentas** > **Gerenciador de pacotes NuGet** > **Package Manager Console**.
