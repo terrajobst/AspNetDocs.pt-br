@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
-title: Exibições do ASP.NET MVC visão geral (c#) | Microsoft Docs
+title: Exibições do ASP.NET MVC visão geral (C#) | Microsoft Docs
 author: StephenWalther
 description: O que é um modo de exibição de MVC do ASP.NET e como ela difere de uma página HTML? Neste tutorial, Stephen Walther apresenta exibições e demonstra como você pode t...
 ms.author: riande
@@ -83,7 +83,7 @@ Observe que o corpo da página HTML na listagem 2 contém o script a seguir:
 
 &lt;% Response.Write(DateTime.Now);%&gt;
 
-Você usa os delimitadores de script &lt;% e %&gt; para marcar o início e término de um script. Esse script é escrito em c#. Ele exibe a data e hora atuais, chamando o método Response para processar o conteúdo para o navegador. Os delimitadores de script &lt;% e %&gt; pode ser usado para executar uma ou mais instruções.
+Você usa os delimitadores de script &lt;% e %&gt; para marcar o início e término de um script. Esse script é escrito em C#. Ele exibe a data e hora atuais, chamando o método Response para processar o conteúdo para o navegador. Os delimitadores de script &lt;% e %&gt; pode ser usado para executar uma ou mais instruções.
 
 Uma vez que você chama Response com tanta frequência, Microsoft fornece um atalho para chamar o método Response. O modo de exibição na listagem 3 usa os delimitadores &lt;% = e %&gt; como um atalho para a chamada de Response.
 
