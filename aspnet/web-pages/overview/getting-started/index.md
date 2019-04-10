@@ -8,32 +8,32 @@ ms.date: 05/18/2012
 ms.assetid: 99253c4e-a125-4c21-85e7-a6dd74d93892
 msc.legacyurl: /web-pages/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: d46c4100bf169caa5dfd0f265e16d00d519ac847
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3e5b9d1a3bac0cf1ab042f473f8fd508069000a5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408570"
 ---
-<a name="getting-started-with-aspnet-web-pages"></a><span data-ttu-id="f1b1c-103">Introdução a páginas da Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f1b1c-103">Getting Started with ASP.NET Web Pages</span></span>
-====================
-> <span data-ttu-id="f1b1c-104">Páginas da Web e o WebMatrix são, além de como instalar tudo, começar a usar e implantar sites.</span><span class="sxs-lookup"><span data-stu-id="f1b1c-104">What Web Pages and WebMatrix are, plus how to install everything, get started, and deploy sites.</span></span>
+# <a name="getting-started-with-aspnet-web-pages"></a><span data-ttu-id="d89a3-103">Introdução a páginas da Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d89a3-103">Getting Started with ASP.NET Web Pages</span></span>
+
+> <span data-ttu-id="d89a3-104">Páginas da Web e o WebMatrix são, além de como instalar tudo, começar a usar e implantar sites.</span><span class="sxs-lookup"><span data-stu-id="d89a3-104">What Web Pages and WebMatrix are, plus how to install everything, get started, and deploy sites.</span></span>
 
 
-- [<span data-ttu-id="f1b1c-105">Programar Páginas da Web do ASP.NET no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="f1b1c-105">Program ASP.NET Web Pages in Visual Studio</span></span>](program-asp-net-web-pages-in-visual-studio.md)
-- [<span data-ttu-id="f1b1c-106">Introdução à sintaxe Razor de programação da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f1b1c-106">Intro to ASP.NET Web Programming Razor Syntax</span></span>](introducing-razor-syntax-c.md)
-- [<span data-ttu-id="f1b1c-107">Visual Basic em Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f1b1c-107">ASP.NET Web Pages Visual Basic</span></span>](introducing-razor-syntax-vb.md)
-- [<span data-ttu-id="f1b1c-108">Perguntas frequentes sobre Páginas da Web do ASP.NET (Razor)</span><span class="sxs-lookup"><span data-stu-id="f1b1c-108">ASP.NET Web Pages (Razor) FAQ</span></span>](aspnet-web-pages-razor-faq.md)
-- [<span data-ttu-id="f1b1c-109">Enviar email através do seu site</span><span class="sxs-lookup"><span data-stu-id="f1b1c-109">Sending Email from Your Site</span></span>](11-adding-email-to-your-web-site.md)
-- [<span data-ttu-id="f1b1c-110">Adição de redes sociais em seu site</span><span class="sxs-lookup"><span data-stu-id="f1b1c-110">Adding Social Networking to Your Website</span></span>](13-adding-social-networking-to-your-web-site.md)
-- [<span data-ttu-id="f1b1c-111">Introdução a Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="f1b1c-111">Introducing ASP.NET Web Pages</span></span>](introducing-aspnet-web-pages-2/index.md)
+- [<span data-ttu-id="d89a3-105">Programar Páginas da Web do ASP.NET no Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d89a3-105">Program ASP.NET Web Pages in Visual Studio</span></span>](program-asp-net-web-pages-in-visual-studio.md)
+- [<span data-ttu-id="d89a3-106">Introdução à sintaxe Razor de programação da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d89a3-106">Intro to ASP.NET Web Programming Razor Syntax</span></span>](introducing-razor-syntax-c.md)
+- [<span data-ttu-id="d89a3-107">Visual Basic em Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d89a3-107">ASP.NET Web Pages Visual Basic</span></span>](introducing-razor-syntax-vb.md)
+- [<span data-ttu-id="d89a3-108">Perguntas frequentes sobre Páginas da Web do ASP.NET (Razor)</span><span class="sxs-lookup"><span data-stu-id="d89a3-108">ASP.NET Web Pages (Razor) FAQ</span></span>](aspnet-web-pages-razor-faq.md)
+- [<span data-ttu-id="d89a3-109">Enviar email através do seu site</span><span class="sxs-lookup"><span data-stu-id="d89a3-109">Sending Email from Your Site</span></span>](11-adding-email-to-your-web-site.md)
+- [<span data-ttu-id="d89a3-110">Adição de redes sociais ao seu site</span><span class="sxs-lookup"><span data-stu-id="d89a3-110">Adding Social Networking to Your Website</span></span>](13-adding-social-networking-to-your-web-site.md)
+- [<span data-ttu-id="d89a3-111">Introdução a Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d89a3-111">Introducing ASP.NET Web Pages</span></span>](introducing-aspnet-web-pages-2/index.md)
 
-    - [<span data-ttu-id="f1b1c-112">Introdução</span><span class="sxs-lookup"><span data-stu-id="f1b1c-112">Getting Started</span></span>](introducing-aspnet-web-pages-2/getting-started.md)
-    - [<span data-ttu-id="f1b1c-113">Noções básicas sobre programação</span><span class="sxs-lookup"><span data-stu-id="f1b1c-113">Programming Basics</span></span>](introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
-    - [<span data-ttu-id="f1b1c-114">Exibindo dados</span><span class="sxs-lookup"><span data-stu-id="f1b1c-114">Displaying Data</span></span>](introducing-aspnet-web-pages-2/displaying-data.md)
-    - [<span data-ttu-id="f1b1c-115">Noções básicas de formulário HTML</span><span class="sxs-lookup"><span data-stu-id="f1b1c-115">HTML Form Basics</span></span>](introducing-aspnet-web-pages-2/form-basics.md)
-    - [<span data-ttu-id="f1b1c-116">Inserir dados de banco de dados usando formulários</span><span class="sxs-lookup"><span data-stu-id="f1b1c-116">Entering Database Data by Using Forms</span></span>](introducing-aspnet-web-pages-2/entering-data.md)
-    - [<span data-ttu-id="f1b1c-117">Atualização de dados do banco de dados</span><span class="sxs-lookup"><span data-stu-id="f1b1c-117">Updating Database Data</span></span>](introducing-aspnet-web-pages-2/updating-data.md)
-    - [<span data-ttu-id="f1b1c-118">Exclusão de dados do banco de dados</span><span class="sxs-lookup"><span data-stu-id="f1b1c-118">Deleting Database Data</span></span>](introducing-aspnet-web-pages-2/deleting-data.md)
-    - [<span data-ttu-id="f1b1c-119">Criação de um layout consistente</span><span class="sxs-lookup"><span data-stu-id="f1b1c-119">Creating a Consistent Layout</span></span>](introducing-aspnet-web-pages-2/layouts.md)
-    - [<span data-ttu-id="f1b1c-120">Publicar um site usando o WebMatrix</span><span class="sxs-lookup"><span data-stu-id="f1b1c-120">Publishing a Site by Using WebMatrix</span></span>](introducing-aspnet-web-pages-2/publishing.md)
+    - [<span data-ttu-id="d89a3-112">Guia de Introdução</span><span class="sxs-lookup"><span data-stu-id="d89a3-112">Getting Started</span></span>](introducing-aspnet-web-pages-2/getting-started.md)
+    - [<span data-ttu-id="d89a3-113">Noções básicas sobre programação</span><span class="sxs-lookup"><span data-stu-id="d89a3-113">Programming Basics</span></span>](introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
+    - [<span data-ttu-id="d89a3-114">Exibir dados</span><span class="sxs-lookup"><span data-stu-id="d89a3-114">Displaying Data</span></span>](introducing-aspnet-web-pages-2/displaying-data.md)
+    - [<span data-ttu-id="d89a3-115">Noções básicas de formulário HTML</span><span class="sxs-lookup"><span data-stu-id="d89a3-115">HTML Form Basics</span></span>](introducing-aspnet-web-pages-2/form-basics.md)
+    - [<span data-ttu-id="d89a3-116">Inserir dados de banco de dados usando formulários</span><span class="sxs-lookup"><span data-stu-id="d89a3-116">Entering Database Data by Using Forms</span></span>](introducing-aspnet-web-pages-2/entering-data.md)
+    - [<span data-ttu-id="d89a3-117">Atualização de dados do banco de dados</span><span class="sxs-lookup"><span data-stu-id="d89a3-117">Updating Database Data</span></span>](introducing-aspnet-web-pages-2/updating-data.md)
+    - [<span data-ttu-id="d89a3-118">Exclusão de dados do banco de dados</span><span class="sxs-lookup"><span data-stu-id="d89a3-118">Deleting Database Data</span></span>](introducing-aspnet-web-pages-2/deleting-data.md)
+    - [<span data-ttu-id="d89a3-119">Criação de um layout consistente</span><span class="sxs-lookup"><span data-stu-id="d89a3-119">Creating a Consistent Layout</span></span>](introducing-aspnet-web-pages-2/layouts.md)
+    - [<span data-ttu-id="d89a3-120">Publicar um site usando o WebMatrix</span><span class="sxs-lookup"><span data-stu-id="d89a3-120">Publishing a Site by Using WebMatrix</span></span>](introducing-aspnet-web-pages-2/publishing.md)
