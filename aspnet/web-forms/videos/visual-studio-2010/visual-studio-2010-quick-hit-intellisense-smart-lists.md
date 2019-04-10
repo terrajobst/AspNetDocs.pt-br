@@ -8,15 +8,15 @@ ms.date: 11/11/2009
 ms.assetid: b70a252d-fc5c-4711-b7d0-cd3228e21e12
 msc.legacyurl: /web-forms/videos/visual-studio-2010/visual-studio-2010-quick-hit-intellisense-smart-lists
 msc.type: video
-ms.openlocfilehash: 07fc37ea919dde61e9fa8e69f7cc3483340cf1aa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 089716762848f3cd71a2cbf83eba349bb3e7b28b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410169"
 ---
-<a name="visual-studio-2010-quick-hit---intellisense-smart-lists"></a>Lista do Visual Studio 2010 "Acertar rápida" - inteligentes do IntelliSense
-====================
+# <a name="visual-studio-2010-quick-hit---intellisense-smart-lists"></a>Lista do Visual Studio 2010 "Acertar rápida" - inteligentes do IntelliSense
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Neste vídeo, você aprenderá sobre a lista de filtragem do IntelliSense do Visual Studio.

@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 0b91d5f8-127d-4f6a-b204-f2e2b35ef703
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-detailsview-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1c18e8be25369d6e7d1703e71b80e75adb9f15fa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9a2f500206bbdc09d8007e10c0c7464f1ba384a3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395063"
 ---
-<a name="using-templatefields-in-the-detailsview-control-vb"></a>Uso de TemplateFields no controle DetailsView (VB)
-====================
+# <a name="using-templatefields-in-the-detailsview-control-vb"></a>Uso de TemplateFields no controle DetailsView (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_13_VB.exe) ou [baixar PDF](using-templatefields-in-the-detailsview-control-vb/_static/datatutorial13vb1.pdf)
@@ -35,7 +35,7 @@ O TemplateField oferece um maior grau de flexibilidade na renderização de dado
 Os mesmos recursos de TemplateFields disponíveis com o GridView também estão disponíveis com o controle DetailsView. Neste tutorial vamos exibir um produto por vez usando um que contém dois TemplateFields DetailsView. O TemplateField primeiro combinará os `UnitPrice`, `UnitsInStock`, e `UnitsOnOrder` campos de dados em uma linha DetailsView. O segundo TemplateField exibirá o valor da `Discontinued` campo, mas usará um método de formatação para exibir "Sim" se `Discontinued` é `True`e "Não", caso contrário.
 
 
-[![Dois TemplateFields são usados para personalizar a exibição](using-templatefields-in-the-detailsview-control-vb/_static/image2.png)](using-templatefields-in-the-detailsview-control-vb/_static/image1.png)
+[![TWO TemplateFields são usados para personalizar a exibição](using-templatefields-in-the-detailsview-control-vb/_static/image2.png)](using-templatefields-in-the-detailsview-control-vb/_static/image1.png)
 
 **Figura 1**: Dois TemplateFields são usados para personalizar a exibição ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image3.png))
 
@@ -49,7 +49,7 @@ Conforme discutido no tutorial anterior, ao trabalhar com TemplateFields geralme
 Abra o `DetailsViewTemplateField.aspx` página e arraste um DetailsView da caixa de ferramentas para o Designer. Na marca inteligente de DetailsView optar por adicionar um novo controle ObjectDataSource invoca o `ProductsBLL` da classe `GetProducts()` método.
 
 
-[![Adicionar um novo controle ObjectDataSource que invoca o método GetProducts()](using-templatefields-in-the-detailsview-control-vb/_static/image5.png)](using-templatefields-in-the-detailsview-control-vb/_static/image4.png)
+[![Add um novo controle ObjectDataSource invoca o método GetProducts()](using-templatefields-in-the-detailsview-control-vb/_static/image5.png)](using-templatefields-in-the-detailsview-control-vb/_static/image4.png)
 
 **Figura 2**: Adicionar um novo controle ObjectDataSource que invoca a `GetProducts()` método ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image6.png))
 
@@ -64,7 +64,7 @@ Depois de fazer essas alterações, marcação declarativa do seu controle Detai
 Reserve um tempo para exibir a página por meio de um navegador. Neste ponto, você verá um único produto listado (Chai) com linhas que mostra o nome do produto, categoria, fornecedor, preço, unidades em estoque, unidades em ordem e seu status descontinuados.
 
 
-[![Detalhes do produto são mostrados usando uma série de BoundFields](using-templatefields-in-the-detailsview-control-vb/_static/image8.png)](using-templatefields-in-the-detailsview-control-vb/_static/image7.png)
+[![TDetalhes do produto he são mostrados usando uma série de BoundFields](using-templatefields-in-the-detailsview-control-vb/_static/image8.png)](using-templatefields-in-the-detailsview-control-vb/_static/image7.png)
 
 **Figura 3**: Detalhes do produto são mostrados usando uma série de BoundFields ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image9.png))
 
@@ -76,7 +76,7 @@ DetailsView tem uma linha para o `UnitPrice`, `UnitsInStock`, e `UnitsOnOrder` c
 Comece clicando no link Editar campos na marca inteligente de DetailsView para abrir a caixa de diálogo de campos. Em seguida, adicione um novo TemplateField e defina suas `HeaderText` propriedade para "Preços e estoque" e mover o TemplateField novo para que ele está posicionado acima de `UnitPrice` BoundField.
 
 
-[![Adicionar Novo TemplateField no controle DetailsView](using-templatefields-in-the-detailsview-control-vb/_static/image11.png)](using-templatefields-in-the-detailsview-control-vb/_static/image10.png)
+[![Add Novo TemplateField no controle DetailsView](using-templatefields-in-the-detailsview-control-vb/_static/image11.png)](using-templatefields-in-the-detailsview-control-vb/_static/image10.png)
 
 **Figura 4**: Adicionar um novo TemplateField para o controle DetailsView ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image12.png))
 
@@ -88,7 +88,7 @@ A última tarefa para esta etapa é definir o `ItemTemplate` marcação para o p
 Para este tutorial, comece por adicionar um controle de rótulo para o preço e do inventário TemplateField `ItemTemplate`. Em seguida, clique no link Editar DataBindings de smart tag do controle de Web Label e associar a `Text` propriedade para o `UnitPrice` campo.
 
 
-[![Associar a propriedade de texto do rótulo para o campo de dados de UnitPrice](using-templatefields-in-the-detailsview-control-vb/_static/image14.png)](using-templatefields-in-the-detailsview-control-vb/_static/image13.png)
+[![BCampo de propriedade de texto do rótulo para os dados de UnitPrice IND](using-templatefields-in-the-detailsview-control-vb/_static/image14.png)](using-templatefields-in-the-detailsview-control-vb/_static/image13.png)
 
 **Figura 5**: Associar o rótulo `Text` propriedade para o `UnitPrice` campo de dados ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image15.png))
 
@@ -98,7 +98,7 @@ Para este tutorial, comece por adicionar um controle de rótulo para o preço e 
 Com esse acréscimo, o controle de rótulo Web preço e o inventário TemplateField agora exibirá apenas o preço para o produto selecionado. Figura 6 mostra uma captura de tela de nosso progresso até o momento quando visualizado por meio de um navegador.
 
 
-[![O preço e inventário TemplateField mostra o preço](using-templatefields-in-the-detailsview-control-vb/_static/image17.png)](using-templatefields-in-the-detailsview-control-vb/_static/image16.png)
+[![Tele preços e estoque TemplateField mostra o preço](using-templatefields-in-the-detailsview-control-vb/_static/image17.png)](using-templatefields-in-the-detailsview-control-vb/_static/image16.png)
 
 **Figura 6**: O preço e inventário TemplateField mostra o preço ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image18.png))
 
@@ -110,7 +110,7 @@ Para especificar a formatação para a sintaxe de associação de dados usada no
 Para o `UnitPrice` campo use a formatação de moeda especificada, selecionando o valor apropriado na lista suspensa ou digitando na `{0:C}` manualmente.
 
 
-[![O preço de formato como uma moeda](using-templatefields-in-the-detailsview-control-vb/_static/image20.png)](using-templatefields-in-the-detailsview-control-vb/_static/image19.png)
+[![FFormatar o preço como uma moeda](using-templatefields-in-the-detailsview-control-vb/_static/image20.png)](using-templatefields-in-the-detailsview-control-vb/_static/image19.png)
 
 **Figura 7**: O preço como uma moeda de formato ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image21.png))
 
@@ -137,7 +137,7 @@ Depois de executar essa tarefa marcação declarativa de ovládacího prvku Deta
 Com essas alterações consolidamos as informações de preços e estoque em uma única linha DetailsView.
 
 
-[![O preço e informações de inventário são exibidos em uma única linha](using-templatefields-in-the-detailsview-control-vb/_static/image23.png)](using-templatefields-in-the-detailsview-control-vb/_static/image22.png)
+[![Tele preço e informações de inventário é exibido em uma única linha](using-templatefields-in-the-detailsview-control-vb/_static/image23.png)](using-templatefields-in-the-detailsview-control-vb/_static/image22.png)
 
 **Figura 8**: O preço e informações de inventário são exibidos em uma única linha ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image24.png))
 
@@ -149,7 +149,7 @@ O `Products` da tabela `Discontinued` coluna é um valor de bit que indica se o 
 Em vez de exibir o CheckBoxField podemos querer em vez disso, exibir o texto que indica se o produto foi descontinuado. Para fazer isso pudéssemos remover CheckBoxField de DetailsView e, em seguida, adicione um BoundField cujos `DataField` propriedade foi definida como `Discontinued`. Reserve um tempo para fazer isso. Após essa alteração DetailsView mostra o texto "True" para produtos descontinuados e "False" para os produtos que ainda estão ativos.
 
 
-[![As cadeias de caracteres True e False são usadas para exibir o estado Descontinuado](using-templatefields-in-the-detailsview-control-vb/_static/image26.png)](using-templatefields-in-the-detailsview-control-vb/_static/image25.png)
+[![Tele cadeias de caracteres True e False são usados para exibir o estado de Discontinued](using-templatefields-in-the-detailsview-control-vb/_static/image26.png)](using-templatefields-in-the-detailsview-control-vb/_static/image25.png)
 
 **Figura 9**: As cadeias de caracteres True e False são usados para exibir o estado de Discontinued ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image27.png))
 
@@ -175,7 +175,7 @@ Com esse método de formatação completo, tudo o que resta é chamá-la do Temp
 Isso fará com que o `DisplayDiscontinuedAsYESorNO` método a ser invocado durante a renderização DetailsView, passando a `ProductRow` da instância `Discontinued` valor. Desde que o `Eval` método retorna um valor do tipo `Object`, mas o `DisplayDiscontinuedAsYESorNO` método espera um parâmetro de entrada do tipo `Boolean`, podemos converter a `Eval` métodos retornam o valor a ser `Boolean`. O `DisplayDiscontinuedAsYESorNO` método, em seguida, retorna "YES" ou "Não", dependendo do valor que ele recebe. O valor retornado é o que é exibido neste DetailsView linha (veja a Figura 10).
 
 
-[![Os valores Sim ou não são agora são mostrados na linha Descontinuado](using-templatefields-in-the-detailsview-control-vb/_static/image29.png)](using-templatefields-in-the-detailsview-control-vb/_static/image28.png)
+[![YES ou valores não são agora são mostrados na linha Discontinued](using-templatefields-in-the-detailsview-control-vb/_static/image29.png)](using-templatefields-in-the-detailsview-control-vb/_static/image28.png)
 
 **Figura 10**: Os valores Sim ou não são agora são mostrados na linha Discontinued ([clique para exibir a imagem em tamanho normal](using-templatefields-in-the-detailsview-control-vb/_static/image30.png))
 

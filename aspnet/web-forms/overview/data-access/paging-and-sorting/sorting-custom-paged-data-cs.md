@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
-title: Classificação personalizados paginados dados (C#) | Microsoft Docs
+title: Classificação personalizados paginados dados (c#) | Microsoft Docs
 author: rick-anderson
 description: No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da web. Neste tutorial, podemos ver como estender o anterior...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 778baa4e-4af8-4665-947e-7a01d1a4dff2
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ebc6be8c41251190a0124fe5f3d2c154f1ad4450
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a65fe60dc44eb40591733ba9371e409f690fea52
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425635"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409233"
 ---
-<a name="sorting-custom-paged-data-c"></a>Classificação de dados personalizados paginados (C#)
-====================
+# <a name="sorting-custom-paged-data-c"></a>Classificação de dados personalizados paginados (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_CS.exe) ou [baixar PDF](sorting-custom-paged-data-cs/_static/datatutorial26cs1.pdf)
@@ -71,7 +71,7 @@ Reserve um tempo para testar esse procedimento armazenado com valores diferentes
 **Figura 1**: Testar valores diferentes para os procedimento armazenado s três parâmetros de entrada
 
 
-[![O procedimento armazenado s resultados são mostrados na janela de saída](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
+[![Ts de procedimento armazenado he resultados são mostrados na janela de saída](sorting-custom-paged-data-cs/_static/image3.png)](sorting-custom-paged-data-cs/_static/image2.png)
 
 **Figura 2**: O procedimento armazenado s resultados são mostrados na janela de saída ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-cs/_static/image4.png))
 
@@ -145,7 +145,7 @@ Para habilitar a classificação em GridView, basta marcar a caixa de seleção 
 Figura 7 mostra a primeira página de resultados quando classificadas pelo `UnitPrice` em ordem crescente.
 
 
-[![Os resultados são classificados por UnitPrice](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
+[![The resultados são classificados por UnitPrice](sorting-custom-paged-data-cs/_static/image10.png)](sorting-custom-paged-data-cs/_static/image9.png)
 
 **Figura 7**: Os resultados são classificados por UnitPrice ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-cs/_static/image11.png))
 
@@ -166,7 +166,7 @@ Essa exceção ocorre porque o `SortExpression` os s GridView `SupplierName` Bou
 **Figura 9**: Altere o NomeDoFornecedor BoundField s SortExpression para CompanyName
 
 
-[![Os resultados agora podem ser classificados por fornecedor](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
+[![Tele resultados agora podem ser classificados por fornecedor](sorting-custom-paged-data-cs/_static/image15.png)](sorting-custom-paged-data-cs/_static/image14.png)
 
 **Figura 10**: Os resultados agora podem ser classificadas por fornecedor ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-cs/_static/image16.png))
 

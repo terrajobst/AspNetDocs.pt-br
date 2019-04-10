@@ -8,15 +8,15 @@ ms.date: 07/18/2007
 ms.assetid: ad0f1014-1eff-465f-bdc6-93058de00e44
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 13d67b3f4f2613c820baa3ec52d49ad6ea556f9d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1218cf3463c78e4b3bd3c7ca1c65d21590358f8a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395544"
 ---
-<a name="masterdetail-filtering-with-a-dropdownlist-vb"></a>Filtragem mestre/detalhes com uma DropDownList (VB)
-====================
+# <a name="masterdetail-filtering-with-a-dropdownlist-vb"></a>Filtragem mestre/detalhes com uma DropDownList (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_33_VB.exe) ou [baixar PDF](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/datatutorial33vb1.pdf)
@@ -49,7 +49,7 @@ Antes de começar este tutorial, primeiro vamos adicionar a pasta e as páginas 
 Em seguida, abra o `Default.aspx` da página e arraste o `SectionLevelTutorialListing.ascx` controle de usuário do `UserControls` pasta para a superfície de Design. Esse controle de usuário que criamos na [páginas mestras e navegação no Site](../introduction/master-pages-and-site-navigation-vb.md) tutorial, enumera o mapa do site e exibe os tutoriais da seção atual em uma lista com marcadores.
 
 
-[![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image3.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image2.png)
+[![Add o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image3.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image2.png)
 
 **Figura 2**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image4.png))
 
@@ -69,7 +69,7 @@ Para ter a exibição de lista com marcadores os tutoriais de mestre/detalhes, c
 Nosso relatório mestre/detalhes listará as categorias na DropDownList, com produtos do item de lista selecionado exibidos mais adiante na página em um DataList. A primeira tarefa à frente de nós, em seguida, é ter as categorias exibidas na DropDownList. Comece abrindo o `FilterByDropDownList.aspx` página o `DataListRepeaterFiltering` pasta e arraste uma DropDownList da caixa de ferramentas para o designer da página. Em seguida, defina a DropDownList `ID` propriedade para `Categories`. Clique no link na marca inteligente do DropDownList Escolher fonte de dados e criar um novo ObjectDataSource chamado `CategoriesDataSource`.
 
 
-[![Adicionar um novo ObjectDataSource chamado CategoriesDataSource](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image7.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image6.png)
+[![Add um novo ObjectDataSource chamado CategoriesDataSource](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image7.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image6.png)
 
 **Figura 4**: Adicionar um novo ObjectDataSource nomeado `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image8.png))
 
@@ -77,7 +77,7 @@ Nosso relatório mestre/detalhes listará as categorias na DropDownList, com pro
 Configurar o novo ObjectDataSource, de modo que ele chama o `CategoriesBLL` da classe `GetCategories()` método. Depois de configurar o ObjectDataSource ainda precisamos especificar qual campo de fonte de dados deve ser exibido na DropDownList e que um deve ser associado como o valor para cada item de lista. Ter o `CategoryName` campo, como a exibição e `CategoryID` como o valor para cada item de lista.
 
 
-[![Ter a exibição DropDownList CategoryName campo e Use CategoryID como o valor](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image10.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image9.png)
+[![Halvar DropDownList exibir o uso CategoryID e CategoryName Field como o valor](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image10.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image9.png)
 
 **Figura 5**: Ter a exibição DropDownList a `CategoryName` campo e Use `CategoryID` como o valor ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image11.png))
 
@@ -85,7 +85,7 @@ Configurar o novo ObjectDataSource, de modo que ele chama o `CategoriesBLL` da c
 Neste ponto, temos um controle DropDownList que é preenchido com os registros da `Categories` tabela (tudo feito em cerca de seis segundos). Figura 6 mostra nosso progresso até o momento quando visualizado por meio de um navegador.
 
 
-[![Uma lista suspensa lista as categorias atuais](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image13.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image12.png)
+[![A Lista suspensa lista as categorias atuais](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image13.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image12.png)
 
 **Figura 6**: Menu suspenso que lista as categorias atual ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image14.png))
 
@@ -95,7 +95,7 @@ Neste ponto, temos um controle DropDownList que é preenchido com os registros d
 A última etapa do nosso relatório mestre/detalhes é listar os produtos associados a categoria selecionada. Para fazer isso, adicione uma DataList à página e criar um novo ObjectDataSource chamado `ProductsByCategoryDataSource`. Ter o `ProductsByCategoryDataSource` recuperar seus dados, controle de `ProductsBLL` da classe `GetProductsByCategoryID(categoryID)` método. Como esse relatório mestre/detalhes é somente leitura, escolha a que opção nas guias de INSERT, UPDATE e DELETE (nenhum).
 
 
-[![Selecione o método GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image16.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image15.png)
+[![SEscolha o método GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image16.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image15.png)
 
 **Figura 7**: Selecione o `GetProductsByCategoryID(categoryID)` método ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image17.png))
 
@@ -103,7 +103,7 @@ A última etapa do nosso relatório mestre/detalhes é listar os produtos associ
 Depois de clicar em Avançar, o assistente ObjectDataSource nos solicita a origem do valor para o `GetProductsByCategoryID(categoryID)` do método *`categoryID`* parâmetro. Para usar o valor de selecionado `categories` DropDownList item define a origem do parâmetro ControlID para e de controle `Categories`.
 
 
-[![Defina o parâmetro categoryID como o valor de Categories DropDownList](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image19.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image18.png)
+[![Sdefinir o parâmetro para o valor de Categories DropDownList categoryID](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image19.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image18.png)
 
 **Figura 8**: Defina as *`categoryID`* parâmetro para o valor da `Categories` DropDownList ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image20.png))
 
@@ -119,12 +119,12 @@ Reserve um tempo para fazer check-out de nosso progresso em um navegador. Quando
 As figuras 9 e 10 ilustram o relatório mestre/detalhes em ação.
 
 
-[![Quando o primeiro visitando a página, os produtos de bebidas são exibidos](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image22.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image21.png)
+[![Wuando primeiro visitando a página, os produtos de bebidas são exibidas](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image22.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image21.png)
 
 **Figura 9**: Quando o primeiro visitando a página, os produtos de bebidas são exibidos ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image23.png))
 
 
-[![Selecionar um novo produto (produzir) automaticamente faz com que um PostBack, atualizando DataList](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image25.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image24.png)
+[![Seleger um novo produto (produzir) automaticamente faz com que um PostBack, atualizando DataList](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image25.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image24.png)
 
 **Figura 10**: Selecionar um novo produto (produzir) automaticamente faz com que um PostBack, atualizando DataList ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image26.png))
 
@@ -156,7 +156,7 @@ Além disso, precisamos definir o controle de DropDownList `AppendDataBoundItems
 O motivo pelo qual escolhemos o valor `0` para obter a lista de "-- Escolha uma categoria –" item é porque não há nenhuma categoria no sistema com um valor de `0`, portanto, não há registros de produto serão retornados quando o item de lista "-- Escolha uma categoria –" está selecionado. Para confirmar isso, reserve um tempo para visitar a página por meio de um navegador. Como mostra a Figura 13, quando inicialmente exibindo a página que o item de lista "-- Escolha uma categoria –" está selecionado e nenhum produto é exibido.
 
 
-[![Quando o](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image30.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image29.png)
+[![Wuando o](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image30.png)](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image29.png)
 
 **Figura 13**: Quando o Item de lista "-- Escolha uma categoria –" é selecionado, os produtos não são exibidos ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image31.png))
 

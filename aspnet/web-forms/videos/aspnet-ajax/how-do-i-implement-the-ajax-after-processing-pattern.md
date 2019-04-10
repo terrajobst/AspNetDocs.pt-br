@@ -8,15 +8,15 @@ ms.date: 06/21/2007
 ms.assetid: 9a382d8e-ea3a-4fa4-bd24-b56f9051f4db
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-implement-the-ajax-after-processing-pattern
 msc.type: video
-ms.openlocfilehash: 6e10200299b78dcf2d5ae356b302ddddcffb999c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3d4b4e0d12d8baa6810a90ff9225fcbf88fad58f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398625"
 ---
-<a name="how-do-i-implement-the-ajax-after-processing-pattern"></a>[Como fazer:] Implementar o AJAX após o processamento padrão?
-====================
+# <a name="how-do-i-implement-the-ajax-after-processing-pattern"></a>[Como fazer:] Implementar o AJAX após o processamento padrão?
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 A estrutura ASP.NET AJAX permite que seu código do lado do servidor conectar-se no e responder a vários eventos do lado do cliente. Neste vídeo, saiba como implementar o após processamento padrão, que permite que o código do lado do servidor executar a lógica de conclusão depois que o usuário termina com a página da Web.

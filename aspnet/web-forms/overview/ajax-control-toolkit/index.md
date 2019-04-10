@@ -8,22 +8,22 @@ ms.date: 10/05/2011
 ms.assetid: 76242ce9-e611-41d2-95e8-dc5f406d4bfc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit
 msc.type: chapter
-ms.openlocfilehash: ad68d8f074bc3c453e991abf7f8d393fbe9740ba
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 795283c33d63272b29b91fd7037c3463bc71abad
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410741"
 ---
-<a name="older-versions---ajax-control-toolkit"></a>Versões mais antigas – Ajax Control Toolkit
-====================
+# <a name="older-versions---ajax-control-toolkit"></a>Versões mais antigas – Ajax Control Toolkit
+
 > Como começar com o Ajax Control Toolkit e como usar alguns dos controles mais populares. DevExpress mantém que o aberto e gratuito origem Ajax Control Toolkit.
 > 
 > 
 > ![](index/_static/image1.png) DevExpress, os desenvolvedores de formulários da Web do ASP.NET, MVC e controles de interface do usuário do HTML5 e estruturas, premiado assumiu a manutenção do ASP.NET AJAX Control Toolkit para colocar essa biblioteca de código-fonte aberto altamente exigidos novamente em um estado confiável. [Saiba mais](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_Tutorials.aspx).
 
 
-- [Introdução](getting-started/index.md)
+- [Guia de Introdução](getting-started/index.md)
 
     - [Introdução ao AJAX Control Toolkit (C#)](getting-started/get-started-with-the-ajax-control-toolkit-cs.md)
     - [Uso de controles e extensores de controle do AJAX Control Toolkit (C#)](getting-started/using-ajax-control-toolkit-controls-and-control-extenders-cs.md)
@@ -40,38 +40,38 @@ ms.locfileid: "57020303"
 - [Animação](animation/index.md)
 
     - [Adição de animação a um controle (C#)](animation/adding-animation-to-a-control-cs.md)
-    - [Executando várias animações ao mesmo tempo (C#)](animation/executing-several-animations-at-the-same-time-cs.md)
-    - [Executando várias animações, uma após a outra (C#)](animation/executing-several-animations-after-each-other-cs.md)
+    - [Executar várias animações ao mesmo tempo (C#)](animation/executing-several-animations-at-the-same-time-cs.md)
+    - [Executar várias animações, uma após a outra (C#)](animation/executing-several-animations-after-each-other-cs.md)
     - [Animação dependendo de uma condição (C#)](animation/animation-depending-on-a-condition-cs.md)
-    - [Escolhendo uma animação em uma lista (C#)](animation/picking-one-animation-out-of-a-list-cs.md)
+    - [Escolher uma animação em uma lista (C#)](animation/picking-one-animation-out-of-a-list-cs.md)
     - [Animação em resposta à interação do usuário (C#)](animation/animating-in-response-to-user-interaction-cs.md)
     - [Desabilitar ações durante a animação (C#)](animation/disabling-actions-during-animation-cs.md)
     - [Disparar uma animação em outro controle (C#)](animation/triggering-an-animation-in-another-control-cs.md)
-    - [Modificando animações pelo lado do servidor (C#)](animation/modifying-animations-from-the-server-side-cs.md)
+    - [Modificar animações pelo lado do servidor (C#)](animation/modifying-animations-from-the-server-side-cs.md)
     - [Executar animações usando o código do lado do cliente (C#)](animation/executing-animations-using-client-side-code-cs.md)
     - [Alterar uma animação usando o código do lado do cliente (C#)](animation/changing-an-animation-using-client-side-code-cs.md)
     - [Animar um controle UpdatePanel (C#)](animation/animating-an-updatepanel-control-cs.md)
-    - [Controlando dinamicamente animações UpdatePanel (C#)](animation/dynamically-controlling-updatepanel-animations-cs.md)
+    - [Controlar dinamicamente animações UpdatePanel (C#)](animation/dynamically-controlling-updatepanel-animations-cs.md)
     - [Adição de animação a um controle (VB)](animation/adding-animation-to-a-control-vb.md)
-    - [Executando várias animações ao mesmo tempo (VB)](animation/executing-several-animations-at-the-same-time-vb.md)
-    - [Executando várias animações, uma após a outra (VB)](animation/executing-several-animations-after-each-other-vb.md)
+    - [Executar várias animações ao mesmo tempo (VB)](animation/executing-several-animations-at-the-same-time-vb.md)
+    - [Executar várias animações, uma após a outra (VB)](animation/executing-several-animations-after-each-other-vb.md)
     - [Animação dependendo de uma condição (VB)](animation/animation-depending-on-a-condition-vb.md)
-    - [Escolhendo uma animação em uma lista (VB)](animation/picking-one-animation-out-of-a-list-vb.md)
+    - [Escolher uma animação em uma lista (VB)](animation/picking-one-animation-out-of-a-list-vb.md)
     - [Animação em resposta à interação do usuário (VB)](animation/animating-in-response-to-user-interaction-vb.md)
     - [Desabilitar ações durante a animação (VB)](animation/disabling-actions-during-animation-vb.md)
     - [Disparar uma animação em outro controle (VB)](animation/triggering-an-animation-in-another-control-vb.md)
-    - [Modificando animações pelo lado do servidor (VB)](animation/modifying-animations-from-the-server-side-vb.md)
+    - [Modificar animações pelo lado do servidor (VB)](animation/modifying-animations-from-the-server-side-vb.md)
     - [Executar animações usando o código do lado do cliente (VB)](animation/executing-animations-using-client-side-code-vb.md)
     - [Alterar uma animação usando o código do lado do cliente (VB)](animation/changing-an-animation-using-client-side-code-vb.md)
     - [Animar um controle UpdatePanel (VB)](animation/animating-an-updatepanel-control-vb.md)
-    - [Controlando dinamicamente animações UpdatePanel (VB)](animation/dynamically-controlling-updatepanel-animations-vb.md)
+    - [Controlar dinamicamente animações UpdatePanel (VB)](animation/dynamically-controlling-updatepanel-animations-vb.md)
 - [CascadingDropdown](cascadingdropdown/index.md)
 
-    - [Preenchendo uma lista usando o CascadingDropDown (C#)](cascadingdropdown/filling-a-list-using-cascadingdropdown-cs.md)
+    - [Preencher uma lista usando o CascadingDropDown (C#)](cascadingdropdown/filling-a-list-using-cascadingdropdown-cs.md)
     - [Uso de CascadingDropDown com um banco de dados (C#)](cascadingdropdown/using-cascadingdropdown-with-a-database-cs.md)
     - [Predefinição de entradas de lista com CascadingDropDown (C#)](cascadingdropdown/presetting-list-entries-with-cascadingdropdown-cs.md)
     - [Uso de postback automático com CascadingDropDown (C#)](cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs.md)
-    - [Preenchendo uma lista usando o CascadingDropDown (VB)](cascadingdropdown/filling-a-list-using-cascadingdropdown-vb.md)
+    - [Preencher uma lista usando o CascadingDropDown (VB)](cascadingdropdown/filling-a-list-using-cascadingdropdown-vb.md)
     - [Uso de CascadingDropDown com um banco de dados (VB)](cascadingdropdown/using-cascadingdropdown-with-a-database-vb.md)
     - [Predefinição de entradas de lista com CascadingDropDown (VB)](cascadingdropdown/presetting-list-entries-with-cascadingdropdown-vb.md)
     - [Uso de postback automático com CascadingDropDown (VB)](cascadingdropdown/using-auto-postback-with-cascadingdropdown-vb.md)
@@ -94,9 +94,9 @@ ms.locfileid: "57020303"
 - [DropShadow](dropshadow/index.md)
 
     - [Ajuste do índice Z de um DropShadow (C#)](dropshadow/adjusting-the-z-index-of-a-dropshadow-cs.md)
-    - [Manipulando propriedades de DropShadow através de código de cliente (C#)](dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
+    - [Manipular propriedades de DropShadow através de código de cliente (C#)](dropshadow/manipulating-dropshadow-properties-from-client-code-cs.md)
     - [Ajuste do índice Z de um DropShadow (VB)](dropshadow/adjusting-the-z-index-of-a-dropshadow-vb.md)
-    - [Manipulando propriedades de DropShadow através de código de cliente (VB)](dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
+    - [Manipular propriedades de DropShadow através de código de cliente (VB)](dropshadow/manipulating-dropshadow-properties-from-client-code-vb.md)
 - [DynamicPopulate](dynamicpopulate/index.md)
 
     - [Preenchimento dinâmico de um controle (C#)](dynamicpopulate/dynamically-populating-a-control-cs.md)
@@ -161,7 +161,7 @@ ms.locfileid: "57020303"
     - [Arrastar e soltar por meio de ReorderList (C#)](reorderlist/drag-and-drop-via-reorderlist-cs.md)
     - [Uso de postbacks com ReorderList (VB)](reorderlist/using-postbacks-with-reorderlist-vb.md)
     - [Arrastar e soltar por meio de ReorderList (VB)](reorderlist/drag-and-drop-via-reorderlist-vb.md)
-- [Slider](slider/index.md)
+- [Controle deslizante](slider/index.md)
 
     - [Controle deslizante com postback automático (C#)](slider/using-the-slider-control-with-auto-postback-cs.md)
     - [Associação de Dados do controle deslizante (C#)](slider/databinding-the-slider-control-cs.md)

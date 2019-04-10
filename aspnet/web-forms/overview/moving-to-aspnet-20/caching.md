@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 5c97464ee50291338a80120a86b1b86b07bc672d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400198"
 ---
-<a name="caching"></a>Cache
-====================
+# <a name="caching"></a>Cache
+
 por [Microsoft](https://github.com/microsoft)
 
 > Uma compreensão de armazenamento em cache é importante para um aplicativo ASP.NET de bom desempenho. ASP.NET 1.x oferecidos três opções diferentes para armazenamento em cache. o cache de saída, cache de fragmento e a API de cache.
@@ -56,7 +56,7 @@ Para invalidar o item que foi inserido acima, basta remova o item que foi inseri
 
 Observe que a chave do item que atua como a chave de cache deve ser o mesmo que o valor adicionado à matriz de chaves de cache.
 
-## <a name="polling-based-sql-cache-dependenciesemalso-called-table-based-dependenciesem"></a>Dependências de Cache de SQL baseadas em sondagem<em>(também chamado de dependências baseadas em tabela)</em>
+## <a name="polling-based-sql-cache-dependenciesalso-called-table-based-dependencies"></a>Sondagem o SQL Cache Dependencies(Also called Table-Based Dependencies)
 
 SQL Server 7 e 2000 usam o modelo baseado em sondagem para dependências de cache SQL. O modelo baseado em sondagem usa um gatilho em uma tabela de banco de dados que é disparada quando a alteração de dados na tabela. Que disparar atualizações de um **changeId** campo na tabela de notificação que o ASP.NET verifica periodicamente. Se o **changeId** campo foi atualizado, o ASP.NET sabe que os dados foram alterados e invalida os dados em cache.
 
@@ -252,7 +252,7 @@ Os seguintes atributos estão disponíveis para o &lt;sqlCacheDependency&gt; ele
 
 | **Atributo** | **Descrição** |
 | --- | --- |
-| **enabled** | Exigido **Boolean** atributo. Indica se as alterações estão sendo pesquisadas para. |
+| **habilitado** | Exigido **Boolean** atributo. Indica se as alterações estão sendo pesquisadas para. |
 | **pollTime** | Opcional **Int32** atributo. Define a frequência com a qual o SqlCacheDependency sonda a tabela de banco de dados para que as alterações. Esse valor corresponde ao número de milissegundos entre pollings sucessivas. Ele não pode ser definido como menor que 500 milissegundos. Valor padrão é 1 minuto. |
 
 ### <a name="more-information"></a>Mais informações

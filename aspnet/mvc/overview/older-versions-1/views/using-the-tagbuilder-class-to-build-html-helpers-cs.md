@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs
-title: Usando a classe TagBuilder para criar auxiliares de HTML (C#) | Microsoft Docs
+title: Usando a classe TagBuilder para criar auxiliares de HTML (c#) | Microsoft Docs
 author: StephenWalther
 description: Stephen Walther apresenta uma classe de utilitário útil na estrutura do ASP.NET MVC, a classe TagBuilder nomeada. Você pode usar facilmente a classe TagBuilder para...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 3975a52f-bd15-4edd-8f3d-1df93672515b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9759ea9b05ba5eba268901d3d2d1a15b2afe6202
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3227560c1d0c48f7738e26c87a0dbb140c410eee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410091"
 ---
-<a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>Usando a classe TagBuilder para criar auxiliares de HTML (C#)
-====================
+# <a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>Usando a classe TagBuilder para criar auxiliares de HTML (c#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther apresenta uma classe de utilitário útil na estrutura do ASP.NET MVC, a classe TagBuilder nomeada. Você pode usar a classe TagBuilder para criar facilmente as marcas HTML.
@@ -65,7 +65,7 @@ Depois de criar o auxiliar de imagem, você pode usar o auxiliar em suas exibiç
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-cs/samples/sample2.aspx)]
 
 
-[![A caixa de diálogo Novo projeto](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.png)
 
 **Figura 01**: Usando o auxiliar de imagem ([clique para exibir a imagem em tamanho normal](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image2.png))
 

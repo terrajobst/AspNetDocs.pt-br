@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: d4fab68555eeb27420e60a28aca2f2c0fb9a73e3
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f3f8c649932682fd96e0640ddf4595c19c755909
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421512"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408180"
 ---
-<a name="membership"></a>Associação
-====================
+# <a name="membership"></a>Associação
+
 por [Microsoft](https://github.com/microsoft)
 
 > Associação do ASP.NET compila o sucesso do modelo de autenticação de formulários do ASP.NET 1. x. Autenticação de formulários do ASP.NET fornece uma maneira conveniente de incorporar um formulário de logon em seu aplicativo ASP.NET e validar os usuários em relação a um banco de dados ou outro armazenamento de dados.
@@ -74,7 +74,7 @@ Você pode iniciar a interface da Web clicando no botão de configuração do AS
 
 Isso inicia a ferramenta de administração de Site da Web do ASP.NET mostrado abaixo. A administração de Site da Web do ASP.NET é uma interface de guia de quatro que torna mais fácil de gerenciar configurações de aplicativo. As seguintes guias estão disponíveis:
 
-- **Início**
+- **Home**
 - **Segurança** configurar usuários, funções e acesso.
 - **Aplicativo** definir configurações do aplicativo.
 - **Provedor** configurar e testar o seu provedor de associação de aplicativos.
@@ -233,7 +233,7 @@ Se, por outro lado, você deseja criar seu próprio provedor (para armazenar as 
 
 ## <a name="creating-your-own-membership-provider"></a>Criar seu próprio provedor de associação
 
-Para criar seu próprio provedor de associação, você precisa primeiro criar uma classe que herda da classe MembershipProvider. Se você estiver usando o VB.NET, o Visual Studio 2005 adicionará os stubs para todos os métodos que você precisa substituir. Se você estiver usando C#, depende de você adicionar os stubs.
+Para criar seu próprio provedor de associação, você precisa primeiro criar uma classe que herda da classe MembershipProvider. Se você estiver usando o VB.NET, o Visual Studio 2005 adicionará os stubs para todos os métodos que você precisa substituir. Se você estiver usando c#, depende de você adicionar os stubs.
 
 Você precisará substituir o seguinte:
 
@@ -264,7 +264,7 @@ Você precisará substituir o seguinte:
 - Função UpdateUser
 - Função ValidateUser
 
-Que uma grande lista implementar como desenvolvedor em C#. Você talvez ache mais fácil de criar a classe no VB.NET sem qualquer implementação e, em seguida, usar o .NET Reflector ou uma ferramenta semelhante para converter o código em C#.
+Que uma grande lista implementar como desenvolvedor em c#. Você talvez ache mais fácil de criar a classe no VB.NET sem qualquer implementação e, em seguida, usar o .NET Reflector ou uma ferramenta semelhante para converter o código em c#.
 
 A cadeia de caracteres de conexão e outras propriedades devem ser definidas como seus padrões no método Initialize. (O método Initialize é disparado quando o provedor é carregado no tempo de execução). O segundo parâmetro para o método Initialize é do tipo NameValueCollection e é uma referência para o &lt;adicionar&gt; elemento que está associado com o provedor personalizado no arquivo Web. config. Essa entrada é semelhante ao seguinte:
 

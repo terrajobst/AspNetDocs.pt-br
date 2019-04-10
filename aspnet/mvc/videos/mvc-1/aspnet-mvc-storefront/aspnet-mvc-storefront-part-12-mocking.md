@@ -8,15 +8,15 @@ ms.date: 06/19/2008
 ms.assetid: 9a0f04b9-6a49-4e2c-9c12-03ab71ab2705
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-12-mocking
 msc.type: video
-ms.openlocfilehash: 0af5799a779f19f19f8eaeab5c554d90993ca4af
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 481b3185b2050d2ac944da8969ce68353f89a3ef
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411521"
 ---
-<a name="aspnet-mvc-storefront-part-12-mocking"></a>Vitrine do ASP.NET MVC, parte 12: Simulação
-====================
+# <a name="aspnet-mvc-storefront-part-12-mocking"></a>Vitrine do ASP.NET MVC, parte 12: Simulação
+
 por [Rob Conery](https://github.com/robconery)
 
 Neste episódio, eu implemento para que eu posso testar minha ação de autenticação para meu UserController de simulação.

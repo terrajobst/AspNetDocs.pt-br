@@ -8,15 +8,15 @@ ms.date: 01/06/2011
 ms.assetid: 36c5beeb-45a7-48a0-9c30-f82cdf5c5f5f
 msc.legacyurl: /web-pages/readme
 msc.type: content
-ms.openlocfilehash: aa852e7bbd93622154d59e0d0a13ffa680812df2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7374b1afafa9ca63309f3c0369c5efd808f7f28a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401979"
 ---
-<a name="webmatrix-readme"></a>Leiame do WebMatrix
-====================
+# <a name="webmatrix-readme"></a>Leiame do WebMatrix
+
 13 de janeiro de 2011
 
 ## <a name="contents"></a>Conteúdo
@@ -255,9 +255,9 @@ Esta seção do documento descreve novos recursos, alterações e problemas conh
 > 1. Copie os assemblies do mecanismo de banco de dados para o *Bin* pasta (e as subpastas) do aplicativo no computador de destino:  
 > 
 >    - Copy *C:\Program Files\Microsoft SQL Server Edition\v4.0\Desktop\System.Data.SqlServerCe.dll*   
->        **to** *\Bin*
->    - Cópia <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\</em><strong><em>para</em></strong>\Bin\x86*
->    - Cópia <em>C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\</em>* <strong>para</strong><em>\Bin\amd64</em>
+>      **to** *\Bin*
+>    - Cópia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\*  **para** *\Bin\x86*
+>    - Cópia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\** **para** *\Bin\amd64*
 > 
 > 2. Na pasta raiz do site, crie ou abra uma *Web. config* arquivo. (No WebMatrix 1.0, esse tipo de arquivo está disponível se você clicar **todos os** na **escolher um tipo de arquivo** caixa de diálogo.)
 > 3. Adicione o seguinte elemento como um filho de `<configuration>` elemento (não dentro a `<system.web>` elemento):

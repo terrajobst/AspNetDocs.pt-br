@@ -8,15 +8,15 @@ ms.date: 02/22/2006
 ms.assetid: 8fcd3402-1711-4f19-b0cc-b91edfe285fc
 msc.legacyurl: /web-forms/videos/sql-2005/more-about-column-data-types-and-other-properties
 msc.type: video
-ms.openlocfilehash: 8a6eb053ae8059d2dbdeee5f96b69d22e0959559
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 21c6e5b69729659973fe63f364aa3bb2b4f2e4ab
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398664"
 ---
-<a name="more-about-column-data-types-and-other-properties"></a>Mais informações sobre tipos de dados de coluna e outras propriedades
-====================
+# <a name="more-about-column-data-types-and-other-properties"></a>Mais informações sobre tipos de dados de coluna e outras propriedades
+
 por [Microsoft](https://github.com/microsoft)
 
 Iniciantes do SQL Server explorar a integridade dos dados, saiba quais tipos de dados a ser usado para o que e evitar armadilhas comuns de tipo de dados.

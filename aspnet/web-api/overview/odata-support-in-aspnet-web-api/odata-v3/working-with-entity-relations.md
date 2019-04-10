@@ -8,15 +8,15 @@ ms.date: 02/26/2014
 ms.assetid: 1e4c2eb4-b6cf-42ff-8a65-4d71ddca0394
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/working-with-entity-relations
 msc.type: authoredcontent
-ms.openlocfilehash: f78b5cf36789032f90d3d073698f7a439507277f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c78787aac83720eb9e8d6e9e0499f30a31951bc2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393854"
 ---
-<a name="supporting-entity-relations-in-odata-v3-with-web-api-2"></a>Suporte a relações de entidade no OData v3 com a API Web 2
-====================
+# <a name="supporting-entity-relations-in-odata-v3-with-web-api-2"></a>Suporte a relações de entidade no OData v3 com a API Web 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Baixe o projeto concluído](http://code.msdn.microsoft.com/ASPNET-Web-API-OData-cecdb524)

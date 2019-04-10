@@ -8,15 +8,15 @@ ms.date: 08/30/2013
 ms.assetid: 0ee21741-c1bf-4025-a9b0-24580cae24bc
 msc.legacyurl: /aspnet/overview/owin-and-katana/an-overview-of-project-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 52007eba109de28c6d178505b82b1d5ff2883b47
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 72f70faa151007558ecbb270143ecd5b37c2134d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392567"
 ---
-<a name="an-overview-of-project-katana"></a>Uma visão geral do projeto Katana
-====================
+# <a name="an-overview-of-project-katana"></a>Uma visão geral do projeto Katana
+
 por [Howard Dierking](https://github.com/howarddierking)
 
 > A estrutura do ASP.NET já existe há mais de dez anos, e a plataforma habilitou o desenvolvimento de inúmeros sites da Web e serviços. Conforme as estratégias de desenvolvimento de aplicativos Web evoluíram, o framework foi capaz de evoluir em etapa com tecnologias como ASP.NET MVC e API Web ASP.NET. Desenvolvimento de aplicativo Web leva sua próxima etapa revolucionário no mundo da computação em nuvem, do projeto [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) fornece o conjunto subjacente de componentes para aplicativos ASP.NET, permitindo que eles ser flexível e portátil, leve e fornecer um desempenho melhor – em outras palavras, o projeto [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) nuvem otimiza a seus aplicativos ASP.NET.

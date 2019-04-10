@@ -1,19 +1,20 @@
 ---
 uid: identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
-title: Migrando um site existente da associação do SQL para o ASP.NET Identity | Microsoft Docs
+title: Migrando um site existente da associação do SQL para a identidade do ASP.NET - ASP.NET 4.x
 author: Rick-Anderson
 description: Este tutorial ilustra as etapas para migrar um aplicativo web existente com o usuário e dados de função criados usando a associação do SQL para a nova identidade do ASP.NET s...
 ms.author: riande
 ms.date: 12/19/2014
+ms.custom: seoapril2019
 ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: b80f2f5cc4702c3e406d8989905c56508711e788
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: f205dfd8692bc946ca2124655bf8bcefbdbd1779
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426075"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394517"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migração de um site existente da Associação do SQL para a Identidade do ASP.NET
 
@@ -98,7 +99,7 @@ Para classes de identidade do ASP.NET trabalhar fora da caixa com os dados de us
 
 É necessário ter tabelas para cada um desses modelos com colunas que correspondem às propriedades. O mapeamento entre classes e tabelas é definido na `OnModelCreating` método da `IdentityDBContext`. Isso é conhecido como o método da API fluente da configuração e obter mais informações podem ser encontradas [aqui](https://msdn.microsoft.com/data/jj591617.aspx). A configuração das classes é mencionado abaixo
 
-| **Class** | **Tabela** | **Chave primária** | **Chave estrangeira** |
+| **Classe** | **Tabela** | **Chave primária** | **Chave estrangeira** |
 | --- | --- | --- | --- |
 | IdentityUser | AspnetUsers | Id |  |
 | IdentityRole | AspnetRoles | Id |  |
@@ -109,7 +110,7 @@ Para classes de identidade do ASP.NET trabalhar fora da caixa com os dados de us
 Com essas informações, podemos criar instruções SQL para criar novas tabelas. Podemos pode gravar cada instrução individualmente ou gerar todo o script usando os comandos do PowerShell do EntityFramework que, em seguida, podemos Editar conforme necessário. Para fazer isso, no VS open a **Package Manager Console** da **exibição** ou **ferramentas** menu
 
 - Execute o comando "Enable-Migrations" para habilitar migrações do EntityFramework.
-- Execute o comando "Add-migration initial", que cria o código de configuração inicial para criar o banco de dados em C# / VB.
+- Execute o comando "Add-migration initial", que cria o código de configuração inicial para criar o banco de dados em c# / VB.
 - A etapa final é executar "Update-Database – Script" comando que gera o script SQL baseado nas classes de modelo.
 
 [!INCLUDE[](../../../includes/identity/alter-command-exception.md)]

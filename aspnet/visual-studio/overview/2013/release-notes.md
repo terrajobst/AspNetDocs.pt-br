@@ -8,15 +8,15 @@ ms.date: 10/17/2013
 ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: cd6197a9cbed822ba874a19823521a3711be9201
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8234bd1b7eb74d9b03e507f00d9ad937314288be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411274"
 ---
-<a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Notas de versão do ASP.NET and Web Tools para Visual Studio 2013
-====================
+# <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Notas de versão do ASP.NET and Web Tools para Visual Studio 2013
+
 por [Microsoft](https://github.com/microsoft)
 
 > Este documento descreve a versão do ASP.NET and Web Tools para Visual Studio 2013.
@@ -30,7 +30,7 @@ por [Microsoft](https://github.com/microsoft)
 
 ### <a name="new-features-in-aspnet-and-web-tools-for-visual-studio-2013"></a>Novos recursos do ASP.NET and Web Tools para Visual Studio 2013
 
-- [One ASP.NET](#TOC6)
+- [Um ASP.NET](#TOC6)
 - [Nova experiência de projeto da Web](#newproj)
 - [Scaffolding do ASP.NET](#scaffold)
 - [Link do navegador](#browser-link)
@@ -40,9 +40,9 @@ por [Microsoft](https://github.com/microsoft)
 - [NuGet 2.7](#nuget)
 - [Web Forms do ASP.NET](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
-- [API Web ASP.NET 2](#TOC11)
-- [SignalR do ASP.NET](#TOC13)
-- [Identidade do ASP.NET](#TOC8)
+- [ASP.NET Web API 2](#TOC11)
+- [ASP.NET SignalR](#TOC13)
+- [ASP.NET Identity](#TOC8)
 - [Componentes do Microsoft OWIN](#TOC7)
 - [Entity Framework 6](#ef6)
 - [ASP.NET Razor 3](#TOC14)
@@ -135,7 +135,7 @@ No Visual Studio 2013 com o SDK do Azure para .NET 2.2, você pode usar **Gerenc
 Para obter mais informações, consulte os seguintes recursos:
 
 - [Criar um aplicativo web ASP.NET no serviço de aplicativo do Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/)
-- [Solucionar problemas de um aplicativo Web no Serviço de Aplicativo do Azure usando o Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Solucionar problemas de um aplicativo web no serviço de aplicativo do Azure usando o Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Aprimoramentos de publicar Web

@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 27591afa-3c14-47e6-8323-573f8f7aa862
 msc.legacyurl: /web-forms/videos/how-do-i
 msc.type: chapter
-ms.openlocfilehash: d53304d60888de55ad474f5be8c0cfe6f8b122bb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7d300a1f29c7712408d17c6629da6cefb67b3cdb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410312"
 ---
-<a name="how-do-i"></a>Como faço para:
-====================
+# <a name="how-do-i"></a>Como faço para:
+
 > Como executar uma variedade de tarefas comuns.
 
 
@@ -29,7 +29,7 @@ ms.locfileid: "57020243"
 - [Proteger meu site usando associações e funções](how-do-i-secure-my-site-using-membership-and-roles.md)
 - [Criar uma página "Fale Conosco"](how-do-i-create-a-contact-us-page.md)
 - [Criar um portal de logon para clientes cheio de recursos](how-do-i-create-a-full-featured-customer-login-portal.md)
-- [Use as páginas mestras e navegação no site](how-do-i-use-master-pages-and-site-navigation.md)
+- [Usar as páginas mestras e navegação no site](how-do-i-use-master-pages-and-site-navigation.md)
 - [Criar sites controlados por dados](how-do-i-create-data-driven-web-sites.md)
 - [Implementar um HttpModule](how-do-i-implement-an-httpmodule.md)
 - [Configurar o provedor de associação do SQL](how-do-i-set-up-the-sql-membership-provider.md)
@@ -65,9 +65,9 @@ ms.locfileid: "57020243"
 - [Implantar uma ferramenta de site de cópia de site](how-do-i-deploy-a-web-site-using-the-copy-web-site-tool.md)
 - [Criar e usar uma seção de configuração personalizada em um arquivo de configuração do ASP.NET](how-do-i-create-and-use-a-custom-configuration-section-in-an-aspnet-configuration-file.md)
 - [Configurar um site do ASP.NET para uma versão do .NET Framework](how-do-i-configure-an-aspnet-web-site-for-a-net-framework-version.md)
-- [Use a ferramenta de registro de IIS do ASP.NET para configurar o ASP.NET](how-do-i-use-the-aspnet-iis-registration-tool-to-configure-aspnet.md)
+- [Usar a ferramenta de registro de IIS do ASP.NET para configurar o ASP.NET](how-do-i-use-the-aspnet-iis-registration-tool-to-configure-aspnet.md)
 - [Estender e personalizar um controle de servidor do ASP.NET para uma finalidade específica](how-do-i-extend-and-customize-an-aspnet-server-control-for-a-specific-purpose.md)
-- [Use a capacidade de criar grupos com o controle ListView para dados diferentes](how-do-i-use-the-ability-to-create-groups-with-the-listview-control-for-different-data.md)
+- [Usar a capacidade de criar grupos com o controle ListView para dados diferentes](how-do-i-use-the-ability-to-create-groups-with-the-listview-control-for-different-data.md)
 - [Disponibilizar elementos HTML de código do lado do servidor](how-do-i-make-html-elements-accessible-from-server-side-code.md)
 - [Usar funções para segmentar a funcionalidade em um site do ASP.NET](how-do-i-use-roles-to-segment-functionality-in-an-aspnet-web-site.md)
 - [Trabalhar com páginas mestras aninhadas para criar layouts de conteúdo padrão](how-do-i-work-with-nested-master-pages-to-create-standard-content-layouts.md)
@@ -78,7 +78,7 @@ ms.locfileid: "57020243"
 - [Implementar um postback em outra página no ASP.NET](how-do-i-implement-a-cross-page-postback-in-aspnet.md)
 - [Adicionar controles a uma Página da Web do ASP.NET por meio de programação](how-do-i-add-controls-to-an-aspnet-web-page-programmatically.md)
 - [Usar um campo oculto para armazenar e manipular informações do lado do cliente](how-do-i-use-a-hidden-field-to-store-and-manipulate-client-side-information.md)
-- [Use a opção Fixednames com o utilitário de compilador para obter flexibilidade máxima](how-do-i-use-the-fixednames-option-with-the-compiler-utility-for-maximum-flexibility.md)
+- [Usar a opção Fixednames com o utilitário de compilador para obter flexibilidade máxima](how-do-i-use-the-fixednames-option-with-the-compiler-utility-for-maximum-flexibility.md)
 - [Implementar botões de comando para itens individuais](how-do-i-implement-command-buttons-for-individual-items.md)
 - [Usar capas com CSS para um site flexível e sustentável do ASP.NET](how-do-i-use-skins-with-css-for-a-flexible-and-maintainable-aspnet-web-site.md)
 - [Determinar quando usar um site ou um projeto de aplicativo Web](how-do-i-determine-whether-to-use-a-web-site-or-a-web-application-project.md)
@@ -108,10 +108,10 @@ ms.locfileid: "57020243"
 - [Tecnologias de acesso a dados do ASP.NET: uma introdução ao LINQ](aspnet-data-access-technologies-an-introduction-to-linq.md)
 - [Criar e usar classes no JavaScript](how-do-i-create-and-use-classes-in-javascript.md)
 - [Criar uma abordagem eficiente e padronizada para implementar estilos CSS](how-do-i-create-an-efficient-and-standardized-approach-for-implementing-css-styles.md)
-- [O que é ASP.NET?](what-is-asp-net.md)
-- [Escolha do modelo de programação correto](choosing-the-right-programming-model.md)
+- [O que é o ASP.NET?](what-is-asp-net.md)
+- [Escolher do modelo de programação correto](choosing-the-right-programming-model.md)
 - [Criar seu primeiro aplicativo do ASP.NET com o Web Forms do ASP.NET](build-your-first-asp-net-application-with-asp-net-web-forms.md)
-- [Criar seu primeiro aplicativo do ASP.NET com o ASP.NET MVC](build-your-first-asp-net-application-with-asp-net-mvc.md)
+- [Compilar seu primeiro aplicativo do ASP.NET com o ASP.NET MVC](build-your-first-asp-net-application-with-asp-net-mvc.md)
 - [O que você precisa saber sobre o Web Forms do ASP.NET](how-to-best-learn-aspnet-web-forms.md)
 - [Introdução de 5 minutos ao Web Forms do ASP.NET](5-minute-introduction-to-aspnet-web-forms.md)
-- [Instalar ASP.NET e ferramentas](how-to-install-asp-net-and-tools.md)
+- [Instalar o ASP.NET e ferramentas](how-to-install-asp-net-and-tools.md)

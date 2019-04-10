@@ -8,15 +8,15 @@ ms.date: 04/10/2013
 ms.assetid: ab7b2554-956a-4f6d-b2a0-4ae0c62e8580
 msc.legacyurl: /signalr/overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 258a55bf72c4b3425d001f478620fa9651952b3f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a63bca69f137a4d4765db6a4925ff027c9d8bf7d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403578"
 ---
-<a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutorial: Transmissão de servidor com SignalR 1.x do ASP.NET
-====================
+# <a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutorial: Transmissão de servidor com SignalR 1.x do ASP.NET
+
 by [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://github.com/tdykstra)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -48,7 +48,7 @@ Este tutorial contém as seções a seguir:
 - [Configure o código de servidor](#server)
 - [Configure o código de cliente](#client)
 - [Testar o aplicativo](#test)
-- [Habilitar registro em log](#enablelogging)
+- [Habilite o registro em logs](#enablelogging)
 - [Instalar e examine o exemplo completo de StockTicker](#fullsample)
 - [Próximas etapas](#nextsteps)
 
@@ -412,7 +412,7 @@ Para obter tutoriais que mostram os cenários de comunicação peer-to-peer, con
 
 Para saber mais avançados conceitos de desenvolvimento do SignalR, visite os seguintes sites para o código-fonte SignalR e recursos:
 
-- [SignalR do ASP.NET](https://asp.net/signalr/)
+- [ASP.NET SignalR](https://asp.net/signalr/)
 - [Projeto de SignalR](http://signalr.net/)
 - [Github do SignalR e exemplos](https://github.com/SignalR/SignalR)
 - [Wiki do SignalR](https://github.com/SignalR/SignalR/wiki)

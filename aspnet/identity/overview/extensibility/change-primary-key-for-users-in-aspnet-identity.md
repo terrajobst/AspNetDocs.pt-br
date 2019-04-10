@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/extensibility/change-primary-key-for-users-in-aspnet-identity
-title: Alterar a chave primária para os usuários no ASP.NET Identity | Microsoft Docs
+title: Alterar a chave primária para os usuários na identidade do ASP.NET - ASP.NET 4.x
 author: Rick-Anderson
 description: No Visual Studio 2013, o aplicativo web padrão usa um valor de cadeia de caracteres para a chave para as contas de usuário. Identidade do ASP.NET permite que você altere o tipo da...
 ms.author: riande
 ms.date: 09/30/2014
 ms.assetid: 44925849-5762-4504-a8cd-8f0cd06f6dc3
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/change-primary-key-for-users-in-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: d2856ce1ca61a29e091bfbd16647b673e6fc659b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 212b07494381d13f6ded96a41b846dcdf7e8ff16
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033803"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393737"
 ---
-<a name="change-primary-key-for-users-in-aspnet-identity"></a>Alterar a chave primária de usuários na Identidade do ASP.NET
-====================
+# <a name="change-primary-key-for-users-in-aspnet-identity"></a>Alterar a chave primária de usuários na Identidade do ASP.NET
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > No Visual Studio 2013, o aplicativo web padrão usa um valor de cadeia de caracteres para a chave para as contas de usuário. Identidade do ASP.NET permite que você altere o tipo da chave para atender aos requisitos de dados. Por exemplo, você pode alterar o tipo da chave de uma cadeia de caracteres em um inteiro.

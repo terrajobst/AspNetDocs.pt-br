@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model
-title: Adicionar validação ao modelo (C#) | Microsoft Docs
+title: Adicionar validação ao modelo (c#) | Microsoft Docs
 author: Rick-Anderson
 description: Criando um controlador
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/12/2011
 ms.assetid: 9af927e2-1c3b-43d9-917d-1df75be3c482
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-validation-to-the-model
 msc.type: authoredcontent
-ms.openlocfilehash: dd126ca070b81285f902e164f9e5f82397974096
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 67c8a943e4d972f0956185a54d533d8082c786cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410156"
 ---
-<a name="adding-validation-to-the-model-c"></a>Adicionar validação ao modelo (C#)
-====================
+# <a name="adding-validation-to-the-model-c"></a>Adicionar validação ao modelo (C#)
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -31,7 +31,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > 
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte C# está disponível para acompanhar este tópico. [Baixe a versão C#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte c# está disponível para acompanhar este tópico. [Baixe a versão c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
 
 
 Nesta seção, você adicionará lógica de validação para o `Movie` modelo e você vai garantir que as regras de validação são impostas sempre que um usuário tenta criar ou editar um filme usando o aplicativo.

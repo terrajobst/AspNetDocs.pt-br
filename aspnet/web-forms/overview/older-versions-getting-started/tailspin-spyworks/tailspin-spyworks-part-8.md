@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 5aeadf8f-39f3-4f07-a78f-1c310c64fb23
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 3b49ee53e82933de9b50960779c28ca6ab7441e5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: db8db4e3bff8047b48a7528b5146873ab6d84714
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398677"
 ---
-<a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: Páginas finais, tratamento de exceção e conclusão
-====================
+# <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: Páginas finais, tratamento de exceção e conclusão
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks demonstra como incrivelmente simples é criar aplicativos avançados e escalonáveis para a plataforma .NET. Ele mostra como usar os novos recursos no ASP.NET 4 para criar uma loja online, incluindo as compras, check-out e administração.
@@ -28,7 +28,7 @@ por [Joe Stagner](https://github.com/JoeStagner)
 
 Criar uma nova página chamada ContactUs.aspx
 
-Usando o designer, crie o seguinte formulário anotar especial para incluir o ToolkitScriptManager e o controle de Editor do AjaxdControlToolkit. .
+Usando o designer, crie o seguinte formulário anotar especial para incluir o ToolkitScriptManager e o controle de Editor do AjaxControlToolkit. .
 
 ![](tailspin-spyworks-part-8/_static/image1.jpg)
 
@@ -79,4 +79,4 @@ Já vimos que WebForms ASP.NET torna mais fácil para criar um site da Web sofis
 Espero que este tutorial tenha fornecido as ferramentas que você precisa para começar a criar seu próprio ASP.NET WebForms aplicativos!
 
 > [!div class="step-by-step"]
-> [Anterior](tailspin-spyworks-part-7.md)
+> [Voltar](tailspin-spyworks-part-7.md)

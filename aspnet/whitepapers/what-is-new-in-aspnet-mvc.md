@@ -8,15 +8,15 @@ ms.date: 04/20/2010
 ms.assetid: 69a8d6f8-4b10-4602-8822-2d6c05fc432b
 msc.legacyurl: /whitepapers/what-is-new-in-aspnet-mvc
 msc.type: content
-ms.openlocfilehash: 82a3fd4fe74202ed9a23298390322458cfc029f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f846e807309f3123db52b3053b9aa8d6aca81e6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394829"
 ---
-<a name="whats-new-in-aspnet-mvc-2"></a>Novidades no ASP.NET MVC 2
-====================
+# <a name="whats-new-in-aspnet-mvc-2"></a>Novidades no ASP.NET MVC 2
+
 > Este documento descreve novos recursos e aprimoramentos introduzidos no ASP.NET MVC 2. Este documento também está disponível para [baixar](https://download.microsoft.com/download/F/1/6/F16F9AF9-8EF4-4845-BC97-639791D5699C/WhatIsNewInMVC_2.pdf)
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "57030993"
 [Método auxiliar Html.ValidationSummary pode exibir erros de nível de modelo](#_TOC3_14)   
 [Modelos T4 no Visual Studio gerar código específico para a versão de destino do .NET Framework](#_TOC3_15)[melhorias na API](#_TOC4)  
 [Alterações significativas](#_TOC5)  
-[Isenção de responsabilidade](#_TOC6)  
+[Aviso de isenção de responsabilidade](#_TOC6)  
 
 ## <a id="_TOC1"></a>  Introdução
 

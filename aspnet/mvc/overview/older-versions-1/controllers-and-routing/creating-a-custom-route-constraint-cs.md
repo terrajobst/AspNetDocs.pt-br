@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-cs
-title: Criar uma restrição de rota personalizada (C#) | Microsoft Docs
+title: Criar uma restrição de rota personalizada (c#) | Microsoft Docs
 author: StephenWalther
 description: Stephen Walther demonstra como você pode criar uma restrição de rota personalizados. Implementamos um simples restrição personalizada que impede que uma rota que está sendo correspondido w...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/16/2009
 ms.assetid: a4f4bf4e-abcc-4650-8f43-527e48b52fe6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-custom-route-constraint-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0a0b6b706fdb212a745346ffaefc118e85c2a245
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5d8a40b03a1997904a2736a339dbf6b4003ae7bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410637"
 ---
-<a name="creating-a-custom-route-constraint-c"></a>Criação de uma restrição de rota personalizada (C#)
-====================
+# <a name="creating-a-custom-route-constraint-c"></a>Criação de uma restrição de rota personalizada (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther demonstra como você pode criar uma restrição de rota personalizados. Implementamos uma restrição personalizada simple que impede que uma rota que está sendo correspondido quando é feita uma solicitação de navegador de um computador remoto.

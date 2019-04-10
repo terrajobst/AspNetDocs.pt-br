@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 21ebbaee-7ed8-45ae-b6c1-c27c88342e48
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/configuration-and-instrumentation
 msc.type: authoredcontent
-ms.openlocfilehash: ba116140faa0667d504e0ff101c274db9f46079e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b06f105b16087f97788e0ab360af41f538d2c1ac
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400796"
 ---
-<a name="configuration-and-instrumentation"></a>Configuração e instrumentação
-====================
+# <a name="configuration-and-instrumentation"></a>Configuração e instrumentação
+
 por [Microsoft](https://github.com/microsoft)
 
 > Há grandes alterações na configuração e instrumentação no ASP.NET 2.0. A nova API de configuração do ASP.NET permite que as alterações de configuração sejam feitas de forma programática. Além disso, existem a muitas novas definições de configuração Permitir novas configurações e instrumentação.
@@ -148,8 +148,8 @@ O &lt;healthMonitoring&gt; seção do arquivo Web. config global contém os segu
 | **provedores** | Contém os provedores de configurar para o Visualizador de eventos, o WMI e o SQL Server. |
 | --- | --- |
 | **eventMappings** | Contém mapeamentos para as várias classes de WebBase. Você pode estender essa lista se você gerar sua própria classe de evento. Gerar sua própria classe de evento oferece granularidade mais fina sobre os provedores que você enviar informações para. Por exemplo, você poderia configurar exceções sem tratamento a ser enviada para o SQL Server, ao enviar seus próprios eventos personalizados para o email. |
-| **rules** | Links eventMappings ao provedor. |
-| **buffering** | Usado com provedores SQL Server e o email para determinar a frequência de liberar os eventos para o provedor. |
+| **regras** | Links eventMappings ao provedor. |
+| **buffer** | Usado com provedores SQL Server e o email para determinar a frequência de liberar os eventos para o provedor. |
 
 Abaixo está um exemplo de código do arquivo Web. config global.
 
@@ -298,7 +298,7 @@ As seguintes opções estão disponíveis durante a execução aspnet\_regbrowse
 
 A ferramenta de compilação do ASP.NET pode ser usada de duas maneiras gerais: para compilação no local e a compilação para implantação, em que um diretório de saída de destino é especificado.
 
-### <a name="compiling-an-application-in-placehttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilar um aplicativo no local](https://msdn.microsoft.com/library/ms229863.aspx)
+### [<a name="compiling-an-application-in-place"></a>Compilar um aplicativo no local](https://msdn.microsoft.com/library/ms229863.aspx)
 
 A ferramenta de compilação do ASP.NET pode compilar um aplicativo no local, ou seja, ele simula o comportamento de fazer várias solicitações para o aplicativo, fazendo com que a compilação regular. Os usuários de um site pré-compilado não haverá um atraso causado por compilar a página na primeira solicitação.
 
@@ -314,7 +314,7 @@ Você também pode recompilar um aplicativo em vigor após a adição de novos a
 > Compilação de um aplicativo que contém um aplicativo aninhado não compilar o aplicativo de aninhados. O aplicativo aninhado deve ser compilado separadamente.
 
 
-### <a name="compiling-an-application-for-deploymenthttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilando um aplicativo para implantação](https://msdn.microsoft.com/library/ms229863.aspx)
+### [<a name="compiling-an-application-for-deployment"></a>Compilando um aplicativo para implantação](https://msdn.microsoft.com/library/ms229863.aspx)
 
 Você pode compilar um aplicativo para implantação (compilação para um local de destino), especificando o parâmetro targetDir. O targetDir pode ser o local final para o aplicativo Web ou aplicativo compilado pode ser implantado. Usando o **-u** opção compila o aplicativo de tal forma que você pode fazer alterações a certos arquivos no aplicativo compilado sem recompilá-lo. ASPNET\_compiler.exe faz uma distinção entre tipos de arquivos estáticos e dinâmicos e trata-los de maneira diferente ao criar o aplicativo resultante.
 
@@ -351,11 +351,11 @@ A tabela a seguir descreve como o compilação do ASP.NET ferramenta lida com di
 | arquivos. skin no aplicativo\_subdiretório de temas | Temas são compilados em assemblies e colocados no diretório Bin. Arquivos stub são criados para arquivos. skin e colocados no diretório de saída correspondente. Arquivos estáticos (por exemplo,. CSS) são copiados para os diretórios de saída. |
 | Assemblies já está presentes no diretório Bin de tipos. browser arquivos estáticos Web. config | Esses arquivos são copiados como é o diretório de saída. |
 
-### <a name="fixed-assembly-nameshttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Nomes de Assembly corrigido](https://msdn.microsoft.com/library/ms229863.aspx##)
+### [<a name="fixed-assembly-names"></a>Nomes de Assembly corrigido](https://msdn.microsoft.com/library/ms229863.aspx##)
 
 Alguns cenários, como a implantação de um aplicativo Web usando o instalador MSI do Windows, exigem o uso de nomes de arquivo consistente e conteúdo, bem como estruturas de diretório consistente para identificar os assemblies ou definições de configuração para atualizações. Nesses casos, você pode usar o **- fixednames** opção para especificar que a ferramenta de compilação do ASP.NET deve compilar um assembly para cada arquivo de origem em vez de usar where várias páginas são compiladas em assemblies. Isso pode levar a um grande número de assemblies, portanto, se você estiver preocupado com escalabilidade devem usar essa opção com cuidado.
 
-### <a name="strong-name-compilationhttpsmsdnmicrosoftcomlibraryms229863aspx"></a>[Compilação de nome forte](https://msdn.microsoft.com/library/ms229863.aspx##)
+### [<a name="strong-name-compilation"></a>Compilação de nome forte](https://msdn.microsoft.com/library/ms229863.aspx##)
 
 O **- aptca**, **- delaysign**, **- keycontainer** e **- keyfile** opções são fornecidas para que você possa usar Aspnet\_ Compiler.exe Criar fortemente nomeado assemblies sem usar o [ferramenta de nome forte (Sn.exe)](https://msdn.microsoft.com/library/k5b5tt23.aspx) separadamente. Essas opções correspondem, respectivamente, para **AllowPartiallyTrustedCallersAttribute**, **AssemblyDelaySignAttribute**, **AssemblyKeyNameAttribute**e  **AssemblyKeyFileAttribute**.
 

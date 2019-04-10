@@ -8,15 +8,15 @@ ms.date: 01/13/2008
 ms.assetid: 07e15538-2f29-40c6-b2e7-e6115075ac83
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 817a823ab5b09ea8bf2620a142779e79f53d957d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8f6fb4348e6ff703d329331b908e41763f24bb1f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026503"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402941"
 ---
-<a name="security-basics-and-aspnet-support-c"></a>Noções básicas sobre segurança e suporte do ASP.NET (C#)
-====================
+# <a name="security-basics-and-aspnet-support-c"></a>Noções básicas sobre segurança e suporte do ASP.NET (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_cs.pdf)
@@ -140,7 +140,7 @@ A Microsoft fornece duas classes de provedor de associação no .NET Framework:
 Esta série de tutoriais se concentra exclusivamente no SqlMembershipProvider.
 
 
-[![O modelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework&lt;/ strong&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
+[![TModelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework de he&lt;/ strong&gt;](security-basics-and-asp-net-support-cs/_static/image4.png)](security-basics-and-asp-net-support-cs/_static/image3.png)
 
 **Figura 03**: O modelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework ([clique para exibir a imagem em tamanho normal](security-basics-and-asp-net-support-cs/_static/image5.png))
 

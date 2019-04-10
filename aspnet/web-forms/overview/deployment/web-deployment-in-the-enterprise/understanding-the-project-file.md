@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 07978d9d-341c-4524-bcba-62976f390f77
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/understanding-the-project-file
 msc.type: authoredcontent
-ms.openlocfilehash: 114dd21002ef41627f3a101c0197a85fd5208887
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d774a8e13e108d1be4c39e1e909d3d9683968a0d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053963"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404917"
 ---
-<a name="understanding-the-project-file"></a>Noções básicas sobre o arquivo de projeto
-====================
+# <a name="understanding-the-project-file"></a>Noções básicas sobre o arquivo de projeto
+
 by [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
@@ -33,7 +33,7 @@ by [Jason Lee](https://github.com/jrjlee)
 
 ## <a name="msbuild-and-the-project-file"></a>O MSBuild e o arquivo de projeto
 
-Quando você cria e compilar soluções no Visual Studio, o Visual Studio usa o MSBuild para compilar cada projeto na solução. Cada projeto do Visual Studio inclui um arquivo de projeto do MSBuild, com uma extensão de arquivo que reflete o tipo de projeto&#x2014;por exemplo, um projeto C# (. csproj), um projeto do Visual Basic.NET (. vbproj) ou um projeto de banco de dados (. dbproj). Para criar um projeto, o MSBuild deve processar o arquivo de projeto associado ao projeto. O arquivo de projeto é um documento XML que contém todas as informações e instruções que precisa de MSBuild para compilar seu projeto, como o conteúdo a ser incluído, requisitos de plataforma, informações de controle de versão, servidor web ou configurações do servidor de banco de dados e o tarefas que devem ser executadas.
+Quando você cria e compilar soluções no Visual Studio, o Visual Studio usa o MSBuild para compilar cada projeto na solução. Cada projeto do Visual Studio inclui um arquivo de projeto do MSBuild, com uma extensão de arquivo que reflete o tipo de projeto&#x2014;por exemplo, um projeto c# (. csproj), um projeto do Visual Basic.NET (. vbproj) ou um projeto de banco de dados (. dbproj). Para criar um projeto, o MSBuild deve processar o arquivo de projeto associado ao projeto. O arquivo de projeto é um documento XML que contém todas as informações e instruções que precisa de MSBuild para compilar seu projeto, como o conteúdo a ser incluído, requisitos de plataforma, informações de controle de versão, servidor web ou configurações do servidor de banco de dados e o tarefas que devem ser executadas.
 
 Arquivos de projeto MSBuild se baseiam os [esquema XML do MSBuild](https://msdn.microsoft.com/library/5dy88c2e.aspx), e assim o processo de compilação é totalmente aberto e transparente. Além disso, você não precisa instalar o Visual Studio para usar o mecanismo do MSBuild&#x2014;executável MSBuild.exe faz parte do .NET Framework, e você pode executá-lo em um prompt de comando. Como desenvolvedor, você pode criar seus próprios arquivos de projeto do MSBuild, usando o esquema XML do MSBuild, para impor o controle refinado e sofisticado sobre como seus projetos são criados e implantados. Esses arquivos de projeto personalizados funcionam exatamente da mesma forma que os arquivos de projeto que o Visual Studio gera automaticamente.
 
@@ -90,7 +90,7 @@ Um arquivo de projeto geralmente precisa fornecer muitas partes diferentes de in
 [!code-xml[Main](understanding-the-project-file/samples/sample2.xml)]
 
 
-Para recuperar um valor de propriedade, você pode usar o formato <strong>$(</strong><em>PropertyName</em><strong>)</strong><em>.</em> Por exemplo, para recuperar o valor da <strong>ServerName</strong> propriedade, você digitaria:
+Para recuperar um valor de propriedade, você pode usar o formato **$(***PropertyName***) * * *.* Por exemplo, para recuperar o valor da **ServerName** propriedade, você digitaria:
 
 
 [!code-powershell[Main](understanding-the-project-file/samples/sample3.ps1)]
@@ -155,7 +155,7 @@ Você pode criar **ItemGroup** elementos dentro do nível raiz **Project** eleme
 No esquema de MSBuild, uma [tarefa](https://msdn.microsoft.com/library/77f2hx1s.aspx) elemento representa uma instrução de compilação individual (ou tarefas). MSBuild inclui uma variedade de tarefas predefinidas. Por exemplo:
 
 - O **cópia** tarefa copia arquivos para um novo local.
-- O **Csc** tarefa chama o compilador do Visual C#.
+- O **Csc** tarefa chama o compilador do Visual c#.
 - O **Vbc** tarefa chama o compilador do Visual Basic.
 - O **Exec** tarefa executa um programa especificado.
 - O **mensagem** tarefa grava uma mensagem para um agente.
@@ -192,8 +192,8 @@ Destinos e tarefas podem incluir **condição** atributos. Como tal, você pode 
 
 Em geral, quando você cria tarefas úteis e destinos, você precisará consultar as propriedades e os itens que você definiu em outro lugar no arquivo de projeto:
 
-- Para usar um valor de propriedade, digite <strong>$(</strong><em>PropertyName</em><strong>)</strong>, onde <em>PropertyName</em> é o nome da <strong>propriedade</strong> elemento ou o nome do parâmetro.
-- Para usar um item, digite <strong>@(</strong><em>ItemName</em><strong>)</strong>, onde <em>ItemName</em> é o nome da <strong>Item</strong> elemento.
+- Para usar um valor de propriedade, digite **$(***PropertyName***)**, onde *PropertyName* é o nome da **propriedade** elemento ou o nome das parâmetro.
+- Para usar um item, digite **@(***ItemName***)**, onde *ItemName* é o nome da **Item** elemento.
 
 > [!NOTE]
 > Lembre-se de que, se você criar vários itens com o mesmo nome, você está criando uma lista. Por outro lado, se você criar várias propriedades com o mesmo nome, o último valor de propriedade que você fornecer substituirá quaisquer propriedades anteriores com o mesmo nome&#x2014;uma propriedade pode conter apenas um único valor.

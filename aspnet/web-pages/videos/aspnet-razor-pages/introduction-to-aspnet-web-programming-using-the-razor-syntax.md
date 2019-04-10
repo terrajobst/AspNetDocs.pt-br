@@ -8,15 +8,15 @@ ms.date: 02/25/2011
 ms.assetid: 22947987-9b02-4595-9e83-3d54ae013796
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax
 msc.type: video
-ms.openlocfilehash: 6ce40513522b99fd07f5a3b500d4cb11c22d92a5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 70ca3370623117d7b3415ff8cd24572cba60c3bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410221"
 ---
-<a name="introduction-to-aspnet-web-programming-using-the-razor-syntax"></a>Introdução a O ASP.NET que programa usando a sintaxe razor
-====================
+# <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax"></a>Introdução a O ASP.NET que programa usando a sintaxe razor
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Acompanhamento de vídeo de Introdução ao ASP.NET Web de programação usando o tutorial de sintaxe do Razor

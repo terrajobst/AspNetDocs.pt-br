@@ -1,23 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
-title: Suporte a opções de consulta OData na API Web ASP.NET 2 | Microsoft Docs
+title: Suporte a opções de consulta OData na API Web ASP.NET 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Visão geral com exemplos de código mostra as opções de consulta OData suporte na API Web 2 ASP.NET para ASP.NET 4. x.
 ms.author: riande
 ms.date: 02/04/2013
+ms.custom: seoapril2019
 ms.assetid: 50e6e62b-e72e-4a29-8293-4b67377bd21f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options
 msc.type: authoredcontent
-ms.openlocfilehash: 8745183125c9dd1dcc7cb0e146367a893bdb0170
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 428e4942e42436585049c1e84cd7b07a4a79c0d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411560"
 ---
-<a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Suporte a opções de consulta OData na API Web ASP.NET 2
-====================
+# <a name="supporting-odata-query-options-in-aspnet-web-api-2"></a>Suporte a opções de consulta OData na API Web ASP.NET 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
+
+Esta visão geral com exemplos de código demonstra as opções de consulta OData suporte na API Web 2 ASP.NET para ASP.NET 4. x. 
 
 OData define os parâmetros que podem ser usados para modificar uma consulta de OData. O cliente envia esses parâmetros na cadeia de caracteres de consulta do URI da solicitação. Por exemplo, para classificar os resultados, um cliente usa o parâmetro $orderby:
 

@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: aa7b3e8e-e23d-49f1-b160-f99a7f2982bd
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part7
 msc.type: authoredcontent
-ms.openlocfilehash: 4c7867587ba0610f0f1c23d9a0b9fbdc4040de7c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392346"
 ---
-<a name="adding-validation-to-the-model"></a>Adicionar validação ao modelo
-====================
+# <a name="adding-validation-to-the-model"></a>Adicionar validação ao modelo
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este é um tutorial para iniciantes que apresenta os conceitos básicos do ASP.NET MVC. Você criará um aplicativo web simples que lê e grava de um banco de dados. Visite o [Central de informações do ASP.NET MVC](../../../index.md) para localizar outros ASP.NET MVC, tutoriais e exemplos.
@@ -61,11 +61,11 @@ Além disso, adicione essa única linha acima a Html.BeginForm:
 
 Aqui está o código mostrado no IDE.
 
-[![Filmes - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
+[![Movies - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
 
 Executar seu aplicativo, visite /Movies/Create novamente e clique em criar sem inserir nenhum dado. As mensagens de erro são exibidas imediatamente sem a página flash que associamos ao enviar dados de volta para o servidor. Isso é porque o ASP.NET MVC agora está validando a entrada em ambos o cliente (usando JavaScript) e no servidor.
 
-[![Criar – Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
+[![Criar - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
 
 Isso está funcionando bem! Vamos agora adicionar uma coluna adicional para o banco de dados.
 

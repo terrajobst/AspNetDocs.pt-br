@@ -8,15 +8,15 @@ ms.date: 03/27/2007
 ms.assetid: 3a052ced-9cf5-47b8-a400-934f0b687c26
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/updating-and-deleting-existing-binary-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 9a0f9e5ebb8bc8227e869f2af085394262a31663
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b12af635c7913d4ca343d3e0e6af9f43aef493e9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037413"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391553"
 ---
-<a name="updating-and-deleting-existing-binary-data-vb"></a>Atualizar e excluir dados binários existentes (VB)
-====================
+# <a name="updating-and-deleting-existing-binary-data-vb"></a>Atualizar e excluir dados binários existentes (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_57_VB.exe) ou [baixar PDF](updating-and-deleting-existing-binary-data-vb/_static/datatutorial57vb1.pdf)
@@ -34,10 +34,10 @@ Tudo o que resta a ser implementada é a capacidade de editar e excluir as categ
 
 A DAL tem gerado automaticamente `Insert`, `Update`, e `Delete` métodos, mas esses métodos foram gerados com base no `CategoriesTableAdapter` consulta principal s, que não inclui o `Picture` coluna. Portanto, o `Insert` e `Update` métodos não têm parâmetros para especificar os dados binários para a imagem de categoria s. Como fizemos [tutorial anterior](including-a-file-upload-option-when-adding-a-new-record-vb.md), precisamos criar um novo método do TableAdapter para atualizar o `Categories` ao especificar dados binários de tabela.
 
-Abra o conjunto de dados tipado e, no Designer, clique com botão direito no `CategoriesTableAdapter` cabeçalho s e escolha Add Query no menu de contexto para launche o Assistente de configuração de consulta do TableAdapter. Este assistente inicia nos pedindo a como a consulta do TableAdapter deve acessar o banco de dados. Escolha usar instruções SQL e clique em Avançar. A próxima etapa solicitará o tipo de consulta a ser gerado. Desde que criamos re criando uma consulta para adicionar um novo registro para o `Categories` de tabela, escolha a atualização e clique em Avançar.
+Abra o conjunto de dados tipado e, no Designer, clique com botão direito no `CategoriesTableAdapter` cabeçalho s e escolha Add Query no menu de contexto para iniciar o Assistente de configuração de consulta do TableAdapter. Este assistente inicia nos pedindo a como a consulta do TableAdapter deve acessar o banco de dados. Escolha usar instruções SQL e clique em Avançar. A próxima etapa solicitará o tipo de consulta a ser gerado. Desde que criamos re criando uma consulta para adicionar um novo registro para o `Categories` de tabela, escolha a atualização e clique em Avançar.
 
 
-[![Selecione a opção de atualização](updating-and-deleting-existing-binary-data-vb/_static/image2.png)](updating-and-deleting-existing-binary-data-vb/_static/image1.png)
+[![SEscolha a opção de atualização](updating-and-deleting-existing-binary-data-vb/_static/image2.png)](updating-and-deleting-existing-binary-data-vb/_static/image1.png)
 
 **Figura 1**: Selecione a opção de atualização ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image3.png))
 
@@ -50,7 +50,7 @@ Agora, precisamos especificar o `UPDATE` instrução SQL. O assistente sugere au
 A tela final do assistente nos pede para nomear o novo método do TableAdapter. Insira `UpdateWithPicture` e clique em Concluir.
 
 
-[![Nomeie o novo UpdateWithPicture de método do TableAdapter](updating-and-deleting-existing-binary-data-vb/_static/image5.png)](updating-and-deleting-existing-binary-data-vb/_static/image4.png)
+[![No novo UpdateWithPicture de método do TableAdapter de AME](updating-and-deleting-existing-binary-data-vb/_static/image5.png)](updating-and-deleting-existing-binary-data-vb/_static/image4.png)
 
 **Figura 2**: Nomeie o novo método do TableAdapter `UpdateWithPicture` ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image6.png))
 
@@ -78,7 +78,7 @@ No [tutorial anterior](including-a-file-upload-option-when-adding-a-new-record-v
 Comece abrindo o `UploadInDetailsView.aspx` página. Copie toda a sintaxe declarativa dentro a `<asp:Content>` elemento, conforme mostrado na Figura 3. Em seguida, abra `UpdatingAndDeleting.aspx` e cole essa marcação dentro de seu `<asp:Content>` elemento. Da mesma forma, copie o código do `UploadInDetailsView.aspx` página de classe code-behind de s para `UpdatingAndDeleting.aspx`.
 
 
-[![Copiar a marcação declarativa de UploadInDetailsView.aspx](updating-and-deleting-existing-binary-data-vb/_static/image8.png)](updating-and-deleting-existing-binary-data-vb/_static/image7.png)
+[![Copiar marcação declarativa de UploadInDetailsView.aspx](updating-and-deleting-existing-binary-data-vb/_static/image8.png)](updating-and-deleting-existing-binary-data-vb/_static/image7.png)
 
 **Figura 3**: Copie a marcação declarativa de `UploadInDetailsView.aspx` ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image9.png))
 
@@ -113,7 +113,7 @@ Depois de concluir o assistente e corrigindo o `OldValuesParameterFormatString`,
 Depois de configurar o ObjectDataSource, adicione recursos excluindo o GridView, marcando a caixa de seleção Habilitar exclusão da marca inteligente s GridView. Isso adicionará um CommandField GridView cujos `ShowDeleteButton` estiver definida como `True`.
 
 
-[![Habilitar o suporte para exclusão em GridView](updating-and-deleting-existing-binary-data-vb/_static/image14.png)](updating-and-deleting-existing-binary-data-vb/_static/image13.png)
+[![EHabilitar suporte para exclusão no GridView](updating-and-deleting-existing-binary-data-vb/_static/image14.png)](updating-and-deleting-existing-binary-data-vb/_static/image13.png)
 
 **Figura 5**: Habilitar o suporte para exclusão no GridView ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image15.png))
 
@@ -121,12 +121,12 @@ Depois de configurar o ObjectDataSource, adicione recursos excluindo o GridView,
 Reserve um tempo para testar a funcionalidade de exclusão. Há uma chave estrangeira entre a `Products` tabela s `CategoryID` e o `Categories` tabela s `CategoryID`, portanto, você obterá uma exceção de violação de restrição de chave estrangeira se você tentar excluir qualquer uma das oito primeiras categorias. Para testar essa funcionalidade horizontalmente, adicione uma nova categoria, fornecendo um folheto e a imagem. Categoria meu teste, mostrada na Figura 6, inclui um arquivo de folheto de teste chamado `Test.pdf` e uma imagem de teste. Figura 7 mostra o GridView depois que a categoria de teste foi adicionada.
 
 
-[![Adicionar uma categoria de teste com um folheto e imagem](updating-and-deleting-existing-binary-data-vb/_static/image17.png)](updating-and-deleting-existing-binary-data-vb/_static/image16.png)
+[![Add uma categoria de teste com um folheto e imagem](updating-and-deleting-existing-binary-data-vb/_static/image17.png)](updating-and-deleting-existing-binary-data-vb/_static/image16.png)
 
 **Figura 6**: Adicionar uma categoria de teste com um folheto e a imagem ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image18.png))
 
 
-[![Depois de inserir a categoria de teste, ele é exibido em GridView](updating-and-deleting-existing-binary-data-vb/_static/image20.png)](updating-and-deleting-existing-binary-data-vb/_static/image19.png)
+[![Atermina após a inserção de categoria de teste, ele é exibido no GridView](updating-and-deleting-existing-binary-data-vb/_static/image20.png)](updating-and-deleting-existing-binary-data-vb/_static/image19.png)
 
 **Figura 7**: Depois de inserir a categoria de teste, ele é exibido no GridView ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image21.png))
 
@@ -171,7 +171,7 @@ Conforme discutido no tutorial uma visão geral de inserção de, atualizando e 
 Clique no link configurar fonte de dados do Assistente de s ObjectDataSource e prossiga para a segunda etapa. Devido a `DataObjectMethodAttribute` usado na `CategoriesBLL`, a lista suspensa de atualização deve ser preenchida automaticamente com o `UpdateCategory` sobrecarga que aceita quatro parâmetros de entrada (para todas as colunas, mas `Picture`). Altere isso para que ele usa a sobrecarga com cinco parâmetros.
 
 
-[![Configurar o ObjectDataSource para usar o método UpdateCategory não que inclui um parâmetro de imagem](updating-and-deleting-existing-binary-data-vb/_static/image23.png)](updating-and-deleting-existing-binary-data-vb/_static/image22.png)
+[![Configurar o ObjectDataSource para usar o método UpdateCategory não inclui um parâmetro para imagem](updating-and-deleting-existing-binary-data-vb/_static/image23.png)](updating-and-deleting-existing-binary-data-vb/_static/image22.png)
 
 **Figura 9**: Configurar o ObjectDataSource para usar o `UpdateCategory` que inclui um parâmetro para o método `Picture` ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image24.png))
 
@@ -186,7 +186,7 @@ Depois de concluir o assistente e corrigindo o `OldValuesParameterFormatString`,
 Para ativar os recursos de edição GridView s internos, verifique a opção Habilitar edição da marca inteligente s GridView. Isso definirá o s CommandField `ShowEditButton` propriedade para `True`, resultando na adição de um botão Editar (e botões de atualização e cancelamento para a linha que está sendo editada).
 
 
-[![Configurar o GridView à edição de suporte](updating-and-deleting-existing-binary-data-vb/_static/image26.png)](updating-and-deleting-existing-binary-data-vb/_static/image25.png)
+[![Configurar GridView à edição de suporte](updating-and-deleting-existing-binary-data-vb/_static/image26.png)](updating-and-deleting-existing-binary-data-vb/_static/image25.png)
 
 **Figura 10**: Configurar o GridView à edição de suporte ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image27.png))
 
@@ -194,7 +194,7 @@ Para ativar os recursos de edição GridView s internos, verifique a opção Hab
 Visite a página por meio de um navegador e clique em um da linha s botões de edição. O `CategoryName` e `Description` BoundFields são renderizados como caixas de texto. O `BrochurePath` TemplateField não tem um `EditItemTemplate`, portanto, ele continua mostrar seu `ItemTemplate` um link para a publicação. O `Picture` ImageField é renderizado como uma caixa de texto cuja `Text` propriedade recebe o valor da s ImageField `DataImageUrlField` de valor, nesse caso, `CategoryID`.
 
 
-[![O GridView não tem uma Interface de edição para BrochurePath](updating-and-deleting-existing-binary-data-vb/_static/image29.png)](updating-and-deleting-existing-binary-data-vb/_static/image28.png)
+[![Tele GridView não tem uma Interface de edição para BrochurePath](updating-and-deleting-existing-binary-data-vb/_static/image29.png)](updating-and-deleting-existing-binary-data-vb/_static/image28.png)
 
 **Figura 11**: O GridView não tem uma Interface de edição para `BrochurePath` ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image30.png))
 
@@ -226,7 +226,7 @@ Definir a primeira `ListItem` s `Selected` propriedade `True`.
 Sob o RadioButtonList, adicione um controle FileUpload chamado `BrochureUpload`. Defina suas `Visible` propriedade para `False`.
 
 
-[![Adicionar um RadioButtonList e o controle FileUpload ao EditItemTemplate](updating-and-deleting-existing-binary-data-vb/_static/image32.png)](updating-and-deleting-existing-binary-data-vb/_static/image31.png)
+[![Add um RadioButtonList e controle FileUpload ao EditItemTemplate](updating-and-deleting-existing-binary-data-vb/_static/image32.png)](updating-and-deleting-existing-binary-data-vb/_static/image31.png)
 
 **Figura 13**: Adicionar um RadioButtonList e o controle FileUpload para o `EditItemTemplate` ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image33.png))
 
@@ -241,12 +241,12 @@ Como os controles RadioButtonList e FileUpload são dentro de um modelo, precisa
 Com esse código funcionando, reserve um tempo para testar a interface de edição. Clique no botão Editar para uma linha. Inicialmente, a opção de folheto usar atual deve ser selecionada. Alterar o índice selecionado faz com que um postback. Se a terceira opção é selecionada, o controle FileUpload for exibido, caso contrário, ele está oculto. A Figura 14 mostra a interface de edição quando o botão Editar é clicado pela primeira vez; Figura 15 mostra a interface depois que a nova opção de folheto do Upload é selecionada.
 
 
-[![Inicialmente, o uso atual folheto de que opção está selecionada](updating-and-deleting-existing-binary-data-vb/_static/image35.png)](updating-and-deleting-existing-binary-data-vb/_static/image34.png)
+[![Initially, o uso atual folheto que opção for selecionada](updating-and-deleting-existing-binary-data-vb/_static/image35.png)](updating-and-deleting-existing-binary-data-vb/_static/image34.png)
 
 **Figura 14**: Inicialmente, o uso atual folheto de opção é selecionada ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image36.png))
 
 
-[![Escolhendo o folheto do Upload nova opção exibe o controle FileUpload](updating-and-deleting-existing-binary-data-vb/_static/image38.png)](updating-and-deleting-existing-binary-data-vb/_static/image37.png)
+[![Choosing o folheto do Upload nova opção exibe o controle FileUpload](updating-and-deleting-existing-binary-data-vb/_static/image38.png)](updating-and-deleting-existing-binary-data-vb/_static/image37.png)
 
 **Figura 15**: Escolhendo o folheto do Upload nova opção exibe o controle FileUpload ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image39.png))
 
@@ -302,7 +302,7 @@ Converter o ImageField em um TemplateField dessa maneira gera um TemplateField c
 Precisamos atualizar o `EditItemTemplate` para usar um controle FileUpload. De GridView de marca inteligente do s clique em Editar modelos vincular e, em seguida, selecione a `Picture` TemplateField s `EditItemTemplate` na lista suspensa. No modelo você deve ver uma caixa de texto removê-lo. Em seguida, arraste um controle FileUpload da caixa de ferramentas para a configuração do modelo, suas `ID` para `PictureUpload`. Também adicione o texto para alterar a imagem de categoria s, especifique uma nova imagem. Para manter a imagem de categoria s o mesmo, deixe o campo vazio para o modelo.
 
 
-[![Adicionar um controle FileUpload ao EditItemTemplate](updating-and-deleting-existing-binary-data-vb/_static/image41.png)](updating-and-deleting-existing-binary-data-vb/_static/image40.png)
+[![Add um controle FileUpload EditItemTemplate](updating-and-deleting-existing-binary-data-vb/_static/image41.png)](updating-and-deleting-existing-binary-data-vb/_static/image40.png)
 
 **Figura 17**: Adicionar um controle FileUpload para o `EditItemTemplate` ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image42.png))
 
@@ -310,7 +310,7 @@ Precisamos atualizar o `EditItemTemplate` para usar um controle FileUpload. De G
 Depois de personalizar a interface de edição, exiba seu progresso em um navegador. Ao exibir uma linha no modo somente leitura, a imagem de s de categoria é mostrada como era antes, mas clicando no botão Editar renderiza a coluna de imagem como texto com um controle FileUpload.
 
 
-[![A Interface de edição inclui um controle FileUpload](updating-and-deleting-existing-binary-data-vb/_static/image44.png)](updating-and-deleting-existing-binary-data-vb/_static/image43.png)
+[![Tele edição Interface inclui um controle FileUpload](updating-and-deleting-existing-binary-data-vb/_static/image44.png)](updating-and-deleting-existing-binary-data-vb/_static/image43.png)
 
 **Figura 18**: A Interface de edição inclui um controle FileUpload ([clique para exibir a imagem em tamanho normal](updating-and-deleting-existing-binary-data-vb/_static/image45.png))
 
@@ -366,4 +366,4 @@ Boa programação!
 Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi Teresa Murphy. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Anterior](including-a-file-upload-option-when-adding-a-new-record-vb.md)
+> [Voltar](including-a-file-upload-option-when-adding-a-new-record-vb.md)

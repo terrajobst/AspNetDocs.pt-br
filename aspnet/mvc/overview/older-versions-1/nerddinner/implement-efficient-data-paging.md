@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: adea836d-dbc2-4005-94ea-53aef09e9e34
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/implement-efficient-data-paging
 msc.type: authoredcontent
-ms.openlocfilehash: 9a0b3357ef4ac9c884877474454089cc71692b7d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ff12bc43ad68fdc4bbcd478624f47ea0d2774c2d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399301"
 ---
-<a name="implement-efficient-data-paging"></a>Implementar a paginação eficiente de dados
-====================
+# <a name="implement-efficient-data-paging"></a>Implementar a paginação eficiente de dados
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -70,7 +70,7 @@ O código a seguir demonstra como podemos atualizar nosso método de ação Inde
 
 O método de ação Index () acima tem um parâmetro chamado "página". O parâmetro é declarado como um inteiro anulável (que é o que int? indica). Isso significa que o */Dinners? página = 2* URL fará com que um valor de "2" a ser passado como o valor do parâmetro. O */Dinners* URL (sem um valor de querystring) fará com que um valor nulo seja passado.
 
-Podemos são multiplicar o valor da página pelo tamanho da página (nesse caso, 10 linhas) para determinar quantos jantares ignorar. Estamos usando o [C# "" operador de união nulo (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) que é útil ao lidar com tipos anuláveis. O código acima atribui o valor de 0 página se o parâmetro de página é nulo.
+Podemos são multiplicar o valor da página pelo tamanho da página (nesse caso, 10 linhas) para determinar quantos jantares ignorar. Estamos usando o [c# "" operador de união nulo (?) ](https://weblogs.asp.net/scottgu/archive/2007/09/20/the-new-c-null-coalescing-operator-and-using-it-with-linq.aspx) que é útil ao lidar com tipos anuláveis. O código acima atribui o valor de 0 página se o parâmetro de página é nulo.
 
 #### <a name="using-embedded-url-values"></a>Usando valores da URL inserida
 

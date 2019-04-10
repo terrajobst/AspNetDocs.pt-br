@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: bbb976e5-6150-4283-a374-c22fbafe29f5
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/provide-crud-create-read-update-delete-data-form-entry-support
 msc.type: authoredcontent
-ms.openlocfilehash: 45d74249a34fc7e37e9776a398615d2f613a7582
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410858"
 ---
-<a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fornecer suporte de CRUD (criar, ler, atualizar e excluir) ao formulário de entrada de dados
-====================
+# <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fornecer suporte de CRUD (criar, ler, atualizar e excluir) ao formulário de entrada de dados
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -36,18 +36,18 @@ Já apresentamos controladores e exibições e abordou como usá-los para implem
 
 Adicionamos anteriormente métodos de ação ao DinnersController que implementou o suporte para duas URLs: */Dinners* e */Dinners/detalhes / [id]*.
 
-| **URL** | **VERB** | **Finalidade** |
+| **URL** | **VERBO** | **Finalidade** |
 | --- | --- | --- |
 | */Dinners/* | OBTER | Exiba uma lista HTML de jantares futuros. |
 | */Dinners/Details/[id]* | OBTER | Exibir detalhes sobre um jantar específico. |
 
-Agora, adicionaremos métodos de ação para implementar as três URLs adicionais: <em>/Dinners/Editar / [id], / jantares/criar,</em>e<em>/Dinners/Delete / [id]</em>. Essas URLs serão habilitar o suporte para edição jantares existentes, criando novos jantares e excluindo jantares.
+Agora, adicionaremos métodos de ação para implementar as três URLs adicionais: */Dinners/Editar / [id]*, *jantares/Create*, e */Dinners/Delete / [id]*. Essas URLs serão habilitar o suporte para edição jantares existentes, criando novos jantares e excluindo jantares.
 
 Daremos suporte a interações de verbo HTTP GET e HTTP POST com essas novas URLs. Solicitações HTTP GET para essas URLs exibirá o modo de exibição HTML inicial dos dados (um formulário preenchido com os dados de jantar no caso de "Editar", um formulário em branco no caso de "criar" e uma tela de confirmação de exclusão no caso de "exclusão"). Solicitações de HTTP POST a essas URLs serão salvar/atualizar/excluir os dados de jantar nosso DinnerRepository (e daí para o banco de dados).
 
-| **URL** | **VERB** | **Finalidade** |
+| **URL** | **VERBO** | **Finalidade** |
 | --- | --- | --- |
-| */Dinners/Edit/[id]* | OBTER | Exiba um formulário HTML editável preenchido com dados de jantar. |
+| */Dinners/Editar / [id]* | OBTER | Exiba um formulário HTML editável preenchido com dados de jantar. |
 | POSTAR | Salve as alterações do formulário em um jantar específico para o banco de dados. |
 | */Dinners/Create* | OBTER | Exiba um formulário HTML vazio que permite aos usuários definir jantares novo. |
 | POSTAR | Crie um novo jantar e salvá-lo no banco de dados. |
@@ -138,7 +138,7 @@ Vamos começar pela adição de um método sobrecarregado da ação de "Editar" 
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample9.cs)]
 
-Quando o atributo [AcceptVerbs] é aplicado aos métodos de ação sobrecarregado, o ASP.NET MVC controla automaticamente solicitações de expedição para o método de ação apropriada dependendo do verbo HTTP de entrada. Solicitações HTTP POST <em>/Dinners/Editar / [id]</em> URLs ir para o método acima de edição, enquanto todas as outras solicitações de verbo HTTP para <em>/Dinners/Editar / [id]</em>URLs passará para o primeiro método de edição que implementamos (que foi não tem um atributo [AcceptVerbs]).
+Quando o atributo [AcceptVerbs] é aplicado aos métodos de ação sobrecarregado, o ASP.NET MVC controla automaticamente solicitações de expedição para o método de ação apropriada dependendo do verbo HTTP de entrada. Solicitações HTTP POST */Dinners/Editar / [id]* URLs ir para o método acima de edição, enquanto todas as outras solicitações de verbo HTTP para */Dinners/Editar / [id]* URLs passará para o primeiro método de edição que implementamos (que foi não tem um `[AcceptVerbs]` atributo).
 
 | **Tópico de lado: Por que diferencia por meio de verbos HTTP?** |
 | --- |
@@ -228,7 +228,7 @@ O método auxiliar Html.ValidationMessage() também dá suporte a um segundo par
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample18.aspx)]
 
-Gera o código acima:  <em>&lt;estendem a classe = "Erro de validação do campo"&gt;\*&lt;/span&gt;</em>em vez do texto de erro padrão quando houver um erro para o Propriedade EventDate.
+Gera o código acima: *&lt;estendem a classe = "Erro de validação do campo"&gt;\*&lt;/span&gt;* em vez do texto de erro padrão quando houver um erro para o Propriedade EventDate.
 
 ##### <a name="htmlvalidationsummary-helper-method"></a>Método auxiliar de Html.ValidationSummary()
 

@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 7f07c112-cd4f-4427-9699-57cfab2791fd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ef2481b93a8bbe16b79edb8c93c02e24fc9890f3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 963850e1048d4fde573f28244fd32d0c4232fda4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399184"
 ---
-<a name="using-hovermenu-with-a-repeater-control-vb"></a>Uso de HoverMenu com um controle repetidor (VB)
-====================
+# <a name="using-hovermenu-with-a-repeater-control-vb"></a>Uso de HoverMenu com um controle repetidor (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/b/0/6/b06fe835-5b8f-4c00-aef8-062c19d75b95/HoverMenu1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/hovermenu1VB.pdf)
@@ -53,9 +53,9 @@ Agora, o `HoverMenuExtender` entra em cena. Para que todos os elementos na fonte
 Agora cada item na fonte de dados exibe um pop-up para a direita (`PopupPosition` atributo) após um atraso de 50 milissegundos (`PopDelay` atributo).
 
 
-[![O menu de foco é exibido ao lado de cada item no repetidor](using-hovermenu-with-a-repeater-control-vb/_static/image2.png)](using-hovermenu-with-a-repeater-control-vb/_static/image1.png)
+[![Tmenu de focalização he aparece ao lado de cada item no repetidor](using-hovermenu-with-a-repeater-control-vb/_static/image2.png)](using-hovermenu-with-a-repeater-control-vb/_static/image1.png)
 
 O menu de foco é exibido ao lado de cada item no repetidor ([clique para exibir a imagem em tamanho normal](using-hovermenu-with-a-repeater-control-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Anterior](using-hovermenu-with-a-repeater-control-cs.md)
+> [Voltar](using-hovermenu-with-a-repeater-control-cs.md)

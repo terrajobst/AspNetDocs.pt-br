@@ -1,33 +1,37 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
-title: 'Laboratório prático: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js | Microsoft Docs'
+title: 'Laboratório prático: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js - ASP.NET 4.x'
 author: rick-anderson
-description: Em aplicativos web tradicionais, o cliente (navegador) inicia a comunicação com o servidor, solicitando uma página. O servidor, em seguida, processa a solicitação...
+description: 'Passo a passo de código: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js para o ASP.NET 4. x.'
 ms.author: riande
 ms.date: 09/30/2015
+ms.custom: seoapril2019
 ms.assetid: 719727b7-bef3-45ad-bfe9-ba5bcdb2305f
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
 msc.type: authoredcontent
-ms.openlocfilehash: 03409e2fda831a07bbc5321ad842633b23ec25e5
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 1f093e348216750cbadb6e52f524e5edd4d6c498
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422401"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390266"
 ---
-<a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET API Web e o Angular.js
-====================
+# <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET API Web e o Angular.js
+
 por [Web Camps equipe](https://twitter.com/webcamps)
 
 [Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
 
-> Em aplicativos web tradicionais, o cliente (navegador) inicia a comunicação com o servidor, solicitando uma página. O servidor, em seguida, processa a solicitação e envia o HTML da página para o cliente. As interações subsequentes com a página – por exemplo, o usuário navega para um link ou envia um formulário com dados – uma nova solicitação é enviada ao servidor, e o fluxo será iniciado novamente: o servidor processa a solicitação e envia uma nova página para o navegador em resposta à nova solicitação de ação ED pelo cliente.
+Este laboratório prático mostra como criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js para o ASP.NET 4. x.
+
+Neste laboratório em mãos, você irá tirar proveito dessas tecnologias para implementar o nerd do teste, um site de desafio com base no conceito SPA. Primeiro, você implementará a camada de serviço com a API Web do ASP.NET para expor os pontos de extremidade necessários para recuperar as perguntas de teste e armazenar as respostas. Em seguida, você irá criar uma interface de usuário rica e responsiva usando efeitos de transformação do AngularJS e CSS3.
+
+Em aplicativos web tradicionais, o cliente (navegador) inicia a comunicação com o servidor, solicitando uma página. O servidor, em seguida, processa a solicitação e envia o HTML da página para o cliente. As interações subsequentes com a página – por exemplo, o usuário navega para um link ou envia um formulário com dados – uma nova solicitação é enviada ao servidor, e o fluxo será iniciado novamente: o servidor processa a solicitação e envia uma nova página para o navegador em resposta à nova solicitação de ação ED pelo cliente.
 > 
 > Em aplicativos de única página (SPAs) toda a página é carregada no navegador após a solicitação inicial, mas as interações subsequentes ocorrem por meio de solicitações Ajax. Isso significa que o navegador é necessário atualizar somente a parte da página que foi alterado; Não há nenhuma necessidade de recarregar a página inteira. A abordagem SPA reduz o tempo gasto pelo aplicativo para responder às ações do usuário, resultando em uma experiência mais fluida.
 > 
 > A arquitetura de um SPA envolve determinados desafios que não estão presentes nos aplicativos web tradicionais. No entanto, tecnologias, como API Web ASP.NET emergentes, estruturas de JavaScript como AngularJS e novos recursos de estilo fornecidos pelo CSS3 facilitam realmente a design e criação de SPAs.
 > 
-> Neste laboratório em mãos, você irá tirar proveito dessas tecnologias para implementar o nerd do teste, um site de desafio com base no conceito SPA. Primeiro, você implementará a camada de serviço com a API Web do ASP.NET para expor os pontos de extremidade necessários para recuperar as perguntas de teste e armazenar as respostas. Em seguida, você irá criar uma interface de usuário rica e responsiva usando efeitos de transformação do AngularJS e CSS3.
 > 
 > Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 
@@ -72,7 +76,7 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 > Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Exercícios
@@ -104,8 +108,8 @@ Nesta tarefa você começará criando um novo projeto ASP.NET MVC com suporte pa
 
     ![Criar um novo projeto](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image1.png "criando um novo projeto")
 
-    *Criar um novo projeto*
-2. No **novo projeto** caixa de diálogo, selecione **aplicativo Web ASP.NET** sob o **Visual C# | Web** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie- *GeekQuiz*, escolha um **local** e clique em **Okey**.
+    *Criando um novo projeto*
+2. No **novo projeto** caixa de diálogo, selecione **aplicativo Web ASP.NET** sob o **Visual c# | Web** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie- *GeekQuiz*, escolha um **local** e clique em **Okey**.
 
     ![Criar um novo projeto de aplicativo Web ASP.NET](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image2.png "criando um novo projeto de aplicativo Web ASP.NET")
 
@@ -433,7 +437,7 @@ Nesta tarefa, você usará propriedades CSS3 para executar animações avançada
 
     *Recuperando a pergunta a seguir com o efeito de flip*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo

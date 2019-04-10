@@ -8,15 +8,15 @@ ms.date: 03/24/2008
 ms.assetid: fd208ee9-69cc-4467-9783-b4e039bdd1d3
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/assigning-roles-to-users-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 334440f514e94927e428aef8fdba53f0b99e4460
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6bedfd2b6ff0b50b3b863d26dccaacf687ed5907
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403266"
 ---
-<a name="assigning-roles-to-users-vb"></a>Atribuir funções aos usuários (VB)
-====================
+# <a name="assigning-roles-to-users-vb"></a>Atribuir funções aos usuários (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/VB.10.zip) ou [baixar PDF](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial10_AssigningRoles_vb.pdf)
@@ -57,7 +57,7 @@ Em seguida, adicione a seguinte definição de classe CSS para o `Styles.css` fo
 Essa definição de CSS instrui o navegador para exibir o rótulo usando uma grande fonte vermelha. Figura 1 mostra esse efeito por meio do Designer do Visual Studio.
 
 
-[![A propriedade do rótulo CssClass resulta em uma grande fonte vermelha](assigning-roles-to-users-vb/_static/image2.png)](assigning-roles-to-users-vb/_static/image1.png)
+[![TResultados da propriedade do rótulo he CssClass em uma grande, fonte vermelha](assigning-roles-to-users-vb/_static/image2.png)](assigning-roles-to-users-vb/_static/image1.png)
 
 **Figura 1**: O rótulo `CssClass` resultados da propriedade em uma grande, fonte vermelha ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image3.png))
 
@@ -93,7 +93,7 @@ Por fim, precisamos chamar esses dois métodos, quando a página é carregada pe
 Com esse código funcionando, reserve um tempo para visitar a página por meio de um navegador. sua tela deve ser semelhante da Figura 2. Todas as contas de usuário são preenchidas na lista suspensa e, abaixo desse, cada função é exibida como uma caixa de seleção. Porque definimos o `AutoPostBack` propriedades do DropDownList e caixas de seleção como True, alterando o usuário selecionado ou verificando ou desmarcar uma função causa um postback. Nenhuma ação é executada, no entanto, porque ainda temos de escrever código para lidar com essas ações. Que abordaremos essas tarefas nas próximas duas seções.
 
 
-[![A página exibe os usuários e funções](assigning-roles-to-users-vb/_static/image5.png)](assigning-roles-to-users-vb/_static/image4.png)
+[![Tele página exibe os usuários e funções](assigning-roles-to-users-vb/_static/image5.png)](assigning-roles-to-users-vb/_static/image4.png)
 
 **Figura 2**: A página exibe os usuários e funções ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image6.png))
 
@@ -135,7 +135,7 @@ O código acima inicia referenciando programaticamente a caixa de seleção que 
 Reserve um tempo para testar esta página por meio de um navegador. Selecione o usuário Tito e, em seguida, adicionar Tito para os administradores e supervisores de funções.
 
 
-[![Tito foi adicionado para os administradores e funções de supervisores](assigning-roles-to-users-vb/_static/image8.png)](assigning-roles-to-users-vb/_static/image7.png)
+[![TShu foi adicionado para os administradores e funções de supervisores](assigning-roles-to-users-vb/_static/image8.png)](assigning-roles-to-users-vb/_static/image7.png)
 
 **Figura 3**: Tito foi adicionado para os administradores e funções de supervisores ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image9.png))
 
@@ -167,7 +167,7 @@ Precisamos preencher o `RoleList` DropDownList com o conjunto de funções no si
 As duas últimas linhas na `BindRolesToList` método foram adicionados ao associar o conjunto de funções para o `RoleList` controle DropDownList. Figura 5 mostra o resultado final quando visualizado por meio de um navegador – uma lista suspensa preenchida com as funções do sistema.
 
 
-[![As funções são exibidas na RoleList DropDownList](assigning-roles-to-users-vb/_static/image14.png)](assigning-roles-to-users-vb/_static/image13.png)
+[![TFunções de he são exibidas na RoleList DropDownList](assigning-roles-to-users-vb/_static/image14.png)](assigning-roles-to-users-vb/_static/image13.png)
 
 **Figura 5**: As funções são exibidas na `RoleList` DropDownList ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image15.png))
 
@@ -187,7 +187,7 @@ Esse método precisa ser chamado em duas circunstâncias: quando a página é in
 Com esse código funcionando, o `RolesUserList` GridView deve exibir aos usuários que pertencem à função selecionada. Como mostra a Figura 6, a função de supervisores consiste em dois membros: Bruce e Tito.
 
 
-[![O GridView lista os usuários que pertencem à função selecionada](assigning-roles-to-users-vb/_static/image17.png)](assigning-roles-to-users-vb/_static/image16.png)
+[![Tele GridView lista aos usuários que pertencem à função selecionada](assigning-roles-to-users-vb/_static/image17.png)](assigning-roles-to-users-vb/_static/image16.png)
 
 **Figura 6**: O GridView lista aqueles usuários que pertencem à função selecionada ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image18.png))
 
@@ -199,7 +199,7 @@ Vamos ampliar o `RolesUserList` GridView para que ele inclua uma coluna de "remo
 Comece adicionando um campo de botão de exclusão para o GridView. Tornar este campo são exibidos como esquerda mais arquivada e alterar seu `DeleteText` propriedade de "Excluir" (o padrão) para "Remover".
 
 
-[![Adicionar o](assigning-roles-to-users-vb/_static/image20.png)](assigning-roles-to-users-vb/_static/image19.png)
+[![Add o](assigning-roles-to-users-vb/_static/image20.png)](assigning-roles-to-users-vb/_static/image19.png)
 
 **Figura 7**: Adicionar o botão "Remover" para o GridView ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image21.png))
 
@@ -217,7 +217,7 @@ O código começa pela determinação do nome da função selecionada. Em seguid
 Figura 8 mostra a página depois que o usuário Tito tiver sido removido do grupo de supervisores.
 
 
-[![Infelizmente, Tito não é mais um Supervisor](assigning-roles-to-users-vb/_static/image23.png)](assigning-roles-to-users-vb/_static/image22.png)
+[![Alas, Tito não é mais um Supervisor](assigning-roles-to-users-vb/_static/image23.png)](assigning-roles-to-users-vb/_static/image22.png)
 
 **Figura 8**: Infelizmente, Tito não é mais um Supervisor ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image24.png))
 
@@ -245,7 +245,7 @@ A maioria do código no `Click` manipulador de eventos executa várias verifica�
 Visite a página por meio de um navegador e selecione a função de supervisores do `RoleList` DropDownList. Tente inserir um nome de usuário inválido – você deve ver uma mensagem explicando que o usuário não existe no sistema.
 
 
-[![Você não pode adicionar um usuário não existente a uma função](assigning-roles-to-users-vb/_static/image26.png)](assigning-roles-to-users-vb/_static/image25.png)
+[![Yunidade organizacional não é possível adicionar um usuário não existente a uma função](assigning-roles-to-users-vb/_static/image26.png)](assigning-roles-to-users-vb/_static/image25.png)
 
 **Figura 9**: Não é possível adicionar um usuário não existente a uma função ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image27.png))
 
@@ -253,7 +253,7 @@ Visite a página por meio de um navegador e selecione a função de supervisores
 Agora, tente adicionar um usuário válido. Vá em frente e adicione novamente Tito à função de supervisores.
 
 
-[![Tito mais uma vez é um Supervisor!](assigning-roles-to-users-vb/_static/image29.png)](assigning-roles-to-users-vb/_static/image28.png)
+[![TShu é mais uma vez um Supervisor!](assigning-roles-to-users-vb/_static/image29.png)](assigning-roles-to-users-vb/_static/image28.png)
 
 **Figura 10**: Tito mais uma vez é um Supervisor!  ([Clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image30.png))
 
@@ -290,7 +290,7 @@ Abra o `CreateUserWizardWithRoles.aspx` da página e adicione um controle Create
 Em seguida, selecione o "Adicionar/remover `WizardSteps`..." opção de marca inteligente do CreateUserWizard e adicione um novo `WizardStep`, definindo suas `ID` para `SpecifyRolesStep`. Mover o `SpecifyRolesStep WizardStep` para que ele vem após a etapa de "Sign Up for Your New Account", mas antes da etapa de "Concluído". Defina a `WizardStep`do `Title` propriedade como "Especificar funções", seu `StepType` propriedade a ser `Step`e seu `AllowReturn` propriedade como False.
 
 
-[![Adicionar o](assigning-roles-to-users-vb/_static/image32.png)](assigning-roles-to-users-vb/_static/image31.png)
+[![Add o](assigning-roles-to-users-vb/_static/image32.png)](assigning-roles-to-users-vb/_static/image31.png)
 
 **Figura 11**: Adicionar "Especificar funções" `WizardStep` para o CreateUserWizard ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image33.png))
 
@@ -318,7 +318,7 @@ Se o usuário apenas atingiu a etapa de "Concluído", o manipulador de eventos e
 Visite esta página por meio de um navegador. A primeira etapa na CreateUserWizard é a etapa de "Sign Up for Your New Account" padrão, que solicitará o novo nome de usuário, senha, email e outras informações importantes. Insira as informações para criar um novo usuário chamado Wanda.
 
 
-[![Criar um novo usuário denominado Wanda](assigning-roles-to-users-vb/_static/image35.png)](assigning-roles-to-users-vb/_static/image34.png)
+[![Ccriar um novo usuário denominado Wanda](assigning-roles-to-users-vb/_static/image35.png)](assigning-roles-to-users-vb/_static/image34.png)
 
 **Figura 12**: Criar um novo usuário denominado Wanda ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image36.png))
 
@@ -326,7 +326,7 @@ Visite esta página por meio de um navegador. A primeira etapa na CreateUserWiza
 Clique no botão "Criar usuário". O CreateUserWizard chama internamente o `Membership.CreateUser` método, criando a nova conta de usuário e, em seguida, avança para a próxima etapa, "Especifica funções." Aqui, as funções do sistema são listadas. Marque a caixa de seleção de supervisores e clique em Avançar.
 
 
-[![Tornar um membro da função de supervisores de Wanda](assigning-roles-to-users-vb/_static/image38.png)](assigning-roles-to-users-vb/_static/image37.png)
+[![Mriar Wanda um membro da função de supervisores](assigning-roles-to-users-vb/_static/image38.png)](assigning-roles-to-users-vb/_static/image37.png)
 
 **Figura 13**: Tornar um membro da função de supervisores de Wanda ([clique para exibir a imagem em tamanho normal](assigning-roles-to-users-vb/_static/image39.png))
 

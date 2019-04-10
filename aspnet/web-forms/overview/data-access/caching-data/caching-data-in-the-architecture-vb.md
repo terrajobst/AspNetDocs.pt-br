@@ -8,15 +8,15 @@ ms.date: 05/30/2007
 ms.assetid: 5e189dd7-f4f9-4f28-9b3a-6cb7d392e9c7
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-in-the-architecture-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 45a717f9b68a1465d3446b06358a062f6b640c9e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9c5ac1aeff427c78030f789fcb67736020ce3367
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060223"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391788"
 ---
-<a name="caching-data-in-the-architecture-vb"></a>Armazenar dados em cache na arquitetura (VB)
-====================
+# <a name="caching-data-in-the-architecture-vb"></a>Armazenar dados em cache na arquitetura (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_59_VB.exe) ou [baixar PDF](caching-data-in-the-architecture-vb/_static/datatutorial59vb1.pdf)
@@ -159,7 +159,7 @@ Com essa modificação para `AddCacheItem(key, value)`, invaliding o cache é t�
 Os métodos e classes de s da camada de armazenamento em cache podem ser usados para trabalhar com dados usando as técnicas podemos ve examinado durante esses tutoriais. Para ilustrar a trabalhar com dados armazenados em cache, salve suas alterações para o `ProductsCL` de classe e, em seguida, abra o `FromTheArchitecture.aspx` página no `Caching` pasta e adicione um GridView. De GridView s marca inteligente, crie um novo ObjectDataSource. A primeira etapa do assistente s, você verá o `ProductsCL` da classe como uma das opções na lista suspensa.
 
 
-[![A classe ProductsCL está incluída na lista suspensa de objeto comercial](caching-data-in-the-architecture-vb/_static/image5.png)](caching-data-in-the-architecture-vb/_static/image4.png)
+[![Tele que productscl classe está incluído na lista suspensa de objeto comercial](caching-data-in-the-architecture-vb/_static/image5.png)](caching-data-in-the-architecture-vb/_static/image4.png)
 
 **Figura 4**: O `ProductsCL` classe está incluída na lista suspensa de objeto comercial ([clique para exibir a imagem em tamanho normal](caching-data-in-the-architecture-vb/_static/image6.png))
 
@@ -167,7 +167,7 @@ Os métodos e classes de s da camada de armazenamento em cache podem ser usados 
 Depois de selecionar `ProductsCL`, clique em Avançar. A lista suspensa na guia SELECT possui dois itens - `GetProducts()` e `GetProductsByCategoryID(categoryID)` e a guia de atualização tem o único `UpdateProduct` de sobrecarga. Escolha o `GetProducts()` método a partir da guia SELECT e o `UpdateProducts` método a partir de guia de atualização e clique em Concluir.
 
 
-[![Os métodos de classe ProductsCL s estão listados no menu suspenso lista](caching-data-in-the-architecture-vb/_static/image8.png)](caching-data-in-the-architecture-vb/_static/image7.png)
+[![Tele que productscl classe s métodos estão listados no menu suspenso lista](caching-data-in-the-architecture-vb/_static/image8.png)](caching-data-in-the-architecture-vb/_static/image7.png)
 
 **Figura 5**: O `ProductsCL` métodos de classe s estão listados no menu suspenso lista ([clique para exibir a imagem em tamanho normal](caching-data-in-the-architecture-vb/_static/image9.png))
 

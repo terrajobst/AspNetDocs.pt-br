@@ -8,15 +8,15 @@ ms.date: 05/18/2012
 ms.assetid: febf2824-4e3d-4dc6-84c5-f99777ec6144
 msc.legacyurl: /web-pages/videos
 msc.type: book
-ms.openlocfilehash: 8ad0a510ea62848b7a429c0bd4fa781b50c2ce53
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 86b90a21f59ee0ad52a3e6f7db19d4714282105c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401134"
 ---
-<a name="videos"></a>Vídeos
-====================
+# <a name="videos"></a>Vídeos
+
 
 > [!NOTE] 
 > O WebMatrix não é mais recomendado como um ambiente de desenvolvimento integrado para páginas da Web do ASP.NET. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
@@ -39,16 +39,16 @@ ms.locfileid: "57022603"
     - [Introdução à sintaxe Razor de programação da Web do ASP.NET](aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
     - [Criar uma aparência consistente (parte 1)](aspnet-razor-pages/creating-a-consistent-look-part-1.md)
     - [Criar uma aparência consistente (parte 2)](aspnet-razor-pages/creating-a-consistent-look-part-2.md)
-    - [Trabalhando com formulários (parte 1)](aspnet-razor-pages/working-with-forms-part-1.md)
-    - [Trabalhando com formulários (parte 2)](aspnet-razor-pages/working-with-forms-part-2.md)
-    - [Trabalhando com os dados (parte 1)](aspnet-razor-pages/working-with-data-part-1.md)
-    - [Trabalhando com os dados (parte 2)](aspnet-razor-pages/working-with-data-part-2.md)
-    - [Exibindo dados em uma grade](aspnet-razor-pages/displaying-data-in-a-grid.md)
-    - [Exibindo dados em um gráfico (parte 1)](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
-    - [Exibindo dados em um gráfico (parte 2)](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
+    - [Trabalhar com formulários (parte 1)](aspnet-razor-pages/working-with-forms-part-1.md)
+    - [Trabalhar com formulários (parte 2)](aspnet-razor-pages/working-with-forms-part-2.md)
+    - [Trabalhar com dados (parte 1)](aspnet-razor-pages/working-with-data-part-1.md)
+    - [Trabalhar com dados (parte 2)](aspnet-razor-pages/working-with-data-part-2.md)
+    - [Exibir dados em uma grade](aspnet-razor-pages/displaying-data-in-a-grid.md)
+    - [Exibir dados em um gráfico (parte 1)](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
+    - [Exibir dados em um gráfico (parte 2)](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
     - [Trabalhando com arquivos](aspnet-razor-pages/working-with-files.md)
     - [Trabalhando com imagens](aspnet-razor-pages/working-with-images.md)
     - [Trabalhando com vídeo](aspnet-razor-pages/working-with-video.md)
     - [Adição de email ao seu site](aspnet-razor-pages/adding-email-to-your-web-site.md)
     - [Adição de pesquisa ao seu site](aspnet-razor-pages/adding-search-to-your-web-site.md)
-    - [Adição de redes sociais em seu site](aspnet-razor-pages/adding-social-networking-to-your-website.md)
+    - [Adição de redes sociais ao seu site](aspnet-razor-pages/adding-social-networking-to-your-website.md)

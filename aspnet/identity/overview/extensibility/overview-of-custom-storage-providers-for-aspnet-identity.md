@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
-title: Visão geral dos provedores de armazenamento personalizado para o ASP.NET Identity | Microsoft Docs
+title: Visão geral dos provedores de armazenamento personalizados para a identidade do ASP.NET - ASP.NET 4.x
 author: Rick-Anderson
 description: O ASP.NET Identity é um sistema extensível que permite que você criar seu próprio provedor de armazenamento e conectá-lo ao seu aplicativo sem trabalhar novamente o aplicativo...
 ms.author: riande
 ms.date: 10/13/2014
 ms.assetid: 681a9204-462e-4260-9a0b-19f0644d6ad7
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: d819fabf4f367c8f6d0ce857bc248a2b812c2b21
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 71201e9d91080855350349b966fe7916ce21a909
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411261"
 ---
-<a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Visão geral de provedores de armazenamento personalizados para a Identidade do ASP.NET
-====================
+# <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Visão geral de provedores de armazenamento personalizados para a Identidade do ASP.NET
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > O ASP.NET Identity é um sistema extensível que permite que você criar seu próprio provedor de armazenamento e conectá-lo ao seu aplicativo sem trabalhar novamente o aplicativo. Este tópico descreve como criar um provedor de armazenamento personalizado para a identidade do ASP.NET. Ele aborda os conceitos importantes para a criação de seu próprio provedor de armazenamento, mas não é passo a passo sobre como implementar um provedor de armazenamento personalizado.

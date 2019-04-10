@@ -8,15 +8,15 @@ ms.date: 02/27/2014
 ms.assetid: 69fb02e0-f5b7-4c35-878c-fa87164fc785
 msc.legacyurl: /mvc/overview/security/preventing-open-redirection-attacks
 msc.type: authoredcontent
-ms.openlocfilehash: 767f9c85527fbcdf34e700eb32fe0c6cad30bf0c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1d83ede97ec37166d8dec32ff9e21c65423f3fc5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027393"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408479"
 ---
-<a name="preventing-open-redirection-attacks-c"></a>Impedir ataques de redirecionamento aberto (C#)
-====================
+# <a name="preventing-open-redirection-attacks-c"></a>Impedir ataques de redirecionamento aberto (C#)
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > Este tutorial explica como você pode impedir ataques de redirecionamento aberto em seus aplicativos ASP.NET MVC. Este tutorial aborda as alterações que foram feitas no controlador no ASP.NET MVC 3 e demonstra como você pode aplicar essas alterações no seu ASP.NET MVC 1.0 existente e 2 aplicativos.

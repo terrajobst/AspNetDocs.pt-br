@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: 5fee879b-8bde-42a9-a434-60ba6b1cf747
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e04a9b274b735af05a8e08dc7d8f34f0d83605be
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 863fe772a1d79201b83da8498bf7e981acf7fd0e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401069"
 ---
-<a name="passing-data-to-view-master-pages-c"></a>Transmitir dados para Exibir páginas mestras (C#)
-====================
+# <a name="passing-data-to-view-master-pages-c"></a>Transmitir dados para Exibir páginas mestras (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_13_CS.pdf)
@@ -33,7 +33,7 @@ O objetivo deste tutorial é explicar como você pode passar dados de um control
 Imagine que você está criando um aplicativo de banco de dados de filme e você deseja exibir a lista de categorias de filmes em todas as páginas em seu aplicativo (veja a Figura 1). Além disso, imagine que a lista de categorias de filmes é armazenada em uma tabela de banco de dados. Nesse caso, faria sentido para recuperar as categorias do banco de dados e renderizar a lista de categorias de filmes dentro de uma página de exibição mestre.
 
 
-[![Exibir categorias de filmes em uma página mestra do modo de exibição](passing-data-to-view-master-pages-cs/_static/image2.png)](passing-data-to-view-master-pages-cs/_static/image1.png)
+[![Dcategorias de filme isplaying em uma página de exibição mestre](passing-data-to-view-master-pages-cs/_static/image2.png)](passing-data-to-view-master-pages-cs/_static/image1.png)
 
 **Figura 01**: Exibir categorias de filmes em uma página de exibição mestre ([clique para exibir a imagem em tamanho normal](passing-data-to-view-master-pages-cs/_static/image3.png))
 
@@ -59,7 +59,7 @@ Observe que o Index () e as ações de Details() adicionar dois itens para exibi
 A ação Details() também adiciona duas chaves nomeadas categorias e filmes. A chave de categorias, mais uma vez, representa a lista de categorias de filmes exibido pela página modo de exibição mestre. A chave de filmes representa a lista de filmes em uma determinada categoria exibidos por página de exibição de detalhes (consulte a Figura 2).
 
 
-[![A exibição de detalhes](passing-data-to-view-master-pages-cs/_static/image5.png)](passing-data-to-view-master-pages-cs/_static/image4.png)
+[![Tmodo de exibição de detalhes he](passing-data-to-view-master-pages-cs/_static/image5.png)](passing-data-to-view-master-pages-cs/_static/image4.png)
 
 **Figura 02**: A exibição de detalhes ([clique para exibir a imagem em tamanho normal](passing-data-to-view-master-pages-cs/_static/image6.png))
 

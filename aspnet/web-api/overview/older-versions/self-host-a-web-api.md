@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/older-versions/self-host-a-web-api
-title: Hospedar internamente o ASP.NET Web API 1 (C#) | Microsoft Docs
+title: Hospedar internamente o ASP.NET Web API 1 (C#)-ASP.NET 4.x
 author: MikeWasson
-description: API Web ASP.NET não requer o IIS. Você pode hospedar internamente uma API da web em seu próprio processo de host. Este tutorial mostra como hospedar uma API da web dentro de um console applic...
+description: Tutorial com o código mostra como hospedar uma API da web dentro de um aplicativo de console.
 ms.author: riande
 ms.date: 01/26/2012
+ms.custom: seoapril2019
 ms.assetid: be5ab1e2-4140-4275-ac59-ca82a1bac0c1
 msc.legacyurl: /web-api/overview/older-versions/self-host-a-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 63d192a6fa2aafef3770d5b0b97ec32e001b69db
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7c73bf4734f8ed8a1bf93595c0847f611ad9cc15
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040753"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409591"
 ---
-<a name="self-host-aspnet-web-api-1-c"></a>Hospedar internamente o ASP.NET Web API 1 (C#)
-====================
+# <a name="self-host-aspnet-web-api-1-c"></a>Hospedar internamente o ASP.NET Web API 1 (c#)
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
-> API Web ASP.NET não requer o IIS. Você pode hospedar internamente uma API da web em seu próprio processo de host. Este tutorial mostra como hospedar uma API da web dentro de um aplicativo de console.
+> Este tutorial mostra como hospedar uma API da web dentro de um aplicativo de console. API Web ASP.NET não requer o IIS. Você pode hospedar internamente uma API da web em seu próprio processo de host. 
 > 
 > **Novos aplicativos devem usar o OWIN para auto-hospedar a API da Web.** Ver [usar o OWIN para auto-hospedar a API Web ASP.NET 2](../hosting-aspnet-web-api/use-owin-to-self-host-web-api.md).
 > 
@@ -34,7 +35,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 
 Inicie o Visual Studio e selecione **Novo projeto** na página **Iniciar**. Ou, no menu **Arquivo**, selecione **Novo** e, em seguida, **Projeto**.
 
-No painel **Modelos**, selecione **Modelos Instalados** e expanda o nó **Visual C#**. Sob **Visual C#**, selecione **Windows**. Na lista de modelos de projeto, selecione **aplicativo de Console**. Nomeie o projeto &quot;SelfHost&quot; e clique em **Okey**.
+No painel **Modelos**, selecione **Modelos Instalados** e expanda o nó **Visual C#**. Sob **Visual c#**, selecione **Windows**. Na lista de modelos de projeto, selecione **aplicativo de Console**. Nomeie o projeto &quot;SelfHost&quot; e clique em **Okey**.
 
 ![](self-host-a-web-api/_static/image1.png)
 
@@ -127,7 +128,7 @@ Quando tiver terminado de hospedagem interna, não se esqueça de excluir a rese
 
 [!code-console[Main](self-host-a-web-api/samples/sample6.cmd)]
 
-## <a name="call-the-web-api-from-a-client-application-c"></a>Chamar a API Web de um aplicativo cliente (C#)
+## <a name="call-the-web-api-from-a-client-application-c"></a>Chamar a API Web de um aplicativo cliente (c#)
 
 Vamos escrever um aplicativo de console simples que chama a API da web.
 

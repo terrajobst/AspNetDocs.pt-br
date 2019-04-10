@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
-title: Autenticação de dois fatores usando SMS e email com o ASP.NET Identity | Microsoft Docs
+title: Autenticação de dois fatores usando SMS e email com o ASP.NET Identity - ASP.NET 4.x
 author: HaoK
 description: Este tutorial mostra como configurar a autenticação de dois fatores (2FA) usando o SMS e email. Este artigo foi escrito por Rick Anderson ( @RickAndMSFT ), por...
 ms.author: riande
 ms.date: 09/15/2015
 ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 4b253923696e35e59c196578a232f53c11671d16
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c41fc06ad98665f7d48efde030c1341b06e49dd0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395284"
 ---
-<a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticação de dois fatores usando SMS e email com o ASP.NET Identity
-====================
+# <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticação de dois fatores usando SMS e email com o ASP.NET Identity
+
 por [Kung Hao](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
 
 > Este tutorial mostra como configurar a autenticação de dois fatores (2FA) usando o SMS e email.
@@ -52,8 +53,8 @@ Nesta seção, você usará o NuGet para baixar um exemplo, com que trabalharemo
    Neste tutorial, usaremos [SendGrid](http://sendgrid.com/) para enviar email e [Twilio](https://www.twilio.com/) ou [ASPSMS](https://www.aspsms.com/asp.net/identity/testcredits/) para mandar um texto sms. O `Identity.Samples` pacote instala o código que podemos trabalhará.
 3. Defina as [projeto para usar SSL](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md).
 4. *Opcional*: Siga as instruções em minha [tutorial de confirmação de Email](account-confirmation-and-password-recovery-with-aspnet-identity.md) interligar SendGrid e, em seguida, execute o aplicativo e registrar uma conta de email.
-5. * Opcional: * Remova o código de confirmação de link de email de demonstração de exemplo (o `ViewBag.Link` código no controlador da conta. Consulte a `DisplayEmail` e `ForgotPasswordConfirmation` métodos de ação e as exibições do razor).
-6. <em>Opcional: * Remova o `ViewBag.Status` código dos controladores de gerenciamento e a conta e do *Views\Account\VerifyCode.cshtml</em> e <em>Views\Manage\VerifyPhoneNumber.cshtml</em> exibições do razor. Como alternativa, você pode manter o `ViewBag.Status` exibição para testar como este aplicativo funciona localmente sem ter de ligar e enviar email e mensagens SMS.
+5. *Opcional:* Remover o código de confirmação de link de email de demonstração de exemplo (o `ViewBag.Link` código no controlador da conta. Consulte a `DisplayEmail` e `ForgotPasswordConfirmation` métodos de ação e as exibições do razor).
+6. *Opcional:* Remover o `ViewBag.Status` código do que os controladores de gerenciamento e a conta e do *Views\Account\VerifyCode.cshtml* e *Views\Manage\VerifyPhoneNumber.cshtml* exibições do razor. Como alternativa, você pode manter o `ViewBag.Status` exibição para testar como este aplicativo funciona localmente sem ter de ligar e enviar email e mensagens SMS.
 
 > [!NOTE]
 > Aviso: Se você alterar as configurações de segurança neste exemplo, aplicativos de produções precisará passar por uma auditoria de segurança que explicitamente chama as alterações feitas.

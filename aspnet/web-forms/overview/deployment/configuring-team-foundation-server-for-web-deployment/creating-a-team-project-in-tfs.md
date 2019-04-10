@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: b28d3e2d-0bb4-4e29-a780-af810b964722
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/creating-a-team-project-in-tfs
 msc.type: authoredcontent
-ms.openlocfilehash: 9218a22ff221dc7067662c58ccd3e758fca493b7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1e727e8124e1f045f8ef25ab7a3d4efbafd4290a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062513"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411209"
 ---
-<a name="creating-a-team-project-in-tfs"></a>Criação de um projeto de equipe no TFS
-====================
+# <a name="creating-a-team-project-in-tfs"></a>Criação de um projeto de equipe no TFS
+
 by [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
@@ -106,7 +106,8 @@ Em seguida, você precisa dar permissão ao usuário para criar novos sites de e
 
    > [!NOTE]
    > Você pode receber um <strong>HTTP 404 não encontrado</strong> erro devido a um bug de codificação duplo do HTTP. Se isso ocorrer, substitua a URL com este:   
-   > `[site_collection_URL]/_layouts/permsetup.aspx` Por exemplo:  
+   > `[site_collection_URL]/_layouts/permsetup.aspx`
+   > Por exemplo:  
    > `http://tfs/sites/Fabrikam%20Web%20Projects/_layouts/permsetup.aspx` 
 8. Sobre o **configurar grupos para esse Site** página, adicione o usuário que criarão projetos de equipe para o **proprietários** de grupo e, em seguida, clique em **Okey**.
 

@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: a36d3bdf-ef1b-47a4-b932-3a0cf4cad716
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: 79f76410e091b137e2792127b0a42524270761e8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 796e0c5e605d1103a4b9937b4e698c5c9412c013
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402291"
 ---
-<a name="getting-started"></a>Guia de Introdução
-====================
+# <a name="getting-started"></a>Guia de Introdução
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 [!INCLUDE[](~/includes/rp.md)]
@@ -63,7 +63,7 @@ Vamos supor que você esteja familiarizado com:
 - **Folhas de estilos em cascata (CSS)**. Mesmo que com HTML.
 - **Ideias de banco de dados básico**. Se você tiver usado uma planilha de dados e classificados e filtrados de dados, que é o nível de conhecimento geralmente supondo para este conjunto de tutoriais.
 
-Vamos supor também que você está interessado em aprender programação básica. Páginas da Web ASP.NET usam uma linguagem de programação C#. Você não precisa ter qualquer experiência em programação, apenas um interesse nele. Se você já escreveu nenhum JavaScript em uma página da web antes, você tem muita em segundo plano.
+Vamos supor também que você está interessado em aprender programação básica. Páginas da Web ASP.NET usam uma linguagem de programação c#. Você não precisa ter qualquer experiência em programação, apenas um interesse nele. Se você já escreveu nenhum JavaScript em uma página da web antes, você tem muita em segundo plano.
 
 Observe que, se você estiver familiarizado com programação, você pode achar que este tutorial é definida inicialmente se move lentamente enquanto oferecemos os novos programadores a agilizar. Como podemos superar alguns tutoriais primeiro, no entanto, haverá menos básicas de programação para explicar e as coisas se moverá ao longo em um clipe mais rápido.
 

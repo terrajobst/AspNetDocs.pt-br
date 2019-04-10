@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: bea66072-59b6-42b4-98fa-211812f5925f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/dynamically-controlling-updatepanel-animations-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2a4c01ffdee20f2c7970d999b34bf1374088d4c5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 223fad7013a53212c0c822a87bd3e2fcc0a5f17f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408947"
 ---
-<a name="dynamically-controlling-updatepanel-animations-vb"></a>Controlar dinamicamente animações UpdatePanel (VB)
-====================
+# <a name="dynamically-controlling-updatepanel-animations-vb"></a>Controlar dinamicamente animações UpdatePanel (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/UpdatePanelAnimation2.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/updatepanelanimation2VB.pdf)
@@ -58,9 +58,9 @@ Por fim, o `UpdatePanelAnimationExtender` devem ser configurados: Defina o `Targ
 Execute o arquivo no navegador. Sempre que você clica no botão, a hora atual é mostrada no painel, sempre fade in para a duração de um segundo.
 
 
-[![A hora atual está desaparecendo](dynamically-controlling-updatepanel-animations-vb/_static/image2.png)](dynamically-controlling-updatepanel-animations-vb/_static/image1.png)
+[![Tele hora atual está desaparecendo](dynamically-controlling-updatepanel-animations-vb/_static/image2.png)](dynamically-controlling-updatepanel-animations-vb/_static/image1.png)
 
 A hora atual está desaparecendo ([clique para exibir a imagem em tamanho normal](dynamically-controlling-updatepanel-animations-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Anterior](animating-an-updatepanel-control-vb.md)
+> [Voltar](animating-an-updatepanel-control-vb.md)

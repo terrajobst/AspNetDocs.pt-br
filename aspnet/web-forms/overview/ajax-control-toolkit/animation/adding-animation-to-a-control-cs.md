@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-cs
-title: Adicionando animação a um controle (C#) | Microsoft Docs
+title: Adicionando animação a um controle (c#) | Microsoft Docs
 author: wenz
 description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Este tutorial mostra como...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 0f1fc1f5-9dbd-44e7-931e-387d42f0342b
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: aac6e97ae5d3d777c3644515628d2669076a88c4
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: e4c6bfe1884d3e066c7b27e07e3a069943793bdd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392281"
 ---
-<a name="adding-animation-to-a-control-c"></a>Adição de animação a um controle (C#)
-====================
+# <a name="adding-animation-to-a-control-c"></a>Adição de animação a um controle (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation1.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation1CS.pdf)
@@ -72,7 +72,7 @@ Neste exemplo, o painel deve desaparecer. A animação deverão utilizar 1,5 seg
 Quando você executa esse script, o painel é exibido e fade out em um e meio segundos.
 
 
-[![O painel está desaparecendo](adding-animation-to-a-control-cs/_static/image2.png)](adding-animation-to-a-control-cs/_static/image1.png)
+[![Tpainel he está desaparecendo](adding-animation-to-a-control-cs/_static/image2.png)](adding-animation-to-a-control-cs/_static/image1.png)
 
 O painel está desaparecendo ([clique para exibir a imagem em tamanho normal](adding-animation-to-a-control-cs/_static/image3.png))
 

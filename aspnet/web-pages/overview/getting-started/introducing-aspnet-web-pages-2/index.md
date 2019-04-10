@@ -8,21 +8,21 @@ ms.date: 05/18/2012
 ms.assetid: ef969007-9e27-431c-b2f7-e1772af7a0b6
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2
 msc.type: chapter
-ms.openlocfilehash: f0d8f91d0398e95e4d962aac7fea7db9abc926b3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 324a9d7b8666cbd387ff6ea17e9d341fe2f38423
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409616"
 ---
-<a name="introducing-aspnet-web-pages"></a>Introdução a Páginas da Web do ASP.NET
-====================
+# <a name="introducing-aspnet-web-pages"></a>Introdução a Páginas da Web do ASP.NET
+
 > Introdução ao ASP.NET Web Pages 2
 
 
-- [Introdução](getting-started.md)
+- [Guia de Introdução](getting-started.md)
 - [Noções básicas sobre programação](intro-to-web-pages-programming.md)
-- [Exibindo dados](displaying-data.md)
+- [Exibir dados](displaying-data.md)
 - [Noções básicas de formulário HTML](form-basics.md)
 - [Inserir dados de banco de dados usando formulários](entering-data.md)
 - [Atualização de dados do banco de dados](updating-data.md)

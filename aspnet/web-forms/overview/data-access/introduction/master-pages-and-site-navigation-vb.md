@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 022801d8-a327-4d0c-8780-6094c9cee00d
 msc.legacyurl: /web-forms/overview/data-access/introduction/master-pages-and-site-navigation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2a814fe8ed4a902061b2c50fd9d63983c4f6b2e8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 38bc21c1a7809c235a85638cbb40183f2d0b422d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398508"
 ---
-<a name="master-pages-and-site-navigation-vb"></a>Páginas mestras e navegação no site (VB)
-====================
+# <a name="master-pages-and-site-navigation-vb"></a>Páginas mestras e navegação no site (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_3_VB.exe) ou [baixar PDF](master-pages-and-site-navigation-vb/_static/datatutorial03vb1.pdf)
@@ -33,7 +33,7 @@ O [sistema de navegação de site](http://aspnet.4guysfromrolla.com/articles/111
 Para ilustrar esses conceitos e tornar o nosso site tutoriais mais utilizável, vamos nos concentrar nesta lição, definir um layout de página em todo o site, a implementação de um mapa de site e adicionar a navegação da interface do usuário. No final deste tutorial, teremos um design bem acabados do site para a criação de páginas da web tutorial.
 
 
-[![O resultado final deste tutorial](master-pages-and-site-navigation-vb/_static/image2.png)](master-pages-and-site-navigation-vb/_static/image1.png)
+[![Tele final de resultado deste Tutorial](master-pages-and-site-navigation-vb/_static/image2.png)](master-pages-and-site-navigation-vb/_static/image1.png)
 
 **Figura 1**: O End resultado deste Tutorial ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image3.png))
 
@@ -51,7 +51,7 @@ A primeira etapa é criar a página mestra para o site. Agora nosso site consist
 Para criar uma página mestra, com o botão direito no nome do projeto no Gerenciador de soluções e escolha Add New Item. Em seguida, selecione o tipo de página mestra na lista de modelos e nomeie- `Site.master`.
 
 
-[![Adicionar uma nova página mestra ao site](master-pages-and-site-navigation-vb/_static/image6.png)](master-pages-and-site-navigation-vb/_static/image5.png)
+[![Auma nova página mestra para o site de dd](master-pages-and-site-navigation-vb/_static/image6.png)](master-pages-and-site-navigation-vb/_static/image5.png)
 
 **Figura 3**: Adicionar uma nova página mestra ao site ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image7.png))
 
@@ -68,7 +68,7 @@ Uma página mestra define o layout de página estática e as regiões que podem 
 Com a marcação inserida acima, a alternar para a exibição de Design mostra o layout da página mestra. Qualquer página do ASP.NET que use essa página mestre terá esse layout uniforme, com a capacidade de especificar a marcação para o `MainContent` região.
 
 
-[![A página mestra, quando visualizado por meio da exibição de Design](master-pages-and-site-navigation-vb/_static/image9.png)](master-pages-and-site-navigation-vb/_static/image8.png)
+[![Tele página mestra, quando exibidas por meio do modo de Design](master-pages-and-site-navigation-vb/_static/image9.png)](master-pages-and-site-navigation-vb/_static/image8.png)
 
 **Figura 4**: A página mestra, quando exibidas por meio do modo de Design ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image10.png))
 
@@ -78,7 +78,7 @@ Com a marcação inserida acima, a alternar para a exibição de Design mostra o
 Com a página mestra definida, estamos prontos para adicionar as páginas do ASP.NET para o site. Vamos começar adicionando `Default.aspx`, homepage do nosso site. Clique com botão direito no nome do projeto no Gerenciador de soluções e escolha Add New Item. Escolha a opção de formulário da Web na lista de modelo e o nome do arquivo `Default.aspx`. Além disso, verifique a caixa de seleção "Selecionar página mestra".
 
 
-[![Adicione um novo formulário da Web, verificando a página mestra selecione caixa de seleção](master-pages-and-site-navigation-vb/_static/image12.png)](master-pages-and-site-navigation-vb/_static/image11.png)
+[![Aum novo formulário da Web, verificando a página mestra selecione caixa de seleção de dd](master-pages-and-site-navigation-vb/_static/image12.png)](master-pages-and-site-navigation-vb/_static/image11.png)
 
 **Figura 5**: Adicione um novo formulário da Web, verificando a página mestra selecione caixa de seleção ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image13.png))
 
@@ -86,7 +86,7 @@ Com a página mestra definida, estamos prontos para adicionar as páginas do ASP
 Depois de clicar no botão Okey, somos solicitados a escolher qual página mestre essa nova página do ASP.NET deve usar. Embora você possa ter várias páginas mestras em seu projeto, temos apenas um.
 
 
-[![Escolha a página mestra que Use essa página ASP.NET](master-pages-and-site-navigation-vb/_static/image15.png)](master-pages-and-site-navigation-vb/_static/image14.png)
+[![CEscolha a página mestra deste ASP.NET página deve usar](master-pages-and-site-navigation-vb/_static/image15.png)](master-pages-and-site-navigation-vb/_static/image14.png)
 
 **Figura 6**: Escolha a página mestra deste ASP.NET página deve usar ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image16.png))
 
@@ -110,7 +110,7 @@ O `Title` de atributo em de `@Page` diretiva nos permite definir o título da p�
 Alternar para a exibição de Design que podemos ver qual será a aparência de nossa página em um navegador. Observe que, no Design, exibir para a página do ASP.NET que somente as conteúdo editáveis regiões são editáveis a marcação não ContentPlaceHolder definida na página mestra está esmaecida.
 
 
-[![Modo de Design para a página ASP.NET mostra ambas as regiões editáveis e não editáveis](master-pages-and-site-navigation-vb/_static/image18.png)](master-pages-and-site-navigation-vb/_static/image17.png)
+[![Tele tem o modo de Design para o ASP.NET página mostra tanto a editável e regiões de não editável](master-pages-and-site-navigation-vb/_static/image18.png)](master-pages-and-site-navigation-vb/_static/image17.png)
 
 **Figura 7**: O modo de exibição de Design para o ASP.NET página mostra ambos os o editável e regiões de não editável ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image19.png))
 
@@ -142,7 +142,7 @@ O sistema de navegação de site do ASP.NET 2.0 fornece um meio para um desenvol
 Para este tutorial, no entanto, vamos usar o provedor de mapa de site padrão que é fornecido com o ASP.NET 2.0. Para criar o mapa do site, simplesmente clique com botão direito no nome do projeto no Gerenciador de soluções, escolha Add New Item e escolha a opção de mapa do Site. Deixe o nome como `Web.sitemap` e clique no botão Adicionar.
 
 
-[![Adicionar um mapa do Site ao seu projeto](master-pages-and-site-navigation-vb/_static/image22.png)](master-pages-and-site-navigation-vb/_static/image21.png)
+[![Aum mapa de Site para seu projeto de dd](master-pages-and-site-navigation-vb/_static/image22.png)](master-pages-and-site-navigation-vb/_static/image21.png)
 
 **Figura 9**: Adicionar um mapa de Site ao seu projeto ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image23.png))
 
@@ -159,7 +159,7 @@ Web.sitemap
 O mapa do site define a estrutura de navegação do site, que é uma hierarquia que descreve as várias seções do site. Cada `<siteMapNode>` elemento no `Web.sitemap` representa uma seção na estrutura de navegação do site.
 
 
-[![O mapa de Site representa uma estrutura de Navegação hierárquica](master-pages-and-site-navigation-vb/_static/image25.png)](master-pages-and-site-navigation-vb/_static/image24.png)
+[![Tele mapa de Site representa uma estrutura de Navegação hierárquica](master-pages-and-site-navigation-vb/_static/image25.png)](master-pages-and-site-navigation-vb/_static/image24.png)
 
 **Figura 10**: O mapa de Site representa uma estrutura de Navegação hierárquica ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image26.png))
 
@@ -252,7 +252,7 @@ Os tutoriais em nosso site são divididos em categorias diferentes relatórios b
 Vamos exibir uma lista não ordenada usando um repetidor novamente, mas desta vez, que vamos exibir o título e a descrição dos tutoriais. Já que a marcação e código para realizar este será precisam ser repetido para cada `Default.aspx` página, podemos pode encapsular essa lógica de interface do usuário em um [controle de usuário](https://msdn.microsoft.com/library/y6wb1a0e.aspx). Crie uma pasta no site de chamada `UserControls` e adicione para que um novo item do tipo de controle de usuário da Web chamado `SectionLevelTutorialListing.ascx`e adicione a seguinte marcação:
 
 
-[![Adicionar um novo controle de usuário da Web para a pasta UserControls](master-pages-and-site-navigation-vb/_static/image30.png)](master-pages-and-site-navigation-vb/_static/image29.png)
+[![Aum novo controle de usuário da Web para a pasta UserControls de dd](master-pages-and-site-navigation-vb/_static/image30.png)](master-pages-and-site-navigation-vb/_static/image29.png)
 
 **Figura 13**: Adicionar um novo controle de usuário da Web para o `UserControls` pasta ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image31.png))
 
@@ -272,12 +272,12 @@ No exemplo anterior Repeater é associado a `SiteMap` dados para o Repeater decl
 Quando esse Repeater tiver sido criado, abra o `Default.aspx` páginas em cada uma das pastas, vá para a exibição de Design e simplesmente arrastar o controle de usuário do Gerenciador de soluções para a superfície de Design onde você deseja que a lista de tutoriais apareça.
 
 
-[![O controle de usuário tem que foram adicionados ao default. aspx](master-pages-and-site-navigation-vb/_static/image33.png)](master-pages-and-site-navigation-vb/_static/image32.png)
+[![TControle de usuário tem foram adicionados ao default. aspx](master-pages-and-site-navigation-vb/_static/image33.png)](master-pages-and-site-navigation-vb/_static/image32.png)
 
 **Figura 14**: O controle de usuário tem que foram adicionados ao `Default.aspx` ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image34.png))
 
 
-[![Os tutoriais de Reporting básicos estão listados](master-pages-and-site-navigation-vb/_static/image36.png)](master-pages-and-site-navigation-vb/_static/image35.png)
+[![TTutoriais do Reporting básica he listados](master-pages-and-site-navigation-vb/_static/image36.png)](master-pages-and-site-navigation-vb/_static/image35.png)
 
 **Figura 15**: Os tutoriais de Reporting básicos estão listados ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-vb/_static/image37.png))
 
@@ -313,4 +313,4 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 Esta série de tutoriais foi revisada por muitos revisores úteis. Revisores de avanço para este tutorial foram Liz Shulok, Dennis Patterson e Hilton Giesenow. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Anterior](creating-a-business-logic-layer-vb.md)
+> [Voltar](creating-a-business-logic-layer-vb.md)

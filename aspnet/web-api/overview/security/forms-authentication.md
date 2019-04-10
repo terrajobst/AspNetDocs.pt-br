@@ -8,15 +8,15 @@ ms.date: 12/12/2012
 ms.assetid: 9f06c1f2-ffaa-4831-94a0-2e4a3befdf07
 msc.legacyurl: /web-api/overview/security/forms-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 35d62a83382553085ed8a728dcdcdae0e93090b8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 147bfab76e48497f35a72b28cd935f40ec4193bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410065"
 ---
-<a name="forms-authentication-in-aspnet-web-api"></a>Autenticação de formulários na API Web ASP.NET
-====================
+# <a name="forms-authentication-in-aspnet-web-api"></a>Autenticação de formulários na API Web ASP.NET
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Autenticação de formulários usa um formulário HTML para enviar as credenciais do usuário para o servidor. Não é um padrão da Internet. Autenticação de formulários é apropriada para APIs da web que são chamadas de um aplicativo web, somente para que o usuário pode interagir com o formulário HTML.

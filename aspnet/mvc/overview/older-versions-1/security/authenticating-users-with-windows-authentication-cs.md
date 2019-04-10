@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-cs
-title: Autenticar usuários com a autenticação do Windows (C#) | Microsoft Docs
+title: Autenticar usuários com a autenticação do Windows (c#) | Microsoft Docs
 author: microsoft
 description: Saiba como usar a autenticação do Windows no contexto de um aplicativo MVC. Você aprenderá a habilitar a autenticação do Windows dentro do co do seu aplicativo web...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 418bb07e-f369-4119-b4b0-08f890f7abb2
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0f46af21841a60fe4257cb30b78abdfd421c66bd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3c12f2a3d253df1ed9d8b25001edf13a04da26f5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039383"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394881"
 ---
-<a name="authenticating-users-with-windows-authentication-c"></a>Autenticar usuários com a autenticação do Windows (C#)
-====================
+# <a name="authenticating-users-with-windows-authentication-c"></a>Autenticar usuários com a autenticação do Windows (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como usar a autenticação do Windows no contexto de um aplicativo MVC. Você aprenderá como habilitar a autenticação do Windows dentro do arquivo de configuração do seu aplicativo web e como configurar a autenticação com o IIS. Por fim, você aprenderá como usar o atributo [autorizar] para restringir o acesso a ações do controlador para determinados usuários do Windows ou grupos.

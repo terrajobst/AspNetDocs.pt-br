@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: a64a7aa0-6608-449e-83bf-1ef8cceee504
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3d6e25de44a7c84ef0919d1cfd8ab4c6b368e0ea
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 66b6df78a8ffed3ea7c586a995b8df8563d908bb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407205"
 ---
-<a name="configuring-the-production-web-application-to-use-the-production-database-vb"></a>Configuração do aplicativo Web de produção para usar o banco de dados de produção (VB)
-====================
+# <a name="configuring-the-production-web-application-to-use-the-production-database-vb"></a>Configuração do aplicativo Web de produção para usar o banco de dados de produção (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_08_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial08_DBConfig_vb.pdf)
@@ -53,7 +53,7 @@ Você pode criar a cadeia de caracteres de conexão de banco de dados manualment
 Abra o Visual Studio e, em seguida, navegue até a janela do Gerenciador de servidores (no Visual Web Developer, essa janela é chamada Gerenciador de banco de dados). Clique na opção conexões de dados e escolha a opção de Adicionar Conexão no menu de contexto. Isso abre o assistente mostrado na Figura 1. Escolha a fonte de dados apropriada e clique em continuar.
 
 
-[![Optar por adicionar um novo banco de dados para o Gerenciador de servidores](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image1.jpg) 
+[![Cescolher o modo para adicionar um novo banco de dados para o Gerenciador de servidores](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image1.jpg) 
 
 **Figura 1**: Optar por adicionar um novo banco de dados para o Gerenciador de servidores ([clique para exibir a imagem em tamanho normal](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image3.jpg))
 
@@ -61,7 +61,7 @@ Abra o Visual Studio e, em seguida, navegue até a janela do Gerenciador de serv
 Em seguida, especifique as várias informações de conexão de banco de dados (veja a Figura 2). Quando você se inscreveu com sua empresa de hospedagem de web que eles devem ter fornecido informações sobre como se conectar ao banco de dados - o nome do servidor de banco de dados, o nome do banco de dados, o nome de usuário e senha a ser usada para se conectar ao banco de dados e assim por diante. Depois de inserir essas informações, clique em Okey para concluir este assistente e adicionar o banco de dados para o Gerenciador de servidores.
 
 
-[![Especifique as informações de Conexão de banco de dados](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image4.jpg) 
+[![Sespecificar as informações de Conexão de banco de dados](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image4.jpg) 
 
 **Figura 2**: Especifique as informações de Conexão de banco de dados ([clique para exibir a imagem em tamanho normal](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image6.jpg))
 
@@ -91,7 +91,7 @@ A menos que você tenha um fluxo de trabalho de implantação mais formal, qualq
 Depois que o site foi implantado para produção, visite o site de produção por meio de seu navegador. Você deve ver e aproveite a mesma experiência de usuário que, ao executar o aplicativo controlado por dados localmente. Claro quando você visitar o site de produção o site é alimentado pelo servidor de banco de dados de produção, enquanto que visitar o site no ambiente de desenvolvimento usa o banco de dados no desenvolvimento. A Figura 3 mostra a *ensinar por conta própria ASP.NET 3.5 in 24 horas* examine a página do site no ambiente de produção (Observe a URL na barra de endereços do navegador s).
 
 
-[![O aplicativo controlado por dados está agora disponível em produção!](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image7.jpg) 
+[![Tele é controlada por dados de aplicativo está agora disponível em produção!](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image7.jpg) 
 
 **Figura 3**: O aplicativo controlado por dados está agora disponível em produção! ([Clique para exibir a imagem em tamanho normal](configuring-the-production-web-application-to-use-the-production-database-vb/_static/image9.jpg))
 

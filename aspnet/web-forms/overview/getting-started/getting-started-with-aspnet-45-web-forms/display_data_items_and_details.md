@@ -8,15 +8,15 @@ ms.date: 1/04/2019
 ms.assetid: 64a491a8-0ed6-4c2f-9c1c-412962eb6006
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/display_data_items_and_details
 msc.type: authoredcontent
-ms.openlocfilehash: acc2f8e78375ef0455d467e2af750ecbee623224
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 54896da5565c9383f13fc352da26bbdc3cb63a76
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405359"
 ---
-<a name="display-data-items-and-details"></a>Itens de dados de exibição e detalhes
-====================
+# <a name="display-data-items-and-details"></a>Itens de dados de exibição e detalhes
+
 by [Erik Reitan](https://github.com/Erikre)
 
 > Esta série de tutoriais ensina os conceitos básicos da criação de um aplicativo Web Forms do ASP.NET com o ASP.NET 4.7 e o Microsoft Visual Studio 2017.
@@ -39,9 +39,9 @@ Neste tutorial, você aprenderá como exibir itens de dados e os detalhes do ite
 
 Você pode usar algumas opções diferentes para associar dados a um controle de servidor. As mais comuns incluem:
 
- * Adicionando um controle de fonte de dados
- * Adicionando o código manualmente
- * Usando a associação de modelos
+* Adicionando um controle de fonte de dados
+* Adicionando o código manualmente
+* Usando a associação de modelos
 
 ### <a name="use-a-data-source-control-to-bind-data"></a>Usar um controle de fonte de dados para associar dados
 

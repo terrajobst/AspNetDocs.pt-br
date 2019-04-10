@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: 6fe55a14b40f8c50dee91cdc7f59d0378f2a1ea2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: de65e01b888d9ed15da3903f086b40c49b32b9fb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402408"
 ---
-<a name="aspnet-mvc-4-mobile-features"></a>Recursos móveis do ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4-mobile-features"></a>Recursos móveis do ASP.NET MVC 4
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Agora há uma versão do MVC 5 deste tutorial com exemplos de código em [implantar um aplicativo da Web do ASP.NET MVC 5 móveis nos Sites do Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
@@ -248,7 +248,7 @@ Atualizar o *AllTags* exibir no navegador móvel. Agora você pode navegar entre
 >
 > [!code-csharp[Main](aspnet-mvc-4-mobile-features/samples/sample15.cs)]
 >
->  e adicionar o título para o *Views\Shared\\layout. cshtml* arquivo.
+> e adicionar o título para o *Views\Shared\\layout. cshtml* arquivo.
 >
 > [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample16.html)]
 

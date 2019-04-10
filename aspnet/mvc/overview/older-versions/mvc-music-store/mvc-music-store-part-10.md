@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: 0c6e4c2f-fcdb-4978-9656-1990c6f15727
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-10
 msc.type: authoredcontent
-ms.openlocfilehash: f32509701dd112053aa4f31d6552601f961c7413
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48404f449ce2641bdff55b9ad75aa5eec1aee46b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403292"
 ---
-<a name="part-10-final-updates-to-navigation-and-site-design-conclusion"></a>Parte 10: Atualizações finais à navegação e ao design do site e conclusão
-====================
+# <a name="part-10-final-updates-to-navigation-and-site-design-conclusion"></a>Parte 10: Atualizações finais à navegação e ao design do site e conclusão
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  
@@ -136,4 +136,4 @@ Já vimos que ASP.NET MVC torna mais fácil para criar um site da Web sofisticad
 
 
 > [!div class="step-by-step"]
-> [Anterior](mvc-music-store-part-9.md)
+> [Voltar](mvc-music-store-part-9.md)

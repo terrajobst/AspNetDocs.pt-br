@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/inserting-updating-and-deleting-data-with-the-sqldatasource-cs
-title: Inserindo, atualizando e excluindo dados com o SqlDataSource (C#) | Microsoft Docs
+title: Inserindo, atualizando e excluindo dados com o SqlDataSource (c#) | Microsoft Docs
 author: rick-anderson
 description: Nos tutoriais anteriores, aprendemos como o controle ObjectDataSource permitido para inserção, atualização e exclusão de dados. O controle SqlDataSource dá suporte a t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2007
 ms.assetid: a526f0ec-779e-4a2b-a476-6604090d25ce
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/inserting-updating-and-deleting-data-with-the-sqldatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 06c5fea8a058f15e72d455cf0e15b462d8f91e38
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 8a1f0f929e2e2ee01a4567cb502e5fd908d8c90b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440385"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402784"
 ---
-<a name="inserting-updating-and-deleting-data-with-the-sqldatasource-c"></a>Inserir, atualizar e excluir dados com o SqlDataSource (C#)
-====================
+# <a name="inserting-updating-and-deleting-data-with-the-sqldatasource-c"></a>Inserir, atualizar e excluir dados com o SqlDataSource (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_49_CS.exe) ou [baixar PDF](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/datatutorial49cs1.pdf)
@@ -50,7 +50,7 @@ Uma vez um `InsertCommand`, `UpdateCommand`, ou `DeleteCommand` valor tiver sido
 Comece abrindo o `InsertUpdateDelete.aspx` e `Querying.aspx` páginas do `SqlDataSource` pasta. No Designer na `Querying.aspx` , selecione o SqlDataSource e GridView do primeiro exemplo (o `ProductsDataSource` e `GridView1` controles). Depois de selecionar os dois controles, vá para o menu Editar e escolha Copiar (ou apenas pressione Ctrl + C). Em seguida, vá para o Designer de `InsertUpdateDelete.aspx` e colar nos controles. Depois de ter de mudar os dois controles para `InsertUpdateDelete.aspx`, testar a página em um navegador. Você deve ver os valores da `ProductID`, `ProductName`, e `UnitPrice` colunas para todos os registros no `Products` tabela de banco de dados.
 
 
-[![Todos os produtos são listados, ordenados por ProductID](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image1.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image1.png)
+[![All dos produtos listados, ordenados por ProductID](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image1.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image1.png)
 
 **Figura 1**: Todos os produtos são listados, ordenados por `ProductID` ([clique para exibir a imagem em tamanho normal](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image2.png))
 
@@ -87,7 +87,7 @@ Clique nas reticências na propriedade DeleteQuery para abrir a caixa de diálog
 Em seguida, clique no botão Atualizar parâmetros para adicionar o `@ProductID` parâmetro à lista de parâmetros abaixo.
 
 
-[![Selecione a propriedade DeleteQuery na janela Propriedades](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image3.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image3.png)
+[![SEscolha a propriedade DeleteQuery na janela Propriedades](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image3.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image3.png)
 
 **Figura 3**: Selecione a propriedade DeleteQuery na janela Propriedades ([clique para exibir a imagem em tamanho normal](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image4.png))
 
@@ -111,7 +111,7 @@ Observe a adição do `DeleteCommand` propriedade, bem como a `<DeleteParameters
 Com o `DeleteCommand` propriedade adicionada, a marca inteligente do GridView s agora contém a opção de habilitar a exclusão. Vá em frente e marque essa caixa de seleção. Conforme discutido em [uma visão geral de inserção, atualização e exclusão](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-cs.md), isso faz com que o GridView adicionar um CommandField com seus `ShowDeleteButton` propriedade definida como `true`. Como a Figura 4 mostra, quando a página for visitada por meio de um navegador em um botão Excluir é incluído. Essa saída de página de teste, excluindo alguns produtos.
 
 
-[![Cada linha de GridView agora inclui um botão Excluir](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image4.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image5.png)
+[![ELinha de GridView de ACH agora inclui um botão Delete](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image4.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image5.png)
 
 **Figura 4**: Cada linha de GridView agora inclui um botão Delete ([clique para exibir a imagem em tamanho normal](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image6.png))
 
@@ -137,7 +137,7 @@ Como etapa examinado, de 1 `INSERT`, `UPDATE`, e `DELETE` instruções SQL podem
 Deixe o s explorar essa opção de geração automática. Adicionar um DetailsView para o Designer no `InsertUpdateDelete.aspx` e defina sua `ID` propriedade `ManageProducts`. Em seguida, da DetailsView s marca inteligente, optar por criar uma nova fonte de dados e criar um SqlDataSource chamado `ManageProductsDataSource`.
 
 
-[![Criar um novo SqlDataSource chamado ManageProductsDataSource](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image6.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image7.png)
+[![Ccriar um novo SqlDataSource chamado ManageProductsDataSource](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image6.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image7.png)
 
 **Figura 6**: Criar um novo SqlDataSource nomeado `ManageProductsDataSource` ([clique para exibir a imagem em tamanho normal](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image8.png))
 
@@ -145,7 +145,7 @@ Deixe o s explorar essa opção de geração automática. Adicionar um DetailsVi
 No Assistente Configurar fonte de dados, optar por usar o `NORTHWINDConnectionString` conexão da cadeia de caracteres e clique em Avançar. De configurar a tela de instrução Select, deixe as especificar colunas usando um botão de opção de tabela ou exibição selecionado e escolha o `Products` tabela na lista suspensa. Selecione o `ProductID`, `ProductName`, `UnitPrice`, e `Discontinued` colunas da lista de caixa de seleção.
 
 
-[![Usando a tabela de produtos, retornar o ProductID, ProductName, UnitPrice e colunas descontinuadas](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image7.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image9.png)
+[![Ucantar tabela Products, retorne o ProductID, ProductName, UnitPrice e descontinuado colunas](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image7.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image9.png)
 
 **Figura 7**: Usando o `Products` da tabela, retornar o `ProductID`, `ProductName`, `UnitPrice`, e `Discontinued` colunas ([clique para exibir a imagem em tamanho normal](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image10.png))
 
@@ -173,7 +173,7 @@ Para ativar os recursos de modificação de dados de s DetailsView, verifique a 
 Visite a página em um navegador e observe a edição, exclusão e novos botões incluídos em DetailsView. Clique no botão Editar transforma DetailsView em modo de edição, que exibe cada BoundField cujos `ReadOnly` estiver definida como `false` (o padrão) como uma caixa de texto e o CheckBoxField como uma caixa de seleção.
 
 
-[![O s DetailsView padrão de Interface de edição](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image9.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image11.png)
+[![Tele DetailsView s Interface de edição padrão](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image9.gif)](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image11.png)
 
 **Figura 9**: O s DetailsView Interface de edição padrão ([clique para exibir a imagem em tamanho normal](inserting-updating-and-deleting-data-with-the-sqldatasource-cs/_static/image12.png))
 

@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: 18a292ada33936ea03f2d51427c160541424c8d1
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a1218b1fb5a8ee28ea6ee3d3c5af979e86821ed7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391189"
 ---
-<a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Cenários de estrutura avançada de entidade para um aplicativo Web do MVC (10 de 10)
-====================
+# <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Cenários de estrutura avançada de entidade para um aplicativo Web do MVC (10 de 10)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixe o projeto concluído](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -316,7 +316,8 @@ Uma causa desse problema é erros de validação quando o `Seed` execuções de 
 
 Mensagem de erro:
 
-*Erro HTTP 500.19 - erro interno do servidor a página solicitada não pode ser acessado porque os dados de configuração relacionados para a página são inválidos.*
+*Erro HTTP 500.19 – Erro Interno do Servidor  
+A página solicitada não pode ser acessada porque os dados de configuração relacionados para a página são inválidos.*
 
 Solução:
 
@@ -326,7 +327,7 @@ Uma maneira que você pode obter esse erro é de várias cópias da solução, c
 
 Mensagem de erro:
 
-*Ocorreu um erro relacionado à rede ou específico da instância ao estabelecer uma conexão com o SQL Server. O servidor não foi encontrado ou não estava acessível. Verifique se o nome da instância está correto e que o SQL Server está configurado para permitir conexões remotas. (provedor: Adaptadores de Rede do SQL, erro: 26 - erro ao localizar servidor/instância especificada)*
+*Ocorreu um erro relacionado à rede ou específico a uma instância ao estabelecer uma conexão com o SQL Server. O servidor não foi encontrado ou não estava acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. (provedor: Adaptadores de Rede do SQL, erro: 26 – Erro ao localizar a instância/o servidor especificado)*
 
 Solução:
 

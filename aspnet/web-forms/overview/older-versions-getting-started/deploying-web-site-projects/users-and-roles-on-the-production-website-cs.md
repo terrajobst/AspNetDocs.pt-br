@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs
-title: Usuários e funções no site de produção (C#) | Microsoft Docs
+title: Usuários e funções no site de produção (c#) | Microsoft Docs
 author: rick-anderson
 description: A ferramenta de administração de site do ASP.NET (WSAT) fornece uma interface do usuário baseada na web para definir as configurações de associação e funções e para criar, editar, um...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: dbc54313-5d05-4285-98b3-726edea6d0c9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/users-and-roles-on-the-production-website-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f08afe5f4ab379d1532f50267299892829c95dcc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 691de0a29ce4798d2f18a58141b833db9cddb2d5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396597"
 ---
-<a name="users-and-roles-on-the-production-website-c"></a>Usuários e funções no site de produção (C#)
-====================
+# <a name="users-and-roles-on-the-production-website-c"></a>Usuários e funções no site de produção (c#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial16_CustomAWAT_cs.pdf)
@@ -97,7 +97,7 @@ No [ *Configurando um site que usa serviços de aplicativos* tutorial](configuri
 
 Para obter uma visão mais detalhada na criação de páginas de administração de usuário e a função, juntamente com instruções passo a passo sobre como usar o `Membership` e `Roles` classes e controles relacionados ao logon da Web do ASP.NET, certifique-se de ler meu [a segurança de site Tutoriais](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Lá você encontrará diretrizes sobre como criar páginas da web para criar novas contas, criar e gerenciar funções, atribuir usuários a funções e outras tarefas administrativas comuns.
 
-Para implementar a funcionalidade semelhante WSAT no site de produção, você sempre pode criar sua própria série de páginas da web que implementam os recursos do WSAT. Para ajudar a começar, confira o código-fonte WSAT, que está localizado na pasta `%WINDIR%\Microsoft.NET\Framework\v2.0.50727\ASP.NETWebAdminFiles`. Outra opção é usar a alternativa WSAT de Dan Clem, que ele compartilha em seu artigo, [sem interrupção sua própria ferramenta Web Site Administration](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx). Dan orienta os leitores por meio do processo de criação de uma ferramenta semelhante WSAT personalizada, inclui código-fonte do seu aplicativo para download (em C#) e fornece instruções passo a passo para adicionar sua WSAT personalizado a um site hospedado.
+Para implementar a funcionalidade semelhante WSAT no site de produção, você sempre pode criar sua própria série de páginas da web que implementam os recursos do WSAT. Para ajudar a começar, confira o código-fonte WSAT, que está localizado na pasta `%WINDIR%\Microsoft.NET\Framework\v2.0.50727\ASP.NETWebAdminFiles`. Outra opção é usar a alternativa WSAT de Dan Clem, que ele compartilha em seu artigo, [sem interrupção sua própria ferramenta Web Site Administration](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx). Dan orienta os leitores por meio do processo de criação de uma ferramenta semelhante WSAT personalizada, inclui código-fonte do seu aplicativo para download (em c#) e fornece instruções passo a passo para adicionar sua WSAT personalizado a um site hospedado.
 
 ## <a name="summary"></a>Resumo
 

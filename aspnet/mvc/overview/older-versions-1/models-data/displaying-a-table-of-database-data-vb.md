@@ -8,15 +8,15 @@ ms.date: 10/07/2008
 ms.assetid: 5bb4587f-5bcd-44f5-b368-3c1709162b35
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d96f574c9284ab259b8733b3b8109ecd0b689aa8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c33812ab9d758c3155a2f75f59bfb63c55487dc7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396402"
 ---
-<a name="displaying-a-table-of-database-data-vb"></a>Exibir uma tabela de dados de banco de dados (VB)
-====================
+# <a name="displaying-a-table-of-database-data-vb"></a>Exibir uma tabela de dados de banco de dados (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_11_VB.pdf)
@@ -61,7 +61,7 @@ Depois de clicar no botão Add, o Assistente de modelo de dados de entidade é e
 3. No **Choose Your Database Objects** etapa, expanda o nó Tables, selecione a tabela de filmes. Insira o namespace *modelos* e clique no **concluir** botão.
 
 
-[![Criando o LINQ para classes SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)
+[![Criando LINQ para classes SQL](displaying-a-table-of-database-data-vb/_static/image1.jpg)](displaying-a-table-of-database-data-vb/_static/image1.png)
 
 **Figura 01**: Criando o LINQ para SQL classes ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-vb/_static/image2.png))
 
@@ -69,7 +69,7 @@ Depois de clicar no botão Add, o Assistente de modelo de dados de entidade é e
 Depois de concluir o Assistente de modelo de dados de entidade, o Designer de modelo de dados de entidade é aberto. O Designer deve exibir a entidade de filmes (veja a Figura 2).
 
 
-[![O Designer de modelo de dados de entidade](displaying-a-table-of-database-data-vb/_static/image2.jpg)](displaying-a-table-of-database-data-vb/_static/image3.png)
+[![Tele Entity Data Model Designer](displaying-a-table-of-database-data-vb/_static/image2.jpg)](displaying-a-table-of-database-data-vb/_static/image3.png)
 
 **Figura 02**: O Designer de modelo de dados de entidade ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-vb/_static/image4.png))
 
@@ -83,7 +83,7 @@ Duas vezes no nome da classe na superfície do designer e altere o nome da class
 Agora que temos uma forma de representar nossos registros do banco de dados, podemos criar um controlador que retorna a coleção de filmes. Dentro da janela do Gerenciador de soluções do Visual Studio, clique com botão direito na pasta controladores e selecione a opção de menu **Add, controlador** (veja a Figura 3).
 
 
-[![O controlador Menu adicionar](displaying-a-table-of-database-data-vb/_static/image3.jpg)](displaying-a-table-of-database-data-vb/_static/image5.png)
+[![Tele Adicionar controlador Menu](displaying-a-table-of-database-data-vb/_static/image3.jpg)](displaying-a-table-of-database-data-vb/_static/image5.png)
 
 **Figura 03**: Adicionar Menu de controlador ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-vb/_static/image6.png))
 
@@ -91,7 +91,7 @@ Agora que temos uma forma de representar nossos registros do banco de dados, pod
 Quando o **Adicionar controlador** caixa de diálogo for exibida, insira o nome do controlador MovieController (veja a Figura 4). Clique o **adicionar** botão para adicionar o novo controlador.
 
 
-[![A caixa de diálogo Adicionar controlador](displaying-a-table-of-database-data-vb/_static/image4.jpg)](displaying-a-table-of-database-data-vb/_static/image7.png)
+[![Tcaixa de diálogo de adicionar controlador he](displaying-a-table-of-database-data-vb/_static/image4.jpg)](displaying-a-table-of-database-data-vb/_static/image7.png)
 
 **Figura 04**: A caixa de diálogo Adicionar controlador ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-vb/_static/image8.png))
 
@@ -113,7 +113,7 @@ Criar seu aplicativo, selecionando a opção de menu **Build Build Solution**. V
 A ação Index () com o botão direito e selecione a opção de menu **adicionar exibição** (consulte a Figura 5).
 
 
-[![Adicionando uma exibição](displaying-a-table-of-database-data-vb/_static/image5.jpg)](displaying-a-table-of-database-data-vb/_static/image9.png)
+[![Aadição de um modo de exibição](displaying-a-table-of-database-data-vb/_static/image5.jpg)](displaying-a-table-of-database-data-vb/_static/image9.png)
 
 **Figura 05**: Adicionando uma exibição ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-vb/_static/image10.png))
 
@@ -121,7 +121,7 @@ A ação Index () com o botão direito e selecione a opção de menu **adicionar
 No **adicionar exibição** caixa de diálogo, marque a caixa de seleção **criar uma exibição fortemente tipada**. Selecione a classe de filme como a **exibir dados de classe**. Selecione *lista* como o **exibir conteúdo** (veja a Figura 6). Selecione essas opções irá gerar uma exibição fortemente tipada que exibe uma lista de filmes.
 
 
-[![A caixa de diálogo Adicionar modo de exibição](displaying-a-table-of-database-data-vb/_static/image6.jpg)](displaying-a-table-of-database-data-vb/_static/image11.png)
+[![Tcaixa de diálogo de adicionar exibição he](displaying-a-table-of-database-data-vb/_static/image6.jpg)](displaying-a-table-of-database-data-vb/_static/image11.png)
 
 **Figura 06**: A caixa de diálogo Adicionar modo de exibição ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-vb/_static/image12.png))
 
@@ -135,7 +135,7 @@ Depois de clicar na **adicionar** botão, o modo de exibição na listagem 2 é 
 Você pode executar o aplicativo, selecionando a opção de menu **depurar, iniciar depuração** (ou pressionando a tecla F5). Executando o aplicativo inicia o Internet Explorer. Se você navegar até a URL /Movie, em seguida, você verá a página na Figura 7.
 
 
-[![Uma tabela de filmes](displaying-a-table-of-database-data-vb/_static/image7.jpg)](displaying-a-table-of-database-data-vb/_static/image13.png)
+[![A tabela de filmes](displaying-a-table-of-database-data-vb/_static/image7.jpg)](displaying-a-table-of-database-data-vb/_static/image13.png)
 
 **Figura 07**: Uma tabela de filmes ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-vb/_static/image14.png))
 

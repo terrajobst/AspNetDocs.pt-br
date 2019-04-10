@@ -1,28 +1,31 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
-title: Introdução ao ASP.NET Web API 2 (c#)
+title: Introdução ao ASP.NET Web API 2 (C#)-ASP.NET 4.x
 author: MikeWasson
-description: HTTP não é apenas para servir as páginas da web. Também é uma plataforma poderosa para a criação de APIs que expõem serviços e dados. O HTTP é simples, flexível e ubiq...
+description: Tutorial com o código. Use a API Web do ASP.NET para criar uma API web que retorna uma lista de produtos.
 ms.author: riande
 ms.date: 11/28/2017
+ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 7bec95af4532535f0d620bfe6862958907466874
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e3c049ba4349301c3c2d173d4311b3d0883bf68
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401738"
 ---
-<a name="get-started-with-aspnet-web-api-2-c"></a>Introdução ao ASP.NET Web API 2 (c#)
-====================
+# <a name="get-started-with-aspnet-web-api-2-c"></a>Introdução ao ASP.NET Web API 2 (c#)
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Baixe o projeto concluído](https://code.msdn.microsoft.com/Sample-code-of-Getting-c56ccb28)
 
+Neste tutorial, você usará a API Web ASP.NET para criar uma API Web que retorna uma lista de produtos.
+
 HTTP não é apenas para servir as páginas da web. HTTP também é uma plataforma poderosa para a criação de APIs que expõem serviços e dados. HTTP é simples, flexível e todos os lugares. Praticamente qualquer plataforma que você pode pensar tem uma biblioteca HTTP, para que os serviços HTTP podem alcançar uma ampla gama de clientes, incluindo navegadores, dispositivos móveis e aplicativos de desktop tradicionais.
 
-A API Web ASP.NET é uma estrutura para a criação de APIs Web sobre o .NET Framework. Neste tutorial, você usará a API Web ASP.NET para criar uma API Web que retorna uma lista de produtos.
+A API Web ASP.NET é uma estrutura para a criação de APIs Web sobre o .NET Framework. 
 
 ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
 

@@ -8,15 +8,15 @@ ms.date: 08/03/2007
 ms.assetid: 9ed8ccb5-5f31-4eb4-976d-cabf4b45ca09
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 106f7498a70339556d0662a986d71a01a21074ab
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 6dda18eb27d45f8dfdb4803cf3aca3ffe96bf11e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406555"
 ---
-<a name="debugging-stored-procedures-vb"></a>Depuração de procedimentos armazenados (VB)
-====================
+# <a name="debugging-stored-procedures-vb"></a>Depuração de procedimentos armazenados (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_74_VB.zip) ou [baixar PDF](debugging-stored-procedures-vb/_static/datatutorial74vb1.pdf)
@@ -67,7 +67,7 @@ Uma vez que o `Products_SelectByCategoryID` procedimento armazenado espera um `@
 Depois de fornecer o valor para o `@CategoryID` parâmetro, o procedimento armazenado é executado. Em vez de em execução até a conclusão, no entanto, o depurador interromperá a execução na primeira instrução. Observe a seta amarela na margem, que indica o local atual no procedimento armazenado. Você pode exibir e editar valores de parâmetro por meio da janela de inspeção ou passando o mouse sobre o nome do parâmetro no procedimento armazenado.
 
 
-[![O depurador foi interrompido na primeira instrução do procedimento armazenado](debugging-stored-procedures-vb/_static/image3.png)](debugging-stored-procedures-vb/_static/image2.png)
+[![Tele depurador foi interrompido na primeira instrução do procedimento armazenado](debugging-stored-procedures-vb/_static/image3.png)](debugging-stored-procedures-vb/_static/image2.png)
 
 **Figura 2**: O depurador foi interrompido na primeira instrução do procedimento armazenado ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image4.png))
 
@@ -85,7 +85,7 @@ Embora seja útil depurar um procedimento armazenado diretamente do Gerenciador 
 Para que possamos começar a depuração de procedimentos armazenados chamados do aplicativo, é necessário instruir o aplicativo web ASP.NET para integrar com o depurador do SQL Server. Inicie o clicando no nome do site no Gerenciador de soluções (`ASPNET_Data_Tutorial_74_VB`). Escolha a opção de páginas de propriedades no menu de contexto, selecione o item de opções de inicialização à esquerda e marque a caixa de seleção do SQL Server na seção depuradores (veja a Figura 3).
 
 
-[![Marque a caixa de seleção de servidor SQL nas páginas de propriedade de aplicativo s](debugging-stored-procedures-vb/_static/image6.png)](debugging-stored-procedures-vb/_static/image5.png)
+[![Cfazer check-in na caixa de seleção de servidor SQL em páginas de propriedades do aplicativo s](debugging-stored-procedures-vb/_static/image6.png)](debugging-stored-procedures-vb/_static/image5.png)
 
 **Figura 3**: Marque a caixa de seleção de servidor SQL em aplicativo s páginas de propriedades ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image7.png))
 
@@ -108,7 +108,7 @@ Neste ponto, o aplicativo ASP.NET foi configurado para permitir que o Visual Stu
 Abra o `Products_SelectByCategoryID` procedimento armazenado e defina um ponto de interrupção no início do `SELECT` instrução clicando na margem no local apropriado ou colocando o cursor no início do `SELECT` instrução e pressionando F9. Como ilustra a Figura 4, o ponto de interrupção aparece como um círculo vermelho na margem.
 
 
-[![Defina um ponto de interrupção no Products_SelectByCategoryID procedimento armazenado](debugging-stored-procedures-vb/_static/image9.png)](debugging-stored-procedures-vb/_static/image8.png)
+[![SET procedimento armazenado de um ponto de interrupção no Products_SelectByCategoryID](debugging-stored-procedures-vb/_static/image9.png)](debugging-stored-procedures-vb/_static/image8.png)
 
 **Figura 4**: Defina um ponto de interrupção na `Products_SelectByCategoryID` procedimento armazenado ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image10.png))
 
@@ -126,12 +126,12 @@ Com o conjunto de ponto de interrupção e a opção de depuração do aplicativ
 O `Products_SelectByCategoryID` procedimento armazenado foi criado na [usando procedimentos armazenados existentes para o s TableAdapters do conjunto de dados tipado](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) tutorial. A página da web correspondente (`~/AdvancedDAL/ExistingSprocs.aspx`) contém um GridView que exibe os resultados retornados por esse procedimento armazenado. Visite esta página por meio do navegador. Ao atingir a página, o ponto de interrupção a `Products_SelectByCategoryID` procedimento armazenado será atingido e o controle é retornado para o Visual Studio. Assim como na etapa 1, você pode percorrer as instruções do procedimento armazenado s e modo de exibição e modificar os valores de parâmetro.
 
 
-[![A página ExistingSprocs.aspx exibe inicialmente as bebidas](debugging-stored-procedures-vb/_static/image13.png)](debugging-stored-procedures-vb/_static/image12.png)
+[![Tele ExistingSprocs.aspx página exibe inicialmente as bebidas](debugging-stored-procedures-vb/_static/image13.png)](debugging-stored-procedures-vb/_static/image12.png)
 
 **Figura 6**: O `ExistingSprocs.aspx` página exibe inicialmente as bebidas ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image14.png))
 
 
-[![O procedimento armazenado s ponto de interrupção foi atingido](debugging-stored-procedures-vb/_static/image16.png)](debugging-stored-procedures-vb/_static/image15.png)
+[![Tele Stored Procedure s ponto de interrupção foi atingido](debugging-stored-procedures-vb/_static/image16.png)](debugging-stored-procedures-vb/_static/image15.png)
 
 **Figura 7**: S o procedimento armazenado que ponto de interrupção foi atingido ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image17.png))
 
@@ -139,12 +139,12 @@ O `Products_SelectByCategoryID` procedimento armazenado foi criado na [usando pr
 Como a janela de observação na Figura 7 mostra, o valor da `@CategoryID` parâmetro é 1. Isso ocorre porque o `ExistingSprocs.aspx` página exibe inicialmente os produtos na categoria Bebidas, que tem um `CategoryID` valor 1. Escolha uma categoria diferente na lista suspensa. Isso faz com que um postback e executa novamente o `Products_SelectByCategoryID` procedimento armazenado. O ponto de interrupção é atingido, novamente, mas desta vez o `@CategoryID` o valor do parâmetro s reflete o item selecionado na lista suspensa s `CategoryID`.
 
 
-[![Escolha uma categoria diferente na lista suspensa](debugging-stored-procedures-vb/_static/image19.png)](debugging-stored-procedures-vb/_static/image18.png)
+[![CEscolher uma categoria diferente na lista suspensa](debugging-stored-procedures-vb/_static/image19.png)](debugging-stored-procedures-vb/_static/image18.png)
 
 **Figura 8**: Escolha uma categoria diferente na lista suspensa ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image20.png))
 
 
-[![O @CategoryID parâmetro reflete a categoria selecionada da página da Web](debugging-stored-procedures-vb/_static/image22.png)](debugging-stored-procedures-vb/_static/image21.png)
+[![Tele @CategoryID parâmetro reflete a categoria selecionada da página da Web](debugging-stored-procedures-vb/_static/image22.png)](debugging-stored-procedures-vb/_static/image21.png)
 
 **Figura 9**: O `@CategoryID` parâmetro reflete a categoria selecionada da página da Web ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image23.png))
 

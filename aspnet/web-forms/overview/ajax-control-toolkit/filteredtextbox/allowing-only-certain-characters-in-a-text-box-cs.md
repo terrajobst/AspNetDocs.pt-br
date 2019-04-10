@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: fd2a1c52-d717-44af-8a61-67c8279bb26e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d8a1e792c9cd854591fc434f28afe98e4d91dfbe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 020f7bbe797a2c04f1ff97ea2056345028f700fb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407608"
 ---
-<a name="allowing-only-certain-characters-in-a-text-box-c"></a>Permitir somente determinados caracteres em uma caixa de texto (C#)
-====================
+# <a name="allowing-only-certain-characters-in-a-text-box-c"></a>Permitir somente determinados caracteres em uma caixa de texto (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/4/c/2/4c2def7a-0d23-4055-91f9-1f18504167d7/FilteredTextBox0.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/filteredtextbox0CS.pdf)
@@ -56,7 +56,7 @@ Aqui está a marcação para o `FilteredTextBoxExtender` controle que permite so
 Executar a página e tente digitar uma letra, se o JavaScript estiver habilitado, ele não funcionará; No entanto, dígitos exibidos na página. No entanto, observe que a proteção `FilteredTextBox` fornece não é à prova de marcador: Se o JavaScript estiver habilitado, todos os dados podem ser inseridos na caixa de texto, portanto, você precisa usar meios de validação adicional, ou seja, o ASP. Controles de validação da rede.
 
 
-[![Somente dígitos podem ser inseridos.](allowing-only-certain-characters-in-a-text-box-cs/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-cs/_static/image1.png)
+[![Osomente dígitos podem ser inseridos](allowing-only-certain-characters-in-a-text-box-cs/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-cs/_static/image1.png)
 
 Somente dígitos podem ser inseridos ([clique para exibir a imagem em tamanho normal](allowing-only-certain-characters-in-a-text-box-cs/_static/image3.png))
 

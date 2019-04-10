@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: b895e37e-0e69-45cc-a7e4-17ddd2e1b38d
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/paging-and-sorting-report-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 23f14251c280e1da3a51612ed538ecbc0f5b8d54
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 5f2cd9c752968f11efe74cce1c620d0b7cf6a467
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408583"
 ---
-<a name="paging-and-sorting-report-data-vb"></a>Paginação e classificação de dados de relatórios (VB)
-====================
+# <a name="paging-and-sorting-report-data-vb"></a>Paginação e classificação de dados de relatórios (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_24_VB.exe) ou [baixar PDF](paging-and-sorting-report-data-vb/_static/datatutorial24vb1.pdf)
@@ -67,7 +67,7 @@ Para fazer com que a lista com marcadores exiba a paginação e classificação 
 
 ## <a name="step-2-displaying-product-information-in-a-gridview"></a>Etapa 2: Exibindo informações de produto em um GridView
 
-Antes de nós implementamos realmente paging e recursos de classificação, deixe s primeiro criar um padrão não-srotable, não-paginável GridView que lista as informações do produto. Essa é uma tarefa é ve feito muitas vezes antes em toda esta série de tutoriais essas etapas deve estar familiarizado. Comece abrindo o `SimplePagingSorting.aspx` da página e arraste um controle GridView na caixa de ferramentas para o Designer, definindo seu `ID` propriedade `Products`. Em seguida, crie um novo ObjectDataSource que usa a classe ProductsBLL s `GetProducts()` método para retornar todas as informações de produto.
+Antes de nós implementamos realmente paging e recursos de classificação, deixe s primeiro criar um GridView não classificável, não-paginável padrão que lista as informações do produto. Essa é uma tarefa é ve feito muitas vezes antes em toda esta série de tutoriais essas etapas deve estar familiarizado. Comece abrindo o `SimplePagingSorting.aspx` da página e arraste um controle GridView na caixa de ferramentas para o Designer, definindo seu `ID` propriedade `Products`. Em seguida, crie um novo ObjectDataSource que usa a classe ProductsBLL s `GetProducts()` método para retornar todas as informações de produto.
 
 
 ![Recuperar informações sobre todos os produtos usando o método GetProducts()](paging-and-sorting-report-data-vb/_static/image4.png)
@@ -91,7 +91,7 @@ Em seguida, permitir que s personalize os campos de s GridView para que sejam ex
 Figura 6 mostra nosso progresso até o momento quando visualizado por meio de um navegador. Observe que a página lista todos os produtos em uma única tela, mostrando cada nome de produto s, a categoria, o fornecedor, o preço e descontinuado status.
 
 
-[![Cada um dos produtos listados](paging-and-sorting-report-data-vb/_static/image7.png)](paging-and-sorting-report-data-vb/_static/image6.png)
+[![EACH dos produtos listados](paging-and-sorting-report-data-vb/_static/image7.png)](paging-and-sorting-report-data-vb/_static/image6.png)
 
 **Figura 6**: Cada um dos produtos são listados ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image8.png))
 
@@ -101,7 +101,7 @@ Figura 6 mostra nosso progresso até o momento quando visualizado por meio de um
 Listando *todos os* dos produtos em uma única tela pode levar a sobrecarga de informações para o usuário analisando os dados. Para ajudar a tornar os resultados mais gerenciáveis, podemos dividir os dados em páginas menores de dados e permitir que o usuário percorrer os dados em uma página por vez. Para realizar isso basta marcar a caixa de seleção Habilitar paginação da marca inteligente GridView s (Isso define o s GridView [ `AllowPaging` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.allowpaging.aspx) para `true`).
 
 
-[![Marque a caixa de seleção Habilitar paginação para adicionar suporte à paginação](paging-and-sorting-report-data-vb/_static/image10.png)](paging-and-sorting-report-data-vb/_static/image9.png)
+[![Cfazer check-in a habilitar paginação de caixa de seleção para adicionar suporte a paginação](paging-and-sorting-report-data-vb/_static/image10.png)](paging-and-sorting-report-data-vb/_static/image9.png)
 
 **Figura 7**: Marque a habilitar a paginação de seleção para adicionar suporte a paginação ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image11.png))
 
@@ -137,7 +137,7 @@ Em seguida, abra o `GridView.skin` arquivo o `DataWebControls` pasta dentro a `A
 A Figura 8 mostra a página da web quando acessadas por meio de um navegador depois que o GridView s habilitar paginação caixa de seleção foi marcada e o `PagerStyle` e `PagerSettings` configurações foram feitas por meio de `GridView.skin` arquivo. Observe como apenas dez registros são mostrados e a interface de paginação indica que estamos está exibindo a primeira página de dados.
 
 
-[![Com a paginação habilitada, somente um subconjunto de registros são exibidos por vez](paging-and-sorting-report-data-vb/_static/image13.png)](paging-and-sorting-report-data-vb/_static/image12.png)
+[![WOM paginação habilitada, somente um subconjunto de registros são exibidos por vez](paging-and-sorting-report-data-vb/_static/image13.png)](paging-and-sorting-report-data-vb/_static/image12.png)
 
 **Figura 8**: Com a paginação habilitada, somente um subconjunto de registros são exibidos por vez ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image14.png))
 
@@ -145,7 +145,7 @@ A Figura 8 mostra a página da web quando acessadas por meio de um navegador dep
 Quando o usuário clica em um dos números de página na interface de paginação, massacre um postback e a página recarrega mostrando que a solicitada registros s de página. Figura 9 mostra os resultados depois de aceitar para exibir a página final de dados. Observe que a página final tem apenas um registro; Isso ocorre porque há 81 registros no total, resultando em oito páginas de 10 registros por página mais de uma página com um único registro.
 
 
-[![Clicar em um número de página causa um Postback e mostra um subconjunto apropriado de registros](paging-and-sorting-report-data-vb/_static/image16.png)](paging-and-sorting-report-data-vb/_static/image15.png)
+[![Clicking em um número de página causa um Postback e mostra o subconjunto de registros adequados](paging-and-sorting-report-data-vb/_static/image16.png)](paging-and-sorting-report-data-vb/_static/image15.png)
 
 **Figura 9**: Clicar em um número de página causa um Postback e mostra o subconjunto de registros apropriados ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image17.png))
 
@@ -182,7 +182,7 @@ Atribui esse manipulador de eventos do `PagingInformation` rótulo s `Text` prop
 Com esse acréscimo, o usuário agora é mostrado uma mensagem indicando qual página eles estão visitando e é o número de páginas total de dados existe.
 
 
-[![O número da página atual e o número Total de páginas são exibidas](paging-and-sorting-report-data-vb/_static/image19.png)](paging-and-sorting-report-data-vb/_static/image18.png)
+[![Tele número da página atual e o número Total de páginas são exibidas](paging-and-sorting-report-data-vb/_static/image19.png)](paging-and-sorting-report-data-vb/_static/image18.png)
 
 **Figura 10**: O número da página atual e o número Total de páginas são exibidas ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image20.png))
 
@@ -206,7 +206,7 @@ Por fim, precisamos criar um manipulador de eventos para o s DropDownList `Selec
 Como mostra a Figura 11, simplesmente alterando o GridView s `PageIndex` propriedade faz com que os dados sejam associadas novamente para o GridView. Em s GridView `DataBound` manipulador de eventos, DropDownList apropriado `ListItem` está selecionado.
 
 
-[![O usuário é levado automaticamente para o sexto página quando selecionando o Item de lista suspensa página 6](paging-and-sorting-report-data-vb/_static/image22.png)](paging-and-sorting-report-data-vb/_static/image21.png)
+[![Tele usuário é levado automaticamente para o sexto página quando selecionando o Item de lista suspensa página 6](paging-and-sorting-report-data-vb/_static/image22.png)](paging-and-sorting-report-data-vb/_static/image21.png)
 
 **Figura 11**: O usuário é levado automaticamente para o sexto página quando selecionando o Item de lista suspensa página 6 ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image23.png))
 
@@ -231,7 +231,7 @@ Essa sintaxe indica o uso de texto em branco ao exibir os hiperlinks dentro de u
 Após essa adição do CSS, ao visitar a página por meio de um navegador sua tela deve ser semelhante a Figura 12. Em particular, a Figura 12 mostra os resultados depois que o link do preço campo s cabeçalho foi clicado.
 
 
-[![Os resultados tenham sido classificados com o UnitPrice em ordem crescente](paging-and-sorting-report-data-vb/_static/image25.png)](paging-and-sorting-report-data-vb/_static/image24.png)
+[![Tele resultados tenham sido classificados com o UnitPrice em ordem crescente](paging-and-sorting-report-data-vb/_static/image25.png)](paging-and-sorting-report-data-vb/_static/image24.png)
 
 **Figura 12**: Os resultados tenham sido classificados com o UnitPrice em ordem crescente ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image26.png))
 
@@ -264,7 +264,7 @@ Um campo pode ser configurado para que ele s não classificável, limpando sua `
 Uma vez a `SortExpression` propriedade foi removida para o `UnitPrice` BoundField, o cabeçalho é renderizado como texto em vez de um link, impedindo que os usuários de classificação dos dados pelo preço.
 
 
-[![Removendo a propriedade SortExpression, os usuários podem não classificar os produtos pelo preço](paging-and-sorting-report-data-vb/_static/image29.png)](paging-and-sorting-report-data-vb/_static/image28.png)
+[![By removendo a propriedade SortExpression, os usuários não podem mais classificar os produtos por preço](paging-and-sorting-report-data-vb/_static/image29.png)](paging-and-sorting-report-data-vb/_static/image28.png)
 
 **Figura 14**: Removendo a propriedade SortExpression, os usuários não podem classificar produtos pelo preço ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image30.png))
 
@@ -283,7 +283,7 @@ Para realizar isso adicione um controle da Web de botão para a página, defina 
 Clicar nesse botão retorna o usuário para a primeira página com os produtos classificados por preço, do mais caro para menos cara (veja a Figura 15).
 
 
-[![Clicar no botão ordena os produtos do mais caro para o menos](paging-and-sorting-report-data-vb/_static/image32.png)](paging-and-sorting-report-data-vb/_static/image31.png)
+[![Cos pedidos de botão licking a produtos da mais cara para o menos](paging-and-sorting-report-data-vb/_static/image32.png)](paging-and-sorting-report-data-vb/_static/image31.png)
 
 **Figura 15**: Clicar no botão ordena a produtos da mais cara para o menos ([clique para exibir a imagem em tamanho normal](paging-and-sorting-report-data-vb/_static/image33.png))
 

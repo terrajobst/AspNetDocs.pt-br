@@ -8,15 +8,15 @@ ms.date: 02/29/2012
 ms.assetid: ba1fabb4-31a3-4ebf-8327-41a6bbba6eaf
 msc.legacyurl: /whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012
 msc.type: content
-ms.openlocfilehash: 6bbfb4aa7f29e4c189da4dfdca6f2113c7550b68
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5f50721b6f263b9cb025f5fa57c923dadeddcd28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410585"
 ---
-<a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novidades no ASP.NET 4.5 e no Visual Studio 2012
-====================
+# <a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novidades no ASP.NET 4.5 e no Visual Studio 2012
+
 > Este documento descreve novos recursos e aprimoramentos que estão sendo introduzidos no ASP.NET 4.5. Ele também descreve as melhorias que estão sendo feitas para o desenvolvimento da web no Visual Studio 2012. Este documento foi publicado originalmente em 29 de fevereiro de 2012.
 
 
@@ -54,7 +54,7 @@ ms.locfileid: "57045043"
     - [Validação não invasiva](#_Toc318097392)
     - [Atualizações do HTML5](#_Toc318097393)
 - [ASP.NET MVC 4](#_Toc318097394)
-- [ASP.NET Web Pages 2](#_Toc318097395)
+- [Páginas da Web do ASP.NET 2](#_Toc318097395)
 - [Visual Studio 2012 Release Candidate](#_Toc318097396)
 
     - [Projeto de compartilhamento entre o Visual Studio 2010 e o Visual Studio 2012 Release Candidate (compatibilidade do projeto)](#project-compatibility)
@@ -71,9 +71,9 @@ ms.locfileid: "57045043"
         - [Geração do manipulador de eventos](#_Toc318097404)
         - [Recuo inteligente](#_Toc318097405)
         - [Preenchimento de declaração de redução automática](#_Toc318097406)
-    - [Editor de JavaScript](#_Toc318097407)
+    - [Editor JavaScript](#_Toc318097407)
 
-        - [A estrutura de tópicos de código](#_Toc318097408)
+        - [Estrutura de tópicos de código](#_Toc318097408)
         - [Correspondência de chaves](#_Toc318097409)
         - [Ir para Definição](#_Toc318097410)
         - [Suporte a ECMAScript5](#_Toc318097411)
@@ -87,16 +87,16 @@ ms.locfileid: "57045043"
         - [Suporte de hacks do CSS](#_Toc318097418)
         - [Esquemas específicos do fornecedor (- moz-, - webkit)](#_Toc318097419)
         - [1&gt;{2&gt;suporte a inserção e suporte](#_Toc318097420)
-        - [Seletor de cores](#_Toc318097421)
-        - [Snippets](#_Toc318097422)
+        - [Seletor de cor](#_Toc318097421)
+        - [Trechos de código](#_Toc318097422)
         - [Regiões personalizadas](#_Toc318097423)
     - [Inspetor de Página](#_Toc318097424)
-    - [Publicação](#_Toc318097425)
+    - [Publicando](#_Toc318097425)
 
         - [Perfis de publicação](#_Toc318097426)
         - [A pré-compilação do ASP.NET e mesclagem](#_Toc318097427)
 - [IIS Express](#_Toc318097428)
-- [Isenção de responsabilidade](#_Toc318097429)
+- [Aviso de isenção de responsabilidade](#_Toc318097429)
 
 <a id="_Toc318097372"></a>
 ## <a name="aspnet-core-runtime-and-framework"></a>Estrutura e o tempo de execução do ASP.NET Core

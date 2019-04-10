@@ -8,15 +8,15 @@ ms.date: 08/01/2007
 ms.assetid: 525c3f23-586a-4594-a2cf-efb5a1ef6898
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-implement-continuous-integration-with-team-foundation
 msc.type: video
-ms.openlocfilehash: 52b5cd9b2ed2145d1b4d38d3231c7c62a65ffea9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 80c9852395345f8ad7266dc469b34821d75e444b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393998"
 ---
-<a name="how-do-i-implement-continuous-integration-with-team-foundation"></a>[Como fazer:] Implementar a integração contínua com Team Foundation?
-====================
+# <a name="how-do-i-implement-continuous-integration-with-team-foundation"></a>[Como fazer:] Implementar a integração contínua com Team Foundation?
+
 por [Chris Menegay](https://twitter.com/CMenegay)
 
 Há uma série de ferramentas de integração contínua que funcionem sobre o Team Foundation Server, e este vídeo vamos examinar a versão gratuita [Norton TeamCI](http://teamsystemrocks.com/files/12/tools/entry1018.aspx) ferramenta disponível no [Team System Rocks](http://teamsystemrocks.com/). TeamCI verifica periodicamente se atualizada arquivos tenham sido verificados Team Foundation Server e, nesse caso, compile a solução e executar todos os testes automatizados.

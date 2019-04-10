@@ -8,15 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: 62fc223f-9c29-4af9-bdb7-902103d5cff1
 msc.legacyurl: /web-forms/videos/aspnet-35/data-controls
 msc.type: chapter
-ms.openlocfilehash: 4425c5f2ebeb327e251db1309f397a1b54438833
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 17ec29cb24d0cd6943a821190d5cbabee69a58d2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020503"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397377"
 ---
-<a name="data-controls"></a>Controles de dados
-====================
+# <a name="data-controls"></a>Controles de dados
+
 > Este conjunto de vídeos explora como usar os novos recursos de controle de dados com o ASP.NET 3.5
 
 

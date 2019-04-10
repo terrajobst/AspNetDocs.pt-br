@@ -8,15 +8,15 @@ ms.date: 03/03/2014
 ms.assetid: 5344b74e-b888-479a-92bc-601a33bd61a2
 msc.legacyurl: /web-forms/overview/getting-started/code-editing-in-web-forms-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 670f81ca1ef9923575cb2fee1747f06f426963d8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397364"
 ---
-<a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Edição de código de Web Forms do ASP.NET no Visual Studio 2013
-====================
+# <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Edição de código de Web Forms do ASP.NET no Visual Studio 2013
+
 by [Erik Reitan](https://github.com/Erikre)
 
 Em muitas páginas de Web Form do ASP.NET, você escreve código em Visual Basic, c# ou outra linguagem. O editor de código no Visual Studio pode ajudá-lo a escrever código rapidamente, enquanto ajuda a evitar erros. Além disso, o editor fornece maneiras para você criar códigos reutilizáveis para ajudar a reduzir a quantidade de trabalho que você precisa fazer.
@@ -59,7 +59,7 @@ Nesta parte do passo a passo, você criará um projeto de aplicativo Web e adici
 3. Selecione o **modelos**  - &gt; **Visual c#**  - &gt; **Web** grupo de modelos à esquerda.
 4. Escolha o **aplicativo Web ASP.NET** modelo na coluna central.
 5. Nomeie o projeto ***BasicWebApp*** e clique no **Okey** botão.   
-![Caixa de diálogo Novo projeto](code-editing-in-web-forms-pages/_static/image2.png)
+![Caixa de diálogo Novo Projeto](code-editing-in-web-forms-pages/_static/image2.png)
 6. Em seguida, selecione a **Web Forms** modelo e clique no **Okey** botão para criar o projeto.  
 ![Caixa de diálogo Novo projeto ASP.NET](code-editing-in-web-forms-pages/_static/image3.png)  
 
@@ -77,7 +77,7 @@ Quando você cria um novo aplicativo do Web Forms usando o **aplicativo Web ASP.
 1. Na **Gerenciador de soluções**, clique no nome do aplicativo Web (neste tutorial é o nome do aplicativo **BasicWebSite**) e, em seguida, clique em **Add**  - &gt; **Novo Item**.   
 A caixa de diálogo **Adicionar Novo Item** é exibida.
 2. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, selecione **Web Form** do meio lista e nomeie-o *FirstWebPage*.   
-    ![Adicionar caixa de diálogo Novo Item](code-editing-in-web-forms-pages/_static/image4.png)
+    ![Caixa de diálogo Adicionar Novo Item](code-editing-in-web-forms-pages/_static/image4.png)
 3. Clique em **adicionar** para adicionar a página de Web Forms ao seu projeto.  
  Visual Studio cria a nova página e ele é aberto.
 4. Em seguida, defina essa nova página como a página de inicialização padrão. Na **Gerenciador de soluções**, clique com botão direito a nova página denominada *FirstWebPage* e selecione **definir como página inicial**. Na próxima vez que você executar esse aplicativo para testar nosso progresso, você será automaticamente consulte essa nova página no navegador.

@@ -8,15 +8,15 @@ ms.date: 07/29/2010
 ms.assetid: 39a7142b-8228-4dae-8578-c26d70e3ae71
 msc.legacyurl: /web-forms/videos/authentication/logging-users-into-your-membership-system
 msc.type: video
-ms.openlocfilehash: e395924f3af1dafc6f4da7b0073a9a94a40ea33c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 39aec7811eb9b93d5d7d6635d03581e45e2be455
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404761"
 ---
-<a name="logging-users-into-your-membership-system"></a>Conexão de usuários ao seu sistema de associação
-====================
+# <a name="logging-users-into-your-membership-system"></a>Conexão de usuários ao seu sistema de associação
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Neste vídeo, Joe Stagner mostra como registrar em log nossos usuários para o sistema de associação do ASP.NET.

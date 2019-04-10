@@ -8,15 +8,15 @@ ms.date: 06/12/2007
 ms.assetid: 2aee17e4-06d1-4875-985e-8fb817dc8bcd
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-use-the-numericupdown-extender-control
 msc.type: video
-ms.openlocfilehash: a3405c2ba0ec1372d343187c042ab5409a9db5fb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 695ade1162b26556304f2df28f0ebf0d21f6170a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396623"
 ---
-<a name="how-do-i-use-the-numericupdown-extender-control"></a>[Como fazer:] Usar o controle de extensor NumericUpDown?
-====================
+# <a name="how-do-i-use-the-numericupdown-extender-control"></a>[Como fazer:] Usar o controle de extensor NumericUpDown?
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Neste vídeo, vamos examinar o controle de extensor NumericUpDown do ASP.NET AJAX Control Toolkit. Podemos ver como o extensor NumericUpDown adiciona "para cima" e "para baixo" botões a um controle TextBox do ASP.NET padrão. Os botões permitem que o usuário incrementar ou decrementar um número, percorrer a lista de valores conhecidos ou chamar um serviço Web para recuperar o próximo valor. Dessa forma o desenvolvedor pode controlar por completo os valores que o usuário pode enviar a um aplicativo Web.

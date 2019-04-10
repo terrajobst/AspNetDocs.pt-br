@@ -2,26 +2,26 @@
 uid: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs
 title: Controlar a nomenclatura de ID em páginas de conteúdo (c#) | Microsoft Docs
 author: rick-anderson
-description: Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindConrol)...
+description: Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindControl)...
 ms.author: riande
 ms.date: 06/10/2008
 ms.assetid: 1c7d0916-0988-4b4f-9a03-935e4b5af6af
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0c8617bb14c7023cfd926022b66c69bb5762758b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a398494df0ed2bf749620b717350b21669a1ae5c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395640"
 ---
-<a name="control-id-naming-in-content-pages-c"></a>Controlar nomenclatura de ID em páginas de conteúdo (C#)
-====================
+# <a name="control-id-naming-in-content-pages-c"></a>Controlar nomenclatura de ID em páginas de conteúdo (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_05_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_05_CS.pdf)
 
-> Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindConrol). Aborda esse problema e soluções alternativas. Também descreve como acessar programaticamente o valor de ClientID resultante.
+> Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindControl). Aborda esse problema e soluções alternativas. Também descreve como acessar programaticamente o valor de ClientID resultante.
 
 
 ## <a name="introduction"></a>Introdução
@@ -83,7 +83,7 @@ Neste ponto marcação declarativa do controle de conteúdo deve ser semelhante 
 Figura 3 mostra a página quando visualizado no designer do Visual Studio.
 
 
-[![A página inclui três controles da Web: uma caixa de texto, botão e Label](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
+[![The inclui três Web controles de página: uma caixa de texto, botão e Label](control-id-naming-in-content-pages-cs/_static/image4.png)](control-id-naming-in-content-pages-cs/_static/image3.png)
 
 **Figura 03**: Os página inclui três controles da Web: uma caixa de texto, botão e Label ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-cs/_static/image5.png))
 
@@ -133,7 +133,7 @@ Embora a sintaxe usada para chamar o `FindControl` método difere ligeiramente n
 Depois de inserir esse código, visite o `IDIssues.aspx` página por meio de um navegador, insira sua idade e clique no botão "Enviar". Ao clicar no botão "Enviar" um `NullReferenceException` é gerado (consulte a Figura 5).
 
 
-[![Uma NullReferenceException é gerada](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
+[![A É acionado NullReferenceException](control-id-naming-in-content-pages-cs/_static/image8.png)](control-id-naming-in-content-pages-cs/_static/image7.png)
 
 **Figura 05**: Um `NullReferenceException` é gerado ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-cs/_static/image9.png))
 
@@ -173,7 +173,7 @@ Felizmente, uma referência para a página mestra é acessível por meio de `Pag
 Neste momento, visitando a página por meio de um navegador, inserindo sua idade e clicando no botão "Enviar" exibe a mensagem no `Results` rotular, conforme o esperado.
 
 
-[![A idade do usuário é exibida no rótulo](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
+[![TIdade do usuário é exibida no rótulo](control-id-naming-in-content-pages-cs/_static/image11.png)](control-id-naming-in-content-pages-cs/_static/image10.png)
 
 **Figura 06**: A idade do usuário é exibida no rótulo ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-cs/_static/image12.png))
 
@@ -200,7 +200,7 @@ Adicione o seguinte código para o `PageExtensionMethods.cs` arquivo de classe p
 Com esse código funcionando, retornar para o `IDIssues.aspx` classe code-behind da página e comente atual `FindControl` chamadas de método. Substitua-as por chamadas para `Page.FindControlRecursive("controlID")`. O que é interessante sobre os métodos de extensão é que eles aparecem diretamente em listas de lista suspensa do IntelliSense. Como mostra a Figura 7, quando você digitar página e, em seguida, pressionar período, o `FindControlRecursive` método está incluído o IntelliSense lista suspensa, juntamente com os outros `Control` métodos de classe.
 
 
-[![Métodos de extensão são incluídos no IntelliSense suspensos](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
+[![EMétodos de xtensão são incluídos no IntelliSense suspensas](control-id-naming-in-content-pages-cs/_static/image14.png)](control-id-naming-in-content-pages-cs/_static/image13.png)
 
 **Figura 07**: Métodos de extensão são incluídos no IntelliSense suspensas ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-cs/_static/image15.png))
 

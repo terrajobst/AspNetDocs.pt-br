@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/error-handling/exception-handling
-title: Tratamento de exceções em API Web ASP.NET | Microsoft Docs
+title: Tratamento de exceções em API Web ASP.NET - ASP.NET 4.x
 author: MikeWasson
 description: ''
 ms.author: riande
 ms.date: 03/12/2012
+ms.custom: seoapril2019
 ms.assetid: cbebeb37-2594-41f2-b71a-f4f26520d512
 msc.legacyurl: /web-api/overview/error-handling/exception-handling
 msc.type: authoredcontent
-ms.openlocfilehash: e6a04c490a1f7e3b2a450414b4be6f02804b9681
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 08b3663c1f9a08b8b3600113c32aeffb36c0d990
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422591"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399314"
 ---
-<a name="exception-handling-in-aspnet-web-api"></a>Tratamento de exceções em API Web ASP.NET
-====================
+# <a name="exception-handling-in-aspnet-web-api"></a>Tratamento de exceções em API Web ASP.NET
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Este artigo descreve o erro e tratamento de exceções em API Web do ASP.NET.

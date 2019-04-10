@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: b3193d33-2d0b-4d98-9712-58bd897c62ec
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: b666c3cef0b09c6d68cee581a3c27c08e3357cca
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b1e7bd0b16190b00e0e78a01ef71475e1c8d048a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59394816"
 ---
-<a name="part-6-using-data-annotations-for-model-validation"></a>Parte 6: Uso de anotações de dados para a validação de modelo
-====================
+# <a name="part-6-using-data-annotations-for-model-validation"></a>Parte 6: Uso de anotações de dados para a validação de modelo
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  

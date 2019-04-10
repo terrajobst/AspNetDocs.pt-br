@@ -8,15 +8,15 @@ ms.date: 11/06/2008
 ms.assetid: 424788ac-0a43-4063-99e7-db5aa4c66a9d
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-embed-an-image-in-an-email-with-aspnet
 msc.type: video
-ms.openlocfilehash: d046c988c060580b856fb65c90521c3a2815e760
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fce565c7746acaa10ef1cf68e3ed98e052cca43e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407270"
 ---
-<a name="how-do-i-embed-an-image-in-an-email-with-aspnet"></a>[Como fazer:] Inserir uma imagem em um Email com o ASP.NET
-====================
+# <a name="how-do-i-embed-an-image-in-an-email-with-aspnet"></a>[Como fazer:] Inserir uma imagem em um Email com o ASP.NET
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Chris Pels mostra como inserir uma imagem em um email com o ASP.NET. Ele cria um formulário da web (com campos para, de, assunto e corpo), usa a classe de AlternateView para criar o texto e HTML em versões de um email, armazena uma imagem em uma instância da classe LinkedResource, insere-o em AlternateView o HTML. Em seguida, ele adiciona as duas versões para o objeto MailMessage e envia o email duas vezes, primeiro com os recursos de recebimento do HTML habilitado e, em seguida, como somente texto. Ambas as mensagens de email aparecem no Outlook. A versão do HTML mostra a imagem incorporada; a versão de texto, não.

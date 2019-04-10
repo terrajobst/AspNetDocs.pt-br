@@ -8,15 +8,15 @@ ms.date: 10/15/2014
 ms.assetid: 92c84846-f0ea-4b5e-94b6-5004874eb060
 msc.legacyurl: /web-api/overview/security/individual-accounts-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 01d117260ef458453bee79285a37a8977221998c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29c3670ad7ab93acb0be878e5bd961d0ea446eee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396220"
 ---
-<a name="secure-a-web-api-with-individual-accounts-and-local-login-in-aspnet-web-api-22"></a>Proteger uma API Web com contas individuais e logon Local na API Web ASP.NET 2.2
-====================
+# <a name="secure-a-web-api-with-individual-accounts-and-local-login-in-aspnet-web-api-22"></a>Proteger uma API Web com contas individuais e logon Local na API Web ASP.NET 2.2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Baixe o aplicativo de exemplo](https://github.com/MikeWasson/LocalAccountsApp)
@@ -253,7 +253,7 @@ Quando o cliente solicita um recurso protegido, aqui está o que acontece no pip
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Identidade do ASP.NET](../../../identity/index.md)
+- [ASP.NET Identity](../../../identity/index.md)
 - [Noções básicas sobre os recursos de segurança no modelo do SPA para VS2013 RC](https://blogs.msdn.com/b/webdev/archive/2013/09/20/understanding-security-features-in-spa-template.aspx). Postagem do blog do MSDN por Hongye Sun.
 - [Dissecando o Web API indivíduo contas modelo – parte 2: Contas locais](http://leastprivilege.com/2013/11/26/dissecting-the-web-api-individual-accounts-templatepart-2-local-accounts/). Postagem de blog de Dominick Baier.
 - [Hospedar a autenticação e a API Web com OWIN](http://brockallen.com/2013/10/27/host-authentication-and-web-api-with-owin-and-active-vs-passive-authentication-middleware/). Uma boa explicação sobre `SuppressDefaultHostAuthentication` e `HostAuthenticationFilter` por Brock Allen.

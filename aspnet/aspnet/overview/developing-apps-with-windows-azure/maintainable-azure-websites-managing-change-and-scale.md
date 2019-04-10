@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: 315e89c81782edf0875c65afd27153102d733050
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424242"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409727"
 ---
-<a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratório prático: Sites sustentáveis do Azure: Gerenciamento da alteração e escala
-====================
+# <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratório prático: Sites sustentáveis do Azure: Gerenciamento da alteração e escala
+
 por [Web Camps equipe](https://twitter.com/webcamps)
 
 [Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
@@ -89,7 +89,7 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 > Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Exercícios
@@ -131,7 +131,7 @@ Nesta tarefa, você passará pelas etapas de habilitação **Entity Framework Co
 
     ![Habilitar migrações](maintainable-azure-websites-managing-change-and-scale/_static/image1.png "habilitar migrações")
 
-    *Habilitar migrações*
+    *Habilitando as migrações*
 
     > [!NOTE]
     > Este comando adiciona uma **migrações** pasta ao projeto de Geek Quiz que contém um arquivo chamado **Configuration.cs**. O **configuração** classe permite que você configurar o comportamento de migrações para o seu contexto.
@@ -625,7 +625,7 @@ Nesta tarefa, você usará a janela do Gerenciador de servidores do Visual Studi
 
     ![Conectar ao Windows Azure](maintainable-azure-websites-managing-change-and-scale/_static/image62.png)
 
-    *Conectar-se para o Azure*
+    *Conecte-se ao Azure*
 4. Expanda o **Azure** nó, clique com botão direito **armazenamento** e selecione **anexar armazenamento externo...** .
 5. No **adicionar uma nova conta de armazenamento** caixa de diálogo, digite o **nome da conta** e **chave da conta** obtido na tarefa anterior e clique **Okey**.
 
@@ -772,7 +772,7 @@ Agora que **AutoEscala** tiver sido configurado, você aprenderá a criar um **p
     ![Criar um novo projeto](maintainable-azure-websites-managing-change-and-scale/_static/image79.png "criando um novo projeto")
 
     *Criar um novo projeto*
-2. No **novo projeto** caixa de diálogo, selecione **projeto de teste de carga e desempenho na Web** sob o **Visual C# | Teste** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie o projeto *WebAndLoadTestProject*, escolha um **local** e clique em **Okey**.
+2. No **novo projeto** caixa de diálogo, selecione **projeto de teste de carga e desempenho na Web** sob o **Visual c# | Teste** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie o projeto *WebAndLoadTestProject*, escolha um **local** e clique em **Okey**.
 
     ![Criar um novo projeto de teste de carga e da Web](maintainable-azure-websites-managing-change-and-scale/_static/image80.png "criando um novo projeto de teste de carga e Web")
 
@@ -909,7 +909,7 @@ Agora você irá executar o teste de carga que você criou na tarefa anterior e 
     > - Reduzir os valores mínimos e máximo do **Target CPU** intervalo na configuração de dimensionamento automático do seu aplicativo web
     > - Executar o teste de carga na nuvem com o **planos de teste do Azure**. Obter mais informações [aqui](/azure/devops/test/load-test/index?view=vsts)
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
-title: Uso de TextBoxWatermark em um FormView (C#) | Microsoft Docs
+title: Uso de TextBoxWatermark em um FormView (c#) | Microsoft Docs
 author: wenz
 description: O controle TextBoxWatermark do AJAX Control Toolkit estende uma caixa de texto para que um texto seja exibido dentro da caixa. Quando um usuário clica na caixa de-eu...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e6ee90bf-32a5-4987-a384-15cc7dd30c8a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 272befe4182a459c0e1f3b6668d252d9ba4715d0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 10c877e072d5caf23e78f49ebc71387fde20393d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038313"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393607"
 ---
-<a name="using-textboxwatermark-in-a-formview-c"></a>Uso de TextBoxWatermark em um FormView (C#)
-====================
+# <a name="using-textboxwatermark-in-a-formview-c"></a>Uso de TextBoxWatermark em um FormView (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/TextBoxWatermark1.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/textboxwatermark1CS.pdf)
@@ -49,7 +49,7 @@ Lembre-se o nome (`ID`) da fonte de dados, pois ele será usado o `DataSourceID`
 Agora quando o usuário altera no modo de inserção do `FormView` controlar, o campo de texto para o novo fornecedor é previamente preenchido obrigado a `TextBoxWatermarkExtender` controle. Um clique na caixa de texto permite que o texto do enchimento desaparecer.
 
 
-[![A marca d'água no campo vem do extensor](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
+[![Tmarca d'água de he no campo vem do extensor](using-textboxwatermark-in-a-formview-cs/_static/image2.png)](using-textboxwatermark-in-a-formview-cs/_static/image1.png)
 
 A marca d'água no campo vem do extensor ([clique para exibir a imagem em tamanho normal](using-textboxwatermark-in-a-formview-cs/_static/image3.png))
 

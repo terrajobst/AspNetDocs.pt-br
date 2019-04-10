@@ -8,15 +8,15 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 93ee29ae125e9442ee755998768a8105dfb485c0
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424294"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409714"
 ---
-<a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
-====================
+# <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
+
 > Este documento fornece uma visão geral de muitos dos novos recursos do ASP.NET que estão incluídos no.NET Framework 4 e no Visual Studio 2010.
 > 
 > [Baixe este white paper](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_and_Visual_Studio_2010_Web_Development_Overview.pdf)
@@ -77,7 +77,7 @@ ms.locfileid: "58424294"
 [Novos atributos para exibição do controle e suporte a enumerações](#0.2__Toc253429286 "_Toc253429286")  
 [Suporte aprimorado para filtros](#0.2__Toc253429287 "_Toc253429287")
 
-**[Visual Studio 2010 Web Development Improvements](#0.2__Toc253429288 "_Toc253429288")**  
+**[Melhorias de desenvolvimento da Web do Visual Studio 2010](#0.2__Toc253429288 "_Toc253429288")**  
 [CSS compatibilidade aprimorada](#0.2__Toc253429289 "_Toc253429289")  
 [HTML e JavaScript trechos](#0.2__Toc253429290 "_Toc253429290")  
 [JavaScript IntelliSense Enhancements](#0.2__Toc253429291 "_Toc253429291")
@@ -202,7 +202,7 @@ ASP.NET 4 também permite que você configure os caracteres que são usados pela
 
 [!code-xml[Main](overview/samples/sample11.xml)]
 
-Por padrão, o <em>requestPathInvalidChars</em> atributo define oito caracteres como inválido. (Na cadeia de caracteres que é atribuída a <em>requestPathInvalidChars</em> por padrão<em>,</em>o menor que (&lt;), maior que (&gt;) e "e" comercial (&amp;) são caracteres codificado, pois o `Web.config` arquivo é um arquivo XML.) Você pode personalizar o conjunto de caracteres inválidos, conforme necessário.
+Por padrão, o *requestPathInvalidChars* atributo define oito caracteres como inválido. (Na cadeia de caracteres que é atribuída a *requestPathInvalidChars* por padrão, o menor que (&lt;), maior que (&gt;) e "e" comercial (&amp;) caracteres são codificados, porque o `Web.config` arquivo é um arquivo XML). Você pode personalizar o conjunto de caracteres inválidos, conforme necessário.
 
 > [!NOTE]
 > Observação ASP.NET 4 sempre rejeita os caminhos de URL que contêm caracteres no intervalo ASCII de 0x00 a 0x1F, pois esses são os caracteres de URL inválidos conforme definido no RFC 2396 da IETF ([http://www.ietf.org/rfc/rfc2396.txt](http://www.ietf.org/rfc/rfc2396.txt)). Em versões do Windows Server que executam o IIS 6 ou superior, o driver de dispositivo do protocolo HTTP. sys recusa automaticamente as URLs com esses caracteres.
@@ -411,13 +411,13 @@ Como você pode ver, o código desabilita o estado de exibição para o controle
 
 O efeito dessas configurações é que, quando a página for carregada na primeira vez, a saída a seguir é exibida no navegador:
 
-Desabilitado `: [DynamicValue]`
+Disabled `: [DynamicValue]`
 
 Habilitado:`[DynamicValue]`
 
 Depois de um postback, no entanto, a seguinte saída é exibida:
 
-Desabilitado `: [DeclaredValue]`
+Disabled `: [DeclaredValue]`
 
 Habilitado:`[DynamicValue]`
 
@@ -628,7 +628,7 @@ O *RouteParameter* classe permite que você especifique os dados de rota como um
 
 [!code-aspx[Main](overview/samples/sample46.aspx)]
 
-Nesse caso, o valor de searchterm de parâmetro de rota será usado para o @companyname parâmetro na <em>selecione</em> instrução.
+Nesse caso, o valor de searchterm de parâmetro de rota será usado para o @companyname parâmetro na *selecione* instrução.
 
 <a id="0.2__Toc224729037"></a><a id="0.2__Toc253429261"></a><a id="0.2__Toc243304635"></a>
 
@@ -982,10 +982,10 @@ Em seguida, você pode definir uma classe CSS que se aplica apenas à *ocultos* 
 Por padrão, os seguintes controles de servidor Web do ASP.NET que dão suporte a modelos são automaticamente encapsulados em uma tabela externa que é usada para aplicar estilos embutidos:
 
 - *FormView*
-- *Login*
+- *logon*
 - *PasswordRecovery*
 - *ChangePassword*
-- *Assistente*
+- *Wizard*
 - *CreateUserWizard*
 
 Uma nova propriedade chamada *RenderOuterTable* foi adicionado a esses controles que permite que a tabela externa a ser removido da marcação. Por exemplo, considere o exemplo a seguir de um *FormView* controle:
@@ -1279,7 +1279,7 @@ O designer do Visual Web Developer no Visual Studio 2010 foi atualizado para mel
 
 ### <a name="html-and-javascript-snippets"></a>Trechos de JavaScript e HTML
 
-No editor de HTML, IntelliSense é preenchida automaticamente nomes de marca. O recurso de trechos de código do IntelliSense é preenchida automaticamente marcas inteiras e muito mais. No Visual Studio 2010, trechos de código do IntelliSense têm suporte para JavaScript, juntamente com o C# e Visual Basic, que foram suportados nas versões anteriores do Visual Studio.
+No editor de HTML, IntelliSense é preenchida automaticamente nomes de marca. O recurso de trechos de código do IntelliSense é preenchida automaticamente marcas inteiras e muito mais. No Visual Studio 2010, trechos de código do IntelliSense têm suporte para JavaScript, juntamente com o c# e Visual Basic, que foram suportados nas versões anteriores do Visual Studio.
 
 Visual Studio 2010 inclui mais de 200 trechos de código que ajudam você a auto-completar ASP.NET e HTML marcas comuns, incluindo os atributos necessários (como runat = "server") e específicos a uma marca de atributos comuns (como *identificação*,  *DataSourceID*, *ControlToValidate*, e *texto*).
 

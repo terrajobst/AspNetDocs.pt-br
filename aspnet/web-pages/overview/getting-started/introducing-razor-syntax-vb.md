@@ -8,15 +8,15 @@ ms.date: 02/07/2014
 ms.assetid: 5da59646-e973-41cd-88a9-c6b2c0594027
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 17a3a4925766b74446955a8e3a6fddbf9d29a721
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e6b63afb9492e810e19999c7c7ffe074ad510bda
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59406763"
 ---
-<a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introdução à programação Web do ASP.NET usando a sintaxe do Razor (Visual Basic)
-====================
+# <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-visual-basic"></a>Introdução à programação Web do ASP.NET usando a sintaxe do Razor (Visual Basic)
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este artigo fornece uma visão geral da programação com páginas da Web do ASP.NET usando a sintaxe do Razor e o Visual Basic. O ASP.NET é uma tecnologia da Microsoft para a execução de páginas da web dinâmicas em servidores web.
@@ -37,10 +37,10 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > Este tutorial também funciona com ASP.NET Web Pages 2.
 
 
-A maioria dos exemplos de como usar páginas da Web ASP.NET com sintaxe do Razor usar C#. Mas a sintaxe do Razor também suporta Visual Basic. Para programar uma página da web ASP.NET no Visual Basic, você cria uma página da web com um *. vbhtml* extensão de nome de arquivo e, em seguida, adicione o código do Visual Basic. Este artigo fornece uma visão geral de como trabalhar com a linguagem Visual Basic e a sintaxe para criar páginas da Web ASP.NET.
+A maioria dos exemplos de como usar páginas da Web ASP.NET com sintaxe do Razor usar c#. Mas a sintaxe do Razor também suporta Visual Basic. Para programar uma página da web ASP.NET no Visual Basic, você cria uma página da web com um *. vbhtml* extensão de nome de arquivo e, em seguida, adicione o código do Visual Basic. Este artigo fornece uma visão geral de como trabalhar com a linguagem Visual Basic e a sintaxe para criar páginas da Web ASP.NET.
 
 > [!NOTE]
-> Os modelos de site padrão para o Microsoft WebMatrix (**padaria**, **Galeria de fotos**, e **Starter Site**, etc.) estão disponíveis nas versões C# e Visual Basic. Você pode instalar os modelos do Visual Basic, como pacotes NuGet. Modelos de site são instalados na pasta raiz do seu site em uma pasta chamada *Microsoft Templates*.
+> Os modelos de site padrão para o Microsoft WebMatrix (**padaria**, **Galeria de fotos**, e **Starter Site**, etc.) estão disponíveis nas versões c# e Visual Basic. Você pode instalar os modelos do Visual Basic, como pacotes NuGet. Modelos de site são instalados na pasta raiz do seu site em uma pasta chamada *Microsoft Templates*.
 
 
 ## <a name="the-top-8-programming-tips"></a>Principais dicas de programação 8
@@ -179,7 +179,7 @@ Este procedimento mostra como criar uma página que ilustra as técnicas de prog
 
 Anteriormente, você viu um exemplo básico de como criar uma página da web do ASP.NET e como você pode adicionar código de servidor a marcação HTML. Aqui você aprenderá as Noções básicas de como usar o Visual Basic para escrever código de servidor ASP.NET usando a sintaxe do Razor &#8212; ou seja, as regras linguagem de programação.
 
-Se você tiver experiência com programação (especialmente se você já usou o C, C++, C#, Visual Basic ou JavaScript), grande parte o que você leia aqui será familiar. Você provavelmente precisará familiarizar-se apenas com como o código do WebMatrix é adicionado a marcação na *. vbhtml* arquivos.
+Se você tiver experiência com programação (especialmente se você já usou o C, C++, c#, Visual Basic ou JavaScript), grande parte o que você leia aqui será familiar. Você provavelmente precisará familiarizar-se apenas com como o código do WebMatrix é adicionado a marcação na *. vbhtml* arquivos.
 
 ### <a id="BM_CombiningTextMarkupAndCode"></a>  A combinação de texto, marcação e código em blocos de código
 
@@ -284,7 +284,9 @@ A tabela a seguir lista alguns métodos comuns de conversão e teste para variá
         <strong>Example</strong>
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsInt(), IsInt()`
@@ -296,7 +298,9 @@ A tabela a seguir lista alguns métodos comuns de conversão e teste para variá
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample23.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsBool(), IsBool()`
@@ -308,7 +312,9 @@ A tabela a seguir lista alguns métodos comuns de conversão e teste para variá
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample24.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsFloat(), IsFloat()`
@@ -320,7 +326,9 @@ A tabela a seguir lista alguns métodos comuns de conversão e teste para variá
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample25.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsDecimal(), IsDecimal()`
@@ -332,7 +340,9 @@ A tabela a seguir lista alguns métodos comuns de conversão e teste para variá
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample26.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AsDateTime(), IsDateTime()`
@@ -344,7 +354,9 @@ A tabela a seguir lista alguns métodos comuns de conversão e teste para variá
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample27.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `ToString()`
@@ -374,7 +386,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         <strong>Examples</strong>
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `+ - * /`
@@ -386,7 +400,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample29.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `=`
@@ -398,7 +414,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample30.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `<>`
@@ -410,7 +428,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample31.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `< > <= >=`
@@ -422,7 +442,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample32.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `&`
@@ -434,7 +456,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample33.vbhtml)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `+= -=`
@@ -446,7 +470,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample34.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `.`
@@ -458,7 +484,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample35.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `()`
@@ -470,7 +498,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vbhtml[Main](introducing-razor-syntax-vb/samples/sample36.vbhtml)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `Not`
@@ -482,7 +512,9 @@ Um operador é uma palavra-chave ou um caractere que informa ao ASP.NET que tipo
         [!code-vb[Main](introducing-razor-syntax-vb/samples/sample37.vb)]
     :::column-end:::
 :::row-end:::
-* * *
+
+---
+
 :::row:::
     :::column:::
         `AndAlso OrElse`

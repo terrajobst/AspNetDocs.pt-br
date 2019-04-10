@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: 18700815-8e6c-4489-91af-7ea9dab6529e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-ajax-to-deliver-dynamic-updates
 msc.type: authoredcontent
-ms.openlocfilehash: 71e566523d658eb8198453f354a12e63a4c38495
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 56ebc40aa500b62811bac0a5041fa9aa4f91f4ae
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421031"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391046"
 ---
-<a name="use-ajax-to-deliver-dynamic-updates"></a>Usar o AJAX para fornecer atualizações dinâmicas
-====================
+# <a name="use-ajax-to-deliver-dynamic-updates"></a>Usar o AJAX para fornecer atualizações dinâmicas
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -114,7 +114,7 @@ Para usar o jQuery primeiro vamos adicionar uma referência de script para ele. 
 
 *Dica: Verifique se que você instalou o hotfix do intellisense do JavaScript para o VS 2008 SP1 que habilita o suporte mais amplo de intellisense para arquivos JavaScript (incluindo jQuery). Você pode baixá-lo de: http://tinyurl.com/vs2008javascripthotfix*
 
-Código escrito usando o JQuery geralmente usa um global "$ ()" método de JavaScript que recupera um ou mais elementos HTML usando um seletor de CSS. Por exemplo, <em>$("#rsvpmsg")</em> seleciona qualquer elemento HTML com a id de rsvpmsg, enquanto <em>$(".something")</em> selecionará todos os elementos com o "algo" CSS nome de classe. Você também pode escrever consultas mais avançadas, como "retornar todos os botões de opção selecionado" usando uma consulta de seletor como: <em>$("entrada [@type= rádio] [@checked]")</em>.
+Código escrito usando o JQuery geralmente usa um global "$ ()" método de JavaScript que recupera um ou mais elementos HTML usando um seletor de CSS. Por exemplo, *$("#rsvpmsg")* seleciona qualquer elemento HTML com a id de rsvpmsg, enquanto *$(".something")* selecionará todos os elementos com o "algo" CSS nome de classe. Você também pode escrever consultas mais avançadas, como "retornar todos os botões de opção selecionado" usando uma consulta de seletor como: *$("entrada [@type= rádio] [@checked]")*.
 
 Depois de selecionar elementos, você pode chamar métodos neles para tomar uma ação, como ocultá-las: *$("#rsvpmsg").hide();*
 

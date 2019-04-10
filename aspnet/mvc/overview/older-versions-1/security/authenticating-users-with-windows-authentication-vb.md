@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 532fa051-7d5c-4d6d-87f6-339ce4b84c44
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e37508dedd4243dd1a1638e68760f6f4310e61a8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d6b48d676c2dd90fc052b338f31a389e0fb809be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59402304"
 ---
-<a name="authenticating-users-with-windows-authentication-vb"></a>Autenticar usuários com a autenticação do Windows (VB)
-====================
+# <a name="authenticating-users-with-windows-authentication-vb"></a>Autenticar usuários com a autenticação do Windows (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como usar a autenticação do Windows no contexto de um aplicativo MVC. Você aprenderá como habilitar a autenticação do Windows dentro do arquivo de configuração do seu aplicativo web e como configurar a autenticação com o IIS. Por fim, você aprenderá como usar o atributo [autorizar] para restringir o acesso a ações do controlador para determinados usuários do Windows ou grupos.
@@ -69,7 +69,7 @@ Depois de habilitar a autenticação do Windows, você pode usar o &lt;autorizar
 
 Por exemplo, o controlador Home na listagem 1 expõe três ações chamadas Index (), CompanySecrets() e StephenSecrets(). Qualquer pessoa pode invocar a ação Index (). No entanto, somente os membros do grupo Windows local gerentes podem invocar a ação de CompanySecrets(). Por fim, somente o usuário de domínio do Windows chamado Stephen (no domínio Redmond) pode invocar a ação de StephenSecrets().
 
-**Listing 1 – Controllers\HomeController.vb**
+**Listagem 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-windows-authentication-vb/samples/sample2.vb)]
 

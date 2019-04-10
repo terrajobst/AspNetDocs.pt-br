@@ -8,15 +8,15 @@ ms.date: 02/25/2011
 ms.assetid: 76ac6b38-ca93-4d8f-8a72-9e46c82054ab
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/displaying-data-in-a-grid
 msc.type: video
-ms.openlocfilehash: a8da9a5f454ce94b22365bc302cd2348240bd09b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 64d13293ba4575c035965ce173e233f1ed612b72
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037723"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403487"
 ---
-<a name="displaying-data-in-a-grid"></a>Exibir dados em uma grade
-====================
+# <a name="displaying-data-in-a-grid"></a>Exibir dados em uma grade
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Acompanhamento de vídeo exibindo dados em um tutorial de grade

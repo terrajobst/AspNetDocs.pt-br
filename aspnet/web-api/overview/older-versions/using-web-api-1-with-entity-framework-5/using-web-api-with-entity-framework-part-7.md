@@ -8,15 +8,15 @@ ms.date: 07/04/2012
 ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 91a6496e2640668c58ec0493d47d909e2de67367
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421344"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409259"
 ---
-<a name="part-7-creating-the-main-page"></a>Parte 7: Criação da página principal
-====================
+# <a name="part-7-creating-the-main-page"></a>Parte 7: Criação da página principal
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Baixe o projeto concluído](http://code.msdn.microsoft.com/ASP-NET-Web-API-with-afa30545)
@@ -83,7 +83,7 @@ Isso itera na matriz de produtos e exibe o nome e o preço. O botão "Adicionar 
 
 As chamadas do botão "Adicionar a ordem de" `addItemToCart` sobre o `ProductViewModel` instância para o produto. Isso demonstra um recurso interessante do Knockout. js: Quando um modelo de exibição contiver outros modelos de exibição, você pode aplicar as associações ao modelo interno. Neste exemplo, as associações de dentro de `foreach` são aplicadas a cada uma da `ProductViewModel` instâncias. Essa abordagem é muito mais fácil do que colocar toda a funcionalidade em um único modelo de exibição.
 
-**Cart**
+**Carrinho**
 
 Aqui estão as associações para o carrinho de:
 
@@ -91,7 +91,7 @@ Aqui estão as associações para o carrinho de:
 
 Isso itera na matriz de carrinho e exibe o nome, preço e quantidade. Observe que o link "Remover" e o botão "Criar Order" são associados a funções de modelo de exibição.
 
-**Pedidos**
+**Orders**
 
 Aqui estão as vinculações para a lista de pedidos:
 
@@ -117,4 +117,4 @@ Recursos adicionais:
 - [Entity Framework Developer Center](https://msdn.microsoft.com/data/ef)
 
 > [!div class="step-by-step"]
-> [Anterior](using-web-api-with-entity-framework-part-6.md)
+> [Voltar](using-web-api-with-entity-framework-part-6.md)

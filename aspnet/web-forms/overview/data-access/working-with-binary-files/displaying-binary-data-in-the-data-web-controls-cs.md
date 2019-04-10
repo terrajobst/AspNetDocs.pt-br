@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
-title: Exibindo dados binários na Web dados controles (C#) | Microsoft Docs
+title: Exibindo dados binários na Web dados controles (c#) | Microsoft Docs
 author: rick-anderson
 description: Este tutorial vamos examinar as opções para apresentar dados binários em uma página da Web, incluindo a exibição de um arquivo de imagem e o provisionamento de um link de 'Download' f...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/27/2007
 ms.assetid: 5cbeb9f8-5f92-4ba8-87ae-0b4d460ae6d4
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/displaying-binary-data-in-the-data-web-controls-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 026fce7544f40ff333a5c0a500bc53c7fd434080
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c6c41ba5b5414da689e63ef521f1cf22e0b55701
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404280"
 ---
-<a name="displaying-binary-data-in-the-data-web-controls-c"></a>Exibir dados binários nos controles de dados da Web (C#)
-====================
+# <a name="displaying-binary-data-in-the-data-web-controls-c"></a>Exibir dados binários nos controles de dados da Web (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_55_CS.exe) ou [baixar PDF](displaying-binary-data-in-the-data-web-controls-cs/_static/datatutorial55cs1.pdf)
@@ -41,7 +41,7 @@ No tutorial anterior, vimos como usar o controle FileUpload. Portanto, você pod
 Este download s do tutorial, você encontrará sete arquivos folheto PDF no `~/Brochures` pasta, um para cada uma das categorias, exceto Frutos do mar. Omiti, intencionalmente, adicionando um folheto Frutos do mar para ilustrar como lidar com cenários em que nem todos os registros têm dados binários associados. Para atualizar o `Categories` da tabela com esses valores, clique com botão direito no `Categories` nó no Gerenciador de servidores e escolha Mostrar dados da tabela. Em seguida, insira os caminhos virtuais para os arquivos de folheto para cada categoria que tem um folheto, como mostra a Figura 1. Como não há nenhum folheto para a categoria de Frutos do mar, deixe seus `BrochurePath` valor da coluna s como `NULL`.
 
 
-[![Insira manualmente os valores para a coluna de BrochurePath categorias tabela s](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.png)
+[![Manualmente, insira os valores para a tabela de categorias s BrochurePath coluna](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image1.png)
 
 **Figura 1**: Insira manualmente os valores para o `Categories` tabela s `BrochurePath` coluna ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image2.png))
 
@@ -53,7 +53,7 @@ Com o `BrochurePath` valores fornecidos para o `Categories` tabela, podemos est�
 Comece arrastando um GridView da caixa de ferramentas para o Designer do `DisplayOrDownloadData.aspx` página o `BinaryData` pasta. Definir o s GridView `ID` para `Categories` e por meio de GridView s marca inteligente, escolha vinculá-la a uma nova fonte de dados. Especificamente, associá-lo a um ObjectDataSource denominado `CategoriesDataSource` que recupera dados usando o `CategoriesBLL` objeto s `GetCategories()` método.
 
 
-[![Criar um novo ObjectDataSource chamado CategoriesDataSource](displaying-binary-data-in-the-data-web-controls-cs/_static/image2.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image3.png)
+[![Ccriar um novo ObjectDataSource chamado CategoriesDataSource](displaying-binary-data-in-the-data-web-controls-cs/_static/image2.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image3.png)
 
 **Figura 2**: Criar um novo ObjectDataSource nomeado `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image4.png))
 
@@ -76,7 +76,7 @@ Depois de concluir o Assistente Configurar fonte de dados, o Visual Studio adici
 Exibir esta página por meio de um navegador (consulte a Figura 5). Cada uma das oito categorias está listada. As sete categorias com `BrochurePath` valores têm a `BrochurePath` valor exibido no BoundField respectivo. Frutos do mar, que tem um `NULL` de valor para o seu `BrochurePath`, exibe uma célula vazia.
 
 
-[![Cada categoria é o nome, descrição e o valor de BrochurePath está listada](displaying-binary-data-in-the-data-web-controls-cs/_static/image5.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image9.png)
+[![EACH categoria s nome, descrição e o valor de BrochurePath é listado](displaying-binary-data-in-the-data-web-controls-cs/_static/image5.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image9.png)
 
 **Figura 5**: Cada categoria s nome, descrição, e `BrochurePath` valor é listado ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image10.png))
 
@@ -92,12 +92,12 @@ Em vez de exibir o texto do `BrochurePath` coluna, queremos criar um link para a
 Isso adicionará uma coluna de links para o controle GridView, como mostra a Figura 7. Clicar em um link de exibição folheto irá exibir o PDF diretamente no navegador ou solicitar que o usuário baixe o arquivo, dependendo se um leitor de PDF está instalado e as configurações do navegador s.
 
 
-[![Uma categoria s folheto pode ser exibido clicando no Link de folheto do modo de exibição](displaying-binary-data-in-the-data-web-controls-cs/_static/image7.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.png)
+[![A Folheto categoria s pode ser exibido clicando no Link de folheto do modo de exibição](displaying-binary-data-in-the-data-web-controls-cs/_static/image7.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.png)
 
 **Figura 7**: Uma categoria s folheto podem ser exibidos clicando no Link de folheto do modo de exibição ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image12.png))
 
 
-[![A categoria s folheto PDF é exibida](displaying-binary-data-in-the-data-web-controls-cs/_static/image8.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.png)
+[![Tele categoria s folheto PDF é exibido](displaying-binary-data-in-the-data-web-controls-cs/_static/image8.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.png)
 
 **Figura 8**: A categoria s folheto PDF é exibida ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image14.png))
 
@@ -131,7 +131,7 @@ Este método determina se passado `object` valor é um banco de dados `NULL` e, 
 Figura 10 mostra a página após essas alterações foram aplicadas. Observe que a categoria de Frutos do mar s `BrochurePath` campo agora exibe o texto do folheto de nenhum disponível.
 
 
-[![O texto não folheto disponíveis é exibida para as categorias sem um folheto](displaying-binary-data-in-the-data-web-controls-cs/_static/image10.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image15.png)
+[![Tele folheto disponíveis do texto não é exibido para as categorias sem um folheto](displaying-binary-data-in-the-data-web-controls-cs/_static/image10.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image15.png)
 
 **Figura 10**: O texto não folheto disponíveis é exibida para as categorias sem um folheto ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image16.png))
 
@@ -168,7 +168,7 @@ O `Response.ContentType` propriedade especifica o [tipo de MIME](http://en.wikip
 Com essa página foi criada, uma imagem de determinada categoria s pode ser exibida visitando `DisplayCategoryPicture.aspx?CategoryID=categoryID`. A Figura 11 mostra a imagem de categoria s Bebidas, que pode ser exibida no `DisplayCategoryPicture.aspx?CategoryID=1`.
 
 
-[![O s categoria Bebidas que imagem é exibida.](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image17.png)
+[![Tele categoria Bebidas s imagem é exibido](displaying-binary-data-in-the-data-web-controls-cs/_static/image11.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image17.png)
 
 **Figura 11**: O s categoria Bebidas imagem é exibida ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image18.png))
 
@@ -208,7 +208,7 @@ Depois de adicionar o ImageField, sua sintaxe declarativa do GridView s deve ser
 Reserve um tempo para exibir esta página por meio de um navegador. Observe como cada registro agora inclui uma imagem para a categoria.
 
 
-[![A categoria s imagem é exibida para cada linha](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image19.png)
+[![Tele categoria s imagem é exibido para cada linha](displaying-binary-data-in-the-data-web-controls-cs/_static/image13.gif)](displaying-binary-data-in-the-data-web-controls-cs/_static/image19.png)
 
 **Figura 13**: A categoria s imagem é exibida para cada linha ([clique para exibir a imagem em tamanho normal](displaying-binary-data-in-the-data-web-controls-cs/_static/image20.png))
 

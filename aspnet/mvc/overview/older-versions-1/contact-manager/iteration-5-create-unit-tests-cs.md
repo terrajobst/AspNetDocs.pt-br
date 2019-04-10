@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
-title: 'Iteração #5 – criar testes de unidade (C#) | Microsoft Docs'
+title: 'Iteração #5 – criar testes de unidade (c#) | Microsoft Docs'
 author: microsoft
 description: Na quinta iteração, podemos tornar nosso aplicativo mais fácil de manter e modificar adicionando testes de unidade. Vamos simular a nossas classes de modelo de dados e criar testes de unidade para o...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 28ad8f80-b8a5-444e-b478-8b15a846060c
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-5-create-unit-tests-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b2e96c996905bc73698d1c0b11df97d1dd366172
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 68080859e205283f56d8f543bfa06b76bb22a39d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408856"
 ---
-<a name="iteration-5--create-unit-tests-c"></a>Iteração #5 – criar testes de unidade (C#)
-====================
+# <a name="iteration-5--create-unit-tests-c"></a>Iteração #5 – criar testes de unidade (c#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar o código](iteration-5-create-unit-tests-cs/_static/contactmanager_5_cs1.zip)
@@ -24,7 +24,7 @@ por [Microsoft](https://github.com/microsoft)
 > Na quinta iteração, podemos tornar nosso aplicativo mais fácil de manter e modificar adicionando testes de unidade. Vamos simular a nossas classes de modelo de dados e criar testes de unidade para nossos controladores e lógica de validação.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (c#)
 
 Esta série de tutoriais, vamos criar um aplicativo de gerenciamento de contatos inteiro do início ao fim. O aplicativo Gerenciador de contatos permite que você armazene informações de contato - nomes, números de telefone e endereços de email - para obter uma lista de pessoas.
 
@@ -117,12 +117,12 @@ Antes de usar Moq, você precisará concluir as etapas a seguir:
 5. Depois de concluir essas etapas, sua pasta de referências deve ser semelhante a Figura 2.
 
 
-[![Como desbloquear Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![Unblocking Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
 **Figura 01**: Como desbloquear Moq ([clique para exibir a imagem em tamanho normal](iteration-5-create-unit-tests-cs/_static/image2.png))
 
 
-[![Referências depois de adicionar o Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![Rreferências depois de adicionar o Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
 **Figura 02**: Referências depois de adicionar o Moq ([clique para exibir a imagem em tamanho normal](iteration-5-create-unit-tests-cs/_static/image4.png))
 
@@ -185,7 +185,7 @@ Verifique se os testes restantes que quando o método CreateContact() é chamado
 Você pode executar os testes de unidade na listagem 1, selecionando a opção de menu **teste, execute todos os testes na solução (CTRL + R, um)**. Os resultados dos testes são exibidos na janela de resultados de teste (veja a Figura 4).
 
 
-[![Resultados de teste](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
+[![TResultados de est](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
 **Figura 04**: Resultados de teste ([clique para exibir a imagem em tamanho normal](iteration-5-create-unit-tests-cs/_static/image8.png))
 

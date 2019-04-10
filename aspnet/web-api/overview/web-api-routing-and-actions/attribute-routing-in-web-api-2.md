@@ -8,15 +8,15 @@ ms.date: 01/20/2014
 ms.assetid: 979d6c9f-0129-4e5b-ae56-4507b281b86d
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
 msc.type: authoredcontent
-ms.openlocfilehash: 22eb2fd748d52ec95e813ada8b1bf3b4826ad573
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 65e2268418501f89a77a0ba20f7960a618c2e9b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034273"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59405450"
 ---
-<a name="attribute-routing-in-aspnet-web-api-2"></a>Roteamento de atributo na API Web ASP.NET 2
-====================
+# <a name="attribute-routing-in-aspnet-web-api-2"></a>Roteamento de atributo na API Web ASP.NET 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 *Roteamento* é como API Web corresponde a um URI para uma ação. API Web 2 dá suporte a um novo tipo de roteamento, chamado *roteamento de atributo*. Como o nome implica, roteamento de atributo usa atributos para definir rotas. Roteamento de atributo fornece mais controle sobre os URIs na API web. Por exemplo, você pode criar facilmente os URIs que descrevem as hierarquias de recursos.
@@ -228,8 +228,8 @@ Como alternativa, você pode especificar um valor padrão dentro do modelo de ro
 
 Isso é quase o mesmo do exemplo anterior, mas há uma pequena diferença de comportamento quando o valor padrão é aplicado.
 
-- No primeiro exemplo ("{lcid?}"), o valor padrão de 1033 é atribuído diretamente para o parâmetro do método, portanto, o parâmetro terá esse valor exato.
-- No segundo exemplo ("{lcid = 1033}"), o valor padrão de "1033" percorre o processo de associação de modelos. O associador de modelo padrão será converter "1033" para o valor numérico 1033. No entanto, você pode conectar um associador de modelo personalizado, que pode fazer algo diferente.
+- No primeiro exemplo ("{lcid:int?}"), o valor padrão de 1033 é atribuído diretamente para o parâmetro do método, portanto, o parâmetro terá esse valor exato.
+- No segundo exemplo ("{lcid:int = 1033}"), o valor padrão de "1033" percorre o processo de associação de modelos. O associador de modelo padrão será converter "1033" para o valor numérico 1033. No entanto, você pode conectar um associador de modelo personalizado, que pode fazer algo diferente.
 
 (Na maioria dos casos, a menos que você tenha associadores de modelos personalizados em seu pipeline, as duas formas será equivalentes.)
 

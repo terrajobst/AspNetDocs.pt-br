@@ -1,38 +1,39 @@
 ---
 uid: web-api/index
-title: API Web ASP.NET | Microsoft Docs
+title: API Web ASP.NET - ASP.NET 4.x
 author: rick-anderson
 description: Baixar o ASP.NET MVC 4 e criar serviços HTTP que alcançam uma ampla gama de clientes.
 ms.author: riande
 ms.date: 01/17/2012
+ms.custom: seoapril2019
 ms.assetid: f571ca7a-c06b-400d-8051-f62f9f0bcc9b
 msc.legacyurl: /web-api
 msc.type: categoryindex
-ms.openlocfilehash: 3246478c9d159afce7e265af0a471d639ce202bf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c04719e06c6c0900c8f8268b73f833b525ea3dd6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59410832"
 ---
-<a name="aspnet-web-api"></a>ASP.NET Web API
-====================
+# <a name="aspnet-web-api"></a>ASP.NET Web API
+
 - [Diretrizes](overview/index.md)
 
-    - [Introdução](overview/getting-started-with-aspnet-web-api/index.md)
+    - [Guia de Introdução](overview/getting-started-with-aspnet-web-api/index.md)
 
         - [Introdução à API Web 2 (C#)](overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
         - [Resultados da ação na API Web 2](overview/getting-started-with-aspnet-web-api/action-results.md)
         - [Uso da API Web com Web Forms do ASP.NET](overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
-        - [Criação páginas de ajuda da API Web](overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-        - [Laboratório prático: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js](overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+        - [Criar páginas de ajuda da API Web](overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md)
+        - [Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET API Web e o Angular.js](overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
     - [Roteamento](overview/web-api-routing-and-actions/index.md)
 
         - [Roteamento na API Web](overview/web-api-routing-and-actions/routing-in-aspnet-web-api.md)
         - [Roteamento e seleção de ação na API Web](overview/web-api-routing-and-actions/routing-and-action-selection.md)
         - [Atribuir roteamento na API Web 2](overview/web-api-routing-and-actions/attribute-routing-in-web-api-2.md)
         - [Criar uma API REST com roteamento de atributo na API Web 2](overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
-    - [Trabalhando com os Dados](overview/data/index.md)
+    - [Trabalhando com dados](overview/data/index.md)
 
         - [Uso da API Web 2 com o Entity Framework 6](overview/data/using-web-api-with-entity-framework/index.md)
 
@@ -66,7 +67,7 @@ ms.locfileid: "57022363"
             - [Criar um ponto de extremidade OData v3](overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint.md)
             - [Suporte a relações de entidade no OData v3](overview/odata-support-in-aspnet-web-api/odata-v3/working-with-entity-relations.md)
             - [Ações de OData na API Web 2](overview/odata-support-in-aspnet-web-api/odata-v3/odata-actions.md)
-            - [Chamando um serviço OData em um cliente .NET (C#)](overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client.md)
+            - [Chamar um serviço OData em um cliente .NET (C#)](overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client.md)
         - [Suporte a opções de consulta de OData na API Web 2](overview/odata-support-in-aspnet-web-api/supporting-odata-query-options.md)
         - [Uso de $select, $expand e $value no OData da API Web 2](overview/odata-support-in-aspnet-web-api/using-select-expand-and-value.md)
         - [Convenções de roteamento no OData da API Web 2](overview/odata-support-in-aspnet-web-api/odata-routing-conventions.md)
@@ -79,7 +80,7 @@ ms.locfileid: "57022363"
         - [Negociação de conteúdo na API Web](overview/formats-and-model-binding/content-negotiation.md)
         - [Validação de modelo na API Web](overview/formats-and-model-binding/model-validation-in-aspnet-web-api.md)
         - [Associação de parâmetro na API Web](overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api.md)
-    - [Tratamento de erro](overview/error-handling/index.md)
+    - [Tratamento de erros](overview/error-handling/index.md)
 
         - [Tratamento de exceção na API Web](overview/error-handling/exception-handling.md)
         - [Tratamento de erro global na API Web 2](overview/error-handling/web-api-global-error-handling.md)
@@ -87,7 +88,7 @@ ms.locfileid: "57022363"
 
         - [Rastreamento na API Web 2](overview/testing-and-debugging/tracing-in-aspnet-web-api.md)
         - [Teste de unidade da API Web 2](overview/testing-and-debugging/unit-testing-with-aspnet-web-api.md)
-        - [Controladores de teste de unidade no ASP.NET Web API 2](overview/testing-and-debugging/unit-testing-controllers-in-web-api.md)
+        - [Controladores de teste de unidade no ASP.NET API Web 2](overview/testing-and-debugging/unit-testing-controllers-in-web-api.md)
         - [Simulação do Entity Framework ao realizar teste de unidade da API Web 2](overview/testing-and-debugging/mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
         - [Solução de problemas de erros HTTP 405 após a publicação de aplicativos da API Web 2](overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications.md)
     - [Segurança, autenticação e autorização](overview/security/index.md)
@@ -95,27 +96,27 @@ ms.locfileid: "57022363"
         - [Autenticação e autorização na API Web](overview/security/authentication-and-authorization-in-aspnet-web-api.md)
         - [Proteger uma API Web com contas individuais na API Web 2.2](overview/security/individual-accounts-in-web-api.md)
         - [Serviços de autenticação externa com a API Web (C#)](overview/security/external-authentication-services.md)
-        - [Impedindo ataques de CSRF (solicitação intersite forjada) na API Web](overview/security/preventing-cross-site-request-forgery-csrf-attacks.md)
+        - [Impedir ataques de CSRF (solicitação intersite forjada) na API Web](overview/security/preventing-cross-site-request-forgery-csrf-attacks.md)
         - [Habilitar solicitações entre origens na API Web 2](overview/security/enabling-cross-origin-requests-in-web-api.md)
         - [Filtros de autenticação na API Web 2](overview/security/authentication-filters.md)
         - [Autenticação básica na API Web](overview/security/basic-authentication.md)
         - [Autenticação de formulários na API Web](overview/security/forms-authentication.md)
         - [Autenticação Integrada do Windows](overview/security/integrated-windows-authentication.md)
-        - [Trabalhando com SSL](overview/security/working-with-ssl-in-web-api.md)
+        - [Trabalhar com SSL](overview/security/working-with-ssl-in-web-api.md)
     - [Implantação e hospedagem](overview/hosting-aspnet-web-api/index.md)
 
         - [Usar OWIN para auto-hospedar a API Web 2](overview/hosting-aspnet-web-api/use-owin-to-self-host-web-api.md)
         - [Hospedar a API Web 2 em uma função de trabalho do Azure](overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role.md)
     - [Tópicos avançados](overview/advanced/index.md)
 
-        - [Configurando a API Web 2](overview/advanced/configuring-aspnet-web-api.md)
+        - [Configurar a API Web 2](overview/advanced/configuring-aspnet-web-api.md)
         - [Injeção de dependência na API Web 2](overview/advanced/dependency-injection.md)
         - [Chamar uma API Web em um cliente .NET (C#)](overview/advanced/calling-a-web-api-from-a-net-client.md)
         - [Manipuladores de mensagens de HTTP na API Web](overview/advanced/http-message-handlers.md)
         - [Manipuladores de mensagens de HttpClient na API Web](overview/advanced/httpclient-message-handlers.md)
         - [Enviar dados de formulário HTML na API Web: Dados de formulário urlencoded](overview/advanced/sending-html-form-data-part-1.md)
-        - [Enviar dados de formulário HTML na API Web: Upload do arquivo e MIME com diversas partes](overview/advanced/sending-html-form-data-part-2.md)
-        - [Cookies HTTP no ASP.NET Web API](overview/advanced/http-cookies.md)
+        - [Enviar dados de formulário HTML na API Web: Carregamento do arquivo e MIME com diversas partes](overview/advanced/sending-html-form-data-part-2.md)
+        - [Cookies HTTP no ASP.NET API Web](overview/advanced/http-cookies.md)
     - [Versões](overview/releases/index.md)
 
         - [Novidades no OData da API Web 5.3](overview/releases/whats-new-in-aspnet-web-api-odata-53.md)
@@ -124,26 +125,26 @@ ms.locfileid: "57022363"
     - [Versões mais antigas](overview/older-versions/index.md)
 
         - [Habilitar operações CRUD na API Web 1](overview/older-versions/creating-a-web-api-that-supports-crud-operations.md)
-        - [Uso do ASP.NET Web API 1 com o Entity Framework 5](overview/older-versions/using-web-api-1-with-entity-framework-5/index.md)
+        - [Uso do ASP.NET API Web 1 com o Entity Framework 5](overview/older-versions/using-web-api-1-with-entity-framework-5/index.md)
 
             - [Visão geral e criação do projeto](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-1.md)
             - [Criação dos modelos de domínio](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-2.md)
             - [Criação de um controlador de administrador](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-3.md)
-            - [Adicionando uma exibição de administrador](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-4.md)
+            - [Adicionar uma exibição de administrador](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-4.md)
             - [Criação uma interface do usuário dinâmica com Knockout.js](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-5.md)
             - [Criação de controladores de produto e pedido](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-6.md)
             - [Criação da página principal](overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7.md)
         - [Auto-hospedar a API Web 1 (C#)](overview/older-versions/self-host-a-web-api.md)
-        - [Criar APIs RESTful com o ASP.NET Web API](overview/older-versions/build-restful-apis-with-aspnet-web-api.md)
+        - [Criar APIs RESTful com o ASP.NET API Web](overview/older-versions/build-restful-apis-with-aspnet-web-api.md)
 - [Vídeos](videos/index.md)
 
     - [Visão geral e Introdução](videos/getting-started/index.md)
 
         - [ASP.NET Web API](videos/getting-started/aspnet-web-api.md)
-        - [API Web ASP.NET, parte 1: Sua primeira API Web](videos/getting-started/your-first-web-api.md)
-        - [API Web ASP.NET, parte 2: Obtendo dados](videos/getting-started/getting-data.md)
-        - [API Web ASP.NET, parte 3: DELETE e Update](videos/getting-started/delete-and-update.md)
-        - [API Web ASP.NET, parte 4: Paginação e consulta](videos/getting-started/paging-and-querying.md)
-        - [API Web ASP.NET, parte 5: Validação personalizada](videos/getting-started/custom-validation.md)
-        - [API Web ASP.NET, parte 6: Autorização](videos/getting-started/authorization.md)
+        - [ASP.NET API Web, parte 1: Sua primeira API Web](videos/getting-started/your-first-web-api.md)
+        - [ASP.NET API Web, parte 2: Obter dados](videos/getting-started/getting-data.md)
+        - [ASP.NET API Web, parte 3: Excluir e atualizar](videos/getting-started/delete-and-update.md)
+        - [ASP.NET API Web, parte 4: Paginação e consulta](videos/getting-started/paging-and-querying.md)
+        - [ASP.NET API Web, parte 5: Validação personalizada](videos/getting-started/custom-validation.md)
+        - [ASP.NET API Web, parte 6: Autorização](videos/getting-started/authorization.md)
 - [Lista de exemplos de API Web](samples-list.md)

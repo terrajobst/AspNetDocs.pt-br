@@ -8,15 +8,15 @@ ms.date: 06/09/2009
 ms.assetid: cb061642-faf3-41b2-9372-69e13444d458
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 449b8eb26f3f6018fdd6c6dcc1de1c8d58214ac3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0ccb1a737fdfc3cf2ffdcc22131650e1b79cd2cb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045943"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407218"
 ---
-<a name="displaying-a-custom-error-page-c"></a>Exibição de uma página de erro personalizada (C#)
-====================
+# <a name="displaying-a-custom-error-page-c"></a>Exibição de uma página de erro personalizada (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_11_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial11_CustomErrors_cs.pdf)
@@ -167,7 +167,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 - [Páginas de erro, mais uma vez](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/)
 - [Diretrizes de design para exceções](https://msdn.microsoft.com/library/ms229014.aspx)
 - [Páginas de erro amigável](http://aspnet.4guysfromrolla.com/articles/090606-1.aspx)
-- [Tratando e gerando exceções](https://msdn.microsoft.com/library/5b2yeyab.aspx)
+- [Manipulando e lançando exceções](https://msdn.microsoft.com/library/5b2yeyab.aspx)
 - [Corretamente usando páginas de erro personalizada no ASP.NET](http://professionalaspnet.com/archive/2007/09/30/Properly-Using-Custom-Error-Pages-in-ASP.NET.aspx)
 
 > [!div class="step-by-step"]

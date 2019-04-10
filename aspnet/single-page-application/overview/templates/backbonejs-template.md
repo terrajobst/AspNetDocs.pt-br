@@ -8,15 +8,15 @@ ms.date: 04/04/2013
 ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 325c4f5370340b2e223521fada77cf0e78a67b5b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8148974eacd1db05947ba54fe40776df69f92290
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404111"
 ---
-<a name="backbone-template"></a>Modelo Backbone
-====================
+# <a name="backbone-template"></a>Modelo Backbone
+
 por [Mads Kristensen](https://github.com/madskristensen)
 
 > O modelo do SPA Backbone foi escrito por Kazi Manzur Rashid

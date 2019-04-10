@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 4a365e58-9b18-4bd2-bfd5-6981e7f2e179
 msc.legacyurl: /web-forms/videos/authentication
 msc.type: chapter
-ms.openlocfilehash: 00a91f03e05a56a3ebbe75f113b1330cffc57a99
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 68c1acdaaf1e6674f4dc3bcca0557382407ca147
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400107"
 ---
-<a name="authentication"></a>Autenticação
-====================
+# <a name="authentication"></a>Autenticação
+
 > Como implementar e gerenciar a segurança (autenticação) em um aplicativo ASP.NET.
 
 
@@ -28,7 +28,7 @@ ms.locfileid: "57021593"
 - [Adicionar dados personalizados ao método de autenticação](add-custom-data-to-the-authentication-method.md)
 - [Usar objetos de entidade de segurança personalizada](use-custom-principal-objects.md)
 - [Noções básicas sobre associações do ASP.NET](understanding-aspnet-memberships.md)
-- [Configurando o SQL para trabalhar com esquemas de associação](configuring-sql-to-work-with-membership-schemas.md)
+- [Configurar o SQL para trabalhar com esquemas de associação](configuring-sql-to-work-with-membership-schemas.md)
 - [Alterar as configurações de associação do esquema de associação padrão](changing-membership-settings-in-the-default-membership-schema.md)
 - [Criar contas de usuário com o assistente Criar usuário](creating-user-accounts-with-the-create-user-wizard.md)
 - [Criar contas de usuário por meio de programação](creating-user-accounts-programmatically.md)

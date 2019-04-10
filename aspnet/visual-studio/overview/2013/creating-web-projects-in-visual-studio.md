@@ -8,15 +8,15 @@ ms.date: 12/01/2014
 ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
-ms.openlocfilehash: 3d96d796d22c3511fedc45c024274300143b119b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a62c821159cd097507019d5efb29e01958ec9fba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398092"
 ---
-<a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Criação de Projetos Web do ASP.NET no Visual Studio 2013
-====================
+# <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Criação de Projetos Web do ASP.NET no Visual Studio 2013
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Este tópico explica as opções para a criação de projetos web ASP.NET no Visual Studio 2013 com atualização 3
@@ -81,7 +81,7 @@ Visual Studio inclui recursos que tornam mais fácil trabalhar com os serviços 
 - Criar e gerenciar aplicativos web ou máquinas virtuais que tornar seu aplicativo disponível pela Internet.
 - Exibir os logs criados pelo aplicativo conforme ele é executado na nuvem.
 - Execute no modo de depuração remotamente enquanto o aplicativo é executado na nuvem.
-- Viiew e gerenciar outros serviços do Azure, como bancos de dados SQL.
+- Exibir e gerenciar outros serviços do Azure, como bancos de dados SQL.
 
 Você pode [criar uma conta do Azure](https://www.windowsazure.com/pricing/free-trial/) que inclui serviços básicos, como aplicativos web gratuitamente, e se você for assinante do MSDN, você pode [ativar os benefícios de](https://azure.microsoft.com/pricing/member-offers/visual-studio-subscriptions/) que lhe dar créditos Azure adicionais serviços. 
 
@@ -383,7 +383,7 @@ Para obter informações sobre como criar aplicativos que usam **nuvem - organiz
 
 - [Autenticação do Azure](../2012/windows-azure-authentication.md)
 - [Adicionando logon ao seu aplicativo Web usando o Azure AD](https://msdn.microsoft.com/library/windowsazure/dn151790.aspx)
-- [Desenvolvendo aplicativos do ASP.NET com o Azure Active Directory](../../../identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
+- [Desenvolver aplicativos do ASP.NET com o Azure Active Directory](../../../identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
 - [Proteger API da Web ASP.NET com o Azure AD e os componentes Microsoft OWIN](https://msdn.microsoft.com/magazine/dn463788.aspx)
 
 Os tutoriais ainda não foram atualizados para o Visual Studio 2013; alguns dos quais os tutoriais direcionará você para fazer manualmente é automatizado no Visual Studio 2013.

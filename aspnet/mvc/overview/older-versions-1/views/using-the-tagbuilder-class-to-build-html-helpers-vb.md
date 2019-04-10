@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: ec26f264-d0ea-4031-9943-825505a3ac4b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 783c5f73709de37f79c472e10c79e284cf25f8fd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4fe34858aadb705ffb59e06ba805493d89aa4028
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049393"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403201"
 ---
-<a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>Usando a classe TagBuilder para criar auxiliares de HTML (VB)
-====================
+# <a name="using-the-tagbuilder-class-to-build-html-helpers-vb"></a>Usando a classe TagBuilder para criar auxiliares de HTML (VB)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther apresenta uma classe de utilitário útil na estrutura do ASP.NET MVC, a classe TagBuilder nomeada. Você pode usar a classe TagBuilder para criar facilmente as marcas HTML.
@@ -65,7 +65,7 @@ Depois de criar o auxiliar de imagem, você pode usar o auxiliar em suas exibiç
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-vb/samples/sample2.aspx)]
 
 
-[![A caixa de diálogo Novo projeto](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image1.png)
 
 **Figura 01**: Usando o auxiliar de imagem ([clique para exibir a imagem em tamanho normal](using-the-tagbuilder-class-to-build-html-helpers-vb/_static/image2.png))
 

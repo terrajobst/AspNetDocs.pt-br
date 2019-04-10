@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 92c70297-4430-4e4e-919a-9c2333a8d09a
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a319e2eb71da1bf693b1bd14ae368c844e7daeb1
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 256536150a585a4bb0304f23c3524b18d0f552f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59392372"
 ---
-<a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iteração #4 – tornar o aplicativo fracamente acoplado (VB)
-====================
+# <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iteração #4 – tornar o aplicativo fracamente acoplado (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar o código](iteration-4-make-the-application-loosely-coupled-vb/_static/contactmanager_4_vb1.zip)

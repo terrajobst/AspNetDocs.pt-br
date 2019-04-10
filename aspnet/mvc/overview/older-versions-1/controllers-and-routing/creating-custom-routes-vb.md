@@ -8,15 +8,15 @@ ms.date: 02/16/2009
 ms.assetid: 6ac5758b-6199-42af-adcb-21954b864951
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-custom-routes-vb
 msc.type: authoredcontent
-ms.openlocfilehash: cd7ad46161b3f44d915bc4b2fa201606b00d194a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a7b8b85ba1cf5c18e605eb8114a305272baf41a6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57035273"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59404865"
 ---
-<a name="creating-custom-routes-vb"></a>Criação de rotas personalizadas (VB)
-====================
+# <a name="creating-custom-routes-vb"></a>Criação de rotas personalizadas (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como adicionar rotas personalizadas para um aplicativo ASP.NET MVC. Neste tutorial, você aprenderá como modificar a tabela de rotas padrão no arquivo global. asax.
@@ -61,7 +61,7 @@ Observe que o método Entry() na listagem 2 aceita um parâmetro do tipo DateTim
 **Figura 1 – erro de conversão de parâmetro**
 
 
-[![A caixa de diálogo Novo projeto](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
 
 **Figura 01**: Erro de conversão de parâmetro ([clique para exibir a imagem em tamanho normal](creating-custom-routes-vb/_static/image2.png))
 

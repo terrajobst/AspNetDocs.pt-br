@@ -8,15 +8,15 @@ ms.date: 10/09/2014
 ms.assetid: 716264ae-ab72-45de-bfc5-53a6237089cf
 msc.legacyurl: /web-forms/overview/security/create-an-aspnet-web-forms-app-with-sms-two-factor-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: 7ad3b7a453a40f2708902ae5b9e5cb75b931d54d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2010de510cf44bba1b95d29dbdb573ab78f452f7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411352"
 ---
-<a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Criar um aplicativo de Web Forms do ASP.NET com autenticação de dois fatores por SMS (C#)
-====================
+# <a name="create-an-aspnet-web-forms-app-with-sms-two-factor-authentication-c"></a>Criar um aplicativo de Web Forms do ASP.NET com autenticação de dois fatores por SMS (C#)
+
 by [Erik Reitan](https://github.com/Erikre)
 
 [Baixe o aplicativo de formulários da Web do ASP.NET com o Email e SMS de autenticação de dois fatores](https://code.msdn.microsoft.com/ASPNET-Web-Forms-App-with-5a0ff94e)
@@ -108,7 +108,7 @@ Neste ponto, você habilitou a autenticação de dois fatores para seu aplicativ
 <a id="addRes"></a>
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Autenticação de dois fatores usando SMS e email com a Identidade do ASP.NET](../../../identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
+- [Autenticação de dois fatores usando SMS e email com o ASP.NET Identity](../../../identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 - [Recursos recomendados de links para a identidade do ASP.NET](../../../identity/overview/getting-started/aspnet-identity-recommended-resources.md)
 - [Implantar um aplicativo de formulários da Web do ASP.NET seguro com associação, OAuth e banco de dados SQL em um site do Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)
 - [Série de tutoriais do ASP.NET Web Forms - adicionar um provedor de OAuth 2.0](../getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal.md#OAuthWebForms)

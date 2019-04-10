@@ -8,15 +8,15 @@ ms.date: 05/18/2012
 ms.assetid: 79eca52c-e7ad-44ab-a3e4-d8093e9da5a7
 msc.legacyurl: /web-pages/pluralsight
 msc.type: content
-ms.openlocfilehash: e4b60da0bb4e1d8fce0640516fa4f127dcc30f37
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78e4d3aedd183e8ec91a8c833e4b60894ae214ec
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401186"
 ---
-<a name="webmatrix-and-web-pages-video-training-from-pluralsight"></a>Treinamento em vídeo da Pluralsight sobre WebMatrix e páginas da Web
-====================
+# <a name="webmatrix-and-web-pages-video-training-from-pluralsight"></a>Treinamento em vídeo da Pluralsight sobre WebMatrix e páginas da Web
+
 
 > [!NOTE] 
 > O WebMatrix não é mais recomendado como um ambiente de desenvolvimento integrado para páginas da Web do ASP.NET. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
@@ -29,7 +29,7 @@ ms.locfileid: "57048703"
 - [Trabalhando com documentos da Web padrão](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m4&mode=live&clip=0&course=webmatrix-introduction)
 - [Páginas da Web do ASP.NET](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m5&mode=live&clip=0&course=webmatrix-introduction)
 - [Emissão de relatórios e implantação](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m8&mode=live&clip=0&course=webmatrix-introduction)
-- [Controle do código-fonte](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m9&mode=live&clip=0&course=webmatrix-introduction)
+- [Controle do código-Fonte](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m9&mode=live&clip=0&course=webmatrix-introduction)
 - [Sites para dispositivos móveis](https://pluralsight.com/training/Player?author=matt-milner&name=webmatrix-introduction-m10&mode=live&clip=0&course=webmatrix-introduction)
 
 

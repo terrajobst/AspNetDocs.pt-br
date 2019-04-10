@@ -8,15 +8,15 @@ ms.date: 02/27/2014
 ms.assetid: 7ef664b3-1cc8-4cbf-bb18-9f0f3a3ada2b
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/adding-business-logic-layer
 msc.type: authoredcontent
-ms.openlocfilehash: 4ba1830ce51f257e18880f752b249dbeb77f504e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a229ebd71c913f3fe086892786988d0b3e42ec88
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411573"
 ---
-<a name="adding-business-logic-layer-to-a-project-that-uses-model-binding-and-web-forms"></a>Adicionar camada de lógica comercial para um projeto que usa a associação de modelos e formulários da web
-====================
+# <a name="adding-business-logic-layer-to-a-project-that-uses-model-binding-and-web-forms"></a>Adicionar camada de lógica comercial para um projeto que usa a associação de modelos e formulários da web
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Esta série de tutoriais demonstra aspectos básicos de como usar a associação de modelo com um projeto de Web Forms do ASP.NET. Associação de modelo torna a interação de dados mais simples que lidam com dados de objetos de origem (como ObjectDataSource ou SqlDataSource). Esta série começa com material introdutório e move para conceitos mais avançados em tutoriais posteriores.
@@ -96,4 +96,4 @@ Executar o aplicativo e observe que todas as páginas funcionam conforme eles ti
 Neste tutorial, você estruturados novamente seu aplicativo para usar uma camada de acesso a dados e a camada de lógica comercial. Você especificou que os controles de dados usam um objeto que não é a página atual para operações de dados.
 
 > [!div class="step-by-step"]
-> [Anterior](using-query-string-values-to-retrieve-data.md)
+> [Voltar](using-query-string-values-to-retrieve-data.md)

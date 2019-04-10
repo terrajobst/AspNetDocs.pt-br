@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 719d50d4-2305-454c-98b4-bae64937c48f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6fe880775a5d477aefcf0fe6cedb3e719760ed90
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c92d7cdeb7b2d31d5eca810628e9f563840f7494
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036483"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400590"
 ---
-<a name="creating-a-controller-c"></a>Criar um controlador (C#)
-====================
+# <a name="creating-a-controller-c"></a>Criar um controlador (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Neste tutorial, Stephen Walther demonstra como você pode adicionar um controlador a um aplicativo ASP.NET MVC.
@@ -29,12 +29,12 @@ O objetivo deste tutorial é explicar como você pode criar novas ASP.NET MVC co
 A maneira mais fácil de criar um novo controlador é com o botão direito na pasta controladores na janela do Gerenciador de soluções do Visual Studio e selecione o **Add, controlador** opção de menu (veja a Figura 1). Selecionar essa opção de menu abre a **Adicionar controlador** caixa de diálogo (consulte a Figura 2).
 
 
-[![A caixa de diálogo Novo projeto](creating-a-controller-cs/_static/image1.jpg)](creating-a-controller-cs/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](creating-a-controller-cs/_static/image1.jpg)](creating-a-controller-cs/_static/image1.png)
 
 **Figura 01**: Adicionando um novo controlador ([clique para exibir a imagem em tamanho normal](creating-a-controller-cs/_static/image2.png))
 
 
-[![A caixa de diálogo Novo projeto](creating-a-controller-cs/_static/image2.jpg)](creating-a-controller-cs/_static/image3.png)
+[![Tcaixa de diálogo Novo projeto he](creating-a-controller-cs/_static/image2.jpg)](creating-a-controller-cs/_static/image3.png)
 
 **Figura 02**: A caixa de diálogo Adicionar controlador ([clique para exibir a imagem em tamanho normal](creating-a-controller-cs/_static/image4.png))
 
@@ -56,7 +56,7 @@ Você deve sempre criar controladores na pasta controladores. Caso contrário, v
 Quando você cria um controlador, você tem a opção para gerar os métodos de ação de criar, atualizar e detalhes automaticamente (veja a Figura 3). Se você selecionar essa opção, em seguida, a classe do controlador na listagem 2 é gerada.
 
 
-[![Criação automática de métodos de ação](creating-a-controller-cs/_static/image3.jpg)](creating-a-controller-cs/_static/image5.png)
+[![Cmétodos de ação riando automaticamente](creating-a-controller-cs/_static/image3.jpg)](creating-a-controller-cs/_static/image5.png)
 
 **Figura 03**: Criação automática de métodos de ação ([clique para exibir a imagem em tamanho normal](creating-a-controller-cs/_static/image6.png))
 
@@ -76,7 +76,7 @@ O controlador MVC do ASP.NET é apenas uma classe. Se você preferir, você pode
 3. Modifique o arquivo de classe resultante para que a classe herda da classe Controller base (consulte a listagem 3).
 
 
-[![Criando uma nova classe](creating-a-controller-cs/_static/image4.jpg)](creating-a-controller-cs/_static/image7.png)
+[![Cuma nova classe de riando](creating-a-controller-cs/_static/image4.jpg)](creating-a-controller-cs/_static/image7.png)
 
 **Figura 04**: Criando uma nova classe ([clique para exibir a imagem em tamanho normal](creating-a-controller-cs/_static/image8.png))
 

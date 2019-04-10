@@ -8,15 +8,15 @@ ms.date: 03/28/2008
 ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
-ms.openlocfilehash: 4883046aa16d5e67b7f0c92e15c897ef1a933b67
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d2d7982a4e0175824ffede965dc8206219485df2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396467"
 ---
-<a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Noções básicas sobre atualizações de página parcial com o AJAX ASP.NET
-====================
+# <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Noções básicas sobre atualizações de página parcial com o AJAX ASP.NET
+
 por [Scott Cate](https://github.com/scottcate)
 
 [Baixar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial01_Partial_Page_Updates_cs.pdf)
@@ -111,7 +111,7 @@ O Visual Studio 2008 não parece vêm com um modelo predefinido para um site ASP
 
 Propriedades de marcação habilitada:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
 | AllowCustomErrors-Redirect | Bool | Especifica se deve usar a seção de erro personalizada do arquivo Web. config para lidar com erros. |
 | AsyncPostBackError-Message | Cadeia de Caracteres | Obtém ou define a mensagem de erro enviada ao cliente, se um erro será gerado. |
@@ -124,7 +124,7 @@ Propriedades de marcação habilitada:
 
 Propriedades de código:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
 | AuthenticationService | AuthenticationService-Manager | Obtém os detalhes sobre o proxy do serviço de autenticação do ASP.NET que será enviada ao cliente. |
 | IsDebuggingEnabled | Bool | Obtém se criar scripts e depuração de código está habilitada. |
@@ -142,7 +142,7 @@ Métodos de código público:
 
 Descendentes de marcação:
 
-| **Tag** | **Descrição** |
+| **Marca** | **Descrição** |
 | --- | --- |
 | &lt;AuthenticationService&gt; | Fornece detalhes sobre o proxy para o serviço de autenticação do ASP.NET. |
 | &lt;ProfileService&gt; | Fornece detalhes sobre o proxy para o serviço de criação de perfil do ASP.NET. |
@@ -185,7 +185,7 @@ O controle ScriptManager fornece amplo suporte para localização de cadeias de 
 
 Propriedades de marcação habilitada:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
 | ChildrenAsTriggers | bool | Especifica se os controles filho invocar automaticamente a atualização em um postback. |
 | RenderMode | Enum (bloco, embutido) | Especifica a maneira como o conteúdo será apresentado visualmente. |
@@ -193,7 +193,7 @@ Propriedades de marcação habilitada:
 
 Propriedades de código:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
 | IsInPartialRendering | bool | Determina se o UpdatePanel é dar suporte a renderização parcial para a solicitação atual. |
 | ContentTemplate | ITemplate | Obtém o modelo de marcação para a solicitação de atualização. |
@@ -208,7 +208,7 @@ Métodos de código público:
 
 Descendentes de marcação:
 
-| **Tag** | **Descrição** |
+| **Marca** | **Descrição** |
 | --- | --- |
 | &lt;ContentTemplate&gt; | Especifica a marcação a ser usado para renderizar o resultado da renderização parcial. Filho de &lt;asp: UpdatePanel&gt;. |
 | &lt;Gatilhos&gt; | Especifica uma coleção de *n* controles associados à atualização esse UpdatePanel. Filho de &lt;asp: UpdatePanel&gt;. |
@@ -280,7 +280,7 @@ Por fim, se um aplicativo exigir que os UpdatePanels sejam usados, as diretrizes
 
 Propriedades de marcação habilitada:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
 | AssociatedUpdate-PanelID | Cadeia de Caracteres | Especifica a ID do UpdatePanel que este UpdateProgress deve relatar. |
 | DisplayAfter | int | Especifica o tempo limite em milissegundos antes que esse controle é exibido após o início da solicitação assíncrona. |
@@ -288,7 +288,7 @@ Propriedades de marcação habilitada:
 
 Descendentes de marcação:
 
-| **Tag** | **Descrição** |
+| **Marca** | **Descrição** |
 | --- | --- |
 | &lt;ProgressTemplate&gt; | Contém o modelo de controle definido para o conteúdo que será exibido com esse controle. |
 

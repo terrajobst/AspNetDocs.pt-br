@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: f71d8311cbb1131d9c30c0bd9071a1c6c90f9976
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59409792"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação para produção
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação para produção
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -247,7 +247,7 @@ O processo para criar um aplicativo web de produção e implantação em produç
 
 ### <a name="edit-the-pubxml-file-to-exclude-robotstxt"></a>Edite o arquivo. pubxml para excluir robots. txt
 
-Os arquivos são nomeados de perfil de publicação &lt;profilename&gt;*. pubxml* e estão localizados na *PublishProfiles* pasta. O *PublishProfiles* pasta está sob o *propriedades* pasta em um aplicativo web C# do projeto, no *meu projeto* pasta em um projeto de aplicativo da web VB ou em um de *App\_dados* pasta em um projeto de aplicativo web. Cada *. pubxml* arquivo contém as configurações que se aplicam a um perfil de publicação. Os valores inseridos no Assistente de publicação na Web são armazenados nesses arquivos, e você pode editá-los para criar ou alterar as configurações que não estão disponíveis na IU do Visual Studio.
+Os arquivos são nomeados de perfil de publicação &lt;profilename&gt;*. pubxml* e estão localizados na *PublishProfiles* pasta. O *PublishProfiles* pasta está sob o *propriedades* pasta em um aplicativo web c# do projeto, no *meu projeto* pasta em um projeto de aplicativo da web VB ou em um de *App\_dados* pasta em um projeto de aplicativo web. Cada *. pubxml* arquivo contém as configurações que se aplicam a um perfil de publicação. Os valores inseridos no Assistente de publicação na Web são armazenados nesses arquivos, e você pode editá-los para criar ou alterar as configurações que não estão disponíveis na IU do Visual Studio.
 
 Por padrão, *. pubxml* arquivos são incluídos no projeto quando você criar um perfil de publicação, mas você pode excluí-los do projeto e Visual Studio ainda irá usá-los. O Visual Studio procura *PublishProfiles* pasta *. pubxml* arquivos, independentemente se eles são incluídos no projeto.
 
@@ -276,7 +276,7 @@ Um *. pubxml* arquivo contém as configurações que pertencem a um perfil de pu
 
     ![Visualização de arquivos a serem publicados para a produção](deploying-to-production/_static/image14.png)
 
-    Examine a lista de arquivos que serão copiados. Você verá que todos os *. CS* arquivos, incluindo *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, e  *Master.Designer.CS* arquivos são omitidos. Todo esse código tiver sido compilado na *contosouniversity. dll* e *ContosUniversity.pdb* arquivos que você encontrará o *bin* pasta. Porque somente o *. dll* é necessária para executar o aplicativo e você especificou anteriormente que devem ser implantados somente os arquivos necessários para executar o aplicativo, não *CS* arquivos foram copiados para o destino ambiente. O *obj* pasta e o *Contosouniversity* e *. csproj* arquivos são omitidos pelo mesmo motivo.
+    Examine a lista de arquivos que serão copiados. Você verá que todos os *. CS* arquivos, incluindo *. aspx.cs*, *. aspx.designer.cs*, *Master.cs*, e  *Master.Designer.CS* arquivos são omitidos. Todo esse código tiver sido compilado na *contosouniversity. dll* e *ContosoUniversity.pdb* arquivos que você encontrará o *bin* pasta. Porque somente o *. dll* é necessária para executar o aplicativo e você especificou anteriormente que devem ser implantados somente os arquivos necessários para executar o aplicativo, não *CS* arquivos foram copiados para o destino ambiente. O *obj* pasta e o *Contosouniversity* e *. csproj* arquivos são omitidos pelo mesmo motivo.
 
     Clique em **publicar** para implantar o ambiente de produção.
 2. Teste em produção, seguindo o mesmo procedimento usado para a preparação.

@@ -8,23 +8,23 @@ ms.date: 05/16/2012
 ms.assetid: 489b414b-2322-4385-8638-04e08c0b6c90
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment
 msc.type: chapter
-ms.openlocfilehash: 559718b0ddb4ffc892ea166c7c3a4dfaf36e3691
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 63ffb6fa3c32c91508a12ed4545de08767c6200c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59397962"
 ---
-<a name="aspnet-4---enterprise-deployment-series-2-configuring-servers"></a>ASP.NET 4 – Série 2 sobre implantação corporativa: configuração de servidores
-====================
+# <a name="aspnet-4---enterprise-deployment-series-2-configuring-servers"></a>ASP.NET 4 – Série 2 sobre implantação corporativa: configuração de servidores
+
 > Este tutorial mostra como configurar ambientes de servidor para suporte em um único clique, ou automatizado, a implantação do site e a publicação em vários cenários diferentes.
 
 
 - [Configuração de ambientes de servidor para a Implantação da Web](configuring-server-environments-for-web-deployment.md)
 - [Escolha da abordagem correta para a Implantação da Web](choosing-the-right-approach-to-web-deployment.md)
-- [Cenário: Configurando um ambiente de teste para implantação da Web](scenario-configuring-a-test-environment-for-web-deployment.md)
-- [Cenário: Configurando um ambiente de preparo para a implantação da Web](scenario-configuring-a-staging-environment-for-web-deployment.md)
-- [Cenário: Configurando um ambiente de produção para implantação da Web](scenario-configuring-a-production-environment-for-web-deployment.md)
+- [Cenário: Configuração de ambientes de teste para a Implantação da Web](scenario-configuring-a-test-environment-for-web-deployment.md)
+- [Cenário: Configuração de ambientes de preparo para a Implantação da Web](scenario-configuring-a-staging-environment-for-web-deployment.md)
+- [Cenário: Configuração de um ambiente de produção para a Implantação da Web](scenario-configuring-a-production-environment-for-web-deployment.md)
 - [Configuração de um servidor Web para publicação de Implantação da Web (agente remoto)](configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
 - [Configuração de um servidor Web para publicação de Implantação da Web (manipulador de Implantação da Web)](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
 - [Configuração de um servidor Web para publicação de Implantação da Web (implantação offline)](configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)

@@ -8,15 +8,15 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: f4dae827627103e5cfb9981b6c3b9342cdc34c13
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59403903"
 ---
-<a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoramento e telemetria (compilando aplicativos de nuvem do mundo Real com o Azure)
-====================
+# <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoramento e telemetria (compilando aplicativos de nuvem do mundo Real com o Azure)
+
 por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -72,7 +72,7 @@ Implantar o aplicativo no Azure e começar a usá-lo. Crie alguns Fix It tarefas
 
 Em seguida, volte para o **New Relic** página na **complementos** guia do portal e clique em **gerenciar**. O portal envia para o portal de gerenciamento do New Relic, usando o logon único para autenticação para que você não precise digitar suas credenciais novamente. A página de visão geral apresenta uma variedade de estatísticas de desempenho. (Clique na imagem para ver o tamanho total da página Visão geral).
 
-[![Guia de monitoramento do Relíquia nova](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![NGuia de monitoramento Relíquia ova](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
 Aqui estão algumas das estatísticas que você pode ver:
 
@@ -139,7 +139,7 @@ Enquanto que vale a pena ter sempre fazendo logon em produção, outra prática 
 
 Aplicativos Web no serviço de aplicativo do Azure têm suporte interno para gravação `System.Diagnostics` logs para o sistema de arquivos, armazenamento de tabela ou armazenamento de BLOBs. Você pode selecionar os níveis de log diferentes para cada destino de armazenamento, e você pode alterar o nível de log em tempo real sem reiniciar o aplicativo. O suporte ao armazenamento de Blob torna mais fácil de executar [HDInsight](https://docs.microsoft.com/azure/hdinsight/) trabalhos de análise em seus logs de aplicativo, porque HDInsight sabe como trabalhar diretamente com o armazenamento de BLOBs.
 
-### <a name="log-exceptions"></a>Exceções de log
+### <a name="log-exceptions"></a>registrar exceções em log
 
 Não coloque apenas *exceção. ToString ()* em seu código de registro em log. Isso deixa as informações contextuais. No caso de erros do SQL, ele deixa de fora o número do erro SQL. Para todas as exceções, incluem informações de contexto, a própria exceção e exceções internas para certificar-se de que você está fornecendo tudo o que serão necessário para a solução de problemas. Por exemplo, informações de contexto podem incluir o nome do servidor, um identificador de transação e um nome de usuário (mas não a senha ou os segredos!).
 

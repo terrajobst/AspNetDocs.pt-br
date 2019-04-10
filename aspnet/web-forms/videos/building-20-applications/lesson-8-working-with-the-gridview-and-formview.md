@@ -8,15 +8,15 @@ ms.date: 11/29/2005
 ms.assetid: be41acae-1e1e-403c-bdd2-28cdcd11a22a
 msc.legacyurl: /web-forms/videos/building-20-applications/lesson-8-working-with-the-gridview-and-formview
 msc.type: video
-ms.openlocfilehash: 15b2295cd8cb5d0d47c9053411b1ea66761e018e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 58b4f131e6e39a1eac42d2897ff774146b90961f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408726"
 ---
-<a name="lesson-8-working-with-the-gridview-and-formview"></a>[Lição 8:] Trabalhar com GridView e FormView
-====================
+# <a name="lesson-8-working-with-the-gridview-and-formview"></a>[Lição 8:] Trabalhar com GridView e FormView
+
 por [Microsoft](https://github.com/microsoft)
 
 Nesta lição, você aprenderá sobre o GridView e FormView controla e como você pode usar alguns dos recursos desses controles para facilitar a edição e exibição de conteúdo do banco de dados mais fácil.

@@ -8,15 +8,15 @@ ms.date: 06/25/2013
 ms.assetid: 51900291-7787-4a6e-be4e-fa558486f5ff
 msc.legacyurl: /visual-studio/overview/2012
 msc.type: chapter
-ms.openlocfilehash: 7d49d7cf865bb6fad0bf4e90788bcf5c2613ab87
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9b057f68e90a985c4e6950a94e49d84f8a6d5a07
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59393360"
 ---
-<a name="aspnet-and-visual-studio-2012"></a>ASP.NET e Visual Studio 2012
-====================
+# <a name="aspnet-and-visual-studio-2012"></a>ASP.NET e Visual Studio 2012
+
 > Desenvolvimento de aplicativos web do ASP.NET com o Visual Studio 2012
 
 
@@ -30,7 +30,7 @@ ms.locfileid: "57019923"
 - [Recuo hierárquico do Editor de CSS](visual-studio-vnext-videos-css-editor-hierarchical-indentation.md)
 - [Snippets do Editor de CSS](visual-studio-vnext-videos-css-editor-snippets.md)
 - [Seletor de cor do Editor de CSS](visual-studio-vnext-videos-css-editor-color-picker.md)
-- [Inspetor de Página – introdução](visual-studio-vnext-videos-page-inspector-introduction.md)
-- [Inspetor de Página – decomposição de seu aplicativo Web](visual-studio-vnext-videos-page-inspector-decomposing-your-web-application.md)
+- [Inspetor de Página – Introdução](visual-studio-vnext-videos-page-inspector-introduction.md)
+- [Inspetor de Página – Decomposição de seu aplicativo Web](visual-studio-vnext-videos-page-inspector-decomposing-your-web-application.md)
 - [Autenticação do Microsoft Azure](windows-azure-authentication.md)
-- [Notas de versão do ASP.NET and Web Tools 2012.2](aspnet-and-web-tools-20122-release-notes-rtw.md)
+- [Notas de Versão do ASP.NET and Web Tools 2012.2](aspnet-and-web-tools-20122-release-notes-rtw.md)

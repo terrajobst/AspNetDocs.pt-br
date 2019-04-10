@@ -8,15 +8,15 @@ ms.date: 11/01/2010
 ms.assetid: 658b149b-d770-46bf-8b4b-4e47cca242f3
 msc.legacyurl: /mvc/overview/older-versions/creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript
 msc.type: authoredcontent
-ms.openlocfilehash: f60ca3e76fda8a18da1ad83e955e5e4759f5e3af
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 91c96cc413e63ad2fc160ffbb473c4f3e1ada3e4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59401056"
 ---
-<a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Criação de um aplicativo do MVC 3 com Razor e JavaScript não obstrusivo
-====================
+# <a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Criação de um aplicativo do MVC 3 com Razor e JavaScript não obstrusivo
+
 por [Microsoft](https://github.com/microsoft)
 
 > O aplicativo de web de exemplo de lista de usuários demonstra como é simples criar aplicativos ASP.NET MVC 3 usando o mecanismo de exibição do Razor. O aplicativo de exemplo mostra como usar o novo mecanismo de exibição do Razor com o ASP.NET MVC versão 3 e o Visual Studio 2010 para criar um site fictício de lista de usuários que inclui a funcionalidade, como criar, exibir, editar e excluir usuários.
@@ -30,13 +30,13 @@ O aplicativo, que você estará criando é um site de lista do usuário simples.
 
 ![Site de exemplo](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image1.png)
 
-Você pode baixar o projeto concluído de VB e C# [aqui](https://code.msdn.microsoft.com/Creating-a-MVC-3-28883c0f).
+Você pode baixar o projeto concluído de VB e c# [aqui](https://code.msdn.microsoft.com/Creating-a-MVC-3-28883c0f).
 
 ## <a name="creating-the-web-application"></a>Criando o aplicativo Web
 
 Para iniciar o tutorial, abra o Visual Studio 2010 e crie um novo projeto usando o *aplicativo Web do ASP.NET MVC 3* modelo. Nome do aplicativo &quot;Mvc3Razor&quot;.
 
-[![Novo projeto MVC 3](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image3.png)](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image2.png)
+[![Nprojeto do MVC 3 ova](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image3.png)](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript/_static/image2.png)
 
 No **novo projeto ASP.NET MVC 3** caixa de diálogo, selecione **aplicativo de Internet**, selecione o mecanismo de exibição do Razor e, em seguida, clique em **Okey**.
 

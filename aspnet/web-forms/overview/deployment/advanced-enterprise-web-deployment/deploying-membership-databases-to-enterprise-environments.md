@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 3cf765df-d311-4f68-a295-c9685ceea830
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/deploying-membership-databases-to-enterprise-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 307375843c51f31d3d8ae0f2ef0a17a3e58d3a64
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: eea0761ac85693553808e581a8712c822d19c226
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390474"
 ---
-<a name="deploying-membership-databases-to-enterprise-environments"></a>Implantação do bancos de dados de associação em ambientes corporativos
-====================
+# <a name="deploying-membership-databases-to-enterprise-environments"></a>Implantação do bancos de dados de associação em ambientes corporativos
+
 by [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

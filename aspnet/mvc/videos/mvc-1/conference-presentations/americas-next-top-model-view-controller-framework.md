@@ -8,15 +8,15 @@ ms.date: 05/12/2009
 ms.assetid: 2ce3281d-dc92-4a43-9645-7e12ef6e72a6
 msc.legacyurl: /mvc/videos/mvc-1/conference-presentations/americas-next-top-model-view-controller-framework
 msc.type: video
-ms.openlocfilehash: f42dedbbe837fcfe922a8843527960e7f55f3b04
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 917629c3ad457ade21dc832b248cb09102a5cf0c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59395154"
 ---
-<a name="americas-next-top-model-view-controller-framework"></a>Estrutura do America's Next Top Model View Controller
-====================
+# <a name="americas-next-top-model-view-controller-framework"></a>Estrutura do America's Next Top Model View Controller
+
 por [Phil Haack](https://github.com/Haacked)
 
 Veja como criar um aplicativo simples que destaca alguns dos principais recursos do ASP.NET MVC. Além disso, saiba como melhorar a produtividade usando alguns de cool novas ferramentas de recursos.

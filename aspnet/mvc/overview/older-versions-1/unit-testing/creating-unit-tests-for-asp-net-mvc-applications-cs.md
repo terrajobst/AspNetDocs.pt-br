@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: d3a270b9-d7b1-47f2-8775-fc3beb518b5c
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 08de8a57860886a8f633cacbaae1d63fe08a5a02
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1193d7dc6fc29dfdac5637c9391a82f9f3566073
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041223"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59407725"
 ---
-<a name="creating-unit-tests-for-aspnet-mvc-applications-c"></a>Criação de testes de unidade para aplicativos do ASP.NET MVC (C#)
-====================
+# <a name="creating-unit-tests-for-aspnet-mvc-applications-c"></a>Criação de testes de unidade para aplicativos do ASP.NET MVC (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 [Baixar PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_07_CS.pdf)
@@ -59,12 +59,12 @@ Esta ação do controlador também retorna uma exibição nomeada `Details`. No 
 Você pode executar o teste de unidade na listagem 2 digitando a combinação de teclado **Ctrl-R, A** ou clicando o **executar todos os testes na solução** botão (consulte a Figura 1). Se o teste for bem-sucedido, você verá a janela Test Results na Figura 2.
 
 
-[![Executar todos os testes na solução](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
+[![RCancelar todos os testes na solução](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image2.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image1.png)
 
 **Figura 01**: Executar todos os testes na solução ([clique para exibir a imagem em tamanho normal](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image3.png))
 
 
-[![Sucesso!](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
+[![Success!](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image5.png)](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image4.png)
 
 **Figura 02**: Sucesso! ([Clique para exibir a imagem em tamanho normal](creating-unit-tests-for-asp-net-mvc-applications-cs/_static/image6.png))
 

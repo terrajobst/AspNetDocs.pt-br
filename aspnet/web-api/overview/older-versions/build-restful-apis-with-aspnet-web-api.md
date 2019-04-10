@@ -1,25 +1,30 @@
 ---
 uid: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
-title: Criar APIs RESTful com a API Web ASP.NET | Microsoft Docs
+title: Criar APIs RESTful com a API Web ASP.NET - ASP.NET 4.x
 author: rick-anderson
-description: Nos últimos anos, tornou-se claro que o HTTP não é apenas para servir as páginas HTML. Também é uma plataforma poderosa para a criação de APIs da Web, usando um punhado de s...
+description: 'Laboratório prático: Usar a API da Web no ASP.NET 4.x para compilar uma API REST simples para um aplicativo do Gerenciador de contatos.'
 ms.author: riande
 ms.date: 02/18/2013
+ms.custom: seoapril2019
 ms.assetid: 87daa99f-3810-407e-b969-dd28a192959d
 msc.legacyurl: /web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f1f5ebbf5170f205be331b6402951fb429196046
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3ba7f2d186e6f0837a32f69f964cec19fe625953
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59391475"
 ---
-<a name="build-restful-apis-with-aspnet-web-api"></a>Criar APIs RESTful com a API da Web ASP.NET
-====================
+# <a name="build-restful-apis-with-aspnet-web-api"></a>Criar APIs RESTful com a API da Web ASP.NET
+
 por [Web Camps equipe](https://twitter.com/webcamps)
 
-> Nos últimos anos, tornou-se claro que o HTTP não é apenas para servir as páginas HTML. Também é uma plataforma poderosa para a criação de APIs da Web, usando um punhado de verbos (GET, POST e assim por diante) além de alguns conceitos simples, como *URIs* e *cabeçalhos*. API Web ASP.NET é um conjunto de componentes que simplificam a programação HTTP. Porque ele se baseia no tempo de execução do ASP.NET MVC, API Web manipula automaticamente os detalhes de baixo nível de transporte de HTTP. Ao mesmo tempo, a API da Web naturalmente expõe o modelo de programação HTTP. Na verdade, é uma meta de API da Web *não* abstraem a realidade de HTTP. Como resultado, a API Web é flexível e fácil de estender. Neste laboratório prático, você usará a API da Web para criar uma API REST simples para um aplicativo do Gerenciador de contatos. Você também criará um cliente para consumir a API. O estilo de arquitetura REST provou para ser uma maneira eficiente de aproveitar HTTP – embora certamente isso não seja a abordagem só é válida para HTTP. O Gerenciador de contatos irá expor o RESTful para listagem, adicionando e removendo contatos, entre outros. Este laboratório requer um entendimento básico de HTTP, REST e pressupõe que você tenha um conhecimento prático básico de HTML, JavaScript e jQuery.
+> Laboratório prático: Usar a API da Web no ASP.NET 4.x para compilar uma API REST simples para um aplicativo do Gerenciador de contatos. Você também criará um cliente para consumir a API.
+
+Nos últimos anos, tornou-se claro que o HTTP não é apenas para servir as páginas HTML. Também é uma plataforma poderosa para a criação de APIs da Web, usando um punhado de verbos (GET, POST e assim por diante) além de alguns conceitos simples, como *URIs* e *cabeçalhos*. API Web ASP.NET é um conjunto de componentes que simplificam a programação HTTP. Porque ele se baseia no tempo de execução do ASP.NET MVC, API Web manipula automaticamente os detalhes de baixo nível de transporte de HTTP. Ao mesmo tempo, a API da Web naturalmente expõe o modelo de programação HTTP. Na verdade, é uma meta de API da Web *não* abstraem a realidade de HTTP. Como resultado, a API Web é flexível e fácil de estender.  O estilo de arquitetura REST provou para ser uma maneira eficiente de aproveitar HTTP – embora certamente isso não seja a abordagem só é válida para HTTP. O Gerenciador de contatos irá expor o RESTful para listagem, adicionando e removendo contatos, entre outros. 
+
+Este laboratório requer um entendimento básico de HTTP, REST e pressupõe que você tenha um conhecimento prático básico de HTML, JavaScript e jQuery.
 > 
 > > [!NOTE]
 > > O site da Web do ASP.NET tem uma área dedicada a estrutura de API Web ASP.NET no [ https://asp.net/web-api ](https://asp.net/web-api). Este site continuará fornecer informações mais recentes, exemplos e notícias relacionadas à API da Web, portanto, verifique-lo com frequência se você gostaria de nos aprofundar na arte de criação de APIs Web personalizadas disponíveis para praticamente qualquer estrutura de desenvolvimento ou dispositivo.
@@ -84,7 +89,7 @@ Neste exercício, você implementará os métodos GET somente leitura para o Ger
 Nesta tarefa, você usará os novos modelos de projeto de web do ASP.NET para criar um aplicativo de web API da Web.
 
 1. Execute **Visual Studio 2012 Express para Web**, para fazer isso, vá para **inicie** e digite **VS Express para Web** , em seguida, pressione **Enter**.
-2. Dos **arquivo** menu, selecione **novo projeto**. Selecione o **Visual C# | Web** tipo de exibição de árvore de tipo de projeto do projeto, em seguida, selecione o **aplicativo Web do ASP.NET MVC 4** tipo de projeto. Defina o projeto **nome** para *ContactManager* e o **nome da solução** para *começar*, em seguida, clique em **Okey**.
+2. Dos **arquivo** menu, selecione **novo projeto**. Selecione o **Visual c# | Web** tipo de exibição de árvore de tipo de projeto do projeto, em seguida, selecione o **aplicativo Web do ASP.NET MVC 4** tipo de projeto. Defina o projeto **nome** para *ContactManager* e o **nome da solução** para *começar*, em seguida, clique em **Okey**.
 
     ![Criando um novo projeto de aplicativo do ASP.NET MVC 4.0 da Web](build-restful-apis-with-aspnet-web-api/_static/image1.png "criando um novo projeto de aplicativo do ASP.NET MVC 4.0 da Web")
 
@@ -417,7 +422,7 @@ Nesta tarefa, você continuará modificar a exibição de índice do aplicativo 
 > Além disso, você pode implantar esse aplicativo do Azure seguinte [apêndice c: Publicando um aplicativo ASP.NET MVC 4 usando a implantação da Web](#AppendixC).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo
@@ -440,7 +445,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 <a id="CodeSnippetUsingKeyBoard"></a>
 
 <a id="To_add_a_code_snippet_using_the_keyboard_C_only"></a>
-### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Para adicionar um trecho de código usando o teclado (somente C#)
+### <a name="to-add-a-code-snippet-using-the-keyboard-c-only"></a>Para adicionar um trecho de código usando o teclado (somente c#)
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -463,7 +468,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 <a id="CodeSnippetUsingMouse"></a>
 
 <a id="To_add_a_code_snippet_using_the_mouse_C_Visual_Basic_and_XML"></a>
-### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)
+### <a name="to-add-a-code-snippet-using-the-mouse-c-visual-basic-and-xml"></a>Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)
 
 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 2. Selecione **Inserir trecho** seguido **Meus trechos de código**.
