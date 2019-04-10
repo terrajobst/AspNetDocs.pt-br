@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 794bd819-00fc-47e2-876d-fc5d15e0de1c
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/troubleshooting-the-packaging-process
 msc.type: authoredcontent
-ms.openlocfilehash: 22be1ccc5a1ec52d143bedffd79264918c1a45e1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 79774c6a1a1d05d5a7bcd82a5d7aa888933cf089
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420101"
 ---
-<a name="troubleshooting-the-packaging-process"></a>Solução de problemas do processo de empacotamento
-====================
+# <a name="troubleshooting-the-packaging-process"></a>Solução de problemas do processo de empacotamento
+
 by [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
@@ -113,4 +113,4 @@ Este tópico descreveu como você pode usar o **EnablePackageProcessLoggingAndAs
 Para obter mais informações sobre como usar arquivos de projeto personalizados do MSBuild para controlar o processo de implantação, consulte [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md) e [Noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md). Para obter mais informações sobre o WPP e como ele gerencia o processo de empacotamento, consulte [compilação e empacotamento Web Application Projects](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md). Para obter orientação sobre como excluir arquivos e pastas específicos de pacotes de implantação da web, consulte [excluindo arquivos e pastas de implantação](excluding-files-and-folders-from-deployment.md).
 
 > [!div class="step-by-step"]
-> [Anterior](running-windows-powershell-scripts-from-msbuild-project-files.md)
+> [Voltar](running-windows-powershell-scripts-from-msbuild-project-files.md)

@@ -8,20 +8,20 @@ ms.date: 09/08/2014
 ms.assetid: 0bbf7a6e-d7eb-4091-91e4-fff892777f32
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 msc.type: authoredcontent
-ms.openlocfilehash: e6ec385c6a4a5507ffae726157f7d52e9c5605da
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bc91eba17938de15f03ecc1e745aac57c7eac7a1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419490"
 ---
-<a name="create-the-data-access-layer"></a>Criar a camada de acesso a dados
-====================
+# <a name="create-the-data-access-layer"></a>Criar a camada de acesso a dados
+
 by [Erik Reitan](https://github.com/Erikre)
 
-[Baixe o projeto de exemplo do Wingtip Toys (C#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
+[Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
-> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte C#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
+> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
 
 
 Este tutorial descreve como criar, acessar e analisar dados de um banco de dados usando o Web Forms do ASP.NET e o Entity Framework Code First. Este tutorial se baseia no tutorial anterior, "Criar o projeto" e faz parte da série de tutoriais de Wingtip Toys Store. Depois de concluir este tutorial, você terá criado um grupo de classes de acesso a dados que estão na *modelos* pasta do projeto.
@@ -66,7 +66,7 @@ Neste tutorial, você começará adicionando classes de entidade simples que rep
     ![Criar camada de acesso a dados - novo Menu de Item](create_the_data_access_layer/_static/image1.png)
 
    A caixa de diálogo **Adicionar Novo Item** é exibida.
-2. Sob **Visual C#** da **instalado** painel à esquerda, selecione **código**. 
+2. Sob **Visual c#** da **instalado** painel à esquerda, selecione **código**. 
 
     ![Criar camada de acesso a dados - novo Menu de Item](create_the_data_access_layer/_static/image2.png)
 3. Selecione **classe** no painel central e nomeie essa nova classe *Product.cs*.
@@ -89,7 +89,7 @@ Você deve ter notado que determinados membros das classes têm atributos especi
 
 Para começar a usar as classes para acesso a dados, você deve definir uma classe de contexto. Conforme mencionado anteriormente, a classe de contexto gerencia as classes de entidade (como o `Product` classe e o `Category` classe) e fornece acesso a dados no banco de dados.
 
-Este procedimento adiciona uma novo contexto classe C# para o *modelos* pasta.
+Este procedimento adiciona uma novo contexto classe c# para o *modelos* pasta.
 
 1. Clique com botão direito do *modelos* pasta e, em seguida, selecione **Add**  - &gt; **Novo Item**.   
    A caixa de diálogo **Adicionar Novo Item** é exibida.
@@ -106,7 +106,7 @@ O `ProductContext` classe representa o contexto de banco de dados de produto do 
 
 Você precisará executar alguma lógica personalizada para inicializar o tempo de banco de dados primeiro que o contexto é usado. Isso permitirá que os dados de propagação a ser adicionado ao banco de dados para que você possa exibir imediatamente categorias e produtos.
 
-Este procedimento adiciona uma novo inicializador classe C# para o *modelos* pasta.
+Este procedimento adiciona uma novo inicializador classe c# para o *modelos* pasta.
 
 1. Criar outra `Class` no *modelos* pasta e nomeie-o *ProductDatabaseInitializer.cs*.
 2. Substitua o código padrão contido na classe pelo código a seguir:   

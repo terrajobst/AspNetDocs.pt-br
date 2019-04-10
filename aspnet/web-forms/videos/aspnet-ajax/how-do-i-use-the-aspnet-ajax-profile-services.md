@@ -8,15 +8,15 @@ ms.date: 07/16/2007
 ms.assetid: 8fc77048-4d1f-42bf-a947-ecc9a02b25c9
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-use-the-aspnet-ajax-profile-services
 msc.type: video
-ms.openlocfilehash: b3cb1bdbd6be4fcdc956b8dc475888b9ab0a440e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 54b82c52f0bd58a0184824a861b5f31754652ace
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420309"
 ---
-<a name="how-do-i-use-the-aspnet-ajax-profile-services"></a>[Como fazer:] Usar os serviços de perfil do ASP.NET AJAX?
-====================
+# <a name="how-do-i-use-the-aspnet-ajax-profile-services"></a>[Como fazer:] Usar os serviços de perfil do ASP.NET AJAX?
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 O ASP.NET 2.0 introduzida [propriedades do perfil](https://msdn.microsoft.com/library/at64shx3.aspx) com a qual você pode armazenar detalhes de cada usuário do seu aplicativo Web ASP.NET. Serviços de perfil do ASP.NET AJAX permitem que sua interface de Web do lado do cliente recuperar propriedades de perfil do usuário do aplicativo Web do lado do servidor. Este vídeo demonstra como um site de viagem habilitados para AJAX de exemplo pode armazenar as informações de solicitação de viagem de um usuário para que os detalhes podem ser recuperados quando ele ou ela visita o site.

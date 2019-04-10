@@ -8,15 +8,15 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: ea149b6450cf02c993c7690752a05396802336be
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 078382191595d1f65b5ebe9d0de8d41cd70e376d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419880"
 ---
-<a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Analisar e depurar seu aplicativo do ASP.NET MVC com Glimpse
-====================
+# <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Analisar e depurar seu aplicativo do ASP.NET MVC com Glimpse
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Visão rápida é prosperando e aumentando a família de pacotes do NuGet de software livre que fornece desempenho detalhados, depuração e informações de diagnóstico para aplicativos ASP.NET. Ele é trivial para instalar, leve, com rapidez e exibe as principais métricas de desempenho na parte inferior de cada página. Ele permite fazer uma busca detalhada em seu aplicativo quando você precisa descobrir o que está acontecendo no servidor. Visão rápida fornece informações muito valiosas que é recomendável que usá-lo em todo seu ciclo de desenvolvimento, incluindo o seu ambiente de teste do Azure. Enquanto [Fiddler](http://www.telerik.com/fiddler) e o [ferramentas de desenvolvimento F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) fornecem um cliente modo de exibição, a visão rápida fornece uma exibição detalhada do servidor. Este tutorial se concentrará em usando o ASP.NET MVC de amostra e pacotes do EF, mas muitos outros pacotes estão disponíveis. Sempre que possível, eu vinculará a apropriado [dê uma olhada docs](http://getglimpse.com/Docs/) que ajudam a manter. Visão rápida é um projeto de código-fonte aberto, você também pode contribuir com o código-fonte e os documentos.

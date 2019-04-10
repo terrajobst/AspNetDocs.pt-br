@@ -8,15 +8,15 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 6d5af6563bdf3872110497f4b142dd7353c8d64c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426114"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420205"
 ---
-<a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novidades no ASP.NET e desenvolvimento da Web no Visual Studio 2012
-====================
+# <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novidades no ASP.NET e desenvolvimento da Web no Visual Studio 2012
+
 por [Web Camps equipe](https://twitter.com/webcamps)
 
 > A nova versão do Visual Studio apresenta uma série de aprimoramentos e concentrados em melhorar a experiência e o desempenho ao trabalhar com tecnologias da Web. Editores do Visual Studio para CSS, JavaScript e HTML foi completamente reformuladas para incluir muitas das ajudas de código mais acessado, como IntelliSense e recuo automático. Em relação ao desempenho, agrupamento e minificação agora estão integradas como o tempo de carregamento de recursos internos para reduzir facilmente a página.
@@ -63,7 +63,7 @@ Este laboratório prático inclui os seguintes exercícios:
 1. [Exercício 1: O que há de novo no Editor de CSS](#Exercise1)
 2. [Exercício 2: O que há de novo no Editor de HTML](#Exercise2)
 3. [Exercício 3: O que há de novo no Editor de JavaScript](#Exercise3)
-4. [Exercício 4: Agrupamento e Minificação](#Exercise4)
+4. [Exercício 4: Agrupamento e minificação](#Exercise4)
 
 Tempo estimado para concluir este laboratório: **60 minutos**.
 
@@ -131,7 +131,7 @@ Nesta tarefa, você descobrirá que o novo seletor de cor CSS integrado ao Visua
 
     ![Seletor de cores](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image13.png "selecionador de cores")
 
-    *Seletor de cores*
+    *Seletor de cor*
 3. Pressione a **Expand** (![com](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image14.png) ) botão o seletor de cores para exibir o gradiente de cores e, em seguida, arraste o cursor de gradiente para selecionar uma cor diferente. Em seguida, clique o **conta-gotas** botão e selecione qualquer cor na tela. Observe que o valor de cor do plano de fundo muda dinamicamente enquanto você move o cursor.
 
     ![Gradiente de seletor de cores](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image15.png "gradiente do seletor de cores")
@@ -720,7 +720,7 @@ Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &
 
     *VS Express para o bloco da Web*
 
-* * *
+---
 
 <a id="AppendixB"></a>
 

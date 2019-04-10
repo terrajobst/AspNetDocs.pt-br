@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: ff03dcc0-da97-458d-838f-0823e7482642
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part2
 msc.type: authoredcontent
-ms.openlocfilehash: b593c6225c05c7405c9d8b78abfd29a087d47b04
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 84f9c822f041808184b2c586ce933ba3b24615dc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419828"
 ---
-<a name="adding-a-controller"></a>Adicionando um controlador
-====================
+# <a name="adding-a-controller"></a>Adicionando um controlador
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > > [!NOTE]
@@ -40,7 +40,7 @@ Vamos criar um novo controlador clicando duas vezes na pasta controladores no so
 
 Nomeie o novo controlador "HelloWorldController" e clique em Adicionar.
 
-[![Adicionar caixa de diálogo do controlador](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
+[![Acaixa de diálogo do controlador de dd](getting-started-with-mvc-part2/_static/image4.png)](getting-started-with-mvc-part2/_static/image3.png)
 
 Observe que no Gerenciador de soluções à direita que um novo arquivo foi criado para você chamou HelloWorldController.cs e agora, esse arquivo é aberto na **IDE**.
 
@@ -58,15 +58,15 @@ ASP.NET MVC invoca as diferentes classes de controlador (e diferentes métodos d
 
 A primeira parte da URL determina a classe de controlador para executar. Portanto, /HelloWorld mapeia para a classe HelloWorldController. A segunda parte da URL determina o método de ação na classe para executar. Portanto, /HelloWorld/Index faria com que o método Index () da classe HelloWorldController para executar. Observe que só tivemos que visite /HelloWorld acima e o método que index foi indicado. Isso ocorre porque um método chamado "Index" é o método padrão que será chamado em um controlador se nenhum for especificado explicitamente.
 
-[![Essa é minha ação padrão](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
+[![TEsta é minha ação padrão](getting-started-with-mvc-part2/_static/image8.png)](getting-started-with-mvc-part2/_static/image7.png)
 
 Agora, vamos visite `http://localhost:xx/HelloWorld/Welcome.` agora bem-vindo ao nosso método foi executado e que retornou de sua cadeia de caracteres HTML.
 
 Novamente, / [Controller] / [nome da ação] / [parâmetros] para que o controlador é HelloWorld e boas-vindas é o método nesse caso. Ainda não fizemos parâmetros.
 
-[![Esse é o método de ação boas-vindas](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
+[![TSTA é o método de ação boas-vindas](getting-started-with-mvc-part2/_static/image10.png)](getting-started-with-mvc-part2/_static/image9.png)
 
-Vamos modificar nosso exemplo um pouco para que podemos passar algumas informações da URL para o nosso controlador, por exemplo, como este: / HelloWorld/Welcome? nome = Scott&amp;numtimes = 4. Altere o método de boas-vindo para incluir dois parâmetros e update-lo como abaixo. Observe que usamos o recurso de parâmetro opcional do C# para indicar que o parâmetro numTimes deve padrão como 1 se ele não for passado.
+Vamos modificar nosso exemplo um pouco para que podemos passar algumas informações da URL para o nosso controlador, por exemplo, como este: / HelloWorld/Welcome? nome = Scott&amp;numtimes = 4. Altere o método de boas-vindo para incluir dois parâmetros e update-lo como abaixo. Observe que usamos o recurso de parâmetro opcional do c# para indicar que o parâmetro numTimes deve padrão como 1 se ele não for passado.
 
 [!code-csharp[Main](getting-started-with-mvc-part2/samples/sample2.cs)]
 

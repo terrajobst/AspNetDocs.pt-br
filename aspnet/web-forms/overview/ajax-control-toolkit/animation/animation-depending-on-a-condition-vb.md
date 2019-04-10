@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 1b87d8d6-b3f7-4126-b51c-d41442fbf947
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-vb
 msc.type: authoredcontent
-ms.openlocfilehash: be43b68ce77819cdcd09d8e875604db90e8a8d96
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 78140f56184e88fb4dbe29f234aebd5732b69ad9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418866"
 ---
-<a name="animation-depending-on-a-condition-vb"></a>Animação dependendo de uma condição (VB)
-====================
+# <a name="animation-depending-on-a-condition-vb"></a>Animação dependendo de uma condição (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation4.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation4VB.pdf)
@@ -53,7 +53,7 @@ Dentro de `<Animations>` nó, use `<OnLoad>` para as animações são executadas
 Observe que o sinal de menor que (`<`) na `ConditionScript` atributo deve ser (escape). Quando você executar esse script, nenhuma animação será executado, ou uma das duas delas, ou ambos fazem.
 
 
-[![O painel está desaparecendo sem redimensionamento, portanto, o segunda animação é executado, o primeiro deles não](animation-depending-on-a-condition-vb/_static/image2.png)](animation-depending-on-a-condition-vb/_static/image1.png)
+[![Tpainel he está desaparecendo sem redimensionamento, portanto, o segunda animação é executado, o primeiro deles não](animation-depending-on-a-condition-vb/_static/image2.png)](animation-depending-on-a-condition-vb/_static/image1.png)
 
 O painel está desaparecendo sem redimensionamento, portanto, o segunda animação é executado, o primeiro deles não ([clique para exibir a imagem em tamanho normal](animation-depending-on-a-condition-vb/_static/image3.png))
 

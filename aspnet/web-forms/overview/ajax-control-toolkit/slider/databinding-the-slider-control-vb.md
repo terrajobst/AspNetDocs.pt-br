@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 4f3ba53f-d166-422d-b29c-403348057836
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 284a650d1b63ceed887deb3ddd639fe9fd27019f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a60e09b7cdda7f924a4287aab8cda32fef5a53ac
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419763"
 ---
-<a name="databinding-the-slider-control-vb"></a>Associação de Dados do controle deslizante (VB)
-====================
+# <a name="databinding-the-slider-control-vb"></a>Associação de Dados do controle deslizante (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/Slider0.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/slider0VB.pdf)
@@ -45,9 +45,9 @@ A próxima etapa já é a etapa final. O `SliderExtender` controle do ASP.NET AJ
 Como você pode ver no navegador, a associação de dados funciona em ambas as direções: inserindo um novo valor na caixa de texto atualiza a posição do controle deslizante. Se você fizer a segunda caixa de texto somente leitura, você pode adicionar uma proteção fraca ao campo de texto para que ele seja mais difícil para o usuário atualizar manualmente o valor aqui.
 
 
-[![Controle deslizante e caixa de texto estão em sincronia](databinding-the-slider-control-vb/_static/image2.png)](databinding-the-slider-control-vb/_static/image1.png)
+[![Scaixa de texto e lider estão em sincronia](databinding-the-slider-control-vb/_static/image2.png)](databinding-the-slider-control-vb/_static/image1.png)
 
 Controle deslizante e caixa de texto estão em sincronia ([clique para exibir a imagem em tamanho normal](databinding-the-slider-control-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Anterior](using-the-slider-control-with-auto-postback-vb.md)
+> [Voltar](using-the-slider-control-with-auto-postback-vb.md)

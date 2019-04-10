@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
-title: Práticas recomendadas para implantar senhas e outros dados confidenciais no ASP.NET e o serviço de aplicativo do Azure | Microsoft Docs
+title: Implantar senhas e outros dados confidenciais no ASP.NET e o serviço de aplicativo do Azure - ASP.NET 4.x
 author: Rick-Anderson
 description: Este tutorial mostra como o seu código com segurança pode armazenar e acessar informações seguras. O ponto mais importante é que você nunca deve armazenar senhas ou outros sen...
 ms.author: riande
 ms.date: 05/21/2015
 ms.assetid: 97902c66-cb61-4d11-be52-73f962f2db0a
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
 msc.type: authoredcontent
-ms.openlocfilehash: 8b5d6bf9fad72218341e4e0b90144da01abea3aa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2620d9e2eaf3c7719d9a289e42bb91270708ae79
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419438"
 ---
-<a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Melhores práticas para implantar senhas e outros dados confidenciais no ASP.NET e no Serviço de Aplicativo do Azure
-====================
+# <a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Melhores práticas para implantar senhas e outros dados confidenciais no ASP.NET e no Serviço de Aplicativo do Azure
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Este tutorial mostra como o seu código com segurança pode armazenar e acessar informações seguras. O ponto mais importante é que você nunca deve armazenar senhas ou outros dados confidenciais no código-fonte, e você não deve usar os segredos de produção no modo de desenvolvimento e teste.

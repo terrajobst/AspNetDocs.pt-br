@@ -8,15 +8,15 @@ ms.date: 08/03/2007
 ms.assetid: d57dfa2b-d627-45cb-b5b1-abbf3159d770
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/configuring-the-data-access-layer-s-connection-and-command-level-settings-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 37c537931008045c5c6438fe2097652438c7e8b1
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: a6097a32f0a67436b786fcdd808964ac6b832439
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424905"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419568"
 ---
-<a name="configuring-the-data-access-layers-connection--and-command-level-settings-vb"></a>Definir as configurações de nível de conexão e comando da Camada de Acesso a Dados (VB)
-====================
+# <a name="configuring-the-data-access-layers-connection--and-command-level-settings-vb"></a>Definir as configurações de nível de conexão e comando da Camada de Acesso a Dados (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_72_VB.zip) ou [baixar PDF](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/datatutorial72vb1.pdf)
@@ -51,7 +51,7 @@ Exceto para o [de encapsulamento de modificações de banco de dados em uma tran
 Cada classe de TableAdapter tem um `Connection` propriedade que especifica informações de conexão de banco de dados. Esse tipo de dados de propriedade s e `ConnectionString` valor são determinadas pelas seleções feitas no Assistente de configuração do TableAdapter. Lembre-se de que quando primeiro adicionamos um TableAdapter para um conjunto de dados tipado este assistente nos pede para o banco de dados de origem (consulte a Figura 1). A lista suspensa nessa primeira etapa inclui esses bancos de dados especificados no arquivo de configuração, bem como outros bancos de dados em Gerenciador de servidores s conexões de dados. Se o banco de dados que queremos usar não existe na lista suspensa, uma nova conexão de banco de dados pode ser especificado clicando no botão Nova Conexão e fornecendo as informações de conexão necessárias.
 
 
-[![A primeira etapa do Assistente de configuração do TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image1.png)
+[![Tele primeira etapa do Assistente de configuração do TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image1.png)
 
 **Figura 1**: A primeira etapa do Assistente de configuração do TableAdapter ([clique para exibir a imagem em tamanho normal](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image3.png))
 
@@ -109,7 +109,7 @@ Essa classe parcial expõe apenas uma propriedade do objeto de conexão subjacen
 Abra o `Northwind` conjunto de dados, clique no `ProductsTableAdapter` no Designer e navegue até a janela Propriedades. Você verá então o `ConnectionModifier` definido como seu valor padrão, `Assembly`. Para tornar o `Connection` disponível fora do assembly de conjunto de dados tipado s, alteração de propriedade de `ConnectionModifier` propriedade para `Public`.
 
 
-[![O nível de acessibilidade de s de propriedade de Conexão pode ser configurado por meio da propriedade ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image6.png)
+[![Tele propriedade de Conexão s nível de acessibilidade pode ser configurado por meio da propriedade ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image6.png)
 
 **Figura 4**: O `Connection` propriedade s acessibilidade nível pode ser configurado por meio de `ConnectionModifier` propriedade ([clique para exibir a imagem em tamanho normal](configuring-the-data-access-layer-s-connection-and-command-level-settings-vb/_static/image8.png))
 

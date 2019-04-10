@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: bd356ca3-5bdb-4067-9dac-c9e9923a86e8
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 0f252fd5c0e5962353720e47ba888d2b6b325a1c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 63d85ec5f1f2fbadd92fd0210e67332df30aab5a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421902"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419594"
 ---
-<a name="part-1-overview-and-file-new-project"></a>Parte 1: Visão geral e Arquivo -> Novo Projeto
-====================
+# <a name="part-1-overview-and-file-new-project"></a>Parte 1: Visão geral e Arquivo -> Novo Projeto
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  
@@ -86,7 +86,7 @@ Vamos começar selecionando "Novo projeto" no menu arquivo no Visual Web Develop
 
 ![](mvc-music-store-part-1/_static/image5.png)
 
-Vamos selecionar Visual C# -&gt; modelos da Web de grupo à esquerda, em seguida, escolha o modelo "Aplicativo de Web do ASP.NET MVC 3" na coluna central. Nomeie o projeto MvcMusicStore e pressione o botão Okey.
+Vamos selecionar Visual c# -&gt; modelos da Web de grupo à esquerda, em seguida, escolha o modelo "Aplicativo de Web do ASP.NET MVC 3" na coluna central. Nomeie o projeto MvcMusicStore e pressione o botão Okey.
 
 ![](mvc-music-store-part-1/_static/image8.jpg)
 
@@ -114,8 +114,8 @@ ASP.NET MVC faz uso de algumas convenções básicas de nomenclatura para nomes 
 
 | **Pasta** | **Finalidade** |
 | --- | --- |
-| **/Controllers** | Controladores de respondem à entrada do navegador, decidir o que fazer com ele e retornar a resposta para o usuário. |
-| **/Views** | Modos de exibição manter nossos modelos de interface do usuário |
+| **/ Controladores** | Controladores de respondem à entrada do navegador, decidir o que fazer com ele e retornar a resposta para o usuário. |
+| **/ Modos de exibição** | Modos de exibição manter nossos modelos de interface do usuário |
 | **Ou os modelos** | Modelos de mantenham e manipulam dados |
 | **/Content** | Essa pasta contém nossas imagens, CSS e qualquer outro conteúdo estático |
 | **/Scripts** | Essa pasta contém nossos arquivos de JavaScript |

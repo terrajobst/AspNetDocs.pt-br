@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 8a07210c-eb0e-485e-9ee8-82a101520e65
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/positioning-a-modalpopup-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a507cb173b6dba96ca532a249fa9d495ded7d4e8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e37d2f4450c697f963d954c2fbb58e3ed20a1566
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421141"
 ---
-<a name="positioning-a-modalpopup-vb"></a>Posicionamento de um ModalPopup (VB)
-====================
+# <a name="positioning-a-modalpopup-vb"></a>Posicionamento de um ModalPopup (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup4.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup4VB.pdf)
@@ -55,9 +55,9 @@ E o `stopMoving()` função entra em jogo quando o pop-up é fechado isso pode s
 [!code-aspx[Main](positioning-a-modalpopup-vb/samples/sample6.aspx)]
 
 
-[![O popup modal é exibido na posição designada](positioning-a-modalpopup-vb/_static/image2.png)](positioning-a-modalpopup-vb/_static/image1.png)
+[![Tpop-up modal de he aparece na posição designada](positioning-a-modalpopup-vb/_static/image2.png)](positioning-a-modalpopup-vb/_static/image1.png)
 
 O popup modal é exibido na posição designada ([clique para exibir a imagem em tamanho normal](positioning-a-modalpopup-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Anterior](handling-postbacks-from-a-modalpopup-vb.md)
+> [Voltar](handling-postbacks-from-a-modalpopup-vb.md)

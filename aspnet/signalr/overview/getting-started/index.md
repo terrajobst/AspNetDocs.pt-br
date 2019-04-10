@@ -8,20 +8,20 @@ ms.date: 09/19/2014
 ms.assetid: 2acff246-c74c-4277-b539-35bc42988c6f
 msc.legacyurl: /signalr/overview/getting-started
 msc.type: chapter
-ms.openlocfilehash: 4573a04f115ab5d2fdc363f9746a22bc3939174c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3e720dd895c609d5b35848dbc4d4a6989028ff7d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418749"
 ---
-<a name="signalr-getting-started"></a>Guia de Introdução do SignalR
-====================
+# <a name="signalr-getting-started"></a>Guia de Introdução do SignalR
+
 > O que é o SignalR, plataformas, que é executado, e como começar.
 
 
 - [Introdução ao SignalR](introduction-to-signalr.md)
-- [Plataformas com suporte](supported-platforms.md)
+- [Plataformas compatíveis](supported-platforms.md)
 - [Tutorial: Introdução ao SignalR 2](tutorial-getting-started-with-signalr.md)
 - [Tutorial: Introdução ao SignalR 2 e MVC 5](tutorial-getting-started-with-signalr-and-mvc.md)
 - [Tutorial: Em tempo real de alta frequência com SignalR 2](tutorial-high-frequency-realtime-with-signalr.md)

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
-title: Configuração de um site que usa os serviços de aplicativo (C#) | Microsoft Docs
+title: Configuração de um site que usa os serviços de aplicativo (c#) | Microsoft Docs
 author: rick-anderson
 description: Versão do ASP.NET 2.0 introduziu uma série de serviços de aplicativos, que fazem parte do .NET Framework e servir como um conjunto de blocos de construção de serviços que yo...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: 1e33d1c6-3f9f-4c26-81e2-2a8f8907bb05
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2cfe18b99af7b04d18a52e64b77e1b9a6b204f75
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: fe6097c32e4584fd4c577fb8d2afee9b3483c22f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418411"
 ---
-<a name="configuring-a-website-that-uses-application-services-c"></a>Configuração de um site que usa Serviços de Aplicativos (C#)
-====================
+# <a name="configuring-a-website-that-uses-application-services-c"></a>Configuração de um site que usa Serviços de Aplicativos (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_09_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial09_AppServicesConfig_cs.pdf)
@@ -106,7 +106,7 @@ Permitir que o s examinar como adicionar os objetos de banco de dados para o ban
 A ferramenta é iniciada, exibindo uma tela de abertura, explicando sua finalidade. Clique em Avançar para ir à tela de "Selecione uma opção de instalação", que é mostrada na Figura 1. A partir daqui, você pode optar por adicionar os serviços de aplicativo objetos de banco de dados ou removê-los de um banco de dados. Como queremos adicionar esses objetos no banco de dados de produção, selecione a opção "Configurar o SQL Server para serviços de aplicativos" e clique em Avançar.
 
 
-[![Optar por configurar o SQL Server para serviços de aplicativos](configuring-a-website-that-uses-application-services-cs/_static/image2.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image1.jpg)
+[![Cescolher o modo para configurar o SQL Server para serviços de aplicativo](configuring-a-website-that-uses-application-services-cs/_static/image2.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image1.jpg)
 
 **Figura 1**: Optar por configurar o SQL Server para serviços de aplicativos ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-cs/_static/image3.jpg))
 
@@ -117,7 +117,7 @@ Em "Selecionar o servidor e banco de dados" tela solicita informações para se 
 > Depois de inserir o seu servidor de banco de dados e as credenciais, você poderá receber um erro ao expandir a lista suspensa de banco de dados. O `aspnet_regsql.exe` ferramenta de consultas a `sysdatabases` tabela do sistema para recuperar uma lista de bancos de dados do servidor, mas alguns web seus servidores de banco de dados de bloqueio de empresas de hospedagem para que essas informações não estão disponíveis publicamente. Se você receber esse erro, você pode digitar o nome do banco de dados diretamente na lista suspensa.
 
 
-[![Forneça a ferramenta com suas informações de Conexão do banco de dados s](configuring-a-website-that-uses-application-services-cs/_static/image5.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image4.jpg)
+[![Supply o informações de Conexão do s ferramenta com seu banco de dados](configuring-a-website-that-uses-application-services-cs/_static/image5.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image4.jpg)
 
 **Figura 2**: Forneça o informações de Conexão do s ferramenta com seu banco de dados ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-cs/_static/image6.jpg))
 
@@ -125,7 +125,7 @@ Em "Selecionar o servidor e banco de dados" tela solicita informações para se 
 A tela subsequente resume as ações que estão prestes a ocorrer, ou seja, que serão os objetos de banco de dados de serviços de aplicativo a ser adicionado ao banco de dados especificado. Clique em Avançar para concluir esta ação. Após alguns instantes, a tela final é exibida, indicando que os objetos de banco de dados foram adicionados (veja a Figura 3).
 
 
-[![Sucesso! Os objetos de banco de dados de serviços de aplicativo foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-cs/_static/image8.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image7.jpg)
+[![Success! Os objetos de banco de dados de serviços de aplicativo foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-cs/_static/image8.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image7.jpg)
 
 **Figura 3**: Sucesso! O aplicativo Serviços de banco de dados de objetos foram adicionados ao banco de dados de produção ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-cs/_static/image9.jpg))
 
@@ -133,7 +133,7 @@ A tela subsequente resume as ações que estão prestes a ocorrer, ou seja, que 
 Para verificar se os objetos de banco de dados de serviços de aplicativo foram adicionados com êxito no banco de dados de produção, abra o SQL Server Management Studio e conecte-se ao banco de dados de produção. Como mostra a Figura 4, agora você deve ver as tabelas de banco de dados de serviços de aplicativo em seu banco de dados `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`e assim por diante.
 
 
-[![Confirme se os objetos de banco de dados foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-cs/_static/image11.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image10.jpg)
+[![Cconfirmar que os objetos de banco de dados foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-cs/_static/image11.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image10.jpg)
 
 **Figura 4**: Confirme se os objetos de banco de dados foram adicionados ao banco de dados de produção ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-cs/_static/image12.jpg))
 
@@ -172,12 +172,12 @@ Lembre-se de que um tutorial anterior atualizado o aplicativo web de resenhas de
 > Para obter mais informações sobre como usar a associação e funções de APIs, juntamente com os controles relacionados ao logon da Web do ASP.NET, certifique-se de ler minha [ *tutoriais de segurança do site*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Para obter mais informações sobre como personalizar o controle CreateUserWizard, consulte o [ *criando contas de usuário* ](../../older-versions-security/membership/creating-user-accounts-cs.md) e [ *armazenar informações de usuário adicionais* ](../../older-versions-security/membership/storing-additional-user-information-cs.md) tutoriais ou check-out [ *Erich Peterson* ](http://www.erichpeterson.com/) artigo de s [ *Personalizando o controle CreateUserWizard* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
 
-[![Os administradores podem criar novas contas de usuário](configuring-a-website-that-uses-application-services-cs/_static/image14.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image13.jpg)
+[![Administrators pode criar novas contas de usuário](configuring-a-website-that-uses-application-services-cs/_static/image14.jpg)](configuring-a-website-that-uses-application-services-cs/_static/image13.jpg)
 
 **Figura 5**: Os administradores podem criar novas contas de usuário ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-cs/_static/image15.jpg))
 
 
-Se você precisar da funcionalidade completa do check-out no WSAT [ *sem interrupção sua própria ferramenta Web Site Administration*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), no qual o autor Dan Clem percorre o processo de criação de uma ferramenta semelhante WSAT personalizada. Dan compartilha seu código-fonte aplicativo s (em C#) e fornece instruções passo a passo para adicioná-lo ao seu site hospedado.
+Se você precisar da funcionalidade completa do check-out no WSAT [ *sem interrupção sua própria ferramenta Web Site Administration*](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx), no qual o autor Dan Clem percorre o processo de criação de uma ferramenta semelhante WSAT personalizada. Dan compartilha seu código-fonte aplicativo s (em c#) e fornece instruções passo a passo para adicioná-lo ao seu site hospedado.
 
 ## <a name="summary"></a>Resumo
 

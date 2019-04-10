@@ -8,15 +8,15 @@ ms.date: 02/14/2013
 ms.assetid: bdb18d02-9f61-4676-836d-6fdea94f9282
 msc.legacyurl: /whitepapers/aspnet-and-web-tools-20122-release-notes
 msc.type: content
-ms.openlocfilehash: 50e96251f8add00f70193977e73f9af194571c49
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 45e2d1b10665a8ca1965f0761bfa6bfd13444c8e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419503"
 ---
-<a name="aspnet-and-web-tools-20122-release-notes"></a>Notas de Versão do ASP.NET and Web Tools 2012.2
-====================
+# <a name="aspnet-and-web-tools-20122-release-notes"></a>Notas de Versão do ASP.NET and Web Tools 2012.2
+
 > Este documento descreve a versão do ASP.NET e Web Tools 2012.2. É uma atualização para as ferramentas do Visual Studio Web e ASP.NET.
 
 
@@ -31,7 +31,7 @@ ms.locfileid: "57038903"
     - [Modelos do ASP.NET MVC](#_Templates)
     - [ASP.NET Web API](#_ASP.NET_Web_API)
 
-    - [SignalR do ASP.NET](#_ASP.NET_SignalR)
+    - [ASP.NET SignalR](#_ASP.NET_SignalR)
     - [URLs amigáveis do ASP.NET](#_ASP.NET_Friendly_URLs)
 - [Problemas conhecidos e alterações recentes](#_Known_Issues_and)
 
@@ -85,7 +85,7 @@ Esta seção descreve os recursos que foram introduzidos na versão do ASP.NET e
     - Suporte para realce de sintaxe para CoffeeScript, Mustache, Handlebars e JsRender.
     - O editor de HTML fornece o Intellisense para associações do Knockout.
     - Suportam a menos de edição e o compilador para habilitar a criação de CSS dinâmico usando o menor.
-    - Colar JSON como uma classe do .NET. Usar este comando Colar especial para colar JSON em um C# ou VB.NET arquivo de código e o Visual Studio gerará automaticamente inferidas do JSON de classes do .NET.
+    - Colar JSON como uma classe do .NET. Usar este comando Colar especial para colar JSON em um c# ou VB.NET arquivo de código e o Visual Studio gerará automaticamente inferidas do JSON de classes do .NET.
 - Suporte do emulador móvel adiciona ganchos de extensibilidade para que os emuladores de terceiros podem ser instalados como um VSIX. Os emuladores instalados serão exibida na lista suspensa F5, para que os desenvolvedores podem visualizar seus sites em uma variedade de dispositivos móveis. Leia mais sobre esse recurso na entrada no blog de Hanselman [a nova integração BrowserStack com o Visual Studio](http://www.hanselman.com/blog/CrossBrowserDebuggingIntegratedIntoVisualStudioWithBrowserStack.aspx).
 
 <a id="_Web_Publishing"></a>

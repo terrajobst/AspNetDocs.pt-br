@@ -8,15 +8,15 @@ ms.date: 01/16/2019
 ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
-ms.openlocfilehash: d49dfad368ca4b81bb865103a99ec223a1cc66df
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 39502e03196d2ba51e826d248ff0ff1e84258131
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420192"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação para teste
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação para teste
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou em um provedor de hospedagem de terceiros usando o Visual Studio 2017. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).

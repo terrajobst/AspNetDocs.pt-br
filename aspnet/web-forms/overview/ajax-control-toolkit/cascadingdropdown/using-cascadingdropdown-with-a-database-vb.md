@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 97a3d33c-c856-43f3-8acb-f1ccbc48221a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 98e07764a3bd6afc8045221e9c016e57be44f5f7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d0b6f8651e327cf9ad2a3051edd323efba4f64fc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418723"
 ---
-<a name="using-cascadingdropdown-with-a-database-vb"></a>Uso de CascadingDropDown com um banco de dados (VB)
-====================
+# <a name="using-cascadingdropdown-with-a-database-vb"></a>Uso de CascadingDropDown com um banco de dados (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown1VB.pdf)
@@ -86,12 +86,12 @@ O restante do método é bastante direto, em seguida. ID do fornecedor é usado 
 Carregar a página ASP.NET e pouco tempo depois, a lista de fornecedores é preenchida com 25 entradas. Selecione uma entrada e observe como a segunda lista suspensa é preenchida com dados.
 
 
-[![A primeira lista é preenchida automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
+[![Tprimeira lista é preenchida automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
 
 A primeira lista é preenchida automaticamente ([clique para exibir a imagem em tamanho normal](using-cascadingdropdown-with-a-database-vb/_static/image3.png))
 
 
-[![A segunda lista é preenchida de acordo com a seleção na primeira lista](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
+[![Tsegunda lista é preenchida de acordo com a seleção na primeira lista](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
 
 A segunda lista é preenchida de acordo com a seleção na primeira lista ([clique para exibir a imagem em tamanho normal](using-cascadingdropdown-with-a-database-vb/_static/image6.png))
 

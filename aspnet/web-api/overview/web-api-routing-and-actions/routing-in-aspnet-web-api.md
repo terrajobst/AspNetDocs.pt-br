@@ -8,15 +8,15 @@ ms.date: 10/29/2018
 ms.assetid: 0675bdc7-282f-4f47-b7f3-7e02133940ca
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: a7bc998fc23c0453fc9cd6ac1e7b9af7bd516225
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 85862c094cc54365267b1f21e68d235a15519cda
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419230"
 ---
-<a name="routing-in-aspnet-web-api"></a>Roteamento na API Web ASP.NET
-====================
+# <a name="routing-in-aspnet-web-api"></a>Roteamento na API Web ASP.NET
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Este artigo descreve como o API Web ASP.NET encaminha solicitações HTTP para controladores.

@@ -8,15 +8,15 @@ ms.date: 01/28/2019
 ms.assetid: 08257f55-36f4-4e39-9c88-2a5602838c79
 msc.legacyurl: /aspnet/overview/owin-and-katana/owin-startup-class-detection
 msc.type: authoredcontent
-ms.openlocfilehash: 0b34cca8b48383dbb028106651758dff889ed614
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e4d9424d691f92aacf078faed09689daa40a44fd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418333"
 ---
-<a name="owin-startup-class-detection"></a>Detecção de classe de inicialização OWIN
-====================
+# <a name="owin-startup-class-detection"></a>Detecção de classe de inicialização OWIN
+
 
 > Este tutorial mostra como configurar qual classe de inicialização OWIN é carregado. Para obter mais informações sobre o OWIN, consulte [uma visão geral do projeto Katana](an-overview-of-project-katana.md). Este tutorial foi escrito por Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Howard Dierking e Praburaj Thiagarajan ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).
 >
@@ -79,7 +79,8 @@ ms.locfileid: "57039773"
      > [!NOTE]
      > No código acima é ter comentado a `OwinStartup` atributo e nós depende da convenção de executar a classe denominada `Startup` .-pressione ***F5*** para executar o aplicativo. Clique em atualizar algumas vezes.
 
-    ![](owin-startup-class-detection/_static/image4.png) Observação: O número mostrado nas imagens neste tutorial não corresponderá o número que você vê. A cadeia de caracteres de milissegundo é usada para mostrar uma nova resposta quando a página for atualizada.
+    ![](owin-startup-class-detection/_static/image4.png)
+  Observação: O número mostrado nas imagens neste tutorial não corresponderá o número que você vê. A cadeia de caracteres de milissegundo é usada para mostrar uma nova resposta quando a página for atualizada.
   Você pode ver as informações de rastreamento a **saída** janela.
 
     ![](owin-startup-class-detection/_static/image5.png)

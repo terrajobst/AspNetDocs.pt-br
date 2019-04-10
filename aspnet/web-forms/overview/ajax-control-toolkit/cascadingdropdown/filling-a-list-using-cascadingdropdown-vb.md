@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 5236695e-5c70-4887-baee-0bfb0afb3448
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b4bbe5c120a6f17a7dca08e6fc855018a2e23797
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 663dfc76dc3d07dbe9ddca002dc07cb3f9acdb1c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419334"
 ---
-<a name="filling-a-list-using-cascadingdropdown-vb"></a>Preencher uma lista usando o CascadingDropDown (VB)
-====================
+# <a name="filling-a-list-using-cascadingdropdown-vb"></a>Preencher uma lista usando o CascadingDropDown (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown0.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown0VB.pdf)
@@ -46,7 +46,7 @@ Para obter essa lista, um extensor de CascadingDropDown é adicionado. Ele envia
 - `Category`: Informações de categoria que são enviadas para o método da web quando chamado
 - `PromptText`: Texto exibido quando assincronamente Carregando dados da lista do servidor
 
-Aqui está a marcação para o `CascadingDropDown` elemento. A única diferença entre C# e VB é o nome do serviço web associado:
+Aqui está a marcação para o `CascadingDropDown` elemento. A única diferença entre c# e VB é o nome do serviço web associado:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-vb/samples/sample3.aspx)]
 
@@ -61,7 +61,7 @@ Portanto, o aspecto importante é que o método deve retornar uma matriz do tipo
 Carregamento da página no navegador disparará a lista a ser preenchido com três fornecedores.
 
 
-[![A lista é preenchida automaticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
+[![Tlista é preenchida automaticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
 
 A lista é preenchida automaticamente ([clique para exibir a imagem em tamanho normal](filling-a-list-using-cascadingdropdown-vb/_static/image3.png))
 

@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/sending-html-form-data-part-1
-title: 'Enviando dados de formulário HTML na API Web ASP.NET: Dados de formulário urlencoded | Microsoft Docs'
+title: 'Enviando dados de formulário HTML na API Web ASP.NET: Dados de formulário urlencoded - ASP.NET 4.x'
 author: MikeWasson
-description: ''
+description: Este artigo mostra como publicar dados de formulário urlencoded a um controlador de API da Web com ASP.NET 4. x
 ms.author: riande
 ms.date: 06/15/2012
+ms.custom: seoapril2019
 ms.assetid: 585351c4-809a-4bf5-bcbe-35d624f565fe
 msc.legacyurl: /web-api/overview/advanced/sending-html-form-data-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 2d01212cc408f8bb66fa3103464c9a1f7a1e21c6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fb0309af11910125943737ebb721b356b7bd08bc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049353"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418294"
 ---
-<a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Enviando dados de formulário HTML na API Web ASP.NET: Dados de formulário urlencoded
-====================
+# <a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Enviando dados de formulário HTML na API Web ASP.NET: Dados de formulário urlencoded
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 ## <a name="part-1-form-urlencoded-data"></a>Parte 1: Dados de formulário urlencoded
@@ -133,4 +134,4 @@ Você pode usar a mesma abordagem para enviar uma matriz de tipos simples:
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-[Parte 2: Upload do arquivo e MIME com diversas partes](sending-html-form-data-part-2.md)
+[Parte 2: Carregamento do arquivo e MIME com diversas partes](sending-html-form-data-part-2.md)

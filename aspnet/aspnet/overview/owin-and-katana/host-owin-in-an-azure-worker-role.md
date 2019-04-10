@@ -8,15 +8,15 @@ ms.date: 04/11/2014
 ms.assetid: 07aa855a-92ee-4d43-ba66-5bfd7de20ee6
 msc.legacyurl: /aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: dbf0964695dd2592d063b05c0778923edffe8e2e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 129b6a8f411d482de75e7e5edc5cc919b4d2de52
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058033"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59419516"
 ---
-<a name="host-owin-in-an-azure-worker-role"></a>Hospedar OWIN em uma função de trabalho do Azure
-====================
+# <a name="host-owin-in-an-azure-worker-role"></a>Hospedar OWIN em uma função de trabalho do Azure
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > Este tutorial mostra como hospedar internamente o OWIN em uma função de trabalho do Microsoft Azure.
@@ -37,7 +37,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 
 Inicie o Visual Studio com privilégios de administrador. Privilégios de administrador são necessárias para depurar o aplicativo localmente, usando o emulador de computação do Azure.
 
-No **arquivo** menu, clique em **New**, em seguida, clique em **projeto**. Partir **modelos instalados**, no Visual C#, clique em **nuvem** e, em seguida, clique em **serviço de nuvem do Windows Azure**. Nomeie o projeto "AzureApp" e clique em **Okey**.
+No **arquivo** menu, clique em **New**, em seguida, clique em **projeto**. Partir **modelos instalados**, no Visual c#, clique em **nuvem** e, em seguida, clique em **serviço de nuvem do Windows Azure**. Nomeie o projeto "AzureApp" e clique em **Okey**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image2.png)](host-owin-in-an-azure-worker-role/_static/image1.png)
 
@@ -116,7 +116,7 @@ O emulador de computação atribui um endereço IP local para o ponto de extremi
 
 [![](host-owin-in-an-azure-worker-role/_static/image10.png)](host-owin-in-an-azure-worker-role/_static/image9.png)
 
-Localize o endereço IP em implantações de serviços de implantação [id], detalhes do serviço. Abra um navegador da web e navegue até http://<em>endereço</em>, onde <em>endereço</em> é o endereço IP atribuído pelo emulador de computação; por exemplo, `http://127.0.0.1:80`. Você verá a página de boas-vinda do OWIN:
+Localize o endereço IP em implantações de serviços de implantação [id], detalhes do serviço. Abra um navegador da web e navegue para http:\/\/*endereço*, onde *endereço* é o endereço IP atribuído pelo emulador de computação; por exemplo, `http://127.0.0.1:80`. Você verá a página de boas-vinda do OWIN:
 
 ![](host-owin-in-an-azure-worker-role/_static/image11.png)
 
