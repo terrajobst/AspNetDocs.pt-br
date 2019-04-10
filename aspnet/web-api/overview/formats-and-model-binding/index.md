@@ -1,28 +1,29 @@
 ---
 uid: web-api/overview/formats-and-model-binding/index
-title: Serialização e a associação de modelo na API Web ASP.NET | Microsoft Docs
+title: Serialização e a associação de modelo na API Web ASP.NET - ASP.NET 4.x
 author: rick-anderson
-description: Como a API Web ASP.NET associa mensagens HTTP para modelos de domínio e, em seguida, formata de como trabalhar com a mídia na API da Web.
+description: Como a API Web ASP.NET associa HTTP mensagens para modelos de domínio e formatos de como trabalhar com a mídia na API da Web para ASP.NET 4. x.
 ms.author: riande
 ms.date: 01/17/2012
+ms.custom: seoapril2019
 ms.assetid: 2d520763-3860-4b3f-8b99-ac71fb01cf37
 msc.legacyurl: /web-api/overview/formats-and-model-binding
 msc.type: chapter
-ms.openlocfilehash: fea9b9dcfa9dfbc56a724d2dab03b98a1259e3a4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9d5b58871147b84cb4d8bde73d3139655e4cd3e6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388732"
 ---
-<a name="serialization-and-model-binding-in-aspnet-web-api"></a><span data-ttu-id="14b1a-103">Serialização e a associação de modelo na API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="14b1a-103">Serialization and Model Binding in ASP.NET Web API</span></span>
-====================
-> <span data-ttu-id="14b1a-104">Como a API Web ASP.NET associa mensagens HTTP para modelos de domínio e, em seguida, formata de como trabalhar com a mídia na API da Web.</span><span class="sxs-lookup"><span data-stu-id="14b1a-104">How ASP.NET Web API binds HTTP messages to domain models, and how to work with media formats in Web API.</span></span>
+# <a name="serialization-and-model-binding-in-aspnet-web-api"></a><span data-ttu-id="3f58f-103">Serialização e a associação de modelo na API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="3f58f-103">Serialization and Model Binding in ASP.NET Web API</span></span>
+
+> <span data-ttu-id="3f58f-104">Como a API Web ASP.NET associa mensagens HTTP para modelos de domínio e, em seguida, formata de como trabalhar com a mídia na API da Web.</span><span class="sxs-lookup"><span data-stu-id="3f58f-104">How ASP.NET Web API binds HTTP messages to domain models, and how to work with media formats in Web API.</span></span>
 
 
-- [<span data-ttu-id="14b1a-105">Formatadores de mídia na API Web 2</span><span class="sxs-lookup"><span data-stu-id="14b1a-105">Media Formatters in Web API 2</span></span>](media-formatters.md)
-- [<span data-ttu-id="14b1a-106">Serialização de XML e JSON na API Web</span><span class="sxs-lookup"><span data-stu-id="14b1a-106">JSON and XML Serialization in Web API</span></span>](json-and-xml-serialization.md)
-- [<span data-ttu-id="14b1a-107">Suporte a BSON na API Web 2.1</span><span class="sxs-lookup"><span data-stu-id="14b1a-107">BSON Support in Web API 2.1</span></span>](bson-support-in-web-api-21.md)
-- [<span data-ttu-id="14b1a-108">Negociação de conteúdo na API Web</span><span class="sxs-lookup"><span data-stu-id="14b1a-108">Content Negotiation in Web API</span></span>](content-negotiation.md)
-- [<span data-ttu-id="14b1a-109">Validação de modelo na API Web</span><span class="sxs-lookup"><span data-stu-id="14b1a-109">Model Validation in Web API</span></span>](model-validation-in-aspnet-web-api.md)
-- [<span data-ttu-id="14b1a-110">Associação de parâmetro na API Web</span><span class="sxs-lookup"><span data-stu-id="14b1a-110">Parameter Binding in Web API</span></span>](parameter-binding-in-aspnet-web-api.md)
+- [<span data-ttu-id="3f58f-105">Formatadores de mídia na API Web 2</span><span class="sxs-lookup"><span data-stu-id="3f58f-105">Media Formatters in Web API 2</span></span>](media-formatters.md)
+- [<span data-ttu-id="3f58f-106">Serialização de XML e JSON na API Web</span><span class="sxs-lookup"><span data-stu-id="3f58f-106">JSON and XML Serialization in Web API</span></span>](json-and-xml-serialization.md)
+- [<span data-ttu-id="3f58f-107">Suporte a BSON na API Web 2.1</span><span class="sxs-lookup"><span data-stu-id="3f58f-107">BSON Support in Web API 2.1</span></span>](bson-support-in-web-api-21.md)
+- [<span data-ttu-id="3f58f-108">Negociação de conteúdo na API Web</span><span class="sxs-lookup"><span data-stu-id="3f58f-108">Content Negotiation in Web API</span></span>](content-negotiation.md)
+- [<span data-ttu-id="3f58f-109">Validação de modelo na API Web</span><span class="sxs-lookup"><span data-stu-id="3f58f-109">Model Validation in Web API</span></span>](model-validation-in-aspnet-web-api.md)
+- [<span data-ttu-id="3f58f-110">Associação de parâmetro na API Web</span><span class="sxs-lookup"><span data-stu-id="3f58f-110">Parameter Binding in Web API</span></span>](parameter-binding-in-aspnet-web-api.md)
