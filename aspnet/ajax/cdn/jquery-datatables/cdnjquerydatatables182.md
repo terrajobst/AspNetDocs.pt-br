@@ -8,16 +8,16 @@ ms.date: 07/27/2014
 ms.assetid: 2a72d2f5-b387-41e6-9807-21f2ec8c2b7a
 msc.legacyurl: /ajax/cdn/jquery-datatables/cdnjquerydatatables182
 msc.type: content
-ms.openlocfilehash: 5c2028c50c370b6e51991df9238570604f0c7912
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f6690541333ce5329c0253572c18a3363f0d73f2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411898"
 ---
-<a name="jquery-datatables-182"></a><span data-ttu-id="1ca8b-102">jQuery DataTables 1.8.2</span><span class="sxs-lookup"><span data-stu-id="1ca8b-102">jQuery DataTables 1.8.2</span></span>
-====================
-<span data-ttu-id="1ca8b-103">Os seguintes arquivos para o plug-ins de DataTables do jQuery são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="1ca8b-103">The following files for the jQuery DataTables plugins are hosted on the CDN:</span></span>
+# <a name="jquery-datatables-182"></a><span data-ttu-id="93e88-102">jQuery DataTables 1.8.2</span><span class="sxs-lookup"><span data-stu-id="93e88-102">jQuery DataTables 1.8.2</span></span>
+
+<span data-ttu-id="93e88-103">Os seguintes arquivos para o plug-ins de DataTables do jQuery são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="93e88-103">The following files for the jQuery DataTables plugins are hosted on the CDN:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.8.2/jquery.dataTables.js
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.8.2/jquery.dataTables.min.js

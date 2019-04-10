@@ -8,20 +8,20 @@ ms.date: 02/14/2008
 ms.assetid: b0a08145-5569-482c-abca-18df242628ec
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i/how-do-i-create-a-master-page-in-visual-studio-2008
 msc.type: video
-ms.openlocfilehash: 0e660fce7536ebc44587faa192605cb6e990bf85
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b9eef4f60789e4e1f4e28e06b35e0dd76006998a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412054"
 ---
-<a name="how-do-i-create-a-master-page-in-visual-studio-2008"></a><span data-ttu-id="1d3c7-103">[Como fazer:] Criar uma página mestra no Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="1d3c7-103">[How Do I:] Create a Master Page in Visual Studio 2008</span></span>
-====================
-<span data-ttu-id="1d3c7-104">por Asli Bilgin</span><span class="sxs-lookup"><span data-stu-id="1d3c7-104">by Asli Bilgin</span></span>
+# <a name="how-do-i-create-a-master-page-in-visual-studio-2008"></a><span data-ttu-id="d55a0-103">[Como fazer:] Criar uma página mestra no Visual Studio 2008</span><span class="sxs-lookup"><span data-stu-id="d55a0-103">[How Do I:] Create a Master Page in Visual Studio 2008</span></span>
 
-<span data-ttu-id="1d3c7-105">Neste vídeo, demonstrarei como criar uma página mestra simples usando o .NET 3.5 no Visual Studio 2008.</span><span class="sxs-lookup"><span data-stu-id="1d3c7-105">In this video I will demonstrate how to create a simple Master Page using .NET 3.5 in Visual Studio 2008.</span></span>
+<span data-ttu-id="d55a0-104">por Asli Bilgin</span><span class="sxs-lookup"><span data-stu-id="d55a0-104">by Asli Bilgin</span></span>
 
-[<span data-ttu-id="1d3c7-106">&#9654;Assista ao vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="1d3c7-106">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-a-master-page-in-visual-studio-2008)
+<span data-ttu-id="d55a0-105">Neste vídeo, demonstrarei como criar uma página mestra simples usando o .NET 3.5 no Visual Studio 2008.</span><span class="sxs-lookup"><span data-stu-id="d55a0-105">In this video I will demonstrate how to create a simple Master Page using .NET 3.5 in Visual Studio 2008.</span></span>
+
+[<span data-ttu-id="d55a0-106">&#9654;Assista ao vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="d55a0-106">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-a-master-page-in-visual-studio-2008)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="1d3c7-107">Avançar</span><span class="sxs-lookup"><span data-stu-id="1d3c7-107">Next</span></span>](how-do-i-create-nested-master-page-in-visual-studio-2008.md)
+> [<span data-ttu-id="d55a0-107">Avançar</span><span class="sxs-lookup"><span data-stu-id="d55a0-107">Next</span></span>](how-do-i-create-nested-master-page-in-visual-studio-2008.md)

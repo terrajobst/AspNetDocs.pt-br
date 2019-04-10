@@ -8,22 +8,22 @@ ms.date: 10/18/2007
 ms.assetid: 3a75ac02-225d-4e30-8669-0156c3ef06c7
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control
 msc.type: video
-ms.openlocfilehash: 35ffec97c7652622ae69c443f741114758ef95b4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9fdb0665aa8a6cb038203d31f8f71a8725834cee
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417410"
 ---
-<a name="how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control"></a><span data-ttu-id="8a3ea-105">[Como fazer:] Associar o comportamento do cliente AJAX com um controle de servidor ASP.NET?</span><span class="sxs-lookup"><span data-stu-id="8a3ea-105">[How Do I:] Associate AJAX Client Behavior with an ASP.NET Server Control?</span></span>
-====================
-<span data-ttu-id="8a3ea-106">por [Chris Pels](https://twitter.com/chrispels)</span><span class="sxs-lookup"><span data-stu-id="8a3ea-106">by [Chris Pels](https://twitter.com/chrispels)</span></span>
+# <a name="how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control"></a><span data-ttu-id="dabac-105">[Como fazer:] Associar o comportamento do cliente AJAX com um controle de servidor ASP.NET?</span><span class="sxs-lookup"><span data-stu-id="dabac-105">[How Do I:] Associate AJAX Client Behavior with an ASP.NET Server Control?</span></span>
 
-<span data-ttu-id="8a3ea-107">Saiba como criar um comportamento do cliente com base no Microsoft AJAX que pode ser associado um controle de servidor ASP.NET em uma página. aspx.</span><span class="sxs-lookup"><span data-stu-id="8a3ea-107">Learn how to create a client behavior based upon Microsoft AJAX that can be associated with an ASP.NET server control on an .aspx page.</span></span> <span data-ttu-id="8a3ea-108">O comportamento do cliente estende a funcionalidade do controle ASP.NET padrão por meio de associação em vez de criar um novo controle personalizado.</span><span class="sxs-lookup"><span data-stu-id="8a3ea-108">The client behavior extends the functionality of the standard ASP.NET control through association rather than by creating a new custom control.</span></span> <span data-ttu-id="8a3ea-109">Portanto, o comportamento pode ser reutilizado em várias instâncias ou tipos de controles ASP.NET dependendo de sua implementação.</span><span class="sxs-lookup"><span data-stu-id="8a3ea-109">Therefore, the behavior can be reused across multiple instances or types of ASP.NET controls depending upon its implementation.</span></span>
+<span data-ttu-id="dabac-106">por [Chris Pels](https://twitter.com/chrispels)</span><span class="sxs-lookup"><span data-stu-id="dabac-106">by [Chris Pels](https://twitter.com/chrispels)</span></span>
 
-[<span data-ttu-id="8a3ea-110">&#9654;Assista ao vídeo (18 minutos)</span><span class="sxs-lookup"><span data-stu-id="8a3ea-110">&#9654; Watch video (18 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control)
+<span data-ttu-id="dabac-107">Saiba como criar um comportamento do cliente com base no Microsoft AJAX que pode ser associado um controle de servidor ASP.NET em uma página. aspx.</span><span class="sxs-lookup"><span data-stu-id="dabac-107">Learn how to create a client behavior based upon Microsoft AJAX that can be associated with an ASP.NET server control on an .aspx page.</span></span> <span data-ttu-id="dabac-108">O comportamento do cliente estende a funcionalidade do controle ASP.NET padrão por meio de associação em vez de criar um novo controle personalizado.</span><span class="sxs-lookup"><span data-stu-id="dabac-108">The client behavior extends the functionality of the standard ASP.NET control through association rather than by creating a new custom control.</span></span> <span data-ttu-id="dabac-109">Portanto, o comportamento pode ser reutilizado em várias instâncias ou tipos de controles ASP.NET dependendo de sua implementação.</span><span class="sxs-lookup"><span data-stu-id="dabac-109">Therefore, the behavior can be reused across multiple instances or types of ASP.NET controls depending upon its implementation.</span></span>
+
+[<span data-ttu-id="dabac-110">&#9654;Assista ao vídeo (18 minutos)</span><span class="sxs-lookup"><span data-stu-id="dabac-110">&#9654; Watch video (18 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-associate-ajax-client-behavior-with-an-aspnet-server-control)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="8a3ea-111">[Anterior](how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax.md)
-> [Próximo](how-do-i-retrieve-values-from-server-side-ajax-controls.md)</span><span class="sxs-lookup"><span data-stu-id="8a3ea-111">[Previous](how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax.md)
+> <span data-ttu-id="dabac-111">[Anterior](how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax.md)
+> [Próximo](how-do-i-retrieve-values-from-server-side-ajax-controls.md)</span><span class="sxs-lookup"><span data-stu-id="dabac-111">[Previous](how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax.md)
 [Next](how-do-i-retrieve-values-from-server-side-ajax-controls.md)</span></span>
