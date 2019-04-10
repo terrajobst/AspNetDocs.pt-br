@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: 94297aa0-1f2d-4d72-bbcb-63f64653e0c0
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: 828ff18abcc5932f82be71a45ebde589eeb051fa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ce866a169e69c0d85fe18ddeccf271f1f235d440
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049273"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381114"
 ---
-<a name="part-3-views-and-viewmodels"></a>Parte 3: Exibições e ViewModels
-====================
+# <a name="part-3-views-and-viewmodels"></a>Parte 3: Exibições e ViewModels
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  
@@ -144,7 +144,7 @@ Agora podemos modificar a lógica para retornar um objeto de álbum para o modo 
 
 [!code-csharp[Main](mvc-music-store-part-3/samples/sample11.cs)]
 
-*Observação: Se você estiver familiarizado com o C#, você pode supor que, usando var significa que nossa variável de álbum é a associação tardia. Não está correta – o compilador do C# é usando inferência de tipo com base no qual estamos atribuindo à variável para determinar o que álbum é do tipo álbum e compilando a variável local álbum como um tipo de álbum, portanto, obtemos a verificação de tempo de compilação e o editor de códigos do Visual Studio suporte.*
+*Observação: Se você estiver familiarizado com o C#, você pode supor que, usando var significa que nossa variável de álbum é a associação tardia. Não está correta – o compilador do c# é usando inferência de tipo com base no qual estamos atribuindo à variável para determinar o que álbum é do tipo álbum e compilando a variável local álbum como um tipo de álbum, portanto, obtemos a verificação de tempo de compilação e o editor de códigos do Visual Studio suporte.*
 
 Agora, vamos criar um modelo de exibição que usa nosso álbum para gerar uma resposta HTML. Antes de fazer isso é necessário compilar o projeto para que a caixa de diálogo Adicionar modo de exibição sabe sobre nossa classe de álbum recém-criado. Você pode compilar o projeto, selecionando o Debug⇨Build MvcMusicStore item de menu (para créditos extras, você pode usar o atalho Ctrl-Shift-B para compilar o projeto).
 

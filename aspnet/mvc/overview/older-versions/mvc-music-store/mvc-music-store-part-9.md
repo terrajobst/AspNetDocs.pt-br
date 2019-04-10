@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: d65c5c2b-a039-463f-ad29-25cf9fb7a1ba
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-9
 msc.type: authoredcontent
-ms.openlocfilehash: b3babf1d935774b0ef93d6ab02c8b295998f8afc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c7151351b087439f17457b254cd9e373af21cae3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060483"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380893"
 ---
-<a name="part-9-registration-and-checkout"></a>Parte 9: Registro e check-out
-====================
+# <a name="part-9-registration-and-checkout"></a>Parte 9: Registro e check-out
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  

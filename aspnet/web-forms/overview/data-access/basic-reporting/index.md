@@ -8,21 +8,21 @@ ms.date: 10/05/2011
 ms.assetid: cbd98d24-8281-4415-87df-8365f0fbe7fc
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting
 msc.type: chapter
-ms.openlocfilehash: 9323886ed50df775ac587b0473126fbdc28a7a19
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0099e82a6b49d37eb8151ab727da0260e423faf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384195"
 ---
-<a name="basic-reporting"></a>Relatórios básicos
-====================
+# <a name="basic-reporting"></a>Relatórios básicos
+
 > Esse conjunto de tutoriais examina como usar o controle ObjectDataSource para trabalhar com dados recuperados da BLL, tudo sem código.
 
 
-- [Exibindo dados com o ObjectDataSource (C#)](displaying-data-with-the-objectdatasource-cs.md)
+- [Exibir dados com o ObjectDataSource (C#)](displaying-data-with-the-objectdatasource-cs.md)
 - [Parâmetros declarativos (C#)](declarative-parameters-cs.md)
-- [Configurando programaticamente os valores do parâmetro ObjectDataSource (C#)](programmatically-setting-the-objectdatasource-s-parameter-values-cs.md)
-- [Exibindo dados com o ObjectDataSource (VB)](displaying-data-with-the-objectdatasource-vb.md)
+- [Configurar programaticamente os valores do parâmetro ObjectDataSource (C#)](programmatically-setting-the-objectdatasource-s-parameter-values-cs.md)
+- [Exibir dados com o ObjectDataSource (VB)](displaying-data-with-the-objectdatasource-vb.md)
 - [Parâmetros declarativos (VB)](declarative-parameters-vb.md)
-- [Configurando programaticamente os valores do parâmetro ObjectDataSource (VB)](programmatically-setting-the-objectdatasource-s-parameter-values-vb.md)
+- [Configurar programaticamente os valores do parâmetro ObjectDataSource (VB)](programmatically-setting-the-objectdatasource-s-parameter-values-vb.md)

@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: 64116e56-1c9a-4f07-8097-bb36cbb6e57f
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
 msc.type: authoredcontent
-ms.openlocfilehash: 203a12473f79f38f7162d360d2179ca7c4a30303
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379463"
 ---
-<a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores e exibições para implementar uma interface do usuário de listagem/detalhes
-====================
+# <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores e exibições para implementar uma interface do usuário de listagem/detalhes
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -96,7 +96,7 @@ Abaixo está uma tabela que demonstra como uma variedade de URLs são mapeados u
 | */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
 | *Jantares/5/edição* | DinnersController | Edit(ID) | id=5 |
 | */Dinners/Create* | DinnersController | Create() | N/D |
-| */Dinners* | DinnersController | Index) | N/D |
+| */ Jantares* | DinnersController | Index) | N/D |
 | */Home* | HomeController | Index) | N/D |
 | */* | HomeController | Index) | N/D |
 
@@ -236,7 +236,7 @@ A solução de tabela acima nos dá um layout de grade de nossos dados jantar �
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample10.aspx)]
 
-Estamos usando a palavra-chave de "var" dentro da instrução foreach acima conforme executamos um loop sobre cada jantar em nosso modelo. Aqueles familiarizados com C# 3.0 podem pensar que, usar "var" significa que o objeto de jantar é associação tardia. Em vez disso, significa que o compilador está usando inferência de tipo em relação a propriedade "Model" com rigidez de tipos (que é do tipo "IEnumerable&lt;Dinner&gt;") e compilar a variável local "Jantar" como um tipo de jantar – o que significa que podemos obter completos IntelliSense e procurando dentro de blocos de código de tempo de compilação:
+Estamos usando a palavra-chave de "var" dentro da instrução foreach acima conforme executamos um loop sobre cada jantar em nosso modelo. Aqueles familiarizados com c# 3.0 podem pensar que, usar "var" significa que o objeto de jantar é associação tardia. Em vez disso, significa que o compilador está usando inferência de tipo em relação a propriedade "Model" com rigidez de tipos (que é do tipo "IEnumerable&lt;Dinner&gt;") e compilar a variável local "Jantar" como um tipo de jantar – o que significa que podemos obter completos IntelliSense e procurando dentro de blocos de código de tempo de compilação:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image21.png)
 

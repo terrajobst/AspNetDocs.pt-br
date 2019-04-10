@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 0c8e74f1-b3ba-4ca9-a1c5-f5c4831a359a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/using-modalpopup-with-a-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4915883ce50512a0a612060ba9543705abcc5f00
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f1875ae95d79ec2a6762a547aabfbd03e0930b2c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386496"
 ---
-<a name="using-modalpopup-with-a-repeater-control-vb"></a>Uso de ModalPopup com um controle repetidor (VB)
-====================
+# <a name="using-modalpopup-with-a-repeater-control-vb"></a>Uso de ModalPopup com um controle repetidor (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/2/4/0/24052038-f942-4336-905b-b60ae56f0dd5/ModalPopup2.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/modalpopup2VB.pdf)
@@ -49,7 +49,7 @@ Para fazer com que o pop-up funcionar dentro de repeater, o `ModalPopupExtender`
 Em seguida, cada item na fonte de dados é exibido com um botão ao lado dele que dispara o popup modal.
 
 
-[![O popup modal pode ser disparado para cada entrada da fonte de dados](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
+[![Tpop-up modal de he pode ser disparado para cada entrada da fonte de dados](using-modalpopup-with-a-repeater-control-vb/_static/image2.png)](using-modalpopup-with-a-repeater-control-vb/_static/image1.png)
 
 O popup modal pode ser disparado para cada entrada da fonte de dados ([clique para exibir a imagem em tamanho normal](using-modalpopup-with-a-repeater-control-vb/_static/image3.png))
 

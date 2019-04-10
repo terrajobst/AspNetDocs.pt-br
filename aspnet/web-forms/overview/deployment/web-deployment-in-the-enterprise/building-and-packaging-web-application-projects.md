@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: 94e92f80-a7e3-4d18-9375-ff8be5d666ac
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 msc.type: authoredcontent
-ms.openlocfilehash: 406b8e6daf47196eb98700efe41e34c02d5682d3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396324"
 ---
-<a name="building-and-packaging-web-application-projects"></a>Criação e a empacotamento de projetos de aplicativos Web
-====================
+# <a name="building-and-packaging-web-application-projects"></a>Criação e a empacotamento de projetos de aplicativos Web
+
 by [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
@@ -34,13 +34,13 @@ No Visual Studio 2010, o processo de compilação e implantação para projetos 
 
 ## <a name="how-does-the-wpp-work"></a>Como funciona o WPP?
 
-Se você dê uma olhada no arquivo de projeto para um C# – projeto de aplicativo web com base, você pode ver que ele importa dois arquivos. targets.
+Se você dê uma olhada no arquivo de projeto para um c# – projeto de aplicativo web com base, você pode ver que ele importa dois arquivos. targets.
 
 
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
 
 
-A primeira **importação** instrução é comum a todos os projetos do Visual C#. Esse arquivo, *targets*, contém os destinos e tarefas que são específicas para o Visual C#. Por exemplo, o compilador C# (**Csc**) tarefa é invocada aqui. O *targets* importações de arquivo por sua vez as *targets* arquivo. Isso define os destinos que são comuns a todos os projetos, como **construir**, **recompilar**, **execute**, **compilar**, e **Clean** . A segunda **importação** instrução é específica para projetos de aplicativos web. O *WebApplication* importações de arquivo por sua vez as *Microsoft.Web.Publishing.targets* arquivo. O *Microsoft.Web.Publishing.targets* do arquivo essencialmente *é* o WPP. Ele define como o destino do **pacote** e **MSDeployPublish**, que invocam a implantação da Web para concluir várias tarefas de implantação.
+A primeira **importação** instrução é comum a todos os projetos do Visual c#. Esse arquivo, *targets*, contém os destinos e tarefas que são específicas para o Visual c#. Por exemplo, o compilador c# (**Csc**) tarefa é invocada aqui. O *targets* importações de arquivo por sua vez as *targets* arquivo. Isso define os destinos que são comuns a todos os projetos, como **construir**, **recompilar**, **execute**, **compilar**, e **Clean** . A segunda **importação** instrução é específica para projetos de aplicativos web. O *WebApplication* importações de arquivo por sua vez as *Microsoft.Web.Publishing.targets* arquivo. O *Microsoft.Web.Publishing.targets* do arquivo essencialmente *é* o WPP. Ele define como o destino do **pacote** e **MSDeployPublish**, que invocam a implantação da Web para concluir várias tarefas de implantação.
 
 Para entender como esses destinos adicionais são usados na solução de exemplo Contact Manager, abra o *Publish.proj* do arquivo e dê uma olhada a **BuildProjects** destino.
 

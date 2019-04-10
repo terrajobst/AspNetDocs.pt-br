@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
-ms.openlocfilehash: 28385ac2244ab0bfb38ee5fcbc64e6e11804612b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385950"
 ---
-<a name="introducing-aspnet-web-pages---html-form-basics"></a>Introdução ao ASP.NET Web Pages - Noções básicas de formulário HTML
-====================
+# <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introdução ao ASP.NET Web Pages - Noções básicas de formulário HTML
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial mostra os fundamentos de como criar um formulário de entrada e como lidar com a entrada do usuário quando você usa o ASP.NET Web Pages (Razor). E agora que você tem um banco de dados, você usará o suas habilidades de formulário para permitir que os usuários a localizar filmes específicos no banco de dados. Ele pressupõe que você tenha concluído a série por meio [Introduction para exibir dados usando o ASP.NET Web Pages](/aspnet/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data).
@@ -356,7 +356,7 @@ O próximo tutorial, você criará uma página que usa um formulário para permi
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introdução a O ASP.NET que programa usando a sintaxe razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Cláusula WHERE SQL](http://www.w3schools.com/sql/sql_where.asp) no site W3Schools
 - [As definições de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) artigo no site do W3C
 

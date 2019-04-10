@@ -8,15 +8,15 @@ ms.date: 03/14/2014
 ms.assetid: 58b583cd-c4ab-47a3-8527-8c92c298c91f
 msc.legacyurl: /whitepapers/aspnet-web-deployment-content-map
 msc.type: content
-ms.openlocfilehash: 6df0c9d2f38ad1d39abd62787c600ef80da8e8e0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3f36f0c504678e1e8b40aef99db81ab99101568b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383874"
 ---
-<a name="aspnet-web-deployment---recommended-resources"></a>Implantação da Web do ASP.NET – Recursos recomendados
-====================
+# <a name="aspnet-web-deployment---recommended-resources"></a>Implantação da Web do ASP.NET – Recursos recomendados
+
 > Este tópico fornece links para documentação de recursos sobre como implantar (publicar) ASP.NET web a aplicativos para o IIS usando o Visual Studio 2010, Visual Web Developer 2010 e versões posteriores.
 > 
 > Se você souber que um blog excelente postagem, [stackoverflow](http://stackoverflow.com) thread ou qualquer outro link que pode ser útil, [envie-em um email](mailto:aspnetue@microsoft.com?subject=Deployment%20Content%20Map) com o link.

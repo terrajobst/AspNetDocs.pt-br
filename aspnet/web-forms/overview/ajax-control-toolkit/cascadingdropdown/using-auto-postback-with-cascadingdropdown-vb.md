@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 0b34f7f6-a0cc-4b9f-9761-643fb0bb3ece
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 31f24374714371f102a1e6bc7e8977713876b228
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 433756839532393b36935df8f237e93706b4f18c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055353"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383143"
 ---
-<a name="using-auto-postback-with-cascadingdropdown-vb"></a>Uso de postback automático com CascadingDropDown (VB)
-====================
+# <a name="using-auto-postback-with-cascadingdropdown-vb"></a>Uso de postback automático com CascadingDropDown (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown3.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown3VB.pdf)
@@ -57,9 +57,9 @@ Carregamento da página no navegador preencherá a lista suspensa com três forn
 Dessa forma, um postback é executado apenas quando há, na verdade, os elementos na lista e o usuário seleciona uma entrada.
 
 
-[![Selecionar um elemento de lista faz com que um postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
+[![Seleger um elemento de lista gera um postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
 
 Selecionar um elemento de lista faz com que um postback ([clique para exibir a imagem em tamanho normal](using-auto-postback-with-cascadingdropdown-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Anterior](presetting-list-entries-with-cascadingdropdown-vb.md)
+> [Voltar](presetting-list-entries-with-cascadingdropdown-vb.md)

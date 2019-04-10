@@ -8,15 +8,15 @@ ms.date: 05/12/2009
 ms.assetid: 16dc5c11-65be-4eae-a818-9fad7f8259c6
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/get-started-with-the-ajax-control-toolkit-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6ecf716b78a789ca72e8b35e0be3e1fd0b957052
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3bbbe0c8240a2a77edee8d39a76bf865c95f345e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57052453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381088"
 ---
-<a name="get-started-with-the-ajax-control-toolkit-c"></a>Introdução ao AJAX Control Toolkit (C#)
-====================
+# <a name="get-started-with-the-ajax-control-toolkit-c"></a>Introdução ao AJAX Control Toolkit (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Aprenda tudo o que você precisa saber para começar a usar o AJAX Control Toolkit.
@@ -29,7 +29,7 @@ O AJAX Control Toolkit contém mais de 30 controles gratuitos que você pode usa
 O [AJAX Control Toolkit](http://devexpress.com/act) é um projeto de código-fonte aberto desenvolvido por membros da comunidade do ASP.NET e a equipe do ASP.NET. 
 
 
-[![Baixando o AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-cs/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image1.png)
+[![Downloading o AJAX Control Toolkit](get-started-with-the-ajax-control-toolkit-cs/_static/image1.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image1.png)
 
 **Figura 01**: Baixando o AJAX Control Toolkit ([clique para exibir a imagem em tamanho normal](get-started-with-the-ajax-control-toolkit-cs/_static/image2.png))
 
@@ -37,7 +37,7 @@ O [AJAX Control Toolkit](http://devexpress.com/act) é um projeto de código-fon
 Depois de baixar o arquivo, você precisará desbloquear o arquivo. O arquivo com o botão direito, selecione Propriedades e clique o **Unblock** botão (consulte a Figura 2).
 
 
-[![Desbloquear o arquivo ZIP de kit de ferramentas de controle do AJAX](get-started-with-the-ajax-control-toolkit-cs/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image3.png)
+[![Uo arquivo ZIP de kit de ferramentas de controle AJAX do nblocking](get-started-with-the-ajax-control-toolkit-cs/_static/image2.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image3.png)
 
 **Figura 02**: Desbloquear o arquivo ZIP de kit de ferramentas de controle do AJAX ([clique para exibir a imagem em tamanho normal](get-started-with-the-ajax-control-toolkit-cs/_static/image4.png))
 
@@ -61,7 +61,7 @@ Primeiro, você precisará adicionar uma guia do AJAX Control Toolkit à caixa d
 3. Insira uma nova guia chamada AJAX Control Toolkit.
 
 
-[![Adicionar uma nova guia](get-started-with-the-ajax-control-toolkit-cs/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image7.png)
+[![Aadição de uma nova guia](get-started-with-the-ajax-control-toolkit-cs/_static/image4.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image7.png)
 
 **Figura 04**: Adicionar uma nova guia ([clique para exibir a imagem em tamanho normal](get-started-with-the-ajax-control-toolkit-cs/_static/image8.png))
 
@@ -72,7 +72,7 @@ Em seguida, você precisa adicionar os controles do AJAX Control Toolkit para a 
 - Navegue até o local onde você descompactou o AJAX Control Toolkit e selecione o assembly AjaxControlToolkit.
 
 
-[![Escolha os itens a serem adicionados à caixa de ferramentas](get-started-with-the-ajax-control-toolkit-cs/_static/image5.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image9.png)
+[![Cher itens para adicionar à caixa de ferramentas](get-started-with-the-ajax-control-toolkit-cs/_static/image5.jpg)](get-started-with-the-ajax-control-toolkit-cs/_static/image9.png)
 
 **Figura 05**: Escolha os itens a serem adicionados à caixa de ferramentas ([clique para exibir a imagem em tamanho normal](get-started-with-the-ajax-control-toolkit-cs/_static/image10.png))
 

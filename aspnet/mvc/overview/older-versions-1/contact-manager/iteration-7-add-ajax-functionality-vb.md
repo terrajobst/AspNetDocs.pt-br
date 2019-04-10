@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: f640e063-150e-453d-8cfc-7e54a6ce0f1e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0b9c6ff228e73ce63f7a0b046110db656103d6d5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3df4258b2de309aed5a3a598caeb1e7332c321f6
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383948"
 ---
-<a name="iteration-7--add-ajax-functionality-vb"></a>Iteração #7 – adicionar funcionalidade do Ajax (VB)
-====================
+# <a name="iteration-7--add-ajax-functionality-vb"></a>Iteração #7 – adicionar funcionalidade do Ajax (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar o código](iteration-7-add-ajax-functionality-vb/_static/contactmanager_7_vb1.zip)
@@ -94,7 +94,7 @@ Adicione o seguinte JavaScript inclui dentro de &lt;head&gt; marca da sua págin
 Permitir que o s comece modificando nossa exibição de índice, de modo que apenas clicando em um grupo de contatos atualiza a região da exibição que exibe os contatos. A caixa vermelha na Figura 1 contém a região que queremos atualizar.
 
 
-[![Atualizar somente os contatos](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
+[![Uapenas os contatos tualização](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
 
 **Figura 01**: Atualizar somente os contatos ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-vb/_static/image2.png))
 
@@ -194,7 +194,7 @@ Quando um usuário pressiona o botão Avançar ou voltar do navegador, o evento 
 No momento, para excluir um contato, você precisa clicar no link excluir e, em seguida, clique no botão de exclusão exibido na página de confirmação de exclusão (veja a Figura 2). Isso parece muito de solicitações de página para fazer algo simples, como a exclusão de um registro de banco de dados.
 
 
-[![A página de confirmação de exclusão](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
+[![Tele página Confirmação de exclusão](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
 
 **Figura 02**: A página de confirmação de exclusão ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-vb/_static/image4.png))
 
@@ -241,4 +241,4 @@ Também adicionamos suporte ao histórico de navegador para o nosso aplicativo A
 Por fim, criamos um link de exclusão que dá suporte a operações HTTP DELETE. Ao realizar exclusões de Ajax, podemos permitir que os usuários excluir registros de banco de dados sem exigir que o usuário solicitar uma página de confirmação de exclusão adicionais.
 
 > [!div class="step-by-step"]
-> [Anterior](iteration-6-use-test-driven-development-vb.md)
+> [Voltar](iteration-6-use-test-driven-development-vb.md)

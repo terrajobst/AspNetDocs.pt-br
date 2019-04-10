@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: b8283698-7b82-42a8-8d83-3aeb18ca7fcc
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise
 msc.type: authoredcontent
-ms.openlocfilehash: 735cc5ac37e369e6149c526174c3f74a08db9758
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f2dc0fea9eeca64b9389881470353c5cca473e0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396311"
 ---
-<a name="web-deployment-in-the-enterprise"></a>Implantação da Web na empresa
-====================
+# <a name="web-deployment-in-the-enterprise"></a>Implantação da Web na empresa
+
 by [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
@@ -77,7 +77,7 @@ Estes tópicos descrevem a implantação do aplicativo web, incluindo como a com
 
 - [Criação e a empacotamento de projetos de aplicativos Web](building-and-packaging-web-application-projects.md)
 - [Configuração de parâmetros para a implantação de pacote da Web](configuring-parameters-for-web-package-deployment.md)
-- [Implantando pacotes da Web](deploying-web-packages.md)
+- [Implantação de pacotes da Web](deploying-web-packages.md)
 
 - [Implantação de projetos de banco de dados](deploying-database-projects.md) descreve as diferentes técnicas que você pode usar para implantar projetos de banco de dados do Visual Studio, junto com as vantagens e desvantagens de cada abordagem. [Criando e executando um arquivo de comando de implantação](creating-and-running-a-deployment-command-file.md) descreve como criar um arquivo de comando simples que encapsula a lógica de implantação e permite que você implante soluções complexas como um processo passo a passo.
 - Por fim, [manualmente instalando os pacotes da Web](manually-installing-web-packages.md) conclui o tutorial mostrando a você importar pacotes da web para o IIS.

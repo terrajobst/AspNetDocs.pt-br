@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: ca665073-b379-4239-9404-f597663ca65e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d52fadc1ddcc101d5815df6f1c1bc5eeba95d9b8
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 358d8605ed602720c7dd1687c8bdbb4275753529
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386093"
 ---
-<a name="handling-bll--and-dal-level-exceptions-vb"></a>Tratar de exceções de nível BLL e DAL (VB)
-====================
+# <a name="handling-bll--and-dal-level-exceptions-vb"></a>Tratar de exceções de nível BLL e DAL (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_38_VB.exe) ou [baixar PDF](handling-bll-and-dal-level-exceptions-vb/_static/datatutorial38vb1.pdf)
@@ -41,7 +41,7 @@ Nossos tutoriais DataList, no entanto, não estiverem usando o ObjectDataSource 
 Antes de nos preocupamos com tratamento de exceções que ocorrem durante o fluxo de trabalho de atualização, deixe s primeiro criar uma DataList editável. Abra o `ErrorHandling.aspx` página na `EditDeleteDataList` pasta, adicionar uma DataList ao Designer de conjunto seu `ID` propriedade a ser `Products`, e adicione um novo ObjectDataSource chamado `ProductsDataSource`. Configurar o ObjectDataSource para usar o `ProductsBLL` classe s `GetProducts()` método para selecionar registros; definir as listas suspensas em INSERT, UPDATE e excluir guias como (nenhum).
 
 
-[![Retornar as informações de produto usando o método GetProducts()](handling-bll-and-dal-level-exceptions-vb/_static/image2.png)](handling-bll-and-dal-level-exceptions-vb/_static/image1.png)
+[![Roltar as informações do produto usando o método GetProducts()](handling-bll-and-dal-level-exceptions-vb/_static/image2.png)](handling-bll-and-dal-level-exceptions-vb/_static/image1.png)
 
 **Figura 1**: Retornar as informações de produto usando o `GetProducts()` método ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-vb/_static/image3.png))
 
@@ -60,7 +60,7 @@ Após essas alterações, sua marcação declarativa de s de página deve ser se
 Reserve um tempo para exibir nosso progresso através de um navegador (veja a Figura 2).
 
 
-[![Cada produto inclui um botão Editar](handling-bll-and-dal-level-exceptions-vb/_static/image5.png)](handling-bll-and-dal-level-exceptions-vb/_static/image4.png)
+[![EACH produto inclui um botão Editar](handling-bll-and-dal-level-exceptions-vb/_static/image5.png)](handling-bll-and-dal-level-exceptions-vb/_static/image4.png)
 
 **Figura 2**: Cada produto inclui um botão Editar ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-vb/_static/image6.png))
 
@@ -115,12 +115,12 @@ Para concluir este tutorial, simplesmente chame o `DisplayExceptionDetails` mét
 Com o `Try ... Catch` bloquear em vigor, os usuários são apresentados com uma mensagem de erro mais informativa, como as figuras 4 e 5 show. Observe que, diante de uma exceção DataList permanece no modo de edição. Isso ocorre porque quando a exceção ocorre, o fluxo de controle é imediatamente redirecionado para o `Catch` bloco, ignorando o código que retorna DataList para seu estado de edição previamente.
 
 
-[![Uma mensagem de erro será exibida se um usuário omite um campo obrigatório](handling-bll-and-dal-level-exceptions-vb/_static/image9.png)](handling-bll-and-dal-level-exceptions-vb/_static/image8.png)
+[![An mensagem de erro será exibida se um usuário omite um campo obrigatório](handling-bll-and-dal-level-exceptions-vb/_static/image9.png)](handling-bll-and-dal-level-exceptions-vb/_static/image8.png)
 
 **Figura 4**: Uma mensagem de erro será exibida se um usuário omite um campo obrigatório ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-vb/_static/image10.png))
 
 
-[![Uma mensagem de erro é exibido ao inserir um preço negativo](handling-bll-and-dal-level-exceptions-vb/_static/image12.png)](handling-bll-and-dal-level-exceptions-vb/_static/image11.png)
+[![An mensagem de erro é exibido ao inserir um preço negativo](handling-bll-and-dal-level-exceptions-vb/_static/image12.png)](handling-bll-and-dal-level-exceptions-vb/_static/image11.png)
 
 **Figura 5**: Uma mensagem de erro é exibido ao inserir um preço negativo ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-vb/_static/image13.png))
 

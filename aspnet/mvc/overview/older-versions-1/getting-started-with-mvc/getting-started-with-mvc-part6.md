@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: a3a90963-0286-4fa0-9b3d-c230cc18b0a3
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part6
 msc.type: authoredcontent
-ms.openlocfilehash: 546c3e0a24ecd0d916c79e9ad12f62b926c760c5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380802"
 ---
-<a name="adding-a-create-method-and-create-view"></a>Adicionar um Criar Método e um Criar Exibição
-====================
+# <a name="adding-a-create-method-and-create-view"></a>Adicionar um Criar Método e um Criar Exibição
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este é um tutorial para iniciantes que apresenta os conceitos básicos do ASP.NET MVC. Você criará um aplicativo web simples que lê e grava de um banco de dados. Visite o [Central de informações do ASP.NET MVC](../../../index.md) para localizar outros ASP.NET MVC, tutoriais e exemplos.
@@ -38,7 +38,7 @@ Agora, vamos implementar o modelo de Create View que usaremos para exibir um for
 
 Vamos selecionar que estamos indo para passar o modelo de exibição "Filme" como sua classe de dados de exibição e indicar que desejamos criar o "scaffolding" de um modelo de "Criar".
 
-[![Adicionar modo de exibição](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
+[![Add exibição](getting-started-with-mvc-part6/_static/image2.png)](getting-started-with-mvc-part6/_static/image1.png)
 
 Depois de clicar no botão Add, o modelo de exibição \Movies\Create.aspx será criado para você. Porque nós selecionamos "Criar" na lista suspensa "modo de exibição de conteúdo", a caixa de diálogo Adicionar modo de exibição automaticamente "geradas por scaffolding" algum conteúdo padrão para nós. O scaffolding criou um HTML &lt;formulário&gt;, mensagens de um local para o erro de validação para ir e uma vez que o scaffolding sabe sobre filmes, ele criou o rótulo e campos para cada propriedade de nossa classe.
 
@@ -48,7 +48,7 @@ Como nosso banco de dados fornece automaticamente um filme uma ID, vamos remover
 
 Vamos agora criar um novo filme e adicioná-lo ao banco de dados. Vamos fazer isso executando o aplicativo novamente e visite a "/ filmes" URL e clique em "Criar" link para adicionar um novo filme.
 
-[![Criar – Windows Internet Explorer](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
+[![Criar - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image4.png)](getting-started-with-mvc-part6/_static/image3.png)
 
 Quando clicamos no botão Criar, publicaremos novamente (por meio de HTTP POST) os dados neste formulário para o método /Movies/Create que acabamos de criar. Assim como quando o sistema automaticamente o parâmetro "numTimes" e "nome" da URL e mapeados-los para parâmetros em um método anteriormente, o sistema automaticamente tirar os campos de formulário de uma POSTAGEM e mapeá-los para um objeto. Nesse caso, os valores dos campos em HTML, como "ReleaseDate" e "Title" serão automaticamente colocados nas propriedades corretas de uma nova instância de um filme.
 
@@ -58,7 +58,7 @@ Vamos examinar o segundo método de criação de nosso MoviesController novament
 
 Esse objeto de filme, em seguida, foi passado para a versão de [HttpPost] do nosso método de ação de criar e, ele será salvo no banco de dados e redirecionado, em seguida, o usuário para o método de ação Index () que mostra o resultado salvo na lista de filmes:
 
-[![Lista de filmes - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
+[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part6/_static/image6.png)](getting-started-with-mvc-part6/_static/image5.png)
 
 Nós não estão verificando se o nosso filmes estão corretos, no entanto, e o banco de dados não nos permite salvar um filme sem título. Seria bom se poderíamos dar ao usuário que gerou um erro antes do banco de dados. Faremos isso em seguida, adicionando suporte de validação ao nosso aplicativo.
 

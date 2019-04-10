@@ -8,15 +8,15 @@ ms.date: 11/15/2007
 ms.assetid: 24282199-9edf-4211-ac6e-f05df68cccbe
 msc.legacyurl: /web-forms/videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-data-model
 msc.type: video
-ms.openlocfilehash: 4b3a0c5f4b3fdd3d6d7ba89e7216f190cc1a2d49
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9053b5d006a703c9e10ede3a768adf1d90aab185
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386106"
 ---
-<a name="how-do-i-linq-to-sql-data-model"></a>[Como fazer:] LINQ to SQL: Modelo de dados
-====================
+# <a name="how-do-i-linq-to-sql-data-model"></a>[Como fazer:] LINQ to SQL: Modelo de dados
+
 por [Scott Stanfield](https://github.com/scottstanfield)
 
 O LINQ to SQL se baseia em um conjunto de modelo de objeto para relacional de classes que são mapeados para as tabelas de banco de dados. Visual Studio 2008 inclui uma superfície de design visual ORM que mapeia essas tabelas para o código.

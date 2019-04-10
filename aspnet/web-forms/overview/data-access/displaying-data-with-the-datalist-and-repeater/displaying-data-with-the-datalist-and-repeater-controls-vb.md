@@ -8,15 +8,15 @@ ms.date: 09/13/2006
 ms.assetid: 58618954-a9ed-4ca0-8c2d-95a5ffd9c03e
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4ece899d4c9f3277fc27cdfc9c3f3e25ab7809fb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e275b552af1348da48937e26012f7625a2bb3b93
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383873"
 ---
-<a name="displaying-data-with-the-datalist-and-repeater-controls-vb"></a>Exibir dados com os controles DataList e o Repeater (VB)
-====================
+# <a name="displaying-data-with-the-datalist-and-repeater-controls-vb"></a>Exibir dados com os controles DataList e o Repeater (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_29_VB.exe) ou [baixar PDF](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/datatutorial29vb1.pdf)
@@ -51,7 +51,7 @@ Antes de começar este tutorial, deixe s primeiro dedique uns momentos para adic
 Abra o `Default.aspx` da página e arraste o `SectionLevelTutorialListing.ascx` controle de usuário do `UserControls` pasta para a superfície de Design. Esse controle de usuário que criamos na [páginas mestras e navegação no Site](../introduction/master-pages-and-site-navigation-vb.md) tutorial, enumera o mapa do site e exibe os tutoriais da seção atual em uma lista com marcadores.
 
 
-[![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image3.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image2.png)
+[![Add o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image3.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image2.png)
 
 **Figura 2**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image4.png))
 
@@ -72,7 +72,7 @@ Para ter a exibição de lista com marcadores os tutoriais do DataList e Repeate
 Assim como FormView, o controle DataList s saída renderizada varia de acordo com modelos em vez de BoundFields, CheckBoxFields e assim por diante. Ao contrário de FormView, DataList foi projetado para exibir um conjunto de registros em vez de um solitário. Deixe o s começar este tutorial com uma análise de informações de produto de associação para uma DataList. Comece abrindo o `Basics.aspx` página o `DataListRepeaterBasics` pasta. Em seguida, arraste uma DataList da caixa de ferramentas para o Designer. Como ilustra a Figura 4, antes de especificar os modelos de DataList s, o Designer exibe como uma caixa cinza.
 
 
-[![Arraste DataList da caixa de ferramentas para o Designer](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image7.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image6.png)
+[![Dpano a DataList da caixa de ferramentas para o Designer](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image7.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image6.png)
 
 **Figura 4**: Arraste o DataList da caixa de ferramentas para o Designer ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image8.png))
 
@@ -80,7 +80,7 @@ Assim como FormView, o controle DataList s saída renderizada varia de acordo co
 Do DataList s marca inteligente, adicione um novo ObjectDataSource e configurá-lo para usar o `ProductsBLL` classe s `GetProducts` método. Como re criando um DataList de somente leitura neste tutorial, definimos a lista suspensa como (nenhum) em s Assistente inserir, atualizar e excluir guias.
 
 
-[![Optar por criar um novo ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image10.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image9.png)
+[![OPT para criar um novo ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image10.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image9.png)
 
 **Figura 5**: Otimizado para criar um novo ObjectDataSource ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image11.png))
 
@@ -120,7 +120,7 @@ No entanto, deixando nos controles da Web de rótulo, oferece duas vantagens. Pr
 Portanto, ao trabalhar com o controle DataList que fornece a opção de editar os modelos por meio do Designer, eu prefiro usar controles da Web de rótulo para que o conteúdo é acessível por meio da interface de editar modelos. Como você verá em breve, o Repeater requer que o modelo de conteúdo s ser editado da exibição da fonte. Consequentemente, ao criar os modelos de s Repeater geralmente omitirei Web rótulo controla a menos que eu sei que precisarei formatar a aparência dos dados associados texto com base em lógica programática.
 
 
-[![Cada produto s saída é renderizado usando DataList s ItemTemplate](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image19.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image18.png)
+[![EACH produto s saída é renderizado usando DataList s ItemTemplate](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image19.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image18.png)
 
 **Figura 8**: A saída de cada produto s é renderizado usando s DataList `ItemTemplate` ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image20.png))
 
@@ -134,7 +134,7 @@ Conforme discutido na [exibindo dados com o ObjectDataSource](../basic-reporting
 Para adicionar um arquivo de capa, clique com botão direito no `App_Themes/DataWebControls` pasta, escolha Adicionar um novo Item e selecione a opção de arquivo de capa da lista. Dê o nome `DataList.skin` para o arquivo.
 
 
-[![Criar um novo arquivo de capa chamado DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image22.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image21.png)
+[![Ccriar uma nova capa arquivo denominado DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image22.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image21.png)
 
 **Figura 9**: Criar um novo nomeado de arquivo de capa `DataList.skin` ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image23.png))
 
@@ -149,7 +149,7 @@ Essas configurações atribuir as mesmas classes CSS para as propriedades de Dat
 Com a adição desse arquivo de capa, a aparência de s DataList é atualizada no Designer (talvez seja necessário atualizar a exibição de Designer para ver os efeitos do novo arquivo de capa; a partir do menu Exibir, escolha Atualizar). Como mostra a Figura 10, cada produto alternado tem uma cor de plano de fundo rosa-claro.
 
 
-[![Criar um novo arquivo de capa chamado DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image25.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image24.png)
+[![Ccriar uma nova capa arquivo denominado DataList.skin](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image25.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image24.png)
 
 **Figura 10**: Criar um novo nomeado de arquivo de capa `DataList.skin` ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image26.png))
 
@@ -174,7 +174,7 @@ Ao especificar o `HeaderTemplate` ou `FooterTemplate`, DataList adiciona uma lin
 Para nosso exemplo, let s têm o título de informações do produto exibida na parte superior dos resultados DataList s em um `<h3>` título. Para fazer isso, adicione um `HeaderTemplate` com a marcação apropriada. No Designer, isso pode ser feito clicando no link Editar modelos na marca inteligente DataList s, escolhendo o modelo de cabeçalho da lista suspensa e digitar o texto depois de escolher a opção de título 3 do estilo de lista suspensa lista (veja a Figura 11).
 
 
-[![Adicionar um HeaderTemplate com as informações de produto do texto](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image28.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image27.png)
+[![Add um HeaderTemplate com as informações de produto de texto](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image28.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image27.png)
 
 **Figura 11**: Adicionar um `HeaderTemplate` com as informações de produto do texto ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image29.png))
 
@@ -196,7 +196,7 @@ Para adicionar um pouco de espaço entre cada produto na listagem, permitem que 
 Depois de fazer essa adição ao exibir a página por meio de um navegador deve ser semelhante à Figura 12. Observe a linha de cabeçalho e a linha entre cada produto na listagem.
 
 
-[![DataList inclui uma linha de cabeçalho e uma régua Horizontal entre cada listagem de produto](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image31.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image30.png)
+[![Tele DataList inclui uma linha de cabeçalho e um Horizontal regra entre cada listagem de produtos](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image31.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image30.png)
 
 **Figura 12**: DataList inclui uma linha de cabeçalho e um Horizontal regra entre cada listagem de produtos ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image32.png))
 
@@ -227,7 +227,7 @@ O Repeater serve como uma captura todos os dados de controle da Web. Se não for
 Para fazer isso, comece a arrastar um controle Repeater da caixa de ferramentas para o Designer, acima do DataList de informações do produto. Assim como acontece com o DataList e Repeater exibe inicialmente como uma caixa cinza até que seus modelos foram definidos.
 
 
-[![Adicionar um repetidor para o Designer](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image34.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image33.png)
+[![Add um repetidor para o Designer](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image34.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image33.png)
 
 **Figura 13**: Adicionar um repetidor para o Designer ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image35.png))
 
@@ -235,7 +235,7 @@ Para fazer isso, comece a arrastar um controle Repeater da caixa de ferramentas 
 Há apenas uma opção s no repetidor s marca inteligente: Escolha fonte de dados. Optar por criar um novo ObjectDataSource e configurá-lo para usar o `CategoriesBLL` classe s `GetCategories` método.
 
 
-[![Criar um novo ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image37.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image36.png)
+[![Ccriar um novo ObjectDataSource](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image37.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image36.png)
 
 **Figura 14**: Criar um novo ObjectDataSource ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image38.png))
 
@@ -265,7 +265,7 @@ Uma vez que o `<td>Category X</td>` texto é a parte que se repete, isso será e
 O Repeater emite marcação conforme especificado por seus modelos, nada mais, nada menos precisa. Figura 17 mostra a saída de s Repeater quando visualizado por meio de um navegador.
 
 
-[![Uma única linha de HTML &lt;tabela&gt; lista cada categoria em uma coluna separada](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image46.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image45.png)
+[![A Uma única linha de HTML &lt;tabela&gt; lista cada categoria em uma coluna separada](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image46.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image45.png)
 
 **Figura 17**: Uma única linha de HTML `<table>` lista cada categoria em uma coluna separada ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image47.png))
 
@@ -292,7 +292,7 @@ O seguinte `HeaderTemplate` e `FooterTemplate` resultar na marcação desejada:
 Figura 18 mostra o Repeater depois que essas alterações foram feitas.
 
 
-[![As colunas categoria alternativo na cor do plano de fundo e inclui uma linha de cabeçalho](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image49.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image48.png)
+[![Tele categoria colunas alternativo na cor de plano de fundo e inclui uma linha de cabeçalho](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image49.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image48.png)
 
 **Figura 18**: A categoria colunas alternativo na cor de plano de fundo e inclui uma linha de cabeçalho ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image50.png))
 

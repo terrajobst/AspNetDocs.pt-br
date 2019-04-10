@@ -8,15 +8,15 @@ ms.date: 12/10/2012
 ms.assetid: b0a214c7-2f38-4dbc-b47f-bd7bd9df97bd
 msc.legacyurl: /mvc/overview/advanced/custom-mvc-templates
 msc.type: authoredcontent
-ms.openlocfilehash: 3c14bc6feb144a52773bf7bd4c23df24966a9ebb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0603bc24e070e223551813f66a75889a2e46fd35
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379541"
 ---
-<a name="custom-mvc-template"></a>Modelo MVC personalizado
-====================
+# <a name="custom-mvc-template"></a>Modelo MVC personalizado
+
 por [Jacques Eloff](https://github.com/joeloff)
 
 A versão de atualização de ferramentas do MVC 3 para Visual Studio 2010 introduziu um Assistente de projeto separado para projetos MVC. A alteração foi conduzida por dois fatores. Em primeiro lugar, a introdução de novos modelos do MVC 3 e suporte a mecanismos de exibição adicionais, como o Razor gerar overcrowding a caixa de diálogo Novo projeto no Visual Studio. Em segundo lugar, os clientes tinham solicitado para pontos de extensibilidade e Assistente do novo projeto MVC seria dispensar a-na oportunidade de responder a essas solicitações.

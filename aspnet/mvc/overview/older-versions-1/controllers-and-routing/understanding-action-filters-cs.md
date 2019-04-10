@@ -8,15 +8,15 @@ ms.date: 10/16/2008
 ms.assetid: a94e4e81-40c1-47b7-8613-126a1a6cc93d
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/understanding-action-filters-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6c7706d8252d5a0271f1b9243fa8eb282f722654
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8264b48388ee4a6b51515aa2b897ece3b2f3972a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380867"
 ---
-<a name="understanding-action-filters-c"></a>Noções básicas sobre filtros de ação (C#)
-====================
+# <a name="understanding-action-filters-c"></a>Noções básicas sobre filtros de ação (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://download.microsoft.com/download/e/f/3/ef3f2ff6-7424-48f7-bdaa-180ef64c3490/ASPNET_MVC_Tutorial_14_CS.pdf)
@@ -49,7 +49,7 @@ Por exemplo, o controlador de dados na listagem 1 expõe uma ação chamada `Ind
 Se você invocar repetidamente a `Index()` ação inserindo a URL/dados/índice na barra de endereços do navegador e atingir a atualização do botão várias vezes, em seguida, você verá o mesmo tempo para 10 segundos. A saída a `Index()` ação é armazenado em cache por 10 segundos (veja a Figura 1).
 
 
-[![Tempo em cache](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
+[![Ctempo ache](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
 
 **Figura 01**: Armazenados em cache o tempo ([clique para exibir a imagem em tamanho normal](understanding-action-filters-cs/_static/image3.png))
 
@@ -107,7 +107,7 @@ Para ilustrar como você pode criar um filtro de ação personalizada, vamos cri
 Na listagem 2, o `OnActionExecuting()`, `OnActionExecuted()`, `OnResultExecuting()`, e `OnResultExecuted()` todos os métodos de chamar o `Log()` método. O nome do método e os dados de rota atuais é passado para o `Log()` método. O `Log()` método grava uma mensagem na janela de saída do Visual Studio (veja a Figura 2).
 
 
-[![Escrever na janela de saída do Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
+[![Writing para a janela de saída do Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
 
 **Figura 02**: Escrever na janela de saída do Visual Studio ([clique para exibir a imagem em tamanho normal](understanding-action-filters-cs/_static/image6.png))
 

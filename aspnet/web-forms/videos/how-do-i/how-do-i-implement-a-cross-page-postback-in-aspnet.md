@@ -8,15 +8,15 @@ ms.date: 07/10/2008
 ms.assetid: cd88fa45-8f51-48f5-b642-5021acddec40
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-implement-a-cross-page-postback-in-aspnet
 msc.type: video
-ms.openlocfilehash: a7413926b6bf6624169b48a701d916342bcaf4ce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a98274a154691e3e0b6c5ff57b57bca1ef57ba6b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381426"
 ---
-<a name="how-do-i-implement-a-cross-page-postback-in-aspnet"></a>[Como fazer:] Implementar um PostBack entre páginas em ASP.NET
-====================
+# <a name="how-do-i-implement-a-cross-page-postback-in-aspnet"></a>[Como fazer:] Implementar um PostBack entre páginas em ASP.NET
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Neste vídeo, Chris Pels mostra como criar uma nova postagem cruzada de páginas no ASP.NET, onde um controle em uma página de código-fonte gera um evento de PostBack para uma página de destino diferente. Primeiro, saiba como configurar um controle de botão para PostBack para uma página de destino diferente. Em seguida, saiba como obter informações de controles na página de código-fonte com a propriedade PreviousPage e o método FindControl. Em seguida, saiba como usar propriedades públicas na página de código-fonte para expor dados para a página de destino e saiba como usar o @PreviousPageType diretiva na página de destino para acessar essas propriedades. Finalmente, Aprenda a diferença entre um PostBack de página cruzada e o método Server. Transfer.

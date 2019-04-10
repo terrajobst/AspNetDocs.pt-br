@@ -8,20 +8,20 @@ ms.date: 06/06/2012
 ms.assetid: a56572ba-81c3-47af-826d-941e9c4775ec
 msc.legacyurl: /mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: 20f8d6f459cefc6c1a2e7d5f64c6df4199f8ad24
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8292fd43ffa2bc66b4daa8f0fc09569226d90bff
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379554"
 ---
-<a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Usando métodos assíncronos no ASP.NET MVC 4
-====================
+# <a name="using-asynchronous-methods-in-aspnet-mvc-4"></a>Usando métodos assíncronos no ASP.NET MVC 4
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Este tutorial lhe ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC assíncrona usando [Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/11), que é uma versão gratuita do Microsoft Visual Studio. Você também pode usar [Visual Studio 2012](https://www.microsoft.com/visualstudio/11).
 > 
-> Um exemplo completo é fornecido para este tutorial no github  [https://github.com/RickAndMSFT/Async-ASP.NET/](https://github.com/RickAndMSFT/Async-ASP.NET/)
+> Um exemplo completo é fornecido para este tutorial no github [https://github.com/RickAndMSFT/Async-ASP.NET/](https://github.com/RickAndMSFT/Async-ASP.NET/)
 
 
 O ASP.NET MVC 4 [controlador](https://msdn.microsoft.com/library/system.web.mvc.controller(VS.108).aspx) classe em combinação [.NET 4.5](https://msdn.microsoft.com/library/w0x726c2(VS.110).aspx) lhe permite escrever métodos de ação assíncrono que retornam um objeto do tipo [tarefa&lt;ActionResult&gt; ](https://msdn.microsoft.com/library/dd321424(VS.110).aspx). O .NET Framework 4 introduziu um conceito de programação assíncrono, conhecido como um [tarefa](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) e dá suporte ao ASP.NET MVC 4 [tarefa](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx). As tarefas são representadas pela **tarefa** tipo e tipos relacionados na [Tasks](https://msdn.microsoft.com/library/system.threading.tasks.aspx) namespace. O .NET Framework 4.5 se baseia nesse suporte assíncrono com o [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) e [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) palavras-chave que tornam o trabalho com [tarefa](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) objetos muito menos complexos do que a anterior métodos assíncronos. O [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) palavra-chave é o tipo de taquigrafia sintático para indicar que um trecho de código deve aguardar de forma assíncrona em alguma outra parte do código. O [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) palavra-chave representa uma dica de que você pode usar para marcar métodos como métodos assíncronos baseados em tarefa. A combinação de **await**, **async**e o **tarefa** objeto torna muito mais fácil de escrever código assíncrono no .NET 4.5. O novo modelo para métodos assíncronos é chamado de *padrão assíncrono baseado em tarefa* (**toque**). Este tutorial presume que você tem alguma familiaridade com o uso de programação assíncrona [await](https://msdn.microsoft.com/library/hh156528(VS.110).aspx) e [async](https://msdn.microsoft.com/library/hh156513(VS.110).aspx) palavras-chave e o [tarefa](https://msdn.microsoft.com/library/system.threading.tasks.task.aspx) namespace.
@@ -166,7 +166,7 @@ Para obter os benefícios de um aplicativo da web assíncrona, você talvez prec
 
     - Abra o Gerenciador do IIS e navegue até o painel de Pools de aplicativos.
     - Clique com o botão direito no pool de aplicativos de destino e selecione **configurações avançadas**.  
-        ![advanced](using-asynchronous-methods-in-aspnet-mvc-4/_static/image4.png)
+        ![avançado](using-asynchronous-methods-in-aspnet-mvc-4/_static/image4.png)
     - No **configurações avançadas** caixa de diálogo alteração *comprimento da fila* de 1.000 para 5.000.  
         ![Comprimento da fila](using-asynchronous-methods-in-aspnet-mvc-4/_static/image5.png)  
   

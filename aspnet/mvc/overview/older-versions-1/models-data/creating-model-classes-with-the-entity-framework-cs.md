@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 61644169-e8b1-45dd-bf96-9c2301b69879
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d1cf97a7f1dc9bae2774518cdfc13da48fc7ada2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29f7dded2f6fc2e8ce588dab2949b59ddb6f1fc4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388901"
 ---
-<a name="creating-model-classes-with-the-entity-framework-c"></a>Criação de classes de modelo com o Entity Framework (C#)
-====================
+# <a name="creating-model-classes-with-the-entity-framework-c"></a>Criação de classes de modelo com o Entity Framework (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, você aprenderá como usar o ASP.NET MVC com o Entity Framework da Microsoft. Você aprenderá a usar o Assistente de entidade para criar um modelo de dados de entidade ADO.NET. No decorrer deste tutorial, criamos um aplicativo web que ilustra como selecionar, inserir, atualizar e excluir dados de banco de dados usando o Entity Framework.

@@ -8,15 +8,15 @@ ms.date: 11/16/2009
 ms.assetid: d47626d1-5ffb-4757-bfbe-49e37f08d474
 msc.legacyurl: /web-forms/videos/net-4/markup-control/aspnet-4-quick-hit-new-rendering-option-for-check-box-lists-and-radio-button-lists
 msc.type: video
-ms.openlocfilehash: ec6b1d8906eac845fbd99626bcd1d0503ebbf625
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 079a43a72e24460c37a185764f82625068116757
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59390838"
 ---
-<a name="aspnet-4-quick-hit--new-rendering-option-for-check-box-lists-and-radio-button-lists"></a>Lista de "Acertar rápida –" nova opção para listas de caixa de seleção e botão de opção de renderização ASP.NET 4
-====================
+# <a name="aspnet-4-quick-hit--new-rendering-option-for-check-box-lists-and-radio-button-lists"></a>Lista de "Acertar rápida –" nova opção para listas de caixa de seleção e botão de opção de renderização ASP.NET 4
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Neste vídeo, você aprenderá a opção de renderização RepeatLayout para caixa de seleção e botão de opção de lista. 

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
-title: Consultando dados com o controle SqlDataSource (C#) | Microsoft Docs
+title: Consultando dados com o controle SqlDataSource (c#) | Microsoft Docs
 author: rick-anderson
 description: Nos tutoriais anteriores, usamos o controle ObjectDataSource para separar totalmente a camada de apresentação da camada de acesso a dados. Iniciando com este tutorial...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2007
 ms.assetid: 60512d6a-b572-4b7a-beb3-3e44b4d2020c
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/querying-data-with-the-sqldatasource-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0d15e09c2b790c4d1e6b278c4ea35bab7f66b861
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f6aa0e4535f88a04419695114d07ea2cf6ac7036
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381153"
 ---
-<a name="querying-data-with-the-sqldatasource-control-c"></a>Consultar dados com o controle SqlDataSource (C#)
-====================
+# <a name="querying-data-with-the-sqldatasource-control-c"></a>Consultar dados com o controle SqlDataSource (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_47_CS.exe) ou [baixar PDF](querying-data-with-the-sqldatasource-control-cs/_static/datatutorial47cs1.pdf)
@@ -79,7 +79,7 @@ Antes de começarmos a explorar como trabalhar diretamente com os dados do banco
 Como em outras pastas `Default.aspx` no `SqlDataSource` pasta listará os tutoriais em sua seção. Lembre-se de que o `SectionLevelTutorialListing.ascx` controle de usuário fornece essa funcionalidade. Portanto, adicionar esse controle de usuário `Default.aspx` arrastando-no Gerenciador de soluções para a página de exibição de Design de s.
 
 
-[![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](querying-data-with-the-sqldatasource-control-cs/_static/image5.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image4.gif)
+[![Add o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](querying-data-with-the-sqldatasource-control-cs/_static/image5.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image4.gif)
 
 **Figura 4**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](querying-data-with-the-sqldatasource-control-cs/_static/image6.gif))
 
@@ -155,7 +155,7 @@ O `SelectCommand` propriedade especifica a instrução de SQL ad hoc ou o proced
 Depois que o SqlDataSource tiver sido configurado, ele pode ser ligado a um controle da Web, como um GridView ou DetailsView de dados. Para este tutorial, deixe s exibir os dados em um GridView. Na caixa de ferramentas, arraste um controle GridView à página e associá-lo para o `ProductsDataSource` SqlDataSource escolhendo-se a fonte de dados na lista suspensa na marca inteligente s GridView.
 
 
-[![Adicionar um controle GridView e associá-lo para o controle SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image13.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image12.gif)
+[![Add um GridView e associá-lo para o controle SqlDataSource](querying-data-with-the-sqldatasource-control-cs/_static/image13.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image12.gif)
 
 **Figura 10**: Adicionar um controle GridView e associá-lo para o controle SqlDataSource ([clique para exibir a imagem em tamanho normal](querying-data-with-the-sqldatasource-control-cs/_static/image14.gif))
 
@@ -170,7 +170,7 @@ Reserve um tempo para configurar o s GridView três BoundFields. Alterar o `Prod
 Visite esta página por meio de um navegador. Como mostra a Figura 11, GridView lista cada produto s `ProductID`, `ProductName`, e `UnitPrice` valores.
 
 
-[![O GridView exibe cada produto s ProductID, ProductName e valores de UnitPrice](querying-data-with-the-sqldatasource-control-cs/_static/image16.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image15.gif)
+[![Tele GridView exibe cada produto s ProductID, ProductName e os valores de UnitPrice](querying-data-with-the-sqldatasource-control-cs/_static/image16.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image15.gif)
 
 **Figura 11**: S o GridView exibe cada produto `ProductID`, `ProductName`, e `UnitPrice` valores ([clique para exibir a imagem em tamanho normal](querying-data-with-the-sqldatasource-control-cs/_static/image17.gif))
 
@@ -228,7 +228,7 @@ Depois de concluir o assistente, o GridView terá três BoundFields adicionados 
 [!code-aspx[Main](querying-data-with-the-sqldatasource-control-cs/samples/sample5.aspx)]
 
 
-[![O GridView mostra cada ID de produto s, o nome da categoria e o nome associado](querying-data-with-the-sqldatasource-control-cs/_static/image22.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image21.gif)
+[![Tele GridView mostra cada ID produto s, o nome e o nome da categoria associado](querying-data-with-the-sqldatasource-control-cs/_static/image22.gif)](querying-data-with-the-sqldatasource-control-cs/_static/image21.gif)
 
 **Figura 15**: O ID do GridView mostra cada produto, nome e nome da categoria associada ([clique para exibir a imagem em tamanho normal](querying-data-with-the-sqldatasource-control-cs/_static/image23.gif))
 

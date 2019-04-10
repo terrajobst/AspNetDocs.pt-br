@@ -8,15 +8,15 @@ ms.date: 04/22/2010
 ms.assetid: 36e519b9-c786-4819-beda-2af72f088623
 msc.legacyurl: /mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-3
 msc.type: video
-ms.openlocfilehash: 24764c24d939fca1141d8474691f1c8322c4a656
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c3bd47b13d32ee4ac977ff99cb1e0a038f81ebaa
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383051"
 ---
-<a name="aspnet-mvc-for-the-rest-of-us-part-3"></a>ASP.NET MVC para o restante de nós: Parte 3
-====================
+# <a name="aspnet-mvc-for-the-rest-of-us-part-3"></a>ASP.NET MVC para o restante de nós: Parte 3
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Neste vídeo da Microsoft Joe Stagner recria o recurso "Fale conosco" para um aplicativo ASP.NET MVC usando o Entity Framework da Microsoft e uma exibição fortemente tipada. Aqui, podemos começar a ter uma noção real para a capacidade de trabalhar com dados no ASP.NET MVC.

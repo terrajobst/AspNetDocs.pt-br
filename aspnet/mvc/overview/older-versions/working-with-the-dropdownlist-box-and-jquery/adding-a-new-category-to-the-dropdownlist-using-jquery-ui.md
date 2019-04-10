@@ -8,15 +8,15 @@ ms.date: 01/12/2012
 ms.assetid: 44aa1ac4-6ea2-48a2-972d-52710c48eae5
 msc.legacyurl: /mvc/overview/older-versions/working-with-the-dropdownlist-box-and-jquery/adding-a-new-category-to-the-dropdownlist-using-jquery-ui
 msc.type: authoredcontent
-ms.openlocfilehash: 9fb95d22be473a4318520a391fa424106246a054
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 99bb37f95ddbad775c9c50ff5faf985b631473d0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386743"
 ---
-<a name="adding-a-new-category-to-the-dropdownlist-using-jquery-ui"></a>Adicionar uma nova categoria ao DropDownList usando o jQuery UI
-====================
+# <a name="adding-a-new-category-to-the-dropdownlist-using-jquery-ui"></a>Adicionar uma nova categoria ao DropDownList usando o jQuery UI
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 O HTML `Select` marca é ideal para apresentar uma lista de dados de categoria fixo, mas muitas vezes você precisa adicionar uma nova categoria. Suponha que desejamos adicionar o gênero "Opera" para as categorias no nosso banco de dados? Nesta seção, usaremos o jQuery UI para adicionar uma caixa de diálogo, que podemos usar para adicionar uma nova categoria. A imagem abaixo mostra como a interface do usuário apresentará no navegador.
@@ -139,4 +139,4 @@ Rick.Anderson[at]Microsoft.com
 - Tom Dykstra
 
 > [!div class="step-by-step"]
-> [Anterior](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
+> [Voltar](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)

@@ -1,27 +1,28 @@
 ---
 uid: web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
-title: Habilitar operações CRUD na API 1 da Web ASP.NET | Microsoft Docs
+title: Habilitar operações CRUD na API 1 - ASP.NET Web ASP.NET 4. x
 author: MikeWasson
-description: Este tutorial mostra como dar suporte a operações CRUD em um serviço HTTP usando a API Web do ASP.NET. Versões de software usadas no tutorial Visual Studio 2012 Web ponto de acesso...
+description: O tutorial mostra como dar suporte a operações CRUD em um serviço HTTP usando a API Web do ASP.NET para ASP.NET 4. x.
 ms.author: riande
 ms.date: 01/28/2012
+ms.custom: seoapril2019
 ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
-ms.openlocfilehash: f3cb0004075ef7687ca1096bd407c342b4d0b7be
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 855c3fa35d82173c87d13adb51e10fd13698ade5
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423735"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381342"
 ---
-<a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Habilitar operações CRUD na API 1 da Web ASP.NET
-====================
+# <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Habilitar operações CRUD na API 1 da Web ASP.NET
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 [Baixe o projeto concluído](http://code.msdn.microsoft.com/ASP-NET-Web-API-Tutorial-c4761894)
 
-> Este tutorial mostra como dar suporte a operações CRUD em um serviço HTTP usando a API Web do ASP.NET.
+> Este tutorial mostra como dar suporte a operações CRUD em um serviço HTTP usando a API Web do ASP.NET para ASP.NET 4. x.
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
 > 
@@ -85,7 +86,7 @@ Um *modelo (model)* é um objeto que representa os dados em seu aplicativo. Na A
 
 Para a API ProductStore, nossos dados consistem em produtos, portanto, vamos criar uma nova classe chamada `Product`.
 
-Se o Gerenciador de Soluções não estiver visível, clique no menu **Exibir** e selecione **Gerenciador de Soluções**. No Gerenciador de soluções, clique com botão direito do **modelos** pasta. A partir do meny contexto, selecione **Add**, em seguida, selecione **classe**. Nomeie a classe &quot;Produt&quot; (produto).
+Se o Gerenciador de Soluções não estiver visível, clique no menu **Exibir** e selecione **Gerenciador de Soluções**. No Gerenciador de soluções, clique com botão direito do **modelos** pasta. No menu de contexto, selecione **Add**, em seguida, selecione **classe**. Nomeie a classe &quot;Produt&quot; (produto).
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image3.png)
 
@@ -101,7 +102,7 @@ No Gerenciador de soluções, clique com botão direito do **modelos** pasta. Se
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image4.png)
 
-No **modelos** painel, selecione **modelos instalados** e expanda o nó do C#. Em C#, selecione **código**. Na lista de modelos de código, selecione **Interface**. Nomeie a interface &quot;IProductRepository&quot;.
+No **modelos** painel, selecione **modelos instalados** e expanda o nó do c#. Em c#, selecione **código**. Na lista de modelos de código, selecione **Interface**. Nomeie a interface &quot;IProductRepository&quot;.
 
 ![](creating-a-web-api-that-supports-crud-operations/_static/image5.png)
 

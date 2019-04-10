@@ -8,15 +8,15 @@ ms.date: 10/17/2006
 ms.assetid: ee20742f-6fb7-49a0-a009-058fe363aacb
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 73a93c93932a004e76cf4ef7be1b3308ef6b991f
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: bdf1d69ea8020ce055d7765591cf2d488de71245
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388693"
 ---
-<a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb"></a>Mestre/detalhes usando uma lista com marcadores de registros mestre com um DataList de detalhes (VB)
-====================
+# <a name="masterdetail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb"></a>Mestre/detalhes usando uma lista com marcadores de registros mestre com um DataList de detalhes (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_35_VB.exe) ou [baixar PDF](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/datatutorial35vb1.pdf)
@@ -31,7 +31,7 @@ No [tutorial anterior](master-detail-filtering-acess-two-pages-datalist-vb.md) a
 Neste tutorial serão compactados o tutorial de duas páginas em uma única página, mostrando uma lista com marcadores de nomes de categoria no lado esquerdo da tela com cada nome de categoria renderizado como um LinkButton. Clicar em um dos botões de link do nome da categoria induz um postback e associa os produtos a categoria selecionada a um DataList de duas colunas à direita da tela. Além de exibir cada nome de categoria s, repetidor à esquerda mostra o número total de produtos lá é para uma determinada categoria (veja a Figura 1).
 
 
-[![A categoria s nome e o número Total de produtos são exibidos à esquerda](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image2.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image1.png)
+[![Tele categoria s nome e o número Total de produtos são exibidos à esquerda](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image2.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image1.png)
 
 **Figura 1**: A categoria s nome e o número Total de produtos são exibidos à esquerda ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image3.png))
 
@@ -62,7 +62,7 @@ Em seguida, substituímos o `<div>` com `<div class="FloatLeft">`.
 Depois de adicionar a classe CSS e configurando a marcação no `CategoriesAndProducts.aspx` página, vá para o Designer. Você deve ver o Repeater flutuante à esquerda do DataList (embora direita agora ambos são exibidos como caixas cinzas desde que criamos ve ainda para configurar suas fontes de dados ou modelos).
 
 
-[![O Repeater é flutuante à esquerda do DataList](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image5.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image4.png)
+[![Tele Repeater é flutuante à esquerda do DataList](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image5.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image4.png)
 
 **Figura 2**: O Repeater é flutuante à esquerda do DataList ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image6.png))
 
@@ -122,7 +122,7 @@ Começamos, garantindo que podemos está trabalhando com um item de dados (um cu
 Depois de adicionar esse manipulador de eventos, reserve um tempo para testar a página por meio de um navegador. Observe como cada categoria é listada em uma lista com marcadores, exibindo o nome da categoria s e o número de produtos associados à categoria (consulte a Figura 4).
 
 
-[![Cada categoria s nome e o número de produtos são exibidos](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image11.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image10.png)
+[![EACH s nome da categoria e o número de produtos são exibidos](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image11.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image10.png)
 
 **Figura 4**: Cada categoria s nome e o número de produtos são exibidos ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image12.png))
 
@@ -132,7 +132,7 @@ Depois de adicionar esse manipulador de eventos, reserve um tempo para testar a 
 Em vez de determinar o número de produtos para cada categoria como ela s associados a Repeater, podemos pode simplificar esse processo, ajustando a `CategoriesDataTable` e `CategoriesTableAdapter` na camada de acesso a dados para incluir essas informações nativamente. Para conseguir isso, devemos adicionar uma nova coluna à `CategoriesDataTable` para manter o número de produtos associados. Para adicionar uma nova coluna a um DataTable, abra o conjunto de dados tipado (`App_Code\DAL\Northwind.xsd`), clique com botão direito na DataTable para modificar e escolha Adicionar / coluna. Adicionar uma nova coluna para o `CategoriesDataTable` (consulte a Figura 5).
 
 
-[![Adicionar uma nova coluna para o CategoriesDataSource](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image14.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image13.png)
+[![Add uma nova coluna para o CategoriesDataSource](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image14.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image13.png)
 
 **Figura 5**: Adicionar uma nova coluna para o `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image15.png))
 
@@ -150,12 +150,12 @@ Enquanto o `CategoriesDataTable` agora tem um `NumberOfProducts` coluna, seu val
 Para adicionar essa nova `GetCategoriesAndNumberOfProducts()` método, o botão direito do mouse no `CategoriesTableAdapter` e escolha a nova consulta. Isso abre o TableAdapter consultar o Assistente de configuração, o qual estamos ve usado várias vezes nos tutoriais anteriores. Para esse método, inicie o assistente, indicando que a consulta usa uma instrução SQL ad hoc que retorna linhas.
 
 
-[![Crie o método usando uma instrução de SQL Ad Hoc](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image18.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image17.png)
+[![Ccriar o método usando uma instrução de SQL Ad Hoc](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image18.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image17.png)
 
 **Figura 7**: Criar o método usando uma instrução de SQL Ad Hoc ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image19.png))
 
 
-[![A instrução SQL retorna linhas](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image21.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image20.png)
+[![Tele retorna linhas de demonstrativo de SQL](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image21.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image20.png)
 
 **Figura 8**: A instrução de SQL retorna linhas ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image22.png))
 
@@ -166,7 +166,7 @@ A próxima tela do assistente solicita que nós da consulta usar. Para retornar 
 [!code-sql[Main](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/samples/sample7.sql)]
 
 
-[![Especifique a consulta para uso](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image24.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image23.png)
+[![Sespecificar a consulta para uso](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image24.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image23.png)
 
 **Figura 9**: Especifique a consulta para uso ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image25.png))
 
@@ -176,7 +176,7 @@ Observe que a subconsulta que calcula o número de produtos associados com a cat
 Depois de inserir essa consulta, a última etapa é escolher o nome para o novo método. Use `FillWithNumberOfProducts` e `GetCategoriesAndNumberOfProducts` para o preenchimento uma DataTable e retornar uma DataTable padrões, respectivamente.
 
 
-[![Nome de métodos FillWithNumberOfProducts novo do TableAdapter s e GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image27.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image26.png)
+[![Name a s novo TableAdapter métodos FillWithNumberOfProducts e GetCategoriesAndNumberOfProducts](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image27.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image26.png)
 
 **Figura 10**: Nomeie o TableAdapter novo s métodos `FillWithNumberOfProducts` e `GetCategoriesAndNumberOfProducts` ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image28.png))
 
@@ -218,7 +218,7 @@ Antes de nos preocupamos a falta de um `SelectedValue` propriedade para o Repeat
 Da marca inteligente DataList s, optar por adicionar um novo ObjectDataSource denominado `CategoryProductsDataSource` e configurá-lo para usar o `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` método. Uma vez que DataList neste tutorial oferece uma interface somente leitura, fique à vontade definir as listas suspensas em INSERT, UPDATE e excluir guias como (nenhum).
 
 
-[![Configurar o ObjectDataSource para usar a classe ProductsBLL s GetProductsByCategoryID(categoryID) método](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image33.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image32.png)
+[![Configurar o ObjectDataSource para uso ProductsBLL classe s GetProductsByCategoryID(categoryID) método](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image33.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image32.png)
 
 **Figura 12**: Configurar o ObjectDataSource para uso `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` método ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image34.png))
 
@@ -228,7 +228,7 @@ Uma vez que o `GetProductsByCategoryID(categoryID)` método espera um parâmetro
 Por enquanto, defina a lista de lista suspensa de origem do parâmetro como None. Poderemos programaticamente atribuir esse valor de parâmetro quando uma categoria que LinkButton é clicado no Repetidor.
 
 
-[![Fazer não especificar uma fonte de parâmetro para o parâmetro categoryID](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image36.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image35.png)
+[![Do não especificar uma fonte de parâmetro para o parâmetro categoryID](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image36.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image35.png)
 
 **Figura 13**: Fazer não especificar uma fonte de parâmetro para o *`categoryID`* parâmetro ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image37.png))
 
@@ -263,12 +263,12 @@ Depois de garantir que o passado `CommandName` ListProducts é igual a, o manipu
 Com essas adições, nosso tutorial está completo! Reserve um tempo para testá-lo em um navegador. Figura 14 mostra a tela quando o primeiro visitando a página. Uma vez que uma categoria ainda deve ser selecionado, não há produtos são exibidos. Clicar em uma categoria, como produzir, exibe os produtos na categoria de produto em uma exibição de duas colunas (veja a Figura 15).
 
 
-[![Nenhum produto é exibidas quando primeiro visitando a página](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image39.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image38.png)
+[![NProdutos o são exibidos quando primeiro visitando a página](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image39.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image38.png)
 
 **Figura 14**: Nenhum produto é exibidas quando primeiro visitando a página ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image40.png))
 
 
-[![Clicar em listas de categorias de produzir os produtos correspondentes à direita](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image42.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image41.png)
+[![Clicking a produzir a categoria lista os produtos correspondentes à direita](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image42.png)](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image41.png)
 
 **Figura 15**: Clicar na categoria de produzir lista os produtos de correspondência para a direita ([clique para exibir a imagem em tamanho normal](master-detail-using-a-bulleted-list-of-master-records-with-a-details-datalist-vb/_static/image43.png))
 
@@ -300,4 +300,4 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi Zack Jones. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Anterior](master-detail-filtering-acess-two-pages-datalist-vb.md)
+> [Voltar](master-detail-filtering-acess-two-pages-datalist-vb.md)

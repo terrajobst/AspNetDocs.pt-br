@@ -8,15 +8,15 @@ ms.date: 01/10/2011
 ms.assetid: ffa3d5c9-91e5-4da3-b409-560b0c7fbbf0
 msc.legacyurl: /web-pages/readme/beta3
 msc.type: content
-ms.openlocfilehash: 3d729d1b0615533dddceff484acb3d42247f6cab
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7f0c5ff599235157bd11f5f86a26b8882e0f29dc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060493"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381803"
 ---
-<a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>Leiame do Web Matrix e de Páginas da Web do ASP.NET (Razor) versão beta 3
-====================
+# <a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>Leiame do Web Matrix e de Páginas da Web do ASP.NET (Razor) versão beta 3
+
 > Leiame do Web Matrix e de Páginas da Web do ASP.NET (Razor) versão beta 3
 
 9 de novembro de 2010
@@ -32,7 +32,7 @@ ms.locfileid: "57060493"
     - [SQL Server Compact](#Known_Issues_SQL_Server_Compact)
     - [Instalação de aplicativos](#Known_Issues_Installing_Applications)
     - [Publicação de aplicativos](#Known_Issues_Publishing_Applications)
-    - [Outros problemas](#Known_Issues_Other_Issues)
+    - [Outros Problemas](#Known_Issues_Other_Issues)
 - [Para obter mais informações](#More_Info)
 
 <a id="Overview"></a>
@@ -454,7 +454,7 @@ Esta seção do documento descreve novos recursos, alterações e problemas conh
 
 > Navegando para um aplicativo WCF resulta em um erro semelhante ao seguinte:
 > 
-> *Não foi possível carregar arquivo ou assembly ' Administration, versão = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' ou uma de suas dependências. O sistema não pode localizar o arquivo especificado.*
+> *Não foi possível carregar arquivo ou assembly ' Administration, versão = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' ou uma de suas dependências. O sistema não pode encontrar o arquivo especificado.*
 > 
 > Isso ocorre porque a versão do IIS Express Beta não dá suporte a WCF por padrão.
 > 
@@ -548,6 +548,6 @@ Para obter mais informações sobre o WebMatrix Beta 3, consulte os seguintes si
 - [ASP.NET](https://asp.net/webmatrix)
 - [Microsoft.com/web](https://www.microsoft.com/web)
 
-* * *
+---
 
 © 2010 Microsoft Corporation. Todos os direitos reservados. [Termos de uso](https://msdn.microsoft.cos/cc300389.aspx).

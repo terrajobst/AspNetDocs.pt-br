@@ -8,20 +8,20 @@ ms.date: 12/03/2010
 ms.assetid: 5cb00916-8f46-491f-be25-4739a615d619
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: f9f100ccaf5e9cfdaf0633f9bfebbad273212a0e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 51e3010f6e01434c495201af4af3bbdcde993da7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57054233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398430"
 ---
-<a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Introdução ao banco de dados do Entity Framework 4.0 primeiro e o ASP.NET 4 Web Forms
-====================
+# <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms"></a>Introdução ao banco de dados do Entity Framework 4.0 primeiro e o ASP.NET 4 Web Forms
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Aplicativo web de exemplo Contoso University demonstra como criar aplicativos Web Forms do ASP.NET usando o Entity Framework 4.0 e o Visual Studio 2010. O aplicativo de exemplo é um site de uma Contoso University fictícia. Ele inclui funcionalidades como admissão de alunos, criação de cursos e atribuições de instrutor.
 > 
-> O tutorial mostra exemplos em C#. O [amostra para download](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) contém código em C# e Visual Basic.
+> O tutorial mostra exemplos em c#. O [amostra para download](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) contém código em c# e Visual Basic.
 > 
 > ## <a name="database-first"></a>Primeiro banco de dados
 > 

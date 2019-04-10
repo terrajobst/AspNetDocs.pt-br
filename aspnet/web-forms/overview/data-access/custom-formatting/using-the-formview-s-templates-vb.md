@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 67b25f4c-2823-42b6-b07d-1d650b3fd711
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-the-formview-s-templates-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6d16ef7ef8a3d5fce10e0d0b88421be294e9fc8d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 268403a7b832596421120a24c64580f63eb987c3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383849"
 ---
-<a name="using-the-formviews-templates-vb"></a>Usando os modelos de FormView (VB)
-====================
+# <a name="using-the-formviews-templates-vb"></a>Usando os modelos de FormView (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_14_VB.exe) ou [baixar PDF](using-the-formview-s-templates-vb/_static/datatutorial14vb1.pdf)
@@ -40,7 +40,7 @@ Ao contrário de DetailsView, FormView não é composto de campos. É possível 
 Neste tutorial, que vamos examinar usando o controle FormView para apresentar uma exibição menos rígida de produtos. Em vez de ter campos para o nome, categoria, fornecedor e da assim por diante, FormView `ItemTemplate` mostrará esses valores usando uma combinação de um elemento de cabeçalho e um `<table>` (veja a Figura 1).
 
 
-[![FormView forçadas do Layout de grade como visto em DetailsView](using-the-formview-s-templates-vb/_static/image2.png)](using-the-formview-s-templates-vb/_static/image1.png)
+[![The FormView forçadas do Grid-Like Layout visto em DetailsView](using-the-formview-s-templates-vb/_static/image2.png)](using-the-formview-s-templates-vb/_static/image1.png)
 
 **Figura 1**: FormView foge do Layout de Grid-Like visto em DetailsView ([clique para exibir a imagem em tamanho normal](using-the-formview-s-templates-vb/_static/image3.png))
 
@@ -50,7 +50,7 @@ Neste tutorial, que vamos examinar usando o controle FormView para apresentar um
 Abra o `FormView.aspx` página e arraste um FormView da caixa de ferramentas para o Designer. Quando adicionar pela primeira vez FormView ele aparece como uma caixa cinza, instruindo-nos que um `ItemTemplate` é necessária.
 
 
-[![FormView não pode ser renderizado no Designer, até que um ItemTemplate seja fornecido](using-the-formview-s-templates-vb/_static/image5.png)](using-the-formview-s-templates-vb/_static/image4.png)
+[![Tele FormView não pode ser renderizado no Designer de até que um ItemTemplate seja fornecido](using-the-formview-s-templates-vb/_static/image5.png)](using-the-formview-s-templates-vb/_static/image4.png)
 
 **Figura 2**: O FormView não pode ser renderizado no Designer de até uma `ItemTemplate` é fornecido ([clique para exibir a imagem em tamanho normal](using-the-formview-s-templates-vb/_static/image6.png))
 
@@ -88,12 +88,12 @@ Como não há nenhum CheckBoxFields disponíveis com o FormView para mostrar o `
 Com o `ItemTemplate` concluída, as informações de produto são exibidas de maneira muito mais fluida. Compare a saída de DetailsView do último tutorial (Figura 3) com a saída gerada pela FormView neste tutorial (Figura 4).
 
 
-[![A saída de DetailsView rígida](using-the-formview-s-templates-vb/_static/image8.png)](using-the-formview-s-templates-vb/_static/image7.png)
+[![Tele tem saída de DetailsView rígida](using-the-formview-s-templates-vb/_static/image8.png)](using-the-formview-s-templates-vb/_static/image7.png)
 
 **Figura 3**: A saída de DetailsView rígida ([clique para exibir a imagem em tamanho normal](using-the-formview-s-templates-vb/_static/image9.png))
 
 
-[![A saída de FormView fluidos](using-the-formview-s-templates-vb/_static/image11.png)](using-the-formview-s-templates-vb/_static/image10.png)
+[![Tele fluido FormView saída](using-the-formview-s-templates-vb/_static/image11.png)](using-the-formview-s-templates-vb/_static/image10.png)
 
 **Figura 4**: A saída de FormView fluido ([clique para exibir a imagem em tamanho normal](using-the-formview-s-templates-vb/_static/image12.png))
 

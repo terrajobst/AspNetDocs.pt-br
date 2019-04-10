@@ -8,15 +8,15 @@ ms.date: 07/17/2006
 ms.assetid: 6331e02e-c465-4cdf-bd3f-f07680c289d6
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2b0d7aeab357a0009c44a29ff66f22ce8a744a90
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: fc5c99ce6c5da7d004b95462a3338aefbed31b36
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422137"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388699"
 ---
-<a name="adding-client-side-confirmation-when-deleting-vb"></a>Adicionar confirmação do lado do cliente ao excluir (VB)
-====================
+# <a name="adding-client-side-confirmation-when-deleting-vb"></a>Adicionar confirmação do lado do cliente ao excluir (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_22_VB.exe) ou [baixar PDF](adding-client-side-confirmation-when-deleting-vb/_static/datatutorial22vb1.pdf)
@@ -65,7 +65,7 @@ Uma vez que ele foi associado a um controle ObjectDataSource que dá suporte som
 Com essas alterações, temos uma página da web totalmente funcional que permite que um usuário alternar entre os produtos de uma vez, com a capacidade de excluir um produto, simplesmente clicando no botão Excluir. Figura 2 mostra uma captura de tela de nosso progresso até o momento quando visualizado por meio de um navegador.
 
 
-[![FormView mostra informações sobre um único produto](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
+[![Tele FormView mostra informações sobre um único produto](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
 
 **Figura 2**: O FormView mostra informações sobre um único produto ([clique para exibir a imagem em tamanho normal](adding-client-side-confirmation-when-deleting-vb/_static/image4.png))
 
@@ -85,7 +85,7 @@ Tudo que s é a ele! Figura 3 mostra uma captura de tela dessa confirmação em 
 > A cadeia de caracteres passada para o `confirm(string)` função JavaScript é delimitada com apóstrofos (em vez de aspas). No JavaScript, cadeias de caracteres podem ser delimitadas usando qualquer um dos caracteres. Usamos apóstrofos aqui para que os delimitadores para a cadeia de caracteres passada para `confirm(string)` não introduzem ambiguidade com os delimitadores usados para o `OnClientClick` valor da propriedade.
 
 
-[![Uma confirmação é agora exibido ao clicar no botão Excluir](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
+[![A A confirmação é agora exibido ao clicar no botão Excluir](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
 
 **Figura 3**: Uma confirmação é agora exibido ao clicar no botão Excluir ([clique para exibir a imagem em tamanho normal](adding-client-side-confirmation-when-deleting-vb/_static/image7.png))
 
@@ -127,7 +127,7 @@ Com essas alterações completas, clicando em um botão Excluir no GridView most
 > Essa técnica também pode ser usada para acessar programaticamente o botão Excluir no CommandField em um DetailsView. Para DetailsView, no entanto, você d cria um manipulador de eventos para o `DataBound` evento, como DetailsView não tem um `RowDataBound` eventos.
 
 
-[![Clicar no botão de exclusão de s GridView exibe uma caixa de diálogo de confirmação personalizado](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
+[![Clicking o s GridView Excluir botão exibe uma caixa de diálogo de confirmação personalizado](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
 
 **Figura 4**: Clicar o botão de exclusão do s GridView exibe uma caixa de diálogo de confirmação personalizado ([clique para exibir a imagem em tamanho normal](adding-client-side-confirmation-when-deleting-vb/_static/image10.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
-title: Realizar validação simples (C#) | Microsoft Docs
+title: Realizar validação simples (c#) | Microsoft Docs
 author: StephenWalther
 description: Saiba como executar a validação em um aplicativo ASP.NET MVC. Neste tutorial, Stephen Walther apresenta você ao estado de modelo e o auxiliar de validação HTML...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 21383c9d-6aea-4bad-a99b-b5f2c9d6503f
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 8ee1d892cd58534c2b64455efed01aa8c2dfdcce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 12fe89ec83a33ece2971c8186783326d165cbf79
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388498"
 ---
-<a name="performing-simple-validation-c"></a>Realizar validação simples (C#)
-====================
+# <a name="performing-simple-validation-c"></a>Realizar validação simples (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Saiba como executar a validação em um aplicativo ASP.NET MVC. Neste tutorial, Stephen Walther apresenta você ao estado de modelo e os auxiliares de validação HTML.
@@ -56,12 +56,12 @@ Os auxiliares Html.ValidationMessage() e Html.ValidationSummary() são usados na
 Certifique-se de que você compila seu aplicativo antes de adicionar um modo de exibição. Caso contrário, a lista de classes não aparecerá na **exibir dados de classe** lista suspensa.
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
 
 **Figura 01**: Adicionando uma exibição ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image2.png))
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
 
 **Figura 02**: Criando uma exibição fortemente tipada ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image4.png))
 
@@ -79,7 +79,7 @@ O auxiliar Html.ValidationMessage() é chamado ao lado de cada um dos campos de 
 A página na Figura 3 ilustra as mensagens de erro renderizadas pelos auxiliares de validação quando o formulário é enviado com campos ausentes e valores inválidos.
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
 
 **Figura 03**: Modo de exibição criar enviado com problemas ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image6.png))
 
@@ -104,7 +104,7 @@ Você pode modificar essas classes de folha de estilo em cascata e, portanto, mo
 Se você enviar o formulário HTML para a criação de um produto e insira um valor inválido para o campo de preço e nenhum valor para o campo UnitsInStock, em seguida, você receberá as mensagens de validação exibidas na Figura 4. Onde vêm essas mensagens de erro de validação?
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
 
 **Figura 04**: Erros de validação de prebinding ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image8.png))
 

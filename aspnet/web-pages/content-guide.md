@@ -8,22 +8,22 @@ ms.date: 01/13/2011
 ms.assetid: b558e481-775a-4aa0-bd3b-ad61e530c2d2
 msc.legacyurl: /web-pages/content-guide
 msc.type: content
-ms.openlocfilehash: e5c2edcceeda977919c1212719786630e7bb8a4f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e410ac0c6d3430c00e171775d842ee30eeab021
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028933"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383142"
 ---
-<a name="webmatrix-content-guide"></a>Guia de conteúdo do WebMatrix
-====================
+# <a name="webmatrix-content-guide"></a>Guia de conteúdo do WebMatrix
+
 
 > [!NOTE] 
 > O WebMatrix não é mais recomendado como um ambiente de desenvolvimento integrado para páginas da Web do ASP.NET. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
 
 O WebMatrix é um conjunto de ferramentas que fornece uma maneira fácil para criar sites da Web para o Microsoft Windows. Ele inclui o IIS Express (servidor de web de desenvolvimento), o ASP.NET (uma estrutura de programação de web) e o SQL Server Compact (um banco de dados inserido). Para ver um rápido tour do WebMatrix, consulte [visão geral do WebMatrix](https://www.microsoft.com/web/webmatrix/). Para examinar os principais recursos do WebMatrix, consulte [recursos do WebMatrix](https://www.microsoft.com/web/webmatrix/features/).
 
-| **Cenário** | **Content** |
+| **Cenário** | **Conteúdo** |
 | --- | --- |
 | Introdução ao WebMatrix | [Introdução ao WebMatrix](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/intro.mp4) (vídeo) [Introdução ao WebMatrix e páginas da Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202889) [começar do zero](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough1b.mp4) (vídeo) Saiba como usar o código do Razor do ASP.NET para gravar um site personalizado. [Seu primeiro site usando o WebMatrix](https://go.microsoft.com/fwlink/?LinkId=208553) [começar com aplicativos Web](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4) (vídeo) Use um aplicativo gratuito de código-fonte aberto para criar seu próprio site. |
 | Instalar componentes (incluindo o WebMatrix) | [Usando o Microsoft Web Platform Installer](https://www.iis.net/learn/install/web-platform-installer/using-the-microsoft-web-platform-installer) [Web Platform Installer 2.0 Walkthrough](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-20-walkthrough) [recursos de instalador de plataforma da Web](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-resources) |
@@ -68,7 +68,7 @@ O WebMatrix é um conjunto de ferramentas que fornece uma maneira fácil para cr
 - [Começar com aplicativos Web](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4)
 - [Pacote pequeno, mas completo](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-compact.mp4)
 - [Cresce com você](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-extend.mp4)
-- [Código-fonte aberto](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-webapps-b.mp4)
+- [Software Livre](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-webapps-b.mp4)
 - [Banco de dados de forma simple](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-databases.mp4)
 - [Interface elegante, experiência simples](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-ux.mp4)
 - [Simples de código](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-aspnetpages.mp4)

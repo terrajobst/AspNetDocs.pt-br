@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 1bcf9a1c-ed34-4ed0-ab91-253df08fc6ff
 msc.legacyurl: /web-forms/videos/vs-2005
 msc.type: chapter
-ms.openlocfilehash: 0085424743ad2592dd06c58adba801bd676f2c0f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 25d9cc02ef9b0e8f068c9e84469d9661b06f0b28
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381101"
 ---
-<a name="visual-studio-2005"></a>Visual Studio 2005
-====================
+# <a name="visual-studio-2005"></a>Visual Studio 2005
+
 > Como trabalhar com o Visual Studio 2005 Team System e suplementos para executar o teste, implantação e outras tarefas.
 
 
@@ -25,7 +25,7 @@ ms.locfileid: "57022053"
 - [Introdução ao teste de carga de aplicativos Web com o Team System](introduction-to-load-testing-web-applications-with-team-system.md)
 - [Introdução ao teste manual de unidade com o Team System](introduction-to-manual-testing-with-team-system.md)
 - [Introdução ao gerenciamento e execução de testes com o Team System](introduction-to-managing-and-running-tests-with-team-system.md)
-- [Medindo o valor comercial do AJAX](measuring-the-business-value-of-ajax.md)
+- [Medir o valor comercial do AJAX](measuring-the-business-value-of-ajax.md)
 - [Cobertura de código dos testes automatizados](code-coverage-of-automated-tests.md)
 - [Regras de extração personalizadas e testes Web codificados](custom-extraction-rules-and-coded-web-tests.md)
 - [Efeitos do cache](the-effects-of-caching.md)

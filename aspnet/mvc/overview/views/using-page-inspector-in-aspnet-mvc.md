@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: abb1ef355bd7614daaab8c205d9d53065856cd23
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ef0ae42e1c6114849a311164eac242db6dab2b1d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385785"
 ---
-<a name="using-page-inspector-in-aspnet-mvc"></a>Usando o Inspetor de Página no ASP.NET MVC
-====================
+# <a name="using-page-inspector-in-aspnet-mvc"></a>Usando o Inspetor de Página no ASP.NET MVC
+
 por Tim Ammann
 
 > O Inspetor de página no Visual Studio 2012 é uma ferramenta de desenvolvimento na web com um navegador integrado. Selecione qualquer elemento no navegador integrado e Inspetor de página instantaneamente destaca o código-fonte e o CSS do elemento. Você pode procurar qualquer modo de exibição do MVC, rapidamente encontrar as fontes de marcação renderizada e usar as ferramentas de navegador dentro do ambiente do Visual Studio.
@@ -55,7 +55,7 @@ O Page Inspector é fornecido com o Microsoft Web Developer Tools. A versão mai
 
 ## <a name="create-a-web-application"></a>Criar um aplicativo Web
 
-Primeiro, crie um aplicativo web que você usará com o Inspetor de página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual C#**, selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**.
+Primeiro, crie um aplicativo web que você usará com o Inspetor de página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#**, selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**.
 
 ![Novo aplicativo ASP.NET MVC](using-page-inspector-in-aspnet-mvc/_static/image2.png)
 
@@ -240,7 +240,7 @@ Com a versão 1.3, o Page Inspector agora pode mapear itens que foram adicionado
 > O modelo SPA requer o [ASP.NET e Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) atualizar.
 
 
-No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual C#**, selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**. Clique em **OK**.
+No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#**, selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**. Clique em **OK**.
 
 No **novo projeto ASP.NET MVC 4** caixa de diálogo, selecione **aplicativo de página única**.
 

@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 829f589f-e201-4f6e-9ae6-08ae84322065
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 389627e610eebcdabee9b4db524e5915186db099
-ms.sourcegitcommit: 62db31596a7da029263cf06335aff12236fb3186
+ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58440346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381270"
 ---
-<a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iteração #4 – tornar o aplicativo fracamente acoplado (c#)
-====================
+# <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iteração #4 – tornar o aplicativo fracamente acoplado (c#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar o código](iteration-4-make-the-application-loosely-coupled-cs/_static/contactmanager_4_cs1.zip)
@@ -137,7 +137,7 @@ Para corrigir esse problema, podemos criar uma separada [ *camada de serviço*](
 
 O ContactManagerService está contido na listagem 4. Ele contém a lógica de validação da classe de controlador do contato.
 
-**Listagem 4 - Models\ContactManagerService.cs**
+**Listing 4 - Models\ContactManagerService.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample4.cs)]
 
@@ -169,7 +169,7 @@ Um controlador usa um ModelStateDictionary chamada ModelState para representar e
 
 O padrão decorador permite que você encapsule uma classe existente em uma nova classe para implementar uma interface. Nosso projeto Contact Manager inclui a classe de ModelStateWrapper contida na listagem 7. A classe ModelStateWrapper implementa a interface na listagem 8.
 
-**Listagem 7 - Models\Validation\ModelStateWrapper.cs**
+**Listing 7 - Models\Validation\ModelStateWrapper.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample7.cs)]
 

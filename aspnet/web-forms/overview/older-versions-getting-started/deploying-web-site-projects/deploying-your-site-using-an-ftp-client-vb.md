@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: 09279194-bcf9-4b59-a09d-c68e5926a758
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-an-ftp-client-vb
 msc.type: authoredcontent
-ms.openlocfilehash: ea6d2deaaad1112f4a5ce4e4ea5534c6eab35a8d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 70640ac12b52d50c92d1d7f65c1116b2ec36d883
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381764"
 ---
-<a name="deploying-your-site-using-an-ftp-client-vb"></a>Implantação do site com o uso de um cliente de FTP (VB)
-====================
+# <a name="deploying-your-site-using-an-ftp-client-vb"></a>Implantação do site com o uso de um cliente de FTP (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_03_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial03_DeployingViaFTP_vb.pdf)
@@ -69,7 +69,7 @@ Figura 1 mostra o FileZilla depois que os arquivos necessários foram copiados. 
 > Não há nenhum problema em que os arquivos de código fonte no servidor de produção, como eles são ignorados. ASP.NET proíbe solicitações HTTP para arquivos de código-fonte por padrão, para que, mesmo se os arquivos de código-fonte estão presentes no servidor de produção sejam inacessíveis para os visitantes do site. (Ou seja, se um usuário tentar visitar `http://www.yoursite.com/Default.aspx.vb` obterão uma página de erro que explica que esses tipos de arquivos - `.vb` arquivos – são proibidos.)
 
 
-[![Use um cliente FTP para copiar os arquivos necessários da área de trabalho para o servidor Web no provedor de Host da Web.](deploying-your-site-using-an-ftp-client-vb/_static/image2.png)](deploying-your-site-using-an-ftp-client-vb/_static/image1.png)
+[![USe um cliente de FTP para copiar os arquivos necessários de sua área de trabalho para o servidor Web no provedor de Host da Web.](deploying-your-site-using-an-ftp-client-vb/_static/image2.png)](deploying-your-site-using-an-ftp-client-vb/_static/image1.png)
 
 **Figura 1**: Usar um cliente de FTP para copiar os arquivos necessários de sua área de trabalho para o servidor Web no provedor de Host da Web ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-an-ftp-client-vb/_static/image3.png))
 
@@ -82,7 +82,7 @@ Figura 2 mostra um site implantado resenhas de livros. Observe que estou exibind
 > Se você receber um erro ao seu aplicativo de exibição levar alguns instantes para garantir que você implantou o conjunto correto de arquivos. Em seguida, verifique a mensagem de erro para ver se ele revela qualquer pistas sobre o problema. Depois disso, pode ser a assistência técnica de web host da sua empresa ou poste sua pergunta para o fórum apropriado na [fóruns do ASP.NET](https://forums.asp.net/).
 
 
-[![O Site de revisões do livro é agora acessível para qualquer pessoa com uma Conexão de Internet.](deploying-your-site-using-an-ftp-client-vb/_static/image5.png)](deploying-your-site-using-an-ftp-client-vb/_static/image4.png)
+[![Tele livro revisões de Site é agora acessível para qualquer pessoa com uma Conexão de Internet.](deploying-your-site-using-an-ftp-client-vb/_static/image5.png)](deploying-your-site-using-an-ftp-client-vb/_static/image4.png)
 
 **Figura 2**: O Site de revisões do livro é agora acessível para qualquer pessoa com uma Conexão de Internet ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-an-ftp-client-vb/_static/image6.png))
 
@@ -124,7 +124,7 @@ Depois que você criou com êxito o projeto, use seu cliente FTP para copiar os 
 Figura 3 mostra o FileZilla depois de copiar os arquivos necessários. Como você pode ver, o ASP.NET fonte arquivos de código, como `About.aspx.vb`, estão presentes no computador local (o ambiente de desenvolvimento) e o provedor de host da web (o ambiente de produção) como arquivos de código precisam ser implantados ao usar automática compilação.
 
 
-[![Usar um cliente de FTP para copiar os arquivos necessários da área de trabalho para o servidor Web no provedor de Host da Web](deploying-your-site-using-an-ftp-client-vb/_static/image8.png)](deploying-your-site-using-an-ftp-client-vb/_static/image7.png)
+[![USe um cliente de FTP para copiar os arquivos necessários de sua área de trabalho para o servidor Web no provedor de Host da Web](deploying-your-site-using-an-ftp-client-vb/_static/image8.png)](deploying-your-site-using-an-ftp-client-vb/_static/image7.png)
 
 **Figura 3**: Usar um cliente de FTP para copiar os arquivos necessários de sua área de trabalho para o servidor Web no provedor de Host da Web ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-an-ftp-client-vb/_static/image9.png))
 

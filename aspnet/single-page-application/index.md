@@ -8,15 +8,15 @@ ms.date: 11/14/2012
 ms.assetid: 4760328c-3d73-4757-a36f-ab80a5b3f611
 msc.legacyurl: /single-page-application
 msc.type: categoryindex
-ms.openlocfilehash: 30b992967c3fe36539481f11a94a5db290cf99c5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 74ebdc39a81d31fb3c1ef3e5bab1857915cdc247
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59400926"
 ---
-<a name="aspnet-single-page-application"></a>Aplicativo de página única do ASP.NET
-====================
+# <a name="aspnet-single-page-application"></a>Aplicativo de página única do ASP.NET
+
 - [Visão geral](overview/index.md)
 
     - [Introdução](overview/introduction/index.md)

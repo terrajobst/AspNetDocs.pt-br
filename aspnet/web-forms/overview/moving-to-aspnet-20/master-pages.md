@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 644beb37bf893a590be03dd0929c5870af6fbe87
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381140"
 ---
-<a name="master-pages"></a>Páginas mestras
-====================
+# <a name="master-pages"></a>Páginas mestras
+
 por [Microsoft](https://github.com/microsoft)
 
 > Um dos principais componentes para o êxito de um site da Web é uma aparência consistente. No ASP.NET 1. x, os desenvolvedores usavam os controles de usuário para replicar os elementos de página comuns entre um aplicativo da Web. Embora seja certamente uma solução viável, usando controles de usuário tem algumas desvantagens. Por exemplo, uma alteração na posição de um controle de usuário requer uma alteração em várias páginas em um site. Controles de usuário também não são renderizados no modo de exibição de Design depois que está sendo inserido em uma página.
@@ -71,7 +71,7 @@ Para criar uma nova página mestra:
 **Figura 2**: Criando uma nova página mestra
 
 
-Observe que é a extensão de arquivo para uma página mestra <em>. master</em>. Essa é uma das maneiras que uma página mestra difere de uma página comum. A principal diferença é que no lugar de um @Page diretiva, a página mestra contém um @Master diretiva. Alternar a exibição da fonte para o mestre de página que você acabou de criar e revisar o código.
+Observe que é a extensão de arquivo para uma página mestra *. master*. Essa é uma das maneiras que uma página mestra difere de uma página comum. A principal diferença é que no lugar de um @Page diretiva, a página mestra contém um @Master diretiva. Alternar a exibição da fonte para o mestre de página que você acabou de criar e revisar o código.
 
 Uma nova página mestra terá um controle de ContentPlaceHolder por padrão. Na maioria dos casos, ele faz mais sentido para criar os elementos de página comuns primeiro e, em seguida, inserir controles ContentPlaceHolder onde o conteúdo personalizado é desejado. Nesses casos, os desenvolvedores desejará excluir o controle padrão ContentPlaceHolder e inserir novos registros, como a página é desenvolvida. ContentPlaceHolder controles não são redimensionáveis apesar do fato de que elas exibem as alças de dimensionamento. Os tamanhos de controle de ContentPlaceHolder automaticamente com base no conteúdo que ele contém com uma exceção; Se você colocar um controle ContentPlaceHolder dentro de um elemento de bloco, como uma célula de tabela, ele será redimensionado acordo com o tamanho do elemento.
 
@@ -154,7 +154,7 @@ Definindo a propriedade MasterPageFile no código, você pode aplicar uma págin
 
 ## <a name="using-the-ltpagesgt-element"></a>Usando o &lt;páginas&gt; elemento
 
-Você pode configurar uma página mestra para suas páginas, definindo o atributo masterPageFile na &lt;páginas&gt; elemento do arquivo Web. config. Ao usar esse método, lembre-se de que arquivos Web. config inferiores na estrutura de aplicativo podem substituir essa configuração. Qualquer atributo MasterPageFile definido um @Page diretiva também irá substituir essa configuração. Usando o &lt;páginas&gt; elemento torna simples para criar um <em>mestre</em> página mestra que pode ser substituída se for necessário em determinadas pastas ou arquivos.
+Você pode configurar uma página mestra para suas páginas, definindo o atributo masterPageFile na &lt;páginas&gt; elemento do arquivo Web. config. Ao usar esse método, lembre-se de que arquivos Web. config inferiores na estrutura de aplicativo podem substituir essa configuração. Qualquer atributo MasterPageFile definido um @Page diretiva também irá substituir essa configuração. Usando o &lt;páginas&gt; elemento torna simples para criar um *mestre* página mestra que pode ser substituída se for necessário em determinadas pastas ou arquivos.
 
 ## <a name="properties-in-master-pages"></a>Propriedades em páginas mestras
 

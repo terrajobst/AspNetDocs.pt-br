@@ -8,15 +8,15 @@ ms.date: 05/01/2013
 ms.assetid: 501db899-e68c-49ff-81b2-1dc561bfe908
 msc.legacyurl: /signalr/overview/older-versions/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
-ms.openlocfilehash: 77186f43b38a8423a1cbd4cf42723c5b9ccdd953
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cab185ccb048a374a08f4b5d978b30675c30a60d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383949"
 ---
-<a name="signalr-scaleout-with-azure-service-bus-signalr-1x"></a>Expansão do SignalR com o Barramento de Serviço do Azure (SignalR 1.x)
-====================
+# <a name="signalr-scaleout-with-azure-service-bus-signalr-1x"></a>Expansão do SignalR com o Barramento de Serviço do Azure (SignalR 1.x)
+
 por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -71,7 +71,7 @@ Crie um novo namespace do barramento de serviço, conforme descrito em [como o b
 
 Inicie o Visual Studio. Dos **arquivo** menu, clique em **novo projeto**.
 
-No **novo projeto** diálogo caixa, expanda **Visual C#**. Sob **modelos instalados**, selecione **nuvem** e, em seguida, selecione **serviço de nuvem do Windows Azure**. Mantenha o padrão do .NET Framework 4.5. Nome do aplicativo ChatService e clique em **Okey**.
+No **novo projeto** diálogo caixa, expanda **Visual c#**. Sob **modelos instalados**, selecione **nuvem** e, em seguida, selecione **serviço de nuvem do Windows Azure**. Mantenha o padrão do .NET Framework 4.5. Nome do aplicativo ChatService e clique em **Okey**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image4.png)
 

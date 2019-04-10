@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 093c1362-f10b-407c-a708-be370f4b62b0
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-entity-framework-scaffolding-and-migrations
 msc.type: authoredcontent
-ms.openlocfilehash: 649f83d54bfdb3367d9cea056a53a614f982adec
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422955"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389031"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Migrações e scaffolding do Entity Framework do ASP.NET MVC 4
 
@@ -58,7 +58,7 @@ Para sua conveniência, grande parte do código que você estiver gerenciando ao
 
 Se você não estiver familiarizado com os trechos de código do Visual Studio e aprender como usá-los, consulte o Apêndice deste documento &quot; [apêndice b: Usar trechos de código](#AppendixB)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -90,7 +90,7 @@ Neste exercício, você aprenderá a usar scaffolding do ASP.NET MVC 4 com o có
 #### <a name="task-1--creating-a-new-aspnet-mvc-4-project-using-scaffolding"></a>Projeto da tarefa 1-Criando um novo do ASP.NET MVC 4 usando o Scaffolding
 
 1. Se não estiver aberto, inicie **Visual Studio 2012**.
-2. Selecione **arquivo | Novo projeto**. No novo projeto na caixa de diálogo, o **Visual C# | Web** seção, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto para **MVC4andEFMigrations** e defina o local como **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** pasta deste laboratório. Definir a **nome da solução** para **começar** e verifique se **criar diretório para solução** é verificada. Clique em **OK**.
+2. Selecione **arquivo | Novo projeto**. No novo projeto na caixa de diálogo, o **Visual c# | Web** seção, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto para **MVC4andEFMigrations** e defina o local como **Source\Ex1 UsingMVC4ScaffoldingEFMigrations** pasta deste laboratório. Definir a **nome da solução** para **começar** e verifique se **criar diretório para solução** é verificada. Clique em **OK**.
 
     ![Caixa de diálogo Novo projeto ASP.NET MVC 4](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image1.png "caixa de diálogo Novo projeto ASP.NET MVC 4")
 
@@ -218,7 +218,7 @@ Nesta tarefa, você atualizará o banco de dados usando migrações do Entity Fr
 
     ![Gerar um script SQL](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image15.png "gerando um script SQL")
 
-    *Gerar um script SQL*
+    *Gerando um script SQL*
 
     ![Atualização de Script SQL](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image16.png "atualização de Script SQL")
 
@@ -231,7 +231,7 @@ Nesta tarefa, você atualizará o banco de dados usando migrações do Entity Fr
 
     ![Atualizando o banco de dados](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image17.png "atualizando o banco de dados")
 
-    *Atualizando o banco de dados*
+    *Atualizar o banco de dados*
 
     Isso adicionará a **MiddleName** coluna o **pessoas** tabela para coincidir com a definição atual do **pessoa** classe.
 9. Depois que o banco de dados for atualizado, clique com botão direito na pasta do controlador e selecione **adicionar | Controlador** para adicionar o controlador de pessoa novamente (completa com os mesmos valores). Isso atualizará os métodos existentes e exibições para adicionar o novo atributo.
@@ -260,7 +260,7 @@ Nesta tarefa, você atualizará o banco de dados usando migrações do Entity Fr
 
     ![Edição do nome do meio](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image21.png "edição do nome do meio")
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -316,7 +316,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente C#)***
+***Para adicionar um trecho de código usando o teclado (somente c#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -336,7 +336,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.
