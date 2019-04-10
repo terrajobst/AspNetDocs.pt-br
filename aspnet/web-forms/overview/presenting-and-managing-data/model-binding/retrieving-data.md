@@ -8,26 +8,26 @@ ms.date: 02/27/2014
 ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
-ms.openlocfilehash: c53c27f4852eab9813bd917315111e7cd3b04953
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056593"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59398469"
 ---
-<a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperando e exibindo dados com a associação de modelos e formulários da web
-====================
+# <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperando e exibindo dados com a associação de modelos e formulários da web
+
 
 > Esta série de tutoriais demonstra aspectos básicos de como usar a associação de modelo com um projeto de Web Forms do ASP.NET. Associação de modelo torna a interação de dados mais simples que lidam com dados de objetos de origem (como ObjectDataSource ou SqlDataSource). Esta série começa com material introdutório e move para conceitos mais avançados em tutoriais posteriores.
 > 
->  O padrão de associação de modelo funciona com qualquer tecnologia de acesso a dados. Neste tutorial, você usará o Entity Framework, mas você pode usar a tecnologia de acesso de dados que é mais familiar para você. De um controle de servidor associado a dados, como um controle ListView, GridView, DetailsView ou FormView, você deve especificar os nomes dos métodos a ser usado para selecionar, atualizando, excluindo e criação de dados. Neste tutorial, você especificará um valor para o SelectMethod. 
+> O padrão de associação de modelo funciona com qualquer tecnologia de acesso a dados. Neste tutorial, você usará o Entity Framework, mas você pode usar a tecnologia de acesso de dados que é mais familiar para você. De um controle de servidor associado a dados, como um controle ListView, GridView, DetailsView ou FormView, você deve especificar os nomes dos métodos a ser usado para selecionar, atualizando, excluindo e criação de dados. Neste tutorial, você especificará um valor para o SelectMethod. 
 > 
 > Dentro desse método, você pode fornecer a lógica para recuperar os dados. O próximo tutorial, você definirá valores para InsertMethod e DeleteMethod, o UpdateMethod.
 >
 > Você pode [Baixe](https://go.microsoft.com/fwlink/?LinkId=286116) o projeto completo no C# ou o Visual Basic. O código para download funciona com o Visual Studio 2012 e posterior. Ele usa o modelo do Visual Studio 2012, que é ligeiramente diferente do que o modelo do Visual Studio 2017 mostrado neste tutorial.
 > 
 > No tutorial, você executar o aplicativo no Visual Studio. Você também pode implantar o aplicativo em um provedor de hospedagem e disponibilizá-lo pela internet. A Microsoft oferece a hospedagem de web gratuita para até 10 sites em um  
->  [conta gratuita do Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Para obter informações sobre como implantar um projeto de web do Visual Studio para aplicativos de Web do serviço de aplicativo do Azure, consulte a [implantação de Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) série. Esse tutorial também mostra como usar o Entity Framework Code First Migrations para implantar seu banco de dados do SQL Server no banco de dados SQL.
+> [conta gratuita do Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604). Para obter informações sobre como implantar um projeto de web do Visual Studio para aplicativos de Web do serviço de aplicativo do Azure, consulte a [implantação de Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md) série. Esse tutorial também mostra como usar o Entity Framework Code First Migrations para implantar seu banco de dados do SQL Server no banco de dados SQL.
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
 > 

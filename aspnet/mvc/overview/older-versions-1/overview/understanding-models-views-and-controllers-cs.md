@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: 87313792-0a96-4caf-89fc-1457d54e5c1e
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5e9186a6c261266de8f1a1509a49b84b359bd920
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8c57345c510ad0afccaabf377fda35afbfc05e17
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57040573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383402"
 ---
-<a name="understanding-models-views-and-controllers-c"></a>Noções básicas sobre modelos, exibições e controladores (C#)
-====================
+# <a name="understanding-models-views-and-controllers-c"></a>Noções básicas sobre modelos, exibições e controladores (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Confuso sobre modelos, exibições e controladores? Neste tutorial, Stephen Walther apresenta as diferentes partes de um aplicativo ASP.NET MVC.
@@ -33,7 +33,7 @@ O modelo padrão do Visual Studio para a criação de aplicativos Web do ASP.NET
 Você cria um novo aplicativo ASP.NET MVC com o modelo MVC iniciando o Visual Studio 2008 e selecionar a opção de menu Arquivo, novo projeto (consulte a Figura 1). Na caixa de diálogo Novo projeto, selecione sua linguagem de programação favorita em tipos de projeto (Visual Basic ou c#) e selecione **aplicativo Web ASP.NET MVC** em modelos. Clique no botão Okey.
 
 
-[![Caixa de diálogo Novo projeto](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
+[![Ncaixa de diálogo vo projeto](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
 
 **Figura 01**: Caixa de diálogo Novo projeto ([clique para exibir a imagem em tamanho normal](understanding-models-views-and-controllers-cs/_static/image2.png))
 
@@ -41,7 +41,7 @@ Você cria um novo aplicativo ASP.NET MVC com o modelo MVC iniciando o Visual St
 Quando você cria um novo aplicativo ASP.NET MVC, o **criar o projeto de teste de unidade** caixa de diálogo aparece (veja a Figura 2). Essa caixa de diálogo permite que você crie um projeto separado em sua solução para testar seu aplicativo ASP.NET MVC. Selecione a opção **não, não crie um projeto de teste de unidade** e clique no **Okey** botão.
 
 
-[![Criar caixa de diálogo de teste de unidade](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
+[![Ccaixa de diálogo de teste de unidade de reate](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
 
 **Figura 02**: Criar caixa de diálogo de teste de unidade ([clique para exibir a imagem em tamanho normal](understanding-models-views-and-controllers-cs/_static/image4.png))
 
@@ -51,7 +51,7 @@ Depois do ASP.NET MVC novo aplicativo é criado. Você verá várias pastas e ar
 Se você expandir a pasta controladores, você deve ver um arquivo chamado AccountController.cs e um arquivo chamado HomeController.cs. Se você expandir a pasta de modos de exibição, você verá três subpastas nomeadas de conta, início e compartilhado. Se você expandir a pasta base, você verá dois arquivos adicionais chamados aspx e About (veja a Figura 3). Esses arquivos fazem parte do aplicativo de exemplo incluído com o modelo ASP.NET MVC padrão.
 
 
-[![A janela do Gerenciador de soluções](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
+[![Tele janela Gerenciador de soluções](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
 
 **Figura 03**: A janela do Gerenciador de soluções ([clique para exibir a imagem em tamanho normal](understanding-models-views-and-controllers-cs/_static/image6.png))
 
@@ -61,7 +61,7 @@ Você pode executar o aplicativo de exemplo, selecionando a opção de menu **de
 Quando você executa um aplicativo ASP.NET, será exibida a caixa de diálogo na Figura 4 recomenda que você habilite o modo de depuração. Clique no botão Okey e o aplicativo será executado.
 
 
-[![Caixa de diálogo depuração não habilitada](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
+[![Ddiálogo de não habilitado epuração](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
 
 **Figura 04**: Depurando a caixa de diálogo não habilitado ([clique para exibir a imagem em tamanho normal](understanding-models-views-and-controllers-cs/_static/image8.png))
 
@@ -69,7 +69,7 @@ Quando você executa um aplicativo ASP.NET, será exibida a caixa de diálogo na
 Quando você executa um aplicativo ASP.NET MVC, o Visual Studio inicia o aplicativo no navegador da web. O aplicativo de exemplo consiste em apenas duas páginas: a página de índice e a página sobre. Quando o aplicativo é iniciado pela primeira vez, é exibida a página de índice (consulte a Figura 5). Você pode navegar para a página sobre clicando no link do menu na parte superior direita do aplicativo.
 
 
-[![A página de índice](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
+[![Tele tem página de índice](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
 
 **Figura 05**: A página de índice ([clique para exibir a imagem em tamanho normal](understanding-models-views-and-controllers-cs/_static/image11.png))
 
@@ -122,7 +122,7 @@ Controlador = funcionário
 
 ação = índice
 
-Id = 
+Id = ��
 
 Por fim, se você abrir um aplicativo ASP.NET MVC sem fornecer qualquer URL (por exemplo, `http://localhost`) e em seguida, a URL é analisada como este:
 
@@ -130,7 +130,7 @@ controlador = início
 
 ação = índice
 
-Id = 
+Id = ��
 
 A solicitação é encaminhada para a ação Index () na classe HomeController.
 

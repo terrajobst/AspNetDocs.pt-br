@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-cs
-title: Criar procedimentos armazenados e funções definidas pelo usuário com código (c#) gerenciado | Microsoft Docs
+title: Criar procedimentos armazenados e funções definidas pelo usuário com código (C#) gerenciado | Microsoft Docs
 author: rick-anderson
 description: Microsoft SQL Server 2005 integra-se com o .NET Common Language Runtime para permitir que os desenvolvedores a criar objetos de banco de dados por meio de código gerenciado. Este tutorial...
 ms.author: riande
@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/cr
 msc.type: authoredcontent
 ms.openlocfilehash: fb4a867d5868e8000fcd10130401a9e169b6f49f
 ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57057893"
@@ -21,7 +21,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_75_CS.zip) ou [baixar PDF](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/datatutorial75cs1.pdf)
 
-> Microsoft SQL Server 2005 integra-se com o .NET Common Language Runtime para permitir que os desenvolvedores a criar objetos de banco de dados por meio de código gerenciado. Este tutorial mostra como criar procedimentos armazenados gerenciados e gerenciados de funções definidas pelo usuário com seu código Visual Basic ou c#. Também vemos como essas edições do Visual Studio permitem que você depurar esses objetos de banco de dados gerenciado.
+> Microsoft SQL Server 2005 integra-se com o .NET Common Language Runtime para permitir que os desenvolvedores a criar objetos de banco de dados por meio de código gerenciado. Este tutorial mostra como criar procedimentos armazenados gerenciados e gerenciados de funções definidas pelo usuário com seu código Visual Basic ou C#. Também vemos como essas edições do Visual Studio permitem que você depurar esses objetos de banco de dados gerenciado.
 
 
 ## <a name="introduction"></a>Introdução
@@ -30,7 +30,7 @@ Bancos de dados, como s do Microsoft SQL Server 2005 usam o [linguagem de consul
 
 Em seu núcleo, o SQL foi projetado para trabalhar com conjuntos de dados. O `SELECT`, `UPDATE`, e `DELETE` instruções se aplicam a todos os registros na tabela correspondente por natureza e são limitadas apenas pelos seus `WHERE` cláusulas. Ainda há muitos recursos de linguagem projetados para trabalhar com um registro por vez e manipulação de dados escalares. [`CURSOR` s](http://www.sqlteam.com/item.asp?ItemID=553) permitem um conjunto de registros para estar em um loop por meio de um de cada vez. Funções de manipulação, como cadeia de caracteres `LEFT`, `CHARINDEX`, e `PATINDEX` funcionam com dados escalares. SQL também inclui instruções de fluxo de controle, como `IF` e `WHILE`.
 
-Antes do Microsoft SQL Server 2005, procedimentos armazenados e UDFs só pode ser definidos como uma coleção de instruções T-SQL. SQL Server 2005, no entanto, foi projetado para fornecer integração com o [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), que é o tempo de execução usado por todos os assemblies do .NET. Consequentemente, os procedimentos armazenados e UDFs em um banco de dados do SQL Server 2005 podem ser criados usando código gerenciado. Ou seja, você pode criar um procedimento armazenado ou UDF como um método em uma classe c#. Isso permite que esses procedimentos armazenados e UDFs para utilizar a funcionalidade no .NET Framework e de suas próprias classes personalizadas.
+Antes do Microsoft SQL Server 2005, procedimentos armazenados e UDFs só pode ser definidos como uma coleção de instruções T-SQL. SQL Server 2005, no entanto, foi projetado para fornecer integração com o [Common Language Runtime (CLR)](https://msdn.microsoft.com/netframework/aa497266.aspx), que é o tempo de execução usado por todos os assemblies do .NET. Consequentemente, os procedimentos armazenados e UDFs em um banco de dados do SQL Server 2005 podem ser criados usando código gerenciado. Ou seja, você pode criar um procedimento armazenado ou UDF como um método em uma classe C#. Isso permite que esses procedimentos armazenados e UDFs para utilizar a funcionalidade no .NET Framework e de suas próprias classes personalizadas.
 
 Neste tutorial, que vamos examinar como criar gerenciado procedimentos armazenados e funções definidas pelo usuário e como integrá-los ao nosso banco de dados Northwind. Permitir que o s começar!
 
@@ -78,7 +78,7 @@ Clique no botão Okey para anexar o banco de dados. A caixa de diálogo anexar b
 
 ## <a name="step-2-creating-a-new-solution-and-sql-server-project-in-visual-studio"></a>Etapa 2: Criando uma nova solução e projeto do SQL Server no Visual Studio
 
-Para criar procedimentos armazenados gerenciados ou UDFs no SQL Server 2005 escreveremos o procedimento armazenado e a lógica UDF como o código c# em uma classe. Depois que o código foi escrito, será necessário compilar essa classe em um assembly (um `.dll` arquivo), registrar o assembly com o banco de dados do SQL Server e, em seguida, criar um procedimento armazenado ou UDF no banco de dados que aponta para o método correspondente em o assembly. Essas etapas podem ser executadas manualmente. Podemos criar o código em qualquer texto editor, compilá-lo na linha de comando usando o compilador do c# ([`csc.exe`](https://msdn.microsoft.com/library/ms379563(vs.80).aspx)), registrá-lo com o banco de dados usando o [ `CREATE ASSEMBLY` ](https://msdn.microsoft.com/library/ms189524.aspx) comando ou do gerenciamento Studio e adicione o procedimento armazenado ou o objeto UDF através de meios semelhantes. Felizmente, as versões Professional e sistemas de equipe do Visual Studio incluem um tipo de projeto do SQL Server que automatiza a essas tarefas. Neste tutorial, orientaremos pelas usando o tipo de projeto do SQL Server para criar um procedimento armazenado gerenciado e UDF.
+Para criar procedimentos armazenados gerenciados ou UDFs no SQL Server 2005 escreveremos o procedimento armazenado e a lógica UDF como o código C# em uma classe. Depois que o código foi escrito, será necessário compilar essa classe em um assembly (um `.dll` arquivo), registrar o assembly com o banco de dados do SQL Server e, em seguida, criar um procedimento armazenado ou UDF no banco de dados que aponta para o método correspondente em o assembly. Essas etapas podem ser executadas manualmente. Podemos criar o código em qualquer texto editor, compilá-lo na linha de comando usando o compilador do C# ([`csc.exe`](https://msdn.microsoft.com/library/ms379563(vs.80).aspx)), registrá-lo com o banco de dados usando o [ `CREATE ASSEMBLY` ](https://msdn.microsoft.com/library/ms189524.aspx) comando ou do gerenciamento Studio e adicione o procedimento armazenado ou o objeto UDF através de meios semelhantes. Felizmente, as versões Professional e sistemas de equipe do Visual Studio incluem um tipo de projeto do SQL Server que automatiza a essas tarefas. Neste tutorial, orientaremos pelas usando o tipo de projeto do SQL Server para criar um procedimento armazenado gerenciado e UDF.
 
 > [!NOTE]
 > Se você estiver usando o Visual Web Developer ou Standard edition do Visual Studio, você precisará usar a abordagem manual em vez disso. Etapa 13 fornece instruções detalhadas para executar essas etapas manualmente. Eu recomendo que você leia as etapas 2 a 12 antes de ler a etapa 13, pois essas etapas incluem instruções de configuração do SQL Server importantes que devem ser aplicadas, independentemente de qual versão do Visual Studio que você está usando.
@@ -141,7 +141,7 @@ Deixe o s começar pela adição de um procedimento armazenado que simplesmente 
 **Figura 8**: Adicione um novo chamado procedimento de armazenado `GetDiscontinuedProducts.cs` ([clique para exibir a imagem em tamanho normal](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image14.png))
 
 
-Isso criará um novo arquivo de classe em c# com o seguinte conteúdo:
+Isso criará um novo arquivo de classe em C# com o seguinte conteúdo:
 
 
 [!code-csharp[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/samples/sample2.cs)]
@@ -227,7 +227,7 @@ Muitas das consultas e procedimentos armazenados que criamos durante esses tutor
 
 Para criar um procedimento armazenado gerenciado que aceita parâmetros de entrada, basta especifica esses parâmetros na definição do método s. Para ilustrar isso, let s adicionar outro procedimento armazenado gerenciado para o `ManagedDatabaseConstructs` projeto chamado `GetProductsWithPriceLessThan`. Esse procedimento armazenado gerenciado aceita um parâmetro de entrada especificando um preço e retornará todos os produtos cujo `UnitPrice` campo for menor que o valor do parâmetro s.
 
-Para adicionar um novo procedimento armazenado ao projeto, clique com botão direito no `ManagedDatabaseConstructs` nome do projeto e escolha Adicionar um novo procedimento armazenado. Dê o nome `GetProductsWithPriceLessThan.cs` para o arquivo. Como vimos na etapa 3, isso criará um novo arquivo de classe em c# com um método chamado `GetProductsWithPriceLessThan` colocados dentro de `partial` classe `StoredProcedures`.
+Para adicionar um novo procedimento armazenado ao projeto, clique com botão direito no `ManagedDatabaseConstructs` nome do projeto e escolha Adicionar um novo procedimento armazenado. Dê o nome `GetProductsWithPriceLessThan.cs` para o arquivo. Como vimos na etapa 3, isso criará um novo arquivo de classe em C# com um método chamado `GetProductsWithPriceLessThan` colocados dentro de `partial` classe `StoredProcedures`.
 
 Atualizar o `GetProductsWithPriceLessThan` definição de método s forma que ele aceite uma [ `SqlMoney` ](https://msdn.microsoft.com/library/system.data.sqltypes.sqlmoney.aspx) parâmetro de entrada chamado `price` e escrever o código para executar e retornar os resultados da consulta:
 
@@ -343,7 +343,7 @@ Ainda mais prática, adicione uma caixa de texto e outro GridView à página. Te
 
 ## <a name="step-9-creating-and-calling-t-sql-udfs"></a>Etapa 9: Criando e chamando UDFs de T-SQL
 
-Funções definidas pelo usuário ou UDFs, são o banco de dados objetos intimamente imitar a semântica das funções em linguagens de programação. Como uma função em c#, as UDFs podem incluir um número variável de parâmetros de entrada e retornam um valor de um tipo específico. Uma UDF pode retornar qualquer um dos dados escalares - uma cadeia de caracteres, um número inteiro e assim por diante – ou dados tabulares. Deixe o s dar uma olhada rápida em ambos os tipos de UDFs, começando com um UDF que retorna um tipo de dados escalares.
+Funções definidas pelo usuário ou UDFs, são o banco de dados objetos intimamente imitar a semântica das funções em linguagens de programação. Como uma função em C#, as UDFs podem incluir um número variável de parâmetros de entrada e retornam um valor de um tipo específico. Uma UDF pode retornar qualquer um dos dados escalares - uma cadeia de caracteres, um número inteiro e assim por diante – ou dados tabulares. Deixe o s dar uma olhada rápida em ambos os tipos de UDFs, começando com um UDF que retorna um tipo de dados escalares.
 
 O UDF a seguir calcula o valor estimado do estoque de um produto específico. Ele faz isso levando-se em três parâmetros de entrada - a `UnitPrice`, `UnitsInStock`, e `Discontinued` os valores para um determinado produto - e retorna um valor do tipo `money`. Ele calcula o valor estimado do inventário multiplicando-se a `UnitPrice` pelo `UnitsInStock`. Para itens descontinuados, esse valor é reduzido à metade.
 
@@ -484,7 +484,7 @@ Para ilustrar essas tarefas, permitir que o s crie um novo managed procedimento 
 
 Esse código é quase idêntico do `GetProductsWithPriceLessThan` método criado na etapa 5. As únicas diferenças são os nomes de método, o `WHERE` cláusula e o nome do parâmetro usado na consulta. Volta a `GetProductsWithPriceLessThan` método, o `WHERE` cláusula ler: `WHERE UnitPrice < @MaxPrice`. Aqui, na `GetProductsWithPriceGreaterThan`, usamos: `WHERE UnitPrice > @MinPrice` .
 
-Agora, precisamos compilar essa classe em um assembly. Na linha de comando, navegue até o diretório onde você salvou o `GetProductsWithPriceGreaterThan.cs` arquivo e usar o compilador c# (`csc.exe`) para compilar o arquivo de classe em um assembly:
+Agora, precisamos compilar essa classe em um assembly. Na linha de comando, navegue até o diretório onde você salvou o `GetProductsWithPriceGreaterThan.cs` arquivo e usar o compilador C# (`csc.exe`) para compilar o arquivo de classe em um assembly:
 
 
 [!code-console[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/samples/sample18.cmd)]
@@ -500,10 +500,10 @@ Se a pasta que contém `csc.exe` em não no sistema s `PATH`, você terá que re
 **Figura 29**: Compile `GetProductsWithPriceGreaterThan.cs` em um Assembly ([clique para exibir a imagem em tamanho normal](creating-stored-procedures-and-user-defined-functions-with-managed-code-cs/_static/image71.png))
 
 
-O `/t` sinalizador Especifica que o arquivo de classe do c# deve ser compilado em uma DLL (em vez de um executável). O `/out` sinalizador Especifica o nome do assembly resultante.
+O `/t` sinalizador Especifica que o arquivo de classe do C# deve ser compilado em uma DLL (em vez de um executável). O `/out` sinalizador Especifica o nome do assembly resultante.
 
 > [!NOTE]
-> Em vez de compilar os `GetProductsWithPriceGreaterThan.cs` arquivo de classe da linha de comando, você também pode usar [Visual c# Express Edition](https://msdn.microsoft.com/vstudio/express/visualcsharp/) ou criar um projeto de biblioteca de classes separado no Visual Studio Standard Edition. S ren Jacob Lauritsen tiver fornecido gentilmente um projeto de Visual c# Express Edition com o código para o `GetProductsWithPriceGreaterThan` procedimento armazenado e os dois procedimentos armazenados de gerenciados e UDF criado nas etapas 3, 5 e 10. Projeto de s ren S também inclui os comandos T-SQL necessários para adicionar os objetos de banco de dados correspondente.
+> Em vez de compilar os `GetProductsWithPriceGreaterThan.cs` arquivo de classe da linha de comando, você também pode usar [Visual C# Express Edition](https://msdn.microsoft.com/vstudio/express/visualcsharp/) ou criar um projeto de biblioteca de classes separado no Visual Studio Standard Edition. S ren Jacob Lauritsen tiver fornecido gentilmente um projeto de Visual C# Express Edition com o código para o `GetProductsWithPriceGreaterThan` procedimento armazenado e os dois procedimentos armazenados de gerenciados e UDF criado nas etapas 3, 5 e 10. Projeto de s ren S também inclui os comandos T-SQL necessários para adicionar os objetos de banco de dados correspondente.
 
 
 Com o código compilado em um assembly, estamos prontos para registrar o assembly no banco de dados do SQL Server 2005. Isso pode ser feito por meio do T-SQL, usando o comando `CREATE ASSEMBLY`, ou por meio do SQL Server Management Studio. Deixe o foco usando o Management Studio.
@@ -543,7 +543,7 @@ Como mostra a Figura 32, o comando acima exibe informações de produtos com um 
 
 ## <a name="summary"></a>Resumo
 
-Microsoft SQL Server 2005 fornece integração com o tempo de execução do CLR (Common Language), que permite que os objetos de banco de dados a ser criado usando código gerenciado. Anteriormente, esses objetos de banco de dados só podiam ser criados usando o T-SQL, mas agora podemos criar esses objetos usando linguagens como c# de programação .NET. Neste tutorial, criamos dois gerenciado procedimentos armazenados e uma função definida pelo usuário gerenciada.
+Microsoft SQL Server 2005 fornece integração com o tempo de execução do CLR (Common Language), que permite que os objetos de banco de dados a ser criado usando código gerenciado. Anteriormente, esses objetos de banco de dados só podiam ser criados usando o T-SQL, mas agora podemos criar esses objetos usando linguagens como C# de programação .NET. Neste tutorial, criamos dois gerenciado procedimentos armazenados e uma função definida pelo usuário gerenciada.
 
 Visual Studio s tipo de projeto do SQL Server facilita a criação, compilação e implantação de objetos de banco de dados gerenciado. Além disso, ele oferece suporte avançado a depuração. No entanto, os tipos de projeto do SQL Server só estão disponíveis nas edições Professional e sistemas de equipe do Visual Studio. Para aqueles usar o Visual Web Developer ou Standard Edition do Visual Studio, a criação, compilação e as etapas de implantação deve ser executada manualmente, como vimos na etapa 13.
 
@@ -570,7 +570,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 
 ## <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi S ren Jacob Lauritsen. Além de examinar este artigo, ren S também criou o projeto de Visual c# Express Edition incluído no download neste artigo s para compilar manualmente os objetos de banco de dados gerenciado. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi S ren Jacob Lauritsen. Além de examinar este artigo, ren S também criou o projeto de Visual C# Express Edition incluído no download neste artigo s para compilar manualmente os objetos de banco de dados gerenciado. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](debugging-stored-procedures-cs.md)

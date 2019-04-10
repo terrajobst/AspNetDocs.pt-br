@@ -10,7 +10,7 @@ msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/cr
 msc.type: authoredcontent
 ms.openlocfilehash: 1596e1c8c1b96fd41c842169b95914c7b02cf196
 ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 03/25/2019
 ms.locfileid: "58424619"
@@ -21,7 +21,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_75_VB.zip) ou [baixar PDF](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/_static/datatutorial75vb1.pdf)
 
-> Microsoft SQL Server 2005 integra-se com o .NET Common Language Runtime para permitir que os desenvolvedores a criar objetos de banco de dados por meio de código gerenciado. Este tutorial mostra como criar procedimentos armazenados gerenciados e gerenciados de funções definidas pelo usuário com seu código Visual Basic ou c#. Também vemos como essas edições do Visual Studio permitem que você depurar esses objetos de banco de dados gerenciado.
+> Microsoft SQL Server 2005 integra-se com o .NET Common Language Runtime para permitir que os desenvolvedores a criar objetos de banco de dados por meio de código gerenciado. Este tutorial mostra como criar procedimentos armazenados gerenciados e gerenciados de funções definidas pelo usuário com seu código Visual Basic ou C#. Também vemos como essas edições do Visual Studio permitem que você depurar esses objetos de banco de dados gerenciado.
 
 
 ## <a name="introduction"></a>Introdução
@@ -484,7 +484,7 @@ Para ilustrar essas tarefas, permitir que o s crie um novo managed procedimento 
 
 Esse código é quase idêntico do `GetProductsWithPriceLessThan` método criado na etapa 5. As únicas diferenças são os nomes de método, o `WHERE` cláusula e o nome do parâmetro usado na consulta. Volta a `GetProductsWithPriceLessThan` método, o `WHERE` cláusula ler: `WHERE UnitPrice < @MaxPrice`. Aqui, na `GetProductsWithPriceGreaterThan`, usamos: `WHERE UnitPrice > @MinPrice` .
 
-Agora, precisamos compilar essa classe em um assembly. Na linha de comando, navegue até o diretório onde você salvou o `GetProductsWithPriceGreaterThan.vb` arquivo e usar o compilador c# (`csc.exe`) para compilar o arquivo de classe em um assembly:
+Agora, precisamos compilar essa classe em um assembly. Na linha de comando, navegue até o diretório onde você salvou o `GetProductsWithPriceGreaterThan.vb` arquivo e usar o compilador C# (`csc.exe`) para compilar o arquivo de classe em um assembly:
 
 
 [!code-console[Main](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/samples/sample18.cmd)]
@@ -570,7 +570,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 
 ## <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi S ren Jacob Lauritsen. Além de examinar este artigo, ren S também criou o projeto de Visual c# Express Edition incluído no download neste artigo s para compilar manualmente os objetos de banco de dados gerenciado. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi S ren Jacob Lauritsen. Além de examinar este artigo, ren S também criou o projeto de Visual C# Express Edition incluído no download neste artigo s para compilar manualmente os objetos de banco de dados gerenciado. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](debugging-stored-procedures-vb.md)

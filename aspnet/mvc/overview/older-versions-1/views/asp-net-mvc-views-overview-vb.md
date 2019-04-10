@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: c28ba88d-3a93-47f5-a306-049bd766714d
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a7f4afd70a17281123a7448a00896c186b9a00f8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 84af745d338e38ece438fa58d51d0929c7b92967
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59408453"
 ---
-<a name="aspnet-mvc-views-overview-vb"></a>Visão geral de exibições do ASP.NET MVC (VB)
-====================
+# <a name="aspnet-mvc-views-overview-vb"></a>Visão geral de exibições do ASP.NET MVC (VB)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > O que é um modo de exibição de MVC do ASP.NET e como ela difere de uma página HTML? Neste tutorial, Stephen Walther apresenta a modos de exibição e demonstra como você pode tirar proveito dos dados de exibição e auxiliares HTML dentro de um modo de exibição.
@@ -75,7 +75,7 @@ Um modo de exibição é um padrão de (documento HTML que pode conter scripts X
 
 Por exemplo, o modo de exibição na listagem 2 exibe a data e hora atuais.
 
-**Listing 2 - \Views\Home\Index.aspx**
+**Listagem 2 - \Views\Home\Index.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample2.aspx)]
 
@@ -99,12 +99,12 @@ Para tornar mais fácil de adicionar conteúdo a um modo de exibição, você po
 
 Por exemplo, a exibição na listagem 4 tira proveito dos três auxiliares de HTML – auxiliares BeginForm(), TextBox() e Password() – para gerar um logon do formam (veja a Figura 1).
 
-**Listing 4 -- \Views\Home\Login.aspx**
+**Listagem 4 – \Views\Home\Login.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-vb/samples/sample4.aspx)]
 
 
-[![A caixa de diálogo Novo projeto](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](asp-net-mvc-views-overview-vb/_static/image1.jpg)](asp-net-mvc-views-overview-vb/_static/image1.png)
 
 **Figura 01**: Um formulário de logon padrão ([clique para exibir a imagem em tamanho normal](asp-net-mvc-views-overview-vb/_static/image2.png))
 

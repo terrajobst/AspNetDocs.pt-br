@@ -8,15 +8,15 @@ ms.date: 08/15/2006
 ms.assetid: 3e20e64a-8808-4b49-88d6-014e2629d56f
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5870b9ac2af7d9df927edd8230334dee4885c6a1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 20ea33efbd1db657a03b20a665a041ecf3a6d248
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056753"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59399548"
 ---
-<a name="efficiently-paging-through-large-amounts-of-data-vb"></a>Paginação de grandes quantidades de dados com eficiência (VB)
-====================
+# <a name="efficiently-paging-through-large-amounts-of-data-vb"></a>Paginação de grandes quantidades de dados com eficiência (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_25_VB.exe) ou [baixar PDF](efficiently-paging-through-large-amounts-of-data-vb/_static/datatutorial25vb1.pdf)
@@ -191,7 +191,7 @@ Depois de criar o procedimento armazenado, reserve um tempo para testá-lo. Cliq
 Depois de escolher esses valores de parâmetros de entrada, a janela de saída mostrará os resultados. Figura 8 mostra os resultados quando passando 10 para ambos os `@startRowIndex` e `@maximumRows` parâmetros.
 
 
-[![Os registros que apareceriam na segunda página de dados são retornados](efficiently-paging-through-large-amounts-of-data-vb/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image8.png)
+[![Tele registros que apareceriam na segunda página de dados são retornados](efficiently-paging-through-large-amounts-of-data-vb/_static/image9.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image8.png)
 
 **Figura 8**: Os registros que apareceriam na segunda página de dados são retornados ([clique para exibir a imagem em tamanho normal](efficiently-paging-through-large-amounts-of-data-vb/_static/image10.png))
 
@@ -293,7 +293,7 @@ Observe que o `EnablePaging` e `SelectCountMethod` propriedades foram definidas 
 Depois de fazer essas alterações, visite esta página por meio de um navegador. Você deve ver 10 produtos listados, classificados em ordem alfabética. Reserve um tempo para percorrer os dados em uma página por vez. Embora não haja nenhuma diferença visual da perspectiva do usuário final de s entre a paginação padrão e a paginação personalizada, paginação personalizada com mais eficiência páginas por meio de grandes quantidades de dados, como ele recupera somente os registros que precisam ser exibido para uma determinada página.
 
 
-[![Os dados, ordenado pelo produto s nome, é paginado usando personalizado paginação](efficiently-paging-through-large-amounts-of-data-vb/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image19.png)
+[![The dados, ordenados por s nome do produto, é paginado usando personalizado paginação](efficiently-paging-through-large-amounts-of-data-vb/_static/image20.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image19.png)
 
 **Figura 17**: Os dados, ordenado pelo produto s nome, é paginado usando personalizado paginação ([clique para exibir a imagem em tamanho normal](efficiently-paging-through-large-amounts-of-data-vb/_static/image21.png))
 
@@ -309,7 +309,7 @@ Clicando no link de página última causa um postback e instrui o GridView para 
 Nossa implementação de paginação personalizada atual requer que a ordem pela qual os dados são paginados por meio de ser estaticamente especificada ao criar o `GetProductsPaged` procedimento armazenado. No entanto, você pode ter anotado que a marca inteligente do GridView s contém uma caixa de seleção Habilitar classificação além da opção de habilitar a paginação. Infelizmente, adicionando suporte à classificação a GridView com nossa implementação de paginação personalizada atual será apenas classificar os registros na página de dados exibido no momento. Por exemplo, se você configurar o GridView para também dar suporte à paginação e em seguida, ao exibir a primeira página de dados, classificar por nome de produto em ordem decrescente, ele será inverter a ordem dos produtos na página 1. Como mostra a Figura 18, como mostra o Camarões da Malásia como o produto primeiro ao classificar em ordem alfabética inversa, que ignora os 71 outros produtos que vêm depois Camarões da Malásia, em ordem alfabética; somente os registros na primeira página são considerados na classificação.
 
 
-[![Somente os dados mostrados na página atual é classificado](efficiently-paging-through-large-amounts-of-data-vb/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image22.png)
+[![Oomente os dados mostrados na página atual é classificada](efficiently-paging-through-large-amounts-of-data-vb/_static/image23.png)](efficiently-paging-through-large-amounts-of-data-vb/_static/image22.png)
 
 **Figura 18**: Somente os dados mostrados na página atual é classificado ([clique para exibir a imagem em tamanho normal](efficiently-paging-through-large-amounts-of-data-vb/_static/image24.png))
 
@@ -352,12 +352,12 @@ Infelizmente, s não existe nenhuma solução única todos responder aqui. O gan
 Um artigo de meu, [paginação personalizada no ASP.NET 2.0 com o SQL Server 2005](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx), contém alguns testes de desempenho que executei para apresentar as diferenças no desempenho entre essas duas técnicas de paginação quando a paginação por meio de uma tabela de banco de dados com 50.000 registros. Nesses testes, eu examinei o tempo para executar a consulta no nível do SQL Server (usando [SQL Profiler](https://msdn.microsoft.com/library/ms173757.aspx)) e a página do ASP.NET usando [recursos de rastreamento do ASP.NET s](https://msdn.microsoft.com/library/y13fw6we.aspx). Tenha em mente que esses testes foram executados em minha caixa de desenvolvimento com um único usuário Active Directory e, portanto, são não-científico e imitar os padrões de carga site típico. Independentemente disso, os resultados ilustram as diferenças relativas no tempo de execução para paginação personalizada e padrão, ao trabalhar com suficientemente grandes quantidades de dados.
 
 
-|  | **Média Duração (s)** | **Leituras** |
+|  | **Média Duração (s)** | **Leitura** |
 | --- | --- | --- |
 | **Padrão paginação SQL Profiler** | 1.411 | 383 |
 | **Profiler SQL de paginação personalizada** | 0.002 | 29 |
-| **Rastreamento do ASP.NET de paginação de padrão** | 2.379 | *N/A* |
-| **Rastreamento de ASP.NET paginação personalizada** | 0.029 | *N/A* |
+| **Rastreamento do ASP.NET de paginação de padrão** | 2.379 | *N/D* |
+| **Rastreamento de ASP.NET paginação personalizada** | 0.029 | *N/D* |
 
 
 Como você pode ver, recuperando uma determinada página de dados necessário 354 menos leituras em média e concluída em uma fração do tempo. Na página ASP.NET, personalizado a página foi capaz de renderizar em perto de 1/100<sup>ésimo</sup> do tempo necessário ao usar a paginação padrão. Ver [meu artigo](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx) para obter mais informações sobre esses resultados juntamente com o código e um banco de dados, você pode baixar para reproduzir esses testes em seu próprio ambiente.
