@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider
-title: Implementando um provedor de armazenamento de identidade do ASP.NET personalizado de MySQL | Microsoft Docs
+title: Implementando um provedor de armazenamento de identidade do ASP.NET personalizado de MySQL - ASP.NET 4.x
 author: raquelsa
 description: O ASP.NET Identity é um sistema extensível que permite que você criar seu próprio provedor de armazenamento e conectá-lo ao seu aplicativo sem trabalhar novamente o aplicativo...
 ms.author: riande
 ms.date: 05/22/2015
 ms.assetid: 248f5fe7-39ba-40ea-ab1e-71a69b0bd649
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider
 msc.type: authoredcontent
-ms.openlocfilehash: 4f9803f0717245ede73466f4c54c2aa3b7ae3882
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 224fa56a455affcbbdf76eceee5422850415037e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425945"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420764"
 ---
-<a name="implementing-a-custom-mysql-aspnet-identity-storage-provider"></a>Implementar um provedor de armazenamento personalizado de MySQL da Identidade do ASP.NET
-====================
+# <a name="implementing-a-custom-mysql-aspnet-identity-storage-provider"></a>Implementar um provedor de armazenamento personalizado de MySQL da Identidade do ASP.NET
+
 por [Raquel Soares De Almeida](https://github.com/raquelsa), [Suhas Joshi](https://github.com/suhasj), [Tom FitzMacken](https://github.com/tfitzmac)
 
 > O ASP.NET Identity é um sistema extensível que permite que você criar seu próprio provedor de armazenamento e conectá-lo ao seu aplicativo sem trabalhar novamente o aplicativo. Este tópico descreve como criar um provedor de armazenamento do MySQL para o ASP.NET Identity. Para uma visão geral da criação de provedores de armazenamento personalizados, consulte [visão geral do armazenamento provedores personalizados para o ASP.NET Identity](overview-of-custom-storage-providers-for-aspnet-identity.md).
@@ -113,7 +114,7 @@ Se necessário, instale o [Visual Studio Express 2013 para Web](https://go.micro
 ### <a name="create-a-new-mvc-application-project-from-template"></a>Criar um novo projeto de aplicativo do MVC de modelo
 
 1. Clique com botão direito do **AspNet.Identity.MySQL** solução e **Add**, **novo projeto**
-2. No **adicionar novo projeto** diálogo, selecione **Visual C#** à esquerda, em seguida, **Web** e, em seguida, selecione **aplicativo Web ASP.NET**. Nomeie o projeto **IdentityMySQLDemo**; e, em seguida, clique em Okey.  
+2. No **adicionar novo projeto** diálogo, selecione **Visual c#** à esquerda, em seguida, **Web** e, em seguida, selecione **aplicativo Web ASP.NET**. Nomeie o projeto **IdentityMySQLDemo**; e, em seguida, clique em Okey.  
   
     ![](implementing-a-custom-mysql-aspnet-identity-storage-provider/_static/image2.jpg)
 3. No **novo projeto ASP.NET** caixa de diálogo, selecione o modelo MVC com as opções padrão (que inclui **contas de usuário individuais** como método de autenticação) e clique em **Okey** .![](implementing-a-custom-mysql-aspnet-identity-storage-provider/_static/image3.jpg)

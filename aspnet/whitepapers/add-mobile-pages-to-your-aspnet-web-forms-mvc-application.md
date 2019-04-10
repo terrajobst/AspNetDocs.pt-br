@@ -8,15 +8,15 @@ ms.date: 01/20/2011
 ms.assetid: 3124f28e-cc32-418a-afe3-519fa56f4c36
 msc.legacyurl: /whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application
 msc.type: content
-ms.openlocfilehash: 1693838a74f0564e38e11a2827cceb3d6474677b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: db8f336f3fd9a88dfb32f99510fc53cd7b4a5178
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415980"
 ---
-<a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Como: Adicionar páginas móveis ao seu Web Forms do ASP.NET ou seu aplicativo do MVC
-====================
+# <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Como: Adicionar páginas móveis ao seu Web Forms do ASP.NET ou seu aplicativo do MVC
+
 > **Aplica-se a**
 > 
 > - Versão de Web Forms do ASP.NET 4.0
@@ -240,7 +240,7 @@ Em seguida, observe que, ao adicionar um segundo HomeController ao seu aplicativ
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 
-Agora, o erro irá distância e a URL http://<em>seusite</em>/ atingirá a home page da área de trabalho e http://<em>seusite</em>/mobile/ alcançará a móvel da home page.
+Agora, o erro irá distância e o URL http:\/\/*seusite*/ atingirá a home page da área de trabalho e o http:\/\/*seusite*/mobile/ será acessar a home page da móvel.
 
 ### <a name="redirecting-mobile-visitors-to-your-mobile-area"></a>Redirecionando visitantes por dispositivos móveis na sua área de móvel
 

@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: ff8322c9-12f3-4e24-aba6-a38046b9bb0d
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-the-entity-framework-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c1f64f57d4c23fe225a8268042104254e17dc456
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b3c6726c2d08e2e6ac37501f2ab455e427df82bb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414043"
 ---
-<a name="creating-model-classes-with-the-entity-framework-vb"></a>Criação de classes de modelo com o Entity Framework (VB)
-====================
+# <a name="creating-model-classes-with-the-entity-framework-vb"></a>Criação de classes de modelo com o Entity Framework (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, você aprenderá como usar o ASP.NET MVC com o Entity Framework da Microsoft. Você aprenderá a usar o Assistente de entidade para criar um modelo de dados de entidade ADO.NET. No decorrer deste tutorial, criamos um aplicativo web que ilustra como selecionar, inserir, atualizar e excluir dados de banco de dados usando o Entity Framework.
@@ -116,7 +116,7 @@ Não modifique o código no arquivo vb, pois suas alterações serão substituí
 
 Vamos começar a compilar nosso aplicativo de banco de dados do filme, criando uma página que exibe uma lista de registros de filmes. O controlador Home na listagem 1 expõe uma ação chamada index (). A ação de Index () retorna todos os registros de filme da tabela de banco de dados de filme, tirando proveito do Entity Framework.
 
-**Listing 1 – Controllers\HomeController.vb**
+**Listagem 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample1.vb)]
 

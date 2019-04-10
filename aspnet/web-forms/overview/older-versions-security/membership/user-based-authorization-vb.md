@@ -8,15 +8,15 @@ ms.date: 01/18/2008
 ms.assetid: bc937e9d-5c14-4fc4-aec7-440da924dd18
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/user-based-authorization-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 263b421cbce68cbc9a596e40a6be4ff140edc0d4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1aba8e068e80d2c2533c8aa68e75518f92b71a93
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420647"
 ---
-<a name="user-based-authorization-vb"></a>Autorização baseada em usuário (VB)
-====================
+# <a name="user-based-authorization-vb"></a>Autorização baseada em usuário (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_07_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial07_UserAuth_vb.pdf)
@@ -45,7 +45,7 @@ Vamos examinar a sintaxe para as regras de autorização de URL na etapa 1, mas 
 A Figura 1 ilustra o fluxo de trabalho de pipeline do ASP.NET, o `FormsAuthenticationModule`e o `UrlAuthorizationModule` quando chega uma solicitação não autorizada. Em particular, a Figura 1 mostra uma solicitação por um visitante anônimo para `ProtectedPage.aspx`, que é uma página que nega o acesso a usuários anônimos. Uma vez que o visitante é anônimo, o `UrlAuthorizationModule` anula a solicitação e retorna um status HTTP 401 não autorizado. O `FormsAuthenticationModule` , em seguida, converte o status de 401 em um redirecionamento 302 para página de logon. Depois que o usuário é autenticado por meio da página de logon, ele é redirecionado para `ProtectedPage.aspx`. Desta vez o `FormsAuthenticationModule` identifica o usuário com base em seu tíquete de autenticação. Agora que o visitante é autenticado, o `UrlAuthorizationModule` permite o acesso à página.
 
 
-[![A autenticação de formulários e fluxo de trabalho de autorização de URL](user-based-authorization-vb/_static/image2.png)](user-based-authorization-vb/_static/image1.png)
+[![Tele autenticação de formulários e fluxo de trabalho de autorização de URL](user-based-authorization-vb/_static/image2.png)](user-based-authorization-vb/_static/image1.png)
 
 **Figura 1**: A autenticação de formulários e fluxo de trabalho de autorização de URL ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image3.png))
 
@@ -59,7 +59,7 @@ Imagine que o nosso site teve suas regras de autorização de URL configuradas, 
 Figura 2 ilustra esse fluxo de trabalho confuso.
 
 
-[![O fluxo de trabalho padrão pode levar a um ciclo confuso](user-based-authorization-vb/_static/image5.png)](user-based-authorization-vb/_static/image4.png)
+[![Tele fluxo de trabalho padrão pode levar a um ciclo confuso](user-based-authorization-vb/_static/image5.png)](user-based-authorization-vb/_static/image4.png)
 
 **Figura 2**: O padrão fluxo de trabalho pode levar a um ciclo confuso ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image6.png))
 
@@ -116,7 +116,7 @@ ASP.NET torna fácil definir regras de autorização diferentes para diferentes 
 Vamos atualizar nosso site para que somente usuários autenticados podem visitar as páginas do ASP.NET no `Membership` pasta. Para fazer isso, precisamos adicionar um `Web.config` o arquivo para o `Membership` pasta e definir suas configurações de autorização para negar a usuários anônimos. Clique com botão direito do `Membership` pasta no Gerenciador de soluções, escolha o menu Adicionar Novo Item no menu de contexto e adicione um novo arquivo de configuração Web denominada `Web.config`.
 
 
-[![Adicionar um arquivo Web. config na pasta de associação](user-based-authorization-vb/_static/image8.png)](user-based-authorization-vb/_static/image7.png)
+[![Aum arquivo Web. config na pasta de associação de dd](user-based-authorization-vb/_static/image8.png)](user-based-authorization-vb/_static/image7.png)
 
 **Figura 3**: Adicionar um `Web.config` o arquivo para o `Membership` pasta ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image9.png))
 
@@ -124,7 +124,7 @@ Vamos atualizar nosso site para que somente usuários autenticados podem visitar
 Neste momento a seu projeto deve conter dois `Web.config` arquivos: um no diretório raiz e outro no `Membership` pasta.
 
 
-[![Seu aplicativo agora deve conter dois arquivos Web. config](user-based-authorization-vb/_static/image11.png)](user-based-authorization-vb/_static/image10.png)
+[![Ynosso aplicativo agora deve conter dois arquivos Web. config](user-based-authorization-vb/_static/image11.png)](user-based-authorization-vb/_static/image10.png)
 
 **Figura 4**: Seu aplicativo deve agora contêm duas `Web.config` arquivos ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image12.png))
 
@@ -140,7 +140,7 @@ Para testar essa alteração, visite a home page em um navegador e verifique se 
 Clique no link criar contas de usuário encontrado na coluna à esquerda. Isso levará você até o `~/Membership/CreatingUserAccounts.aspx`. Uma vez que o `Web.config` do arquivo na `Membership` pasta define as regras de autorização para proibir o acesso anônimo, o `UrlAuthorizationModule` anula a solicitação e retorna um status HTTP 401 não autorizado. O `FormsAuthenticationModule` modifica isso com o status de redirecionamento 302, enviando-nos para a página de logon. Observe que a página nós estavam tentando acessar (`CreatingUserAccounts.aspx`) é passada para a página de logon por meio de `ReturnUrl` parâmetro querystring.
 
 
-[![Desde a URL de autorização regras proibir o acesso anônimo, podemos serão redirecionados para a página de logon](user-based-authorization-vb/_static/image14.png)](user-based-authorization-vb/_static/image13.png)
+[![Since a URL de autorização regras proibir o acesso anônimo, podemos serão redirecionados para a página de logon](user-based-authorization-vb/_static/image14.png)](user-based-authorization-vb/_static/image13.png)
 
 **Figura 5**: Desde a URL de autorização regras proibir o acesso anônimo, podemos serão redirecionados para a página de logon ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image15.png))
 
@@ -196,7 +196,7 @@ O código acima redireciona os usuários não autorizados, autenticados para o `
 Neste ponto, podemos são anônimos, portanto `Request.IsAuthenticated` retorna `False` e nós não serão redirecionados para `UnauthorizedAccess.aspx`. Em vez disso, a página de logon é exibida. Faça logon como um usuário diferente Tito como Bruce. Depois de inserir as credenciais apropriadas, o logon página redireciona-nos de volta ao `~/Membership/CreatingUserAccounts.aspx`. No entanto, como essa página só está acessível para Tito, vamos Anexações não autorizados para exibi-lo e são retornados imediatamente para a página de logon. Neste momento, no entanto, `Request.IsAuthenticated` retorna `True` (e o `ReturnUrl` parâmetro querystring existe), portanto, podemos são redirecionados para o `UnauthorizedAccess.aspx` página.
 
 
-[![Usuários não autorizados autenticado, serão redirecionados para UnauthorizedAccess.aspx](user-based-authorization-vb/_static/image17.png)](user-based-authorization-vb/_static/image16.png)
+[![Aautenticada, os usuários não autorizados são redirecionadas para UnauthorizedAccess.aspx](user-based-authorization-vb/_static/image17.png)](user-based-authorization-vb/_static/image16.png)
 
 **Figura 6**: Usuários não autorizados autenticado, serão redirecionados para `UnauthorizedAccess.aspx` ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image18.png))
 
@@ -236,7 +236,7 @@ O código acima usa o [ `DirectoryInfo` classe](https://msdn.microsoft.com/libra
 Reserve um tempo para visitar esta página por meio de um navegador. Ele exibirá a lista de arquivos que residem no diretório raiz do aplicativo. Clicar em qualquer um da exibição ou excluir LinkButtons fará com que um postback, mas nenhuma ação ocorrerá porque ainda não encontramos criar manipuladores de eventos necessários.
 
 
-[![O GridView lista os arquivos no diretório raiz do aplicativo de Web](user-based-authorization-vb/_static/image20.png)](user-based-authorization-vb/_static/image19.png)
+[![TGridView lista os arquivos no diretório de raiz do aplicativo Web](user-based-authorization-vb/_static/image20.png)](user-based-authorization-vb/_static/image19.png)
 
 **Figura 7**: O GridView lista os arquivos no diretório raiz do aplicativo de Web ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image21.png))
 
@@ -252,7 +252,7 @@ Em seguida, crie um manipulador de eventos para o GridView [ `SelectedIndexChang
 Esse código usa o GridView `SelectedValue` propriedade para determinar o nome de arquivo completo do arquivo selecionado. Internamente, o `DataKeys` coleção é referenciada para obter o `SelectedValue`, portanto, é imperativo que você defina o GridView `DataKeyNames` propriedade para o nome, conforme descrito anteriormente nesta etapa. O [ `File` classe](https://msdn.microsoft.com/library/system.io.file.aspx) é usado para ler o conteúdo do arquivo selecionado em uma cadeia de caracteres, que é então atribuído ao `FileContents` da caixa de texto `Text` propriedade, assim, exibindo o conteúdo do arquivo selecionado na página.
 
 
-[![Conteúdo do arquivo selecionado é exibido na caixa de texto](user-based-authorization-vb/_static/image23.png)](user-based-authorization-vb/_static/image22.png)
+[![The do conteúdo do arquivo selecionado é exibido na caixa de texto](user-based-authorization-vb/_static/image23.png)](user-based-authorization-vb/_static/image22.png)
 
 **Figura 8**: Conteúdo do arquivo selecionado é exibido na caixa de texto ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image24.png))
 
@@ -268,7 +268,7 @@ Por fim, adicione um manipulador de eventos com o seguinte código para o GridVi
 O código simplesmente exibe o nome completo do arquivo a ser excluído na `FileContents` caixa de texto *sem* realmente excluir o arquivo.
 
 
-[![Clicar no botão de exclusão não exclui o arquivo](user-based-authorization-vb/_static/image26.png)](user-based-authorization-vb/_static/image25.png)
+[![Clicking a excluir botão não exclui o arquivo](user-based-authorization-vb/_static/image26.png)](user-based-authorization-vb/_static/image25.png)
 
 **Figura 9**: Clicar a excluir botão não exclui o arquivo ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image27.png))
 
@@ -298,7 +298,7 @@ No entanto, esse código não é mais válido. Movendo o `FileContents` caixa de
 Depois de mover a caixa de texto para o LoginView `LoggedInTemplate` e atualizar o código da página para referência usando a caixa de texto o `FindControl("controlId")` padrão, visite a página como um usuário anônimo. Como mostra a Figura 10, o `FileContents` não será exibida a caixa de texto. No entanto, o modo de exibição LinkButton ainda é exibido.
 
 
-[![O controle LoginView renderiza apenas a caixa de texto FileContents para usuários autenticados](user-based-authorization-vb/_static/image29.png)](user-based-authorization-vb/_static/image28.png)
+[![Tele controle LoginView renderiza apenas FileContents TextBox para usuários autenticados](user-based-authorization-vb/_static/image29.png)](user-based-authorization-vb/_static/image28.png)
 
 **Figura 10**: O LoginView controle só processa os `FileContents` caixa de texto para usuários autenticados ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image30.png))
 
@@ -318,7 +318,7 @@ Uma maneira para ocultar o botão de modo de exibição para usuários anônimos
 Como mostra a Figura 11, o resultado final não é que muito como a exibição coluna continua sendo exibida, embora os botões de link de exibição dentro da coluna estão ocultos. Vamos examinar como ocultar a coluna de GridView inteira (e não apenas no LinkButton) na próxima seção.
 
 
-[![O controle LoginView oculta os botões de link do modo de exibição para visitantes anônimos](user-based-authorization-vb/_static/image32.png)](user-based-authorization-vb/_static/image31.png)
+[![Tele controle LoginView oculta os botões de link do modo de exibição para visitantes anônimos](user-based-authorization-vb/_static/image32.png)](user-based-authorization-vb/_static/image31.png)
 
 **Figura 11**: O controle LoginView oculta os botões de link do modo de exibição para visitantes anônimos ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image33.png))
 
@@ -341,12 +341,12 @@ Adicione o seguinte código para o `Page_Load` manipulador de eventos antes dos 
 Como discutimos na [ *visão geral de uma de autenticação de formulários* ](../introduction/an-overview-of-forms-authentication-vb.md) tutorial, `User.Identity.Name` retorna o nome da identidade. Isso corresponde ao nome de usuário inserido no controle de logon. Se ele é Tito visitando a página, segunda coluna do GridView `Visible` estiver definida como `True`; caso contrário, ele é definido como `False`. O resultado líquido é que, quando alguém que não seja Tito visita a página, outro usuário autenticado ou um usuário anônimo, a coluna de exclusão não é renderizada (veja a Figura 12); No entanto, quando Tito visita a página, a coluna de exclusão está presente (veja a Figura 13).
 
 
-[![Excluir coluna não é processado quando visitado por alguém diferente de Tito (por exemplo, Bruce)](user-based-authorization-vb/_static/image35.png)](user-based-authorization-vb/_static/image34.png)
+[![TExcluir coluna não é processado quando visitado por alguém diferente de Tito (por exemplo, Bruce)](user-based-authorization-vb/_static/image35.png)](user-based-authorization-vb/_static/image34.png)
 
 **Figura 12**: Excluir coluna não é processado quando visitado por alguém diferente de Tito (por exemplo, Bruce) ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image36.png))
 
 
-[![Excluir coluna é renderizada para Tito](user-based-authorization-vb/_static/image38.png)](user-based-authorization-vb/_static/image37.png)
+[![Tele excluir coluna é renderizado para Tito](user-based-authorization-vb/_static/image38.png)](user-based-authorization-vb/_static/image37.png)
 
 **Figura 13**: Excluir coluna é renderizada para Tito ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image39.png))
 
@@ -370,7 +370,7 @@ O atributo para o `SelectedIndexChanged` impõe de manipulador de eventos que so
 Se, de alguma forma, um usuário diferente Tito tenta executar o `RowDeleting` manipulador de eventos ou um usuário não autenticado tenta executar o `SelectedIndexChanged` manipulador de eventos, o tempo de execução do .NET irá gerar um `SecurityException`.
 
 
-[![Se o contexto de segurança não está autorizado a executar o método, um SecurityException é gerado](user-based-authorization-vb/_static/image41.png)](user-based-authorization-vb/_static/image40.png)
+[![Io contexto de segurança não está autorizado a executar o método de f, um SecurityException é apresentado](user-based-authorization-vb/_static/image41.png)](user-based-authorization-vb/_static/image40.png)
 
 **Figura 14**: Se o contexto de segurança não está autorizado a executar o método, uma `SecurityException` é lançada ([clique para exibir a imagem em tamanho normal](user-based-authorization-vb/_static/image42.png))
 

@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
-title: Migrando dados do provedor Universal para associações e perfis de usuário para a identidade do ASP.NET (C#) | Microsoft Docs
+title: Migrando dados do provedor Universal para associações e perfis de usuário para a identidade do ASP.NET (C#)-ASP.NET 4.x
 author: rustd
 description: Este tutorial descreve as etapas necessárias migrar dados de função e de usuários e dados de perfil de usuário criados usando provedores universais de um aplicativo existente...
 ms.author: riande
 ms.date: 12/13/2013
+ms.custom: seoapril2019
 ms.assetid: 2e260430-d13c-4658-bd05-e256fc0d63b8
 msc.legacyurl: /identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: a91bb6ac51819d7dbb8eb3c63bd36a9d830eecce
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1043dce4cdd62f94ae9d2344a9301c1b03426f3d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422259"
 ---
-<a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migração de dados de Associação e Perfis de usuário do provedor universal para a Identidade do ASP.NET (C#)
-====================
+# <a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migração de dados de Associação e Perfis de usuário do provedor universal para a Identidade do ASP.NET (C#)
+
 por [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Robert McMurray](https://github.com/rmcmurray), [Suhas Joshi](https://github.com/suhasj)
 
 > Este tutorial descreve as etapas necessárias migrar dados de perfil de usuário criados usando provedores universais de um aplicativo existente para o modelo de identidade do ASP.NET e de usuário e dados de função. A abordagem mencionada aqui migrar dados de perfil do usuário pode ser usados em um aplicativo com a associação do SQL também.

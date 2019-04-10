@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application
-title: Chamar a API da Web de um Windows Phone 8 aplicativo (C#) | Microsoft Docs
+title: Chamar a API da Web de um Windows Phone 8 do aplicativo (C#)-ASP.NET 4.x
 author: rmcmurray
-description: Crie um cenário de ponta a ponta completo consiste em um aplicativo de API Web ASP.NET que fornece um catálogo de livros de um aplicativo do Windows Phone 8.
+description: 'Tutorial com o código: Criar um aplicativo de API Web ASP.NET no ASP.NET 4.x que fornece um catálogo de livros de um aplicativo do Windows Phone 8.'
 ms.author: riande
 ms.date: 10/09/2013
+ms.custom: seoapril2019
 ms.assetid: b9775f41-352a-4f82-baa6-23e95b342e20
 msc.legacyurl: /web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application
 msc.type: authoredcontent
-ms.openlocfilehash: ca2b5f41f6c3bd38faacd1e15c4dee6f6210aff7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a5c7804c2336e91dc171b5da52819436472e81cf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412444"
 ---
-<a name="calling-web-api-from-a-windows-phone-8-application-c"></a>Chamar a API Web em um aplicativo do Windows Phone 8 (C#)
-====================
+# <a name="calling-web-api-from-a-windows-phone-8-application-c"></a>Chamar a API Web em um aplicativo do Windows Phone 8 (C#)
+
 por [Robert McMurray](https://github.com/rmcmurray)
 
 Neste tutorial, você aprenderá como criar um cenário de ponta a ponta completo consiste em um aplicativo de API Web ASP.NET que fornece um catálogo de livros de um aplicativo do Windows Phone 8.
@@ -47,7 +48,7 @@ A primeira etapa deste tutorial de ponta a ponta é criar um projeto de API da W
 
 1. Abra **Visual Studio 2013**.
 2. Clique em **arquivo**, em seguida, **novos**e então **projeto**.
-3. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **modelos**, em seguida, **Visual C#** e, em seguida, **Web**.
+3. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **modelos**, em seguida, **Visual c#** e, em seguida, **Web**.
 
 
    | [![](calling-web-api-from-a-windows-phone-8-application/_static/image2.png)](calling-web-api-from-a-windows-phone-8-application/_static/image1.png) |
@@ -106,7 +107,7 @@ A primeira etapa deste tutorial de ponta a ponta é criar um projeto de API da W
 É a próxima etapa deste cenário de ponta a ponta criar o aplicativo de catálogo para o Windows Phone 8. Este aplicativo usará o *Windows Phone Databound App* modelo para a interface do usuário padrão e ele usará o aplicativo de API da Web que você criou na [etapa 1](#STEP1) deste tutorial, como a fonte de dados.
 
 1. Clique com botão direito a **livraria** solução no no Gerenciador de soluções, clique em **Add**e, em seguida, **novo projeto**.
-2. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **Visual C#** e, em seguida, **Windows Phone**.
+2. Quando o **novo projeto** caixa de diálogo for exibida, expanda **instalado**, em seguida, **Visual c#** e, em seguida, **Windows Phone**.
 3. Realçar **Windows Phone Databound App**, insira **BookCatalog** para o nome e, em seguida, clique **Okey**.
 4. Adicione o pacote do NuGet de Json.NET para o **BookCatalog** projeto:
 

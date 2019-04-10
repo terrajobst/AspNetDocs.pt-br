@@ -8,15 +8,15 @@ ms.date: 03/13/2008
 ms.assetid: d19152e7-ba19-4729-9e30-d311630aaf95
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-create-user-selectable-themes-for-a-web-site
 msc.type: video
-ms.openlocfilehash: 2685d27fda5f49e3038d6f6f42da7b77f6a7daa7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c9c97bb2627054380d92eee5468ca03a81d2f61e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046313"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413354"
 ---
-<a name="how-do-i-create-user-selectable-themes-for-a-web-site"></a>[Como fazer:] Criar temas selecionáveis pelo usuário para um Site da Web
-====================
+# <a name="how-do-i-create-user-selectable-themes-for-a-web-site"></a>[Como fazer:] Criar temas selecionáveis pelo usuário para um Site da Web
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Neste vídeo, Chris Pels mostrará como criar vários temas para um site da web e, em seguida, permitir que o usuário selecionar o tema é aplicado ao site. Veja como criar uma interface de usuário simples que permite que o usuário selecione cada um dos temas com um controle de usuário. Além disso, saiba como definir um tema para uma página de conteúdo de um controle de usuário em uma página mestra.

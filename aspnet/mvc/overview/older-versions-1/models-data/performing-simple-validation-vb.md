@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: df6cf4b7-0bb3-4c4e-b17a-bd78a759a6bc
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 31faf2e89e6acb25854455902c1a6fdffebd293c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c7a1b9e82defaae71f0a911e5e4321f6e15ad8bf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423176"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422610"
 ---
-<a name="performing-simple-validation-vb"></a>Realizar validação simples (VB)
-====================
+# <a name="performing-simple-validation-vb"></a>Realizar validação simples (VB)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Saiba como executar a validação em um aplicativo ASP.NET MVC. Neste tutorial, Stephen Walther apresenta você ao estado de modelo e os auxiliares de validação HTML.
@@ -56,12 +56,12 @@ Os auxiliares Html.ValidationMessage() e Html.ValidationSummary() são usados na
 Certifique-se de que você compila seu aplicativo antes de adicionar um modo de exibição. Caso contrário, a lista de classes não aparecerá na **exibir dados de classe** lista suspensa.
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-vb/_static/image1.jpg)](performing-simple-validation-vb/_static/image1.png)
 
 **Figura 01**: Adicionando uma exibição ([clique para exibir a imagem em tamanho normal](performing-simple-validation-vb/_static/image2.png))
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-vb/_static/image2.jpg)](performing-simple-validation-vb/_static/image3.png)
 
 **Figura 02**: Criando uma exibição fortemente tipada ([clique para exibir a imagem em tamanho normal](performing-simple-validation-vb/_static/image4.png))
 
@@ -79,7 +79,7 @@ O auxiliar Html.ValidationMessage() é chamado ao lado de cada um dos campos de 
 A página na Figura 3 ilustra as mensagens de erro renderizadas pelos auxiliares de validação quando o formulário é enviado com campos ausentes e valores inválidos.
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-vb/_static/image3.jpg)](performing-simple-validation-vb/_static/image5.png)
 
 **Figura 03**: Modo de exibição criar enviado com problemas ([clique para exibir a imagem em tamanho normal](performing-simple-validation-vb/_static/image6.png))
 
@@ -104,7 +104,7 @@ Você pode modificar essas classes de folha de estilo em cascata e, portanto, mo
 Se você enviar o formulário HTML para a criação de um produto e insira um valor inválido para o campo de preço e nenhum valor para o campo UnitsInStock, em seguida, você receberá as mensagens de validação exibidas na Figura 4. Onde vêm essas mensagens de erro de validação?
 
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
+[![Tcaixa de diálogo Novo projeto he](performing-simple-validation-vb/_static/image4.jpg)](performing-simple-validation-vb/_static/image7.png)
 
 **Figura 04**: Erros de validação de prebinding ([clique para exibir a imagem em tamanho normal](performing-simple-validation-vb/_static/image8.png))
 

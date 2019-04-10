@@ -8,15 +8,15 @@ ms.date: 10/30/2010
 ms.assetid: f1a1be2c-6fd9-4a09-916e-aa1b98d5cf17
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-acess-two-pages-datalist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7d7be3364b4b19c89fac47875983fbb7193a36ea
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f71e4814d59ef1817d5a64f778ba6d572fc19145
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422727"
 ---
-<a name="masterdetail-filtering-across-two-pages-vb"></a>Filtragem mestre/detalhes em duas páginas (VB)
-====================
+# <a name="masterdetail-filtering-across-two-pages-vb"></a>Filtragem mestre/detalhes em duas páginas (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_34_VB.exe) ou [baixar PDF](master-detail-filtering-acess-two-pages-datalist-vb/_static/datatutorial34vb1.pdf)
@@ -49,7 +49,7 @@ Em seguida, defina os modelos do repetidor, de modo que ele exibe cada nome de c
 Com essa marcação completa, reserve um tempo para exibir nosso progresso através de um navegador. Como mostra a Figura 2, o Repeater é renderizado como uma lista com marcadores mostrando o nome e uma descrição de cada categoria.
 
 
-[![Cada categoria é exibida como um Item de lista com marcadores](master-detail-filtering-acess-two-pages-datalist-vb/_static/image5.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image4.png)
+[![EACH que categoria é exibida como um Item de lista com marcadores](master-detail-filtering-acess-two-pages-datalist-vb/_static/image5.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image4.png)
 
 **Figura 2**: Cada categoria é exibida como um Item de lista com marcadores ([clique para exibir a imagem em tamanho normal](master-detail-filtering-acess-two-pages-datalist-vb/_static/image6.png))
 
@@ -73,7 +73,7 @@ Uma vantagem de usar o controle de hiperlink é que ele pode ser programaticamen
 Se você estiver acompanhando, fique à vontade usar o elemento de âncora ou uma abordagem de controle de hiperlink na página. Independentemente da abordagem, ao exibir a página por meio de um navegador que cada nome de categoria deve ser renderizado como um link para `ProductsForCategoryDetails.aspx`, passando o aplicável `CategoryID` valor (veja a Figura 3).
 
 
-[![Os nomes de categoria se vincular ProductsForCategoryDetails.aspx](master-detail-filtering-acess-two-pages-datalist-vb/_static/image8.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image7.png)
+[![Tele categoria nomes agora Link para ProductsForCategoryDetails.aspx](master-detail-filtering-acess-two-pages-datalist-vb/_static/image8.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image7.png)
 
 **Figura 3**: A categoria de nomes de Link agora para `ProductsForCategoryDetails.aspx` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-acess-two-pages-datalist-vb/_static/image9.png))
 
@@ -91,7 +91,7 @@ Com o `CategoryListMaster.aspx` página completa, estamos prontos para voltar no
 Uma vez que o `GetProductsByCategoryID(categoryID)` método aceita um parâmetro de entrada (*`categoryID`*), o Assistente de fonte de dados escolha nos oferece uma oportunidade de especificar a origem do parâmetro. Defina a origem do parâmetro QueryString usando o QueryStringField `CategoryID`.
 
 
-[![Use o campo Querystring CategoryID como origem do parâmetro](master-detail-filtering-acess-two-pages-datalist-vb/_static/image14.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image13.png)
+[![USe o CategoryID de campo Querystring como origem do parâmetro](master-detail-filtering-acess-two-pages-datalist-vb/_static/image14.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image13.png)
 
 **Figura 5**: Use a Querystring Field `CategoryID` como origem do parâmetro ([clique para exibir a imagem em tamanho normal](master-detail-filtering-acess-two-pages-datalist-vb/_static/image15.png))
 
@@ -103,7 +103,7 @@ Como vimos nos tutoriais anteriores, após concluir o Assistente de escolher fon
 Para exibir esta página em ação, desde o `CategoryListMaster.aspx` página; em seguida, clique em um link na lista com marcadores de categorias. Isso levará você até `ProductsForCategoryDetails.aspx`, passando ao longo de `CategoryID` por meio da cadeia de consulta. O `ProductsInCategoryDataSource` ObjectDataSource em `ProductsForCategoryDetails.aspx` , em seguida, obter apenas os produtos para a categoria especificada e exibi-los no DataList, que renderiza os dois produtos por linha. A Figura 6 mostra uma captura de tela `ProductsForCategoryDetails.aspx` ao exibir as bebidas.
 
 
-[![São exibidas as bebidas, duas por linha](master-detail-filtering-acess-two-pages-datalist-vb/_static/image17.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image16.png)
+[![The bebidas são exibidas, duas por linha](master-detail-filtering-acess-two-pages-datalist-vb/_static/image17.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image16.png)
 
 **Figura 6**: São exibidas as bebidas, duas por linha ([clique para exibir a imagem em tamanho normal](master-detail-filtering-acess-two-pages-datalist-vb/_static/image18.png))
 
@@ -115,7 +115,7 @@ Quando um usuário clica em uma categoria na `CategoryListMaster.aspx`, eles sã
 Para fazer isso, adicione um FormView acima do controle Repeater na `ProductsForCategoryDetails.aspx`. Em seguida, adicione um novo ObjectDataSource para a página na chamada de marca inteligente de FormView `CategoryDataSource` e configurá-lo para usar o `CategoriesBLL` da classe `GetCategoryByCategoryID(categoryID)` método.
 
 
-[![Acessar informações sobre a categoria por meio GetCategoryByCategoryID(categoryID) método da classe CategoriesBLL](master-detail-filtering-acess-two-pages-datalist-vb/_static/image20.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image19.png)
+[![Aacessar informações sobre a categoria por meio GetCategoryByCategoryID(categoryID) método da classe CategoriesBLL](master-detail-filtering-acess-two-pages-datalist-vb/_static/image20.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image19.png)
 
 **Figura 7**: Acessar informações sobre a categoria por meio de `CategoriesBLL` da classe `GetCategoryByCategoryID(categoryID)` método ([clique para exibir a imagem em tamanho normal](master-detail-filtering-acess-two-pages-datalist-vb/_static/image21.png))
 
@@ -132,7 +132,7 @@ Figura 8 mostra uma tela de captura ao exibir esta página por meio de um navega
 > Além de FormView, eu também adicionou um controle de hiperlink acima FormView que levará o usuário de volta para a lista de categorias (`CategoryListMaster.aspx`). Fique à vontade para colocar este link em outro lugar ou para omiti-lo completamente.
 
 
-[![Informações de categoria são agora exibido na parte superior da página](master-detail-filtering-acess-two-pages-datalist-vb/_static/image23.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image22.png)
+[![Categorias informações é agora exibido na parte superior da página](master-detail-filtering-acess-two-pages-datalist-vb/_static/image23.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image22.png)
 
 **Figura 8**: Informações de categoria são agora exibido na parte superior da página ([clique para exibir a imagem em tamanho normal](master-detail-filtering-acess-two-pages-datalist-vb/_static/image24.png))
 
@@ -158,7 +158,7 @@ Todas as categorias no banco de dados Northwind são associadas com um ou mais p
 Depois de atualizar o banco de dados adequadamente, retornar o `CategoryListMaster.aspx` da página e clique no link de produzir. Uma vez que não existem mais todos os produtos que pertencem à categoria de produção, você deve ver a mensagem "Não há nenhum produto para a categoria selecionada...", conforme mostrado na Figura 9.
 
 
-[![Uma mensagem será exibida se não houver nenhum produtos pertencentes à categoria selecionada](master-detail-filtering-acess-two-pages-datalist-vb/_static/image26.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image25.png)
+[![A Mensagem é exibida se não houver nenhum produtos pertencentes à categoria selecionada](master-detail-filtering-acess-two-pages-datalist-vb/_static/image26.png)](master-detail-filtering-acess-two-pages-datalist-vb/_static/image25.png)
 
 **Figura 9**: Uma mensagem será exibida se não houver nenhum produtos pertencentes à categoria selecionada ([clique para exibir a imagem em tamanho normal](master-detail-filtering-acess-two-pages-datalist-vb/_static/image27.png))
 

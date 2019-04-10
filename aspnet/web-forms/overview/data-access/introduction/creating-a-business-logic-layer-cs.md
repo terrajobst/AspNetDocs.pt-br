@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs
-title: Criando uma camada de lógica de negócios (C#) | Microsoft Docs
+title: Criando uma camada de lógica de negócios (c#) | Microsoft Docs
 author: rick-anderson
 description: Neste tutorial, veremos como centralizar suas regras de negócios em um negócio lógica BLL (camada) que serve como um intermediário para troca de dados entre o t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 85554606-47cb-4e4f-9848-eed9da579056
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0db90f1e87bcaac51ca08ef1a8b258c93be8f613
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fd3bf46394f562462c561bf06370d2f372e47d0a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415257"
 ---
-<a name="creating-a-business-logic-layer-c"></a>Criação de uma camada de lógica de negócios (C#)
-====================
+# <a name="creating-a-business-logic-layer-c"></a>Criação de uma camada de lógica de negócios (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_2_CS.exe) ou [baixar PDF](creating-a-business-logic-layer-cs/_static/datatutorial02cs1.pdf)
@@ -73,7 +73,7 @@ ProductsBLL.cs
 
 Os métodos que simplesmente retornam dados `GetProducts`, `GetProductByProductID`, `GetProductsByCategoryID`, e `GetProductBySuppliersID` são bem simples, conforme eles simplesmente chamam para baixo da DAL. Embora em alguns cenários talvez existam regras de negócios que precisam ser implementados nesse nível (como as regras de autorização com base no usuário conectado no momento ou a função à qual pertence o usuário), vamos simplesmente deixar esses métodos como-está. Para esses métodos, em seguida, a BLL serve apenas como um proxy por meio do qual a camada de apresentação acessa os dados subjacentes da camada de acesso de dados.
 
-O `AddProduct` e `UpdateProduct` métodos tanto usam como parâmetros de valores para os vários campos de produto e adicionar um novo produto ou atualizar um existente, respectivamente. Já que muitas as `Product` colunas da tabela podem aceitar `NULL` valores (`CategoryID`, `SupplierID`, e `UnitPrice`, para citar alguns exemplos), os parâmetros de entrada `AddProduct` e `UpdateProduct` que são mapeados para esse uso de colunas [tipos anuláveis](https://msdn.microsoft.com/library/1t3y8s4s(v=vs.80).aspx). Tipos anuláveis são novos para o .NET 2.0 e fornecer uma técnica para que indica se um tipo de valor deve, em vez disso, ser `null`. No C# você pode sinalizar um tipo de valor como um tipo anulável, adicionando `?` após o tipo (como `int? x;`). Consulte a [tipos anuláveis](https://msdn.microsoft.com/library/1t3y8s4s.aspx) seção o [guia de programação em C#](https://msdn.microsoft.com/library/67ef8sbd%28VS.80%29.aspx) para obter mais informações.
+O `AddProduct` e `UpdateProduct` métodos tanto usam como parâmetros de valores para os vários campos de produto e adicionar um novo produto ou atualizar um existente, respectivamente. Já que muitas as `Product` colunas da tabela podem aceitar `NULL` valores (`CategoryID`, `SupplierID`, e `UnitPrice`, para citar alguns exemplos), os parâmetros de entrada `AddProduct` e `UpdateProduct` que são mapeados para esse uso de colunas [tipos anuláveis](https://msdn.microsoft.com/library/1t3y8s4s(v=vs.80).aspx). Tipos anuláveis são novos para o .NET 2.0 e fornecer uma técnica para que indica se um tipo de valor deve, em vez disso, ser `null`. No c# você pode sinalizar um tipo de valor como um tipo anulável, adicionando `?` após o tipo (como `int? x;`). Consulte a [tipos anuláveis](https://msdn.microsoft.com/library/1t3y8s4s.aspx) seção o [guia de programação em c#](https://msdn.microsoft.com/library/67ef8sbd%28VS.80%29.aspx) para obter mais informações.
 
 Todos os três métodos retornam um valor booliano que indica se uma linha foi inserida, atualizada ou excluída desde que a operação não pode resultar em uma linha afetada. Por exemplo, se o desenvolvedor da página chama `DeleteProduct` passando um `ProductID` para um produto inexistente, o `DELETE` instrução emitida para o banco de dados terão nenhum efeito e, portanto, o `DeleteProduct` método retornará `false`.
 
@@ -127,7 +127,7 @@ Para usar a BLL nova classes, tudo o que precisa ser alterado é a primeira linh
 As classes BLL também podem ser acessadas declarativamente (como podem fazer o conjunto de dados tipado) usando o ObjectDataSource. Vamos abordar o ObjectDataSource mais detalhadamente nos tutoriais a seguir.
 
 
-[![A lista de produtos é exibida em um GridView](creating-a-business-logic-layer-cs/_static/image4.png)](creating-a-business-logic-layer-cs/_static/image3.png)
+[![TEle lista de produtos é exibido em um GridView](creating-a-business-logic-layer-cs/_static/image4.png)](creating-a-business-logic-layer-cs/_static/image3.png)
 
 **Figura 3**: A lista de produtos é exibida em um GridView ([clique para exibir a imagem em tamanho normal](creating-a-business-logic-layer-cs/_static/image5.png))
 
@@ -146,7 +146,7 @@ Essas regras podem e devem ser expressos no nível do banco de dados. O limite d
 Além de aplicar essas regras no banco de dados que eles também devem ser impostos no nível do conjunto de dados. Na verdade, o tamanho do campo e se um valor é obrigatório ou opcional já são capturados para conjunto do cada DataTable de colunas de dados. Para ver a validação de nível de campo existente fornecida automaticamente, vá para o Designer de conjunto de dados, selecione um campo de uma do DataTables e, em seguida, vá para a janela de propriedades. Como mostra a Figura 4, o `QuantityPerUnit` DataColumn em de `ProductsDataTable` tem um comprimento máximo de 20 caracteres e permitir `NULL` valores. Se tentarmos definir a `ProductsDataRow`do `QuantityPerUnit` propriedade para um valor de cadeia de caracteres mais de 20 caracteres um `ArgumentException` será lançada.
 
 
-[![A DataColumn fornece validação básica de nível de campo](creating-a-business-logic-layer-cs/_static/image7.png)](creating-a-business-logic-layer-cs/_static/image6.png)
+[![Tele validação DataColumn fornece básica de nível de campo](creating-a-business-logic-layer-cs/_static/image7.png)](creating-a-business-logic-layer-cs/_static/image6.png)
 
 **Figura 4**: A DataColumn fornece nível de campo validação básica ([clique para exibir a imagem em tamanho normal](creating-a-business-logic-layer-cs/_static/image8.png))
 
@@ -154,7 +154,7 @@ Além de aplicar essas regras no banco de dados que eles também devem ser impos
 Infelizmente, estamos não é possível especificar verificações de limites, como o `UnitPrice` valor deve ser maior que ou igual a zero, na janela Propriedades. Para fornecer esse tipo de validação de nível de campo é necessário criar um manipulador de eventos para a DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) eventos. Conforme mencionado na [tutorial anterior](creating-a-data-access-layer-cs.md), os objetos de conjunto de dados, DataTables e DataRow criados pelo conjunto de dados tipado que podem ser estendidos com o uso de classes parciais. Usando essa técnica podemos criar uma `ColumnChanging` manipulador de eventos para o `ProductsDataTable` classe. Comece criando uma classe de `App_Code` pasta chamada `ProductsDataTable.ColumnChanging.cs`.
 
 
-[![Adicione uma nova classe para a pasta App_Code](creating-a-business-logic-layer-cs/_static/image10.png)](creating-a-business-logic-layer-cs/_static/image9.png)
+[![Auma nova classe para a pasta App_Code do dd](creating-a-business-logic-layer-cs/_static/image10.png)](creating-a-business-logic-layer-cs/_static/image9.png)
 
 **Figura 5**: Adicione uma nova classe para o `App_Code` pasta ([clique para exibir a imagem em tamanho normal](creating-a-business-logic-layer-cs/_static/image11.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
-title: 'Iteração #3 – adicionar validação de formulário (C#) | Microsoft Docs'
+title: 'Iteração #3 – adicionar validação de formulário (c#) | Microsoft Docs'
 author: microsoft
 description: Na terceira iteração, podemos adicionar validação de formulário básico. Podemos impedir que pessoas enviando um formulário sem preencher os campos obrigatórios do formulário. Também podemos validar o e-mail...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 51a0d175-913b-43d8-95e3-840fb96ad1a9
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4115b3898415d63ffb122f3d0fea93022f2baa02
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 973878ef0afd62035b3fc840371e6c6223c8951c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030413"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413783"
 ---
-<a name="iteration-3--add-form-validation-c"></a>Iteração #3 – adicionar validação de formulário (C#)
-====================
+# <a name="iteration-3--add-form-validation-c"></a>Iteração #3 – adicionar validação de formulário (c#)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar o código](iteration-3-add-form-validation-cs/_static/contactmanager_3_cs1.zip)
@@ -24,7 +24,7 @@ por [Microsoft](https://github.com/microsoft)
 > Na terceira iteração, podemos adicionar validação de formulário básico. Podemos impedir que pessoas enviando um formulário sem preencher os campos obrigatórios do formulário. Podemos também validar endereços de email e números de telefone.
 
 
-## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (C#)
+## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (c#)
   
 
 Esta série de tutoriais, vamos criar um aplicativo de gerenciamento de contatos inteiro do início ao fim. O aplicativo Gerenciador de contatos permite que você armazene informações de contato - nomes, números de telefone e endereços de email - para obter uma lista de pessoas.
@@ -51,7 +51,7 @@ Criamos o aplicativo ao longo de várias iterações. Com cada iteração, podem
 Nesta segunda iteração do aplicativo Contact Manager, podemos adicionar validação de formulário básico. Podemos impedir que pessoas enviando um contato sem inserir valores para os campos de formulário necessária. Podemos também validar números de telefone e endereços de email (veja a Figura 1).
 
 
-[![A caixa de diálogo Novo projeto](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
 **Figura 01**: Um formulário com a validação ([clique para exibir a imagem em tamanho normal](iteration-3-add-form-validation-cs/_static/image2.png))
 

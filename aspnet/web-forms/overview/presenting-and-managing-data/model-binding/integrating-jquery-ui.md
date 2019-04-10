@@ -8,15 +8,15 @@ ms.date: 02/27/2014
 ms.assetid: 3cbab37b-fb0f-4751-9ec4-74e068c3f380
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/integrating-jquery-ui
 msc.type: authoredcontent
-ms.openlocfilehash: ff1b17295c58d40d55bdcd4346b83121b579bb4c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5e9cbb4ca4c45fabfa53f9e3d2537250f1231ba0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421960"
 ---
-<a name="integrating-jquery-ui-datepicker-with-model-binding-and-web-forms"></a>A integração do JQuery UI Datepicker com associação de modelos e formulários da web
-====================
+# <a name="integrating-jquery-ui-datepicker-with-model-binding-and-web-forms"></a>A integração do JQuery UI Datepicker com associação de modelos e formulários da web
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Esta série de tutoriais demonstra aspectos básicos de como usar a associação de modelo com um projeto de Web Forms do ASP.NET. Associação de modelo torna a interação de dados mais simples que lidam com dados de objetos de origem (como ObjectDataSource ou SqlDataSource). Esta série começa com material introdutório e move para conceitos mais avançados em tutoriais posteriores.
@@ -25,7 +25,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial se baseia no projeto criado a [primeira](retrieving-data.md) e [segundo](updating-deleting-and-creating-data.md) partes da série.
 > 
-> Você pode [baixar](https://go.microsoft.com/fwlink/?LinkId=286116) o projeto completo em C# ou VB. O código para download funciona com o Visual Studio 2012 ou Visual Studio 2013. Ele usa o modelo do Visual Studio 2012, que é ligeiramente diferente do que o modelo do Visual Studio 2013 mostrado neste tutorial.
+> Você pode [baixar](https://go.microsoft.com/fwlink/?LinkId=286116) o projeto completo em c# ou VB. O código para download funciona com o Visual Studio 2012 ou Visual Studio 2013. Ele usa o modelo do Visual Studio 2012, que é ligeiramente diferente do que o modelo do Visual Studio 2013 mostrado neste tutorial.
 
 
 ## <a name="what-youll-build"></a>O que você vai criar

@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: bf4a1c19-0a94-4208-b268-a96ddcf26946
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part1
 msc.type: authoredcontent
-ms.openlocfilehash: 2d9c1dd0dd3c9f892b42b0f29ac3361a7f2b638c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dcc2e703829cfa0b77575870feff451fd0738f56
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416487"
 ---
-<a name="intro-to-aspnet-mvc"></a>Introdução ao ASP.NET MVC
-====================
+# <a name="intro-to-aspnet-mvc"></a>Introdução ao ASP.NET MVC
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > > [!NOTE]
@@ -32,7 +32,7 @@ Vamos criar nosso primeiro aplicativo Web ASP.NET MVC usando [Visual Web Develop
 
 Aqui estão as duas capturas de tela do aplicativo que você criará. Você terá uma tabela simples de filmes com várias colunas.
 
-[![Lista de filmes - Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
+[![Movie lista - Windows Internet Explorer (12)](getting-started-with-mvc-part1/_static/image2.png)](getting-started-with-mvc-part1/_static/image1.png)
 
 E você terá um formulário de criação para poder adicionar à lista de filmes.
 
@@ -61,7 +61,7 @@ O Visual Web Developer é um IDE ou ambiente de desenvolvimento integrado. Assim
 
 Você pode criar aplicativos usando o Visual Basic ou Visual c#. Por enquanto, selecione Visual c# à esquerda, em seguida, escolher "Aplicativo de Web do ASP.NET MVC 2". Nomeie o projeto "Filmes" e clique em Okey.
 
-[![Novo projeto](getting-started-with-mvc-part1/_static/image8.png)](getting-started-with-mvc-part1/_static/image7.png)
+[![Nvo projeto](getting-started-with-mvc-part1/_static/image8.png)](getting-started-with-mvc-part1/_static/image7.png)
 
 No lado direito é o Gerenciador de soluções mostrando todos os arquivos e pastas em seu aplicativo. A janela grande no meio é onde você pode editar seu código e passa a maior parte do seu tempo. Visual Studio usou um modelo padrão para o projeto do ASP.NET MVC que você acabou de criar, portanto, você tem agora um aplicativo de trabalho sem fazer nada! Isso é um simples "Hello World! projeto e é um bom lugar para começar nosso aplicativo.
 
@@ -77,7 +77,7 @@ Selecione o botão "reproduzir" na barra de ferramentas.
 
 Isso fará com que o Visual Web Developer iniciar um servidor web de desenvolvimento e executar nosso aplicativo web (não há nenhuma configuração ou etapas manuais necessárias para habilitar isso). Em seguida, ele iniciará um navegador e configurá-lo para procurar a home page do aplicativo. Abaixo, observe que a barra de endereços do navegador diz "localhost" e não algo como exemplo.com. Isso ocorre porque o localhost sempre aponta para o seu próprio computador local – que nesse caso está executando o aplicativo que acabou de criar.
 
-[![Home Page](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
+[![HPágina de ome](getting-started-with-mvc-part1/_static/image13.png)](getting-started-with-mvc-part1/_static/image12.png)
 
 Fora da caixa desse modelo padrão fornece a você duas páginas para visitar e uma página de logon básica. Vamos alterar como este aplicativo funciona e aprender um pouco sobre o ASP.NET MVC no processo. Feche seu navegador e permite alterar o código.
 

@@ -8,15 +8,15 @@ ms.date: 08/28/2012
 ms.assetid: dde851d7-882e-4d99-9b96-cf96daed81cc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-view
 msc.type: authoredcontent
-ms.openlocfilehash: 7b55a55db6207b8ff18b2dd207e919cee45f6973
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1ab1ea8b277b48b3b72edb9dd45aa4cc2937ffa8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418047"
 ---
-<a name="adding-a-view"></a>Adicionar uma exibição
-====================
+# <a name="adding-a-view"></a>Adicionar uma exibição
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
@@ -25,7 +25,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 Nesta seção você irá modificar o `HelloWorldController` classe para usar a exibição de arquivos de modelo para corretamente encapsulam o processo de geração de respostas HTML para um cliente.
 
-Você criará um arquivo de modelo de exibição usando o [mecanismo de exibição Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introduzido com o ASP.NET MVC 3. Modelos de exibição baseado no Razor têm uma *. cshtml* extensão de arquivo e fornecem uma maneira elegante de criar o HTML de saída usando a linguagem C#. Razor minimiza o número de caracteres e pressionamentos de teclas necessários ao escrever um modelo de exibição e permite um rápido, fluido fluxo de trabalho de codificação.
+Você criará um arquivo de modelo de exibição usando o [mecanismo de exibição Razor](https://weblogs.asp.net/scottgu/archive/2010/07/02/introducing-razor.aspx) introduzido com o ASP.NET MVC 3. Modelos de exibição baseado no Razor têm uma *. cshtml* extensão de arquivo e fornecem uma maneira elegante de criar o HTML de saída usando a linguagem c#. Razor minimiza o número de caracteres e pressionamentos de teclas necessários ao escrever um modelo de exibição e permite um rápido, fluido fluxo de trabalho de codificação.
 
 Atualmente, o método `Index` retorna uma cadeia de caracteres com uma mensagem que é embutida em código na classe do controlador. Alterar o `Index` método para retornar um `View` do objeto, conforme mostrado no código a seguir:
 
@@ -75,7 +75,7 @@ Primeiro, você deseja alterar o &quot;seu logotipo aqui.&quot; título na parte
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modelos de layout permitem que você especifique o layout de contêiner HTML do seu site em um só lugar e, em seguida, aplicá-la em várias páginas em seu site. Localize a linha `@RenderBody()`. `RenderBody` é um espaço reservado em que todas as páginas específicas à exibição criadas são mostradas, &quot;encapsuladas&quot; na página de layout. Por exemplo, se você selecionar o link de sobre o *Views\Home\About.cshtml* exibição é renderizada dentro de `RenderBody` método.
+Modelos de layout permitem que você especifique o layout de contêiner HTML do seu site em um só lugar e, em seguida, aplicá-la em várias páginas em seu site. Localize a linha `@RenderBody()`. `RenderBody` é um espaço reservado em que todos os a exibição de páginas específicas criadas são mostradas, &quot;encapsulado&quot; na página de layout. Por exemplo, se você selecionar o link de sobre o *Views\Home\About.cshtml* exibição é renderizada dentro de `RenderBody` método.
 
 Altere o cabeçalho de título do site no modelo de layout &quot;seu logotipo aqui&quot; à &quot;filme MVC&quot;.
 

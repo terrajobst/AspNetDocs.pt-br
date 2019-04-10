@@ -8,15 +8,15 @@ ms.date: 02/20/2009
 ms.assetid: 4805e75a-7911-46e3-b11b-229a6eed245e
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b44aaab45f04f736e4171a43a8b24b71aaedca2f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e031417f2ee22533e7b5a606fc40526d7d911efc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413328"
 ---
-<a name="iteration-3--add-form-validation-vb"></a>Iteração #3 – adicionar validação de formulário (VB)
-====================
+# <a name="iteration-3--add-form-validation-vb"></a>Iteração #3 – adicionar validação de formulário (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar o código](iteration-3-add-form-validation-vb/_static/contactmanager_3_vb1.zip)
@@ -51,7 +51,7 @@ Criamos o aplicativo ao longo de várias iterações. Com cada iteração, podem
 Nesta segunda iteração do aplicativo Contact Manager, podemos adicionar validação de formulário básico. Podemos impedir que pessoas enviando um contato sem inserir valores para os campos de formulário necessária. Podemos também validar números de telefone e endereços de email (veja a Figura 1).
 
 
-[![A caixa de diálogo Novo projeto](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](iteration-3-add-form-validation-vb/_static/image1.jpg)](iteration-3-add-form-validation-vb/_static/image1.png)
 
 **Figura 01**: Um formulário com a validação ([clique para exibir a imagem em tamanho normal](iteration-3-add-form-validation-vb/_static/image2.png))
 

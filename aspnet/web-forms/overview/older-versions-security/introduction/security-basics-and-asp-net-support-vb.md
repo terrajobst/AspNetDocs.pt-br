@@ -8,15 +8,15 @@ ms.date: 01/13/2008
 ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c293f4946001d0940c7e12b67f4fbc63cf5ca18c
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1b6675a933f04b3eb7f5111b2ccd16c44baab7ba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57043623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414342"
 ---
-<a name="security-basics-and-aspnet-support-vb"></a>Noções básicas sobre segurança e suporte do ASP.NET (VB)
-====================
+# <a name="security-basics-and-aspnet-support-vb"></a>Noções básicas sobre segurança e suporte do ASP.NET (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
@@ -39,7 +39,7 @@ Este é o primeiro tutorial de uma série de tutoriais que exploram técnicas pa
 - Limitar o acesso a uma página da web, o diretório ou a funcionalidade específica com base na função do usuário conectado
 - Personalize e estenda o ASP. Controles de Web de segurança da rede
 
-Esses tutoriais se destinam a ser concisas e fornecem instruções passo a passo com capturas de tela suficiente para orientá-lo pelo processo visualmente. Cada tutorial está disponível nas versões do Visual Basic e do C# e inclui um download do código completo usado. (Este primeiro tutorial concentra-se nos conceitos de segurança de um ponto de vista de alto nível e, portanto, não contém qualquer código associado.)
+Esses tutoriais se destinam a ser concisas e fornecem instruções passo a passo com capturas de tela suficiente para orientá-lo pelo processo visualmente. Cada tutorial está disponível nas versões do Visual Basic e do c# e inclui um download do código completo usado. (Este primeiro tutorial concentra-se nos conceitos de segurança de um ponto de vista de alto nível e, portanto, não contém qualquer código associado.)
 
 Neste tutorial, abordaremos os conceitos de segurança importantes e quais recursos estão disponíveis no ASP.NET para ajudá-lo na implementação de formulários de autenticação, autorização, contas de usuário e funções. Vamos começar!
 
@@ -139,7 +139,7 @@ A Microsoft fornece duas classes de provedor de associação no .NET Framework:
 Esta série de tutoriais se concentra exclusivamente no SqlMembershipProvider.
 
 
-[![O modelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
+[![Tele modelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
 
 **Figura 03**: O modelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework ([clique para exibir a imagem em tamanho normal](security-basics-and-asp-net-support-vb/_static/image5.png))
 

@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
-title: Adicionando conteúdo dinâmico a uma página em cache (C#) | Microsoft Docs
+title: Adicionando conteúdo dinâmico a uma página em cache (c#) | Microsoft Docs
 author: microsoft
 description: Saiba como a combinação de conteúdo dinâmico e armazenados em cache na mesma página. Substituição do pós-cache de permite que você exiba o conteúdo dinâmico, como faixa anúncios s...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 2ddd4407-d143-4a94-877c-21771bfb97a6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 26e40ff9659a4b8552b2a087c7c948c9f1f1554c
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424164"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415356"
 ---
-<a name="adding-dynamic-content-to-a-cached-page-c"></a>Adicionar conteúdo dinâmico a uma página em cache (C#)
-====================
+# <a name="adding-dynamic-content-to-a-cached-page-c"></a>Adicionar conteúdo dinâmico a uma página em cache (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como a combinação de conteúdo dinâmico e armazenados em cache na mesma página. Substituição do pós-cache de permite que você exiba o conteúdo dinâmico, como anúncios de banner ou itens de notícias, dentro de uma página que tem sido a saída armazenada em cache.
@@ -93,10 +93,6 @@ Quando você solicita a página renderizada pela exibição na listagem 5, uma f
 Este tutorial explicou como você pode atualizar dinamicamente o conteúdo em uma página em cache. Você aprendeu como usar o método HttpResponse.WriteSubstitution() para habilitar o conteúdo dinâmico a ser injetado em uma página em cache. Você também aprendeu como encapsular a chamada ao método WriteSubstitution() dentro de um método auxiliar HTML.
 
 Tirar proveito do armazenamento em cache sempre que possível – ele pode ter um impacto significativo sobre o desempenho de seus aplicativos web. Conforme explicado neste tutorial, você pode tirar proveito do armazenamento em cache, mesmo quando você precisa exibir o conteúdo dinâmico em suas páginas.
-
-## 
-
-## 
 
 > [!div class="step-by-step"]
 > [Anterior](improving-performance-with-output-caching-cs.md)

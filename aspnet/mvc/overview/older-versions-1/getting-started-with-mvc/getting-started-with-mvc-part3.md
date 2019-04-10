@@ -8,15 +8,15 @@ ms.date: 08/14/2010
 ms.assetid: e8f1515c-c277-47ff-a23e-224118f13f02
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part3
 msc.type: authoredcontent
-ms.openlocfilehash: f55e558dd056e86bdd2310894959aef02a9d8de2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3eff3aceea302c51e6970bb13fbee3a8bf98a71d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411976"
 ---
-<a name="adding-a-view"></a>Adicionar uma exibição
-====================
+# <a name="adding-a-view"></a>Adicionar uma exibição
+
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este é um tutorial para iniciantes que apresenta os conceitos básicos do ASP.NET MVC. Você criará um aplicativo web simples que lê e grava de um banco de dados. Visite o [Central de informações do ASP.NET MVC](../../../index.md) para localizar outros ASP.NET MVC, tutoriais e exemplos.
@@ -38,7 +38,7 @@ Agora vamos adicionar um modelo de exibição ao nosso projeto que usaremos para
 
 Isso abrirá a caixa de diálogo "Adicionar exibição", que nos fornece algumas opções para como queremos criar um modelo de exibição pode ser usado pelo nosso método de índice. Por enquanto, não altera nada e simplesmente clique no botão Adicionar.
 
-[![Adicionar caixa de diálogo de exibição](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
+[![Acaixa de diálogo de exibição de dd](getting-started-with-mvc-part3/_static/image3.png)](getting-started-with-mvc-part3/_static/image2.png)
 
 Depois de clicar em Adicionar, uma nova pasta e um novo arquivo aparecerá na pasta da solução, como visto aqui. Agora tenho uma pasta de HelloWorld em modos de exibição e um arquivo aspx dentro dessa pasta.
 
@@ -50,7 +50,7 @@ O novo arquivo de índice também já está aberto e pronto para edição. Adici
 
 Executar o aplicativo e visite [ `http://localhost:xx/HelloWorld` ](http://localhostxx) novamente no seu navegador. O método Index em nosso controlador neste exemplo não realiza nenhum trabalho, mas chamou de "retorno View()" que indicado que queremos usar um arquivo de modelo de exibição para renderizar uma resposta de volta ao cliente. Porque não especificamos explicitamente o nome do arquivo de modelo de exibição para usar, ASP.NET MVC assumiu como padrão usando o arquivo de exibição aspx dentro da pasta \Views\HelloWorld. Agora, vemos que a cadeia de caracteres que é embutido em código na nossa exibição.
 
-[![Index - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image7.png)](getting-started-with-mvc-part3/_static/image6.png)
+[![Indice - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image7.png)](getting-started-with-mvc-part3/_static/image6.png)
 
 Parece muito bom. No entanto, observe que o título do navegador diz "Index" e grande título na página diz "Meu aplicativo MVC." Vamos alterá-los.
 
@@ -80,7 +80,7 @@ Abra /HelloWorld/Index.aspx. Há dois lugares para alterar. Primeiro, o título 
 
 Executar seu aplicativo e visite /Movies. Observe que o título do navegador, o cabeçalho primário e os títulos secundários foram alterados. É fácil fazer grandes alterações em seu aplicativo com pequenas alterações ao modo de exibição.
 
-[![Lista de filmes - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
+[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image9.png)](getting-started-with-mvc-part3/_static/image8.png)
 
 Nosso pequeno bit de "dados" (no caso de "Hello World!" mensagem) foi codificado no entanto. Temos V (exibições) e temos C (controladores), mas ainda não há M (modelo). Em breve vamos examinar como criar um banco de dados e recuperar dados de modelo dele.
 
@@ -109,11 +109,11 @@ Adicione este código sob o &lt;h2&gt; em seu novo Welcome.aspx. Vamos fazer um 
 
 Além disso, observe enquanto você estiver digitando que porque nós dissemos isso exibição sobre o WelcomeViewModel (são casados, lembre-se?) que obtemos o Intellisense útil sempre que fazemos referência nosso objeto de modelo, como visto na captura de tela abaixo:
 
-[![Código-fonte NumTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
+[![NCódigo-fonte do umTime](getting-started-with-mvc-part3/_static/image12.png)](getting-started-with-mvc-part3/_static/image11.png)
 
 Executar o aplicativo e visite `http://localhost:xx/HelloWorld/Welcome?name=Scott&numtimes=4` novamente. Agora estamos levando dados da URL, ele é passado para o nosso controlador automaticamente, nosso controlador empacota os dados em um ViewModel e passa esse objeto para nosso modo de exibição. O modo de exibição que exibe os dados como HTML para o usuário.
 
-[![Bem-vindo - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
+[![Wem-vindo - Windows Internet Explorer](getting-started-with-mvc-part3/_static/image14.png)](getting-started-with-mvc-part3/_static/image13.png)
 
 Bem, isso foi uma espécie de "M" para o modelo, mas não o tipo de banco de dados. Vejamos o que aprendemos e criar um banco de dados de filmes.
 

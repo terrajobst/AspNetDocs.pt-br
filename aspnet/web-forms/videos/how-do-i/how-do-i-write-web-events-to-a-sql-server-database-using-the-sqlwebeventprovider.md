@@ -8,15 +8,15 @@ ms.date: 08/28/2008
 ms.assetid: d4c08844-fe1c-4759-9ec7-66263ba678fb
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-write-web-events-to-a-sql-server-database-using-the-sqlwebeventprovider
 msc.type: video
-ms.openlocfilehash: f97a294f6222f1a55e0776412cd060ecfbe25405
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 601da044c0c9679526eecaa09256e0100e7ad571
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046423"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420777"
 ---
-<a name="how-do-i-write-web-events-to-a-sql-server-database-using-the-sqlwebeventprovider"></a>[Como fazer:] Gravar eventos da Web em um banco de dados do SQL Server usando o SqlWebEventProvider
-====================
+# <a name="how-do-i-write-web-events-to-a-sql-server-database-using-the-sqlwebeventprovider"></a>[Como fazer:] Gravar eventos da Web em um banco de dados do SQL Server usando o SqlWebEventProvider
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Neste vídeo, Chris Pels mostra como usar a SqlWebEventProvider de monitoramento de integridade do ASP.NET para registrar erros em um site da web para um banco de dados do SQL Server. Primeiro, saber a função do provedor e eventos no monitoramento de integridade do ASP.NET. Em seguida, veja como configurar um banco de dados do SQL Server com os objetos necessários para integridade de gravação de monitoramento de eventos usando o aspnet\_regiis utilitário, o mesmo utilitário usado para configurar a associação do ASP.NET. Em seguida, saiba como configurar o monitoramento de integridade no arquivo Web. config para registrar eventos em um site da web ASP.NET para o banco de dados do SQL Server recém-criado. Como parte dessa configuração, consulte como o arquivo Web. config de raiz no .NET Framework 2.0 tem provedores e eventos definidos que podem ser aproveitados ao configurar o monitoramento de integridade. Esses conceitos básicos são uma base na qual os eventos personalizados podem ser criados de suas próprias informações específicas de log para um banco de dados do SQL Server em um site da web ASP.NET.

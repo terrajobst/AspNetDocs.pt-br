@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
-ms.openlocfilehash: 194f72ce40067e177a23b1eb70bd07ceb2225a04
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: c3fe4a08a30aa2ed116dfa36ce6206dc9cbd07f8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425555"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415070"
 ---
-<a name="tutorial-signalr-self-host"></a>Tutorial: Auto-hospedar SignalR
-====================
+# <a name="tutorial-signalr-self-host"></a>Tutorial: Auto-hospedar SignalR
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -73,7 +73,7 @@ Este tutorial contém as seções a seguir:
 
 Neste tutorial, você criará um servidor que está hospedado em um aplicativo de console, mas o servidor pode ser hospedado em qualquer tipo de processo, como um serviço do Windows ou uma função de trabalho do Azure. Para o código de exemplo para hospedar um servidor do SignalR em um serviço do Windows, consulte [Self-Hosting SignalR em um serviço Windows](https://code.msdn.microsoft.com/SignalR-self-hosted-in-6ff7e6c3).
 
-1. Abra o Visual Studio 2013 com privilégios de administrador. Selecione **arquivo**, **novo projeto**. Selecione **Windows** sob o **Visual C#** nó no **modelos** painel e selecione o **aplicativo de Console** modelo. Nomeie o novo projeto "SignalRSelfHost" e clique em **Okey**.
+1. Abra o Visual Studio 2013 com privilégios de administrador. Selecione **arquivo**, **novo projeto**. Selecione **Windows** sob o **Visual c#** nó no **modelos** painel e selecione o **aplicativo de Console** modelo. Nomeie o novo projeto "SignalRSelfHost" e clique em **Okey**.
 
     ![](tutorial-signalr-self-host/_static/image1.png)
 2. Abra o console de Gerenciador de pacotes do NuGet, selecionando **ferramentas** > **Gerenciador de pacotes NuGet** > **Package Manager Console**.

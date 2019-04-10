@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
-title: Convenções de roteamento na API Web ASP.NET 2 Odata | Microsoft Docs
+title: Convenções de roteamento na API Web ASP.NET 2 Odata - ASP.NET 4.x
 author: MikeWasson
-description: Este artigo descreve as convenções de roteamento API Web usa para pontos de extremidade OData.
+description: Descreve as convenções de roteamentos dessa API Web 2 no ASP.NET 4. x usa pontos de extremidade OData.
 ms.author: riande
 ms.date: 07/31/2013
+ms.custom: seoapril2019
 ms.assetid: adbc175a-14eb-4ab2-a441-d056ffa8266f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
 msc.type: authoredcontent
-ms.openlocfilehash: 0199ccde100c8c3ab70db912b8ab984e0617f9dd
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8916f8b7a024636be1be055457081487f46a7936
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421622"
 ---
-<a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenções de roteamento na API Web ASP.NET 2 Odata
-====================
+# <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenções de roteamento na API Web ASP.NET 2 Odata
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
-> Este artigo descreve as convenções de roteamento API Web usa para pontos de extremidade OData.
+> Este artigo descreve as convenções de roteamento dessa API Web 2 no ASP.NET 4. x usa pontos de extremidade OData.
 
 
 Quando a API Web recebe uma solicitação de OData, ele mapeia a solicitação para um nome de controlador e um nome de ação. O mapeamento é baseado no método HTTP e o URI. Por exemplo, `GET /odata/Products(1)` mapeia para `ProductsController.GetProduct`.
@@ -118,7 +119,7 @@ Para obter mais informações, consulte [trabalhando com relações de entidade]
 
 Para obter mais informações, consulte [ações de OData](odata-v3/odata-actions.md).
 
-**Assinaturas de método**
+**Assinaturas de Método**
 
 Aqui estão algumas regras para as assinaturas de método:
 

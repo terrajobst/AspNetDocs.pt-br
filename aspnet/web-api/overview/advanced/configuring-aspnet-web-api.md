@@ -1,22 +1,23 @@
 ---
 uid: web-api/overview/advanced/configuring-aspnet-web-api
-title: Configurando a API Web ASP.NET 2 | Microsoft Docs
+title: Configurando o ASP.NET Web API 2 - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: 'Configurar API Web ASP.NET 2 para o ASP.NET 4. x: Definir configurações, hospedagem do ASP.NET 4.x, serviços de hospedagem interna, globais do OWIN e configuração do pré controlador de.'
 ms.author: riande
 ms.date: 03/31/2014
+ms.custom: seoapril2019
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 270268b77f398084169843e20b0a2bf9f1c2a011
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411937"
 ---
-<a name="configuring-aspnet-web-api-2"></a>Configurando a API Web ASP.NET 2
-====================
+# <a name="configuring-aspnet-web-api-2"></a>Configurando a API Web ASP.NET 2
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
 Este tópico descreve como configurar a API Web do ASP.NET.

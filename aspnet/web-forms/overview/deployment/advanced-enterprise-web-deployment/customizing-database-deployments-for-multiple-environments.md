@@ -8,15 +8,15 @@ ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 52fb2539ef388d129f88aa8aa87088e2d4a41ccf
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412977"
 ---
-<a name="customizing-database-deployments-for-multiple-environments"></a>Personalização das implantações de banco de dados para vários ambientes
-====================
+# <a name="customizing-database-deployments-for-multiple-environments"></a>Personalização das implantações de banco de dados para vários ambientes
+
 by [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)

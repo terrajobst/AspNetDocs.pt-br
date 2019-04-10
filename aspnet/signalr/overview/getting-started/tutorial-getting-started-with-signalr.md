@@ -9,12 +9,12 @@ ms.assetid: a8b3b778-f009-4369-85c7-e90f9878d8b4
 msc.legacyurl: /signalr/overview/getting-started/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
 ms.topic: tutorial
-ms.openlocfilehash: 90f2c03fbda522e3a46200bc0132cc74100ce70f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b1e8b6b1b300665f6cd2466766e9adcff52733da
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042673"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422909"
 ---
 # <a name="tutorial-real-time-chat-with-signalr-2"></a>Tutorial: Bate-papo em tempo real com SignalR 2
 
@@ -81,6 +81,7 @@ Esta seção mostra como usar o Visual Studio 2017 e SignalR 2 para criar um apl
 1. Verifique se as referências de script no bloco de código correspondem às versões dos arquivos de script no projeto.
 
     Referências de script de bloco de código original:
+
     ```html
     <!--Script references. -->
     <!--Reference the jQuery library. -->

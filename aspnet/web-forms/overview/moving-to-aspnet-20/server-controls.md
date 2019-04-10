@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 43f6ac47-76fc-4cf7-8e9f-c18ce673dfd8
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/server-controls
 msc.type: authoredcontent
-ms.openlocfilehash: ecf99fa894c1f662542aa8a613195b828bf2c67b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bfbc151af40bf7ccceb5ac298ba812730d4e4ed9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420751"
 ---
-<a name="server-controls"></a>Controles de servidor
-====================
+# <a name="server-controls"></a>Controles de servidor
+
 por [Microsoft](https://github.com/microsoft)
 
 > O ASP.NET 2.0 aprimora a controles de servidor de várias maneiras. Neste módulo, vamos abordar algumas das alterações na arquitetura na maneira como o ASP.NET 2.0 e o Visual Studio 2005 lida com controles de servidor.
@@ -99,7 +99,7 @@ No ASP.NET 2.0, a definição de tipo de documento padrão é o seguinte:
 
 [!code-html[Main](server-controls/samples/sample7.html)]
 
-Se você escolher, você pode alterar a conformidade de XHML padrão através do nó xhtmlConformance no arquivo de configuração. Por exemplo, o nó seguinte no arquivo Web. config será alterado com XHTML para XHTML 1.0 Strict:
+Se você escolher, você pode alterar a compatibilidade com XHTML padrão através do nó xhtmlConformance no arquivo de configuração. Por exemplo, o nó seguinte no arquivo Web. config será alterado com XHTML para XHTML 1.0 Strict:
 
 [!code-xml[Main](server-controls/samples/sample8.xml)]
 

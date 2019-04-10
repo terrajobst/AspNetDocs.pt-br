@@ -1,27 +1,30 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms
-title: Usando a API da Web com Web Forms do ASP.NET | Microsoft Docs
+title: Usando a API da Web com Web Forms do ASP.NET - ASP.NET 4.x
 author: MikeWasson
-description: ''
+description: Tutorial com o código passo a passo para adicionar a API da Web a um aplicativo de formulários do ASP.NET para ASP.NET 4. x
 ms.author: riande
 ms.date: 04/03/2012
+ms.custom: seoapril2019
 ms.assetid: 25da8c3f-4e90-4946-9765-4f160985e1e4
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms
 msc.type: authoredcontent
-ms.openlocfilehash: a14bf0abd8c5d603cf3859891f855415cf3df9f3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ae553b62998fefd128e12711cbde958ea42d8c63
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57055683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59422571"
 ---
-<a name="using-web-api-with-aspnet-web-forms"></a>Uso da API Web com Web Forms do ASP.NET
-====================
+# <a name="using-web-api-with-aspnet-web-forms"></a>Uso da API Web com Web Forms do ASP.NET
+
 por [Mike Wasson](https://github.com/MikeWasson)
 
-Embora a API Web ASP.NET é empacotada com o ASP.NET MVC, é fácil adicionar a API da Web a um aplicativo Web Forms do ASP.NET tradicional. Este tutorial orienta você pelas etapas.
+Este tutorial orienta você pelas etapas para adicionar a API da Web a um aplicativo Web Forms do ASP.NET tradicional no ASP.NET 4. x. 
 
 ## <a name="overview"></a>Visão geral
+
+Embora a API Web ASP.NET é empacotada com o ASP.NET MVC, é fácil adicionar a API da Web a um aplicativo Web Forms do ASP.NET tradicional.
 
 Para usar a API da Web em um aplicativo Web Forms, há duas etapas principais:
 

@@ -8,15 +8,15 @@ ms.date: 10/13/2010
 ms.assetid: c8511ebe-68bc-4240-87c3-d5ced84a3f37
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: 44205f0ef59e00ad9fb1c45fdc0ba8934b5804cc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f5431d60506f5b0a0f4bbcd8e86b316c728a1191
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060423"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415915"
 ---
-<a name="part-7-membership-and-authorization"></a>Parte 7: Associação e a autorização
-====================
+# <a name="part-7-membership-and-authorization"></a>Parte 7: Associação e a autorização
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  
@@ -78,8 +78,8 @@ Preencha os campos de informações do usuário à esquerda usando as seguintes 
 | **Senha** | password123! |
 | **Confirmar senha** | password123! |
 | **Email** | (qualquer endereço de email funcionarão) |
-| **Pergunta de Segurança** | (o que quiser) |
-| **Resposta de Segurança** | (o que quiser) |
+| **Pergunta de segurança** | (o que quiser) |
+| **Resposta de segurança** | (o que quiser) |
 
 *Observação: É claro, você pode usar qualquer senha que você deseja. As configurações de segurança de senha padrão exigem uma senha que é de 7 caracteres e contém um caractere não alfanumérico.*
 

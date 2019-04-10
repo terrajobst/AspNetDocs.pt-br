@@ -8,15 +8,15 @@ ms.date: 05/29/2009
 ms.assetid: 7ca8013e-9dfc-4e33-8336-cdccfd5f9414
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 203e49e67d8a9c6eb9dbf605a8d7d860737de073
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 300fc9f7e82fe8201b083de9e740e1620f5d09b9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59411807"
 ---
-<a name="validation-with-the-data-annotation-validators-c"></a>Validação com os validadores de anotação de dados (C#)
-====================
+# <a name="validation-with-the-data-annotation-validators-c"></a>Validação com os validadores de anotação de dados (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Aproveite o associador de modelo de anotação de dados para executar a validação dentro de um aplicativo ASP.NET MVC. Saiba como usar os diferentes tipos de atributos de validador e trabalhar com eles no Microsoft Entity Framework.

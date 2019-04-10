@@ -8,15 +8,15 @@ ms.date: 02/14/2008
 ms.assetid: 426a5d0f-fde7-447c-ad69-4efe45f8efea
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i/how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly
 msc.type: video
-ms.openlocfilehash: 0048108e6237e64daf12e4fec673edaddee73c73
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b1ea56d8588023dd37bc42521c7cd339e6f631c8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416188"
 ---
-<a name="how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly"></a>[Como fazer:] Adicionar elementos a uma CSS arquivo e cria nova CSS em tempo real
-====================
+# <a name="how-do-i-adding-elements-to-a-css-file-and-create-new-css-on-the-fly"></a>[Como fazer:] Adicionar elementos a uma CSS arquivo e cria nova CSS em tempo real
+
 por Asli Bilgin
 
 Neste vídeo, vamos compilar em uma folha de estilos existente e aprimorá-lo com as ids de elemento usando as novas ferramentas de gerenciamento de CSS no Visual Studio 2008.

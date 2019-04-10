@@ -8,21 +8,21 @@ ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 3db54a134e8f842cab1d3471c69f5a8e2039d83d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 9904582450d4386ef8b8656078f6d40dbd1e10be
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412002"
 ---
-<a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratório prático: Aplicativos Web em tempo real com SignalR
-====================
+# <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratório prático: Aplicativos Web em tempo real com SignalR
+
 
 por [Web Camps equipe](https://twitter.com/webcamps)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-[Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
+[Baixar a Web Camps treinamento Kit, versão de outubro de 2015](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b)
 
 > A capacidade de conteúdo por push do servidor para os clientes conectados conforme ela ocorre em tempo real de recursos de aplicativos da Web em tempo real. Para desenvolvedores do ASP.NET **SignalR do ASP.NET** é uma biblioteca para adicionar a funcionalidade da web em tempo real aos seus aplicativos. Ela tira proveito de vários transportes, selecionar automaticamente o melhor considerando o cliente e transporte disponíveis melhor do servidor de transporte disponível. Ele aproveita **WebSocket**, uma API de HTML5 que permite a comunicação bidirecional entre o navegador e o servidor.
 > 
@@ -34,8 +34,7 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > 
 > ![Arquitetura do SignalR](real-time-web-applications-with-signalr/_static/image1.png)
 > 
-> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
+> Todo o código de exemplo e trechos de código são incluídos no Kit de treinamento do Web Camps, outubro de 2015 liberar, disponível em [ https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b ](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b).  Observe que o link do instalador nessa página não funciona; Use um dos links na seção de ativos.
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Visão geral
@@ -77,7 +76,7 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 > Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Exercícios
@@ -177,7 +176,7 @@ Nesta tarefa, você adicionar o SignalR para a solução e enviar atualizações
     ![Adicionar novo item](real-time-web-applications-with-signalr/_static/image11.png "adicionar novo item")
 
     *Adicionar novo item*
-6. No **Adicionar Novo Item** caixa de diálogo, selecione o **Visual C# | Web | O SignalR** nó no painel esquerdo, selecione **classe de Hub do SignalR (v2)** do painel central, nomeie o arquivo **StatisticsHub.cs** e clique em **Add**.
+6. No **Adicionar Novo Item** caixa de diálogo, selecione o **Visual c# | Web | O SignalR** nó no painel esquerdo, selecione **classe de Hub do SignalR (v2)** do painel central, nomeie o arquivo **StatisticsHub.cs** e clique em **Add**.
 
     ![Caixa de diálogo Adicionar novo item](real-time-web-applications-with-signalr/_static/image12.png "caixa de diálogo Adicionar novo item")
 
@@ -394,7 +393,7 @@ Nesta tarefa, você configurará **Pau teste** para se conectar ao backplane do 
 
     *Tabela de mensagens do backplane*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo

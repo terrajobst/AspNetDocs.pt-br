@@ -8,15 +8,15 @@ ms.date: 02/14/2014
 ms.assetid: 961e525b-7700-469e-8a68-d7010b6fb68c
 msc.legacyurl: /web-pages/overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website
 msc.type: authoredcontent
-ms.openlocfilehash: ede341e02869a9c81cbe2fa7ef97345dc87519a1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 10b853966ba80b673e1a6786987893f919369e7a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412899"
 ---
-<a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>Cache de dados em um Site do ASP.NET Web Pages (Razor) para melhorar o desempenho
-====================
+# <a name="caching-data-in-an-aspnet-web-pages-razor-site-for-better-performance"></a>Cache de dados em um Site do ASP.NET Web Pages (Razor) para melhorar o desempenho
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este artigo explica como usar um auxiliar de informações em cache para melhorar o desempenho em um site de páginas da Web do ASP.NET (Razor). Você pode acelerar o seu site, fazendo com que ele armazenar &#8212; ou seja, armazenar em cache &#8212; dos resultados de dados que normalmente levaria um tempo considerável para recuperar ou processar e que não é alterada com frequência.
@@ -79,5 +79,5 @@ O ASP.NET inclui um `WebCache` auxiliar que torna mais fácil adicionar cache ao
 ## <a name="additional-resources"></a>Recursos adicionais
 
 
-- [Exibindo dados em um gráfico](https://go.microsoft.com/fwlink/?LinkId=202895)
+- [Exibir dados em um gráfico](https://go.microsoft.com/fwlink/?LinkId=202895)
 - [Referência da API do WebCache](https://msdn.microsoft.com/library/system.web.helpers.webcache(v=vs.99).aspx) (MSDN)

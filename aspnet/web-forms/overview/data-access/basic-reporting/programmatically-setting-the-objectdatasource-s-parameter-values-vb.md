@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 0ecb03b6-52a0-4731-8c7a-436391d36838
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/programmatically-setting-the-objectdatasource-s-parameter-values-vb
 msc.type: authoredcontent
-ms.openlocfilehash: f823d1db7f98dcbbef12d20df4a28e39fae0ac26
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0f5c5d4530092cced02834161ae91d840f42de1b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59420725"
 ---
-<a name="programmatically-setting-the-objectdatasources-parameter-values-vb"></a>Configurar programaticamente os valores do parâmetro ObjectDataSource (VB)
-====================
+# <a name="programmatically-setting-the-objectdatasources-parameter-values-vb"></a>Configurar programaticamente os valores do parâmetro ObjectDataSource (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_6_VB.exe) ou [baixar PDF](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/datatutorial06vb1.pdf)
@@ -33,7 +33,7 @@ Pode haver ocasiões, no entanto, quando o valor do parâmetro trata de alguma o
 Sempre que o ObjectDataSource `Select` método é invocado pela primeira vez dispara o ObjectDataSource seus [evento Selecting](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.selecting%28VS.80%29.aspx). Método do objeto subjacente do ObjectDataSource, em seguida, é invocado. Depois de concluído o ObjectDataSource [eventos selecionados](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.selected%28VS.80%29.aspx) é acionado (Figura 1 ilustra essa sequência de eventos). Os valores de parâmetro passados para o método do objeto subjacente do ObjectDataSource podem ser definidos ou personalizados em um manipulador de eventos para o `Selecting` eventos.
 
 
-[![O ObjectDataSource Selected e selecionando incêndio de eventos antes e do depois de seu objeto subjacente método é invocado](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image2.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image1.png)
+[![Té invocado do ObjectDataSource he Selected e selecionando incêndio de eventos antes e do depois de seu objeto subjacente método](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image2.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image1.png)
 
 **Figura 1**: O ObjectDataSource `Selected` e `Selecting` acionar eventos antes e do depois de seu objeto subjacente método é invocado ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image3.png))
 
@@ -47,7 +47,7 @@ Vamos começar!
 Para nosso primeiro exemplo, precisamos adicionar um meio para recuperar os funcionários cujo `HireDate` ocorreu em um mês especificado. Para fornecer essa funcionalidade de acordo com nossa arquitetura é necessário primeiro criar um método em `EmployeesTableAdapter` que é mapeado para a instrução SQL adequada. Para fazer isso, comece abrindo o conjunto de dados tipados do Northwind. Clique com botão direito no `EmployeesTableAdapter` de rótulo e escolha Add Query.
 
 
-[![Adicionar uma nova consulta para o EmployeesTableAdapter](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image5.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image4.png)
+[![Add uma nova consulta para o EmployeesTableAdapter](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image5.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image4.png)
 
 **Figura 2**: Adicionar uma nova consulta para o `EmployeesTableAdapter` ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image6.png))
 
@@ -55,7 +55,7 @@ Para nosso primeiro exemplo, precisamos adicionar um meio para recuperar os func
 Escolha esta opção Adicionar uma instrução SQL que retorna linhas. Quando você chegar a especificar uma `SELECT` o padrão de tela da instrução `SELECT` instrução para o `EmployeesTableAdapter` já será carregado. Basta adicionar na `WHERE` cláusula: `WHERE DATEPART(m, HireDate) = @Month`. [DATEPART](https://msdn.microsoft.com/library/ms174420.aspx) é uma função T-SQL que retorna uma parte de data específica de um `datetime` tipo; nesse caso, estamos usando `DATEPART` para retornar o mês do `HireDate` coluna.
 
 
-[![Retorno apenas aquelas linhas onde a coluna HireDate é menor ou igual ao @HiredBeforeDate parâmetro](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image8.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image7.png)
+[![Roltar apenas aquelas linhas onde a coluna HireDate é menor ou igual ao @HiredBeforeDate parâmetro](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image8.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image7.png)
 
 **Figura 3**: Retornar apenas as linhas onde a `HireDate` coluna for menor ou igual de `@HiredBeforeDate` parâmetro ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image9.png))
 
@@ -63,7 +63,7 @@ Escolha esta opção Adicionar uma instrução SQL que retorna linhas. Quando vo
 Por fim, altere o `FillBy` e `GetDataBy` nomes de método para `FillByHiredDateMonth` e `GetEmployeesByHiredDateMonth`, respectivamente.
 
 
-[![Escolha nomes mais apropriados do método que FillBy e GetDataBy](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image11.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image10.png)
+[![Cescolher o modo mais apropriado método nomes que FillBy e GetDataBy](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image11.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image10.png)
 
 **Figura 4**: Escolha mais apropriada método nomes que `FillBy` e `GetDataBy` ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image12.png))
 
@@ -71,7 +71,7 @@ Por fim, altere o `FillBy` e `GetDataBy` nomes de método para `FillByHiredDateM
 Clique em Concluir para concluir o assistente e retornar à superfície de design do conjunto de dados. O `EmployeesTableAdapter` agora deve incluir um novo conjunto de métodos para acessar o employees contratados em um mês especificado.
 
 
-[![Os novos métodos aparecem na superfície de Design do conjunto de dados](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image14.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image13.png)
+[![Tele novos métodos aparecem na superfície de Design do conjunto de dados](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image14.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image13.png)
 
 **Figura 5**: Os novos métodos aparecem na superfície de Design do conjunto de dados ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image15.png))
 
@@ -90,12 +90,12 @@ Assim como acontece com nossos outros métodos nessa classe, `GetEmployeesByHire
 A etapa final para este exemplo é exibir esses funcionários cuja data de contratação especial é este mês. Comece adicionando um GridView para o `ProgrammaticParams.aspx` página o `BasicReporting` pasta e adicione um novo ObjectDataSource como sua fonte de dados. Configurar o ObjectDataSource para usar o `EmployeesBLL` classe com o `SelectMethod` definido como `GetEmployeesByHiredDateMonth(month)`.
 
 
-[![Use a classe EmployeesBLL](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image17.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image16.png)
+[![USe a classe EmployeesBLL](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image17.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image16.png)
 
 **Figura 6**: Use o `EmployeesBLL` classe ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image18.png))
 
 
-[![Selecione de GetEmployeesByHiredDateMonth(month) o método](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image20.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image19.png)
+[![SEscolha o GetEmployeesByHiredDateMonth(month) do método](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image20.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image19.png)
 
 **Figura 7**: Select From a `GetEmployeesByHiredDateMonth(month)` método ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image21.png))
 
@@ -103,7 +103,7 @@ A etapa final para este exemplo é exibir esses funcionários cuja data de contr
 A tela final pede que possamos fornecer os `month` origem do valor do parâmetro. Já que vamos definir esse valor por meio de programação, deixe a fonte de parâmetro definidos para o padrão nenhuma opção e clique em Concluir.
 
 
-[![Deixe o código-fonte do parâmetro definido como None](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image23.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image22.png)
+[![Leixar a fonte de parâmetro definido como None](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image23.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image22.png)
 
 **Figura 8**: Deixe a origem do parâmetro definido como None ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image24.png))
 
@@ -129,7 +129,7 @@ Todas as três abordagens adicionar um novo manipulador de eventos para o Object
 Ao visitar esta página por meio de um navegador, vemos que apenas um funcionário foi contratado neste mês (março) Laura Callahan, que tem sido a empresa desde 1994.
 
 
-[![Esses funcionários cujas datas especiais deste mês são mostrados](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image27.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image26.png)
+[![TMangueira os funcionários cujo aniversários deste mês são mostradas](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image27.png)](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image26.png)
 
 **Figura 10**: Os funcionários cujo aniversários deste mês são mostrados ([clique para exibir a imagem em tamanho normal](programmatically-setting-the-objectdatasource-s-parameter-values-vb/_static/image28.png))
 
@@ -151,4 +151,4 @@ Boa programação!
 Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi Hilton Giesenow. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Anterior](declarative-parameters-vb.md)
+> [Voltar](declarative-parameters-vb.md)

@@ -8,15 +8,15 @@ ms.date: 03/13/2008
 ms.assetid: 3c21fefc-6858-40e1-8307-22f68cbd0e31
 msc.legacyurl: /web-forms/videos/aspnet-ajax/use-aspnet-ajax-cascading-drop-down-control-to-access-a-database
 msc.type: video
-ms.openlocfilehash: aa81898f3277722150dd4f08cc343ca06ce37854
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: be8cc54920a7c74b162aac8a809d8eaf8f2be08e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59418099"
 ---
-<a name="use-aspnet-ajax-cascading-drop-down-control-to-access-a-database"></a>Usar o controle de lista suspensa em cascata do AJAX ASP.NET para acessar um banco de dados
-====================
+# <a name="use-aspnet-ajax-cascading-drop-down-control-to-access-a-database"></a>Usar o controle de lista suspensa em cascata do AJAX ASP.NET para acessar um banco de dados
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Este vídeo demonstra como ASP. DropDownList de padrão da rede pode se tornar habilitado para AJAX usando o extensor do controle CascadingDropDown do ASP.NET AJAX Control Toolkit. Você também verá como é fácil para um web form extrair dados de um banco de dados.

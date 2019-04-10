@@ -8,15 +8,15 @@ ms.date: 05/28/2015
 ms.assetid: b3a006a0-3ea2-4d45-b833-e20e3a3c0a1a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data
 msc.type: authoredcontent
-ms.openlocfilehash: 9158a1f53268daec6e6fbdf003dd73e1d62cc667
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57031243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412171"
 ---
-<a name="introducing-aspnet-web-pages---displaying-data"></a>Introdução ao ASP.NET Web Pages - exibindo dados
-====================
+# <a name="introducing-aspnet-web-pages---displaying-data"></a>Introdução ao ASP.NET Web Pages - exibindo dados
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial mostra como criar um banco de dados no WebMatrix e como exibir dados de banco de dados em uma página, quando você usa o ASP.NET Web Pages (Razor). Ele pressupõe que você tenha concluído a série por meio [Introdução à programação de páginas da Web do ASP.NET](../introducing-razor-syntax-c.md).
@@ -214,7 +214,7 @@ Nesse estágio, o banco de dados foi aberto, você já tem os dados você quer, 
 
 > [!TIP] 
 > 
-> **Linguagem de consulta estruturada (SQL)**
+> **Structured Query Language (SQL)**
 > 
 > SQL é uma linguagem que é usada na maioria dos bancos de dados relacionais para o gerenciamento de dados em um banco de dados. Ele inclui comandos que permitem que você recuperar dados e atualizá-lo e que permitem que você criar, modificar e gerenciar dados em tabelas de banco de dados. SQL é diferente de uma linguagem de programação (como c#). Com SQL, você informa o banco de dados que você deseja e trabalho do banco de dados é descobrir como obter os dados ou executar a tarefa. Aqui estão exemplos de alguns comandos SQL e o que fazer:
 > 
@@ -333,7 +333,7 @@ No próximo tutorial, você aprenderá como usar o código do Razor e c# para ob
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introdução a O ASP.NET que programa usando a sintaxe razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 
 > [!div class="step-by-step"]
 > [Anterior](intro-to-web-pages-programming.md)

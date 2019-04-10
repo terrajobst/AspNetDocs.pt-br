@@ -8,15 +8,15 @@ ms.date: 07/03/2013
 ms.assetid: 9594d644-66b6-4223-acdd-23e29a6e4c46
 msc.legacyurl: /signalr/overview/older-versions/signalr-performance
 msc.type: authoredcontent
-ms.openlocfilehash: 55e38762dbc7caf31989d65ebf70516a458cfb00
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 5f7415d0a4275a3864dc9eefb9588f17698147cd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412691"
 ---
-<a name="signalr-performance-signalr-1x"></a>Desempenho do SignalR (SignalR 1.x)
-====================
+# <a name="signalr-performance-signalr-1x"></a>Desempenho do SignalR (SignalR 1.x)
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -227,7 +227,7 @@ Os seguintes contadores de desempenho também podem ser útil no monitoramento d
 - TCPv6/conexões estabelecidas
 - TCPv4/conexões estabelecidas
 
-**Serviço Web**
+**Serviço da Web**
 
 - Web \ conexões atuais
 - Conexões de Service\Maximum da Web
@@ -243,6 +243,6 @@ Os seguintes contadores de desempenho também podem ser útil no monitoramento d
 
 Para obter mais informações sobre monitoramento e ajuste de desempenho do ASP.NET, consulte os tópicos a seguir:
 
-- [Visão geral do desempenho do ASP.NET](https://msdn.microsoft.com/library/cc668225(v=vs.100).aspx)
+- [Visão geral de desempenho do ASP.NET](https://msdn.microsoft.com/library/cc668225(v=vs.100).aspx)
 - [Uso de threads do ASP.NET no IIS 7.5, IIS 7.0 e IIS 6.0](https://blogs.msdn.com/b/tmarq/archive/2007/07/21/asp-net-thread-usage-on-iis-7-0-and-6-0.aspx)
 - [&lt;applicationPool&gt; (configurações da Web)](https://msdn.microsoft.com/library/dd560842.aspx)

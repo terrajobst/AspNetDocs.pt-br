@@ -8,15 +8,15 @@ ms.date: 07/09/2007
 ms.assetid: ab2eedbc-79b5-4b63-a1df-935940c1545b
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-enforce-coding-standards-with-code-analysis
 msc.type: video
-ms.openlocfilehash: 609f91090520cc36f312a68d63ba6d7356bb008d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1a9cf8ac7e8618dd3733080ba6a065e14f1cb68c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417137"
 ---
-<a name="how-do-i-enforce-coding-standards-with-code-analysis"></a>[Como fazer:] Impor padrões de codificação com a análise de código?
-====================
+# <a name="how-do-i-enforce-coding-standards-with-code-analysis"></a>[Como fazer:] Impor padrões de codificação com a análise de código?
+
 por [Chris Menegay](https://twitter.com/CMenegay)
 
 Com o Visual Studio Team System, você tem controle refinado sobre as regras de análise de código que se aplicam a projetos de biblioteca de classes, projetos de site e controle do código fonte. Neste vídeo, saiba como especificar os erros e avisos que serão aplicadas durante o projeto de código e compilações de check-ins e vemos como suprimir uma determinada regra da aplicação a um membro de classe específica. Com essa capacidade de configuração que você pode impor padrões de codificação para melhorar a qualidade do seu código, garantindo regras inaplicáveis obtém nunca sua maneira.

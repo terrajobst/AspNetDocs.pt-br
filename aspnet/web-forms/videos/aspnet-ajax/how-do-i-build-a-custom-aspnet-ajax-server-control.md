@@ -8,15 +8,15 @@ ms.date: 07/25/2007
 ms.assetid: 1165e0b4-2240-4dc2-aa94-ef6664c71a8c
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-do-i-build-a-custom-aspnet-ajax-server-control
 msc.type: video
-ms.openlocfilehash: ae685bc2b8a236729f86ead591874421e92a642a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4aec93a42f6766a043a5d672c9e084683b71076c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044423"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416240"
 ---
-<a name="how-do-i-build-a-custom-aspnet-ajax-server-control"></a>[Como fazer:] Criar um controle de servidor AJAX ASP.NET personalizados?
-====================
+# <a name="how-do-i-build-a-custom-aspnet-ajax-server-control"></a>[Como fazer:] Criar um controle de servidor AJAX ASP.NET personalizados?
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Saiba como criar um controle de servidor Web personalizado com a funcionalidade do AJAX ASP.NET usando as extensões do AJAX na biblioteca do Microsoft AJAX. Este vídeo percorre o código do lado do servidor .NET e o código de JavaScript do lado do cliente e fornece uma explicação sobre o conceito de 'protótipo'. O controle personalizado do AJAX ASP.NET, em seguida, pode ser usado em uma página. aspx como qualquer outro controle de servidor.

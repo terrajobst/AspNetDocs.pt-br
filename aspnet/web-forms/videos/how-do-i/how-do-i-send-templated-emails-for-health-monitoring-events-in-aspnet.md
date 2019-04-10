@@ -8,15 +8,15 @@ ms.date: 09/18/2008
 ms.assetid: 5c107c6e-9fb7-4206-bd3f-221cb0767f8a
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet
 msc.type: video
-ms.openlocfilehash: 0556fcde5489821b4d0b83b9de3410e25c9c5a15
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e7b929c6e186e59b43180e8f26cf0f8b4608328f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417982"
 ---
-<a name="how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet"></a>[Como fazer:] Enviar Emails de modelo de integridade para monitorar eventos no ASP.NET
-====================
+# <a name="how-do-i-send-templated-emails-for-health-monitoring-events-in-aspnet"></a>[Como fazer:] Enviar Emails de modelo de integridade para monitorar eventos no ASP.NET
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Neste vídeo, Chris Pels mostra como usar o TemplatedEmailWebEventProvider para enviar emails quando ocorrem eventos de monitoramento de integridade que utilizar um modelo para o conteúdo do email. Primeiro, consulte como configurar o &lt;provedor&gt; e &lt;regras&gt; elementos no arquivo Web. config para implementar o uso de email com modelo e associar uma evento com o provedor de email com modelo de monitoramento de integridade. Depois que o provedor de modelo estiver configurado, consulte como criar o modelo de email usando a página. aspx como padrão. Saiba quais informações estão disponíveis na classe MailEventNotificaitonInfo que é passada pelo TemplatedEmailWebEventProvider para a página. aspx do modelo. Veja como ele pode ser usado para incluir qualquer informação é apropriada no conteúdo do email. Por fim, exiba o site de teste que envia emails em resposta a eventos de monitoramento de integridade. Em seguida, exiba reais emails recebidos que contêm informações de evento baseadas no modelo de monitoramento de integridade.

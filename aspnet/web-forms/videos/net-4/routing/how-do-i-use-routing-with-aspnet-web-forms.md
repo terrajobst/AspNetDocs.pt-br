@@ -8,15 +8,15 @@ ms.date: 10/15/2010
 ms.assetid: a3ab6cd9-8f71-4b73-9336-21c0de078269
 msc.legacyurl: /web-forms/videos/net-4/routing/how-do-i-use-routing-with-aspnet-web-forms
 msc.type: video
-ms.openlocfilehash: b1bba2725f893032f49fa1d43dbc7348f2c21e6e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f5036d780ed4fd0dd8caabbf4badb39fd9ee2de3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417059"
 ---
-<a name="how-do-i-use-routing-with-aspnet-web-forms"></a>Como faço Usar o roteamento com Web Forms do ASP.NET?
-====================
+# <a name="how-do-i-use-routing-with-aspnet-web-forms"></a>Como faço Usar o roteamento com Web Forms do ASP.NET?
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Neste vídeo, Chris Pels mostra como implementar o roteamento para formulários da Web no ASP.NET 4. Primeiro, o conceito de uma URL de roteamento é comparado ao mapear a URL para um arquivo físico no site. Em seguida, uma rota de exemplo para uma URL é definida no global. asax aplicativo arquivos\_manipulador de eventos de início. A rota contém um valor com parâmetros que o usuário pode inserir na URL. Uma página de exemplo, em seguida, é criada e o valor do parâmetro de rota é extraído na página\_manipulador de eventos de carga. Em seguida, uma segunda rota é definida que tem vários parâmetros e as rotas para a mesma página como a rota inicial. A página\_manipulador de eventos de carga é expandido para extrair o valor do parâmetro de rota adicional e exibir informações diferentes, dependendo de quais valores foram passados para a página.

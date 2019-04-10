@@ -8,15 +8,15 @@ ms.date: 07/16/2014
 ms.assetid: 09e82351-816b-402d-acd1-0f9ac6901d16
 msc.legacyurl: /visual-studio/overview/2013/visual-studio-2013-web-tools
 msc.type: authoredcontent
-ms.openlocfilehash: 54d86de49bf61305b17fc80964723c518abd467b
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 874542305bd3f47066cfae595919285ed079aa53
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58423241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421063"
 ---
-<a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratório prático: Ferramentas da Web do Visual Studio 2013
-====================
+# <a name="hands-on-lab-visual-studio-2013-web-tools"></a>Laboratório prático: Ferramentas da Web do Visual Studio 2013
+
 por [Web Camps equipe](https://twitter.com/webcamps)
 
 [Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
@@ -74,7 +74,7 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 > Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
 
 
-* * *
+---
 
 <a id="Exercises"></a>
 ## <a name="exercises"></a>Exercícios
@@ -511,7 +511,7 @@ Com o Web Essentials 2013, folhas de estilo e páginas HTML produzem uma lista d
 
     *Player de áudio incluído na exibição*
 
-* * *
+---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo

@@ -8,15 +8,15 @@ ms.date: 06/29/2010
 ms.assetid: a408449b-4fc5-4659-8bb6-801404cfbd8f
 msc.legacyurl: /web-forms/videos/tailspin-spyworks/tailspin-spyworks-adding-items-to-the-shopping-cart
 msc.type: video
-ms.openlocfilehash: 0901cc3c7933ed1b935913c68c2121bb4fa02044
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: cf11d6bc886b5fd950d149e922b83021827cc350
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59417033"
 ---
-<a name="tailspin-spyworks---adding-items-to-the-shopping-cart"></a>Tailspin Spyworks – Adicionar itens ao carrinho de compras
-====================
+# <a name="tailspin-spyworks---adding-items-to-the-shopping-cart"></a>Tailspin Spyworks – Adicionar itens ao carrinho de compras
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner compila a adicionar à função de carrinho para o aplicativo de formulários da Web de exemplo Tailspin Spyworks.

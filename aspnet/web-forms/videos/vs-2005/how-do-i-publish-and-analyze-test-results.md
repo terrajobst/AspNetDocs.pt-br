@@ -8,15 +8,15 @@ ms.date: 07/16/2007
 ms.assetid: 9fb155e0-1379-482c-963d-af7dc0397d76
 msc.legacyurl: /web-forms/videos/vs-2005/how-do-i-publish-and-analyze-test-results
 msc.type: video
-ms.openlocfilehash: a575dd0af20bb1565606c93e5a189b7a3e35ff3d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 80289680e4d40ec903524d9f4752b71d13db790e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413497"
 ---
-<a name="how-do-i-publish-and-analyze-test-results"></a>[Como fazer:] Publicar e analisar resultados de teste?
-====================
+# <a name="how-do-i-publish-and-analyze-test-results"></a>[Como fazer:] Publicar e analisar resultados de teste?
+
 por [Chris Menegay](https://twitter.com/CMenegay)
 
 Visual Studio Team System permite que você as alterações do gráfico na qualidade do código do projeto conforme o andamento do projeto. Este vídeo fornece instruções sobre como publicar resultados de teste para o banco de dados de projeto do Team Foundation Server e associar os resultados com um número de compilação. Podemos ver que depois que os resultados são publicados podemos usar o Gerenciador de relatórios para exibir uma representação gráfica das alterações em nossos resultados de teste de compilação.

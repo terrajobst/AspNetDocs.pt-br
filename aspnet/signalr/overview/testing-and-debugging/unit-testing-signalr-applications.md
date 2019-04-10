@@ -8,15 +8,15 @@ ms.date: 06/10/2014
 ms.assetid: d1983524-e0d5-4ee6-9d87-1f552f7cb964
 msc.legacyurl: /signalr/overview/testing-and-debugging/unit-testing-signalr-applications
 msc.type: authoredcontent
-ms.openlocfilehash: cb4eb25aeedfe31ac2606de9fe7d280eb95ce2e6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1556e8275da446e285c88d1f850d072725de057b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57039283"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59415668"
 ---
-<a name="unit-testing-signalr-applications"></a>Teste de unidade em aplicativos do SignalR
-====================
+# <a name="unit-testing-signalr-applications"></a>Teste de unidade em aplicativos do SignalR
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -63,7 +63,7 @@ Nesta seção, você adicionará um teste de unidade para o aplicativo criado na
 3. Se você estiver usando a versão de download do aplicativo de Introdução, abra **Package Manager Console** e clique em **restaurar** para adicionar o pacote de SignalR ao projeto.
 
     ![Restaurar pacotes](unit-testing-signalr-applications/_static/image1.png)
-4. Adicione um projeto à solução para o teste de unidade. Sua solução no botão direito do mouse **Gerenciador de soluções** e selecione **Add**, **novo projeto...** . Sob o **C#** nó, selecione o **Windows** nó. Selecione **biblioteca de classes**. Nomeie o novo projeto **TestLibrary** e clique em **Okey**.
+4. Adicione um projeto à solução para o teste de unidade. Sua solução no botão direito do mouse **Gerenciador de soluções** e selecione **Add**, **novo projeto...** . Sob o **c#** nó, selecione o **Windows** nó. Selecione **biblioteca de classes**. Nomeie o novo projeto **TestLibrary** e clique em **Okey**.
 
     ![Criar a biblioteca de teste](unit-testing-signalr-applications/_static/image2.png)
 5. Adicione uma referência no projeto de biblioteca de teste ao projeto SignalRChat. Clique com botão direito do **TestLibrary** do projeto e selecione **Add**, **referência...** . Selecione o **projetos** nó sob o **solução** nó e verificação **SignalRChat**. Clique em **OK**.

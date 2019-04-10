@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-cs
-title: Criar e gerenciar funções (C#) | Microsoft Docs
+title: Criar e gerenciar funções (c#) | Microsoft Docs
 author: rick-anderson
 description: Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, vamos criar páginas da web para criar e excluir funções.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/24/2008
 ms.assetid: 113f10b3-a19a-471b-8ff6-db3c79ce8a91
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/creating-and-managing-roles-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 41cd8cef2582b730391e5221629e9bb35794c159
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3ee858cba449b0a8c8e693970a10ce0182e8c3da
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412392"
 ---
-<a name="creating-and-managing-roles-c"></a>Criar e gerenciar funções (C#)
-====================
+# <a name="creating-and-managing-roles-c"></a>Criar e gerenciar funções (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/CS.09.zip) ou [baixar PDF](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial09_CreatingRoles_cs.pdf)
@@ -48,7 +48,7 @@ Comece criando uma nova pasta no projeto chamado `Roles`. Em seguida, adicione q
 Neste ponto, Gerenciador de soluções do seu projeto deve ser semelhante à mostrada na Figura 1 de captura de tela.
 
 
-[![Quatro novas páginas foram adicionadas à pasta de funções](creating-and-managing-roles-cs/_static/image2.png)](creating-and-managing-roles-cs/_static/image1.png)
+[![Fnossas novas páginas foram adicionadas à pasta funções](creating-and-managing-roles-cs/_static/image2.png)](creating-and-managing-roles-cs/_static/image1.png)
 
 **Figura 1**: Quatro novas páginas foram adicionados para o `Roles` pasta ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-cs/_static/image3.png))
 
@@ -68,7 +68,7 @@ Por fim, vamos atualizar o mapa do site (`Web.sitemap`) para incluir essas novas
 Com o mapa de site atualizado, visite o site por meio de um navegador. Como mostra a Figura 2, a navegação à esquerda agora inclui itens para os tutoriais de funções.
 
 
-[![Quatro novas páginas foram adicionadas à pasta de funções](creating-and-managing-roles-cs/_static/image5.png)](creating-and-managing-roles-cs/_static/image4.png)
+[![Fnossas novas páginas foram adicionadas à pasta funções](creating-and-managing-roles-cs/_static/image5.png)](creating-and-managing-roles-cs/_static/image4.png)
 
 **Figura 2**: Quatro novas páginas foram adicionados para o `Roles` pasta ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-cs/_static/image6.png))
 
@@ -149,7 +149,7 @@ O código acima inicia atribuindo o nome da função cortado inserido na `RoleNa
 Vamos criar uma função chamada Administrators. Visite o `ManageRoles.aspx` através de um navegador, digite Administradores na caixa de texto (veja a Figura 3) e, em seguida, clique no botão Create Role.
 
 
-[![Criar uma função de administradores](creating-and-managing-roles-cs/_static/image8.png)](creating-and-managing-roles-cs/_static/image7.png)
+[![Ccriar uma função de administradores](creating-and-managing-roles-cs/_static/image8.png)](creating-and-managing-roles-cs/_static/image7.png)
 
 **Figura 3**: Criar uma função de administradores ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-cs/_static/image9.png))
 
@@ -157,7 +157,7 @@ Vamos criar uma função chamada Administrators. Visite o `ManageRoles.aspx` atr
 O que acontece? Ocorre um postback, mas não há nenhuma indicação visual que a função, na verdade, foi adicionado ao sistema. Atualizaremos esta página na etapa 5 para incluir comentários visuais. Por enquanto, no entanto, você pode verificar se a função foi criada, vá para o `SecurityTutorials.mdf` banco de dados e exibir os dados do `aspnet_Roles` tabela. Como mostra a Figura 4, o `aspnet_Roles` tabela contém um registro para as funções de administradores just-adicionado.
 
 
-[![A tabela aspnet_Roles tem uma linha para os administradores](creating-and-managing-roles-cs/_static/image11.png)](creating-and-managing-roles-cs/_static/image10.png)
+[![Tele aspnet_Roles tabela tem uma linha para os administradores](creating-and-managing-roles-cs/_static/image11.png)](creating-and-managing-roles-cs/_static/image10.png)
 
 **Figura 4**: O `aspnet_Roles` tabela tem uma linha para os administradores ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-cs/_static/image12.png))
 
@@ -175,7 +175,7 @@ O `Roles` da classe `GetAllRoles` método retorna todas as funções no sistema 
 Com esse código, visite a página por meio de um navegador. Como mostra a Figura 5, você deve ver uma grade com uma única coluna rotulada como o Item. A grade inclui uma linha para a função de administradores que adicionamos na etapa 4.
 
 
-[![O GridView exibe as funções em uma única coluna](creating-and-managing-roles-cs/_static/image14.png)](creating-and-managing-roles-cs/_static/image13.png)
+[![Tele GridView exibe as funções em uma única coluna](creating-and-managing-roles-cs/_static/image14.png)](creating-and-managing-roles-cs/_static/image13.png)
 
 **Figura 5**: O GridView exibe as funções em uma única coluna ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-cs/_static/image15.png))
 
@@ -203,7 +203,7 @@ Atualmente, o `RoleList` GridView está associado apenas à lista de funções q
 Agora quando o usuário adiciona uma nova função de `RoleList` GridView mostra a função adicionada apenas no postback, fornecer comentários visuais que a função foi criada com êxito. Para ilustrar isso, visite o `ManageRoles.aspx` página por meio de um navegador e adicionar uma função chamada supervisores. Ao clicar no botão Create Role, ocorrerá um postback e a grade será atualizada para incluir os administradores, bem como a nova função, os supervisores.
 
 
-[![A função de supervisores tem foi adicionado](creating-and-managing-roles-cs/_static/image17.png)](creating-and-managing-roles-cs/_static/image16.png)
+[![TFunção supervisores tem foram adicionados](creating-and-managing-roles-cs/_static/image17.png)](creating-and-managing-roles-cs/_static/image16.png)
 
 **Figura 6**: A função de supervisores tem foram adicionados ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-cs/_static/image18.png))
 
@@ -220,7 +220,7 @@ O `DeleteRole` método também gerará uma exceção se *roleName* é `null` ou 
 Vamos ampliar o GridView no `ManageRoles.aspx` para incluir a uma exclusão de botão que, quando clicado, exclui a função selecionada. Comece adicionando um botão Excluir ao GridView indo para a caixa de diálogo de campos e adicionar um botão Excluir, que está localizado sob a opção CommandField. Verifique a exclusão de coluna à extrema esquerda de botão e defina seu `DeleteText` propriedade à função de excluir.
 
 
-[![Adicionar um botão Excluir ao RoleList GridView](creating-and-managing-roles-cs/_static/image20.png)](creating-and-managing-roles-cs/_static/image19.png)
+[![Add um botão Excluir ao RoleList GridView](creating-and-managing-roles-cs/_static/image20.png)](creating-and-managing-roles-cs/_static/image19.png)
 
 **Figura 7**: Adicionar um botão Excluir para o `RoleList` GridView ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-cs/_static/image21.png))
 

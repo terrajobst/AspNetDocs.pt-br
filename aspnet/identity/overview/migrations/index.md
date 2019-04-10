@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/migrations/index
-title: Migrando para o ASP.NET Identity | Microsoft Docs
+title: Migrando para a identidade do ASP.NET - ASP.NET 4.x
 author: rick-anderson
 description: Migração para o ASP.NET Identity de outros provedores de associação
 ms.author: riande
 ms.date: 10/02/2013
+ms.custom: seoapril2019
 ms.assetid: 4a54fee1-d064-4d67-837a-87143a9205fd
 msc.legacyurl: /identity/overview/migrations
 msc.type: chapter
-ms.openlocfilehash: 27f5913631ed2fc12c53c7dcb027512c51c1a97d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 725e66b6fc926d2466469f8455a3a0b949988dc4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416162"
 ---
-<a name="migrating-to-aspnet-identity"></a>Migrando para o ASP.NET Identity
-====================
+# <a name="migrating-to-aspnet-identity"></a>Migrando para o ASP.NET Identity
+
 > Migração para o ASP.NET Identity de outros provedores de associação
 
 

@@ -1,25 +1,26 @@
 ---
 uid: web-api/overview/error-handling/web-api-global-error-handling
-title: Global tratamento de erro no ASP.NET Web API 2 | Microsoft Docs
+title: Global tratamento de erro no ASP.NET Web API 2 - ASP.NET 4.x
 author: davidmatson
-description: ''
+description: Uma visão geral global de tratamento de erro na API Web 2 ASP.NET para ASP.NET 4. x.
 ms.author: riande
 ms.date: 02/03/2014
+ms.custom: seoapril2019
 ms.assetid: bffd7863-f63b-4b23-a13c-372b5492e9fb
 msc.legacyurl: /web-api/overview/error-handling/web-api-global-error-handling
 msc.type: authoredcontent
-ms.openlocfilehash: 3e371760d2b34eb2be492e6ebbb33a5f9f7eff10
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7d9f4fb9909671d7c4c8ee2aa9285b0186c4b125
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59414368"
 ---
-<a name="global-error-handling-in-aspnet-web-api-2"></a>Global tratamento de erros em API Web ASP.NET 2
-====================
+# <a name="global-error-handling-in-aspnet-web-api-2"></a>Global tratamento de erros em API Web ASP.NET 2
+
 por [David Matson](https://github.com/davidmatson), [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-Hoje, há nenhuma maneira fácil na API da Web para fazer logon ou tratar erros globalmente. Algumas exceções não tratadas podem ser processadas por meio [filtros de exceção](exception-handling.md), mas há um número de casos que não é possível lidar com os filtros de exceção. Por exemplo:
+Este tópico fornece uma visão global de tratamento de erro na API Web 2 ASP.NET para ASP.NET 4. x. Hoje, há nenhuma maneira fácil na API da Web para fazer logon ou tratar erros globalmente. Algumas exceções não tratadas podem ser processadas por meio [filtros de exceção](exception-handling.md), mas há um número de casos que não é possível lidar com os filtros de exceção. Por exemplo:
 
 1. Exceções geradas por construtores de controlador.
 2. Exceções geradas por manipuladores de mensagens.

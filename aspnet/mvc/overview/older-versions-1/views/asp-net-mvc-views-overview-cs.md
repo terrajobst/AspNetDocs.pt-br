@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
-title: Exibições do ASP.NET MVC visão geral (C#) | Microsoft Docs
+title: Exibições do ASP.NET MVC visão geral (c#) | Microsoft Docs
 author: StephenWalther
 description: O que é um modo de exibição de MVC do ASP.NET e como ela difere de uma página HTML? Neste tutorial, Stephen Walther apresenta exibições e demonstra como você pode t...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 02/16/2008
 ms.assetid: 152ab1e5-aec2-4ea7-b8cc-27a24dd9acb8
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a8e64a99549584f150d64d909ac97210257b1147
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042963"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59421323"
 ---
-<a name="aspnet-mvc-views-overview-c"></a>Visão geral de exibições do ASP.NET MVC (C#)
-====================
+# <a name="aspnet-mvc-views-overview-c"></a>Visão geral de exibições do ASP.NET MVC (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > O que é um modo de exibição de MVC do ASP.NET e como ela difere de uma página HTML? Neste tutorial, Stephen Walther apresenta a modos de exibição e demonstra como você pode tirar proveito dos dados de exibição e auxiliares HTML dentro de um modo de exibição.
@@ -75,7 +75,7 @@ Um modo de exibição é um padrão de (documento HTML que pode conter scripts X
 
 Por exemplo, o modo de exibição na listagem 2 exibe a data e hora atuais.
 
-**Listing 2 - \Views\Home\Index.aspx**
+**Listagem 2 - \Views\Home\Index.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample2.aspx)]
 
@@ -83,7 +83,7 @@ Observe que o corpo da página HTML na listagem 2 contém o script a seguir:
 
 &lt;% Response.Write(DateTime.Now);%&gt;
 
-Você usa os delimitadores de script &lt;% e %&gt; para marcar o início e término de um script. Esse script é escrito em C#. Ele exibe a data e hora atuais, chamando o método Response para processar o conteúdo para o navegador. Os delimitadores de script &lt;% e %&gt; pode ser usado para executar uma ou mais instruções.
+Você usa os delimitadores de script &lt;% e %&gt; para marcar o início e término de um script. Esse script é escrito em c#. Ele exibe a data e hora atuais, chamando o método Response para processar o conteúdo para o navegador. Os delimitadores de script &lt;% e %&gt; pode ser usado para executar uma ou mais instruções.
 
 Uma vez que você chama Response com tanta frequência, Microsoft fornece um atalho para chamar o método Response. O modo de exibição na listagem 3 usa os delimitadores &lt;% = e %&gt; como um atalho para a chamada de Response.
 
@@ -99,12 +99,12 @@ Para tornar mais fácil de adicionar conteúdo a um modo de exibição, você po
 
 Por exemplo, a exibição na listagem 4 tira proveito dos três auxiliares de HTML – auxiliares BeginForm(), TextBox() e Password() – para gerar um logon do formam (veja a Figura 1).
 
-**Listing 4 -- \Views\Home\Login.aspx**
+**Listagem 4 – \Views\Home\Login.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
 
-[![A caixa de diálogo Novo projeto](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
+[![Tcaixa de diálogo Novo projeto he](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figura 01**: Um formulário de logon padrão ([clique para exibir a imagem em tamanho normal](asp-net-mvc-views-overview-cs/_static/image2.png))
 

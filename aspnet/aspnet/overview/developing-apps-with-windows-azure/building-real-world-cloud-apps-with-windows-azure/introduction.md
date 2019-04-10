@@ -8,15 +8,15 @@ ms.date: 06/12/2014
 ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: c496e93d7517bc187514d5fa2dfa90d29c5f47f9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: bf9cf1f5be22a5b97ec964277c11ae21066676f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59412405"
 ---
-<a name="building-real-world-cloud-apps-with-azure"></a>Criando aplicativos de nuvem do mundo Real com o Azure
-====================
+# <a name="building-real-world-cloud-apps-with-azure"></a>Criando aplicativos de nuvem do mundo Real com o Azure
+
 por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
@@ -100,7 +100,7 @@ Este livro eletrônico explica que treze recomendado padrões para desenvolvimen
     - Habilitar a alta disponibilidade e melhorar a escalabilidade aliando livremente as camadas web e de trabalho.
     - Demo: Filas de armazenamento do Azure no aplicativo corrigi-lo.
 - [Mais orientações e padrões de aplicativo de nuvem](more-patterns-and-guidance.md).
-- [Apêndice: A correção do exemplo de aplicativo](the-fix-it-sample-application.md)
+- [Apêndice: O aplicativo de exemplo Fix It](the-fix-it-sample-application.md)
 
     - Problemas Conhecidos
     - Práticas recomendadas

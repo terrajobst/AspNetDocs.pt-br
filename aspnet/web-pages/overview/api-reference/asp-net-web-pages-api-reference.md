@@ -8,15 +8,15 @@ ms.date: 02/10/2014
 ms.assetid: 4001cb9b-3bfd-4ace-8a89-1561d8421e2c
 msc.legacyurl: /web-pages/overview/api-reference/asp-net-web-pages-api-reference
 msc.type: authoredcontent
-ms.openlocfilehash: 656987f8a725f81dbca7a72594d7d03bc542fabe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 547b1932c4f8d3684c668561e3fe568a0f272925
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416500"
 ---
-<a name="aspnet-web-pages-razor-api-quick-reference"></a>Referência rápida da API de (Razor) de páginas da Web ASP.NET
-====================
+# <a name="aspnet-web-pages-razor-api-quick-reference"></a>Referência rápida da API de (Razor) de páginas da Web ASP.NET
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Esta página contém uma lista com breves exemplos de como os objetos mais usados, propriedades e métodos para a programação de páginas da Web ASP.NET com sintaxe do Razor.
@@ -689,7 +689,7 @@ Envia uma mensagem de email.
 
 ### `WebMail.SmtpServer`
 
-Define o nome do servidor SMTP. Normalmente você definir essa propriedade<em>\_AppStart</em> página.
+Define o nome do servidor SMTP. Normalmente você definir essa propriedade  *\_AppStart* página.
 
 [!code-html[Main](asp-net-web-pages-api-reference/samples/sample105.html)]
 

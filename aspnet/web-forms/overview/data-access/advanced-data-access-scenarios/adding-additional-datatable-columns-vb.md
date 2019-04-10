@@ -8,15 +8,15 @@ ms.date: 07/18/2007
 ms.assetid: 1e8e65f9-fe3e-4250-810b-c90227786bed
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/adding-additional-datatable-columns-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 75b5a1e1d6beb00079d754601860d0c25bc8a23e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 985e052abbe1065ba2d6816911f686cb61c85a6d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57062743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59416461"
 ---
-<a name="adding-additional-datatable-columns-vb"></a>Adicionar mais colunas DataTable (VB)
-====================
+# <a name="adding-additional-datatable-columns-vb"></a>Adicionar mais colunas DataTable (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_70_VB.zip) ou [baixar PDF](adding-additional-datatable-columns-vb/_static/datatutorial70vb1.pdf)
@@ -49,7 +49,7 @@ Para este tutorial, vamos s adicionar um método para o `ProductsTableAdapter` c
 Abra o `NorthwindWithSprocs` conjunto de dados e clique duas vezes no `ProductsDataTable`. Escolha Adicionar no menu de contexto e, em seguida, escolha a coluna.
 
 
-[![Adicionar uma nova coluna para o ProductsDataTable](adding-additional-datatable-columns-vb/_static/image2.png)](adding-additional-datatable-columns-vb/_static/image1.png)
+[![Add uma nova coluna para o ProductsDataTable](adding-additional-datatable-columns-vb/_static/image2.png)](adding-additional-datatable-columns-vb/_static/image1.png)
 
 **Figura 1**: Adicionar uma nova coluna para o `ProductsDataTable` ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image3.png))
 
@@ -57,7 +57,7 @@ Abra o `NorthwindWithSprocs` conjunto de dados e clique duas vezes no `ProductsD
 Isso adicionará uma nova coluna à DataTable chamado Column1 do tipo `System.String`. Precisamos atualizar esse nome de coluna s PriceQuartile e seu tipo como `System.Int32` , pois ele será usado para manter um número entre 1 e 4. Selecione a coluna recentemente adicionada na `ProductsDataTable` e, na janela Propriedades, defina a `Name` propriedade PriceQuartile e o `DataType` propriedade `System.Int32`.
 
 
-[![Definir as propriedades de tipo de dados e o nome da nova coluna s](adding-additional-datatable-columns-vb/_static/image5.png)](adding-additional-datatable-columns-vb/_static/image4.png)
+[![SET o nome da nova coluna s e propriedades de tipo de dados](adding-additional-datatable-columns-vb/_static/image5.png)](adding-additional-datatable-columns-vb/_static/image4.png)
 
 **Figura 2**: Definir a nova coluna s `Name` e `DataType` propriedades ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image6.png))
 
@@ -69,7 +69,7 @@ Como mostra a Figura 2, há propriedades adicionais que podem ser definidas, com
 Agora que o `ProductsDataTable` foi atualizado para incluir os `PriceQuartile` coluna, estamos prontos para criar o `GetProductsWithPriceQuartile` método. Inicie o botão direito do mouse no TableAdapter e selecionando Add Query no menu de contexto. Isso abre o Assistente de configuração de consulta do TableAdapter, que primeiro solicita sobre se desejamos usar instruções SQL ad hoc ou um procedimento armazenado de novo ou existente. Já que estamos don t ainda tem um procedimento armazenado que retorna os dados de preço quartil, permitem que s permitem que o TableAdapter criar esse procedimento armazenado para nós. Selecione a opção de procedimento armazenado criar novo e clique em Avançar.
 
 
-[![Instruir o Assistente para criar o procedimento armazenado para que possamos TableAdapter](adding-additional-datatable-columns-vb/_static/image8.png)](adding-additional-datatable-columns-vb/_static/image7.png)
+[![ITableAdapter Assistente para criar o armazenado procedimento para nós de NStruct](adding-additional-datatable-columns-vb/_static/image8.png)](adding-additional-datatable-columns-vb/_static/image7.png)
 
 **Figura 3**: Instruir o Assistente para criar o armazenado procedimento para nós TableAdapter ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image9.png))
 
@@ -77,7 +77,7 @@ Agora que o `ProductsDataTable` foi atualizado para incluir os `PriceQuartile` c
 A tela subsequente, mostrada na Figura 4, o assistente solicita a nós que tipo de consulta para adicionar. Uma vez que o `GetProductsWithPriceQuartile` método retornará todas as colunas e registros da `Products` da tabela, selecione SELECT que retorna linhas de opção e clique em Avançar.
 
 
-[![Nossa consulta será uma instrução SELECT que retorna várias linhas](adding-additional-datatable-columns-vb/_static/image11.png)](adding-additional-datatable-columns-vb/_static/image10.png)
+[![Osua consulta será uma instrução SELECT que retorna várias linhas](adding-additional-datatable-columns-vb/_static/image11.png)](adding-additional-datatable-columns-vb/_static/image10.png)
 
 **Figura 4**: Nossa consulta será um `SELECT` instrução que retorna várias linhas ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image12.png))
 
@@ -98,7 +98,7 @@ Infelizmente, o construtor de consultas não sabem como analisar o `OVER` palavr
 Depois de inserir o `SELECT` consulta e clique em Avançar, o assistente solicita que possamos fornecer um nome para o procedimento armazenado será criado. Nomeie o novo procedimento armazenado `Products_SelectWithPriceQuartile` e clique em Avançar.
 
 
-[![Nome do procedimento armazenado Products_SelectWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image14.png)](adding-additional-datatable-columns-vb/_static/image13.png)
+[![No Products_SelectWithPriceQuartile de procedimento armazenado de AME](adding-additional-datatable-columns-vb/_static/image14.png)](adding-additional-datatable-columns-vb/_static/image13.png)
 
 **Figura 5**: Nomeie o procedimento armazenado `Products_SelectWithPriceQuartile` ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image15.png))
 
@@ -106,7 +106,7 @@ Depois de inserir o `SELECT` consulta e clique em Avançar, o assistente solicit
 Por fim, podemos serão solicitados a nomear os métodos do TableAdapter. Deixe os dois o preenchimento uma DataTable e retornar uma DataTable de caixas de seleção marcadas e o nome os métodos `FillWithPriceQuartile` e `GetProductsWithPriceQuartile`.
 
 
-[![Os métodos TableAdapter s de nome e clique em Concluir](adding-additional-datatable-columns-vb/_static/image17.png)](adding-additional-datatable-columns-vb/_static/image16.png)
+[![NClique em Concluir e métodos de ome TableAdapter s](adding-additional-datatable-columns-vb/_static/image17.png)](adding-additional-datatable-columns-vb/_static/image16.png)
 
 **Figura 6**: Nomeie os métodos do TableAdapter s e clique em Concluir ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image18.png))
 
@@ -121,7 +121,7 @@ Depois de concluir o assistente, o TableAdapter deve incluir a `FillWithPriceQua
 **Figura 7**: Verifique se que foi adicionado um novo método ao TableAdapter
 
 
-[![Certifique-se de que o banco de dados contém o Products_SelectWithPriceQuartile procedimento armazenado](adding-additional-datatable-columns-vb/_static/image21.png)](adding-additional-datatable-columns-vb/_static/image20.png)
+[![Ensure que o banco de dados contém o procedimento armazenado de Products_SelectWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image21.png)](adding-additional-datatable-columns-vb/_static/image20.png)
 
 **Figura 8**: Certifique-se de que o banco de dados que contém o `Products_SelectWithPriceQuartile` procedimento armazenado ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image22.png))
 
@@ -155,7 +155,7 @@ Com a adição de BLL conclua, está pronto para criar uma página ASP.NET que m
 **Figura 9**: Configurar o ObjectDataSource para usar o `ProductsBLLWithSprocs` classe ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image25.png))
 
 
-[![Recuperar informações de produto do método GetProductsWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image27.png)](adding-additional-datatable-columns-vb/_static/image26.png)
+[![Recuperar informações sobre o produto do método GetProductsWithPriceQuartile](adding-additional-datatable-columns-vb/_static/image27.png)](adding-additional-datatable-columns-vb/_static/image26.png)
 
 **Figura 10**: Recuperar informações de produto a `GetProductsWithPriceQuartile` método ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image28.png))
 
@@ -172,12 +172,12 @@ Após essas modificações, GridView e ObjectDataSource s marcação declarativa
 Figura 11 mostra essa página quando acessadas por meio de um navegador. Observe que, inicialmente, os produtos são ordenados por seu preço em ordem decrescente com cada produto atribuído apropriado `PriceQuartile` valor. É claro esses dados podem ser classificados por outros critérios com o valor da coluna preço quartil ainda refletindo a classificação de produto s em relação ao preço (veja a Figura 12).
 
 
-[![Os produtos são ordenados por seus preços](adding-additional-datatable-columns-vb/_static/image30.png)](adding-additional-datatable-columns-vb/_static/image29.png)
+[![TProdutos he são ordenados por seus preços](adding-additional-datatable-columns-vb/_static/image30.png)](adding-additional-datatable-columns-vb/_static/image29.png)
 
 **Figura 11**: Os produtos são ordenados por seus preços ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image31.png))
 
 
-[![Os produtos são ordenados por seus nomes](adding-additional-datatable-columns-vb/_static/image33.png)](adding-additional-datatable-columns-vb/_static/image32.png)
+[![TProdutos he são ordenados por seus nomes](adding-additional-datatable-columns-vb/_static/image33.png)](adding-additional-datatable-columns-vb/_static/image32.png)
 
 **Figura 12**: Os produtos são ordenados por seus nomes ([clique para exibir a imagem em tamanho normal](adding-additional-datatable-columns-vb/_static/image34.png))
 

@@ -8,15 +8,15 @@ ms.date: 02/17/2014
 ms.assetid: e158bed7-226f-4275-b02e-7553bd58c669
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/18-customizing-site-wide-behavior
 msc.type: authoredcontent
-ms.openlocfilehash: ca7c241d6e4d1e4baa581faf2bda4ed275b4e785
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2763cae0f8124cfcaccfd737622cb17b6dd947e1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030943"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59413289"
 ---
-<a name="customizing-site-wide-behavior-for-aspnet-web-pages-razor-sites"></a>Personalizando o comportamento de todo o Site para Sites do ASP.NET Web Pages (Razor)
-====================
+# <a name="customizing-site-wide-behavior-for-aspnet-web-pages-razor-sites"></a>Personalizando o comportamento de todo o Site para Sites do ASP.NET Web Pages (Razor)
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este artigo explica como fazer configurações de site lado para páginas em um site de páginas da Web do ASP.NET (Razor).
