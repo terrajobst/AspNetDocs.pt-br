@@ -2,26 +2,26 @@
 uid: web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb
 title: Controlar a nomenclatura de ID em páginas de conteúdo (VB) | Microsoft Docs
 author: rick-anderson
-description: Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindConrol)...
+description: Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindControl)...
 ms.author: riande
 ms.date: 06/10/2008
 ms.assetid: dbb024a6-f043-4fc5-ad66-56556711875b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6e9a751538ca28250e4e776ff2c6c3f0185ffbe6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: dd60d02c2c3840edd4c0e1244623fcea0cb2db0b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386314"
 ---
-<a name="control-id-naming-in-content-pages-vb"></a>Controlar nomenclatura de ID em páginas de conteúdo (VB)
-====================
+# <a name="control-id-naming-in-content-pages-vb"></a>Controlar nomenclatura de ID em páginas de conteúdo (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_05_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_05_VB.pdf)
 
-> Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindConrol). Aborda esse problema e soluções alternativas. Também descreve como acessar programaticamente o valor de ClientID resultante.
+> Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindControl). Aborda esse problema e soluções alternativas. Também descreve como acessar programaticamente o valor de ClientID resultante.
 
 
 ## <a name="introduction"></a>Introdução
@@ -83,7 +83,7 @@ Neste ponto marcação declarativa do controle de conteúdo deve ser semelhante 
 Figura 3 mostra a página quando visualizado no designer do Visual Studio.
 
 
-[![A página inclui três controles da Web: uma caixa de texto, botão e Label](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
+[![The inclui três Web controles de página: uma caixa de texto, botão e Label](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
 
 **Figura 03**: Os página inclui três controles da Web: uma caixa de texto, botão e Label ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image5.png))
 
@@ -133,7 +133,7 @@ Embora a sintaxe usada para chamar o `FindControl` método difere ligeiramente n
 Depois de inserir esse código, visite o `IDIssues.aspx` página por meio de um navegador, insira sua idade e clique no botão "Enviar". Ao clicar no botão "Enviar" um `NullReferenceException` é gerado (consulte a Figura 5).
 
 
-[![Uma NullReferenceException é gerada](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
+[![A É acionado NullReferenceException](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
 
 **Figura 05**: Um `NullReferenceException` é gerado ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image9.png))
 
@@ -173,7 +173,7 @@ Felizmente, uma referência para a página mestra é acessível por meio de `Pag
 Neste momento, visitando a página por meio de um navegador, inserindo sua idade e clicando no botão "Enviar" exibe a mensagem no `Results` rotular, conforme o esperado.
 
 
-[![A idade do usuário é exibida no rótulo](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
+[![TIdade do usuário é exibida no rótulo](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
 
 **Figura 06**: A idade do usuário é exibida no rótulo ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image12.png))
 
@@ -187,7 +187,7 @@ Então, ter `Control.FindControl` pesquisar apenas *controle*de nomenclatura do 
 A boa notícia é que podemos criar nossos próprios `FindControl` método esse recursivamente procura todos os contêineres de nomenclatura. Na verdade, usando *métodos de extensão* podemos pode acrescentar uma `FindControlRecursive` método para o `Control` classe para acompanhar as existentes `FindControl` método.
 
 > [!NOTE]
-> Métodos de extensão são um recurso novo C# 3,0 e Visual Basic 9, quais são os idiomas que acompanham o .NET Framework versão 3.5 e o Visual Studio 2008. Em resumo, os métodos de extensão permitem que um desenvolvedor crie um novo método para um tipo de classe existente por meio de uma sintaxe especial. Para obter mais informações sobre este recurso útil, consulte meu artigo [estender funcionalidade do tipo Base com métodos de extensão](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
+> Métodos de extensão são um recurso novo c# 3,0 e Visual Basic 9, quais são os idiomas que acompanham o .NET Framework versão 3.5 e o Visual Studio 2008. Em resumo, os métodos de extensão permitem que um desenvolvedor crie um novo método para um tipo de classe existente por meio de uma sintaxe especial. Para obter mais informações sobre este recurso útil, consulte meu artigo [estender funcionalidade do tipo Base com métodos de extensão](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
 
 
 Para criar o método de extensão, adicione um novo arquivo para o `App_Code` pasta chamada `PageExtensionMethods.vb`. Adicionar um método de extensão denominado `FindControlRecursive` que usa como entrada uma `String` parâmetro chamado `controlID`. Para métodos de extensão funcione corretamente, é vital que a classe ser marcado como um `Module` e que os métodos de extensão ser prefixadas com o `<Extension()>` atributo. Além disso, todos os métodos de extensão devem aceitar como seu primeiro parâmetro um objeto do tipo ao qual o método de extensão se aplica.
@@ -200,7 +200,7 @@ Adicione o seguinte código para o `PageExtensionMethods.vb` arquivo para defini
 Com esse código funcionando, retornar para o `IDIssues.aspx` classe code-behind da página e comente atual `FindControl` chamadas de método. Substitua-as por chamadas para `Page.FindControlRecursive("controlID")`. O que é interessante sobre os métodos de extensão é que eles aparecem diretamente em listas de lista suspensa do IntelliSense. Como mostra a Figura 7, quando você digita `Page` e, em seguida, pressionar período, o `FindControlRecursive` método está incluído o IntelliSense lista suspensa, juntamente com os outros `Control` métodos de classe.
 
 
-[![Métodos de extensão são incluídos no IntelliSense suspensos](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
+[![EMétodos de xtensão são incluídos no IntelliSense suspensas](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
 
 **Figura 07**: Métodos de extensão são incluídos no IntelliSense suspensas ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image15.png))
 
@@ -211,7 +211,7 @@ Digite o seguinte código para o `SubmitButton_Click` manipulador de eventos e, 
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample13.vb)]
 
 > [!NOTE]
-> Como os métodos de extensão são novos para C# 3,0 e Visual Basic 9, se você estiver usando o Visual Studio 2005, é possível usar métodos de extensão. Em vez disso, você precisará implementar o `FindControlRecursive` método em uma classe auxiliar. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) tem um exemplo em sua postagem de blog, [páginas mestra do ASP.NET e `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
+> Como os métodos de extensão são novos para c# 3,0 e Visual Basic 9, se você estiver usando o Visual Studio 2005, é possível usar métodos de extensão. Em vez disso, você precisará implementar o `FindControlRecursive` método em uma classe auxiliar. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) tem um exemplo em sua postagem de blog, [páginas mestra do ASP.NET e `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
 
 
 ## <a name="step-4-using-the-correctidattribute-value-in-client-side-script"></a>Etapa 4: Usando o correto`id`valor no Script do lado do cliente do atributo

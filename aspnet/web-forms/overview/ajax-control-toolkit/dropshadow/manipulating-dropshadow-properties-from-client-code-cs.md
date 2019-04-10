@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: c83ca3e6-c0bf-4158-a166-40c1ab0f33da
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f751e2378621a6ab74f9f15fe51fd18bdd8b4070
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 3bf4b8fe85780135c821fbb7fcceefd326dce656
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57044333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381335"
 ---
-<a name="manipulating-dropshadow-properties-from-client-code-c"></a>Manipular propriedades de DropShadow através de código de cliente (C#)
-====================
+# <a name="manipulating-dropshadow-properties-from-client-code-c"></a>Manipular propriedades de DropShadow através de código de cliente (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow2.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow2CS.pdf)
@@ -55,7 +55,7 @@ A função JavaScript `changeOpacity()` , em seguida, deve primeiro localizar o 
 [!code-html[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample6.html)]
 
 
-[![A opacidade é alterada no lado do cliente](manipulating-dropshadow-properties-from-client-code-cs/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-cs/_static/image1.png)
+[![Topacidade he é alterada no lado do cliente](manipulating-dropshadow-properties-from-client-code-cs/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-cs/_static/image1.png)
 
 A opacidade é alterada no lado do cliente ([clique para exibir a imagem em tamanho normal](manipulating-dropshadow-properties-from-client-code-cs/_static/image3.png))
 

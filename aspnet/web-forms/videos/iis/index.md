@@ -8,23 +8,23 @@ ms.date: 10/05/2011
 ms.assetid: 0078ceb6-3447-4ce4-90c2-d0e013ebc000
 msc.legacyurl: /web-forms/videos/iis
 msc.type: chapter
-ms.openlocfilehash: febbe4e6cc00241246cb4a8d212bb86d1adccf23
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 883b5c3ad39922ddd51ea1d07b8d52d1c74d2153
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57020183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384286"
 ---
-<a name="general-iis-tips"></a>Dicas gerais de IIS
-====================
+# <a name="general-iis-tips"></a>Dicas gerais de IIS
+
 > Como configurar o IIS para trabalhar com aplicativos ASP.NET.
 
 
 - [Desenvolver e implantar em uma hospedagem compartilhada](developing-and-deploying-in-a-shared-hosting.md)
-- [Trabalhando com o administrador delegado do IIS7](working-with-iis7-deligated-admin.md)
+- [Trabalhar com o administrador delegado do IIS7](working-with-iis7-deligated-admin.md)
 - [Gerenciamento delegado específico de recurso](feature-specific-delegated-management.md)
 - [Solução de problemas de aplicativos do ASP.NET de produção](troubleshooting-production-aspnet-apps.md)
 - [Criação de um site com o gerenciador do IIS7](creating-a-site-with-iis7-manager.md)
-- [Instalando o FTP7](installing-ftp7.md)
+- [Instalação do FTP7](installing-ftp7.md)
 - [Limitação da taxa de bits](bit-rate-throttling.md)
 - [Listas de reprodução do IIS7](iis7-playlists.md)

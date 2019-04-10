@@ -1,19 +1,20 @@
 ---
 uid: identity/overview/getting-started/aspnet-identity-recommended-resources
-title: Recursos recomendados da identidade do ASP.NET | Microsoft Docs
+title: Identidade do ASP.NET recursos recomendados - ASP.NET 4.x
 author: Rick-Anderson
 description: Este tópico fornece links para recursos de documentação sobre como usar a identidade do ASP.NET. Se você souber que uma postagem de blog excelente, thread de stackoverflow ou qualquer outro lin...
 ms.author: riande
 ms.date: 04/09/2015
 ms.assetid: 0f78aec2-f509-46fa-b20f-d5208425d8ec
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-recommended-resources
 msc.type: authoredcontent
-ms.openlocfilehash: 14a8ec16fe741d87a23bfa45046386a2c08d2f27
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381894"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Recursos recomendados da Identidade do ASP.NET
 
@@ -58,7 +59,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 ## <a name="intermediate-aspnet-identity"></a>O ASP.NET Identity intermediário
 
 - [Confirmação de conta e recuperação de senha com o ASP.NET Identity](../features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
-- [Autenticação de dois fatores usando SMS e email com a Identidade do ASP.NET](../features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
+- [Autenticação de dois fatores usando SMS e email com o ASP.NET Identity](../features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 - [Migração de um site existente da Associação do SQL para a Identidade do ASP.NET](../migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md)
 - [Adição de Identidade do ASP.NET a um projeto vazio ou existente do Web Forms](adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
 - MSDN Magazine [autenticação externa com o ASP.NET Identity](https://msdn.microsoft.com/magazine/dn745860.aspx) por Dino Esposito

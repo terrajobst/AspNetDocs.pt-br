@@ -8,15 +8,15 @@ ms.date: 08/20/2015
 ms.assetid: f50a5cdb-c06a-46ed-aa14-fc5b049dc8dc
 msc.legacyurl: /mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: a422988f681273b153725d32bb8337deb25b12f1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 25d21efaf2f01ee1c162408a3caf699ac818aaa7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384949"
 ---
-<a name="aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication"></a>Aplicativo do ASP.NET MVC 5 com autenticação de dois fatores por SMS e email
-====================
+# <a name="aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication"></a>Aplicativo do ASP.NET MVC 5 com autenticação de dois fatores por SMS e email
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Este tutorial mostra como criar um aplicativo de web do ASP.NET MVC 5 com autenticação de dois fatores. Você deve concluir [criar um aplicativo de web do ASP.NET MVC 5 seguro com logon, redefinição de senha e de confirmação de email](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md) antes de continuar. Você pode baixar o aplicativo concluído [aqui](https://code.msdn.microsoft.com/MVC-5-with-2FA-email-8f26d952). O download contém os auxiliares de depuração que permitem que você teste confirmação por email e SMS sem configurar um email ou um provedor de SMS.

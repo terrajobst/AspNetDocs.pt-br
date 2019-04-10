@@ -8,15 +8,15 @@ ms.date: 07/30/2013
 ms.assetid: f81f3d80-3674-4d8e-a9b1-87feed1a93c9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: cfb01742c3921c24c71fd3fa4a14a9f71fac1ac1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 15bdaa588792c3cf4a8e6eee651e0675f959f942
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57063673"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382220"
 ---
-<a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Criando um modelo de dados mais complexo para um aplicativo ASP.NET MVC (4 de 10)
-====================
+# <a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Criando um modelo de dados mais complexo para um aplicativo ASP.NET MVC (4 de 10)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixe o projeto concluído](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
@@ -48,7 +48,7 @@ Na *Models\Student.cs*, adicione uma `using` instrução para o `System.Componen
 
 O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributo é usado para especificar um tipo de dados que é mais específico do que o tipo intrínseco de banco de dados. Nesse caso, apenas desejamos acompanhar a data, não a data e a hora. O [enumeração DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) fornece muitos tipos de dados, tais como *data, hora, PhoneNumber, moeda, EmailAddress* e muito mais. O atributo `DataType` também pode permitir que o aplicativo forneça automaticamente recursos específicos a um tipo. Por exemplo, uma `mailto:` link pode ser criado para [DataType.EmailAddress](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx), e um seletor de data pode ser fornecido para [DataType.Date](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) em navegadores que oferecem suporte a [HTML5](http://html5.org/). O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributos emite HTML 5 [dados -](http://ejohn.org/blog/html-5-data-attributes/) (pronuncia-se *dash dados*) atributos que navegadores HTML 5. O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributos não fornecem nenhuma validação.
 
-`DataType.Date` não especifica o formato da data exibida. Por padrão, o campo de dados é exibido de acordo com os formatos padrão com base no servidor do [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
+`DataType.Date` Especifica o formato da data que é exibido. Por padrão, o campo de dados é exibido de acordo com os formatos padrão com base no servidor do [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
 
 O atributo `DisplayFormat` é usado para especificar explicitamente o formato de data:
 
@@ -152,7 +152,7 @@ Você pode colocar vários atributos em uma única linha, portanto, você també
 
 ### <a name="the-fullname-calculated-property"></a>O FullName calculada de propriedade
 
-`FullName` é uma propriedade calculada que retorna um valor criado pela concatenação de duas outras propriedades. Portanto, ela tem apenas um `get` acessador e não `FullName` coluna será gerada no banco de dados.
+`FullName` é uma propriedade calculada que retorna um valor que é criado pela concatenação de duas outras propriedades. Portanto, ela tem apenas um `get` acessador e não `FullName` coluna será gerada no banco de dados.
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample11.cs)]
 
@@ -358,7 +358,7 @@ No PMC, insira o `add-migration` comando:
 
 Se você tentar atualizar o banco de dados neste momento, você obterá o seguinte erro:
 
-*A instrução ALTER TABLE entrou em conflito com a restrição FOREIGN KEY "FK\_dbo. Curso\_dbo. Departamento\_DepartmentID ". O conflito ocorreu no banco de dados "ContosoUniversity" tabela "dbo. Departamento", coluna 'DepartmentID'.*
+*A instrução ALTER TABLE entrou em conflito com a restrição FOREIGN KEY "FK\_dbo. Curso\_dbo. Departamento\_DepartmentID ". O conflito ocorreu no banco de dados "ContosoUniversity", tabela "dbo.Departamento", coluna 'DepartmentID'.*
 
 Editar o &lt; *timestamp&gt;\_Chap4.cs* de arquivo e faça as alterações de código a seguir (você adicionará uma instrução SQL e modificar um `AddColumn` instrução):
 
@@ -377,7 +377,7 @@ Depois de concluir a edição do &lt; *timestamp&gt;\_Chap4.cs* arquivo, insira 
 > 
 > [!code-xml[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample35.xml?highlight=1-2)]
 > 
->  Com um novo banco de dados, não há nenhum dado para migrar e o `update-database` comando é muito mais provável de ser concluído sem erros. Para obter instruções sobre como excluir o banco de dados, consulte [como descartar um banco de dados do Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
+> Com um novo banco de dados, não há nenhum dado para migrar e o `update-database` comando é muito mais provável de ser concluído sem erros. Para obter instruções sobre como excluir o banco de dados, consulte [como descartar um banco de dados do Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
 
 
 Abra o banco de dados **Gerenciador de servidores** como você fez anteriormente e expanda o **tabelas** nó para ver se todas as tabelas foram criadas. (Se você ainda tiver **Gerenciador de servidores** aberto do momento anterior, clique o **atualizar** botão.)

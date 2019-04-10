@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 4da43d77-f6c4-43a8-9124-f1e8e1c8f0a2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 81b0dbd794d31bc3c55bff4ba8110c590b88b509
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ee66e166d24bb80008671c84f6512d5c54707fcf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049933"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389804"
 ---
-<a name="using-multiple-popup-controls-vb"></a>Uso de vários controles pop-up (VB)
-====================
+# <a name="using-multiple-popup-controls-vb"></a>Uso de vários controles pop-up (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol1VB.pdf)
@@ -49,7 +49,7 @@ Agora estender cada uma das duas caixas de texto com um `PopupControlExtender`. 
 Agora sempre que você clica em um campo de texto, um calendário aparece abaixo do campo, permitindo que você selecione uma data. (Voltando a data selecionada nas caixas de texto será abordado em um tutorial diferente.)
 
 
-[![O calendário é exibido quando o usuário clica na caixa de texto](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
+[![Tele calendário é exibido quando o usuário clica na caixa de texto](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
 
 O calendário é exibido quando o usuário clica na caixa de texto ([clique para exibir a imagem em tamanho normal](using-multiple-popup-controls-vb/_static/image3.png))
 

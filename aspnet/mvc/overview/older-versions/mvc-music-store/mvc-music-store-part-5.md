@@ -8,15 +8,15 @@ ms.date: 04/21/2011
 ms.assetid: 6b09413a-6d6a-425a-87c9-629f91b91b28
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-5
 msc.type: authoredcontent
-ms.openlocfilehash: c1065dcb45b6d28672edba32b95c7fc476c8b944
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e02e15a8955fa42692fac486dadfa426540295f7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041693"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387460"
 ---
-<a name="part-5-edit-forms-and-templating"></a>Parte 5: Formulários de edição e modelagem
-====================
+# <a name="part-5-edit-forms-and-templating"></a>Parte 5: Formulários de edição e modelagem
+
 por [Jon Galloway](https://github.com/jongalloway)
 
 > A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  

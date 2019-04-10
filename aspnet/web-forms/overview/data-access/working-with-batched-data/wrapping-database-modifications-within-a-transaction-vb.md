@@ -8,15 +8,15 @@ ms.date: 06/26/2007
 ms.assetid: 7d821db5-6cbb-4b38-af14-198f9155fc82
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 986baf521bf68b60e9c868f070f31a3aee21db8d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2fc7ba3d62d41685c234756709707ff14f81b316
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380308"
 ---
-<a name="wrapping-database-modifications-within-a-transaction-vb"></a>Encapsulamento de modificações de banco de dados em uma transação (VB)
-====================
+# <a name="wrapping-database-modifications-within-a-transaction-vb"></a>Encapsulamento de modificações de banco de dados em uma transação (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_63_VB.zip) ou [baixar PDF](wrapping-database-modifications-within-a-transaction-vb/_static/datatutorial63vb1.pdf)
@@ -83,7 +83,7 @@ Antes de começarmos a explorar como incrementar a DAL para dar suporte a transa
 Assim como acontece com as outras pastas `Default.aspx` usará o `SectionLevelTutorialListing.ascx` controle de usuário para listar os tutoriais dentro da própria seção. Portanto, adicionar esse controle de usuário `Default.aspx` arrastando-no Gerenciador de soluções para a página de exibição de Design de s.
 
 
-[![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](wrapping-database-modifications-within-a-transaction-vb/_static/image2.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image1.png)
+[![Add o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](wrapping-database-modifications-within-a-transaction-vb/_static/image2.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image1.png)
 
 **Figura 2**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image2.png))
 
@@ -168,12 +168,12 @@ Para ilustrar o efeito que a transação tenha ao atualizar um lote de registros
 Comece abrindo o `Transactions.aspx` página o `BatchData` pasta e arraste um controle GridView na caixa de ferramentas para o Designer. Defina suas `ID` ao `Products` e, na marca inteligente, de associá-lo a um novo ObjectDataSource chamado `ProductsDataSource`. Configurar o ObjectDataSource para efetuar pull de seus dados a partir de `ProductsBLL` classe s `GetProducts` método. Isso será um GridView somente leitura, portanto, defina as listas suspensas na atualização, inserção e excluir guias como (nenhum) e clique em Concluir.
 
 
-[![Configurar o ObjectDataSource para usar o método de GetProducts ProductsBLL classe s](wrapping-database-modifications-within-a-transaction-vb/_static/image5.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image3.png)
+[![Configurar o ObjectDataSource para usar a classe ProductsBLL s GetProducts método](wrapping-database-modifications-within-a-transaction-vb/_static/image5.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image3.png)
 
 **Figura 5**: Configurar o ObjectDataSource para usar o `ProductsBLL` classe s `GetProducts` método ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image4.png))
 
 
-[![Definir as listas suspensas na atualização, inserção e excluir guias como (nenhum)](wrapping-database-modifications-within-a-transaction-vb/_static/image6.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image5.png)
+[![SET as listas suspensas no UPDATE, INSERT e DELETE guias como (nenhum)](wrapping-database-modifications-within-a-transaction-vb/_static/image6.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image5.png)
 
 **Figura 6**: Defina a lista suspensa no UPDATE, INSERT e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image6.png))
 
@@ -191,7 +191,7 @@ Em seguida, adicione três controles da Web de botão acima GridView. Defina o p
 Neste ponto, o modo de exibição de Design no Visual Studio deve ser semelhante à mostrada na Figura 7 de captura de tela.
 
 
-[![A página contém um GridView e três controles de Web de botão](wrapping-database-modifications-within-a-transaction-vb/_static/image7.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image7.png)
+[![Tele página contém um GridView e três controles de Web de botão](wrapping-database-modifications-within-a-transaction-vb/_static/image7.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image7.png)
 
 **Figura 7**: A página contém um GridView e três controles de Web de botão ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image8.png))
 
@@ -210,12 +210,12 @@ O terceiro `Click` manipulador de eventos atualiza os produtos `CategoryID` s da
 Para demonstrar esse comportamento, visite esta página por meio de um navegador. Inicialmente, você verá a primeira página de dados conforme mostrado na Figura 8. Em seguida, clique no botão Modificar categorias (com transação). Isso fará com que um postback-lo e tentar atualizar todos os produtos `CategoryID` valores, mas resultará em uma violação de restrição de chave estrangeira (consulte a Figura 9).
 
 
-[![Os produtos são exibidos em um GridView paginável](wrapping-database-modifications-within-a-transaction-vb/_static/image8.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image9.png)
+[![The produtos são exibidos em um GridView paginável](wrapping-database-modifications-within-a-transaction-vb/_static/image8.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image9.png)
 
 **Figura 8**: Os produtos são exibidos em um GridView paginável ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image10.png))
 
 
-[![Reatribuindo os resultados de categorias em uma violação de restrição de chave estrangeira](wrapping-database-modifications-within-a-transaction-vb/_static/image9.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image11.png)
+[![Ros resultados de categorias em uma violação de restrição de chave estrangeira de eassigning](wrapping-database-modifications-within-a-transaction-vb/_static/image9.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image11.png)
 
 **Figura 9**: Reatribuindo os resultados de categorias em uma violação de restrição de chave estrangeira ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image12.png))
 
@@ -225,7 +225,7 @@ Agora, pressione o botão de voltar do navegador s e, em seguida, clique no bot�
 Agora, tente clicar no botão Modificar categorias (sem transação). Isso resultará no mesmo erro de violação de restrição de chave estrangeira (consulte a Figura 9), mas desta vez, esses produtos cuja `CategoryID` valores foram alterados para um legal valor serão não será revertido. Pressione o botão de voltar do navegador s e, em seguida, no botão de atualização de grade. Como mostra a Figura 10, o `CategoryID` s os oito primeiros produtos foram reatribuídos. Por exemplo, na Figura 8, Chang tinha um `CategoryID` de 1, mas na Figura 10 it s foi reatribuída a 2.
 
 
-[![Alguns produtos CategoryID valores não pudessem ser atualizada enquanto outros foram](wrapping-database-modifications-within-a-transaction-vb/_static/image10.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image13.png)
+[![Some produtos CategoryID valores não pudessem ser atualizada enquanto outros foram](wrapping-database-modifications-within-a-transaction-vb/_static/image10.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image13.png)
 
 **Figura 10**: Alguns produtos `CategoryID` valores não pudessem ser atualizada enquanto outros eram ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image14.png))
 

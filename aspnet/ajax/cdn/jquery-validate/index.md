@@ -8,15 +8,15 @@ ms.date: 10/14/2017
 ms.assetid: a266cc44-f514-4913-9768-5b382380184d
 msc.legacyurl: /ajax/cdn/jquery-validate
 msc.type: folder
-ms.openlocfilehash: d7990cf52fedd10d09b1edcfb1dfb05df367a5eb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 83214b38d112707ef67ce94ff2757f1fc0f5f920
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389798"
 ---
-<a name="jquery-validate"></a>Validar jQuery 1.5.5
-====================
+# <a name="jquery-validate"></a>Validar jQuery 1.5.5
+
 - [jQuery Validation 1.17.0](cdnjqueryvalidate1170.md)
 - [Validação do jQuery 1.16.0](cdnjqueryvalidate1160.md)
 - [Validação do jQuery 1.15.1](cdnjqueryvalidate1151.md)

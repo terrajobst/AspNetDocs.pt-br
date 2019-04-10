@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 50223ee9-11b9-4cf3-bca2-e2f10bf471f3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: cada8d9aee649e4f2a5afc1ca2b46863ea458207
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 646aeb4ad99ba9b0ee114c6be4aa528e62ef4775
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056513"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389941"
 ---
-<a name="part-7-adding-features"></a>Parte 7: Adição de funcionalidades
-====================
+# <a name="part-7-adding-features"></a>Parte 7: Adição de funcionalidades
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks demonstra como incrivelmente simples é criar aplicativos avançados e escalonáveis para a plataforma .NET. Ele mostra como usar os novos recursos no ASP.NET 4 para criar uma loja online, incluindo as compras, check-out e administração.
@@ -41,11 +41,11 @@ Embora os usuários podem procurar nosso catálogo, colocar itens no carrinho de
 
 Na pasta "Conta", crie duas páginas. aspx um OrderList.aspx nomeado e a outros OrderDetails.aspx nomeado
 
-OrderList.aspx aproveitará os controles GridView e EntityDataSoure quanto temos anteriormente.
+OrderList.aspx aproveitará os controles GridView e EntityDataSource quanto temos anteriormente.
 
 [!code-aspx[Main](tailspin-spyworks-part-7/samples/sample1.aspx)]
 
-O EntityDataSoure seleciona os registros da tabela filtrada no nome de usuário (consulte o WhereParameter) que definimos em uma variável de sessão quando o log do usuário do dentro.
+O EntityDataSource seleciona os registros da tabela filtrada no nome de usuário (consulte o WhereParameter) que definimos em uma variável de sessão quando o log do usuário do dentro.
 
 Observe também esses parâmetros no HyperlinkField de GridView:
 
@@ -143,7 +143,7 @@ Observe também esta linha importante na parte superior da marcação do nosso c
 
 Uma vez que os itens mais populares não será alterada em uma base de minuto a minuto, podemos adicionar uma diretiva dor para melhorar o desempenho do nosso aplicativo. Essa diretiva fará com que o código de controles para ser executado apenas quando a saída do controle do cache expira. Caso contrário, a versão em cache de saída do controle será usada.
 
-Agora tudo o que precisamos fazer é incluir nosso novo controle na nossa página Default.aspc.
+Agora tudo o que precisamos fazer é incluir nosso novo controle na nossa página Default. aspx.
 
 Use arrastar e soltar para colocar uma instância do controle na coluna de nosso formulário de padrão aberta.
 

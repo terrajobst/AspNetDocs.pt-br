@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
-title: Impedindo ataques de injeção de JavaScript (C#) | Microsoft Docs
+title: Impedindo ataques de injeção de JavaScript (c#) | Microsoft Docs
 author: StephenWalther
 description: Impedir ataques de injeção de JavaScript e ataques de scripts entre sites está acontecendo para você. Neste tutorial, Stephen Walther explica como você pode facilmente de...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: d0136da6-81a4-4815-b002-baa84744c09e
 msc.legacyurl: /mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 77d0f0346e9eff756cd74c64c310918f3c367ab1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 2d954cbc001a62f021f942f1ff44522a2769f516
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029823"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389566"
 ---
-<a name="preventing-javascript-injection-attacks-c"></a>Impedir ataques de injeção de JavaScript (C#)
-====================
+# <a name="preventing-javascript-injection-attacks-c"></a>Impedir ataques de injeção de JavaScript (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 [Baixar PDF](http://download.microsoft.com/download/8/4/8/84843d8d-1575-426c-bcb5-9d0c42e51416/ASPNET_MVC_Tutorial_06_CS.pdf)
@@ -33,7 +33,7 @@ Sempre que você aceita a entrada do usuário e exibir novamente a entrada do us
 Imagine que você tenha criado um site de comentários do cliente (veja a Figura 1). Os clientes podem visitar o site e inserir comentários em sua experiência usando seus produtos. Quando um cliente envia seus comentários, comentários é exibida novamente na página de comentários.
 
 
-[![Site de comentários do cliente](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
+[![CSite de comentários do ustomer](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
 
 **Figura 01**: Site de comentários do cliente ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-cs/_static/image3.png))
 
@@ -65,7 +65,7 @@ Imagine que você insira o texto a seguir no formulário de comentários do clie
 Esse texto representa um script JavaScript que exibe uma caixa de mensagem de alerta. Depois que alguém envia esse script em comentários de formulário, a mensagem <em>Boo!</em> será exibida sempre que qualquer pessoa que visita o site de comentários do cliente no futuro (veja a Figura 2).
 
 
-[![Injeção de JavaScript](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
+[![JavaScript injeção](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
 
 **Figura 02**: Injeção de JavaScript ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-cs/_static/image6.png))
 
@@ -93,7 +93,7 @@ Observe que o valor de `feedback.Message` é codificado em HTML antes que o valo
 O que significa para o HTML codificar uma cadeia de caracteres? Quando o HTML codificar uma cadeia de caracteres, perigoso caracteres, como `<` e `>` são substituídos por referências a entidades, como HTML `&lt;` e `&gt;`. Portanto, quando a cadeia de caracteres `<script>alert("Boo!")</script>` é o HTML codificado, eles serão convertidos em `&lt;script&gt;alert(&quot;Boo!&quot;)&lt;/script&gt;`. A cadeia de caracteres codificada não executa como um script JavaScript quando interpretada por um navegador. Em vez disso, você obtém a página inofensiva na Figura 3.
 
 
-[![Ataque de JavaScript derrotada](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
+[![Defeated ataque JavaScript](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
 
 **Figura 03**: Anulou o ataque de JavaScript ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-cs/_static/image9.png))
 

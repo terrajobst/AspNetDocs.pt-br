@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: d3bc39a37cace003c3fda6691f0dd7f893128b07
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380217"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceitos básicos do ASP.NET MVC 4
 
@@ -125,7 +125,7 @@ Neste exercício, você aprenderá como criar um aplicativo ASP.NET MVC no Visua
 
 1. Nesta tarefa, você criará um projeto de aplicativo do ASP.NET MVC vazio usando o modelo MVC Visual Studio. Inicie **VS Express para Web**.
 2. No menu **Arquivo**, clique em **Novo Projeto**.
-3. No **novo projeto** caixa de diálogo, selecione o **aplicativo Web do ASP.NET MVC 4** tipo, localizado no projeto **Visual C#** **Web** modelo lista.
+3. No **novo projeto** caixa de diálogo, selecione o **aplicativo Web do ASP.NET MVC 4** tipo, localizado no projeto **Visual c#** **Web** modelo lista.
 4. Alterar o **nome** à *MvcMusicStore*.
 5. Defina o local da solução dentro de um novo **começar** na pasta de origem neste exercício, por exemplo **\Source\Ex01-CreatingMusicStoreProject\Begin [YOUR-CHOL-PATH]**. Clique em **OK**.
 
@@ -563,7 +563,7 @@ Nesta tarefa, você atualizará o **StoreController** usar o **StoreIndexViewMod
     [!code-csharp[Main](aspnet-mvc-4-fundamentals/samples/sample13.cs)]
 
 > [!NOTE]
-> Se você estiver familiarizado com C#, você pode presumir que usar **var** significa que o **viewModel** variável é a associação tardia. Que não estiver correta – o compilador C# está usando com base em atribuir à variável de inferência de tipo para determinar que **viewModel** é do tipo **StoreIndexViewModel**. Além disso, ao compilar local **viewModel** variável como um **StoreIndexViewModel** tipo de verificação de tempo de compilação get e suporte de editor de códigos do Visual Studio.
+> Se você estiver familiarizado com c#, você pode presumir que usar **var** significa que o **viewModel** variável é a associação tardia. Que não estiver correta – o compilador c# está usando com base em atribuir à variável de inferência de tipo para determinar que **viewModel** é do tipo **StoreIndexViewModel**. Além disso, ao compilar local **viewModel** variável como um **StoreIndexViewModel** tipo de verificação de tempo de compilação get e suporte de editor de códigos do Visual Studio.
 
 <a id="Ex5Task4"></a>
 
@@ -581,14 +581,14 @@ Nesta tarefa, você criará um modelo de exibição que usará um objeto StoreIn
 
     ![Adicionando uma exibição](aspnet-mvc-4-fundamentals/_static/image23.png "adicionando uma exibição")
 
-    *Adicionando uma exibição*
+    *Adicionar uma exibição*
 3. Porque o **caixa de diálogo Adicionar modo de exibição** foi invocado a partir o **StoreController**, ele adicionará o modelo de exibição por padrão em um **\Views\Store\Index.cshtml** arquivo. Verifique as **criar um fortemente tipada-modo de exibição** caixa de seleção e, em seguida, selecione **StoreIndexViewModel** como o **classe de modelo**. Além disso, certifique-se de que o mecanismo de exibição selecionado **Razor**. Clique em **Adicionar**.
 
     ![Adicionar caixa de diálogo de exibição](aspnet-mvc-4-fundamentals/_static/image24.png "Adicionar caixa de diálogo de exibição")
 
     *Adicionar caixa de diálogo de exibição*
 
-    O **\Views\Store\Index.cshtml** arquivo de modelo de exibição é criado e aberto. Com base nas informações fornecidas para o **adicionar exibição** caixa de diálogo na última etapa, a exibição de modelo espera que um **StoreIndexViewModel** instância como os dados a serem usados para gerar uma resposta HTML. Você observará que o modelo herda um `ViewPage<musicstore.viewmodels.storeindexviewmodel>` em C#.
+    O **\Views\Store\Index.cshtml** arquivo de modelo de exibição é criado e aberto. Com base nas informações fornecidas para o **adicionar exibição** caixa de diálogo na última etapa, a exibição de modelo espera que um **StoreIndexViewModel** instância como os dados a serem usados para gerar uma resposta HTML. Você observará que o modelo herda um `ViewPage<musicstore.viewmodels.storeindexviewmodel>` em c#.
 
 <a id="Ex5Task5"></a>
 
@@ -691,7 +691,7 @@ Um **StoreBrowseViewModel** será usado nessa tarefa para mostrar os álbuns que
 > [!NOTE]
 > O que é **lista&lt;álbum&gt;**  ?: Essa definição é usando o **lista&lt;T&gt;**  tipo, onde **T** restringe o tipo ao qual os elementos disso **lista** pertence, nesse caso **Álbum** (ou qualquer um dos seus descendentes).
 > 
-> Essa capacidade de criar classes e métodos que adiam a especificação de um ou mais tipos até que a classe ou método é declarado e instanciado pelo código do cliente é um recurso da linguagem C# chamado **genéricos**.
+> Essa capacidade de criar classes e métodos que adiam a especificação de um ou mais tipos até que a classe ou método é declarado e instanciado pelo código do cliente é um recurso da linguagem c# chamado **genéricos**.
 > 
 > **Lista&lt;T&gt;**  é o equivalente genérico a **ArrayList** digite e está disponível na **Collections** namespace. Um dos benefícios de usar **genéricos** é que, como o tipo é especificado, você não precisa cuidar da verificação de operações como converter os elementos de tipo **álbum** como você faria com um **ArrayList**.
 
@@ -872,7 +872,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
 #### <a name="task-1-exploring-the-aspnet-mvc-4-internet-application-template"></a>Tarefa 1: Explorando o modelo de aplicativo de Internet do ASP.NET MVC 4
 
 1. Se não estiver aberto, inicie **VS Express para Web**
-2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual C# | Web** modelo no painel à esquerda de árvore e, em seguida, escolha o **aplicativo Web do ASP.NET MVC 4**. **Nome da** o projeto *MusicStore* e atualize o **nome da solução** para *começar*, em seguida, selecione um local (ou deixe o padrão) e clique em **Okey** .
+2. Selecione o **arquivo | Novo | Projeto** comando de menu. No **novo projeto** caixa de diálogo, selecione o **Visual c# | Web** modelo no painel à esquerda de árvore e, em seguida, escolha o **aplicativo Web do ASP.NET MVC 4**. **Nome da** o projeto *MusicStore* e atualize o **nome da solução** para *começar*, em seguida, selecione um local (ou deixe o padrão) e clique em **Okey** .
 
     ![Criando um novo projeto ASP.NET MVC 4](aspnet-mvc-4-fundamentals/_static/image36.png "criando um novo projeto ASP.NET MVC 4")
 
@@ -947,7 +947,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
 > Além disso, você pode implantar esse aplicativo para Windows Azure Web Sites seguinte [apêndice b: Publicando um aplicativo ASP.NET MVC 4 usando a implantação da Web](#AppendixB).
 
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -1157,7 +1157,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente C#)***
+***Para adicionar um trecho de código usando o teclado (somente c#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -1177,7 +1177,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.

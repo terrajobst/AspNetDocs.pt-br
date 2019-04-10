@@ -8,15 +8,15 @@ ms.date: 07/01/2015
 ms.assetid: 2a7517a0-b88c-4162-ade3-9bf6ca7062fd
 msc.legacyurl: /signalr/overview/deployment/using-signalr-with-azure-web-sites
 msc.type: authoredcontent
-ms.openlocfilehash: 13eb5d29a2c40f52aed4b569ec8695f014a05f03
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 531aba3753bf97b8bf1763a22615fb811b375286
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036513"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379138"
 ---
-<a name="using-signalr-with-web-apps-in-azure-app-service"></a>Usar o SignalR com aplicativos Web no Serviço de Aplicativo do Azure
-====================
+# <a name="using-signalr-with-web-apps-in-azure-app-service"></a>Usar o SignalR com aplicativos Web no Serviço de Aplicativo do Azure
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -44,7 +44,7 @@ por [Patrick Fletcher](https://github.com/pfletcher)
 - [Implantando um aplicativo Web do SignalR para o serviço de aplicativo do Azure](#deploying)
 - [Habilitar WebSockets no serviço de aplicativo do Azure](#websocket)
 - [Usando o Backplane de Cache Redis do Azure](#backplane)
-- [Próximas Etapas](#nextsteps)
+- [Próximas etapas](#nextsteps)
 
 <a id="introduction"></a>
 ## <a name="introduction"></a>Introdução

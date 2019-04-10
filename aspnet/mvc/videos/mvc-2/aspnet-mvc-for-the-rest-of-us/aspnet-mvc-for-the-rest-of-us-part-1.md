@@ -8,15 +8,15 @@ ms.date: 04/22/2010
 ms.assetid: c56355c3-821f-43e2-9058-9499a1d63f80
 msc.legacyurl: /mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-1
 msc.type: video
-ms.openlocfilehash: 3e7d874c322e6461dcc030814de455318c9dd902
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ac872869f97aab679384c7cda9f6c8399cd966a3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384670"
 ---
-<a name="aspnet-mvc-for-the-rest-of-us-part-1"></a>ASP.NET MVC para o restante de nós: Parte 1
-====================
+# <a name="aspnet-mvc-for-the-rest-of-us-part-1"></a>ASP.NET MVC para o restante de nós: Parte 1
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Neste vídeo da Microsoft Joe Stagner cria um recurso de "Fale conosco" para um aplicativo ASP.NET MVC, adicionando uma exibição, a lógica do controlador e um modelo personalizado para o aplicativo ASP.NET padrão. Você verá algumas das diferenças fundamentais entre trabalhar com o ASP.NET MVC em comparação com Web Forms do ASP.NET.

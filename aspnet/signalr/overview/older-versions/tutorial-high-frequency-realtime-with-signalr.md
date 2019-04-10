@@ -8,15 +8,15 @@ ms.date: 04/16/2013
 ms.assetid: ad2a5da5-2e79-40ea-bc84-028d327f5982
 msc.legacyurl: /signalr/overview/older-versions/tutorial-high-frequency-realtime-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 60fffd7cd5139b2be34968c1f33474be867f0962
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 179f6dd3a60f8c49770ee34af93d54defad0adc4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379399"
 ---
-<a name="high-frequency-realtime-with-signalr-1x"></a>Tempo real de alta frequência com SignalR 1.x
-====================
+# <a name="high-frequency-realtime-with-signalr-1x"></a>Tempo real de alta frequência com SignalR 1.x
+
 por [Patrick Fletcher](https://github.com/pfletcher)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
@@ -70,7 +70,7 @@ Se você tiver o Visual Studio 2010, verifique se [NuGet](https://visualstudioga
 Nesta seção, vamos criar o projeto no Visual Studio.
 
 1. Dos **arquivo** menu, clique em **novo projeto**.
-2. No **novo projeto** diálogo caixa, expanda **C#** sob **modelos** e selecione **Web**.
+2. No **novo projeto** diálogo caixa, expanda **c#** sob **modelos** e selecione **Web**.
 3. Selecione o **aplicativo Web vazio ASP.NET** modelo, o nome do projeto *MoveShapeDemo*e clique em **Okey**.
 
     ![Criar o novo projeto](tutorial-high-frequency-realtime-with-signalr/_static/image2.png)

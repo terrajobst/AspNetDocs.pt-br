@@ -8,15 +8,15 @@ ms.date: 02/20/2014
 ms.assetid: 68de4326-7611-4b9b-b5f6-79b7adc3069f
 msc.legacyurl: /web-pages/overview/testing-and-debugging/introduction-to-debugging
 msc.type: authoredcontent
-ms.openlocfilehash: e5302492f01cbd507e0b0fd995f21621bf6f04c8
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d4be58f618ed990b1932b4388f84cd743c21f009
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389603"
 ---
-<a name="introduction-to-debugging-aspnet-web-pages-razor-sites"></a>Introdução à depuração da Web do ASP.NET (Razor) Sites de páginas
-====================
+# <a name="introduction-to-debugging-aspnet-web-pages-razor-sites"></a>Introdução à depuração da Web do ASP.NET (Razor) Sites de páginas
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este artigo explica as várias maneiras de depurar páginas em um site de páginas da Web do ASP.NET (Razor). Depuração é o processo de localizar e corrigir erros em suas páginas de código.

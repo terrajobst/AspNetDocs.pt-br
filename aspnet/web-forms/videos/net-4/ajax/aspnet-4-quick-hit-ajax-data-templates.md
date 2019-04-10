@@ -8,15 +8,15 @@ ms.date: 11/16/2009
 ms.assetid: dfb7d181-f97c-43cc-8a19-8403655382ea
 msc.legacyurl: /web-forms/videos/net-4/ajax/aspnet-4-quick-hit-ajax-data-templates
 msc.type: video
-ms.openlocfilehash: f5ade4912a70b0cfcc1fae8c165142cf8f1a6c64
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 44219c97cfcb1a17acbe22a7413a33eb8b8c52b7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388511"
 ---
-<a name="aspnet-4-quick-hit---ajax-data-templates"></a>ASP.NET 4 "Acertar rápido" – modelos de dados do AJAX
-====================
+# <a name="aspnet-4-quick-hit---ajax-data-templates"></a>ASP.NET 4 "Acertar rápido" – modelos de dados do AJAX
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Neste vídeo, você aprenderá como usar modelos de cliente para exibir registros de banco de dados com o controle DataView. 
@@ -24,4 +24,4 @@ Neste vídeo, você aprenderá como usar modelos de cliente para exibir registro
 [&#9654;Assista ao vídeo (12 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-ajax-data-templates)
 
 > [!div class="step-by-step"]
-> [Anterior](aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)
+> [Voltar](aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)

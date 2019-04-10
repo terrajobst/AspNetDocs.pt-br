@@ -8,15 +8,15 @@ ms.date: 01/06/2019
 ms.assetid: 9f35ca15-e216-4db6-9ebf-24380b0f31b4
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-validation
 msc.type: authoredcontent
-ms.openlocfilehash: f127f6a7d8a1f949432cc8f6f784dd7ee85ec207
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 2b5d2a355a27bfe9a3aa8b2fa4a2de79c7f74314
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387120"
 ---
-<a name="adding-validation"></a>Adicionando uma Validação
-====================
+# <a name="adding-validation"></a>Adicionando uma Validação
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 [!INCLUDE [Tutorial Note](sample/code-location.md)]
@@ -131,7 +131,7 @@ Abra o arquivo *Movie.cs* e examine a classe `Movie`. O [ `System.ComponentModel
 
 O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributos fornecem apenas dicas para o mecanismo de exibição formate os dados (e fornece atributos como `<a>` para as URLs e `<a href="mailto:EmailAddress.com">` para email. Você pode usar o [RegularExpression](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.regularexpressionattribute.aspx) atributo para validar o formato dos dados. O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributo é usado para especificar um tipo de dados que é mais específico do que o tipo intrínseco de banco de dados, eles são ***não*** atributos de validação. Nesse caso, apenas desejamos acompanhar a data, não a data e a hora. O [enumeração DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) fornece muitos tipos de dados, tais como *data, hora, PhoneNumber, moeda, EmailAddress* e muito mais. O atributo `DataType` também pode permitir que o aplicativo forneça automaticamente recursos específicos a um tipo. Por exemplo, uma `mailto:` link pode ser criado para [DataType.EmailAddress](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx), e um seletor de data pode ser fornecido para [DataType.Date](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatype.aspx) em navegadores que oferecem suporte a [HTML5](http://html5.org/). O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributos emite HTML 5 [dados -](http://ejohn.org/blog/html-5-data-attributes/) (pronuncia-se *dash dados*) atributos que navegadores HTML 5. O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.datatypeattribute.aspx) atributos não fornecem nenhuma validação.
 
-`DataType.Date` não especifica o formato da data exibida. Por padrão, o campo de dados é exibido de acordo com os formatos padrão com base no servidor do [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
+`DataType.Date` Especifica o formato da data que é exibido. Por padrão, o campo de dados é exibido de acordo com os formatos padrão com base no servidor do [CultureInfo](https://msdn.microsoft.com/library/vstudio/system.globalization.cultureinfo(v=vs.110).aspx).
 
 O atributo `DisplayFormat` é usado para especificar explicitamente o formato de data:
 

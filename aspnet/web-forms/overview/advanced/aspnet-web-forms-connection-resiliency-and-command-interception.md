@@ -8,15 +8,15 @@ ms.date: 03/31/2014
 ms.assetid: 6d497001-fa80-4765-b4cc-181fe90b894e
 msc.legacyurl: /web-forms/overview/advanced/aspnet-web-forms-connection-resiliency-and-command-interception
 msc.type: authoredcontent
-ms.openlocfilehash: 067542e8b8aa9909bbb2147f8e11e34604986d87
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 2b8cae61347f00712aba18fe6a2e91bc207cb9f3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58424021"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380035"
 ---
-<a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Resiliência de conexão do Web Forms do ASP.NET e interceptação de comando
-====================
+# <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Resiliência de conexão do Web Forms do ASP.NET e interceptação de comando
+
 by [Erik Reitan](https://github.com/Erikre)
 
 Neste tutorial, você modificará o aplicativo de exemplo Wingtip Toys para dar suporte a resiliência de conexão e interceptação de comando. Habilitando a resiliência de conexão, o aplicativo de exemplo Wingtip Toys repetirá automaticamente chamadas de dados quando ocorrem erros transitórios típicos de um ambiente de nuvem. Além disso, ao implementar a interceptação de comando, o aplicativo de exemplo Wingtip Toys irá capturar todas as consultas SQL enviadas ao banco de dados para fazer logon ou alterá-los.
@@ -39,7 +39,7 @@ Antes de começar, certifique-se de que você tenha o seguinte software instalad
 - [Microsoft Visual Studio 2013](https://www.microsoft.com/visualstudio/11/downloads#vs) ou [Microsoft Visual Studio Express 2013 para Web](https://www.microsoft.com/visualstudio/11/downloads#express-web). O .NET Framework é instalado automaticamente.
 - A Wingtip Toys o projeto, de exemplo para que você possa implementar a funcionalidade mencionada neste tutorial dentro do projeto Wingtip Toys. O link a seguir fornece detalhes de download:
 
-    - [Introdução ao ASP.NET 4.5.1 Web Forms - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&amp;clcid=0x409) (C#)
+    - [Introdução ao ASP.NET 4.5.1 Web Forms - Wingtip Toys](https://go.microsoft.com/fwlink/?LinkID=389434&amp;clcid=0x409) (c#)
 - Antes de concluir este tutorial, considere revisar a série de tutoriais relacionada [Introdução ao Web Forms do ASP.NET 4.5 e Visual Studio 2013](../getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview.md). A série de tutoriais ajudarão você a se familiarizar com o **WingtipToys** projeto e o código.
 
 ## <a name="connection-resiliency"></a>Resiliência da conexão
@@ -160,7 +160,7 @@ Você escreveu o código de erro transitório de simulação de uma maneira que 
 6. Parar o projeto e examine o Visual Studio **saída** janela para ver a saída de rastreamento. Você pode encontrar o **saída** janela selecionando **Debug**  - &gt; **Windows**  - &gt;  **Saída**. Talvez você precise rolarem vários outros logs gravados pelo seu agente.  
   
    Observe que você pode ver as consultas SQL reais enviadas para o banco de dados. Você verá algumas consultas inicias e comandos que o Entity Framework para começar, verificação da tabela de histórico de versão e a migração de banco de dados.   
-    ![Janela de Saída](aspnet-web-forms-connection-resiliency-and-command-interception/_static/image1.png)   
+    ![Janela Saída](aspnet-web-forms-connection-resiliency-and-command-interception/_static/image1.png)   
    Observe que você não pode repetir esse teste, a menos que você interrompa o aplicativo e reiniciá-lo. Se você quiser ser capaz de testar a resiliência de conexão várias vezes em uma única execução do aplicativo, você pode escrever código para redefinir o contador de erro em `InterceptorTransientErrors` .
 7. Para ver a diferença a estratégia de execução (política de repetição) faz, comentário a `SetExecutionStrategy` de linha no *WingtipToysConfiguration.cs* do arquivo no *lógica* pasta, execute o **Admin**  página no modo de depuração novamente e adicione o produto chamado &quot;lançar&quot; novamente.  
   

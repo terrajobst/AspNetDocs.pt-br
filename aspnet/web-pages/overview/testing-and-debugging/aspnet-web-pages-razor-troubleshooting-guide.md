@@ -8,15 +8,15 @@ ms.date: 02/10/2014
 ms.assetid: 2a2c1833-0bfe-4e2e-9cc0-341b52c7b121
 msc.legacyurl: /web-pages/overview/testing-and-debugging/aspnet-web-pages-razor-troubleshooting-guide
 msc.type: authoredcontent
-ms.openlocfilehash: ec8cdda5c5b298736a650f82cd6b52d73b6dfe3d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: adbaa5cbda4a60a8b222ba49bb148b28b2e214cc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57061293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389200"
 ---
-<a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guia de solução de problemas de Páginas da Web do ASP.NET (Razor)
-====================
+# <a name="aspnet-web-pages-razor-troubleshooting-guide"></a>Guia de solução de problemas de Páginas da Web do ASP.NET (Razor)
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este artigo descreve problemas que você possa ter ao trabalhar com páginas da Web do ASP.NET (Razor) e algumas soluções sugeridas.
@@ -136,12 +136,12 @@ Substitua os valores apropriados para `your-SMTP-server-name`e assim por diante.
 
 - *Falha ao enviar email.*
 
-    -ou-
+    - ou -
 
     *Uma tentativa de conexão falhou porque a parte conectada não respondeu corretamente após um período de tempo ou a conexão estabelecida falhou porque o host conectado não respondeu*
 
     Esse erro geralmente significa que o aplicativo não pôde se conectar ao servidor SMTP. Verifique o nome do servidor e número da porta.
-- <em>Caixa de correio indisponível. A resposta do servidor foi: 5.1.0 &lt; someuser@invaliddomain &gt; remetente rejeitado: domínio do remetente inválido</em>
+- *Caixa de correio indisponível. A resposta do servidor foi: 5.1.0 &lt; someuser@invaliddomain &gt; remetente rejeitado: domínio do remetente inválido*
 
     Essa mensagem pode indicar que o `From` endereço não está correto ou está ausente.
 - *A cadeia de caracteres especificada não está no formato necessário para um endereço de email.*

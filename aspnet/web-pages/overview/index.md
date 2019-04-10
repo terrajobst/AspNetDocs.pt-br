@@ -8,28 +8,28 @@ ms.date: 05/18/2012
 ms.assetid: 1a2ed0e8-63da-4110-9896-e2731d86f7c4
 msc.legacyurl: /web-pages/overview
 msc.type: book
-ms.openlocfilehash: f95d998b838e262dd1843c882dae466a88c23ad5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b4c9e9eb85f6ba9a1e2b2d0a1bbaf027ee25bc0d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57023983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381842"
 ---
-<a name="web-pages-guidance"></a>Diretrizes de páginas da Web
-====================
-- [Introdução](getting-started/index.md)
+# <a name="web-pages-guidance"></a>Diretrizes de páginas da Web
+
+- [Guia de Introdução](getting-started/index.md)
 
     - [Programar Páginas da Web do ASP.NET no Visual Studio](getting-started/program-asp-net-web-pages-in-visual-studio.md)
     - [Introdução à sintaxe Razor de programação da Web do ASP.NET](getting-started/introducing-razor-syntax-c.md)
     - [Visual Basic em Páginas da Web do ASP.NET](getting-started/introducing-razor-syntax-vb.md)
     - [Perguntas frequentes sobre Páginas da Web do ASP.NET (Razor)](getting-started/aspnet-web-pages-razor-faq.md)
     - [Enviar email através do seu site](getting-started/11-adding-email-to-your-web-site.md)
-    - [Adição de redes sociais em seu site](getting-started/13-adding-social-networking-to-your-web-site.md)
+    - [Adição de redes sociais ao seu site](getting-started/13-adding-social-networking-to-your-web-site.md)
     - [Introdução a Páginas da Web do ASP.NET](getting-started/introducing-aspnet-web-pages-2/index.md)
 
-        - [Introdução](getting-started/introducing-aspnet-web-pages-2/getting-started.md)
+        - [Guia de Introdução](getting-started/introducing-aspnet-web-pages-2/getting-started.md)
         - [Noções básicas sobre programação](getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
-        - [Exibindo dados](getting-started/introducing-aspnet-web-pages-2/displaying-data.md)
+        - [Exibir dados](getting-started/introducing-aspnet-web-pages-2/displaying-data.md)
         - [Noções básicas de formulário HTML](getting-started/introducing-aspnet-web-pages-2/form-basics.md)
         - [Inserir dados de banco de dados usando formulários](getting-started/introducing-aspnet-web-pages-2/entering-data.md)
         - [Atualização de dados do banco de dados](getting-started/introducing-aspnet-web-pages-2/updating-data.md)
@@ -41,7 +41,7 @@ ms.locfileid: "57023983"
     - [Criação de URLs legíveis em sites de Páginas da Web do ASP.NET](routing/creating-readable-urls-in-aspnet-web-pages-sites.md)
 - [Interface do usuário, layouts e temas](ui-layouts-and-themes/index.md)
 
-    - [Trabalhando com formulários](ui-layouts-and-themes/4-working-with-forms.md)
+    - [Trabalhar com formulários](ui-layouts-and-themes/4-working-with-forms.md)
     - [Validação da entrada do usuário em sites de Páginas da Web do ASP.NET](ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
     - [Criar uma aparência consistente](ui-layouts-and-themes/3-creating-a-consistent-look.md)
     - [Personalizar o comportamento de todo o site](ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
@@ -51,13 +51,13 @@ ms.locfileid: "57023983"
     - [Instalação de um auxiliar](ui-layouts-and-themes/installing-helpers.md)
     - [Auxiliar do Twitter com Páginas da Web do ASP.NET](ui-layouts-and-themes/twitter-helper.md)
     - [Exibição de mapas em um site de Páginas da Web do ASP.NET](ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
-- [Dispositivo móvel](mobile/index.md)
+- [Celular](mobile/index.md)
 
     - [Renderização de sites de Páginas da Web do ASP.NET para dispositivos móveis](mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
-- [Trabalhando com os Dados](data/index.md)
+- [Trabalhando com dados](data/index.md)
 
-    - [Trabalhando com os Dados](data/5-working-with-data.md)
-    - [Exibindo dados em um gráfico](data/7-displaying-data-in-a-chart.md)
+    - [Trabalhando com dados](data/5-working-with-data.md)
+    - [Exibir dados em um gráfico](data/7-displaying-data-in-a-chart.md)
     - [Trabalhando com arquivos](data/working-with-files.md)
 - [Teste e depuração](testing-and-debugging/index.md)
 
@@ -70,10 +70,10 @@ ms.locfileid: "57023983"
     - [Usar um CAPTCHA para evitar que programas automatizados (Bots) usem o seu site do ASP.NET](security/using-a-catpcha-to-prevent-automated-programs-bots-from-using-your-aspnet-web-site.md)
 - [Desempenho](performance-and-traffic/index.md)
 
-    - [Cache para melhorar o desempenho do seu site](performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
+    - [Armazenamento em cache para melhorar o desempenho de seu site](performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
     - [Análise de tráfego](performance-and-traffic/14-analyzing-traffic.md)
     - [Agrupamento e minificação de ativos em um site de Páginas da Web do ASP.NET (Razor)](performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
-- [Referência de API](api-reference/index.md)
+- [Referência API](api-reference/index.md)
 
     - [Guia de Referência Rápida da API do ASP.NET](api-reference/asp-net-web-pages-api-reference.md)
 - [Versões](releases/index.md)
@@ -82,4 +82,4 @@ ms.locfileid: "57023983"
     - [Novidades nas Páginas da Web do ASP.NET 3.1](releases/whats-new-aspnet-web-pages-31.md)
     - [Principais recursos em Páginas da Web do ASP.NET 2](releases/top-features-in-web-pages-2.md)
     - [Leiame da versão prévia de Páginas da Web do ASP.NET 2 Developer](releases/aspnet-web-pages-2-developer-preview-readme.md)
-    - [Executando versões diferentes de Páginas da Web do ASP.NET lado a lado](releases/running-v1-and-v2-sites-side-by-side.md)
+    - [Executar versões diferentes de Páginas da Web do ASP.NET lado a lado](releases/running-v1-and-v2-sites-side-by-side.md)

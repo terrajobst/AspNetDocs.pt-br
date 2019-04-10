@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
-title: Validação com uma camada de serviço (C#) | Microsoft Docs
+title: Validação com uma camada de serviço (c#) | Microsoft Docs
 author: StephenWalther
 description: Aprenda a mover sua lógica de validação fora de suas ações do controlador e uma camada de serviço separado. Neste tutorial, Stephen Walther explica como você...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: 4eabc535-b8a1-43f5-bb99-cfeb86db0fca
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 69ff78949589017d12a791231e38b400b49f2917
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9b2a7e00b3c50a946ad0f2518880892f103a5c1b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051833"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387107"
 ---
-<a name="validating-with-a-service-layer-c"></a>Validação com uma camada de serviço (C#)
-====================
+# <a name="validating-with-a-service-layer-c"></a>Validação com uma camada de serviço (C#)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Aprenda a mover sua lógica de validação fora de suas ações do controlador e uma camada de serviço separado. Neste tutorial, Stephen Walther explica como você pode manter uma nítida separação de preocupações, isolando sua camada de serviço de camada do seu controlador.
@@ -48,7 +48,7 @@ Uma camada de serviço é uma camada adicional em um aplicativo ASP.NET MVC que 
 
 Por exemplo, a camada de serviço do produto na listagem 3 tem um método CreateProduct(). O método CreateProduct() chama o método de ValidateProduct() para validar um novo produto antes de passar o produto para o repositório de produto.
 
-**Listagem 3 - Models\ProductService.cs**
+**Listing 3 - Models\ProductService.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample3.cs)]
 

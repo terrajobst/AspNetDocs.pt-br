@@ -8,15 +8,15 @@ ms.date: 07/21/2010
 ms.assetid: 15d4652b-d5aa-4172-b186-2c7f96ba316d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: d2e4b36c9029e86eea9b09974839e96e9aa39ced
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57033393"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385352"
 ---
-<a name="part-1-file--new-project"></a>Parte 1: Arquivo -> Novo Projeto
-====================
+# <a name="part-1-file--new-project"></a>Parte 1: Arquivo -> Novo Projeto
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 > Tailspin Spyworks demonstra como incrivelmente simples é criar aplicativos avançados e escalonáveis para a plataforma .NET. Ele mostra como usar os novos recursos no ASP.NET 4 para criar uma loja online, incluindo as compras, check-out e administração.

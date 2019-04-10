@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-cs
-title: Uma visão geral de editar e excluir dados no DataList (C#) | Microsoft Docs
+title: Uma visão geral de editar e excluir dados no DataList (c#) | Microsoft Docs
 author: rick-anderson
 description: Enquanto DataList não tiver a edição internos e excluir recursos, este tutorial veremos como criar uma DataList que dá suporte à edição e exclusão e s...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 10/30/2006
 ms.assetid: c3b0c86e-fe98-41ee-b26f-ca38cddaa75e
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/an-overview-of-editing-and-deleting-data-in-the-datalist-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 7e9268a2ca805bfae2f77e72a131968e09a92b31
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7e29ae36b81b08df2b6f52e0f6d9e1a10d9b6f19
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050353"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384923"
 ---
-<a name="an-overview-of-editing-and-deleting-data-in-the-datalist-c"></a>Uma visão geral de editar e excluir dados no DataList (C#)
-====================
+# <a name="an-overview-of-editing-and-deleting-data-in-the-datalist-c"></a>Uma visão geral de editar e excluir dados no DataList (c#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_36_CS.exe) ou [baixar PDF](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/datatutorial36cs1.pdf)
@@ -59,7 +59,7 @@ Antes de começarmos a explorar como atualizar e excluir dados de uma DataList, 
 Como em outras pastas `Default.aspx` no `EditDeleteDataList` pasta lista os tutoriais em sua seção. Lembre-se de que o `SectionLevelTutorialListing.ascx` controle de usuário fornece essa funcionalidade. Portanto, adicionar esse controle de usuário `Default.aspx` arrastando-no Gerenciador de soluções para a página de exibição de Design de s.
 
 
-[![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image3.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image2.png)
+[![Add o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image3.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image2.png)
 
 **Figura 2**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image4.png))
 
@@ -112,7 +112,7 @@ Comece abrindo o `Basics.aspx` página o `EditDeleteDataList` pasta e, na exibi�
 **Figura 4**: Configurar o ObjectDataSource para usar o `ProductsBLL` classe ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image8.png))
 
 
-[![Retornar as informações de produto usando o método GetProducts()](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image10.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image9.png)
+[![Roltar as informações do produto usando o método GetProducts()](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image10.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image9.png)
 
 **Figura 5**: Retornar as informações de produto usando o `GetProducts()` método ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image11.png))
 
@@ -120,7 +120,7 @@ Comece abrindo o `Basics.aspx` página o `EditDeleteDataList` pasta e, na exibi�
 DataList, como o GridView, não é criado para inserir novos dados; Portanto, selecione opção na lista suspensa na guia Inserir (nenhum). Também escolha (nenhum) para as guias de atualização e exclusão, pois as atualizações e exclusões serão executadas programaticamente por meio da BLL.
 
 
-[![Confirme se as listas suspensas em s ObjectDataSource INSERT, UPDATE e excluir guias estiverem definidas como (nenhum)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image13.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image12.png)
+[![CConfirmar a lista suspensa em s ObjectDataSource inserir, atualizar e excluir guias são definidas como (nenhum)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image13.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image12.png)
 
 **Figura 6**: Confirme que as listas suspensas no ObjectDataSource s INSERT, UPDATE e excluir guias estão definidas como (nenhum) ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image14.png))
 
@@ -139,7 +139,7 @@ Depois de substituir o padrão DataList `ItemTemplate` com um personalizado, a m
 Reserve um tempo para exibir nosso progresso através de um navegador. Como mostra a Figura 7, DataList exibe o preço de unidade e o nome do produto para cada produto em duas colunas.
 
 
-[![Os nomes de produtos e os preços são exibidos em um DataList de duas colunas](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image16.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image15.png)
+[![TNomes de produtos he e os preços são exibidos em um DataList de duas colunas](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image16.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image15.png)
 
 **Figura 7**: Os nomes de produtos e os preços são exibidos em um DataList de duas colunas ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image17.png))
 
@@ -147,7 +147,7 @@ Reserve um tempo para exibir nosso progresso através de um navegador. Como most
 > [!NOTE]
 > DataList tem um número de propriedades que são necessários para o processo de atualização e exclusão, e esses valores são armazenados no estado de exibição. Portanto, quando criar uma DataList que dá suporte a edição ou exclusão de dados, é essencial que o estado de exibição do DataList s ser habilitada.  
 >   
->  O leitor astuto deve se lembrar de que fomos capazes de desabilitar o estado de exibição ao criar GridViews, DetailsViews e FormViews editável. Isso ocorre porque os controles da Web do ASP.NET 2.0 podem incluir *estado de controle*, que é o estado persistente entre postbacks, como estado de exibição, mas considerado essencial.
+> O leitor astuto deve se lembrar de que fomos capazes de desabilitar o estado de exibição ao criar GridViews, DetailsViews e FormViews editável. Isso ocorre porque os controles da Web do ASP.NET 2.0 podem incluir *estado de controle*, que é o estado persistente entre postbacks, como estado de exibição, mas considerado essencial.
 
 
 Desabilitar a exibição de estado no GridView simplesmente omite informações de estado trivial, mas mantém o estado de controle (que inclui o estado necessário para editar e excluir). DataList, ter sido criado no período de tempo do ASP.NET 1. x, não utiliza o estado do controle e, portanto, deve ter habilitado o estado de exibição. Consulte [vs do estado do controle. Estado de exibição](https://msdn.microsoft.com/library/1whwt1k7.aspx) para obter mais informações sobre a finalidade do estado do controle e como ela difere do estado de exibição.
@@ -161,7 +161,7 @@ DataList, por outro lado, processa seus itens usando modelos. Itens somente leit
 O `EditItemTemplate` pode ser criado declarativamente ou por meio do Designer (selecionando a opção de editar modelos da marca inteligente DataList s). Para usar a opção de editar modelos, primeiro clique no link Editar modelos na marca inteligente e, em seguida, selecione o `EditItemTemplate` item da lista suspensa.
 
 
-[![Otimizado para trabalhar com o DataList s EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image19.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image18.png)
+[![OPT para trabalhar com o DataList s EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image19.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image18.png)
 
 **Figura 8**: Otimizado para trabalhar com o DataList s `EditItemTemplate` ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image20.png))
 
@@ -169,7 +169,7 @@ O `EditItemTemplate` pode ser criado declarativamente ou por meio do Designer (s
 Em seguida, digite o nome de produto: e preço: e, em seguida, arraste dois controles de caixa de texto da caixa de ferramentas para o `EditItemTemplate` interface no Designer. Defina as caixas de texto `ID` propriedades a serem `ProductName` e `UnitPrice`.
 
 
-[![Adicione uma caixa de texto para o nome do produto s e o preço](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image22.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image21.png)
+[![Auma caixa de texto para o nome do produto e o preço de dd](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image22.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image21.png)
 
 **Figura 9**: Adicionar uma caixa de texto para o s o nome do produto e o preço ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image23.png))
 
@@ -198,7 +198,7 @@ Lembre-se de que esses eventos são acionados *além* o `ItemCommand` eventos.
 Adicionar para o `EditItemTemplate` dois controles da Web de botão, um cujo `CommandName` é definido como a atualização e os outros s definido como ' Cancelar '. Depois de adicionar esses dois controles de botão Web Designer deve ser semelhante ao seguinte:
 
 
-[![Adicionar atualização botões e Cancelar ao EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image26.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image25.png)
+[![Add atualização e Cancelar botões ao EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image26.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image25.png)
 
 **Figura 11**: Adicionar atualização e Cancelar botões para o `EditItemTemplate` ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image27.png))
 
@@ -215,7 +215,7 @@ Neste ponto, nosso DataList tem uma interface de edição definida por meio de s
 Depois de adicionar esse botão de edição, reserve um tempo para exibir a página por meio de um navegador. Com esse acréscimo, cada produto na listagem deve incluir um botão Editar.
 
 
-[![Adicionar atualização botões e Cancelar ao EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image29.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image28.png)
+[![Add atualização e Cancelar botões ao EditItemTemplate](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image29.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image28.png)
 
 **Figura 12**: Adicionar atualização e Cancelar botões para o `EditItemTemplate` ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image30.png))
 
@@ -235,7 +235,7 @@ O `EditCommand` manipulador de eventos é passado em um objeto do tipo `DataList
 Depois de adicionar esse manipulador de eventos, examine a página em um navegador. Clique no botão Editar agora torna o produto clicado editável (consulte a Figura 13).
 
 
-[![Clicar o botão de edição torna o produto editável](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image32.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image31.png)
+[![Co torna o botão Editar licking editável do produto](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image32.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image31.png)
 
 **Figura 13**: Clique no botão Editar torna editável do produto ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image33.png))
 
@@ -283,17 +283,17 @@ Depois de ler os valores, o `ProductsBLL` classe s `UpdateProduct` método é ch
 Com o `EditCommand`, `CancelCommand`, e `UpdateCommand` concluir de manipuladores de eventos, um visitante pode editar o nome e o preço de um produto. As figuras 14-16 mostram esse fluxo de trabalho de edição em ação.
 
 
-[![Quando o primeiro visitando a página, todos os produtos estão no modo somente leitura](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image35.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image34.png)
+[![Wuando primeiro visitando a página, todos os produtos estão no modo somente leitura](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image35.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image34.png)
 
 **Figura 14**: Quando o primeiro visitando a página, todos os produtos estão no modo somente leitura ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image36.png))
 
 
-[![Para atualizar um s nome ou o preço do produto, clique no botão Editar](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image38.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image37.png)
+[![TAtualização de s um nome de produto s ou o preço, clique no botão Editar](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image38.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image37.png)
 
 **Figura 15**: Para atualizar um produto s nome ou o preço, clique no botão Editar ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image39.png))
 
 
-[![Depois de alterar o valor, clique em atualizar para o retorno para o modo somente leitura](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image41.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image40.png)
+[![Atermina após a alteração do valor, clique em atualizar para o retorno para o modo somente leitura](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image41.png)](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image40.png)
 
 **Figura 16**: Depois de alterar o valor, clique em atualizar para o retorno para o modo somente leitura ([clique para exibir a imagem em tamanho normal](an-overview-of-editing-and-deleting-data-in-the-datalist-cs/_static/image42.png))
 

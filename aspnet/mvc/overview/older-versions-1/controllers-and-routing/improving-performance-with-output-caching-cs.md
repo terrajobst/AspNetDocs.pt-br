@@ -8,15 +8,15 @@ ms.date: 01/27/2009
 ms.assetid: 521c9117-81cd-4d8d-9d96-0256dc7bf50f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 516c370941b8f7e5f3528953491057973679586d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384754"
 ---
-<a name="improving-performance-with-output-caching-c"></a>Melhorar o desempenho com o cache de saída (C#)
-====================
+# <a name="improving-performance-with-output-caching-c"></a>Melhorar o desempenho com o cache de saída (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, você aprenderá como você pode melhorar drasticamente o desempenho dos aplicativos web ASP.NET MVC, aproveitando o cache de saída. Você aprenderá a armazenar em cache o resultado retornado de uma ação do controlador para que o mesmo conteúdo não precisa ser criado um novo usuário invoca a ação de cada vez.

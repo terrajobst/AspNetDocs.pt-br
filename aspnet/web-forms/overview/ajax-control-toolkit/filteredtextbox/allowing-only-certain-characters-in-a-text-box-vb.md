@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: 33af23f1-4016-4740-8fb2-37d1773452cd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-vb
 msc.type: authoredcontent
-ms.openlocfilehash: aec5a3af98cf40e460f4164fb8950e8029002937
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 455d62d97808862f70692c46ae223f47270266f9
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57028543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387614"
 ---
-<a name="allowing-only-certain-characters-in-a-text-box-vb"></a>Permitir somente determinados caracteres em uma caixa de texto (VB)
-====================
+# <a name="allowing-only-certain-characters-in-a-text-box-vb"></a>Permitir somente determinados caracteres em uma caixa de texto (VB)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/4/c/2/4c2def7a-0d23-4055-91f9-1f18504167d7/FilteredTextBox0.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/filteredtextbox0VB.pdf)
@@ -56,9 +56,9 @@ Aqui está a marcação para o `FilteredTextBoxExtender` controle que permite so
 Executar a página e tente digitar uma letra, se o JavaScript estiver habilitado, ele não funcionará; No entanto, dígitos exibidos na página. No entanto, observe que a proteção `FilteredTextBox` fornece não é à prova de marcador: Se o JavaScript estiver habilitado, todos os dados podem ser inseridos na caixa de texto, portanto, você precisa usar meios de validação adicional, ou seja, o ASP. Controles de validação da rede.
 
 
-[![Somente dígitos podem ser inseridos.](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
+[![Osomente dígitos podem ser inseridos](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
 
 Somente dígitos podem ser inseridos ([clique para exibir a imagem em tamanho normal](allowing-only-certain-characters-in-a-text-box-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Anterior](allowing-only-certain-characters-in-a-text-box-cs.md)
+> [Voltar](allowing-only-certain-characters-in-a-text-box-cs.md)

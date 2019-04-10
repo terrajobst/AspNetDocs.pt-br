@@ -8,15 +8,15 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 8b9176cb88f6e460fe5494167d4a5880456530aa
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4a62cce3af57b507882744f948ce208becdb03ac
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57032973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382297"
 ---
-<a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Trabalhando com arquivos em um Site do ASP.NET Web Pages (Razor)
-====================
+# <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Trabalhando com arquivos em um Site do ASP.NET Web Pages (Razor)
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este artigo explica como ler, gravar, acrescentar, excluir e carregar arquivos em um site de páginas da Web do ASP.NET (Razor).

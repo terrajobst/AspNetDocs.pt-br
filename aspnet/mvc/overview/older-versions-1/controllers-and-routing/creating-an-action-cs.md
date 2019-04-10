@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
-title: Criando uma ação (C#) | Microsoft Docs
+title: Criando uma ação (c#) | Microsoft Docs
 author: microsoft
 description: Saiba como adicionar uma nova ação para um controlador ASP.NET MVC. Saiba mais sobre os requisitos para um método a ser uma ação.
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: cb33b28c-3025-4bd1-a1fa-eaa3af7bb56f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 243248ee30c6a2db7f102f7743d0393d4a6a9d24
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c66e066bd3e241e667924dacc114f57151df822a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389551"
 ---
-<a name="creating-an-action-c"></a>Criar uma ação (C#)
-====================
+# <a name="creating-an-action-c"></a>Criar uma ação (C#)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como adicionar uma nova ação para um controlador ASP.NET MVC. Saiba mais sobre os requisitos para um método a ser uma ação.
@@ -57,7 +57,7 @@ Se você precisar criar um método público em uma classe de controlador e você
 Se você tentar invocar a ação do controlador CompanySecrets() digitando /Work/CompanySecrets na barra de endereços do navegador, em seguida, você obterá a mensagem de erro na Figura 1.
 
 
-[![Invocando um método NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
+[![Invoking um método NonAction](creating-an-action-cs/_static/image1.jpg)](creating-an-action-cs/_static/image1.png)
 
 **Figura 01**: Invocando um método NonAction ([clique para exibir a imagem em tamanho normal](creating-an-action-cs/_static/image2.png))
 

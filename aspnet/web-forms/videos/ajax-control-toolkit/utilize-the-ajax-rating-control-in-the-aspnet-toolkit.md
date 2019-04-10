@@ -8,15 +8,15 @@ ms.date: 07/10/2008
 ms.assetid: da366876-06d8-4a5d-9bce-1f52530f04b0
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/utilize-the-ajax-rating-control-in-the-aspnet-toolkit
 msc.type: video
-ms.openlocfilehash: f68655a082b4fe595f74a24ff4379bfb4a5148d9
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4e4ae06ab6a6208c20d5206e171e5c906ac55708
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57059433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388784"
 ---
-<a name="utilize-the-ajax-rating-control-in-the-aspnet-toolkit"></a>Utilizar o controle de classificação do AJAX no kit de ferramentas do ASP.NET
-====================
+# <a name="utilize-the-ajax-rating-control-in-the-aspnet-toolkit"></a>Utilizar o controle de classificação do AJAX no kit de ferramentas do ASP.NET
+
 por [Joe Stagner](https://github.com/JoeStagner)
 
 Joe Stagner demonstra como usar a ferramenta de classificação que é fornecido com o Kit de ferramentas do ASP.NET AJAX.

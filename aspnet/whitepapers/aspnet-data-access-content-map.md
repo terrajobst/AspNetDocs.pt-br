@@ -8,15 +8,15 @@ ms.date: 07/25/2013
 ms.assetid: f8157be1-4ab9-469e-ad3a-0ccc80b56c00
 msc.legacyurl: /whitepapers/aspnet-data-access-content-map
 msc.type: content
-ms.openlocfilehash: 6993c17c8de890cbaa40c619bcd20f494bfd2f90
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: d120c184f6cf7dd0db075bbfac17214d7467664a
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383714"
 ---
-<a name="aspnet-data-access---recommended-resources"></a>Acesso a Dados do ASP.NET – Recursos recomendados
-====================
+# <a name="aspnet-data-access---recommended-resources"></a>Acesso a Dados do ASP.NET – Recursos recomendados
+
 > Este tópico fornece links para recursos de documentação sobre como acessar dados em aplicativos web ASP.NET, principalmente usando o Entity Framework e do SQL Server.
 > 
 > Se você souber que um blog excelente postagem, [stackoverflow](http://stackoverflow.com) thread ou qualquer outro link que pode ser útil, [envie-em um email](mailto:aspnetue@microsoft.com?subject=Data Access Content Map) com o link.

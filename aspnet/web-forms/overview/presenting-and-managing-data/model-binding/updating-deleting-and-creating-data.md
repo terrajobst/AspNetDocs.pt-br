@@ -8,15 +8,15 @@ ms.date: 02/27/2014
 ms.assetid: 602baa94-5a4f-46eb-a717-7a9e539c1db4
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/updating-deleting-and-creating-data
 msc.type: authoredcontent
-ms.openlocfilehash: 127543b0696b01f136b340d07f6f806b6a6fb1eb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0ac1982a9476ea324f2faea0bf06f9406f9af1cf
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57056523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389317"
 ---
-<a name="updating-deleting-and-creating-data-with-model-binding-and-web-forms"></a>Atualizar, excluir e criar dados com a associação de modelos e formulários da web
-====================
+# <a name="updating-deleting-and-creating-data-with-model-binding-and-web-forms"></a>Atualizar, excluir e criar dados com a associação de modelos e formulários da web
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Esta série de tutoriais demonstra aspectos básicos de como usar a associação de modelo com um projeto de Web Forms do ASP.NET. Associação de modelo torna a interação de dados mais simples que lidam com dados de objetos de origem (como ObjectDataSource ou SqlDataSource). Esta série começa com material introdutório e move para conceitos mais avançados em tutoriais posteriores.
@@ -31,7 +31,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial se baseia no projeto criado no primeiro [parte](retrieving-data.md) da série.
 > 
-> Você pode [baixar](https://go.microsoft.com/fwlink/?LinkId=286116) o projeto completo em C# ou VB. O código para download funciona com o Visual Studio 2012 ou Visual Studio 2013. Ele usa o modelo do Visual Studio 2012, que é ligeiramente diferente do que o modelo do Visual Studio 2013 mostrado neste tutorial.
+> Você pode [baixar](https://go.microsoft.com/fwlink/?LinkId=286116) o projeto completo em c# ou VB. O código para download funciona com o Visual Studio 2012 ou Visual Studio 2013. Ele usa o modelo do Visual Studio 2012, que é ligeiramente diferente do que o modelo do Visual Studio 2013 mostrado neste tutorial.
 
 
 ## <a name="what-youll-build"></a>O que você vai criar

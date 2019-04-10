@@ -8,15 +8,15 @@ ms.date: 10/05/2010
 ms.assetid: dddc8812-a0bc-49f9-aafb-caf2064c2b8c
 msc.legacyurl: /mvc/mvc3
 msc.type: content
-ms.openlocfilehash: 82d18865815568c5df9768fd9dd403f11ebd1714
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 42c28bb7082781ffdf8f2f0fb46f14387e614043
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045423"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389525"
 ---
-<a name="aspnet-mvc-3"></a>ASP.NET MVC 3
-====================
+# <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
+
 > *(inclui de abril de 2011 Tools atualização)*
 > 
 > O ASP.NET MVC 3 é uma estrutura para a criação de aplicativos web escalonáveis baseados em padrões, usando padrões de design bem estabelecidos e o poder do ASP.NET e o .NET Framework.

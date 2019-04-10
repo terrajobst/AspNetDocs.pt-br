@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
-title: Atualizando o TableAdapter para usar JOINs (C#) | Microsoft Docs
+title: Atualizando o TableAdapter para usar JOINs (c#) | Microsoft Docs
 author: rick-anderson
 description: Ao trabalhar com um banco de dados é comum para solicitar os dados são distribuídos entre várias tabelas. Para recuperar dados de duas tabelas diferentes, pode usar qualquer um...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 07/18/2007
 ms.assetid: 675531a7-cb54-4dd6-89ac-2636e4c285a5
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d5b69b502cf650a477b2841c25ad3f1ab5f8da93
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 297496e590caf9c8ded83cb16b5fef1dfc542dc7
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57050623"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381380"
 ---
-<a name="updating-the-tableadapter-to-use-joins-c"></a>Atualizar o TableAdapter para usar JOINs (C#)
-====================
+# <a name="updating-the-tableadapter-to-use-joins-c"></a>Atualizar o TableAdapter para usar JOINs (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_69_CS.zip) ou [baixar PDF](updating-the-tableadapter-to-use-joins-cs/_static/datatutorial69cs1.pdf)
@@ -64,7 +64,7 @@ Para explorar essa deficiência, crie um conjunto de dados tipado temporário no
 [!code-sql[Main](updating-the-tableadapter-to-use-joins-cs/samples/sample3.sql)]
 
 
-[![Insira uma consulta principal que contém associações](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
+[![Eerir um principal de consulta que une contém](updating-the-tableadapter-to-use-joins-cs/_static/image2.png)](updating-the-tableadapter-to-use-joins-cs/_static/image1.png)
 
 **Figura 1**: Insira uma consulta principal que contém `JOIN` s ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image3.png))
 
@@ -88,7 +88,7 @@ Clique em Concluir para concluir o assistente. Neste ponto seu Designer de s do 
 Enquanto a DataTable tem as colunas apropriadas, o TableAdapter não possui valores para seus `InsertCommand`, `UpdateCommand`, e `DeleteCommand` propriedades. Para confirmar isso, clique no TableAdapter no Designer e, em seguida, vá para a janela de propriedades. Lá você verá que o `InsertCommand`, `UpdateCommand`, e `DeleteCommand` propriedades são definidas como (nenhum).
 
 
-[![O InsertCommand, UpdateCommand e DeleteCommand propriedades são definidas como (nenhum)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
+[![Tele InsertCommand, UpdateCommand e DeleteCommand propriedades são definidas como (nenhum)](updating-the-tableadapter-to-use-joins-cs/_static/image7.png)](updating-the-tableadapter-to-use-joins-cs/_static/image6.png)
 
 **Figura 4**: O `InsertCommand`, `UpdateCommand`, e `DeleteCommand` propriedades são definidas como (nenhum) ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image8.png))
 
@@ -108,7 +108,7 @@ Para este tutorial, adicionaremos um TableAdapter e uma DataTable fortemente tip
 Comece abrindo o `NorthwindWithSprocs` conjunto de dados a `~/App_Code/DAL` pasta. Com o botão direito no Designer, selecione a opção Adicionar no menu de contexto e escolha o item de menu do TableAdapter. Isso iniciará o Assistente de configuração do TableAdapter. Conforme mostra a Figura 5, que o assistente criar novos procedimentos armazenados e clique em Avançar. Para relembrar criando novos procedimentos do Assistente de s TableAdapter de armazenados, consulte o [criando novos procedimentos armazenados para o s TableAdapters do conjunto de dados tipado](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md) tutorial.
 
 
-[![Selecione os procedimentos armazenados nova opção de criar](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
+[![SEscolha os criar novos procedimentos armazenados opção](updating-the-tableadapter-to-use-joins-cs/_static/image10.png)](updating-the-tableadapter-to-use-joins-cs/_static/image9.png)
 
 **Figura 5**: Selecione Criar novo armazenados procedimentos opção ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image11.png))
 
@@ -123,7 +123,7 @@ Uma vez que essa consulta não inclui nenhum `JOIN` s, o TableAdapter assistente
 A seguinte etapa nos permite nomear os procedimentos de s armazenados TableAdapter. Use os nomes `Employees_Select`, `Employees_Insert`, `Employees_Update`, e `Employees_Delete`, conforme mostrado na Figura 6.
 
 
-[![Os procedimentos do TableAdapter s armazenados de nome](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
+[![NProcedimentos armazenados de ome TableAdapter s](updating-the-tableadapter-to-use-joins-cs/_static/image13.png)](updating-the-tableadapter-to-use-joins-cs/_static/image12.png)
 
 **Figura 6**: Nomeie o TableAdapter s Stored Procedures ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image14.png))
 
@@ -131,7 +131,7 @@ A seguinte etapa nos permite nomear os procedimentos de s armazenados TableAdapt
 A etapa final nos solicita para nomear os métodos do TableAdapter s. Use `Fill` e `GetEmployees` como os nomes de método. Também Certifique-se de deixar os crie métodos para enviar atualizações diretamente para a caixa de seleção de banco de dados (GenerateDBDirectMethods) marcada.
 
 
-[![Nome do preenchimento de métodos do TableAdapter s e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
+[![Name o TableAdapter s métodos Fill e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image16.png)](updating-the-tableadapter-to-use-joins-cs/_static/image15.png)
 
 **Figura 7**: Nomeie os métodos do TableAdapter s `Fill` e `GetEmployees` ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image17.png))
 
@@ -139,7 +139,7 @@ A etapa final nos solicita para nomear os métodos do TableAdapter s. Use `Fill`
 Depois de concluir o assistente, reserve um tempo para examinar os procedimentos armazenados no banco de dados. Você deverá ver quatro novas: `Employees_Select`, `Employees_Insert`, `Employees_Update`, e `Employees_Delete`. Em seguida, inspecione a `EmployeesDataTable` e `EmployeesTableAdapter` acabou de criar. A DataTable contém uma coluna para cada campo retornado pela consulta principal. Clique no TableAdapter e, em seguida, vá para a janela de propriedades. Lá você verá que o `InsertCommand`, `UpdateCommand`, e `DeleteCommand` propriedades estão configuradas corretamente para chamar os procedimentos armazenados correspondentes.
 
 
-[![O TableAdapter inclui Insert, Update e excluir recursos](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
+[![Tele TableAdapter inclui inserir, atualizar e excluir recursos](updating-the-tableadapter-to-use-joins-cs/_static/image19.png)](updating-the-tableadapter-to-use-joins-cs/_static/image18.png)
 
 **Figura 8**: O TableAdapter inclui inserir, atualizar e excluir recursos ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image20.png))
 
@@ -156,7 +156,7 @@ Comece indo para o Gerenciador de servidores, drill-down até a pasta de procedi
 Depois de atualizar o `SELECT` instrução, salve as alterações no menu Arquivo e escolhendo Salvar `Employees_Select`. Como alternativa, você pode clique no ícone Salvar na barra de ferramentas ou pressione Ctrl + S. Depois de salvar suas alterações, clique com botão direito no `Employees_Select` procedimento armazenado no Gerenciador de servidores e escolha Executar. Isso irá executar o procedimento armazenado e mostrar seus resultados na janela de saída (veja a Figura 9).
 
 
-[![Os resultados de procedimentos armazenados são exibidos na janela de saída](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
+[![TProcedimentos armazenados he os resultados são exibidos na janela de saída](updating-the-tableadapter-to-use-joins-cs/_static/image22.png)](updating-the-tableadapter-to-use-joins-cs/_static/image21.png)
 
 **Figura 9**: Os resultados de procedimentos armazenados são exibidos na janela de saída ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image23.png))
 
@@ -173,7 +173,7 @@ Exploramos manualmente adicionando colunas de tabela de dados nos tutoriais ante
 Comece clicando com o `EmployeesTableAdapter` e selecionando configurar no menu de contexto. Isso abre o Assistente de configuração do TableAdapter, que lista os procedimentos armazenados usados para selecionar, inserir, atualizar e excluir, junto com seus valores de retorno e parâmetros (se houver). Figura 10 mostra esse assistente. Aqui podemos ver que o `Employees_Select` procedimento armazenado agora retorna o `ManagerFirstName` e `ManagerLastName` campos.
 
 
-[![Procedimento de armazenado mostra o Assistente para a lista de coluna atualizada para o Employees_Select](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
+[![Tele Assistente mostra a lista de colunas atualizadas para o procedimento armazenado de Employees_Select](updating-the-tableadapter-to-use-joins-cs/_static/image25.png)](updating-the-tableadapter-to-use-joins-cs/_static/image24.png)
 
 **Figura 10**: O assistente mostra a lista de coluna atualizada para o `Employees_Select` procedimento armazenado ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image26.png))
 
@@ -181,7 +181,7 @@ Comece clicando com o `EmployeesTableAdapter` e selecionando configurar no menu 
 Conclua o assistente clicando em Finish. Ao retornar para o Designer de conjunto de dados, o `EmployeesDataTable` inclui duas colunas adicionais: `ManagerFirstName` e `ManagerLastName`.
 
 
-[![O EmployeesDataTable contém duas novas colunas](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
+[![Tele EmployeesDataTable contém duas novas colunas](updating-the-tableadapter-to-use-joins-cs/_static/image28.png)](updating-the-tableadapter-to-use-joins-cs/_static/image27.png)
 
 **Figura 11**: O `EmployeesDataTable` contém duas novas colunas ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image29.png))
 
@@ -209,7 +209,7 @@ Configurar o ObjectDataSource para usar o `EmployeesBLLWithSprocs` de classe e, 
 **Figura 12**: Configurar o ObjectDataSource para usar o `EmployeesBLLWithSprocs` classe ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image32.png))
 
 
-[![Poderá usar o ObjectDataSource os métodos de DeleteEmployee e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
+[![Halvar o ObjectDataSource Use os métodos de DeleteEmployee e GetEmployees](updating-the-tableadapter-to-use-joins-cs/_static/image34.png)](updating-the-tableadapter-to-use-joins-cs/_static/image33.png)
 
 **Figura 13**: Poderá usar o ObjectDataSource a `GetEmployees` e `DeleteEmployee` métodos ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image35.png))
 
@@ -224,7 +224,7 @@ Para permitir que os usuários excluam os funcionários dessa página que precis
 Testar a página visitando-lo por meio de um navegador. Como mostra a Figura 14, a página listará cada funcionário e seu nome do s Gerenciador (supondo que eles tenham um).
 
 
-[![A junção no Employees_Select procedimento armazenado retorna o nome do Gerenciador de s](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
+[![Tele INGRESSAR no procedimento armazenado Employees_Select retorna o Gerenciador de s nome](updating-the-tableadapter-to-use-joins-cs/_static/image37.png)](updating-the-tableadapter-to-use-joins-cs/_static/image36.png)
 
 **Figura 14**: O `JOIN` no `Employees_Select` procedimento armazenado retorna o nome do Gerenciador ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image38.png))
 
@@ -232,7 +232,7 @@ Testar a página visitando-lo por meio de um navegador. Como mostra a Figura 14,
 Clicando no botão Excluir inicia o fluxo de trabalho excluindo, culmina na execução do `Employees_Delete` procedimento armazenado. No entanto, a tentativa `DELETE` instrução no procedimento armazenado falhará devido a uma violação de restrição de chave estrangeira (consulte a Figura 15). Especificamente, cada funcionário tem um ou mais registros no `Orders` tabela, fazendo com que a exclusão falha.
 
 
-[![Exclusão de um funcionário que tem resultados correspondentes de pedidos em uma violação de restrição de chave estrangeira](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
+[![Deleting um funcionário que tem resultados correspondentes de pedidos em uma violação de restrição de chave estrangeira](updating-the-tableadapter-to-use-joins-cs/_static/image40.png)](updating-the-tableadapter-to-use-joins-cs/_static/image39.png)
 
 **Figura 15**: Exclusão de um funcionário que tem resultados correspondentes de pedidos em uma violação de restrição de chave estrangeira ([clique para exibir a imagem em tamanho normal](updating-the-tableadapter-to-use-joins-cs/_static/image41.png))
 

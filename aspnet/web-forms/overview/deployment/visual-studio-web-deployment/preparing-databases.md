@@ -8,15 +8,15 @@ ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 67f44d9f23a2fe83c48e68328b1dee739056e32f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 786be61d48f26e5765eac0c8d6fad7551897f711
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387679"
 ---
-<a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: Preparação para implantação de banco de dados
-====================
+# <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: Preparação para implantação de banco de dados
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
@@ -63,7 +63,7 @@ Quando você implanta um banco de dados do aplicativo, normalmente você não si
 
 Para simular esse cenário comum, você configurará um migrações do Code First `Seed` método que insere no banco de dados, somente os dados que você deseja estar lá em produção. Isso `Seed` método não deve inserir dados de teste porque ele será executado em produção depois que o Code First cria o banco de dados em produção.
 
-Em versões anteriores do Code First antes que as migrações foi lançado, era comum `Seed` métodos para inserir dados de teste também, porque cada alteração de modelo durante o desenvolvimento de banco de dados tinha completamente ser excluído e recriado do zero. Com migrações do Code First, teste os dados são mantidos após as alterações do banco de dados, portanto, incluindo dados de teste no `Seed` método não é necessário. O projeto que você baixou usa o método de todos os dados, incluindo o `Seed` método de uma classe de inicializador. Neste tutorial, você vai desabilitar essa classe de inicializador e `enable Migrations. Then you'll update the `semente ' método na configuração de migrações de classe para que ele insira apenas os dados que você deseja ser inserida em produção.
+Em versões anteriores do Code First antes que as migrações foi lançado, era comum `Seed` métodos para inserir dados de teste também, porque cada alteração de modelo durante o desenvolvimento de banco de dados tinha completamente ser excluído e recriado do zero. Com migrações do Code First, teste os dados são mantidos após as alterações do banco de dados, portanto, incluindo dados de teste no `Seed` método não é necessário. O projeto que você baixou usa o método de todos os dados, incluindo o `Seed` método de uma classe de inicializador. Neste tutorial, você desativar essa classe de inicializador e habilitar migrações. Em seguida, você atualizará o `Seed` método na configuração de migrações de classe para que ele insira apenas os dados que você deseja ser inserida em produção.
 
 O diagrama a seguir ilustra o esquema do banco de dados do aplicativo:
 
@@ -130,7 +130,7 @@ O projeto agora está pronto para implantar o *ContosoUniversity* banco de dados
 > [!NOTE]
 > Adicionando código para o `Seed` método é uma das muitas maneiras que você pode inserir dados fixa no banco de dados. Uma alternativa é adicionar código para o `Up` e `Down` métodos de cada classe de migração. O `Up` e `Down` métodos contêm código que implementa as alterações do banco de dados. Você verá exemplos na [Implantando uma atualização de banco de dados](deploying-a-database-update.md) tutorial.
 > 
-> Você também pode escrever código que executa instruções SQL usando o `Sql` método. Por exemplo, se você estivesse adicionando uma coluna de orçamento para a tabela de departamento e quiser inicializar todos os orçamentos de departamento para US $ 1.000,00 como parte de uma migração, você pode adicionar a seguinte linha de código ao `Up` método para que a migração:
+> Você também pode escrever código que executa instruções SQL usando o `Sql` método. Por exemplo, se você estivesse adicionando uma coluna de orçamento para a tabela de departamento e quiser inicializar todos os orçamentos de departamento para US $ 1.000,00 como parte de uma migração, você pode adicionar a seguinte linha de código para o `Up` método para que a migração:
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 

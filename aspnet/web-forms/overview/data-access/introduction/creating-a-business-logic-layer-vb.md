@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: 142e5181-29ce-4bb9-907b-2a0becf7928b
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 345f4981ebdd5384068bd42bce0581f94866ad1d
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 63efa46410e821947c6b0ee4ecd0c790fbf793e3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57024343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380087"
 ---
-<a name="creating-a-business-logic-layer-vb"></a>Criação de uma camada de lógica de negócios (VB)
-====================
+# <a name="creating-a-business-logic-layer-vb"></a>Criação de uma camada de lógica de negócios (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_2_VB.exe) ou [baixar PDF](creating-a-business-logic-layer-vb/_static/datatutorial02vb1.pdf)
@@ -129,7 +129,7 @@ Para usar a BLL nova classes, tudo o que precisa ser alterado é a primeira linh
 As classes BLL também podem ser acessadas declarativamente (como podem fazer o conjunto de dados tipado) usando o ObjectDataSource. Vamos abordar o ObjectDataSource mais detalhadamente nos tutoriais a seguir.
 
 
-[![A lista de produtos é exibida em um GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
+[![TEle lista de produtos é exibido em um GridView](creating-a-business-logic-layer-vb/_static/image4.png)](creating-a-business-logic-layer-vb/_static/image3.png)
 
 **Figura 3**: A lista de produtos é exibida em um GridView ([clique para exibir a imagem em tamanho normal](creating-a-business-logic-layer-vb/_static/image5.png))
 
@@ -148,7 +148,7 @@ Essas regras podem e devem ser expressos no nível do banco de dados. O limite d
 Além de aplicar essas regras no banco de dados que eles também devem ser impostos no nível do conjunto de dados. Na verdade, o tamanho do campo e se um valor é obrigatório ou opcional já são capturados para conjunto do cada DataTable de colunas de dados. Para ver a validação de nível de campo existente fornecida automaticamente, vá para o Designer de conjunto de dados, selecione um campo de uma do DataTables e, em seguida, vá para a janela de propriedades. Como mostra a Figura 4, o `QuantityPerUnit` DataColumn em de `ProductsDataTable` tem um comprimento máximo de 20 caracteres e permitir `NULL` valores. Se tentarmos definir a `ProductsDataRow`do `QuantityPerUnit` propriedade para um valor de cadeia de caracteres mais de 20 caracteres um `ArgumentException` será lançada.
 
 
-[![A DataColumn fornece validação básica de nível de campo](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
+[![Tele validação DataColumn fornece básica de nível de campo](creating-a-business-logic-layer-vb/_static/image7.png)](creating-a-business-logic-layer-vb/_static/image6.png)
 
 **Figura 4**: A DataColumn fornece nível de campo validação básica ([clique para exibir a imagem em tamanho normal](creating-a-business-logic-layer-vb/_static/image8.png))
 
@@ -156,7 +156,7 @@ Além de aplicar essas regras no banco de dados que eles também devem ser impos
 Infelizmente, estamos não é possível especificar verificações de limites, como o `UnitPrice` valor deve ser maior que ou igual a zero, na janela Propriedades. Para fornecer esse tipo de validação de nível de campo é necessário criar um manipulador de eventos para a DataTable [ColumnChanging](https://msdn.microsoft.com/library/system.data.datatable.columnchanging%28VS.80%29.aspx) eventos. Conforme mencionado na [tutorial anterior](creating-a-data-access-layer-vb.md), os objetos de conjunto de dados, DataTables e DataRow criados pelo conjunto de dados tipado que podem ser estendidos com o uso de classes parciais. Usando essa técnica podemos criar uma `ColumnChanging` manipulador de eventos para o `ProductsDataTable` classe. Comece criando uma classe de `App_Code` pasta chamada `ProductsDataTable.ColumnChanging.vb`.
 
 
-[![Adicione uma nova classe para a pasta App_Code](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
+[![Auma nova classe para a pasta App_Code do dd](creating-a-business-logic-layer-vb/_static/image10.png)](creating-a-business-logic-layer-vb/_static/image9.png)
 
 **Figura 5**: Adicione uma nova classe para o `App_Code` pasta ([clique para exibir a imagem em tamanho normal](creating-a-business-logic-layer-vb/_static/image11.png))
 

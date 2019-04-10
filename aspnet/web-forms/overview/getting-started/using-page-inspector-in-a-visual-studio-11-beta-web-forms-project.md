@@ -8,20 +8,20 @@ ms.date: 08/15/2012
 ms.assetid: 2ece0bf4-aae5-4ff4-8f62-28e0819d4f86
 msc.legacyurl: /web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
 msc.type: authoredcontent
-ms.openlocfilehash: d2c377f8466f8f324b75ce60860aa00c11bc0ffe
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c39e1cf42fde382a9e74d7f865f0dac1aa62ddc8
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57058473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384224"
 ---
-<a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Uso do Inspetor de Página para Visual Studio 2012 em Web Forms do ASP.NET
-====================
+# <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Uso do Inspetor de Página para Visual Studio 2012 em Web Forms do ASP.NET
+
 por Tim Ammann
 
 > O Inspetor de página para Visual Studio 2012 é uma ferramenta de desenvolvimento na web com um navegador integrado. Selecione qualquer elemento no navegador integrado e Inspetor de página instantaneamente destaca o código-fonte e o CSS do elemento. Você pode procurar qualquer página em seu aplicativo rapidamente encontrar as fontes de marcação renderizada e usar as ferramentas de navegador dentro do ambiente do Visual Studio.
 > 
-> Este tutorial shwos como habilitar o modo de inspeção e, em seguida, rapidamente localizar e editar regras de CSS e texto dentro de seu projeto da web. O tutorial usa um projeto de aplicativo Web Forms, mas você também pode usar o Inspetor de página para projetos de Site e [MVC](https://go.microsoft.com/?linkid=9802002) aplicativos.
+> Este tutorial mostra como habilitar o modo de inspeção e, em seguida, rapidamente localizar e editar regras de CSS e texto dentro de seu projeto da web. O tutorial usa um projeto de aplicativo Web Forms, mas você também pode usar o Inspetor de página para projetos de Site e [MVC](https://go.microsoft.com/?linkid=9802002) aplicativos.
 > 
 > O tutorial tem as seguintes seções:
 > 

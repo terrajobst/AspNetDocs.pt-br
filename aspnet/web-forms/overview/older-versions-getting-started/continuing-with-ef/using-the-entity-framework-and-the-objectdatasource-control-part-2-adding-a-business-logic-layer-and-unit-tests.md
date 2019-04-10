@@ -8,15 +8,15 @@ ms.date: 01/26/2011
 ms.assetid: efb0e677-10b8-48dc-93d3-9ba3902dd807
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests
 msc.type: authoredcontent
-ms.openlocfilehash: 6517f037a03bb520ee4f3b3185a255b0eaa9de9a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 4d436b0e5d605027cfcf5243f615f9ac167c5888
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57029903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59388043"
 ---
-<a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests"></a>Usando o Entity Framework 4.0 e o controle ObjectDataSource, parte 2: Adição de uma Camada de lógica de negócios (VB) e Testes de unidade
-====================
+# <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests"></a>Usando o Entity Framework 4.0 e o controle ObjectDataSource, parte 2: Adição de uma Camada de lógica de negócios (VB) e Testes de unidade
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais baseia-se no aplicativo web Contoso University que é criado pela [Introdução ao Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de tutoriais. Se você não concluir os tutoriais anteriores, como um ponto de partida para este tutorial, você pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que você teria criado. Você também pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) que é criado pela série de tutoriais completa. Se você tiver dúvidas sobre os tutoriais, você pode postá-los para o [Fórum do Entity Framework do ASP.NET](https://forums.asp.net/1227.aspx).

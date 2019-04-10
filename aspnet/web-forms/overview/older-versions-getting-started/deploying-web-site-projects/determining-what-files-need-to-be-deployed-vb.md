@@ -8,15 +8,15 @@ ms.date: 04/01/2009
 ms.assetid: ea918f62-c9d6-4a7f-9bc6-e054d3764b2c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 22461b681ea195225c6b7b0306b6f49956a2890b
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: fe19910d693a784b8dc207462591c9f4d51cec14
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382141"
 ---
-<a name="determining-what-files-need-to-be-deployed-vb"></a>Determinar quais arquivos precisam ser implantados (VB)
-====================
+# <a name="determining-what-files-need-to-be-deployed-vb"></a>Determinar quais arquivos precisam ser implantados (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_02_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial02_FilesToDeploy_vb.pdf)
@@ -32,7 +32,7 @@ Em geral, todos os arquivos de suporte do lado do cliente devem ser copiados do 
 
 ## <a name="explicit-compilation-versus-automatic-compilation"></a>Compilação explícita Versus compilação automática
 
-Páginas da web ASP.NET são divididas em código-fonte e de marcação declarativo. A parte de marcação declarativa inclui HTML, controles da Web e sintaxe de associação de dados; a parte de código contém manipuladores de eventos escritos em código Visual Basic ou C#. As partes de código e marcação normalmente são separadas em arquivos diferentes: `WebPage.aspx` contém a marcação declarativa enquanto `WebPage.aspx.vb` abriga o código.
+Páginas da web ASP.NET são divididas em código-fonte e de marcação declarativo. A parte de marcação declarativa inclui HTML, controles da Web e sintaxe de associação de dados; a parte de código contém manipuladores de eventos escritos em código Visual Basic ou c#. As partes de código e marcação normalmente são separadas em arquivos diferentes: `WebPage.aspx` contém a marcação declarativa enquanto `WebPage.aspx.vb` abriga o código.
 
 Considere uma página ASP.NET chamada `Clock.aspx` que contém um controle de rótulo cuja propriedade de texto é definida como a data e hora atuais no carregamento da página. A parte de marcação declarativa (no `Clock.aspx`) conteria a marcação para um controle de rótulo Web - `<asp:Label runat="server" id="TimeLabel" />` – durante a parte de código (no `Clock.aspx.vb`) teria um `Page_Load` manipulador de eventos com o código a seguir:
 
@@ -93,7 +93,7 @@ O download para este tutorial inclui um aplicativo ASP.NET chamado resenhas de l
 Figura 1 mostra uma captura de tela do site resenhas de livros quando visualizado por meio de um navegador. Aqui você verá a página ~ / Tech/TYASP35.aspx, que analisa o livro *ensinar por conta própria ASP.NET 3.5 in 24 horas*. A trilha de navegação que abrange a parte superior da página e no menu na coluna à esquerda são baseados na estrutura de mapa de site definida em `Web.sitemap`. A imagem no canto superior direito é uma da tampa de livro imagens localizadas no `Images` pasta. Aparência do site da Web são definidas por meio de regras de folha de estilos em cascata escritas pelos arquivos CSS na `Styles` pasta, enquanto o layout de página abrangente é definido na página mestra, `Site.master`.
 
 
-[![O site do livro analisa oferece revisões em uma variedade de títulos](determining-what-files-need-to-be-deployed-vb/_static/image2.png)](determining-what-files-need-to-be-deployed-vb/_static/image1.png)
+[![Tele livro examina o site oferece revisões em uma variedade de títulos](determining-what-files-need-to-be-deployed-vb/_static/image2.png)](determining-what-files-need-to-be-deployed-vb/_static/image1.png)
 
 **Figura 1**: O site do livro analisa oferece revisões em uma variedade de títulos ([clique para exibir a imagem em tamanho normal](determining-what-files-need-to-be-deployed-vb/_static/image3.png))
 
@@ -116,7 +116,7 @@ O modelo de projeto de aplicativo Web usa a compilação explícita - código-fo
 Figura 2 mostra os arquivos que compõem o projeto de aplicativo Web do livro revisões.
 
 
-[![O Gerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web.](determining-what-files-need-to-be-deployed-vb/_static/image5.png)](determining-what-files-need-to-be-deployed-vb/_static/image4.png)
+[![TGerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web.](determining-what-files-need-to-be-deployed-vb/_static/image5.png)](determining-what-files-need-to-be-deployed-vb/_static/image4.png)
 
 **Figura 2**: O Gerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web
 
@@ -147,7 +147,7 @@ A opção de menu de compilação no Visual Studio está presente em projetos de
 Figura 3 mostra os arquivos que compõem o projeto de Site da Web do catálogo de revisões.
 
 
-[![O Gerenciador de soluções lista os arquivos que compõem o projeto de Site da Web.](determining-what-files-need-to-be-deployed-vb/_static/image7.png)](determining-what-files-need-to-be-deployed-vb/_static/image6.png)
+[![TGerenciador de soluções lista os arquivos que compõem o projeto de Site da Web.](determining-what-files-need-to-be-deployed-vb/_static/image7.png)](determining-what-files-need-to-be-deployed-vb/_static/image6.png)
 
 **Figura 3**: O Gerenciador de soluções lista os arquivos que compõem o projeto de Site da Web
 

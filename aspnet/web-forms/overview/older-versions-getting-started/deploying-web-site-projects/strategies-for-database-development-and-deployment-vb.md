@@ -8,15 +8,15 @@ ms.date: 04/23/2009
 ms.assetid: 07b8905d-78ac-4252-97fb-8675b3fb0bbf
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b44ef5e92df8cc3b8660a8ce9e4ccc9b74c135d2
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: afd287836337d0f9411daac805c3e9bcbb2dbadb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58422721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385066"
 ---
-<a name="strategies-for-database-development-and-deployment-vb"></a>Estratégias de desenvolvimento e implantação de banco de dados (VB)
-====================
+# <a name="strategies-for-database-development-and-deployment-vb"></a>Estratégias de desenvolvimento e implantação de banco de dados (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_vb.pdf)
@@ -99,7 +99,7 @@ Há uma variedade de ferramentas de comparação do banco de dados de terceiros 
 Quando a comparação do SQL inicia a caixa de diálogo de projetos de comparação é aberta, mostrando os projetos de SQL Compare salvos. Crie um novo projeto. Isso inicia o Assistente de configuração de projeto, que solicita informações sobre os bancos de dados a ser comparado (veja a Figura 1). Insira as informações para os bancos de dados de desenvolvimento e produção de ambiente.
 
 
-[![Comparar o desenvolvimento e os bancos de dados de produção](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
+[![Ccomparar o desenvolvimento e produção de bancos de dados](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
 
 **Figura 1**: Comparar o desenvolvimento e os bancos de dados de produção ([clique para exibir a imagem em tamanho normal](strategies-for-database-development-and-deployment-vb/_static/image3.jpg))
 
@@ -116,7 +116,7 @@ Depois de selecionar os bancos de dados compare (e revisar as opções de compar
 > As alterações do modelo de dados feitas neste tutorial foram feitas para ilustrar o uso de uma ferramenta de comparação do banco de dados. Você não encontrará essas alterações no banco de dados em tutoriais futuros.
 
 
-[![Comparação SQL lista as diferenças entre o desenvolvimento e os bancos de dados de produção](strategies-for-database-development-and-deployment-vb/_static/image5.jpg)](strategies-for-database-development-and-deployment-vb/_static/image4.jpg)
+[![SQL Compare lista as diferenças entre o desenvolvimento e produção de bancos de dados](strategies-for-database-development-and-deployment-vb/_static/image5.jpg)](strategies-for-database-development-and-deployment-vb/_static/image4.jpg)
 
 **Figura 2**: Comparação SQL lista as diferenças entre o desenvolvimento e os bancos de dados de produção ([clique para exibir a imagem em tamanho normal](strategies-for-database-development-and-deployment-vb/_static/image6.jpg))
 
@@ -128,7 +128,7 @@ Selecionando um objeto de banco de dados exibe a janela de diferenças de SQL, q
 Depois de revisar as diferenças e selecionar quais objetos você deseja sincronizar, a próxima etapa é gerar comandos SQL necessários para atualizar o esquema de s de banco de dados de produção para coincidir com o banco de dados de desenvolvimento. Isso é feito através do Assistente de sincronização. O Assistente de sincronização confirma que objetos para sincronizar e resume a ação de plano (consulte a Figura 3). Você pode sincronizar os bancos de dados imediatamente ou gerar um script com os comandos SQL que pode ser executado em seu tempo livre.
 
 
-[![Use o Assistente de sincronização para sincronizar seus esquemas de bancos de dados](strategies-for-database-development-and-deployment-vb/_static/image8.jpg)](strategies-for-database-development-and-deployment-vb/_static/image7.jpg)
+[![USe o Assistente de sincronização para sincronizar seus esquemas de bancos de dados](strategies-for-database-development-and-deployment-vb/_static/image8.jpg)](strategies-for-database-development-and-deployment-vb/_static/image7.jpg)
 
 **Figura 3**: Use o Assistente de sincronização para sincronizar seus esquemas de bancos de dados ([clique para exibir a imagem em tamanho normal](strategies-for-database-development-and-deployment-vb/_static/image9.jpg))
 

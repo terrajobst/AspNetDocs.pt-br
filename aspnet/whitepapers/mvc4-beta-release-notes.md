@@ -8,15 +8,15 @@ ms.date: 09/09/2011
 ms.assetid: 666407bb-81de-4319-89ba-0302c382a208
 msc.legacyurl: /whitepapers/mvc4-beta-release-notes
 msc.type: content
-ms.openlocfilehash: f1d949ec716ea8cb677c54fe5b07431161c58fbc
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b7722d5c282f07b35dd18d08911fa562dae6afc2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387926"
 ---
-<a name="aspnet-mvc-4"></a>ASP.NET MVC 4
-====================
+# <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
+
 > Este documento descreve a versão do ASP.NET MVC 4 Beta para Visual Studio 2010.
 > 
 > > [!NOTE]
@@ -242,7 +242,7 @@ O novo recurso de receitas permite que o Visual Studio gerar o código específi
 
 Agora você pode escrever métodos de ação assíncrono como uma única métodos que retornam um objeto do tipo *tarefa* ou *tarefa&lt;ActionResult&gt;*.
 
-Por exemplo, se você estiver usando o Visual C# 5 (ou usando o [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), você pode criar um método de ação assíncrono que é semelhante ao seguinte:
+Por exemplo, se você estiver usando o Visual c# 5 (ou usando o [Async CTP](https://msdn.microsoft.com/vstudio/async.aspx)), você pode criar um método de ação assíncrono que é semelhante ao seguinte:
 
 [!code-csharp[Main](mvc4-beta-release-notes/samples/sample8.cs)]
 
@@ -265,7 +265,7 @@ ASP.NET MVC 4 Beta suporta a versão 1.5 de setembro de 2011 do SDK do Windows A
     A solução alternativa é compilar o projeto para colocar os assemblies na pasta bin. Observe que, se você limpar o projeto que remove os assemblies da pasta bin, o problema de editor será voltar.
 
     Isso será corrigido na próxima versão.
-- **Modelos de projeto C# para Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão incorretas em Global.asax.cs.** A conexão padrão especificado no aplicativo\_método Start para projetos criados no Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão LocalDB que contém uma barra invertida sem escape (\) caractere. Isso resulta em um erro de conexão após tentativas de acessar um DbContext do Entity Framework, que gera uma SqlException.
+- **Modelos de projeto c# para Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão incorretas em Global.asax.cs.** A conexão padrão especificado no aplicativo\_método Start para projetos criados no Visual Studio 11 Beta contêm uma cadeia de caracteres de conexão LocalDB que contém uma barra invertida sem escape (\) caractere. Isso resulta em um erro de conexão após tentativas de acessar um DbContext do Entity Framework, que gera uma SqlException.
 
     Para corrigir esse problema, escapar do caractere de barra invertida no aplicativo\_início – método de Global.asax.cs para exibi-lo da seguinte maneira:
 

@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 754b8c66-cefc-42d6-9f02-685efabdfcc6
 msc.legacyurl: /web-forms/videos/aspnet-ajax
 msc.type: chapter
-ms.openlocfilehash: c8084dedc89bc2fcab6bee03b1a65911d42435b3
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5fc85b5ac4771d6784e9afa41e09d74474a605ba
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57021213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59381296"
 ---
-<a name="aspnet-ajax"></a>AJAX ASP.NET
-====================
+# <a name="aspnet-ajax"></a>AJAX ASP.NET
+
 > Maneiras de trabalhar com o ASP.NET AJAX para criar páginas altamente responsivos, mesmo que você não seja um especialista em JavaScript.
 
 
@@ -34,16 +34,16 @@ ms.locfileid: "57021213"
 - [Implementar o padrão de exibição de página incremental do AJAX](how-do-i-implement-the-ajax-incremental-page-display-pattern.md)
 - [Implementar o padrão de exibição de página incremental usando HTTP GET e POST](how-do-i-implement-the-incremental-page-display-pattern-using-http-get-and-post.md)
 - [Controle UpdateProgress do AJAX ASP.NET](how-do-i-use-the-aspnet-ajax-updateprogress-control.md)
-- [Controle de Histórico do AJAX ASP.NET](how-do-i-use-the-aspnet-ajax-history-control.md)
+- [Controle de histórico do AJAX ASP.NET](how-do-i-use-the-aspnet-ajax-history-control.md)
 - [Implementar o padrão pós-processamento do AJAX](how-do-i-implement-the-ajax-after-processing-pattern.md)
 - [Atualizar várias regiões de uma página com o AJAX ASP.NET](how-do-i-update-multiple-regions-of-a-page-with-aspnet-ajax.md)
-- [Escolha entre métodos de atualização de página do AJAX](how-do-i-choose-between-methods-of-ajax-page-updates.md)
+- [Escolher entre métodos de atualização de página do AJAX](how-do-i-choose-between-methods-of-ajax-page-updates.md)
 - [Usar outras bibliotecas de interface do usuário de JavaScript com o AJAX ASP.NET](how-do-i-use-other-javascript-user-interface-libraries-with-aspnet-ajax.md)
 - [Usar os serviços de perfil do AJAX ASP.NET](how-do-i-use-the-aspnet-ajax-profile-services.md)
 - [Depurar aplicativos do AJAX ASP.NET usando o Visual Studio 2005](how-do-i-debug-aspnet-ajax-applications-using-visual-studio-2005.md)
 - [Criar um controle de servidor personalizado do AJAX ASP.NET](how-do-i-build-a-custom-aspnet-ajax-server-control.md)
 - [Usar JavaScript para atualizar um UpdatePanel do AJAX ASP.NET](how-do-i-use-javascript-to-refresh-an-aspnet-ajax-updatepanel.md)
-- [Determinar se um houve um postback assíncrono](how-do-i-determine-whether-an-asynchronous-postback-has-occurred.md)
+- [Determinar se houve um postback assíncrono](how-do-i-determine-whether-an-asynchronous-postback-has-occurred.md)
 - [Usar o UpdateMode condicional do UpdatePanel](how-do-i-use-the-conditional-updatemode-of-the-updatepanel.md)
 - [Implementar o padrão de comunicações persistentes com o UpdatePanel](how-do-i-implement-the-persistent-communications-pattern-with-the-updatepanel.md)
 - [Localizar um aplicativo do AJAX ASP.NET](how-do-i-localize-an-aspnet-ajax-application.md)

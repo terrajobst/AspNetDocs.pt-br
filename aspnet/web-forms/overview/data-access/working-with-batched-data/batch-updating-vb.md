@@ -8,15 +8,15 @@ ms.date: 06/26/2007
 ms.assetid: d191a204-d7ea-458d-b81c-0b9049ecb55f
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-updating-vb
 msc.type: authoredcontent
-ms.openlocfilehash: dc40c056aa951b94ca0af2af339d9c7987ffd987
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: d1809c869253ecb454e427a5092015a69009da5c
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58426023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59386938"
 ---
-<a name="batch-updating-vb"></a>Atualização em lote (VB)
-====================
+# <a name="batch-updating-vb"></a>Atualização em lote (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_64_VB.zip) ou [baixar PDF](batch-updating-vb/_static/datatutorial64vb1.pdf)
@@ -31,7 +31,7 @@ No [tutorial anterior](wrapping-database-modifications-within-a-transaction-vb.m
 Neste tutorial, criaremos um GridView onde cada linha é editável (veja a Figura 1). Como cada linha é processada na sua interface de edição, daí s sem a necessidade de uma coluna de edição, atualizar e Cancelar botões. Em vez disso, há dois botões atualizar produtos na página que, quando clicado, enumerar as linhas de GridView e atualizar o banco de dados.
 
 
-[![Cada linha de GridView é editável](batch-updating-vb/_static/image1.gif)](batch-updating-vb/_static/image1.png)
+[![EACH linha GridView é editável](batch-updating-vb/_static/image1.gif)](batch-updating-vb/_static/image1.png)
 
 **Figura 1**: Cada linha de GridView é editável ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image2.png))
 
@@ -70,7 +70,7 @@ Antes de nos preocupamos criando um GridView onde estão as linhas é editável,
 Como GridView, os recursos de modificação de s de ObjectDataSource são projetados para trabalhar em uma base por linha. Para atualizar um conjunto de registros, precisaremos escrever um pouco de código em que a classe de code-behind de s de página ASP.NET que processa os dados em lotes e passa-o para a BLL. Portanto, defina as listas suspensas em s ObjectDataSource guias UPDATE, INSERT e DELETE como (nenhum). Clique em Concluir para concluir o assistente.
 
 
-[![Definir as listas suspensas na atualização, inserção e excluir guias como (nenhum)](batch-updating-vb/_static/image4.gif)](batch-updating-vb/_static/image7.png)
+[![SET as listas suspensas no UPDATE, INSERT e DELETE guias como (nenhum)](batch-updating-vb/_static/image4.gif)](batch-updating-vb/_static/image7.png)
 
 **Figura 4**: Defina a lista suspensa no UPDATE, INSERT e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image8.png))
 
@@ -107,7 +107,7 @@ Permitir que o s comece com o `ProductName` TemplateField. Clique no link Editar
 Em seguida, adicione um RequiredFieldValidator para o `ItemTemplate` para garantir que o usuário fornece um valor para cada nome de produto s. Defina as `ControlToValidate` propriedade ProductName, o `ErrorMessage` propriedade para que você deve fornecer o nome do produto. e o `Text` propriedade para \*. Depois de fazer essas adições para o `ItemTemplate`, sua tela deve ser semelhante à Figura 6.
 
 
-[![O ProductName TemplateField agora inclui uma caixa de texto e um RequiredFieldValidator](batch-updating-vb/_static/image6.gif)](batch-updating-vb/_static/image9.png)
+[![Tele ProductName TemplateField agora inclui uma caixa de texto e um RequiredFieldValidator](batch-updating-vb/_static/image6.gif)](batch-updating-vb/_static/image9.png)
 
 **Figura 6**: O `ProductName` TemplateField agora inclui uma caixa de texto e um RequiredFieldValidator ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image10.png))
 
@@ -117,7 +117,7 @@ Para o `UnitPrice` interface de edição, comece copiando-se a caixa de texto do
 Adicione também um CompareValidator para o `UnitPrice` s `ItemTemplate` para garantir que o valor inserido pelo usuário é um valor de moeda válidos maior que ou igual a US $0,00. Definir o s validador `ControlToValidate` propriedade UnitPrice, seu `ErrorMessage` propriedade para que você deve inserir um valor de moeda válidos. . Omitir qualquer moeda símbolos., suas `Text` propriedade para \*, sua `Type` propriedade a ser `Currency`, sua `Operator` propriedade a ser `GreaterThanEqual`e seu `ValueToCompare` propriedade como 0.
 
 
-[![Adicionar um CompareValidator para garantir que o preço inserido é um valor de moeda não negativo](batch-updating-vb/_static/image7.gif)](batch-updating-vb/_static/image11.png)
+[![Add um CompareValidator para garantir que o preço inserido é um valor de moeda não negativo](batch-updating-vb/_static/image7.gif)](batch-updating-vb/_static/image11.png)
 
 **Figura 7**: Adicionar um CompareValidator para garantir que o preço inserido é um valor de moeda não negativo ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image12.png))
 
@@ -148,7 +148,7 @@ Arraste uma DropDownList da caixa de ferramentas para o `CategoryName` s Templat
 Como esse ObjectDataSource é usada simplesmente para recuperar dados, defina as listas suspensas nas guias de UPDATE e DELETE como (nenhum). Clique em Concluir para concluir o assistente.
 
 
-[![Conjunto de listas suspensas na atualização e exclusão guias como (nenhum)](batch-updating-vb/_static/image10.gif)](batch-updating-vb/_static/image17.png)
+[![SET as listas suspensas na atualização e exclusão guias como (nenhum)](batch-updating-vb/_static/image10.gif)](batch-updating-vb/_static/image17.png)
 
 **Figura 10**: Defina a lista suspensa na atualização e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image18.png))
 
@@ -161,7 +161,7 @@ Depois de concluir o assistente, o `CategoriesDataSource` marcação declarativa
 Com o `CategoriesDataSource` criado e configurado, retornar para o `CategoryName` TemplateField s `ItemTemplate` e, da DropDownList s marca inteligente, clique no link Escolher fonte de dados. No Assistente de configuração de fonte de dados, selecione a `CategoriesDataSource` opção na primeira lista suspensa e optar por ter `CategoryName` usado para a exibição e `CategoryID` como o valor.
 
 
-[![Associar o CategoriesDataSource DropDownList](batch-updating-vb/_static/image11.gif)](batch-updating-vb/_static/image19.png)
+[![BIND DropDownList para a CategoriesDataSource](batch-updating-vb/_static/image11.gif)](batch-updating-vb/_static/image19.png)
 
 **Figura 11**: Associar a DropDownList para a `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image20.png))
 
@@ -190,7 +190,7 @@ Observe como o `<asp:ListItem Value="">` – selecione um – tem seu `Value` at
 Podemos var feitas algumas alterações nos modelos de s GridView sem pausar para exibir nosso progresso. Reserve um tempo para exibir nosso progresso através de um navegador. Como mostra a Figura 13, cada linha é renderizada utilizando seu `ItemTemplate`, que contém o s célula interface de edição.
 
 
-[![Cada linha de GridView é editável](batch-updating-vb/_static/image13.gif)](batch-updating-vb/_static/image21.png)
+[![EACH linha GridView é editável](batch-updating-vb/_static/image13.gif)](batch-updating-vb/_static/image21.png)
 
 **Figura 13**: Cada linha de GridView é editável ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image22.png))
 
@@ -223,7 +223,7 @@ Depois de fazer acima mencionado alterações de formatação, adicionar os cont
 A Figura 16 mostra essa página quando visualizado por meio de um navegador depois que os controles da Web de botão foram adicionados e as alterações feitas na formatação.
 
 
-[![A página agora inclui dois botões de produtos de atualização](batch-updating-vb/_static/image16.gif)](batch-updating-vb/_static/image23.png)
+[![Tele página agora inclui dois produtos de botões de atualização](batch-updating-vb/_static/image16.gif)](batch-updating-vb/_static/image23.png)
 
 **Figura 16**: A página agora inclui dois atualização produtos botões ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image24.png))
 

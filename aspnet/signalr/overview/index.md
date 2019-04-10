@@ -8,19 +8,19 @@ ms.date: 10/24/2012
 ms.assetid: e57da75a-1d98-4e3c-8787-f1d7e1eb2d86
 msc.legacyurl: /signalr/overview
 msc.type: book
-ms.openlocfilehash: 2ab5094e863c5762c0c4c70a15f4da1088bc52e7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 8bef8a53f6d47a9274a984e0650125fb538c23f0
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57022663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380061"
 ---
-<a name="signalr-guidance"></a>Diretrizes de SignalR
-====================
-- [Introdução](getting-started/index.md)
+# <a name="signalr-guidance"></a>Diretrizes de SignalR
+
+- [Guia de Introdução](getting-started/index.md)
 
     - [Introdução ao SignalR](getting-started/introduction-to-signalr.md)
-    - [Plataformas com suporte](getting-started/supported-platforms.md)
+    - [Plataformas compatíveis](getting-started/supported-platforms.md)
     - [Tutorial: Introdução ao SignalR 2](getting-started/tutorial-getting-started-with-signalr.md)
     - [Tutorial: Introdução ao SignalR 2 e MVC 5](getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
     - [Tutorial: Em tempo real de alta frequência com SignalR 2](getting-started/tutorial-high-frequency-realtime-with-signalr.md)
@@ -28,11 +28,11 @@ ms.locfileid: "57022663"
     - [Laboratório prático: Aplicativos Web em tempo real com SignalR](getting-started/real-time-web-applications-with-signalr.md)
 - [Guia para a API](guide-to-the-api/index.md)
 
-    - [Guia da API Hubs – servidor (C#)](guide-to-the-api/hubs-api-guide-server.md)
-    - [Guia da API Hubs – cliente JavaScript](guide-to-the-api/hubs-api-guide-javascript-client.md)
-    - [Guia da API Hubs – cliente .NET (C#)](guide-to-the-api/hubs-api-guide-net-client.md)
+    - [Guia da API Hubs – Servidor (C#)](guide-to-the-api/hubs-api-guide-server.md)
+    - [Guia da API Hubs – Cliente JavaScript](guide-to-the-api/hubs-api-guide-javascript-client.md)
+    - [Guia da API Hubs – Cliente .NET (C#)](guide-to-the-api/hubs-api-guide-net-client.md)
     - [Noções básicas e tratamento de eventos de tempo de vida de conexão no SignalR](guide-to-the-api/handling-connection-lifetime-events.md)
-    - [Trabalhando com grupos no SignalR](guide-to-the-api/working-with-groups.md)
+    - [Trabalhar com grupos no SignalR](guide-to-the-api/working-with-groups.md)
     - [Mapeamento de usuários do SignalR para conexões](guide-to-the-api/mapping-users-to-connections.md)
 - [Teste e depuração](testing-and-debugging/index.md)
 
@@ -56,7 +56,7 @@ ms.locfileid: "57022663"
 - [Implantação e hospedagem](deployment/index.md)
 
     - [Tutorial: Auto-hospedar SignalR](deployment/tutorial-signalr-self-host.md)
-    - [Usando o SignalR com aplicativos Web no Serviço de Aplicativo do Azure](deployment/using-signalr-with-azure-web-sites.md)
+    - [Usar o SignalR com aplicativos Web no Serviço de Aplicativo do Azure](deployment/using-signalr-with-azure-web-sites.md)
 - [Avançado](advanced/index.md)
 
     - [Injeção de dependência no SignalR](advanced/dependency-injection.md)
@@ -68,12 +68,12 @@ ms.locfileid: "57022663"
     - [Tutorial: Introdução ao SignalR 1.x](older-versions/tutorial-getting-started-with-signalr.md)
     - [Tutorial: Introdução ao SignalR 1.x e MVC 4](older-versions/tutorial-getting-started-with-signalr-and-mvc-4.md)
     - [Tempo real de alta frequência com SignalR 1.x](older-versions/tutorial-high-frequency-realtime-with-signalr.md)
-    - [Tutorial: Transmissão de servidor com SignalR do ASP.NET 1.x](older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
-    - [Guia da API Hubs – servidor](older-versions/signalr-1x-hubs-api-guide-server.md)
-    - [Guia da API Hubs do SignalR 1.x – cliente JavaScript](older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
-    - [Guia da API Hubs – cliente .NET](older-versions/signalr-1x-hubs-api-guide-net-client.md)
+    - [Tutorial: Transmissão de servidor com SignalR 1.x do ASP.NET](older-versions/tutorial-server-broadcast-with-aspnet-signalr.md)
+    - [Guia da API Hubs – Servidor](older-versions/signalr-1x-hubs-api-guide-server.md)
+    - [Guia da API Hubs do SignalR 1.x – Cliente JavaScript](older-versions/signalr-1x-hubs-api-guide-javascript-client.md)
+    - [Guia da API Hubs – Cliente .NET](older-versions/signalr-1x-hubs-api-guide-net-client.md)
     - [Noções básicas e tratamento de eventos de tempo de vida de conexão no SignalR](older-versions/handling-connection-lifetime-events.md)
-    - [Trabalhando com grupos no SignalR 1.x](older-versions/working-with-groups.md)
+    - [Trabalhar com grupos no SignalR 1.x](older-versions/working-with-groups.md)
     - [Mapeamento de usuários do SignalR para conexões no SignalR 1.x](older-versions/mapping-users-to-connections.md)
     - [Introdução à segurança do SignalR (SignalR 1.x)](older-versions/introduction-to-security.md)
     - [Autenticação e autorização para hubs do SignalR (SignalR 1.x)](older-versions/hub-authorization.md)

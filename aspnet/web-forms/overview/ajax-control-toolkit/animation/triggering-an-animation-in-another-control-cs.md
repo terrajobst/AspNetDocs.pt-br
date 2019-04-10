@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
-title: Disparar uma animação em outro controle (C#) | Microsoft Docs
+title: Disparar uma animação em outro controle (c#) | Microsoft Docs
 author: wenz
 description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Em geral, iniciar um...
 ms.author: riande
@@ -8,15 +8,15 @@ ms.date: 06/02/2008
 ms.assetid: e5d99c2b-d8ee-413c-80d5-c120cffb0a4c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6216f24e497936245280f337477b287ff2afb080
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: ca383b7a82b754c7556dcea3bcdb8e28e5c7a45d
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58421382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384845"
 ---
-<a name="triggering-an-animation-in-another-control-c"></a>Disparar uma animação em outro controle (C#)
-====================
+# <a name="triggering-an-animation-in-another-control-c"></a>Disparar uma animação em outro controle (C#)
+
 por [Christian Wenz](https://github.com/wenz)
 
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation8.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation8CS.pdf)
@@ -57,7 +57,7 @@ Dentro de `<Animations>` nó, as animações de lugar como de costume. Para torn
 Observe a ordem especial em que as animações individuais aparecem. Em primeiro lugar, o botão é desativado depois que a animação é executada. Como não há nenhuma `AnimationTarget` de atributo no `<EnableAction>` elemento, essa animação é aplicado ao controle de origem: o botão. As duas próximas animação etapas deverão ser executadas em paralelo (`<Parallel>` elemento). Ambos têm seus `AnimationTarget` os atributos definidos para `"Panel1"`, animação, portanto, o painel, não o botão.
 
 
-[![Um clique do mouse no botão inicia a animação de painel](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
+[![A Clique no botão do mouse inicia a animação de painel](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
 
 Um clique do mouse no botão inicia a animação de painel ([clique para exibir a imagem em tamanho normal](triggering-an-animation-in-another-control-cs/_static/image3.png))
 

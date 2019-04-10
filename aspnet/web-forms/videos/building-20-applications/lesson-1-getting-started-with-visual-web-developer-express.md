@@ -8,15 +8,15 @@ ms.date: 09/08/2005
 ms.assetid: e9341b0b-1f01-4371-bfe0-0fb7410916a4
 msc.legacyurl: /web-forms/videos/building-20-applications/lesson-1-getting-started-with-visual-web-developer-express
 msc.type: video
-ms.openlocfilehash: 7fa8a155b65ee1aa4672d23c4450a758d3a48d35
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6f325af39ea977a0a565f4546a3d8a74bcdbbd02
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57034813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382544"
 ---
-<a name="lesson-1-getting-started-with-visual-web-developer-express"></a>[Lição 1:] Introdução ao Visual Web Developer Express
-====================
+# <a name="lesson-1-getting-started-with-visual-web-developer-express"></a>[Lição 1:] Introdução ao Visual Web Developer Express
+
 por [Microsoft](https://github.com/microsoft)
 
 Nesta lição, você começará a se familiarizar com o Visual Web Developer Express Edition e examinar o fluxo de trabalho envolvido no uso do programa para criar sites do ASP.NET dinâmicos.

@@ -8,15 +8,15 @@ ms.date: 05/21/2008
 ms.assetid: ea8196f5-039d-43ec-8447-8997ad4d3900
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1b28e6df0e0ab25e8292b6523c9ad7482301a511
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6e86626c2949543c0a36a210d52ee8297156a017
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57047253"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382155"
 ---
-<a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb"></a>Especificar o título, as metamarcas e outros cabeçalhos de HTML na página mestra (VB)
-====================
+# <a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb"></a>Especificar o título, as metamarcas e outros cabeçalhos de HTML na página mestra (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixar o código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_03_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_03_VB.pdf)
@@ -169,7 +169,7 @@ Depois de fazer isso, visite o site por meio de um navegador. Se você visitar u
 A Figura 5 mostra o `MultipleContentPlaceHolders.aspx` página quando visualizado por meio de um navegador. Observe que o título é precisamente nome do arquivo da página (menos a extensão), "MultipleContentPlaceHolders".
 
 
-[![Se um título não é especificado explicitamente, o nome do arquivo da página é usado automaticamente](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image5.png)
+[![Ium título de f não é especificado explicitamente, o nome do arquivo da página é usado automaticamente](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image5.png)
 
 **Figura 05**: Se um título não é especificado explicitamente, o nome do arquivo da página é usado automaticamente ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image7.png))
 
@@ -191,7 +191,7 @@ O sistema de mapa de site é construído sobre a [modelo de provedor](http://asp
 Comece criando um arquivo de mapa de site na pasta raiz do site do chamado `Web.sitemap`. Para fazer isso, clique com botão direito no nome do site no Gerenciador de soluções, escolha Add New Item e selecione o modelo do mapa do Site. Certifique-se de que o arquivo é nomeado `Web.sitemap` e clique em Adicionar.
 
 
-[![Adicionar um arquivo denominado Web. sitemap à pasta da raiz do site](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image8.png)
+[![Add um arquivo chamado SiteMap à pasta da raiz do site](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image8.png)
 
 **Figura 06**: Adicionar um arquivo nomeado `Web.sitemap` à pasta da raiz do site ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image10.png))
 
@@ -224,7 +224,7 @@ Inicie removendo a marcação existente da lista não ordenada da seção de li�
 No Assistente de configuração de fonte de dados, escolha para associar o ListView a um novo controle SiteMapDataSource chamado `LessonsDataSource`. O controle SiteMapDataSource retorna a estrutura hierárquica de mapa do sistema de site.
 
 
-[![Associar um controle SiteMapDataSource ao controle ListView LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image12.png)
+[![Blocalizar um controle SiteMapDataSource para o controle ListView LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image12.png)
 
 **Figura 08**: Associar um controle SiteMapDataSource ao controle ListView LessonsList ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image14.png))
 
@@ -239,7 +239,7 @@ O `LayoutTemplate` gera a marcação para uma lista não ordenada (`<ul>...</ul>
 Depois de configurar os modelos do ListView, visite o site. Como mostra a Figura 9, a seção de lições contém um único item com marcadores, Home. Onde estão About e usando lições ContentPlaceHolder vários controles? SiteMapDataSource foi projetado para retornar um conjunto hierárquico de dados, mas o controle ListView só pode exibir um único nível da hierarquia. Consequentemente, somente o primeiro nível de nós de mapa de site retornados por SiteMapDataSource é exibido.
 
 
-[![A seção de lições contém um único Item de lista](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image15.png)
+[![Tele lições, seção contém um único Item de lista](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image15.png)
 
 **Figura 09**: A seção de lições contém um único Item de lista ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image17.png))
 
@@ -254,7 +254,7 @@ Com essa alteração, o ListView exibe itens com marcadores do About e usando v�
 Configurando a SiteMapDataSource para omitir o nó inicial e adicionar explicitamente um item com marcador inicial, a seção de lições agora exibe a saída desejada.
 
 
-[![A seção de lições contém um Item de marcador para uso doméstico e cada nó filho](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image18.png)
+[![Tele lições, seção contém um marcador de Item para casa e cada nó filho](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image18.png)
 
 **Figura 10**: A seção de lições contém um Item de marcador para uso doméstico e cada nó filho ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb/_static/image20.png))
 

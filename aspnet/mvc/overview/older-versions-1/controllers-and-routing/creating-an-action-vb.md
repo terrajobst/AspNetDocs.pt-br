@@ -8,15 +8,15 @@ ms.date: 03/02/2009
 ms.assetid: c8d93e11-ef78-4a30-afbc-f30419000a60
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 070dd4c9d68327eec52fe385000b9ca3907eaa9f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5f8eeeaa9bd77c0259f680198e57ade8d49cd06b
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57051933"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382604"
 ---
-<a name="creating-an-action-vb"></a>Criar uma ação (VB)
-====================
+# <a name="creating-an-action-vb"></a>Criar uma ação (VB)
+
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como adicionar uma nova ação para um controlador ASP.NET MVC. Saiba mais sobre os requisitos para um método a ser uma ação.
@@ -57,7 +57,7 @@ Se você precisa criar um método público em uma classe de controlador e você 
 Se você tentar invocar a ação do controlador CompanySecrets() digitando /Work/CompanySecrets na barra de endereços do navegador, em seguida, você obterá a mensagem de erro na Figura 1.
 
 
-[![Invocando um método NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
+[![Invoking um método NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
 
 **Figura 01**: Invocando um método NonAction ([clique para exibir a imagem em tamanho normal](creating-an-action-vb/_static/image2.png))
 

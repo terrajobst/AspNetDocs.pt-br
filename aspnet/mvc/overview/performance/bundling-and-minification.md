@@ -8,15 +8,15 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9b627a66007aec09a404147698e2bef06c7e7794
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57053183"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59383831"
 ---
-<a name="bundling-and-minification"></a>Agrupamento e minificação
-====================
+# <a name="bundling-and-minification"></a>Agrupamento e minificação
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Agrupamento e minificação são duas técnicas você pode usar no ASP.NET 4.5 para melhorar o tempo de carregamento da solicitação. Agrupamento e minificação melhora o tempo de carregamento, reduzindo o número de solicitações para o servidor e reduzindo o tamanho dos ativos mais solicitados (como CSS e JavaScript.)
@@ -165,7 +165,7 @@ Considere um projeto com os arquivos JavaScript a seguir:
 
 A tabela a seguir mostra os arquivos adicionados a um pacote usando o caractere curinga, conforme mostrado:
 
-| **Call** | **Arquivos adicionados ou a exceção gerada** |
+| **Chamada** | **Arquivos adicionados ou a exceção gerada** |
 | --- | --- |
 | Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
 | Include("~/Scripts/Common/T\*.js") | Exceção padrão inválido. O caractere curinga só é permitido no prefixo ou sufixo. |

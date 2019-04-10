@@ -1,22 +1,23 @@
 ---
 uid: identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider
-title: 'Identidade do ASP.NET: Usar o armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#) | Microsoft Docs'
+title: 'Identidade do ASP.NET: Usar o armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)-ASP.NET 4.x'
 author: maumar
 description: Este tutorial mostra como substituir o mecanismo de armazenamento de dados padrão para a identidade do ASP.NET com EntityFramework (provedor de cliente SQL) por uma ou se contrair MySQL...
 ms.author: riande
 ms.date: 12/10/2013
 ms.assetid: 15253312-a92c-43ba-908e-b5dacd3d08b8
+ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider
 msc.type: authoredcontent
-ms.openlocfilehash: f510c9bcaf83c6a68e835a7d82555653459df856
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6a73efb7d577cc70ca5ebaa69e8fdd03f3735ae4
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379658"
 ---
-<a name="aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider-c"></a>Identidade do ASP.NET: Uso do Armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)
-====================
+# <a name="aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider-c"></a>Identidade do ASP.NET: Uso do Armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)
+
 by [Maurycy Markowski](https://github.com/maumar), [Raquel Soares De Almeida](https://github.com/raquelsa), [Robert McMurray](https://github.com/rmcmurray)
 
 > Este tutorial mostra como substituir o mecanismo de armazenamento de dados padrão para [ **ASP.NET Identity** ](introduction-to-aspnet-identity.md) com EntityFramework (provedor de cliente SQL) com um provedor de MySQL.

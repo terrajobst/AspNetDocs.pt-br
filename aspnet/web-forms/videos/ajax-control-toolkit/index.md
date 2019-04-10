@@ -8,15 +8,15 @@ ms.date: 10/05/2011
 ms.assetid: 6f7b1c74-cc73-42f9-8ef0-8b3d058dabfa
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit
 msc.type: chapter
-ms.openlocfilehash: 389a7563ca2c95563cd57326122a4a801e9e91e6
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 938d7f696e12496fc4ae79c51e9446d71a898e3e
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382882"
 ---
-<a name="ajax-control-toolkit"></a>Ajax Control Toolkit
-====================
+# <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
+
 > Como criar páginas usando o Kit de ferramentas de controle Ajax do ASP.NET muito ágil.
 
 
@@ -55,8 +55,8 @@ ms.locfileid: "57019003"
 - [Controle de reordenação do AJAX Toolkit](how-do-i-the-ajax-toolkit-reorder-control.md)
 - [Utilizar o controle de classificação do AJAX no kit de ferramentas do ASP.NET](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
 - [Extensores de controle](control-extenders.md)
-- [Seletor de cor](color-picker.md)
-- [Caixa de combinação](combo-box.md)
-- [Controle do editor](editor-control.md)
+- [Seletor de Cor](color-picker.md)
+- [Caixa de Combinação](combo-box.md)
+- [Controle de editor](editor-control.md)
 - [Editor de controle personalizado](editor-control-custom.md)
 - [Criar um novo extensor personalizado](create-a-new-custom-extender.md)

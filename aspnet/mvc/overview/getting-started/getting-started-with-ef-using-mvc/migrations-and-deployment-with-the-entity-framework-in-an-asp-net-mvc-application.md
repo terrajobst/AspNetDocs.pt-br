@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: d4dfc435-bda6-4621-9762-9ba270f8de4e
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: dd6bf5d8eb8a05dad1d230ef40c9b863e2af7094
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 1f25a9afdf379d725496bd88f6ac192ab19930ca
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57036983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384507"
 ---
 # <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>Tutorial: Usar migrações do EF em um aplicativo ASP.NET MVC e implantar no Azure
 
@@ -168,8 +168,8 @@ Você implantará o banco de dados no banco de dados SQL do Azure. Banco de dado
 10. Modifique [agrupamento](/sql/relational-databases/collations/collation-and-unicode-support) conforme necessário.
 11. Insira um administrador **nome de usuário de administrador de SQL** e **senha de administrador do SQL**.
 
-   - Se você selecionou **servidor do novo banco de dados SQL**, definir um novo nome e uma senha que você usará mais tarde ao acessar o banco de dados.
-   - Se você selecionou um servidor que você criou anteriormente, insira as credenciais para o servidor.
+    - Se você selecionou **servidor do novo banco de dados SQL**, definir um novo nome e uma senha que você usará mais tarde ao acessar o banco de dados.
+    - Se você selecionou um servidor que você criou anteriormente, insira as credenciais para o servidor.
 
 12. Coleta de telemetria pode ser habilitada para o serviço de aplicativo usando o Application Insights. Com pouca configuração, o Application Insights coleta eventos importantes, exceção, dependência, solicitação e informações de rastreamento. Para saber mais sobre o Application Insights, consulte [do Azure Monitor](https://azure.microsoft.com/services/monitor/).
 13. Clique em **criar** na parte inferior para indicar que tiver terminado.

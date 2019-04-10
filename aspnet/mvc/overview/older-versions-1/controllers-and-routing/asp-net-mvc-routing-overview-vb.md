@@ -8,15 +8,15 @@ ms.date: 08/19/2008
 ms.assetid: 4bc8d19a-80f1-44b4-adbf-95ed22d691ca
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/asp-net-mvc-routing-overview-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c20626b24e43031fc4103365396fc26b6a6daf93
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c135bacd7f9f87fac87a3c8cf41bad359bb3c0a2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57038053"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379177"
 ---
-<a name="aspnet-mvc-routing-overview-vb"></a>Visão geral sobre o roteamento do ASP.NET MVC (VB)
-====================
+# <a name="aspnet-mvc-routing-overview-vb"></a>Visão geral sobre o roteamento do ASP.NET MVC (VB)
+
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Neste tutorial, Stephen Walther mostra como o ASP.NET MVC framework mapeia as solicitações do navegador para ações do controlador.
@@ -95,7 +95,7 @@ Por fim, invocando o método Index () na listagem 5 com a URL /Home faz com que 
 [!code-vb[Main](asp-net-mvc-routing-overview-vb/samples/sample5.vb)]
 
 
-[![Invocar uma ação do controlador que espera um valor de parâmetro](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
+[![Iuma ação do controlador que espera um valor de parâmetro de nvoking](asp-net-mvc-routing-overview-vb/_static/image1.jpg)](asp-net-mvc-routing-overview-vb/_static/image1.png)
 
 **Figura 01**: Invocar uma ação do controlador que espera um valor de parâmetro ([clique para exibir a imagem em tamanho normal](asp-net-mvc-routing-overview-vb/_static/image2.png))
 

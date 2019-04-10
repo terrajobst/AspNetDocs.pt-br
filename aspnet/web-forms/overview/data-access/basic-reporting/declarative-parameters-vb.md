@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: dc1234a3-114f-4c9a-8d25-50ca03cc8e8e
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/declarative-parameters-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 10ed3a4f019cd78033ecdd61499b1914f403414e
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: be792b0511e91b65cf3dd56458630b4e8ec3b5af
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57060993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384221"
 ---
-<a name="declarative-parameters-vb"></a>Parâmetros declarativos (VB)
-====================
+# <a name="declarative-parameters-vb"></a>Parâmetros declarativos (VB)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_5_VB.exe) ou [baixar PDF](declarative-parameters-vb/_static/datatutorial05vb1.pdf)
@@ -37,7 +37,7 @@ Para este tutorial vamos começar que ilustram como usar um parâmetro definido 
 Para o primeiro exemplo, comece adicionando um controle DetailsView para o `DeclarativeParams.aspx` página o `BasicReporting` pasta. Na marca inteligente de DetailsView, selecione &lt;nova fonte de dados&gt; na lista suspensa lista e escolha Adicionar um ObjectDataSource.
 
 
-[![Adicionar um ObjectDataSource para a página](declarative-parameters-vb/_static/image2.png)](declarative-parameters-vb/_static/image1.png)
+[![Add um ObjectDataSource para a página](declarative-parameters-vb/_static/image2.png)](declarative-parameters-vb/_static/image1.png)
 
 **Figura 1**: Adicionar um ObjectDataSource para a página ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image3.png))
 
@@ -45,7 +45,7 @@ Para o primeiro exemplo, comece adicionando um controle DetailsView para o `Decl
 Isso iniciará o Assistente de escolher fonte de dados do controle ObjectDataSource automaticamente. Selecione o `ProductsBLL` classe desde a primeira tela do assistente.
 
 
-[![Selecione a classe ProductsBLL](declarative-parameters-vb/_static/image5.png)](declarative-parameters-vb/_static/image4.png)
+[![SEscolha a classe ProductsBLL](declarative-parameters-vb/_static/image5.png)](declarative-parameters-vb/_static/image4.png)
 
 **Figura 2**: Selecione o `ProductsBLL` classe ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image6.png))
 
@@ -53,7 +53,7 @@ Isso iniciará o Assistente de escolher fonte de dados do controle ObjectDataSou
 Como queremos exibir informações sobre um produto específico que queremos usar o `GetProductByProductID(productID)` método.
 
 
-[![Escolha o método GetProductByProductID(productID)](declarative-parameters-vb/_static/image8.png)](declarative-parameters-vb/_static/image7.png)
+[![Cescolher o método GetProductByProductID(productID)](declarative-parameters-vb/_static/image8.png)](declarative-parameters-vb/_static/image7.png)
 
 **Figura 3**: Escolha o `GetProductByProductID(productID)` método ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image9.png))
 
@@ -61,7 +61,7 @@ Como queremos exibir informações sobre um produto específico que queremos usa
 Uma vez que o método selecionamos inclui um parâmetro, há uma tela de mais para que o assistente, em que somos solicitados a definir o valor a ser usado para o parâmetro. A lista à esquerda mostra todos os parâmetros para o método selecionado. Para `GetProductByProductID(productID)` há apenas um `productID`. À direita, podemos especificar o valor do parâmetro selecionado. A lista de lista suspensa de origem do parâmetro enumera as várias fontes possíveis para o valor do parâmetro. Como queremos especificar um valor embutido em código de 5 para o `productID` parâmetro, deixar a fonte de parâmetro como None e digitar 5, na caixa de texto DefaultValue.
 
 
-[![Um Hard-Coded parâmetro de valor de 5 será usado para o parâmetro productID](declarative-parameters-vb/_static/image11.png)](declarative-parameters-vb/_static/image10.png)
+[![A Embutido em código parâmetro de valor de 5 será usado para o parâmetro productID](declarative-parameters-vb/_static/image11.png)](declarative-parameters-vb/_static/image10.png)
 
 **Figura 4**: Um Hard-Coded parâmetro de valor de 5 será usado para o `productID` parâmetro ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image12.png))
 
@@ -77,7 +77,7 @@ Depois de concluir o Assistente Configurar fonte de dados, a marcação de decla
 Ao visitar essa página, os dados de controle de Web invocará o ObjectDataSource `Select` método, que chamará o `ProductsBLL` da classe `GetProductByProductID(productID)` método usando o valor embutido em código de 5 para o `productID` parâmetro de entrada. O método retornará um fortemente tipadas `ProductDataTable` objeto que contém uma única linha com informações sobre a mistura de para Gumbo do chefe Anton (o produto com `ProductID` 5).
 
 
-[![Para Gumbo mistura informações sobre do chefe Anton são exibidos](declarative-parameters-vb/_static/image14.png)](declarative-parameters-vb/_static/image13.png)
+[![IMistura de para Gumbo nformation sobre do chefe Anton são exibidas](declarative-parameters-vb/_static/image14.png)](declarative-parameters-vb/_static/image13.png)
 
 **Figura 5**: Para Gumbo mistura informações sobre do chefe Anton são exibidas ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image15.png))
 
@@ -87,7 +87,7 @@ Ao visitar essa página, os dados de controle de Web invocará o ObjectDataSourc
 Parâmetros do ObjectDataSource valores também podem ser definidos com base no valor de um controle da Web na página. Para ilustrar isso, vamos dar uma GridView que lista todos os fornecedores que estão localizados em um país especificado pelo usuário. Para realizar este guia de início, adicionando uma caixa de texto para a página na qual o usuário pode inserir um nome de país. Definir esse controle de caixa de texto `ID` propriedade para `CountryName`. Também adicione um controle da Web de botão.
 
 
-[![Adicione uma caixa de texto para a página com ID CountryName](declarative-parameters-vb/_static/image17.png)](declarative-parameters-vb/_static/image16.png)
+[![Add uma caixa de texto para a página com ID CountryName](declarative-parameters-vb/_static/image17.png)](declarative-parameters-vb/_static/image16.png)
 
 **Figura 6**: Adicione uma caixa de texto para a página com `ID` `CountryName` ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image18.png))
 
@@ -95,7 +95,7 @@ Parâmetros do ObjectDataSource valores também podem ser definidos com base no 
 Em seguida, adicionar um controle GridView à página e, na marca inteligente, escolha Adicionar um novo ObjectDataSource. Como queremos exibir select de informações do fornecedor a `SuppliersBLL` classe da primeira de tela do assistente. Na segunda tela, escolha o `GetSuppliersByCountry(country)` método.
 
 
-[![Escolha o método GetSuppliersByCountry(country)](declarative-parameters-vb/_static/image20.png)](declarative-parameters-vb/_static/image19.png)
+[![Cescolher o método GetSuppliersByCountry(country)](declarative-parameters-vb/_static/image20.png)](declarative-parameters-vb/_static/image19.png)
 
 **Figura 7**: Escolha o `GetSuppliersByCountry(country)` método ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image21.png))
 
@@ -103,7 +103,7 @@ Em seguida, adicionar um controle GridView à página e, na marca inteligente, e
 Uma vez que o `GetSuppliersByCountry(country)` método tem um parâmetro de entrada, o assistente inclui mais uma vez uma tela final para escolher o valor do parâmetro. Neste momento, defina a origem do parâmetro de controle. Isso populará a lista suspensa de ControlID com os nomes dos controles na página; Selecione o `CountryName` controle da lista. Quando a página é visitada primeiro o `CountryName` caixa de texto estará em branco, portanto, nenhum resultado será retornado e nada é exibido. Se você quiser exibir algum resultado por padrão, defina a caixa de texto DefaultValue adequadamente.
 
 
-[![Defina o valor de parâmetro para o valor do controle CountryName](declarative-parameters-vb/_static/image23.png)](declarative-parameters-vb/_static/image22.png)
+[![Sdefinir o valor do parâmetro para o valor do controle CountryName](declarative-parameters-vb/_static/image23.png)](declarative-parameters-vb/_static/image22.png)
 
 **Figura 8**: Defina o valor de parâmetro para o `CountryName` valor de controle ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image24.png))
 
@@ -117,7 +117,7 @@ Ao visitar a página pela primeira vez o `CountryName` caixa de texto está vazi
 Depois que o visitante entra em um país, no entanto e clica no botão Mostrar fornecedores para fazer com que um postback, o ObjectDataSource `Select` método é novamente consultado, passando o controle de caixa de texto `Text` de valor como o `country` parâmetro.
 
 
-[![Esses fornecedores do Canadá são mostrados](declarative-parameters-vb/_static/image26.png)](declarative-parameters-vb/_static/image25.png)
+[![TMangueira fornecedores do Canadá é mostradas](declarative-parameters-vb/_static/image26.png)](declarative-parameters-vb/_static/image25.png)
 
 **Figura 9**: Esses fornecedores do Canadá são mostrados ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image27.png))
 
@@ -139,7 +139,7 @@ Alterar o `GetSuppliersByCountry(country)` método no `SuppliersBLL` classe para
 Com essa alteração de `DeclarativeParams.aspx` página mostra todos os fornecedores quando visitado pela primeira vez (ou sempre que o `CountryName` caixa de texto está vazia).
 
 
-[![Todos os fornecedores estão agora são mostradas por padrão](declarative-parameters-vb/_static/image29.png)](declarative-parameters-vb/_static/image28.png)
+[![AFornecedores de ll estão agora são mostradas por padrão](declarative-parameters-vb/_static/image29.png)](declarative-parameters-vb/_static/image28.png)
 
 **Figura 10**: Todos os fornecedores estão agora são mostradas por padrão ([clique para exibir a imagem em tamanho normal](declarative-parameters-vb/_static/image30.png))
 

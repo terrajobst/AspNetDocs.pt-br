@@ -8,15 +8,15 @@ ms.date: 02/20/2005
 ms.assetid: 72d90cd0-b3d9-454c-b2eb-ed0d9812f32c
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/improvements-in-visual-studio-2005
 msc.type: authoredcontent
-ms.openlocfilehash: 60259ceb99de536410aa5f53db64fb2dca68bf66
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a580b678a943695969b7f3acd2f7a033bd0b6ee3
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57037353"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379762"
 ---
-<a name="improvements-in-visual-studio-2005"></a>Aprimoramentos no Visual Studio 2005
-====================
+# <a name="improvements-in-visual-studio-2005"></a>Aprimoramentos no Visual Studio 2005
+
 por [Microsoft](https://github.com/microsoft)
 
 > Visual Studio 2005 fornece aos desenvolvedores de aplicativos Web uma longa lista de aprimoramentos e melhorias para projetos da Web.
@@ -438,7 +438,7 @@ Você deverá atingir o ponto de interrupção conforme o esperado.
 
 ## <a name="aspnet-development-server"></a>ASP.NET Development Server
 
-Como weve já discutido, o Visual Studio 2005 é fornecido com um servidor de Web chamado o ASP.NET Development Server. (O ASP.NET Development Server é às vezes chamado como Cassini.) Esse servidor Web é um meio conveniente de navegar e depurar aplicativos Web em execução no sistema de arquivos.
+Como já mencionei, o Visual Studio 2005 é fornecido com um servidor de Web chamado o ASP.NET Development Server. (O ASP.NET Development Server é às vezes chamado como Cassini.) Esse servidor Web é um meio conveniente de navegar e depurar aplicativos Web em execução no sistema de arquivos.
 
 O ASP.NET Development Server é um servidor Web restrito. Ele não permite conexões remotas, ela não permite todas as solicitações de qualquer usuário que não seja o usuário que iniciou o servidor Web. Ele também não tem a capacidade de servir as páginas ASP. Somente os recursos do ASP.NET e recursos HTML (incluindo imagens, arquivos CSS, etc.) são atendidos.
 

@@ -8,15 +8,15 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: 74abf391bb4aab3ff0d5079e0a24ba20287e18fb
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57049453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387900"
 ---
-<a name="enable-automated-unit-testing"></a>Habilitar o teste de unidade automatizado
-====================
+# <a name="enable-automated-unit-testing"></a>Habilitar o teste de unidade automatizado
+
 por [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
@@ -98,7 +98,7 @@ Vamos posicionar nosso cursor dentro da classe DinnerTest e digite "Ctrl R, T" p
 
 *Observação: A janela de resultados de teste do VS não mostra a coluna de nome de classe por padrão. Você pode adicionar isso clicando duas vezes dentro da janela de resultados de teste e usando o comando de menu Adicionar/remover colunas.*
 
-Nossos dois testes levaram apenas uma fração de segundo para executar – e como você pode ver ambos passados. Agora podemos ir e aumentá-las com a criação de testes adicionais que verifique se as validações de regra específica, bem como abordam os dois métodos auxiliares - IsUserHost() e IsUserRegisterd() – que adicionamos à classe Dinner. Ter todos esses testes em vigor para a classe Dinner tornará muito mais fácil e segura adicionar novas regras de negócio e as validações a ela no futuro. Podemos adicionar nossa nova lógica de regra para o jantar e, em seguida, em segundos, verifique se que ele ainda não dividido qualquer um dos nossos funcionalidade lógica anterior.
+Nossos dois testes levaram apenas uma fração de segundo para executar – e como você pode ver ambos passados. Agora podemos ir e aumentá-las com a criação de testes adicionais que verifique se as validações de regra específica, bem como abordam os dois métodos auxiliares - IsUserHost() e IsUserRegistered() – que adicionamos à classe Dinner. Ter todos esses testes em vigor para a classe Dinner tornará muito mais fácil e segura adicionar novas regras de negócio e as validações a ela no futuro. Podemos adicionar nossa nova lógica de regra para o jantar e, em seguida, em segundos, verifique se que ele ainda não dividido qualquer um dos nossos funcionalidade lógica anterior.
 
 Observe como usando um nome descritivo de teste torna mais fácil entender rapidamente o que cada teste é verificar. É recomendável usar o **ferramentas -&gt;opções** comando de menu, abrindo a testar ferramentas -&gt;tela de configuração de execução de teste e verificação de "duas vezes em um resultado de teste de unidade com falha ou inconclusivo exibe o ponto de falha no teste de"caixa de seleção. Isso permitirá que você clique duas vezes em uma falha na janela de resultados do teste e ir imediatamente para a falha de assert.
 
@@ -211,7 +211,7 @@ O melhor de tudo, eles ocupam apenas uma fração de segundo para executar e nã
 
 | **Tópico de lado: Estruturas de injeção de dependência** |
 | --- |
-| Execução de injeção de dependência manual (como acima) funciona bem, mas se tornará mais difícil de manter como o número de dependências e componentes em um aplicativo aumenta. Existem várias estruturas de injeção de dependência para .NET que pode ajudar a fornecer mais flexibilidade de gerenciamento de dependência. Essas estruturas, também chamadas de contêineres de "Inversão de controle" (IoC), fornecem mecanismos que permitem que um nível adicional de suporte de configuração para especificar e passar as dependências para objetos em tempo de execução (geralmente usando injeção de construtor ). Alguns da injeção de dependência de software livre mais populares / IOC estruturas no .NET incluem: AutoFac, Ninject, Spring.NET, StructureMap e Windsor. ASP.NET MVC expõe APIs que permitem que os desenvolvedores a participarem na resolução e instanciação dos controladores, e que permite a injeção de dependência de extensibilidade / estruturas IoC seja integrada corretamente dentro desse processo. Usar uma estrutura DI/IOC seria também nos permitem remover o construtor padrão do nosso DinnersController – o que seria remover completamente o acoplamento entre ele e o DinnerRepositorys. Não será utilizada uma injeção de dependência / estrutura IOC com nosso aplicativo NerdDinner. Mas é algo que podemos considerar a possibilidade para o futuro se os recursos e a base de código do NerdDinner cresceram. |
+| Execução de injeção de dependência manual (como acima) funciona bem, mas se tornará mais difícil de manter como o número de dependências e componentes em um aplicativo aumenta. Existem várias estruturas de injeção de dependência para .NET que pode ajudar a fornecer mais flexibilidade de gerenciamento de dependência. Essas estruturas, também chamadas de contêineres de "Inversão de controle" (IoC), fornecem mecanismos que permitem que um nível adicional de suporte de configuração para especificar e passar as dependências para objetos em tempo de execução (geralmente usando injeção de construtor ). Alguns da injeção de dependência de software livre mais populares / IOC estruturas no .NET incluem: AutoFac, Ninject, Spring.NET, StructureMap e Windsor. ASP.NET MVC expõe APIs que permitem que os desenvolvedores a participarem na resolução e instanciação dos controladores, e que permite a injeção de dependência de extensibilidade / estruturas IoC seja integrada corretamente dentro desse processo. Usar uma estrutura DI/IOC seria também nos permitem remover o construtor padrão do nosso DinnersController – o que seria remover completamente o acoplamento entre ele e o DinnerRepository. Não será utilizada uma injeção de dependência / estrutura IOC com nosso aplicativo NerdDinner. Mas é algo que podemos considerar a possibilidade para o futuro se os recursos e a base de código do NerdDinner cresceram. |
 
 ### <a name="creating-edit-action-unit-tests"></a>Criando testes de unidade de ação Editar
 

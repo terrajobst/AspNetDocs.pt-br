@@ -8,15 +8,15 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: a688761c87376aa93463c13eaa07858d3acb9dc2
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57064583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59379770"
 ---
-<a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introdução ao trabalho com um banco de dados da Web do ASP.NET (Razor) Sites de páginas
-====================
+# <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introdução ao trabalho com um banco de dados da Web do ASP.NET (Razor) Sites de páginas
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este artigo descreve como usar as ferramentas do Microsoft WebMatrix para criar um banco de dados em um site de páginas da Web do ASP.NET (Razor) e como criar páginas que permitem a você exibir, adicionar, editar e excluir dados.
@@ -151,7 +151,7 @@ Depois que você tem um banco de dados com os dados contidos nela, você pode ex
 
 > [!TIP] 
 > 
-> **Linguagem de consulta estruturada (SQL)**
+> **Structured Query Language (SQL)**
 > 
 > SQL é uma linguagem que é usada na maioria dos bancos de dados relacionais para o gerenciamento de dados em um banco de dados. Ele inclui comandos que permitem que você recuperar dados e atualizá-lo e que permitem que você criar, modificar e gerenciar tabelas de banco de dados. SQL é diferente de uma linguagem de programação (como aquele que você está usando no WebMatrix) porque com SQL, a ideia é que você informar o banco de dados que você deseja e trabalho do banco de dados é descobrir como obter os dados ou executar a tarefa. Aqui estão exemplos de alguns comandos SQL e o que fazer:
 > 

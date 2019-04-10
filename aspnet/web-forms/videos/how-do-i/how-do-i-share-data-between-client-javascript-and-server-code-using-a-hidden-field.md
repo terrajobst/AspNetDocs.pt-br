@@ -8,15 +8,15 @@ ms.date: 03/13/2008
 ms.assetid: bf0a7434-a017-4506-a240-2bd27e360a2f
 msc.legacyurl: /web-forms/videos/how-do-i/how-do-i-share-data-between-client-javascript-and-server-code-using-a-hidden-field
 msc.type: video
-ms.openlocfilehash: 537eed0ecc73e31f6be1ab1d8900ac22b486c6f4
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f0dd8c55e01398de33d26635b5a85e5ad366c16f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57026603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382804"
 ---
-<a name="how-do-i-share-data-between-client-javascript-and-server-code-using-a-hidden-field"></a>[Como fazer:] Compartilhar dados entre o cliente JavaScript e código de servidor usando um campo oculto
-====================
+# <a name="how-do-i-share-data-between-client-javascript-and-server-code-using-a-hidden-field"></a>[Como fazer:] Compartilhar dados entre o cliente JavaScript e código de servidor usando um campo oculto
+
 por [Chris Pels](https://twitter.com/chrispels)
 
 Neste vídeo, Chris Pels mostrará como compartilhar dados entre JavaScript e código do lado do servidor por meio de um campo oculto em uma página ASP.NET. Em seguida, saiba como usar o método RegisterHiddenField no código do lado do servidor para criar programaticamente um campo oculto no cliente. Além disso, consulte como criar programaticamente um controle de servidor HiddenField para compartilhar dados em uma página ASP.NET. Por fim, use o método RegisterArrayDeclaration para criar um contêiner no código do servidor para armazenar vários valores que é renderizado para a página de onde ele pode ser acessado pelo JavaScript.

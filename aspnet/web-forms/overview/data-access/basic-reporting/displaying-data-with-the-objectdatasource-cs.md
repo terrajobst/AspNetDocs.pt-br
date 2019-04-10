@@ -8,15 +8,15 @@ ms.date: 03/31/2010
 ms.assetid: af882aef-56f5-4e9a-8f95-3977fde20e74
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 45f72cfb06cdd4ee624f9930a360d5a85a98a9c1
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: a861fbbf2813a659f5301e43bd851345cac34e9f
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045823"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59380022"
 ---
-<a name="displaying-data-with-the-objectdatasource-c"></a>Exibir dados com o ObjectDataSource (C#)
-====================
+# <a name="displaying-data-with-the-objectdatasource-c"></a>Exibir dados com o ObjectDataSource (C#)
+
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/6/3/463cf87c-4724-4cbc-b7b5-3f866f43ba50/ASPNET_Data_Tutorial_4_CS.exe) ou [baixar PDF](displaying-data-with-the-objectdatasource-cs/_static/datatutorial04cs1.pdf)
@@ -39,7 +39,7 @@ O ASP.NET 2.0 é fornecido com cinco controles de fonte de dados internos [SqlDa
 O ObjectDataSource serve como um proxy para trabalhar com algum outro objeto. Para configurar o ObjectDataSource especificamos isso base do objeto e como seus métodos são mapeados para o ObjectDataSource `Select`, `Insert`, `Update`, e `Delete` métodos. Depois que esse objeto subjacente foi especificado e seus métodos mapeados para o ObjectDataSource, em seguida, podemos ligar o ObjectDataSource em um controle da Web de dados. ASP.NET é fornecido com muitos dados a controles da Web, incluindo o GridView, DetailsView, RadioButtonList e DropDownList, entre outros. Durante o ciclo de vida da página, os dados de controle de Web talvez precise acessar os dados que ele está vinculado, que ele realizará invocando seu ObjectDataSource `Select` método; se os dados de controle da Web dá suporte à inserção, atualização, ou excluir, chamadas podem ser feitas para seu ObjectDataSource `Insert`, `Update`, ou `Delete` métodos. Essas chamadas, em seguida, são roteadas por ObjectDataSource para métodos do objeto subjacente apropriado conforme ilustra o diagrama a seguir.
 
 
-[![O ObjectDataSource serve como um Proxy](displaying-data-with-the-objectdatasource-cs/_static/image3.png)](displaying-data-with-the-objectdatasource-cs/_static/image2.png)
+[![Tele ObjectDataSource serve como um Proxy](displaying-data-with-the-objectdatasource-cs/_static/image3.png)](displaying-data-with-the-objectdatasource-cs/_static/image2.png)
 
 **Figura 2**: O ObjectDataSource serve como um Proxy ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image4.png))
 
@@ -57,7 +57,7 @@ Comece abrindo o `SimpleDisplay.aspx` página o `BasicReporting` pasta, alterne 
 Para especificar o ObjectDataSource objeto subjacente e como os métodos desse objeto são mapeados para o ObjectDataSource, clique no link configurar fonte de dados na marca inteligente do ObjectDataSource.
 
 
-[![Clique a configurar o vínculo da fonte de dados da marca inteligente](displaying-data-with-the-objectdatasource-cs/_static/image6.png)](displaying-data-with-the-objectdatasource-cs/_static/image5.png)
+[![CClique no Link de fonte de dados configurar da marca inteligente](displaying-data-with-the-objectdatasource-cs/_static/image6.png)](displaying-data-with-the-objectdatasource-cs/_static/image5.png)
 
 **Figura 3**: Clique no Link da fonte de dados configurar da marca inteligente ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image7.png))
 
@@ -67,7 +67,7 @@ Isso abre o Assistente Configurar fonte de dados. Primeiro, vamos deve especific
 Nesta primeira tela, escolha o `ProductsBLL` classe na lista suspensa e clique em Avançar.
 
 
-[![Especifique o objeto para uso com o controle ObjectDataSource](displaying-data-with-the-objectdatasource-cs/_static/image9.png)](displaying-data-with-the-objectdatasource-cs/_static/image8.png)
+[![Sespecificar o objeto a ser usado com o controle ObjectDataSource](displaying-data-with-the-objectdatasource-cs/_static/image9.png)](displaying-data-with-the-objectdatasource-cs/_static/image8.png)
 
 **Figura 4**: Especifique o objeto para uso com o controle ObjectDataSource ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image10.png))
 
@@ -75,7 +75,7 @@ Nesta primeira tela, escolha o `ProductsBLL` classe na lista suspensa e clique e
 A próxima tela do assistente solicita que você selecione qual método o ObjectDataSource deve invocar. Na lista suspensa lista esses métodos que retornam dados no objeto selecionado na tela anterior. Aqui, vemos `GetProductByProductID`, `GetProducts`, `GetProductsByCategoryID`, e `GetProductsBySupplierID`. Selecione o `GetProducts` método a partir de lista suspensa e clique em Concluir (se você tiver adicionado a `DataObjectMethodAttribute` para o `ProductBLL`do métodos conforme mostrado no tutorial anterior, essa opção serão selecionados por padrão).
 
 
-[![Escolha o método para retornar dados a partir da guia SELECT](displaying-data-with-the-objectdatasource-cs/_static/image12.png)](displaying-data-with-the-objectdatasource-cs/_static/image11.png)
+[![CEscolha o método para retornar os dados a partir da guia selecione](displaying-data-with-the-objectdatasource-cs/_static/image12.png)](displaying-data-with-the-objectdatasource-cs/_static/image11.png)
 
 **Figura 5**: Escolha o método para retornar os dados na guia Selecionar ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image13.png))
 
@@ -98,7 +98,7 @@ Depois que o ObjectDataSource foi adicionado à página e configurado, estamos p
 Adicionar um controle GridView na caixa de ferramentas para `SimpleDisplay.aspx`da superfície de design. Na marca inteligente do GridView, escolha o controle ObjectDataSource, adicionamos na etapa 1. Isso criará automaticamente um BoundField no GridView para cada propriedade retornada pelos dados do ObjectDataSource `Select` método (ou seja, as propriedades definidas por produtos DataTable).
 
 
-[![Foi adicionado um GridView à página e associado a ObjectDataSource](displaying-data-with-the-objectdatasource-cs/_static/image15.png)](displaying-data-with-the-objectdatasource-cs/_static/image14.png)
+[![A GridView foi adicionado à página e associado a ObjectDataSource](displaying-data-with-the-objectdatasource-cs/_static/image15.png)](displaying-data-with-the-objectdatasource-cs/_static/image14.png)
 
 **Figura 6**: Um GridView foi adicionado à página e associação a ObjectDataSource ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image16.png))
 
@@ -106,7 +106,7 @@ Adicionar um controle GridView na caixa de ferramentas para `SimpleDisplay.aspx`
 Em seguida, você pode personalizar, reorganizar ou remover BoundFields do GridView, clicando na opção Editar colunas da marca inteligente.
 
 
-[![Gerenciar BoundFields do GridView por meio da caixa de diálogo Editar colunas](displaying-data-with-the-objectdatasource-cs/_static/image18.png)](displaying-data-with-the-objectdatasource-cs/_static/image17.png)
+[![Mgerenciar o GridView BoundFields por meio das colunas de caixa de diálogo Editar](displaying-data-with-the-objectdatasource-cs/_static/image18.png)](displaying-data-with-the-objectdatasource-cs/_static/image17.png)
 
 **Figura 7**: Gerenciar BoundFields por meio das colunas de caixa do GridView de diálogo Editar ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image19.png))
 
@@ -117,7 +117,7 @@ Dedique uns momentos para modificar BoundFields do GridView, removendo o `Produc
 [!code-aspx[Main](displaying-data-with-the-objectdatasource-cs/samples/sample2.aspx)]
 
 
-[![BoundFields do GridView foram personalizados](displaying-data-with-the-objectdatasource-cs/_static/image21.png)](displaying-data-with-the-objectdatasource-cs/_static/image20.png)
+[![TForam personalizados BoundFields do GridView he](displaying-data-with-the-objectdatasource-cs/_static/image21.png)](displaying-data-with-the-objectdatasource-cs/_static/image20.png)
 
 **Figura 8**: BoundFields foram personalizados o GridView ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image22.png))
 
@@ -133,7 +133,7 @@ Nosso tema não incluirá todas as imagens ou arquivos CSS (vamos deixar a folha
 Comece adicionando um novo arquivo de capa ao seu projeto chamado `GridView.skin` clicando duas vezes no nome do projeto no Gerenciador de soluções e escolhendo Adicionar Novo Item.
 
 
-[![Adicione um arquivo de capa chamado GridView.skin](displaying-data-with-the-objectdatasource-cs/_static/image24.png)](displaying-data-with-the-objectdatasource-cs/_static/image23.png)
+[![Add um GridView.skin de chamado de arquivo de capa](displaying-data-with-the-objectdatasource-cs/_static/image24.png)](displaying-data-with-the-objectdatasource-cs/_static/image23.png)
 
 **Figura 9**: Adicionar um arquivo de capa nomeado `GridView.skin` ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image25.png))
 
@@ -141,7 +141,7 @@ Comece adicionando um novo arquivo de capa ao seu projeto chamado `GridView.skin
 Arquivos de capa precisam ser colocados em um tema, que estão localizado no `App_Themes` pasta. Como ainda não temos uma pasta, o Visual Studio oferecerá gentilmente para criá-lo para nós quando adicionar nossa capa primeiro. Clique em Sim para criar o `App_Theme` pasta e coloque o novo `GridView.skin` arquivo existe.
 
 
-[![Deixe o Visual Studio crie a pasta App_Theme](displaying-data-with-the-objectdatasource-cs/_static/image27.png)](displaying-data-with-the-objectdatasource-cs/_static/image26.png)
+[![LET o Visual Studio crie a pasta de App_Theme](displaying-data-with-the-objectdatasource-cs/_static/image27.png)](displaying-data-with-the-objectdatasource-cs/_static/image26.png)
 
 **Figura 10**: Permitir que o Visual Studio criar o `App_Theme` pasta ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image28.png))
 
@@ -172,7 +172,7 @@ Com nosso tema definido, a última etapa é aplicar o tema à nossa página do A
 E isso é tudo! O `styleSheetTheme` configuração indica que as propriedades especificadas no tema devem *não* substituir as propriedades especificadas no nível de controle. Para especificar que as configurações de tema devem prevalecem sobre as configurações de controle, use o `theme` de atributo no lugar de `styleSheetTheme`; Infelizmente, especificadas por meio de configurações de tema a `theme` atributo não aparecem na exibição de Design do Visual Studio. Consulte a [visão geral de capas e temas do ASP.NET](https://msdn.microsoft.com/library/ykzx33wh.aspx) e [usando temas do lado do servidor estilos](https://quickstarts.asp.net/quickstartv20/aspnet/doc/themes/stylesheettheme.aspx) para obter mais informações sobre temas e capas; consulte [How To: Aplicar temas do ASP.NET](https://msdn.microsoft.com/library/0yy5hxdk(VS.80).aspx) para obter mais informações sobre como configurar uma página para usar um tema.
 
 
-[![O GridView exibe o nome do produto, categoria, fornecedor, preço e informações descontinuadas](displaying-data-with-the-objectdatasource-cs/_static/image31.png)](displaying-data-with-the-objectdatasource-cs/_static/image30.png)
+[![Tele GridView exibe o nome do produto, categoria, fornecedor, preço e informações Descontinuado](displaying-data-with-the-objectdatasource-cs/_static/image31.png)](displaying-data-with-the-objectdatasource-cs/_static/image30.png)
 
 **Figura 12**: O GridView exibe o nome do produto, categoria, fornecedor, preço e informações descontinuados ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image32.png))
 
@@ -184,7 +184,7 @@ O GridView exibe uma linha para cada registro retornado pelo controle de fonte d
 Comece adicionando um controle DetailsView *acima* GridView no `SimpleDisplay.aspx`. Em seguida, associá-lo ao mesmo controle ObjectDataSource como GridView. Como com o controle GridView, um BoundField será adicionado ao DetailsView para cada propriedade no objeto retornado pelo ObjectDataSource `Select` método. A única diferença é BoundFields de DetailsView são dispostos horizontalmente em vez de verticalmente.
 
 
-[![Adicione um DetailsView à página e associá-lo a ObjectDataSource](displaying-data-with-the-objectdatasource-cs/_static/image34.png)](displaying-data-with-the-objectdatasource-cs/_static/image33.png)
+[![Add um DetailsView para a página e associá-lo a ObjectDataSource](displaying-data-with-the-objectdatasource-cs/_static/image34.png)](displaying-data-with-the-objectdatasource-cs/_static/image33.png)
 
 **Figura 13**: Adicione um DetailsView à página e associá-lo para o ObjectDataSource ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image35.png))
 
@@ -192,7 +192,7 @@ Comece adicionando um controle DetailsView *acima* GridView no `SimpleDisplay.as
 Como o GridView, BoundFields de DetailsView pode ser alterado para fornecer uma exibição mais personalizada dos dados retornados pelo ObjectDataSource. Figura 14 mostra DetailsView após sua BoundFields e `CssClass` propriedades tiverem sido configuradas para tornar sua aparência semelhante ao exemplo GridView.
 
 
-[![DetailsView mostra um único registro](displaying-data-with-the-objectdatasource-cs/_static/image37.png)](displaying-data-with-the-objectdatasource-cs/_static/image36.png)
+[![Tele DetailsView mostra um único registro](displaying-data-with-the-objectdatasource-cs/_static/image37.png)](displaying-data-with-the-objectdatasource-cs/_static/image36.png)
 
 **Figura 14**: DetailsView mostra um único registro ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image38.png))
 
@@ -200,12 +200,12 @@ Como o GridView, BoundFields de DetailsView pode ser alterado para fornecer uma 
 Observe que o DetailsView exibe apenas o primeiro registro retornado pela fonte de dados. Para permitir que o usuário percorrer todos os registros, um de cada vez, podemos deve habilitar a paginação para DetailsView. Para fazer isso, retorne ao Visual Studio e marque a caixa de seleção Habilitar paginação na marca inteligente do ovládacího prvku DetailsView.
 
 
-[![Habilitar a paginação no controle DetailsView](displaying-data-with-the-objectdatasource-cs/_static/image40.png)](displaying-data-with-the-objectdatasource-cs/_static/image39.png)
+[![EHabilitar a paginação no controle DetailsView](displaying-data-with-the-objectdatasource-cs/_static/image40.png)](displaying-data-with-the-objectdatasource-cs/_static/image39.png)
 
 **Figura 15**: Habilitar a paginação no controle DetailsView ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image41.png))
 
 
-[![Com paginação habilitada, DetailsView permite que o usuário exiba qualquer um dos produtos](displaying-data-with-the-objectdatasource-cs/_static/image43.png)](displaying-data-with-the-objectdatasource-cs/_static/image42.png)
+[![WPaginação habilitada, DetailsView de OM permite que o usuário exibir qualquer um dos produtos](displaying-data-with-the-objectdatasource-cs/_static/image43.png)](displaying-data-with-the-objectdatasource-cs/_static/image42.png)
 
 **Figura 16**: Com paginação habilitada, DetailsView permite ao usuário exibir qualquer um dos produtos ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image44.png))
 
@@ -221,18 +221,18 @@ O [controle FormView](https://msdn.microsoft.com/library/fyf1dk77.aspx) fornece 
 Adicionar um controle FormView para o `SimpleDisplay.aspx` superfície de design da página. FormView exibe inicialmente como um bloco cinza, informando-no que precisamos fornecer, no mínimo, o controle `ItemTemplate`.
 
 
-[![FormView devem incluir um ItemTemplate](displaying-data-with-the-objectdatasource-cs/_static/image46.png)](displaying-data-with-the-objectdatasource-cs/_static/image45.png)
+[![Tele FormView deve incluir um ItemTemplate](displaying-data-with-the-objectdatasource-cs/_static/image46.png)](displaying-data-with-the-objectdatasource-cs/_static/image45.png)
 
 **Figura 17**: FormView deve incluir um `ItemTemplate` ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image47.png))
 
 
-Você pode vincular FormView diretamente a um controle de fonte de dados por meio de marca inteligente de FormView, que criará um padrão `ItemTemplate` automaticamente (junto com um `EditItemTemplate` e `InsertItemTemplate`, se o controle de ObjectDatatSource `InsertMethod` e `UpdateMethod` são definidas). No entanto, para este exemplo vamos associar os dados ao FormView e especifique seu `ItemTemplate` manualmente. Comece definindo o FormView `DataSourceID` propriedade para o `ID` do controle ObjectDataSource, `ObjectDataSource1`. Em seguida, crie o `ItemTemplate` para que ele exibe o nome e o preço do produto um `<h4>` elemento e os nomes de categoria e transportadora abaixo do que em uma fonte menor.
+Você pode vincular FormView diretamente a um controle de fonte de dados por meio de marca inteligente de FormView, que criará um padrão `ItemTemplate` automaticamente (junto com um `EditItemTemplate` e `InsertItemTemplate`, se do controle ObjectDataSource `InsertMethod` e `UpdateMethod` são definidas). No entanto, para este exemplo vamos associar os dados ao FormView e especifique seu `ItemTemplate` manualmente. Comece definindo o FormView `DataSourceID` propriedade para o `ID` do controle ObjectDataSource, `ObjectDataSource1`. Em seguida, crie o `ItemTemplate` para que ele exibe o nome e o preço do produto um `<h4>` elemento e os nomes de categoria e transportadora abaixo do que em uma fonte menor.
 
 
 [!code-aspx[Main](displaying-data-with-the-objectdatasource-cs/samples/sample6.aspx)]
 
 
-[![O primeiro produto (Chai) é exibido em um formato personalizado](displaying-data-with-the-objectdatasource-cs/_static/image49.png)](displaying-data-with-the-objectdatasource-cs/_static/image48.png)
+[![Tele primeiro produto (Chai) é exibido em um formato personalizado](displaying-data-with-the-objectdatasource-cs/_static/image49.png)](displaying-data-with-the-objectdatasource-cs/_static/image48.png)
 
 **Figura 18**: O primeiro produto (Chai) é exibido em um formato personalizado ([clique para exibir a imagem em tamanho normal](displaying-data-with-the-objectdatasource-cs/_static/image50.png))
 

@@ -8,15 +8,15 @@ ms.date: 08/15/2012
 ms.assetid: ed66530a-04d5-49eb-b76a-85be1f57c437
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: ea3d1517192ded0e5372c49897bb1fec33324b6f
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: ecc0733c2850bc157c7ee5b251787152393481fc
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57046773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59385237"
 ---
-<a name="intro-to-aspnet-mvc-4"></a>Introdução ao ASP.NET MVC 4
-====================
+# <a name="intro-to-aspnet-mvc-4"></a>Introdução ao ASP.NET MVC 4
+
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Uma versão atualizada, se este tutorial está disponível [aqui](../../getting-started/introduction/getting-started.md) usando [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). O novo tutorial usa o ASP.NET MVC 5, que fornece muitos aprimoramentos ao longo deste tutorial.
@@ -30,7 +30,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 >
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale o [installer WPI para ASP.NET MVC 4](https://go.microsoft.com/fwlink/?LinkId=243392) e o: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack)
 >
-> Um projeto do Visual Web Developer com código-fonte C# está disponível para acompanhar este tópico. [Baixe a versão C#](https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d/file/114480/1/MvcMovie.zip).
+> Um projeto do Visual Web Developer com código-fonte c# está disponível para acompanhar este tópico. [Baixe a versão c#](https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d/file/114480/1/MvcMovie.zip).
 >
 > No tutorial, você executar o aplicativo no Visual Studio. Você também pode fazer o aplicativo disponível na Internet, implantá-lo em um provedor de hospedagem. A Microsoft oferece a hospedagem de web gratuita para até 10 sites em uma [conta gratuita do Windows Azure](https://www.windowsazure.com/pricing/free-trial/?WT.mc_id=A443DD604). Para obter informações sobre como implantar um projeto de web do Visual Studio para um Site do Windows Azure, consulte [criar e implantar um site da web ASP.NET e o banco de dados SQL com o Visual Studio](https://docs.microsoft.com/dotnet/azure/). Esse tutorial também mostra como usar o Entity Framework Code First Migrations para implantar seu banco de dados do SQL Server no Windows Azure SQL Database (anteriormente conhecido como SQL Azure).
 >
@@ -61,7 +61,7 @@ Visual Studio é um IDE ou ambiente de desenvolvimento integrado. Assim como usa
 
 ## <a name="creating-your-first-application"></a>Criando seu primeiro aplicativo
 
-Você pode criar aplicativos usando o Visual Basic ou Visual C# como linguagem de programação. Selecione Visual C# à esquerda e, em seguida, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto &quot;MvcMovie&quot; e, em seguida, clique em **Okey**.
+Você pode criar aplicativos usando o Visual Basic ou Visual c# como linguagem de programação. Selecione Visual c# à esquerda e, em seguida, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto &quot;MvcMovie&quot; e, em seguida, clique em **Okey**.
 
 ![](intro-to-aspnet-mvc-4/_static/image4.png)
 

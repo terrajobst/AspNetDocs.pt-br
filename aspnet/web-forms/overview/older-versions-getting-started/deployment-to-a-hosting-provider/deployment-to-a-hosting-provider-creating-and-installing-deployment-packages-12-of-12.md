@@ -8,15 +8,15 @@ ms.date: 11/17/2011
 ms.assetid: 3fc23eed-921d-4d46-a610-a2d156e4bd03
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 2923501289f31243a7341848ed3f7c2142c98e75
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 7e3c8b2adbe8d5248bed7299fb5e784a753f3851
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041963"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59382154"
 ---
-<a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-troubleshooting-12-of-12"></a>Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Solução de problemas (12 de 12)
-====================
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-troubleshooting-12-of-12"></a>Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Solução de problemas (12 de 12)
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixe o projeto inicial](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
@@ -113,7 +113,7 @@ Depois de implantar um aplicativo usando um único clique publica, quando você 
 
 ### <a name="possible-cause-and-solution"></a>Possível causa e solução
 
-Abra o *Web. config* arquivo no site implantado e verifique se os valores de cadeia de caracteres de conexão começam com `$(ReplacableToken_`, conforme mostrado no exemplo a seguir:
+Abra o *Web. config* arquivo no site implantado e verifique se os valores de cadeia de caracteres de conexão começam com `$(ReplaceableToken_`, conforme mostrado no exemplo a seguir:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample9.xml)]
 
@@ -318,4 +318,4 @@ O servidor não oferece suporte para ASP.NET 4.5. Entre em contato com o provedo
 O projeto **propriedades** windows inclui uma lista de lista suspensa de framework de destino, mas você não pode resolver esse problema alterando apenas do **.NET Framework 4.5** para **do.NETFramework4**. Se você alterar a estrutura de destino para uma versão anterior do framework, o projeto ainda terão referências aos assemblies do framework versão posterior e não será executado. Você precisa alterar essas referências manualmente ou criar um novo projeto que tem como alvo o .NET Framework 4 ou anterior. Para obter mais informações, consulte [.NET Framework Targeting para Sites da Web](https://msdn.microsoft.com/library/bb398791(v=vs.100).aspx).
 
 > [!div class="step-by-step"]
-> [Anterior](deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)
+> [Voltar](deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12.md)

@@ -8,15 +8,15 @@ ms.date: 01/26/2011
 ms.assetid: 393df4a8-b1db-44c4-9db7-2b533ca887d0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4
 msc.type: authoredcontent
-ms.openlocfilehash: 402e7ace1abad899d32ed179d6b68de4e5a129f5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57045713"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59387445"
 ---
-<a name="whats-new-in-the-entity-framework-40"></a>Novidades no Entity Framework 4.0
-====================
+# <a name="whats-new-in-the-entity-framework-40"></a>Novidades no Entity Framework 4.0
+
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais baseia-se no aplicativo web Contoso University que é criado pela [guia de Introdução com o Entity Framework](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) série de tutoriais. Se você não concluir os tutoriais anteriores, como um ponto de partida para este tutorial, você pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que você teria criado. Você também pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) que é criado pela série de tutoriais completa. Se você tiver dúvidas sobre os tutoriais, você pode postá-los para o [Fórum do Entity Framework do ASP.NET](https://forums.asp.net/1227.aspx).
@@ -135,7 +135,7 @@ No **escolha sua Conexão de dados** etapa, clique em **nova Conexão**.
 
 [![Image14](what-s-new-in-the-entity-framework-4/_static/image26.png)](what-s-new-in-the-entity-framework-4/_static/image25.png)
 
-No **propriedades de Conexão** diálogo caixa, selecione a instância local do SQL Server Express e o nome do banco de dados `AlumniAsssociation`.
+No **propriedades de Conexão** diálogo caixa, selecione a instância local do SQL Server Express e o nome do banco de dados `AlumniAssociation`.
 
 [![Image15](what-s-new-in-the-entity-framework-4/_static/image28.png)](what-s-new-in-the-entity-framework-4/_static/image27.png)
 
@@ -197,7 +197,7 @@ Para obter mais informações sobre como usar a abordagem primeiramente de códi
 - [Desenvolvimento com o Entity Framework 4 Code-First](https://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx). Isso é uma postagem de blog de Introdução ao desenvolvimento de código primeiro Scott Guthrie.
 - [Postagens de blog da equipe de desenvolvimento do Framework entidade - CodeOnly marcado](https://blogs.msdn.com/b/efdesign/archive/tags/codeonly/)
 - [Blog da equipe de desenvolvimento do Framework entidade - postagens marcadas Code First](https://blogs.msdn.com/b/efdesign/archive/tags/code+first/)
-- [Tutorial de Store de música do MVC – parte 4: Acesso a dados e modelos](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
+- [Tutorial de Store de música do MVC – parte 4: Modelos e Acesso a Dados](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
 - [Introdução ao MVC 3 – parte 4: Desenvolvimento do Entity Framework Code First](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md)
 
 Além disso, um novo tutorial MVC Code-First que cria um aplicativo semelhante ao aplicativo Contoso University está previsto para ser publicado no primeiro semestre de 2011 às [https://asp.net/entity-framework/tutorials](../../../../entity-framework.md)
@@ -210,4 +210,4 @@ Isso conclui a visão geral para o que há de novo no Entity Framework e esse co
 - [Anunciando o lançamento do Entity Framework 4](https://blogs.msdn.com/b/efdesign/archive/2010/04/12/announcing-the-release-of-entity-framework-4.aspx) postagem do blog da equipe de desenvolvimento do Entity Framework sobre os novos recursos na versão 4.
 
 > [!div class="step-by-step"]
-> [Anterior](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
+> [Voltar](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)

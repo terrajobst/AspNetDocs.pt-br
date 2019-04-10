@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 634ea84b-f904-4afe-b71b-49cccef4d9cc
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-models-and-data-access
 msc.type: authoredcontent
-ms.openlocfilehash: 10c2f6379f6d3139dd3bcf1027ff456e074298c3
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 53ca3bc4e550f488f3ae4c41f02a636e747107cb
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59384884"
 ---
 # <a name="aspnet-mvc-4-models-and-data-access"></a>Acesso a dados e modelos do ASP.NET MVC 4
 
@@ -74,7 +74,7 @@ Para sua conveniência, grande parte do código que você estiver gerenciando ao
 
 Se você não estiver familiarizado com os trechos de código do Visual Studio e aprender como usá-los, consulte o Apêndice deste documento &quot; [apêndice c: Usar trechos de código](#AppendixC)&quot;.
 
-* * *
+---
 
 <a id="Exercises"></a>
 
@@ -204,7 +204,7 @@ Nesta tarefa, você verificará que, embora a geração de modelo tiver removido
     ![Compilações foi bem-sucedida](aspnet-mvc-4-models-and-data-access/_static/image14.png "compilações foi bem-sucedida")
 
     *Compilações com êxito*
-3. Enquanto o designer exibe as entidades em um formato de diagrama, eles são realmente as classes do C#. Expanda o **StoreDB.edmx** nó no Gerenciador de soluções e, em seguida **StoreDB.tt**, você verá as novas entidades geradas.
+3. Enquanto o designer exibe as entidades em um formato de diagrama, eles são realmente as classes do c#. Expanda o **StoreDB.edmx** nó no Gerenciador de soluções e, em seguida **StoreDB.tt**, você verá as novas entidades geradas.
 
     ![Arquivos gerados](aspnet-mvc-4-models-and-data-access/_static/image15.png "arquivos gerados")
 
@@ -514,7 +514,7 @@ Nesta tarefa, você executar o aplicativo em um navegador da web e obter os deta
 > [!NOTE]
 > Além disso, você pode implantar esse aplicativo para Windows Azure Web Sites seguinte [apêndice b: Publicando um aplicativo ASP.NET MVC 4 usando a implantação da Web](#AppendixB).
 
-* * *
+---
 
 <a id="Summary"></a>
 
@@ -716,7 +716,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Usar trechos de código do Visual Studio para inserir código em seu projeto*
 
-***Para adicionar um trecho de código usando o teclado (somente C#)***
+***Para adicionar um trecho de código usando o teclado (somente c#)***
 
 1. Coloque o cursor onde você deseja inserir o código.
 2. Comece a digitar o nome do trecho de código (sem espaços ou hifens).
@@ -736,7 +736,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 
 *Pressione Tab novamente e o trecho de código serão expandido*
 
-***Para adicionar um trecho de código usando o mouse (C#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
+***Para adicionar um trecho de código usando o mouse (c#, Visual Basic e XML)*** 1. Clique com botão direito no qual você deseja inserir o trecho de código.
 
 1. Selecione **Inserir trecho** seguido **Meus trechos de código**.
 2. Selecione o trecho relevante na lista, clicando nele.

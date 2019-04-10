@@ -8,15 +8,15 @@ ms.date: 08/08/2011
 ms.assetid: 24eab207-f69c-4eab-bfae-06725050452d
 msc.legacyurl: /web-forms/overview/security
 msc.type: chapter
-ms.openlocfilehash: 236a89bebd6cebf1720d5be5804ba9194d397a0a
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 6b911b1f32dcfba810312a19e1764ec51c3c2255
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57019703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59389057"
 ---
-<a name="security-authentication-and-authorization-in-aspnet-web-forms"></a>Segurança, autenticação e autorização no ASP.NET Web Forms
-====================
+# <a name="security-authentication-and-authorization-in-aspnet-web-forms"></a>Segurança, autenticação e autorização no ASP.NET Web Forms
+
 > Como permitir que os usuários para fazer logon no seu site (e, opcionalmente, ser atribuídos a funções) usando um formulário de logon ou a autenticação do Windows.
 
 
