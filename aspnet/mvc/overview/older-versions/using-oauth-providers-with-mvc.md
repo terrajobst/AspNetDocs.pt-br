@@ -8,15 +8,15 @@ ms.date: 06/19/2013
 ms.assetid: 7a87f16f-0e19-4f15-a88a-094ae866c4a2
 msc.legacyurl: /mvc/overview/older-versions/using-oauth-providers-with-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: d0203b62c911056fc56ed103c1c42f67816cbbf0
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: c2fe74c3d7b1aa0d230f1893f6ba7dcaa7a88419
+ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57065723"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59396974"
 ---
-<a name="using-oauth-providers-with-mvc-4"></a>Uso de provedores OAuth com o MVC 4
-====================
+# <a name="using-oauth-providers-with-mvc-4"></a>Uso de provedores OAuth com o MVC 4
+
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
 > Este tutorial mostra como criar um aplicativo web ASP.NET MVC 4 que permite aos usuários fazer logon com credenciais de um provedor externo, como o Facebook, Twitter, Microsoft ou Google e, em seguida, integre algumas das funcionalidades desses provedores em seu aplicativo Web. Para simplificar, este tutorial concentra-se sobre como trabalhar com as credenciais do Facebook.
@@ -83,7 +83,7 @@ Este tutorial não mostra todas as etapas que você deve executar para registrar
 - [Microsoft](http://manage.dev.live.com/)
 - [Twitter](https://dev.twitter.com/)
 
-Ao registrar o seu site com o Facebook, você pode fornecer &quot;localhost&quot; para o domínio do site e `&quot; http://localhost/&quot;` para a URL, conforme mostrado na imagem abaixo. Usando localhost funciona com a maioria dos provedores, mas atualmente não funciona com o provedor Microsoft. Para o provedor da Microsoft, você deve incluir uma URL de site válido.
+Ao registrar o seu site com o Facebook, você pode fornecer &quot;localhost&quot; para o domínio do site e `&quot;http://localhost/&quot;` para a URL, conforme mostrado na imagem abaixo. Usando localhost funciona com a maioria dos provedores, mas atualmente não funciona com o provedor Microsoft. Para o provedor da Microsoft, você deve incluir uma URL de site válido.
 
 ![Registre o site](using-oauth-providers-with-mvc/_static/image4.png)
 
