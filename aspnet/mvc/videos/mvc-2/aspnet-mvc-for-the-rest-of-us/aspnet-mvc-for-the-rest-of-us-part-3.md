@@ -12,18 +12,18 @@ ms.openlocfilehash: c3bd47b13d32ee4ac977ff99cb1e0a038f81ebaa
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383051"
 ---
-# <a name="aspnet-mvc-for-the-rest-of-us-part-3"></a><span data-ttu-id="46c4b-103">ASP.NET MVC para o restante de nós: Parte 3</span><span class="sxs-lookup"><span data-stu-id="46c4b-103">ASP.NET MVC For the Rest of Us: Part 3</span></span>
+# <a name="aspnet-mvc-for-the-rest-of-us-part-3"></a><span data-ttu-id="ce130-103">ASP.NET MVC para o restante de nós: Parte 3</span><span class="sxs-lookup"><span data-stu-id="ce130-103">ASP.NET MVC For the Rest of Us: Part 3</span></span>
 
-<span data-ttu-id="46c4b-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="46c4b-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="ce130-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="ce130-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="46c4b-105">Neste vídeo da Microsoft Joe Stagner recria o recurso "Fale conosco" para um aplicativo ASP.NET MVC usando o Entity Framework da Microsoft e uma exibição fortemente tipada.</span><span class="sxs-lookup"><span data-stu-id="46c4b-105">In this Video Microsoft's Joe Stagner rebuilds the "Contact Us" feature for an ASP.NET MVC application using the Microsoft Entity Framework and a strongly typed view.</span></span> <span data-ttu-id="46c4b-106">Aqui, podemos começar a ter uma noção real para a capacidade de trabalhar com dados no ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="46c4b-106">Here we start to get a real feel for the power of working with data in ASP.NET MVC.</span></span>
+<span data-ttu-id="ce130-105">Neste vídeo da Microsoft Joe Stagner recria o recurso "Fale conosco" para um aplicativo ASP.NET MVC usando o Entity Framework da Microsoft e uma exibição fortemente tipada.</span><span class="sxs-lookup"><span data-stu-id="ce130-105">In this Video Microsoft's Joe Stagner rebuilds the "Contact Us" feature for an ASP.NET MVC application using the Microsoft Entity Framework and a strongly typed view.</span></span> <span data-ttu-id="ce130-106">Aqui, podemos começar a ter uma noção real para a capacidade de trabalhar com dados no ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="ce130-106">Here we start to get a real feel for the power of working with data in ASP.NET MVC.</span></span>
 
-[<span data-ttu-id="46c4b-107">&#9654;Assista ao vídeo (16 minutos)</span><span class="sxs-lookup"><span data-stu-id="46c4b-107">&#9654; Watch video (16 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-3)
+[<span data-ttu-id="ce130-107">&#9654;Assista ao vídeo (16 minutos)</span><span class="sxs-lookup"><span data-stu-id="ce130-107">&#9654; Watch video (16 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-3)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="46c4b-108">[Anterior](aspnet-mvc-for-the-rest-of-us-part-2.md)
-> [Próximo](aspnet-mvc-for-the-rest-of-us-part-4.md)</span><span class="sxs-lookup"><span data-stu-id="46c4b-108">[Previous](aspnet-mvc-for-the-rest-of-us-part-2.md)
+> <span data-ttu-id="ce130-108">[Anterior](aspnet-mvc-for-the-rest-of-us-part-2.md)
+> [Próximo](aspnet-mvc-for-the-rest-of-us-part-4.md)</span><span class="sxs-lookup"><span data-stu-id="ce130-108">[Previous](aspnet-mvc-for-the-rest-of-us-part-2.md)
 [Next](aspnet-mvc-for-the-rest-of-us-part-4.md)</span></span>

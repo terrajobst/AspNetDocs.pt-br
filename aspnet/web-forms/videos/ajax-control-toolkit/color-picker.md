@@ -12,18 +12,18 @@ ms.openlocfilehash: fe3383b48adf2c5ed4766b40ceed80fd4bcca2a9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392671"
 ---
-# <a name="color-picker"></a><span data-ttu-id="1d995-103">Seletor de Cor</span><span class="sxs-lookup"><span data-stu-id="1d995-103">Color Picker</span></span>
+# <a name="color-picker"></a><span data-ttu-id="82f7c-103">Seletor de Cor</span><span class="sxs-lookup"><span data-stu-id="82f7c-103">Color Picker</span></span>
 
-<span data-ttu-id="1d995-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="1d995-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="82f7c-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="82f7c-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="1d995-105">Este vídeo demonstrará como usar o novo controle de seletor de cores do Microsoft AJAX Control Toolkit.</span><span class="sxs-lookup"><span data-stu-id="1d995-105">This video will demonstrate how to use the new Color Picker control from the Microsoft AJAX Control Toolkit.</span></span>
+<span data-ttu-id="82f7c-105">Este vídeo demonstrará como usar o novo controle de seletor de cores do Microsoft AJAX Control Toolkit.</span><span class="sxs-lookup"><span data-stu-id="82f7c-105">This video will demonstrate how to use the new Color Picker control from the Microsoft AJAX Control Toolkit.</span></span>
 
-[<span data-ttu-id="1d995-106">&#9654;Assista ao vídeo (9 minutos)</span><span class="sxs-lookup"><span data-stu-id="1d995-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/color-picker)
+[<span data-ttu-id="82f7c-106">&#9654;Assista ao vídeo (9 minutos)</span><span class="sxs-lookup"><span data-stu-id="82f7c-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/color-picker)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="1d995-107">[Anterior](control-extenders.md)
-> [Próximo](combo-box.md)</span><span class="sxs-lookup"><span data-stu-id="1d995-107">[Previous](control-extenders.md)
+> <span data-ttu-id="82f7c-107">[Anterior](control-extenders.md)
+> [Próximo](combo-box.md)</span><span class="sxs-lookup"><span data-stu-id="82f7c-107">[Previous](control-extenders.md)
 [Next](combo-box.md)</span></span>

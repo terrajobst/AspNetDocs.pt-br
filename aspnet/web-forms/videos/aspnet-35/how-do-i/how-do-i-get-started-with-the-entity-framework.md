@@ -12,18 +12,18 @@ ms.openlocfilehash: d6559ebcbce82911a4bfa37327f08bccfa3ee52d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396857"
 ---
-# <a name="how-do-i-get-started-with-the-entity-framework"></a><span data-ttu-id="64ab6-103">[Como fazer:] Introdução ao Entity Framework</span><span class="sxs-lookup"><span data-stu-id="64ab6-103">[How Do I:] Get Started with the Entity Framework</span></span>
+# <a name="how-do-i-get-started-with-the-entity-framework"></a><span data-ttu-id="d2428-103">[Como fazer:] Introdução ao Entity Framework</span><span class="sxs-lookup"><span data-stu-id="d2428-103">[How Do I:] Get Started with the Entity Framework</span></span>
 
-<span data-ttu-id="64ab6-104">por [Alex James](https://github.com/adjames)</span><span class="sxs-lookup"><span data-stu-id="64ab6-104">by [Alex James](https://github.com/adjames)</span></span>
+<span data-ttu-id="d2428-104">por [Alex James](https://github.com/adjames)</span><span class="sxs-lookup"><span data-stu-id="d2428-104">by [Alex James](https://github.com/adjames)</span></span>
 
-<span data-ttu-id="64ab6-105">Neste vídeo introdutório, Alex James mostrará como criar um modelo de dados de entidade simples em um curto período de tempo.</span><span class="sxs-lookup"><span data-stu-id="64ab6-105">In this introductory video, Alex James will show you how to build a simple Entity Data Model in a short amount of time.</span></span>
+<span data-ttu-id="d2428-105">Neste vídeo introdutório, Alex James mostrará como criar um modelo de dados de entidade simples em um curto período de tempo.</span><span class="sxs-lookup"><span data-stu-id="d2428-105">In this introductory video, Alex James will show you how to build a simple Entity Data Model in a short amount of time.</span></span>
 
-[<span data-ttu-id="64ab6-106">&#9654;Assista ao vídeo (9 minutos)</span><span class="sxs-lookup"><span data-stu-id="64ab6-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-the-entity-framework)
+[<span data-ttu-id="d2428-106">&#9654;Assista ao vídeo (9 minutos)</span><span class="sxs-lookup"><span data-stu-id="d2428-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-the-entity-framework)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="64ab6-107">[Anterior](how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
-> [Próximo](how-do-i-use-the-new-entity-data-source.md)</span><span class="sxs-lookup"><span data-stu-id="64ab6-107">[Previous](how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
+> <span data-ttu-id="d2428-107">[Anterior](how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
+> [Próximo](how-do-i-use-the-new-entity-data-source.md)</span><span class="sxs-lookup"><span data-stu-id="d2428-107">[Previous](how-do-i-converting-a-net-20-windows-forms-application-to-net-35.md)
 [Next](how-do-i-use-the-new-entity-data-source.md)</span></span>

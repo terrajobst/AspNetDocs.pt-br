@@ -12,13 +12,13 @@ ms.openlocfilehash: e499292c6dedcec0718d0823e7c324a7da9e00b8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396376"
 ---
-# <a name="an-introduction-to-soap-based-web-services-with-visual-web-developer-2008"></a><span data-ttu-id="4f302-103">Uma introdução ao SOAP com base em serviços Web com o Visual Web Developer 2008</span><span class="sxs-lookup"><span data-stu-id="4f302-103">An Introduction to SOAP Based Web Services with Visual Web Developer 2008</span></span>
+# <a name="an-introduction-to-soap-based-web-services-with-visual-web-developer-2008"></a><span data-ttu-id="0ffe3-103">Uma introdução ao SOAP com base em serviços Web com o Visual Web Developer 2008</span><span class="sxs-lookup"><span data-stu-id="0ffe3-103">An Introduction to SOAP Based Web Services with Visual Web Developer 2008</span></span>
 
-<span data-ttu-id="4f302-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="4f302-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="0ffe3-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="0ffe3-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="4f302-105">Este vídeo mostra como é rápido e isso pode ser fácil começar a desenvolver aplicativos distribuídos com base em SOAP / serviços web XML.</span><span class="sxs-lookup"><span data-stu-id="4f302-105">This video shows you how quick and easy it can be to start developing distributed applications based on SOAP / XML web services.</span></span>
+<span data-ttu-id="0ffe3-105">Este vídeo mostra como é rápido e isso pode ser fácil começar a desenvolver aplicativos distribuídos com base em SOAP / serviços web XML.</span><span class="sxs-lookup"><span data-stu-id="0ffe3-105">This video shows you how quick and easy it can be to start developing distributed applications based on SOAP / XML web services.</span></span>
 
-[<span data-ttu-id="4f302-106">&#9654;Assista ao vídeo (26 minutos)</span><span class="sxs-lookup"><span data-stu-id="4f302-106">&#9654; Watch video (26 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/an-introduction-to-soap-based-web-services-with-visual-web-developer-2008)
+[<span data-ttu-id="0ffe3-106">&#9654;Assista ao vídeo (26 minutos)</span><span class="sxs-lookup"><span data-stu-id="0ffe3-106">&#9654; Watch video (26 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/an-introduction-to-soap-based-web-services-with-visual-web-developer-2008)

@@ -12,25 +12,25 @@ ms.openlocfilehash: 83214b38d112707ef67ce94ff2757f1fc0f5f920
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389798"
 ---
-# <a name="jquery-validate"></a><span data-ttu-id="59401-102">Validar jQuery 1.5.5</span><span class="sxs-lookup"><span data-stu-id="59401-102">jQuery Validate</span></span>
+# <a name="jquery-validate"></a><span data-ttu-id="90963-102">Validar jQuery 1.5.5</span><span class="sxs-lookup"><span data-stu-id="90963-102">jQuery Validate</span></span>
 
-- [<span data-ttu-id="59401-103">jQuery Validation 1.17.0</span><span class="sxs-lookup"><span data-stu-id="59401-103">jQuery Validation 1.17.0</span></span>](cdnjqueryvalidate1170.md)
-- [<span data-ttu-id="59401-104">Validação do jQuery 1.16.0</span><span class="sxs-lookup"><span data-stu-id="59401-104">jQuery Validation 1.16.0</span></span>](cdnjqueryvalidate1160.md)
-- [<span data-ttu-id="59401-105">Validação do jQuery 1.15.1</span><span class="sxs-lookup"><span data-stu-id="59401-105">jQuery Validation 1.15.1</span></span>](cdnjqueryvalidate1151.md)
-- [<span data-ttu-id="59401-106">Validação do jQuery 1.15.0</span><span class="sxs-lookup"><span data-stu-id="59401-106">jQuery Validation 1.15.0</span></span>](cdnjqueryvalidate1150.md)
-- [<span data-ttu-id="59401-107">Validação do jQuery 1.14.0</span><span class="sxs-lookup"><span data-stu-id="59401-107">jQuery Validation 1.14.0</span></span>](cdnjqueryvalidate1140.md)
-- [<span data-ttu-id="59401-108">Validação do jQuery 1.13.1</span><span class="sxs-lookup"><span data-stu-id="59401-108">jQuery Validation 1.13.1</span></span>](cdnjqueryvalidate1131.md)
-- [<span data-ttu-id="59401-109">Validação do jQuery 1.13.0</span><span class="sxs-lookup"><span data-stu-id="59401-109">jQuery Validation 1.13.0</span></span>](cdnjqueryvalidate1130.md)
-- [<span data-ttu-id="59401-110">Validação do jQuery 1.12.0</span><span class="sxs-lookup"><span data-stu-id="59401-110">jQuery Validation 1.12.0</span></span>](cdnjqueryvalidate1120.md)
-- [<span data-ttu-id="59401-111">Validação do jQuery 1.11.1</span><span class="sxs-lookup"><span data-stu-id="59401-111">jQuery Validation 1.11.1</span></span>](cdnjqueryvalidate1111.md)
-- [<span data-ttu-id="59401-112">Validação do jQuery 1.11.0</span><span class="sxs-lookup"><span data-stu-id="59401-112">jQuery Validation 1.11.0</span></span>](cdnjqueryvalidate111.md)
-- [<span data-ttu-id="59401-113">Validação do jQuery 1.10.0</span><span class="sxs-lookup"><span data-stu-id="59401-113">jQuery Validation 1.10.0</span></span>](cdnjqueryvalidate110.md)
-- [<span data-ttu-id="59401-114">jquery.validate versão 1.9</span><span class="sxs-lookup"><span data-stu-id="59401-114">jquery.validate version 1.9</span></span>](cdnjqueryvalidate19.md)
-- [<span data-ttu-id="59401-115">jquery.validate versão 1.8.1</span><span class="sxs-lookup"><span data-stu-id="59401-115">jquery.validate version 1.8.1</span></span>](cdnjqueryvalidate181.md)
-- [<span data-ttu-id="59401-116">jquery.validate versão 1.8</span><span class="sxs-lookup"><span data-stu-id="59401-116">jquery.validate version 1.8</span></span>](cdnjqueryvalidate18.md)
-- [<span data-ttu-id="59401-117">jquery.validate versão 1.7</span><span class="sxs-lookup"><span data-stu-id="59401-117">jquery.validate version 1.7</span></span>](cdnjqueryvalidate17.md)
-- [<span data-ttu-id="59401-118">Validar jQuery 1.6</span><span class="sxs-lookup"><span data-stu-id="59401-118">jQuery Validate 1.6</span></span>](cdnjqueryvalidate16.md)
-- [<span data-ttu-id="59401-119">Validar jQuery 1.5.5</span><span class="sxs-lookup"><span data-stu-id="59401-119">jQuery Validate 1.5.5</span></span>](cdnjqueryvalidate155.md)
+- [<span data-ttu-id="90963-103">jQuery Validation 1.17.0</span><span class="sxs-lookup"><span data-stu-id="90963-103">jQuery Validation 1.17.0</span></span>](cdnjqueryvalidate1170.md)
+- [<span data-ttu-id="90963-104">Validação do jQuery 1.16.0</span><span class="sxs-lookup"><span data-stu-id="90963-104">jQuery Validation 1.16.0</span></span>](cdnjqueryvalidate1160.md)
+- [<span data-ttu-id="90963-105">Validação do jQuery 1.15.1</span><span class="sxs-lookup"><span data-stu-id="90963-105">jQuery Validation 1.15.1</span></span>](cdnjqueryvalidate1151.md)
+- [<span data-ttu-id="90963-106">Validação do jQuery 1.15.0</span><span class="sxs-lookup"><span data-stu-id="90963-106">jQuery Validation 1.15.0</span></span>](cdnjqueryvalidate1150.md)
+- [<span data-ttu-id="90963-107">Validação do jQuery 1.14.0</span><span class="sxs-lookup"><span data-stu-id="90963-107">jQuery Validation 1.14.0</span></span>](cdnjqueryvalidate1140.md)
+- [<span data-ttu-id="90963-108">Validação do jQuery 1.13.1</span><span class="sxs-lookup"><span data-stu-id="90963-108">jQuery Validation 1.13.1</span></span>](cdnjqueryvalidate1131.md)
+- [<span data-ttu-id="90963-109">Validação do jQuery 1.13.0</span><span class="sxs-lookup"><span data-stu-id="90963-109">jQuery Validation 1.13.0</span></span>](cdnjqueryvalidate1130.md)
+- [<span data-ttu-id="90963-110">Validação do jQuery 1.12.0</span><span class="sxs-lookup"><span data-stu-id="90963-110">jQuery Validation 1.12.0</span></span>](cdnjqueryvalidate1120.md)
+- [<span data-ttu-id="90963-111">Validação do jQuery 1.11.1</span><span class="sxs-lookup"><span data-stu-id="90963-111">jQuery Validation 1.11.1</span></span>](cdnjqueryvalidate1111.md)
+- [<span data-ttu-id="90963-112">Validação do jQuery 1.11.0</span><span class="sxs-lookup"><span data-stu-id="90963-112">jQuery Validation 1.11.0</span></span>](cdnjqueryvalidate111.md)
+- [<span data-ttu-id="90963-113">Validação do jQuery 1.10.0</span><span class="sxs-lookup"><span data-stu-id="90963-113">jQuery Validation 1.10.0</span></span>](cdnjqueryvalidate110.md)
+- [<span data-ttu-id="90963-114">jquery.validate versão 1.9</span><span class="sxs-lookup"><span data-stu-id="90963-114">jquery.validate version 1.9</span></span>](cdnjqueryvalidate19.md)
+- [<span data-ttu-id="90963-115">jquery.validate versão 1.8.1</span><span class="sxs-lookup"><span data-stu-id="90963-115">jquery.validate version 1.8.1</span></span>](cdnjqueryvalidate181.md)
+- [<span data-ttu-id="90963-116">jquery.validate versão 1.8</span><span class="sxs-lookup"><span data-stu-id="90963-116">jquery.validate version 1.8</span></span>](cdnjqueryvalidate18.md)
+- [<span data-ttu-id="90963-117">jquery.validate versão 1.7</span><span class="sxs-lookup"><span data-stu-id="90963-117">jquery.validate version 1.7</span></span>](cdnjqueryvalidate17.md)
+- [<span data-ttu-id="90963-118">Validar jQuery 1.6</span><span class="sxs-lookup"><span data-stu-id="90963-118">jQuery Validate 1.6</span></span>](cdnjqueryvalidate16.md)
+- [<span data-ttu-id="90963-119">Validar jQuery 1.5.5</span><span class="sxs-lookup"><span data-stu-id="90963-119">jQuery Validate 1.5.5</span></span>](cdnjqueryvalidate155.md)
