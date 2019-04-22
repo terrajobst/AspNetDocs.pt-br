@@ -12,13 +12,13 @@ ms.openlocfilehash: 61ae8f7cbf976dde326ebd51e4f7c97f600b6afd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419412"
 ---
-# <a name="login-controls"></a><span data-ttu-id="68d2a-103">Controles de logon</span><span class="sxs-lookup"><span data-stu-id="68d2a-103">Login Controls</span></span>
+# <a name="login-controls"></a><span data-ttu-id="998e5-103">Controles de logon</span><span class="sxs-lookup"><span data-stu-id="998e5-103">Login Controls</span></span>
 
-<span data-ttu-id="68d2a-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="68d2a-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="998e5-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="998e5-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="68d2a-105">Este vídeo Joe apresentará você a associação do ASP.NET, mostrando a você como usar alguns dos controles de logon no ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="68d2a-105">In this video Joe will introduce you to ASP.NET Membership by showing you how to use some of the Login Controls in ASP.NET.</span></span>
+<span data-ttu-id="998e5-105">Este vídeo Joe apresentará você a associação do ASP.NET, mostrando a você como usar alguns dos controles de logon no ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="998e5-105">In this video Joe will introduce you to ASP.NET Membership by showing you how to use some of the Login Controls in ASP.NET.</span></span>
 
-[<span data-ttu-id="68d2a-106">&#9654;Assista ao vídeo (10 minutos)</span><span class="sxs-lookup"><span data-stu-id="68d2a-106">&#9654; Watch video (10 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/login-controls)
+[<span data-ttu-id="998e5-106">&#9654;Assista ao vídeo (10 minutos)</span><span class="sxs-lookup"><span data-stu-id="998e5-106">&#9654; Watch video (10 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/login-controls)

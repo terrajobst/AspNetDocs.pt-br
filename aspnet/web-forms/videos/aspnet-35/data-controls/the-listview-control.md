@@ -12,16 +12,16 @@ ms.openlocfilehash: 4a4daf851f3b8f69a70409d00ef7cd624437f57a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383845"
 ---
-# <a name="the-listview-control"></a><span data-ttu-id="ae7e7-105">O controle ListView</span><span class="sxs-lookup"><span data-stu-id="ae7e7-105">The ListView Control</span></span>
+# <a name="the-listview-control"></a><span data-ttu-id="4628d-105">O controle ListView</span><span class="sxs-lookup"><span data-stu-id="4628d-105">The ListView Control</span></span>
 
-<span data-ttu-id="ae7e7-106">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="ae7e7-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="4628d-106">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="4628d-106">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="ae7e7-107">Ao criar um novo site, demonstrarei o novo controle ListView.</span><span class="sxs-lookup"><span data-stu-id="ae7e7-107">By creating a new website, I will demonstrate the new ListView control.</span></span> <span data-ttu-id="ae7e7-108">Como o ListView é a unidade de dados, precisamos uma fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="ae7e7-108">Because the ListView is data drive, we will need a data source.</span></span> <span data-ttu-id="ae7e7-109">Você pode usar qualquer fonte de dados: SQL, dados de objeto, dados de link ou XAML.</span><span class="sxs-lookup"><span data-stu-id="ae7e7-109">You can use any data source: SQL, object data, link data or XAML.</span></span> <span data-ttu-id="ae7e7-110">Usarei meu blog como a fonte de dados neste vídeo.</span><span class="sxs-lookup"><span data-stu-id="ae7e7-110">I will use my blog as the data source in this video.</span></span>
+<span data-ttu-id="4628d-107">Ao criar um novo site, demonstrarei o novo controle ListView.</span><span class="sxs-lookup"><span data-stu-id="4628d-107">By creating a new website, I will demonstrate the new ListView control.</span></span> <span data-ttu-id="4628d-108">Como o ListView é a unidade de dados, precisamos uma fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="4628d-108">Because the ListView is data drive, we will need a data source.</span></span> <span data-ttu-id="4628d-109">Você pode usar qualquer fonte de dados: SQL, dados de objeto, dados de link ou XAML.</span><span class="sxs-lookup"><span data-stu-id="4628d-109">You can use any data source: SQL, object data, link data or XAML.</span></span> <span data-ttu-id="4628d-110">Usarei meu blog como a fonte de dados neste vídeo.</span><span class="sxs-lookup"><span data-stu-id="4628d-110">I will use my blog as the data source in this video.</span></span>
 
-[<span data-ttu-id="ae7e7-111">&#9654;Assista ao vídeo (10 minutos)</span><span class="sxs-lookup"><span data-stu-id="ae7e7-111">&#9654; Watch video (10 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/the-listview-control)
+[<span data-ttu-id="4628d-111">&#9654;Assista ao vídeo (10 minutos)</span><span class="sxs-lookup"><span data-stu-id="4628d-111">&#9654; Watch video (10 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/the-listview-control)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="ae7e7-112">Avançar</span><span class="sxs-lookup"><span data-stu-id="ae7e7-112">Next</span></span>](the-datapager-control.md)
+> [<span data-ttu-id="4628d-112">Avançar</span><span class="sxs-lookup"><span data-stu-id="4628d-112">Next</span></span>](the-datapager-control.md)

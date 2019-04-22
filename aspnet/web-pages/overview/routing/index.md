@@ -12,12 +12,12 @@ ms.openlocfilehash: 27d195b13fa7a215859d3782f78e51e29a73a7ee
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386275"
 ---
-# <a name="routing"></a><span data-ttu-id="3efdd-103">Roteamento</span><span class="sxs-lookup"><span data-stu-id="3efdd-103">Routing</span></span>
+# <a name="routing"></a><span data-ttu-id="2f0a7-103">Roteamento</span><span class="sxs-lookup"><span data-stu-id="2f0a7-103">Routing</span></span>
 
-> <span data-ttu-id="3efdd-104">Como personalizar as URLs usadas por um aplicativo de páginas da Web.</span><span class="sxs-lookup"><span data-stu-id="3efdd-104">How to customize the URLs used by a Web Pages application.</span></span>
+> <span data-ttu-id="2f0a7-104">Como personalizar as URLs usadas por um aplicativo de páginas da Web.</span><span class="sxs-lookup"><span data-stu-id="2f0a7-104">How to customize the URLs used by a Web Pages application.</span></span>
 
 
-- [<span data-ttu-id="3efdd-105">Criação de URLs legíveis em sites de Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="3efdd-105">Creating Readable URLs in ASP.NET Web Pages Sites</span></span>](creating-readable-urls-in-aspnet-web-pages-sites.md)
+- [<span data-ttu-id="2f0a7-105">Criação de URLs legíveis em sites de Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="2f0a7-105">Creating Readable URLs in ASP.NET Web Pages Sites</span></span>](creating-readable-urls-in-aspnet-web-pages-sites.md)

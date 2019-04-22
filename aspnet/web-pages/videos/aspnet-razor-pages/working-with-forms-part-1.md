@@ -12,18 +12,18 @@ ms.openlocfilehash: 812bbe4acc6ae7f364bab98d3ffc4be0f1388c2b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378404"
 ---
-# <a name="working-with-forms-part-1"></a><span data-ttu-id="557cc-103">Trabalhar com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="557cc-103">Working with Forms (Part 1)</span></span>
+# <a name="working-with-forms-part-1"></a><span data-ttu-id="918b3-103">Trabalhar com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="918b3-103">Working with Forms (Part 1)</span></span>
 
-<span data-ttu-id="557cc-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="557cc-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="918b3-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="918b3-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="557cc-105">Acompanhamento de vídeo ao trabalhando com o tutorial de formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="557cc-105">Video accompaniment to the Working with Forms tutorial (Part 1)</span></span>
+<span data-ttu-id="918b3-105">Acompanhamento de vídeo ao trabalhando com o tutorial de formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="918b3-105">Video accompaniment to the Working with Forms tutorial (Part 1)</span></span>
 
-[<span data-ttu-id="557cc-106">&#9654;Assista ao vídeo (14 minutos)</span><span class="sxs-lookup"><span data-stu-id="557cc-106">&#9654; Watch video (14 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-part-1)
+[<span data-ttu-id="918b3-106">&#9654;Assista ao vídeo (14 minutos)</span><span class="sxs-lookup"><span data-stu-id="918b3-106">&#9654; Watch video (14 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-part-1)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="557cc-107">[Anterior](creating-a-consistent-look-part-2.md)
-> [Próximo](working-with-forms-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="557cc-107">[Previous](creating-a-consistent-look-part-2.md)
+> <span data-ttu-id="918b3-107">[Anterior](creating-a-consistent-look-part-2.md)
+> [Próximo](working-with-forms-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="918b3-107">[Previous](creating-a-consistent-look-part-2.md)
 [Next](working-with-forms-part-2.md)</span></span>

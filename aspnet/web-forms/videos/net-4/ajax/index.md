@@ -12,15 +12,15 @@ ms.openlocfilehash: 3f090f46b5e7c7f9b046f2cdbef7162cc6f364cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386808"
 ---
-# <a name="ajax"></a><span data-ttu-id="6c21b-103">Ajax</span><span class="sxs-lookup"><span data-stu-id="6c21b-103">Ajax</span></span>
+# <a name="ajax"></a><span data-ttu-id="f6efa-103">Ajax</span><span class="sxs-lookup"><span data-stu-id="f6efa-103">Ajax</span></span>
 
-> <span data-ttu-id="6c21b-104">Esta série de vídeos mostra os novos recursos no ASP.NET 4 para suporte a JavaScript e jQuery.</span><span class="sxs-lookup"><span data-stu-id="6c21b-104">This video series shows the new features in ASP.NET 4 for JavaScript and jQuery support.</span></span>
+> <span data-ttu-id="f6efa-104">Esta série de vídeos mostra os novos recursos no ASP.NET 4 para suporte a JavaScript e jQuery.</span><span class="sxs-lookup"><span data-stu-id="f6efa-104">This video series shows the new features in ASP.NET 4 for JavaScript and jQuery support.</span></span>
 
 
-- [<span data-ttu-id="6c21b-105">Sintaxe imperativa de JavaScript para controles da Microsoft do lado do cliente</span><span class="sxs-lookup"><span data-stu-id="6c21b-105">Imperative JavaScript Syntax for Microsoft Client Side Controls</span></span>](aspnet-4-quick-hit-imperative-javascript-syntax-for-microsoft-client-side-controls.md)
-- [<span data-ttu-id="6c21b-106">ScriptLoader</span><span class="sxs-lookup"><span data-stu-id="6c21b-106">ScriptLoader</span></span>](aspnet-4-quick-hit-the-scriptloader.md)
-- [<span data-ttu-id="6c21b-107">Sintaxe de JQuery para Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="6c21b-107">JQuery Syntax for Microsoft Ajax</span></span>](aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)
-- [<span data-ttu-id="6c21b-108">Modelos de dados do AJAX</span><span class="sxs-lookup"><span data-stu-id="6c21b-108">AJAX Data Templates</span></span>](aspnet-4-quick-hit-ajax-data-templates.md)
+- [<span data-ttu-id="f6efa-105">Sintaxe imperativa de JavaScript para controles da Microsoft do lado do cliente</span><span class="sxs-lookup"><span data-stu-id="f6efa-105">Imperative JavaScript Syntax for Microsoft Client Side Controls</span></span>](aspnet-4-quick-hit-imperative-javascript-syntax-for-microsoft-client-side-controls.md)
+- [<span data-ttu-id="f6efa-106">ScriptLoader</span><span class="sxs-lookup"><span data-stu-id="f6efa-106">ScriptLoader</span></span>](aspnet-4-quick-hit-the-scriptloader.md)
+- [<span data-ttu-id="f6efa-107">Sintaxe de JQuery para Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="f6efa-107">JQuery Syntax for Microsoft Ajax</span></span>](aspnet-4-quick-hit-jquery-syntax-for-microsoft-ajax.md)
+- [<span data-ttu-id="f6efa-108">Modelos de dados do AJAX</span><span class="sxs-lookup"><span data-stu-id="f6efa-108">AJAX Data Templates</span></span>](aspnet-4-quick-hit-ajax-data-templates.md)

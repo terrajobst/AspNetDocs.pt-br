@@ -12,18 +12,18 @@ ms.openlocfilehash: 6428bc6e31f143f10f9acb0d491c2813552f4938
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381907"
 ---
-# <a name="using-sql-server-management-studio"></a><span data-ttu-id="04d95-104">Usar o SQL Server Management Studio</span><span class="sxs-lookup"><span data-stu-id="04d95-104">Using SQL Server Management Studio</span></span>
+# <a name="using-sql-server-management-studio"></a><span data-ttu-id="1eb95-104">Usar o SQL Server Management Studio</span><span class="sxs-lookup"><span data-stu-id="1eb95-104">Using SQL Server Management Studio</span></span>
 
-<span data-ttu-id="04d95-105">por [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="04d95-105">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="1eb95-105">por [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="1eb95-105">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="04d95-106">SQL Server Management Studio Express normalmente será a interface principal no SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="04d95-106">SQL Server Management Studio Express will typically be your main interface into SQL Server Express.</span></span> <span data-ttu-id="04d95-107">Esta lição demonstra as técnicas essenciais e habilidades que você precisará se conectar a instâncias de banco de dados com êxito, navegue a janela de consulta e gerar scripts de objetos de banco de dados, anexar, desanexar e fazendo backup de bancos de dados e muito mais.</span><span class="sxs-lookup"><span data-stu-id="04d95-107">This lesson demonstrates the essential techniques and skills you'll need to successfully connect to database instances, navigate the query window and scripting database objects, attaching, detaching and backing up databases, and much more.</span></span>
+<span data-ttu-id="1eb95-106">SQL Server Management Studio Express normalmente será a interface principal no SQL Server Express.</span><span class="sxs-lookup"><span data-stu-id="1eb95-106">SQL Server Management Studio Express will typically be your main interface into SQL Server Express.</span></span> <span data-ttu-id="1eb95-107">Esta lição demonstra as técnicas essenciais e habilidades que você precisará se conectar a instâncias de banco de dados com êxito, navegue a janela de consulta e gerar scripts de objetos de banco de dados, anexar, desanexar e fazendo backup de bancos de dados e muito mais.</span><span class="sxs-lookup"><span data-stu-id="1eb95-107">This lesson demonstrates the essential techniques and skills you'll need to successfully connect to database instances, navigate the query window and scripting database objects, attaching, detaching and backing up databases, and much more.</span></span>
 
-[<span data-ttu-id="04d95-108">&#9654;Assista ao vídeo (40 minutos)</span><span class="sxs-lookup"><span data-stu-id="04d95-108">&#9654; Watch video (40 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/using-sql-server-management-studio)
+[<span data-ttu-id="1eb95-108">&#9654;Assista ao vídeo (40 minutos)</span><span class="sxs-lookup"><span data-stu-id="1eb95-108">&#9654; Watch video (40 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/using-sql-server-management-studio)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="04d95-109">[Anterior](connecting-your-web-application-to-sql-server-2005-express-edition.md)
-> [Próximo](getting-started-with-reporting-services.md)</span><span class="sxs-lookup"><span data-stu-id="04d95-109">[Previous](connecting-your-web-application-to-sql-server-2005-express-edition.md)
+> <span data-ttu-id="1eb95-109">[Anterior](connecting-your-web-application-to-sql-server-2005-express-edition.md)
+> [Próximo](getting-started-with-reporting-services.md)</span><span class="sxs-lookup"><span data-stu-id="1eb95-109">[Previous](connecting-your-web-application-to-sql-server-2005-express-edition.md)
 [Next](getting-started-with-reporting-services.md)</span></span>

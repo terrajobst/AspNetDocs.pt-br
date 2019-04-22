@@ -12,18 +12,18 @@ ms.openlocfilehash: c3437e7f5200ece9766ec89d22a5c051cb17f13f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379229"
 ---
-# <a name="begin-modifying-dynamic-data-applications-with-url-routing"></a><span data-ttu-id="7e301-103">Começar a modificar aplicativos de Dados Dinâmicos com o roteamento de URL</span><span class="sxs-lookup"><span data-stu-id="7e301-103">Begin Modifying Dynamic Data Applications with URL Routing</span></span>
+# <a name="begin-modifying-dynamic-data-applications-with-url-routing"></a><span data-ttu-id="0c205-103">Começar a modificar aplicativos de Dados Dinâmicos com o roteamento de URL</span><span class="sxs-lookup"><span data-stu-id="0c205-103">Begin Modifying Dynamic Data Applications with URL Routing</span></span>
 
-<span data-ttu-id="7e301-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="7e301-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="0c205-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="0c205-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="7e301-105">Este vídeo apresenta o roteamento de URL de dados dinâmicos do ASP.NET e mostra como configurar a URL do aplicativo com opções de roteamento.</span><span class="sxs-lookup"><span data-stu-id="7e301-105">This video introduces ASP.NET Dynamic Data URL routing and shows how to configure an application's URL with routing options.</span></span>
+<span data-ttu-id="0c205-105">Este vídeo apresenta o roteamento de URL de dados dinâmicos do ASP.NET e mostra como configurar a URL do aplicativo com opções de roteamento.</span><span class="sxs-lookup"><span data-stu-id="0c205-105">This video introduces ASP.NET Dynamic Data URL routing and shows how to configure an application's URL with routing options.</span></span>
 
-[<span data-ttu-id="7e301-106">&#9654;Assista ao vídeo (5 minutos)</span><span class="sxs-lookup"><span data-stu-id="7e301-106">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/begin-modifying-dynamic-data-applications-with-url-routing)
+[<span data-ttu-id="0c205-106">&#9654;Assista ao vídeo (5 minutos)</span><span class="sxs-lookup"><span data-stu-id="0c205-106">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/begin-modifying-dynamic-data-applications-with-url-routing)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="7e301-107">[Anterior](begin-editing-the-templates-in-aspnet-dynamic-data-applications.md)
-> [Próximo](enable-in-line-editing-in-aspnet-dynamic-data-applications.md)</span><span class="sxs-lookup"><span data-stu-id="7e301-107">[Previous](begin-editing-the-templates-in-aspnet-dynamic-data-applications.md)
+> <span data-ttu-id="0c205-107">[Anterior](begin-editing-the-templates-in-aspnet-dynamic-data-applications.md)
+> [Próximo](enable-in-line-editing-in-aspnet-dynamic-data-applications.md)</span><span class="sxs-lookup"><span data-stu-id="0c205-107">[Previous](begin-editing-the-templates-in-aspnet-dynamic-data-applications.md)
 [Next](enable-in-line-editing-in-aspnet-dynamic-data-applications.md)</span></span>

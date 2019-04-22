@@ -12,12 +12,12 @@ ms.openlocfilehash: 552d047286adbc53e4161b412432cbf0b3bfb4c9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380295"
 ---
-# <a name="mobile"></a><span data-ttu-id="fcf75-103">Celular</span><span class="sxs-lookup"><span data-stu-id="fcf75-103">Mobile</span></span>
+# <a name="mobile"></a><span data-ttu-id="67582-103">Celular</span><span class="sxs-lookup"><span data-stu-id="67582-103">Mobile</span></span>
 
-> <span data-ttu-id="fcf75-104">Como trabalhar com dispositivos móveis em aplicativos de páginas da Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="fcf75-104">How to work with Mobile devices in ASP.NET Web Pages applications.</span></span>
+> <span data-ttu-id="67582-104">Como trabalhar com dispositivos móveis em aplicativos de páginas da Web ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="67582-104">How to work with Mobile devices in ASP.NET Web Pages applications.</span></span>
 
 
-- [<span data-ttu-id="fcf75-105">Renderização de sites de Páginas da Web do ASP.NET para dispositivos móveis</span><span class="sxs-lookup"><span data-stu-id="fcf75-105">Rendering ASP.NET Web Pages Sites for Mobile Devices</span></span>](rendering-aspnet-web-pages-sites-for-mobile-devices.md)
+- [<span data-ttu-id="67582-105">Renderização de sites de Páginas da Web do ASP.NET para dispositivos móveis</span><span class="sxs-lookup"><span data-stu-id="67582-105">Rendering ASP.NET Web Pages Sites for Mobile Devices</span></span>](rendering-aspnet-web-pages-sites-for-mobile-devices.md)
