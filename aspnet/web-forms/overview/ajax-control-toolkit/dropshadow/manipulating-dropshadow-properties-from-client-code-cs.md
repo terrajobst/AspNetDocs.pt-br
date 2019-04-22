@@ -12,7 +12,7 @@ ms.openlocfilehash: 3bf4b8fe85780135c821fbb7fcceefd326dce656
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381335"
 ---
 # <a name="manipulating-dropshadow-properties-from-client-code-c"></a>Manipular propriedades de DropShadow através de código de cliente (C#)
@@ -55,7 +55,7 @@ A função JavaScript `changeOpacity()` , em seguida, deve primeiro localizar o 
 [!code-html[Main](manipulating-dropshadow-properties-from-client-code-cs/samples/sample6.html)]
 
 
-[![Topacidade he é alterada no lado do cliente](manipulating-dropshadow-properties-from-client-code-cs/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-cs/_static/image1.png)
+[![A opacidade é alterada no lado do cliente](manipulating-dropshadow-properties-from-client-code-cs/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-cs/_static/image1.png)
 
 A opacidade é alterada no lado do cliente ([clique para exibir a imagem em tamanho normal](manipulating-dropshadow-properties-from-client-code-cs/_static/image3.png))
 

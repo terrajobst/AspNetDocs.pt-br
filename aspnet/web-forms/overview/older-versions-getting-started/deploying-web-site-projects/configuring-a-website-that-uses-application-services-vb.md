@@ -12,7 +12,7 @@ ms.openlocfilehash: b8ec246c2f35f3d7fa5bcf67aa6f157195028176
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379515"
 ---
 # <a name="configuring-a-website-that-uses-application-services-vb"></a>Configuração de um site que usa Serviços de Aplicativos (VB)
@@ -106,7 +106,7 @@ Permitir que o s examinar como adicionar os objetos de banco de dados para o ban
 A ferramenta é iniciada, exibindo uma tela de abertura, explicando sua finalidade. Clique em Avançar para ir à tela de "Selecione uma opção de instalação", que é mostrada na Figura 1. A partir daqui, você pode optar por adicionar os serviços de aplicativo objetos de banco de dados ou removê-los de um banco de dados. Como queremos adicionar esses objetos no banco de dados de produção, selecione a opção "Configurar o SQL Server para serviços de aplicativos" e clique em Avançar.
 
 
-[![Cescolher o modo para configurar o SQL Server para serviços de aplicativo](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
+[![Optar por configurar o SQL Server para serviços de aplicativos](configuring-a-website-that-uses-application-services-vb/_static/image2.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image1.jpg)
 
 **Figura 1**: Optar por configurar o SQL Server para serviços de aplicativos ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-vb/_static/image3.jpg))
 
@@ -117,7 +117,7 @@ Em "Selecionar o servidor e banco de dados" tela solicita informações para se 
 > Depois de inserir o seu servidor de banco de dados e as credenciais, você poderá receber um erro ao expandir a lista suspensa de banco de dados. O `aspnet_regsql.exe` ferramenta de consultas a `sysdatabases` tabela do sistema para recuperar uma lista de bancos de dados do servidor, mas alguns web seus servidores de banco de dados de bloqueio de empresas de hospedagem para que essas informações não estão disponíveis publicamente. Se você receber esse erro, você pode digitar o nome do banco de dados diretamente na lista suspensa.
 
 
-[![Supply o informações de Conexão do s ferramenta com seu banco de dados](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
+[![Forneça a ferramenta com suas informações de Conexão do banco de dados s](configuring-a-website-that-uses-application-services-vb/_static/image5.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image4.jpg)
 
 **Figura 2**: Forneça o informações de Conexão do s ferramenta com seu banco de dados ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-vb/_static/image6.jpg))
 
@@ -125,7 +125,7 @@ Em "Selecionar o servidor e banco de dados" tela solicita informações para se 
 A tela subsequente resume as ações que estão prestes a ocorrer, ou seja, que serão os objetos de banco de dados de serviços de aplicativo a ser adicionado ao banco de dados especificado. Clique em Avançar para concluir esta ação. Após alguns instantes, a tela final é exibida, indicando que os objetos de banco de dados foram adicionados (veja a Figura 3).
 
 
-[![Success! Os objetos de banco de dados de serviços de aplicativo foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
+[![Sucesso! Os objetos de banco de dados de serviços de aplicativo foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-vb/_static/image8.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image7.jpg)
 
 **Figura 3**: Sucesso! O aplicativo Serviços de banco de dados de objetos foram adicionados ao banco de dados de produção ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-vb/_static/image9.jpg))
 
@@ -133,7 +133,7 @@ A tela subsequente resume as ações que estão prestes a ocorrer, ou seja, que 
 Para verificar se os objetos de banco de dados de serviços de aplicativo foram adicionados com êxito no banco de dados de produção, abra o SQL Server Management Studio e conecte-se ao banco de dados de produção. Como mostra a Figura 4, agora você deve ver as tabelas de banco de dados de serviços de aplicativo em seu banco de dados `aspnet_Applications`, `aspnet_Membership`, `aspnet_Users`e assim por diante.
 
 
-[![Cconfirmar que os objetos de banco de dados foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
+[![Confirme se os objetos de banco de dados foram adicionados ao banco de dados de produção](configuring-a-website-that-uses-application-services-vb/_static/image11.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image10.jpg)
 
 **Figura 4**: Confirme se os objetos de banco de dados foram adicionados ao banco de dados de produção ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-vb/_static/image12.jpg))
 
@@ -172,7 +172,7 @@ Lembre-se de que um tutorial anterior atualizado o aplicativo web de resenhas de
 > Para obter mais informações sobre como usar a associação e funções de APIs, juntamente com os controles relacionados ao logon da Web do ASP.NET, certifique-se de ler minha [ *tutoriais de segurança do site*](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md). Para obter mais informações sobre como personalizar o controle CreateUserWizard, consulte o [ *criando contas de usuário* ](../../older-versions-security/membership/creating-user-accounts-vb.md) e [ *armazenar informações de usuário adicionais* ](../../older-versions-security/membership/storing-additional-user-information-vb.md) tutoriais ou check-out [ *Erich Peterson* ](http://www.erichpeterson.com/) artigo de s [ *Personalizando o controle CreateUserWizard* ](http://aspnet.4guysfromrolla.com/articles/070506-1.aspx).
 
 
-[![Administrators pode criar novas contas de usuário](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
+[![Os administradores podem criar novas contas de usuário](configuring-a-website-that-uses-application-services-vb/_static/image14.jpg)](configuring-a-website-that-uses-application-services-vb/_static/image13.jpg)
 
 **Figura 5**: Os administradores podem criar novas contas de usuário ([clique para exibir a imagem em tamanho normal](configuring-a-website-that-uses-application-services-vb/_static/image15.jpg))
 

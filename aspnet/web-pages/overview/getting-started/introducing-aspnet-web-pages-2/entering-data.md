@@ -12,7 +12,7 @@ ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380113"
 ---
 # <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introdução ao ASP.NET Web Pages - inserindo o banco de dados usando formulários
@@ -253,7 +253,7 @@ No próximo tutorial, você aprenderá a permitir aos usuários editar dados que
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução a O ASP.NET que programa usando a sintaxe razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Inserir na instrução SQL](http://www.w3schools.com/sql/sql_insert.asp) no site W3Schools
 - [Validação de entrada do usuário na Web ASP.NET de Sites de páginas](https://go.microsoft.com/fwlink/?LinkId=253002). Para obter mais informações sobre como trabalhar com o `Validation` auxiliar.
 

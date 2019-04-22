@@ -12,7 +12,7 @@ ms.openlocfilehash: 7ea11f436d8f0455621d22c4d5a5b4d6b6ece68f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386418"
 ---
 # <a name="formatting-the-datalist-and-repeater-based-upon-data-c"></a>Formatação do DataList e Repeater com base nos dados (C#)
@@ -74,7 +74,7 @@ Antes de nos preocupamos com a formatação, let s primeiro criar uma página qu
 Depois que você tiver replicado a funcionalidade do DataList e ObjectDataSource da `Basics.aspx` em `Formatting.aspx`, reserve um tempo para alterar o s DataList `ID` propriedade do `DataList1` para um mais descritivo `ItemDataBoundFormattingExample`. Em seguida, exiba DataList em um navegador. Como mostra a Figura 1, a única diferença formatação entre cada produto é que a cor do plano de fundo alternativos.
 
 
-[![The produtos listados no controle DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
+[![Os produtos são listados no controle DataList](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image1.png)
 
 **Figura 1**: Os produtos são listados no controle DataList ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image3.png))
 
@@ -117,7 +117,7 @@ Para aplicar a formatação, basta definir os dois controles de Web Label `CssCl
 Com o `ItemDataBound` concluída do manipulador de eventos, examine o `Formatting.aspx` página em um navegador. Como ilustra a Figura 2, esses produtos com um preço de US $ 20,00 por tem seu nome e o preço realçado.
 
 
-[![TMangueira produtos menor que US $20,00 são realçadas](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
+[![Esses produtos inferiores a US $20,00 são realçadas](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image4.png)
 
 **Figura 2**: Esses produtos inferiores a US $20,00 são destacados ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image6.png))
 
@@ -129,7 +129,7 @@ Com o `ItemDataBound` concluída do manipulador de eventos, examine o `Formattin
 O `RepeaterItem` s que compõem o controle Repeater, no entanto, don t oferecem tais propriedades de nível de estilo. Portanto, a aplicação da formatação personalizada para o Repeater requer a aplicação de propriedades de estilo para controles da Web nos modelos Repeater s, exatamente como fizemos na Figura 2.
 
 
-[![Tele todo Item de produto é realçado para produtos em US $20,00](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
+[![O Item de produto inteiro é realçado para produtos em US $20,00](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image7.png)
 
 **Figura 3**: O Item de produto inteiro é realçado para produtos em US $20,00 ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image9.png))
 
@@ -141,7 +141,7 @@ No *Usando TemplateFields no controle GridView* tutorial vimos como usar uma fun
 Para demonstrar as funções de formatação, let s tem as informações de produto incluem o texto [DISCONTINUED] ao lado do nome do produto s se ele s descontinuado. Além disso, let s ter if preço realçado amarelo-s menor que US $20,00 (como fizemos no `ItemDataBound` exemplo de manipulador de eventos); se o preço é US $20,00 ou s maior, let não exibir o preço real, mas em vez disso, o texto, tente chamar uma cotação de preço. Figura 4 mostra uma captura de tela dos produtos listando com essas regras de formatação aplicadas.
 
 
-[![Fou produtos caros, o preço é substituído pelo texto,. chame uma cotação de preço](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
+[![Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image10.png)
 
 **Figura 4**: Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image12.png))
 
@@ -182,7 +182,7 @@ Para exibir o preço, podemos simplesmente definir a `UnitPriceLabel` rótulo s 
 Com as chamadas para as funções de formatação em vigor, reserve um tempo para exibir nosso progresso em um navegador. Sua tela deve ser semelhante à Figura 5, com os produtos descontinuados, incluindo o texto [DISCONTINUED] e esses produtos que custam mais de US $ 20,00 por ter seu preço substituído pelo texto, a chamada para uma cotação de preço.
 
 
-[![Fou produtos caros, o preço é substituído pelo texto,. chame uma cotação de preço](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
+[![Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image13.png)
 
 **Figura 5**: Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-cs/_static/image15.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 1cce2b05f125902ab05d493bebe753b2060b4d95
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384273"
 ---
 # <a name="disabling-actions-during-animation-c"></a>Desabilitar ações durante a animação (C#)
@@ -55,7 +55,7 @@ Também seria possível habilitar novamente o botão após a animação, usando 
 No entanto em determinado cenário seria inútil desde o botão fade out e não fica visível no final da animação.
 
 
-[![Tbotão he está desabilitado, assim que a animação é executada](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
+[![O botão estiver desabilitado, assim que a animação é executada](disabling-actions-during-animation-cs/_static/image2.png)](disabling-actions-during-animation-cs/_static/image1.png)
 
 O botão estiver desabilitado, assim que a animação é executada ([clique para exibir a imagem em tamanho normal](disabling-actions-during-animation-cs/_static/image3.png))
 

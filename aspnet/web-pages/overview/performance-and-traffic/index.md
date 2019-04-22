@@ -12,7 +12,7 @@ ms.openlocfilehash: 36cfc3435a832eaf8a6aeb24ff91fa03b99f2e39
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385599"
 ---
 # <a name="performance"></a>Desempenho
@@ -20,6 +20,6 @@ ms.locfileid: "59385599"
 > Como armazenar em cache o conteúdo para um desempenho mais rápido e como medir o tráfego do site.
 
 
-- [Armazenamento em cache para melhorar o desempenho de seu site](15-caching-to-improve-the-performance-of-your-website.md)
+- [Cache para melhorar o desempenho do seu site](15-caching-to-improve-the-performance-of-your-website.md)
 - [Análise de tráfego](14-analyzing-traffic.md)
 - [Agrupamento e minificação de ativos em um site de Páginas da Web do ASP.NET (Razor)](bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)

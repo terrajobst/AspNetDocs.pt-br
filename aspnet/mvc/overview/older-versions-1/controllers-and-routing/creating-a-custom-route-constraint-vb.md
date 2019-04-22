@@ -12,7 +12,7 @@ ms.openlocfilehash: febba98be86f0151724af6d6c00fb14760ce1b91
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378943"
 ---
 # <a name="creating-a-custom-route-constraint-vb"></a>Criação de uma restrição de rota personalizada (VB)
@@ -51,4 +51,4 @@ A restrição de Localhost é usada na definição de rota de administrador. Ess
 Observe que a rota padrão foi comentada do arquivo global. asax na listagem 2. Se você incluir a rota padrão, a rota padrão corresponderia solicitações para o controlador de administrador. Nesse caso, os usuários remotos ainda pode invocar ações do controlador de administrador, mesmo que suas solicitações não correspondem à rota Admin.
 
 > [!div class="step-by-step"]
-> [Voltar](creating-a-route-constraint-vb.md)
+> [Anterior](creating-a-route-constraint-vb.md)

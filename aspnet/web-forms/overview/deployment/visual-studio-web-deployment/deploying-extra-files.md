@@ -12,7 +12,7 @@ ms.openlocfilehash: 7ec80056a845429d5971bb174f6348b4b7a9587d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379581"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-extra-files"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação de arquivos extras
@@ -93,7 +93,7 @@ Eu gostaria de agradecer a pessoas que fizeram contribuições significativas pa
 - [Kristina Olson, Microsoft](https://blogs.iis.net/krolson/default.aspx)
 - [Mike Pope, Microsoft](http://www.mikepope.com/blog/DisplayBlog.aspx)
 - Mohit Srivastava, Microsoft
-- [Raffaele Rialdi, Itália](http://www.iamraf.net/)
+- [Raffaele Rialdi, Italy](http://www.iamraf.net/)
 - [Rick Anderson, Microsoft](https://blogs.msdn.com/b/rickandy/)
 - [Sayed Hashimi, Microsoft](http://sedodream.com/default.aspx)(twitter: [ @sayedihashimi ](http://twitter.com/sayedihashimi))
 - [Scott Hanselman](http://www.hanselman.com/blog/) (twitter: [ @shanselman ](http://twitter.com/shanselman))

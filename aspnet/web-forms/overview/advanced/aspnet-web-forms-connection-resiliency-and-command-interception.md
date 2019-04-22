@@ -12,7 +12,7 @@ ms.openlocfilehash: 2b8cae61347f00712aba18fe6a2e91bc207cb9f3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380035"
 ---
 # <a name="aspnet-web-forms-connection-resiliency-and-command-interception"></a>Resiliência de conexão do Web Forms do ASP.NET e interceptação de comando
@@ -160,7 +160,7 @@ Você escreveu o código de erro transitório de simulação de uma maneira que 
 6. Parar o projeto e examine o Visual Studio **saída** janela para ver a saída de rastreamento. Você pode encontrar o **saída** janela selecionando **Debug**  - &gt; **Windows**  - &gt;  **Saída**. Talvez você precise rolarem vários outros logs gravados pelo seu agente.  
   
    Observe que você pode ver as consultas SQL reais enviadas para o banco de dados. Você verá algumas consultas inicias e comandos que o Entity Framework para começar, verificação da tabela de histórico de versão e a migração de banco de dados.   
-    ![Janela Saída](aspnet-web-forms-connection-resiliency-and-command-interception/_static/image1.png)   
+    ![Janela de Saída](aspnet-web-forms-connection-resiliency-and-command-interception/_static/image1.png)   
    Observe que você não pode repetir esse teste, a menos que você interrompa o aplicativo e reiniciá-lo. Se você quiser ser capaz de testar a resiliência de conexão várias vezes em uma única execução do aplicativo, você pode escrever código para redefinir o contador de erro em `InterceptorTransientErrors` .
 7. Para ver a diferença a estratégia de execução (política de repetição) faz, comentário a `SetExecutionStrategy` de linha no *WingtipToysConfiguration.cs* do arquivo no *lógica* pasta, execute o **Admin**  página no modo de depuração novamente e adicione o produto chamado &quot;lançar&quot; novamente.  
   

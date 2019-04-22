@@ -12,7 +12,7 @@ ms.openlocfilehash: 8caa88d928517e1c71210cbe55e3961d4baf461a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381270"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-c"></a>Iteração #4 – tornar o aplicativo fracamente acoplado (c#)
@@ -137,7 +137,7 @@ Para corrigir esse problema, podemos criar uma separada [ *camada de serviço*](
 
 O ContactManagerService está contido na listagem 4. Ele contém a lógica de validação da classe de controlador do contato.
 
-**Listing 4 - Models\ContactManagerService.cs**
+**Listagem 4 - Models\ContactManagerService.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample4.cs)]
 
@@ -169,7 +169,7 @@ Um controlador usa um ModelStateDictionary chamada ModelState para representar e
 
 O padrão decorador permite que você encapsule uma classe existente em uma nova classe para implementar uma interface. Nosso projeto Contact Manager inclui a classe de ModelStateWrapper contida na listagem 7. A classe ModelStateWrapper implementa a interface na listagem 8.
 
-**Listing 7 - Models\Validation\ModelStateWrapper.cs**
+**Listagem 7 - Models\Validation\ModelStateWrapper.cs**
 
 [!code-csharp[Main](iteration-4-make-the-application-loosely-coupled-cs/samples/sample7.cs)]
 

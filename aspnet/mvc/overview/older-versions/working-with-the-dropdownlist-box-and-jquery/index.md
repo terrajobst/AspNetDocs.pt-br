@@ -12,7 +12,7 @@ ms.openlocfilehash: b7ef5109a0b87736881b9835b9b7e52689d9aa6d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421089"
 ---
 # <a name="mvc-3---working-with-the-dropdownlist-box-and-jquery"></a>MVC 3 – Trabalhar com a caixa DropDownList e o jQuery
@@ -20,6 +20,6 @@ ms.locfileid: "59421089"
 > Este tutorial mostra como usar a caixa DropDownList com o jQuery
 
 
-- [Usar o auxiliar do DropDownList com ASP.NET MVC](using-the-dropdownlist-helper-with-aspnet-mvc.md)
+- [Usando o auxiliar do DropDownList com ASP.NET MVC](using-the-dropdownlist-helper-with-aspnet-mvc.md)
 - [Examinando como o ASP.NET MVC faz Scaffold do auxiliar DropDownList](examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
-- [Adicionar uma nova categoria ao DropDownList usando o jQuery UI](adding-a-new-category-to-the-dropdownlist-using-jquery-ui.md)
+- [Adicionando uma nova categoria ao DropDownList usando o jQuery UI](adding-a-new-category-to-the-dropdownlist-using-jquery-ui.md)

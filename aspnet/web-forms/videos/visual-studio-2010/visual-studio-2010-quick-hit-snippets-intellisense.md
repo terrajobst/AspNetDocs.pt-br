@@ -12,7 +12,7 @@ ms.openlocfilehash: b048413b03c9f0b915dc5d64fcf85e2425a890fc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380958"
 ---
 # <a name="visual-studio-2010-quick-hit---snippets-intellisense"></a>Visual Studio 2010 "Acertar rápida" - trechos de código IntelliSense
@@ -24,4 +24,4 @@ Neste vídeo, você aprenderá sobre o suporte de trecho de código do Visual St
 [&#9654;Assista ao vídeo (4 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/visual-studio-2010-quick-hit-snippets-intellisense)
 
 > [!div class="step-by-step"]
-> [Voltar](visual-studio-2010-quick-hit-websites-instead-of-web-projects.md)
+> [Anterior](visual-studio-2010-quick-hit-websites-instead-of-web-projects.md)

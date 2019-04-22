@@ -12,7 +12,7 @@ ms.openlocfilehash: 99bd8dc1bce48d320e7d203abd5739b770d678d9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387536"
 ---
 # <a name="aspnet-mvc-storefront-part-9-the-shopping-cart"></a>Vitrine do ASP.NET MVC, parte 9: O carrinho de compras

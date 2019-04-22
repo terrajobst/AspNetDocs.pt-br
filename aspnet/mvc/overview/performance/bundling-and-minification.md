@@ -12,7 +12,7 @@ ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383831"
 ---
 # <a name="bundling-and-minification"></a>Agrupamento e minificação
@@ -165,7 +165,7 @@ Considere um projeto com os arquivos JavaScript a seguir:
 
 A tabela a seguir mostra os arquivos adicionados a um pacote usando o caractere curinga, conforme mostrado:
 
-| **Chamada** | **Arquivos adicionados ou a exceção gerada** |
+| **Call** | **Arquivos adicionados ou a exceção gerada** |
 | --- | --- |
 | Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
 | Include("~/Scripts/Common/T\*.js") | Exceção padrão inválido. O caractere curinga só é permitido no prefixo ou sufixo. |

@@ -12,7 +12,7 @@ ms.openlocfilehash: 62e5c5622743447e1119141469c894dc905e6b43
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381049"
 ---
 # <a name="configuring-permissions-for-team-build-deployment"></a>Configuração de permissões para a implantação do Team Build
@@ -91,4 +91,4 @@ Neste ponto, você deve compreender as permissões necessárias, junto com as op
 Para obter mais informações sobre como configurar ambientes de servidor do Windows para dar suporte à implantação remota, consulte [Configurando ambientes de servidor para implantação da Web](../configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md).
 
 > [!div class="step-by-step"]
-> [Voltar](deploying-a-specific-build.md)
+> [Anterior](deploying-a-specific-build.md)

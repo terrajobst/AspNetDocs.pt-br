@@ -12,7 +12,7 @@ ms.openlocfilehash: 4e4ae06ab6a6208c20d5206e171e5c906ac55708
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388784"
 ---
 # <a name="utilize-the-ajax-rating-control-in-the-aspnet-toolkit"></a>Utilizar o controle de classificação do AJAX no kit de ferramentas do ASP.NET

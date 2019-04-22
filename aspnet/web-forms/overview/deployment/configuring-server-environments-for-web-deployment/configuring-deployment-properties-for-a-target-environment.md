@@ -12,7 +12,7 @@ ms.openlocfilehash: 74fc0f4cb7d3ed7d1ef091cdb8fa829091af5a7a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388680"
 ---
 # <a name="configuring-deployment-properties-for-a-target-environment"></a>Configuração de propriedades de implantação para um ambiente de destino
@@ -116,4 +116,4 @@ Para usar esses arquivos de projeto como parte de um processo de implantação p
 - Para obter informações sobre como executar seus arquivos de projeto personalizado do Team Build, consulte [criando uma definição de compilação que dá suporte à implantação](../configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment.md).
 
 > [!div class="step-by-step"]
-> [Voltar](creating-a-server-farm-with-the-web-farm-framework.md)
+> [Anterior](creating-a-server-farm-with-the-web-farm-framework.md)

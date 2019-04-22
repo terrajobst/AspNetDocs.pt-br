@@ -12,7 +12,7 @@ ms.openlocfilehash: 67ca6b1dc68dc2dde4e24d4d6c6ddae04fc4bb6d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383467"
 ---
 # <a name="signalr-older-versions"></a>Versões mais antigas do SignalR
@@ -23,12 +23,12 @@ ms.locfileid: "59383467"
 - [Tutorial: Introdução ao SignalR 1.x](tutorial-getting-started-with-signalr.md)
 - [Tutorial: Introdução ao SignalR 1.x e MVC 4](tutorial-getting-started-with-signalr-and-mvc-4.md)
 - [Tempo real de alta frequência com SignalR 1.x](tutorial-high-frequency-realtime-with-signalr.md)
-- [Tutorial: Transmissão de servidor com SignalR 1.x do ASP.NET](tutorial-server-broadcast-with-aspnet-signalr.md)
-- [Guia da API Hubs – Servidor](signalr-1x-hubs-api-guide-server.md)
-- [Guia da API Hubs do SignalR 1.x – Cliente JavaScript](signalr-1x-hubs-api-guide-javascript-client.md)
-- [Guia da API Hubs – Cliente .NET](signalr-1x-hubs-api-guide-net-client.md)
+- [Tutorial: Transmissão de servidor com SignalR do ASP.NET 1.x](tutorial-server-broadcast-with-aspnet-signalr.md)
+- [Guia da API Hubs – servidor](signalr-1x-hubs-api-guide-server.md)
+- [Guia da API Hubs do SignalR 1.x – cliente JavaScript](signalr-1x-hubs-api-guide-javascript-client.md)
+- [Guia da API Hubs – cliente .NET](signalr-1x-hubs-api-guide-net-client.md)
 - [Noções básicas e tratamento de eventos de tempo de vida de conexão no SignalR](handling-connection-lifetime-events.md)
-- [Trabalhar com grupos no SignalR 1.x](working-with-groups.md)
+- [Trabalhando com grupos no SignalR 1.x](working-with-groups.md)
 - [Mapeamento de usuários do SignalR para conexões no SignalR 1.x](mapping-users-to-connections.md)
 - [Introdução à segurança do SignalR (SignalR 1.x)](introduction-to-security.md)
 - [Autenticação e autorização para hubs do SignalR (SignalR 1.x)](hub-authorization.md)

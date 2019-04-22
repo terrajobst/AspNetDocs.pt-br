@@ -12,7 +12,7 @@ ms.openlocfilehash: 455d62d97808862f70692c46ae223f47270266f9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387614"
 ---
 # <a name="allowing-only-certain-characters-in-a-text-box-vb"></a>Permitir somente determinados caracteres em uma caixa de texto (VB)
@@ -56,9 +56,9 @@ Aqui está a marcação para o `FilteredTextBoxExtender` controle que permite so
 Executar a página e tente digitar uma letra, se o JavaScript estiver habilitado, ele não funcionará; No entanto, dígitos exibidos na página. No entanto, observe que a proteção `FilteredTextBox` fornece não é à prova de marcador: Se o JavaScript estiver habilitado, todos os dados podem ser inseridos na caixa de texto, portanto, você precisa usar meios de validação adicional, ou seja, o ASP. Controles de validação da rede.
 
 
-[![Osomente dígitos podem ser inseridos](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
+[![Somente dígitos podem ser inseridos.](allowing-only-certain-characters-in-a-text-box-vb/_static/image2.png)](allowing-only-certain-characters-in-a-text-box-vb/_static/image1.png)
 
 Somente dígitos podem ser inseridos ([clique para exibir a imagem em tamanho normal](allowing-only-certain-characters-in-a-text-box-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](allowing-only-certain-characters-in-a-text-box-cs.md)
+> [Anterior](allowing-only-certain-characters-in-a-text-box-cs.md)

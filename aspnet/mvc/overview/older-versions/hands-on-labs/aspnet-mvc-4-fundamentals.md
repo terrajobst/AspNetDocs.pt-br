@@ -12,7 +12,7 @@ ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380217"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceitos básicos do ASP.NET MVC 4
@@ -581,7 +581,7 @@ Nesta tarefa, você criará um modelo de exibição que usará um objeto StoreIn
 
     ![Adicionando uma exibição](aspnet-mvc-4-fundamentals/_static/image23.png "adicionando uma exibição")
 
-    *Adicionar uma exibição*
+    *Adicionando uma exibição*
 3. Porque o **caixa de diálogo Adicionar modo de exibição** foi invocado a partir o **StoreController**, ele adicionará o modelo de exibição por padrão em um **\Views\Store\Index.cshtml** arquivo. Verifique as **criar um fortemente tipada-modo de exibição** caixa de seleção e, em seguida, selecione **StoreIndexViewModel** como o **classe de modelo**. Além disso, certifique-se de que o mecanismo de exibição selecionado **Razor**. Clique em **Adicionar**.
 
     ![Adicionar caixa de diálogo de exibição](aspnet-mvc-4-fundamentals/_static/image24.png "Adicionar caixa de diálogo de exibição")

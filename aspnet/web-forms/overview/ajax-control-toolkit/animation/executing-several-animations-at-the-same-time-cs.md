@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d9c566a301c8b64e33e67b0e9415a5955b5436e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388212"
 ---
 # <a name="executing-several-animations-at-the-same-time-c"></a>Executando várias animações ao mesmo tempo (c#)
@@ -55,7 +55,7 @@ Aqui está a uma marcação possíveis para o `AnimationExtender` controle, o de
 E realmente: quando você executa esse script, o painel é exibido, em seguida, é redimensionada (triplica a mais de sua largura e metade da altura) e fade out ao mesmo tempo.
 
 
-[![TPainel de he é desaparecimento e redimensionamento (incluindo seu conteúdo, graças ao mecanismo de renderização do navegador)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)
+[![O painel é desaparecimento e redimensionamento (incluindo seu conteúdo, graças ao mecanismo de renderização do navegador)](executing-several-animations-at-the-same-time-cs/_static/image2.png)](executing-several-animations-at-the-same-time-cs/_static/image1.png)
 
 O painel é desaparecimento e redimensionamento (incluindo seu conteúdo, graças ao mecanismo de renderização do navegador) ([clique para exibir a imagem em tamanho normal](executing-several-animations-at-the-same-time-cs/_static/image3.png))
 

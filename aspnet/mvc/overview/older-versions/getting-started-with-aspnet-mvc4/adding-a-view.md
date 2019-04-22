@@ -12,7 +12,7 @@ ms.openlocfilehash: 1ab1ea8b277b48b3b72edb9dd45aa4cc2937ffa8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418047"
 ---
 # <a name="adding-a-view"></a>Adicionar uma exibição
@@ -75,7 +75,7 @@ Primeiro, você deseja alterar o &quot;seu logotipo aqui.&quot; título na parte
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modelos de layout permitem que você especifique o layout de contêiner HTML do seu site em um só lugar e, em seguida, aplicá-la em várias páginas em seu site. Localize a linha `@RenderBody()`. `RenderBody` é um espaço reservado em que todos os a exibição de páginas específicas criadas são mostradas, &quot;encapsulado&quot; na página de layout. Por exemplo, se você selecionar o link de sobre o *Views\Home\About.cshtml* exibição é renderizada dentro de `RenderBody` método.
+Modelos de layout permitem que você especifique o layout de contêiner HTML do seu site em um só lugar e, em seguida, aplicá-la em várias páginas em seu site. Localize a linha `@RenderBody()`. `RenderBody` é um espaço reservado em que todas as páginas específicas à exibição criadas são mostradas, &quot;encapsuladas&quot; na página de layout. Por exemplo, se você selecionar o link de sobre o *Views\Home\About.cshtml* exibição é renderizada dentro de `RenderBody` método.
 
 Altere o cabeçalho de título do site no modelo de layout &quot;seu logotipo aqui&quot; à &quot;filme MVC&quot;.
 

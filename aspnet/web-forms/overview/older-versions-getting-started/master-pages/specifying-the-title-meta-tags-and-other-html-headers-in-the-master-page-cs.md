@@ -12,7 +12,7 @@ ms.openlocfilehash: 431d5a124017e2a23bfaa7579f63d61faf0b8ebd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379788"
 ---
 # <a name="specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-c"></a>Especificando o título, as metamarcas e outros cabeçalhos de HTML na página mestra (C#)
@@ -169,7 +169,7 @@ Depois de fazer isso, visite o site por meio de um navegador. Se você visitar u
 A Figura 5 mostra o `MultipleContentPlaceHolders.aspx` página quando visualizado por meio de um navegador. Observe que o título é precisamente nome do arquivo da página (menos a extensão), "MultipleContentPlaceHolders".
 
 
-[![Ium título de f não é especificado explicitamente, o nome do arquivo da página é usado automaticamente](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image5.png)
+[![Se um título não é especificado explicitamente, o nome do arquivo da página é usado automaticamente](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image6.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image5.png)
 
 **Figura 05**: Se um título não é especificado explicitamente, o nome do arquivo da página é usado automaticamente ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image7.png))
 
@@ -191,7 +191,7 @@ O sistema de mapa de site é construído sobre a [modelo de provedor](http://asp
 Comece criando um arquivo de mapa de site na pasta raiz do site do chamado `Web.sitemap`. Para fazer isso, clique com botão direito no nome do site no Gerenciador de soluções, escolha Add New Item e selecione o modelo do mapa do Site. Certifique-se de que o arquivo é nomeado `Web.sitemap` e clique em Adicionar.
 
 
-[![Add um arquivo chamado SiteMap à pasta da raiz do site](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image8.png)
+[![Adicionar um arquivo denominado Web. sitemap à pasta da raiz do site](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image9.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image8.png)
 
 **Figura 06**: Adicionar um arquivo nomeado `Web.sitemap` à pasta da raiz do site ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image10.png))
 
@@ -224,7 +224,7 @@ Inicie removendo a marcação existente da lista não ordenada da seção de li�
 No Assistente de configuração de fonte de dados, escolha para associar o ListView a um novo controle SiteMapDataSource chamado `LessonsDataSource`. O controle SiteMapDataSource retorna a estrutura hierárquica de mapa do sistema de site.
 
 
-[![Blocalizar um controle SiteMapDataSource para o controle ListView LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image12.png)
+[![Associar um controle SiteMapDataSource ao controle ListView LessonsList](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image13.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image12.png)
 
 **Figura 08**: Associar um controle SiteMapDataSource para o `LessonsList` controle ListView ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image14.png))
 
@@ -239,7 +239,7 @@ O `LayoutTemplate` gera a marcação para uma lista não ordenada (`<ul>...</ul>
 Depois de configurar os modelos do ListView, visite o site. Como mostra a Figura 9, a seção de lições contém um único item com marcadores, Home. Onde estão About e usando lições ContentPlaceHolder vários controles? SiteMapDataSource foi projetado para retornar um conjunto hierárquico de dados, mas o controle ListView só pode exibir um único nível da hierarquia. Consequentemente, somente o primeiro nível de nós de mapa de site retornados por SiteMapDataSource é exibido.
 
 
-[![Tele lições, seção contém um único Item de lista](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image15.png)
+[![A seção de lições contém um único Item de lista](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image16.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image15.png)
 
 **Figura 09**: A seção de lições contém um único Item de lista ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image17.png))
 
@@ -254,7 +254,7 @@ Com essa alteração, o ListView exibe itens com marcadores do About e usando v�
 Configurando a SiteMapDataSource para omitir o nó inicial e adicionar explicitamente um item com marcador inicial, a seção de lições agora exibe a saída desejada.
 
 
-[![Tele lições, seção contém um marcador de Item para casa e cada nó filho](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image18.png)
+[![A seção de lições contém um Item de marcador para uso doméstico e cada nó filho](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image19.png)](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image18.png)
 
 **Figura 10**: A seção de lições contém um Item de marcador para uso doméstico e cada nó filho ([clique para exibir a imagem em tamanho normal](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs/_static/image20.png))
 

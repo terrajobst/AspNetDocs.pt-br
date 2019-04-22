@@ -12,7 +12,7 @@ ms.openlocfilehash: d4003dba8530d2e72c514c572ffc28ef942fd437
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379359"
 ---
 # <a name="improving-the-details-and-delete-methods-c"></a>Aprimorar os métodos Details e Delete (C#)
@@ -85,4 +85,4 @@ Aproveite!
 — Scott Hanselman ([ http://hanselman.com ](http://hanselman.com) e [ @shanselman ](http://twitter.com/shanselman) no Twitter) e Rick Anderson [blogs.msdn.com/rickAndy](https://blogs.msdn.com/rickAndy)
 
 > [!div class="step-by-step"]
-> [Voltar](adding-validation-to-the-model.md)
+> [Anterior](adding-validation-to-the-model.md)

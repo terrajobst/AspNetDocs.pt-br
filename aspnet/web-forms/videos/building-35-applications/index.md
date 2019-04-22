@@ -12,7 +12,7 @@ ms.openlocfilehash: 2808f8811e06875a5b38585772763f45794d1fc2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388316"
 ---
 # <a name="building-35-applications"></a>Compilar aplicativos 3.5
@@ -23,7 +23,7 @@ ms.locfileid: "59388316"
 - [Introdução ao Visual Web Developer](intro-to-visual-web-developer.md)
 - [IntelliSense](intellisense.md)
 - [Introdução ao Web Forms](intro-to-web-forms.md)
-- [Layout de página](page-layout.md)
+- [Layout da página](page-layout.md)
 - [Eventos de ciclo de vida da página](page-lifecycle-events.md)
 - [Introdução aos controles do ASP.NET](intro-to-aspnet-controls.md)
 - [Enviar e postback](submit-and-postback.md)

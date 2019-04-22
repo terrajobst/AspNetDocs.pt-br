@@ -12,7 +12,7 @@ ms.openlocfilehash: d6a787206862b88f915859d4a8fc4dd3c3166293
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389590"
 ---
 # <a name="configuring-the-data-access-layers-connection--and-command-level-settings-c"></a>Definir as configurações de nível de conexão e comando da Camada de Acesso a Dados (C#)
@@ -51,7 +51,7 @@ Exceto para o [de encapsulamento de modificações de banco de dados em uma tran
 Cada classe de TableAdapter tem um `Connection` propriedade que especifica informações de conexão de banco de dados. Esse tipo de dados de propriedade s e `ConnectionString` valor são determinadas pelas seleções feitas no Assistente de configuração do TableAdapter. Lembre-se de que quando primeiro adicionamos um TableAdapter para um conjunto de dados tipado este assistente nos pede para o banco de dados de origem (consulte a Figura 1). A lista suspensa nessa primeira etapa inclui esses bancos de dados especificados no arquivo de configuração, bem como outros bancos de dados em Gerenciador de servidores s conexões de dados. Se o banco de dados que queremos usar não existe na lista suspensa, uma nova conexão de banco de dados pode ser especificado clicando no botão Nova Conexão e fornecendo as informações de conexão necessárias.
 
 
-[![Tele primeira etapa do Assistente de configuração do TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image1.png)
+[![A primeira etapa do Assistente de configuração do TableAdapter](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image2.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image1.png)
 
 **Figura 1**: A primeira etapa do Assistente de configuração do TableAdapter ([clique para exibir a imagem em tamanho normal](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image3.png))
 
@@ -109,7 +109,7 @@ Essa classe parcial expõe apenas uma propriedade do objeto de conexão subjacen
 Abra o `Northwind` conjunto de dados, clique no `ProductsTableAdapter` no Designer e navegue até a janela Propriedades. Você verá então o `ConnectionModifier` definido como seu valor padrão, `Assembly`. Para tornar o `Connection` disponível fora do assembly de conjunto de dados tipado s, alteração de propriedade de `ConnectionModifier` propriedade para `Public`.
 
 
-[![Tele propriedade de Conexão s nível de acessibilidade pode ser configurado por meio da propriedade ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image6.png)
+[![O nível de acessibilidade de s de propriedade de Conexão pode ser configurado por meio da propriedade ConnectionModifier](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image7.png)](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image6.png)
 
 **Figura 4**: O `Connection` propriedade s acessibilidade nível pode ser configurado por meio de `ConnectionModifier` propriedade ([clique para exibir a imagem em tamanho normal](configuring-the-data-access-layer-s-connection-and-command-level-settings-cs/_static/image8.png))
 

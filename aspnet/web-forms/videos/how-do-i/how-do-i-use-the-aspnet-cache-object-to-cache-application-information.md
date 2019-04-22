@@ -12,7 +12,7 @@ ms.openlocfilehash: 56b14586b37bb8fc6cf544dc342ac8aa3b8a2c47
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380503"
 ---
 # <a name="how-do-i-use-the-aspnet-cache-object-to-cache-application-information"></a>[How Do I]: Usar o objeto de cache do ASP.NET para armazenar informações de aplicativo em cache

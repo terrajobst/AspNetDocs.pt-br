@@ -12,7 +12,7 @@ ms.openlocfilehash: 8027a77ab3504848a28ce9bdc7779092b28759ce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421154"
 ---
 # <a name="how-do-i-use-the-html-editor-control-c"></a>Como usar o controle de Editor de HTML? (C#)
@@ -25,7 +25,7 @@ por [Microsoft](https://github.com/microsoft)
 O objetivo deste tutorial é fornecer uma visão geral do controle de Editor de HTML incluído com o AJAX Control Toolkit. O Editor de HTML inclui opções para alterar o tamanho da fonte, selecionando uma fonte, alterando a cor do plano de fundo, modificando a cor de primeiro plano, adicionando links, a adição de imagens, alterando o alinhamento de texto e execução de recortar, copiar e colar operações (veja a Figura 1).
 
 
-[![Tele Editor de HTML](how-do-i-use-the-html-editor-control-cs/_static/image1.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image1.png)
+[![O Editor de HTML](how-do-i-use-the-html-editor-control-cs/_static/image1.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image1.png)
 
 **Figura 01**: O Editor de HTML ([clique para exibir a imagem em tamanho normal](how-do-i-use-the-html-editor-control-cs/_static/image2.png))
 
@@ -33,7 +33,7 @@ O objetivo deste tutorial é fornecer uma visão geral do controle de Editor de 
 O editor de HTML permite que você inserir o conteúdo usando um modo de design, ou você pode inserir HTML diretamente. Você também é fornecidas com a opção de visualizar o conteúdo HTML (consulte a Figura 2).
 
 
-[![Design, HTML e botões de visualização](how-do-i-use-the-html-editor-control-cs/_static/image2.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image3.png)
+[![Design, HTML e visualização de botões](how-do-i-use-the-html-editor-control-cs/_static/image2.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image3.png)
 
 **Figura 02**: Design, HTML e visualização botões ([clique para exibir a imagem em tamanho normal](how-do-i-use-the-html-editor-control-cs/_static/image4.png))
 
@@ -49,7 +49,7 @@ Você deve colocar o controle ScriptManager na parte superior da página antes d
 O controle de Editor de HTML está localizado na caixa de ferramentas com o restante dos controles do AJAX Control Toolkit. Ele é chamado de controle do Editor (veja a Figura 3).
 
 
-[![Tele tem controle de Editor de HTML](how-do-i-use-the-html-editor-control-cs/_static/image3.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image5.png)
+[![O controle de Editor de HTML](how-do-i-use-the-html-editor-control-cs/_static/image3.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image5.png)
 
 **Figura 03**: O controle de Editor de HTML ([clique para exibir a imagem em tamanho normal](how-do-i-use-the-html-editor-control-cs/_static/image6.png))
 
@@ -63,7 +63,7 @@ Depois que você arrasta o Editor de HTML para uma página, você pode definir s
 A página na listagem 1 contém um controle de Editor de HTML, um controle de botão e um controle Literal. Quando você clica no botão, o conteúdo do Editor de HTML aparece no controle Literal (veja a Figura 4).
 
 
-[![Submitting um formulário com um Editor de HTML](how-do-i-use-the-html-editor-control-cs/_static/image4.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image7.png)
+[![Enviando um formulário com um Editor de HTML](how-do-i-use-the-html-editor-control-cs/_static/image4.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image7.png)
 
 **Figura 04**: Enviando um formulário com um Editor de HTML ([clique para exibir a imagem em tamanho normal](how-do-i-use-the-html-editor-control-cs/_static/image8.png))
 
@@ -75,7 +75,7 @@ A propriedade de conteúdo do Editor de HTML é usada para recuperar o conteúdo
 É possível personalizar exatamente quais botões aparecem no editor. Por exemplo, você talvez queira remover da guia HTML para impedir que os usuários alternem o Editor de HTML para o modo HTML. Ou, você talvez queira remover a lista de lista suspensa de tamanho da fonte para impedir que os usuários criem excessivamente grande de texto em um Fórum da mensagem post (consulte a Figura 5).
 
 
-[![A Editor de HTML personalizados](how-do-i-use-the-html-editor-control-cs/_static/image5.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image9.png)
+[![Um Editor de HTML personalizado](how-do-i-use-the-html-editor-control-cs/_static/image5.jpg)](how-do-i-use-the-html-editor-control-cs/_static/image9.png)
 
 **Figura 05**: Personalizado de um Editor de HTML ([clique para exibir a imagem em tamanho normal](how-do-i-use-the-html-editor-control-cs/_static/image10.png))
 

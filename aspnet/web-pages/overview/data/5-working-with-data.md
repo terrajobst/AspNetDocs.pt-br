@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379770"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introdução ao trabalho com um banco de dados da Web do ASP.NET (Razor) Sites de páginas
@@ -151,7 +151,7 @@ Depois que você tem um banco de dados com os dados contidos nela, você pode ex
 
 > [!TIP] 
 > 
-> **Structured Query Language (SQL)**
+> **Linguagem de consulta estruturada (SQL)**
 > 
 > SQL é uma linguagem que é usada na maioria dos bancos de dados relacionais para o gerenciamento de dados em um banco de dados. Ele inclui comandos que permitem que você recuperar dados e atualizá-lo e que permitem que você criar, modificar e gerenciar tabelas de banco de dados. SQL é diferente de uma linguagem de programação (como aquele que você está usando no WebMatrix) porque com SQL, a ideia é que você informar o banco de dados que você deseja e trabalho do banco de dados é descobrir como obter os dados ou executar a tarefa. Aqui estão exemplos de alguns comandos SQL e o que fazer:
 > 

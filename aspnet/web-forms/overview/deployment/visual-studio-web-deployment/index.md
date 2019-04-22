@@ -12,7 +12,7 @@ ms.openlocfilehash: 3d8a6a102788cb6b5612e9bc537e1c13e7798c54
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59378930"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio"></a>Implantação da Web do ASP.NET com uso do Visual Studio
@@ -23,12 +23,12 @@ ms.locfileid: "59378930"
 - [Introdução](introduction.md)
 - [Preparação para implantação de banco de dados](preparing-databases.md)
 - [Transformações de arquivo Web.config](web-config-transformations.md)
-- [Propriedades do projeto](project-properties.md)
-- [Implantação para teste](deploying-to-iis.md)
+- [Propriedades de projeto](project-properties.md)
+- [Implantando para teste](deploying-to-iis.md)
 - [Configuração de permissões de pasta](setting-folder-permissions.md)
-- [Implantação para produção](deploying-to-production.md)
-- [Implantação de uma atualização de código](deploying-a-code-update.md)
-- [Implantação de uma atualização de banco de dados](deploying-a-database-update.md)
+- [Implantando para produção](deploying-to-production.md)
+- [Implantando uma atualização de código](deploying-a-code-update.md)
+- [Implantando uma atualização de banco de dados](deploying-a-database-update.md)
 - [Implantação por linha de comando](command-line-deployment.md)
-- [Implantação de arquivos extras](deploying-extra-files.md)
+- [Implantando arquivos extras](deploying-extra-files.md)
 - [Solução de problemas](troubleshooting.md)

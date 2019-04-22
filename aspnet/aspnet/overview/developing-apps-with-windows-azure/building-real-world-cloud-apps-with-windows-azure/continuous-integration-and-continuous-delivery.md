@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fb0a331a2a6e2af5c5097db8b57942525d24ffc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384299"
 ---
 # <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integração contínua e entrega contínua (Criando aplicativos de nuvem do mundo Real com o Azure)
@@ -34,7 +34,7 @@ Em geral, recomendamos que você faça a entrega contínua para seu desenvolvime
 
 O diagrama a seguir da [um Microsoft Patterns and Practices livro eletrônico sobre a entrega contínua](https://aka.ms/ReleasePipeline) ilustra um fluxo de trabalho típico. Clique na imagem para vê-la em tamanho completo em seu contexto original.
 
-[![Cfluxo de trabalho de entrega ontinuous](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
+[![Fluxo de trabalho de entrega contínua](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
 ## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Como a nuvem permite econômica CI e CD
 

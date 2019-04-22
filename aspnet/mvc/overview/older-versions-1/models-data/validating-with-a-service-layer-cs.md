@@ -12,7 +12,7 @@ ms.openlocfilehash: 9b2a7e00b3c50a946ad0f2518880892f103a5c1b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387107"
 ---
 # <a name="validating-with-a-service-layer-c"></a>Validação com uma camada de serviço (C#)
@@ -48,7 +48,7 @@ Uma camada de serviço é uma camada adicional em um aplicativo ASP.NET MVC que 
 
 Por exemplo, a camada de serviço do produto na listagem 3 tem um método CreateProduct(). O método CreateProduct() chama o método de ValidateProduct() para validar um novo produto antes de passar o produto para o repositório de produto.
 
-**Listing 3 - Models\ProductService.cs**
+**Listagem 3 - Models\ProductService.cs**
 
 [!code-csharp[Main](validating-with-a-service-layer-cs/samples/sample3.cs)]
 

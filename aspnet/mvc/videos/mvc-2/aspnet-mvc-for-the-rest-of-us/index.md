@@ -12,7 +12,7 @@ ms.openlocfilehash: 229d9b389d109160ba17406a9db69464c65a8632
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418827"
 ---
 # <a name="aspnet-mvc-for-the-rest-of-us"></a>ASP.NET MVC para o restante de nós

@@ -12,7 +12,7 @@ ms.openlocfilehash: 7de5a1545ee59e671058f09789ce69d5062d3655
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380971"
 ---
 # <a name="passing-data-to-view-master-pages-vb"></a>Transmitir dados para Exibir páginas mestras (VB)
@@ -33,7 +33,7 @@ O objetivo deste tutorial é explicar como você pode passar dados de um control
 Imagine que você está criando um aplicativo de banco de dados de filme e você deseja exibir a lista de categorias de filmes em todas as páginas em seu aplicativo (veja a Figura 1). Além disso, imagine que a lista de categorias de filmes é armazenada em uma tabela de banco de dados. Nesse caso, faria sentido para recuperar as categorias do banco de dados e renderizar a lista de categorias de filmes dentro de uma página de exibição mestre.
 
 
-[![Dcategorias de filme isplaying em uma página de exibição mestre](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
+[![Exibir categorias de filmes em uma página mestra do modo de exibição](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Exibir categorias de filmes em uma página de exibição mestre ([clique para exibir a imagem em tamanho normal](passing-data-to-view-master-pages-vb/_static/image3.png))
 
@@ -59,7 +59,7 @@ Observe que tanto a `Index()` e o `Details()` ações adicionam dois itens para 
 O `Details()` ação também adiciona duas chaves nomeadas categorias e filmes. A chave de categorias, mais uma vez, representa a lista de categorias de filmes exibido pela página modo de exibição mestre. A chave de filmes representa a lista de filmes em uma determinada categoria exibidos por página de exibição de detalhes (consulte a Figura 2).
 
 
-[![Tmodo de exibição de detalhes he](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
+[![A exibição de detalhes](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: A exibição de detalhes ([clique para exibir a imagem em tamanho normal](passing-data-to-view-master-pages-vb/_static/image6.png))
 
@@ -115,4 +115,4 @@ Neste tutorial, discutimos duas abordagens para passar os dados de exibição de
 Em seguida, examinamos uma estratégia melhor para adicionar os dados necessários para uma página mestra do modo de exibição para exibir os dados. Em vez de adicionar os dados de exibição em cada ação de controlador, adicionamos os dados de exibição apenas uma vez dentro de um controlador de aplicativo. Dessa forma, você pode evitar código duplicado ao passar dados para uma página mestra do modo de exibição em um aplicativo ASP.NET MVC.
 
 > [!div class="step-by-step"]
-> [Voltar](creating-page-layouts-with-view-master-pages-vb.md)
+> [Anterior](creating-page-layouts-with-view-master-pages-vb.md)

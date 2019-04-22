@@ -12,7 +12,7 @@ ms.openlocfilehash: 11e70493478d6810d63ba6b3ac813e32f03052eb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381322"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Noções básicas sobre a localização do AJAX ASP.NET
@@ -32,13 +32,13 @@ Este white paper examina os recursos de localização presentes na estrutura do 
 
 Este white paper se baseia na versão Beta 2 do Microsoft Visual Studio 2008. Este white paper também pressupõe que você estará trabalhando com o Visual Studio 2008, não Visual Web Developer Express e fornecerá instruções passo a passo de acordo com a interface do usuário do Visual Studio. Alguns exemplos de código irá utilizar modelos de projeto que podem não estar disponíveis no Visual Web Developer Express.
 
-## *<a name="the-need-for-localization"></a>A necessidade de localização*
+## <a name="the-need-for-localization"></a>*A necessidade de localização*
 
 Especialmente para os desenvolvedores de aplicativos empresariais e os desenvolvedores de componentes, a capacidade de criar ferramentas que podem estar cientes das diferenças entre idiomas e culturas se tornou cada vez mais necessária. Criar componentes com a capacidade de adaptar-se à localidade do cliente aumenta a produtividade do desenvolvedor e reduz a quantidade de trabalho necessária para a adaptação de um componente funcione globalmente.
 
 Localização é o processo de criação e a integração do suporte para um idioma ou cultura específico em um aplicativo ou um componente de aplicativo. A plataforma Microsoft ASP.NET fornece amplo suporte para a localização para aplicativos do ASP.NET padrão, integrando o modelo de localização do .NET standard; a estrutura do Microsoft AJAX utilizam o modelo integrado para dar suporte os diversos cenários em que localização pode ser executada. Com a estrutura do Microsoft AJAX, scripts ou podem ser localizados por que está sendo implantado em assemblies satélite, ou utilizando uma estrutura de sistema de arquivos estáticos.
 
-## *<a name="embedding-scripts-with-satellite-assemblies"></a>Inclusão de Scripts com Assemblies de satélite*
+## <a name="embedding-scripts-with-satellite-assemblies"></a>*Inclusão de Scripts com Assemblies de satélite*
 
 Consistente com a estratégia de localização padrão do .NET Framework, os recursos podem ser incluídos em assemblies satélites. Assemblies satélites oferecem diversas vantagens sobre a inclusão de recurso tradicionais em binários - qualquer determinada localização pode ser atualizada sem atualizar a imagem ampliada, suas localizações adicionais podem ser implantadas instalando assemblies satélites em a pasta do projeto e assemblies de satélite podem ser implantados sem causar um recarregamento do assembly do projeto principal. Particularmente em projetos do ASP.NET, isso é benéfico porque ele pode reduzir significativamente a quantidade de recursos do sistema usados por atualizações incrementais e minimamente interrompe o uso do site de produção.
 
@@ -118,7 +118,7 @@ Para aqueles familiarizados com a sintaxe JavaScript Regex, o texto dentro do ú
 
 Observe que há diversas variações para este passo a passo. Por exemplo, scripts pôde ser registrados com o controle ScriptManager programaticamente durante o carregamento da página.
 
-## *<a name="including-a-static-script-file-structure"></a>Incluindo uma estrutura de arquivos de Script estático*
+## <a name="including-a-static-script-file-structure"></a>*Incluindo uma estrutura de arquivos de Script estático*
 
 Ao usar arquivos de script estático para a implantação, você perde alguns dos benefícios de usar o esquema de localização .NET inerente. É principalmente visível que você perca o tipo automático gerado a partir de incluindo arquivos de recurso de script; no passo a passo acima, por exemplo, os recursos foram expostos por um tipo gerado automaticamente, chamado de mensagem do controle do ScriptManager.
 
@@ -128,7 +128,7 @@ A Microsoft recomenda evitando um problema de controle de versão ao gerar autom
 
 Porque não há recursos a serem incluídos declarativamente, os arquivos devem ser estáticos de script referenciado adicionando `<asp:ScriptElement>` elementos como um filho do `<Scripts>` marca do controle ScriptManager, ou adicionando programaticamente `ScriptReference` objetos para o `Scripts` propriedade do `ScriptManager` controle na página em tempo de execução.
 
-## *<a name="the-scriptmanager-and-its-role-in-localization"></a>O ScriptManager e sua função na localização*
+## <a name="the-scriptmanager-and-its-role-in-localization"></a>*O ScriptManager e sua função na localização*
 
 O ScriptManager habilita vários comportamentos automáticos para aplicativos localizados:
 
@@ -146,7 +146,7 @@ Referências de script podem ser adicionadas ao controle ScriptManager programat
 
 O .NET Framework intrinsecamente dá suporte a uma estrutura avançada de localização, utilizando os assemblies de satélite e arquivos de recurso (. resx) de XML para apresentar uma maneira uniforme para procurar imagens e cadeias de caracteres de recurso. Extensões AJAX do ASP.NET, incluindo a estrutura do Microsoft AJAX e a biblioteca de Script do Microsoft AJAX, oferecem suporte para esse modelo de programação em código do lado do cliente, permitindo pesquisas de cadeia de caracteres de recursos fácil. Assemblies satélites suporte à inclusão automática de recursos de script (arquivos. js real) por meio de ScriptResource desde que os nomes de arquivo seguem um determinado esquema de nomenclatura. Com esse suporte, as extensões do AJAX ASP.NET simplificar a localização dos scripts e a globalização de aplicativos.
 
-## *<a name="bio"></a>Bio*
+## <a name="bio"></a>*Bio*
 
 Scott Cate tem trabalhado com tecnologias Web Microsoft desde 1997 e é o presidente da myKB.com ([www.myKB.com](http://www.myKB.com)) onde ele é especialista na escrita de ASP.NET com base em aplicativos com foco em soluções de Software da Base de dados de Conhecimento. Scott pode ser contatado através do email [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) ou em seu blog em [ScottCate.com](http://ScottCate.com)
 

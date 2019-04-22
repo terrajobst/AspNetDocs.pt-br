@@ -12,7 +12,7 @@ ms.openlocfilehash: a47d428830fa6c43bcb9ce797d65b73891b44618
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381881"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-45"></a>Uso de métodos assíncronos no ASP.NET 4.5
@@ -192,7 +192,7 @@ Para obter os benefícios de um aplicativo da web assíncrona, você talvez prec
 
     - Abra o Gerenciador do IIS e navegue até o painel de Pools de aplicativos.
     - Clique com o botão direito no pool de aplicativos de destino e selecione **configurações avançadas**.  
-        ![avançado](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
+        ![advanced](using-asynchronous-methods-in-aspnet-45/_static/image4.png)
     - No **configurações avançadas** caixa de diálogo alteração *comprimento da fila* de 1.000 para 5.000.  
         ![Comprimento da fila](using-asynchronous-methods-in-aspnet-45/_static/image5.png)  
   

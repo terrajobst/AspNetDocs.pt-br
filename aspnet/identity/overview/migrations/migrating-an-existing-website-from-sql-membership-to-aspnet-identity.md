@@ -13,7 +13,7 @@ ms.openlocfilehash: f205dfd8692bc946ca2124655bf8bcefbdbd1779
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394517"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migração de um site existente da Associação do SQL para a Identidade do ASP.NET
@@ -99,7 +99,7 @@ Para classes de identidade do ASP.NET trabalhar fora da caixa com os dados de us
 
 É necessário ter tabelas para cada um desses modelos com colunas que correspondem às propriedades. O mapeamento entre classes e tabelas é definido na `OnModelCreating` método da `IdentityDBContext`. Isso é conhecido como o método da API fluente da configuração e obter mais informações podem ser encontradas [aqui](https://msdn.microsoft.com/data/jj591617.aspx). A configuração das classes é mencionado abaixo
 
-| **Classe** | **Tabela** | **Chave primária** | **Chave estrangeira** |
+| **Class** | **Tabela** | **Chave primária** | **Chave estrangeira** |
 | --- | --- | --- | --- |
 | IdentityUser | AspnetUsers | Id |  |
 | IdentityRole | AspnetRoles | Id |  |

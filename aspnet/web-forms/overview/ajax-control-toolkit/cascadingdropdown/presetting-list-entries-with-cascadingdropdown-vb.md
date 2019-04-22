@@ -12,7 +12,7 @@ ms.openlocfilehash: 6e685d599e3dbc095631e3c28a603ac9c38f799c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385885"
 ---
 # <a name="presetting-list-entries-with-cascadingdropdown-vb"></a>Predefinição de entradas de lista com CascadingDropDown (VB)
@@ -53,7 +53,7 @@ O método retorna uma matriz do tipo valor CascadingDropDown. O construtor do ti
 Carregamento da página no navegador preencherá a lista suspensa com três fornecedores, o segundo é que está sendo pré-selecionado.
 
 
-[![Tlista é preenchida e pré-selecionado automaticamente](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)
+[![A lista é preenchida e pré-selecionado automaticamente](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)
 
 A lista é preenchida e pré-selecionado automaticamente ([clique para exibir a imagem em tamanho normal](presetting-list-entries-with-cascadingdropdown-vb/_static/image3.png))
 

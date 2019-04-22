@@ -12,7 +12,7 @@ ms.openlocfilehash: 938d7f696e12496fc4ae79c51e9446d71a898e3e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382882"
 ---
 # <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
@@ -55,8 +55,8 @@ ms.locfileid: "59382882"
 - [Controle de reordenação do AJAX Toolkit](how-do-i-the-ajax-toolkit-reorder-control.md)
 - [Utilizar o controle de classificação do AJAX no kit de ferramentas do ASP.NET](utilize-the-ajax-rating-control-in-the-aspnet-toolkit.md)
 - [Extensores de controle](control-extenders.md)
-- [Seletor de Cor](color-picker.md)
-- [Caixa de Combinação](combo-box.md)
-- [Controle de editor](editor-control.md)
+- [Seletor de cor](color-picker.md)
+- [Caixa de combinação](combo-box.md)
+- [Controle do editor](editor-control.md)
 - [Editor de controle personalizado](editor-control-custom.md)
 - [Criar um novo extensor personalizado](create-a-new-custom-extender.md)

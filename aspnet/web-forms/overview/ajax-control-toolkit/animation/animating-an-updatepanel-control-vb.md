@@ -12,7 +12,7 @@ ms.openlocfilehash: a7c40ebe359e21602d9f1de8205e1a7c808acc85
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384247"
 ---
 # <a name="animating-an-updatepanel-control-vb"></a>Animar um controle UpdatePanel (VB)
@@ -50,7 +50,7 @@ Nesse cenário, o novo conteúdo do `UpdatePanel` (após o postback) deverá apl
 Agora, sempre que um postback ocorre dentro do UpdatePanel, o novo conteúdo do painel aplicar fade-in sem problemas.
 
 
-[![Tpróxima etapa do assistente he está desaparecendo](animating-an-updatepanel-control-vb/_static/image2.png)](animating-an-updatepanel-control-vb/_static/image1.png)
+[![A próxima etapa do assistente está desaparecendo](animating-an-updatepanel-control-vb/_static/image2.png)](animating-an-updatepanel-control-vb/_static/image1.png)
 
 A próxima etapa do assistente está desaparecendo ([clique para exibir a imagem em tamanho normal](animating-an-updatepanel-control-vb/_static/image3.png))
 

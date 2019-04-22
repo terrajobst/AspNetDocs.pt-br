@@ -12,7 +12,7 @@ ms.openlocfilehash: e576e11d63f940f1683ed26d217ff255a31b007c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388407"
 ---
 # <a name="understanding-aspnet-ajax-web-services"></a>Noções básicas sobre os serviços Web do AJAX ASP.NET
@@ -48,8 +48,7 @@ Essa substituição HttpHandler é feita para permitir que o objeto notação JS
 
 [!code-json[Main](understanding-asp-net-ajax-web-services/samples/sample2.json)]
 
-> *> [!NOTE]
-> o nome da operação é definido como parte da URL para o serviço web. Além disso, mensagens de solicitação não são sempre enviadas via JSON. Serviços Web podem utilizar o atributo ScriptMethod com o parâmetro UseHttpGet definido como true, o que faz com que os parâmetros a serem passados por meio de um os parâmetros de cadeia de caracteres de consulta.*
+> *> [!NOTE] o nome da operação é definido como parte da URL para o serviço web. Além disso, mensagens de solicitação não são sempre enviadas via JSON. Serviços Web podem utilizar o atributo ScriptMethod com o parâmetro UseHttpGet definido como true, o que faz com que os parâmetros a serem passados por meio de um os parâmetros de cadeia de caracteres de consulta.*
 
 
 **Listagem 3. Mensagem de resposta do serviço Web serializada para JSON**
@@ -158,8 +157,7 @@ Adicionando uma referência para o CustomersService.asmx por meio do controle Sc
 
 [!code-html[Main](understanding-asp-net-ajax-web-services/samples/sample14.html)]
 
-> *> [!NOTE]
-> Se você gostaria de ver o código de proxy JavaScript real que é gerado você pode digitar a URL para o serviço de Web do .NET desejada na caixa de endereço do Internet Explorer e acrescentar /js ao final dele.*
+> *> [!NOTE] Se você gostaria de ver o código de proxy JavaScript real que é gerado você pode digitar a URL para o serviço de Web do .NET desejada na caixa de endereço do Internet Explorer e acrescentar /js ao final dele.*
 
 
 Se a depuração está habilitada no Web. config, que uma versão de depuração de proxy JavaScript será inserida na página como mostrado a seguir:
@@ -183,7 +181,7 @@ Um exemplo de como usar um proxy JavaScript para chamar um método de Web chamad
 Essa chamada faz referência ao namespace de InterfaceTraining, CustomersService classe e método de Web GetCustomersByCountry definidos no serviço. Ele passa um valor de país obtido de uma caixa de texto, bem como uma função de retorno de chamada chamado OnWSRequestComplete que deve ser invocado quando a chamada de serviço da Web assíncrona retorna. OnWSRequestComplete manipula a matriz de objetos de cliente retornados do serviço e converte-os em uma tabela que é exibida na página. A saída gerada a partir da chamada é mostrada na Figura 1.
 
 
-[![Bulação dados obtidos ao realizar uma chamada AJAX assíncrona para um serviço Web.](understanding-asp-net-ajax-web-services/_static/image2.png)](understanding-asp-net-ajax-web-services/_static/image1.png)
+[![Associando dados obtidos ao realizar uma chamada AJAX assíncrona para um serviço Web.](understanding-asp-net-ajax-web-services/_static/image2.png)](understanding-asp-net-ajax-web-services/_static/image1.png)
 
 **Figura 1**: Associando dados obtidos ao realizar uma chamada AJAX assíncrona para um serviço Web.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-web-services/_static/image3.png))
 
@@ -201,7 +199,7 @@ Retornos de chamada assíncronos para serviços Web podem encontrar diferentes t
 Todos os erros que ocorrem quando o serviço Web é chamado disparará a função de retorno de chamada de OnWSRequestFailed() para ser chamado que aceita um objeto que representa o erro como um parâmetro. O objeto de erro expõe várias funções diferentes para determinar a causa do erro, bem como se a chamada atingiu o tempo limite. Listagem 14 mostra um exemplo de como usar as funções de erro diferentes e a Figura 2 mostra um exemplo da saída gerada pelas funções.
 
 
-[![Obir saída gerada por chamar funções de erro do ASP.NET AJAX.](understanding-asp-net-ajax-web-services/_static/image5.png)](understanding-asp-net-ajax-web-services/_static/image4.png)
+[![Saída gerada ao chamar funções de erro do ASP.NET AJAX.](understanding-asp-net-ajax-web-services/_static/image5.png)](understanding-asp-net-ajax-web-services/_static/image4.png)
 
 **Figura 2**: Saída gerada ao chamar funções de erro do ASP.NET AJAX.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-web-services/_static/image6.png))
 
@@ -227,7 +225,7 @@ Tipos complexos aceito ou retornado por um serviço Web são automaticamente exp
 Para responder essa pergunta, suponha que uma página ASP.NET AJAX exibe os dados do cliente e permite que os usuários finais atualizar o endereço do cliente. Se o serviço da Web Especifica que o tipo de endereço (um tipo complexo definido dentro de uma classe CustomerDetails) possa ser enviado ao cliente, em seguida, o processo de atualização pode ser dividido em funções separadas melhor para reutilização de códigos.
 
 
-[![Obir saída criando-se de chamar um serviço Web que retorna dados RSS.](understanding-asp-net-ajax-web-services/_static/image8.png)](understanding-asp-net-ajax-web-services/_static/image7.png)
+[![Saída de criação de chamar um serviço Web que retorna dados RSS.](understanding-asp-net-ajax-web-services/_static/image8.png)](understanding-asp-net-ajax-web-services/_static/image7.png)
 
 **Figura 3**: Saída de criação de chamar um serviço Web que retorna dados RSS.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-web-services/_static/image9.png))
 
@@ -275,7 +273,7 @@ Em casos em que você só precisa usar o controle em uma página específica, vo
 [!code-aspx[Main](understanding-asp-net-ajax-web-services/samples/sample25.aspx)]
 
 
-[![Ucantar controle AutoCompleteExtender.](understanding-asp-net-ajax-web-services/_static/image11.png)](understanding-asp-net-ajax-web-services/_static/image10.png)
+[![Usando o controle AutoCompleteExtender.](understanding-asp-net-ajax-web-services/_static/image11.png)](understanding-asp-net-ajax-web-services/_static/image10.png)
 
 **Figura 4**: Usando o controle AutoCompleteExtender.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-web-services/_static/image12.png))
 

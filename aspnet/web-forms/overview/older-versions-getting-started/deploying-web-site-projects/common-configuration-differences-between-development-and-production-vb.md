@@ -12,7 +12,7 @@ ms.openlocfilehash: 48af71fc5ff4dad3371687726660a5d914236df5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379372"
 ---
 # <a name="common-configuration-differences-between-development-and-production-vb"></a>Diferenças de configuração comuns entre desenvolvimento e produção (VB)

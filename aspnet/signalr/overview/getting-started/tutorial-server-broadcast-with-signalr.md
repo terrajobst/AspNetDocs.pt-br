@@ -13,7 +13,7 @@ ms.openlocfilehash: aa8c0be6e4a758da34fc6eed902e31049d0a9a9c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379723"
 ---
 # <a name="tutorial-server-broadcast-with-signalr-2"></a>Tutorial: Servidor de transmissão com SignalR 2
@@ -480,7 +480,7 @@ Para obter tutoriais que mostram os cenários de comunicação peer-to-peer, con
 
 Para obter mais informações sobre o SignalR, consulte os seguintes recursos:
 
-* [ASP.NET SignalR](../../index.md)
+* [SignalR do ASP.NET](../../index.md)
 * [Projeto de SignalR](http://signalr.net/)
 * [GitHub do SignalR e exemplos](https://github.com/SignalR/SignalR)
 * [Wiki do SignalR](https://github.com/SignalR/SignalR/wiki)

@@ -12,7 +12,7 @@ ms.openlocfilehash: af8a8e22df83f64de570dda966f9a831be957c0d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381428"
 ---
 # <a name="aspnet-4-quick-hit---disabled-control-styling"></a>ASP.NET 4 ""rápido ocorrências - desativado estilos de controle
@@ -24,4 +24,4 @@ Neste vídeo, você aprenderá como usar a configuração controlRenderingCompat
 [&#9654;Assista ao vídeo (6 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-4-quick-hit-disabled-control-styling)
 
 > [!div class="step-by-step"]
-> [Voltar](aspnet-4-quick-hit-hidden-field-divs.md)
+> [Anterior](aspnet-4-quick-hit-hidden-field-divs.md)

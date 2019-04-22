@@ -12,7 +12,7 @@ ms.openlocfilehash: 8e4fa3f87f09d8872dd4ccc1797c05c229768224
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388277"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-api"></a>Segurança, autenticação e autorização na API Web ASP.NET
@@ -23,10 +23,10 @@ ms.locfileid: "59388277"
 - [Autenticação e autorização na API Web](authentication-and-authorization-in-aspnet-web-api.md)
 - [Proteger uma API Web com contas individuais na API Web 2.2](individual-accounts-in-web-api.md)
 - [Serviços de autenticação externa com a API Web (C#)](external-authentication-services.md)
-- [Impedir ataques de CSRF (solicitação intersite forjada) na API Web](preventing-cross-site-request-forgery-csrf-attacks.md)
+- [Impedindo ataques de CSRF (solicitação intersite forjada) na API Web](preventing-cross-site-request-forgery-csrf-attacks.md)
 - [Habilitar solicitações entre origens na API Web 2](enabling-cross-origin-requests-in-web-api.md)
 - [Filtros de autenticação na API Web 2](authentication-filters.md)
 - [Autenticação básica na API Web](basic-authentication.md)
 - [Autenticação de formulários na API Web](forms-authentication.md)
 - [Autenticação Integrada do Windows](integrated-windows-authentication.md)
-- [Trabalhar com SSL](working-with-ssl-in-web-api.md)
+- [Trabalhando com SSL](working-with-ssl-in-web-api.md)

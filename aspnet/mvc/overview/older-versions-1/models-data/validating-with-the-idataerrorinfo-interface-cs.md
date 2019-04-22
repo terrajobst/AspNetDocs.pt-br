@@ -12,7 +12,7 @@ ms.openlocfilehash: 3e1399d17840a2f5301349cb91deb07b0cc34363
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421973"
 ---
 # <a name="validating-with-the-idataerrorinfo-interface-c"></a>Validação com a interface IDataErrorInfo (C#)
@@ -42,7 +42,7 @@ Neste tutorial, usarei o banco de dados MoviesDB e a tabela de banco de dados de
 Neste tutorial, posso usar o Microsoft Entity Framework para gerar minhas classes de modelo de banco de dados. A classe Movie gerada pelo Entity Framework é exibida na Figura 1.
 
 
-[![Tele entidade filme](validating-with-the-idataerrorinfo-interface-cs/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image1.png)
+[![A entidade de filme](validating-with-the-idataerrorinfo-interface-cs/_static/image1.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image1.png)
 
 **Figura 01**: A entidade de filme ([clique para exibir a imagem em tamanho normal](validating-with-the-idataerrorinfo-interface-cs/_static/image2.png))
 
@@ -73,7 +73,7 @@ A propriedade IsValid retorna false quando há um erro de validação. Nesse cas
 A classe de filme é gerada pelo Entity Framework. Você pode ver o código para a classe de filme, se você expandir o arquivo MoviesDBModel.edmx na janela do Gerenciador de soluções e abra o arquivo de MoviesDBModel.Designer.cs no Editor de códigos (veja a Figura 2).
 
 
-[![To código para a entidade de filme](validating-with-the-idataerrorinfo-interface-cs/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image3.png)
+[![O código para a entidade de filme](validating-with-the-idataerrorinfo-interface-cs/_static/image2.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image3.png)
 
 **Figura 02**: O código para a entidade de filme ([clique para exibir a imagem em tamanho normal](validating-with-the-idataerrorinfo-interface-cs/_static/image4.png))
 
@@ -147,7 +147,7 @@ Na listagem 4, verifica a propriedade do indexador a \_coleção de erros para v
 Você não precisa modificar o controlador inicial de qualquer forma ao usar a classe Movie modificada. A página exibida na Figura 3 ilustra o que acontece quando nenhum valor for inserido para os campos de título ou diretor do formulário.
 
 
-[![Cmétodos de ação riando automaticamente](validating-with-the-idataerrorinfo-interface-cs/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image5.png)
+[![Criação automática de métodos de ação](validating-with-the-idataerrorinfo-interface-cs/_static/image3.jpg)](validating-with-the-idataerrorinfo-interface-cs/_static/image5.png)
 
 **Figura 03**: Um formulário com valores ausentes ([clique para exibir a imagem em tamanho normal](validating-with-the-idataerrorinfo-interface-cs/_static/image6.png))
 

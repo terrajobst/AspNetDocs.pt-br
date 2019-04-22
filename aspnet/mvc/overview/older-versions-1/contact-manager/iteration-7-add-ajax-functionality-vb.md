@@ -12,7 +12,7 @@ ms.openlocfilehash: 3df4258b2de309aed5a3a598caeb1e7332c321f6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383948"
 ---
 # <a name="iteration-7--add-ajax-functionality-vb"></a>Iteração #7 – adicionar funcionalidade do Ajax (VB)
@@ -94,7 +94,7 @@ Adicione o seguinte JavaScript inclui dentro de &lt;head&gt; marca da sua págin
 Permitir que o s comece modificando nossa exibição de índice, de modo que apenas clicando em um grupo de contatos atualiza a região da exibição que exibe os contatos. A caixa vermelha na Figura 1 contém a região que queremos atualizar.
 
 
-[![Uapenas os contatos tualização](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
+[![Atualizar somente os contatos](iteration-7-add-ajax-functionality-vb/_static/image1.jpg)](iteration-7-add-ajax-functionality-vb/_static/image1.png)
 
 **Figura 01**: Atualizar somente os contatos ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-vb/_static/image2.png))
 
@@ -194,7 +194,7 @@ Quando um usuário pressiona o botão Avançar ou voltar do navegador, o evento 
 No momento, para excluir um contato, você precisa clicar no link excluir e, em seguida, clique no botão de exclusão exibido na página de confirmação de exclusão (veja a Figura 2). Isso parece muito de solicitações de página para fazer algo simples, como a exclusão de um registro de banco de dados.
 
 
-[![Tele página Confirmação de exclusão](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
+[![A página de confirmação de exclusão](iteration-7-add-ajax-functionality-vb/_static/image2.jpg)](iteration-7-add-ajax-functionality-vb/_static/image3.png)
 
 **Figura 02**: A página de confirmação de exclusão ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-vb/_static/image4.png))
 
@@ -241,4 +241,4 @@ Também adicionamos suporte ao histórico de navegador para o nosso aplicativo A
 Por fim, criamos um link de exclusão que dá suporte a operações HTTP DELETE. Ao realizar exclusões de Ajax, podemos permitir que os usuários excluir registros de banco de dados sem exigir que o usuário solicitar uma página de confirmação de exclusão adicionais.
 
 > [!div class="step-by-step"]
-> [Voltar](iteration-6-use-test-driven-development-vb.md)
+> [Anterior](iteration-6-use-test-driven-development-vb.md)

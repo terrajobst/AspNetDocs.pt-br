@@ -12,7 +12,7 @@ ms.openlocfilehash: abff97e5cc2663465fdf61f41ff69d17104fe8b6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379463"
 ---
 # <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores e exibições para implementar uma interface do usuário de listagem/detalhes
@@ -96,7 +96,7 @@ Abaixo está uma tabela que demonstra como uma variedade de URLs são mapeados u
 | */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
 | *Jantares/5/edição* | DinnersController | Edit(ID) | id=5 |
 | */Dinners/Create* | DinnersController | Create() | N/D |
-| */ Jantares* | DinnersController | Index) | N/D |
+| */Dinners* | DinnersController | Index) | N/D |
 | */Home* | HomeController | Index) | N/D |
 | */* | HomeController | Index) | N/D |
 

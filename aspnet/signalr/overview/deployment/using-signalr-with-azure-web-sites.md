@@ -12,7 +12,7 @@ ms.openlocfilehash: 531aba3753bf97b8bf1763a22615fb811b375286
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379138"
 ---
 # <a name="using-signalr-with-web-apps-in-azure-app-service"></a>Usar o SignalR com aplicativos Web no Serviço de Aplicativo do Azure
@@ -44,7 +44,7 @@ por [Patrick Fletcher](https://github.com/pfletcher)
 - [Implantando um aplicativo Web do SignalR para o serviço de aplicativo do Azure](#deploying)
 - [Habilitar WebSockets no serviço de aplicativo do Azure](#websocket)
 - [Usando o Backplane de Cache Redis do Azure](#backplane)
-- [Próximas etapas](#nextsteps)
+- [Próximas Etapas](#nextsteps)
 
 <a id="introduction"></a>
 ## <a name="introduction"></a>Introdução

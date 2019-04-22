@@ -12,7 +12,7 @@ ms.openlocfilehash: 029234cf9a28a80c487504e4e0980c214e45f53a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381959"
 ---
 # <a name="adding-a-column-to-the-model"></a>Adicionar uma coluna ao modelo
@@ -28,11 +28,11 @@ Vamos adicionar uma coluna "Classificação" à tabela de filme. Volte para o ID
 
 Adicione uma coluna de "Classificação", conforme mostrado abaixo. Como não há qualquer classificações agora, a coluna pode permitir nulos. Clique em Salvar.
 
-[![Editando filmes tabela](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
+[![Edição de tabela de filmes](getting-started-with-mvc-part8/_static/image2.png)](getting-started-with-mvc-part8/_static/image1.png)
 
 Em seguida, retorne ao Gerenciador de soluções e abra o arquivo Movies.edmx (que está na pasta \Models). Clique com o botão direito na superfície de design (na área branca) e selecione o modelo de atualização do banco de dados.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
+[![Filmes - Microsoft Visual Web Developer 2010 Express (11)](getting-started-with-mvc-part8/_static/image4.png)](getting-started-with-mvc-part8/_static/image3.png)
 
 Isso iniciará o Assistente"atualização". Clique na guia de atualização dentro dele e clique em Concluir. Nossa classe de modelo de filme, em seguida, será atualizado com a nova coluna.
 
@@ -40,7 +40,7 @@ Isso iniciará o Assistente"atualização". Clique na guia de atualização dent
 
 Depois de clicar em Concluir, você pode ver que a nova coluna de classificação foi adicionada à entidade em nosso modelo de filme.
 
-[![Movie entidade](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
+[![Entidade de filme](getting-started-with-mvc-part8/_static/image7.png)](getting-started-with-mvc-part8/_static/image6.png)
 
 Adicionamos uma coluna no modelo de banco de dados, mas os modos de exibição não souber sobre ele.
 
@@ -70,7 +70,7 @@ Executar seu aplicativo e agora você tem um novo campo no banco de dados que fo
 
 Depois de clicar em criar, você é enviado para a página de índice onde você novo filme é listado com a nova coluna de classificação no banco de dados
 
-[![Movie lista - Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
+[![Lista de filmes - Windows Internet Explorer (12)](getting-started-with-mvc-part8/_static/image11.png)](getting-started-with-mvc-part8/_static/image10.png)
 
 Este tutorial básico te a você a começar a transformar controladores, associá-los de modos de exibição e à passagem de dados embutidos. Em seguida, criamos e criado um banco de dados e colocar alguns dados nele. Podemos recuperou os dados do banco de dados e exibida-lo em uma tabela HTML. Em seguida, adicionamos um formulário de criação que permitem ao usuário adicionar dados ao banco de dados em si de dentro do aplicativo Web. Estamos adicionado validação e fez com que a validação usar JavaScript do lado do cliente. Por fim, podemos alterado no banco de dados incluem uma nova coluna de dados e nossas duas páginas atualizadas para criar e exibir esses novos dados.
 
@@ -81,4 +81,4 @@ Aproveite!
 - Scott Hanselman - [ http://hanselman.com ](http://hanselman.com) e [ @shanselman ](http://twitter.com/shanselman) no Twitter.
 
 > [!div class="step-by-step"]
-> [Voltar](getting-started-with-mvc-part7.md)
+> [Anterior](getting-started-with-mvc-part7.md)

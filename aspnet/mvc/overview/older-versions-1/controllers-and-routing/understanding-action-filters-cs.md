@@ -12,7 +12,7 @@ ms.openlocfilehash: 8264b48388ee4a6b51515aa2b897ece3b2f3972a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380867"
 ---
 # <a name="understanding-action-filters-c"></a>Noções básicas sobre filtros de ação (C#)
@@ -49,7 +49,7 @@ Por exemplo, o controlador de dados na listagem 1 expõe uma ação chamada `Ind
 Se você invocar repetidamente a `Index()` ação inserindo a URL/dados/índice na barra de endereços do navegador e atingir a atualização do botão várias vezes, em seguida, você verá o mesmo tempo para 10 segundos. A saída a `Index()` ação é armazenado em cache por 10 segundos (veja a Figura 1).
 
 
-[![Ctempo ache](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
+[![Tempo em cache](understanding-action-filters-cs/_static/image2.png)](understanding-action-filters-cs/_static/image1.png)
 
 **Figura 01**: Armazenados em cache o tempo ([clique para exibir a imagem em tamanho normal](understanding-action-filters-cs/_static/image3.png))
 
@@ -107,7 +107,7 @@ Para ilustrar como você pode criar um filtro de ação personalizada, vamos cri
 Na listagem 2, o `OnActionExecuting()`, `OnActionExecuted()`, `OnResultExecuting()`, e `OnResultExecuted()` todos os métodos de chamar o `Log()` método. O nome do método e os dados de rota atuais é passado para o `Log()` método. O `Log()` método grava uma mensagem na janela de saída do Visual Studio (veja a Figura 2).
 
 
-[![Writing para a janela de saída do Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
+[![Escrever na janela de saída do Visual Studio](understanding-action-filters-cs/_static/image5.png)](understanding-action-filters-cs/_static/image4.png)
 
 **Figura 02**: Escrever na janela de saída do Visual Studio ([clique para exibir a imagem em tamanho normal](understanding-action-filters-cs/_static/image6.png))
 

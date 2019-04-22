@@ -12,7 +12,7 @@ ms.openlocfilehash: 8d9079d75f20bc85a5b4babfb45dfdfcff696a50
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380490"
 ---
 # <a name="how-do-i-use-aspnet-ajax-client-templates"></a>Como faço Usar modelos de cliente do AJAX ASP.NET
@@ -24,4 +24,4 @@ Há duas etapas principais envolvidas na criação de interações de AJAX, cham
 [&#9654;Assista ao vídeo (33 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-aspnet-ajax-client-templates)
 
 > [!div class="step-by-step"]
-> [Voltar](how-do-i-customize-error-handling-for-the-aspnet-ajax-updatepanel.md)
+> [Anterior](how-do-i-customize-error-handling-for-the-aspnet-ajax-updatepanel.md)

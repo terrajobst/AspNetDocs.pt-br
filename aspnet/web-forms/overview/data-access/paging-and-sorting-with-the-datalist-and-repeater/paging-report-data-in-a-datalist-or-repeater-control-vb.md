@@ -12,7 +12,7 @@ ms.openlocfilehash: 69a6843783dad3d8fcd8a5b93c9d8a31f9bb8ec0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383233"
 ---
 # <a name="paging-report-data-in-a-datalist-or-repeater-control-vb"></a>Paginação de dados de relatório em um controle DataList ou Repeater (VB)
@@ -53,7 +53,7 @@ Antes de começar este tutorial, deixe s primeiro dedique uns momentos para adic
 Em seguida, abra o `Default.aspx` da página e arraste o `SectionLevelTutorialListing.ascx` controle de usuário do `UserControls` pasta para a superfície de Design. Esse controle de usuário que criamos na [páginas mestras e navegação no Site](../introduction/master-pages-and-site-navigation-vb.md) tutorial, enumera o mapa do site e exibe esses tutoriais na seção atual em uma lista com marcadores.
 
 
-[![Add o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image3.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image2.png)
+[![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image3.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image2.png)
 
 **Figura 2**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image4.png))
 
@@ -118,7 +118,7 @@ Com o `GetProductsAsPagedDataSource` método adicionado para o `ProductsBLL` cla
 Defina as listas suspensas na atualização, inserção e excluir guias como (nenhum).
 
 
-[![SET as listas suspensas nas guias UPDATE, INSERT e DELETE como (nenhum)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
+[![Defina a lista suspensa na atualização, inserção e excluir guias como (nenhum)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
 
 **Figura 6**: Defina a lista suspensa na atualização, inserção e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image12.png))
 
@@ -130,7 +130,7 @@ O índice da página e os valores de tamanho de página devem ser memorizados en
 Em particular, use a querystring campos pageIndex e pageSize para o `pageIndex` e `pageSize` parâmetros, respectivamente (veja a Figura 7). Reserve um tempo para definir os valores padrão para esses parâmetros, como os valores de cadeia de consulta não estarão presentes quando um usuário visita primeiro nessa página. Para `pageIndex`, defina o valor padrão como 0 (o que mostrará a primeira página de dados) e `pageSize` valor padrão de s para 4.
 
 
-[![USe a cadeia de consulta como a origem para os parâmetros pageIndex e pageSize](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image13.png)
+[![Usar cadeia de consulta como a origem para os parâmetros pageIndex e pageSize](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image13.png)
 
 **Figura 7**: Use a cadeia de consulta como a fonte para o `pageIndex` e `pageSize` parâmetros ([clique para exibir a imagem em tamanho normal](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image15.png))
 
@@ -149,7 +149,7 @@ Depois de fazer essas alterações, a marcação de s DataList e ObjectDataSourc
 Quando inicialmente ao visitar essa página por meio de um navegador, nem o `pageIndex` nem `pageSize` parâmetros querystring são fornecidos. Portanto, os valores padrão de 0 e 4 são usados. Como mostra a Figura 8, isso resulta em uma DataList que exibe os quatro primeiros produtos.
 
 
-[![Tsão listados primeiro quatro produtos he](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image16.png)
+[![Os primeiros quatro produtos são listados](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image16.png)
 
 **Figura 8**: Os primeiros quatro produtos são listados ([clique para exibir a imagem em tamanho normal](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image18.png))
 
@@ -157,7 +157,7 @@ Quando inicialmente ao visitar essa página por meio de um navegador, nem o `pag
 Sem uma interface de paginação, daí s simples no momento, não significa que um usuário navegue para a segunda página de dados. Vamos criar uma interface de paginação na etapa 4. Por enquanto, porém, paginação só pode ser realizada diretamente especificando os critérios de paginação na querystring. Por exemplo, para exibir a segunda página, altere a URL na barra de endereços do navegador s da `Paging.aspx` para `Paging.aspx?pageIndex=2` e pressione Enter. Isso faz com que a segunda página de dados a serem exibidos (consulte a Figura 9).
 
 
-[![Tele segunda página de dados é exibido](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image19.png)
+[![A segunda página de dados é exibido](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image19.png)
 
 **Figura 9**: A segunda página de dados é exibido ([clique para exibir a imagem em tamanho normal](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image21.png))
 
@@ -238,12 +238,12 @@ Let s concluir a interface de paginação, informando ao usuário qual página e
 A Figura 10 mostra `Paging.aspx` quando visitado pela primeira vez. Uma vez que a cadeia de consulta estiver vazio, o padrão é DataList mostrando os primeiros quatro produtos; os primeiro e anterior botões serão desabilitados. Clicar em Avançar exibe os próximos quatro registros (veja a Figura 11); os botões primeiro e anterior agora estão habilitados.
 
 
-[![Tele é de dados da primeira página é exibido](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image22.png)
+[![A primeira página de dados é exibido](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image22.png)
 
 **Figura 10**: A primeira página de dados é exibido ([clique para exibir a imagem em tamanho normal](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image24.png))
 
 
-[![Tele segunda página de dados é exibido](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image25.png)
+[![A segunda página de dados é exibido](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image25.png)
 
 **Figura 11**: A segunda página de dados é exibido ([clique para exibir a imagem em tamanho normal](paging-report-data-in-a-datalist-or-repeater-control-vb/_static/image27.png))
 

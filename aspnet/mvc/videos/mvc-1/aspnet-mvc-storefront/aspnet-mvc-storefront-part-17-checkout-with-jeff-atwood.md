@@ -12,7 +12,7 @@ ms.openlocfilehash: 78b62a7b9093ab6e8a6bfd3d7a01f136c47568f2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59379021"
 ---
 # <a name="aspnet-mvc-storefront-part-17-checkout-with-jeff-atwood"></a>Vitrine do ASP.NET MVC, parte 17: Check-out com Jeff Atwood

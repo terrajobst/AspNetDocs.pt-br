@@ -12,7 +12,7 @@ ms.openlocfilehash: da63b39fcad58580dd1f9c86b811b1a2dcc1cf7e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416643"
 ---
 # <a name="deploying-a-database-c"></a>Implantação de um banco de dados (C#)
@@ -47,7 +47,7 @@ O `Reviews.mdf` banco de dados contém quatro tabelas:
 Figura 1 mostra um diagrama de ER dessas quatro tabelas.
 
 
-[![TAplicativo de Web do catálogo revisões s banco de dados é composto de quatro tabelas](deploying-a-database-cs/_static/image2.jpg)](deploying-a-database-cs/_static/image1.jpg) 
+[![O aplicativo de Web do catálogo revisões banco de dados é composto de quatro tabelas](deploying-a-database-cs/_static/image2.jpg)](deploying-a-database-cs/_static/image1.jpg) 
 
 **Figura 1**: O aplicativo de Web do catálogo revisões banco de dados é composto de quatro tabelas ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image3.jpg))
 
@@ -57,12 +57,12 @@ A versão anterior do site resenhas de livros tinha uma página ASP.NET separada
 As figuras 2 e 3 mostrar o `Genre.aspx` e `Review.aspx` páginas em ação. Anote a URL na barra de endereços para cada página. Na Figura 2 it s Genre.aspx? ID = 85d164ba-1123-4 c 47-82a0-c8ec75de7e0e. Porque é 85d164ba-1123-4c47-82a0-c8ec75de7e0e o `GenreId` valor para o gênero de tecnologia, as leituras de título de página s "Revisões de tecnologia" e a lista com marcadores enumera essas análises no site que se enquadram nesse gênero.
 
 
-[![Tele tem página de gênero de tecnologia](deploying-a-database-cs/_static/image5.jpg)](deploying-a-database-cs/_static/image4.jpg) 
+[![A página de gênero de tecnologia](deploying-a-database-cs/_static/image5.jpg)](deploying-a-database-cs/_static/image4.jpg) 
 
 **Figura 2**: A página de gênero de tecnologia ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image6.jpg))
 
 
-[![Tele revisão para ensinar a mesmo ASP.NET 3.5 in 24 horas](deploying-a-database-cs/_static/image8.jpg)](deploying-a-database-cs/_static/image7.jpg) 
+[![A revisão para ensinar a mesmo ASP.NET 3.5 em 24 horas](deploying-a-database-cs/_static/image8.jpg)](deploying-a-database-cs/_static/image7.jpg) 
 
 **Figura 3**: A revisão *ensinar por conta própria ASP.NET 3.5 in 24 horas* ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image9.jpg))
 
@@ -96,7 +96,7 @@ Deixe o s percorrer usando o Assistente de publicação de banco de dados para i
 Abra o Visual Studio e navegue até o `Reviews.mdf` banco de dados. Se você estiver usando o Visual Web Developer, vá para o Gerenciador de banco de dados; Se você estiver usando o Visual Studio, use o Gerenciador de servidores. A Figura 4 mostra o `Reviews.mdf` banco de dados no Gerenciador de banco de dados no Visual Web Developer. Como mostra a Figura 4, o `Reviews.mdf` banco de dados é composto de quatro tabelas, três procedimentos armazenados e uma função definida pelo usuário.
 
 
-[![Localizar o banco de dados no Server Explorer ou Gerenciador de banco de dados](deploying-a-database-cs/_static/image11.jpg)](deploying-a-database-cs/_static/image10.jpg) 
+[![Localize o banco de dados no banco de dados Explorer ou Gerenciador de servidores](deploying-a-database-cs/_static/image11.jpg)](deploying-a-database-cs/_static/image10.jpg) 
 
 **Figura 4**: Localize o banco de dados no Server Explorer ou Gerenciador de banco de dados ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image12.jpg))
 
@@ -104,7 +104,7 @@ Abra o Visual Studio e navegue até o `Reviews.mdf` banco de dados. Se você est
 Clique com botão direito no nome do banco de dados e escolha a opção "Publicar no provedor de" no menu de contexto. Isso inicia o Assistente de publicação de banco de dados (consulte a Figura 5). Clique em Avançar após a tela inicial.
 
 
-[![Tele tela de inicial do Assistente de publicação de banco de dados](deploying-a-database-cs/_static/image14.jpg)](deploying-a-database-cs/_static/image13.jpg) 
+[![O tela inicial do Assistente de publicação de banco de dados](deploying-a-database-cs/_static/image14.jpg)](deploying-a-database-cs/_static/image13.jpg) 
 
 **Figura 5**: A tela de abertura de Assistente de publicação do banco de dados ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image15.jpg))
 
@@ -115,7 +115,7 @@ A segunda tela do assistente lista os bancos de dados acessíveis para o Assiste
 > Se você receber o erro "não existem objetos no banco de dados *databaseName* dos tipos passíveis de script por este assistente" ao clicar em Avançar na tela mostrada na Figura 6, certifique-se de que o caminho para o arquivo de banco de dados não é muito longo. Foi descoberto que este erro pode ocorrer se o caminho para o arquivo de banco de dados é muito longo.
 
 
-[![Tele tela de inicial do Assistente de publicação de banco de dados](deploying-a-database-cs/_static/image17.jpg)](deploying-a-database-cs/_static/image16.jpg) 
+[![O tela inicial do Assistente de publicação de banco de dados](deploying-a-database-cs/_static/image17.jpg)](deploying-a-database-cs/_static/image16.jpg) 
 
 **Figura 6**: A tela de abertura de Assistente de publicação do banco de dados ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image18.jpg))
 
@@ -123,7 +123,7 @@ A segunda tela do assistente lista os bancos de dados acessíveis para o Assiste
 Na próxima tela você pode gerar um arquivo de script ou, se o host da web dá suporte a ele, publicar o banco de dados diretamente no seu servidor de banco de dados do web host provedor s. Como mostra a Figura 7, estou tendo o script gravado no arquivo `C:\REVIEWS.MDF.sql`.
 
 
-[![Script o banco de dados para um arquivo ou publicá-lo diretamente no seu provedor de Host da Web](deploying-a-database-cs/_static/image20.jpg)](deploying-a-database-cs/_static/image19.jpg) 
+[![O banco de dados para um arquivo de script ou publicá-lo diretamente no seu provedor de Host da Web](deploying-a-database-cs/_static/image20.jpg)](deploying-a-database-cs/_static/image19.jpg) 
 
 **Figura 7**: O banco de dados para um arquivo de script ou publicá-lo diretamente no seu provedor de Host da Web ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image21.jpg))
 
@@ -133,7 +133,7 @@ A tela subsequente solicita a você para uma variedade de opções de script. Vo
 Como ilustra a Figura 8, eu temos o assistente configurado para remover objetos de banco de dados existentes, para gerar script para um banco de dados do SQL Server 2008 e publicar o esquema e os dados.
 
 
-[![Sespecificar opções de publicação](deploying-a-database-cs/_static/image23.jpg)](deploying-a-database-cs/_static/image22.jpg) 
+[![Especifique a publicação de opções](deploying-a-database-cs/_static/image23.jpg)](deploying-a-database-cs/_static/image22.jpg) 
 
 **Figura 8**: Especificar opções de publicação ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image24.jpg))
 
@@ -149,7 +149,7 @@ Uma abordagem melhor é para se conectar diretamente ao servidor de banco de dad
 Inicie o SSMS e conecte-se ao seu servidor web host s banco de dados usando as informações fornecidas pelo seu provedor de host da web.
 
 
-[![Conectar-se ao seu provedor de Host Web s servidor de banco de dados](deploying-a-database-cs/_static/image26.jpg)](deploying-a-database-cs/_static/image25.jpg) 
+[![Conectar-se ao servidor Web Host provedor s banco de dados](deploying-a-database-cs/_static/image26.jpg)](deploying-a-database-cs/_static/image25.jpg) 
 
 **Figura 9**: Conectar-se ao seu provedor de Host Web s servidor de banco de dados ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image27.jpg))
 
@@ -157,7 +157,7 @@ Inicie o SSMS e conecte-se ao seu servidor web host s banco de dados usando as i
 Expandir a guia de bancos de dados e localize seu banco de dados. Clique no botão de nova consulta no canto superior esquerdo da barra de ferramentas, cole os comandos SQL do arquivo de script criado pelo Assistente de publicação do banco de dados e clique no botão Executar para executar esses comandos no servidor de banco de dados de produção. Se seu arquivo de script é especialmente grande ele pode levar vários minutos para executar os comandos.
 
 
-[![Conectar-se ao seu provedor de Host Web s servidor de banco de dados](deploying-a-database-cs/_static/image29.jpg)](deploying-a-database-cs/_static/image28.jpg) 
+[![Conectar-se ao servidor Web Host provedor s banco de dados](deploying-a-database-cs/_static/image29.jpg)](deploying-a-database-cs/_static/image28.jpg) 
 
 **Figura 10**: Conectar-se ao seu provedor de Host Web s servidor de banco de dados ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image30.jpg))
 
@@ -165,12 +165,12 @@ Expandir a guia de bancos de dados e localize seu banco de dados. Clique no bot�
 Tudo que s é a ele! Neste ponto, o banco de dados de desenvolvimento foi duplicado para produção. Se você atualizar o banco de dados no SSMS, você deve ver os novos objetos de banco de dados. Figura 11 mostra as tabelas de banco de dados s de produção, os procedimentos armazenados e funções definidas pelo usuário, que são iguais do banco de dados de desenvolvimento. E porque podemos instruir o Assistente de publicação de banco de dados para publicar os dados, as tabelas de s de banco de dados de produção têm os mesmos dados que as tabelas de s de banco de dados de desenvolvimento no momento em que o assistente foi executado. A Figura 12 mostra os dados no `Books` tabela no banco de dados de produção.
 
 
-[![Tele banco de dados de objetos foram duplicados no banco de dados de produção](deploying-a-database-cs/_static/image32.jpg)](deploying-a-database-cs/_static/image31.jpg) 
+[![Os objetos de banco de dados foram duplicados no banco de dados de produção](deploying-a-database-cs/_static/image32.jpg)](deploying-a-database-cs/_static/image31.jpg) 
 
 **Figura 11**: O banco de dados de objetos foram duplicados no banco de dados de produção ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image33.jpg))
 
 
-[![Tele banco de dados de produção contém os mesmos dados como no desenvolvimento de banco de dados](deploying-a-database-cs/_static/image35.jpg)](deploying-a-database-cs/_static/image34.jpg) 
+[![O banco de dados de produção contém os mesmos dados que o banco de dados de desenvolvimento](deploying-a-database-cs/_static/image35.jpg)](deploying-a-database-cs/_static/image34.jpg) 
 
 **Figura 12**: O banco de dados de produção contém os mesmos dados como no desenvolvimento de banco de dados ([clique para exibir a imagem em tamanho normal](deploying-a-database-cs/_static/image36.jpg))
 

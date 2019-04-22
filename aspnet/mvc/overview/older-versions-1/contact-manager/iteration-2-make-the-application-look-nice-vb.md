@@ -12,7 +12,7 @@ ms.openlocfilehash: 21f7974fe066543d6db1d17d462398a998d0171e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382563"
 ---
 # <a name="iteration-2--make-the-application-look-nice-vb"></a>Iteração #2 – tornar o aplicativo parecer interessante (VB)
@@ -50,7 +50,7 @@ Criamos o aplicativo ao longo de várias iterações. Com cada iteração, podem
 O objetivo dessa iteração é melhorar a aparência do aplicativo Gerenciador de contatos. Atualmente, o Gerenciador de contatos usa a página mestre de modo de exibição ASP.NET MVC padrão e a folha de estilos em cascata (consulte a Figura 1). Esses don t parecem ruins, mas não deseja t o Gerenciador de contato são semelhante a todos os outros sites de ASP.NET MVC. Eu quiser substituir esses arquivos com arquivos personalizados.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image1.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image1.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image1.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image1.png)
 
 **Figura 01**: A aparência padrão de um aplicativo ASP.NET MVC ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image2.png))
 
@@ -68,7 +68,7 @@ A Galeria de Design do ASP.NET MVC é um recurso gratuito fornecido pela Microso
 A Galeria de Design do ASP.NET MVC hospeda uma coleção de projetos de site gratuito que foram criados especificamente para usar em um projeto ASP.NET MVC. Designs são carregados por membros da comunidade. Os visitantes à Galeria podem votar para seus designs de Favoritos (consulte a Figura 2).
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image2.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image3.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image2.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image3.png)
 
 **Figura 02**: A Galeria de Design do ASP.NET MVC ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image4.png))
 
@@ -83,17 +83,17 @@ Enquanto escrevo este tutorial, o design mais popular na Galeria é um design de
 6. Selecione a opção de menu do Visual Studio **editar, localizar e substituir, substituição rápida** e substitua *[MyProjectName]* com *ContactManager* (consulte a Figura 5).
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image3.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image5.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image3.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image5.png)
 
 **Figura 03**: Desbloquear um arquivo baixado da web ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image6.png))
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image4.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image7.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image4.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image7.png)
 
 **Figura 04**: Substituição de arquivos no Gerenciador de soluções ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image8.png))
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image5.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image9.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image5.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image9.png)
 
 **Figura 05**: Substituindo [ProjectName] ContactManager ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image10.png))
 
@@ -101,7 +101,7 @@ Enquanto escrevo este tutorial, o design mais popular na Galeria é um design de
 Depois de concluir essas etapas, seu aplicativo da web usará o novo design. A página na Figura 6 ilustra a aparência do aplicativo Gerenciador de contatos com o design de outubro.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image6.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image11.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image6.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image11.png)
 
 **Figura 06**: ContactManager com o modelo de outubro ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image12.png))
 
@@ -115,7 +115,7 @@ No entanto, você talvez precise criar um design completamente exclusivo para se
 Eu compactado o Gerenciador de contato de iteração n º 1 e enviadas do projeto para a empresa de design. Não possuem o Visual Studio (que horror neles!), mas que não apresentam um problema. Eles foram capazes de baixar o Microsoft Visual Web Developer gratuitamente do [ https://www.asp.net ](https://www.asp.net) site e abra o aplicativo Gerenciador de contatos no Visual Web Developer. Em alguns dias, eles tinham produzido o design na Figura 7.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image7.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image13.png)
 
 **Figura 07**: O Design do Gerenciador de contatos do ASP.NET MVC ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image14.png))
 
@@ -139,7 +139,7 @@ O método Html.ActionLink() renderiza um hiperlink HTML inteiro. O método Url.A
 Além disso, observe que o novo design inclui guias selecionadas e desmarcadas. Por exemplo, na Figura 8, o **criar novo contato** guia é selecionada e o **Meus contatos** guia não estiver selecionada.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-2-make-the-application-look-nice-vb/_static/image8.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image15.png)
+[![A caixa de diálogo Novo projeto](iteration-2-make-the-application-look-nice-vb/_static/image8.jpg)](iteration-2-make-the-application-look-nice-vb/_static/image15.png)
 
 **Figura 08**: Marcados e desmarcados guias ([clique para exibir a imagem em tamanho normal](iteration-2-make-the-application-look-nice-vb/_static/image16.png))
 
