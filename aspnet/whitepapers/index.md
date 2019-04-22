@@ -12,12 +12,12 @@ ms.openlocfilehash: 6d1251da10705867ad25b53afd69bb70c647fc18
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388654"
 ---
 # <a name="whitepapers"></a>Whitepapers
 
-- [Whitepapers](overview.md)
+- [White papers](overview.md)
 - [Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010](aspnet4/index.md)
 
     - [Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010](aspnet4/overview.md)
@@ -27,13 +27,13 @@ ms.locfileid: "59388654"
 - [Novidades no ASP.NET MVC 2](what-is-new-in-aspnet-mvc.md)
 - [ASP.NET MVC 3](mvc3-release-notes.md)
 - [ASP.NET MVC 4](mvc4-beta-release-notes.md)
-- [Executar o ASP.NET 1.1 com o IIS 6.0](aspnet-and-iis6.md)
-- [Como: Adicionar páginas móveis ao seu Web Forms do ASP.NET ou seu aplicativo do MVC](add-mobile-pages-to-your-aspnet-web-forms-mvc-application.md)
+- [Executando o ASP.NET 1.1 com o IIS 6.0](aspnet-and-iis6.md)
+- [Como: Adicionar páginas móveis ao seu Web Forms do ASP.NET / aplicativo MVC](add-mobile-pages-to-your-aspnet-web-forms-mvc-application.md)
 - [Correção do erro "Aplicativo para servidores não disponível" depois de aplicar a atualização de segurança para o IE](ms03-32-issue.md)
 - [Execução lado a lado do ASP.NET no .NET Framework 1.0 e 1.1](side-by-side-with-10.md)
 - [ASP.NET MVC 4](mvc4-release-notes.md)
-- [Solicitação de validação – Impedir ataques de Script](request-validation.md)
-- [Acesso a Dados do ASP.NET – Recursos recomendados](aspnet-data-access-content-map.md)
-- [Implantação da Web do ASP.NET – Recursos recomendados](aspnet-web-deployment-content-map.md)
-- [Notas de Versão do ASP.NET and Web Tools 2012.2](aspnet-and-web-tools-20122-release-notes.md)
+- [Solicitação de validação – impedindo ataques de Script](request-validation.md)
+- [Acesso a Dados do ASP.NET – recursos recomendados](aspnet-data-access-content-map.md)
+- [Implantação da Web do ASP.NET – recursos recomendados](aspnet-web-deployment-content-map.md)
+- [Notas de versão do ASP.NET and Web Tools 2012.2](aspnet-and-web-tools-20122-release-notes.md)
 - [Novidades no ASP.NET 4.5 e no Visual Studio 2012](whats-new-in-aspnet-45-and-visual-studio-2012.md)

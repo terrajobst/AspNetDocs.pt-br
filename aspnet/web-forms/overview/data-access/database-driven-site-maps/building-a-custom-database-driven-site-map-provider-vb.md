@@ -12,7 +12,7 @@ ms.openlocfilehash: ed54ba79635877faa3da774214057e7804432f65
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391878"
 ---
 # <a name="building-a-custom-database-driven-site-map-provider-vb"></a>Criação de um provedor de mapa de site personalizado controlado por banco de dados (VB)
@@ -31,7 +31,7 @@ O ASP.NET 2.0 recurso de mapa de site de s permite que um desenvolvedor de pági
 O provedor de mapa de site baseado em XML padrão funciona bem se a estrutura de s de mapa de site é razoavelmente estática, como para esses tutoriais. Em muitos cenários, no entanto, é necessário um mapa do site mais dinâmico. Considere o mapa do site mostrado na Figura 1, onde cada categoria e produto aparecem como seções na estrutura do site. Com esse mapa de site, visitando a página da web correspondente para o nó raiz pode listar todas as categorias, ao passo que visitar uma página da web de determinada categoria s listaria os produtos dessa categoria e exibir uma página da web de determinado produto s mostraria produto detalhes s.
 
 
-[![TCategorias de he e composição de produtos a estrutura de s de mapa do Site](building-a-custom-database-driven-site-map-provider-vb/_static/image1.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image1.png)
+[![As categorias e produtos de composição a estrutura de s de mapa de Site](building-a-custom-database-driven-site-map-provider-vb/_static/image1.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image1.png)
 
 **Figura 1**: As categorias e produtos de composição a estrutura de s de mapa de Site ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image2.png))
 
@@ -84,12 +84,12 @@ Para começar, precisamos criar a `Default.aspx`, `ProductsByCategory.aspx`, e `
 Abrir o `Default.aspx` página o `SiteMapProvider` pasta e arraste um controle GridView da caixa de ferramentas para o Designer, definindo seu `ID` para `Categories`. Da GridView s marca inteligente, associá-lo a um novo ObjectDataSource denominado `CategoriesDataSource` e configure-o para que ele recupere seus dados usando o `CategoriesBLL` classe s `GetCategories` método. Como esse GridView apenas exibe as categorias e não fornece recursos de modificação de dados, defina as listas suspensas na atualização, inserção e excluir guias como (nenhum).
 
 
-[![Configurar o ObjectDataSource para retornar categorias usando o método GetCategories](building-a-custom-database-driven-site-map-provider-vb/_static/image4.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image3.png)
+[![Configurar o ObjectDataSource para retornar as categorias usando o método GetCategories](building-a-custom-database-driven-site-map-provider-vb/_static/image4.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image3.png)
 
 **Figura 4**: Configurar o ObjectDataSource para retornar categorias usando o `GetCategories` método ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image4.png))
 
 
-[![SET as listas suspensas no UPDATE, INSERT e DELETE guias como (nenhum)](building-a-custom-database-driven-site-map-provider-vb/_static/image5.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image5.png)
+[![Definir as listas suspensas na atualização, inserção e excluir guias como (nenhum)](building-a-custom-database-driven-site-map-provider-vb/_static/image5.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image5.png)
 
 **Figura 5**: Defina a lista suspensa no UPDATE, INSERT e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image6.png))
 
@@ -112,7 +112,7 @@ Depois de criar o ObjectDataSource e personalizar os campos de s GridView, a mar
 A Figura 7 mostra `Default.aspx` quando visualizado por meio de um navegador. Clicar em uma categoria s exibir produtos link leva você à `ProductsByCategory.aspx?CategoryID=categoryID`, que vamos criar na etapa 3.
 
 
-[![EACH categoria é listada junto com um Link de produtos da exibição](building-a-custom-database-driven-site-map-provider-vb/_static/image7.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image7.png)
+[![Cada categoria é listada junto com um Link de produtos do modo de exibição](building-a-custom-database-driven-site-map-provider-vb/_static/image7.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image7.png)
 
 **Figura 7**: Cada categoria é listada junto com um Link de produtos do modo de exibição ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image8.png))
 
@@ -122,7 +122,7 @@ A Figura 7 mostra `Default.aspx` quando visualizado por meio de um navegador. Cl
 Abra o `ProductsByCategory.aspx` da página e adicionar um GridView, nomeando- `ProductsByCategory`. Na marca inteligente, de associar o GridView para um novo ObjectDataSource chamado `ProductsByCategoryDataSource`. Configurar o ObjectDataSource para usar o `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` método e o conjunto na lista suspensa lista como (nenhum) nas guias UPDATE, INSERT e DELETE.
 
 
-[![USe a classe ProductsBLL s GetProductsByCategoryID(categoryID) método](building-a-custom-database-driven-site-map-provider-vb/_static/image8.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image9.png)
+[![Use o método de GetProductsByCategoryID(categoryID) ProductsBLL classe s](building-a-custom-database-driven-site-map-provider-vb/_static/image8.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image9.png)
 
 **Figura 8**: Use o `ProductsBLL` classe s `GetProductsByCategoryID(categoryID)` método ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image10.png))
 
@@ -130,7 +130,7 @@ Abra o `ProductsByCategory.aspx` da página e adicionar um GridView, nomeando- `
 Solicita que a etapa final no Assistente Configurar fonte de dados para uma fonte de parâmetro para *categoryID*. Uma vez que essas informações são passadas por meio do campo querystring `CategoryID`, selecione QueryString na lista suspensa e insira CategoryID na caixa de texto QueryStringField, conforme mostrado na Figura 9. Clique em Concluir para concluir o assistente.
 
 
-[![USe o campo de Querystring CategoryID para o parâmetro categoryID](building-a-custom-database-driven-site-map-provider-vb/_static/image9.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image11.png)
+[![Use o campo de Querystring CategoryID para o parâmetro categoryID](building-a-custom-database-driven-site-map-provider-vb/_static/image9.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image11.png)
 
 **Figura 9**: Use o `CategoryID` Querystring Field para o *categoryID* parâmetro ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image12.png))
 
@@ -153,7 +153,7 @@ Depois de fazer essas personalizações, GridView e ObjectDataSource s marcaçã
 Retornar à exibição `Default.aspx` por meio de um navegador e clique em Exibir produtos vincular para bebidas. Isso levará você para `ProductsByCategory.aspx?CategoryID=1`, exibindo os nomes, os preços e os fornecedores dos produtos no banco de dados Northwind que pertencem à categoria de bebidas (veja a Figura 11). Fique à vontade aprimorar ainda mais essa página para incluir um link para retornar os usuários para a página de listagem de categoria (`Default.aspx`) e um controle DetailsView ou FormView que exibe o nome da categoria selecionada s e a descrição.
 
 
-[![TNomes de bebidas he, preços e fornecedores são exibidos](building-a-custom-database-driven-site-map-provider-vb/_static/image11.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image13.png)
+[![Os nomes de bebidas, preços e fornecedores são exibidos](building-a-custom-database-driven-site-map-provider-vb/_static/image11.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image13.png)
 
 **Figura 11**: Os nomes de bebidas, preços e fornecedores são exibidos ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image14.png))
 
@@ -196,7 +196,7 @@ O mapa do site é representado na memória do servidor s web como uma coleção 
 Figura 15 mostra a estrutura do mapa de site geral da Figura 1, mas com os detalhes de implementação descritos detalhadamente.
 
 
-[![EACH SiteMapNode tem propriedades, como título, Url, chave e assim por diante](building-a-custom-database-driven-site-map-provider-vb/_static/image16.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image15.gif)
+[![Cada SiteMapNode tem propriedades, como título, Url, chave e assim por diante](building-a-custom-database-driven-site-map-provider-vb/_static/image16.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image15.gif)
 
 **Figura 15**: Cada `SiteMapNode` tem propriedades como `Title`, `Url`, `Key`e assim por diante ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image17.gif))
 
@@ -280,7 +280,7 @@ Depois de atualizar `Web.config`, reserve um tempo para exibir qualquer página 
 Com o site personalizado, o provedor de mapa de criado e registrado no `Web.config`, podemos está pronto para adicionar controles de navegação para o `Default.aspx`, `ProductsByCategory.aspx`, e `ProductDetails.aspx` páginas no `SiteMapProvider` pasta. Comece abrindo o `Default.aspx` da página e arraste um `SiteMapPath` da caixa de ferramentas para o Designer. O controle SiteMapPath está localizado na seção de navegação da caixa de ferramentas.
 
 
-[![Add um SiteMapPath para default. aspx](building-a-custom-database-driven-site-map-provider-vb/_static/image19.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image18.gif)
+[![Adicionar um SiteMapPath para default. aspx](building-a-custom-database-driven-site-map-provider-vb/_static/image19.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image18.gif)
 
 **Figura 16**: Adicionar um SiteMapPath para `Default.aspx` ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image20.gif))
 
@@ -290,7 +290,7 @@ O controle SiteMapPath exibe uma navegação de trilha, que indica o local de s 
 Reserve um tempo para exibir esta página por meio de um navegador. O SiteMapPath adicionado na Figura 16 usa o provedor de mapa de site padrão, extraindo seus dados de `Web.sitemap`. Portanto, a trilha de navegação mostra início &gt; Personalizando o mapa do Site, assim como a trilha de navegação no canto superior direito.
 
 
-[![Tele trilha usa o provedor de mapa de Site padrão](building-a-custom-database-driven-site-map-provider-vb/_static/image22.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image21.gif)
+[![A trilha de navegação usa o provedor de mapa de Site padrão](building-a-custom-database-driven-site-map-provider-vb/_static/image22.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image21.gif)
 
 **Figura 17**: A trilha de navegação usa o provedor de mapa de Site padrão ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image23.gif))
 
@@ -298,7 +298,7 @@ Reserve um tempo para exibir esta página por meio de um navegador. O SiteMapPat
 Para que o SiteMapPath adicionado na Figura 16 para usar o provedor de mapa de site personalizado que criamos na etapa 6, defina suas [ `SiteMapProvider` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.sitemappath.sitemapprovider.aspx) para a Northwind, o nome que é atribuído à `NorthwindSiteMapProvider` em `Web.config`. Infelizmente, o Designer continua a usar o provedor de mapa de site padrão, mas se você visitar a página por meio de um navegador depois de fazer essa alteração de propriedade você verá que a trilha de navegação agora usa o provedor de mapa de site personalizadas.
 
 
-[![Tele trilha agora usa o NorthwindSiteMapProvider de provedor de mapa personalizado Site](building-a-custom-database-driven-site-map-provider-vb/_static/image25.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image24.gif)
+[![A trilha de navegação agora usa o NorthwindSiteMapProvider de provedor de mapa de Site personalizada](building-a-custom-database-driven-site-map-provider-vb/_static/image25.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image24.gif)
 
 **Figura 18**: Agora, a trilha de navegação usa o provedor de mapa de Site personalizado `NorthwindSiteMapProvider` ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image26.gif))
 
@@ -306,7 +306,7 @@ Para que o SiteMapPath adicionado na Figura 16 para usar o provedor de mapa de s
 O controle SiteMapPath exibe uma interface do usuário mais funcional na `ProductsByCategory.aspx` e `ProductDetails.aspx` páginas. Adicionar um SiteMapPath para essas páginas, definindo o `SiteMapProvider` propriedade à Northwind. De `Default.aspx` clique no link Exibir produtos para bebidas e, em seguida, no link Exibir detalhes de chá Chai. Como mostra a Figura 19, a trilha de navegação inclui a seção de mapa de site atual (Chai chá) e seus ancestrais: Bebidas e todas as categorias.
 
 
-[![Tele trilha agora usa o NorthwindSiteMapProvider de provedor de mapa personalizado Site](building-a-custom-database-driven-site-map-provider-vb/_static/image27.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image21.png)
+[![A trilha de navegação agora usa o NorthwindSiteMapProvider de provedor de mapa de Site personalizada](building-a-custom-database-driven-site-map-provider-vb/_static/image27.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image21.png)
 
 **Figura 19**: Agora, a trilha de navegação usa o provedor de mapa de Site personalizado `NorthwindSiteMapProvider` ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image22.png))
 
@@ -314,7 +314,7 @@ O controle SiteMapPath exibe uma interface do usuário mais funcional na `Produc
 Outros elementos de interface do usuário de navegação podem ser usados além SiteMapPath, como os controles Menu e TreeView. O `Default.aspx`, `ProductsByCategory.aspx`, e `ProductDetails.aspx` páginas no download para este tutorial, por exemplo, todos incluem controles de Menu (consulte a Figura 20). Consulte [examinando o ASP.NET 2.0 s recursos de navegação do Site](http://aspnet.4guysfromrolla.com/articles/111605-1.aspx) e o [usando controles de navegação do Site](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/navigation/sitenavcontrols.aspx) seção o [guias de início rápido do ASP.NET 2.0](https://quickstarts.asp.net/QuickStartv20/aspnet/) para uma análise mais detalhada de controles de navegação e o sistema de mapa de site no ASP.NET 2.0.
 
 
-[![TControle de Menu lista cada uma das categorias e produtos](building-a-custom-database-driven-site-map-provider-vb/_static/image29.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image28.gif)
+[![O controle Menu lista cada uma das categorias e produtos](building-a-custom-database-driven-site-map-provider-vb/_static/image29.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image28.gif)
 
 **Figura 20**: O Menu de controle de lista cada das categorias e produtos ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image30.gif))
 
@@ -366,4 +366,4 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores de avanço para este tutorial foram Dave Gardner, Zack Jones, Teresa Murphy e Bernadette Leigh. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Voltar](building-a-custom-database-driven-site-map-provider-cs.md)
+> [Anterior](building-a-custom-database-driven-site-map-provider-cs.md)

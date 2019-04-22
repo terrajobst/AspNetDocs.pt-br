@@ -12,7 +12,7 @@ ms.openlocfilehash: d83fb53ddb40a31013bc724909fa149ce2e4c713
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387355"
 ---
 # <a name="using-textboxwatermark-with-validation-controls-vb"></a>Uso de TextBoxWatermark com controles de validação (VB)
@@ -49,9 +49,9 @@ Por fim, adicione algum código do lado do servidor para o texto no campo de sa�
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-vb/samples/sample4.aspx)]
 
 
-[![TValidador de he reclama que não há nenhum texto no campo](using-textboxwatermark-with-validation-controls-vb/_static/image2.png)](using-textboxwatermark-with-validation-controls-vb/_static/image1.png)
+[![O validador reclama que não há nenhum texto no campo](using-textboxwatermark-with-validation-controls-vb/_static/image2.png)](using-textboxwatermark-with-validation-controls-vb/_static/image1.png)
 
 O validador reclama que não há nenhum texto no campo ([clique para exibir a imagem em tamanho normal](using-textboxwatermark-with-validation-controls-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](using-textboxwatermark-in-a-formview-vb.md)
+> [Anterior](using-textboxwatermark-in-a-formview-vb.md)

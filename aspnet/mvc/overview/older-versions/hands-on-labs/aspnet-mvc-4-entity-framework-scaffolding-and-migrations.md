@@ -12,7 +12,7 @@ ms.openlocfilehash: ca47f6fe6d55153354d38fcf1ba5e844215279b2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389031"
 ---
 # <a name="aspnet-mvc-4-entity-framework-scaffolding-and-migrations"></a>Migrações e scaffolding do Entity Framework do ASP.NET MVC 4
@@ -218,7 +218,7 @@ Nesta tarefa, você atualizará o banco de dados usando migrações do Entity Fr
 
     ![Gerar um script SQL](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image15.png "gerando um script SQL")
 
-    *Gerando um script SQL*
+    *Gerar um script SQL*
 
     ![Atualização de Script SQL](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image16.png "atualização de Script SQL")
 
@@ -231,7 +231,7 @@ Nesta tarefa, você atualizará o banco de dados usando migrações do Entity Fr
 
     ![Atualizando o banco de dados](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image17.png "atualizando o banco de dados")
 
-    *Atualizar o banco de dados*
+    *Atualizando o banco de dados*
 
     Isso adicionará a **MiddleName** coluna o **pessoas** tabela para coincidir com a definição atual do **pessoa** classe.
 9. Depois que o banco de dados for atualizado, clique com botão direito na pasta do controlador e selecione **adicionar | Controlador** para adicionar o controlador de pessoa novamente (completa com os mesmos valores). Isso atualizará os métodos existentes e exibições para adicionar o novo atributo.

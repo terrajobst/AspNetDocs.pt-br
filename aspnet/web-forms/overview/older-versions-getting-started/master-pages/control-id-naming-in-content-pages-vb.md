@@ -12,7 +12,7 @@ ms.openlocfilehash: dd60d02c2c3840edd4c0e1244623fcea0cb2db0b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386314"
 ---
 # <a name="control-id-naming-in-content-pages-vb"></a>Controlar nomenclatura de ID em páginas de conteúdo (VB)
@@ -83,7 +83,7 @@ Neste ponto marcação declarativa do controle de conteúdo deve ser semelhante 
 Figura 3 mostra a página quando visualizado no designer do Visual Studio.
 
 
-[![The inclui três Web controles de página: uma caixa de texto, botão e Label](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
+[![A página inclui três controles da Web: uma caixa de texto, botão e Label](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
 
 **Figura 03**: Os página inclui três controles da Web: uma caixa de texto, botão e Label ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image5.png))
 
@@ -133,7 +133,7 @@ Embora a sintaxe usada para chamar o `FindControl` método difere ligeiramente n
 Depois de inserir esse código, visite o `IDIssues.aspx` página por meio de um navegador, insira sua idade e clique no botão "Enviar". Ao clicar no botão "Enviar" um `NullReferenceException` é gerado (consulte a Figura 5).
 
 
-[![A É acionado NullReferenceException](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
+[![Uma NullReferenceException é gerada](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
 
 **Figura 05**: Um `NullReferenceException` é gerado ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image9.png))
 
@@ -173,7 +173,7 @@ Felizmente, uma referência para a página mestra é acessível por meio de `Pag
 Neste momento, visitando a página por meio de um navegador, inserindo sua idade e clicando no botão "Enviar" exibe a mensagem no `Results` rotular, conforme o esperado.
 
 
-[![TIdade do usuário é exibida no rótulo](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
+[![A idade do usuário é exibida no rótulo](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
 
 **Figura 06**: A idade do usuário é exibida no rótulo ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image12.png))
 
@@ -200,7 +200,7 @@ Adicione o seguinte código para o `PageExtensionMethods.vb` arquivo para defini
 Com esse código funcionando, retornar para o `IDIssues.aspx` classe code-behind da página e comente atual `FindControl` chamadas de método. Substitua-as por chamadas para `Page.FindControlRecursive("controlID")`. O que é interessante sobre os métodos de extensão é que eles aparecem diretamente em listas de lista suspensa do IntelliSense. Como mostra a Figura 7, quando você digita `Page` e, em seguida, pressionar período, o `FindControlRecursive` método está incluído o IntelliSense lista suspensa, juntamente com os outros `Control` métodos de classe.
 
 
-[![EMétodos de xtensão são incluídos no IntelliSense suspensas](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
+[![Métodos de extensão são incluídos no IntelliSense suspensos](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
 
 **Figura 07**: Métodos de extensão são incluídos no IntelliSense suspensas ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image15.png))
 

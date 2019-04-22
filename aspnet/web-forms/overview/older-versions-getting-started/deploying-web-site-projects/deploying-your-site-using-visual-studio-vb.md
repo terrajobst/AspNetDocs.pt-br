@@ -12,7 +12,7 @@ ms.openlocfilehash: 23861c4ae9af7d410411b582a8245b178f791c83
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389658"
 ---
 # <a name="deploying-your-site-using-visual-studio-vb"></a>Implantação do site com o uso do Visual Studio (VB)
@@ -46,7 +46,7 @@ Vamos dar uma olhada em como usar a ferramenta Copy Web Site para publicar o apl
 Inicie o projeto da ferramenta Copy Web Site clicando no ícone de Copy Web Site no Gerenciador de soluções (esse ícone é circulado na Figura 1); Como alternativa, você pode selecionar a opção Copy Web Site no menu do site. Qualquer uma das abordagens inicia a interface do usuário Copy Web Site mostrada na Figura 1; apenas o painel esquerdo na Figura 1 é popular porque ainda temos para se conectar a um servidor remoto.
 
 
-[![TInterface do usuário da ferramenta de Site da Web para a cópia he é dividido em dois painéis](deploying-your-site-using-visual-studio-vb/_static/image2.png)](deploying-your-site-using-visual-studio-vb/_static/image1.png)
+[![Interface do usuário da ferramenta do Site da Web a cópia é dividido em dois painéis](deploying-your-site-using-visual-studio-vb/_static/image2.png)](deploying-your-site-using-visual-studio-vb/_static/image1.png)
 
 **Figura 1**: Interface do usuário da ferramenta do Site da Web a cópia é dividido em dois painéis ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image3.png))
 
@@ -63,7 +63,7 @@ Você pode se conectar ao site de destino, selecionando uma das quatro opções 
 A maioria dos provedores de host da web oferecem suporte a FTP, mas menos oferecem suporte à extensão de servidor do FrontPage. Por esse motivo, selecionamos a opção do Site de FTP e, em seguida, inserir as informações de conexão, conforme mostrado na Figura 2.
 
 
-[![Sespecificar o site de destino](deploying-your-site-using-visual-studio-vb/_static/image5.png)](deploying-your-site-using-visual-studio-vb/_static/image4.png)
+[![Especifique o site de destino](deploying-your-site-using-visual-studio-vb/_static/image5.png)](deploying-your-site-using-visual-studio-vb/_static/image4.png)
 
 **Figura 2**: Especifique o site de destino ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image6.png))
 
@@ -73,7 +73,7 @@ Depois de se conectar, a ferramenta Copy Web Site carrega os arquivos no site re
 Vamos adicionar uma nova página ao projeto BookReviewsWSP e, em seguida, implantá-lo para que possamos ver a ferramenta Copy Web Site em ação. Criar uma nova página ASP.NET no Visual Studio no diretório raiz chamado `Privacy.aspx`. Fazer com que a página use a página mestra `Site.master` e adicionar a política de privacidade do seu site a esta página. Figura 3 mostra o Visual Studio depois que esta página foi criada.
 
 
-[![Add uma nova página nomeada &lt;código&gt;Privacy.aspx&lt;/code&gt; para a pasta da raiz do site](deploying-your-site-using-visual-studio-vb/_static/image8.png)](deploying-your-site-using-visual-studio-vb/_static/image7.png)
+[![Adicionar uma nova página nomeada &lt;código&gt;Privacy.aspx&lt;/code&gt; para a pasta da raiz do site](deploying-your-site-using-visual-studio-vb/_static/image8.png)](deploying-your-site-using-visual-studio-vb/_static/image7.png)
 
 **Figura 3**: Adicionar uma nova página nomeada `Privacy.aspx` à pasta da raiz do site ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image9.png))
 
@@ -81,7 +81,7 @@ Vamos adicionar uma nova página ao projeto BookReviewsWSP e, em seguida, implan
 Em seguida, retorne para a interface do usuário Copy Web Site. Como mostra a Figura 4, o painel esquerdo agora inclui os novos arquivos - `Policy.aspx` e `Policy.aspx.vb`. Além disso, esses arquivos são marcados com um ícone de seta e um Status de novo, indicando que eles existem no site local, mas não no site remoto.
 
 
-[![Tele ferramenta Copy Web Site inclui o novo &lt;código&gt;Privacy.aspx&lt;lt;Code>#Date(2011&gt; página em seu painel mais à esquerda](deploying-your-site-using-visual-studio-vb/_static/image11.png)](deploying-your-site-using-visual-studio-vb/_static/image10.png)
+[![A ferramenta Copy Web Site inclui o novo &lt;código&gt;Privacy.aspx&lt;lt;Code>#Date(2011&gt; página em seu painel mais à esquerda](deploying-your-site-using-visual-studio-vb/_static/image11.png)](deploying-your-site-using-visual-studio-vb/_static/image10.png)
 
 **Figura 4**: A ferramenta Copy Web Site inclui o novo `Privacy.aspx` página no seu painel mais à esquerda ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image12.png))
 
@@ -91,7 +91,7 @@ Para implantar os novos arquivos, selecione-os e, em seguida, clique no ícone d
 Junto com a listagem de novos arquivos, a ferramenta Copy Web Site destaca todos os arquivos que diferem entre os sites locais e remotos. Para ver isso em ação, retornar o `Privacy.aspx` página e adicione mais algumas palavras para a política de privacidade. Salve a página e, em seguida, retornar para a ferramenta Copy Web Site. Como mostra a Figura 5, o `Privacy.aspx` página no painel à esquerda tem um status de Changed indicando que ele está fora de sincronia com o site remoto.
 
 
-[![Tele ferramenta Copy Web Site indica que o &lt;código&gt;Privacy.aspx&lt;lt;Code>#Date(2011&gt; página foi alterada](deploying-your-site-using-visual-studio-vb/_static/image14.png)](deploying-your-site-using-visual-studio-vb/_static/image13.png)
+[![A ferramenta Copy Web Site indica que o &lt;código&gt;Privacy.aspx&lt;lt;Code>#Date(2011&gt; página foi alterada](deploying-your-site-using-visual-studio-vb/_static/image14.png)](deploying-your-site-using-visual-studio-vb/_static/image13.png)
 
 **Figura 5**: A ferramenta Copy Web Site indica que o `Privacy.aspx` página foi alterada ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image15.png))
 
@@ -118,7 +118,7 @@ Vamos dar uma olhada em como implantar o aplicativo de resenhas de livros usando
 Também há uma opção para carregar o conteúdo do `App_Data` pasta.
 
 
-[![Sespecificar o site de destino](deploying-your-site-using-visual-studio-vb/_static/image17.png)](deploying-your-site-using-visual-studio-vb/_static/image16.png)
+[![Especifique o site de destino](deploying-your-site-using-visual-studio-vb/_static/image17.png)](deploying-your-site-using-visual-studio-vb/_static/image16.png)
 
 **Figura 6**: Especifique o site de destino ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image18.png))
 
@@ -128,7 +128,7 @@ Para o aplicativo resenha de livro site remoto contém os arquivos sejam implant
 Figura 7 mostra os arquivos no site de FTP depois que a operação de publicação foi concluída. Observe que apenas as páginas de marcação e os arquivos de suporte necessário sever-lado do cliente e foram carregados.
 
 
-[![Oomente que os arquivos necessários foram publicados no ambiente de produção](deploying-your-site-using-visual-studio-vb/_static/image20.png)](deploying-your-site-using-visual-studio-vb/_static/image19.png)
+[![Somente os arquivos necessários foram publicados no ambiente de produção](deploying-your-site-using-visual-studio-vb/_static/image20.png)](deploying-your-site-using-visual-studio-vb/_static/image19.png)
 
 **Figura 7**: Apenas o necessário arquivos foram publicadas no ambiente de produção ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image21.png))
 

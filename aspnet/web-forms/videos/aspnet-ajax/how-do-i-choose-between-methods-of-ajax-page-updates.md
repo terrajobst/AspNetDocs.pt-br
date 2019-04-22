@@ -12,7 +12,7 @@ ms.openlocfilehash: 56e3ebfbe0b5af4234791136725de79e38171cc1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395453"
 ---
 # <a name="how-do-i-choose-between-methods-of-ajax-page-updates"></a>[Como fazer:] Escolha entre os métodos do AJAX página atualizações?

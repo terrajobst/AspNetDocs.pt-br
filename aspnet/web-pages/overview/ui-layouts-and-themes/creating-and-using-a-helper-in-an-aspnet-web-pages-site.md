@@ -12,7 +12,7 @@ ms.openlocfilehash: 28cb3af081f68c20dd9cd9e0b2578f5656d2d652
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389434"
 ---
 # <a name="creating-and-using-a-helper-in-an-aspnet-web-pages-razor-site"></a>Criando e usando um auxiliar em um Site do ASP.NET Web Pages (Razor)

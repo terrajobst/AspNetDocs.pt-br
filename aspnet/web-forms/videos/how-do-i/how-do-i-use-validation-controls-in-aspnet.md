@@ -12,7 +12,7 @@ ms.openlocfilehash: 17204583d986f7938c38dc373cb296df01f16424
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386847"
 ---
 # <a name="how-do-i--use-validation-controls-in-aspnet"></a>[Como fazer:]  Usar controles de validação no ASP.NET?

@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f7ebf7cc6d6a65216021911fe77036357369980
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389265"
 ---
 # <a name="signalr-troubleshooting-signalr-1x"></a>Solução de problemas do SignalR (SignalR 1.x)

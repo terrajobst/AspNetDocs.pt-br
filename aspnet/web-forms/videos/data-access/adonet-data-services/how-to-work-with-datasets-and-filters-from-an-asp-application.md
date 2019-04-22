@@ -12,7 +12,7 @@ ms.openlocfilehash: 0884e561d4ff49f62503e662243f13ad52717c24
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390565"
 ---
 # <a name="how-to-work-with-datasets-and-filters-from-an-asp-application"></a>Como trabalhar com conjuntos de dados e filtros de um aplicativo ASP
@@ -24,4 +24,4 @@ Neste vídeo, parte 3 de 3, Joe Stagner demonstra como retornar um conjunto de d
 [&#9654;Assista ao vídeo (6 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-work-with-datasets-and-filters-from-an-asp-application)
 
 > [!div class="step-by-step"]
-> [Voltar](how-to-manually-bind-a-dataset-to-a-datagrid.md)
+> [Anterior](how-to-manually-bind-a-dataset-to-a-datagrid.md)

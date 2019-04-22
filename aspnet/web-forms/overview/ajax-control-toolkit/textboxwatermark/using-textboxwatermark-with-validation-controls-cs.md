@@ -12,7 +12,7 @@ ms.openlocfilehash: f833868d9dbf51a9714b9bbe6730a24badc169d0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391007"
 ---
 # <a name="using-textboxwatermark-with-validation-controls-c"></a>Uso de TextBoxWatermark com controles de validação (C#)
@@ -49,7 +49,7 @@ Por fim, adicione algum código do lado do servidor para o texto no campo de sa�
 [!code-aspx[Main](using-textboxwatermark-with-validation-controls-cs/samples/sample4.aspx)]
 
 
-[![TValidador de he reclama que não há nenhum texto no campo](using-textboxwatermark-with-validation-controls-cs/_static/image2.png)](using-textboxwatermark-with-validation-controls-cs/_static/image1.png)
+[![O validador reclama que não há nenhum texto no campo](using-textboxwatermark-with-validation-controls-cs/_static/image2.png)](using-textboxwatermark-with-validation-controls-cs/_static/image1.png)
 
 O validador reclama que não há nenhum texto no campo ([clique para exibir a imagem em tamanho normal](using-textboxwatermark-with-validation-controls-cs/_static/image3.png))
 

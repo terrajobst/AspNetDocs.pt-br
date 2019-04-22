@@ -12,7 +12,7 @@ ms.openlocfilehash: ee66e166d24bb80008671c84f6512d5c54707fcf
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389804"
 ---
 # <a name="using-multiple-popup-controls-vb"></a>Uso de vários controles pop-up (VB)
@@ -49,7 +49,7 @@ Agora estender cada uma das duas caixas de texto com um `PopupControlExtender`. 
 Agora sempre que você clica em um campo de texto, um calendário aparece abaixo do campo, permitindo que você selecione uma data. (Voltando a data selecionada nas caixas de texto será abordado em um tutorial diferente.)
 
 
-[![Tele calendário é exibido quando o usuário clica na caixa de texto](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
+[![O calendário é exibido quando o usuário clica na caixa de texto](using-multiple-popup-controls-vb/_static/image2.png)](using-multiple-popup-controls-vb/_static/image1.png)
 
 O calendário é exibido quando o usuário clica na caixa de texto ([clique para exibir a imagem em tamanho normal](using-multiple-popup-controls-vb/_static/image3.png))
 

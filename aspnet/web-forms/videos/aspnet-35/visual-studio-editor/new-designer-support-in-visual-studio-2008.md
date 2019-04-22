@@ -12,7 +12,7 @@ ms.openlocfilehash: 428cf123e2063f265c21e70e439428c702fc2276
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396844"
 ---
 # <a name="new-designer-support-in-visual-studio-2008"></a>Suporte ao novo designer no Visual Studio 2008

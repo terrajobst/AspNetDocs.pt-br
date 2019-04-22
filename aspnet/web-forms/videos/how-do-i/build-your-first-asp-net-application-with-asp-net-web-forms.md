@@ -12,7 +12,7 @@ ms.openlocfilehash: 06a388991d23ced8c7cd6d22e63a6ce6288e0b3f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59382635"
 ---
 # <a name="build-your-first-aspnet-application-with-aspnet-web-forms"></a>Criar seu primeiro aplicativo do ASP.NET com o Web Forms do ASP.NET

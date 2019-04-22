@@ -12,7 +12,7 @@ ms.openlocfilehash: 1291417755e3fa4fb030bc6ba3089c38c4719c71
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389655"
 ---
 # <a name="adding-security-and-membership-to-an-aspnet-web-pages-razor-site"></a>Adição de segurança e associação a um Site do ASP.NET Web Pages (Razor)

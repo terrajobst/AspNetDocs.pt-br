@@ -12,7 +12,7 @@ ms.openlocfilehash: 288f5017acde5a103460ace688933609fba0b02c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391020"
 ---
 # <a name="tutorial-getting-started-with-signalr-1x"></a>Tutorial: Introdução ao SignalR 1.x
@@ -50,7 +50,7 @@ Seções:
 - [Configurar o projeto](#setup)
 - [Executar o exemplo](#run)
 - [Examinar o código](#code)
-- [Próximas etapas](#next)
+- [Próximas Etapas](#next)
 
 <a id="setup"></a>
 

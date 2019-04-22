@@ -12,7 +12,7 @@ ms.openlocfilehash: 986c4b109fc0e809867853da728bcd12654a80ec
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394673"
 ---
 # <a name="interacting-with-the-master-page-from-the-content-page-c"></a>Interagir com a página de conteúdo através da página mestra (C#)
@@ -61,7 +61,7 @@ Etapa 1 explica exibindo os cinco mais recentemente adicionado produtos em um Gr
 Abra o `Site.master` página mestra e adicione um rótulo e um controle GridView para o `leftContent` `<div>`. Desmarque out do rótulo `Text` propriedade, defina sua `EnableViewState` propriedade como false e seu `ID` propriedade a ser `GridMessage`; definir o GridView `ID` propriedade para `RecentProducts`. Em seguida, no Designer, expanda a marca inteligente do GridView e escolha vinculá-la a uma nova fonte de dados. Isso inicia o Assistente de configuração de fonte de dados. Porque o banco de dados Northwind na `App_Data` pasta é um banco de dados do Microsoft SQL Server, optar por criar um SqlDataSource selecionando (veja a Figura 1); nome SqlDataSource `RecentProductsDataSource`.
 
 
-[![BIND GridView para um controle SqlDataSource chamado RecentProductsDataSource](interacting-with-the-master-page-from-the-content-page-cs/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image1.png)
+[![Associar um controle SqlDataSource chamado RecentProductsDataSource GridView](interacting-with-the-master-page-from-the-content-page-cs/_static/image2.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image1.png)
 
 **Figura 01**: Associar um controle SqlDataSource chamado GridView `RecentProductsDataSource` ([clique para exibir a imagem em tamanho normal](interacting-with-the-master-page-from-the-content-page-cs/_static/image3.png))
 
@@ -87,7 +87,7 @@ Como queremos retornar que apenas os cinco mais recentemente adicionado produtos
 O `TOP 5` palavra-chave retorna apenas os cinco primeiros registros da consulta. O `Products` chave primária da tabela `ProductID`, é um `IDENTITY` coluna, que garante a nós que cada produto novo adicionado à tabela terá um valor maior que a entrada anterior. Portanto, classificar os resultados por `ProductID` em ordem decrescente retorna os produtos começando com o último aqueles criados.
 
 
-[![Roltar os cinco mais recentemente adicionado produtos](interacting-with-the-master-page-from-the-content-page-cs/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image7.png)
+[![Retorna os cinco produtos adicionados mais recentemente](interacting-with-the-master-page-from-the-content-page-cs/_static/image8.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image7.png)
 
 **Figura 03**: Os cinco mais recentemente adicionado produtos de retorno ([clique para exibir a imagem em tamanho normal](interacting-with-the-master-page-from-the-content-page-cs/_static/image9.png))
 
@@ -102,7 +102,7 @@ Como você pode ver, a marcação contém: o controle da Web de rótulo (`GridMe
 Com isso GridView criado e seu controle SqlDataSource configurado, visite o site por meio de um navegador. Como mostra a Figura 4, você verá uma grade no canto inferior esquerdo que lista os cinco mais recentemente adicionado produtos.
 
 
-[![Tele GridView exibe os cinco mais recentemente adicionado produtos](interacting-with-the-master-page-from-the-content-page-cs/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image10.png)
+[![O GridView exibe os cinco produtos adicionados mais recentemente](interacting-with-the-master-page-from-the-content-page-cs/_static/image11.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image10.png)
 
 **Figura 04**: O GridView exibe os cinco mais recentemente adicionado produtos ([clique para exibir a imagem em tamanho normal](interacting-with-the-master-page-from-the-content-page-cs/_static/image12.png))
 
@@ -116,7 +116,7 @@ Com isso GridView criado e seu controle SqlDataSource configurado, visite o site
 Nossa próxima tarefa é criar uma página de conteúdo na qual um usuário pode adicionar um novo produto para o `Products` tabela. Adicione uma nova página de conteúdo para o `Admin` pasta chamada `AddProduct.aspx`, deixando de associá-lo para o `Site.master` página mestra. Figura 5 mostra o Gerenciador de soluções depois que esta página foi adicionada ao site.
 
 
-[![Add uma nova página ASP.NET para a pasta Admin](interacting-with-the-master-page-from-the-content-page-cs/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image13.png)
+[![Adicionar uma nova página ASP.NET para a pasta Admin](interacting-with-the-master-page-from-the-content-page-cs/_static/image14.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image13.png)
 
 **Figura 05**: Adicione uma nova página ASP.NET para o `Admin` pasta ([clique para exibir a imagem em tamanho normal](interacting-with-the-master-page-from-the-content-page-cs/_static/image15.png))
 
@@ -145,7 +145,7 @@ Depois de concluir o Assistente de ir para a marca inteligente de DetailsView e 
 E isso é tudo! Vamos testar essa página. Visite `AddProduct.aspx` por meio de um navegador, insira um nome e o preço (veja a Figura 6).
 
 
-[![Add um novo produto no banco de dados](interacting-with-the-master-page-from-the-content-page-cs/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image16.png)
+[![Adicionar um novo produto no banco de dados](interacting-with-the-master-page-from-the-content-page-cs/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image16.png)
 
 **Figura 06**: Adicionar um novo produto no banco de dados ([clique para exibir a imagem em tamanho normal](interacting-with-the-master-page-from-the-content-page-cs/_static/image18.png))
 
@@ -199,7 +199,7 @@ O `Master` propriedade retorna um objeto do tipo [ `MasterPage` ](https://msdn.m
 Agora que temos convertidos a tipagem `Page.Master` propriedade para o `Site` tipo, podemos referenciar as propriedades e métodos específicos do Site. Como mostra a Figura 7, a propriedade pública `GridMessageText` aparece no menu suspenso IntelliSense.
 
 
-[![IIntelliSense mostra os métodos e propriedades públicas da nossa página mestre](interacting-with-the-master-page-from-the-content-page-cs/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image19.png)
+[![O IntelliSense mostra os métodos e propriedades públicas da nossa página mestra](interacting-with-the-master-page-from-the-content-page-cs/_static/image20.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image19.png)
 
 **Figura 07**: O IntelliSense mostra os métodos e propriedades públicas da nossa página mestra ([clique para exibir a imagem em tamanho normal](interacting-with-the-master-page-from-the-content-page-cs/_static/image21.png))
 
@@ -237,7 +237,7 @@ O código acima usa os dois a tipagem `Page.Master` propriedade e fortemente tip
 A Figura 8 mostra o `AddProduct.aspx` imediatamente após um novo produto - de Scott Soda - foi adicionada ao banco de dados. Observe que o nome do produto just-adicionado é observado no rótulo da página mestra e que o GridView tiver sido atualizado para incluir o produto e seu preço.
 
 
-[![TRótulo da página do he mestra e o GridView mostram o produto Just-Added](interacting-with-the-master-page-from-the-content-page-cs/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image22.png)
+[![Rótulo da página mestra e o GridView mostram o produto Just-adicionado](interacting-with-the-master-page-from-the-content-page-cs/_static/image23.png)](interacting-with-the-master-page-from-the-content-page-cs/_static/image22.png)
 
 **Figura 08**: Rótulo da página mestra e o GridView mostram o produto Just-Added ([clique para exibir a imagem em tamanho normal](interacting-with-the-master-page-from-the-content-page-cs/_static/image24.png))
 
@@ -258,7 +258,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 
 - [Acessar e atualizar dados no ASP.NET](http://aspnet.4guysfromrolla.com/articles/011106-1.aspx)
 - [Páginas mestras do ASP.NET: Dicas, truques e armadilhas](http://www.odetocode.com/articles/450.aspx)
-- [`@MasterType` in ASP.NET 2.0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx)
+- [`@MasterType` no ASP.NET 2.0](http://odetocode.com/Blogs/scott/archive/2005/07/16/1944.aspx)
 - [Passando informações entre o conteúdo e páginas mestras](http://aspnet.4guysfromrolla.com/articles/013107-1.aspx)
 - [Trabalhando com dados nos tutoriais do ASP.NET](../../data-access/index.md)
 

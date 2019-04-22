@@ -12,7 +12,7 @@ ms.openlocfilehash: 3db6947f36eb51b41d929f8c7d8835a95db8ea75
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392346"
 ---
 # <a name="adding-validation-to-the-model"></a>Adicionar validação ao modelo
@@ -61,11 +61,11 @@ Além disso, adicione essa única linha acima a Html.BeginForm:
 
 Aqui está o código mostrado no IDE.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
+[![Filmes - Microsoft Visual Web Developer 2010 Express (10)](getting-started-with-mvc-part7/_static/image4.png)](getting-started-with-mvc-part7/_static/image3.png)
 
 Executar seu aplicativo, visite /Movies/Create novamente e clique em criar sem inserir nenhum dado. As mensagens de erro são exibidas imediatamente sem a página flash que associamos ao enviar dados de volta para o servidor. Isso é porque o ASP.NET MVC agora está validando a entrada em ambos o cliente (usando JavaScript) e no servidor.
 
-[![Criar - Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
+[![Criar – Windows Internet Explorer](getting-started-with-mvc-part7/_static/image6.png)](getting-started-with-mvc-part7/_static/image5.png)
 
 Isso está funcionando bem! Vamos agora adicionar uma coluna adicional para o banco de dados.
 

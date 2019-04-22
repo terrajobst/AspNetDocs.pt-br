@@ -12,7 +12,7 @@ ms.openlocfilehash: 2a4d991205351531129480bee221651021483967
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396246"
 ---
 # <a name="using-the-dropdownlist-helper-with-aspnet-mvc"></a>Usar o auxiliar do DropDownList com ASP.NET MVC
@@ -190,7 +190,7 @@ Abra o *Views\Home\MultiSelectCountry.cshtml* arquivo e adicione um `htmlAttribu
 
 [!code-cshtml[Main](using-the-dropdownlist-helper-with-aspnet-mvc/samples/sample12.cshtml)]
 
-No código acima, estamos adicionando o atributo HTML e o valor do atributo `class = "chzn-select"`. O \@ caractere classe anterior não tem nada a ver com o mecanismo de exibição do Razor. `class` é um [ C# palavra-chave](https://msdn.microsoft.com/library/x53a06bb.aspx). Palavras-chave c# não podem ser usadas como identificadores, a menos que elas incluem \@ como um prefixo. No exemplo acima, `@class` é um identificador válido, mas **classe** não é porque **classe** é uma palavra-chave.
+No código acima, estamos adicionando o atributo HTML e o valor do atributo `class = "chzn-select"`. O \@ caractere classe anterior não tem nada a ver com o mecanismo de exibição do Razor. `class` é um [palavra-chave c#](https://msdn.microsoft.com/library/x53a06bb.aspx). Palavras-chave c# não podem ser usadas como identificadores, a menos que elas incluem \@ como um prefixo. No exemplo acima, `@class` é um identificador válido, mas **classe** não é porque **classe** é uma palavra-chave.
 
 Adicione referências para o *Chosen/chosen.jquery.js* e *Chosen/chosen.css* arquivos. O *Chosen/chosen.jquery.js* e implementa a funcionalidade do plugin escolhido. O *Chosen/chosen.css* arquivo fornece a definição de estilo. Adicione essas referências na parte inferior do *Views\Home\MultiSelectCountry.cshtml* arquivo. O código a seguir mostra como referenciar o plug-in escolhido.
 

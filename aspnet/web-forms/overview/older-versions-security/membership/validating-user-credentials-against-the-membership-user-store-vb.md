@@ -12,7 +12,7 @@ ms.openlocfilehash: 98869574adb8ac85a2b6dad8db2a583e013150fe
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393165"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-vb"></a>Validar credenciais de usuário no repositório de usuário associado (VB)
@@ -43,7 +43,7 @@ O `SqlMembershipProvider` valida as credenciais fornecidas por meio da obtençã
 Vamos atualizar nossa página de logon (~ /`Login.aspx`), de modo que ele valida as credenciais fornecidas no repositório de usuário associado do framework. Criamos essa página de logon novamente o <a id="Tutorial02"> </a> [ *uma visão geral de formulários de autenticação* ](../introduction/an-overview-of-forms-authentication-vb.md) tutorial, criando uma interface com duas caixas de texto para o nome de usuário e senha, um Lembrar-Me checkbox e um botão de Login (veja a Figura 1). O código valida as credenciais inseridas em uma lista de embutido em código de pares de nome de usuário e senha (Scott/Jisun/senha, senha e Sam /). No <a id="Tutorial03"> </a> [ *configuração de autenticação de formulários e tópicos avançados* ](../introduction/forms-authentication-configuration-and-advanced-topics-vb.md) tutorial atualizamos o código da página de logon para armazenar informações adicionais em formulários tíquete de autenticação `UserData` propriedade.
 
 
-[![TInterface inclui duas caixas de texto da página de logon he, um CheckBoxList e um botão](validating-user-credentials-against-the-membership-user-store-vb/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image1.png)
+[![Interface a página de logon inclui duas caixas de texto, um CheckBoxList e um botão](validating-user-credentials-against-the-membership-user-store-vb/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image1.png)
 
 **Figura 1**: Interface inclui duas caixas de texto a página de logon, um CheckBoxList e um botão ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image3.png))
 
@@ -86,7 +86,7 @@ O [controle de Web de logon](https://msdn.microsoft.com/library/system.web.ui.we
 Vamos atualizar `Login.aspx`, substituindo a interface criada manualmente e de código com um controle de logon. Inicie removendo a marcação existente e o código em `Login.aspx`. Você pode excluí-lo imediatamente, ou simplesmente comentá-lo. Para comentar marcação declarativa, coloque-o com o `<%--` e `--%>` delimitadores. Você pode inserir esses delimitadores manualmente ou, como mostra a Figura 2, você pode selecionar o texto para comentar e, em seguida, clique no comente o ícone de linhas selecionadas na barra de ferramentas. Da mesma forma, você pode usar o comente o ícone de linhas selecionadas para comentar o código selecionado na classe code-behind.
 
 
-[![Comment Out a existente marcação declarativa e código-fonte no login. aspx](validating-user-credentials-against-the-membership-user-store-vb/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image4.png)
+[![Comente o código-fonte no login. aspx e marcação declarativa existente](validating-user-credentials-against-the-membership-user-store-vb/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image4.png)
 
 **Figura 2**: Comentário horizontalmente o existente marcação declarativa e código-fonte no login. aspx ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image6.png))
 
@@ -98,7 +98,7 @@ Vamos atualizar `Login.aspx`, substituindo a interface criada manualmente e de c
 Em seguida, arraste um controle de logon da caixa de ferramentas para a página e defina suas `ID` propriedade para `myLogin`. Neste ponto, sua tela deve ser semelhante à Figura 3. Observe que a interface de padrão do controle Login inclui controles de caixa de texto para o nome de usuário e senha, um lembrar-me próxima vez que caixa de seleção e um botão Log. Também há `RequiredFieldValidator` controles para as duas caixas de texto.
 
 
-[![Aum controle de logon para a página de dd](validating-user-credentials-against-the-membership-user-store-vb/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image7.png)
+[![Adicionar um controle de logon para a página](validating-user-credentials-against-the-membership-user-store-vb/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image7.png)
 
 **Figura 3**: Adicionar um controle de logon para a página ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image9.png))
 
@@ -115,7 +115,7 @@ O controle de logon usa quatro fatores para determinar a página apropriada para
 A Figura 4 ilustra como o controle de logon usa essas quatro parâmetros para chegar a sua decisão de página apropriado.
 
 
-[![Aum controle de logon para a página de dd](validating-user-credentials-against-the-membership-user-store-vb/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image10.png)
+[![Adicionar um controle de logon para a página](validating-user-credentials-against-the-membership-user-store-vb/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image10.png)
 
 **Figura 4**: Adicionar um controle de logon para a página ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image12.png))
 
@@ -145,7 +145,7 @@ Encapsular as configurações de propriedade do controle de logon, definindo o [
 Depois de fazer essas alterações de propriedade, marcação declarativa e a aparência do seu controle de logon devem ser semelhantes ao mostrado na Figura 5.
 
 
-[![TValores determinam sua aparência propriedades do controle de logon he](validating-user-credentials-against-the-membership-user-store-vb/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image13.png)
+[![Os valores de propriedades do controle Login determinam sua aparência](validating-user-credentials-against-the-membership-user-store-vb/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image13.png)
 
 **Figura 5**: Valores determinam sua aparência propriedades do controle Login ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image15.png))
 
@@ -164,7 +164,7 @@ Para executar a tarefa de primeiro, precisamos converter o controle de logon em 
 Vamos atualizar o controle de logon para que ele solicita aos usuários por nome de usuário, senha e endereço de email e autentica o usuário apenas se o endereço de email fornecido corresponde ao seu endereço de email no arquivo. Primeiro, precisamos converter a interface do controle de logon em um modelo. Na Smart Tag do controle de logon, escolha a converter para a opção de modelo.
 
 
-[![Cconverter o controle de logon para um modelo](validating-user-credentials-against-the-membership-user-store-vb/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image16.png)
+[![Converter o controle de logon em um modelo](validating-user-credentials-against-the-membership-user-store-vb/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image16.png)
 
 **Figura 6**: Converter o controle de logon em um modelo ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image18.png))
 
@@ -176,7 +176,7 @@ Vamos atualizar o controle de logon para que ele solicita aos usuários por nome
 Convertendo o controle de logon em um modelo adiciona um `LayoutTemplate` para marcação declarativa do controle com elementos HTML e controles da Web definindo a interface do usuário. Como mostra a Figura 7, convertendo o controle em um modelo remove um número de propriedades na janela Propriedades, tais como `TitleText`, `CreateUserUrl`e assim por diante, pois esses valores de propriedade são ignorados ao usar um modelo.
 
 
-[![Fewer propriedades estão que disponíveis quando o controle de logon é convertido em um modelo](validating-user-credentials-against-the-membership-user-store-vb/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image19.png)
+[![Menos propriedades estão que disponíveis quando o controle de logon é convertido em um modelo](validating-user-credentials-against-the-membership-user-store-vb/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image19.png)
 
 **Figura 7**: Menos propriedades estão disponíveis quando o controle de logon é convertido em um modelo ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image21.png))
 
@@ -190,7 +190,7 @@ Para coletar o endereço de email do visitante, precisamos adicionar uma caixa d
 Depois de adicionar o `Email` caixa de texto, visite a página por meio de um navegador. Como mostra a Figura 8, a interface do usuário do controle de logon agora inclui uma terceira caixa de texto.
 
 
-[![Tele controle Login agora inclui uma caixa de texto para o endereço de Email do usuário](validating-user-credentials-against-the-membership-user-store-vb/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image22.png)
+[![O controle de logon agora inclui uma caixa de texto para o endereço de Email do usuário](validating-user-credentials-against-the-membership-user-store-vb/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image22.png)
 
 **Figura 8**: O controle de logon agora inclui uma caixa de texto para o endereço de Email do usuário ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image24.png))
 
@@ -208,7 +208,7 @@ Se as credenciais fornecidas são válidas e, em seguida, o tíquete de autentic
 Figura 9 oferece um fluxograma de fluxo de trabalho de autenticação.
 
 
-[![Tfluxo de trabalho de autenticação do controle de logon he](validating-user-credentials-against-the-membership-user-store-vb/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image25.png)
+[![Fluxo de trabalho de autenticação de logon do controle](validating-user-credentials-against-the-membership-user-store-vb/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image25.png)
 
 **Figura 9**: Fluxo de trabalho de autenticação de logon do controle ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image27.png))
 
@@ -247,7 +247,7 @@ O código a seguir implementa essas duas verificações. Se ambos, em seguida, p
 Com esse código funcionando, tente fazer logon como um usuário válido, inserindo o nome de usuário correto, senha e endereço de email. Tente novamente, mas desta vez propositadamente usar um endereço de email incorreto (consulte a Figura 10). Por fim, tente uma terceira vez usando um nome de usuário inexistente. No primeiro caso você deve estar com êxito conectado ao site, mas nos dois últimos casos, você deve ver a mensagem de credenciais inválidas do controle de logon.
 
 
-[![TShu não consegue fazer logon ao fornecer um endereço de Email incorreto](validating-user-credentials-against-the-membership-user-store-vb/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image28.png)
+[![Tito não consegue fazer logon ao fornecer um endereço de Email incorreto](validating-user-credentials-against-the-membership-user-store-vb/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image28.png)
 
 **Figura 10**: Tito não é possível Log em quando fornecendo um endereço de Email incorreto ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image30.png))
 
@@ -280,7 +280,7 @@ O código acima inicia, definindo o controle de logon `FailureText` propriedade 
 Para testar esse código, propositadamente tente fazer logon como um usuário existente, mas usar uma senha incorreta. Faça isso cinco vezes em uma linha em um período de 10 minutos e a conta será bloqueada. Conforme mostrado na Figura 11, logon subsequentes tentativas sempre irá falhar (até mesmo com a senha correta), mas agora exibe o mais descritivo sua conta foi bloqueada devido a muitas tentativas de logon inválido. Entre em contato com o administrador para configurar sua mensagem desbloqueada da conta.
 
 
-[![TShu executadas muito muitas tentativas inválidas de logon e tem sido bloqueados](validating-user-credentials-against-the-membership-user-store-vb/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image31.png)
+[![Tito executada muitas tentativas de logon inválidas e foi bloqueada](validating-user-credentials-against-the-membership-user-store-vb/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-vb/_static/image31.png)
 
 **Figura 11**: Tito executadas muito muitas tentativas inválidas de logon e tem sido bloqueada ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-vb/_static/image33.png))
 

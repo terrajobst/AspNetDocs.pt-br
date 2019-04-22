@@ -12,7 +12,7 @@ ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391150"
 ---
 # <a name="checkout-and-payment-with-paypal"></a>Check-out e pagamento com o PayPal
@@ -124,7 +124,7 @@ O *Web. config* arquivo Especifica que todos os usuários desconhecidos do aplic
 2. Alteração **SSL habilitado** para `true`.
 3. Cópia de **URL do SSL** para que você pode usá-lo mais tarde.   
  A URL do SSL será `https://localhost:44300/` , a menos que você tenha criado Sites da Web SSL anteriormente (conforme mostrado abaixo).   
-    ![Propriedades do projeto](checkout-and-payment-with-paypal/_static/image4.png)
+    ![Propriedades de projeto](checkout-and-payment-with-paypal/_static/image4.png)
 4. Na **Gerenciador de soluções**, clique com botão direito do **WingtipToys** do projeto e clique em **propriedades**.
 5. Na guia à esquerda, clique em **Web**.
 6. Alterar o **Url do projeto** usar o **URL do SSL** que você salvou anteriormente.   
@@ -160,7 +160,7 @@ As etapas a seguir permitirá que você adicionar um provedor de autenticação 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample5.cs)]
 3. Navegue até a [Console de desenvolvedores do Google](https://console.developers.google.com/). Você também precisará entrar com sua conta de email de desenvolvedor do Google (gmail.com). Se você não tiver uma conta do Google, selecione a **criar uma conta** link.   
    Em seguida, você verá a **Console de desenvolvedores do Google**.   
-    ![Google Developers Console](checkout-and-payment-with-paypal/_static/image8.png)
+    ![Console de desenvolvedores do Google](checkout-and-payment-with-paypal/_static/image8.png)
 4. Clique o **criar projeto** e digitar um nome de projeto e a ID (você pode usar os valores padrão). Em seguida, clique o **caixa de seleção de contrato** e o **criar** botão.  
 
     ![Google - novo projeto](checkout-and-payment-with-paypal/_static/image9.png)
@@ -190,7 +190,7 @@ As etapas a seguir permitirá que você adicionar um provedor de autenticação 
     [!code-csharp[Main](checkout-and-payment-with-paypal/samples/sample7.cs?highlight=64-65)]
 15. Pressione **CTRL + F5** para compilar e executar o aplicativo. Clique o **faça logon no** link.
 16. Sob **usar outro serviço para fazer logon**, clique em **Google**.  
-    ![Fazer Logon](checkout-and-payment-with-paypal/_static/image11.png)
+    ![Iniciar sessão](checkout-and-payment-with-paypal/_static/image11.png)
 17. Se você precisar inserir suas credenciais, você será redirecionado ao site do google, onde você vai inserir suas credenciais.  
     ![Google - entrar](checkout-and-payment-with-paypal/_static/image12.png)
 18. Depois de inserir suas credenciais, você deverá conceder permissões para o aplicativo web que você acabou de criar.  
@@ -309,9 +309,9 @@ Coloque a maioria do código PayPal em uma única classe. Essa classe contém m�
 
 A classe NVPAPICaller contém a maioria da funcionalidade PayPal. O código na classe fornece os métodos necessários para fazer um teste de compra do ambiente de teste do PayPal. As três funções PayPal a seguir são usadas para fazer compras:
 
-- `SetExpressCheckout` function
-- `GetExpressCheckoutDetails` function
-- `DoExpressCheckoutPayment` function
+- `SetExpressCheckout` função
+- `GetExpressCheckoutDetails` função
+- `DoExpressCheckoutPayment` função
 
 O `ShortcutExpressCheckout` método de coleta os detalhes de produto e informações de compra do teste do carrinho de compras e chama o `SetExpressCheckout` função PayPal. O `GetCheckoutDetails` método confirma os detalhes de compra e chama o `GetExpressCheckoutDetails` PayPal função antes de fazer a compra de teste. O `DoCheckoutPayment` método conclui a compra de teste do ambiente de teste, chamando o `DoExpressCheckoutPayment` função PayPal. O código restante dá suporte a métodos do PayPal e o processo, como cadeias de caracteres de codificação, decodificação de cadeias de caracteres, matrizes de processamento e determinar as credenciais.
 

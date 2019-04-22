@@ -12,7 +12,7 @@ ms.openlocfilehash: d35c0057f5c29e399e45d0a58467de7f106d9994
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389967"
 ---
 # <a name="calling-an-odata-service-from-a-net-client-c"></a>Chamar um serviço OData em um cliente .NET (C#)
@@ -27,7 +27,7 @@ por [Mike Wasson](https://github.com/MikeWasson)
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013) (funciona com o Visual Studio 2012)
-> - [Biblioteca de cliente do WCF Data Services](https://msdn.microsoft.com/library/cc668772.aspx)
+> - [WCF Data Services Client Library](https://msdn.microsoft.com/library/cc668772.aspx) (Biblioteca de clientes do WCF Data Services)
 > - API Web 2. (O serviço OData de exemplo é criado usando a API Web 2, mas o aplicativo cliente não depende do API da Web).
 
 

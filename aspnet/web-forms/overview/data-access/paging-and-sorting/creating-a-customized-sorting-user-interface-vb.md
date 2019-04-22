@@ -12,7 +12,7 @@ ms.openlocfilehash: 571e34a8c87bf54b8dd71c912f16ebcdab3c87a7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59383441"
 ---
 # <a name="creating-a-customized-sorting-user-interface-vb"></a>Criação de uma interface do usuário de classificação personalizada (VB)
@@ -31,7 +31,7 @@ Ao exibir uma lista longa de dados classificados em que há apenas alguns valore
 Para ajudar a realçar os limites entre grupos classificados, muitos sites empregam uma interface do usuário que adiciona um separador entre esses grupos. Separadores de como as mostradas na Figura 1 permite que um usuário localizar um grupo específico e identificar seus limites mais rapidamente, bem como determinar quais grupos distintos existem nos dados.
 
 
-[![EACH grupo de categorias é claramente identificado](creating-a-customized-sorting-user-interface-vb/_static/image2.png)](creating-a-customized-sorting-user-interface-vb/_static/image1.png)
+[![Cada grupo de categorias é claramente identificado](creating-a-customized-sorting-user-interface-vb/_static/image2.png)](creating-a-customized-sorting-user-interface-vb/_static/image1.png)
 
 **Figura 1**: Cada grupo de categorias é claramente identificado ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-vb/_static/image3.png))
 
@@ -50,7 +50,7 @@ Em seguida, configure o GridView, de modo que ele contém apenas o `ProductName`
 Reserve um tempo para exibir nosso progresso até o momento em um navegador. Figura 2 mostra o GridView classificável quando seus dados são classificados por categoria em ordem alfabética.
 
 
-[![Tele GridView classificável s dados é ordenado pela categoria](creating-a-customized-sorting-user-interface-vb/_static/image5.png)](creating-a-customized-sorting-user-interface-vb/_static/image4.png)
+[![O s GridView classificável os dados são ordenados por categoria](creating-a-customized-sorting-user-interface-vb/_static/image5.png)](creating-a-customized-sorting-user-interface-vb/_static/image4.png)
 
 **Figura 2**: O s GridView classificável dados são ordenados por categoria ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-vb/_static/image6.png))
 
@@ -100,7 +100,7 @@ Em vez dos dados de mensagens antes de associá-lo ao GridView, podemos adiciona
 Para adicionar linhas de separador entre cada grupo de classificação, é possível manipular diretamente essa hierarquia de controle quando ele tiver sido criado. Podemos pode ter certeza de que a hierarquia de controle GridView s foi criada pela última vez no momento em que a página está sendo processada. Portanto, essa abordagem substitui o `Page` classe s `Render` método, no ponto em que a hierarquia de controle final s GridView é atualizada para incluir as linhas de separador necessários. Figura 4 ilustra esse processo.
 
 
-[![ATécnica alternativa n manipula a hierarquia de controle GridView s](creating-a-customized-sorting-user-interface-vb/_static/image9.png)](creating-a-customized-sorting-user-interface-vb/_static/image8.png)
+[![Uma técnica alternativa manipula a hierarquia de controle GridView s](creating-a-customized-sorting-user-interface-vb/_static/image9.png)](creating-a-customized-sorting-user-interface-vb/_static/image8.png)
 
 **Figura 4**: Uma técnica alternativa manipula o s GridView hierarquia de controle ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-vb/_static/image10.png))
 
@@ -156,12 +156,12 @@ A classe CSS usada para formatar a linha de cabeçalho de grupo classificação 
 Com o código atual, a interface de classificação adiciona cabeçalhos de grupo de classificação ao classificar por qualquer BoundField (consulte a Figura 5, que mostra uma captura de tela durante a classificação por fornecedor). No entanto, ao classificar por qualquer outro tipo de campo (como um CheckBoxField ou TemplateField), os cabeçalhos do grupo de classificação são nenhum lugar a ser localizada (veja a Figura 6).
 
 
-[![Tele classificação Interface inclui classificação cabeçalhos de grupo ao classificar por BoundFields](creating-a-customized-sorting-user-interface-vb/_static/image12.png)](creating-a-customized-sorting-user-interface-vb/_static/image11.png)
+[![A Interface de classificação inclui os cabeçalhos de grupo de classificação ao classificar por BoundFields](creating-a-customized-sorting-user-interface-vb/_static/image12.png)](creating-a-customized-sorting-user-interface-vb/_static/image11.png)
 
 **Figura 5**: A classificação Interface inclui classificação grupo cabeçalhos quando a classificação por BoundFields ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-vb/_static/image13.png))
 
 
-[![TCabeçalhos de grupo de classificação he estão ausentes ao classificar um CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image15.png)](creating-a-customized-sorting-user-interface-vb/_static/image14.png)
+[![Os cabeçalhos do grupo de classificação estão ausentes ao classificar um CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image15.png)](creating-a-customized-sorting-user-interface-vb/_static/image14.png)
 
 **Figura 6**: Os cabeçalhos do grupo de classificação estão ausentes ao classificar um CheckBoxField ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-vb/_static/image16.png))
 
@@ -178,7 +178,7 @@ Esse código examina a coluna classificada `TableCell` para a linha atual determ
 Com a adição de código acima, os cabeçalhos do grupo de classificação agora estão presentes quando a classificação por CheckBoxField descontinuados (veja a Figura 7).
 
 
-[![TCabeçalhos de grupo de classificação he estão agora presente ao classificar um CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image18.png)](creating-a-customized-sorting-user-interface-vb/_static/image17.png)
+[![Os cabeçalhos de grupo de classificação são agora presente ao classificar um CheckBoxField](creating-a-customized-sorting-user-interface-vb/_static/image18.png)](creating-a-customized-sorting-user-interface-vb/_static/image17.png)
 
 **Figura 7**: Os cabeçalhos de grupo de classificação são agora presente ao classificar um CheckBoxField ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-vb/_static/image19.png))
 
@@ -198,4 +198,4 @@ Boa programação!
 [Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP.NET e fundador da [4GuysFromRolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Microsoft Web desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 2.0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser contatado pelo [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
 
 > [!div class="step-by-step"]
-> [Voltar](sorting-custom-paged-data-vb.md)
+> [Anterior](sorting-custom-paged-data-vb.md)

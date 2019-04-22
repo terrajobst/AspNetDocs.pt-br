@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f19965894b899aa429be0ef89ccde121191aeb8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394023"
 ---
 # <a name="adding-a-gridview-column-of-checkboxes-c"></a>Adicionar uma coluna de GridView de caixas de seleção (C#)
@@ -31,7 +31,7 @@ O tutorial anterior, examinamos como adicionar uma coluna de botões de opção 
 Neste tutorial veremos como adicionar uma coluna de caixas de seleção e como determinar quais caixas de seleção foram marcadas em um postback. Em particular, vamos criar um exemplo que imita a interface de usuário do cliente de email baseado na web. Nosso exemplo incluirá um GridView paginado listando os produtos a `Products` tabela de banco de dados com uma caixa de seleção em cada linha (veja a Figura 1). Um botão excluir produtos selecionados, quando clicado, excluirá esses produtos selecionados.
 
 
-[![EACH a linha de produto inclui uma caixa de seleção](adding-a-gridview-column-of-checkboxes-cs/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image1.png)
+[![Cada linha de produto inclui uma caixa de seleção](adding-a-gridview-column-of-checkboxes-cs/_static/image1.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image1.png)
 
 **Figura 1**: Cada linha de produto inclui uma caixa de seleção ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image2.png))
 
@@ -41,7 +41,7 @@ Neste tutorial veremos como adicionar uma coluna de caixas de seleção e como d
 Antes de nos preocupamos adicionando uma coluna de caixas de seleção, deixe o foco primeiro sobre a lista de produtos em um GridView que dá suporte à paginação. Comece abrindo o `CheckBoxField.aspx` página o `EnhancedGridView` pasta e arraste um controle GridView da caixa de ferramentas para o Designer, definindo seu `ID` para `Products`. Em seguida, optar por associar o GridView para um novo ObjectDataSource chamado `ProductsDataSource`. Configurar o ObjectDataSource para usar o `ProductsBLL` classe, chamando o `GetProducts()` método para retornar os dados. Já que essa GridView será somente leitura, defina as listas suspensas na atualização, inserção e excluir guias como (nenhum).
 
 
-[![Ccriar um novo ObjectDataSource chamado ProductsDataSource](adding-a-gridview-column-of-checkboxes-cs/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image3.png)
+[![Criar um novo ObjectDataSource chamado ProductsDataSource](adding-a-gridview-column-of-checkboxes-cs/_static/image2.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image3.png)
 
 **Figura 2**: Criar um novo ObjectDataSource nomeado `ProductsDataSource` ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image4.png))
 
@@ -51,7 +51,7 @@ Antes de nos preocupamos adicionando uma coluna de caixas de seleção, deixe o 
 **Figura 3**: Configurar o ObjectDataSource para recuperar dados usando o `GetProducts()` método ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image6.png))
 
 
-[![SET as listas suspensas no UPDATE, INSERT e DELETE guias como (nenhum)](adding-a-gridview-column-of-checkboxes-cs/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image7.png)
+[![Definir as listas suspensas na atualização, inserção e excluir guias como (nenhum)](adding-a-gridview-column-of-checkboxes-cs/_static/image4.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image7.png)
 
 **Figura 4**: Defina a lista suspensa no UPDATE, INSERT e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image8.png))
 
@@ -68,7 +68,7 @@ Depois de fazer essas alterações, a marcação declarativa de s do GridView, O
 Reserve um tempo para exibir a página em um navegador (consulte a Figura 5). Neste ponto, você verá o nome, categoria e preço de dez primeiros produtos.
 
 
-[![Tele nome, categoria e preço dos dez primeiros produtos listados](adding-a-gridview-column-of-checkboxes-cs/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image9.png)
+[![O nome, categoria e preço dos dez primeiros produtos são listados](adding-a-gridview-column-of-checkboxes-cs/_static/image5.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image9.png)
 
 **Figura 5**: O nome, categoria e preço dos dez primeiros produtos são listados ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image10.png))
 
@@ -80,7 +80,7 @@ Uma vez que o ASP.NET 2.0 inclui um CheckBoxField, alguém pode pensar que ele p
 Em vez disso, devemos adicionar um TemplateField e adicionar um controle de caixa de seleção Web para seu `ItemTemplate`. Vá em frente e adicione um TemplateField para o `Products` GridView e torná-lo o primeiro campo (à esquerda). De GridView s marca inteligente, clique no link Editar modelos e, em seguida, arraste um controle de Web de caixa de seleção da caixa de ferramentas para o `ItemTemplate`. Definir s essa caixa de seleção `ID` propriedade para `ProductSelector`.
 
 
-[![Auma caixa de seleção da Web controle denominado ProductSelector no s TemplateField ItemTemplate de dd](adding-a-gridview-column-of-checkboxes-cs/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image11.png)
+[![Adicione um controle de caixa de seleção Web chamado ProductSelector para ItemTemplate s TemplateField](adding-a-gridview-column-of-checkboxes-cs/_static/image6.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image11.png)
 
 **Figura 6**: Adicionar um controle de Web de caixa de seleção denominada `ProductSelector` para o s TemplateField `ItemTemplate` ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image12.png))
 
@@ -88,7 +88,7 @@ Em vez disso, devemos adicionar um TemplateField e adicionar um controle de caix
 Com o controle de Web de caixa de seleção e TemplateField adicionado, cada linha agora inclui uma caixa de seleção. Figura 7 mostra essa página, quando visualizado por meio de um navegador, depois que a caixa de seleção e TemplateField foram adicionadas.
 
 
-[![ELinha de produto do ACH agora inclui uma caixa de seleção](adding-a-gridview-column-of-checkboxes-cs/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image13.png)
+[![Cada linha de produto agora inclui uma caixa de seleção](adding-a-gridview-column-of-checkboxes-cs/_static/image7.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image13.png)
 
 **Figura 7**: Cada linha de produto agora inclui uma caixa de seleção ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image14.png))
 
@@ -109,7 +109,7 @@ O `Rows` propriedade retorna uma coleção de `GridViewRow` instâncias essa com
 Com a adição desse manipulador de eventos, clicando no botão excluir produtos selecionados agora exibe o `ProductID` s dos produtos selecionados.
 
 
-[![Wuando o botão de produtos selecionadas Excluir é clicado a ProductIDs de produtos selecionada são listadas](adding-a-gridview-column-of-checkboxes-cs/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image15.png)
+[![Quando se clica no botão de produtos selecionadas Excluir o ProductIDs de produtos selecionada são listadas](adding-a-gridview-column-of-checkboxes-cs/_static/image8.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image15.png)
 
 **Figura 8**: Quando o botão de produtos selecionadas Excluir é clicado os produtos selecionados `ProductID` s são listados ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image16.png))
 
@@ -136,7 +136,7 @@ Em seguida, crie `Click` manipuladores de eventos para o `CheckAll` e `UncheckAl
 Com esse código, clicando no botão Verificar todos os faz com que um postback e verificará todas as caixas de seleção no GridView. Da mesma forma, clicando em desmarcar tudo desmarca todas as caixas de seleção. Figura 9 mostra a tela depois no botão Verificar tudo foi verificado.
 
 
-[![Clicking verificar todos os botão Seleciona todas as caixas de seleção](adding-a-gridview-column-of-checkboxes-cs/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image17.png)
+[![Clicar a verificação de que todas as botão Seleciona todas as caixas de seleção](adding-a-gridview-column-of-checkboxes-cs/_static/image9.gif)](adding-a-gridview-column-of-checkboxes-cs/_static/image17.png)
 
 **Figura 9**: Clicar em verificar todos os botão Seleciona todas as caixas de seleção ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-checkboxes-cs/_static/image18.png))
 

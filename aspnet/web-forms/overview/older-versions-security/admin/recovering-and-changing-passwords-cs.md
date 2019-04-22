@@ -12,7 +12,7 @@ ms.openlocfilehash: e3e097663568b21ee3f84c7006a0bd89718ac6c2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59380269"
 ---
 # <a name="recovering-and-changing-passwords-c"></a>Recuperação e alteração de senhas (C#)
@@ -63,7 +63,7 @@ Depois que o usuário forneceu a resposta de segurança e o nome de usuário, ou
 Figura 1 ilustra como a interface e o comportamento do PasswordRecovery é influenciada pela configuração de associação.
 
 
-[![Tele RequiresQuestionAndAnswer EnablePasswordRetrieval e EnablePasswordReset influenciam a aparência do controle PasswordRecovery e comportamento](recovering-and-changing-passwords-cs/_static/image2.png)](recovering-and-changing-passwords-cs/_static/image1.png)
+[![O RequiresQuestionAndAnswer, EnablePasswordRetrieval e EnablePasswordReset influenciam a aparência e o comportamento do controle PasswordRecovery](recovering-and-changing-passwords-cs/_static/image2.png)](recovering-and-changing-passwords-cs/_static/image1.png)
 
 **Figura 1**: O `RequiresQuestionAndAnswer`, `EnablePasswordRetrieval`, e `EnablePasswordReset` influenciar a aparência e o comportamento do controle PasswordRecovery ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image3.png))
 
@@ -93,7 +93,7 @@ Além de usar um servidor SMTP na rede, você poderá especificar um diretório 
 Depois de definir as configurações de SMTP, visite o `RecoverPassword.aspx` página por meio de um navegador. Primeiro, tente inserir um nome de usuário que não existe no repositório do usuário. Como mostra a Figura 2, o controle PasswordRecovery exibe uma mensagem indicando que não foi possível acessar as informações do usuário. O texto da mensagem pode ser personalizado por meio do controle [ `UserNameFailureText` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.usernamefailuretext.aspx).
 
 
-[![An mensagem de erro será exibida se um nome de usuário inválido é inserido](recovering-and-changing-passwords-cs/_static/image5.png)](recovering-and-changing-passwords-cs/_static/image4.png)
+[![Uma mensagem de erro será exibida se um nome de usuário inválido é inserido](recovering-and-changing-passwords-cs/_static/image5.png)](recovering-and-changing-passwords-cs/_static/image4.png)
 
 **Figura 2**: Uma mensagem de erro será exibida se um nome de usuário inválido é inserido ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image6.png))
 
@@ -101,7 +101,7 @@ Depois de definir as configurações de SMTP, visite o `RecoverPassword.aspx` p�
 Agora, insira um nome de usuário. Use o nome de usuário de uma conta no sistema com um endereço de email que você pode acessar e cuja segurança responder você sabe. Depois de inserir o nome de usuário e clicar em enviar, o controle PasswordRecovery exibe sua view de pergunta. Como com o modo de exibição do nome de usuário, se você inserir um incorreto responder as exibições de controle PasswordRecovery uma mensagem de erro (consulte a Figura 3). Use o [ `QuestionFailureText` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.questionfailuretext.aspx) para personalizar essa mensagem de erro.
 
 
-[![An mensagem de erro será exibida se o usuário insere uma resposta de segurança inválido](recovering-and-changing-passwords-cs/_static/image8.png)](recovering-and-changing-passwords-cs/_static/image7.png)
+[![Uma mensagem de erro será exibida se o usuário insere uma resposta de segurança inválido](recovering-and-changing-passwords-cs/_static/image8.png)](recovering-and-changing-passwords-cs/_static/image7.png)
 
 **Figura 3**: Uma mensagem de erro será exibida se o usuário insere uma resposta de segurança inválido ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image9.png))
 
@@ -109,7 +109,7 @@ Agora, insira um nome de usuário. Use o nome de usuário de uma conta no sistem
 Por fim, insira a resposta de segurança correto e clique em enviar. Nos bastidores, o controle PasswordRecovery gera uma senha aleatória, atribui a conta de usuário, envia um email informando ao usuário de sua nova senha (veja a Figura 4) e, em seguida, exibe o modo de exibição de êxito.
 
 
-[![TUsuário recebe um Email com a nova senha His](recovering-and-changing-passwords-cs/_static/image11.png)](recovering-and-changing-passwords-cs/_static/image10.png)
+[![O usuário é enviado um Email com a nova senha His](recovering-and-changing-passwords-cs/_static/image11.png)](recovering-and-changing-passwords-cs/_static/image10.png)
 
 **Figura 4**: O usuário é enviado um Email com a nova senha His ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image12.png))
 
@@ -145,7 +145,7 @@ Por fim, aponte o `MailDefinition`do [ `BodyFileName` propriedade](https://msdn.
 Depois de fazer essas alterações revisitar o `RecoverPassword.aspx` página e insira sua resposta de nome de usuário e segurança. Você recebe deve um email que será semelhante à mostrada na Figura 5. Observe que `webmaster@example.com` foi CC seria e que o assunto e corpo foram atualizados.
 
 
-[![Tele assunto, corpo e CC lista foram atualizados](recovering-and-changing-passwords-cs/_static/image14.png)](recovering-and-changing-passwords-cs/_static/image13.png)
+[![O assunto, corpo e lista CC foram atualizadas](recovering-and-changing-passwords-cs/_static/image14.png)](recovering-and-changing-passwords-cs/_static/image13.png)
 
 **Figura 5**: O assunto, corpo e CC lista foram atualizados ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image15.png))
 
@@ -197,7 +197,7 @@ Use o controle ChangePassword para criar uma interface para um usuário altere s
 Abra o `ChangePassword.aspx` da página e adicionar um controle de alteração de senha para a página, nomeando- `ChangePwd`. Neste ponto, a exibição de Design deve mostrar a alterar a senha (consulte a Figura 6). Como com o controle PasswordRecovery, você pode alternar entre os modos de exibição por meio de Smart Tag do controle. Além disso, aparências dessas exibições são personalizáveis por meio das propriedades de estilo variados ou convertendo-os em um modelo.
 
 
-[![Aum controle ChangePassword para a página de dd](recovering-and-changing-passwords-cs/_static/image17.png)](recovering-and-changing-passwords-cs/_static/image16.png)
+[![Adicionar um controle de alteração de senha para a página](recovering-and-changing-passwords-cs/_static/image17.png)](recovering-and-changing-passwords-cs/_static/image16.png)
 
 **Figura 6**: Adicionar um controle de alteração de senha para a página ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image18.png))
 
@@ -215,7 +215,7 @@ Definindo `DisplayUserName` para True será útil se você quiser permitir que u
 Visite o `ChangePassword.aspx` página por meio de um navegador e altere sua senha. Observe que uma mensagem de erro é exibida se você inserir uma nova senha que não atender os requisitos de caractere não alfanumérico especificados na configuração de associação e o comprimento da senha (veja a Figura 7).
 
 
-[![Aum controle ChangePassword para a página de dd](recovering-and-changing-passwords-cs/_static/image20.png)](recovering-and-changing-passwords-cs/_static/image19.png)
+[![Adicionar um controle de alteração de senha para a página](recovering-and-changing-passwords-cs/_static/image20.png)](recovering-and-changing-passwords-cs/_static/image19.png)
 
 **Figura 7**: Adicionar um controle de alteração de senha para a página ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image21.png))
 
@@ -235,7 +235,7 @@ Em seguida, defina o controle de ChangePassword `MailDefinition` da propriedade 
 Depois de fazer essas alterações, examine a página e altere sua senha novamente. Neste momento, o controle ChangePassword envia um email personalizado, formatado em HTML ao endereço de email do usuário no arquivo (consulte a Figura 8).
 
 
-[![An mensagem de Email informa o usuário que seus senha alterada](recovering-and-changing-passwords-cs/_static/image23.png)](recovering-and-changing-passwords-cs/_static/image22.png)
+[![Uma mensagem de Email que informa a que o senha do usuário foi alterado](recovering-and-changing-passwords-cs/_static/image23.png)](recovering-and-changing-passwords-cs/_static/image22.png)
 
 **Figura 8**: Uma mensagem de Email que informa o usuário que seus senha tenha sido alterada ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image24.png))
 
@@ -273,7 +273,7 @@ O código tem alguns bits pouco atraente e está muito longo. Portanto, não que
 Depois de inserir a nova senha, confirmá-la na segunda caixa de texto e clicar no botão de usuário de atualização, um postback massacre e o `aspnet_Membership_SetPassword` procedimento armazenado será invocado, atualizando a senha do usuário. Eu recomendo que os leitores interessados nessa funcionalidade para se familiarizar com o código e tente a estender a funcionalidade para incluir enviando um email para o usuário cuja senha foi alterada.
 
 
-[![An administrador pode alterar a senha do usuário](recovering-and-changing-passwords-cs/_static/image26.png)](recovering-and-changing-passwords-cs/_static/image25.png)
+[![Um administrador pode alterar a senha do usuário](recovering-and-changing-passwords-cs/_static/image26.png)](recovering-and-changing-passwords-cs/_static/image25.png)
 
 **Figura 9**: Um administrador pode alterar a senha do usuário ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image27.png))
 
@@ -297,7 +297,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 - [Guias de início rápido controle ChangePassword](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/changepassword.aspx)
 - [Guias de início rápido controle PasswordRecovery](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/passwordrecovery.aspx)
 - [Envio de Email no ASP.NET](http://aspnet.4guysfromrolla.com/articles/072606-1.aspx)
-- [`System.Net.Mail` Perguntas frequentes](http://www.systemnetmail.com/)
+- [`System.Net.Mail` FAQs](http://www.systemnetmail.com/)
 
 ### <a name="about-the-author"></a>Sobre o autor
 

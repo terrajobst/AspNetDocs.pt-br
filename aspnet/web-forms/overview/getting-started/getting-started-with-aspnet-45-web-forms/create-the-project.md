@@ -12,7 +12,7 @@ ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393048"
 ---
 # <a name="create-the-project"></a>Criar o projeto
@@ -154,7 +154,7 @@ Quando um servidor Web recebe uma solicitação para uma página, ele encontra a
 > 
 > Usam os modelos de projeto do Visual Studio 2013 [Bootstrap](http://getbootstrap.com/), uma estrutura de layout e temas criada por meio do Twitter. O Bootstrap usa CSS3 para fornecer design responsivo, o que significa layouts dinamicamente podem adaptar para tamanhos de janela de navegador diferente. Você também pode usar o recurso de temas do Bootstrap para facilmente fazer uma alteração na aparência do aplicativo. Por padrão, o modelo de aplicativo Web ASP.NET no Visual Studio 2013 inclui o Bootstrap como um pacote do NuGet.
 > 
-> **Pacotes NuGet**
+> **Pacotes do NuGet**
 > 
 > O modelo de aplicativo do ASP.NET Web Forms inclui um conjunto de [NuGet](http://www.nuget.org/) pacotes. Esses pacotes fornecem funcionalidade dividida em componentes na forma de ferramentas e bibliotecas de software livre. Há uma grande variedade de pacotes para ajudá-lo a criar e testar seus aplicativos. Visual Studio torna fácil adicionar, remover e atualizar pacotes do NuGet. Os desenvolvedores podem criar e adicionar pacotes ao NuGet também.
 > 
@@ -190,7 +190,7 @@ Neste tutorial você criou, revisadas e executar o aplicativo de formulários da
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-[Escolher do modelo de programação correto](../../../videos/how-do-i/choosing-the-right-programming-model.md)   
+[Escolhendo o modelo de programação correto](../../../videos/how-do-i/choosing-the-right-programming-model.md)   
 [Projetos de aplicativos Web versus projetos de Site](https://msdn.microsoft.com/library/dd547590.aspx)   
 [Visão geral de páginas de formulários da Web ASP.NET](https://msdn.microsoft.com/library/428509ah.aspx)
 

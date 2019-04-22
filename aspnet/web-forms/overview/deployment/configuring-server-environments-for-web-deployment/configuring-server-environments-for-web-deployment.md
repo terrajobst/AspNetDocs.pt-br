@@ -12,7 +12,7 @@ ms.openlocfilehash: 86ea4a2e17ec44a3716e1570e51a224144f1369c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386964"
 ---
 # <a name="configuring-server-environments-for-web-deployment"></a>Configuração de ambientes de servidor para a Implantação da Web
@@ -31,9 +31,9 @@ by [Jason Lee](https://github.com/jrjlee)
 Este tutorial inclui os seguintes tópicos:
 
 - [Escolha da abordagem correta para a Implantação da Web](choosing-the-right-approach-to-web-deployment.md)
-- [Cenário: Configuração de ambientes de teste para a Implantação da Web](scenario-configuring-a-test-environment-for-web-deployment.md)
-- [Cenário: Configuração de ambientes de preparo para a Implantação da Web](scenario-configuring-a-staging-environment-for-web-deployment.md)
-- [Cenário: Configuração de um ambiente de produção para a Implantação da Web](scenario-configuring-a-production-environment-for-web-deployment.md)
+- [Cenário: Configurando um ambiente de teste para implantação da Web](scenario-configuring-a-test-environment-for-web-deployment.md)
+- [Cenário: Configurando um ambiente de preparo para a implantação da Web](scenario-configuring-a-staging-environment-for-web-deployment.md)
+- [Cenário: Configurando um ambiente de produção para implantação da Web](scenario-configuring-a-production-environment-for-web-deployment.md)
 - [Configuração de um servidor Web para publicação de Implantação da Web (agente remoto)](configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
 - [Configuração de um servidor Web para publicação de Implantação da Web (manipulador de Implantação da Web)](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
 - [Configuração de um servidor Web para publicação de Implantação da Web (implantação offline)](configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)

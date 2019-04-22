@@ -12,7 +12,7 @@ ms.openlocfilehash: 51ce42b2335dc3bd1ee4928b94efed77498fdfe1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388602"
 ---
 # <a name="core"></a>Núcleo
@@ -20,7 +20,7 @@ ms.locfileid: "59388602"
 > Esta série de vídeos explora as principais melhorias no ASP.NET 4 como a codificação HTML, arquivos de configuração limpa e início automático.
 
 
-- [Inicialização automática](aspnet-4-quick-hit-auto-start.md)
+- [Inicialização Automática](aspnet-4-quick-hit-auto-start.md)
 - [Limpar arquivos Web.config](aspnet-4-quick-hit-clean-webconfig-files.md)
 - [IDs de cliente previsíveis](aspnet-4-quick-hit-predictable-client-ids.md)
 - [Método de utilitário HtmlEncoder](aspnet-4-quick-hit-the-htmlencoder-utility-method.md)

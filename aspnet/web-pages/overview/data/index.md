@@ -12,7 +12,7 @@ ms.openlocfilehash: a78f0cbc9d361d42d54cd73f952a37caae91b9f4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388173"
 ---
 # <a name="working-with-data"></a>Trabalhando com dados
@@ -20,6 +20,6 @@ ms.locfileid: "59388173"
 > Como trabalhar com bancos de dados e arquivos em páginas da Web e como exibir e atualizar dados.
 
 
-- [Trabalhando com dados](5-working-with-data.md)
-- [Exibir dados em um gráfico](7-displaying-data-in-a-chart.md)
+- [Trabalhando com os Dados](5-working-with-data.md)
+- [Exibindo dados em um gráfico](7-displaying-data-in-a-chart.md)
 - [Trabalhando com arquivos](working-with-files.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387445"
 ---
 # <a name="whats-new-in-the-entity-framework-40"></a>Novidades no Entity Framework 4.0
@@ -197,7 +197,7 @@ Para obter mais informações sobre como usar a abordagem primeiramente de códi
 - [Desenvolvimento com o Entity Framework 4 Code-First](https://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx). Isso é uma postagem de blog de Introdução ao desenvolvimento de código primeiro Scott Guthrie.
 - [Postagens de blog da equipe de desenvolvimento do Framework entidade - CodeOnly marcado](https://blogs.msdn.com/b/efdesign/archive/tags/codeonly/)
 - [Blog da equipe de desenvolvimento do Framework entidade - postagens marcadas Code First](https://blogs.msdn.com/b/efdesign/archive/tags/code+first/)
-- [Tutorial de Store de música do MVC – parte 4: Modelos e Acesso a Dados](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
+- [Tutorial de Store de música do MVC – parte 4: Acesso a dados e modelos](../../../../mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4.md)
 - [Introdução ao MVC 3 – parte 4: Desenvolvimento do Entity Framework Code First](../../../../mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-model.md)
 
 Além disso, um novo tutorial MVC Code-First que cria um aplicativo semelhante ao aplicativo Contoso University está previsto para ser publicado no primeiro semestre de 2011 às [https://asp.net/entity-framework/tutorials](../../../../entity-framework.md)
@@ -210,4 +210,4 @@ Isso conclui a visão geral para o que há de novo no Entity Framework e esse co
 - [Anunciando o lançamento do Entity Framework 4](https://blogs.msdn.com/b/efdesign/archive/2010/04/12/announcing-the-release-of-entity-framework-4.aspx) postagem do blog da equipe de desenvolvimento do Entity Framework sobre os novos recursos na versão 4.
 
 > [!div class="step-by-step"]
-> [Voltar](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
+> [Anterior](maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)

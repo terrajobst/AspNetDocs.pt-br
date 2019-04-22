@@ -13,7 +13,7 @@ ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381894"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Recursos recomendados da Identidade do ASP.NET
@@ -59,7 +59,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 ## <a name="intermediate-aspnet-identity"></a>O ASP.NET Identity intermediário
 
 - [Confirmação de conta e recuperação de senha com o ASP.NET Identity](../features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
-- [Autenticação de dois fatores usando SMS e email com o ASP.NET Identity](../features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
+- [Autenticação de dois fatores usando SMS e email com a Identidade do ASP.NET](../features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 - [Migração de um site existente da Associação do SQL para a Identidade do ASP.NET](../migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md)
 - [Adição de Identidade do ASP.NET a um projeto vazio ou existente do Web Forms](adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
 - MSDN Magazine [autenticação externa com o ASP.NET Identity](https://msdn.microsoft.com/magazine/dn745860.aspx) por Dino Esposito

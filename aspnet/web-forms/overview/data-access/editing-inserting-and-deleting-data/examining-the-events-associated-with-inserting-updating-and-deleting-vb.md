@@ -12,7 +12,7 @@ ms.openlocfilehash: f38f217b0a7c7e656cf46d442c98949be5d43b62
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385553"
 ---
 # <a name="examining-the-events-associated-with-inserting-updating-and-deleting-vb"></a>Examinar os eventos associados à inserção, atualização e exclusão (VB)
@@ -37,7 +37,7 @@ Durante esta sequência de etapas, um número de eventos acionados, possibilitan
 Figura 1 ilustra essa série de etapas e eventos ao atualizar um GridView. O padrão de evento na Figura 1 não é exclusivo para a atualização com um GridView. Inserindo, atualizando ou excluindo dados de GridView, DetailsView ou FormView precipitates a mesma sequência de eventos de pré e pós-níveis para o controle de Web de dados e o ObjectDataSource.
 
 
-[![A Série de pré e acionar pós-eventos ao atualizar dados em um GridView](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image2.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image1.png)
+[![Uma série de pré e acionar pós-eventos ao atualizar dados em um GridView](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image2.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image1.png)
 
 **Figura 1**: Uma série de pré e pós-eventos incêndio quando atualizando dados em um GridView ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image3.png))
 
@@ -60,7 +60,7 @@ Como o original `UpdateProduct` essa sobrecarga de método, começa verificando 
 Com esse acréscimo à nossa `ProductsBLL` classe, estamos prontos para criar a interface simplificada do GridView. Abra o `DataModificationEvents.aspx` no `EditInsertDelete` pasta e adicione um controle GridView à página. Criar um novo ObjectDataSource e configurá-lo para usar o `ProductsBLL` classe com seus `Select()` mapear de método para `GetProducts` e sua `Update()` mapear de método para o `UpdateProduct` sobrecarga que recebe apenas a `productName`, `unitPrice`, e `productID` parâmetros de entrada. A Figura 2 mostra o assistente Criar fonte de dados ao mapear o ObjectDataSource `Update()` método para o `ProductsBLL` da nova classe `UpdateProduct` sobrecarga de método.
 
 
-[![MSobrecarga de método de Update () do ObjectDataSource para a nova UpdateProduct AP](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image5.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image4.png)
+[![Mapear o método de Update () do ObjectDataSource para a nova sobrecarga UpdateProduct](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image5.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image4.png)
 
 **Figura 2**: Mapear o ObjectDataSource `Update()` método para o novo `UpdateProduct` sobrecarregar ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image6.png))
 
@@ -68,7 +68,7 @@ Com esse acréscimo à nossa `ProductsBLL` classe, estamos prontos para criar a 
 Uma vez que o nosso exemplo inicialmente apenas precisará da capacidade para editar dados, mas não para inserir ou excluir registros, dedique uns momentos para indicar explicitamente que o ObjectDataSource `Insert()` e `Delete()` métodos não devem ser mapeados para qualquer um do `ProductsBLL` métodos da classe indo para as guias INSERT e DELETE e escolhendo (nenhum) na lista suspensa.
 
 
-[![Cescolher o modo (nenhum) da lista suspensa para a inserção e excluir guias](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image8.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image7.png)
+[![Escolha (nenhum) na lista suspensa para as guias DELETE e INSERT](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image8.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image7.png)
 
 **Figura 3**: Escolha (nenhum) da lista suspensa para a inserção e excluir guias ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image9.png))
 
@@ -91,7 +91,7 @@ Observe que o ObjectDataSource `OldValuesParameterFormatString` estiver definida
 Enquanto o ObjectDataSource tem apenas `UpdateParameters` para nome, preço e ID do produto, Visual Studio adicionou um BoundField ou CheckBoxField no GridView para cada um dos campos do produto.
 
 
-[![Tele GridView contém um BoundField ou CheckBoxField para cada um dos campos do produto](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image11.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image10.png)
+[![GridView contém um BoundField ou CheckBoxField para cada um dos campos do produto](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image11.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image10.png)
 
 **Figura 4**: GridView contém um BoundField ou CheckBoxField para cada um dos campos do produto ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image12.png))
 
@@ -99,7 +99,7 @@ Enquanto o ObjectDataSource tem apenas `UpdateParameters` para nome, preço e ID
 Quando o usuário final edita um produto e clica no botão de atualização, o GridView enumera os campos que não eram somente leitura. Ele define o valor do parâmetro correspondente no ObjectDataSource `UpdateParameters` coleção para o valor inserido pelo usuário. Se não houver um parâmetro correspondente, o GridView adiciona um à coleção. Portanto, se nosso GridView contiver BoundFields e CheckBoxFields para todos os campos do produto, o ObjectDataSource termina invocando o `UpdateProduct` sobrecarga que utiliza em todos esses parâmetros, apesar do fato de que o ObjectDataSource marcação declarativa especifica apenas três parâmetros de entrada (consulte a Figura 5). Da mesma forma, se houver alguma combinação de não-somente leitura produto campos no GridView que não corresponde aos parâmetros de entrada para um `UpdateProduct` de sobrecarga, uma exceção será gerada ao tentar atualizar.
 
 
-[![Tele GridView adicionará parâmetros do ObjectDataSource UpdateParameters coleção](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image14.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image13.png)
+[![O GridView será adicionar parâmetros a coleção de UpdateParameters do ObjectDataSource](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image14.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image13.png)
 
 **Figura 5**: O GridView será adicionar parâmetros a ObjectDataSource `UpdateParameters` coleção ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image15.png))
 
@@ -114,7 +114,7 @@ Embora o `UpdateProduct` sobrecarga espera três parâmetros de entrada, temos a
 Nosso GridView, juntamente com o `UpdateProduct` sobrecarregar, permite que o usuário edite apenas o nome e o preço de um produto sem perder qualquer um dos campos do produto.
 
 
-[![The Interface permite editar apenas nome e o preço do produto](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image17.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image16.png)
+[![A Interface permite que apenas o produto nome e preço de edição](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image17.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image16.png)
 
 **Figura 6**: O permite que a Interface apenas o produto nome e preço de edição ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image18.png))
 
@@ -128,7 +128,7 @@ Nosso GridView, juntamente com o `UpdateProduct` sobrecarregar, permite que o us
 Embora o exemplo de GridView, mostrado na Figura 6 funciona, o `UnitPrice` campo não está formatado, resultando em uma exibição de preço que não tem qualquer moeda símbolos e tem quatro casas decimais. Para aplicar uma formatação para as linhas não editável de moedas, basta definir a `UnitPrice` do BoundField `DataFormatString` propriedade a ser `{0:c}` e sua `HtmlEncode` propriedade `False`.
 
 
-[![SET DataFormatString o UnitPrice e as propriedades de HtmlEncode adequadamente](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image20.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image19.png)
+[![Definir o UnitPrice DataFormatString e propriedades HtmlEncode adequadamente](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image20.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image19.png)
 
 **Figura 7**: Defina as `UnitPrice`do `DataFormatString` e `HtmlEncode` propriedades adequadamente ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image21.png))
 
@@ -136,7 +136,7 @@ Embora o exemplo de GridView, mostrado na Figura 6 funciona, o `UnitPrice` campo
 Com essa alteração, as linhas não editável formatar o preço como uma moeda; No entanto, a linha editada, ainda exibe o valor sem o símbolo de moeda e com quatro casas decimais.
 
 
-[![Tele não editável linhas estão agora formatados como valores de moeda](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image23.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image22.png)
+[![As linhas não editável são agora formatados como valores de moeda](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image23.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image22.png)
 
 **Figura 8**: As linhas não editável são agora são formatados como valores de moeda ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image24.png))
 
@@ -144,7 +144,7 @@ Com essa alteração, as linhas não editável formatar o preço como uma moeda;
 As instruções de formatação especificadas na `DataFormatString` propriedade pode ser aplicada à interface de edição, definindo o BoundField `ApplyFormatInEditMode` propriedade `True` (o padrão é `False`). Reserve um tempo para definir essa propriedade como `True`.
 
 
-[![SET o UnitPrice BoundField ApplyFormatInEditMode propriedade como True](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image26.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image25.png)
+[![Definir propriedade de ApplyFormatInEditMode de UnitPrice BoundField como True](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image26.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image25.png)
 
 **Figura 9**: Defina a `UnitPrice` do BoundField `ApplyFormatInEditMode` propriedade `True` ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image27.png))
 
@@ -152,7 +152,7 @@ As instruções de formatação especificadas na `DataFormatString` propriedade 
 Com essa alteração, o valor da `UnitPrice` exibido no editado linha também é formatada como uma moeda.
 
 
-[![TValor de UnitPrice he editado uma linha é formatado agora como uma moeda](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image29.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image28.png)
+[![Valor de UnitPrice da linha editada é agora formatado como uma moeda](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image29.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image28.png)
 
 **Figura 10**: Da linha editada `UnitPrice` valor é agora são formatadas como uma moeda ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image30.png))
 
@@ -169,7 +169,7 @@ Se o usuário tiver fornecido um `UnitPrice` valor (por exemplo, "$19.00"), esse
 A Figura 11 mostra o problema causado por símbolos de moeda em que o usuário forneceu `UnitPrice`, juntamente com como o GridView `RowUpdating` manipulador de eventos pode ser utilizado para analisar corretamente essa entrada.
 
 
-[![TValor de UnitPrice he editado uma linha é formatado agora como uma moeda](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image32.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image31.png)
+[![Valor de UnitPrice da linha editada é agora formatado como uma moeda](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image32.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image31.png)
 
 **Figura 11**: Da linha editada `UnitPrice` valor é agora são formatadas como uma moeda ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image33.png))
 
@@ -188,7 +188,7 @@ Comece adicionando um controle da Web do rótulo para a página chamada `MustPro
 Por fim, defina o rótulo `CssClass` propriedade para `Warning`. Neste ponto o Designer deve mostrar a mensagem de aviso em um vermelho, negrito, itálico, tamanho da fonte extra grande acima GridView, conforme mostrado na Figura 12.
 
 
-[![A Rótulo foi adicionado acima GridView](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image35.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image34.png)
+[![Foi adicionado um rótulo acima GridView](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image35.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image34.png)
 
 **Figura 12**: Um rótulo tem sido adicionados acima. o controle GridView ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image36.png))
 
@@ -206,7 +206,7 @@ Se o usuário tenta atualizar um produto sem especificar o `UnitPrice`, queremos
 Se um usuário tenta salvar um produto sem especificar um preço, a atualização será cancelada e será exibida uma mensagem útil. Enquanto o banco de dados (e a lógica de negócios) permite `NULL` `UnitPrice` s, essa página ASP.NET em particular não faz isso.
 
 
-[![A O usuário não é possível deixar em branco de UnitPrice](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image38.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image37.png)
+[![Um usuário não é possível deixar em branco de UnitPrice](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image38.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image37.png)
 
 **Figura 13**: Um usuário não pode deixar `UnitPrice` em branco ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image39.png))
 
@@ -229,12 +229,12 @@ Para configurar o ObjectDataSource, selecione o link configurar fonte de dados n
 Deixe o `Insert()` método apontando para o `AddProduct` método, mas definir novamente a lista de suspensa da guia exclusão como (nenhum).
 
 
-[![SET suspensa da guia Inserir lista para o método AddProduct](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image41.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image40.png)
+[![Defina o na lista suspensa da guia Inserir para o método AddProduct](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image41.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image40.png)
 
 **Figura 14**: Definir a lista de suspensa da guia Inserir o `AddProduct` método ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image42.png))
 
 
-[![SET suspensa da guia exclusão lista como (nenhum)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image44.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image43.png)
+[![Defina a lista suspensa de exclusão da guia como (nenhum)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image44.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image43.png)
 
 **Figura 15**: Defina a lista de suspensa da guia excluir como (nenhum) ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image45.png))
 
@@ -254,7 +254,7 @@ Com o ObjectDataSource fornecendo recursos de inserção, marca inteligente de D
 Figura 16 mostra essa página quando exibido no momento por meio de um navegador. Como você pode ver, DetailsView lista o nome e o preço do produto primeiro (Chai). No entanto, o que queremos, é uma interface de inserção que fornece um meio para que o usuário adicionar rapidamente um novo produto no banco de dados.
 
 
-[![Tele DetailsView é renderizado no momento no modo somente leitura](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image47.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image46.png)
+[![DetailsView é renderizado no momento no modo somente leitura](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image47.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image46.png)
 
 **Figura 16**: DetailsView é renderizado no momento no modo somente leitura ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image48.png))
 
@@ -262,7 +262,7 @@ Figura 16 mostra essa página quando exibido no momento por meio de um navegador
 Para mostrar o DetailsView no modo de inserção, precisamos definir a `DefaultMode` propriedade para `Inserting`. Isso renderiza DetailsView no modo de inserção quando visitado pela primeira vez e os mantém lá após a inserção de um novo registro. Como mostra a Figura 17, tal um DetailsView fornece uma interface rápida para adicionar um novo registro.
 
 
-[![Tele DetailsView fornece uma Interface para adicionar rapidamente um novo produto](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image50.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image49.png)
+[![DetailsView fornece uma Interface para adicionar rapidamente um novo produto](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image50.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image49.png)
 
 **Figura 17**: DetailsView fornece uma Interface para adicionar rapidamente um novo produto ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image51.png))
 
@@ -285,7 +285,7 @@ Embora GridView na Figura 18 não mostre, os campos de produto na falta da inter
 Isso listará todos os registros no `Products` tabela. Como a Figura 19 mostra, todas as colunas do nosso novo produto diferente de `ProductID`, `ProductName`, e `UnitPrice` ter `NULL` valores.
 
 
-[![Tele produto campos não fornecido em DetailsView são atribuídos valores nulos](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image54.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image53.png)
+[![O produto campos não fornecido em DetailsView são atribuídos valores nulos](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image54.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image53.png)
 
 **Figura 19**: O produto campos não fornecido em DetailsView recebem `NULL` valores ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image55.png))
 
@@ -313,7 +313,7 @@ Neste ponto, o `InputParameters` propriedade contém o ObjectDataSource `InsertP
 Esse tempo ao adicionar um novo produto (como Acme Soda), o `CategoryID` e `SupplierID` colunas do novo produto são definidas como 1 (veja a Figura 20).
 
 
-[![NProdutos de ova agora têm seus CategoryID e SupplierID valores definidos como 1](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image57.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image56.png)
+[![Novos produtos agora têm seus CategoryID e SupplierID valores definidos como 1](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image57.png)](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image56.png)
 
 **Figura 20**: Novos produtos agora têm seus `CategoryID` e `SupplierID` valores definidos como 1 ([clique para exibir a imagem em tamanho normal](examining-the-events-associated-with-inserting-updating-and-deleting-vb/_static/image58.png))
 

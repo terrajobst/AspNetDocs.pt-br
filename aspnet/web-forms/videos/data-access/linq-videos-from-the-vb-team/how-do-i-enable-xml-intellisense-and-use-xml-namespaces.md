@@ -12,7 +12,7 @@ ms.openlocfilehash: d58385ae1e88346fe6e408030eefcfb23cab7977
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390578"
 ---
 # <a name="how-do-i-enable-xml-intellisense-and-use-xml-namespaces"></a>[Como fazer:] Habilitar XML IntelliSense e usar Namespaces XML?

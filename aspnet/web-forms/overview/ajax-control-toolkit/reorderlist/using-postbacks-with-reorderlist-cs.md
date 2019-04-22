@@ -12,7 +12,7 @@ ms.openlocfilehash: 6f8f74b74080104980e1db866d695fe7c6d9d5fc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393347"
 ---
 # <a name="using-postbacks-with-reorderlist-c"></a>Uso de postbacks com ReorderList (C#)
@@ -62,7 +62,7 @@ Por fim, para ativar a funcionalidade do AJAX ASP.NET e o Kit de ferramentas de 
 [!code-aspx[Main](using-postbacks-with-reorderlist-cs/samples/sample6.aspx)]
 
 
-[![Ereordenação de ACH dispara um postback](using-postbacks-with-reorderlist-cs/_static/image2.png)](using-postbacks-with-reorderlist-cs/_static/image1.png)
+[![Cada reordenação dispara um postback](using-postbacks-with-reorderlist-cs/_static/image2.png)](using-postbacks-with-reorderlist-cs/_static/image1.png)
 
 Cada reordenação dispara um postback ([clique para exibir a imagem em tamanho normal](using-postbacks-with-reorderlist-cs/_static/image3.png))
 

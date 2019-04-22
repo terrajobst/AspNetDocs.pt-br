@@ -12,7 +12,7 @@ ms.openlocfilehash: 0fd943eba4c6d80bba5ca6c4d69cbd3a8927513d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391501"
 ---
 # <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-8"></a>Introdução ao banco de dados do Entity Framework 4.0 First e 4 do Web Forms do ASP.NET – parte 8
@@ -120,7 +120,7 @@ Agora que você configurar essas regras de formatação e validação nos metada
 
 Isso conclui esta série de tutoriais sobre como começar com o Entity Framework. Para obter mais recursos para ajudá-lo a aprender a usar o Entity Framework, continue com [o primeiro tutorial na série de tutoriais do Entity Framework próximo](../continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md) ou visite os seguintes sites:
 
-- [Perguntas frequentes do Entity Framework](http://www.ef-faq.org/introduction.html)
+- [Perguntas Frequentes do Entity Framework](http://www.ef-faq.org/introduction.html)
 - [Blog da equipe do Entity Framework](https://blogs.msdn.com/b/adonet/)
 - [Entity Framework na biblioteca MSDN](https://msdn.microsoft.com/library/bb399572.aspx)
 - [Entity Framework no MSDN Data Developer Center](https://msdn.microsoft.com/data/ef.aspx)
@@ -130,4 +130,4 @@ Isso conclui esta série de tutoriais sobre como começar com o Entity Framework
 - [Blog de Julie](http://thedatafarm.com/blog/)
 
 > [!div class="step-by-step"]
-> [Voltar](the-entity-framework-and-aspnet-getting-started-part-7.md)
+> [Anterior](the-entity-framework-and-aspnet-getting-started-part-7.md)

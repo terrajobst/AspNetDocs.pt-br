@@ -12,7 +12,7 @@ ms.openlocfilehash: 0ca34f670202a35c627a514d3394fa430f5d8f26
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59396337"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Uso do ASP.NET MVC com diferentes versões de IIS (C#)
@@ -53,7 +53,7 @@ O modo de processamento de solicitação é determinado pelo pool de aplicativos
 
 Por padrão, o IIS é configurado para dar suporte a dois pools de aplicativos: **DefaultAppPool** e **.NET AppPool clássico**. Se DefaultAppPool for selecionada, seu aplicativo está em execução no modo de processamento de solicitação integrado. Se o .NET AppPool clássico está selecionada, seu aplicativo está em execução no modo de processamento de solicitação clássica.
 
-[![Tcaixa de diálogo Novo projeto he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
+[![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image1.png)
 
 **Figura 1**: Detectando o modo de processamento de solicitação ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.png))
 
@@ -92,7 +92,7 @@ Produto/3/detalhes
 
 Infelizmente, as versões mais antigas do IIS não passam essas solicitações para a estrutura do ASP.NET. Portanto, essas solicitações não serão roteadas para um controlador. Por exemplo, se você fizer uma solicitação do navegador para o URL /Home/índice, em seguida, você obterá a página de erro na Figura 2.
 
-[![Tcaixa de diálogo Novo projeto he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
+[![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.png)
 
 **Figura 2**: Recebendo um erro 404 não encontrado ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.png))
 
@@ -162,7 +162,7 @@ Aqui está como habilitar um mapa de script curinga para o IIS 7.0:
 6. Insira o nome do MVC
 7. Clique o **Okey** botão
 
-[![Tcaixa de diálogo Novo projeto he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
+[![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.png)
 
 **Figura 3**: Criar um mapa de script curinga com o IIS 7.0 ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image6.png))
 
@@ -177,13 +177,13 @@ Siga estas etapas para criar um mapa de script curinga com o IIS 6.0:
 7. Desmarque a caixa de seleção **Verifique se o arquivo já existe**
 8. Clique o **Okey** botão
 
-[![Tcaixa de diálogo Novo projeto he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
+[![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image7.png)
 
 **Figura 4**: Criar um mapa de script curinga com o IIS 6.0 ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image8.png))
 
 Depois de habilitar os mapas de script curinga, você precisará modificar a tabela de rotas no arquivo global. asax para que ele inclua uma rota de raiz. Caso contrário, você obterá a página de erro na Figura 5 quando você faz uma solicitação para a página de raiz do seu aplicativo. Você pode usar o arquivo global. asax modificado na listagem 4.
 
-[![Tcaixa de diálogo Novo projeto he](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
+[![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image9.png)
 
 **Figura 5**: Erro de rota de raiz ausente ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-cs/_static/image10.png))
 

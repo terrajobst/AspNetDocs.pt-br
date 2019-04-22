@@ -12,7 +12,7 @@ ms.openlocfilehash: 644996c713f589c09b991589cf940f73c798809f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388563"
 ---
 # <a name="intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire"></a>Introdução ao ASP.NET para desenvolvedores do ColdFusion: Acrescentar o ASP.NET ao seu repertório

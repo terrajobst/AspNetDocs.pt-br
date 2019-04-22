@@ -12,7 +12,7 @@ ms.openlocfilehash: 2d954cbc001a62f021f942f1ff44522a2769f516
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389566"
 ---
 # <a name="preventing-javascript-injection-attacks-c"></a>Impedir ataques de injeção de JavaScript (C#)
@@ -33,7 +33,7 @@ Sempre que você aceita a entrada do usuário e exibir novamente a entrada do us
 Imagine que você tenha criado um site de comentários do cliente (veja a Figura 1). Os clientes podem visitar o site e inserir comentários em sua experiência usando seus produtos. Quando um cliente envia seus comentários, comentários é exibida novamente na página de comentários.
 
 
-[![CSite de comentários do ustomer](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
+[![Site de comentários do cliente](preventing-javascript-injection-attacks-cs/_static/image2.png)](preventing-javascript-injection-attacks-cs/_static/image1.png)
 
 **Figura 01**: Site de comentários do cliente ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-cs/_static/image3.png))
 
@@ -65,7 +65,7 @@ Imagine que você insira o texto a seguir no formulário de comentários do clie
 Esse texto representa um script JavaScript que exibe uma caixa de mensagem de alerta. Depois que alguém envia esse script em comentários de formulário, a mensagem <em>Boo!</em> será exibida sempre que qualquer pessoa que visita o site de comentários do cliente no futuro (veja a Figura 2).
 
 
-[![JavaScript injeção](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
+[![Injeção de JavaScript](preventing-javascript-injection-attacks-cs/_static/image5.png)](preventing-javascript-injection-attacks-cs/_static/image4.png)
 
 **Figura 02**: Injeção de JavaScript ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-cs/_static/image6.png))
 
@@ -93,7 +93,7 @@ Observe que o valor de `feedback.Message` é codificado em HTML antes que o valo
 O que significa para o HTML codificar uma cadeia de caracteres? Quando o HTML codificar uma cadeia de caracteres, perigoso caracteres, como `<` e `>` são substituídos por referências a entidades, como HTML `&lt;` e `&gt;`. Portanto, quando a cadeia de caracteres `<script>alert("Boo!")</script>` é o HTML codificado, eles serão convertidos em `&lt;script&gt;alert(&quot;Boo!&quot;)&lt;/script&gt;`. A cadeia de caracteres codificada não executa como um script JavaScript quando interpretada por um navegador. Em vez disso, você obtém a página inofensiva na Figura 3.
 
 
-[![Defeated ataque JavaScript](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
+[![Ataque de JavaScript derrotada](preventing-javascript-injection-attacks-cs/_static/image8.png)](preventing-javascript-injection-attacks-cs/_static/image7.png)
 
 **Figura 03**: Anulou o ataque de JavaScript ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-cs/_static/image9.png))
 

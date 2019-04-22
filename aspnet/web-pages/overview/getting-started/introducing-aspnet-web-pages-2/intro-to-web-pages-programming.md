@@ -12,7 +12,7 @@ ms.openlocfilehash: 81c2c6f0070a409c289128ccf5d39f9fff788b48
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387341"
 ---
 # <a name="introducing-aspnet-web-pages---programming-basics"></a>Introdução ao ASP.NET Web Pages - Noções básicas de programação
@@ -354,7 +354,7 @@ O próximo tutorial apresenta a você a trabalhar com um banco de dados. Neste t
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução a O ASP.NET que programa usando a sintaxe razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Auxiliar do Twitter](../../ui-layouts-and-themes/twitter-helper.md)
 
 > [!div class="step-by-step"]

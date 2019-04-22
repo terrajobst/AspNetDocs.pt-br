@@ -12,7 +12,7 @@ ms.openlocfilehash: c9b0946568063b9e5cf1454bd7a57c43304c3543
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59390305"
 ---
 # <a name="manipulating-dropshadow-properties-from-client-code-vb"></a>Manipular propriedades de DropShadow através de código de cliente (VB)
@@ -55,9 +55,9 @@ A função JavaScript `changeOpacity()` , em seguida, deve primeiro localizar o 
 [!code-html[Main](manipulating-dropshadow-properties-from-client-code-vb/samples/sample6.html)]
 
 
-[![Topacidade he é alterada no lado do cliente](manipulating-dropshadow-properties-from-client-code-vb/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-vb/_static/image1.png)
+[![A opacidade é alterada no lado do cliente](manipulating-dropshadow-properties-from-client-code-vb/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-vb/_static/image1.png)
 
 A opacidade é alterada no lado do cliente ([clique para exibir a imagem em tamanho normal](manipulating-dropshadow-properties-from-client-code-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](adjusting-the-z-index-of-a-dropshadow-vb.md)
+> [Anterior](adjusting-the-z-index-of-a-dropshadow-vb.md)

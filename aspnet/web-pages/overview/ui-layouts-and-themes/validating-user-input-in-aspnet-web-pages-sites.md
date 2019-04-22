@@ -12,7 +12,7 @@ ms.openlocfilehash: fd3ba36891aa66f78c28c538a4d3ba0da6736765
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59392983"
 ---
 # <a name="validating-user-input-in-aspnet-web-pages-razor-sites"></a>Validando a entrada do usuário em Sites do ASP.NET Web Pages (Razor)

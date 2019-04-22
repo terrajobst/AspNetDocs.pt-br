@@ -12,7 +12,7 @@ ms.openlocfilehash: 36d1166e1bd2b4c97b3cf3dd0bc3a7e8010a9443
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393685"
 ---
 # <a name="animating-an-updatepanel-control-c"></a>Animar um controle UpdatePanel (C#)
@@ -50,7 +50,7 @@ Nesse cenário, o novo conteúdo do `UpdatePanel` (após o postback) deverá apl
 Agora, sempre que um postback ocorre dentro do UpdatePanel, o novo conteúdo do painel aplicar fade-in sem problemas.
 
 
-[![Tpróxima etapa do assistente he está desaparecendo](animating-an-updatepanel-control-cs/_static/image2.png)](animating-an-updatepanel-control-cs/_static/image1.png)
+[![A próxima etapa do assistente está desaparecendo](animating-an-updatepanel-control-cs/_static/image2.png)](animating-an-updatepanel-control-cs/_static/image1.png)
 
 A próxima etapa do assistente está desaparecendo ([clique para exibir a imagem em tamanho normal](animating-an-updatepanel-control-cs/_static/image3.png))
 

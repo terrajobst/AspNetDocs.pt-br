@@ -12,7 +12,7 @@ ms.openlocfilehash: 590b5c23a7a8a4b2ac20976743fd19d0ab70a070
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393373"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
@@ -20,5 +20,5 @@ ms.locfileid: "59393373"
 > Acertos rápido do ASP.NET MVC 3
 
 
-- [MVC 3 – Mecanismo de exibição do Razor](mvc-3-razor-view-engine.md)
-- [MVC 3 – Auxiliares do Razor](mvc-3-razor-helpers.md)
+- [MVC 3 – mecanismo de exibição do Razor](mvc-3-razor-view-engine.md)
+- [MVC 3 – auxiliares do Razor](mvc-3-razor-helpers.md)

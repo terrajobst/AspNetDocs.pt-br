@@ -12,7 +12,7 @@ ms.openlocfilehash: 9b4266b0909e95424b28415442f1e2ef5ceae382
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395674"
 ---
 # <a name="how-do-i-use-a-visual-studio-2008-web-deployment-project"></a>[Como fazer:] Usar um projeto de implantação de Web do Visual Studio 2008

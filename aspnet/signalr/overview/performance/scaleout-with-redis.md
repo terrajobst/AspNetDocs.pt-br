@@ -12,7 +12,7 @@ ms.openlocfilehash: 78efe409ab59df17ae71c26d4e280cc9971a64d2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393243"
 ---
 # <a name="signalr-scaleout-with-redis"></a>Expansão do SignalR com Redis

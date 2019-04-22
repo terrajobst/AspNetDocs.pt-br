@@ -12,7 +12,7 @@ ms.openlocfilehash: 45ea3c3dbcf7816f67081a61230c4b055a90fcf5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59393620"
 ---
 # <a name="creating-mutually-exclusive-checkboxes-vb"></a>Criação de caixas de seleção mutuamente exclusivas (VB)
@@ -47,9 +47,9 @@ Finalmente, inclua o AJAX ASP.NET `ScriptManager` que é necessária para todos 
 Salve e execute a página: Você pode verificar e desmarque as duas caixas de seleção, no entanto em nenhum momento pode ambas as caixas de seleção estar marcadas.
 
 
-[![Osomente uma caixa de seleção pode ser verificada por vez](creating-mutually-exclusive-checkboxes-vb/_static/image2.png)](creating-mutually-exclusive-checkboxes-vb/_static/image1.png)
+[![Apenas uma caixa de seleção pode ser verificada por vez](creating-mutually-exclusive-checkboxes-vb/_static/image2.png)](creating-mutually-exclusive-checkboxes-vb/_static/image1.png)
 
 Apenas uma caixa de seleção pode ser verificada por vez ([clique para exibir a imagem em tamanho normal](creating-mutually-exclusive-checkboxes-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](creating-mutually-exclusive-checkboxes-cs.md)
+> [Anterior](creating-mutually-exclusive-checkboxes-cs.md)

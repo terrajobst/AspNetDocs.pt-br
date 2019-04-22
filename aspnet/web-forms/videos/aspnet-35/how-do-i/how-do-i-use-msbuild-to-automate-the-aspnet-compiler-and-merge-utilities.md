@@ -12,7 +12,7 @@ ms.openlocfilehash: 4d0ee2f8f1a7538dbfb488a0599fdc0cd3ec999e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388004"
 ---
 # <a name="how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities"></a>[Como fazer:] Usar o MSBuild para automatizar o compilador do ASP.NET e utilitários de mesclagem
@@ -24,4 +24,4 @@ Neste vídeo, Chris Pels mostra como criar um projeto do MSBuild que orquestra a
 [&#9654;Assista ao vídeo (31 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-msbuild-to-automate-the-aspnet-compiler-and-merge-utilities)
 
 > [!div class="step-by-step"]
-> [Voltar](how-do-i-serialize-a-graph-with-the-entity-framework.md)
+> [Anterior](how-do-i-serialize-a-graph-with-the-entity-framework.md)

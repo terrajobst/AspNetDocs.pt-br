@@ -12,7 +12,7 @@ ms.openlocfilehash: de0e9cc168b9f18fd2bd83329106df45d7551b1a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59386548"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenção de XSRF/CSRF no ASP.NET MVC e em páginas da Web
@@ -160,7 +160,7 @@ O *GetTokens* método utiliza como entrada um XSRF solicitação verificação s
 
 O desenvolvedor pode configurar o sistema de anti-XSRF do aplicativo\_iniciar. A configuração é através de programação. As propriedades de estática *AntiForgeryConfig* tipo são descritos abaixo. A maioria dos usuários usando declarações vai querer definir a propriedade UniqueClaimTypeIdentifier.
 
-| **Propriedade** | **Descrição** |
+| **Property** | **Descrição** |
 | --- | --- |
 | **AdditionalDataProvider** | Uma [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) que fornece dados adicionais durante a geração de tokens e consome dados adicionais durante a validação de token. O valor padrão é *nulo*. Para obter mais informações, consulte o [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) seção. |
 | **CookieName** | Uma cadeia de caracteres que fornece o nome do cookie HTTP que é usado para armazenar o token de sessão anti-XSRF. Se esse valor não for definido, um nome será automaticamente gerado com base no caminho de virtual implantada do aplicativo. O valor padrão é *nulo*. |

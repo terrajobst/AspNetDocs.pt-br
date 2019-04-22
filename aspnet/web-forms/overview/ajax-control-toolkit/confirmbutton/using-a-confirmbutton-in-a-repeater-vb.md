@@ -12,7 +12,7 @@ ms.openlocfilehash: 4850493e7a16aa9364396d1bbd3fe3e0db0f47db
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388095"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-vb"></a>Uso de um ConfirmButton em um repetidor (VB)
@@ -47,9 +47,9 @@ Esta fonte de dados, em seguida, pode ser usada em um repetidor. Como de costume
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-vb/samples/sample3.aspx)]
 
 
-[![Tele confirmar botão aparece ao lado de cada entrada da fonte de dados](using-a-confirmbutton-in-a-repeater-vb/_static/image2.png)](using-a-confirmbutton-in-a-repeater-vb/_static/image1.png)
+[![O botão Confirmar aparece ao lado de cada entrada da fonte de dados](using-a-confirmbutton-in-a-repeater-vb/_static/image2.png)](using-a-confirmbutton-in-a-repeater-vb/_static/image1.png)
 
 O botão Confirmar aparece ao lado de cada entrada da fonte de dados ([clique para exibir a imagem em tamanho normal](using-a-confirmbutton-in-a-repeater-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](using-a-confirmbutton-in-a-repeater-cs.md)
+> [Anterior](using-a-confirmbutton-in-a-repeater-cs.md)

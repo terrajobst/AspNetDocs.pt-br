@@ -12,7 +12,7 @@ ms.openlocfilehash: 7f846e807309f3123db52b3053b9aa8d6aca81e6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59394829"
 ---
 # <a name="whats-new-in-aspnet-mvc-2"></a>Novidades no ASP.NET MVC 2
@@ -39,7 +39,7 @@ ms.locfileid: "59394829"
 [Método auxiliar Html.ValidationSummary pode exibir erros de nível de modelo](#_TOC3_14)   
 [Modelos T4 no Visual Studio gerar código específico para a versão de destino do .NET Framework](#_TOC3_15)[melhorias na API](#_TOC4)  
 [Alterações significativas](#_TOC5)  
-[Aviso de isenção de responsabilidade](#_TOC6)  
+[Isenção de responsabilidade](#_TOC6)  
 
 ## <a id="_TOC1"></a>  Introdução
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 6283d5dfad46b8b2c8915d790d1e66e89ba3a5b8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391067"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-roundedcorners-extender"></a>[Como fazer:] Usar o extensor RoundedCorners do ASP.NET AJAX?

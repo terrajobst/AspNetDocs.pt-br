@@ -12,7 +12,7 @@ ms.openlocfilehash: 0442b5e22e44e0767825026b26ad3da55777b962
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384260"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-vb"></a>Criação um controle numérico para cima/para baixo com um back-end de serviço Web (VB)
@@ -54,9 +54,9 @@ Aqui está a marcação completa para a página:
 Se você executar a página, observe como o valor na caixa de texto dobra sempre quando você clica no botão superior e é reduzido à metade quando você clica no botão inferior.
 
 
-[![Onúmeros omente uma potência de 2 aparecerão](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image1.png)
+[![São exibidos apenas os números sejam uma potência de 2](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image1.png)
 
 São exibidos apenas os números sejam uma potência de 2 ([clique para exibir a imagem em tamanho normal](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](creating-a-numeric-up-down-control-with-a-web-service-backend-cs.md)
+> [Anterior](creating-a-numeric-up-down-control-with-a-web-service-backend-cs.md)

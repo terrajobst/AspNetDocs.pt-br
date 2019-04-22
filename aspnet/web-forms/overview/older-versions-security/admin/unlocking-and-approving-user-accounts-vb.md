@@ -12,7 +12,7 @@ ms.openlocfilehash: 1f6ade517bda60ac0f44811853ee9b9d06070091
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384169"
 ---
 # <a name="unlocking-and-approving-user-accounts-vb"></a>Desbloqueio e aprovação de contas de usuário (VB)
@@ -49,7 +49,7 @@ Abra o `ManageUsers.aspx` da página e adicionar um HyperLinkField para o `UserA
 Depois de adicionar o HyperLinkField a GridView, reserve um tempo para exibir o `ManageUsers.aspx` página por meio de um navegador. Como mostra a Figura 1, cada linha de GridView agora inclui um link "Gerenciar". O link "Gerenciar" para Bruce aponta para `UserInformation.aspx?user=Bruce`, enquanto que o link "Gerenciar" de Dave aponta para `UserInformation.aspx?user=Dave`.
 
 
-[![The HyperLinkField adiciona um](unlocking-and-approving-user-accounts-vb/_static/image2.png)](unlocking-and-approving-user-accounts-vb/_static/image1.png)
+[![Adiciona o HyperLinkField um](unlocking-and-approving-user-accounts-vb/_static/image2.png)](unlocking-and-approving-user-accounts-vb/_static/image1.png)
 
 **Figura 1**: O HyperLinkField adiciona um Link "Gerenciar" para cada conta de usuário ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-vb/_static/image3.png))
 
@@ -72,7 +72,7 @@ Agora estamos prontos para implementar a interface do usuário em `UserInformati
 Depois de adicionar esses controles, o modo de exibição de Design no Visual Studio deve ser semelhante para a tela na Figura 2.
 
 
-[![Ccriar a Interface do usuário para UserInformation.aspx](unlocking-and-approving-user-accounts-vb/_static/image5.png)](unlocking-and-approving-user-accounts-vb/_static/image4.png)
+[![Criar a Interface do usuário para UserInformation.aspx](unlocking-and-approving-user-accounts-vb/_static/image5.png)](unlocking-and-approving-user-accounts-vb/_static/image4.png)
 
 **Figura 2**: Criar a Interface do usuário para `UserInformation.aspx` ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-vb/_static/image6.png))
 
@@ -98,7 +98,7 @@ Retorne ao Visual Studio e criar manipuladores de eventos para o `IsApproved` da
 Com esses manipuladores de eventos em vigor, revisita a página aprovadas e um usuário. Como mostra a Figura 3, você deverá ver um resumo da mensagem na página indicando que o usuário `IsApproved` propriedade foi modificada com êxito.
 
 
-[![CHRIS foi reprovado](unlocking-and-approving-user-accounts-vb/_static/image8.png)](unlocking-and-approving-user-accounts-vb/_static/image7.png)
+[![Chris foi reprovado](unlocking-and-approving-user-accounts-vb/_static/image8.png)](unlocking-and-approving-user-accounts-vb/_static/image7.png)
 
 **Figura 3**: Chris foi reprovado ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-vb/_static/image9.png))
 
@@ -106,7 +106,7 @@ Com esses manipuladores de eventos em vigor, revisita a página aprovadas e um u
 Em seguida, logout e tente fazer logon como o usuário cuja conta foi apenas não aprovados. Porque o usuário não for aprovado, eles não podem fazer logon. Por padrão, o controle de logon exibe a mesma mensagem se o usuário não pode fazer logon, independentemente do motivo. Mas no <a id="Tutorial6"> </a> [ *Validar usuário as credenciais contra a associação de usuário Store* ](../membership/validating-user-credentials-against-the-membership-user-store-vb.md) tutorial vimos aprimorando o controle de logon para exibir uma mensagem mais apropriada. Como mostra a Figura 4, Chris é mostrado uma mensagem explicando o que ele não pode fazer logon porque sua conta ainda não foi aprovada.
 
 
-[![CHRIS não podem fazer logon porque sua conta é reprovado](unlocking-and-approving-user-accounts-vb/_static/image11.png)](unlocking-and-approving-user-accounts-vb/_static/image10.png)
+[![Chris não é possível porque o His conta de logon é reprovado](unlocking-and-approving-user-accounts-vb/_static/image11.png)](unlocking-and-approving-user-accounts-vb/_static/image10.png)
 
 **Figura 4**: Chris não é possível porque o His conta de logon é reprovado ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-vb/_static/image12.png))
 
@@ -116,7 +116,7 @@ Para testar a funcionalidade bloqueada, tente fazer logon como um usuário aprov
 Volte para o `ManageUsers.aspx` da página e clique no link Gerenciar para o usuário bloqueado. Como mostra a Figura 5, você deverá ver um valor no `LastLockedOutDateLabel` botão Desbloquear o usuário deve ser habilitado. Clique no botão Desbloquear usuário para desbloquear a conta de usuário. Depois que você conquistou o usuário, eles poderão fazer logon novamente.
 
 
-[![Dalvar foi bloqueada para o sistema](unlocking-and-approving-user-accounts-vb/_static/image14.png)](unlocking-and-approving-user-accounts-vb/_static/image13.png)
+[![Dave foi bloqueado para o sistema](unlocking-and-approving-user-accounts-vb/_static/image14.png)](unlocking-and-approving-user-accounts-vb/_static/image13.png)
 
 **Figura 5**: Dave tem foram bloqueados fora do sistema ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-vb/_static/image15.png))
 
@@ -166,7 +166,7 @@ O `SendingMail` evento é acionado depois que o `CreatedUser` evento, o que sign
 O efeito líquido é que novos usuários são não aprovados, o que significa que eles não podem fazer logon no site. Além disso, elas são enviadas automaticamente um email com um link para a URL de verificação (veja a Figura 6).
 
 
-[![TNovo usuário receberá um Email com um Link para a URL de verificação](unlocking-and-approving-user-accounts-vb/_static/image17.png)](unlocking-and-approving-user-accounts-vb/_static/image16.png)
+[![O novo usuário recebe um Email com um Link para a URL de verificação](unlocking-and-approving-user-accounts-vb/_static/image17.png)](unlocking-and-approving-user-accounts-vb/_static/image16.png)
 
 **Figura 6**: O novo usuário recebe um Email com um Link para a URL de verificação ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-vb/_static/image18.png))
 
@@ -188,7 +188,7 @@ A maior parte do código acima verifica se o UserId fornecido por meio de querys
 A Figura 7 mostra o `Verification.aspx` página quando acessadas por meio de um navegador.
 
 
-[![TConta de usuário nova he é agora aprovadas](unlocking-and-approving-user-accounts-vb/_static/image20.png)](unlocking-and-approving-user-accounts-vb/_static/image19.png)
+[![A nova conta de usuário é agora aprovadas](unlocking-and-approving-user-accounts-vb/_static/image20.png)](unlocking-and-approving-user-accounts-vb/_static/image19.png)
 
 **Figura 7**: A nova conta de usuário é agora aprovadas ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-vb/_static/image21.png))
 
@@ -212,4 +212,4 @@ Scott Mitchell, autor de vários livros sobre ASP/ASP.NET e fundador da 4GuysFro
 Esta série de tutoriais foi revisada por muitos revisores úteis. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, escreva-me em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Voltar](recovering-and-changing-passwords-vb.md)
+> [Anterior](recovering-and-changing-passwords-vb.md)

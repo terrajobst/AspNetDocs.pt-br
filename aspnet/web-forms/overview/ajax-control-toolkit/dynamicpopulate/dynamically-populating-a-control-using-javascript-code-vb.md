@@ -12,7 +12,7 @@ ms.openlocfilehash: 668815d58f2dc9a67cce441dfa267fa043a35091
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387191"
 ---
 # <a name="dynamically-populating-a-control-using-javascript-code-vb"></a>Preenchimento dinâmico de um controle com código de JavaScript (VB)
@@ -55,7 +55,7 @@ Para tornar o exemplo um pouco mais flexível, o usuário pode escolher entre v�
 Observe que dentro do contexto de um botão de opção, a expressão JavaScript `this.value` refere-se ao valor do botão atual, o que vem a ser exatamente as mesmas informações de `getDate()` método pode trabalhar com.
 
 
-[![A Clique no botão recupera a data do servidor, no formato especificado](dynamically-populating-a-control-using-javascript-code-vb/_static/image2.png)](dynamically-populating-a-control-using-javascript-code-vb/_static/image1.png)
+[![Um clique no botão recupera a data do servidor, no formato especificado](dynamically-populating-a-control-using-javascript-code-vb/_static/image2.png)](dynamically-populating-a-control-using-javascript-code-vb/_static/image1.png)
 
 Um clique no botão recupera a data do servidor, no formato especificado ([clique para exibir a imagem em tamanho normal](dynamically-populating-a-control-using-javascript-code-vb/_static/image3.png))
 

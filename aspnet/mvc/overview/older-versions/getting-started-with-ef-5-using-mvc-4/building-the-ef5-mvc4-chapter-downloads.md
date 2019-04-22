@@ -12,7 +12,7 @@ ms.openlocfilehash: e90eebaba3645802f318dbf449c3ec734265a092
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59381935"
 ---
 # <a name="building-the-chapter-downloads-for-the-ef-5-mvc-4-tutorials"></a>Criar o capítulo Downloads para o EF 5 MVC 4 tutoriais
@@ -55,4 +55,4 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
     ![](building-the-ef5-mvc4-chapter-downloads/_static/image5.png)
 
 > [!div class="step-by-step"]
-> [Voltar](advanced-entity-framework-scenarios-for-an-mvc-web-application.md)
+> [Anterior](advanced-entity-framework-scenarios-for-an-mvc-web-application.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 6b911b1f32dcfba810312a19e1764ec51c3c2255
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59389057"
 ---
 # <a name="security-authentication-and-authorization-in-aspnet-web-forms"></a>Segurança, autenticação e autorização no ASP.NET Web Forms

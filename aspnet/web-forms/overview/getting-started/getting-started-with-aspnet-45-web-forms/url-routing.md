@@ -12,7 +12,7 @@ ms.openlocfilehash: 992cea256302231ee7031a21c798117b73eaa01c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384312"
 ---
 # <a name="url-routing"></a>Roteamento de URL

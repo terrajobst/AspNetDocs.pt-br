@@ -12,7 +12,7 @@ ms.openlocfilehash: b75057f3128662a9bbdd641dc0a7c1ba09fbbe87
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59388186"
 ---
 # <a name="creating-a-database"></a>Criar um banco de dados
@@ -32,7 +32,7 @@ Na caixa de diálogo Escolher fonte de dados, selecione Microsoft SQL Server e s
 
 Na caixa de diálogo Adicionar Conexão, insira ". \SQLEXPRESS" para o nome do servidor e digite "Filmes" como o nome do novo banco de dados.
 
-[![Acaixa de diálogo de Conexão dd](getting-started-with-mvc-part4/_static/image4.png)](getting-started-with-mvc-part4/_static/image3.png)
+[![Adicionar caixa de diálogo de Conexão](getting-started-with-mvc-part4/_static/image4.png)](getting-started-with-mvc-part4/_static/image3.png)
 
 Clique em Okey e você será solicitado se você deseja criar esse banco de dados. Selecione Sim.
 
@@ -44,7 +44,7 @@ Agora você tem um banco de dados vazio no Gerenciador de servidores.
 
 Clique com botão direito em tabelas e clique em Adicionar tabela. O Designer de tabela será exibida. Adicione colunas para Id, título, ReleaseDate, gênero e preço. Clique com o botão direito na coluna de ID e clique em define chave primária. É aqui que minhas áreas de design é semelhante.
 
-[![DEditor de tabela de banco de dados](getting-started-with-mvc-part4/_static/image9.png)](getting-started-with-mvc-part4/_static/image8.png)
+[![Editor de tabela de banco de dados](getting-started-with-mvc-part4/_static/image9.png)](getting-started-with-mvc-part4/_static/image8.png)
 
 Além disso, selecione a coluna de Id e em Propriedades de coluna abaixo, altere "Especificação de identidade" para "Sim".
 
@@ -52,11 +52,11 @@ Além disso, selecione a coluna de Id e em Propriedades de coluna abaixo, altere
 
 Quando você tem feito, clique no ícone Salvar na barra de ferramentas ou selecione arquivo | Salvar no menu e nomear sua tabela "**filme**" (singular). Temos um banco de dados e uma tabela!
 
-[![Cescolher o modo de nome](getting-started-with-mvc-part4/_static/image13.png)](getting-started-with-mvc-part4/_static/image12.png)
+[![Escolher nome](getting-started-with-mvc-part4/_static/image13.png)](getting-started-with-mvc-part4/_static/image12.png)
 
 Volte para o Gerenciador de servidores, clique com botão direito tabela Movie e selecione "Mostrar dados da tabela". Insira alguns filmes para que nosso banco de dados tenha alguns dados.
 
-[![DEdição de tabela de banco de dados](getting-started-with-mvc-part4/_static/image15.png)](getting-started-with-mvc-part4/_static/image14.png)
+[![Edição de tabela do banco de dados](getting-started-with-mvc-part4/_static/image15.png)](getting-started-with-mvc-part4/_static/image14.png)
 
 ## <a name="creating-a-model"></a>Criar um Modelo
 
@@ -72,11 +72,11 @@ Clique no botão "Adicionar". Isso iniciará, em seguida, "Entidade de dados mod
 
 Na nova caixa de diálogo pop-up, selecione Gerar do banco de dados. Desde que acabamos de criar um banco de dados, só precisaremos dizer o Entity Framework sobre nosso novo banco de dados e sua tabela. Clique em próximo a salvar nossa conexão de banco de dados na configuração do nosso aplicativo web. Agora, marque as tabelas e o filme caixa de seleção e clique em Finish.
 
-[![ENTITY Assistente de modelo de dados](getting-started-with-mvc-part4/_static/image21.png)](getting-started-with-mvc-part4/_static/image20.png)
+[![Assistente de modelo de dados de entidade](getting-started-with-mvc-part4/_static/image21.png)](getting-started-with-mvc-part4/_static/image20.png)
 
 Agora podemos ver nossa nova tabela de filme no Entity Framework Designer e acessá-lo a partir do código.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part4/_static/image23.png)](getting-started-with-mvc-part4/_static/image22.png)
+[![Filmes - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part4/_static/image23.png)](getting-started-with-mvc-part4/_static/image22.png)
 
 Na superfície de design, você pode ver uma classe "Filme". Essa classe é mapeada para a tabela "Filme" em nosso banco de dados, e cada propriedade dentro dele é mapeado para uma coluna com a tabela. Cada instância de uma classe "Filme" corresponderá a uma linha dentro da tabela "Filme".
 

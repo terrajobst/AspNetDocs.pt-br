@@ -12,7 +12,7 @@ ms.openlocfilehash: 97a60274d9306ea0ee332fcc1ab9e487355dbedb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59384929"
 ---
 # <a name="creating-a-build-definition-that-supports-deployment"></a>Criação de uma definição de build compatível com a implantação

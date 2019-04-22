@@ -12,7 +12,7 @@ ms.openlocfilehash: 055142be60257f0917eb22bc08471c0bec54ca2e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59387172"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Introdução ao ASP.NET MVC 5
@@ -23,14 +23,14 @@ ms.locfileid: "59387172"
 
 Esta série de tutoriais a seguir aborda o ASP.NET MVC: Fonte localizada [GitHub](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/mvc/overview/getting-started/introduction/sample/MvcMovie/MvcMovie)
 
-- [Guia de Introdução](getting-started.md)
+- [Introdução](getting-started.md)
 - [Adicionando um controlador](adding-a-controller.md)
-- [Adicionar uma exibição](adding-a-view.md)
-- [Adicionar um modelo](adding-a-model.md)
-- [Criar uma cadeia de conexão e trabalhando com LocalDB do SQL Server](creating-a-connection-string.md)
-- [Acessar dados do seu modelo por meio de um controlador](accessing-your-models-data-from-a-controller.md)
-- [Examinar os métodos de edição e a exibição de edição](examining-the-edit-methods-and-edit-view.md)
+- [Adicionando uma exibição](adding-a-view.md)
+- [Adicionando um modelo](adding-a-model.md)
+- [Criando uma cadeia de conexão e trabalhando com LocalDB do SQL Server](creating-a-connection-string.md)
+- [Acessando dados do seu modelo por meio de um controlador](accessing-your-models-data-from-a-controller.md)
+- [Examinando os métodos de edição e a exibição de edição](examining-the-edit-methods-and-edit-view.md)
 - [Adicionando uma pesquisa](adding-search.md)
 - [Adicionando um Novo Campo](adding-a-new-field.md)
 - [Adicionando uma Validação](adding-validation.md)
-- [Examinar os métodos Details e Delete](examining-the-details-and-delete-methods.md)
+- [Examinando os métodos Details e Delete](examining-the-details-and-delete-methods.md)

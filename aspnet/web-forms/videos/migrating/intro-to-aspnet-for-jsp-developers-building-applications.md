@@ -12,7 +12,7 @@ ms.openlocfilehash: a63573b0e15dfbf710f6f4b793257246ad3d307b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59395726"
 ---
 # <a name="intro-to-aspnet-for-jsp-developers-building-applications"></a>Introdução ao ASP.NET para desenvolvedores do JSP: Compilar aplicativos

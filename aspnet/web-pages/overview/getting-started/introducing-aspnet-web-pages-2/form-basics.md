@@ -12,7 +12,7 @@ ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59385950"
 ---
 # <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introdução ao ASP.NET Web Pages - Noções básicas de formulário HTML
@@ -356,7 +356,7 @@ O próximo tutorial, você criará uma página que usa um formulário para permi
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução a O ASP.NET que programa usando a sintaxe razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 - [Cláusula WHERE SQL](http://www.w3schools.com/sql/sql_where.asp) no site W3Schools
 - [As definições de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) artigo no site do W3C
 
