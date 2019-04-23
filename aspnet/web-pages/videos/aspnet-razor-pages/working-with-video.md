@@ -12,18 +12,18 @@ ms.openlocfilehash: 1682565cb872ed999c1285ddd2641a7afe02c4d2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412080"
 ---
-# <a name="working-with-video"></a><span data-ttu-id="fd8c6-103">Trabalhando com vídeo</span><span class="sxs-lookup"><span data-stu-id="fd8c6-103">Working with Video</span></span>
+# <a name="working-with-video"></a><span data-ttu-id="32dea-103">Trabalhando com vídeo</span><span class="sxs-lookup"><span data-stu-id="32dea-103">Working with Video</span></span>
 
-<span data-ttu-id="fd8c6-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="fd8c6-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="32dea-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="32dea-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="fd8c6-105">Acompanhamento de vídeo ao trabalhando com o tutorial de vídeo</span><span class="sxs-lookup"><span data-stu-id="fd8c6-105">Video accompaniment to the Working with Video tutorial</span></span>
+<span data-ttu-id="32dea-105">Acompanhamento de vídeo ao trabalhando com o tutorial de vídeo</span><span class="sxs-lookup"><span data-stu-id="32dea-105">Video accompaniment to the Working with Video tutorial</span></span>
 
-[<span data-ttu-id="fd8c6-106">&#9654;Assista ao vídeo (9 minutos)</span><span class="sxs-lookup"><span data-stu-id="fd8c6-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-video)
+[<span data-ttu-id="32dea-106">&#9654;Assista ao vídeo (9 minutos)</span><span class="sxs-lookup"><span data-stu-id="32dea-106">&#9654; Watch video (9 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-video)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="fd8c6-107">[Anterior](working-with-images.md)
-> [Próximo](adding-email-to-your-web-site.md)</span><span class="sxs-lookup"><span data-stu-id="fd8c6-107">[Previous](working-with-images.md)
+> <span data-ttu-id="32dea-107">[Anterior](working-with-images.md)
+> [Próximo](adding-email-to-your-web-site.md)</span><span class="sxs-lookup"><span data-stu-id="32dea-107">[Previous](working-with-images.md)
 [Next](adding-email-to-your-web-site.md)</span></span>

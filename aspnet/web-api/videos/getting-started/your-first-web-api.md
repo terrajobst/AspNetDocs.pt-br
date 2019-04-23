@@ -12,14 +12,14 @@ ms.openlocfilehash: c9ef2f961eece67ab98071de863d8e60bc307e03
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410871"
 ---
-# <a name="aspnet-web-api-part-1-your-first-web-api"></a><span data-ttu-id="d48e4-103">ASP.NET API Web, parte 1: Sua primeira API Web</span><span class="sxs-lookup"><span data-stu-id="d48e4-103">ASP.NET Web API, Part 1: Your First Web API</span></span>
+# <a name="aspnet-web-api-part-1-your-first-web-api"></a><span data-ttu-id="a729f-103">ASP.NET API Web, parte 1: Sua primeira API Web</span><span class="sxs-lookup"><span data-stu-id="a729f-103">ASP.NET Web API, Part 1: Your First Web API</span></span>
 
-<span data-ttu-id="d48e4-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="d48e4-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
+<span data-ttu-id="a729f-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="a729f-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="d48e4-105">Este vídeo contém informações de uma versão de pré-lançamento do ASP.NET Web API.</span><span class="sxs-lookup"><span data-stu-id="d48e4-105">This video contains information from a pre-release version of ASP.NET Web API.</span></span> <span data-ttu-id="d48e4-106">Para obter informações sobre o que mudou, consulte o código de exemplo atualizado em [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span><span class="sxs-lookup"><span data-stu-id="d48e4-106">For information on what changed, see the updated sample code at [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span></span>
+> <span data-ttu-id="a729f-105">Este vídeo contém informações de uma versão de pré-lançamento do ASP.NET Web API.</span><span class="sxs-lookup"><span data-stu-id="a729f-105">This video contains information from a pre-release version of ASP.NET Web API.</span></span> <span data-ttu-id="a729f-106">Para obter informações sobre o que mudou, consulte o código de exemplo atualizado em [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span><span class="sxs-lookup"><span data-stu-id="a729f-106">For information on what changed, see the updated sample code at [https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7](https://code.msdn.microsoft.com/ASPNET-Web-API-JavaScript-d0d64dd7)</span></span>
 
-[<span data-ttu-id="d48e4-107">&#9654;Assista ao vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="d48e4-107">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/your-first-web-api)
+[<span data-ttu-id="a729f-107">&#9654;Assista ao vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="a729f-107">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/your-first-web-api)

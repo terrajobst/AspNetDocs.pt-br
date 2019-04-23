@@ -12,12 +12,12 @@ ms.openlocfilehash: ccd558f7777b1398bf1615ebbe7f18a82bc65985
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408323"
 ---
-# <a name="data"></a><span data-ttu-id="b5499-103">Dados</span><span class="sxs-lookup"><span data-stu-id="b5499-103">Data</span></span>
+# <a name="data"></a><span data-ttu-id="93ede-103">Dados</span><span class="sxs-lookup"><span data-stu-id="93ede-103">Data</span></span>
 
-> <span data-ttu-id="b5499-104">Este vídeo mostra os novos recursos para controles de dados do ASP.NET 4.</span><span class="sxs-lookup"><span data-stu-id="b5499-104">This video shows you new features for ASP.NET 4 data controls.</span></span>
+> <span data-ttu-id="93ede-104">Este vídeo mostra os novos recursos para controles de dados do ASP.NET 4.</span><span class="sxs-lookup"><span data-stu-id="93ede-104">This video shows you new features for ASP.NET 4 data controls.</span></span>
 
 
-- [<span data-ttu-id="b5499-105">Seleção de linha de GridView persistente</span><span class="sxs-lookup"><span data-stu-id="b5499-105">Persistent GridView Row Selection</span></span>](aspnet-4-quick-hit-persistent-gridview-row-selection.md)
+- [<span data-ttu-id="93ede-105">Seleção de linha de GridView persistente</span><span class="sxs-lookup"><span data-stu-id="93ede-105">Persistent GridView Row Selection</span></span>](aspnet-4-quick-hit-persistent-gridview-row-selection.md)

@@ -12,16 +12,16 @@ ms.openlocfilehash: 1daffa462700c0c1603c67b853d1afecfc5a2001
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420179"
 ---
-# <a name="create-a-new-custom-extender"></a><span data-ttu-id="09fc4-103">Criar um novo extensor personalizado</span><span class="sxs-lookup"><span data-stu-id="09fc4-103">Create a New Custom Extender</span></span>
+# <a name="create-a-new-custom-extender"></a><span data-ttu-id="e07c5-103">Criar um novo extensor personalizado</span><span class="sxs-lookup"><span data-stu-id="e07c5-103">Create a New Custom Extender</span></span>
 
-<span data-ttu-id="09fc4-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="09fc4-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="e07c5-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="e07c5-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="09fc4-105">Joe este vídeo demonstra como usar o AJAX Control Toolkit para criar um novo extensor de controle personalizado do AJAX.</span><span class="sxs-lookup"><span data-stu-id="09fc4-105">In this video Joe demonstrates how to use the AJAX Control Toolkit to create a new custom AJAX Control Extender.</span></span>
+<span data-ttu-id="e07c5-105">Joe este vídeo demonstra como usar o AJAX Control Toolkit para criar um novo extensor de controle personalizado do AJAX.</span><span class="sxs-lookup"><span data-stu-id="e07c5-105">In this video Joe demonstrates how to use the AJAX Control Toolkit to create a new custom AJAX Control Extender.</span></span>
 
-[<span data-ttu-id="09fc4-106">&#9654;Assista ao vídeo (26 minutos)</span><span class="sxs-lookup"><span data-stu-id="09fc4-106">&#9654; Watch video (26 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/create-a-new-custom-extender)
+[<span data-ttu-id="e07c5-106">&#9654;Assista ao vídeo (26 minutos)</span><span class="sxs-lookup"><span data-stu-id="e07c5-106">&#9654; Watch video (26 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/create-a-new-custom-extender)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="09fc4-107">Voltar</span><span class="sxs-lookup"><span data-stu-id="09fc4-107">Previous</span></span>](editor-control-custom.md)
+> [<span data-ttu-id="e07c5-107">Anterior</span><span class="sxs-lookup"><span data-stu-id="e07c5-107">Previous</span></span>](editor-control-custom.md)

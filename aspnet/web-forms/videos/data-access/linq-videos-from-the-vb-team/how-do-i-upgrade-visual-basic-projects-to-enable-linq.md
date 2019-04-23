@@ -12,18 +12,18 @@ ms.openlocfilehash: acbca3397fe8f668007eff9b2c2f46c721c9fc8f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419451"
 ---
-# <a name="how-do-i-upgrade-visual-basic-projects-to-enable-linq"></a><span data-ttu-id="1c3b7-104">[Como fazer:] Atualizar projetos do Visual Basic para habilitar o LINQ?</span><span class="sxs-lookup"><span data-stu-id="1c3b7-104">[How Do I:] Upgrade Visual Basic Projects to Enable LINQ?</span></span>
+# <a name="how-do-i-upgrade-visual-basic-projects-to-enable-linq"></a><span data-ttu-id="fe1b3-104">[Como fazer:] Atualizar projetos do Visual Basic para habilitar o LINQ?</span><span class="sxs-lookup"><span data-stu-id="fe1b3-104">[How Do I:] Upgrade Visual Basic Projects to Enable LINQ?</span></span>
 
-<span data-ttu-id="1c3b7-105">por [Beth Massi](https://github.com/bethmassi)</span><span class="sxs-lookup"><span data-stu-id="1c3b7-105">by [Beth Massi](https://github.com/bethmassi)</span></span>
+<span data-ttu-id="fe1b3-105">por [Beth Massi](https://github.com/bethmassi)</span><span class="sxs-lookup"><span data-stu-id="fe1b3-105">by [Beth Massi](https://github.com/bethmassi)</span></span>
 
-<span data-ttu-id="1c3b7-106">Os programadores de Visual Basic irá aprender sobre o novo recurso de multiplataforma e como atualizar projetos escritos em Visual Basic 2005 para o Visual Basic 2008 Beta 2 para habilitar provedores LINQ diferentes.</span><span class="sxs-lookup"><span data-stu-id="1c3b7-106">Visual Basic programmers will learn about the new multi-targeting feature and how to upgrade projects written in Visual Basic 2005 to Visual Basic 2008 Beta 2 in order to enable different LINQ providers.</span></span>
+<span data-ttu-id="fe1b3-106">Os programadores de Visual Basic irá aprender sobre o novo recurso de multiplataforma e como atualizar projetos escritos em Visual Basic 2005 para o Visual Basic 2008 Beta 2 para habilitar provedores LINQ diferentes.</span><span class="sxs-lookup"><span data-stu-id="fe1b3-106">Visual Basic programmers will learn about the new multi-targeting feature and how to upgrade projects written in Visual Basic 2005 to Visual Basic 2008 Beta 2 in order to enable different LINQ providers.</span></span>
 
-[<span data-ttu-id="1c3b7-107">&#9654;Assista ao vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="1c3b7-107">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-upgrade-visual-basic-projects-to-enable-linq)
+[<span data-ttu-id="fe1b3-107">&#9654;Assista ao vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="fe1b3-107">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-upgrade-visual-basic-projects-to-enable-linq)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="1c3b7-108">[Anterior](how-do-i-perform-group-and-aggregate-queries.md)
-> [Próximo](how-do-i-get-started-with-linq-to-xml.md)</span><span class="sxs-lookup"><span data-stu-id="1c3b7-108">[Previous](how-do-i-perform-group-and-aggregate-queries.md)
+> <span data-ttu-id="fe1b3-108">[Anterior](how-do-i-perform-group-and-aggregate-queries.md)
+> [Próximo](how-do-i-get-started-with-linq-to-xml.md)</span><span class="sxs-lookup"><span data-stu-id="fe1b3-108">[Previous](how-do-i-perform-group-and-aggregate-queries.md)
 [Next](how-do-i-get-started-with-linq-to-xml.md)</span></span>

@@ -12,13 +12,13 @@ ms.openlocfilehash: 3e1faaada336fe18b42e48de4824c3f23881392c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409571"
 ---
-# <a name="what-is-aspnet"></a><span data-ttu-id="b5dfa-104">O que é ASP.NET?</span><span class="sxs-lookup"><span data-stu-id="b5dfa-104">What is ASP.NET?</span></span>
+# <a name="what-is-aspnet"></a><span data-ttu-id="e9e4b-104">O que é ASP.NET?</span><span class="sxs-lookup"><span data-stu-id="e9e4b-104">What is ASP.NET?</span></span>
 
-<span data-ttu-id="b5dfa-105">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="b5dfa-105">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="e9e4b-105">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="e9e4b-105">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-<span data-ttu-id="b5dfa-106">Scott Hanselman da Microsoft fornece uma visão geral do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="b5dfa-106">Microsoft's Scott Hanselman gives a brief overview of ASP.NET.</span></span>
+<span data-ttu-id="e9e4b-106">Scott Hanselman da Microsoft fornece uma visão geral do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="e9e4b-106">Microsoft's Scott Hanselman gives a brief overview of ASP.NET.</span></span>
 
-[<span data-ttu-id="b5dfa-107">&#9654;Assista ao vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="b5dfa-107">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-asp-net)
+[<span data-ttu-id="e9e4b-107">&#9654;Assista ao vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="e9e4b-107">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-asp-net)

@@ -12,18 +12,18 @@ ms.openlocfilehash: 6b086fd9c8c92d5dafa8aba9f1a8928c6bcb0c07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413770"
 ---
-# <a name="how-do-i-load-test-a-web-application"></a><span data-ttu-id="fc14a-105">[Como fazer:] Um aplicativo Web de teste de carga?</span><span class="sxs-lookup"><span data-stu-id="fc14a-105">[How Do I:] Load Test a Web Application?</span></span>
+# <a name="how-do-i-load-test-a-web-application"></a><span data-ttu-id="d6da9-105">[Como fazer:] Um aplicativo Web de teste de carga?</span><span class="sxs-lookup"><span data-stu-id="d6da9-105">[How Do I:] Load Test a Web Application?</span></span>
 
-<span data-ttu-id="fc14a-106">por [Chris Menegay](https://twitter.com/CMenegay)</span><span class="sxs-lookup"><span data-stu-id="fc14a-106">by [Chris Menegay](https://twitter.com/CMenegay)</span></span>
+<span data-ttu-id="d6da9-106">por [Chris Menegay](https://twitter.com/CMenegay)</span><span class="sxs-lookup"><span data-stu-id="d6da9-106">by [Chris Menegay](https://twitter.com/CMenegay)</span></span>
 
-<span data-ttu-id="fc14a-107">Este vídeo o orienta pelo processo de gravação de um teste da Web e, em seguida, substituí-lo como um teste de carga que simula vários usuários.</span><span class="sxs-lookup"><span data-stu-id="fc14a-107">This video walks you through the process of recording a Web Test and then replaying it as a Load Test that simulates multiple users.</span></span> <span data-ttu-id="fc14a-108">Podemos ver como o Visual Studio Team System permite que você defina os limites de aviso e críticos da utilização de recursos do servidor, que define se o aplicativo Web passa ou falha no teste de carga.</span><span class="sxs-lookup"><span data-stu-id="fc14a-108">We see how Visual Studio Team System allows you to set warning and critical thresholds of server resources utilization, which defines whether the Web application passes or fails the load test.</span></span>
+<span data-ttu-id="d6da9-107">Este vídeo o orienta pelo processo de gravação de um teste da Web e, em seguida, substituí-lo como um teste de carga que simula vários usuários.</span><span class="sxs-lookup"><span data-stu-id="d6da9-107">This video walks you through the process of recording a Web Test and then replaying it as a Load Test that simulates multiple users.</span></span> <span data-ttu-id="d6da9-108">Podemos ver como o Visual Studio Team System permite que você defina os limites de aviso e críticos da utilização de recursos do servidor, que define se o aplicativo Web passa ou falha no teste de carga.</span><span class="sxs-lookup"><span data-stu-id="d6da9-108">We see how Visual Studio Team System allows you to set warning and critical thresholds of server resources utilization, which defines whether the Web application passes or fails the load test.</span></span>
 
-[<span data-ttu-id="fc14a-109">&#9654;Assista ao vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="fc14a-109">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-load-test-a-web-application)
+[<span data-ttu-id="d6da9-109">&#9654;Assista ao vídeo (8 minutos)</span><span class="sxs-lookup"><span data-stu-id="d6da9-109">&#9654; Watch video (8 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-load-test-a-web-application)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="fc14a-110">[Anterior](how-do-i-practice-test-driven-development.md)
-> [Próximo](how-do-i-tune-web-application-performance-with-profiling.md)</span><span class="sxs-lookup"><span data-stu-id="fc14a-110">[Previous](how-do-i-practice-test-driven-development.md)
+> <span data-ttu-id="d6da9-110">[Anterior](how-do-i-practice-test-driven-development.md)
+> [Próximo](how-do-i-tune-web-application-performance-with-profiling.md)</span><span class="sxs-lookup"><span data-stu-id="d6da9-110">[Previous](how-do-i-practice-test-driven-development.md)
 [Next](how-do-i-tune-web-application-performance-with-profiling.md)</span></span>

@@ -12,18 +12,18 @@ ms.openlocfilehash: 7b708c23dbe9ac16af55d5effdb015a8b0aaa010
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420140"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-togglebutton-extender"></a><span data-ttu-id="2572c-104">[Como fazer:] Usar o extensor ToggleButton do ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="2572c-104">[How Do I:] Use the ASP.NET AJAX ToggleButton Extender?</span></span>
+# <a name="how-do-i-use-the-aspnet-ajax-togglebutton-extender"></a><span data-ttu-id="5278e-104">[Como fazer:] Usar o extensor ToggleButton do ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="5278e-104">[How Do I:] Use the ASP.NET AJAX ToggleButton Extender?</span></span>
 
-<span data-ttu-id="2572c-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="2572c-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="5278e-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="5278e-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="2572c-106">Demonstra como usar o controle de extensor ToggleButton para modificar o comportamento e aparência do controle de caixa de seleção do ASP.NET padrão para aprimorar a interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="2572c-106">Demonstrates using the ToggleButton extender control to modify the behavior and appearance of the standard ASP.NET CheckBox control to enhance the user interface.</span></span>
+<span data-ttu-id="5278e-106">Demonstra como usar o controle de extensor ToggleButton para modificar o comportamento e aparência do controle de caixa de seleção do ASP.NET padrão para aprimorar a interface do usuário.</span><span class="sxs-lookup"><span data-stu-id="5278e-106">Demonstrates using the ToggleButton extender control to modify the behavior and appearance of the standard ASP.NET CheckBox control to enhance the user interface.</span></span>
 
-[<span data-ttu-id="2572c-107">&#9654;Assista ao vídeo (7 minutos)</span><span class="sxs-lookup"><span data-stu-id="2572c-107">&#9654; Watch video (7 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-togglebutton-extender)
+[<span data-ttu-id="5278e-107">&#9654;Assista ao vídeo (7 minutos)</span><span class="sxs-lookup"><span data-stu-id="5278e-107">&#9654; Watch video (7 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-togglebutton-extender)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="2572c-108">[Anterior](how-do-i-use-the-aspnet-ajax-hovermenu-extender.md)
-> [Próximo](how-do-i-use-the-aspnet-ajax-dropshadow-extender.md)</span><span class="sxs-lookup"><span data-stu-id="2572c-108">[Previous](how-do-i-use-the-aspnet-ajax-hovermenu-extender.md)
+> <span data-ttu-id="5278e-108">[Anterior](how-do-i-use-the-aspnet-ajax-hovermenu-extender.md)
+> [Próximo](how-do-i-use-the-aspnet-ajax-dropshadow-extender.md)</span><span class="sxs-lookup"><span data-stu-id="5278e-108">[Previous](how-do-i-use-the-aspnet-ajax-hovermenu-extender.md)
 [Next](how-do-i-use-the-aspnet-ajax-dropshadow-extender.md)</span></span>

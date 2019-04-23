@@ -12,18 +12,18 @@ ms.openlocfilehash: 674eabeb5e3678662a0f523899d83ba66a61dbd2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415993"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender"></a><span data-ttu-id="c96c8-104">[Como fazer:] Usar o extensor DynamicPopulate do ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="c96c8-104">[How Do I:] Use the ASP.NET AJAX DynamicPopulate Extender?</span></span>
+# <a name="how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender"></a><span data-ttu-id="4c155-104">[Como fazer:] Usar o extensor DynamicPopulate do ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="4c155-104">[How Do I:] Use the ASP.NET AJAX DynamicPopulate Extender?</span></span>
 
-<span data-ttu-id="c96c8-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="c96c8-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="4c155-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="4c155-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="c96c8-106">Assista a uma demonstração de como usar o extensor DynamicPopulate do ASP.NET AJAX para preencher dinamicamente uma área de uma página da web com os resultados de uma chamada assíncrona para um método web.</span><span class="sxs-lookup"><span data-stu-id="c96c8-106">Watch a demonstration of using the ASP.NET AJAX DynamicPopulate extender to dynamically populate an area of a web page with the results of an asynchronous call to a web method.</span></span>
+<span data-ttu-id="4c155-106">Assista a uma demonstração de como usar o extensor DynamicPopulate do ASP.NET AJAX para preencher dinamicamente uma área de uma página da web com os resultados de uma chamada assíncrona para um método web.</span><span class="sxs-lookup"><span data-stu-id="4c155-106">Watch a demonstration of using the ASP.NET AJAX DynamicPopulate extender to dynamically populate an area of a web page with the results of an asynchronous call to a web method.</span></span>
 
-[<span data-ttu-id="c96c8-107">&#9654;Assista ao vídeo (11 minutos)</span><span class="sxs-lookup"><span data-stu-id="c96c8-107">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender)
+[<span data-ttu-id="4c155-107">&#9654;Assista ao vídeo (11 minutos)</span><span class="sxs-lookup"><span data-stu-id="4c155-107">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-dynamicpopulate-extender)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="c96c8-108">[Anterior](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)
-> [Próximo](how-do-i-use-the-aspnet-ajax-filteredtextbox-extender.md)</span><span class="sxs-lookup"><span data-stu-id="c96c8-108">[Previous](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)
+> <span data-ttu-id="4c155-108">[Anterior](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)
+> [Próximo](how-do-i-use-the-aspnet-ajax-filteredtextbox-extender.md)</span><span class="sxs-lookup"><span data-stu-id="4c155-108">[Previous](how-do-i-use-the-aspnet-ajax-draggable-panel-extender.md)
 [Next](how-do-i-use-the-aspnet-ajax-filteredtextbox-extender.md)</span></span>

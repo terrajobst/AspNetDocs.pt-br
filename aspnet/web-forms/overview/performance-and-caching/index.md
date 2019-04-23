@@ -12,12 +12,12 @@ ms.openlocfilehash: b217af062f53bf0e88c67a366ffc0111e4a1b4da
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410494"
 ---
-# <a name="performance"></a><span data-ttu-id="ddab8-103">Desempenho</span><span class="sxs-lookup"><span data-stu-id="ddab8-103">Performance</span></span>
+# <a name="performance"></a><span data-ttu-id="032d5-103">Desempenho</span><span class="sxs-lookup"><span data-stu-id="032d5-103">Performance</span></span>
 
-> <span data-ttu-id="ddab8-104">Como armazenar em cache o conteúdo do site para melhorar o desempenho.</span><span class="sxs-lookup"><span data-stu-id="ddab8-104">How to cache site content for faster performance.</span></span>
+> <span data-ttu-id="032d5-104">Como armazenar em cache o conteúdo do site para melhorar o desempenho.</span><span class="sxs-lookup"><span data-stu-id="032d5-104">How to cache site content for faster performance.</span></span>
 
 
-- [<span data-ttu-id="ddab8-105">Uso de métodos assíncronos no ASP.NET 4.5</span><span class="sxs-lookup"><span data-stu-id="ddab8-105">Using Asynchronous Methods in ASP.NET 4.5</span></span>](using-asynchronous-methods-in-aspnet-45.md)
+- [<span data-ttu-id="032d5-105">Uso de métodos assíncronos no ASP.NET 4.5</span><span class="sxs-lookup"><span data-stu-id="032d5-105">Using Asynchronous Methods in ASP.NET 4.5</span></span>](using-asynchronous-methods-in-aspnet-45.md)

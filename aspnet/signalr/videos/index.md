@@ -12,11 +12,11 @@ ms.openlocfilehash: fa8fbdd7ed83f2953bf2dd1b8799fed51587d338
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418710"
 ---
-# <a name="aspnet-signalr-videos"></a><span data-ttu-id="ae7cb-102">Vídeos do SignalR do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ae7cb-102">ASP.NET SignalR Videos</span></span>
+# <a name="aspnet-signalr-videos"></a><span data-ttu-id="72d0c-102">Vídeos do SignalR do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="72d0c-102">ASP.NET SignalR Videos</span></span>
 
-- [<span data-ttu-id="ae7cb-103">Vídeos do SignalR do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="ae7cb-103">ASP.NET SignalR Videos</span></span>](getting-started/index.md)
+- [<span data-ttu-id="72d0c-103">Vídeos do SignalR do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="72d0c-103">ASP.NET SignalR Videos</span></span>](getting-started/index.md)
 
-    - [<span data-ttu-id="ae7cb-104">SignalR e Soquetes Web</span><span class="sxs-lookup"><span data-stu-id="ae7cb-104">SignalR and Web Sockets</span></span>](getting-started/signalr-and-web-sockets.md)
+    - [<span data-ttu-id="72d0c-104">SignalR e Soquetes Web</span><span class="sxs-lookup"><span data-stu-id="72d0c-104">SignalR and Web Sockets</span></span>](getting-started/signalr-and-web-sockets.md)
