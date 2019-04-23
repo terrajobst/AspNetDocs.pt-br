@@ -12,7 +12,7 @@ ms.openlocfilehash: 17fbc85ab1be16e2b4a5c179db3c24645a6a0a64
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404163"
 ---
 # <a name="creating-the-membership-schema-in-sql-server-vb"></a>Criação do esquema de associação no SQL Server (VB)
@@ -57,7 +57,7 @@ O aplicativo que criarmos uma vez que o segundo tutorial ainda não necessária 
 Gerenciador de soluções, clique com botão direito no `App_Data` pasta e optar por adicionar novo Item. (Se você não vir um `App_Data` pasta no seu projeto, clique com botão direito no projeto no Gerenciador de soluções, selecione Adicionar pasta ASP.NET e escolher `App_Data`.) Na caixa de diálogo Add New Item, escolha Adicionar um novo banco de dados SQL denominado `SecurityTutorials.mdf`. Neste tutorial, adicionaremos o `SqlMembershipProvider` esquema para este banco de dados; nos tutoriais subsequentes, vamos criar mais tabelas para capturar dados de nosso aplicativo.
 
 
-[![Aum novo banco de dados denominado SecurityTutorials.mdf banco de dados SQL para a pasta App_Data do dd](creating-the-membership-schema-in-sql-server-vb/_static/image2.png)](creating-the-membership-schema-in-sql-server-vb/_static/image1.png)
+[![Adicionar um novo banco de dados SQL denominado SecurityTutorials.mdf banco de dados para a pasta App_Data](creating-the-membership-schema-in-sql-server-vb/_static/image2.png)](creating-the-membership-schema-in-sql-server-vb/_static/image1.png)
 
 **Figura 1**: Adicionar um banco de dados SQL novo denominado `SecurityTutorials.mdf` do banco de dados para o `App_Data` pasta ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image3.png))
 
@@ -65,7 +65,7 @@ Gerenciador de soluções, clique com botão direito no `App_Data` pasta e optar
 Adicionar um banco de dados para o `App_Data` pasta inclui automaticamente na exibição do Explorer do banco de dados. (Na versão não - Express Edition do Visual Studio, o Gerenciador de banco de dados é chamado o Gerenciador de servidores). Vá para o Gerenciador de banco de dados e expanda o just-adicionado `SecurityTutorials` banco de dados. Se você não vir o Gerenciador de banco de dados na tela, vá até o menu Exibir e escolha Gerenciador de banco de dados ou pressione Ctrl + Alt + S. Como mostra a Figura 2, o `SecurityTutorials` banco de dados está vazio – ele contém nenhuma tabela, não há modos de exibição e nenhum procedimento armazenado.
 
 
-[![Tele SecurityTutorials banco de dados está vazio no momento](creating-the-membership-schema-in-sql-server-vb/_static/image5.png)](creating-the-membership-schema-in-sql-server-vb/_static/image4.png)
+[![O banco de dados SecurityTutorials está vazio no momento](creating-the-membership-schema-in-sql-server-vb/_static/image5.png)](creating-the-membership-schema-in-sql-server-vb/_static/image4.png)
 
 **Figura 2**: O `SecurityTutorials` banco de dados está vazia ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image6.png))
 
@@ -110,12 +110,12 @@ Depois de se conectar à instância do SQL Server 2005 Express Edition, o Manage
 Clique com botão direito na pasta de bancos de dados e escolha Anexar no menu de contexto. Isso exibirá a caixa de diálogo anexar bancos de dados. A partir daqui, clique no botão Adicionar, navegue até o `SecurityTutorials.mdf` de banco de dados e, em seguida, clique em Okey. A Figura 4 mostra a caixa de diálogo anexar bancos de dados após o `SecurityTutorials.mdf` banco de dados foi selecionado. Figura 5 mostra o Pesquisador de objetos do Management Studio depois que o banco de dados foi anexado com êxito.
 
 
-[![Aanexar o banco de dados SecurityTutorials.mdf](creating-the-membership-schema-in-sql-server-vb/_static/image11.png)](creating-the-membership-schema-in-sql-server-vb/_static/image10.png)
+[![Anexe o banco de dados SecurityTutorials.mdf](creating-the-membership-schema-in-sql-server-vb/_static/image11.png)](creating-the-membership-schema-in-sql-server-vb/_static/image10.png)
 
 **Figura 4**: Anexar a `SecurityTutorials.mdf` banco de dados ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image12.png))
 
 
-[![Tele SecurityTutorials.mdf banco de dados aparece na pasta de bancos de dados](creating-the-membership-schema-in-sql-server-vb/_static/image14.png)](creating-the-membership-schema-in-sql-server-vb/_static/image13.png)
+[![O banco de dados SecurityTutorials.mdf aparece na pasta de bancos de dados](creating-the-membership-schema-in-sql-server-vb/_static/image14.png)](creating-the-membership-schema-in-sql-server-vb/_static/image13.png)
 
 **Figura 5**: O `SecurityTutorials.mdf` banco de dados aparece na pasta de bancos de dados ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image15.png))
 
@@ -123,7 +123,7 @@ Clique com botão direito na pasta de bancos de dados e escolha Anexar no menu d
 Como mostra a Figura 5, o `SecurityTutorials.mdf` banco de dados tem um nome em vez disso, confusas. Vamos alterá-lo para um mais fácil de lembrar (e mais fácil de digitar) nome. Clique com botão direito no banco de dados, escolha Renomear no menu de contexto e renomeie- `SecurityTutorialsDatabase`. Isso não altera o nome do arquivo, apenas o nome do banco de dados usa para se identificar para o SQL Server.
 
 
-[![Ro banco de dados SecurityTutorialsDatabase de eName](creating-the-membership-schema-in-sql-server-vb/_static/image17.png)](creating-the-membership-schema-in-sql-server-vb/_static/image16.png)
+[![Renomear o banco de dados SecurityTutorialsDatabase](creating-the-membership-schema-in-sql-server-vb/_static/image17.png)](creating-the-membership-schema-in-sql-server-vb/_static/image16.png)
 
 **Figura 6**: Renomear o banco de dados `SecurityTutorialsDatabase`([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image18.png))
 
@@ -137,7 +137,7 @@ Para iniciar o `aspnet_regsql.exe` ferramenta, vá para o menu Iniciar e escolha
 Executando o `aspnet_regsql.exe` ferramenta sem nenhum argumento de linha de comando inicia a interface gráfica do usuário ASP.NET Assistente de instalação do SQL Server. O assistente facilita a adicionar ou remover os serviços de aplicativo do ASP.NET em um banco de dados especificado. A primeira tela do assistente, mostrado na Figura 7 descreve a finalidade da ferramenta.
 
 
-[![USe o ASP.NET SQL Server Setup assistente faz para adicionar o esquema de associação](creating-the-membership-schema-in-sql-server-vb/_static/image20.png)](creating-the-membership-schema-in-sql-server-vb/_static/image19.png)
+[![Use o SQL do ASP.NET Server instalação assistente torna para adicionar o esquema de associação](creating-the-membership-schema-in-sql-server-vb/_static/image20.png)](creating-the-membership-schema-in-sql-server-vb/_static/image19.png)
 
 **Figura 7**: Usar o ASP.NET SQL Server Setup assistente faz para adicionar o esquema de associação ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image21.png))
 
@@ -145,7 +145,7 @@ Executando o `aspnet_regsql.exe` ferramenta sem nenhum argumento de linha de com
 A segunda etapa do assistente nos pede que desejamos adicionar os serviços de aplicativo ou removê-los. Como queremos adicionar as tabelas, exibições e procedimentos armazenados necessários para o `SqlMembershipProvider`, escolher configurar o SQL Server para a opção de serviços de aplicativo. Posteriormente, se você deseja remover este esquema do banco de dados, execute novamente este assistente, mas em vez disso, escolha as informações de serviços do aplicativo remover de uma opção de banco de dados existente.
 
 
-[![Cescolher o modo de configurar SQL Server para a opção de serviços de aplicativo](creating-the-membership-schema-in-sql-server-vb/_static/image23.png)](creating-the-membership-schema-in-sql-server-vb/_static/image22.png)
+[![Escolha a configurar o SQL Server para a opção de serviços de aplicativo](creating-the-membership-schema-in-sql-server-vb/_static/image23.png)](creating-the-membership-schema-in-sql-server-vb/_static/image22.png)
 
 **Figura 8**: Escolha Configurar o SQL Server para a opção de serviços de aplicativo ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image24.png))
 
@@ -157,7 +157,7 @@ A terceira etapa solicitará as informações de banco de dados: o nome do servi
 - Banco de dados: `SecurityTutorialsDatabase`
 
 
-[![EInsira as informações de banco de dados](creating-the-membership-schema-in-sql-server-vb/_static/image26.png)](creating-the-membership-schema-in-sql-server-vb/_static/image25.png)
+[![Insira as informações de banco de dados](creating-the-membership-schema-in-sql-server-vb/_static/image26.png)](creating-the-membership-schema-in-sql-server-vb/_static/image25.png)
 
 **Figura 9**: Insira as informações de banco de dados ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image27.png))
 
@@ -170,7 +170,7 @@ Depois de inserir as informações de banco de dados, clique em Avançar. A etap
 Após a conclusão do assistente, retorne ao Visual Studio e navegue até o Gerenciador de banco de dados. Expanda a pasta de tabelas. Você deve ver uma série de tabelas cujos nomes começam com o prefixo `aspnet_`. Da mesma forma, uma variedade de exibições e procedimentos armazenados pode ser encontrada nas pastas exibições e procedimentos armazenados. Esses objetos de banco de dados compõem o esquema de serviços de aplicativo. Vamos examinar os objetos de banco de dados específicas de função e associação na etapa 3.
 
 
-[![A Variedade de tabelas, exibições e procedimentos armazenados foram adicionados ao banco de dados](creating-the-membership-schema-in-sql-server-vb/_static/image29.png)](creating-the-membership-schema-in-sql-server-vb/_static/image28.png)
+[![Uma variedade de tabelas, exibições e procedimentos armazenados foram adicionados ao banco de dados](creating-the-membership-schema-in-sql-server-vb/_static/image29.png)](creating-the-membership-schema-in-sql-server-vb/_static/image28.png)
 
 **Figura 10**: Uma variedade de tabelas, exibições e armazenados procedimentos foram adicionados ao banco de dados ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image30.png))
 
@@ -191,7 +191,7 @@ Devido a isso, podemos pode usar as estruturas de associação e funções com c
 As estruturas de associação e funções são projetadas, de modo que um único repositório de usuário e a função pode ser compartilhado entre vários aplicativos diferentes. Um aplicativo ASP.NET que usa as estruturas de associação ou funções deve especificar qual partição de aplicativo para usar. Em resumo, vários aplicativos da web podem usar as mesmas lojas de usuário e a função. Figura 11 ilustra os repositórios de usuário e a função que são particionados em três aplicativos: HRSite, CustomerSite e SalesSite. Esses aplicativos web de três têm suas próprias funções e usuários exclusivos, embora todos eles fisicamente armazenam suas informações de conta e a função de usuário nas mesmas tabelas de banco de dados.
 
 
-[![User contas podem ser particionados em vários aplicativos](creating-the-membership-schema-in-sql-server-vb/_static/image32.png)](creating-the-membership-schema-in-sql-server-vb/_static/image31.png)
+[![Contas de usuário podem ser particionadas em vários aplicativos](creating-the-membership-schema-in-sql-server-vb/_static/image32.png)](creating-the-membership-schema-in-sql-server-vb/_static/image31.png)
 
 **Figura 11**: Contas podem ser particionados em vários aplicativos de usuário ([clique para exibir a imagem em tamanho normal](creating-the-membership-schema-in-sql-server-vb/_static/image33.png))
 
@@ -350,7 +350,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 ### <a name="video-training-on-topics-contained-in-this-tutorial"></a>Treinamento em vídeo sobre os tópicos contidos neste tutorial
 
 - [Noções básicas sobre associações do ASP.NET](../../../videos/authentication/understanding-aspnet-memberships.md)
-- [Configurar o SQL para trabalhar com esquemas de associação](../../../videos/authentication/configuring-sql-to-work-with-membership-schemas.md)
+- [Configurando o SQL para trabalhar com esquemas de associação](../../../videos/authentication/configuring-sql-to-work-with-membership-schemas.md)
 - [Alterar as configurações de associação do esquema de associação padrão](../../../videos/authentication/changing-membership-settings-in-the-default-membership-schema.md)
 
 ### <a name="about-the-author"></a>Sobre o autor

@@ -12,7 +12,7 @@ ms.openlocfilehash: e70a21e2752c7c8fc8be332a98e1cf7e40b01412
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417683"
 ---
 # <a name="using-sql-cache-dependencies-c"></a>Uso de dependências de cache de SQL (C#)
@@ -87,7 +87,7 @@ Comece fechando o Visual Studio. Em seguida, abra o SQL Server Management Studio
 Depois de se conectar ao servidor, o Management Studio mostrará o servidor e ter subpastas para os bancos de dados, segurança e assim por diante. Clique com botão direito na pasta de bancos de dados e escolha a opção de anexar. Isso abrirá a caixa de diálogo anexar bancos de dados caixa (veja a Figura 2). Clique no botão Adicionar e selecione o `NORTHWND.MDF` pasta de banco de dados em seu s do aplicativo web `App_Data` pasta.
 
 
-[![Aanexar o northwnd não. Banco de dados MDF da pasta App_Data](using-sql-cache-dependencies-cs/_static/image2.gif)](using-sql-cache-dependencies-cs/_static/image1.png)
+[![Anexe o northwnd não. Banco de dados MDF da pasta App_Data](using-sql-cache-dependencies-cs/_static/image2.gif)](using-sql-cache-dependencies-cs/_static/image1.png)
 
 **Figura 2**: Anexar a `NORTHWND.MDF` do banco de dados do `App_Data` pasta ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image2.png))
 
@@ -143,7 +143,7 @@ O [armazenando dados com o ObjectDataSource](caching-data-with-the-objectdatasou
 Para demonstrar o uso de dependências de cache SQL declarativamente, abra o `SqlCacheDependencies.aspx` página o `Caching` pasta e arraste um controle GridView na caixa de ferramentas para o Designer. Definir o s GridView `ID` à `ProductsDeclarative` e, na marca inteligente, de escolha para associá-lo para um novo ObjectDataSource chamado `ProductsDataSourceDeclarative`.
 
 
-[![Ccriar um novo ObjectDataSource chamado ProductsDataSourceDeclarative](using-sql-cache-dependencies-cs/_static/image5.gif)](using-sql-cache-dependencies-cs/_static/image3.png)
+[![Criar um novo ObjectDataSource chamado ProductsDataSourceDeclarative](using-sql-cache-dependencies-cs/_static/image5.gif)](using-sql-cache-dependencies-cs/_static/image3.png)
 
 **Figura 5**: Criar um novo ObjectDataSource nomeado `ProductsDataSourceDeclarative` ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image4.png))
 
@@ -151,12 +151,12 @@ Para demonstrar o uso de dependências de cache SQL declarativamente, abra o `Sq
 Configurar o ObjectDataSource para usar o `ProductsBLL` de classe e defina a lista suspensa na guia SELECT para `GetProducts()`. Na guia de atualização, escolha o `UpdateProduct` sobrecarga com três parâmetros de entrada - `productName`, `unitPrice`, e `productID`. Defina as listas suspensas para (nenhum) nas guias INSERT e DELETE.
 
 
-[![USe a sobrecarga de UpdateProduct com três parâmetros de entrada](using-sql-cache-dependencies-cs/_static/image6.gif)](using-sql-cache-dependencies-cs/_static/image5.png)
+[![Use a sobrecarga de UpdateProduct com três parâmetros de entrada](using-sql-cache-dependencies-cs/_static/image6.gif)](using-sql-cache-dependencies-cs/_static/image5.png)
 
 **Figura 6**: Use a sobrecarga de UpdateProduct com três parâmetros de entrada ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image6.png))
 
 
-[![SGuias de lista suspensa como (nenhum) para a inserção e exclusão ET](using-sql-cache-dependencies-cs/_static/image7.gif)](using-sql-cache-dependencies-cs/_static/image7.png)
+[![Definir a lista suspensa como (nenhum) para a inserção e exclusão guias](using-sql-cache-dependencies-cs/_static/image7.gif)](using-sql-cache-dependencies-cs/_static/image7.png)
 
 **Figura 7**: Defina a lista suspensa como (nenhum) para a inserção e excluir guias ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image8.png))
 
@@ -178,7 +178,7 @@ Lembre-se de que o s ObjectDataSource `Selecting` evento é acionado somente qua
 Agora, visite esta página por meio de um navegador. Desde que criamos ve ainda devem implementar qualquer cache, sempre que a página, classificar ou editar a grade de página deve exibir o texto, o evento Selecting acionado, como mostra a Figura 8.
 
 
-[![Tele ObjectDataSource s evento Selecting é disparado cada vez GridView é paginado, editados, ou Sorted](using-sql-cache-dependencies-cs/_static/image8.gif)](using-sql-cache-dependencies-cs/_static/image9.png)
+[![O s ObjectDataSource selecionando evento é acionado cada vez GridView é paginado, editados, ou Sorted](using-sql-cache-dependencies-cs/_static/image8.gif)](using-sql-cache-dependencies-cs/_static/image9.png)
 
 **Figura 8**: O s ObjectDataSource `Selecting` evento é acionado cada vez, GridView é paginado, editada ou Sorted ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image10.png))
 
@@ -197,7 +197,7 @@ Onde *databaseName* é o nome do banco de dados conforme especificado na `name` 
 O GridView no `SqlCacheDependencies.aspx` exibe dados de duas tabelas - `Products` e `Categories` (o produto s `CategoryName` campo é recuperado por meio de um `JOIN` em `Categories`). Portanto, queremos especificar duas dependências de cache SQL: NorthwindDB:Products; NorthwindDB:Categories.
 
 
-[![Configurar o ObjectDataSource para suporte de cache usando Cache dependências do SQL em produtos e as categorias](using-sql-cache-dependencies-cs/_static/image9.gif)](using-sql-cache-dependencies-cs/_static/image11.png)
+[![Configurar o ObjectDataSource para dar suporte a cache usando as dependências de Cache SQL em categorias e produtos](using-sql-cache-dependencies-cs/_static/image9.gif)](using-sql-cache-dependencies-cs/_static/image11.png)
 
 **Figura 9**: Configurar o ObjectDataSource para suporte ao cache usando o SQL dependências de Cache no `Products` e `Categories` ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image12.png))
 
@@ -207,7 +207,7 @@ Depois de configurar o ObjectDataSource para dar suporte a armazenamento em cach
 Depois de paginação por meio da grade e observar a falta do evento Selecting acionado texto, abra uma nova janela do navegador e navegue até o tutorial de conceitos básicos de edição, inserção e exclusão de seção (`~/EditInsertDelete/Basics.aspx`). Atualize o nome ou o preço de um produto. Em seguida, de, para a primeira janela do navegador, exibir uma página de dados diferente, classificar a grade ou clique em um botão de edição de linha s. Neste momento, o evento Selecting acionado deverá reaparecer, como o banco de dados subjacente que dados foram modificadas (veja a Figura 10). Se o texto não aparecer, aguarde alguns instantes e tente novamente. Lembre-se de que o serviço de sondagem está verificando se há alterações para o `Products` tabela cada `pollTime` milissegundos, portanto, não há um atraso entre quando os dados subjacentes são atualizados e quando os dados em cache seja removidos.
 
 
-[![Modifying a tabela de produtos remove os dados armazenados em cache do produto](using-sql-cache-dependencies-cs/_static/image10.gif)](using-sql-cache-dependencies-cs/_static/image13.png)
+[![Modificando a tabela de produtos remove os dados do produto armazenada em cache](using-sql-cache-dependencies-cs/_static/image10.gif)](using-sql-cache-dependencies-cs/_static/image13.png)
 
 **Figura 10**: Modificando a tabela de produtos remove os dados do produto armazenada em cache ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image14.png))
 
@@ -246,12 +246,12 @@ Para testar essa funcionalidade, adicione um controle GridView à página abaixo
 **Figura 11**: Configurar o ObjectDataSource para usar o `ProductsCL` classe ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image16.png))
 
 
-[![SEscolha o método GetProducts de lista suspensa Selecionar guia s](using-sql-cache-dependencies-cs/_static/image12.gif)](using-sql-cache-dependencies-cs/_static/image17.png)
+[![Selecione o método GetProducts na lista suspensa Selecione guia s](using-sql-cache-dependencies-cs/_static/image12.gif)](using-sql-cache-dependencies-cs/_static/image17.png)
 
 **Figura 12**: Selecione o `GetProducts` método de lista suspensa Selecionar guia s ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image18.png))
 
 
-[![Cescolher o método UpdateProduct de lista suspensa s guia de atualização](using-sql-cache-dependencies-cs/_static/image13.gif)](using-sql-cache-dependencies-cs/_static/image19.png)
+[![Escolha o método UpdateProduct na lista de lista suspensa da guia s atualização](using-sql-cache-dependencies-cs/_static/image13.gif)](using-sql-cache-dependencies-cs/_static/image19.png)
 
 **Figura 13**: Escolha o método UpdateProduct de guia de atualização s lista suspensa ([clique para exibir a imagem em tamanho normal](using-sql-cache-dependencies-cs/_static/image20.png))
 
@@ -306,7 +306,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 - [Criando uma notificação de consulta](https://msdn.microsoft.com/library/ms188669.aspx)
 - [Armazenamento em cache no ASP.NET com o `SqlCacheDependency` classe](https://msdn.microsoft.com/library/ms178604(VS.80).aspx)
 - [Ferramenta de registro do servidor SQL do ASP.NET (`aspnet_regsql.exe`)](https://msdn.microsoft.com/library/ms229862(vs.80).aspx)
-- [Visão geral de `SqlCacheDependency`](http://www.aspnetresources.com/blog/sql_cache_depedency_overview.aspx)
+- [Visão geral do `SqlCacheDependency`](http://www.aspnetresources.com/blog/sql_cache_depedency_overview.aspx)
 
 ## <a name="about-the-author"></a>Sobre o autor
 
