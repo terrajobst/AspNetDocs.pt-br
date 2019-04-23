@@ -12,7 +12,7 @@ ms.openlocfilehash: b59cd34036c733579e678eab78097d3393f3e671
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421076"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Implantação da Web do ASP.NET usando o Visual Studio: Solução de problemas
@@ -28,7 +28,7 @@ Esta página descreve alguns problemas comuns que podem surgir quando você impl
 
 Os cenários mostrados se aplicam ao Azure e provedores de hospedagem de terceiros. Para obter mais informações sobre como solucionar problemas de aplicativos web no serviço de aplicativo do Azure, consulte os seguintes recursos:
 
-- [Solucionar problemas de um aplicativo web no serviço de aplicativo do Azure usando o Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
+- [Solucionar problemas de um aplicativo Web no Serviço de Aplicativo do Azure usando o Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
 - [Monitorar aplicativos Web no serviço de aplicativo do Azure](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
 - [Anunciando o lançamento do Windows Azure SDK 2.0 para .NET](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog de ScottGu, mostra como obter logs de diagnóstico no Visual Studio)
 
@@ -306,7 +306,7 @@ Publicação falhará com um erro indicando que você não tiver autoridade para
 
 ### <a name="possible-cause-and-solution"></a>Possível causa e solução
 
-Por padrão, o Visual Studio define permissões de leitura na pasta raiz do site e permissões de gravação no aplicativo\_pasta de dados. Se você souber que as permissões padrão em pastas do site estão corretas e não precisam ser definidas, você desabilitar esse comportamento adicionando ** &lt;destino IncludeSetACLProviderOn&gt;falso&lt;/ IncludeSetACLProviderOnDestination&gt; ** para o arquivo de perfil de publicação (para afetar um único perfil) ou ao arquivo wpp.targets (para afetar todos os perfis). Para obter informações sobre como editar esses arquivos, consulte [como: Editar configurações de implantação nos arquivos de perfil (. pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+Por padrão, o Visual Studio define permissões de leitura na pasta raiz do site e permissões de gravação no aplicativo\_pasta de dados. Se você souber que as permissões padrão em pastas do site estão corretas e não precisam ser definidas, você desabilitar esse comportamento adicionando **&lt;destino IncludeSetACLProviderOn&gt;falso&lt;/ IncludeSetACLProviderOnDestination&gt;** para o arquivo de perfil de publicação (para afetar um único perfil) ou ao arquivo wpp.targets (para afetar todos os perfis). Para obter informações sobre como editar esses arquivos, consulte [como: Editar configurações de implantação nos arquivos de perfil (. pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 ## <a name="access-denied-errors-when-the-application-tries-to-write-to-an-application-folder"></a>Erros de acesso negado quando o aplicativo tenta gravar em uma pasta de aplicativo
 
@@ -316,7 +316,7 @@ Os erros de aplicativo quando ele tenta criar ou editar um arquivo em uma das pa
 
 ### <a name="possible-cause-and-solution"></a>Possível causa e solução
 
-Por padrão, o Visual Studio define permissões de leitura na pasta raiz do site e permissões de gravação no aplicativo\_pasta de dados. Se seu aplicativo precisa de acesso de gravação em uma subpasta, você pode definir permissões para essa pasta como mostrado na definição de permissões de pasta e implantando os tutoriais do ambiente de produção nesta série. Se seu aplicativo precisa de acesso de gravação para a pasta raiz do site, você precisa impedir que a configuração de acesso somente leitura na pasta raiz, adicionando ** &lt;destino IncludeSetACLProviderOn&gt;falso&lt;/ IncludeSetACLProviderOnDestination&gt; ** para o arquivo de perfil de publicação (para afetar um único perfil) ou ao arquivo wpp.targets (para afetar todos os perfis). Para obter informações sobre como editar esses arquivos, consulte [como: Editar configurações de implantação nos arquivos de perfil (. pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
+Por padrão, o Visual Studio define permissões de leitura na pasta raiz do site e permissões de gravação no aplicativo\_pasta de dados. Se seu aplicativo precisa de acesso de gravação em uma subpasta, você pode definir permissões para essa pasta como mostrado na definição de permissões de pasta e implantando os tutoriais do ambiente de produção nesta série. Se seu aplicativo precisa de acesso de gravação para a pasta raiz do site, você precisa impedir que a configuração de acesso somente leitura na pasta raiz, adicionando **&lt;destino IncludeSetACLProviderOn&gt;falso&lt;/ IncludeSetACLProviderOnDestination&gt;** para o arquivo de perfil de publicação (para afetar um único perfil) ou ao arquivo wpp.targets (para afetar todos os perfis). Para obter informações sobre como editar esses arquivos, consulte [como: Editar configurações de implantação nos arquivos de perfil (. pubxml)](https://msdn.microsoft.com/library/ff398069.aspx).
 
 <a id="aspnet45error"></a>
 
@@ -375,4 +375,4 @@ O conteúdo solicitado parece ser o script e não será servido pelo manipulador
 ASP.NET 4.5 não podem ser instaladas em seu computador. Consulte as etapas de implantação para o IIS como um tutorial do ambiente de teste desta série que explicam como instalar o ASP.NET 4.5.
 
 > [!div class="step-by-step"]
-> [Voltar](deploying-extra-files.md)
+> [Anterior](deploying-extra-files.md)
