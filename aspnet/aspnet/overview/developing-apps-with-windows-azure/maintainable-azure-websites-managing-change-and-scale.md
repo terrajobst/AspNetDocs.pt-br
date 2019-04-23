@@ -135,7 +135,7 @@ Nesta tarefa, você passará pelas etapas de habilitação **Entity Framework Co
 
     > [!NOTE]
     > Este comando adiciona uma **migrações** pasta ao projeto de Geek Quiz que contém um arquivo chamado **Configuration.cs**. O **configuração** classe permite que você configurar o comportamento de migrações para o seu contexto.
-5. Com as migrações habilitadas, você precisará atualizar o **Configuration** classe para popular o banco de dados com os dados iniciais que **Pau teste** requer. Sob **migrações**, substitua o **Configuration.cs** arquivo com aquele localizado na **Source\Assets** pasta deste laboratório.
+5. Com as migrações habilitadas, você precisará atualizar o **Configuration** classe para popular o banco de dados com os dados iniciais que **Geek Quiz** requer. Sob **migrações**, substitua o **Configuration.cs** arquivo com aquele localizado na **Source\Assets** pasta deste laboratório.
 
     > [!NOTE]
     > Uma vez que **migrações** chamará o **semente** método com cada atualização do banco de dados, você precisa ter certeza de que os registros não são duplicados no banco de dados. O **AddOrUpdate** método ajudará a evitar dados duplicados.
