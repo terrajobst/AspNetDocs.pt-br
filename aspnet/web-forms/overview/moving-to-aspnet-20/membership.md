@@ -12,7 +12,7 @@ ms.openlocfilehash: f3f8c649932682fd96e0640ddf4595c19c755909
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408180"
 ---
 # <a name="membership"></a>Associação
@@ -74,7 +74,7 @@ Você pode iniciar a interface da Web clicando no botão de configuração do AS
 
 Isso inicia a ferramenta de administração de Site da Web do ASP.NET mostrado abaixo. A administração de Site da Web do ASP.NET é uma interface de guia de quatro que torna mais fácil de gerenciar configurações de aplicativo. As seguintes guias estão disponíveis:
 
-- **Home**
+- **Início**
 - **Segurança** configurar usuários, funções e acesso.
 - **Aplicativo** definir configurações do aplicativo.
 - **Provedor** configurar e testar o seu provedor de associação de aplicativos.

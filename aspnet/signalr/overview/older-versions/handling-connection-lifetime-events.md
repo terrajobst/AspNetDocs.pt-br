@@ -12,7 +12,7 @@ ms.openlocfilehash: a8121a2d7c4ed14e296dc72c72ca7c25939a2b50
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414004"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr-1x"></a>Noções básicas sobre e manipular eventos de tempo de vida de Conexão no SignalR 1.x

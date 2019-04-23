@@ -12,7 +12,7 @@ ms.openlocfilehash: a229ebd71c913f3fe086892786988d0b3e42ec88
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411573"
 ---
 # <a name="adding-business-logic-layer-to-a-project-that-uses-model-binding-and-web-forms"></a>Adicionar camada de lógica comercial para um projeto que usa a associação de modelos e formulários da web
@@ -96,4 +96,4 @@ Executar o aplicativo e observe que todas as páginas funcionam conforme eles ti
 Neste tutorial, você estruturados novamente seu aplicativo para usar uma camada de acesso a dados e a camada de lógica comercial. Você especificou que os controles de dados usam um objeto que não é a página atual para operações de dados.
 
 > [!div class="step-by-step"]
-> [Voltar](using-query-string-values-to-retrieve-data.md)
+> [Anterior](using-query-string-values-to-retrieve-data.md)

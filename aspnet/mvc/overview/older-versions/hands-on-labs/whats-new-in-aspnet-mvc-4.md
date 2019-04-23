@@ -12,7 +12,7 @@ ms.openlocfilehash: b9da2522cfaed324a23f43265d4e234ebb4950bd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411118"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novidades no ASP.NET MVC 4
@@ -547,7 +547,7 @@ Nesta tarefa, você atualizará o layout da área de trabalho para incluir o alt
 
     ![Página sobre](whats-new-in-aspnet-mvc-4/_static/image33.png "sobre a página")
 
-    *Página Sobre*
+    *Sobre a página*
 8. Por fim, abra o site em um navegador da Web da área de trabalho. Observe que nenhuma das atualizações anteriores afetou o modo de exibição da área de trabalho.
 
     ![Modo de exibição da área de trabalho Galeriadefotos](whats-new-in-aspnet-mvc-4/_static/image34.png "Galeriadefotos de exibição da área de trabalho")

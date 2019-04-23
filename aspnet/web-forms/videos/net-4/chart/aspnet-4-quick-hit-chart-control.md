@@ -12,7 +12,7 @@ ms.openlocfilehash: 7bccf52ccf0aacffa90d3c6db541cec5e20582e3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414225"
 ---
 # <a name="aspnet-4-quick-hit---chart-control"></a>ASP.NET 4 "rápido" ocorrências - controle de gráfico

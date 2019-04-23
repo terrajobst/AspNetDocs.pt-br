@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d56a600b1b97d9d044fa90b678c942f0dc6fc00
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413822"
 ---
 # <a name="specifying-the-master-page-programmatically-c"></a>Especificar a página mestra programaticamente (C#)
@@ -42,7 +42,7 @@ Sempre que uma solicitação chega ao servidor web para uma página ASP.NET que 
 Figura 1 ilustra essa fusion. Etapa 1 na Figura 1 mostra o conteúdo inicial e a hierarquias de controle de página mestra. No final de parte final do estágio PreInit o conteúdo de controles da página são adicionados ao ContentPlaceHolders correspondente na página mestra (etapa 2). Após essa fusion, a página mestra serve como a raiz da hierarquia de controle de adição múltipla. Isso fundida controle hierarquia, em seguida, é adicionada à página para produzir a hierarquia de controle finalizado (etapa 3). O resultado líquido é que a hierarquia de controle da página inclui a hierarquia de controle de adição múltipla.
 
 
-[![Tele página mestra e hierarquias de controle da página de conteúdo são combinados juntos durante o estágio de PreInit](specifying-the-master-page-programmatically-cs/_static/image2.png)](specifying-the-master-page-programmatically-cs/_static/image1.png)
+[![A página mestra e hierarquias de controle da página de conteúdo são combinados juntos durante o estágio de PreInit](specifying-the-master-page-programmatically-cs/_static/image2.png)](specifying-the-master-page-programmatically-cs/_static/image1.png)
 
 **Figura 01**: A página mestra e hierarquias de controle da página de conteúdo são combinados juntos durante o estágio de PreInit ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-cs/_static/image3.png))
 
@@ -83,7 +83,7 @@ Se o `MasterPageFile` propriedade é definida por meio de `@Page` diretiva ou po
 Em resumo, você deve deixar o `MasterPageFile` de atributo no `@Page` diretiva para aproveitar uma experiência avançada de tempo de design no Visual Studio.
 
 
-[![VVisual Studio usa o @Page atributo de MasterPageFile da diretiva para renderizar a exibição de Design](specifying-the-master-page-programmatically-cs/_static/image5.png)](specifying-the-master-page-programmatically-cs/_static/image4.png)
+[![Visual Studio usa o @Page atributo de MasterPageFile da diretiva para renderizar a exibição de Design](specifying-the-master-page-programmatically-cs/_static/image5.png)](specifying-the-master-page-programmatically-cs/_static/image4.png)
 
 **Figura 02**: Visual Studio usa o `@Page` da diretiva `MasterPageFile` o modo de exibição de Design de atributo para renderização ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-cs/_static/image6.png))
 
@@ -97,7 +97,7 @@ Vamos examinar como carregar dinamicamente uma página mestra em tempo de execu�
 Criar uma nova página mestre na pasta raiz chamada `Alternate.master`. Também adicione uma nova folha de estilo para o site da Web denominado `AlternateStyles.css`.
 
 
-[![Add outra página mestra e arquivo CSS para o site](specifying-the-master-page-programmatically-cs/_static/image8.png)](specifying-the-master-page-programmatically-cs/_static/image7.png)
+[![Adicione outro arquivo de página mestra e CSS para o site](specifying-the-master-page-programmatically-cs/_static/image8.png)](specifying-the-master-page-programmatically-cs/_static/image7.png)
 
 **Figura 03**: Adicionar outra página mestra e arquivo CSS ao site ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-cs/_static/image9.png))
 
@@ -108,7 +108,7 @@ Eu criei o `Alternate.master` página mestra para o título exibido na parte sup
 > O ASP.NET inclui a capacidade de definir *temas*. Um tema é uma coleção de imagens, arquivos CSS e relacionadas a estilo Web controle configurações de propriedade que podem ser aplicadas a uma página em tempo de execução. Os temas são a melhor opção se os layouts do seu site diferem apenas em imagens exibidas e por suas regras CSS. Se os layouts mais substancialmente, diferem como o uso de controles da Web diferentes ou com um layout radicalmente diferente, em seguida, você precisará usar separado de páginas mestras. Consulte a seção leitura adicional no final deste tutorial para obter mais informações sobre temas.
 
 
-[![OPáginas de conteúdo agora podem usar uma nova aparência](specifying-the-master-page-programmatically-cs/_static/image11.png)](specifying-the-master-page-programmatically-cs/_static/image10.png)
+[![Nossas páginas de conteúdo agora podem usar uma nova aparência](specifying-the-master-page-programmatically-cs/_static/image11.png)](specifying-the-master-page-programmatically-cs/_static/image10.png)
 
 **Figura 04**: Nossas páginas de conteúdo agora podem usar uma nova aparência ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-cs/_static/image12.png))
 
@@ -206,7 +206,7 @@ Vamos criar uma página da web que permite que o usuário escolha qual página m
 > Porque `Site.master` e `Alternate.master` têm o mesmo conjunto de controles ContentPlaceHolder não importa o que você escolher ao criar a nova página de conteúdo de página mestra. Para manter a consistência, eu sugeriria usando `Site.master`.
 
 
-[![Auma página de conteúdo para o site de dd](specifying-the-master-page-programmatically-cs/_static/image14.png)](specifying-the-master-page-programmatically-cs/_static/image13.png)
+[![Adicione uma nova página de conteúdo para o site](specifying-the-master-page-programmatically-cs/_static/image14.png)](specifying-the-master-page-programmatically-cs/_static/image13.png)
 
 **Figura 05**: Adicione uma nova página de conteúdo para o site ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-cs/_static/image15.png))
 
@@ -251,12 +251,12 @@ Com o `ChooseMasterPage.aspx` página completa, nossa tarefa final é ter `BaseP
 Com esse código, visite o `ChooseMasterPage.aspx` página. Inicialmente, o `Site.master` página mestra é selecionado (consulte a Figura 6), mas o usuário pode selecionar uma página mestra diferente na lista suspensa.
 
 
-[![Conteúdo páginas são exibidas usando a página mestra do site](specifying-the-master-page-programmatically-cs/_static/image17.png)](specifying-the-master-page-programmatically-cs/_static/image16.png)
+[![Páginas de conteúdo são exibidas usando a página mestra do site](specifying-the-master-page-programmatically-cs/_static/image17.png)](specifying-the-master-page-programmatically-cs/_static/image16.png)
 
 **Figura 06**: Conteúdo de páginas são exibidas usando o `Site.master` página mestra ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-cs/_static/image18.png))
 
 
-[![CPáginas onteúdo agora são exibidas usando a página mestra Alternate.master](specifying-the-master-page-programmatically-cs/_static/image20.png)](specifying-the-master-page-programmatically-cs/_static/image19.png)
+[![Páginas de conteúdo agora são exibidas usando a página mestra Alternate.master](specifying-the-master-page-programmatically-cs/_static/image20.png)](specifying-the-master-page-programmatically-cs/_static/image19.png)
 
 **Figura 07**: Conteúdo de páginas são agora exibidos usando o `Alternate.master` página mestra ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-cs/_static/image21.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 42c1cd684196c026f1435cba289fc2535187087c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417293"
 ---
 # <a name="dynamically-populating-a-control-c"></a>Preenchimento dinâmico de um controle (C#)
@@ -66,7 +66,7 @@ Como você pode ver, o controle requer algumas informações, mas colocar tudo n
 Execute a página ASP.NET no navegador e clique no botão; Você receberá a data atual no formato mês / dia / ano.
 
 
-[![A Clique no botão recupera a data do servidor](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
+[![Um clique no botão recupera a data do servidor](dynamically-populating-a-control-cs/_static/image2.png)](dynamically-populating-a-control-cs/_static/image1.png)
 
 Um clique no botão recupera a data do servidor ([clique para exibir a imagem em tamanho normal](dynamically-populating-a-control-cs/_static/image3.png))
 

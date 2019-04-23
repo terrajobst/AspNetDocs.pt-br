@@ -12,7 +12,7 @@ ms.openlocfilehash: 63d85ec5f1f2fbadd92fd0210e67332df30aab5a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419594"
 ---
 # <a name="part-1-overview-and-file-new-project"></a>Parte 1: Visão geral e Arquivo -> Novo Projeto
@@ -114,8 +114,8 @@ ASP.NET MVC faz uso de algumas convenções básicas de nomenclatura para nomes 
 
 | **Pasta** | **Finalidade** |
 | --- | --- |
-| **/ Controladores** | Controladores de respondem à entrada do navegador, decidir o que fazer com ele e retornar a resposta para o usuário. |
-| **/ Modos de exibição** | Modos de exibição manter nossos modelos de interface do usuário |
+| **/Controllers** | Controladores de respondem à entrada do navegador, decidir o que fazer com ele e retornar a resposta para o usuário. |
+| **/Views** | Modos de exibição manter nossos modelos de interface do usuário |
 | **Ou os modelos** | Modelos de mantenham e manipulam dados |
 | **/Content** | Essa pasta contém nossas imagens, CSS e qualquer outro conteúdo estático |
 | **/Scripts** | Essa pasta contém nossos arquivos de JavaScript |

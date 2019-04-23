@@ -12,7 +12,7 @@ ms.openlocfilehash: 242665b3ba2e2ad2157abbe2c44ae207f15e72ce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410858"
 ---
 # <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fornecer suporte de CRUD (criar, ler, atualizar e excluir) ao formulário de entrada de dados
@@ -36,7 +36,7 @@ Já apresentamos controladores e exibições e abordou como usá-los para implem
 
 Adicionamos anteriormente métodos de ação ao DinnersController que implementou o suporte para duas URLs: */Dinners* e */Dinners/detalhes / [id]*.
 
-| **URL** | **VERBO** | **Finalidade** |
+| **URL** | **VERB** | **Finalidade** |
 | --- | --- | --- |
 | */Dinners/* | OBTER | Exiba uma lista HTML de jantares futuros. |
 | */Dinners/Details/[id]* | OBTER | Exibir detalhes sobre um jantar específico. |
@@ -45,9 +45,9 @@ Agora, adicionaremos métodos de ação para implementar as três URLs adicionai
 
 Daremos suporte a interações de verbo HTTP GET e HTTP POST com essas novas URLs. Solicitações HTTP GET para essas URLs exibirá o modo de exibição HTML inicial dos dados (um formulário preenchido com os dados de jantar no caso de "Editar", um formulário em branco no caso de "criar" e uma tela de confirmação de exclusão no caso de "exclusão"). Solicitações de HTTP POST a essas URLs serão salvar/atualizar/excluir os dados de jantar nosso DinnerRepository (e daí para o banco de dados).
 
-| **URL** | **VERBO** | **Finalidade** |
+| **URL** | **VERB** | **Finalidade** |
 | --- | --- | --- |
-| */Dinners/Editar / [id]* | OBTER | Exiba um formulário HTML editável preenchido com dados de jantar. |
+| */Dinners/Edit/[id]* | OBTER | Exiba um formulário HTML editável preenchido com dados de jantar. |
 | POSTAR | Salve as alterações do formulário em um jantar específico para o banco de dados. |
 | */Dinners/Create* | OBTER | Exiba um formulário HTML vazio que permite aos usuários definir jantares novo. |
 | POSTAR | Crie um novo jantar e salvá-lo no banco de dados. |

@@ -12,7 +12,7 @@ ms.openlocfilehash: 7a6401e881fd66ab21b58fd7d86085e0bc228b6a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410845"
 ---
 # <a name="using-parameterized-queries-with-the-sqldatasource-c"></a>Uso de consultas parametrizadas com o SqlDataSource (C#)
@@ -61,7 +61,7 @@ Como criar uma consulta parametrizada depende de como o s SqlDataSource `SelectC
 Ao selecionar os dados a serem retornados do banco de dados com o controle SqlDataSource, o Assistente Configurar fonte de dados nos permite simplesmente escolhe as colunas para retornar de uma tabela existente ou exibir (veja a Figura 1). Fazendo isso automaticamente cria um SQL `SELECT` instrução, que é o que é enviado ao banco de dados quando o s SqlDataSource `Select()` método é invocado. Como fizemos no tutorial anterior, selecione a tabela de produtos na lista suspensa e verificar a `ProductID`, `ProductName`, e `UnitPrice` colunas.
 
 
-[![Pas colunas para o retorno de uma tabela ou exibição de ick](using-parameterized-queries-with-the-sqldatasource-cs/_static/image1.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image1.png)
+[![Selecione as colunas para retornar de uma tabela ou exibição](using-parameterized-queries-with-the-sqldatasource-cs/_static/image1.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image1.png)
 
 **Figura 1**: Selecione as colunas para o retorno de uma tabela ou exibição ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image2.png))
 
@@ -71,7 +71,7 @@ Para incluir um `WHERE` cláusula em de `SELECT` instrução, clique no `WHERE` 
 Neste exemplo, let s retornar apenas os resultados onde o `UnitPrice` valor é menor ou igual a $25,00. Portanto, escolha `UnitPrice` na lista suspensa coluna e &lt;= da lista suspensa do operador. Ao usar um valor de parâmetro embutido em código (por exemplo, $25,00) ou se o valor do parâmetro deve ser especificada programaticamente, selecione nenhum na lista suspensa origem. Em seguida, insira o valor do parâmetro embutido em código na caixa de texto valor 25,00 e concluir o processo clicando no botão Adicionar.
 
 
-[![Los resultados retornados de adicionar onde cláusula caixa de diálogo de imit](using-parameterized-queries-with-the-sqldatasource-cs/_static/image2.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image3.png)
+[![Limitar os resultados retornados do Adicione WHERE caixa de diálogo cláusula](using-parameterized-queries-with-the-sqldatasource-cs/_static/image2.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image3.png)
 
 **Figura 2**: Limitar os resultados retornados de adicionar `WHERE` caixa de diálogo cláusula ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image4.png))
 
@@ -93,7 +93,7 @@ Concluir a configuração o SqlDataSource (clique em seguida, em seguida, conclu
 Quando o s SqlDataSource `Select()` método é invocado, o `UnitPrice` o valor do parâmetro (25,00) é aplicado ao `@UnitPrice` parâmetro no `SelectCommand` antes de serem enviados ao banco de dados. O resultado líquido é que somente esses produtos retornados de menor ou igual a $25,00 o `Products` tabela. Para confirmar isso, adicione um controle GridView à página, associá-lo a essa fonte de dados e, em seguida, exiba a página por meio de um navegador. Você deve ver apenas os produtos listados menor ou igual a $25,00, enquanto confirma a Figura 3.
 
 
-[![Osão exibidas somente aqueles produtos menor que ou igual a $25,00](using-parameterized-queries-with-the-sqldatasource-cs/_static/image3.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image5.png)
+[![São exibidas apenas aqueles produtos menor que ou igual a $25,00](using-parameterized-queries-with-the-sqldatasource-cs/_static/image3.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image5.png)
 
 **Figura 3**: São exibidas apenas aqueles produtos menor que ou igual a $25,00 ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image6.png))
 
@@ -110,7 +110,7 @@ Em seguida, arraste um controle GridView à página e na marca inteligente de op
 Depois de inserir a consulta (manualmente ou por meio do construtor de consultas), clique em Avançar.
 
 
-[![Roltar apenas aqueles produtos menor que ou igual a um valor de parâmetro](using-parameterized-queries-with-the-sqldatasource-cs/_static/image4.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image7.png)
+[![Retornar apenas os produtos menor ou igual a um valor de parâmetro](using-parameterized-queries-with-the-sqldatasource-cs/_static/image4.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image7.png)
 
 **Figura 4**: Retorno apenas aqueles produtos menor que ou igual a um valor de parâmetro ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image8.png))
 
@@ -118,7 +118,7 @@ Depois de inserir a consulta (manualmente ou por meio do construtor de consultas
 Uma vez que a consulta inclui parâmetros, a próxima tela do assistente nos solicita a origem dos valores de parâmetros. Escolha o controle da lista de lista suspensa de fonte de parâmetro e `MaxPrice` (o controle de caixa de texto s `ID` valor) na lista suspensa ControlID. Você também pode inserir um valor padrão opcional para usar no caso em que o usuário não tiver inserido qualquer texto no `MaxPrice` caixa de texto. Por enquanto, não insira um valor padrão.
 
 
-[![Tele MaxPrice TextBox s propriedade Text é usado como a origem do parâmetro](using-parameterized-queries-with-the-sqldatasource-cs/_static/image5.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image9.png)
+[![O propriedade Text do s MaxPrice TextBox é usado como a origem do parâmetro](using-parameterized-queries-with-the-sqldatasource-cs/_static/image5.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image9.png)
 
 **Figura 5**: O `MaxPrice` s de caixa de texto `Text` propriedade é usada como a origem do parâmetro ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image10.png))
 
@@ -133,7 +133,7 @@ Observe que o parâmetro dentro da s SqlDataSource `<SelectParameters>` seção 
 Reserve um minuto para exibir esta página por meio de um navegador. Quando o primeiro visitando a página ou sempre que o `MaxPrice` caixa de texto não tiver um valor que não há registros são exibidos em um GridView.
 
 
-[![Ns registros são que exibidos quando o MaxPrice caixa de texto é vazio](using-parameterized-queries-with-the-sqldatasource-cs/_static/image6.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image11.png)
+[![Registros não são que exibidos quando o MaxPrice caixa de texto está vazio](using-parameterized-queries-with-the-sqldatasource-cs/_static/image6.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image11.png)
 
 **Figura 6**: Não há registros são exibidos quando o `MaxPrice` caixa de texto está vazia ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image12.png))
 
@@ -143,7 +143,7 @@ O motivo pelo qual não há produtos são mostrados ocorre porque, por padrão, 
 Insira um valor na caixa de texto, como 5.00 e clique no botão de produtos de correspondência de exibição. No postback, SqlDataSource informa que o GridView que uma das suas fontes de parâmetro foi alterado. Consequentemente, o GridView associa novamente para o SqlDataSource, exibindo os produtos menor ou igual a US $5,00.
 
 
-[![Products menor ou igual a US $5,00 são exibidas](using-parameterized-queries-with-the-sqldatasource-cs/_static/image7.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image13.png)
+[![Produtos de menor que ou igual a US $5,00 são exibidos](using-parameterized-queries-with-the-sqldatasource-cs/_static/image7.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image13.png)
 
 **Figura 7**: Produtos de menor que ou igual a US $5,00 são exibidas ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image14.png))
 
@@ -162,7 +162,7 @@ Infelizmente, podemos ignorar a arquitetura, ao usar o SqlDataSource. Em vez dis
 Isso `WHERE` cláusula retorna *todas as* registra se o `@MaximumPrice` é igual ao parâmetro `-1.0`. Se o valor do parâmetro não for `-1.0`, apenas aqueles produtos cujo `UnitPrice` é menor que ou igual ao `@MaximumPrice` valor de parâmetro são retornados. Definindo o valor padrão a `@MaximumPrice` parâmetro para `-1.0`, o primeiro carregamento de página (ou sempre que o `MaxPrice` caixa de texto está vazia), `@MaximumPrice` terá um valor de `-1.0` e todos os produtos serão exibidos.
 
 
-[![Nomo todos os produtos são que exibidos quando o MaxPrice caixa de texto é vazio](using-parameterized-queries-with-the-sqldatasource-cs/_static/image8.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image15.png)
+[![Agora, todos os produtos são exibidos quando o MaxPrice caixa de texto está vazio](using-parameterized-queries-with-the-sqldatasource-cs/_static/image8.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image15.png)
 
 **Figura 8**: Agora, todos os produtos são exibidos quando o `MaxPrice` caixa de texto está vazia ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image16.png))
 
@@ -185,7 +185,7 @@ Do `NORTHWND.MDF` de banco de dados, clique com botão direito na pasta Stored P
 Clique no ícone Salvar (ou Ctrl + S) para salvar o procedimento armazenado. Você pode testar o procedimento armazenado, clicando duas vezes na pasta de procedimentos armazenados e escolha Executar. Isso lhe solicitará parâmetros de procedimento armazenado s (`@CategoryID`, nesta instância), depois que os resultados serão exibidos na janela de saída.
 
 
-[![The GetProductsByCategory Stored Procedure quando executada com um @CategoryID 1](using-parameterized-queries-with-the-sqldatasource-cs/_static/image9.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image17.png)
+[![O GetProductsByCategory armazenados procedimento quando executada com um @CategoryID 1](using-parameterized-queries-with-the-sqldatasource-cs/_static/image9.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image17.png)
 
 **Figura 9**: O `GetProductsByCategory` procedimento armazenado quando executada com um `@CategoryID` de 1 ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image18.png))
 
@@ -193,7 +193,7 @@ Clique no ícone Salvar (ou Ctrl + S) para salvar o procedimento armazenado. Voc
 Deixe o s usar esse procedimento armazenado para exibir todos os produtos na categoria Bebidas em um GridView. Adicione um novo GridView à página e associá-lo para um novo SqlDataSource chamado `BeverageProductsDataSource`. Continue para especificar uma instrução SQL personalizada ou tela de procedimento armazenado, selecione o botão de opção de procedimento armazenado e escolher o `GetProductsByCategory` procedimento armazenado a partir da lista suspensa.
 
 
-[![SEscolha o procedimento armazenado de GetProductsByCategory na lista suspensa](using-parameterized-queries-with-the-sqldatasource-cs/_static/image10.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image19.png)
+[![Selecione o GetProductsByCategory procedimento armazenado a partir da lista suspensa](using-parameterized-queries-with-the-sqldatasource-cs/_static/image10.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image19.png)
 
 **Figura 10**: Selecione o `GetProductsByCategory` procedimento armazenado na lista suspensa ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image20.png))
 
@@ -201,7 +201,7 @@ Deixe o s usar esse procedimento armazenado para exibir todos os produtos na cat
 Uma vez que o procedimento armazenado aceita um parâmetro de entrada (`@CategoryID`), clique em Avançar solicita a especificar a origem para esse valor de parâmetro s. As bebidas `CategoryID` é 1, portanto, deixe a lista de lista suspensa de origem do parâmetro com nenhum e digite 1 na caixa de texto DefaultValue.
 
 
-[![USe um valor de Hard-Coded de 1 para retornar os produtos na categoria Bebidas](using-parameterized-queries-with-the-sqldatasource-cs/_static/image11.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image21.png)
+[![Use um valor embutido em código de 1 para retornar os produtos na categoria Bebidas](using-parameterized-queries-with-the-sqldatasource-cs/_static/image11.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image21.png)
 
 **Figura 11**: Use um valor de Hard-Coded de 1 para retornar os produtos na categoria Bebidas ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image22.png))
 
@@ -214,7 +214,7 @@ Como mostra a marcação declarativa seguir, ao usar um procedimento armazenado,
 Testar a página em um navegador. Somente os produtos que pertencem à categoria de bebidas são exibidos, embora *todos os* do produto campos são exibidos desde o `GetProductsByCategory` procedimento armazenado retorna todas as colunas da `Products` tabela. É claro, estamos poderia limitar ou personalizar os campos de GridView da caixa de diálogo Editar colunas GridView s.
 
 
-[![All de bebidas são exibidas](using-parameterized-queries-with-the-sqldatasource-cs/_static/image12.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image23.png)
+[![Todos as bebidas sejam exibidos](using-parameterized-queries-with-the-sqldatasource-cs/_static/image12.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image23.png)
 
 **Figura 12**: Todos as bebidas sejam exibidos ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image24.png))
 
@@ -246,7 +246,7 @@ O código a seguir ilustra como recuperar os registros da `RandomCategoryDataSou
 `randomCategoryView[0]` Retorna o primeiro `DataRowView` no DataView. `randomCategoryView[0]["CategoryName"]` Retorna o valor da `CategoryName` coluna nesta primeira linha. Observe que o DataView é fracamente tipado. Para fazer referência a um valor de coluna específico, precisamos passar no nome da coluna como uma cadeia de caracteres (CategoryName, neste caso). A Figura 13 mostra a mensagem exibida no `CategoryNameLabel` ao exibir a página. É claro, o nome da categoria reais exibido é selecionado aleatoriamente pelo `RandomCategoryDataSource` SqlDataSource sobre cada visita à página (incluindo postbacks).
 
 
-[![Tele categoria selecionada aleatoriamente s nome é exibido](using-parameterized-queries-with-the-sqldatasource-cs/_static/image13.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image25.png)
+[![O s da categoria selecionada aleatoriamente que nome é exibido](using-parameterized-queries-with-the-sqldatasource-cs/_static/image13.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image25.png)
 
 **Figura 13**: O s da categoria selecionada aleatoriamente nome é exibido ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image26.png))
 
@@ -270,7 +270,7 @@ Todos os exemplos podemos ve viu até agora neste tutorial ter usado um valor de
 Comece adicionando um GridView à página e associá-lo para um novo SqlDataSource chamado `ProductsByCategoryDataSource`. Muito como fizemos na etapa 3, configure o SqlDataSource, de modo que ele invoca o `GetProductsByCategory` procedimento armazenado. Deixe o conjunto de lista suspensa de origem do parâmetro como None, mas não insira um valor padrão, como podemos definirá esse valor padrão por meio de programação.
 
 
-[![Do não especificar um parâmetro de origem ou o valor padrão](using-parameterized-queries-with-the-sqldatasource-cs/_static/image14.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image27.png)
+[![Não especificar um parâmetro de origem ou o valor padrão](using-parameterized-queries-with-the-sqldatasource-cs/_static/image14.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image27.png)
 
 **Figura 14**: Fazer não especificar uma fonte de parâmetro ou o valor padrão ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image28.png))
 
@@ -288,7 +288,7 @@ Podemos atribuir a `DefaultValue` do `CategoryID` parâmetro programaticamente o
 Com esse acréscimo, a página inclui um GridView que mostra os produtos associados a categoria selecionada aleatoriamente.
 
 
-[![Do não especificar um parâmetro de origem ou o valor padrão](using-parameterized-queries-with-the-sqldatasource-cs/_static/image15.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image29.png)
+[![Não especificar um parâmetro de origem ou o valor padrão](using-parameterized-queries-with-the-sqldatasource-cs/_static/image15.gif)](using-parameterized-queries-with-the-sqldatasource-cs/_static/image29.png)
 
 **Figura 15**: Fazer não especificar uma fonte de parâmetro ou o valor padrão ([clique para exibir a imagem em tamanho normal](using-parameterized-queries-with-the-sqldatasource-cs/_static/image30.png))
 

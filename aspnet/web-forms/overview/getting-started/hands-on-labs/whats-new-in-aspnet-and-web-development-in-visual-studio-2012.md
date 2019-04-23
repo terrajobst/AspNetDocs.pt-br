@@ -12,7 +12,7 @@ ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420205"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novidades no ASP.NET e desenvolvimento da Web no Visual Studio 2012
@@ -63,7 +63,7 @@ Este laboratório prático inclui os seguintes exercícios:
 1. [Exercício 1: O que há de novo no Editor de CSS](#Exercise1)
 2. [Exercício 2: O que há de novo no Editor de HTML](#Exercise2)
 3. [Exercício 3: O que há de novo no Editor de JavaScript](#Exercise3)
-4. [Exercício 4: Agrupamento e minificação](#Exercise4)
+4. [Exercício 4: Agrupamento e Minificação](#Exercise4)
 
 Tempo estimado para concluir este laboratório: **60 minutos**.
 
@@ -131,7 +131,7 @@ Nesta tarefa, você descobrirá que o novo seletor de cor CSS integrado ao Visua
 
     ![Seletor de cores](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image13.png "selecionador de cores")
 
-    *Seletor de cor*
+    *Seletor de cores*
 3. Pressione a **Expand** (![com](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image14.png) ) botão o seletor de cores para exibir o gradiente de cores e, em seguida, arraste o cursor de gradiente para selecionar uma cor diferente. Em seguida, clique o **conta-gotas** botão e selecione qualquer cor na tela. Observe que o valor de cor do plano de fundo muda dinamicamente enquanto você move o cursor.
 
     ![Gradiente de seletor de cores](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image15.png "gradiente do seletor de cores")

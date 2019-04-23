@@ -13,7 +13,7 @@ ms.openlocfilehash: d8340509484ab3f5ad241534bd0756545c5be84c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419321"
 ---
 # <a name="aspnet-identity-extensibility"></a>Extensibilidade do ASP.NET Identity
@@ -22,5 +22,5 @@ ms.locfileid: "59419321"
 
 
 - [Visão geral de provedores de armazenamento personalizados para a Identidade do ASP.NET](overview-of-custom-storage-providers-for-aspnet-identity.md)
-- [Implementar um provedor de armazenamento personalizado de MySQL da Identidade do ASP.NET](implementing-a-custom-mysql-aspnet-identity-storage-provider.md)
+- [Implementando um provedor de armazenamento personalizado de MySQL da Identidade do ASP.NET](implementing-a-custom-mysql-aspnet-identity-storage-provider.md)
 - [Alterar a chave primária de usuários na Identidade do ASP.NET](change-primary-key-for-users-in-aspnet-identity.md)

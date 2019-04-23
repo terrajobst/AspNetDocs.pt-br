@@ -12,7 +12,7 @@ ms.openlocfilehash: 6aee7a07402e407b4c7b0bcd7a5e926955bf96b1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410728"
 ---
 # <a name="using-dynamicpopulate-with-a-user-control-and-javascript-vb"></a>Uso de DynamicPopulate com um controle de usuário e o JavaScript (VB)
@@ -67,9 +67,9 @@ Por fim, adicione o controle de usuário para a página. Você deve definir seus
 E pronto. A página se comporta conforme o esperado: Um usuário clica em um dos botões de opção, o controle no Kit de ferramentas chama o serviço web e exibe a data atual no formato desejado.
 
 
-[![Tbotões de opção he residem em um controle de usuário](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image1.png)
+[![Os botões de opção residem em um controle de usuário](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image1.png)
 
 Os botões de opção residem em um controle de usuário ([clique para exibir a imagem em tamanho normal](using-dynamicpopulate-with-a-user-control-and-javascript-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](dynamically-populating-a-control-using-javascript-code-vb.md)
+> [Anterior](dynamically-populating-a-control-using-javascript-code-vb.md)

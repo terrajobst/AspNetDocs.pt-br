@@ -12,7 +12,7 @@ ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409792"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação para produção

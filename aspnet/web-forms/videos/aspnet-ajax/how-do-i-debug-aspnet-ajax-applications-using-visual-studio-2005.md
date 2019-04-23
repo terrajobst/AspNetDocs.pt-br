@@ -12,7 +12,7 @@ ms.openlocfilehash: 12b0826408679461f58106a393dd2e0408c2f8c9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408219"
 ---
 # <a name="how-do-i-debug-aspnet-ajax-applications-using-visual-studio-2005"></a>[Como fazer:] Depurar aplicativos do AJAX ASP.NET usando o Visual Studio 2005?

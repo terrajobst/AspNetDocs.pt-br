@@ -12,7 +12,7 @@ ms.openlocfilehash: 9665dafb23b885fdf9e4ea5f1a515a0c6dcc9a9a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410624"
 ---
 # <a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configuração de autenticação de formulários e tópicos avançados (C#)
@@ -84,7 +84,7 @@ A expiração define um tempo absoluto no futuro em que o tíquete de autentica�
 Figura 1 ilustra o fluxo de trabalho quando slidingExpiration é definido como false e o tempo limite é definido como 30. Observe que o tíquete de autenticação gerado no logon contém a data de validade, e esse valor não é atualizado em solicitações subsequentes. Se o FormsAuthenticationModule localiza o tíquete expirou, ele descarta e trata a solicitação como anônimo.
 
 
-[![A Representação gráfica dos slidingExpiration de expiração quando do tíquete de autenticação de formulários é false](forms-authentication-configuration-and-advanced-topics-cs/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image1.png)
+[![Uma representação gráfica dos slidingExpiration do tíquete de autenticação de formulários de expiração quando for false](forms-authentication-configuration-and-advanced-topics-cs/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image1.png)
 
 **Figura 01**: Uma representação gráfica dos slidingExpiration do tíquete de autenticação de formulários de expiração quando for false ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image3.png))
 
@@ -92,7 +92,7 @@ Figura 1 ilustra o fluxo de trabalho quando slidingExpiration é definido como f
 A Figura 2 mostra o fluxo de trabalho quando slidingExpiration é definido como true e o tempo limite é definido como 30. Quando uma solicitação autenticada é recebida (com um tíquete não expirados) sua expiração é atualizada para o tempo limite número de minutos no futuro.
 
 
-[![A Representação gráfica do tíquete de autenticação de formulários quando slidingExpiration é true](forms-authentication-configuration-and-advanced-topics-cs/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image4.png)
+[![Uma representação gráfica do tíquete de autenticação de formulários quando slidingExpiration é true](forms-authentication-configuration-and-advanced-topics-cs/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image4.png)
 
 **Figura 02**: Uma representação gráfica do tíquete de autenticação de formulários quando slidingExpiration é true ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image6.png))
 
@@ -181,7 +181,7 @@ Para garantir a autenticidade de um tíquete, o sistema de autenticação de for
 Ao criar (ou modificação) um tíquete, o sistema de autenticação de formulários cria um MAC e o anexa aos dados do tíquete. Quando chega uma solicitação subsequente, o sistema de autenticação de formulários compara os dados de MAC e tíquete para validar a autenticidade dos dados de tíquete. Figura 3 ilustra esse fluxo de trabalho graficamente.
 
 
-[![TAutenticidade do tíquete he é garantida por meio de um MAC](forms-authentication-configuration-and-advanced-topics-cs/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image7.png)
+[![Autenticidade do tíquete é garantida por meio de um MAC](forms-authentication-configuration-and-advanced-topics-cs/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image7.png)
 
 **Figura 03**: Autenticidade do tíquete é garantida por meio de um MAC ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image9.png))
 
@@ -238,7 +238,7 @@ Para armazenar dados de usuário em que o tíquete de autenticação, precisamos
 Sempre que é necessário acessar os dados armazenados no tíquete, podemos fazer isso captando FormsAuthenticationTicket da solicitação atual e desserializar a propriedade de dados do usuário. No caso a data de nascimento e empregador exemplo de nome, podemos seria dividir a cadeia de caracteres de dados do usuário em duas subcadeias de caracteres com base no delimitador (|).
 
 
-[![AInformações de usuário podem ser armazenados no tíquete de autenticação de dicionais](forms-authentication-configuration-and-advanced-topics-cs/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image10.png)
+[![Informações adicionais do usuário podem ser armazenadas no tíquete de autenticação](forms-authentication-configuration-and-advanced-topics-cs/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image10.png)
 
 **Figura 04**: Adicionais usuário informações podem ser armazenados no tíquete de autenticação ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image12.png))
 
@@ -302,7 +302,7 @@ Se Request.IsAuthenticated for true, então a propriedade de texto do WelcomeBac
 Figura 5 mostra uma captura de tela nessa exibição em ação. Fazer logon como Scott exibe uma mensagem de back-boas-vinda que inclui a empresa e o título de Scott.
 
 
-[![TTítulo e empresa he atualmente registrados do usuário são exibidas](forms-authentication-configuration-and-advanced-topics-cs/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image13.png)
+[![Título e empresa atualmente registradas do usuário são exibidos](forms-authentication-configuration-and-advanced-topics-cs/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image13.png)
 
 **Figura 05**: Título e empresa atualmente registradas do usuário são exibidas ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image15.png))
 
@@ -338,7 +338,7 @@ Para este tutorial, vamos criar os objetos personalizados de entidade de seguran
 Em seguida, adicione dois novos arquivos de classe para o aplicativo\_pasta de código, um CustomIdentity.cs nomeado e outro chamado CustomPrincipal.cs.
 
 
-[![Add a CustomIdentity e CustomPrincipal Classes ao seu projeto](forms-authentication-configuration-and-advanced-topics-cs/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image16.png)
+[![Adicione as Classes de CustomPrincipal e CustomIdentity ao seu projeto](forms-authentication-configuration-and-advanced-topics-cs/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image16.png)
 
 **Figura 06**: Adicione as Classes de CustomPrincipal e CustomIdentity ao seu projeto ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image18.png))
 
@@ -362,7 +362,7 @@ O pipeline do ASP.NET leva uma solicitação de entrada e processa-o por meio de
 Após o evento AuthenticateRequest, o pipeline do ASP.NET gera o [PostAuthenticateRequest evento](https://msdn.microsoft.com/library/system.web.httpapplication.postauthenticaterequest.aspx), que é onde podemos pode substituir o objeto GenericPrincipal criado pelo FormsAuthenticationModule com uma instância do nosso Objeto CustomPrincipal. Figura 7 ilustra esse fluxo de trabalho.
 
 
-[![Tele GenericPrincipal é substituído por um CustomPrincipal no evento PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-cs/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image19.png)
+[![O GenericPrincipal é substituído por um CustomPrincipal no evento PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-cs/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image19.png)
 
 **Figura 07**: O GenericPrincipal é substituído por um CustomPrincipal no evento PostAuthenticationRequest ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image21.png))
 
@@ -370,7 +370,7 @@ Após o evento AuthenticateRequest, o pipeline do ASP.NET gera o [PostAuthentica
 Para executar código em resposta a um evento de pipeline do ASP.NET, podemos pode criar o manipulador de eventos apropriado no global. asax ou criar nosso próprio módulo de HTTP. Para este tutorial vamos criar o manipulador de eventos no global. asax. Comece adicionando global. asax ao seu site. Clique com botão direito no nome do projeto no Gerenciador de soluções e adicione um item de tipo de classe de aplicativo Global chamado global. asax.
 
 
-[![Aum arquivo global asax para seu site de dd](forms-authentication-configuration-and-advanced-topics-cs/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image22.png)
+[![Adicionar um arquivo global asax ao seu site](forms-authentication-configuration-and-advanced-topics-cs/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image22.png)
 
 **Figura 08**: Adicionar um arquivo global asax ao seu site ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image24.png))
 

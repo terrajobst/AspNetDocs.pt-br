@@ -13,7 +13,7 @@ ms.openlocfilehash: 08870e703c88afccd57232cc259e928a08e7a7a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417878"
 ---
 # <a name="odata-in-aspnet-web-api"></a>OData na API Web ASP.NET
@@ -36,7 +36,7 @@ ms.locfileid: "59417878"
     - [Criar um ponto de extremidade OData v3](odata-v3/creating-an-odata-endpoint.md)
     - [Suporte a relações de entidade no OData v3](odata-v3/working-with-entity-relations.md)
     - [Ações de OData na API Web 2](odata-v3/odata-actions.md)
-    - [Chamar um serviço OData em um cliente .NET (C#)](odata-v3/calling-an-odata-service-from-a-net-client.md)
+    - [Chamando um serviço OData em um cliente .NET (C#)](odata-v3/calling-an-odata-service-from-a-net-client.md)
 - [Suporte a opções de consulta de OData na API Web 2](supporting-odata-query-options.md)
 - [Uso de $select, $expand e $value no OData da API Web 2](using-select-expand-and-value.md)
 - [Convenções de roteamento no OData da API Web 2](odata-routing-conventions.md)

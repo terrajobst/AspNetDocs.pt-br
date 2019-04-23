@@ -12,7 +12,7 @@ ms.openlocfilehash: 7b708c23dbe9ac16af55d5effdb015a8b0aaa010
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420140"
 ---
 # <a name="how-do-i-use-the-aspnet-ajax-togglebutton-extender"></a>[Como fazer:] Usar o extensor ToggleButton do ASP.NET AJAX?

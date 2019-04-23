@@ -12,7 +12,7 @@ ms.openlocfilehash: bf3336c2467553ba3714bbd4fbb41a35a0490768
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410598"
 ---
 # <a name="using-visual-studio-2013-to-create-a-basic-aspnet-45-web-forms-page"></a>Usando o Visual Studio 2013 para criar uma página de formulários da Web básico ASP.NET 4.5
@@ -62,12 +62,12 @@ Nesta parte do passo a passo, você criará um projeto de aplicativo Web e adici
 3. Selecione o **modelos**  - &gt; **Visual c#**  - &gt; **Web** grupo de modelos à esquerda.
 4. Escolha o **aplicativo Web ASP.NET** modelo na coluna central.
 5. Nomeie o projeto ***BasicWebApp*** e clique no **Okey** botão.   
-![Caixa de diálogo Novo Projeto](creating-a-basic-web-forms-page/_static/image2.png)
+![Caixa de diálogo Novo projeto](creating-a-basic-web-forms-page/_static/image2.png)
 6. Em seguida, selecione a **Web Forms** modelo e clique no **Okey** botão para criar o projeto.  
 ![Caixa de diálogo Novo projeto ASP.NET](creating-a-basic-web-forms-page/_static/image3.png)  
 
     Visual Studio cria um novo projeto que inclui a funcionalidade predefinidas com base no modelo de formulários da Web. Ele fornece não só você com uma *home. aspx* página, um *About* página, uma *Contact* página, mas também inclui a funcionalidade de associação que registra os usuários e salva suas credenciais para que eles podem fazer logon em seu site. Quando uma nova página é criada, por padrão, o Visual Studio exibe a página no **origem** modo, onde você pode ver os elementos da página HTML. A ilustração a seguir mostra o que você veria no **fonte** exibir se você tiver criado uma nova página da Web chamada *BasicWebApp.aspx*.  
-    ![Modo Código-Fonte](creating-a-basic-web-forms-page/_static/image4.png)
+    ![Modo de Exibição de Fonte](creating-a-basic-web-forms-page/_static/image4.png)
 
 
 ### <a name="a-tour-of-the-visual-studio-web-development-environment"></a>Um Tour pelo ambiente de desenvolvimento da Web do Visual Studio
@@ -109,7 +109,7 @@ Quando você cria um novo aplicativo do Web Forms usando o **aplicativo Web ASP.
 2. Na **Gerenciador de soluções**, clique no nome do aplicativo Web (neste tutorial é o nome do aplicativo **BasicWebSite**) e, em seguida, clique em **Add**  - &gt; **Novo Item**.   
 A caixa de diálogo **Adicionar Novo Item** é exibida.
 3. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, selecione **Web Form** do meio lista e nomeie-o *FirstWebPage*.   
-    ![Caixa de diálogo Adicionar Novo Item](creating-a-basic-web-forms-page/_static/image6.png)
+    ![Adicionar caixa de diálogo Novo Item](creating-a-basic-web-forms-page/_static/image6.png)
 4. Clique em **adicionar** para adicionar a página da web ao seu projeto.  
 Visual Studio cria a nova página e ele é aberto.
 

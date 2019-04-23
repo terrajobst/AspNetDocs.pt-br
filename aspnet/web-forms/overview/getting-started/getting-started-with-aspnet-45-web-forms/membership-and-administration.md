@@ -12,7 +12,7 @@ ms.openlocfilehash: 7263a7d7ee791be8a1369934aac4d091736a658b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417475"
 ---
 # <a name="membership-and-administration"></a>Associação e administração
@@ -274,7 +274,7 @@ Neste tutorial, você adicionou uma função personalizada e um usuário que per
 ## <a name="additional-resources"></a>Recursos adicionais
 
 [Web. config - autorização elemento](https://msdn.microsoft.com/library/8d82143t(v=vs.100).aspx)  
-[ASP.NET Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md)  
+[Identidade do ASP.NET](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md)  
 [Implantar um aplicativo de formulários da Web do ASP.NET seguro com associação, OAuth e banco de dados SQL em um Site do Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-webforms-app-membership-oauth-sql-database/)  
 [Microsoft Azure – avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/)
 

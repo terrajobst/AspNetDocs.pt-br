@@ -12,7 +12,7 @@ ms.openlocfilehash: a9a7b74a07c71b47253c0af304c7a26ffa4eaae5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417358"
 ---
 # <a name="publish-the-app-to-azure-azure-app-service"></a>Publicar o aplicativo no Azure App Service do Azure
@@ -55,4 +55,4 @@ Insira um nome de site. Selecione sua assinatura do Azure e a região. Sob **ser
 Clique o **as configurações** guia e verifique &quot;executar migrações do Code First&quot;. Em seguida, clique em **publicar**.
 
 > [!div class="step-by-step"]
-> [Voltar](part-9.md)
+> [Anterior](part-9.md)

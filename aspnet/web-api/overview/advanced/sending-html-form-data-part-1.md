@@ -13,7 +13,7 @@ ms.openlocfilehash: fb0309af11910125943737ebb721b356b7bd08bc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418294"
 ---
 # <a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Enviando dados de formulário HTML na API Web ASP.NET: Dados de formulário urlencoded
@@ -134,4 +134,4 @@ Você pode usar a mesma abordagem para enviar uma matriz de tipos simples:
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-[Parte 2: Carregamento do arquivo e MIME com diversas partes](sending-html-form-data-part-2.md)
+[Parte 2: Upload do arquivo e MIME com diversas partes](sending-html-form-data-part-2.md)

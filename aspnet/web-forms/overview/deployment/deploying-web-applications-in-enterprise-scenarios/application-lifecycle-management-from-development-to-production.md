@@ -12,7 +12,7 @@ ms.openlocfilehash: 3b7f154936222c85bd7897ea10cbb5ae9d1aa670
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408934"
 ---
 # <a name="application-lifecycle-management-from-development-to-production"></a>Gerenciamento do ciclo de vida do aplicativo: Do desenvolvimento à produção
@@ -225,4 +225,4 @@ Este tópico faz parte de uma série de tutoriais que fornecem orientação sobr
 - [Avançadas de implantação da Web corporativa](../advanced-enterprise-web-deployment/advanced-enterprise-web-deployment.md). Este tutorial fornece orientações sobre como atender a alguns dos desafios de implantação mais complexos que as organizações enfrentam.
 
 > [!div class="step-by-step"]
-> [Voltar](enterprise-web-deployment-scenario-overview.md)
+> [Anterior](enterprise-web-deployment-scenario-overview.md)

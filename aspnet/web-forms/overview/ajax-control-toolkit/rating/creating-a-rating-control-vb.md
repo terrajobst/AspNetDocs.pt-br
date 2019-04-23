@@ -12,7 +12,7 @@ ms.openlocfilehash: 91523180501f1d1eb67586bf97649ad6226ec565
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413224"
 ---
 # <a name="creating-a-rating-control-vb"></a>Criação de um controle Classificação (VB)
@@ -71,4 +71,4 @@ Salve a página e carregá-lo em seu navegador. Quando você focaliza os itens d
 Criando um sistema de classificação com o mínimo de código ([clique para exibir a imagem em tamanho normal](creating-a-rating-control-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](creating-a-rating-control-cs.md)
+> [Anterior](creating-a-rating-control-cs.md)

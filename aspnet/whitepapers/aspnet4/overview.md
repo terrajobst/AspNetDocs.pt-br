@@ -12,7 +12,7 @@ ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409714"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
@@ -77,7 +77,7 @@ ms.locfileid: "59409714"
 [Novos atributos para exibição do controle e suporte a enumerações](#0.2__Toc253429286 "_Toc253429286")  
 [Suporte aprimorado para filtros](#0.2__Toc253429287 "_Toc253429287")
 
-**[Melhorias de desenvolvimento da Web do Visual Studio 2010](#0.2__Toc253429288 "_Toc253429288")**  
+**[Visual Studio 2010 Web Development Improvements](#0.2__Toc253429288 "_Toc253429288")**  
 [CSS compatibilidade aprimorada](#0.2__Toc253429289 "_Toc253429289")  
 [HTML e JavaScript trechos](#0.2__Toc253429290 "_Toc253429290")  
 [JavaScript IntelliSense Enhancements](#0.2__Toc253429291 "_Toc253429291")
@@ -411,13 +411,13 @@ Como você pode ver, o código desabilita o estado de exibição para o controle
 
 O efeito dessas configurações é que, quando a página for carregada na primeira vez, a saída a seguir é exibida no navegador:
 
-Disabled `: [DynamicValue]`
+Desabilitado `: [DynamicValue]`
 
 Habilitado:`[DynamicValue]`
 
 Depois de um postback, no entanto, a seguinte saída é exibida:
 
-Disabled `: [DeclaredValue]`
+Desabilitado `: [DeclaredValue]`
 
 Habilitado:`[DynamicValue]`
 
@@ -982,10 +982,10 @@ Em seguida, você pode definir uma classe CSS que se aplica apenas à *ocultos* 
 Por padrão, os seguintes controles de servidor Web do ASP.NET que dão suporte a modelos são automaticamente encapsulados em uma tabela externa que é usada para aplicar estilos embutidos:
 
 - *FormView*
-- *logon*
+- *Login*
 - *PasswordRecovery*
 - *ChangePassword*
-- *Wizard*
+- *Assistente*
 - *CreateUserWizard*
 
 Uma nova propriedade chamada *RenderOuterTable* foi adicionado a esses controles que permite que a tabela externa a ser removido da marcação. Por exemplo, considere o exemplo a seguir de um *FormView* controle:

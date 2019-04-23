@@ -12,7 +12,7 @@ ms.openlocfilehash: 6478ad3c8ef599dcf17c998cb0ce3c71a0039223
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418788"
 ---
 # <a name="aspnet-mvc-storefront-part-24-finis"></a>Vitrine do ASP.NET MVC, parte 24: Térm
@@ -24,4 +24,4 @@ Esse é o último episódio da série de vitrine eletrônica do MVC e isso pode 
 [&#9654;Assista ao vídeo (27 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-24-finis)
 
 > [!div class="step-by-step"]
-> [Voltar](aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design.md)
+> [Anterior](aspnet-mvc-storefront-part-23-getting-started-with-domain-driven-design.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412977"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personalização das implantações de banco de dados para vários ambientes
@@ -68,7 +68,7 @@ Esta tabela mostra as configurações comuns de implantação para ambientes de 
 
 |  | Desenvolvedor/teste | Preparo/integração | Produção |
 | --- | --- | --- | --- |
-| **Agrupamento de comparação de implantação** | Origem | Destino | Destino |
+| **Agrupamento de comparação de implantação** | Source | Destino | Destino |
 | **Implantar propriedades do banco de dados** | verdadeiro | Apenas na primeira vez | Apenas na primeira vez |
 | **Sempre recriar banco de dados** | verdadeiro | False | False |
 | **Bloquear implantação incremental se puder ocorrer perda de dados** | False | Talvez | verdadeiro |

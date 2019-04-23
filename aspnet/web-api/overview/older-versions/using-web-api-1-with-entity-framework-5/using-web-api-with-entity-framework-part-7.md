@@ -12,7 +12,7 @@ ms.openlocfilehash: 028631f8855e4d94bebb0e965de75c4025e22859
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409259"
 ---
 # <a name="part-7-creating-the-main-page"></a>Parte 7: Criação da página principal
@@ -83,7 +83,7 @@ Isso itera na matriz de produtos e exibe o nome e o preço. O botão "Adicionar 
 
 As chamadas do botão "Adicionar a ordem de" `addItemToCart` sobre o `ProductViewModel` instância para o produto. Isso demonstra um recurso interessante do Knockout. js: Quando um modelo de exibição contiver outros modelos de exibição, você pode aplicar as associações ao modelo interno. Neste exemplo, as associações de dentro de `foreach` são aplicadas a cada uma da `ProductViewModel` instâncias. Essa abordagem é muito mais fácil do que colocar toda a funcionalidade em um único modelo de exibição.
 
-**Carrinho**
+**Cart**
 
 Aqui estão as associações para o carrinho de:
 
@@ -91,7 +91,7 @@ Aqui estão as associações para o carrinho de:
 
 Isso itera na matriz de carrinho e exibe o nome, preço e quantidade. Observe que o link "Remover" e o botão "Criar Order" são associados a funções de modelo de exibição.
 
-**Orders**
+**Pedidos**
 
 Aqui estão as vinculações para a lista de pedidos:
 
@@ -117,4 +117,4 @@ Recursos adicionais:
 - [Entity Framework Developer Center](https://msdn.microsoft.com/data/ef)
 
 > [!div class="step-by-step"]
-> [Voltar](using-web-api-with-entity-framework-part-6.md)
+> [Anterior](using-web-api-with-entity-framework-part-6.md)

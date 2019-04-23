@@ -12,7 +12,7 @@ ms.openlocfilehash: 91758b7c329b78bcb3a3ab301650d6da6164d1a3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59411183"
 ---
 # <a name="using-modalpopup-with-a-repeater-control-c"></a>Uso de ModalPopup com um controle repetidor (C#)
@@ -49,7 +49,7 @@ Para fazer com que o pop-up funcionar dentro de repeater, o `ModalPopupExtender`
 Em seguida, cada item na fonte de dados é exibido com um botão ao lado dele que dispara o popup modal.
 
 
-[![Tpop-up modal de he pode ser disparado para cada entrada da fonte de dados](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
+[![O popup modal pode ser disparado para cada entrada da fonte de dados](using-modalpopup-with-a-repeater-control-cs/_static/image2.png)](using-modalpopup-with-a-repeater-control-cs/_static/image1.png)
 
 O popup modal pode ser disparado para cada entrada da fonte de dados ([clique para exibir a imagem em tamanho normal](using-modalpopup-with-a-repeater-control-cs/_static/image3.png))
 

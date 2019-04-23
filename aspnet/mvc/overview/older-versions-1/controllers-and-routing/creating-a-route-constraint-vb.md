@@ -12,7 +12,7 @@ ms.openlocfilehash: 8c7b2274ff396f222382488ed877599e86ae5b99
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412678"
 ---
 # <a name="creating-a-route-constraint-vb"></a>Criação de uma restrição de rota (VB)
@@ -51,7 +51,7 @@ Infelizmente, a rota também serão compatíveis com as seguintes URLs:
 Porque a ação Details() espera um parâmetro de número inteiro, fazendo uma solicitação que contém algo diferente de um valor inteiro causará um erro. Por exemplo, se você digitar a URL /Product/apple no seu navegador, em seguida, você obterá a página de erro na Figura 1.
 
 
-[![Tcaixa de diálogo Novo projeto he](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
+[![A caixa de diálogo Novo projeto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
 **Figura 01**: Vendo uma página explodir ([clique para exibir a imagem em tamanho normal](creating-a-route-constraint-vb/_static/image2.png))
 

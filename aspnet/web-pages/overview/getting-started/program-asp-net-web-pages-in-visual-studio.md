@@ -12,7 +12,7 @@ ms.openlocfilehash: 6d25eb99f87c4c3d2c96e021e79a13c90da4a035
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414485"
 ---
 # <a name="programming-aspnet-web-pages-razor-using-visual-studio"></a>Programação de páginas da Web ASP.NET (Razor) usando o Visual Studio
@@ -58,7 +58,7 @@ A tabela a seguir resume o suporte para páginas da Web do ASP.NET em diferentes
 
 |  | Visual Studio 2010 | Visual Studio 2012 | Visual Studio 2013 |
 | --- | --- | --- | --- |
-| **Páginas da Web do ASP.NET 2** | Instalar o ASP.NET MVC 4 | (Incluído) | (Incluído) |
+| **ASP.NET Web Pages 2** | Instalar o ASP.NET MVC 4 | (Incluído) | (Incluído) |
 | **Páginas da Web do ASP.NET 3** |  | Atualização da Web do ASP.NET 3 NuGet por meio de páginas | (Incluído) |
 
 Para trabalhar com o Visual Studio 2010, consulte [instalando o suporte para páginas da Web ASP.NET no Visual Studio 2010](#vs2010support).

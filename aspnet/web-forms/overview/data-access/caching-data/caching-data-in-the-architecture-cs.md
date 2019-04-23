@@ -12,7 +12,7 @@ ms.openlocfilehash: 7637e23678af80ae037292fd3f89ef74167c8242
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419243"
 ---
 # <a name="caching-data-in-the-architecture-c"></a>Armazenar dados em cache na arquitetura (C#)
@@ -159,7 +159,7 @@ Com essa modificação para `AddCacheItem(key, value)`, invaliding o cache é t�
 Os métodos e classes de s da camada de armazenamento em cache podem ser usados para trabalhar com dados usando as técnicas podemos ve examinado durante esses tutoriais. Para ilustrar a trabalhar com dados armazenados em cache, salve suas alterações para o `ProductsCL` de classe e, em seguida, abra o `FromTheArchitecture.aspx` página no `Caching` pasta e adicione um GridView. De GridView s marca inteligente, crie um novo ObjectDataSource. A primeira etapa do assistente s, você verá o `ProductsCL` da classe como uma das opções na lista suspensa.
 
 
-[![Tele que productscl classe está incluído na lista suspensa de objeto comercial](caching-data-in-the-architecture-cs/_static/image5.png)](caching-data-in-the-architecture-cs/_static/image4.png)
+[![A classe ProductsCL está incluída na lista suspensa de objeto comercial](caching-data-in-the-architecture-cs/_static/image5.png)](caching-data-in-the-architecture-cs/_static/image4.png)
 
 **Figura 4**: O `ProductsCL` classe está incluída na lista suspensa de objeto comercial ([clique para exibir a imagem em tamanho normal](caching-data-in-the-architecture-cs/_static/image6.png))
 
@@ -167,7 +167,7 @@ Os métodos e classes de s da camada de armazenamento em cache podem ser usados 
 Depois de selecionar `ProductsCL`, clique em Avançar. A lista suspensa na guia SELECT possui dois itens - `GetProducts()` e `GetProductsByCategoryID(categoryID)` e a guia de atualização tem o único `UpdateProduct` de sobrecarga. Escolha o `GetProducts()` método a partir da guia SELECT e o `UpdateProducts` método a partir de guia de atualização e clique em Concluir.
 
 
-[![Tele que productscl classe s métodos estão listados no menu suspenso lista](caching-data-in-the-architecture-cs/_static/image8.png)](caching-data-in-the-architecture-cs/_static/image7.png)
+[![Os métodos de classe ProductsCL s estão listados no menu suspenso lista](caching-data-in-the-architecture-cs/_static/image8.png)](caching-data-in-the-architecture-cs/_static/image7.png)
 
 **Figura 5**: O `ProductsCL` métodos de classe s estão listados no menu suspenso lista ([clique para exibir a imagem em tamanho normal](caching-data-in-the-architecture-cs/_static/image9.png))
 

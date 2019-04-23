@@ -12,7 +12,7 @@ ms.openlocfilehash: 2ba52c94737dfc165831ef094d04a333c4fcf133
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414108"
 ---
 # <a name="sql-injection-defense"></a>Defesa contra injeção de SQL
@@ -24,4 +24,4 @@ Uma vulnerabilidade de injeção de SQL em seu aplicativo pode arruinando o seu 
 [&#9654;Assista ao vídeo (25 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/sql-injection-defense)
 
 > [!div class="step-by-step"]
-> [Voltar](creating-inactive-users.md)
+> [Anterior](creating-inactive-users.md)

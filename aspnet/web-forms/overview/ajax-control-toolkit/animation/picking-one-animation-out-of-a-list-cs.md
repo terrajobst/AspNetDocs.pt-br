@@ -12,7 +12,7 @@ ms.openlocfilehash: 1cbb60431824ce642625c06cba6b5194aa547b1b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419698"
 ---
 # <a name="picking-one-animation-out-of-a-list-c"></a>Escolher uma animação em uma lista (C#)
@@ -53,7 +53,7 @@ A marcação a seguir define três subanimations: Redimensionando a largura, red
 [!code-aspx[Main](picking-one-animation-out-of-a-list-cs/samples/sample5.aspx)]
 
 
-[![Om das animações de três possíveis: O painel obtém mais largo](picking-one-animation-out-of-a-list-cs/_static/image2.png)](picking-one-animation-out-of-a-list-cs/_static/image1.png)
+[![Uma das três animações possíveis: O painel obtém maior](picking-one-animation-out-of-a-list-cs/_static/image2.png)](picking-one-animation-out-of-a-list-cs/_static/image1.png)
 
 Uma das três animações possíveis: O painel obtém mais amplo ([clique para exibir a imagem em tamanho normal](picking-one-animation-out-of-a-list-cs/_static/image3.png))
 

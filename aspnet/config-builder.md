@@ -9,9 +9,9 @@ ms.technology: aspnet
 msc.type: content
 ms.openlocfilehash: 443b33b5c3b964f731999834db580a6abbf6617b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420413"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Construtores de configuração para o ASP.NET

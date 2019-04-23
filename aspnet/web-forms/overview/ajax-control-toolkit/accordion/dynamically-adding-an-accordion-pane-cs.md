@@ -12,7 +12,7 @@ ms.openlocfilehash: ea526ce8abdf6f7013e8dd832824c21448878e0b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416838"
 ---
 # <a name="dynamically-adding-an-accordion-pane-c"></a>Adição dinâmica de um painel Accordion (c#)
@@ -55,7 +55,7 @@ Para concluir o exemplo, as duas classes CSS referenciadas no controle Accordion
 [!code-css[Main](dynamically-adding-an-accordion-pane-cs/samples/sample6.css)]
 
 
-[![Tos dados no acordeão dinamicamente foi adicionado pelo código do lado do servidor](dynamically-adding-an-accordion-pane-cs/_static/image2.png)](dynamically-adding-an-accordion-pane-cs/_static/image1.png)
+[![Os dados em um acordeão dinamicamente foi adicionados pelo código do lado do servidor](dynamically-adding-an-accordion-pane-cs/_static/image2.png)](dynamically-adding-an-accordion-pane-cs/_static/image1.png)
 
 Os dados em um acordeão dinamicamente foi adicionados pelo código do lado do servidor ([clique para exibir a imagem em tamanho normal](dynamically-adding-an-accordion-pane-cs/_static/image3.png))
 

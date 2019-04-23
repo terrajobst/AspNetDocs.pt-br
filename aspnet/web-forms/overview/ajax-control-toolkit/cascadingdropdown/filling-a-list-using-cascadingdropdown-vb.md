@@ -12,7 +12,7 @@ ms.openlocfilehash: 663dfc76dc3d07dbe9ddca002dc07cb3f9acdb1c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419334"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-vb"></a>Preencher uma lista usando o CascadingDropDown (VB)
@@ -61,7 +61,7 @@ Portanto, o aspecto importante é que o método deve retornar uma matriz do tipo
 Carregamento da página no navegador disparará a lista a ser preenchido com três fornecedores.
 
 
-[![Tlista é preenchida automaticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
+[![A lista é preenchida automaticamente](filling-a-list-using-cascadingdropdown-vb/_static/image2.png)](filling-a-list-using-cascadingdropdown-vb/_static/image1.png)
 
 A lista é preenchida automaticamente ([clique para exibir a imagem em tamanho normal](filling-a-list-using-cascadingdropdown-vb/_static/image3.png))
 

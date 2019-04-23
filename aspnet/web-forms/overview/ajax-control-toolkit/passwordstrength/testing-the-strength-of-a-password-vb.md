@@ -12,7 +12,7 @@ ms.openlocfilehash: fb185c4147d516ab28d632b3e874b6f1d46f6576
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408414"
 ---
 # <a name="testing-the-strength-of-a-password-vb"></a>Teste da força de uma senha (VB)
@@ -44,9 +44,9 @@ O `StrengthIndicatorType` fornece as informações de como apresentar a força d
 Execute a página e digite imediatamente: Somente depois que você inseriu letras minúsculas, letras maiusculas, dígitos e símbolos, a senha é considerada como inviolável.
 
 
-[![Nomo a senha é bom (muito)](testing-the-strength-of-a-password-vb/_static/image2.png)](testing-the-strength-of-a-password-vb/_static/image1.png)
+[![Agora, a senha é bom (muito)](testing-the-strength-of-a-password-vb/_static/image2.png)](testing-the-strength-of-a-password-vb/_static/image1.png)
 
 Agora, a senha é bom (muito) ([clique para exibir a imagem em tamanho normal](testing-the-strength-of-a-password-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](testing-the-strength-of-a-password-cs.md)
+> [Anterior](testing-the-strength-of-a-password-cs.md)

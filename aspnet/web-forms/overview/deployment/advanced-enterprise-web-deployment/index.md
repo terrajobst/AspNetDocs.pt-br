@@ -12,7 +12,7 @@ ms.openlocfilehash: 0d3a356aafcce499f50d3a5d3b98f44ca5643ede
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417969"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 – Série 4 sobre implantação corporativa: tópicos avançados
@@ -22,10 +22,10 @@ ms.locfileid: "59417969"
 
 - [Implantação da Web corporativa avançada](advanced-enterprise-web-deployment.md)
 - [Execução de uma implantação "What If"](performing-a-what-if-deployment.md)
-- [Personalização das implantações de banco de dados para vários ambientes](customizing-database-deployments-for-multiple-environments.md)
-- [Implantação das associações de função de banco de dados em ambientes de teste](deploying-database-role-memberships-to-test-environments.md)
-- [Implantação do bancos de dados de associação em ambientes corporativos](deploying-membership-databases-to-enterprise-environments.md)
-- [Exclusão de arquivos e pastas da implantação](excluding-files-and-folders-from-deployment.md)
+- [Personalizando as implantações de banco de dados para vários ambientes](customizing-database-deployments-for-multiple-environments.md)
+- [Implantando associações de função de banco de dados em ambientes de teste](deploying-database-role-memberships-to-test-environments.md)
+- [Implantando bancos de dados de associação em ambientes corporativos](deploying-membership-databases-to-enterprise-environments.md)
+- [Excluindo arquivos e pastas da implantação](excluding-files-and-folders-from-deployment.md)
 - [Colocar aplicativos Web em offline com a Implantação da Web](taking-web-applications-offline-with-web-deploy.md)
-- [Execução de scripts do Windows PowerShell de arquivos de projeto do MSBuild](running-windows-powershell-scripts-from-msbuild-project-files.md)
+- [Executando scripts do Windows PowerShell de arquivos de projeto do MSBuild](running-windows-powershell-scripts-from-msbuild-project-files.md)
 - [Solução de problemas do processo de empacotamento](troubleshooting-the-packaging-process.md)

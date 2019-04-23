@@ -12,7 +12,7 @@ ms.openlocfilehash: 9d0e57eb85242a0d6fa8ca9eef7f6c741862069d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408791"
 ---
 # <a name="manually-installing-web-packages"></a>Instalação manual de pacotes da Web
@@ -131,4 +131,4 @@ Este tópico descreveu como importar um pacote de implantação da web para um s
 Para obter orientação sobre como configurar um servidor de web do IIS para dar suporte à importação manual de um pacote da web, consulte [configurar um servidor Web para publicação de implantação do Web (off-line de implantação)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md). Para obter orientação geral sobre a implantação de pacotes da web, consulte [passo a passo: Implantando um projeto de aplicativo Web usando um pacote de implantação da Web (parte 1 de 4)](https://msdn.microsoft.com/library/dd483479.aspx).
 
 > [!div class="step-by-step"]
-> [Voltar](creating-and-running-a-deployment-command-file.md)
+> [Anterior](creating-and-running-a-deployment-command-file.md)

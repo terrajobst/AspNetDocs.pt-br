@@ -12,7 +12,7 @@ ms.openlocfilehash: 6baf5447d31d00b89cb7ddf526553456fecbbf6e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409467"
 ---
 # <a name="fighting-bots-vb"></a>Bots de combate (VB)
@@ -65,9 +65,9 @@ Por fim, você precisa de um formulário para enviar e um elemento de rótulo pa
 Quando você executa esse script e desativar JavaScript ou enviar o formulário durante os primeiros dois segundos ou enviar o formulário de sete vezes dentro de trinta segundos, você receberá uma mensagem de erro. No entanto, usar esse controle com sabedoria, como apenas cerca de 90-95% dos usuários têm ativados por JavaScript, portanto 5 a 10% dos usuários falharão `NoBot`do teste.
 
 
-[![Tsua mensagem de erro pode ter sido causada por um bot](fighting-bots-vb/_static/image2.png)](fighting-bots-vb/_static/image1.png)
+[![Essa mensagem de erro pode ter sido causada por um bot](fighting-bots-vb/_static/image2.png)](fighting-bots-vb/_static/image1.png)
 
 Essa mensagem de erro pode ter sido causada por um bot ([clique para exibir a imagem em tamanho normal](fighting-bots-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](fighting-bots-cs.md)
+> [Anterior](fighting-bots-cs.md)

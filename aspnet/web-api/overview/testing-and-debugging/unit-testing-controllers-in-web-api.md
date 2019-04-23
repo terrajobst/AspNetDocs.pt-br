@@ -12,7 +12,7 @@ ms.openlocfilehash: 9fa71bec14a2ba4d14f01661ad2bf41975f4f55e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413796"
 ---
 # <a name="unit-testing-controllers-in-aspnet-web-api-2"></a>Controladores de teste de unidade no ASP.NET API Web 2

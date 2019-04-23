@@ -12,7 +12,7 @@ ms.openlocfilehash: 4745e68053fae38019b6121295382a170fd2d858
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412925"
 ---
 # <a name="whitepapers"></a>Whitepapers
@@ -22,7 +22,7 @@ ms.locfileid: "59412925"
 > - [ASP.NET 4](#aspnet4)
 > - [White papers de segurança do ASP.NET](#security)
 > - [Instalação e white papers do programa de instalação](#setup)
-> - [SQL Server Whitepapers](#sql)
+> - [White papers do SQL Server](#sql)
 > - [White papers de geral](#general)
 
 

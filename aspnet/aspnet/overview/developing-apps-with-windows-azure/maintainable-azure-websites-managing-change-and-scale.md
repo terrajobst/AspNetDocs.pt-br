@@ -12,7 +12,7 @@ ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409727"
 ---
 # <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratório prático: Sites sustentáveis do Azure: Gerenciamento da alteração e escala
@@ -131,7 +131,7 @@ Nesta tarefa, você passará pelas etapas de habilitação **Entity Framework Co
 
     ![Habilitar migrações](maintainable-azure-websites-managing-change-and-scale/_static/image1.png "habilitar migrações")
 
-    *Habilitando as migrações*
+    *Habilitar migrações*
 
     > [!NOTE]
     > Este comando adiciona uma **migrações** pasta ao projeto de Geek Quiz que contém um arquivo chamado **Configuration.cs**. O **configuração** classe permite que você configurar o comportamento de migrações para o seu contexto.
@@ -625,7 +625,7 @@ Nesta tarefa, você usará a janela do Gerenciador de servidores do Visual Studi
 
     ![Conectar ao Windows Azure](maintainable-azure-websites-managing-change-and-scale/_static/image62.png)
 
-    *Conecte-se ao Azure*
+    *Conectar-se para o Azure*
 4. Expanda o **Azure** nó, clique com botão direito **armazenamento** e selecione **anexar armazenamento externo...** .
 5. No **adicionar uma nova conta de armazenamento** caixa de diálogo, digite o **nome da conta** e **chave da conta** obtido na tarefa anterior e clique **Okey**.
 

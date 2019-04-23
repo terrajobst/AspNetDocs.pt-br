@@ -12,7 +12,7 @@ ms.openlocfilehash: e4d9424d691f92aacf078faed09689daa40a44fd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418333"
 ---
 # <a name="owin-startup-class-detection"></a>Detecção de classe de inicialização OWIN
@@ -79,8 +79,7 @@ ms.locfileid: "59418333"
      > [!NOTE]
      > No código acima é ter comentado a `OwinStartup` atributo e nós depende da convenção de executar a classe denominada `Startup` .-pressione ***F5*** para executar o aplicativo. Clique em atualizar algumas vezes.
 
-    ![](owin-startup-class-detection/_static/image4.png)
-  Observação: O número mostrado nas imagens neste tutorial não corresponderá o número que você vê. A cadeia de caracteres de milissegundo é usada para mostrar uma nova resposta quando a página for atualizada.
+    ![](owin-startup-class-detection/_static/image4.png) Observação: O número mostrado nas imagens neste tutorial não corresponderá o número que você vê. A cadeia de caracteres de milissegundo é usada para mostrar uma nova resposta quando a página for atualizada.
   Você pode ver as informações de rastreamento a **saída** janela.
 
     ![](owin-startup-class-detection/_static/image5.png)

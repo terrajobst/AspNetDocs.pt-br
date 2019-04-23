@@ -12,7 +12,7 @@ ms.openlocfilehash: 844b05f2b046d2c865805150b6ddc5b9c2ebb658
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414147"
 ---
 # <a name="sorting-data-in-a-datalist-or-repeater-control-vb"></a>Classificação de dados em um controle DataList ou Repeater (VB)
@@ -56,7 +56,7 @@ Antes de nos preocupamos implementar qualquer uma das funcionalidades relacionad
 **Figura 1**: Criar um ObjectDataSource e configurá-lo para usar o `GetProductsAsPagedDataSource()` método ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image3.png))
 
 
-[![SET as listas suspensas nas guias UPDATE, INSERT e DELETE como (nenhum)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image5.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image4.png)
+[![Defina a lista suspensa na atualização, inserção e excluir guias como (nenhum)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image5.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image4.png)
 
 **Figura 2**: Defina a lista suspensa na atualização, inserção e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image6.png))
 
@@ -71,7 +71,7 @@ Depois de adicionar o `ItemTemplate`, Repeater e ObjectDataSource s marcação d
 Figura 3 mostra essa página quando visualizado por meio de um navegador.
 
 
-[![Eé exibida ACH s nome, categoria e fornecedor do produto](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image8.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image7.png)
+[![Cada produto s nome, categoria e fornecedor é exibido](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image8.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image7.png)
 
 **Figura 3**: Cada nome de produto, fornecedor e categoria é exibida ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image9.png))
 
@@ -90,7 +90,7 @@ O *sortExpression* valor deve ser atribuído como o nome do campo de dados para 
 Vá em frente e experimente alguns valores embutidos diferentes para *sortExpression* e testar os resultados em um navegador. Como mostra a Figura 4, ao usar ProductName DESC como o *sortExpression*, os produtos são classificados por nome em ordem alfabética inversa.
 
 
-[![Tele produtos são classificados por nome em ordem alfabética inversa](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
+[![Os produtos são classificados por nome em ordem alfabética inversa](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image11.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image10.png)
 
 **Figura 4**: Os produtos são classificados por nome em ordem alfabética inversa ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image12.png))
 
@@ -124,12 +124,12 @@ Com a classificação DropDownList completa, em seguida precisamos atualizar o s
 Neste ponto, quando o primeiro visitando a página de produtos inicialmente serão classificados pela `ProductName` campo de dados, como ela s a `SortBy` `ListItem` selecionada por padrão (veja a Figura 6). Selecionando a opção, como a categoria de classificação um diferentes e você clicar em atualizar, fazer com que um postback e reclassifica os dados pelo nome da categoria, como mostra a Figura 7.
 
 
-[![TProdutos he são inicialmente classificadas por seu nome](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image15.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)
+[![Os produtos são inicialmente classificadas por seu nome](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image15.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image14.png)
 
 **Figura 6**: Os produtos são inicialmente classificadas por seu nome ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image16.png))
 
 
-[![The produtos estão agora são classificados por categoria](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image18.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)
+[![Os produtos são agora são classificados por categoria](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image18.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image17.png)
 
 **Figura 7**: Os produtos são agora são classificados por categoria ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image19.png))
 
@@ -151,7 +151,7 @@ Futuras exemplos neste tutorial exploram como manter os detalhes de classificaç
 No [tutorial anterior](paging-report-data-in-a-datalist-or-repeater-control-vb.md) , examinamos como implementar a paginação padrão com um DataList. Deixe o s estender este exemplo anterior para incluir a capacidade de classificar os dados paginados. Comece abrindo o `SortingWithDefaultPaging.aspx` e `Paging.aspx` páginas no `PagingSortingDataListRepeater` pasta. Do `Paging.aspx` , clique no botão fonte para exibir a marcação declarativa de s de página. Copie o texto selecionado (consulte a Figura 8) e cole-o na marcação declarativa de `SortingWithDefaultPaging.aspx` entre o `<asp:Content>` marcas.
 
 
-[![Replicar no marcação declarativa na &lt;asp: Content&gt; marcas de Paging.aspx para SortingWithDefaultPaging.aspx](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image21.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)
+[![Replicar a marcação declarativa na &lt;asp: Content&gt; marcas de Paging.aspx para SortingWithDefaultPaging.aspx](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image21.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image20.png)
 
 **Figura 8**: Replicar a marcação declarativa na `<asp:Content>` marcas da `Paging.aspx` ao `SortingWithDefaultPaging.aspx` ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image22.png))
 
@@ -185,7 +185,7 @@ Após essas alterações, a marcação declarativa do ObjectDataSource s deve se
 Neste ponto, o `SortingWithDefaultPaging.aspx` página será classificar seus resultados em ordem alfabética pelo nome do produto (veja a Figura 9). Isso ocorre porque, por padrão, um valor de ProductName é passado como o `GetProductsSortedAsPagedDataSource` método s *sortExpression* parâmetro.
 
 
-[![BPadrão de y, os resultados são classificados por ProductName](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image24.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)
+[![Por padrão, os resultados são classificados por ProductName](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image24.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image23.png)
 
 **Figura 9**: Por padrão, os resultados são classificados por `ProductName` ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image25.png))
 
@@ -214,12 +214,12 @@ Em seguida, crie um `Click` manipulador de eventos para cada um. Os manipuladore
 Quando o primeiro visitando a página, os dados são classificados em ordem alfabética pelo nome do produto (consulte novamente a Figura 9). Clique no botão Avançar para Avançar para a segunda página de dados e clique na classificação por botão de categoria. Isso retorna nós para a primeira página de dados, classificados por nome de categoria (consulte a Figura 10). Da mesma forma, clicando em Classificar por botão de fornecedor classifica os dados por fornecedor a partir da primeira página de dados. A opção de classificação será lembrada conforme os dados são paginados por meio do. Figura 11 mostra a página após a classificação por categoria e, em seguida, avançando para a décimo terceiro página de dados.
 
 
-[![TProdutos he são classificados por categoria](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image27.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)
+[![Os produtos são classificados por categoria](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image27.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image26.png)
 
 **Figura 10**: Os produtos são classificados por categoria ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image28.png))
 
 
-[![TExpressão de classificação é lembrada quando paginação por meio de dados do](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image30.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image29.png)
+[![A expressão de classificação é lembrada quando paginação por meio de dados do](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image30.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image29.png)
 
 **Figura 11**: A expressão de classificação é lembrada quando paginação por meio de dados do ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image31.png))
 
@@ -237,7 +237,7 @@ Esses métodos podem ser usados com eficiência, página e classificar dados usa
 Abra o `SortingWithCustomPaging.aspx` página na `PagingSortingDataListRepeater` pasta e adicione um repetidor para a página, definindo seu `ID` propriedade para `Products`. De marca inteligente Repeater s, crie um novo ObjectDataSource chamado `ProductsDataSource`. Configurá-lo para selecionar seus dados a partir de `ProductsBLL` classe s `GetProductsPaged` método.
 
 
-[![Configurar o ObjectDataSource para usar a classe ProductsBLL s GetProductsPaged método](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image33.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image32.png)
+[![Configurar o ObjectDataSource para usar o método de GetProductsPaged ProductsBLL classe s](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image33.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image32.png)
 
 **Figura 12**: Configurar o ObjectDataSource para usar o `ProductsBLL` classe s `GetProductsPaged` método ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image34.png))
 
@@ -245,7 +245,7 @@ Abra o `SortingWithCustomPaging.aspx` página na `PagingSortingDataListRepeater`
 Defina as listas suspensas na atualização, inserção e excluir guias como (nenhum) e, em seguida, clique no botão Avançar. O Assistente Configurar fonte de dados agora solicita as fontes do `GetProductsPaged` método s *startRowIndex* e *maximumRows* parâmetros de entrada. Na realidade, esses parâmetros de entrada são ignorados. Em vez disso, o *startRowIndex* e *maximumRows* valores serão passados por meio de `Arguments` propriedade em s ObjectDataSource `Selecting` manipulador de eventos, assim como como especificamos o *sortExpression* nesta demonstração de tutorial s primeiro. Portanto, deixe a fonte de parâmetro nas listas suspensas no assistente definido em nenhum.
 
 
-[![Leixar a fontes de parâmetro definido como None](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image36.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image35.png)
+[![Deixe o conjunto de fontes de parâmetros como None](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image36.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image35.png)
 
 **Figura 13**: Deixe as fontes de parâmetro definido como None ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image37.png))
 
@@ -267,7 +267,7 @@ Reserve um tempo para visitar a página por meio de um navegador e observe que o
 Com essa alteração, a página, quando visualizado por meio de um navegador, mostra os cinco primeiros produtos.
 
 
-[![The cinco primeiros registros são exibidos](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image39.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image38.png)
+[![Os cinco primeiros registros são exibidos](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image39.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image38.png)
 
 **Figura 14**: Os cinco primeiros registros são exibidos ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image40.png))
 
@@ -313,17 +313,17 @@ Por fim, precisamos desabilitar os botões de primeiro e anterior na interface d
 Depois de adicionar essas `Click` manipuladores de eventos e o código para habilitar ou desabilitar os elementos de interface de paginação com base no índice de linha de início atual, a página de teste em um navegador. Como a Figura 15 ilustra ao primeiro visitar a página na primeira e botões anterior serão estão desabilitados. Clicar em Avançar mostra a segunda página de dados, enquanto clicar em último exibe a última página (consulte as figuras de 16 e 17). Ao exibir a última página de dados de botões de próximo e último estão desabilitados.
 
 
-[![Tele anterior e a última botões estão desabilitadas ao exibir a primeira página de produtos](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image42.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image41.png)
+[![Os botões anterior e último estão desabilitadas ao exibir a primeira página de produtos](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image42.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image41.png)
 
 **Figura 15**: Os botões anterior e último estão desabilitadas ao exibir a primeira página de produtos ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image43.png))
 
 
-[![Tele segunda página de produtos são exibidos](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image45.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image44.png)
+[![A segunda página de produtos são exibidos](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image45.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image44.png)
 
 **Figura 16**: A segunda página de produtos são exibidos ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image46.png))
 
 
-[![Clicking último exibe a página Final de dados](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image48.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image47.png)
+[![Clicar em último exibirá a página Final de dados](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image48.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image47.png)
 
 **Figura 17**: Clicar em último exibe a página de dados Final ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image49.png))
 
@@ -366,7 +366,7 @@ Criar `Click` manipuladores de eventos para esses três controles de botão. No 
 Tudo que s é a ele! Embora houvesse um número de etapas para obter a paginação personalizada e a classificação implementado, as etapas eram muito semelhantes àquelas necessárias para a paginação padrão. Figura 18 mostra os produtos ao exibir a última página de dados quando classificadas por categoria.
 
 
-[![Tele é exibido a última página de dados, Sorted por categoria,](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image51.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image50.png)
+[![A última página de dados, a classificação por categoria, é exibido](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image51.png)](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image50.png)
 
 **Figura 18**: A última página de dados, a classificação por categoria, é exibida ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-vb/_static/image52.png))
 
@@ -394,4 +394,4 @@ Boa programação!
 Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi David Suru. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Voltar](paging-report-data-in-a-datalist-or-repeater-control-vb.md)
+> [Anterior](paging-report-data-in-a-datalist-or-repeater-control-vb.md)

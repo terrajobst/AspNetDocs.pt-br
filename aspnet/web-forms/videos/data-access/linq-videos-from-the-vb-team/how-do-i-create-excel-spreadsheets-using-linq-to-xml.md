@@ -12,7 +12,7 @@ ms.openlocfilehash: 1483030faf631099b8c044d1fbbdd000128f4fce
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414186"
 ---
 # <a name="how-do-i-create-excel-spreadsheets-using-linq-to-xml"></a>[Como fazer:] Criar planilhas do Excel usando LINQ to XML?
@@ -24,4 +24,4 @@ Os desenvolvedores de Visual Basic aprenderá a consultar seu banco de dados do 
 [&#9654;Assista ao vídeo (10 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-create-excel-spreadsheets-using-linq-to-xml)
 
 > [!div class="step-by-step"]
-> [Voltar](how-do-i-create-xml-documents-from-sql-data.md)
+> [Anterior](how-do-i-create-xml-documents-from-sql-data.md)

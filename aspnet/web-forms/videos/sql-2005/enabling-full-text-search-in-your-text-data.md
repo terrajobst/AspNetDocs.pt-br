@@ -12,7 +12,7 @@ ms.openlocfilehash: e4e96810cd1dabb0cf2ab1d49ca1f6a3b019a45f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417449"
 ---
 # <a name="enabling-full-text-search-in-your-text-data"></a>Habilitar a pesquisa de texto completo em seus dados de texto
@@ -24,4 +24,4 @@ Pesquisa de texto completo permite que você salve grandes partes de texto – a
 [&#9654;Assista ao vídeo (38 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/enabling-full-text-search-in-your-text-data)
 
 > [!div class="step-by-step"]
-> [Voltar](creating-and-using-stored-procedures.md)
+> [Anterior](creating-and-using-stored-procedures.md)

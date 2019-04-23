@@ -12,7 +12,7 @@ ms.openlocfilehash: 016dfa2a5a5fb9aaed0e1c60194e53ac9ccb8b36
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59419581"
 ---
 # <a name="data-bound-controls"></a>Controles de dados associados
@@ -195,7 +195,7 @@ Você pode personalizar a aparência do controle GridView, definindo as propried
 
 Você também pode mostrar ou ocultar partes diferentes do controle. A tabela a seguir lista as propriedades que controlam quais partes são mostradas ou ocultas.
 
-| **Propriedade** | **Descrição** |
+| **Property** | **Descrição** |
 | --- | --- |
 | ShowFooter | Mostra ou oculta a seção de rodapé do controle GridView. |
 | ShowHeader | Mostra ou oculta a seção de cabeçalho do controle GridView. |
@@ -204,7 +204,7 @@ Você também pode mostrar ou ocultar partes diferentes do controle. A tabela a 
 
 O controle GridView fornece vários eventos que você pode programar. Isso permite que você execute uma rotina personalizada sempre que um evento ocorre. A tabela a seguir lista os eventos com suporte pelo controle GridView.
 
-| **evento** | **Descrição** |
+| **Event** | **Descrição** |
 | --- | --- |
 | PageIndexChanged | Ocorre quando um dos botões de paginação é clicado, mas após o controle GridView manipula a operação de paginação. Esse evento normalmente é usado quando você precisa executar uma tarefa depois que o usuário navega para uma página diferente no controle. |
 | PageIndexChanging | Ocorre quando um dos botões de paginação é acionado, mas antes do GridView controle manipula a operação de paginação. Esse evento geralmente é usado para cancelar a operação de paginação. |
@@ -262,7 +262,7 @@ O controle FormView oferece muitos recursos internos que permitem ao usuário at
 
 Como o controle FormView usa modelos, ele não fornece uma maneira de gerar automaticamente os botões de comando para executar a atualização, exclusão ou operações de inserção. Você deverá incluir manualmente esses botões de comando em que o modelo apropriado. O controle FormView reconhece determinados botões que têm suas **CommandName** propriedades definidas como valores específicos. A tabela a seguir lista os botões de comando que reconhece o controle FormView.
 
-| **Botão** | **Valor CommandName** | **Descrição** |
+| **Button** | **Valor CommandName** | **Descrição** |
 | --- | --- | --- |
 | Cancelar | "Cancelar" | Usado na atualização ou inserção de operações para cancelar a operação e descartar os valores inseridos pelo usuário. Em seguida, retorna o controle FormView para o modo especificado pela propriedade DefaultMode. |
 | Excluir | "Excluir" | Usada em operações de exclusão para excluir o registro exibido da fonte de dados. Gera os eventos ItemDeleting e ItemDeleted. |
@@ -296,7 +296,7 @@ Você pode personalizar a aparência do controle FormView definindo as proprieda
 
 O controle FormView fornece vários eventos que você pode programar. Isso permite que você execute uma rotina personalizada sempre que um evento ocorre. A tabela a seguir lista os eventos compatíveis com o controle FormView.
 
-| **evento** | **Descrição** |
+| **Event** | **Descrição** |
 | --- | --- |
 | ItemCommand | Ocorre quando um botão em um controle FormView é clicado. Esse evento geralmente é usado para executar uma tarefa quando um botão é clicado no controle. |
 | ItemCreated | Ocorre depois que todos os objetos FormViewRow são criados no controle FormView. Esse evento é geralmente usado para modificar os valores de um registro antes de ser exibido. |
@@ -388,7 +388,7 @@ Você pode personalizar a aparência do controle DetailsView definindo as propri
 
 O controle DetailsView fornece vários eventos que você pode programar. Isso permite que você execute uma rotina personalizada sempre que um evento ocorre. A tabela a seguir lista os eventos com suporte pelo controle DetailsView. O controle DetailsView também herda esses eventos de suas classes base: Vinculação de dados, vinculação de dados, descartado, Init, Load, PreRender e renderização.
 
-| **evento** | **Descrição** |
+| **Event** | **Descrição** |
 | --- | --- |
 | ItemCommand | Ocorre quando um botão é clicado no controle DetailsView. |
 | ItemCreated | Ocorre depois que todos os objetos DetailsViewRow são criados no controle DetailsView. Esse evento é geralmente usado para modificar os valores de um registro antes de ser exibido. |
@@ -508,7 +508,7 @@ O controle TreeView tem várias propriedades que afetam a operação do controle
 
 O **ShowCheckBoxes** propriedade afeta se nós exibem uma caixa de seleção quando renderizado. Os valores válidos para essa propriedade são **None**, **raiz**, **pai**, **folha**, e **todos os**. Elas afetam o controle TreeView da seguinte maneira:
 
-| **Valor da propriedade** | **Efeito** |
+| **Valor da propriedade** | **Effect** |
 | --- | --- |
 | Nenhum | Caixas de seleção não são exibidas em todos os nós. Essa é a configuração padrão. |
 | Raiz | Uma caixa de seleção só é exibida no nó raiz. |
@@ -554,7 +554,7 @@ O **SelectAction** propriedade permite que você configure qual evento é aciona
 
 O controle TreeView fornece muitas propriedades para controlar a aparência do controle com estilos. As seguintes propriedades estão disponíveis.
 
-| **Nome da Propriedade** | **Controles** |
+| **Nome da propriedade** | **Controles** |
 | --- | --- |
 | HoverNodeStyle | Controla o estilo de nós quando o mouse é colocado sobre eles. |
 | LeafNodeStyle | Controla o estilo de nós folha. |
@@ -587,7 +587,7 @@ Um controle SiteMapPath é composto por objetos SiteMapNodeItem. Há três tipos
 
 As propriedades que controlam a operação do controle SiteMapPath são da seguinte maneira:
 
-| **Propriedade** | **Descrição da propriedade** |
+| **Property** | **Descrição da propriedade** |
 | --- | --- |
 | ParentLevelsDisplayed | Controla quantos nós pai são exibidos. O padrão é -1 que não impõe nenhuma restrição no número de nós pai exibidos. |
 | PathDirection | Controla a direção do SiteMapPath. Os valores válidos são RootToCurrent (padrão) e CurrentToRoot. |
@@ -615,7 +615,7 @@ O controle SiteMapPath tem dois eventos que não são derivados da classe de con
 
 Os estilos a seguir estão disponíveis para formatação de um controle SiteMapPath.
 
-| **Nome da Propriedade** | **Controles** |
+| **Nome da propriedade** | **Controles** |
 | --- | --- |
 | CurrentNodeStyle | Controla o estilo do texto para o nó atual. |
 | RootNodeStyle | Controla o estilo do texto para o nó raiz. |

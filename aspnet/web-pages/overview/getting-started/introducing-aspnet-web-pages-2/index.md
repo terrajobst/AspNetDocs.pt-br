@@ -12,7 +12,7 @@ ms.openlocfilehash: 324a9d7b8666cbd387ff6ea17e9d341fe2f38423
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409616"
 ---
 # <a name="introducing-aspnet-web-pages"></a>Introdução a Páginas da Web do ASP.NET
@@ -20,9 +20,9 @@ ms.locfileid: "59409616"
 > Introdução ao ASP.NET Web Pages 2
 
 
-- [Guia de Introdução](getting-started.md)
+- [Introdução](getting-started.md)
 - [Noções básicas sobre programação](intro-to-web-pages-programming.md)
-- [Exibir dados](displaying-data.md)
+- [Exibindo dados](displaying-data.md)
 - [Noções básicas de formulário HTML](form-basics.md)
 - [Inserir dados de banco de dados usando formulários](entering-data.md)
 - [Atualização de dados do banco de dados](updating-data.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 109a0dc1e1ebe0b644e9414561c798a7bb3d0531
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414823"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-1"></a>ASP.NET 4 – Série 1 sobre implantação corporativa
@@ -27,7 +27,7 @@ ms.locfileid: "59414823"
 - [Noções básicas sobre o processo de build](understanding-the-build-process.md)
 - [Criação e a empacotamento de projetos de aplicativos Web](building-and-packaging-web-application-projects.md)
 - [Configuração de parâmetros para a implantação de pacote da Web](configuring-parameters-for-web-package-deployment.md)
-- [Implantação de pacotes da Web](deploying-web-packages.md)
-- [Implantação de projetos de banco de dados](deploying-database-projects.md)
+- [Implantando pacotes da Web](deploying-web-packages.md)
+- [Implantando projetos de banco de dados](deploying-database-projects.md)
 - [Criação e execução de um arquivo de comando de implantação](creating-and-running-a-deployment-command-file.md)
 - [Instalação manual de pacotes da Web](manually-installing-web-packages.md)

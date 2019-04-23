@@ -12,7 +12,7 @@ ms.openlocfilehash: c30544586fdcbdc805e593fae0f186810a412be9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412366"
 ---
 # <a name="getting-started-with-entity-framework-6-database-first-using-mvc-5"></a>Introdução ao banco de dados do Entity Framework 6 pela primeira vez usando o MVC 5
@@ -21,8 +21,8 @@ ms.locfileid: "59412366"
 
 
 - [Introdução ao Database First do Entity Framework 6 usando o MVC 5](setting-up-database.md)
-- [Criar o aplicativo Web e os modelos de dados](creating-the-web-application.md)
+- [Criando o aplicativo Web e os modelos de dados](creating-the-web-application.md)
 - [Geração de exibições](generating-views.md)
-- [Alterar o banco de dados](changing-the-database.md)
-- [Personalizar uma exibição](customizing-a-view.md)
-- [Melhorar a validação de dados](enhancing-data-validation.md)
+- [Alterando o banco de dados](changing-the-database.md)
+- [Personalizando uma exibição](customizing-a-view.md)
+- [Melhorando a validação de dados](enhancing-data-validation.md)

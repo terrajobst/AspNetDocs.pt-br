@@ -12,7 +12,7 @@ ms.openlocfilehash: 68080859e205283f56d8f543bfa06b76bb22a39d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408856"
 ---
 # <a name="iteration-5--create-unit-tests-c"></a>Iteração #5 – criar testes de unidade (c#)
@@ -117,12 +117,12 @@ Antes de usar Moq, você precisará concluir as etapas a seguir:
 5. Depois de concluir essas etapas, sua pasta de referências deve ser semelhante a Figura 2.
 
 
-[![Unblocking Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
+[![Como desbloquear Moq](iteration-5-create-unit-tests-cs/_static/image1.jpg)](iteration-5-create-unit-tests-cs/_static/image1.png)
 
 **Figura 01**: Como desbloquear Moq ([clique para exibir a imagem em tamanho normal](iteration-5-create-unit-tests-cs/_static/image2.png))
 
 
-[![Rreferências depois de adicionar o Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
+[![Referências depois de adicionar o Moq](iteration-5-create-unit-tests-cs/_static/image2.jpg)](iteration-5-create-unit-tests-cs/_static/image3.png)
 
 **Figura 02**: Referências depois de adicionar o Moq ([clique para exibir a imagem em tamanho normal](iteration-5-create-unit-tests-cs/_static/image4.png))
 
@@ -185,7 +185,7 @@ Verifique se os testes restantes que quando o método CreateContact() é chamado
 Você pode executar os testes de unidade na listagem 1, selecionando a opção de menu **teste, execute todos os testes na solução (CTRL + R, um)**. Os resultados dos testes são exibidos na janela de resultados de teste (veja a Figura 4).
 
 
-[![TResultados de est](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
+[![Resultados de teste](iteration-5-create-unit-tests-cs/_static/image4.jpg)](iteration-5-create-unit-tests-cs/_static/image7.png)
 
 **Figura 04**: Resultados de teste ([clique para exibir a imagem em tamanho normal](iteration-5-create-unit-tests-cs/_static/image8.png))
 

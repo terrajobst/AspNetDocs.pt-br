@@ -12,7 +12,7 @@ ms.openlocfilehash: bf9cf1f5be22a5b97ec964277c11ae21066676f0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412405"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Criando aplicativos de nuvem do mundo Real com o Azure
@@ -100,7 +100,7 @@ Este livro eletrônico explica que treze recomendado padrões para desenvolvimen
     - Habilitar a alta disponibilidade e melhorar a escalabilidade aliando livremente as camadas web e de trabalho.
     - Demo: Filas de armazenamento do Azure no aplicativo corrigi-lo.
 - [Mais orientações e padrões de aplicativo de nuvem](more-patterns-and-guidance.md).
-- [Apêndice: O aplicativo de exemplo Fix It](the-fix-it-sample-application.md)
+- [Apêndice: A correção do exemplo de aplicativo](the-fix-it-sample-application.md)
 
     - Problemas Conhecidos
     - Práticas recomendadas

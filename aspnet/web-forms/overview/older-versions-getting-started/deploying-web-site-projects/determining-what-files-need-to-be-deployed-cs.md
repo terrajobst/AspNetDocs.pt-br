@@ -12,7 +12,7 @@ ms.openlocfilehash: c17e3afaf4406489a14d0537a33fef384d6c5a19
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408960"
 ---
 # <a name="determining-what-files-need-to-be-deployed-c"></a>Determinação de quais arquivos precisam ser implantados (C#)
@@ -93,7 +93,7 @@ O download para este tutorial inclui um aplicativo ASP.NET chamado resenhas de l
 Figura 1 mostra uma captura de tela do site resenhas de livros quando visualizado por meio de um navegador. Aqui você verá a página ~ /`Tech/TYASP35.aspx`, que analisa o livro *ensinar por conta própria ASP.NET 3.5 in 24 horas*. A trilha de navegação que abrange a parte superior da página e no menu na coluna à esquerda são baseados na estrutura de mapa de site definida em `Web.sitemap`. A imagem no canto superior direito é uma da tampa de livro imagens localizadas no `Images` pasta. Aparência do site da Web são definidas por meio de regras de folha de estilo escritas pelos arquivos CSS na pasta estilos, enquanto o layout da página abrangente é definido na página mestra, em cascata `Site.master`.
 
 
-[![Tele livro examina o site oferece revisões em uma variedade de títulos](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
+[![O site do livro analisa oferece revisões em uma variedade de títulos](determining-what-files-need-to-be-deployed-cs/_static/image2.png)](determining-what-files-need-to-be-deployed-cs/_static/image1.png)
 
 **Figura 1:** O site do livro analisa oferece revisões em uma variedade de títulos ([clique para exibir a imagem em tamanho normal](determining-what-files-need-to-be-deployed-cs/_static/image3.png))
 
@@ -116,7 +116,7 @@ O modelo de projeto de aplicativo Web usa a compilação explícita - código-fo
 Figura 2 mostra os arquivos que compõem o projeto de aplicativo Web do livro revisões.
 
 
-[![TGerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
+[![O Gerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web](determining-what-files-need-to-be-deployed-cs/_static/image5.png)](determining-what-files-need-to-be-deployed-cs/_static/image4.png)
 
 **Figura 2**: O Gerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web
 
@@ -143,7 +143,7 @@ A opção de menu de compilação no Visual Studio está presente em projetos de
 Figura 3 mostra os arquivos que compõem o projeto de Site da Web do catálogo de revisões.
 
 
- [![TGerenciador de soluções lista os arquivos que compõem o projeto de Site da Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
+ [![O Gerenciador de soluções lista os arquivos que compõem o projeto de Site da Web](determining-what-files-need-to-be-deployed-cs/_static/image7.png)](determining-what-files-need-to-be-deployed-cs/_static/image6.png) 
 
 **Figura 3**: O Gerenciador de soluções lista os arquivos que compõem o projeto de Site da Web
 

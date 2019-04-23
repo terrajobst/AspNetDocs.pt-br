@@ -12,7 +12,7 @@ ms.openlocfilehash: db8f336f3fd9a88dfb32f99510fc53cd7b4a5178
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415980"
 ---
 # <a name="how-to-add-mobile-pages-to-your-aspnet-web-forms--mvc-application"></a>Como: Adicionar páginas móveis ao seu Web Forms do ASP.NET ou seu aplicativo do MVC

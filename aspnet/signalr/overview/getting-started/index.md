@@ -12,7 +12,7 @@ ms.openlocfilehash: 3e720dd895c609d5b35848dbc4d4a6989028ff7d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59418749"
 ---
 # <a name="signalr-getting-started"></a>Guia de Introdução do SignalR
@@ -21,7 +21,7 @@ ms.locfileid: "59418749"
 
 
 - [Introdução ao SignalR](introduction-to-signalr.md)
-- [Plataformas compatíveis](supported-platforms.md)
+- [Plataformas com suporte](supported-platforms.md)
 - [Tutorial: Introdução ao SignalR 2](tutorial-getting-started-with-signalr.md)
 - [Tutorial: Introdução ao SignalR 2 e MVC 5](tutorial-getting-started-with-signalr-and-mvc.md)
 - [Tutorial: Em tempo real de alta frequência com SignalR 2](tutorial-high-frequency-realtime-with-signalr.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: d0e7dcb0317c403c5cf7df1db7decbdda4ada8e9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417371"
 ---
 # <a name="signalr-scaleout-with-azure-service-bus"></a>Expansão do SignalR com o Barramento de Serviço do Azure

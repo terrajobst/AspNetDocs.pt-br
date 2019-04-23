@@ -12,7 +12,7 @@ ms.openlocfilehash: 3e5b9d1a3bac0cf1ab042f473f8fd508069000a5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408570"
 ---
 # <a name="getting-started-with-aspnet-web-pages"></a>Introdução a páginas da Web ASP.NET
@@ -25,12 +25,12 @@ ms.locfileid: "59408570"
 - [Visual Basic em Páginas da Web do ASP.NET](introducing-razor-syntax-vb.md)
 - [Perguntas frequentes sobre Páginas da Web do ASP.NET (Razor)](aspnet-web-pages-razor-faq.md)
 - [Enviar email através do seu site](11-adding-email-to-your-web-site.md)
-- [Adição de redes sociais ao seu site](13-adding-social-networking-to-your-web-site.md)
+- [Adição de redes sociais em seu site](13-adding-social-networking-to-your-web-site.md)
 - [Introdução a Páginas da Web do ASP.NET](introducing-aspnet-web-pages-2/index.md)
 
-    - [Guia de Introdução](introducing-aspnet-web-pages-2/getting-started.md)
+    - [Introdução](introducing-aspnet-web-pages-2/getting-started.md)
     - [Noções básicas sobre programação](introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md)
-    - [Exibir dados](introducing-aspnet-web-pages-2/displaying-data.md)
+    - [Exibindo dados](introducing-aspnet-web-pages-2/displaying-data.md)
     - [Noções básicas de formulário HTML](introducing-aspnet-web-pages-2/form-basics.md)
     - [Inserir dados de banco de dados usando formulários](introducing-aspnet-web-pages-2/entering-data.md)
     - [Atualização de dados do banco de dados](introducing-aspnet-web-pages-2/updating-data.md)

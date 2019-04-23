@@ -12,7 +12,7 @@ ms.openlocfilehash: c7c0de7ade31e43e3b43495cb6755608872d506d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412743"
 ---
 # <a name="aspnet-and-visual-studio-2013"></a>ASP.NET e Visual Studio 2013
@@ -21,16 +21,16 @@ ms.locfileid: "59412743"
 
 
 - [Criação de Projetos Web do ASP.NET no Visual Studio 2013](creating-web-projects-in-visual-studio.md)
-- [Recursos do Editor da Web do Visual Studio 2013 – Link do navegador](visual-studio-2013-web-editor-features-browser-link.md)
+- [Recursos do Editor da Web do Visual Studio 2013 – link do navegador](visual-studio-2013-web-editor-features-browser-link.md)
 - [Recursos do Editor da Web do Visual Studio 2013 – CSS](visual-studio-2013-web-editor-features-css.md)
 - [Recursos do Editor da Web do Visual Studio 2013 – JavaScript](visual-studio-2013-web-editor-features-javascript.md)
-- [Recursos do Editor da Web do Visual Studio 2013 – Publicação](visual-studio-2013-web-editor-features-publishing.md)
+- [Recursos do Editor da Web do Visual Studio 2013 – publicação](visual-studio-2013-web-editor-features-publishing.md)
 - [Recursos do Editor da Web do Visual Studio 2013 – Inspetor de Página](visual-studio-2013-web-editor-features-page-inspector.md)
-- [Recursos do Editor da Web do Visual Studio 2013 – Editor de HTML](visual-studio-2013-web-editor-features-html-editor.md)
+- [Recursos do Editor da Web do Visual Studio 2013 – editor de HTML](visual-studio-2013-web-editor-features-html-editor.md)
 - [Recursos do Editor da Web do Visual Studio 2013 – HTML5](visual-studio-2013-web-editor-features-html5.md)
 - [Scaffolding do ASP.NET no Visual Studio 2013](aspnet-scaffolding-overview.md)
 - [Link do navegador](using-browser-link.md)
 - [Notas de versão do ASP.NET and Web Tools para Visual Studio 2013](release-notes.md)
 - [ASP.NET e Web Tools 2013.2 para notas de versão do Visual Studio 2013](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes.md)
-- [Laboratório prático: Ferramentas da Web do Visual Studio 2013](visual-studio-2013-web-tools.md)
-- [Laboratório prático: Um único ASP.NET: Integração do Web Forms, MVC e da API Web do ASP.NET](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api.md)
+- [Laboratório prático: Ferramentas de Web do Visual Studio 2013](visual-studio-2013-web-tools.md)
+- [Laboratório prático: Um único ASP.NET: A integração do ASP.NET Web Forms, MVC e API da Web](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api.md)

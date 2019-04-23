@@ -12,7 +12,7 @@ ms.openlocfilehash: d4e5ef19044a265f48d51586062fb7d2dc024b4c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59413666"
 ---
 # <a name="introduction-to-web-pages-videos"></a>Introdução aos vídeos de páginas da Web

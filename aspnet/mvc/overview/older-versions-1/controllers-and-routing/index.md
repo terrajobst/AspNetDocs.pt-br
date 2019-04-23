@@ -12,7 +12,7 @@ ms.openlocfilehash: 1a994b37faefe0e20c99a6991768898185e51b43
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417215"
 ---
 # <a name="controllers-and-routing"></a>Controladores e roteamento
@@ -22,16 +22,16 @@ ms.locfileid: "59417215"
 
 - [Visão geral sobre roteamento do ASP.NET MVC (C#)](asp-net-mvc-routing-overview-cs.md)
 - [Noções básicas sobre filtros de ação (C#)](understanding-action-filters-cs.md)
-- [Melhorar o desempenho com o cache de saída (C#)](improving-performance-with-output-caching-cs.md)
-- [Adicionar conteúdo dinâmico a uma página em cache (C#)](adding-dynamic-content-to-a-cached-page-cs.md)
-- [Criar um controlador (C#)](creating-a-controller-cs.md)
-- [Criar uma ação (C#)](creating-an-action-cs.md)
-- [Visão geral sobre o roteamento do ASP.NET MVC (VB)](asp-net-mvc-routing-overview-vb.md)
+- [Melhorando o desempenho com o cache de saída (C#)](improving-performance-with-output-caching-cs.md)
+- [Adicionando conteúdo dinâmico a uma página em cache (C#)](adding-dynamic-content-to-a-cached-page-cs.md)
+- [Criando um controlador (C#)](creating-a-controller-cs.md)
+- [Criando uma ação (C#)](creating-an-action-cs.md)
+- [Visão geral sobre roteamento do ASP.NET MVC (VB)](asp-net-mvc-routing-overview-vb.md)
 - [Noções básicas sobre filtros de ação (VB)](understanding-action-filters-vb.md)
-- [Melhorar o desempenho com o cache de saída (VB)](improving-performance-with-output-caching-vb.md)
-- [Adicionar conteúdo dinâmico a uma página em cache (VB)](adding-dynamic-content-to-a-cached-page-vb.md)
-- [Criar um controlador (VB)](creating-a-controller-vb.md)
-- [Criar uma ação (VB)](creating-an-action-vb.md)
+- [Melhorando o desempenho com o cache de saída (VB)](improving-performance-with-output-caching-vb.md)
+- [Adicionando conteúdo dinâmico a uma página em cache (VB)](adding-dynamic-content-to-a-cached-page-vb.md)
+- [Criando um controlador (VB)](creating-a-controller-vb.md)
+- [Criando uma ação (VB)](creating-an-action-vb.md)
 - [Visão geral sobre o controlador do ASP.NET MVC (C#)](aspnet-mvc-controllers-overview-cs.md)
 - [Criação de rotas personalizadas (C#)](creating-custom-routes-cs.md)
 - [Criação de uma restrição de rota (C#)](creating-a-route-constraint-cs.md)

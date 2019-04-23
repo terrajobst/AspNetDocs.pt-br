@@ -12,7 +12,7 @@ ms.openlocfilehash: 5f7415d0a4275a3864dc9eefb9588f17698147cd
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412691"
 ---
 # <a name="signalr-performance-signalr-1x"></a>Desempenho do SignalR (SignalR 1.x)
@@ -227,7 +227,7 @@ Os seguintes contadores de desempenho também podem ser útil no monitoramento d
 - TCPv6/conexões estabelecidas
 - TCPv4/conexões estabelecidas
 
-**Serviço da Web**
+**Serviço Web**
 
 - Web \ conexões atuais
 - Conexões de Service\Maximum da Web
@@ -243,6 +243,6 @@ Os seguintes contadores de desempenho também podem ser útil no monitoramento d
 
 Para obter mais informações sobre monitoramento e ajuste de desempenho do ASP.NET, consulte os tópicos a seguir:
 
-- [Visão geral de desempenho do ASP.NET](https://msdn.microsoft.com/library/cc668225(v=vs.100).aspx)
+- [Visão geral do desempenho do ASP.NET](https://msdn.microsoft.com/library/cc668225(v=vs.100).aspx)
 - [Uso de threads do ASP.NET no IIS 7.5, IIS 7.0 e IIS 6.0](https://blogs.msdn.com/b/tmarq/archive/2007/07/21/asp-net-thread-usage-on-iis-7-0-and-6-0.aspx)
 - [&lt;applicationPool&gt; (configurações da Web)](https://msdn.microsoft.com/library/dd560842.aspx)

@@ -12,7 +12,7 @@ ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412171"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Introdução ao ASP.NET Web Pages - exibindo dados
@@ -214,7 +214,7 @@ Nesse estágio, o banco de dados foi aberto, você já tem os dados você quer, 
 
 > [!TIP] 
 > 
-> **Structured Query Language (SQL)**
+> **Linguagem de consulta estruturada (SQL)**
 > 
 > SQL é uma linguagem que é usada na maioria dos bancos de dados relacionais para o gerenciamento de dados em um banco de dados. Ele inclui comandos que permitem que você recuperar dados e atualizá-lo e que permitem que você criar, modificar e gerenciar dados em tabelas de banco de dados. SQL é diferente de uma linguagem de programação (como c#). Com SQL, você informa o banco de dados que você deseja e trabalho do banco de dados é descobrir como obter os dados ou executar a tarefa. Aqui estão exemplos de alguns comandos SQL e o que fazer:
 > 
@@ -333,7 +333,7 @@ No próximo tutorial, você aprenderá como usar o código do Razor e c# para ob
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução a O ASP.NET que programa usando a sintaxe razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
 
 > [!div class="step-by-step"]
 > [Anterior](intro-to-web-pages-programming.md)

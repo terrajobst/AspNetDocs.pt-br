@@ -12,7 +12,7 @@ ms.openlocfilehash: 7cb965a79cf9d367b74efa2fe1fd1493cce1c19e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414602"
 ---
 # <a name="aspnet-35---membership"></a>ASP.NET 3.5 – Associação
@@ -22,11 +22,11 @@ ms.locfileid: "59414602"
 
 - [Criação do esquema de associação no SQL Server (C#)](creating-the-membership-schema-in-sql-server-cs.md)
 - [Criação de contas de usuário (C#)](creating-user-accounts-cs.md)
-- [Validar credenciais de usuário no repositório de usuário associado (C#)](validating-user-credentials-against-the-membership-user-store-cs.md)
+- [Validando credenciais de usuário no repositório de usuário associado (C#)](validating-user-credentials-against-the-membership-user-store-cs.md)
 - [Autorização baseada em usuário (C#)](user-based-authorization-cs.md)
-- [Armazenar informações de usuário adicionais (C#)](storing-additional-user-information-cs.md)
+- [Armazenando informações de usuário adicionais (C#)](storing-additional-user-information-cs.md)
 - [Criação do esquema de associação no SQL Server (VB)](creating-the-membership-schema-in-sql-server-vb.md)
 - [Criação de contas de usuário (VB)](creating-user-accounts-vb.md)
-- [Validar credenciais de usuário no repositório de usuário associado (VB)](validating-user-credentials-against-the-membership-user-store-vb.md)
+- [Validando credenciais de usuário no repositório de usuário associado (VB)](validating-user-credentials-against-the-membership-user-store-vb.md)
 - [Autorização baseada em usuário (VB)](user-based-authorization-vb.md)
-- [Armazenar informações de usuário adicionais (VB)](storing-additional-user-information-vb.md)
+- [Armazenando informações de usuário adicionais (VB)](storing-additional-user-information-vb.md)

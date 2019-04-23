@@ -12,7 +12,7 @@ ms.openlocfilehash: c05f0976a135615f7a272b8057eb4c56677e5117
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412418"
 ---
 # <a name="animation-depending-on-a-condition-c"></a>Animação dependendo de uma condição (C#)
@@ -53,7 +53,7 @@ Dentro de `<Animations>` nó, use `<OnLoad>` para as animações são executadas
 Observe que o sinal de menor que (`<`) na `ConditionScript` atributo deve ser (escape). Quando você executar esse script, nenhuma animação será executado, ou uma das duas delas, ou ambos fazem.
 
 
-[![Tpainel he está desaparecendo sem redimensionamento, portanto, o segunda animação é executado, o primeiro deles não](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
+[![O painel está desaparecendo sem redimensionamento, portanto, o segunda animação é executado, o primeiro deles não](animation-depending-on-a-condition-cs/_static/image2.png)](animation-depending-on-a-condition-cs/_static/image1.png)
 
 O painel está desaparecendo sem redimensionamento, portanto, o segunda animação é executado, o primeiro deles não ([clique para exibir a imagem em tamanho normal](animation-depending-on-a-condition-cs/_static/image3.png))
 

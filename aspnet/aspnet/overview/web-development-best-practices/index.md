@@ -12,13 +12,13 @@ ms.openlocfilehash: 6b415480fc3f1d86f74e5845eedb35d284806284
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59412275"
 ---
 # <a name="web-development-best-practices"></a>Melhores práticas de desenvolvimento para a Web
 
 
 - [O que fazer e o que não fazer em ASP.NET](what-not-to-do-in-aspnet-and-what-to-do-instead.md)
-- [Async e Await](async-and-await.md)
+- [Async and Await](async-and-await.md)
 - [Criação aplicativos de nuvem para o mundo real com o Azure](../developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/index.md)
-- [Laboratório prático: Sites sustentáveis do Azure: Gerenciamento da alteração e escala](../developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale.md)
+- [Laboratório prático: Sites sustentáveis do Azure: Gerenciamento de alteração e escala](../developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale.md)

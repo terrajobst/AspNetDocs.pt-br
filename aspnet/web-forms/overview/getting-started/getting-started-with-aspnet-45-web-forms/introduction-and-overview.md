@@ -12,7 +12,7 @@ ms.openlocfilehash: 3a39e8d1979a743101d728eb3430e9aa0efb1252
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415629"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introdução ao ASP.NET 4.5 do Web Forms e Visual Studio 2017
@@ -39,7 +39,7 @@ Você deve ter algum conhecimento nas seguintes áreas:
 
 Para examinar essas áreas, considere a estudar o conteúdo a seguir:
 
-- [Guia de Introdução ao Visual C#](https://msdn.microsoft.com/library/a72418yk.aspx)
+- [Introdução ao Visual c#](https://msdn.microsoft.com/library/a72418yk.aspx)
 - [Web Development](https://msdn.microsoft.com/beginner/bb308760.aspx), [HTML, CSS, JavaScript, SQL, PHP, JQuery](http://w3schools.com/)
 - [Banco de dados relacional](http://en.wikipedia.org/wiki/Relational_database)
 - [Arquitetura de várias camadas](http://en.wikipedia.org/wiki/Multitier_architecture)

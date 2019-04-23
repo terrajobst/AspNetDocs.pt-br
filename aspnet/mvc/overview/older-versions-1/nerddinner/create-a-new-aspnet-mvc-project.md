@@ -12,7 +12,7 @@ ms.openlocfilehash: c85db4289698988ead44afd452da17054bab9f07
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417202"
 ---
 # <a name="create-a-new-aspnet-mvc-project"></a>Criar um novo projeto do ASP.NET MVC
@@ -62,12 +62,12 @@ Projetos do ASP.NET MVC por padrão tem seis diretórios de nível superior:
 
 | **Diretório** | **Finalidade** |
 | --- | --- |
-| **/ Controladores** | Onde você coloca a classes do controlador que manipulam as solicitações de URL |
+| **/Controllers** | Onde você coloca a classes do controlador que manipulam as solicitações de URL |
 | **Ou os modelos** | Onde você coloca as classes que representam e manipulam dados |
-| **/ Modos de exibição** | Onde você coloca arquivos de modelo de interface do usuário que são responsáveis por saída de renderização |
+| **/Views** | Onde você coloca arquivos de modelo de interface do usuário que são responsáveis por saída de renderização |
 | **/Scripts** | Onde você coloca arquivos de biblioteca de JavaScript e scripts (. js) |
 | **/Content** | Onde você colocou o CSS e arquivos de imagem e outros tipos de conteúdo não-dinâmico/não-JavaScript |
-| **/ Aplicativo\_dados** | Onde você armazena arquivos de dados ser leitura/gravação. |
+| **/App\_Data** | Onde você armazena arquivos de dados ser leitura/gravação. |
 
 ASP.NET MVC não exige essa estrutura. Na verdade, os desenvolvedores que trabalham em aplicativos grandes normalmente particionará o aplicativo de backup em vários projetos para torná-lo mais fácil de gerenciar (por exemplo: classes de modelo de dados geralmente entram em um projeto de biblioteca de classe separada do aplicativo web). No entanto, a estrutura de projeto padrão, forneça uma convenção de diretório padrão legal que podemos usar para manter as nossas preocupações de aplicativo limpa.
 

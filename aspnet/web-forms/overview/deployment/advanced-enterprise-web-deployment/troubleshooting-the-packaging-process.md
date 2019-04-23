@@ -12,7 +12,7 @@ ms.openlocfilehash: 79774c6a1a1d05d5a7bcd82a5d7aa888933cf089
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420101"
 ---
 # <a name="troubleshooting-the-packaging-process"></a>Solução de problemas do processo de empacotamento
@@ -113,4 +113,4 @@ Este tópico descreveu como você pode usar o **EnablePackageProcessLoggingAndAs
 Para obter mais informações sobre como usar arquivos de projeto personalizados do MSBuild para controlar o processo de implantação, consulte [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md) e [Noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md). Para obter mais informações sobre o WPP e como ele gerencia o processo de empacotamento, consulte [compilação e empacotamento Web Application Projects](../web-deployment-in-the-enterprise/building-and-packaging-web-application-projects.md). Para obter orientação sobre como excluir arquivos e pastas específicos de pacotes de implantação da web, consulte [excluindo arquivos e pastas de implantação](excluding-files-and-folders-from-deployment.md).
 
 > [!div class="step-by-step"]
-> [Voltar](running-windows-powershell-scripts-from-msbuild-project-files.md)
+> [Anterior](running-windows-powershell-scripts-from-msbuild-project-files.md)

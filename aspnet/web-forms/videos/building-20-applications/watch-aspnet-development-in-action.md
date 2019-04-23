@@ -12,7 +12,7 @@ ms.openlocfilehash: 5e3c5682ced82ad42aaa0b28a7f5a6b67e43338f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59416552"
 ---
 # <a name="watch-aspnet-development-in-action"></a>Ver o desenvolvimento do ASP.NET em ação
@@ -24,4 +24,4 @@ Assista como é fácil criar um "para fazer a" aplicativo do zero usando ASP.NET
 [&#9654;Assista ao vídeo (20 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/watch-aspnet-development-in-action)
 
 > [!div class="step-by-step"]
-> [Voltar](lesson-8-working-with-the-gridview-and-formview.md)
+> [Anterior](lesson-8-working-with-the-gridview-and-formview.md)

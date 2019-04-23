@@ -12,7 +12,7 @@ ms.openlocfilehash: c0e2888207e4fa0363fc3b357ae00108ffe817f5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415213"
 ---
 # <a name="animating-in-response-to-user-interaction-c"></a>Animação em resposta à interação do usuário (C#)
@@ -59,7 +59,7 @@ Nesse cenário, `<OnClick>` é usado. Quando o usuário clica no painel, ele é 
 [!code-aspx[Main](animating-in-response-to-user-interaction-cs/samples/sample5.aspx)]
 
 
-[![A clique do mouse inicia a animação](animating-in-response-to-user-interaction-cs/_static/image2.png)](animating-in-response-to-user-interaction-cs/_static/image1.png)
+[![Um clique do mouse inicia a animação](animating-in-response-to-user-interaction-cs/_static/image2.png)](animating-in-response-to-user-interaction-cs/_static/image1.png)
 
 Um clique do mouse inicia a animação ([clique para exibir a imagem em tamanho normal](animating-in-response-to-user-interaction-cs/_static/image3.png))
 

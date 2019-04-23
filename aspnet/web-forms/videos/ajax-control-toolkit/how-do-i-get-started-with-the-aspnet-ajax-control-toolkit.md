@@ -12,7 +12,7 @@ ms.openlocfilehash: a9c9de7347dd24046d081a5e9ebbcf91a10fe634
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59408258"
 ---
 # <a name="how-do-i-get-started-with-the-aspnet-ajax-control-toolkit"></a>[Como fazer:] Introdução ao ASP.NET AJAX Control Toolkit?

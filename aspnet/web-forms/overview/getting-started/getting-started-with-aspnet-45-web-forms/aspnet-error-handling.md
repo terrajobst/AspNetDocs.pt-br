@@ -12,7 +12,7 @@ ms.openlocfilehash: e4b8f059974dec33d6305e7b84919550713bf4e4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59409875"
 ---
 # <a name="aspnet-error-handling"></a>Tratamento de erro do ASP.NET
@@ -334,7 +334,7 @@ Eu gostaria de agradecer a pessoas que fizeram contribuições significativas pa
 
 - [Alberto Poblacion, MVP &amp; MCT, Espanha](https://mvp.microsoft.com/mvp/Alberto%20Poblacion%20Bolano-36772)
 - [Alex Thissen, Países Baixos](http://blog.alexthissen.nl/) (twitter: [ @alexthissen ](http://twitter.com/alexthissen))
-- [Andre Tournier, USA](http://andret503.wordpress.com/)
+- [Andre Tournier, EUA](http://andret503.wordpress.com/)
 - Apurva Joshi, Microsoft
 - [Bojan Vrhovnik, Eslovênia](http://twitter.com/bvrhovnik)
 - [Bruno Sonnino, Brasil](http://msmvps.com/blogs/bsonnino) (twitter: [ @bsonnino ](http://twitter.com/bsonnino))
@@ -360,4 +360,4 @@ Eu gostaria de agradecer a pessoas que fizeram contribuições significativas pa
   Conversão do Visual Studio 2012: [Iniciando com Web Forms do ASP.NET 4.5 - Parte 1 - Introdução e Visão Geral](https://andrielleazevedo.wordpress.com/2013/01/24/iniciando-com-asp-net-web-forms-4-5-introducao-e-visao-geral/)
 
 > [!div class="step-by-step"]
-> [Voltar](url-routing.md)
+> [Anterior](url-routing.md)

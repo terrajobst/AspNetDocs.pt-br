@@ -12,7 +12,7 @@ ms.openlocfilehash: eeb28e327b400dc1c35a70dfcb51ba6842ea4a48
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59417995"
 ---
 # <a name="how-do-i-create-my-own-bug-work-item"></a>[Como fazer:] Criar meu próprio Item de trabalho Bug?

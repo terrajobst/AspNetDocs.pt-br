@@ -12,7 +12,7 @@ ms.openlocfilehash: 08be9368049e97baecf9ae81e496950b1349d18f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414901"
 ---
 # <a name="getting-started-with-mvc"></a>Introdução ao MVC
@@ -22,9 +22,9 @@ ms.locfileid: "59414901"
 
 - [Introdução ao ASP.NET MVC](getting-started-with-mvc-part1.md)
 - [Adicionando um controlador](getting-started-with-mvc-part2.md)
-- [Adicionar uma exibição](getting-started-with-mvc-part3.md)
-- [Criar um banco de dados](getting-started-with-mvc-part4.md)
-- [Acessar dados do modelo por meio de um controlador](getting-started-with-mvc-part5.md)
-- [Adicionar um Criar Método e um Criar Exibição](getting-started-with-mvc-part6.md)
+- [Adicionando uma exibição](getting-started-with-mvc-part3.md)
+- [Criando um banco de dados](getting-started-with-mvc-part4.md)
+- [Acessando dados do seu modelo por meio de um controlador](getting-started-with-mvc-part5.md)
+- [Adicionando um Criar Método e um Criar Exibição](getting-started-with-mvc-part6.md)
 - [Adicionar validação ao modelo](getting-started-with-mvc-part7.md)
 - [Adicionar uma coluna ao modelo](getting-started-with-mvc-part8.md)

@@ -12,7 +12,7 @@ ms.openlocfilehash: b3c6726c2d08e2e6ac37501f2ab455e427df82bb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59414043"
 ---
 # <a name="creating-model-classes-with-the-entity-framework-vb"></a>Criação de classes de modelo com o Entity Framework (VB)
@@ -116,7 +116,7 @@ Não modifique o código no arquivo vb, pois suas alterações serão substituí
 
 Vamos começar a compilar nosso aplicativo de banco de dados do filme, criando uma página que exibe uma lista de registros de filmes. O controlador Home na listagem 1 expõe uma ação chamada index (). A ação de Index () retorna todos os registros de filme da tabela de banco de dados de filme, tirando proveito do Entity Framework.
 
-**Listagem 1 – Controllers\HomeController.vb**
+**Listing 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](creating-model-classes-with-the-entity-framework-vb/samples/sample1.vb)]
 

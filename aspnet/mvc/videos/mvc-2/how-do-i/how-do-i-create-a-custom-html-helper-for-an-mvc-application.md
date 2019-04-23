@@ -12,7 +12,7 @@ ms.openlocfilehash: 60953243d3038667e4f729b1394e68f0c9d7c178
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59415044"
 ---
 # <a name="how-do-i-create-a-custom-html-helper-for-an-mvc-application"></a>Como faço Criar um auxiliar HTML personalizado para um aplicativo MVC?
