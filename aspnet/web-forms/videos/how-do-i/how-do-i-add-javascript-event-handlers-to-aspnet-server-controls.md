@@ -12,7 +12,7 @@ ms.openlocfilehash: a4d6ef0f82312d32eb1b5aade5428af2a8bd5345
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421765"
 ---
 # <a name="how-do-i-add-javascript-event-handlers-to-aspnet-server-controls"></a>[Como fazer:] Adicionar manipuladores de eventos de JavaScript para controles de servidor ASP.NET

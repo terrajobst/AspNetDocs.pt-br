@@ -12,7 +12,7 @@ ms.openlocfilehash: 6893d1f2445452b1d802b89027b09d8294bdc5b7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422831"
 ---
 # <a name="validation-with-the-data-annotation-validators-vb"></a>Validação com os validadores de anotação de dados (VB)
@@ -151,4 +151,4 @@ A página no **Figura 6** ilustra as mensagens de erro retornadas quando você i
 Neste tutorial, você aprendeu como aproveitar o associador de modelo de anotação de dados para executar a validação dentro de um aplicativo ASP.NET MVC. Você aprendeu a usar os diferentes tipos de atributos de validador, como o necessário e StringLength. Você também aprendeu a usar esses atributos ao trabalhar com o Entity Framework da Microsoft.
 
 > [!div class="step-by-step"]
-> [Voltar](validating-with-a-service-layer-vb.md)
+> [Anterior](validating-with-a-service-layer-vb.md)

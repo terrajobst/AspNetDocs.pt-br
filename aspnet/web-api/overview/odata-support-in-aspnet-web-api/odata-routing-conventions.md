@@ -13,7 +13,7 @@ ms.openlocfilehash: 8916f8b7a024636be1be055457081487f46a7936
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421622"
 ---
 # <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenções de roteamento na API Web ASP.NET 2 Odata
@@ -119,7 +119,7 @@ Para obter mais informações, consulte [trabalhando com relações de entidade]
 
 Para obter mais informações, consulte [ações de OData](odata-v3/odata-actions.md).
 
-**Assinaturas de Método**
+**Assinaturas de método**
 
 Aqui estão algumas regras para as assinaturas de método:
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 9ded6526a2c4f1063843f3448ba3a2023686f529
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421167"
 ---
 # <a name="working-with-computed-columns-vb"></a>Trabalhar com colunas computadas (VB)
@@ -54,7 +54,7 @@ Observe que as cadeias de caracteres podem ser concatenadas em SQL usando o `+` 
 Depois de adicionar a coluna computada sua tela deve ser semelhante a tela na Figura 1.
 
 
-[![Add um computado FullContactName de chamada de coluna à tabela Fornecedores](working-with-computed-columns-vb/_static/image2.png)](working-with-computed-columns-vb/_static/image1.png)
+[![Adicionar uma coluna computada chamada FullContactName à tabela fornecedores](working-with-computed-columns-vb/_static/image2.png)](working-with-computed-columns-vb/_static/image1.png)
 
 **Figura 1**: Adicione um chamado de coluna computada `FullContactName` para o `Suppliers` tabela ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image3.png))
 
@@ -79,7 +79,7 @@ Antes de começarmos o trabalho na camada de acesso a dados, let s Reserve um mi
 Como mostra a Figura 2, os resultados incluirão `FullContactName`, que lista os `CompanyName`, `ContactName`, e `ContactTitle` colunas usando o formato `ContactName` (`ContactTitle`, `CompanyName`).
 
 
-[![Tele FullContactName usa o formato ContactName (TítuloDoContato, CompanyName)](working-with-computed-columns-vb/_static/image5.png)](working-with-computed-columns-vb/_static/image4.png)
+[![O FullContactName usa formato ContactName (TítuloDoContato, CompanyName)](working-with-computed-columns-vb/_static/image5.png)](working-with-computed-columns-vb/_static/image4.png)
 
 **Figura 2**: O `FullContactName` usa o formato `ContactName` (`ContactTitle`, `CompanyName`) ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image6.png))
 
@@ -97,7 +97,7 @@ Para este tutorial, deixe s adicionar um novo TableAdapter e fazê-la automatica
 Comece abrindo o `NorthwindWithSprocs` conjunto de dados a `~/App_Code/DAL` pasta. Clique com botão direito no Designer e, no menu de contexto, escolha Adicionar um novo TableAdapter. Isso iniciará o Assistente de configuração do TableAdapter. Especifique o banco de dados para consultar dados do (`NORTHWNDConnectionString` de `Web.config`) e clique em Avançar. Uma vez que estamos ainda não tiver criado todos os procedimentos armazenados para consultar ou modificar o `Suppliers` da tabela, selecione a criar novos procedimentos armazenados de opção para que o assistente vai criá-los para nós e clique em Avançar.
 
 
-[![Cescolher o modo de criar novos armazenados procedimentos opção](working-with-computed-columns-vb/_static/image8.png)](working-with-computed-columns-vb/_static/image7.png)
+[![Escolha os procedimentos armazenados nova opção de criar](working-with-computed-columns-vb/_static/image8.png)](working-with-computed-columns-vb/_static/image7.png)
 
 **Figura 3**: Escolha os procedimentos armazenados nova opção de criar ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image9.png))
 
@@ -110,7 +110,7 @@ Etapa subsequente nos solicita a consulta principal. Insira a seguinte consulta 
 Depois de inserir a consulta principal e clicar em Avançar, o assistente permite nomear os quatro procedimentos armazenados, que ele irá gerar. Nomeie esses procedimentos armazenados `Suppliers_Select`, `Suppliers_Insert`, `Suppliers_Update`, e `Suppliers_Delete`, como mostra a Figura 4.
 
 
-[![CPersonalizar os nomes dos procedimentos armazenados Auto-Generated](working-with-computed-columns-vb/_static/image11.png)](working-with-computed-columns-vb/_static/image10.png)
+[![Personalizar os nomes dos procedimentos armazenados gerados automaticamente](working-with-computed-columns-vb/_static/image11.png)](working-with-computed-columns-vb/_static/image10.png)
 
 **Figura 4**: Personalizar os nomes dos procedimentos armazenados Auto-Generated ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image12.png))
 
@@ -118,7 +118,7 @@ Depois de inserir a consulta principal e clicar em Avançar, o assistente permit
 A próxima etapa do assistente permite nomear os métodos do TableAdapter s e especificar os padrões usados para acessar e atualizar dados. Deixe todas as três caixas de seleção marcadas, mas renomear os `GetData` método para `GetSuppliers`. Clique em Concluir para concluir o assistente.
 
 
-[![Ro método GetData GetSuppliers de eName](working-with-computed-columns-vb/_static/image14.png)](working-with-computed-columns-vb/_static/image13.png)
+[![Renomeie o método GetData para GetSuppliers](working-with-computed-columns-vb/_static/image14.png)](working-with-computed-columns-vb/_static/image13.png)
 
 **Figura 5**: Renomeie o `GetData` método `GetSuppliers` ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image15.png))
 
@@ -142,7 +142,7 @@ Salve as alterações para o procedimento armazenado, clicando no ícone Salvar 
 Em seguida, retornar para o Designer de conjunto de dados, clique com botão direito no `SuppliersTableAdapter`e escolha Configure no menu de contexto. Observe que o `Suppliers_Select` coluna agora inclui o `FullContactName` coluna em sua coleção de colunas de dados.
 
 
-[![RCancelar o Assistente de configuração do TableAdapter s para atualizar as colunas de s DataTable](working-with-computed-columns-vb/_static/image17.png)](working-with-computed-columns-vb/_static/image16.png)
+[![Execute o Assistente de configuração do TableAdapter s para atualizar as colunas de s DataTable](working-with-computed-columns-vb/_static/image17.png)](working-with-computed-columns-vb/_static/image16.png)
 
 **Figura 6**: Execute o Assistente de configuração para atualizar o s DataTable colunas TableAdapter s ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image18.png))
 
@@ -150,7 +150,7 @@ Em seguida, retornar para o Designer de conjunto de dados, clique com botão dir
 Clique em Concluir para concluir o assistente. Isso adicionará automaticamente uma coluna correspondente para o `SuppliersDataTable`. O Assistente do TableAdapter é inteligente o suficiente para detectar que o `FullContactName` coluna é uma coluna computada e, portanto, somente leitura. Consequentemente, ele define a coluna s `ReadOnly` propriedade para `true`. Para verificar isso, selecione a coluna do `SuppliersDataTable` e, em seguida, vá para a janela Propriedades (consulte a Figura 7). Observe que o `FullContactName` coluna s `DataType` e `MaxLength` propriedades também serão definidas de acordo.
 
 
-[![Tele FullContactName coluna está marcado como somente leitura](working-with-computed-columns-vb/_static/image20.png)](working-with-computed-columns-vb/_static/image19.png)
+[![A coluna FullContactName está marcada como somente leitura](working-with-computed-columns-vb/_static/image20.png)](working-with-computed-columns-vb/_static/image19.png)
 
 **Figura 7**: O `FullContactName` coluna está marcada como somente leitura ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image21.png))
 
@@ -162,7 +162,7 @@ Para este tutorial, criaremos uma página ASP.NET que exibe os fornecedores em u
 Clique com botão direito no `SuppliersTableAdapter` no Design do conjunto de dados e escolha a opção de adicionar consulta no menu de contexto. Como fizemos na etapa 3, permitir que o assistente gerar um novo procedimento armazenado para nós, selecionando a opção de procedimento armazenado criar novo (consulte novamente a Figura 3 para uma captura de tela nesta etapa do assistente). Uma vez que esse método retornará um registro com várias colunas, indica que desejamos usar uma consulta SQL que é um SELECT que retorna linhas e clique em Avançar.
 
 
-[![Cescolher o modo SELECT que retorna linhas opção](working-with-computed-columns-vb/_static/image23.png)](working-with-computed-columns-vb/_static/image22.png)
+[![Escolha o SELECT que retorna linhas opção](working-with-computed-columns-vb/_static/image23.png)](working-with-computed-columns-vb/_static/image22.png)
 
 **Figura 8**: Escolha o SELECT que retorna linhas opção ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image24.png))
 
@@ -175,7 +175,7 @@ Etapa subsequente nos solicita para a consulta a ser usado para esse método. In
 A próxima tela pergunta para nomear o procedimento armazenado que será gerado automaticamente. Nomeie esse procedimento armazenado `Suppliers_SelectBySupplierID` e clique em Avançar.
 
 
-[![No Suppliers_SelectBySupplierID de procedimento armazenado de AME](working-with-computed-columns-vb/_static/image26.png)](working-with-computed-columns-vb/_static/image25.png)
+[![Nome do procedimento armazenado Suppliers_SelectBySupplierID](working-with-computed-columns-vb/_static/image26.png)](working-with-computed-columns-vb/_static/image25.png)
 
 **Figura 9**: Nomeie o procedimento armazenado `Suppliers_SelectBySupplierID` ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image27.png))
 
@@ -183,7 +183,7 @@ A próxima tela pergunta para nomear o procedimento armazenado que será gerado 
 Por fim, a assistente solicita nós para os dados de acesso padrões e nomes de método a ser usado para o TableAdapter. Deixe ambas as caixas de seleção marcadas, mas renomear os `FillBy` e `GetDataBy` métodos `FillBySupplierID` e `GetSupplierBySupplierID`, respectivamente.
 
 
-[![Name a FillBySupplierID de métodos do TableAdapter e GetSupplierBySupplierID](working-with-computed-columns-vb/_static/image29.png)](working-with-computed-columns-vb/_static/image28.png)
+[![Nome do TableAdapter métodos FillBySupplierID e GetSupplierBySupplierID](working-with-computed-columns-vb/_static/image29.png)](working-with-computed-columns-vb/_static/image28.png)
 
 **Figura 10**: Nomeie os métodos TableAdapter `FillBySupplierID` e `GetSupplierBySupplierID` ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image30.png))
 
@@ -229,7 +229,7 @@ Depois de fazer essas edições GridView e ObjectDataSource, sua marcação decl
 Em seguida, visite esta página por meio de um navegador. Como mostra a Figura 12, cada fornecedor está listado em uma grade que inclui o `FullContactName` coluna, cujo valor é simplesmente a concatenação de três colunas formatadas como `ContactName` (`ContactTitle`, `CompanyName`).
 
 
-[![EACH que Supplier é listada na grade](working-with-computed-columns-vb/_static/image35.png)](working-with-computed-columns-vb/_static/image34.png)
+[![Cada fornecedor é listada na grade](working-with-computed-columns-vb/_static/image35.png)](working-with-computed-columns-vb/_static/image34.png)
 
 **Figura 12**: Cada fornecedor é listada na grade ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image36.png))
 
@@ -237,7 +237,7 @@ Em seguida, visite esta página por meio de um navegador. Como mostra a Figura 1
 Clique no botão Editar para um determinado fornecedor faz com que um postback e renderizou aquela linha na sua edição de interface (veja a Figura 13). As três primeiras colunas renderizam em sua interface de edição padrão – controle de uma caixa de texto cuja `Text` estiver definida como o valor do campo de dados. O `FullContactName` coluna, no entanto, permanece como texto. Quando os BoundFields foram adicionadas a GridView após a conclusão do Assistente de configuração de fonte de dados, o `FullContactName` s BoundField `ReadOnly` propriedade foi definida como `True` porque correspondente `FullContactName` coluna o `SuppliersDataTable` tem seu `ReadOnly` propriedade definida como `True`. Conforme observado na etapa 4, o `FullContactName` s `ReadOnly` propriedade foi definida como `True` porque o TableAdapter detectou que a coluna era uma coluna computada.
 
 
-[![Tele FullContactName coluna não é editável](working-with-computed-columns-vb/_static/image38.png)](working-with-computed-columns-vb/_static/image37.png)
+[![A coluna FullContactName não é editável](working-with-computed-columns-vb/_static/image38.png)](working-with-computed-columns-vb/_static/image37.png)
 
 **Figura 13**: O `FullContactName` coluna não é editável ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image39.png))
 

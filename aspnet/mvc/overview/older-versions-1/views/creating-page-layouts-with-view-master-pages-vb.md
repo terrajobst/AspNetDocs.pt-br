@@ -12,7 +12,7 @@ ms.openlocfilehash: 175e78d7ccc669c29c63dcb53af7aad1608c7d15
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422350"
 ---
 # <a name="creating-page-layouts-with-view-master-pages-vb"></a>Criar layouts de página com Exibir páginas mestras (VB)
@@ -37,7 +37,7 @@ Neste tutorial, você aprenderá como criar uma nova página mestra do modo de e
 Vamos começar criando uma página mestra do modo de exibição que define um layout de duas colunas. Você adicionar uma nova página mestra do modo de exibição para um projeto MVC clicando na pasta Views\Shared, selecionando a opção de menu **adicionar, Item novo**e selecione o modelo de página mestra do modo de exibição de MVC (veja a Figura 1).
 
 
-[![Aadição de uma página de exibição mestre](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
+[![Adicionando uma página mestra do modo de exibição](creating-page-layouts-with-view-master-pages-vb/_static/image2.png)](creating-page-layouts-with-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Adicionando uma página de exibição mestre ([clique para exibir a imagem em tamanho normal](creating-page-layouts-with-view-master-pages-vb/_static/image3.png))
 
@@ -55,7 +55,7 @@ Por exemplo, a página mestra do modo de exibição na listagem 1 define um layo
 O corpo da exibição de página mestra na listagem 1 contém dois `<div>` marcas que correspondem às duas colunas. A classe de coluna de folha de estilos em cascata é aplicada a ambas `<div>` marcas. Essa classe é definida na folha de estilos declarada na parte superior da página mestra. Você pode visualizar como a página mestra do modo de exibição será renderizada, alternando para o modo Design. Clique na guia Design na parte inferior esquerda do editor de código fonte (veja a Figura 2).
 
 
-[![Previsão de uma página mestra no designer](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
+[![Visualizando uma página mestra no designer](creating-page-layouts-with-view-master-pages-vb/_static/image5.png)](creating-page-layouts-with-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: Visualizando uma página mestra no designer ([clique para exibir a imagem em tamanho normal](creating-page-layouts-with-view-master-pages-vb/_static/image6.png))
 
@@ -65,7 +65,7 @@ O corpo da exibição de página mestra na listagem 1 contém dois `<div>` marca
 Depois de criar uma página mestra do modo de exibição, você pode criar a exibição de uma ou mais páginas de conteúdo com base na página mestre de modo de exibição. Por exemplo, você pode criar uma página de conteúdo de modo de exibição de índice para o controlador Home pelo botão direito do mouse na pasta Views\Home, selecionando **Add, o novo Item**, selecionando o **página de conteúdo de exibição do MVC** modelo, inserindo o nome do aspx e clicando em Adicionar botão (veja a Figura 3).
 
 
-[![Aadição de uma página de conteúdo da exibição](creating-page-layouts-with-view-master-pages-vb/_static/image8.png)](creating-page-layouts-with-view-master-pages-vb/_static/image7.png)
+[![Adicionando uma página de conteúdo do modo de exibição](creating-page-layouts-with-view-master-pages-vb/_static/image8.png)](creating-page-layouts-with-view-master-pages-vb/_static/image7.png)
 
 **Figura 03**: Adicionando uma página de conteúdo do modo de exibição ([clique para exibir a imagem em tamanho normal](creating-page-layouts-with-view-master-pages-vb/_static/image9.png))
 
@@ -73,7 +73,7 @@ Depois de criar uma página mestra do modo de exibição, você pode criar a exi
 Depois de clicar no botão Adicionar, uma nova caixa de diálogo é exibida que permite que você selecione uma página de exibição mestre para associar com a página de exibição de conteúdo (consulte a Figura 4). Você pode navegar para a página de exibição mestre de site que criamos na seção anterior.
 
 
-[![Seleger uma página mestre](creating-page-layouts-with-view-master-pages-vb/_static/image11.png)](creating-page-layouts-with-view-master-pages-vb/_static/image10.png)
+[![Selecionar uma página mestra](creating-page-layouts-with-view-master-pages-vb/_static/image11.png)](creating-page-layouts-with-view-master-pages-vb/_static/image10.png)
 
 **Figura 04**: Selecionar uma página mestra ([clique para exibir a imagem em tamanho normal](creating-page-layouts-with-view-master-pages-vb/_static/image12.png))
 
@@ -101,7 +101,7 @@ Por exemplo, o modo de exibição do índice modificado na listagem 3 contém ap
 Quando o modo de exibição na listagem 3 é solicitado, ele processa a página na Figura 5. Observe que o modo de exibição renderiza uma página com duas colunas. Além disso, observe que o conteúdo da página de conteúdo de exibição é mesclado com o conteúdo da página modo de exibição mestre.
 
 
-[![Tpágina conteúda do modo de exibição do índice de he](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
+[![A página de conteúdo de modo de exibição de índice](creating-page-layouts-with-view-master-pages-vb/_static/image14.png)](creating-page-layouts-with-view-master-pages-vb/_static/image13.png)
 
 **Figura 05**: A página de conteúdo de modo de exibição de índice ([clique para exibir a imagem em tamanho normal](creating-page-layouts-with-view-master-pages-vb/_static/image15.png))
 
@@ -117,7 +117,7 @@ Há duas maneiras que você pode modificar o título exibido por uma página de 
 Quando o modo de exibição de índice é renderizado no navegador, o título desejado é exibido na barra de título do navegador:
 
 
-[![Bbarra de título navegado](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
+[![Barra de título do navegador](creating-page-layouts-with-view-master-pages-vb/_static/image17.png)](creating-page-layouts-with-view-master-pages-vb/_static/image16.png)
 
 
 Há um requisito importante que uma página de modo de exibição mestre deve satisfazer para que o atributo de título para funcionar. A página mestra do modo de exibição deve conter um `<head runat="server">` marca em vez de um normal `<head>` marca para o seu cabeçalho. Se o `<head>` marca não inclui o runat = "servidor" de atributo e em seguida, o título não aparecerá. Modo de exibição padrão, página mestra inclui necessários `<head runat="server">` marca.

@@ -12,7 +12,7 @@ ms.openlocfilehash: a218dffb3d23ca95e9864fb7b272bc6a004386c4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421193"
 ---
 # <a name="urls-in-master-pages-c"></a>URLs em páginas mestras (C#)
@@ -75,7 +75,7 @@ O `~/Admin/Default.aspx` página de conteúdo é enviada o mesmo HTML para o `fo
 Porque o `<img>` prvku `src` atributo é uma URL relativa, o navegador tenta procurar um `Images` pasta em relação ao local da pasta da página da web. Em outras palavras, o navegador está procurando o arquivo de imagem `Admin/Images/PoweredByASPNET.gif`.
 
 
-[![Tele PoweredByASPNET.gif imagem do arquivo não foi encontrado](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
+[![Não é possível encontrar o arquivo de imagem PoweredByASPNET.gif](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
 
 **Figura 02**: O `PoweredByASPNET.gif` imagem do arquivo não pode ser encontrado ([clique para exibir a imagem em tamanho normal](urls-in-master-pages-cs/_static/image4.png))
 
@@ -92,7 +92,7 @@ Para corrigir a imagem quebrada, mostrada na Figura 2, precisamos atualizar o `<
 Reserve um tempo para atualizar o `<img>` do elemento `src` atributo para uma URL absoluta usando uma das formas mostradas acima e, em seguida, visite o `~/Admin/Default.aspx` página por meio de um navegador. Neste momento, o navegador será corretamente localizar e exibir o `PoweredByASPNET.gif` arquivo de imagem (veja a Figura 3).
 
 
-[![Tele PoweredByASPNET.gif imagem é exibido agora](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
+[![A imagem de PoweredByASPNET.gif é exibido agora](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
 
 **Figura 03**: O `PoweredByASPNET.gif` imagem é agora exibido ([clique para exibir a imagem em tamanho normal](urls-in-master-pages-cs/_static/image7.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 266d2e3fda54a9e584622ccd595e41229c96e6b0
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420738"
 ---
 # <a name="adding-validation-to-the-model"></a>Adicionar validação ao modelo
@@ -49,7 +49,7 @@ Atualize agora o `Movie` classe podem aproveitar o interno [ `Required` ](https:
 
 Execute o aplicativo e você obterá o seguinte erro de tempo de execução:
 
-***O modelo fazendo o contexto de 'MovieDBContext' foi alterado desde que o banco de dados foi criado. Considere o uso de migrações do Code First para atualizar o banco de dados ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).)).***
+***O modelo fazendo o contexto de 'MovieDBContext' foi alterado desde que o banco de dados foi criado. Considere o uso de migrações do Code First para atualizar o banco de dados ([https://go.microsoft.com/fwlink/?LinkId=238269](https://go.microsoft.com/fwlink/?LinkId=238269)).***
 
 Usaremos as migrações para atualizar o esquema. Compile a solução e, em seguida, abra o **Package Manager Console** janela e digite os seguintes comandos:
 

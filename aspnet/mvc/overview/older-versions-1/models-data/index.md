@@ -12,7 +12,7 @@ ms.openlocfilehash: bdd63889eacea1ef03686a65fc1144d16cd41353
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59420621"
 ---
 # <a name="models-data"></a>Modelos (dados)
@@ -22,14 +22,14 @@ ms.locfileid: "59420621"
 
 - [Criação de classes de modelo com o Entity Framework (C#)](creating-model-classes-with-the-entity-framework-cs.md)
 - [Criação de classes de modelo com o LINQ to SQL (C#)](creating-model-classes-with-linq-to-sql-cs.md)
-- [Exibir uma tabela de dados de banco de dados (C#)](displaying-a-table-of-database-data-cs.md)
+- [Exibindo uma tabela de dados de banco de dados (C#)](displaying-a-table-of-database-data-cs.md)
 - [Realizar validação simples (C#)](performing-simple-validation-cs.md)
 - [Validação com a interface IDataErrorInfo (C#)](validating-with-the-idataerrorinfo-interface-cs.md)
 - [Validação com uma camada de serviço (C#)](validating-with-a-service-layer-cs.md)
 - [Validação com os validadores de anotação de dados (C#)](validation-with-the-data-annotation-validators-cs.md)
 - [Criação de classes de modelo com o Entity Framework (VB)](creating-model-classes-with-the-entity-framework-vb.md)
 - [Criação de classes de modelo com o LINQ to SQL (VB)](creating-model-classes-with-linq-to-sql-vb.md)
-- [Exibir uma tabela de dados de banco de dados (VB)](displaying-a-table-of-database-data-vb.md)
+- [Exibindo uma tabela de dados de banco de dados (VB)](displaying-a-table-of-database-data-vb.md)
 - [Realizar validação simples (VB)](performing-simple-validation-vb.md)
 - [Validação com a interface IDataErrorInfo (VB)](validating-with-the-idataerrorinfo-interface-vb.md)
 - [Validação com uma camada de serviço (VB)](validating-with-a-service-layer-vb.md)

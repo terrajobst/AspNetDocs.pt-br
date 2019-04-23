@@ -12,7 +12,7 @@ ms.openlocfilehash: 2d337aa2e0658692e1af213085b262daaed05a18
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421908"
 ---
 # <a name="customizing-the-data-modification-interface-vb"></a>Personalizar a interface de modificação de dados (VB)
@@ -31,7 +31,7 @@ O BoundFields e CheckBoxFields usadas pelos controles GridView e DetailsView sim
 No [tutorial anterior](adding-validation-controls-to-the-editing-and-inserting-interfaces-vb.md) , vimos como personalizar as interfaces de modificação de dados, adicionando controles de Web de validação. Neste tutorial, examinaremos como personalizar os controles de Web de coleção de dados reais, substituindo o BoundField e caixa de texto padrão da CheckBoxField e controles de caixa de seleção com controles de Web de entrada alternativos. Em particular, vamos criar um GridView editável que permite que um produto nome, categoria, fornecedor e descontinuados status ser atualizado. Ao editar uma linha específica, os campos de categoria e fornecedor serão renderizado como DropDownLists, que contém o conjunto de categorias disponíveis e fornecedores para sua escolha. Além disso, substituiremos o padrão do CheckBoxField caixa de seleção com um controle RadioButtonList que oferece duas opções: "Ativo" e "Interrompido".
 
 
-[![Ta edição Interface inclui DropDownLists e botões de opção do GridView he](customizing-the-data-modification-interface-vb/_static/image2.png)](customizing-the-data-modification-interface-vb/_static/image1.png)
+[![A Interface de edição do GridView inclui DropDownLists e botões de opção](customizing-the-data-modification-interface-vb/_static/image2.png)](customizing-the-data-modification-interface-vb/_static/image1.png)
 
 **Figura 1**: O GridView edição Interface inclui DropDownLists e botões de opção ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image3.png))
 
@@ -56,7 +56,7 @@ O código a seguir mostra o novo `UpdateProduct` sobrecarga no `ProductsBLL` cla
 Com o `UpdateProduct` sobrecarga adicionada, estamos prontos para criar nosso GridView editável. Abra o `CustomizedUI.aspx` página no `EditInsertDelete` pasta e adicione um controle GridView para o Designer. Em seguida, crie um novo ObjectDataSource na marca inteligente do GridView. Configurar o ObjectDataSource para recuperar informações de produto por meio de `ProductBLL` da classe `GetProducts()` método e atualizar dados de produto usando o `UpdateProduct` sobrecarga que acabamos de criar. Nas guias INSERT e DELETE, selecione (nenhum) as listas de lista suspensa.
 
 
-[![Configurar o ObjectDataSource para usar o UpdateProduct sobrecarga recém-criada](customizing-the-data-modification-interface-vb/_static/image5.png)](customizing-the-data-modification-interface-vb/_static/image4.png)
+[![Configurar o ObjectDataSource para usar a sobrecarga de UpdateProduct acabou de criar](customizing-the-data-modification-interface-vb/_static/image5.png)](customizing-the-data-modification-interface-vb/_static/image4.png)
 
 **Figura 2**: Configurar o ObjectDataSource para usar o `UpdateProduct` sobrecarregar acabou de criar ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image6.png))
 
@@ -80,7 +80,7 @@ Enquanto o ObjectDataSource está configurado para atualizar apenas um subconjun
 Após essas alterações, o Designer será semelhante à Figura 3, com a sintaxe declarativa do GridView, mostrado abaixo.
 
 
-[![Ros campos desnecessários de GridView de emover](customizing-the-data-modification-interface-vb/_static/image8.png)](customizing-the-data-modification-interface-vb/_static/image7.png)
+[![Remover campos desnecessários de GridView](customizing-the-data-modification-interface-vb/_static/image8.png)](customizing-the-data-modification-interface-vb/_static/image7.png)
 
 **Figura 3**: Remover campos desnecessários de GridView ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image9.png))
 
@@ -90,7 +90,7 @@ Após essas alterações, o Designer será semelhante à Figura 3, com a sintaxe
 Neste ponto, o comportamento de somente leitura do GridView foi concluído. Ao exibir os dados, cada produto é renderizado como uma linha em GridView, mostrando o nome do produto, categoria, fornecedor e descontinuado status.
 
 
-[![TInterface de somente leitura do GridView he é concluir](customizing-the-data-modification-interface-vb/_static/image11.png)](customizing-the-data-modification-interface-vb/_static/image10.png)
+[![Interface de somente leitura do GridView está concluída](customizing-the-data-modification-interface-vb/_static/image11.png)](customizing-the-data-modification-interface-vb/_static/image10.png)
 
 **Figura 4**: Interface de somente leitura do GridView é concluída ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image12.png))
 
@@ -124,7 +124,7 @@ Desde que o BoundField foram marcado como somente leitura, tanto a `ItemTemplate
 Como vimos nos tutoriais anteriores, o modelo pode ser editado por meio do Designer ou diretamente da sintaxe declarativa. Para editá-lo por meio do Designer, clique no link Editar modelos na marca inteligente do GridView e optar por trabalhar com o campo de categoria `EditItemTemplate`. Remover o controle de Web Label e substituí-lo com um controle DropDownList, definindo a propriedade de ID do DropDownList como `Categories`.
 
 
-[![Remover a caixa de texto e adicionar uma DropDownList ao EditItemTemplate](customizing-the-data-modification-interface-vb/_static/image14.png)](customizing-the-data-modification-interface-vb/_static/image13.png)
+[![Remova a caixa de texto e adicione uma DropDownList ao EditItemTemplate](customizing-the-data-modification-interface-vb/_static/image14.png)](customizing-the-data-modification-interface-vb/_static/image13.png)
 
 **Figura 5**: Remova a caixa de texto e adicione uma DropDownList para a `EditItemTemplate` ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image15.png))
 
@@ -132,7 +132,7 @@ Como vimos nos tutoriais anteriores, o modelo pode ser editado por meio do Desig
 Em seguida, precisamos preencher DropDownList com as categorias disponíveis. Clique no link Escolher fonte de dados na marca inteligente do DropDownList e optar por criar um novo ObjectDataSource chamado `CategoriesDataSource`.
 
 
-[![Ccriar um novo ObjectDataSource controle denominado CategoriesDataSource](customizing-the-data-modification-interface-vb/_static/image17.png)](customizing-the-data-modification-interface-vb/_static/image16.png)
+[![Criar um novo controle ObjectDataSource chamado CategoriesDataSource](customizing-the-data-modification-interface-vb/_static/image17.png)](customizing-the-data-modification-interface-vb/_static/image16.png)
 
 **Figura 6**: Criar um controle ObjectDataSource novo chamado `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image18.png))
 
@@ -140,7 +140,7 @@ Em seguida, precisamos preencher DropDownList com as categorias disponíveis. Cl
 Para que este ObjectDataSource retornar todas as categorias, associá-lo para o `CategoriesBLL` da classe `GetCategories()` método.
 
 
-[![Blocalizar o ObjectDataSource para GetCategories() método do CategoriesBLL](customizing-the-data-modification-interface-vb/_static/image20.png)](customizing-the-data-modification-interface-vb/_static/image19.png)
+[![Associar o ObjectDataSource GetCategories() método do CategoriesBLL](customizing-the-data-modification-interface-vb/_static/image20.png)](customizing-the-data-modification-interface-vb/_static/image19.png)
 
 **Figura 7**: Associar o ObjectDataSource para o `CategoriesBLL`do `GetCategories()` método ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image21.png))
 
@@ -148,7 +148,7 @@ Para que este ObjectDataSource retornar todas as categorias, associá-lo para o 
 Por fim, configurar configurações do DropDownList, de modo que o `CategoryName` campo é exibido em cada DropDownList `ListItem` com o `CategoryID` usado como o valor do campo.
 
 
-[![Halvar o campo CategoryName exibido e o CategoryID usado como o valor](customizing-the-data-modification-interface-vb/_static/image23.png)](customizing-the-data-modification-interface-vb/_static/image22.png)
+[![Ter o campo CategoryName exibido e o CategoryID usado como o valor](customizing-the-data-modification-interface-vb/_static/image23.png)](customizing-the-data-modification-interface-vb/_static/image22.png)
 
 **Figura 8**: Ter o `CategoryName` campo exibido e o `CategoryID` usado como o valor ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image24.png))
 
@@ -167,7 +167,7 @@ Repita essas etapas para adicionar uma chamada de DropDownList `Suppliers` para 
 Depois de adicionar o DropDownLists para os dois `EditItemTemplate` s, carregue a página em um navegador e clique no botão Editar para o produto de Seasoning Cajun do chefe Anton. Como mostra a Figura 9, colunas de categoria e fornecedor do produto são renderizadas como listas suspensas que contém as categorias disponíveis e os fornecedores à sua escolha. No entanto, observe que o *primeiro* itens em ambas as listas suspensas são selecionadas por padrão (para a categoria de bebidas) e líquidos exóticos como o fornecedor, mesmo que Seasoning do chefe Anton Cajun é um Condiment fornecido pela nova Orleans Cajun Prazeres.
 
 
-[![Tele primeiro Item no menu suspenso lista é selecionado por padrão](customizing-the-data-modification-interface-vb/_static/image26.png)](customizing-the-data-modification-interface-vb/_static/image25.png)
+[![O primeiro Item no menu suspenso lista é selecionado por padrão](customizing-the-data-modification-interface-vb/_static/image26.png)](customizing-the-data-modification-interface-vb/_static/image25.png)
 
 **Figura 9**: O primeiro Item no menu suspenso lista é selecionado por padrão ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image27.png))
 
@@ -181,7 +181,7 @@ Para ter a categoria e o fornecedor do produto editado nas listas suspensas defi
 Como alternativa, você pode definir databindings do DropDownList editando o modelo por meio do Designer e clicar no link Editar DataBindings de marca inteligente da DropDownList. Em seguida, indicar que o `SelectedValue` propriedade deve ser vinculada ao `CategoryID` campo usando vinculação de dados bidirecional (veja a Figura 10). Repita o processo declarativo ou Designer para associar o `SupplierID` campo de dados para o `Suppliers` DropDownList.
 
 
-[![Blocalizar o CategoryID para a propriedade SelectedValue do DropDownList usando vinculação de dados bidirecional](customizing-the-data-modification-interface-vb/_static/image29.png)](customizing-the-data-modification-interface-vb/_static/image28.png)
+[![Associar o CategoryID a propriedade SelectedValue do DropDownList usando vinculação de dados bidirecional](customizing-the-data-modification-interface-vb/_static/image29.png)](customizing-the-data-modification-interface-vb/_static/image28.png)
 
 **Figura 10**: Associar o `CategoryID` para a DropDownList `SelectedValue` bidirecional usando propriedade de associação de dados ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image30.png))
 
@@ -189,7 +189,7 @@ Como alternativa, você pode definir databindings do DropDownList editando o mod
 Depois que as associações foram aplicadas ao `SelectedValue` propriedades de dois DropDownLists, colunas de categoria e fornecedor do produto editado usará como padrão os valores do produto atual. Ao clicar em atualizar, o `CategoryID` e `SupplierID` valores do item selecionado na lista suspensa serão passados para o `UpdateProduct` método. A Figura 11 mostra o tutorial depois que as instruções de associação de dados forem adicionadas; Observe como os itens selecionados na lista suspensa para Seasoning do chefe Anton Cajun estão corretamente Condiment e Nova Orleans Cajun prazeres.
 
 
-[![TCategoria atual he editado produto e os valores de fornecedor são selecionadas por padrão](customizing-the-data-modification-interface-vb/_static/image32.png)](customizing-the-data-modification-interface-vb/_static/image31.png)
+[![Categoria atual e os valores do fornecedor do produto editado são selecionadas por padrão](customizing-the-data-modification-interface-vb/_static/image32.png)](customizing-the-data-modification-interface-vb/_static/image31.png)
 
 **Figura 11**: Categoria atual e os valores do fornecedor do produto editado são selecionadas por padrão ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image33.png))
 
@@ -219,7 +219,7 @@ Repita essas etapas para fornecedores DropDownList.
 Com isso adicionais `ListItem`, a interface de edição agora pode atribuir `NULL` valores a um produto `CategoryID` e `SupplierID` campos, conforme mostrado na Figura 12.
 
 
-[![Cescolher o modo (nenhum) para atribuir um valor nulo para o fornecedor ou categoria do produto](customizing-the-data-modification-interface-vb/_static/image35.png)](customizing-the-data-modification-interface-vb/_static/image34.png)
+[![Escolha (nenhum) para atribuir um valor nulo para o fornecedor ou categoria do produto](customizing-the-data-modification-interface-vb/_static/image35.png)](customizing-the-data-modification-interface-vb/_static/image34.png)
 
 **Figura 12**: Escolha (nenhum) para atribuir uma `NULL` valor para a categoria de um produto ou o fornecedor ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image36.png))
 
@@ -233,7 +233,7 @@ Iniciar, convertendo as `Discontinued` CheckBoxField em um TemplateField, que cr
 Substitua a caixa de seleção em ambos os `ItemTemplate` e `EditItemTemplate` com um controle RadioButtonList, definir ambos os RadioButtonLists' `ID` propriedades a serem `DiscontinuedChoice`. Em seguida, indicam que o RadioButtonLists, cada um, deve conter dois botões de opção, uma rotulada "ativo" com um valor de "False" e uma guia rotulada "Descontinuado" com um valor "True". Para fazer isso, você pode inserir o `<asp:ListItem>` elementos no diretamente por meio de sintaxe declarativa ou use o `ListItem` Editor de coleção do Designer. A Figura 13 mostra o `ListItem` Editor de coleção depois que as duas opções do botão de opção foram especificados.
 
 
-[![Add ativo e opções descontinuadas RadioButtonList](customizing-the-data-modification-interface-vb/_static/image38.png)](customizing-the-data-modification-interface-vb/_static/image37.png)
+[![Adicionar opções descontinuadas e Active Directory ao RadioButtonList](customizing-the-data-modification-interface-vb/_static/image38.png)](customizing-the-data-modification-interface-vb/_static/image37.png)
 
 **Figura 13**: Adicionar ativo e opções descontinuadas a RadioButtonList ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image39.png))
 
@@ -250,7 +250,7 @@ Depois de adicionar os dois RadioButtonLists e configurá-los, o `Discontinued` 
 Com essas alterações, o `Discontinued` coluna foi transformada em uma lista de caixas de seleção em uma lista de pares de botão de rádio (veja a Figura 14). Ao editar um produto, o botão de opção apropriado é selecionado e o status do produto descontinuado podem ser atualizado, selecionando o outro botão de rádio e clicando em Atualizar.
 
 
-[![Tele caixas de seleção Descontinuado foram substituídos por pares de botão de rádio](customizing-the-data-modification-interface-vb/_static/image41.png)](customizing-the-data-modification-interface-vb/_static/image40.png)
+[![As caixas de seleção descontinuadas foram substituídas por pares de botão de rádio](customizing-the-data-modification-interface-vb/_static/image41.png)](customizing-the-data-modification-interface-vb/_static/image40.png)
 
 **Figura 14**: O Descontinuado caixas de seleção foram substituídos por pares de botão de rádio ([clique para exibir a imagem em tamanho normal](customizing-the-data-modification-interface-vb/_static/image42.png))
 

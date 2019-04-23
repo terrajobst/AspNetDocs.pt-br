@@ -12,7 +12,7 @@ ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421323"
 ---
 # <a name="aspnet-mvc-views-overview-c"></a>Visão geral de exibições do ASP.NET MVC (C#)
@@ -75,7 +75,7 @@ Um modo de exibição é um padrão de (documento HTML que pode conter scripts X
 
 Por exemplo, o modo de exibição na listagem 2 exibe a data e hora atuais.
 
-**Listagem 2 - \Views\Home\Index.aspx**
+**Listing 2 - \Views\Home\Index.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample2.aspx)]
 
@@ -99,12 +99,12 @@ Para tornar mais fácil de adicionar conteúdo a um modo de exibição, você po
 
 Por exemplo, a exibição na listagem 4 tira proveito dos três auxiliares de HTML – auxiliares BeginForm(), TextBox() e Password() – para gerar um logon do formam (veja a Figura 1).
 
-**Listagem 4 – \Views\Home\Login.aspx**
+**Listing 4 -- \Views\Home\Login.aspx**
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
 
-[![Tcaixa de diálogo Novo projeto he](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
+[![A caixa de diálogo Novo projeto](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figura 01**: Um formulário de logon padrão ([clique para exibir a imagem em tamanho normal](asp-net-mvc-views-overview-cs/_static/image2.png))
 

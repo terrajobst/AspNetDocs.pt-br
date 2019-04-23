@@ -12,7 +12,7 @@ ms.openlocfilehash: f44738eca2c3f0146890f69d560eb0a92230ec00
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422649"
 ---
 # <a name="how-do-i-make-use-of-caching"></a>[Como fazer:] Certifique-se de usar o cache?

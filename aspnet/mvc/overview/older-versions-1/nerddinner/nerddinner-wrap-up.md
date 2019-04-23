@@ -12,7 +12,7 @@ ms.openlocfilehash: 49c5f762fdd6d99f1af8a10d057852299a266e50
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59421037"
 ---
 # <a name="nerddinner-wrap-up"></a>Conclusão do NerdDinner
@@ -47,4 +47,4 @@ Esperamos que isso ajude,
 Scott
 
 > [!div class="step-by-step"]
-> [Voltar](enable-automated-unit-testing.md)
+> [Anterior](enable-automated-unit-testing.md)

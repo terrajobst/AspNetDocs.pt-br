@@ -12,7 +12,7 @@ ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59422155"
 ---
 # <a name="authenticating-users-with-forms-authentication-vb"></a>Autenticar usuários com a autenticação de formulários (VB)
@@ -58,7 +58,7 @@ Você pode exigir que um usuário seja autenticado antes do usuário invoca uma 
 
 Por exemplo, o controlador na listagem 1 expõe uma ação chamada CompanySecrets(). Porque essa ação é decorada com o atributo [autorizar], essa ação não pode ser invocada, a menos que um usuário é autenticado.
 
-**Listagem 1 – Controllers\HomeController.vb**
+**Listing 1 – Controllers\HomeController.vb**
 
 [!code-vb[Main](authenticating-users-with-forms-authentication-vb/samples/sample1.vb)]
 
