@@ -12,18 +12,18 @@ ms.openlocfilehash: f2e2cefc8c75c9528fe3b8a7b83dc9b8a3d5d063
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401420"
 ---
-# <a name="how-do-i-use-the-aspnet-ajax-dropshadow-extender"></a><span data-ttu-id="e4b6f-104">[Como fazer:] Usar o extensor DropShadow do ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="e4b6f-104">[How Do I:] Use the ASP.NET AJAX DropShadow Extender?</span></span>
+# <a name="how-do-i-use-the-aspnet-ajax-dropshadow-extender"></a><span data-ttu-id="f3ac9-104">[Como fazer:] Usar o extensor DropShadow do ASP.NET AJAX?</span><span class="sxs-lookup"><span data-stu-id="f3ac9-104">[How Do I:] Use the ASP.NET AJAX DropShadow Extender?</span></span>
 
-<span data-ttu-id="e4b6f-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="e4b6f-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="f3ac9-105">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="f3ac9-105">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="e4b6f-106">Descubra como melhorar a apresentação de sites do ASP.NET, usando o controle de extensor DropShadow do AJAX para adicionar sombras opaca, canto arredondado para áreas de suas páginas.</span><span class="sxs-lookup"><span data-stu-id="e4b6f-106">Discover how to improve the presentation of ASP.NET sites by using the AJAX DropShadow extender control to add opaque, rounded-corner drop shadows to areas of your pages.</span></span>
+<span data-ttu-id="f3ac9-106">Descubra como melhorar a apresentação de sites do ASP.NET, usando o controle de extensor DropShadow do AJAX para adicionar sombras opaca, canto arredondado para áreas de suas páginas.</span><span class="sxs-lookup"><span data-stu-id="f3ac9-106">Discover how to improve the presentation of ASP.NET sites by using the AJAX DropShadow extender control to add opaque, rounded-corner drop shadows to areas of your pages.</span></span>
 
-[<span data-ttu-id="e4b6f-107">&#9654;Assista ao vídeo (2 minutos)</span><span class="sxs-lookup"><span data-stu-id="e4b6f-107">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-dropshadow-extender)
+[<span data-ttu-id="f3ac9-107">&#9654;Assista ao vídeo (2 minutos)</span><span class="sxs-lookup"><span data-stu-id="f3ac9-107">&#9654; Watch video (2 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-the-aspnet-ajax-dropshadow-extender)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="e4b6f-108">[Anterior](how-do-i-use-the-aspnet-ajax-togglebutton-extender.md)
-> [Próximo](how-do-i-use-the-aspnet-ajax-passwordstrength-extender.md)</span><span class="sxs-lookup"><span data-stu-id="e4b6f-108">[Previous](how-do-i-use-the-aspnet-ajax-togglebutton-extender.md)
+> <span data-ttu-id="f3ac9-108">[Anterior](how-do-i-use-the-aspnet-ajax-togglebutton-extender.md)
+> [Próximo](how-do-i-use-the-aspnet-ajax-passwordstrength-extender.md)</span><span class="sxs-lookup"><span data-stu-id="f3ac9-108">[Previous](how-do-i-use-the-aspnet-ajax-togglebutton-extender.md)
 [Next](how-do-i-use-the-aspnet-ajax-passwordstrength-extender.md)</span></span>

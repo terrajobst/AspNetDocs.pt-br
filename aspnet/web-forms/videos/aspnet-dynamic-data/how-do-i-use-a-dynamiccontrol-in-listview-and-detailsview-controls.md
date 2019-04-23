@@ -12,18 +12,18 @@ ms.openlocfilehash: 4916885afff0900d85f7ef58b84abc50144aa29e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406321"
 ---
-# <a name="how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls"></a><span data-ttu-id="cc34c-105">Como usar um DynamicControl em ListView e DetailsView controles?</span><span class="sxs-lookup"><span data-stu-id="cc34c-105">How Do I Use a DynamicControl in ListView and DetailsView Controls?</span></span>
+# <a name="how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls"></a><span data-ttu-id="623fe-105">Como usar um DynamicControl em ListView e DetailsView controles?</span><span class="sxs-lookup"><span data-stu-id="623fe-105">How Do I Use a DynamicControl in ListView and DetailsView Controls?</span></span>
 
-<span data-ttu-id="cc34c-106">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="cc34c-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="623fe-106">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="623fe-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-<span data-ttu-id="cc34c-107">Este vídeo compara o mesmo aplicativo gravado duas vezes, uma vez com os dados dinâmicos e outra sem.</span><span class="sxs-lookup"><span data-stu-id="cc34c-107">This video compares the same application written twice, once with Dynamic Data and once without.</span></span> <span data-ttu-id="cc34c-108">O processo, você adicionará **DynamicControl** objetos **ListView** e **DetailsView** controles.</span><span class="sxs-lookup"><span data-stu-id="cc34c-108">In the process, you add **DynamicControl** objects to **ListView** and **DetailsView** controls.</span></span>
+<span data-ttu-id="623fe-107">Este vídeo compara o mesmo aplicativo gravado duas vezes, uma vez com os dados dinâmicos e outra sem.</span><span class="sxs-lookup"><span data-stu-id="623fe-107">This video compares the same application written twice, once with Dynamic Data and once without.</span></span> <span data-ttu-id="623fe-108">O processo, você adicionará **DynamicControl** objetos **ListView** e **DetailsView** controles.</span><span class="sxs-lookup"><span data-stu-id="623fe-108">In the process, you add **DynamicControl** objects to **ListView** and **DetailsView** controls.</span></span>
 
-[<span data-ttu-id="cc34c-109">&#9654;Assista ao vídeo (5 minutos)</span><span class="sxs-lookup"><span data-stu-id="cc34c-109">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls)
+[<span data-ttu-id="623fe-109">&#9654;Assista ao vídeo (5 minutos)</span><span class="sxs-lookup"><span data-stu-id="623fe-109">&#9654; Watch video (5 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="cc34c-110">[Anterior](how-do-i-display-unknown-datatypes.md)
-> [Próximo](getting-started-with-dynamic-data.md)</span><span class="sxs-lookup"><span data-stu-id="cc34c-110">[Previous](how-do-i-display-unknown-datatypes.md)
+> <span data-ttu-id="623fe-110">[Anterior](how-do-i-display-unknown-datatypes.md)
+> [Próximo](getting-started-with-dynamic-data.md)</span><span class="sxs-lookup"><span data-stu-id="623fe-110">[Previous](how-do-i-display-unknown-datatypes.md)
 [Next](getting-started-with-dynamic-data.md)</span></span>

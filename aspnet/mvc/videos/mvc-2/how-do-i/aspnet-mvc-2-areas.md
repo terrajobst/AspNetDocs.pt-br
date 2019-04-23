@@ -12,18 +12,18 @@ ms.openlocfilehash: bd23eee8fd5def1ce4b55d01b548df004c6e5d81
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399275"
 ---
-# <a name="aspnet-mvc-2---areas"></a><span data-ttu-id="6dbf9-103">ASP.NET MVC 2 – Áreas</span><span class="sxs-lookup"><span data-stu-id="6dbf9-103">ASP.NET MVC 2 - Areas</span></span>
+# <a name="aspnet-mvc-2---areas"></a><span data-ttu-id="7ca1e-103">ASP.NET MVC 2 – Áreas</span><span class="sxs-lookup"><span data-stu-id="7ca1e-103">ASP.NET MVC 2 - Areas</span></span>
 
-<span data-ttu-id="6dbf9-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="6dbf9-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
+<span data-ttu-id="7ca1e-104">por [Jon Galloway](https://github.com/jongalloway)</span><span class="sxs-lookup"><span data-stu-id="7ca1e-104">by [Jon Galloway](https://github.com/jongalloway)</span></span>
 
-<span data-ttu-id="6dbf9-105">Neste vídeo, você aprenderá como usar o recurso de áreas para tornar mais fácil organizar os aplicativos do ASP.NET MVC maiores dividindo-os em diferentes áreas funcionais.</span><span class="sxs-lookup"><span data-stu-id="6dbf9-105">In this video you will learn how to use the Areas feature to make it easier to organize larger ASP.NET MVC applications by breaking them into different functional areas.</span></span>
+<span data-ttu-id="7ca1e-105">Neste vídeo, você aprenderá como usar o recurso de áreas para tornar mais fácil organizar os aplicativos do ASP.NET MVC maiores dividindo-os em diferentes áreas funcionais.</span><span class="sxs-lookup"><span data-stu-id="7ca1e-105">In this video you will learn how to use the Areas feature to make it easier to organize larger ASP.NET MVC applications by breaking them into different functional areas.</span></span>
 
-[<span data-ttu-id="6dbf9-106">&#9654;Assista ao vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="6dbf9-106">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-2-areas)
+[<span data-ttu-id="7ca1e-106">&#9654;Assista ao vídeo (3 minutos)</span><span class="sxs-lookup"><span data-stu-id="7ca1e-106">&#9654; Watch video (3 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-2-areas)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="6dbf9-107">[Anterior](mvc2-template-customization.md)
-> [Próximo](aspnet-mvc-2-render-action.md)</span><span class="sxs-lookup"><span data-stu-id="6dbf9-107">[Previous](mvc2-template-customization.md)
+> <span data-ttu-id="7ca1e-107">[Anterior](mvc2-template-customization.md)
+> [Próximo](aspnet-mvc-2-render-action.md)</span><span class="sxs-lookup"><span data-stu-id="7ca1e-107">[Previous](mvc2-template-customization.md)
 [Next](aspnet-mvc-2-render-action.md)</span></span>

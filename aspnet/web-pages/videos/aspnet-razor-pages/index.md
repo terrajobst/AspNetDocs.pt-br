@@ -12,28 +12,28 @@ ms.openlocfilehash: 3224039c29bfda085e74095f7089dcbfc68ce1cc
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401095"
 ---
-# <a name="aspnet-web-pages"></a><span data-ttu-id="c73db-103">Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c73db-103">ASP.NET Web Pages</span></span>
+# <a name="aspnet-web-pages"></a><span data-ttu-id="310de-103">Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="310de-103">ASP.NET Web Pages</span></span>
 
-> <span data-ttu-id="c73db-104">Os vídeos que você pode exibir para fazer uma busca detalhada em páginas da Web e o WebMatrix.</span><span class="sxs-lookup"><span data-stu-id="c73db-104">Which videos you can view to drill down into Web Pages and WebMatrix.</span></span>
+> <span data-ttu-id="310de-104">Os vídeos que você pode exibir para fazer uma busca detalhada em páginas da Web e o WebMatrix.</span><span class="sxs-lookup"><span data-stu-id="310de-104">Which videos you can view to drill down into Web Pages and WebMatrix.</span></span>
 
 
-- [<span data-ttu-id="c73db-105">Introdução ao WebMatrix e às Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c73db-105">Getting Started with WebMatrix and ASP.NET Web Pages</span></span>](getting-started-with-webmatrix-and-aspnet-web-pages.md)
-- [<span data-ttu-id="c73db-106">Introdução à sintaxe Razor de programação da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c73db-106">Intro to ASP.NET Web Programming Razor Syntax</span></span>](introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
-- [<span data-ttu-id="c73db-107">Criar uma aparência consistente (parte 1)</span><span class="sxs-lookup"><span data-stu-id="c73db-107">Creating a Consistent Look (Part 1)</span></span>](creating-a-consistent-look-part-1.md)
-- [<span data-ttu-id="c73db-108">Criar uma aparência consistente (parte 2)</span><span class="sxs-lookup"><span data-stu-id="c73db-108">Creating a Consistent Look (Part 2)</span></span>](creating-a-consistent-look-part-2.md)
-- [<span data-ttu-id="c73db-109">Trabalhar com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="c73db-109">Working with Forms (Part 1)</span></span>](working-with-forms-part-1.md)
-- [<span data-ttu-id="c73db-110">Trabalhar com formulários (parte 2)</span><span class="sxs-lookup"><span data-stu-id="c73db-110">Working with Forms (Part 2)</span></span>](working-with-forms-part-2.md)
-- [<span data-ttu-id="c73db-111">Trabalhar com dados (parte 1)</span><span class="sxs-lookup"><span data-stu-id="c73db-111">Working with Data (Part 1)</span></span>](working-with-data-part-1.md)
-- [<span data-ttu-id="c73db-112">Trabalhar com dados (parte 2)</span><span class="sxs-lookup"><span data-stu-id="c73db-112">Working with Data (Part 2)</span></span>](working-with-data-part-2.md)
-- [<span data-ttu-id="c73db-113">Exibir dados em uma grade</span><span class="sxs-lookup"><span data-stu-id="c73db-113">Displaying Data in a Grid</span></span>](displaying-data-in-a-grid.md)
-- [<span data-ttu-id="c73db-114">Exibir dados em um gráfico (parte 1)</span><span class="sxs-lookup"><span data-stu-id="c73db-114">Displaying Data in a Chart (Part 1)</span></span>](displaying-data-in-a-chart-part-1.md)
-- [<span data-ttu-id="c73db-115">Exibir dados em um gráfico (parte 2)</span><span class="sxs-lookup"><span data-stu-id="c73db-115">Displaying Data in a Chart (Part 2)</span></span>](displaying-data-in-a-chart-part-2.md)
-- [<span data-ttu-id="c73db-116">Trabalhando com arquivos</span><span class="sxs-lookup"><span data-stu-id="c73db-116">Working with Files</span></span>](working-with-files.md)
-- [<span data-ttu-id="c73db-117">Trabalhando com imagens</span><span class="sxs-lookup"><span data-stu-id="c73db-117">Working with Images</span></span>](working-with-images.md)
-- [<span data-ttu-id="c73db-118">Trabalhando com vídeo</span><span class="sxs-lookup"><span data-stu-id="c73db-118">Working with Video</span></span>](working-with-video.md)
-- [<span data-ttu-id="c73db-119">Adição de email ao seu site</span><span class="sxs-lookup"><span data-stu-id="c73db-119">Adding Email to Your Web Site</span></span>](adding-email-to-your-web-site.md)
-- [<span data-ttu-id="c73db-120">Adição de pesquisa ao seu site</span><span class="sxs-lookup"><span data-stu-id="c73db-120">Adding Search to Your Web Site</span></span>](adding-search-to-your-web-site.md)
-- [<span data-ttu-id="c73db-121">Adição de redes sociais ao seu site</span><span class="sxs-lookup"><span data-stu-id="c73db-121">Adding Social Networking to Your Website</span></span>](adding-social-networking-to-your-website.md)
+- [<span data-ttu-id="310de-105">Introdução ao WebMatrix e às Páginas da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="310de-105">Getting Started with WebMatrix and ASP.NET Web Pages</span></span>](getting-started-with-webmatrix-and-aspnet-web-pages.md)
+- [<span data-ttu-id="310de-106">Introdução à sintaxe Razor de programação da Web do ASP.NET</span><span class="sxs-lookup"><span data-stu-id="310de-106">Intro to ASP.NET Web Programming Razor Syntax</span></span>](introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
+- [<span data-ttu-id="310de-107">Criar uma aparência consistente (parte 1)</span><span class="sxs-lookup"><span data-stu-id="310de-107">Creating a Consistent Look (Part 1)</span></span>](creating-a-consistent-look-part-1.md)
+- [<span data-ttu-id="310de-108">Criar uma aparência consistente (parte 2)</span><span class="sxs-lookup"><span data-stu-id="310de-108">Creating a Consistent Look (Part 2)</span></span>](creating-a-consistent-look-part-2.md)
+- [<span data-ttu-id="310de-109">Trabalhando com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="310de-109">Working with Forms (Part 1)</span></span>](working-with-forms-part-1.md)
+- [<span data-ttu-id="310de-110">Trabalhando com formulários (parte 2)</span><span class="sxs-lookup"><span data-stu-id="310de-110">Working with Forms (Part 2)</span></span>](working-with-forms-part-2.md)
+- [<span data-ttu-id="310de-111">Trabalhando com os dados (parte 1)</span><span class="sxs-lookup"><span data-stu-id="310de-111">Working with Data (Part 1)</span></span>](working-with-data-part-1.md)
+- [<span data-ttu-id="310de-112">Trabalhando com os dados (parte 2)</span><span class="sxs-lookup"><span data-stu-id="310de-112">Working with Data (Part 2)</span></span>](working-with-data-part-2.md)
+- [<span data-ttu-id="310de-113">Exibindo dados em uma grade</span><span class="sxs-lookup"><span data-stu-id="310de-113">Displaying Data in a Grid</span></span>](displaying-data-in-a-grid.md)
+- [<span data-ttu-id="310de-114">Exibindo dados em um gráfico (parte 1)</span><span class="sxs-lookup"><span data-stu-id="310de-114">Displaying Data in a Chart (Part 1)</span></span>](displaying-data-in-a-chart-part-1.md)
+- [<span data-ttu-id="310de-115">Exibindo dados em um gráfico (parte 2)</span><span class="sxs-lookup"><span data-stu-id="310de-115">Displaying Data in a Chart (Part 2)</span></span>](displaying-data-in-a-chart-part-2.md)
+- [<span data-ttu-id="310de-116">Trabalhando com arquivos</span><span class="sxs-lookup"><span data-stu-id="310de-116">Working with Files</span></span>](working-with-files.md)
+- [<span data-ttu-id="310de-117">Trabalhando com imagens</span><span class="sxs-lookup"><span data-stu-id="310de-117">Working with Images</span></span>](working-with-images.md)
+- [<span data-ttu-id="310de-118">Trabalhando com vídeo</span><span class="sxs-lookup"><span data-stu-id="310de-118">Working with Video</span></span>](working-with-video.md)
+- [<span data-ttu-id="310de-119">Adição de email ao seu site</span><span class="sxs-lookup"><span data-stu-id="310de-119">Adding Email to Your Web Site</span></span>](adding-email-to-your-web-site.md)
+- [<span data-ttu-id="310de-120">Adição de pesquisa ao seu site</span><span class="sxs-lookup"><span data-stu-id="310de-120">Adding Search to Your Web Site</span></span>](adding-search-to-your-web-site.md)
+- [<span data-ttu-id="310de-121">Adição de redes sociais em seu site</span><span class="sxs-lookup"><span data-stu-id="310de-121">Adding Social Networking to Your Website</span></span>](adding-social-networking-to-your-website.md)
