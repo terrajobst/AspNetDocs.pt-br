@@ -12,7 +12,7 @@ ms.openlocfilehash: f588af70f3928285274ef6bf14f58697190943ff
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405814"
 ---
 # <a name="aspnet-mvc-getting-started"></a>Guia de Introdução do ASP.NET MVC
@@ -22,24 +22,24 @@ ms.locfileid: "59405814"
 
 - [Introdução ao ASP.NET MVC 5](introduction/index.md)
 
-    - [Guia de Introdução](introduction/getting-started.md)
+    - [Introdução](introduction/getting-started.md)
     - [Adicionando um controlador](introduction/adding-a-controller.md)
-    - [Adicionar uma exibição](introduction/adding-a-view.md)
-    - [Adicionar um modelo](introduction/adding-a-model.md)
-    - [Criar uma cadeia de conexão e trabalhando com LocalDB do SQL Server](introduction/creating-a-connection-string.md)
-    - [Acessar dados do seu modelo por meio de um controlador](introduction/accessing-your-models-data-from-a-controller.md)
-    - [Examinar os métodos de edição e a exibição de edição](introduction/examining-the-edit-methods-and-edit-view.md)
+    - [Adicionando uma exibição](introduction/adding-a-view.md)
+    - [Adicionando um modelo](introduction/adding-a-model.md)
+    - [Criando uma cadeia de conexão e trabalhando com LocalDB do SQL Server](introduction/creating-a-connection-string.md)
+    - [Acessando dados do seu modelo por meio de um controlador](introduction/accessing-your-models-data-from-a-controller.md)
+    - [Examinando os métodos de edição e a exibição de edição](introduction/examining-the-edit-methods-and-edit-view.md)
     - [Adicionando uma pesquisa](introduction/adding-search.md)
     - [Adicionando um Novo Campo](introduction/adding-a-new-field.md)
     - [Adicionando uma Validação](introduction/adding-validation.md)
-    - [Examinar os métodos Details e Delete](introduction/examining-the-details-and-delete-methods.md)
+    - [Examinando os métodos Details e Delete](introduction/examining-the-details-and-delete-methods.md)
 - [Introdução ao EF 6 usando o MVC 5](getting-started-with-ef-using-mvc/index.md)
 
-    - [Criar um modelo de dados do Entity Framework](getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
+    - [Criando um modelo de dados do Entity Framework](getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
     - [Implementar a funcionalidade CRUD básica](getting-started-with-ef-using-mvc/implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)
     - [Classificação, filtragem e paginação](getting-started-with-ef-using-mvc/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Resiliência de conexão e interceptação de comando](getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md)
-    - [Implantação e migrações do Code First](getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application.md)
+    - [Implantação e Migrações do Code First](getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Criação de um modelo de dados mais complexo](getting-started-with-ef-using-mvc/creating-a-more-complex-data-model-for-an-asp-net-mvc-application.md)
     - [Leitura de dados relacionados](getting-started-with-ef-using-mvc/reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
     - [Atualização de dados relacionados](getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
@@ -50,11 +50,11 @@ ms.locfileid: "59405814"
 - [Database First do EF com o ASP.NET MVC](database-first-development/index.md)
 
     - [Introdução ao Database First do Entity Framework 6 usando o MVC 5](database-first-development/setting-up-database.md)
-    - [Criar o aplicativo Web e os modelos de dados](database-first-development/creating-the-web-application.md)
+    - [Criando o aplicativo Web e os modelos de dados](database-first-development/creating-the-web-application.md)
     - [Geração de exibições](database-first-development/generating-views.md)
-    - [Alterar o banco de dados](database-first-development/changing-the-database.md)
-    - [Personalizar uma exibição](database-first-development/customizing-a-view.md)
-    - [Melhorar a validação de dados](database-first-development/enhancing-data-validation.md)
+    - [Alterando o banco de dados](database-first-development/changing-the-database.md)
+    - [Personalizando uma exibição](database-first-development/customizing-a-view.md)
+    - [Melhorando a validação de dados](database-first-development/enhancing-data-validation.md)
 - [Ciclo de vida de um aplicativo do ASP.NET MVC 5](lifecycle-of-an-aspnet-mvc-5-application.md)
 - [Recursos de MVC recomendados](recommended-resources-for-mvc.md)
 - [Artigos e tutoriais de MVC recomendados](mvc-learning-sequence.md)

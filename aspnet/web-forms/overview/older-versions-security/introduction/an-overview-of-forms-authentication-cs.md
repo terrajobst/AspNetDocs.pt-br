@@ -12,7 +12,7 @@ ms.openlocfilehash: 5bb3cf45e50e480d81a441280842c1eec58f4877
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406867"
 ---
 # <a name="an-overview-of-forms-authentication-c"></a>Uma visão geral da autenticação de formulários (c#)
@@ -85,7 +85,7 @@ Antes que podemos configurar autenticação de formulários, primeiro precisamos
 > Visual Studio dá suporte a dois modos de gerenciamento de projeto: Projetos de Site e projetos de aplicativos Web. Projetos de Site não têm um arquivo de projeto, enquanto que a arquitetura do projeto no Visual Studio .NET 2002/2003 imitar a projetos de aplicativos Web – eles incluem um arquivo de projeto e compilar o código-fonte do projeto em um único assembly, que é colocado na pasta /bin. O Visual Studio 2005 inicialmente apenas sites da Web com suporte de projetos, embora o modelo de projeto de aplicativo Web foi reintroduzido com Service Pack 1. O Visual Studio 2008 oferece os dois modelos de projeto. Visual Web Developer 2005 e edições de 2008, no entanto, somente dão suporte a projetos de Site da Web. Usarei o modelo de projeto de Site. Se você estiver usando uma edição não Express e deseja usar o [modelo de projeto de aplicativo Web](https://msdn.microsoft.com/library/aa730880%28vs.80%29.aspx) em vez disso, fique à vontade para fazer isso, mas lembre-se de que pode haver algumas discrepâncias entre o que você vê na tela e as etapas que você deve tomar em comparação com o capturas de tela mostradas e instruções fornecidas nestes tutoriais.
 
 
-[![Ccriar um Site New File System-Based](an-overview-of-forms-authentication-cs/_static/image3.png)](an-overview-of-forms-authentication-cs/_static/image2.png)
+[![Criar um novo arquivo com base no sistema Web Site](an-overview-of-forms-authentication-cs/_static/image3.png)](an-overview-of-forms-authentication-cs/_static/image2.png)
 
 **Figura 2**: Criar um Site New File System-Based ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image4.png))
 
@@ -95,7 +95,7 @@ Antes que podemos configurar autenticação de formulários, primeiro precisamos
 Em seguida, adicione uma nova página mestra para o site no diretório raiz chamado Master. [Páginas mestras](https://msdn.microsoft.com/library/wtxbf3hh.aspx) habilitam um desenvolvedor de página para definir um modelo de todo o site que pode ser aplicado às páginas ASP.NET. O principal benefício das páginas mestras é que a aparência geral do site pode ser definida em um único local, facilitando assim atualizar ou ajustar o layout do site.
 
 
-[![Auma página mestra chamado Master para o site de dd](an-overview-of-forms-authentication-cs/_static/image6.png)](an-overview-of-forms-authentication-cs/_static/image5.png)
+[![Adicionar uma página mestra chamado site a site](an-overview-of-forms-authentication-cs/_static/image6.png)](an-overview-of-forms-authentication-cs/_static/image5.png)
 
 **Figura 3**: Adicionar um master de chamada de página mestra ao site ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image7.png))
 
@@ -109,7 +109,7 @@ Uma página mestra define o layout de página estática e as regiões que podem 
 Com a marcação inserida acima, a alternar para a exibição de Design mostra o layout da página mestra. Qualquer página do ASP.NET que use essa página mestre terá esse layout uniforme, com a capacidade de especificar a marcação para o `MainContent` região.
 
 
-[![Tele página mestra, quando exibidas por meio do modo de Design](an-overview-of-forms-authentication-cs/_static/image9.png)](an-overview-of-forms-authentication-cs/_static/image8.png)
+[![A página mestra, quando visualizado por meio da exibição de Design](an-overview-of-forms-authentication-cs/_static/image9.png)](an-overview-of-forms-authentication-cs/_static/image8.png)
 
 **Figura 4**: A página mestra, quando exibidas por meio do modo de Design ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image10.png))
 
@@ -121,7 +121,7 @@ Neste ponto, temos uma página Default. aspx em nosso site, mas não usa a pági
 Em seguida, clique com botão direito no nome do projeto no Gerenciador de soluções e escolha Adicionar um novo formulário da Web denominado Default. aspx. Neste momento, marque a caixa de seleção "Selecionar a página mestra" e escolha a página mestra do site na lista.
 
 
-[![Add um novo default. aspx página escolher selecionar uma página mestre](an-overview-of-forms-authentication-cs/_static/image12.png)](an-overview-of-forms-authentication-cs/_static/image11.png)
+[![Adicione uma nova página Default. aspx, optando por selecionar uma página mestra](an-overview-of-forms-authentication-cs/_static/image12.png)](an-overview-of-forms-authentication-cs/_static/image11.png)
 
 **Figura 5**: Adicionar um novo default. aspx página optar por selecionar uma página mestra ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image13.png))
 
@@ -158,7 +158,7 @@ Por padrão, os aplicativos ASP.NET usam a autenticação do Windows. Para alter
 Se seu projeto ainda não contém um arquivo Web. config, adicione um agora clicando no nome do projeto no Gerenciador de soluções, escolha Add New Item e, em seguida, adicionando um arquivo de configuração da Web.
 
 
-[![If seu projeto ainda não incluir o Web. config, adicioná-lo agora](an-overview-of-forms-authentication-cs/_static/image16.png)](an-overview-of-forms-authentication-cs/_static/image15.png)
+[![Se seu projeto ainda não inclui Web. config, adicione-o agora](an-overview-of-forms-authentication-cs/_static/image16.png)](an-overview-of-forms-authentication-cs/_static/image15.png)
 
 **Figura 7**: Se seu projeto faz não ainda incluem Web. config, adicione agora ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image17.png))
 
@@ -190,7 +190,7 @@ A página de logon tem três responsabilidades:
 Vamos começar com a primeira tarefa. Adicionar uma nova página ASP.NET para o diretório do site raiz chamado login. aspx e associá-la com a página mestra do site.
 
 
-[![Add um novo ASP.NET página chamada Login. aspx](an-overview-of-forms-authentication-cs/_static/image19.png)](an-overview-of-forms-authentication-cs/_static/image18.png)
+[![Adicionar uma nova página ASP.NET chamada Login. aspx](an-overview-of-forms-authentication-cs/_static/image19.png)](an-overview-of-forms-authentication-cs/_static/image18.png)
 
 **Figura 8**: Adicionar um novo ASP.NET página chamada Login. aspx ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image20.png))
 
@@ -204,7 +204,7 @@ Neste ponto, sua tela deve ser semelhante para a tela na Figura 9, e a sintaxe d
 [!code-aspx[Main](an-overview-of-forms-authentication-cs/samples/sample4.aspx)]
 
 
-[![Tele logon página contém duas caixas de texto, uma caixa de seleção, um botão e um rótulo](an-overview-of-forms-authentication-cs/_static/image22.png)](an-overview-of-forms-authentication-cs/_static/image21.png)
+[![A página de logon contém duas caixas de texto, uma caixa de seleção, um botão e um rótulo](an-overview-of-forms-authentication-cs/_static/image22.png)](an-overview-of-forms-authentication-cs/_static/image21.png)
 
 **Figura 9**: O logon de página contém duas caixas de texto, uma caixa de seleção, um botão e um rótulo ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image23.png))
 
@@ -250,7 +250,7 @@ Ao criar tíquete de autenticação de formulários podemos usar a propriedade d
 Para testar a página de logon, visite-o em um navegador. Inicie inserindo credenciais inválidas, como um nome de usuário de "Nope" e uma senha de "errado". Ao clicar no botão logon ocorre um postback e o rótulo de InvalidCredentialsMessage será exibido.
 
 
-[![Tele InvalidCredentialsMessage rótulo é exibido ao inserir credenciais inválidas](an-overview-of-forms-authentication-cs/_static/image25.png)](an-overview-of-forms-authentication-cs/_static/image24.png)
+[![O rótulo de InvalidCredentialsMessage é exibido ao inserir credenciais inválidas](an-overview-of-forms-authentication-cs/_static/image25.png)](an-overview-of-forms-authentication-cs/_static/image24.png)
 
 **Figura 10**: O rótulo de InvalidCredentialsMessage é exibido ao inserir credenciais inválidas ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image26.png))
 
@@ -379,7 +379,7 @@ Com essa adição à página mestra master, cada página no nosso site exibirá 
 Como nós adicionamos o LoginView para a página mestra, ele pode aparecer em cada página em nosso site. No entanto, pode haver páginas da web em que não queremos mostrar esta mensagem. Uma página dessas é a página de logon, uma vez que um link para a página de logon parece deslocada lá. Uma vez que colocamos o controle LoginView em um ContentPlaceHolder na página mestra, podemos substituir essa marcação padrão em nossa página de conteúdo. Abra o login. aspx e vá para o Designer. Uma vez que estamos explicitamente não definiu um controle de conteúdo no login. aspx para o LoginContent ContentPlaceHolder na página mestra, a página de logon mostrará marcação de padrão da página mestra para esse ContentPlaceHolder. Você pode ver isso por meio do Designer – o LoginContent ContentPlaceHolder mostra a marcação padrão (o controle LoginView).
 
 
-[![Tele página de logon mostra o conteúdo de padrão para LoginContent ContentPlaceHolder's Page the Master](an-overview-of-forms-authentication-cs/_static/image33.png)](an-overview-of-forms-authentication-cs/_static/image32.png)
+[![A página de logon mostra o padrão conteúdo para LoginContent ContentPlaceHolder a página mestra](an-overview-of-forms-authentication-cs/_static/image33.png)](an-overview-of-forms-authentication-cs/_static/image32.png)
 
 **Figura 16**: A página de logon mostra o conteúdo de padrão para LoginContent ContentPlaceHolder's Page the Master ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image34.png))
 
@@ -393,7 +393,7 @@ Para substituir a marcação padrão para o LoginContent ContentPlaceHolder, cli
 Figura 17 mostra a página de login. aspx, quando acessadas a partir de um navegador depois de fazer essa alteração. Observe que não há nenhum "Hello, stranger" ou "Bem-vindo novamente, *nome de usuário*" mensagem no painel de navegação esquerdo &lt;div&gt; que ocorrem quando visitar default. aspx.
 
 
-[![Tele página de logon oculta marcação do padrão LoginContent ContentPlaceHolder](an-overview-of-forms-authentication-cs/_static/image36.png)](an-overview-of-forms-authentication-cs/_static/image35.png)
+[![A página de logon oculta a marcação de LoginContent ContentPlaceHolder o padrão](an-overview-of-forms-authentication-cs/_static/image36.png)](an-overview-of-forms-authentication-cs/_static/image35.png)
 
 **Figura 17**: A página de logon oculta marcação do padrão LoginContent ContentPlaceHolder ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image37.png))
 
@@ -424,12 +424,12 @@ Como o LoginStatus está fora do controle LoginView, ele será exibido para usu�
 Figura 18 mostra default. aspx, quando Jisun visita. Observe que a coluna à esquerda exibe a mensagem "Bem-vindo novamente, Jisun" juntamente com um link para fazer logoff. Na LinkButton logoff causa um postback, sai Jisun o sistema e, em seguida, redireciona dela para Logout.aspx. Como mostra a Figura 19, no momento que jisun atinge Logout.aspx ela já foi desconectada e, portanto, é anônima. Consequentemente, a coluna esquerda mostra o texto "Bem-vindo, stranger" e um link para a página de logon.
 
 
-[![DMostra efault](an-overview-of-forms-authentication-cs/_static/image39.png)](an-overview-of-forms-authentication-cs/_static/image38.png)
+[![Mostra default. aspx](an-overview-of-forms-authentication-cs/_static/image39.png)](an-overview-of-forms-authentication-cs/_static/image38.png)
 
 **Figura 18**: Default. aspx mostra "Bem-vindo novamente, Jisun" juntamente com um LinkButton "Logout" ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image40.png))
 
 
-[![LMostra ogout.aspx](an-overview-of-forms-authentication-cs/_static/image42.png)](an-overview-of-forms-authentication-cs/_static/image41.png)
+[![Mostra logout.aspx](an-overview-of-forms-authentication-cs/_static/image42.png)](an-overview-of-forms-authentication-cs/_static/image41.png)
 
 **Figura 19**: Logout.aspx mostra "Bem-vindo, stranger" junto com um LinkButton "Logon" ([clique para exibir a imagem em tamanho normal](an-overview-of-forms-authentication-cs/_static/image43.png))
 

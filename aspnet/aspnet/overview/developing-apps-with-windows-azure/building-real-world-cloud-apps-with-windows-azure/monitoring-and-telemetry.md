@@ -12,7 +12,7 @@ ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403903"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoramento e telemetria (compilando aplicativos de nuvem do mundo Real com o Azure)
@@ -72,7 +72,7 @@ Implantar o aplicativo no Azure e começar a usá-lo. Crie alguns Fix It tarefas
 
 Em seguida, volte para o **New Relic** página na **complementos** guia do portal e clique em **gerenciar**. O portal envia para o portal de gerenciamento do New Relic, usando o logon único para autenticação para que você não precise digitar suas credenciais novamente. A página de visão geral apresenta uma variedade de estatísticas de desempenho. (Clique na imagem para ver o tamanho total da página Visão geral).
 
-[![NGuia de monitoramento Relíquia ova](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![Guia de monitoramento do Relíquia nova](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
 Aqui estão algumas das estatísticas que você pode ver:
 

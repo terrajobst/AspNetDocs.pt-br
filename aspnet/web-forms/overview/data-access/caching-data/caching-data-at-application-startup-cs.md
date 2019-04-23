@@ -12,7 +12,7 @@ ms.openlocfilehash: 7e858fe4c1f8e93f6e6fa30b33f5682945d03c32
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403071"
 ---
 # <a name="caching-data-at-application-startup-c"></a>Armazenar dados em cache na inicialização do aplicativo (C#)
@@ -119,7 +119,7 @@ Adicionar o `Global.asax` arquivo para diretório de raiz do seu aplicativo web 
 > Se você já tiver um `Global.asax` arquivo em seu projeto, a classe de aplicativo Global, tipo de item não será listado na caixa de diálogo Adicionar Novo Item.
 
 
-[![Add arquivo global asax para o diretório raiz do aplicativo Web Your](caching-data-at-application-startup-cs/_static/image4.png)](caching-data-at-application-startup-cs/_static/image3.png)
+[![Adicionar o arquivo global asax ao diretório raiz do seu aplicativo Web](caching-data-at-application-startup-cs/_static/image4.png)](caching-data-at-application-startup-cs/_static/image3.png)
 
 **Figura 3**: Adicione a `Global.asax` arquivo para o diretório raiz do aplicativo Web Your ([clique para exibir a imagem em tamanho normal](caching-data-at-application-startup-cs/_static/image5.png))
 
@@ -142,7 +142,7 @@ Para esses tutoriais só precisamos adicionar código para o `Application_Start`
 E isso é tudo! Na inicialização do aplicativo, o `LoadStaticCache()` método pegar as informações do fornecedor da BLL e armazená-lo em uma variável de membro estático (ou qualquer cache armazenar você terminou usando no `StaticCache` classe). Para verificar esse comportamento, defina um ponto de interrupção no `Application_Start` método e executar seu aplicativo. Observe que o ponto de interrupção é atingido durante a inicialização do aplicativo. As solicitações subsequentes, no entanto, não causam o `Application_Start` método a ser executado.
 
 
-[![USe um ponto de interrupção Verifique se o manipulador de eventos Application_Start está sendo executado](caching-data-at-application-startup-cs/_static/image7.png)](caching-data-at-application-startup-cs/_static/image6.png)
+[![Use um ponto de interrupção Verifique se o manipulador de eventos Application_Start está sendo executado](caching-data-at-application-startup-cs/_static/image7.png)](caching-data-at-application-startup-cs/_static/image6.png)
 
 **Figura 4**: Use um ponto de interrupção para verificar que o `Application_Start` manipulador de eventos está sendo executado ([clique para exibir a imagem em tamanho normal](caching-data-at-application-startup-cs/_static/image8.png))
 
@@ -163,7 +163,7 @@ Comece abrindo o `AtApplicationStartup.aspx` página o `Caching` pasta. Arraste 
 **Figura 5**: Configurar o ObjectDataSource para usar o `StaticCache` classe ([clique para exibir a imagem em tamanho normal](caching-data-at-application-startup-cs/_static/image11.png))
 
 
-[![USe o método GetSuppliers() para recuperar os dados do fornecedor armazenados em cache](caching-data-at-application-startup-cs/_static/image13.png)](caching-data-at-application-startup-cs/_static/image12.png)
+[![Use o método GetSuppliers() para recuperar os dados do fornecedor armazenados em cache](caching-data-at-application-startup-cs/_static/image13.png)](caching-data-at-application-startup-cs/_static/image12.png)
 
 **Figura 6**: Use o `GetSuppliers()` método para recuperar os dados do fornecedor armazenados em cache ([clique para exibir a imagem em tamanho normal](caching-data-at-application-startup-cs/_static/image14.png))
 
@@ -176,7 +176,7 @@ Depois de concluir o assistente, o Visual Studio adicionará automaticamente Bou
 Figura 7 mostra a página quando visualizado por meio de um navegador. A saída é o mesmo tinha removemos os dados da BLL `SuppliersBLL` classe, mas usando o `StaticCache` classe retorna os dados do fornecedor como armazenado em cache na inicialização do aplicativo. Você pode definir pontos de interrupção a `StaticCache` da classe `GetSuppliers()` método para verificar esse comportamento.
 
 
-[![Tele é armazenada em cache dados do fornecedor é exibido em um GridView](caching-data-at-application-startup-cs/_static/image16.png)](caching-data-at-application-startup-cs/_static/image15.png)
+[![Os dados do fornecedor armazenados em cache é exibido em um GridView](caching-data-at-application-startup-cs/_static/image16.png)](caching-data-at-application-startup-cs/_static/image15.png)
 
 **Figura 7**: Os dados do fornecedor armazenados em cache é exibido em um GridView ([clique para exibir a imagem em tamanho normal](caching-data-at-application-startup-cs/_static/image17.png))
 

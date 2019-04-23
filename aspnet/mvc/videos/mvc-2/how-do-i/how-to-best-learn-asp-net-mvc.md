@@ -12,7 +12,7 @@ ms.openlocfilehash: 5ccc057cfd2567e4b89fc8dcb1697a533b5df19e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407413"
 ---
 # <a name="how-to-best-learn-aspnet-mvc"></a>Como melhor saber sobre ASP.NET MVC
@@ -24,4 +24,4 @@ Scott Hanselman da Microsoft mostra o que você precisa aprender a usar o ASP.NE
 [&#9654;Assista ao vídeo (3 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-best-learn-asp-net-mvc)
 
 > [!div class="step-by-step"]
-> [Voltar](5-minute-introduction-to-aspnet-mvc.md)
+> [Anterior](5-minute-introduction-to-aspnet-mvc.md)

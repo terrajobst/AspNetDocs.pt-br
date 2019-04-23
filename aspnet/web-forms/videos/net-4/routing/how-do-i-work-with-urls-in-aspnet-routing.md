@@ -12,7 +12,7 @@ ms.openlocfilehash: eb1060fd9cc9469dc2b1d2e918823316c36840cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404813"
 ---
 # <a name="how-do-i-work-with-urls-in-aspnet-routing"></a>Como faço Trabalhar com URLs no roteamento do ASP.NET?
@@ -24,4 +24,4 @@ Neste vídeo, Chris Pels mostra como especificar URLs em um site da web que util
 [&#9654;Assista ao vídeo (20 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-work-with-urls-in-aspnet-routing)
 
 > [!div class="step-by-step"]
-> [Voltar](how-do-i-use-routing-with-aspnet-web-forms.md)
+> [Anterior](how-do-i-use-routing-with-aspnet-web-forms.md)

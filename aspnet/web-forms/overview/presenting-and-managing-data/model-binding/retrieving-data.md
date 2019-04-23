@@ -12,7 +12,7 @@ ms.openlocfilehash: 29baaf2917e47ac46a78a252721be725b4e9b58f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398469"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperando e exibindo dados com a associação de modelos e formulários da web

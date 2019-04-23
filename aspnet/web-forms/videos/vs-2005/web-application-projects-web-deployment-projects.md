@@ -12,7 +12,7 @@ ms.openlocfilehash: 026a8405e0d2078e7dc1dada4ed0185daefd86d7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406932"
 ---
 # <a name="web-application-projects--web-deployment-projects"></a>Projetos de aplicativos Web e projetos de Implantação da Web
@@ -24,4 +24,4 @@ Bradley Bartz mostra como os projetos de aplicativos Web e Web Deployment Projec
 [&#9654;Assista ao vídeo (66 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/web-application-projects-web-deployment-projects)
 
 > [!div class="step-by-step"]
-> [Voltar](web-deployment-projects.md)
+> [Anterior](web-deployment-projects.md)

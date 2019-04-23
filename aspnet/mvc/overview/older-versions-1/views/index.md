@@ -12,7 +12,7 @@ ms.openlocfilehash: 3aff4defbfe7738e5f33c6f9d72aed8ac7e12116
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407673"
 ---
 # <a name="aspnet-mvc-views"></a>Exibições do ASP.NET MVC
@@ -24,9 +24,9 @@ ms.locfileid: "59407673"
 - [Criação de auxiliares de HTML personalizados (C#)](creating-custom-html-helpers-cs.md)
 - [Classe TagBuilder para criar auxiliares de HTML (C#)](using-the-tagbuilder-class-to-build-html-helpers-cs.md)
 - [Criar layouts de página com Exibir páginas mestras (C#)](creating-page-layouts-with-view-master-pages-cs.md)
-- [Transmitir dados para Exibir páginas mestras (C#)](passing-data-to-view-master-pages-cs.md)
+- [Transmitindo dados para Exibir páginas mestras (C#)](passing-data-to-view-master-pages-cs.md)
 - [Visão geral de exibições do ASP.NET MVC (VB)](asp-net-mvc-views-overview-vb.md)
 - [Criação de auxiliares de HTML personalizados (VB)](creating-custom-html-helpers-vb.md)
 - [Classe TagBuilder para criar auxiliares de HTML (VB)](using-the-tagbuilder-class-to-build-html-helpers-vb.md)
 - [Criar layouts de página com Exibir páginas mestras (VB)](creating-page-layouts-with-view-master-pages-vb.md)
-- [Transmitir dados para Exibir páginas mestras (VB)](passing-data-to-view-master-pages-vb.md)
+- [Transmitindo dados para Exibir páginas mestras (VB)](passing-data-to-view-master-pages-vb.md)

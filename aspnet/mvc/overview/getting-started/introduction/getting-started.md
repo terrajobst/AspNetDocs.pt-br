@@ -11,7 +11,7 @@ ms.openlocfilehash: c2f7ca2e7fb8d7831f21e3ba2f4713211657e1b3
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402226"
 ---
 # <a name="getting-started-with-aspnet-mvc-5"></a>Introdução ao ASP.NET MVC 5

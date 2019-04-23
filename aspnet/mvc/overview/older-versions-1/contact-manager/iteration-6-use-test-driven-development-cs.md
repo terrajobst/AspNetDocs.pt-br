@@ -12,7 +12,7 @@ ms.openlocfilehash: 94885984ebad90523369dcf5771d0f77a753008f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405658"
 ---
 # <a name="iteration-6--use-test-driven-development-c"></a>Iteração #6 – usar desenvolvimento controlado por testes (c#)
@@ -113,14 +113,14 @@ Nossa história de usuário a primeira é que um usuário deve ser capaz de exib
 Criar um novo teste de unidade pelo botão direito do mouse na pasta controladores no projeto ContactManager.Tests, selecionando **Add, New Test**e selecionando o **de teste de unidade** modelo (consulte a Figura 1). Nome da nova unidade GroupControllerTest.cs de teste e clique no **Okey** botão.
 
 
-[![Aadição de teste de unidade GroupControllerTest](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
+[![Adicionando o teste de unidade GroupControllerTest](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
 
 **Figura 01**: Adicionando o teste de unidade GroupControllerTest ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image2.png))
 
 
 Nosso primeiro teste de unidade está contido na listagem 1. Esse teste verifica que o método Index () do controlador grupo retorna um conjunto de grupos. O teste verifica que uma coleção de grupos é retornada no modo de exibição dados.
 
-**Listing 1 - Controllers\GroupControllerTest.cs**
+**Listagem 1 - Controllers\GroupControllerTest.cs**
 
 [!code-csharp[Main](iteration-6-use-test-driven-development-cs/samples/sample1.cs)]
 
@@ -141,7 +141,7 @@ A classe de controlador de grupo na listagem 2 contém o mínimo de código nece
 Depois de adicionar as classes GroupController e o grupo ao nosso projeto, o nosso primeiro teste de unidade for concluída com êxito (veja a Figura 2). Fizemos o trabalho mínimo necessário para passar no teste. É hora de celebrar.
 
 
-[![Success!](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
+[![Sucesso!](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
 
 **Figura 02**: Sucesso! ([Clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image4.png))
 
@@ -272,7 +272,7 @@ Em seguida, precisamos definir uma relação entre a tabela de banco de dados de
 **Figura 03**: Criando uma relação de tabela do banco de dados ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image6.png))
 
 
-[![Srelações de tabela pecifying](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
+[![Especificando relações de tabela](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
 
 **Figura 04**: Especificando relações de tabela ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image8.png))
 
@@ -288,7 +288,7 @@ Em seguida, precisamos atualizar nosso modelo de dados para representar a nova t
 5. Clique com botão direito a propriedade de navegação de grupos aparece na parte inferior da entidade contato. Altere o nome da *grupos* propriedade de navegação *grupo* (singular).
 
 
-[![Utualização do banco de dados de um modelo de Entity Framework](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
+[![Atualizando um modelo do Entity Framework do banco de dados](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
 
 **Figura 05**: Atualizando um modelo do Entity Framework do banco de dados ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image10.png))
 
@@ -296,7 +296,7 @@ Em seguida, precisamos atualizar nosso modelo de dados para representar a nova t
 Depois de concluir essas etapas, seu modelo de dados representará a tabelas de contatos e grupos. O Designer de entidade deve mostrar as duas entidades (veja a Figura 6).
 
 
-[![Eexibição de Designer NTITY agrupar e entre em contato com](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
+[![Designer de entidade exibindo Group e Contact](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
 
 **Figura 06**: Designer de entidade exibindo Group e Contact ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image12.png))
 
@@ -329,7 +329,7 @@ Quando você usa o mecanismo de exibição do ASP.NET padrão de aplicativo do A
 - Views\Group\Delete.aspx - formulário de confirmação exibida para a exclusão de um grupo de contatos
 
 
-[![Tele exibição índice de grupo](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
+[![O modo de exibição de índice do grupo](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
 
 **Figura 07**: O modo de exibição do grupo de índice ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image14.png))
 
@@ -343,7 +343,7 @@ Precisamos modificar as seguintes exibições existentes para que elas incluem g
 Você pode ver os modos de exibição modificados, observando o aplicativo do Visual Studio que acompanha este tutorial. Por exemplo, a Figura 8 ilustra o modo de exibição de índice de contatos.
 
 
-[![Tele exibição índice de contato](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
+[![O modo de exibição de índice de contatos](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
 
 **Figura 08**: O modo de exibição de índice de contatos ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image16.png))
 

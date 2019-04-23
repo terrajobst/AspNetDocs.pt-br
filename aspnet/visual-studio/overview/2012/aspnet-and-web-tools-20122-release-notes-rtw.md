@@ -12,7 +12,7 @@ ms.openlocfilehash: e4545f36d5a2668bc6a21249a89a94ece9bb2ca2
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397975"
 ---
 # <a name="aspnet-and-web-tools-20122-release-notes"></a>Notas de Versão do ASP.NET and Web Tools 2012.2
@@ -31,7 +31,7 @@ ms.locfileid: "59397975"
     - [Modelos do ASP.NET MVC](#_Templates)
     - [ASP.NET Web API](#_ASP.NET_Web_API)
 
-    - [ASP.NET SignalR](#_ASP.NET_SignalR)
+    - [SignalR do ASP.NET](#_ASP.NET_SignalR)
     - [URLs amigáveis do ASP.NET](#_ASP.NET_Friendly_URLs)
 - [Problemas conhecidos e alterações recentes](#_Known_Issues_and)
 

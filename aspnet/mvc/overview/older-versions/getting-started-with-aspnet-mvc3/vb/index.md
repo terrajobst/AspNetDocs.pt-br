@@ -12,7 +12,7 @@ ms.openlocfilehash: 9dbaf1cbf7eb89a47c1e7e388c4dc35b9900b97d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399106"
 ---
 # <a name="getting-started-with-aspnet-mvc-3-vbnet"></a>Introdução ao ASP.NET MVC 3 (VB.NET)
@@ -21,11 +21,11 @@ ms.locfileid: "59399106"
 
 
 - [Introdução ao ASP.NET MVC 3 (VB)](intro-to-aspnet-mvc-3.md)
-- [Adicionar um controlador (VB)](adding-a-controller.md)
-- [Adicionar uma exibição (VB)](adding-a-view.md)
-- [Adicionar um modelo (VB)](adding-a-model.md)
-- [Acessar dados de seu modelo por meio de um controlador (VB)](accessing-your-models-data-from-a-controller.md)
-- [Examinar os métodos de edição e a exibição de edição (VB)](examining-the-edit-methods-and-edit-view.md)
+- [Adicionando um controlador (VB)](adding-a-controller.md)
+- [Adicionando uma exibição (VB)](adding-a-view.md)
+- [Adicionando um modelo (VB)](adding-a-model.md)
+- [Acessando dados do seu modelo por meio de um controlador (VB)](accessing-your-models-data-from-a-controller.md)
+- [Examinando os métodos de edição e a exibição de edição (VB)](examining-the-edit-methods-and-edit-view.md)
 - [Adicionar um novo campo ao modelo de filme e à tabela do banco de dados (VB)](adding-a-new-field.md)
 - [Adicionar validação ao modelo (VB)](adding-validation-to-the-model.md)
-- [Aprimorar os métodos Details e Delete (VB)](improving-the-details-and-delete-methods.md)
+- [Aprimorando os métodos Details e Delete (VB)](improving-the-details-and-delete-methods.md)

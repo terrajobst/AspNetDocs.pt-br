@@ -12,7 +12,7 @@ ms.openlocfilehash: 963850e1048d4fde573f28244fd32d0c4232fda4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399184"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-vb"></a>Uso de HoverMenu com um controle repetidor (VB)
@@ -53,9 +53,9 @@ Agora, o `HoverMenuExtender` entra em cena. Para que todos os elementos na fonte
 Agora cada item na fonte de dados exibe um pop-up para a direita (`PopupPosition` atributo) após um atraso de 50 milissegundos (`PopDelay` atributo).
 
 
-[![Tmenu de focalização he aparece ao lado de cada item no repetidor](using-hovermenu-with-a-repeater-control-vb/_static/image2.png)](using-hovermenu-with-a-repeater-control-vb/_static/image1.png)
+[![O menu de foco é exibido ao lado de cada item no repetidor](using-hovermenu-with-a-repeater-control-vb/_static/image2.png)](using-hovermenu-with-a-repeater-control-vb/_static/image1.png)
 
 O menu de foco é exibido ao lado de cada item no repetidor ([clique para exibir a imagem em tamanho normal](using-hovermenu-with-a-repeater-control-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Voltar](using-hovermenu-with-a-repeater-control-cs.md)
+> [Anterior](using-hovermenu-with-a-repeater-control-cs.md)

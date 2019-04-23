@@ -12,7 +12,7 @@ ms.openlocfilehash: 0ccb1a737fdfc3cf2ffdcc22131650e1b79cd2cb
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407218"
 ---
 # <a name="displaying-a-custom-error-page-c"></a>Exibição de uma página de erro personalizada (C#)
@@ -167,7 +167,7 @@ Para obter mais informações sobre os tópicos abordados neste tutorial, consul
 - [Páginas de erro, mais uma vez](http://www.smashingmagazine.com/2009/01/29/404-error-pages-one-more-time/)
 - [Diretrizes de design para exceções](https://msdn.microsoft.com/library/ms229014.aspx)
 - [Páginas de erro amigável](http://aspnet.4guysfromrolla.com/articles/090606-1.aspx)
-- [Manipulando e lançando exceções](https://msdn.microsoft.com/library/5b2yeyab.aspx)
+- [Tratando e gerando exceções](https://msdn.microsoft.com/library/5b2yeyab.aspx)
 - [Corretamente usando páginas de erro personalizada no ASP.NET](http://professionalaspnet.com/archive/2007/09/30/Properly-Using-Custom-Error-Pages-in-ASP.NET.aspx)
 
 > [!div class="step-by-step"]

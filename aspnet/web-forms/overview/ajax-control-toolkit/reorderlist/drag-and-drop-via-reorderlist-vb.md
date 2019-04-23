@@ -12,7 +12,7 @@ ms.openlocfilehash: 1b955c43a0fc95bda87843fc4a5c9e56aef3dfc6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400991"
 ---
 # <a name="drag-and-drop-via-reorderlist-vb"></a>Arrastar e soltar por meio de ReorderList (VB)
@@ -44,7 +44,7 @@ Neste banco de dados, criar uma nova tabela chamada `AJAX` com as seguintes quat
 - `position` NULL (int)
 
 
-[![Tlayout de he da tabela AJAX](drag-and-drop-via-reorderlist-vb/_static/image2.png)](drag-and-drop-via-reorderlist-vb/_static/image1.png)
+[![O layout da tabela AJAX](drag-and-drop-via-reorderlist-vb/_static/image2.png)](drag-and-drop-via-reorderlist-vb/_static/image1.png)
 
 O layout da tabela AJAX ([clique para exibir a imagem em tamanho normal](drag-and-drop-via-reorderlist-vb/_static/image3.png))
 
@@ -52,7 +52,7 @@ O layout da tabela AJAX ([clique para exibir a imagem em tamanho normal](drag-an
 Em seguida, preencha a tabela com um par de valores. Observe que o `position` coluna mantém a ordem de classificação dos elementos.
 
 
-[![Tdados iniciais de he na tabela de AJAX](drag-and-drop-via-reorderlist-vb/_static/image5.png)](drag-and-drop-via-reorderlist-vb/_static/image4.png)
+[![Os dados iniciais na tabela de AJAX](drag-and-drop-via-reorderlist-vb/_static/image5.png)](drag-and-drop-via-reorderlist-vb/_static/image4.png)
 
 Os dados iniciais na tabela de AJAX ([clique para exibir a imagem em tamanho normal](drag-and-drop-via-reorderlist-vb/_static/image6.png))
 
@@ -83,9 +83,9 @@ Por fim, um `ScriptManager` controle inicializa o ASP.NET AJAX para a página:
 Executar este exemplo no navegador e reorganizar os itens da lista um pouco. Em seguida, recarregue a página e/ou dar uma olhada no banco de dados. As posições alteradas ter sido mantidas e também são refletidas pelos valores no `position` coluna no banco de dados e que tudo isso sem qualquer código, apenas usando marcação.
 
 
-[![Tele data in das alterações de banco de dados de acordo com a nova ordem de item de lista](drag-and-drop-via-reorderlist-vb/_static/image8.png)](drag-and-drop-via-reorderlist-vb/_static/image7.png)
+[![Os dados em que as alterações de banco de dados de acordo com a nova ordem de item de lista](drag-and-drop-via-reorderlist-vb/_static/image8.png)](drag-and-drop-via-reorderlist-vb/_static/image7.png)
 
 Os dados em que as alterações de banco de dados de acordo com a nova lista de ordem de item ([clique para exibir a imagem em tamanho normal](drag-and-drop-via-reorderlist-vb/_static/image9.png))
 
 > [!div class="step-by-step"]
-> [Voltar](using-postbacks-with-reorderlist-vb.md)
+> [Anterior](using-postbacks-with-reorderlist-vb.md)

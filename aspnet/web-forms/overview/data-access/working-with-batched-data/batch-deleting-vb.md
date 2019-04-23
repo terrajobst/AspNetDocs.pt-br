@@ -12,7 +12,7 @@ ms.openlocfilehash: b6a2450dd824396e1540b52395022f48e41aab70
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403045"
 ---
 # <a name="batch-deleting-vb"></a>Exclusão em lote (VB)
@@ -31,7 +31,7 @@ O [tutorial anterior](batch-updating-vb.md) explorou como criar um lote usando u
 Qualquer pessoa que tenha usado um cliente de email online já está familiarizada com uma das mais comuns lote excluindo interfaces: uma caixa de seleção em cada linha em uma grade com um correspondente excluir todos os itens verificados botão (consulte a Figura 1). Este tutorial é curto em vez disso porque estamos ve feita todo o trabalho pesado nos tutoriais anteriores na criação de interface baseada na web e um método para excluir uma série de registros como uma única operação atômica. No [adicionando uma coluna de GridView de caixas de seleção](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-vb.md) tutorial, criamos um GridView com uma coluna de caixas de seleção e, nas [encapsulamento de modificações de banco de dados em uma transação](wrapping-database-modifications-within-a-transaction-vb.md) tutorial, criamos um método em a BLL que usaria uma transação para excluir uma `List<T>` de `ProductID` valores. Neste tutorial, vamos aproveitam e nossas experiências anteriores para criar um lote de trabalho, excluindo o exemplo de mesclagem.
 
 
-[![EACH linha inclui uma caixa de seleção](batch-deleting-vb/_static/image1.gif)](batch-deleting-vb/_static/image1.png)
+[![Cada linha inclui uma caixa de seleção](batch-deleting-vb/_static/image1.gif)](batch-deleting-vb/_static/image1.png)
 
 **Figura 1**: Cada linha inclui uma caixa de seleção ([clique para exibir a imagem em tamanho normal](batch-deleting-vb/_static/image2.png))
 
@@ -41,7 +41,7 @@ Qualquer pessoa que tenha usado um cliente de email online já está familiariza
 Como já criamos o lote excluindo a interface na [adicionando uma coluna de GridView de caixas de seleção](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-vb.md) tutorial, podemos pode simplesmente copiá-lo para `BatchDelete.aspx` em vez de criá-lo a partir do zero. Comece abrindo o `BatchDelete.aspx` página o `BatchData` pasta e o `CheckBoxField.aspx` página no `EnhancedGridView` pasta. Dos `CheckBoxField.aspx` página, vá para a exibição da fonte e copie a marcação entre o `<asp:Content>` marcas conforme mostrado na Figura 2.
 
 
-[![Copiar a marcação declarativa de CheckBoxField.aspx na área de transferência](batch-deleting-vb/_static/image2.gif)](batch-deleting-vb/_static/image3.png)
+[![A marcação declarativa de CheckBoxField.aspx na área de transferência de cópia](batch-deleting-vb/_static/image2.gif)](batch-deleting-vb/_static/image3.png)
 
 **Figura 2**: Copie a marcação declarativa de `CheckBoxField.aspx` na área de transferência ([clique para exibir a imagem em tamanho normal](batch-deleting-vb/_static/image4.png))
 
@@ -54,7 +54,7 @@ Em seguida, vá para a exibição da fonte no `BatchDelete.aspx` e cole o conte�
 Depois de copiar sobre a marcação declarativa e código-fonte, reserve um tempo para testar `BatchDelete.aspx` exibindo-o por meio de um navegador. Você deve ver um GridView listando os dez primeiros produtos em um GridView com cada linha que lista o nome do produto s, categoria e preço, juntamente com uma caixa de seleção. Deve haver três botões: Verifique todas, desmarcar todos e excluir produtos selecionados. Clicar no botão Verificar todos os seleciona todas as caixas de seleção, enquanto desmarcar todos os limpa todas as caixas de seleção. Clicar em excluir produtos selecionados exibe uma mensagem que lista o `ProductID` valores dos produtos selecionados, mas não exclui os produtos.
 
 
-[![Tele é a Interface de CheckBoxField.aspx foi movido para BatchDeleting.aspx](batch-deleting-vb/_static/image3.gif)](batch-deleting-vb/_static/image5.png)
+[![A Interface de CheckBoxField.aspx foi movida para BatchDeleting.aspx](batch-deleting-vb/_static/image3.gif)](batch-deleting-vb/_static/image5.png)
 
 **Figura 3**: A Interface de `CheckBoxField.aspx` foi movido para `BatchDeleting.aspx` ([clique para exibir a imagem em tamanho normal](batch-deleting-vb/_static/image6.png))
 
@@ -82,12 +82,12 @@ O código atualizado cria uma `List(Of T)` do tipo `Integer` (`productIDsToDelet
 Figura 4 mostra o GridView após um número de linhas foram selecionado para exclusão. Figura 5 mostra a tela imediatamente depois que foi clicado no botão excluir produtos selecionados. Observe que na Figura 5 o `ProductID` valores dos registros excluídos são exibidos no rótulo abaixo GridView e essas linhas não estão mais em GridView.
 
 
-[![Tele produtos selecionados será excluído](batch-deleting-vb/_static/image4.gif)](batch-deleting-vb/_static/image7.png)
+[![Os produtos selecionados serão excluídos](batch-deleting-vb/_static/image4.gif)](batch-deleting-vb/_static/image7.png)
 
 **Figura 4**: O selecionado produtos serão excluídos ([clique para exibir a imagem em tamanho normal](batch-deleting-vb/_static/image8.png))
 
 
-[![The excluído produtos ProductID valores são listados sob o controle GridView](batch-deleting-vb/_static/image5.gif)](batch-deleting-vb/_static/image9.png)
+[![Os valores de ProductID de produtos excluídos são listados sob o controle GridView](batch-deleting-vb/_static/image5.gif)](batch-deleting-vb/_static/image9.png)
 
 **Figura 5**: Os produtos excluídos `ProductID` os valores são listados sob o controle GridView ([clique para exibir a imagem em tamanho normal](batch-deleting-vb/_static/image10.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: ee1b17ac4802ecbd92e571a62c491bc9a49a3560
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401589"
 ---
 # <a name="aspnet-mvc-performance"></a>Desempenho do ASP.NET MVC
@@ -20,6 +20,6 @@ ms.locfileid: "59401589"
 > Recursos para otimizar o desempenho de aplicativos ASP.NET MVC.
 
 
-- [Usando métodos assíncronos no ASP.NET MVC 4](using-asynchronous-methods-in-aspnet-mvc-4.md)
+- [Uso de métodos assíncronos no ASP.NET MVC 4](using-asynchronous-methods-in-aspnet-mvc-4.md)
 - [Analisar e depurar seu aplicativo do ASP.NET MVC com Glimpse](profile-and-debug-your-aspnet-mvc-app-with-glimpse.md)
 - [Agrupamento e minificação](bundling-and-minification.md)

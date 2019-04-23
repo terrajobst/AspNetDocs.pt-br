@@ -12,7 +12,7 @@ ms.openlocfilehash: 01bfda20b12dddac3a564b2222e8d069fa0e8ee9
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406334"
 ---
 # <a name="how-do-i--create-a-custom-user-control-in-aspnet"></a>[Como fazer:]  Criar um controle de usuário personalizada no ASP.NET?

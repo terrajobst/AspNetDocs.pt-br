@@ -12,7 +12,7 @@ ms.openlocfilehash: b79beb79b4ba87fd031f2f2de04a5078d42fa866
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401914"
 ---
 # <a name="how-do-i-use-a-hidden-field-to-store-and-manipulate-client-side-information"></a>[Como fazer:] Usar um campo oculto para Store e manipular informações do lado do cliente

@@ -12,7 +12,7 @@ ms.openlocfilehash: 36bc314c6709c34863d86158419257be99f4084f
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407101"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
@@ -31,14 +31,14 @@ ms.locfileid: "59407101"
     - [Modelos de projeto incluem versões atualizadas do jQuery, o jQuery UI e o jQuery validação](#tu-UpdatedJQuery)
     - [Modelos de projeto agora incluem o ADO.NET Entity Framework 4.1 como um pacote do NuGet pré-instalados](#tu-EF)
     - [Modelos de projeto incluem bibliotecas JavaScript como previamente instalados pacotes do NuGet](#tu-JavaScriptLibsNuget)
-    - [Problemas Conhecidos](#tu-KI)
+    - [Problemas conhecidos](#tu-KI)
 - [RTM do ASP.NET MVC 3 (13 de janeiro de 2011)](#MVC3RTM)
 
     - [Alteração: A versão atualizada do jQuery UI para 1.8.7](#RTM-1)
     - [Alteração: Alterado o padrão ModelMetadataProvider de volta para DataAnnotationsModelMetadataProvider](#RTM-2)
     - [Corrigido: Colando a parte de uma expressão Razor que contém os resultados de espaço em branco nele que está sendo revertido](#RTM-3)
     - [Corrigido: Renomear um arquivo Razor que é aberto no editor de desabilita a colorização de sintaxe e IntelliSense](#RTM-4)
-    - [Problemas Conhecidos](#RTM-KI)
+    - [Problemas conhecidos](#RTM-KI)
     - [Alterações significativas](#RTM-BC)
 - [O ASP.NET MVC 3 versão Release Candidate 2 (10 de dezembro de 2010)](#_Toc2)
 
@@ -56,7 +56,7 @@ ms.locfileid: "59407101"
     - [Auxiliar de fixa "LabelFor" para emitir o valor correto para o atributo "For"](#_Toc2_11)
     - [Método fixa "RenderAction" dar prioridade valores explícitos durante a associação de modelo](#_Toc2_12)
     - [Alterações significativas](#_Toc2_BC)
-    - [Problemas Conhecidos](#_Toc2_KI)
+    - [Problemas conhecidos](#_Toc2_KI)
 - [O ASP.NET MVC 3 versão Release Candidate (9 de novembro de 2010)](#TOC_ASP_NET_3_RC)
 
     - [Novos recursos no ASP.NET MVC 3 RC](#_Toc276711785)
@@ -69,7 +69,7 @@ ms.locfileid: "59407101"
     - [Melhorias da caixa de diálogo "Add View"](#_Toc276711792)
     - [Validação de solicitação granular](#_Toc276711793)
     - [Alterações significativas](#_Toc276711794)
-    - [Problemas Conhecidos](#_Toc276711795)
+    - [Problemas conhecidos](#_Toc276711795)
 - [ASP. Notas de versão Beta MVC 3 (6 de outubro de 2010)](#TOC_ASP_NET_3_Beta)
 
     - [Novos recursos na versão Beta do ASP.NET MVC 3](#0.1__Toc274034215)
@@ -85,10 +85,10 @@ ms.locfileid: "59407101"
     - [Novo suporte para a sintaxe do Razor VBHTML](#0.1__Toc274034225)
     - [Controle mais Granular sobre ValidateInputAttribute](#0.1__Toc274034226)
     - [Os auxiliares de converter sublinhados hifens para nomes de atributo HTML especificados usando objetos anônimos](#0.1__Toc274034227)
-    - [Correções de Bug](#0.1__Toc274034228)
+    - [Correções de bugs](#0.1__Toc274034228)
     - [Alterações significativas](#0.1__Toc274034229)
-    - [Problemas Conhecidos](#0.1__Toc274034230)
-- [Aviso de isenção de responsabilidade](#0.1__Toc274034231)
+    - [Problemas conhecidos](#0.1__Toc274034230)
+- [Isenção de responsabilidade](#0.1__Toc274034231)
 
 <a id="overview"></a>
 ## <a name="overview"></a>Visão geral

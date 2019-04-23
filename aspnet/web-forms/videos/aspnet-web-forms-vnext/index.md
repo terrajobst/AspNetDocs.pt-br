@@ -12,7 +12,7 @@ ms.openlocfilehash: 3b3efb3d5356d6009b86b93405de2cd8d8cddd43
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404228"
 ---
 # <a name="aspnet-45"></a>ASP.NET 4.5
@@ -21,9 +21,9 @@ ms.locfileid: "59404228"
 
 
 - [Controles de dados fortemente tipados](aspnet-vnext-videos-strongly-typed-data-controls.md)
-- [Model binding parte 1: Selecionar dados](aspnet-vnext-videos-model-binding-part-1-selecting-data.md)
-- [Model binding parte 2: Filtragem](aspnet-vnext-videos-model-binding-part-2-filtering.md)
-- [Model binding parte 3: Atualização](aspnet-vnext-videos-model-binding-part-3-updating.md)
+- [Model binding parte 1: selecionar dados](aspnet-vnext-videos-model-binding-part-1-selecting-data.md)
+- [Model binding parte 2: filtragem](aspnet-vnext-videos-model-binding-part-2-filtering.md)
+- [Model binding parte 3: atualização](aspnet-vnext-videos-model-binding-part-3-updating.md)
 - [Model binding do Web Forms do ASP.NET 4.5](aspnet-45-web-forms-model-binding.md)
 - [Controles de dados fortemente tipados do Web Forms do ASP.NET 4.5](aspnet-45-web-forms-strong-typed-data-controls.md)
 - [Agrupamento e minificação](aspnet-vnext-videos-bundling-and-minification.md)

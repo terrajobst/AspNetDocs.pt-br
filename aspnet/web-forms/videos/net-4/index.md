@@ -12,7 +12,7 @@ ms.openlocfilehash: ea11b464329a755d5625797327f5a0a3ccb0f426
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400575"
 ---
 # <a name="net-4"></a>.NET 4
@@ -28,11 +28,11 @@ ms.locfileid: "59400575"
     - [Modelos de dados do AJAX](ajax/aspnet-4-quick-hit-ajax-data-templates.md)
 - [Gráfico](chart/index.md)
 
-    - [Controle Chart](chart/aspnet-4-quick-hit-chart-control.md)
+    - [Controle de Gráfico](chart/aspnet-4-quick-hit-chart-control.md)
     - [Apresentação do novo controle de gráfico no Visual Studio 2010](chart/aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)
-- [Núcleo](core/index.md)
+- [Core](core/index.md)
 
-    - [Inicialização automática](core/aspnet-4-quick-hit-auto-start.md)
+    - [Inicialização Automática](core/aspnet-4-quick-hit-auto-start.md)
     - [Limpar arquivos Web.config](core/aspnet-4-quick-hit-clean-webconfig-files.md)
     - [IDs de cliente previsíveis](core/aspnet-4-quick-hit-predictable-client-ids.md)
     - [Método de utilitário HtmlEncoder](core/aspnet-4-quick-hit-the-htmlencoder-utility-method.md)
@@ -50,7 +50,7 @@ ms.locfileid: "59400575"
 
     - [Estado de exibição seletiva](performance/aspnet-4-quick-hit-selective-view-state.md)
     - [Compactação de estado fácil](performance/aspnet-4-quick-hit-easy-state-compression.md)
-    - [Usar a propriedade ViewStateMode para gerenciamento de ViewState](performance/how-do-i-use-the-viewstatemode-property-for-managing-viewstate.md)
+    - [Usar a propriedade ViewStateMode para o gerenciamento de ViewState](performance/how-do-i-use-the-viewstatemode-property-for-managing-viewstate.md)
 - [Roteamento](routing/index.md)
 
     - [Redirecionamento permanente](routing/aspnet-4-quick-hit-permanent-redirect.md)

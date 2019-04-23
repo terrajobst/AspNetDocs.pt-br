@@ -12,7 +12,7 @@ ms.openlocfilehash: 388637d67594d6431a134673cf85b3b18098136e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402746"
 ---
 # <a name="performing-batch-updates-c"></a>Executar atualizações em lote (C#)
@@ -29,7 +29,7 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 No [tutorial anterior](an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md) , examinamos como criar um DataList de nível de item. Como o GridView editável padrão, cada item no DataList incluído uma edição botão que, quando clicado, seria tornar o item editável. Embora esse nível de item edição funciona bem para dados que só são atualizadas ocasionalmente, determinados cenários de caso de uso exigem que o usuário editar vários registros. Se um usuário precise editar dezenas de registros e é forçado a clicar em Editar, fazer suas alterações e clique em atualizar para cada um deles, a quantidade de clicar em pode dificultar sua produtividade. Em tais situações, uma opção melhor é fornecer uma DataList totalmente editável, aquele em que *todos os* seus itens estão no modo de edição e cujos valores podem ser editados clicando em um botão Atualizar tudo na página (consulte a Figura 1).
 
 
-[![EACH Item em uma DataList totalmente editáveis pode ser modificada](performing-batch-updates-cs/_static/image2.png)](performing-batch-updates-cs/_static/image1.png)
+[![Cada Item em uma DataList totalmente editáveis pode ser modificado.](performing-batch-updates-cs/_static/image2.png)](performing-batch-updates-cs/_static/image1.png)
 
 **Figura 1**: Cada Item em uma DataList totalmente editáveis pode ser modificado ([clique para exibir a imagem em tamanho normal](performing-batch-updates-cs/_static/image3.png))
 
@@ -50,7 +50,7 @@ Para uma DataList totalmente editável, queremos *todos os* da `DataListItem` s 
 Comece abrindo o `BatchUpdate.aspx` página, adicione um controle DataList e defina sua `ID` propriedade `Suppliers`. Da marca inteligente DataList s, optar por adicionar um novo controle ObjectDataSource chamado `SuppliersDataSource`.
 
 
-[![Ccriar um novo ObjectDataSource chamado SuppliersDataSource](performing-batch-updates-cs/_static/image5.png)](performing-batch-updates-cs/_static/image4.png)
+[![Criar um novo ObjectDataSource chamado SuppliersDataSource](performing-batch-updates-cs/_static/image5.png)](performing-batch-updates-cs/_static/image4.png)
 
 **Figura 2**: Criar um novo ObjectDataSource nomeado `SuppliersDataSource` ([clique para exibir a imagem em tamanho normal](performing-batch-updates-cs/_static/image6.png))
 
@@ -63,7 +63,7 @@ Configurar o ObjectDataSource para recuperar dados usando o `SuppliersBLL` class
 **Figura 3**: Recuperar informações de fornecedor usando a `GetSuppliers()` método ([clique para exibir a imagem em tamanho normal](performing-batch-updates-cs/_static/image9.png))
 
 
-[![SET a lista suspensa como (nenhum) no guia de atualização](performing-batch-updates-cs/_static/image11.png)](performing-batch-updates-cs/_static/image10.png)
+[![Definir a lista suspensa como (nenhum) no guia de atualização](performing-batch-updates-cs/_static/image11.png)](performing-batch-updates-cs/_static/image10.png)
 
 **Figura 4**: Defina a lista suspensa como (nenhum) no guia de atualização ([clique para exibir a imagem em tamanho normal](performing-batch-updates-cs/_static/image12.png))
 
@@ -87,7 +87,7 @@ No `ItemTemplate` eu m usando duas novas classes CSS, `SupplierPropertyLabel` e 
 Depois de fazer essas alterações, visite esta página por meio de um navegador. Como mostra a Figura 5, cada item DataList exibe o nome do fornecedor como texto e usa caixas de texto para exibir o endereço, cidade e país.
 
 
-[![EACH Supplier no DataList é editável](performing-batch-updates-cs/_static/image14.png)](performing-batch-updates-cs/_static/image13.png)
+[![Cada fornecedor no DataList é editável](performing-batch-updates-cs/_static/image14.png)](performing-batch-updates-cs/_static/image13.png)
 
 **Figura 5**: Cada fornecedor no DataList é editável ([clique para exibir a imagem em tamanho normal](performing-batch-updates-cs/_static/image15.png))
 
@@ -104,7 +104,7 @@ Comece adicionando um controle da Web de botão acima do DataList e o conjunto d
 Figura 6 mostra a página após os atualização de todos os botões foram adicionados.
 
 
-[![TAtualização WO todos os botões foram adicionados à página](performing-batch-updates-cs/_static/image17.png)](performing-batch-updates-cs/_static/image16.png)
+[![Dois atualização todos os botões foram adicionados à página](performing-batch-updates-cs/_static/image17.png)](performing-batch-updates-cs/_static/image16.png)
 
 **Figura 6**: Dois atualização todos os botões foram adicionados à página ([clique para exibir a imagem em tamanho normal](performing-batch-updates-cs/_static/image18.png))
 

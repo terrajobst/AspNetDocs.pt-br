@@ -12,7 +12,7 @@ ms.openlocfilehash: cc5f283a6f97a83fdb157f54e5b3b020254f5203
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404839"
 ---
 # <a name="protecting-connection-strings-and-other-configuration-information-vb"></a>Proteger cadeias de conexão e outras informações de configuração (VB)
@@ -31,7 +31,7 @@ Informações de configuração para aplicativos ASP.NET é geralmente são arma
 Uma vez que `Web.config` pode conter dados confidenciais, como cadeias de caracteres de conexão, é importante que o conteúdo de `Web.config` sejam mantidos seguros e ocultos dos visualizadores não autorizados. Por padrão, qualquer HTTP de solicitação para um arquivo com o `.config` extensão é tratada pelo mecanismo ASP.NET, que retorna o *esse tipo de página não é atendido* mensagem mostrada na Figura 1. Isso significa que os visitantes não poderá ver sua `Web.config` s o conteúdo do arquivo, basta inserir http://www.YourServer.com/Web.config na sua barra de endereços do navegador s.
 
 
-[![Visiting Web. config por meio de um navegador retorna esse tipo de página não é atendido mensagem](protecting-connection-strings-and-other-configuration-information-vb/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image1.png)
+[![Visitar o Web. config por meio de um navegador retorna esse tipo de página não é atendido mensagem](protecting-connection-strings-and-other-configuration-information-vb/_static/image2.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image1.png)
 
 **Figura 1**: Visitar `Web.config` por meio de um navegador retorna esse tipo de página não é atendida mensagem ([clique para exibir a imagem em tamanho normal](protecting-connection-strings-and-other-configuration-information-vb/_static/image3.png))
 
@@ -83,7 +83,7 @@ Sob a caixa de texto, adicione dois controles de botão chamados `EncryptConnStr
 Neste ponto, sua tela deve ser semelhante da Figura 2.
 
 
-[![Add uma caixa de texto e dois controles de Web de botão para a página](protecting-connection-strings-and-other-configuration-information-vb/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image4.png)
+[![Adicione uma caixa de texto e dois controles de Web de botão à página](protecting-connection-strings-and-other-configuration-information-vb/_static/image5.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image4.png)
 
 **Figura 2**: Adicione uma caixa de texto e dois controles de Web de botão à página ([clique para exibir a imagem em tamanho normal](protecting-connection-strings-and-other-configuration-information-vb/_static/image6.png))
 
@@ -111,7 +111,7 @@ Depois de chamar o `ProtectSection(provider)` ou `UnprotectSection` método, voc
 Depois que você inseriu o código acima, testá-lo visitando o `EncryptingConfigSections.aspx` página por meio de um navegador. Inicialmente, você verá uma página que lista o conteúdo do `Web.config` com o `<connectionStrings>` seção exibida em texto sem formatação (veja a Figura 3).
 
 
-[![Add uma caixa de texto e dois controles de Web de botão para a página](protecting-connection-strings-and-other-configuration-information-vb/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image7.png)
+[![Adicione uma caixa de texto e dois controles de Web de botão à página](protecting-connection-strings-and-other-configuration-information-vb/_static/image8.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image7.png)
 
 **Figura 3**: Adicione uma caixa de texto e dois controles de Web de botão à página ([clique para exibir a imagem em tamanho normal](protecting-connection-strings-and-other-configuration-information-vb/_static/image9.png))
 
@@ -126,7 +126,7 @@ Para obter mais informações sobre a validação de solicitação, sua finalida
 Depois de desabilitar a validação de solicitação para a página, tente clicar no botão criptografar cadeias de caracteres de Conexão novamente. No postback, o arquivo de configuração será acessado e sua `<connectionStrings>` seção criptografada usando o provedor DPAPI. A caixa de texto, em seguida, é atualizada para exibir o novo `Web.config` conteúdo. Como mostra a Figura 4, o `<connectionStrings>` informações agora são criptografadas.
 
 
-[![Clicking a criptografar Conexão cadeias de caracteres de botão criptografa o &lt;connectionString&gt; seção](protecting-connection-strings-and-other-configuration-information-vb/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image10.png)
+[![Clicar a criptografar Conexão cadeias de caracteres de botão criptografa o &lt;connectionString&gt; seção](protecting-connection-strings-and-other-configuration-information-vb/_static/image11.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image10.png)
 
 **Figura 4**: Clicar a criptografar Conexão cadeias de caracteres de botão criptografa o `<connectionString>` seção ([clique para exibir a imagem em tamanho normal](protecting-connection-strings-and-other-configuration-information-vb/_static/image12.png))
 
@@ -143,7 +143,7 @@ O criptografado `<connectionStrings>` seção gerada no meu computador segue, em
 Quando as informações de cadeia de caracteres de conexão são acessadas de `Web.config` - o código que escrevemos, de um controle SqlDataSource, ou o código gerado automaticamente da TableAdapters em nossos conjuntos de dados tipados - é automaticamente descriptografada. Em resumo, não precisamos adicionar qualquer código extra ou lógica para descriptografar o criptografado `<connectionString>` seção. Para demonstrar isso, visite um dos tutoriais anteriores neste momento, como o tutorial simples para exibição da seção de relatórios básicos (`~/BasicReporting/SimpleDisplay.aspx`). Como mostra a Figura 5, o tutorial funciona exatamente como o que desejávamos, indicando que as informações de cadeia de caracteres de conexão criptografada está sendo descriptografadas automaticamente pela página ASP.NET.
 
 
-[![Tele camada de acesso a dados descriptografa automaticamente as informações de cadeia de caracteres de Conexão](protecting-connection-strings-and-other-configuration-information-vb/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image13.png)
+[![A camada de acesso a dados descriptografa automaticamente as informações de cadeia de caracteres de Conexão](protecting-connection-strings-and-other-configuration-information-vb/_static/image14.png)](protecting-connection-strings-and-other-configuration-information-vb/_static/image13.png)
 
 **Figura 5**: A camada de acesso a dados descriptografa automaticamente as informações de cadeia de caracteres de Conexão ([clique para exibir a imagem em tamanho normal](protecting-connection-strings-and-other-configuration-information-vb/_static/image15.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: 056e89b20ccab0e56b1fab422c817d842beff446
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400835"
 ---
 # <a name="using-textboxwatermark-in-a-formview-vb"></a>Uso de TextBoxWatermark em um FormView (VB)
@@ -49,7 +49,7 @@ Lembre-se o nome (`ID`) da fonte de dados, pois ele será usado o `DataSourceID`
 Agora quando o usuário altera no modo de inserção do `FormView` controlar, o campo de texto para o novo fornecedor é previamente preenchido obrigado a `TextBoxWatermarkExtender` controle. Um clique na caixa de texto permite que o texto do enchimento desaparecer.
 
 
-[![Tmarca d'água de he no campo vem do extensor](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
+[![A marca d'água no campo vem do extensor](using-textboxwatermark-in-a-formview-vb/_static/image2.png)](using-textboxwatermark-in-a-formview-vb/_static/image1.png)
 
 A marca d'água no campo vem do extensor ([clique para exibir a imagem em tamanho normal](using-textboxwatermark-in-a-formview-vb/_static/image3.png))
 

@@ -12,7 +12,7 @@ ms.openlocfilehash: e34581130cebaef7a7bcd057e99642cb94936bfa
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399237"
 ---
 # <a name="mvc-music-store-part-2-controllers"></a>Loja de Música do MVC parte 2: Controladores

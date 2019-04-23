@@ -12,7 +12,7 @@ ms.openlocfilehash: e0b540c030bf600def9b9efad4c73f055a343851
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402824"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Acessar dados do modelo por meio de um controlador
@@ -26,7 +26,7 @@ Nesta seção, vamos criar uma nova classe MoviesController e escrever um códig
 
 Clique com o botão direito na pasta Controllers e fazer uma nova MoviesController.
 
-[![Add Controller](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
+[![Adicionar controlador](getting-started-with-mvc-part5/_static/image2.png)](getting-started-with-mvc-part5/_static/image1.png)
 
 Isso criará um novo arquivo de "MoviesController.cs" sob a nossa pasta \Controllers dentro do nosso projeto. Vamos atualizar o MovieController para recuperar a lista de filmes do nosso banco de dados recentemente populado.
 
@@ -42,11 +42,11 @@ Lembre-se de que quando você criou uma nova classe, você precisará compilar s
 
 Clique em Adicionar e o sistema gerará automaticamente o código para um modo de exibição para nós que exibe nossa lista de filmes. Isso é um bom momento para alterar o &lt;h2&gt; título para algo como "Minha lista de filmes" como fizemos anteriormente com a exibição de Hello World.
 
-[![Movies - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
+[![Filmes - Microsoft Visual Web Developer 2010 Express](getting-started-with-mvc-part5/_static/image5.png)](getting-started-with-mvc-part5/_static/image4.png)
 
 Executar o aplicativo e visite /Movies na barra de endereços. Agora nós dados recuperados do banco de dados usando uma consulta básica do controlador e os dados retornados a uma exibição que sabe sobre filmes. Esse modo de exibição gira através da lista de filmes e cria uma tabela de dados para nós.
 
-[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
+[![Lista de filmes - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image7.png)](getting-started-with-mvc-part5/_static/image6.png)
 
 Nós não implementará funcionalidade de edição, detalhes e exclusão com este aplicativo - portanto, não precisamos de links padrão que o modelo de scaffold criado para nós. Abra o arquivo /Movies/Index.aspx e removê-los.
 
@@ -56,7 +56,7 @@ Aqui está o código-fonte para o nosso modelo de exibição atualizado aparênc
 
 Criação de links que não precisamos, portanto, nós os excluiremos para este exemplo. Vamos manter nosso criar novo link no entanto, como o que vem a seguir! Aqui está a aparência de nosso aplicativo com aquela coluna removida.
 
-[![Movie lista - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
+[![Lista de filmes - Windows Internet Explorer](getting-started-with-mvc-part5/_static/image9.png)](getting-started-with-mvc-part5/_static/image8.png)
 
 Agora temos uma lista simples de nossos dados de filme. No entanto, se podemos clicar no link "Criar novo", obterá um erro pois ele não está associado! Vamos implementar um método de ação de criar e habilitar um usuário a inserir novos filmes em nosso banco de dados.
 

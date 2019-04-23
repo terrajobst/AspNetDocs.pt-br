@@ -13,7 +13,7 @@ ms.openlocfilehash: 5634a5d766cdceffc509962d80b0aaa8880d2f8b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397091"
 ---
 # <a name="aspnet-4x-identity-features--api"></a>Recursos de identidade do ASP.NET 4.x e API
@@ -23,4 +23,4 @@ ms.locfileid: "59397091"
 
 - [Melhores práticas para implantar senhas e outros dados confidenciais no ASP.NET e no Serviço de Aplicativo do Azure](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
 - [Confirmação de conta e recuperação de senha na Identidade do ASP.NET (C#)](account-confirmation-and-password-recovery-with-aspnet-identity.md)
-- [Autenticação de dois fatores usando SMS e email com o ASP.NET Identity](two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
+- [Autenticação de dois fatores usando SMS e email com a Identidade do ASP.NET](two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)

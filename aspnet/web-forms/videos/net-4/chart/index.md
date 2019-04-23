@@ -12,7 +12,7 @@ ms.openlocfilehash: c3b2a46119873baf18e953a2d221d544feccbc26
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407296"
 ---
 # <a name="chart"></a>Gráfico
@@ -20,5 +20,5 @@ ms.locfileid: "59407296"
 > Este conjunto de vídeos mostra como usar o controle de gráfico do ASP.NET para criar a exibição de dados visualmente atraente.
 
 
-- [Controle Chart](aspnet-4-quick-hit-chart-control.md)
+- [Controle de Gráfico](aspnet-4-quick-hit-chart-control.md)
 - [Apresentação do novo controle de gráfico no Visual Studio 2010](aspnet-4-how-do-i-introducing-the-new-chart-control-in-visual-studio-2010.md)

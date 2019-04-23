@@ -12,7 +12,7 @@ ms.openlocfilehash: 328dc6fb61ac562131b11b36b40f574ca5a53866
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397364"
 ---
 # <a name="code-editing-aspnet-web-forms-in-visual-studio-2013"></a>Edição de código de Web Forms do ASP.NET no Visual Studio 2013
@@ -59,7 +59,7 @@ Nesta parte do passo a passo, você criará um projeto de aplicativo Web e adici
 3. Selecione o **modelos**  - &gt; **Visual c#**  - &gt; **Web** grupo de modelos à esquerda.
 4. Escolha o **aplicativo Web ASP.NET** modelo na coluna central.
 5. Nomeie o projeto ***BasicWebApp*** e clique no **Okey** botão.   
-![Caixa de diálogo Novo Projeto](code-editing-in-web-forms-pages/_static/image2.png)
+![Caixa de diálogo Novo projeto](code-editing-in-web-forms-pages/_static/image2.png)
 6. Em seguida, selecione a **Web Forms** modelo e clique no **Okey** botão para criar o projeto.  
 ![Caixa de diálogo Novo projeto ASP.NET](code-editing-in-web-forms-pages/_static/image3.png)  
 
@@ -77,7 +77,7 @@ Quando você cria um novo aplicativo do Web Forms usando o **aplicativo Web ASP.
 1. Na **Gerenciador de soluções**, clique no nome do aplicativo Web (neste tutorial é o nome do aplicativo **BasicWebSite**) e, em seguida, clique em **Add**  - &gt; **Novo Item**.   
 A caixa de diálogo **Adicionar Novo Item** é exibida.
 2. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Em seguida, selecione **Web Form** do meio lista e nomeie-o *FirstWebPage*.   
-    ![Caixa de diálogo Adicionar Novo Item](code-editing-in-web-forms-pages/_static/image4.png)
+    ![Adicionar caixa de diálogo Novo Item](code-editing-in-web-forms-pages/_static/image4.png)
 3. Clique em **adicionar** para adicionar a página de Web Forms ao seu projeto.  
  Visual Studio cria a nova página e ele é aberto.
 4. Em seguida, defina essa nova página como a página de inicialização padrão. Na **Gerenciador de soluções**, clique com botão direito a nova página denominada *FirstWebPage* e selecione **definir como página inicial**. Na próxima vez que você executar esse aplicativo para testar nosso progresso, você será automaticamente consulte essa nova página no navegador.

@@ -12,7 +12,7 @@ ms.openlocfilehash: 34d5d109785f5c8fb1daec65293f9b77e947c338
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403864"
 ---
 # <a name="how-do-i-create-an-efficient-and-standardized-approach-for-implementing-css-styles"></a>Como faço Criar uma abordagem eficiente e padronizada para implementar estilos CSS?

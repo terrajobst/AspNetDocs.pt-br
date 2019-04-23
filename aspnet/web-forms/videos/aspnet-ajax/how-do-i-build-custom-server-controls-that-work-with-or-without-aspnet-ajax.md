@@ -12,7 +12,7 @@ ms.openlocfilehash: 81fcc7b533f682d5f515847150345b08aff3d984
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398235"
 ---
 # <a name="how-do-i-build-custom-server-controls-that-work-with-or-without-aspnet-ajax"></a>[Como fazer:] Criar controles de servidor personalizado que funcionem com ou sem o ASP.NET AJAX?

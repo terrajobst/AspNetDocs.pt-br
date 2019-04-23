@@ -12,7 +12,7 @@ ms.openlocfilehash: 41b7c5daa3638eaab25379cdb9bd13fa807823ca
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398417"
 ---
 # <a name="iis7-playlists"></a>Listas de reprodução do IIS7
@@ -24,4 +24,4 @@ Se você estiver hospedando os arquivos de mídia no seu site da web, listas de 
 [&#9654;Assista ao vídeo (8 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/iis7-playlists)
 
 > [!div class="step-by-step"]
-> [Voltar](bit-rate-throttling.md)
+> [Anterior](bit-rate-throttling.md)

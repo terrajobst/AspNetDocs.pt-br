@@ -12,7 +12,7 @@ ms.openlocfilehash: 7a73b6657e6f074cac5e63c907924a8cae68e60e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397172"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010

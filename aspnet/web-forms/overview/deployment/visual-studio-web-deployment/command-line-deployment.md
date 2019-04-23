@@ -12,7 +12,7 @@ ms.openlocfilehash: c9aadec642837953dde4cf3e89ec9a7d484b380e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401329"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação por linha de comando

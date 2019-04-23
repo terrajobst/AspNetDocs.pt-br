@@ -12,7 +12,7 @@ ms.openlocfilehash: a62c821159cd097507019d5efb29e01958ec9fba
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398092"
 ---
 # <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Criação de Projetos Web do ASP.NET no Visual Studio 2013
@@ -383,7 +383,7 @@ Para obter informações sobre como criar aplicativos que usam **nuvem - organiz
 
 - [Autenticação do Azure](../2012/windows-azure-authentication.md)
 - [Adicionando logon ao seu aplicativo Web usando o Azure AD](https://msdn.microsoft.com/library/windowsazure/dn151790.aspx)
-- [Desenvolver aplicativos do ASP.NET com o Azure Active Directory](../../../identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
+- [Desenvolvendo aplicativos do ASP.NET com o Azure Active Directory](../../../identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
 - [Proteger API da Web ASP.NET com o Azure AD e os componentes Microsoft OWIN](https://msdn.microsoft.com/magazine/dn463788.aspx)
 
 Os tutoriais ainda não foram atualizados para o Visual Studio 2013; alguns dos quais os tutoriais direcionará você para fazer manualmente é automatizado no Visual Studio 2013.

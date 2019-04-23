@@ -12,7 +12,7 @@ ms.openlocfilehash: a7b8b85ba1cf5c18e605eb8114a305272baf41a6
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404865"
 ---
 # <a name="creating-custom-routes-vb"></a>Criação de rotas personalizadas (VB)
@@ -61,7 +61,7 @@ Observe que o método Entry() na listagem 2 aceita um parâmetro do tipo DateTim
 **Figura 1 – erro de conversão de parâmetro**
 
 
-[![Tcaixa de diálogo Novo projeto he](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
+[![A caixa de diálogo Novo projeto](creating-custom-routes-vb/_static/image1.jpg)](creating-custom-routes-vb/_static/image1.png)
 
 **Figura 01**: Erro de conversão de parâmetro ([clique para exibir a imagem em tamanho normal](creating-custom-routes-vb/_static/image2.png))
 

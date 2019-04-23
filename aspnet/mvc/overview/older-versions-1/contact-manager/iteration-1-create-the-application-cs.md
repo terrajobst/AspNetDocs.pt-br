@@ -12,7 +12,7 @@ ms.openlocfilehash: 5b3883d8a73d50039dfe6f11f757a0f1cb7ece3a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400965"
 ---
 # <a name="iteration-1--create-the-application-c"></a>Iteração #1 – criar o aplicativo (c#)
@@ -91,7 +91,7 @@ Projeto de aplicativo Web ASP.NET MVC. Inicie o Visual Studio e selecione a opç
 Certifique-se de que você tenha o .NET Framework 3.5 está selecionada na lista suspensa na parte superior direita do **novo projeto** caixa de diálogo. Caso contrário, o modelo de aplicativo Web ASP.NET MVC não aparecerá.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image1.jpg)](iteration-1-create-the-application-cs/_static/image1.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image1.jpg)](iteration-1-create-the-application-cs/_static/image1.png)
 
 **Figura 01**: A caixa de diálogo Novo projeto ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image2.png))
 
@@ -103,7 +103,7 @@ Aplicativo ASP.NET MVC, o **criar o projeto de teste de unidade** caixa de diál
 > Como o Visual Web Developer não oferece suporte a projetos de teste, você obtém a caixa de diálogo Criar projeto de teste de unidade ao usar o Visual Web Developer.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image2.jpg)](iteration-1-create-the-application-cs/_static/image3.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image2.jpg)](iteration-1-create-the-application-cs/_static/image3.png)
 
 **Figura 02**: A caixa de diálogo Criar projeto de teste de unidade ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image4.png))
 
@@ -111,7 +111,7 @@ Aplicativo ASP.NET MVC, o **criar o projeto de teste de unidade** caixa de diál
 Aplicativo ASP.NET MVC aparece na janela do Gerenciador de soluções do Visual Studio (veja a Figura 3). Se don t vir a janela do Gerenciador de soluções, em seguida, você pode abrir essa janela, selecionando a opção de menu **exibir, Gerenciador de soluções**. Observe que a solução contém dois projetos: o projeto ASP.NET MVC e o projeto de teste. O projeto ASP.NET MVC é denominado ContactManager, e o projeto de teste ContactManager.Tests.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image3.jpg)](iteration-1-create-the-application-cs/_static/image5.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image3.jpg)](iteration-1-create-the-application-cs/_static/image5.png)
 
 **Figura 03**: A janela do Gerenciador de soluções ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image6.png))
 
@@ -141,7 +141,7 @@ A estrutura ASP.NET MVC com qualquer banco de dados moderna, incluindo bancos de
 Crie um novo banco de dados clicando com o aplicativo\_pasta de dados na janela Gerenciador de soluções e selecionando a opção de menu **adicionar, Item novo**. No **Adicionar Novo Item** caixa de diálogo, selecione o **dados** categoria e o **banco de dados do SQL Server** modelo (consulte a Figura 4). Nomeie o novo banco de dados ContactManagerDB.mdf e clique no botão Okey.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image4.jpg)](iteration-1-create-the-application-cs/_static/image7.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image4.jpg)](iteration-1-create-the-application-cs/_static/image7.png)
 
 **Figura 04**: Criando um novo banco de dados do Microsoft SQL Server Express ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image8.png))
 
@@ -156,7 +156,7 @@ Depois de criar o novo banco de dados, o banco de dados é exibida no aplicativo
 Você pode usar a janela do Gerenciador de servidores para criar novos objetos de banco de dados como tabelas de banco de dados, exibições, gatilhos e procedimentos armazenados. Clique com botão direito na pasta tabelas e selecione a opção de menu **adicionar nova tabela**. O Designer de tabela do banco de dados é exibida (consulte a Figura 5).
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image5.jpg)](iteration-1-create-the-application-cs/_static/image9.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image5.jpg)](iteration-1-create-the-application-cs/_static/image9.png)
 
 **Figura 05**: O Designer de tabela do banco de dados ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image10.png))
 
@@ -203,22 +203,22 @@ Siga estas etapas para criar as classes de modelo de dados:
 5. No **Choose Your Database Objects** etapa, marque a caixa de seleção rotulada como tabelas (consulte a Figura 9). O modelo de dados incluirá todas as tabelas contidas no banco de dados (há apenas um, a tabela Contatos). Insira o namespace *modelos*. Clique no botão Concluir para concluir o assistente.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image6.jpg)](iteration-1-create-the-application-cs/_static/image11.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image6.jpg)](iteration-1-create-the-application-cs/_static/image11.png)
 
 **Figura 06**: A caixa de diálogo Add New Item ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image12.png))
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image7.jpg)](iteration-1-create-the-application-cs/_static/image13.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image7.jpg)](iteration-1-create-the-application-cs/_static/image13.png)
 
 **Figura 07**: Escolha o modelo de conteúdo ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image14.png))
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image8.jpg)](iteration-1-create-the-application-cs/_static/image15.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image8.jpg)](iteration-1-create-the-application-cs/_static/image15.png)
 
 **Figura 08**: Escolha sua Conexão de dados ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image16.png))
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image9.jpg)](iteration-1-create-the-application-cs/_static/image17.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image9.jpg)](iteration-1-create-the-application-cs/_static/image17.png)
 
 **Figura 09**: Escolha seus objetos de banco de dados ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image18.png))
 
@@ -228,7 +228,7 @@ Depois de concluir o Assistente de modelo de dados de entidade, o Designer de mo
 O Assistente de modelo de dados de entidade gera nomes de classes com base em nomes de tabela do banco de dados. Quase sempre você precisará alterar o nome da classe gerada pelo assistente. A classe de contatos no designer com o botão direito e selecione a opção de menu **Renomear**. Altere o nome da classe de contatos (plurais) para o contato (singular). Depois de alterar o nome de classe, a classe deve aparecer semelhante à Figura 10.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image10.jpg)](iteration-1-create-the-application-cs/_static/image19.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image10.jpg)](iteration-1-create-the-application-cs/_static/image19.png)
 
 **Figura 10**: A classe de contato ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image20.png))
 
@@ -242,7 +242,7 @@ A próxima etapa é criar nosso controlador Home. O controlador Home é o contro
 Criar a classe de controlador Home clicando duas vezes na pasta controladores na janela do Gerenciador de soluções e selecionando a opção de menu **Add, controlador** (veja a Figura 11). Observe a caixa de seleção rotulada **adicionar métodos de ação para criar, atualizar e detalhes cenários**. Verifique se essa caixa de seleção está marcada antes de clicar na **adicionar** botão.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image11.jpg)](iteration-1-create-the-application-cs/_static/image21.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image11.jpg)](iteration-1-create-the-application-cs/_static/image21.png)
 
 **Figura 11**: Adicionando o controlador Home ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image22.png))
 
@@ -272,7 +272,7 @@ Agora que estamos ve criou o controlador de índice, em seguida, precisamos cria
 Criar o modo de exibição do índice clicando duas vezes o método Index () e selecionando a opção de menu **adicionar exibição** (veja a Figura 12). Selecionar essa opção de menu abre a **adicionar exibição** caixa de diálogo (consulte a Figura 13).
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image12.jpg)](iteration-1-create-the-application-cs/_static/image23.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image12.jpg)](iteration-1-create-the-application-cs/_static/image23.png)
 
 **Figura 12**: Adicionando o modo de exibição de índice ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image24.png))
 
@@ -280,7 +280,7 @@ Criar o modo de exibição do índice clicando duas vezes o método Index () e s
 No **adicionar exibição** caixa de diálogo, marque a caixa de seleção **criar uma exibição fortemente tipada**. Selecione a classe de dados de exibição ContactManager.Models.Contact e a lista de conteúdo do modo de exibição. Selecione essas opções gera uma exibição que exibe uma lista de registros de contato.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image13.jpg)](iteration-1-create-the-application-cs/_static/image25.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image13.jpg)](iteration-1-create-the-application-cs/_static/image25.png)
 
 **Figura 13**: A caixa de diálogo Adicionar modo de exibição ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image26.png))
 
@@ -300,7 +300,7 @@ Precisamos fazer uma modificação para a exibição de índice. Porque não est
 Depois de modificar o modo de exibição de índice, você pode executar o aplicativo Gerenciador de contatos. Selecione a opção de menu Depurar, iniciar depuração ou simplesmente pressione F5. A primeira vez que você executar o aplicativo, você obtém a caixa de diálogo na Figura 14. Selecione a opção **modificar o arquivo Web. config para habilitar a depuração** e clique no botão Okey.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image14.jpg)](iteration-1-create-the-application-cs/_static/image27.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image14.jpg)](iteration-1-create-the-application-cs/_static/image27.png)
 
 **Figura 14**: Habilitando a depuração ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image28.png))
 
@@ -308,7 +308,7 @@ Depois de modificar o modo de exibição de índice, você pode executar o aplic
 O modo de exibição de índice é retornado por padrão. Este modo de exibição lista todos os dados da tabela de banco de dados de contatos (consulte a Figura 15).
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image15.jpg)](iteration-1-create-the-application-cs/_static/image29.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image15.jpg)](iteration-1-create-the-application-cs/_static/image29.png)
 
 **Figura 15**: O modo de exibição de índice ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image30.png))
 
@@ -336,7 +336,7 @@ No corpo do método Create (), o Entity Framework é usado para inserir o novo c
 Você pode gerar um formulário HTML para a criação de novos contatos clicando duas vezes qualquer um dos dois métodos Create () e selecionando a opção de menu **adicionar exibição** (consulte a Figura 16).
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image16.jpg)](iteration-1-create-the-application-cs/_static/image31.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image16.jpg)](iteration-1-create-the-application-cs/_static/image31.png)
 
 **Figura 16**: Adicionando o Create view ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image32.png))
 
@@ -344,21 +344,21 @@ Você pode gerar um formulário HTML para a criação de novos contatos clicando
 No **adicionar exibição** caixa de diálogo, selecione o **ContactManager.Models.Contact** classe e o **criar** opção para exibir o conteúdo (consulte a Figura 17). Quando você clica o **adicionar** botão Criar modo de exibição é gerado automaticamente.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image17.jpg)](iteration-1-create-the-application-cs/_static/image33.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image17.jpg)](iteration-1-create-the-application-cs/_static/image33.png)
 
 **Figura 17**: Vendo uma página explodir ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image34.png))
 
 
 Criar exibição contém campos de formulário para cada uma das propriedades da classe Contact. O código da exibição Create está incluído na listagem 5.
 
-**Listagem 5 - Views\Home\Create.aspx**
+**Listing 5 - Views\Home\Create.aspx**
 
 [!code-aspx[Main](iteration-1-create-the-application-cs/samples/sample5.aspx)]
 
 Depois de modificar os métodos Create () e adicionar o Create view, você pode executar o aplicativo Gerenciador de contato e criar novos contatos. Clique o **criar novo** link que aparece na exibição de índice para navegar até o modo de exibição de criar. Você deverá ver a exibição na Figura 18.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image18.jpg)](iteration-1-create-the-application-cs/_static/image35.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image18.jpg)](iteration-1-create-the-application-cs/_static/image35.png)
 
 **Figura 18**: Create View ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image36.png))
 
@@ -380,7 +380,7 @@ O Entity Framework é usado para salvar o contato modificado no banco de dados. 
 Você pode gerar a exibição que contém o formulário de edição clicando duas vezes o método Edit () e selecionando a opção de menu Adicionar modo de exibição. Na caixa de diálogo Adicionar modo de exibição, selecione a **ContactManager.Models.Contact** classe e o **editar** exibir o conteúdo (consulte a Figura 19).
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image19.jpg)](iteration-1-create-the-application-cs/_static/image37.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image19.jpg)](iteration-1-create-the-application-cs/_static/image37.png)
 
 **Figura 19**: Adicionando uma exibição Editar ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image38.png))
 
@@ -409,7 +409,7 @@ Os dois novos métodos Delete () estão contidos na listagem 8.
 O primeiro método Delete () retorna um formulário de confirmação para excluir um registro de contato do banco de dados (consulte Figure20). O segundo método Delete () executa a operação de exclusão real no banco de dados. Depois que o contato original tiver sido recuperado do banco de dados, os métodos do Entity Framework DeleteObject() e SaveChanges () são chamados para executar a exclusão do banco de dados.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image20.jpg)](iteration-1-create-the-application-cs/_static/image39.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image20.jpg)](iteration-1-create-the-application-cs/_static/image39.png)
 
 **Figura 20**: O modo de exibição de confirmação de exclusão ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image40.png))
 
@@ -419,7 +419,7 @@ Precisamos modificar a exibição de índice para que ele contém um link para a
 Html.ActionLink( { id=item.Id }) %&gt;
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image21.jpg)](iteration-1-create-the-application-cs/_static/image41.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image21.jpg)](iteration-1-create-the-application-cs/_static/image41.png)
 
 **Figura 21**: Indexa a exibição com o link de edição ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image42.png))
 
@@ -429,7 +429,7 @@ Em seguida, precisamos criar o modo de confirmação de exclusão. O método Del
 Ao contrário no caso das exibições de lista, criar e editar, a caixa de diálogo Adicionar modo de exibição não contém uma opção para criar um modo de exibição de exclusão. Em vez disso, selecione o **ContactManager.Models.Contact** classe de dados e o **vazia** exibir o conteúdo. Selecionando o modo de exibição vazio conteúda opção exigirá a criar a exibição de nós mesmos.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image22.jpg)](iteration-1-create-the-application-cs/_static/image43.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image22.jpg)](iteration-1-create-the-application-cs/_static/image43.png)
 
 **Figura 22**: Adicionando o modo de exibição de confirmação de exclusão ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image44.png))
 
@@ -447,12 +447,12 @@ Ele pode se preocupar com você que o nome da nossa classe de controlador para t
 Esse problema é fácil de corrigir. Primeiro, é necessário refatorar o nome do controlador Home. Abra a classe HomeController no Editor de código do Visual Studio, clique com botão direito o nome da classe e selecione a opção de menu **refatoração Renomear**. Selecionar essa opção de menu abre a caixa de diálogo de renomeação.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image23.jpg)](iteration-1-create-the-application-cs/_static/image45.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image23.jpg)](iteration-1-create-the-application-cs/_static/image45.png)
 
 **Figura 23**: Refatoração de um nome de controlador ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image46.png))
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image24.jpg)](iteration-1-create-the-application-cs/_static/image47.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image24.jpg)](iteration-1-create-the-application-cs/_static/image47.png)
 
 **Figura 24**: Na caixa de diálogo Rename ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image48.png))
 
@@ -462,7 +462,7 @@ Se você renomear sua classe de controlador, o Visual Studio atualizará o nome 
 Depois de fazer essa alteração, seu aplicativo não terá um controlador Home. Quando você executa seu aplicativo, você obterá a página de erro na Figura 25.
 
 
-[![Tcaixa de diálogo Novo projeto he](iteration-1-create-the-application-cs/_static/image25.jpg)](iteration-1-create-the-application-cs/_static/image49.png)
+[![A caixa de diálogo Novo projeto](iteration-1-create-the-application-cs/_static/image25.jpg)](iteration-1-create-the-application-cs/_static/image49.png)
 
 **Figura 25**: Nenhum controlador padrão ([clique para exibir a imagem em tamanho normal](iteration-1-create-the-application-cs/_static/image50.png))
 

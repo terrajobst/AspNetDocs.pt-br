@@ -12,7 +12,7 @@ ms.openlocfilehash: 23741d7974713102e6ccb46ced5d62ec202505e8
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400848"
 ---
 # <a name="creating-custom-html-helpers-c"></a>Criação de auxiliares de HTML personalizados (C#)
@@ -49,7 +49,7 @@ A estrutura ASP.NET MVC inclui o seguinte conjunto de auxiliares de HTML padrão
 Por exemplo, considere o formulário na listagem 1. Esse formulário é renderizado com a Ajuda de dois dos auxiliares HTML padrão (veja a Figura 1). O formulário usa o `Html.BeginForm()` e `Html.TextBox()` métodos auxiliares para processar um formulário HTML simples.
 
 
-[![Pidade renderizada com auxiliares de HTML](creating-custom-html-helpers-cs/_static/image2.png)](creating-custom-html-helpers-cs/_static/image1.png)
+[![Página renderizada com auxiliares de HTML](creating-custom-html-helpers-cs/_static/image2.png)](creating-custom-html-helpers-cs/_static/image1.png)
 
 **Figura 01**: Página renderizada com auxiliares HTML ([clique para exibir a imagem em tamanho normal](creating-custom-html-helpers-cs/_static/image3.png))
 
@@ -104,7 +104,7 @@ Em segundo lugar, observe que o primeiro parâmetro do `Label()` método é prec
 Depois de criar um método de extensão e crie seu aplicativo com êxito, o método de extensão é exibida no Visual Studio Intellisense, como todos os outros métodos de uma classe (consulte a Figura 2). A única diferença é que essa extensão métodos aparecem com um símbolo especial ao lado deles (um ícone de uma seta para baixo).
 
 
-[![Ucantar o método de extensão Html.Label()](creating-custom-html-helpers-cs/_static/image5.png)](creating-custom-html-helpers-cs/_static/image4.png)
+[![Usando o método de extensão Html.Label()](creating-custom-html-helpers-cs/_static/image5.png)](creating-custom-html-helpers-cs/_static/image4.png)
 
 **Figura 02**: Usando o método de extensão Html.Label() ([clique para exibir a imagem em tamanho normal](creating-custom-html-helpers-cs/_static/image6.png))
 

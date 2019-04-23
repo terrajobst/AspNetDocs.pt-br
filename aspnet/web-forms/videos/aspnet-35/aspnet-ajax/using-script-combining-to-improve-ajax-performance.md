@@ -12,7 +12,7 @@ ms.openlocfilehash: fd025699a72aea6bd39672f2f240e76528eaa8ab
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406919"
 ---
 # <a name="using-script-combining-to-improve-ajax-performance"></a>Uso de combinação de script para melhorar o desempenho do AJAX
@@ -22,4 +22,4 @@ Betrand Le Roy descreve como melhorar o desempenho de um aplicativo Ajax usando 
 [&#9654;Assista ao vídeo (4 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/using-script-combining-to-improve-ajax-performance)
 
 > [!div class="step-by-step"]
-> [Voltar](introduction-to-aspnet-ajax-history.md)
+> [Anterior](introduction-to-aspnet-ajax-history.md)

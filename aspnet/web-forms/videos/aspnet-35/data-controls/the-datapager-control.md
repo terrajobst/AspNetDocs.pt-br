@@ -12,7 +12,7 @@ ms.openlocfilehash: d59358f99a71d9583df1cc3cfee37303b625e95a
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406971"
 ---
 # <a name="the-datapager-control"></a>O controle DataPager
@@ -24,4 +24,4 @@ Em geral, o controle DataPager é usado com o controle ListView. O controle List
 [&#9654;Assista ao vídeo (8 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/the-datapager-control)
 
 > [!div class="step-by-step"]
-> [Voltar](the-listview-control.md)
+> [Anterior](the-listview-control.md)

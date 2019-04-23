@@ -12,7 +12,7 @@ ms.openlocfilehash: 796e0c5e605d1103a4b9937b4e698c5c9412c013
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402291"
 ---
 # <a name="getting-started"></a>Guia de Introdução

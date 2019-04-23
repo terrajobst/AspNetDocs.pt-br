@@ -12,7 +12,7 @@ ms.openlocfilehash: d5cf8850a1994d209cfaa829d1de2f8bc79776e7
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398937"
 ---
 # <a name="how-do-i-deploy-a-web-application-during-a-team-build"></a>[Como fazer:] Implantar um aplicativo Web durante uma compilação de equipe?

@@ -12,7 +12,7 @@ ms.openlocfilehash: cce8770eb0f60c4306d4560e9a4e72fa1a59f618
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406503"
 ---
 # <a name="creating-user-accounts-c"></a>Criação de contas de usuário (C#)
@@ -57,7 +57,7 @@ Comece criando uma nova pasta no projeto chamado `Membership`. Em seguida, adici
 Neste ponto, Gerenciador de soluções do seu projeto deve ser semelhante à mostrada na Figura 1 de captura de tela.
 
 
-[![Fá cinco novas páginas foram adicionados à pasta associação](creating-user-accounts-cs/_static/image2.png)](creating-user-accounts-cs/_static/image1.png)
+[![Cinco novas páginas foram adicionadas à pasta de associação](creating-user-accounts-cs/_static/image2.png)](creating-user-accounts-cs/_static/image1.png)
 
 **Figura 1**: Cinco novas páginas foram adicionados para o `Membership` pasta ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image3.png))
 
@@ -81,7 +81,7 @@ Como as estruturas de associação e funções, a estrutura do mapa do Site é c
 O provedor de mapa de Site padrão espera que um arquivo XML formatado corretamente chamado `Web.sitemap` existir o diretório raiz. Como estamos usando esse provedor padrão, é necessário adicionar esse arquivo e definir a estrutura do mapa do site no formato XML apropriado. Para adicionar o arquivo, clique com botão direito no nome do projeto no Gerenciador de soluções e escolha Add New Item. Na caixa de diálogo, optar por adicionar um arquivo do tipo de mapa de Site denominado `Web.sitemap`.
 
 
-[![Add um arquivo chamado SiteMap ao diretório raiz do projeto](creating-user-accounts-cs/_static/image5.png)](creating-user-accounts-cs/_static/image4.png)
+[![Adicionar um arquivo denominado Web. sitemap para o diretório raiz do projeto](creating-user-accounts-cs/_static/image5.png)](creating-user-accounts-cs/_static/image4.png)
 
 **Figura 2**: Adicionar um arquivo nomeado `Web.sitemap` para o diretório raiz do projeto ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image6.png))
 
@@ -95,7 +95,7 @@ Insira o seguinte XML para o `Web.sitemap` arquivo:
 A marcação de mapa de site acima define a hierarquia mostrada na Figura 3.
 
 
-[![Tele mapa de Site representa uma estrutura de Navegação hierárquica](creating-user-accounts-cs/_static/image8.png)](creating-user-accounts-cs/_static/image7.png)
+[![O mapa de Site representa uma estrutura de Navegação hierárquica](creating-user-accounts-cs/_static/image8.png)](creating-user-accounts-cs/_static/image7.png)
 
 **Figura 3**: O mapa de Site representa uma estrutura de Navegação hierárquica ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image9.png))
 
@@ -117,7 +117,7 @@ A marcação acima associa um controle Repeater denominado `menu` a SiteMapDataS
 Figura 4 mostra a saída renderizada da marcação acima com a estrutura de mapa de site que criamos na etapa 2. O Repeater renderiza marcação da lista não ordenada de baunilha; as regras de folha de estilos em cascata definidas na `Styles.css` são responsável pelo layout estética forma. Para obter uma descrição mais detalhada de como funciona a marcação acima, consulte a [páginas mestras e navegação no Site](https://asp.net/learn/data-access/tutorial-03-cs.aspx) tutorial.
 
 
-[![Tele Interface do usuário de navegação é renderizado usando aninhados não ordenada listas](creating-user-accounts-cs/_static/image11.png)](creating-user-accounts-cs/_static/image10.png)
+[![A Interface do usuário de navegação é renderizado usando aninhados não ordenada listas](creating-user-accounts-cs/_static/image11.png)](creating-user-accounts-cs/_static/image10.png)
 
 **Figura 4**: A Interface do usuário de navegação é renderizado usando aninhados não ordenada listas ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image12.png))
 
@@ -133,7 +133,7 @@ Especificamente, adicione uma `<span>` elemento para o cabeçalho da página mes
 Figura 5 mostra a saída do SiteMapPath ao visitar `~/Membership/CreatingUserAccounts.aspx`.
 
 
-[![Tele trilha exibe a página atual e seus ancestrais no mapa do Site](creating-user-accounts-cs/_static/image14.png)](creating-user-accounts-cs/_static/image13.png)
+[![A trilha de navegação exibe a página atual e seus ancestrais no Site do mapa](creating-user-accounts-cs/_static/image14.png)](creating-user-accounts-cs/_static/image13.png)
 
 **Figura 5**: A trilha de navegação exibe a página atual e seus ancestrais no mapa do Site ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image15.png))
 
@@ -174,7 +174,7 @@ Para ilustrar o uso de `CreateUser` método, vamos criar uma interface do usuár
 Neste ponto, sua tela deve ser semelhante à mostrada na Figura 6 de captura de tela.
 
 
-[![Add os diversos controles da Web para a página CreatingUserAccounts.aspx](creating-user-accounts-cs/_static/image17.png)](creating-user-accounts-cs/_static/image16.png)
+[![Adicionar vários controles da Web para a página CreatingUserAccounts.aspx](creating-user-accounts-cs/_static/image17.png)](creating-user-accounts-cs/_static/image16.png)
 
 **Figura 6**: Adicionar vários controles de Web para o `CreatingUserAccounts.aspx` página ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image18.png))
 
@@ -194,17 +194,17 @@ O `Click` manipulador de eventos começa definindo uma variável chamada `create
 Depois de chamar `CreateUser`, passando `createStatus`, um `switch` instrução é usada para gerar uma mensagem apropriada, dependendo do valor atribuído a `createStatus`. As figuras 7 mostra a saída quando um novo usuário foi criado com êxito. As figuras 8 e 9 mostram a saída quando a conta de usuário não é criada. Na Figura 8, o visitante inseriu uma senha de cinco letras que não atende aos requisitos de força de senha escritos nas definições de configuração do provedor de associação. Figura 9, o visitante está tentando criar uma conta de usuário com um nome de usuário existente (aquele criado na Figura 7).
 
 
-[![A Nova conta de usuário é criado com êxito](creating-user-accounts-cs/_static/image20.png)](creating-user-accounts-cs/_static/image19.png)
+[![Uma nova conta de usuário é criado com êxito](creating-user-accounts-cs/_static/image20.png)](creating-user-accounts-cs/_static/image19.png)
 
 **Figura 7**: Uma nova conta de usuário é criado com êxito ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image21.png))
 
 
-[![TEle conta de usuário não é criado porque a senha fornecida é muito fraca](creating-user-accounts-cs/_static/image23.png)](creating-user-accounts-cs/_static/image22.png)
+[![A conta de usuário não é criada porque a senha fornecida é muito fraca](creating-user-accounts-cs/_static/image23.png)](creating-user-accounts-cs/_static/image22.png)
 
 **Figura 8**: A conta de usuário não é criada porque a senha fornecida é muito fraca ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image24.png))
 
 
-[![TEle conta de usuário não é criado porque o nome de usuário é já em uso](creating-user-accounts-cs/_static/image26.png)](creating-user-accounts-cs/_static/image25.png)
+[![A conta de usuário não é criado porque o nome de usuário já em uso](creating-user-accounts-cs/_static/image26.png)](creating-user-accounts-cs/_static/image25.png)
 
 **Figura 9**: A conta de usuário não é criado porque o nome de usuário já em uso ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image27.png))
 
@@ -216,7 +216,7 @@ Depois de chamar `CreateUser`, passando `createStatus`, um `switch` instrução 
 Depois de criar algumas contas de usuário, verifique se as contas foram criadas, listando o conteúdo do `aspnet_Users` e `aspnet_Membership` tabelas no `SecurityTutorials.mdf` banco de dados. Como mostra a Figura 10, adicionei dois usuários por meio de `CreatingUserAccounts.aspx` página: Tito e Bruce.
 
 
-[![TAqui estão dois usuários na Store de usuário de associação: Tito e Bruce](creating-user-accounts-cs/_static/image29.png)](creating-user-accounts-cs/_static/image28.png)
+[![Há dois usuários de Store de usuário de associação: Tito e Bruce](creating-user-accounts-cs/_static/image29.png)](creating-user-accounts-cs/_static/image28.png)
 
 **Figura 10**: Há dois usuários de Store de usuário de associação: Tito e Bruce ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image30.png))
 
@@ -246,7 +246,7 @@ Vamos começar com uma olhada no uso da interface padrão e o comportamento do c
 Volte para o `CreatingUserAccounts.aspx` página o `Membership` pasta, alterne para o modo de Design ou de divisão e, em seguida, adicione um controle CreateUserWizard na parte superior da página. O controle CreateUserWizard é arquivado na seção de controles de logon da caixa de ferramentas. Depois de adicionar o controle, defina suas `ID` propriedade para `RegisterUser`. Como a captura de tela na Figura 11 mostra, CreateUserWizard renderiza uma interface com caixas de texto para o novo nome de usuário, senha, endereço de email e pergunta de segurança e resposta.
 
 
-[![Tele controle CreateUserWizard renderiza uma Interface de usuário genérica criar](creating-user-accounts-cs/_static/image32.png)](creating-user-accounts-cs/_static/image31.png)
+[![Os renderizadores de controle CreateUserWizard um genérico criar a Interface do usuário](creating-user-accounts-cs/_static/image32.png)](creating-user-accounts-cs/_static/image31.png)
 
 **Figura 11**: O controle CreateUserWizard renderiza uma Interface de usuário criar genérica ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image33.png))
 
@@ -267,7 +267,7 @@ O CreateUserWizard aparência e comportamento podem ser modificados, convertendo
 Vamos ver o controle CreateUserWizard em ação. Visite o `CreatingUserAccounts.aspx` página por meio de um navegador. Inicie inserindo alguns valores inválidos na interface do CreateUserWizard. Tente inserir uma senha que não são compatíveis com os requisitos de força de senha ou deixar o "nome de usuário" caixa de texto vazia. O CreateUserWizard exibirá uma mensagem de erro apropriado. Figura 12 mostra a saída ao tentar criar um usuário com uma senha forte insuficiente.
 
 
-[![Tele CreateUserWizard automaticamente injeta controles de validação](creating-user-accounts-cs/_static/image35.png)](creating-user-accounts-cs/_static/image34.png)
+[![O CreateUserWizard injeta automaticamente os controles de validação](creating-user-accounts-cs/_static/image35.png)](creating-user-accounts-cs/_static/image34.png)
 
 **Figura 12**: O CreateUserWizard automaticamente injeta controles de validação ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image36.png))
 
@@ -275,7 +275,7 @@ Vamos ver o controle CreateUserWizard em ação. Visite o `CreatingUserAccounts.
 Em seguida, insira os valores apropriados em CreateUserWizard e clique no botão "Criar usuário". Supondo que os campos obrigatórios foram inseridos e a intensidade da senha é suficiente, CreateUserWizard será criar uma nova conta de usuário por meio da estrutura de associação e, em seguida, exibirá o `CompleteWizardStep`da interface (consulte a Figura 13). Nos bastidores, o CreateUserWizard chama o `Membership.CreateUser` método, exatamente como fizemos na etapa 5.
 
 
-[![A Nova conta de usuário tiver sido criado com êxito](creating-user-accounts-cs/_static/image38.png)](creating-user-accounts-cs/_static/image37.png)
+[![Uma nova conta de usuário tiver sido criado com êxito](creating-user-accounts-cs/_static/image38.png)](creating-user-accounts-cs/_static/image37.png)
 
 **Figura 13**: Uma nova conta de usuário tiver sido criado com êxito ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image39.png))
 
@@ -299,7 +299,7 @@ Além das propriedades relacionadas à aparência, há um número de propriedade
 Vamos atualizar o `RegisterUser` controle CreateUserWizard para mostrar um botão Cancelar e enviar o visitante a `Default.aspx` quando os botões cancelar ou continuar são clicados. Para fazer isso, defina a `DisplayCancelButton` propriedade para True e ambas as `CancelDestinationPageUrl` e `ContinueDestinationPageUrl` propriedades para "~ / default. aspx". Figura 14 mostra o CreateUserWizard atualizado quando visualizado por meio de um navegador.
 
 
-[![Tele CreateUserWizardStep inclui um botão Cancelar](creating-user-accounts-cs/_static/image41.png)](creating-user-accounts-cs/_static/image40.png)
+[![O CreateUserWizardStep inclui um botão Cancelar](creating-user-accounts-cs/_static/image41.png)](creating-user-accounts-cs/_static/image40.png)
 
 **Figura 14**: O `CreateUserWizardStep` inclui um botão Cancelar ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image42.png))
 
@@ -337,7 +337,7 @@ Observe que o nome de usuário e senha inseridos no controle CreateUserWizard es
 A Figura 15 mostra uma captura de tela de `CreatingUserAccounts.aspx` quando o usuário insere um nome de usuário com espaços à esquerda.
 
 
-[![Usernames à esquerda ou espaços à direita não são permitidos](creating-user-accounts-cs/_static/image44.png)](creating-user-accounts-cs/_static/image43.png)
+[![Os nomes de usuário à esquerda ou espaços à direita não são permitidos.](creating-user-accounts-cs/_static/image44.png)](creating-user-accounts-cs/_static/image43.png)
 
 **Figura 15**: Os nomes de usuário à esquerda ou espaços à direita não são permitidos ([clique para exibir a imagem em tamanho normal](creating-user-accounts-cs/_static/image45.png))
 

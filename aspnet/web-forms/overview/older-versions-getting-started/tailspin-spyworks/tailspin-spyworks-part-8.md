@@ -12,7 +12,7 @@ ms.openlocfilehash: db8db4e3bff8047b48a7528b5146873ab6d84714
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398677"
 ---
 # <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: Páginas finais, tratamento de exceção e conclusão
@@ -79,4 +79,4 @@ Já vimos que WebForms ASP.NET torna mais fácil para criar um site da Web sofis
 Espero que este tutorial tenha fornecido as ferramentas que você precisa para começar a criar seu próprio ASP.NET WebForms aplicativos!
 
 > [!div class="step-by-step"]
-> [Voltar](tailspin-spyworks-part-7.md)
+> [Anterior](tailspin-spyworks-part-7.md)

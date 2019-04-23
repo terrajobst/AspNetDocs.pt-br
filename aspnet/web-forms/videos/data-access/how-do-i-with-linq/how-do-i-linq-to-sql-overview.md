@@ -12,7 +12,7 @@ ms.openlocfilehash: 56dda72b8cadcef4449f3ff6e8e8e4e3315d0687
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402876"
 ---
 # <a name="how-do-i-linq-to-sql-overview"></a>[Como fazer:] LINQ to SQL: Visão geral

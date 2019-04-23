@@ -12,7 +12,7 @@ ms.openlocfilehash: 0767b66a035069629c15e658c1e75ea78a7bd07b
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407647"
 ---
 # <a name="dynamically-controlling-updatepanel-animations-c"></a>Controlar dinamicamente animações UpdatePanel (C#)
@@ -58,7 +58,7 @@ Por fim, o `UpdatePanelAnimationExtender` devem ser configurados: Defina o `Targ
 Execute o arquivo no navegador. Sempre que você clica no botão, a hora atual é mostrada no painel, sempre fade in para a duração de um segundo.
 
 
-[![Tele hora atual está desaparecendo](dynamically-controlling-updatepanel-animations-cs/_static/image2.png)](dynamically-controlling-updatepanel-animations-cs/_static/image1.png)
+[![A hora atual está desaparecendo](dynamically-controlling-updatepanel-animations-cs/_static/image2.png)](dynamically-controlling-updatepanel-animations-cs/_static/image1.png)
 
 A hora atual está desaparecendo ([clique para exibir a imagem em tamanho normal](dynamically-controlling-updatepanel-animations-cs/_static/image3.png))
 

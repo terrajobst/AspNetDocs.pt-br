@@ -12,7 +12,7 @@ ms.openlocfilehash: e3821eee8c7bf2c2f9b45ea75ade2bd5b3b8ef19
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59406256"
 ---
 # <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Noções básicas sobre os gatilhos UpdatePanel do AJAX ASP.NET
@@ -32,7 +32,7 @@ Este white paper examina a funcionalidade de gatilhos de XML do ASP.NET AJAX `Up
 
 Este white paper se baseia na versão Beta 2 do .NET Framework 3.5 e Visual Studio 2008. As extensões do AJAX ASP.NET, anteriormente um assembly de complemento destinado a ASP.NET 2.0, agora estão integradas a biblioteca de classe Base do .NET Framework. Este white paper também pressupõe que você estará trabalhando com o Visual Studio 2008, não Visual Web Developer Express e fornecerá instruções passo a passo de acordo com a interface do usuário do Visual Studio (embora listagens de código serão totalmente compatíveis independentemente de ambiente de desenvolvimento).
 
-## *<a name="triggers"></a>Gatilhos*
+## <a name="triggers"></a>*Gatilhos*
 
 Gatilhos para um determinado UpdatePanel, por padrão, incluem automaticamente todos os controles filho que invocam um postback, (por exemplo) incluindo controles de caixa de texto que têm suas `AutoPostBack` propriedade definida como **verdadeiro**. No entanto, os gatilhos também podem ser incluídos declarativamente usando marcação; Isso é feito dentro do `<triggers>` seção da declaração do controle UpdatePanel. Embora os gatilhos podem ser acessados por meio do `Triggers` propriedade de coleção, é recomendável que você registre quaisquer gatilhos de renderização parcial no tempo de execução (por exemplo, se um controle não está disponível em tempo de design) usando o `RegisterAsyncPostBackControl(Control)` método da Objeto ScriptManager para sua página, dentro de `Page_Load` eventos. Lembre-se de que as páginas são sem monitoração de estado e, portanto, você deverá registrar novamente esses controles sempre que eles são criados.
 
@@ -40,7 +40,7 @@ Inclusão de gatilho automático filho também pode ser desabilitado (de modo qu
 
 Observe que quando os controles UpdatePanel são aninhados, quando o UpdateMode é definido como **condicional**, se o filho UpdatePanel for disparado, mas o pai, em seguida, não, é apenas o filho UpdatePanel será atualizado. No entanto, se o pai UpdatePanel é atualizado, em seguida, o UpdatePanel filho também será atualizado.
 
-## *<a name="the-lttriggersgt-element"></a>O &lt;gatilhos&gt; elemento*
+## <a name="the-lttriggersgt-element"></a>*O &lt;gatilhos&gt; elemento*
 
 Ao trabalhar no editor de marcação no Visual Studio, você pode perceber (do IntelliSense) que há dois elementos filho de um `UpdatePanel` controle. O elemento visto mais frequentemente é o `<ContentTemplate>` elemento, que essencialmente encapsula o conteúdo que será mantido pelo painel de atualização (o conteúdo para o qual estamos possibilitando a renderização parcial). O outro elemento é o `<Triggers>` elemento, que especifica os controles na página (ou controle de usuário, se você estiver usando um) que acionará uma renderização parcial do controle UpdatePanel no qual o &lt;gatilhos&gt; elemento reside.
 
@@ -50,16 +50,16 @@ O `<asp:AsyncPostBackTrigger>` elemento é particularmente útil em que ele pode
 
 Da mesma forma, o `<asp:PostBackTrigger>` elemento pode ser usado para renderizar uma página parcial do gatilho, mas que exige uma ida e volta completa para o servidor. Este elemento de gatilho também pode ser usado para forçar uma renderização de página inteira quando um controle caso contrário, normalmente acionaria uma renderização de página parcial (por exemplo, quando um `Button` controle existe o `<ContentTemplate>` elemento de um controle UpdatePanel). Novamente, o elemento PostBackTrigger pode especificar qualquer controle que é um filho de qualquer controle UpdatePanel na unidade atual de encapsulamento.
 
-## *<a name="lttriggersgt-element-reference"></a>&lt;Gatilhos&gt; referência de elemento*
+## <a name="lttriggersgt-element-reference"></a>*&lt;Gatilhos&gt; referência de elemento*
 
 *Descendentes de marcação:*
 
-| **Marca** | **Descrição** |
+| **Tag** | **Descrição** |
 | --- | --- |
 | &lt;asp:AsyncPostBackTrigger&gt; | Especifica um controle e o evento que fará com que uma atualização parcial de página para o UpdatePanel que contém essa referência de gatilho. |
 | &lt;asp:PostBackTrigger&gt; | Especifica um controle e o evento que fará com que uma atualização de página inteira (uma atualização completa de página). Essa marca pode ser usada para forçar uma atualização completa quando um controle dispararia caso contrário, o processamento parcial. |
 
-## *<a name="walkthrough-cross-updatepanel-triggers"></a>Passo a passo: Gatilhos cruzado UpdatePanel*
+## <a name="walkthrough-cross-updatepanel-triggers"></a>*Passo a passo: Gatilhos cruzado UpdatePanel*
 
 1. Crie uma nova página ASP.NET com um objeto ScriptManager definido para permitir o processamento parcial. Adicionar dois UpdatePanels a esta página - na primeira, inclua um controle de rótulo (Label1) e dois controles de botão (Button1 e Button2). Button1 deve dizer clique para atualizar os dois e Button2 deve dizer clique para atualizar isso ou algo semelhante. No segundo UpdatePanel, incluir apenas um controle de rótulo (Label2), mas defina sua propriedade de cor de primeiro plano para algo diferente do padrão para diferenciá-lo.
 2. Defina a propriedade UpdateMode de ambas as marcas de UpdatePanel para **condicional**.
@@ -82,7 +82,7 @@ Da mesma forma, o `<asp:PostBackTrigger>` elemento pode ser usado para renderiza
 ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-updatepanel-triggers/_static/image3.png))
 
 
-## *<a name="under-the-hood"></a>Nos bastidores*
+## <a name="under-the-hood"></a>*Nos bastidores*
 
 Utilizando o exemplo que acabou de criar, podemos pode dar uma olhada no ASP.NET AJAX está fazendo e como funcionam os gatilhos de painel entre nossos UpdatePanel. Para fazer isso, trabalharemos com a origem da página gerado HTML, bem como a extensão do Mozilla Firefox chamado FireBug - com ele, podemos examinar com facilidade os postbacks AJAX. Também usaremos a ferramenta .NET Reflector por Lutz Roeder ' s. Ambas as ferramentas estão disponíveis gratuitamente online e podem ser encontradas com uma pesquisa na internet.
 

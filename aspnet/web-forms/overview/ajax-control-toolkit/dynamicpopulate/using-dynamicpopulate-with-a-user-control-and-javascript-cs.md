@@ -12,7 +12,7 @@ ms.openlocfilehash: 0462d8357d83115e751a818d3c9feb4b4274e212
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402538"
 ---
 # <a name="using-dynamicpopulate-with-a-user-control-and-javascript-c"></a>Uso de DynamicPopulate com um controle de usuário e o JavaScript (C#)
@@ -67,7 +67,7 @@ Por fim, adicione o controle de usuário para a página. Você deve definir seus
 E pronto. A página se comporta conforme o esperado: Um usuário clica em um dos botões de opção, o controle no Kit de ferramentas chama o serviço web e exibe a data atual no formato desejado.
 
 
-[![Tbotões de opção he residem em um controle de usuário](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image1.png)
+[![Os botões de opção residem em um controle de usuário](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image1.png)
 
 Os botões de opção residem em um controle de usuário ([clique para exibir a imagem em tamanho normal](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image3.png))
 

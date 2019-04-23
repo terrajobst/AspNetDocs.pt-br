@@ -12,7 +12,7 @@ ms.openlocfilehash: 33544825403db67fc3b8f0e9eae5d7671b8d2e67
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59402177"
 ---
 # <a name="aspnet-mvc-controller-overview-vb"></a>Visão geral sobre o controlador do ASP.NET MVC (VB)

@@ -12,7 +12,7 @@ ms.openlocfilehash: c2dc613713747cef5ada2e44e2077fc36e7a2086
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399773"
 ---
 # <a name="performance"></a>Desempenho
@@ -22,4 +22,4 @@ ms.locfileid: "59399773"
 
 - [Estado de exibição seletiva](aspnet-4-quick-hit-selective-view-state.md)
 - [Compactação de estado fácil](aspnet-4-quick-hit-easy-state-compression.md)
-- [Usar a propriedade ViewStateMode para gerenciamento de ViewState](how-do-i-use-the-viewstatemode-property-for-managing-viewstate.md)
+- [Usar a propriedade ViewStateMode para o gerenciamento de ViewState](how-do-i-use-the-viewstatemode-property-for-managing-viewstate.md)

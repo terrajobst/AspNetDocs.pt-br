@@ -12,7 +12,7 @@ ms.openlocfilehash: b4e8dfe9deaf8ee4196d327d94d9b99f568bd11d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59405762"
 ---
 # <a name="cascadingdropdown"></a>CascadingDropdown
@@ -20,11 +20,11 @@ ms.locfileid: "59405762"
 > Este tutorial mostra como usar o controle CascadingDropDown para criar listas suspensas relacionadas que atualizar quando os usuários a fazer uma seleção.
 
 
-- [Preencher uma lista usando o CascadingDropDown (C#)](filling-a-list-using-cascadingdropdown-cs.md)
+- [Preenchendo uma lista usando o CascadingDropDown (C#)](filling-a-list-using-cascadingdropdown-cs.md)
 - [Uso de CascadingDropDown com um banco de dados (C#)](using-cascadingdropdown-with-a-database-cs.md)
 - [Predefinição de entradas de lista com CascadingDropDown (C#)](presetting-list-entries-with-cascadingdropdown-cs.md)
 - [Uso de postback automático com CascadingDropDown (C#)](using-auto-postback-with-cascadingdropdown-cs.md)
-- [Preencher uma lista usando o CascadingDropDown (VB)](filling-a-list-using-cascadingdropdown-vb.md)
+- [Preenchendo uma lista usando o CascadingDropDown (VB)](filling-a-list-using-cascadingdropdown-vb.md)
 - [Uso de CascadingDropDown com um banco de dados (VB)](using-cascadingdropdown-with-a-database-vb.md)
 - [Predefinição de entradas de lista com CascadingDropDown (VB)](presetting-list-entries-with-cascadingdropdown-vb.md)
 - [Uso de postback automático com CascadingDropDown (VB)](using-auto-postback-with-cascadingdropdown-vb.md)

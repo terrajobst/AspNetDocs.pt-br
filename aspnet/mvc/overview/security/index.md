@@ -12,7 +12,7 @@ ms.openlocfilehash: 0e060fe9cff63558d371a19bcfb7cadad21e7f9d
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401680"
 ---
 # <a name="security-authentication-and-authorization-with-aspnet-mvc"></a>Segurança, autenticação e autorização com o ASP.NET MVC
@@ -24,4 +24,4 @@ ms.locfileid: "59401680"
 - [Criar um aplicativo Web seguro do ASP.NET MVC 5 com logon, confirmação por email e redefinição de senha (C#)](create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md)
 - [Aplicativo do ASP.NET MVC 5 com autenticação de dois fatores por SMS e email](aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md)
 - [Prevenção de XSRF/CSRF no ASP.NET MVC e em páginas da Web](xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
-- [Impedir ataques de redirecionamento aberto (C#)](preventing-open-redirection-attacks.md)
+- [Impedindo ataques de redirecionamento aberto (C#)](preventing-open-redirection-attacks.md)

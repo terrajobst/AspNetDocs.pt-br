@@ -12,7 +12,7 @@ ms.openlocfilehash: 55ee67150d1567a0334988a06ff0fcca8a89bbd4
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59404046"
 ---
 # <a name="launching-a-modal-popup-window-from-server-code-vb"></a>Inicialização de uma janela ModalPopup por meio de código do servidor (VB)
@@ -65,7 +65,7 @@ O `pageLoad()` função JavaScript é uma função especial que é executada dep
 O `$find()` está procurando por um elemento nomeado na página de função e espera que a ID do lado do servidor como um parâmetro. Portanto, `$find("mpe")` retorna a representação de cliente do controle ModalPopup; sua `show()` método permite que o pop-up aparecer.
 
 
-[![Tpop-up modal de he aparece quando qualquer um dos botões é clicado](launching-a-modal-popup-window-from-server-code-vb/_static/image2.png)](launching-a-modal-popup-window-from-server-code-vb/_static/image1.png)
+[![O popup modal é exibida quando qualquer um dos botões é clicado](launching-a-modal-popup-window-from-server-code-vb/_static/image2.png)](launching-a-modal-popup-window-from-server-code-vb/_static/image1.png)
 
 O popup modal é exibida quando qualquer um dos botões é clicado ([clique para exibir a imagem em tamanho normal](launching-a-modal-popup-window-from-server-code-vb/_static/image3.png))
 

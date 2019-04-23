@@ -12,7 +12,7 @@ ms.openlocfilehash: 68c1acdaaf1e6674f4dc3bcca0557382407ca147
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59400107"
 ---
 # <a name="authentication"></a>Autenticação
@@ -28,7 +28,7 @@ ms.locfileid: "59400107"
 - [Adicionar dados personalizados ao método de autenticação](add-custom-data-to-the-authentication-method.md)
 - [Usar objetos de entidade de segurança personalizada](use-custom-principal-objects.md)
 - [Noções básicas sobre associações do ASP.NET](understanding-aspnet-memberships.md)
-- [Configurar o SQL para trabalhar com esquemas de associação](configuring-sql-to-work-with-membership-schemas.md)
+- [Configurando o SQL para trabalhar com esquemas de associação](configuring-sql-to-work-with-membership-schemas.md)
 - [Alterar as configurações de associação do esquema de associação padrão](changing-membership-settings-in-the-default-membership-schema.md)
 - [Criar contas de usuário com o assistente Criar usuário](creating-user-accounts-with-the-create-user-wizard.md)
 - [Criar contas de usuário por meio de programação](creating-user-accounts-programmatically.md)

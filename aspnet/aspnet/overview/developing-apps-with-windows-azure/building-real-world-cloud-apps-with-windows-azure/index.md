@@ -12,7 +12,7 @@ ms.openlocfilehash: bb9ae940ba90620a6a4c2d373117635f80e14588
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59397442"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Criação aplicativos de nuvem para o mundo real com o Azure
@@ -22,7 +22,7 @@ ms.locfileid: "59397442"
 
 - [Introdução](introduction.md)
 - [Automatizar tudo](automate-everything.md)
-- [Controle do código-Fonte](source-control.md)
+- [Controle do código-fonte](source-control.md)
 - [Integração contínua e entrega](continuous-integration-and-continuous-delivery.md)
 - [Melhores práticas de desenvolvimento para a Web](web-development-best-practices.md)
 - [Logon único](single-sign-on.md)
@@ -35,4 +35,4 @@ ms.locfileid: "59397442"
 - [Cache distribuído](distributed-caching.md)
 - [Padrão de trabalho centrado em fila](queue-centric-work-pattern.md)
 - [Mais padrões e diretrizes](more-patterns-and-guidance.md)
-- [Apêndice: O aplicativo de exemplo Fix It](the-fix-it-sample-application.md)
+- [Apêndice: A correção do exemplo de aplicativo](the-fix-it-sample-application.md)

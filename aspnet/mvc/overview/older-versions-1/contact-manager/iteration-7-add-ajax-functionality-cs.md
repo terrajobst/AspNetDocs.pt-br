@@ -12,7 +12,7 @@ ms.openlocfilehash: 34fce0bef5163ba0423ea00cf4b7507947c45c68
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59398066"
 ---
 # <a name="iteration-7--add-ajax-functionality-c"></a>Iteração #7 – adicionar funcionalidade do Ajax (c#)
@@ -93,7 +93,7 @@ Adicione o seguinte JavaScript inclui dentro de &lt;head&gt; marca da sua págin
 Permitir que o s comece modificando nossa exibição de índice, de modo que apenas clicando em um grupo de contatos atualiza a região da exibição que exibe os contatos. A caixa vermelha na Figura 1 contém a região que queremos atualizar.
 
 
-[![Uapenas os contatos tualização](iteration-7-add-ajax-functionality-cs/_static/image1.jpg)](iteration-7-add-ajax-functionality-cs/_static/image1.png)
+[![Atualizar somente os contatos](iteration-7-add-ajax-functionality-cs/_static/image1.jpg)](iteration-7-add-ajax-functionality-cs/_static/image1.png)
 
 **Figura 01**: Atualizar somente os contatos ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-cs/_static/image2.png))
 
@@ -193,7 +193,7 @@ Quando um usuário pressiona o botão Avançar ou voltar do navegador, o evento 
 No momento, para excluir um contato, você precisa clicar no link excluir e, em seguida, clique no botão de exclusão exibido na página de confirmação de exclusão (veja a Figura 2). Isso parece muito de solicitações de página para fazer algo simples, como a exclusão de um registro de banco de dados.
 
 
-[![Tele página Confirmação de exclusão](iteration-7-add-ajax-functionality-cs/_static/image2.jpg)](iteration-7-add-ajax-functionality-cs/_static/image3.png)
+[![A página de confirmação de exclusão](iteration-7-add-ajax-functionality-cs/_static/image2.jpg)](iteration-7-add-ajax-functionality-cs/_static/image3.png)
 
 **Figura 02**: A página de confirmação de exclusão ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-cs/_static/image4.png))
 

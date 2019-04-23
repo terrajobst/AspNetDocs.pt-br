@@ -12,7 +12,7 @@ ms.openlocfilehash: ca1bf281130bf2c726b6147f90733c8a83754563
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59399575"
 ---
 # <a name="sorting-custom-paged-data-vb"></a>Classificação de dados personalizados paginados (VB)
@@ -71,7 +71,7 @@ Reserve um tempo para testar esse procedimento armazenado com valores diferentes
 **Figura 1**: Testar valores diferentes para os procedimento armazenado s três parâmetros de entrada
 
 
-[![Ts de procedimento armazenado he resultados são mostrados na janela de saída](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
+[![O procedimento armazenado s resultados são mostrados na janela de saída](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
 
 **Figura 2**: O procedimento armazenado s resultados são mostrados na janela de saída ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image4.png))
 
@@ -145,7 +145,7 @@ Para habilitar a classificação em GridView, basta marcar a caixa de seleção 
 Figura 7 mostra a primeira página de resultados quando classificadas pelo `UnitPrice` em ordem crescente.
 
 
-[![The resultados são classificados por UnitPrice](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
+[![Os resultados são classificados por UnitPrice](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
 
 **Figura 7**: Os resultados são classificados por UnitPrice ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image11.png))
 
@@ -166,7 +166,7 @@ Essa exceção ocorre porque o `SortExpression` os s GridView `SupplierName` Bou
 **Figura 9**: Altere o NomeDoFornecedor BoundField s SortExpression para CompanyName
 
 
-[![Tele resultados agora podem ser classificados por fornecedor](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
+[![Os resultados agora podem ser classificados por fornecedor](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
 
 **Figura 10**: Os resultados agora podem ser classificadas por fornecedor ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image16.png))
 

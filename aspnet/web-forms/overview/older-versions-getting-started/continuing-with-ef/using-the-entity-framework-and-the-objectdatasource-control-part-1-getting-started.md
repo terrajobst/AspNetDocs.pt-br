@@ -12,7 +12,7 @@ ms.openlocfilehash: c0f11019c7410b756d592066a7fe33b3e26fd383
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59407192"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>Usando o Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Guia de Introdução

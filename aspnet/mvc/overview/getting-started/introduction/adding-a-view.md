@@ -9,7 +9,7 @@ ms.openlocfilehash: 42469611f94b374d6692a1c2017aced77a0a414c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59403851"
 ---
 # <a name="adding-a-view"></a>Adicionar uma exibição
@@ -68,7 +68,7 @@ Primeiro, você deseja alterar o &quot;nome do aplicativo&quot; link na parte su
 
 ![_LayoutCshtml](adding-a-view/_static/image7.png)
 
-Modelos de layout permitem que você especifique o layout de contêiner HTML do seu site em um só lugar e, em seguida, aplicá-la em várias páginas em seu site. Localize a linha `@RenderBody()`. `RenderBody` é um espaço reservado em que todos os a exibição de páginas específicas criadas são mostradas, &quot;encapsulado&quot; na página de layout. Por exemplo, se você selecionar o **sobre** link, o *Views\Home\About.cshtml* exibição é renderizada dentro de `RenderBody` método.
+Modelos de layout permitem que você especifique o layout de contêiner HTML do seu site em um só lugar e, em seguida, aplicá-la em várias páginas em seu site. Localize a linha `@RenderBody()`. `RenderBody` é um espaço reservado em que todas as páginas específicas à exibição criadas são mostradas, &quot;encapsuladas&quot; na página de layout. Por exemplo, se você selecionar o **sobre** link, o *Views\Home\About.cshtml* exibição é renderizada dentro de `RenderBody` método.
 
 Altere o conteúdo do elemento de título. Alterar o [ActionLink](https://msdn.microsoft.com/library/dd504972(v=vs.108).aspx) no modelo de layout de &quot;nome do aplicativo&quot; para &quot;filme MVC&quot; e do controlador do `Home` para `Movies`. O arquivo de layout completa é mostrado abaixo:
 

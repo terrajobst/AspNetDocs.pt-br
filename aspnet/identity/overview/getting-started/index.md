@@ -13,7 +13,7 @@ ms.openlocfilehash: 36933f42806b82437f0ba8e59ad1c90024ed6b9e
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401225"
 ---
 # <a name="getting-started-with-aspnet-identity"></a>Introdução à Identidade do ASP.NET
@@ -24,5 +24,5 @@ ms.locfileid: "59401225"
 - [Introdução à Identidade do ASP.NET](introduction-to-aspnet-identity.md)
 - [Recursos recomendados da Identidade do ASP.NET](aspnet-identity-recommended-resources.md)
 - [Adição de Identidade do ASP.NET a um projeto vazio ou existente do Web Forms](adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
-- [Desenvolver aplicativos do ASP.NET com o Azure Active Directory](developing-aspnet-apps-with-windows-azure-active-directory.md)
-- [Identidade do ASP.NET: Uso do Armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+- [Desenvolvendo aplicativos do ASP.NET com o Azure Active Directory](developing-aspnet-apps-with-windows-azure-active-directory.md)
+- [Identidade do ASP.NET: Usar o armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
