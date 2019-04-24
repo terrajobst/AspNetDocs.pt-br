@@ -283,7 +283,7 @@ Neste exercício, você usará **SQL Server** para distribuir mensagens entre o 
 <a id="Ex2Task1"></a>
 #### <a name="task-1---understanding-the-scenario"></a>Tarefa 1: Noções básicas sobre o cenário
 
-Nesta tarefa, você executará 2 instâncias de **Geek Qui** simular IIS de várias instâncias no seu computador local. Nesse cenário, ao responder às perguntas de desafios em um aplicativo, a atualização não será notificada na página de estatísticas da segunda instância. Essa simulação é semelhante a um ambiente onde o aplicativo é implantado em várias instâncias e usando um balanceador de carga para se comunicar com eles.
+Nesta tarefa, você executará 2 instâncias de **Geek Quiz** simular IIS de várias instâncias no seu computador local. Nesse cenário, ao responder às perguntas de desafios em um aplicativo, a atualização não será notificada na página de estatísticas da segunda instância. Essa simulação é semelhante a um ambiente onde o aplicativo é implantado em várias instâncias e usando um balanceador de carga para se comunicar com eles.
 
 1. Abra o **Begin.sln** solução localizada na **origem/o Ex2-ScalingOutWithSQLServer/início** pasta. Uma vez carregado, você perceberá na **Gerenciador de servidores** que a solução tem dois projetos com idênticos, mas diferentes nomes de estruturas. Isso será simular que executa duas instâncias do mesmo aplicativo em seu computador local.
 
