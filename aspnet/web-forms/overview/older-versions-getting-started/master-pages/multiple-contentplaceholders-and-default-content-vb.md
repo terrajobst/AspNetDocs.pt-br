@@ -8,12 +8,12 @@ ms.date: 05/21/2008
 ms.assetid: 866a7177-6884-451e-88f4-c934b1dd1af5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/multiple-contentplaceholders-and-default-content-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 488988bbf540cc809579a5ad5f80cb772ed6b1bf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 02d94c340f79299beae77531e87f5c0d65902720
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408362"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126899"
 ---
 # <a name="multiple-contentplaceholders-and-default-content-vb"></a>Vários ContentPlaceHolders e conteúdo padrão (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_02_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_02_VB.pdf)
 
 > Examina como adicionar vários espaços reservados conteúdo a uma página mestra, bem como especificar o conteúdo padrão em que o conteúdo de espaços reservados.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -36,19 +35,15 @@ Muitos designs de site contêm várias áreas na tela que são personalizadas em
 
 A Figura 1 mostra `Default.aspx` quando visualizado por meio de um navegador. A região circulada em vermelho é a marcação de específico da página correspondente ao `MainContent`.
 
-
 [![A região dentro de um círculo mostra a área atualmente personalizáveis em uma base de página por página](multiple-contentplaceholders-and-default-content-vb/_static/image2.png)](multiple-contentplaceholders-and-default-content-vb/_static/image1.png)
 
 **Figura 01**: A região circulados mostra a área atualmente personalizáveis em uma base de página por página ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image3.png))
 
-
 Imagine que, além da região mostrada na Figura 1, também precisamos adicionar itens de específico da página para a coluna esquerda abaixo as lições e notícias seções. Para fazer isso, adicionamos outro controle ContentPlaceHolder para a página mestra. Para acompanhar, abra o `Site.master` página no Visual Web Developer mestra e, em seguida, arraste um controle de ContentPlaceHolder da caixa de ferramentas para o designer após a seção notícias. Defina o ContentPlaceHolder `ID` para `LeftColumnContent`.
-
 
 [![Adicionar um controle de ContentPlaceHolder a coluna da esquerda da página mestra](multiple-contentplaceholders-and-default-content-vb/_static/image5.png)](multiple-contentplaceholders-and-default-content-vb/_static/image4.png)
 
 **Figura 02**: Adicionar um controle de ContentPlaceHolder a coluna da esquerda da página mestra ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image6.png))
-
 
 Com a adição do `LeftColumnContent` ContentPlaceHolder para a página mestra, podemos definir o conteúdo para esta região em uma base de página por página, incluindo o conteúdo de um controle na página cuja `ContentPlaceHolderID` é definido como `LeftColumnContent`. Vamos examinar esse processo na etapa 2.
 
@@ -66,11 +61,9 @@ Insira algum conteúdo para a referência de controle de conteúdo a `MainConten
 
 Depois de adicionar essa marcação, visite a página por meio de um navegador. Como mostra a Figura 3, a marcação é colocado no `Content3` controle de conteúdo é exibido na coluna à esquerda, abaixo da seção de notícias (circulada em vermelho). A marcação é colocado no `Content2` é exibido na parte direita da página (circulada em azul).
 
-
 [![A coluna à esquerda agora inclui conteúdo específico da página abaixo da seção de notícias](multiple-contentplaceholders-and-default-content-vb/_static/image8.png)](multiple-contentplaceholders-and-default-content-vb/_static/image7.png)
 
 **Figura 03**: A esquerda coluna agora inclui específico da página conteúdo abaixo a seção notícias ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image9.png))
-
 
 ### <a name="defining-content-in-existing-content-pages"></a>Como definir o conteúdo em páginas de conteúdo existentes
 
@@ -80,11 +73,9 @@ Ao contrário da maioria dos controles da Web do ASP.NET, as ferramentas do Visu
 
 Para adicionar um controle de conteúdo para o `LeftColumnContent` ContentPlaceHolder para `About.aspx`, expanda a marca inteligente do ContentPlaceHolder e clique no link criar conteúdo personalizado.
 
-
 [![Modo de Design para About mostra o LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image11.png)](multiple-contentplaceholders-and-default-content-vb/_static/image10.png)
 
 **Figura 04**: Modo de Design para `About.aspx` mostra a `LeftColumnContent` ContentPlaceHolder ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image12.png))
-
 
 Ao clicar no link criar conteúdo personalizado gera o necessário controle na página e conjuntos de conteúdo seu `ContentPlaceHolderID` propriedade para o ContentPlaceHolder `ID`. Por exemplo, clicar no link criar conteúdo personalizado para `LeftColumnContent` região no `About.aspx` adiciona a seguinte marcação declarativa à página:
 
@@ -96,11 +87,9 @@ ASP.NET não exige que todas as páginas de conteúdo incluem controles de conte
 
 No momento, `Default.aspx` contém dois controles de conteúdo para o `head` e `MainContent` ContentPlaceHolders; ele não tem um controle de conteúdo para `LeftColumnContent`. Consequentemente, quando `Default.aspx` é renderizado o `LeftColumnContent` conteúdo de padrão do ContentPlaceHolder é usado. Como temos ainda definir qualquer conteúdo padrão para esse ContentPlaceHolder, o efeito líquido é que nenhuma marcação é emitida para esta região. Para verificar esse comportamento, visite `Default.aspx` através de um navegador. Como mostra a Figura 5, nenhuma marcação é emitida na coluna à esquerda, abaixo da seção de notícias.
 
-
 [![Nenhum conteúdo é renderizado para o LeftColumnContent ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image14.png)](multiple-contentplaceholders-and-default-content-vb/_static/image13.png)
 
 **Figura 05**: Nenhum conteúdo é renderizado para o `LeftColumnContent` ContentPlaceHolder ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image15.png))
-
 
 ## <a name="step-3-specifying-default-content-in-the-master-page"></a>Etapa 3: Especificando o conteúdo padrão na página mestra
 
@@ -113,7 +102,6 @@ Uma solução melhor é definir as caixas de texto nome de usuário e senha como
 > [!NOTE]
 > O restante deste tutorial atualiza nosso site para incluir uma interface de logon na coluna à esquerda para todas as páginas, mas a página de logon. No entanto, este tutorial examina como configurar o site para dar suporte a contas de usuário. Para obter mais informações sobre esse tópico, consulte a minha [formulários de autenticação, autorização, contas de usuário e funções](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md) tutoriais.
 
-
 ### <a name="adding-a-contentplaceholder-and-specifying-its-default-content"></a>Adicionando um ContentPlaceHolder e especificando seu conteúdo padrão
 
 Abra o `Site.master` página mestra e adicione a seguinte marcação para a coluna esquerda entre a `DateDisplay` seção rótulo e lições:
@@ -122,11 +110,9 @@ Abra o `Site.master` página mestra e adicione a seguinte marcação para a colu
 
 Depois de adicionar essa marcação de exibição de Design da sua página mestre deve ser semelhante a Figura 6.
 
-
 [![A página mestra inclui um controle de logon](multiple-contentplaceholders-and-default-content-vb/_static/image17.png)](multiple-contentplaceholders-and-default-content-vb/_static/image16.png)
 
 **Figura 06**: A página mestra inclui um controle de logon ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image18.png))
-
 
 Este ContentPlaceHolder `QuickLoginUI`, tem um controle de Web de logon como seu conteúdo padrão. O controle de logon exibe uma interface do usuário que solicita ao usuário seu nome de usuário e senha juntamente com um botão de Log. Ao clicar no botão logon, o controle de logon internamente valida as credenciais do usuário em relação a API Membership. Para usar esse controle de logon na prática, em seguida, você precisará configurar seu site para usar a associação. Este tópico está além do escopo deste tutorial. Consulte a minha [formulários de autenticação, autorização, contas de usuário e funções](../../older-versions-security/introduction/security-basics-and-asp-net-support-cs.md) tutoriais para obter mais informações sobre a criação de um aplicativo web que dá suporte a contas de usuário.
 
@@ -144,11 +130,9 @@ Depois de definir o conteúdo para o `MainContent` e `LeftColumnContent` regiõe
 
 Figura 7 mostra essa página quando visualizado por meio de um navegador. Como esta página especifica um controle de conteúdo para o `QuickLoginUI` ContentPlaceHolder, ele substitui o conteúdo padrão especificado na página mestra. O efeito líquido é que o controle de logon é exibido no Design da página mestra exibição (veja a Figura 6) é renderizada não nesta página.
 
-
 [![A página de logon Represses conteúdo de padrão de QuickLoginUI ContentPlaceHolder](multiple-contentplaceholders-and-default-content-vb/_static/image20.png)](multiple-contentplaceholders-and-default-content-vb/_static/image19.png)
 
 **Figura 07**: A página de logon Represses a `QuickLoginUI` o conteúdo de padrão do ContentPlaceHolder ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image21.png))
-
 
 ### <a name="using-the-default-content-in-new-pages"></a>Usando o conteúdo padrão em novas páginas
 
@@ -160,11 +144,9 @@ Para remover o controle de conteúdo, você pode manualmente excluir sua marcaç
 
 A Figura 8 mostra `Default.aspx` quando visualizado por meio de um navegador. Lembre-se de que `Default.aspx` tem apenas dois controles de conteúdo especificados na sua marcação declarativa - um para `head` e outra para `MainContent`. Como resultado, o conteúdo para o padrão de `LeftColumnContent` e `QuickLoginUI` ContentPlaceHolders são exibidos.
 
-
 [![O conteúdo padrão para o LeftColumnContent e QuickLoginUI ContentPlaceHolders são exibidos](multiple-contentplaceholders-and-default-content-vb/_static/image23.png)](multiple-contentplaceholders-and-default-content-vb/_static/image22.png)
 
 **Figura 08**: O conteúdo padrão para o `LeftColumnContent` e `QuickLoginUI` ContentPlaceHolders são exibidas ([clique para exibir a imagem em tamanho normal](multiple-contentplaceholders-and-default-content-vb/_static/image24.png))
-
 
 ## <a name="summary"></a>Resumo
 

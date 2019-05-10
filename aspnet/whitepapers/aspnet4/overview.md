@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 0991ce5c866aa9e31ef23812e953d9ee10dda3d1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fbbb9e2ef6ce540f0ab422d2b80e4a5409076c83
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409714"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132935"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
 
 > Este documento fornece uma visão geral de muitos dos novos recursos do ASP.NET que estão incluídos no.NET Framework 4 e no Visual Studio 2010.
 > 
 > [Baixe este white paper](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_and_Visual_Studio_2010_Web_Development_Overview.pdf)
-
 
 **Conteúdo**
 
@@ -145,7 +144,6 @@ Um novo recurso de escalabilidade *auto-início* que diretamente endereços nest
 > 
 > Para obter mais informações, consulte [Application warm-up](https://www.iis.net/extensions/applicationwarmup%20on%20the%20IIS.net) no site da Web do IIS.net. Para um passo a passo que ilustra como usar o recurso de aquecimento, consulte [Introdução ao módulo de aquecimento do aplicativo do IIS 7.5](https://www.iis.net/learn/manage) no site da Web do IIS.net.
 
-
 Para usar o recurso auto-start, um administrador do IIS define um pool de aplicativos no IIS 7.5 seja iniciado automaticamente usando a seguinte configuração no `applicationHost.config` arquivo:
 
 [!code-xml[Main](overview/samples/sample5.xml)]
@@ -206,7 +204,6 @@ Por padrão, o *requestPathInvalidChars* atributo define oito caracteres como in
 
 > [!NOTE]
 > Observação ASP.NET 4 sempre rejeita os caminhos de URL que contêm caracteres no intervalo ASCII de 0x00 a 0x1F, pois esses são os caracteres de URL inválidos conforme definido no RFC 2396 da IETF ([http://www.ietf.org/rfc/rfc2396.txt](http://www.ietf.org/rfc/rfc2396.txt)). Em versões do Windows Server que executam o IIS 6 ou superior, o driver de dispositivo do protocolo HTTP. sys recusa automaticamente as URLs com esses caracteres.
-
 
 <a id="0.2__Toc253429245"></a><a id="0.2__Toc243304619"></a>
 
@@ -270,7 +267,6 @@ ASP.NET 4 aproveita a nova funcionalidade de monitoramento de recursos introduzi
 
 > [!NOTE]
 > Observação o `aspnet.config` arquivo está no diretório em que o .NET Framework está instalado. Não é o `Web.config` arquivo.
-
 
 Quando o *appDomainResourceMonitoring* recurso foi habilitado, dois novos contadores de desempenho estão disponíveis na categoria de desempenho "Aplicativos do ASP.NET": *% tempo do processador gerenciado* e  *Memória usada gerenciada*. Ambos esses contadores de desempenho usam o novo recurso de gerenciamento de recursos de domínio de aplicativo do CLR para controlar o tempo estimado de CPU e a utilização de memória gerenciada de aplicativos individuais do ASP.NET. Como resultado, com o ASP.NET 4, os administradores agora têm uma exibição mais granular sobre o consumo de recursos de aplicativos individuais executados em um único processo de trabalho.
 
@@ -678,7 +674,6 @@ O *estáticos* configuração tem o efeito de redefinir na hierarquia de nomencl
 > [!NOTE]
 > Observe que cabe a você certifique-se de que as IDs de controle renderizado são exclusivas. Se não, isso pode interromper qualquer funcionalidade que exija IDs exclusivos para elementos HTML individuais, como o cliente *getElementById* função.
 
-
 #### <a name="creating-predictable-client-ids-in-data-bound-controls"></a>Criação de IDs de cliente previsíveis em controles ligados a dados
 
 O *ClientID* valores que são gerados para controles em um controle de lista associado a dados pelo algoritmo herdado podem ser longos e não são realmente previsíveis. O *ClientIDMode* funcionalidade pode ajudá-lo a ter mais controle sobre como essas IDs são geradas.
@@ -1004,12 +999,10 @@ O exemplo anterior renderiza a seguinte saída, sem a *tabela*, *tr*, e *td* ele
 
 > Conteúdo
 
-
 Esse aprimoramento pode tornar mais fácil ao estilo o conteúdo do controle com o CSS, porque nenhuma marca inesperada é renderizada pelo controle.
 
 > [!NOTE]
 > Observe que essa alteração desabilita o suporte para a função de formatação automática no designer do Visual Studio 2010, porque não há um *tabela* elemento que pode hospedar os atributos de estilo que são gerados pela opção de formatação automática.
-
 
 <a id="0.2__Toc253429270"></a><a id="0.2__Toc243304644"></a>
 
@@ -1057,7 +1050,6 @@ A marcação anterior gera o seguinte HTML:
 
 > [!NOTE]
 > Observação: se você definir *RepeatLayout* à *OrderedList* ou *UnorderedList*, o *RepeatDirection* propriedade não podem ser usada e serão gera uma exceção em tempo de execução se a propriedade foi definida em sua marcação ou código. A propriedade não teria nenhum valor, porque o layout visual desses controles é definido usando a CSS em vez disso.
-
 
 <a id="0.2__Toc253429272"></a><a id="0.2__Toc243304646"></a>
 
@@ -1146,7 +1138,6 @@ Dados dinâmicos foi introduzidos na versão do .NET Framework 3.5 SP1 em meados
 
 > [!NOTE]
 > Observação: para obter mais informações, consulte o [documentação de dados dinâmicos](https://msdn.microsoft.com/library/cc488545.aspx) na biblioteca MSDN.
-
 
 Para o ASP.NET 4, dados dinâmicos foi aprimorado para dar aos desenvolvedores ainda mais poderosas para criar rapidamente sites controlados por dados.
 

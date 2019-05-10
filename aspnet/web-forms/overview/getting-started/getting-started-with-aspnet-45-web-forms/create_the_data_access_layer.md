@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 0bbf7a6e-d7eb-4091-91e4-fff892777f32
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 msc.type: authoredcontent
-ms.openlocfilehash: bc91eba17938de15f03ecc1e745aac57c7eac7a1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 61a9dae22efed9cb7e8957a8c131396cbdeea3c9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419490"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131351"
 ---
 # <a name="create-the-data-access-layer"></a>Criar a camada de acesso a dados
 
@@ -22,7 +22,6 @@ by [Erik Reitan](https://github.com/Erikre)
 [Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
-
 
 Este tutorial descreve como criar, acessar e analisar dados de um banco de dados usando o Web Forms do ASP.NET e o Entity Framework Code First. Este tutorial se baseia no tutorial anterior, "Criar o projeto" e faz parte da série de tutoriais de Wingtip Toys Store. Depois de concluir este tutorial, você terá criado um grupo de classes de acesso a dados que estão na *modelos* pasta do projeto.
 
@@ -70,7 +69,7 @@ Neste tutorial, você começará adicionando classes de entidade simples que rep
 
     ![Criar camada de acesso a dados - novo Menu de Item](create_the_data_access_layer/_static/image2.png)
 3. Selecione **classe** no painel central e nomeie essa nova classe *Product.cs*.
-4. Clique em **Adicionar**.  
+4.  Clique em **Adicionar**.  
    O novo arquivo de classe é exibido no editor.
 5. Substitua o código padrão pelo código a seguir:   
 
@@ -119,7 +118,6 @@ Como você pode ver no código acima, quando o banco de dados é criado e inicia
 > 
 > Se você quisesse que o banco de dados a ser recriado sempre que você executou o aplicativo, você pode usar o `DropCreateDatabaseAlways` classe, em vez do `DropCreateDatabaseIfModelChanges` classe. No entanto para esta série de tutoriais, use o `DropCreateDatabaseIfModelChanges` classe.
 
-
 Neste momento neste tutorial, você terá um *modelos* pasta com quatro novas classes e a classe de um padrão:
 
 ![Criar pasta de modelos de camada de acesso a dados-](create_the_data_access_layer/_static/image3.png)
@@ -136,7 +134,6 @@ Para inicializar os modelos de dados quando o aplicativo é iniciado, você atua
 > 
 > No Solution Explorer, você pode selecionar o *global. asax* arquivo ou o *Global.asax.cs* arquivo para editar o *Global.asax.cs* arquivo.
 
-
 1. Adicione o seguinte código realçado em amarelo para o `Application_Start` método na *Global.asax.cs* arquivo.   
 
     [!code-csharp[Main](create_the_data_access_layer/samples/sample5.cs?highlight=9-10,22-23)]
@@ -144,7 +141,6 @@ Para inicializar os modelos de dados quando o aplicativo é iniciado, você atua
 > [!NOTE] 
 > 
 > Seu navegador deve dar suporte a HTML5 para exibir o código realçado em amarelo, ao exibir esta série de tutoriais em um navegador.
-
 
 Conforme mostrado no código acima, quando o aplicativo é iniciado, o aplicativo especifica o inicializador que será executado durante a primeira vez que os dados é acessado. Os dois namespaces adicionais são necessários para acessar o `Database` objeto e o `ProductDatabaseInitializer` objeto.
 

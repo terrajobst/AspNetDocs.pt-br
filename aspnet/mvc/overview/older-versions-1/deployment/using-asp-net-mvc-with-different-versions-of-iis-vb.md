@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: 1c1283b2-6956-4937-b568-d30de432ce23
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0446a125845134d2fad869094a540c960f6b0a25
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b754175c853c20eec6be3521376b62d62f33106d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406464"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123220"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-vb"></a>Uso do ASP.NET MVC com diferentes versões de IIS (VB)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, você aprenderá como usar o ASP.NET MVC e o roteamento de URL, com diferentes versões dos serviços de informações da Internet. Você aprenderá as diferentes estratégias para usar o ASP.NET MVC com o IIS 7.0 (modo clássico), o IIS 6.0 e versões anteriores do IIS.
-
 
 A estrutura ASP.NET MVC depende do roteamento do ASP.NET para rotear solicitações de navegador às ações do controlador. Para tirar proveito do roteamento do ASP.NET, você talvez precise executar etapas de configuração adicionais em seu servidor web. Tudo depende da versão dos serviços de informações da Internet (IIS) e o modo para seu aplicativo de processamento de solicitação.
 
@@ -53,18 +52,15 @@ O modo de processamento de solicitação é determinado pelo pool de aplicativos
 
 Por padrão, o IIS é configurado para dar suporte a dois pools de aplicativos: **DefaultAppPool** e **.NET AppPool clássico**. Se DefaultAppPool for selecionada, seu aplicativo está em execução no modo de processamento de solicitação integrado. Se o .NET AppPool clássico está selecionada, seu aplicativo está em execução no modo de processamento de solicitação clássica.
 
-
 [![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image1.png)
 
 **Figura 1**: Detectando o modo de processamento de solicitação ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.png))
-
 
 Observe que você pode modificar o modo de processamento de solicitação dentro da caixa de diálogo Editar aplicativo. Clique no botão Selecionar e alterar o pool de aplicativos associado ao aplicativo. Perceba que há problemas de compatibilidade ao alterar um aplicativo ASP.NET do clássico para o modo integrado. Para obter mais informações, confira os seguintes artigos:
 
 - Atualizando o ASP.NET 1.1 para o IIS 7.0 no Windows Vista e Windows Server 2008 – [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/upgrading-aspnet-11-to-iis-on-windows-vista-and-windows-server-2008)
 
 - Integração do ASP.NET com o IIS 7.0 – [https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis](https://www.iis.net/learn/application-frameworks/building-and-running-aspnet-applications/aspnet-integration-with-iis)
-
 
 Se um aplicativo ASP.NET estiver usando o DefaultAppPool, você não precisa executar nenhuma etapa adicional para obter o roteamento do ASP.NET (e, portanto, ASP.NET MVC) para trabalhar. No entanto, se o aplicativo ASP.NET estiver configurado para usar o .NET AppPool clássico, em seguida, continue lendo, você terá mais trabalho a fazer.
 
@@ -96,11 +92,9 @@ Produto/3/detalhes
 
 Infelizmente, as versões mais antigas do IIS não passam essas solicitações para a estrutura do ASP.NET. Portanto, essas solicitações não serão roteadas para um controlador. Por exemplo, se você fizer uma solicitação do navegador para o URL /Home/índice, em seguida, você obterá a página de erro na Figura 2.
 
-
 [![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image2.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.png)
 
 **Figura 2**: Recebendo um erro 404 não encontrado ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.png))
-
 
 Versões anteriores do IIS ser mapeado apenas determinadas solicitações para a estrutura do ASP.NET. A solicitação deve ser para uma URL com a extensão de arquivo correto. Por exemplo, uma solicitação para /SomePage.aspx é mapeada para a estrutura do ASP.NET. No entanto, uma solicitação para /SomePage.htm não permite.
 
@@ -116,9 +110,7 @@ O arquivo global. asax modificado na listagem 2 funciona com versões anteriores
 
 [!code-vb[Main](using-asp-net-mvc-with-different-versions-of-iis-vb/samples/sample2.vb)]
 
-
 Importante: Lembre-se de criar seu aplicativo ASP.NET MVC novamente depois de alterar o arquivo global asax.
-
 
 Há duas alterações importantes para o arquivo global asax na listagem 2. Agora há duas rotas definidas em global. asax. O padrão de URL para a rota padrão, a primeira rota, agora se parece com:
 
@@ -138,9 +130,7 @@ A segunda rota, a rota de raiz, há de nova. Esse padrão de URL para a rota de 
 
 Depois de fazer essas modificações à sua tabela de rotas, você precisará certificar-se de que todos os links em seu aplicativo são compatíveis com esses novos padrões de URL. Em outras palavras, certifique-se de que todos os seus links incluem a extensão. MVC. Se você usar o método auxiliar Html.ActionLink() para gerar seus links, não deve precisar fazer alterações.
 
-
 Em vez de usar o script registermvc.wcf, você pode adicionar uma nova extensão para IIS que é mapeado para a estrutura do ASP.NET manualmente. Ao adicionar uma nova extensão, certifique-se de que a caixa de seleção rotulada **Verifique se esse arquivo existe** não está marcada.
-
 
 ## <a name="hosted-server"></a>Servidor hospedado
 
@@ -172,11 +162,9 @@ Aqui está como habilitar um mapa de script curinga para o IIS 7.0:
 6. Insira o nome do MVC
 7. Clique o **Okey** botão
 
-
 [![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image3.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.png)
 
 **Figura 3**: Criar um mapa de script curinga com o IIS 7.0 ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image6.png))
-
 
 Siga estas etapas para criar um mapa de script curinga com o IIS 6.0:
 
@@ -189,19 +177,15 @@ Siga estas etapas para criar um mapa de script curinga com o IIS 6.0:
 7. Desmarque a caixa de seleção **Verifique se o arquivo já existe**
 8. Clique o **Okey** botão
 
-
 [![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image4.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image7.png)
 
 **Figura 4**: Criar um mapa de script curinga com o IIS 6.0 ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image8.png))
 
-
 Depois de habilitar os mapas de script curinga, você precisará modificar a tabela de rotas no arquivo global. asax para que ele inclua uma rota de raiz. Caso contrário, você obterá a página de erro na Figura 5 quando você faz uma solicitação para a página de raiz do seu aplicativo. Você pode usar o arquivo global. asax modificado na listagem 4.
-
 
 [![A caixa de diálogo Novo projeto](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image5.jpg)](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image9.png)
 
 **Figura 5**: Erro de rota de raiz ausente ([clique para exibir a imagem em tamanho normal](using-asp-net-mvc-with-different-versions-of-iis-vb/_static/image10.png))
-
 
 **Listagem 4 - global. asax (modificado com a rota de raiz)**
 

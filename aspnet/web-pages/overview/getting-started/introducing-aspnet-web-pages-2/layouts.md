@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
-ms.openlocfilehash: 58f3ec28914a604aa911cc3cb73733f0d58fd49f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 678eb7089e95e3d221d6b2d82034a62aefa75757
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390409"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131830"
 ---
 # <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introdução ao ASP.NET Web Pages - criando um Layout consistente
 
@@ -26,7 +26,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - É o que uma página de layout.
 > - Como combinar as páginas de layout com conteúdo dinâmico.
 > - Como passar valores para uma página de layout.
-
 
 ## <a name="about-layouts"></a>Sobre Layouts
 
@@ -167,7 +166,6 @@ Se desejar, exiba a origem da página no navegador. Você pode ver que o `<title
 > Você pode passar qualquer número de valores usando o `Page` objeto. Se você quiser passar informações de filmes para a página de layout, você pode passar valores usando algo como `Page.MovieTitle` e `Page.Genre` e `Page.MovieYear`. (Ou outros nomes inventada para armazenar as informações.) O único requisito — que é provavelmente óbvia — é que você precisa usar os mesmos nomes na página de conteúdo e a página de layout.
 > 
 > As informações transmitidas por meio de `Page` objeto não está limitado a apenas texto a ser exibido na página de layout. Você pode passar um valor para a página de layout e, em seguida, o código na página de layout pode usar o valor para decidir se deve exibir uma seção da página, o que *. CSS* de arquivos para usar e assim por diante. Os valores que você passe a `Page` objeto são como quaisquer outros valores que você usar no código. É assim que os valores são originadas na página de conteúdo e são passados para a página de layout.
-
 
 Abra o *AddMovie.cshtml* da página e adicione uma linha na parte superior do código que fornece um título para o *AddMovie.cshtml* página:
 

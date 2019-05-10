@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: b3193d33-2d0b-4d98-9712-58bd897c62ec
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6
 msc.type: authoredcontent
-ms.openlocfilehash: b1e7bd0b16190b00e0e78a01ef71475e1c8d048a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bc031dd5be61cc6707c522f85f6af77a420c8b31
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59394816"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129663"
 ---
 # <a name="part-6-using-data-annotations-for-model-validation"></a>Parte 6: Uso de anotações de dados para a validação de modelo
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.  
 >   
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 6 aborda o uso de anotações de dados para a validação de modelo.
-
 
 Temos um grande problema com nossos formulários de criar e editar: eles não estão fazendo nenhuma validação. Podemos fazer coisas como deixar os campos obrigatórios em branco ou tipo letras no campo de preço e o primeiro erro que veremos é do banco de dados.
 
@@ -76,7 +75,6 @@ Felizmente, os modelos do scaffold ASP.NET MVC 3 tem validação do lado do clie
 Digitar uma única letra no campo título satisfaz os requisitos de validação, para que a mensagem de validação é removida imediatamente.
 
 ![](mvc-music-store-part-6/_static/image3.png)
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-5.md)

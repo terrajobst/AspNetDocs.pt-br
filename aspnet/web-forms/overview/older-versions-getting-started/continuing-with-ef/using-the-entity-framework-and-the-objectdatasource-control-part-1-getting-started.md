@@ -8,12 +8,12 @@ ms.date: 01/26/2011
 ms.assetid: 244278c1-fec8-4255-8a8a-13bde491c4f5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started
 msc.type: authoredcontent
-ms.openlocfilehash: c0f11019c7410b756d592066a7fe33b3e26fd383
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2f14707eb058d438495dd2bc4c17b976c471fc97
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407192"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131334"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-1-getting-started"></a>Usando o Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Guia de Introdução
 
@@ -45,7 +45,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > ## <a name="questions"></a>Perguntas
 > 
 > Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do Entity Framework do ASP.NET](https://forums.asp.net/1227.aspx), o [Entity Framework e LINQ para o fórum de entidades](https://social.msdn.microsoft.com/forums/adodotnetentityframework/threads/), ou [ StackOverflow.com](http://stackoverflow.com/).
-
 
 O `EntityDataSource` controle permite que você criar um aplicativo muito rapidamente, mas normalmente requer que você mantenha uma quantidade significativa de lógica de negócios e lógica de acesso a dados em seu *. aspx* páginas. Se você espera que seu aplicativo aumente de complexidade e requer manutenção contínua, você pode investir mais tempo de desenvolvimento com antecedência para criar uma *fileiras* ou *em camadas* estrutura de aplicativo Isso é mais sustentável. Para implementar essa arquitetura, você pode separar a camada de apresentação da camada de lógica de negócios (BLL) e a camada de acesso a dados (DAL). Uma maneira de implementar essa estrutura é usar o `ObjectDataSource` controlar em vez do `EntityDataSource` controle. Quando você usa o `ObjectDataSource` controle, implementar seu próprio código de acesso a dados e, em seguida, invoque-o na *. aspx* páginas usando um controle que tem muitos dos mesmos recursos que os outros controles de fonte de dados. Isso permite que você combine as vantagens de uma abordagem de n camadas com os benefícios de usar um controle de formulários da Web para acesso a dados.
 
@@ -102,7 +101,6 @@ Clique em **Okey** na **tabelas e colunas** , clique em **fechar** no **relaçõ
 > 
 > Depois de salvar a alteração, você não poderá excluir uma linha do `Person` tabela se essa pessoa é um administrador de departamento. Em um aplicativo de produção, você forneceria uma mensagem de erro específica quando uma restrição de banco de dados impede a exclusão ou, você especificaria uma exclusão em cascata. Para obter um exemplo de como especificar uma exclusão em cascata, consulte [de Entity Framework e do ASP.NET – Introdução à parte 2](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-2.md).
 
-
 ### <a name="adding-a-view-to-the-database"></a>Adicionando uma exibição no banco de dados
 
 Na nova *Departments.aspx* página que você criará, que você deseja fornecer uma lista suspensa de instrutores, com nomes no formato "Sobrenome, nome" para que os usuários podem selecionar os administradores de departamento. Para tornar mais fácil de fazer isso, você criará um modo de exibição no banco de dados. O modo de exibição consistirá apenas os dados necessários para a lista suspensa: o nome completo (formatado corretamente) e a chave de registro.
@@ -136,7 +134,6 @@ No designer, você verá que a ferramenta está sendo criado um `vInstructorName
 > [!NOTE]
 > No **saída** e **lista de erros** tecla do windows, você poderá ver uma mensagem de aviso informando que a ferramenta criar automaticamente um primário para o novo `vInstructorName` modo de exibição. Esse comportamento é esperado.
 
-
 Quando você se referir ao novo `vInstructorName` entidade no código, você não quiser usar a convenção de banco de dados de prefixar um "v" em letras minúsculas para ele. Portanto, você renomeará a entidade e a entidade definida no modelo.
 
 Abra o **navegador de modelos**. Você verá `vInstructorName` listado como um tipo de entidade e um modo de exibição.
@@ -159,7 +156,6 @@ Esse código fornece uma única `GetDepartments` método que retorna todas as en
 
 > [!NOTE]
 > Uma prática comum é criar uma classe de repositório para cada tipo de entidade. Neste tutorial, uma classe de repositório para vários tipos de entidade é usada. Para obter mais informações sobre o padrão de repositório, consulte as postagens no [blog da equipe do Entity Framework](https://blogs.msdn.com/b/adonet/archive/2009/06/16/using-repository-and-unit-of-work-patterns-with-entity-framework-4-0.aspx) e [blog de Julie](http://thedatafarm.com/blog/data-access/agile-ef4-repository-part-3-fine-tuning-the-repository/).
-
 
 O `GetDepartments` método retorna um `IEnumerable` objeto em vez de um `IQueryable` objeto para garantir que a coleção retornada é utilizável até mesmo depois que o próprio objeto de repositório é descartado. Um `IQueryable` objeto pode fazer com que o acesso de banco de dados sempre que ele é acessado, mas o objeto de repositório pode ser descartado no momento em um controle de vinculação de dados tenta renderizar os dados. Você pode retornar outro tipo de coleção, como um `IList` do objeto, em vez de um `IEnumerable` objeto. No entanto, retornando um `IEnumerable` objeto garante que você pode realizar tarefas de processamento de lista típica de somente leitura, como `foreach` loops e consultas LINQ, mas você não pode adicionar a ou remover itens na coleção, que poderá indicar que essas alterações seria persistentes no banco de dados.
 
@@ -309,7 +305,6 @@ Use o *DepartmentsAdd.aspx* página para adicionar um novo departamento, em segu
 
 > [!NOTE]
 > Você não poderá editar as linhas que você não adicionou (ou seja, que já estavam no banco de dados), devido aos dados inválidos no banco de dados; os administradores para as linhas que foram criados com o banco de dados são os alunos. Se você tentar editar um deles, você obterá uma página de erro que informa um erro como `'InstructorsDropDownList' has a SelectedValue which is invalid because it does not exist in the list of items.`
-
 
 [![Image10](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image36.png)](using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started/_static/image35.png)
 

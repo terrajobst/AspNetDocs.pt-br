@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 0177dabd-d888-449f-91b2-24190cf5e842
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-the-production-web-application-to-use-the-production-database-cs
 msc.type: authoredcontent
-ms.openlocfilehash: fa05645db9d43a836cc75b399153dd2e2c288f7c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1e93a5314129b2a05ede603ae9c01cd57b574f88
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388751"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127034"
 ---
 # <a name="configuring-the-production-web-application-to-use-the-production-database-c"></a>Configuração do aplicativo Web de produção para usar o banco de dados de produção (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/E/6/F/E6FE3A1F-EE3A-4119-989A-33D1A9F6F6DD/ASPNET_Hosting_Tutorial_08_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial08_DBConfig_cs.pdf)
 
 > Conforme discutido nos tutoriais anteriores, não é incomum para obter informações de configuração são diferentes entre os ambientes de desenvolvimento e produção. Isso é especialmente verdadeiro para aplicativos web controlados por dados, como as cadeias de caracteres de conexão de banco de dados diferem entre os ambientes de desenvolvimento e produção. Este tutorial explora maneiras para configurar o ambiente de produção para incluir a cadeia de caracteres de conexão apropriado em mais detalhes.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -44,7 +43,6 @@ A cadeia de caracteres de conexão - fonte de dados =. \SQLEXPRESS; AttachDbFile
 - `AttachDbFilename` -Especifica o local do arquivo de banco de dados. O valor contém o espaço reservado `|DataDirectory|`, que é resolvido para o caminho completo da s aplicativo `App_Data` pasta em tempo de execução.
 - `Integrated Security` -um valor booliano que indica se deve usar uma nome de usuário e senha especificada ao se conectar ao banco de dados (false) ou o Windows atual, as credenciais da conta (true).
 - `User Instance` -uma opção de configuração específica para as edições SQL Server Express que indica se deve permitir que usuários não administrativos no computador local, anexar e se conectar a um banco de dados do SQL Server Express Edition. Ver [instâncias do SQL Server Express usuário](https://msdn.microsoft.com/library/ms254504.aspx) para obter mais informações sobre essa configuração.
-  
 
 As opções de cadeia de caracteres de conexão permitidos dependem do banco de dados que você está se conectando e o provedor de banco de dados do ADO.NET que está sendo usado. Por exemplo, a cadeia de conexão para se conectar a um Microsoft SQL Server difere do banco de dados que é usado para se conectar ao banco de dados Oracle. Da mesma forma, se conectar a um banco de dados do Microsoft SQL Server usando o provedor SqlClient usa uma cadeia de caracteres de conexão diferente que ao usar o provedor OLE DB.
 
@@ -52,19 +50,15 @@ Você pode criar a cadeia de caracteres de conexão de banco de dados manualment
 
 Abra o Visual Studio e, em seguida, navegue até a janela do Gerenciador de servidores (no Visual Web Developer, essa janela é chamada Gerenciador de banco de dados). Clique na opção conexões de dados e escolha a opção de Adicionar Conexão no menu de contexto. Isso abre o assistente mostrado na Figura 1. Escolha a fonte de dados apropriada e clique em continuar.
 
-
 [![Optar por adicionar um novo banco de dados para o Gerenciador de servidores](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image2.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image1.jpg) 
 
 **Figura 1**: Optar por adicionar um novo banco de dados para o Gerenciador de servidores ([clique para exibir a imagem em tamanho normal](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image3.jpg))
 
-
 Em seguida, especifique as várias informações de conexão de banco de dados (veja a Figura 2). Quando você se inscreveu com sua empresa de hospedagem de web que eles devem ter fornecido informações sobre como se conectar ao banco de dados - o nome do servidor de banco de dados, o nome do banco de dados, o nome de usuário e senha a ser usada para se conectar ao banco de dados e assim por diante. Depois de inserir essas informações, clique em Okey para concluir este assistente e adicionar o banco de dados para o Gerenciador de servidores.
-
 
 [![Especifique as informações de Conexão de banco de dados](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image5.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image4.jpg) 
 
 **Figura 2**: Especifique as informações de Conexão de banco de dados ([clique para exibir a imagem em tamanho normal](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image6.jpg))
-
 
 O banco de dados do ambiente de produção deve agora estar listado no Gerenciador de servidores. Selecione o banco de dados do Gerenciador de servidores e vá para a janela Propriedades. Lá você encontrará uma propriedade de cadeia de caracteres de Conexão com a cadeia de caracteres de conexão do banco de dados s nomeada. Supondo que você estiver usando um banco de dados do Microsoft SQL Server em produção e o provedor do SqlClient sua cadeia de conexão deve ser semelhante ao seguinte:
 
@@ -87,14 +81,11 @@ A menos que você tenha um fluxo de trabalho de implantação mais formal, qualq
 > [!NOTE]
 > Se você implantar acidentalmente um `Web.config` arquivo que contém a cadeia de caracteres de conexão de banco de dados de desenvolvimento, haverá um erro quando o aplicativo em produção tenta se conectar ao banco de dados. Esse erro se manifesta como um `SqlException` com uma mensagem que informa que o servidor não foi encontrado ou não estava acessível.
 
-
 Depois que o site foi implantado para produção, visite o site de produção por meio de seu navegador. Você deve ver e aproveite a mesma experiência de usuário que, ao executar o aplicativo controlado por dados localmente. Claro quando você visitar o site de produção o site é alimentado pelo servidor de banco de dados de produção, enquanto que visitar o site no ambiente de desenvolvimento usa o banco de dados no desenvolvimento. A Figura 3 mostra a *ensinar por conta própria ASP.NET 3.5 in 24 horas* examine a página do site no ambiente de produção (Observe a URL na barra de endereços do navegador s).
-
 
 [![O aplicativo controlado por dados está agora disponível em produção!](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image8.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image7.jpg) 
 
 **Figura 3**: O aplicativo controlado por dados está agora disponível em produção! ([Clique para exibir a imagem em tamanho normal](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image9.jpg))
-
 
 ### <a name="storing-connection-strings-in-a-separate-configuration-file"></a>Armazenando cadeias de caracteres de Conexão em um arquivo de configuração separado
 
@@ -113,14 +104,11 @@ Faça uma cópia do arquivo databaseConnectionStrings.dev.config e nomeie-a como
 > [!NOTE]
 > Você pode nomear o arquivo de configuração algo diferente de databaseConnectionStrings.config, se você d como, por exemplo, `connectionStrings.config` ou `dbInfo.config`. No entanto, certifique-se de nomear o arquivo com um `.config` extensão como `.config` arquivos, por padrão, não são realizados pelo mecanismo ASP.NET. Se você nomear o arquivo outra coisa, como `connectionStrings.txt`, um usuário poderia apontar seu navegador para [www.yoursite.com/ConfigSettings/connectionStrings.txt](http://www.yoursite.com/ConfigSettings/connectionStrings.txt) e exibir o conteúdo do arquivo!
 
-
 Neste ponto o `ConfigSections` pasta deve conter três arquivos (veja a Figura 4). Os arquivos databaseConnectionStrings.dev.config e databaseConnectionStrings.production.config contêm as cadeias de caracteres de conexão para os ambientes de desenvolvimento e produção, respectivamente. O arquivo databaseConnectionStrings.config contém as informações de cadeia de caracteres de conexão que serão usadas pelo aplicativo web em tempo de execução. Consequentemente, o arquivo databaseConnectionStrings.config deve ser idêntico ao arquivo databaseConnectionStrings.dev.config no ambiente de desenvolvimento, enquanto em produção, o arquivo databaseConnectionStrings.config deve ser idêntico ao databaseConnectionStrings.production.config.
-
 
 [![ConfigSections](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image11.jpg)](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image10.jpg) 
 
 **Figura 4**: ConfigSections ([clique para exibir a imagem em tamanho normal](configuring-the-production-web-application-to-use-the-production-database-cs/_static/image12.jpg))
-
 
 Agora, precisamos instruir `Web.config` para usar o arquivo de databaseConnectionStrings.config para seu armazenamento de cadeia de caracteres de conexão. Abra `Web.config` e substitua o elemento `<connectionStrings>` existente pelo seguinte:
 
@@ -132,7 +120,6 @@ Com essa modificação, ambientes de desenvolvimento e produção contêm os mes
 
 > [!NOTE]
 > Você pode especificar as informações para qualquer `Web.config` elemento em um arquivo separado e usar o `configSource` atributo para fazer referência a esse arquivo no `Web.config`.
-
 
 ## <a name="summary"></a>Resumo
 

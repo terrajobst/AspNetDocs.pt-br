@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: b3a006a0-3ea2-4d45-b833-e20e3a3c0a1a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data
 msc.type: authoredcontent
-ms.openlocfilehash: 5415913626eb063a4cb1013ba03857c130487f42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e665ca8dd064c23a8b8bd3593014969d0c3da48
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412171"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128501"
 ---
 # <a name="introducing-aspnet-web-pages---displaying-data"></a>Introdução ao ASP.NET Web Pages - exibindo dados
 
@@ -34,7 +34,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Ferramentas de banco de dados do WebMatrix.
 > - `WebGrid` auxiliar.
-
 
 ## <a name="what-youll-build"></a>O que você vai criar
 
@@ -96,7 +95,6 @@ Alterne para o **tipo de dados** lista e escolha **int**. Esse valor Especifica 
 
 > [!NOTE]
 > Não chamamos o qualquer mais aqui (muito), mas você pode usar gestos de teclado padrão do Windows para navegar nessa grade. Por exemplo, você pode pressionar tab entre os campos, você apenas pode começar a digitar para selecionar um item em uma lista e assim por diante.
-
 
 Guia após o **valor padrão** caixa (ou seja, deixe em branco). Alterne para o **é a chave primária** caixa de seleção e selecione-o. Essa opção informa ao banco de dados que o *ID* coluna conterá os dados que identificam as linhas individuais. (Ou seja, cada linha terá um valor exclusivo na coluna de ID que você pode usar para encontrar aquela linha.)
 
@@ -177,7 +175,6 @@ Para executar a grade, você precisará escrever algumas linhas de código. Algu
 > [!NOTE]
 > Você realmente tem muitas opções para exibir dados em uma página. o `WebGrid` auxiliar é apenas um. Optamos por ele para este tutorial porque é a maneira mais fácil de exibir dados e porque ele é razoavelmente flexível. O próximo conjunto de tutoriais, você verá como usar um modo "manual" mais para trabalhar com dados na página, que lhe dá controle mais direto sobre como exibir os dados.
 
-
 No painel esquerdo no WebMatrix, clique o **arquivos** espaço de trabalho.
 
 O novo banco de dados que você criou está no *App\_dados* pasta. Se a pasta ainda não existir, o WebMatrix criou para seu novo banco de dados. (A pasta pode ter existido se anteriormente você tiver instalado os auxiliares.)
@@ -241,7 +238,6 @@ Nesse estágio, o banco de dados foi aberto, você já tem os dados você quer, 
 > Para algumas dessas operações (como inserindo e excluindo registros), o processo que está solicitando a operação deve ter as permissões apropriadas no banco de dados. Esse é o motivo para bancos de dados de produção que muitas vezes, é preciso fornecer um nome de usuário e senha ao se conectar ao banco de dados.
 > 
 > Existem dezenas de comandos SQL, mas todos eles seguem um padrão como os comandos que você vê aqui. Você pode usar comandos SQL para criar tabelas de banco de dados, contar o número de registros em uma tabela, calcular preços e realizar várias operações mais.
-
 
 ### <a name="adding-markup-to-display-the-data"></a>Adicionando marcação para exibir os dados
 

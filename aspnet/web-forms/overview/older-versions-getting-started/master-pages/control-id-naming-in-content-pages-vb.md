@@ -8,12 +8,12 @@ ms.date: 06/10/2008
 ms.assetid: dbb024a6-f043-4fc5-ad66-56556711875b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/control-id-naming-in-content-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: dd60d02c2c3840edd4c0e1244623fcea0cb2db0b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 27ceb8b30aaad2ad0ed7af5cd852af4acf599c31
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59386314"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131687"
 ---
 # <a name="control-id-naming-in-content-pages-vb"></a>Controlar nomenclatura de ID em páginas de conteúdo (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_05_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_05_VB.pdf)
 
 > Ilustra como os controles ContentPlaceHolder servem como um contêiner de nomenclatura e, portanto, fazer trabalhando programaticamente com um controle difícil (via FindControl). Aborda esse problema e soluções alternativas. Também descreve como acessar programaticamente o valor de ClientID resultante.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -33,7 +32,6 @@ Para lidar com esses cenários, o ASP.NET permite que certos controles a ser ind
 > [!NOTE]
 > O [ `INamingContainer` interface](https://msdn.microsoft.com/library/system.web.ui.inamingcontainer.aspx) é usado para indicar que um determinado controle de servidor ASP.NET deve funcionar como um contêiner de nomenclatura. O `INamingContainer` interface não soletrar todos os métodos que o controle de servidor deve implementar; em vez disso, ele é usado como um marcador. Gerar a marcação renderizada, se um controle implementa essa interface, em seguida, o mecanismo do ASP.NET automaticamente inclui prefixos de seu `ID` valor para seus descendentes processado `id` valores de atributo. Esse processo é abordado em mais detalhes na etapa 2.
 
-
 Contêineres de nomenclatura não apenas alterar o renderizado `id` valor do atributo, mas também afetam como o controle pode ser referenciado por meio de programação de classe de code-behind da página ASP.NET. O `FindControl("controlID")` método normalmente é usado para fazer referência a um controle da Web por meio de programação. No entanto, `FindControl` não invadir por meio de contêineres de nomenclatura. Consequentemente, você não pode usar diretamente o `Page.FindControl` método a referenciar os controles dentro de um GridView ou outro contêiner de nomenclatura.
 
 Como você pode ter imaginado, páginas mestras e ContentPlaceHolders são implementados como contêineres de nomenclatura. Neste tutorial, examinamos como mestre 2&gt;elementos HTML afetam `id` valores e maneiras de fazer referência por meio de programação de controles da Web dentro de uma página de conteúdo usando `FindControl`.
@@ -42,34 +40,27 @@ Como você pode ter imaginado, páginas mestras e ContentPlaceHolders são imple
 
 Para demonstrar os conceitos discutidos neste tutorial, vamos adicionar uma nova página ASP.NET ao nosso site. Criar uma nova página de conteúdo denominada `IDIssues.aspx` na pasta raiz, associando-o para o `Site.master` página mestra.
 
-
 ![Adicionar o IDIssues.aspx página conteúdo para a pasta raiz](control-id-naming-in-content-pages-vb/_static/image1.png)
 
 **Figura 01**: Adicionar página de conteúdo `IDIssues.aspx` para a pasta raiz
 
-
 Visual Studio cria automaticamente um controle de conteúdo para cada um dos ContentPlaceHolders de quatro da página mestra. Conforme observado na [ *vários ContentPlaceHolders e conteúdo padrão* ](multiple-contentplaceholders-and-default-content-vb.md) tutorial, se não houver um controle de conteúdo o conteúdo de ContentPlaceHolder da página mestra padrão é emitido em vez disso. Porque o `QuickLoginUI` e `LeftColumnContent` ContentPlaceHolders contêm marcação padrão adequada para essa página, vá em frente e remover seus controles de conteúdo do `IDIssues.aspx`. Neste ponto, a marcação declarativa da página de conteúdo deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](control-id-naming-in-content-pages-vb/samples/sample1.aspx)]
 
 No [ *especificando o título, marcas Meta e outros cabeçalhos de HTML na página mestra* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md) tutorial, criamos uma classe de página de base personalizada (`BasePage`) que configura automaticamente o título da página se ela for não foi explicitamente definido. Para o `IDIssues.aspx` página para empregar essa funcionalidade, a classe de code-behind da página deve derivar do `BasePage` classe (em vez de `System.Web.UI.Page`). Modifique a definição da classe de code-behind para que ele é semelhante ao seguinte:
 
-
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample2.vb)]
 
 Por fim, atualize o `Web.sitemap` arquivo para incluir uma entrada para esta lição novo. Adicionar um `<siteMapNode>` elemento e defina sua `title` e `url` atributos "Problemas de nomenclatura de ID de controle" e `~/IDIssues.aspx`, respectivamente. Depois de fazer essa adição seu `Web.sitemap` marcação do arquivo deve ser semelhante ao seguinte:
-
 
 [!code-xml[Main](control-id-naming-in-content-pages-vb/samples/sample3.xml)]
 
 Como ilustra a Figura 2, a nova entrada de mapa de site no `Web.sitemap` é refletida imediatamente na seção lições na coluna à esquerda.
 
-
 ![A seção de lições agora inclui um Link para &quot;controlar problemas de nomenclatura de ID&quot;](control-id-naming-in-content-pages-vb/_static/image2.png)
 
 **Figura 02**: A seção de lições agora inclui um Link para "Problemas de nomenclatura de ID de controle"
-
 
 ## <a name="step-2-examining-the-renderedidchanges"></a>Etapa 2: Examinando o renderizado`ID`alterações
 
@@ -77,19 +68,15 @@ Para entender melhor as modificações do ASP.NET mecanismo faz para o renderiza
 
 Neste ponto marcação declarativa do controle de conteúdo deve ser semelhante ao seguinte:
 
-
 [!code-aspx[Main](control-id-naming-in-content-pages-vb/samples/sample4.aspx)]
 
 Figura 3 mostra a página quando visualizado no designer do Visual Studio.
-
 
 [![A página inclui três controles da Web: uma caixa de texto, botão e Label](control-id-naming-in-content-pages-vb/_static/image4.png)](control-id-naming-in-content-pages-vb/_static/image3.png)
 
 **Figura 03**: Os página inclui três controles da Web: uma caixa de texto, botão e Label ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image5.png))
 
-
 Visite a página por meio de um navegador e, em seguida, exibir o código-fonte HTML. Como a marcação a seguir mostra, o `id` os valores dos elementos HTML para os controles TextBox, Button e Web de rótulo são uma combinação da `ID` valores dos controles da Web e o `ID` valores dos contêineres de nomenclatura na página.
-
 
 [!code-html[Main](control-id-naming-in-content-pages-vb/samples/sample5.html)]
 
@@ -97,18 +84,14 @@ Conforme mencionado anteriormente neste tutorial, a página mestra e seu Content
 
 Figura 4 ilustra esse comportamento. Para determinar o renderizado `id` do `Age` caixa de texto, comece com o `ID` o valor do controle TextBox, `Age`. Em seguida, faz o caminho até a hierarquia de controle. Em cada contêiner de nomenclatura (esses nós com uma cor de pêssego), de prefixo atual renderizado `id` com o contêiner de nomenclatura `id`.
 
-
 ![Os atributos de id renderizado são com base na valores de ID dos contêineres de nomenclatura](control-id-naming-in-content-pages-vb/_static/image6.png)
 
 **Figura 04**: O renderizado `id` atributos são baseadas no `ID` valores dos contêineres de nomenclatura
 
-
 > [!NOTE]
 > Conforme discutimos, a `ctl00` parte de renderizado `id` atributo constitui a `ID` valor a página mestra, mas você pode estar se perguntando como este `ID` valor surgiu. Não especificamos-lo em qualquer lugar em nossa página mestre ou conteúda. A maioria dos controles de servidor em uma página ASP.NET são adicionados explicitamente por meio de marcação declarativa da página. O `MainContent` controle ContentPlaceHolder foi especificada explicitamente na marcação de `Site.master`; o `Age` caixa de texto foi definida `IDIssues.aspx`da marcação. Podemos especificar o `ID` valores para esses tipos de controles na janela Propriedades ou da sintaxe declarativa. Outros controles, como a página mestra em si, não estão definidos na marcação declarativa. Consequentemente, seus `ID` valores devem ser gerados automaticamente para nós. Os conjuntos de mecanismo do ASP.NET a `ID` valores em tempo de execução para esses controles cujos IDs não tem sido definidos explicitamente. Ele usa o padrão de nomenclatura `ctlXX`, onde *XX* é um valor inteiro crescentes e consecutivos.
 
-
 Porque a página mestra em si serve como um contêiner de nomenclatura, os controles da Web definidos na página mestre também tem alterado renderizado `id` valores de atributo. Por exemplo, o `DisplayDate` rótulo que adicionamos a página mestra a [ *criar um Layout de todo o Site com páginas mestras* ](creating-a-site-wide-layout-using-master-pages-vb.md) tutorial tem a seguinte marcação processada:
-
 
 [!code-html[Main](control-id-naming-in-content-pages-vb/samples/sample6.html)]
 
@@ -125,18 +108,15 @@ Para ilustrar usando o `FindControl` método para procurar controles dentro de u
 > [!NOTE]
 > É claro, não precisamos usar `FindControl` para referenciar os controles de rótulo e a caixa de texto para este exemplo. Podemos pode referenciá-los diretamente por meio de seus `ID` valores de propriedade. Posso usar `FindControl` aqui para ilustrar o que acontece quando uso `FindControl` de uma página de conteúdo.
 
-
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample7.vb)]
 
 Embora a sintaxe usada para chamar o `FindControl` método difere ligeiramente nas duas primeiras linhas do `SubmitButton_Click`, eles são semanticamente equivalentes. Lembre-se que todos os controles de servidor ASP.NET incluem uma `FindControl` método. Isso inclui o `Page` classe, do ASP.NET que todas as classes code-behind devem derivar. Portanto, chamar `FindControl("controlID")` é equivalente a chamar `Page.FindControl("controlID")`, supondo que você ainda não tiver substituído o `FindControl` método em sua classe code-behind ou em uma classe base personalizada.
 
 Depois de inserir esse código, visite o `IDIssues.aspx` página por meio de um navegador, insira sua idade e clique no botão "Enviar". Ao clicar no botão "Enviar" um `NullReferenceException` é gerado (consulte a Figura 5).
 
-
 [![Uma NullReferenceException é gerada](control-id-naming-in-content-pages-vb/_static/image8.png)](control-id-naming-in-content-pages-vb/_static/image7.png)
 
 **Figura 05**: Um `NullReferenceException` é gerado ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image9.png))
-
 
 Se você definir um ponto de interrupção na `SubmitButton_Click` manipulador de eventos, você verá que as duas chamadas para `FindControl` retornar `Nothing`. O `NullReferenceException` é gerado ao tentar acessar o `Age` da caixa de texto `Text` propriedade.
 
@@ -148,11 +128,9 @@ Há duas soluções alternativas para esse desafio: podemos pode fazer drill dow
 
 Para usar `FindControl` a referência a `Results` rótulo ou `Age` caixa de texto, precisamos chamar `FindControl` de um controle de ancestral no mesmo contêiner de nomenclatura. Conforme a Figura 4 mostrou, o `MainContent` controle ContentPlaceHolder é o ancestral somente `Results` ou `Age` que esteja dentro do mesmo contêiner de nomenclatura. Em outras palavras, chamando o `FindControl` método da `MainContent` controle, conforme mostrado no trecho de código abaixo, retorna uma referência ao corretamente a `Results` ou `Age` controles.
 
-
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample8.vb)]
 
 No entanto, podemos não é possível trabalhar com o `MainContent` ContentPlaceHolder da classe de code-behind da página de nosso conteúdo usando a sintaxe acima como o ContentPlaceHolder é definido na página mestra. Em vez disso, temos de usar `FindControl` para obter uma referência ao `MainContent`. Substitua o código no `SubmitButton_Click` manipulador de eventos com as seguintes modificações:
-
 
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample9.vb)]
 
@@ -160,23 +138,19 @@ Se você visitar a página por meio de um navegador, insira sua idade e clique n
 
 Antes que podemos usar `FindControl` para obter uma referência ao `MainContent`, precisamos primeiro uma referência ao controle de página mestra. Assim que tivermos uma referência para a página mestra podemos obter uma referência para o `MainContent` ContentPlaceHolder por meio `FindControl` e, a partir daí, as referências ao `Results` rótulo e `Age` caixa de texto (novamente, por meio do usando `FindControl`). Mas como podemos obter uma referência para a página mestra? Inspecionando os `id` atributos na marcação renderizada é evidente que a página mestra `ID` valor é `ctl00`. Portanto, poderíamos usar `Page.FindControl("ctl00")` para obter uma referência para a página mestra, em seguida, usar esse objeto para obter uma referência ao `MainContent`e assim por diante. O trecho a seguir ilustra essa lógica:
 
-
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample10.vb)]
 
 Embora esse código funcionará sem dúvida, ele pressupõe que gerado automaticamente da página mestra `ID` sempre será `ctl00`. Nunca é uma boa ideia fazer suposições sobre os valores gerados automaticamente.
 
 Felizmente, uma referência para a página mestra é acessível por meio de `Page` da classe `Master` propriedade. Portanto, em vez de ter que usar `FindControl("ctl00")` para obter uma referência da página mestra para acessar o `MainContent` ContentPlaceHolder, em vez disso, usamos `Page.Master.FindControl("MainContent")`. Atualização de `SubmitButton_Click` manipulador de eventos com o código a seguir:
 
-
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample11.vb)]
 
 Neste momento, visitando a página por meio de um navegador, inserindo sua idade e clicando no botão "Enviar" exibe a mensagem no `Results` rotular, conforme o esperado.
 
-
 [![A idade do usuário é exibida no rótulo](control-id-naming-in-content-pages-vb/_static/image11.png)](control-id-naming-in-content-pages-vb/_static/image10.png)
 
 **Figura 06**: A idade do usuário é exibida no rótulo ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image12.png))
-
 
 ### <a name="recursively-searching-through-naming-containers"></a>Pesquisar por meio de contêineres de nomenclatura recursivamente
 
@@ -189,35 +163,28 @@ A boa notícia é que podemos criar nossos próprios `FindControl` método esse 
 > [!NOTE]
 > Métodos de extensão são um recurso novo c# 3,0 e Visual Basic 9, quais são os idiomas que acompanham o .NET Framework versão 3.5 e o Visual Studio 2008. Em resumo, os métodos de extensão permitem que um desenvolvedor crie um novo método para um tipo de classe existente por meio de uma sintaxe especial. Para obter mais informações sobre este recurso útil, consulte meu artigo [estender funcionalidade do tipo Base com métodos de extensão](http://aspnet.4guysfromrolla.com/articles/120507-1.aspx).
 
-
 Para criar o método de extensão, adicione um novo arquivo para o `App_Code` pasta chamada `PageExtensionMethods.vb`. Adicionar um método de extensão denominado `FindControlRecursive` que usa como entrada uma `String` parâmetro chamado `controlID`. Para métodos de extensão funcione corretamente, é vital que a classe ser marcado como um `Module` e que os métodos de extensão ser prefixadas com o `<Extension()>` atributo. Além disso, todos os métodos de extensão devem aceitar como seu primeiro parâmetro um objeto do tipo ao qual o método de extensão se aplica.
 
 Adicione o seguinte código para o `PageExtensionMethods.vb` arquivo para definir isso `Module` e o `FindControlRecursive` método de extensão:
-
 
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample12.vb)]
 
 Com esse código funcionando, retornar para o `IDIssues.aspx` classe code-behind da página e comente atual `FindControl` chamadas de método. Substitua-as por chamadas para `Page.FindControlRecursive("controlID")`. O que é interessante sobre os métodos de extensão é que eles aparecem diretamente em listas de lista suspensa do IntelliSense. Como mostra a Figura 7, quando você digita `Page` e, em seguida, pressionar período, o `FindControlRecursive` método está incluído o IntelliSense lista suspensa, juntamente com os outros `Control` métodos de classe.
 
-
 [![Métodos de extensão são incluídos no IntelliSense suspensos](control-id-naming-in-content-pages-vb/_static/image14.png)](control-id-naming-in-content-pages-vb/_static/image13.png)
 
 **Figura 07**: Métodos de extensão são incluídos no IntelliSense suspensas ([clique para exibir a imagem em tamanho normal](control-id-naming-in-content-pages-vb/_static/image15.png))
 
-
 Digite o seguinte código para o `SubmitButton_Click` manipulador de eventos e, em seguida, testá-lo visitando a página, inserindo sua idade e clicar no botão "Enviar". Conforme mostrado na Figura 6, a saída resultante será a mensagem, "Você está anos de idade!"
-
 
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample13.vb)]
 
 > [!NOTE]
 > Como os métodos de extensão são novos para c# 3,0 e Visual Basic 9, se você estiver usando o Visual Studio 2005, é possível usar métodos de extensão. Em vez disso, você precisará implementar o `FindControlRecursive` método em uma classe auxiliar. [Rick Strahl](http://www.west-wind.com/WebLog/default.aspx) tem um exemplo em sua postagem de blog, [páginas mestra do ASP.NET e `FindControl` ](http://www.west-wind.com/WebLog/posts/5127.aspx).
 
-
 ## <a name="step-4-using-the-correctidattribute-value-in-client-side-script"></a>Etapa 4: Usando o correto`id`valor no Script do lado do cliente do atributo
 
 Conforme observado na introdução deste tutorial, um controle da Web processado do `id` atributo muitas vezes, é usado no script do lado do cliente para fazer referência a um determinado elemento HTML por meio de programação. Por exemplo, o JavaScript a seguir faz referência a um elemento HTML por seu `id` e, em seguida, exibe seu valor em uma caixa de mensagem modal:
-
 
 [!code-csharp[Main](control-id-naming-in-content-pages-vb/samples/sample14.cs)]
 
@@ -227,11 +194,9 @@ O problema com essa abordagem é que, ao usar as páginas mestras (ou outros con
 
 A boa notícia é que o `id` valor de atributo que é renderizado é acessível no código do lado do servidor por meio do controle da Web [ `ClientID` propriedade](https://msdn.microsoft.com/library/system.web.ui.control.clientid.aspx). Você deve usar essa propriedade para determinar o `id` usado no script do lado do cliente de valor do atributo. Por exemplo, para adicionar uma função JavaScript à página que, quando chamado, exibe o valor da `Age` caixa de texto em uma caixa de mensagem modal, adicione o seguinte código para o `Page_Load` manipulador de eventos:
 
-
 [!code-vb[Main](control-id-naming-in-content-pages-vb/samples/sample15.vb)]
 
 O código acima, o valor de injeta a `Age` da caixa de texto `ClientID` propriedade para a chamada JavaScript a `getElementById`. Se você visitar esta página por meio de um navegador e exibir o código-fonte HTML, você encontrará o código JavaScript a seguir:
-
 
 [!code-html[Main](control-id-naming-in-content-pages-vb/samples/sample16.html)]
 
@@ -239,7 +204,6 @@ Observe como o correto `id` valor de atributo, `ctl00_MainContent_Age`, é exibi
 
 > [!NOTE]
 > Este exemplo de JavaScript simplesmente mostra como adicionar uma função JavaScript que referencia corretamente o elemento HTML renderizado por um controle de servidor. Para usar essa função, você precisaria criar JavaScript adicional para chamar a função quando o documento for carregado ou quando ocorre alguma ação de usuário específico. Para obter mais informações sobre essas e tópicos relacionados, leia [trabalhando com Script do lado do cliente](https://msdn.microsoft.com/library/aa479302.aspx).
-
 
 ## <a name="summary"></a>Resumo
 

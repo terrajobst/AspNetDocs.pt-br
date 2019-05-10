@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 38ac8250-8854-444c-b9ab-8998faa41c5a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/using-dynamicpopulate-with-a-user-control-and-javascript-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0462d8357d83115e751a818d3c9feb4b4274e212
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 387cad748428249273cf9708b794dd8864cf982f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402538"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125044"
 ---
 # <a name="using-dynamicpopulate-with-a-user-control-and-javascript-c"></a>Uso de DynamicPopulate com um controle de usuário e o JavaScript (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate2.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate2CS.pdf)
 
 > O controle de DynamicPopulate no ASP.NET AJAX Control Toolkit chama um serviço web (ou o método de página) e preenche o valor resultante em um controle de destino na página, sem uma atualização de página. Também é possível disparar a população usando código personalizado de JavaScript do lado do cliente. No entanto, um cuidado especial tem a ser tomada quando o extensor reside em um controle de usuário.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -65,7 +64,6 @@ Por fim, adicione o controle de usuário para a página. Você deve definir seus
 [!code-aspx[Main](using-dynamicpopulate-with-a-user-control-and-javascript-cs/samples/sample8.aspx)]
 
 E pronto. A página se comporta conforme o esperado: Um usuário clica em um dos botões de opção, o controle no Kit de ferramentas chama o serviço web e exibe a data atual no formato desejado.
-
 
 [![Os botões de opção residem em um controle de usuário](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image2.png)](using-dynamicpopulate-with-a-user-control-and-javascript-cs/_static/image1.png)
 

@@ -8,12 +8,12 @@ ms.date: 08/03/2007
 ms.assetid: 9ed8ccb5-5f31-4eb4-976d-cabf4b45ca09
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/debugging-stored-procedures-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6dda18eb27d45f8dfdb4803cf3aca3ffe96bf11e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e02f259d0c9833a91bd1592f46e0a4e30d59cea1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406555"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131844"
 ---
 # <a name="debugging-stored-procedures-vb"></a>Depuração de procedimentos armazenados (VB)
 
@@ -23,7 +23,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > As edições do Visual Studio Professional e Team System permitem que você defina pontos de interrupção e etapa para procedimentos armazenados no SQL Server, facilitando a depuração de procedimentos armazenados tão fácil quanto a depuração de código do aplicativo. Este tutorial demonstra o banco de dados direto e aplicativo a depuração de procedimentos armazenados.
 
-
 ## <a name="introduction"></a>Introdução
 
 Visual Studio oferece uma rica experiência de depuração. Com alguns pressionamentos de teclas ou cliques do mouse, ela é possível usar pontos de interrupção para interromper a execução de um programa e examinar seu fluxo de controle e estado. Junto com a depuração de código do aplicativo, o Visual Studio oferece suporte para depuração de procedimentos armazenados a partir do SQL Server. Assim como os pontos de interrupção podem ser definidos dentro do código de uma classe de code-behind do ASP.NET ou classe da camada de lógica de negócios, portanto, muito eles ser colocados dentro de procedimentos armazenados.
@@ -32,7 +31,6 @@ Neste tutorial vamos examinar intervir procedimentos armazenados do Gerenciador 
 
 > [!NOTE]
 > Infelizmente, os procedimentos armazenados só podem ser entrados e depurados por meio das versões Professional e sistemas de equipe do Visual Studio. Se você estiver usando a versão padrão do Visual Studio ou Visual Web Developer, são bem-vindo ao longo de leitura como podemos percorrer as etapas necessárias para depurar procedimentos armazenados, mas você não poderá replicar essas etapas em seu computador.
-
 
 ## <a name="sql-server-debugging-concepts"></a>Conceitos de depuração do SQL Server
 
@@ -58,25 +56,20 @@ Visual Studio torna fácil de depurar diretamente um objeto de banco de dados. P
 
 Uma vez que o `Products_SelectByCategoryID` procedimento armazenado espera um `@CategoryID` parâmetro de entrada, somos solicitados a fornecer esse valor. Insira 1, que retornará informações sobre as bebidas.
 
-
 ![Use o valor 1 para o @CategoryID parâmetro](debugging-stored-procedures-vb/_static/image1.png)
 
 **Figura 1**: Use o valor 1 para o `@CategoryID` parâmetro
 
-
 Depois de fornecer o valor para o `@CategoryID` parâmetro, o procedimento armazenado é executado. Em vez de em execução até a conclusão, no entanto, o depurador interromperá a execução na primeira instrução. Observe a seta amarela na margem, que indica o local atual no procedimento armazenado. Você pode exibir e editar valores de parâmetro por meio da janela de inspeção ou passando o mouse sobre o nome do parâmetro no procedimento armazenado.
-
 
 [![O depurador foi interrompido na primeira instrução do procedimento armazenado](debugging-stored-procedures-vb/_static/image3.png)](debugging-stored-procedures-vb/_static/image2.png)
 
 **Figura 2**: O depurador foi interrompido na primeira instrução do procedimento armazenado ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image4.png))
 
-
 Para percorrer a instrução de um procedimento armazenado por vez, clique no botão Avançar na barra de ferramentas ou pressione a tecla F10. O `Products_SelectByCategoryID` procedimento armazenado contiver um único `SELECT` instrução, portanto, atingir F10 será contornar a instrução única e concluir a execução do procedimento armazenado. Após o procedimento armazenado, sua saída será exibida na janela de saída e o depurador será encerrado.
 
 > [!NOTE]
 > Depuração T-SQL ocorre no nível de instrução; Você não pode entrar em um `SELECT` instrução.
-
 
 ## <a name="step-2-configuring-the-website-for-application-debugging"></a>Etapa 2: Configurando o site da Web para depuração de aplicativo
 
@@ -84,22 +77,18 @@ Embora seja útil depurar um procedimento armazenado diretamente do Gerenciador 
 
 Para que possamos começar a depuração de procedimentos armazenados chamados do aplicativo, é necessário instruir o aplicativo web ASP.NET para integrar com o depurador do SQL Server. Inicie o clicando no nome do site no Gerenciador de soluções (`ASPNET_Data_Tutorial_74_VB`). Escolha a opção de páginas de propriedades no menu de contexto, selecione o item de opções de inicialização à esquerda e marque a caixa de seleção do SQL Server na seção depuradores (veja a Figura 3).
 
-
 [![Marque a caixa de seleção de servidor SQL nas páginas de propriedade de aplicativo s](debugging-stored-procedures-vb/_static/image6.png)](debugging-stored-procedures-vb/_static/image5.png)
 
 **Figura 3**: Marque a caixa de seleção de servidor SQL em aplicativo s páginas de propriedades ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image7.png))
-
 
 Além disso, precisamos atualizar a cadeia de caracteres de conexão de banco de dados usada pelo aplicativo para que o pooling de conexão está desabilitado. Quando uma conexão a um banco de dados é fechado, correspondente `SqlConnection` objeto é colocado em um pool de conexões disponíveis. Ao estabelecer uma conexão para um banco de dados, um objeto de conexão disponíveis podem ser recuperadas desse pool em vez de ter que criar e estabelecer uma nova conexão. Esse pool de objetos de conexão é um aprimoramento de desempenho e é habilitado por padrão. No entanto, ao depurar queremos desativar o pooling de conexão porque a infraestrutura de depuração não será restabelecida corretamente ao trabalhar com uma conexão que foi obtido do pool.
 
 Conexão desabilitado o pool de conexões, atualize o `NORTHWNDConnectionString` na `Web.config` para que ele inclui a configuração `Pooling=false` .
 
-
 [!code-xml[Main](debugging-stored-procedures-vb/samples/sample1.xml)]
 
 > [!NOTE]
 > Depois de concluir a depuração do SQL Server por meio do aplicativo ASP.NET não se esqueça de restabelecer o pooling de conexão, removendo o `Pooling` configuração da cadeia de conexão (ou definindo-a para `Pooling=true` ).
-
 
 Neste ponto, o aplicativo ASP.NET foi configurado para permitir que o Visual Studio para depurar objetos de banco de dados do SQL Server quando invocado por meio do aplicativo web. Tudo o que resta agora é adicionar um ponto de interrupção para um procedimento armazenado e iniciar a depuração!
 
@@ -107,51 +96,40 @@ Neste ponto, o aplicativo ASP.NET foi configurado para permitir que o Visual Stu
 
 Abra o `Products_SelectByCategoryID` procedimento armazenado e defina um ponto de interrupção no início do `SELECT` instrução clicando na margem no local apropriado ou colocando o cursor no início do `SELECT` instrução e pressionando F9. Como ilustra a Figura 4, o ponto de interrupção aparece como um círculo vermelho na margem.
 
-
 [![Defina um ponto de interrupção no Products_SelectByCategoryID procedimento armazenado](debugging-stored-procedures-vb/_static/image9.png)](debugging-stored-procedures-vb/_static/image8.png)
 
 **Figura 4**: Defina um ponto de interrupção na `Products_SelectByCategoryID` procedimento armazenado ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image10.png))
 
-
 Para um objeto de banco de dados SQL a ser depurado por meio de um aplicativo cliente que, é imperativo que o banco de dados seja configurada para dar suporte à depuração do aplicativo. Quando você primeiro defina um ponto de interrupção, essa configuração automaticamente deve estar ativada, mas é prudente verificar novamente. Clique com botão direito no `NORTHWND.MDF` nó no Gerenciador de servidores. O menu de contexto deve incluir um check item de menu chamado depuração do aplicativo.
-
 
 ![Verifique se a opção de depuração do aplicativo está habilitada](debugging-stored-procedures-vb/_static/image11.png)
 
 **Figura 5**: Verifique se a opção de depuração do aplicativo está habilitada
 
-
 Com o conjunto de ponto de interrupção e a opção de depuração do aplicativo habilitado, você está pronto para depurar o procedimento armazenado quando chamado a partir do aplicativo ASP.NET. Inicie o depurador, vá ao menu Depurar e escolha Iniciar depuração, pressionando F5 ou clicando o verde play ícone na barra de ferramentas. Isso iniciará o depurador e inicie o site.
 
 O `Products_SelectByCategoryID` procedimento armazenado foi criado na [usando procedimentos armazenados existentes para o s TableAdapters do conjunto de dados tipado](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-vb.md) tutorial. A página da web correspondente (`~/AdvancedDAL/ExistingSprocs.aspx`) contém um GridView que exibe os resultados retornados por esse procedimento armazenado. Visite esta página por meio do navegador. Ao atingir a página, o ponto de interrupção a `Products_SelectByCategoryID` procedimento armazenado será atingido e o controle é retornado para o Visual Studio. Assim como na etapa 1, você pode percorrer as instruções do procedimento armazenado s e modo de exibição e modificar os valores de parâmetro.
-
 
 [![A página ExistingSprocs.aspx exibe inicialmente as bebidas](debugging-stored-procedures-vb/_static/image13.png)](debugging-stored-procedures-vb/_static/image12.png)
 
 **Figura 6**: O `ExistingSprocs.aspx` página exibe inicialmente as bebidas ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image14.png))
 
-
 [![O procedimento armazenado s ponto de interrupção foi atingido](debugging-stored-procedures-vb/_static/image16.png)](debugging-stored-procedures-vb/_static/image15.png)
 
 **Figura 7**: S o procedimento armazenado que ponto de interrupção foi atingido ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image17.png))
 
-
 Como a janela de observação na Figura 7 mostra, o valor da `@CategoryID` parâmetro é 1. Isso ocorre porque o `ExistingSprocs.aspx` página exibe inicialmente os produtos na categoria Bebidas, que tem um `CategoryID` valor 1. Escolha uma categoria diferente na lista suspensa. Isso faz com que um postback e executa novamente o `Products_SelectByCategoryID` procedimento armazenado. O ponto de interrupção é atingido, novamente, mas desta vez o `@CategoryID` o valor do parâmetro s reflete o item selecionado na lista suspensa s `CategoryID`.
-
 
 [![Escolha uma categoria diferente na lista suspensa](debugging-stored-procedures-vb/_static/image19.png)](debugging-stored-procedures-vb/_static/image18.png)
 
 **Figura 8**: Escolha uma categoria diferente na lista suspensa ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image20.png))
 
-
 [![O @CategoryID parâmetro reflete a categoria selecionada da página da Web](debugging-stored-procedures-vb/_static/image22.png)](debugging-stored-procedures-vb/_static/image21.png)
 
 **Figura 9**: O `@CategoryID` parâmetro reflete a categoria selecionada da página da Web ([clique para exibir a imagem em tamanho normal](debugging-stored-procedures-vb/_static/image23.png))
 
-
 > [!NOTE]
 > Se o ponto de interrupção a `Products_SelectByCategoryID` procedimento armazenado não é atingido quando visitar o `ExistingSprocs.aspx` página, certifique-se de que a caixa de seleção do SQL Server foi verificada na seção depuradores do aplicativo ASP.NET s página de propriedades, o pooling de conexão tiver sido desabilitado, e se o banco de dados s opção de depuração do aplicativo está habilitado. Se você ainda tiver problemas, reinicie o Visual Studio e tente novamente.
-
 
 ## <a name="debugging-t-sql-database-objects-on-remote-instances"></a>Objetos de banco de dados do T-SQL em instâncias remotas de depuração
 
@@ -166,14 +144,12 @@ A segunda tarefa requer que a conta de usuário do Windows usada para depurar o 
 
 Um exemplo pode ajudar a esclarecer as coisas. Imagine que há uma conta de Windows chamada `SQLDebug` dentro do domínio do Windows. Essa conta precisa ser adicionado à instância remota do SQL Server como um logon válido e como um membro do `sysadmin` função. Em seguida, para depurar a instância remota do SQL Server no Visual Studio, seria preciso executar o Visual Studio como o `SQLDebug` usuário. Isso pode ser feito pelo registro em log fora de nossa estação de trabalho, logon novamente como `SQLDebug`, e, em seguida, iniciar o Visual Studio, mas uma abordagem mais simples seria fazer logon usando credenciais de nossos próprio nossa estação de trabalho e, em seguida, usar `runas.exe` para iniciar o Visual Studio como o `SQLDebug` usuário. `runas.exe` permite que um aplicativo específico a ser executada na forma de uma conta de usuário diferente. Para iniciar o Visual Studio como `SQLDebug`, você poderia digitar a instrução a seguir na linha de comando:
 
-
 [!code-console[Main](debugging-stored-procedures-vb/samples/sample2.cmd)]
 
 Para obter uma explicação mais detalhada sobre esse processo, consulte [William R. Vaughn](http://betav.com/BLOG/billva/) s *Mochileiro s Guide to Visual Studio e SQL Server, a sétima edição* , bem como [How To: Definir permissões do SQL Server para depuração](https://msdn.microsoft.com/library/w1bhybwz(VS.80).aspx).
 
 > [!NOTE]
 > Se seu computador de desenvolvimento está executando o Windows XP Service Pack 2, você precisará configurar o Firewall de Conexão de Internet para permitir a depuração remota. [Como: Habilitar a depuração do SQL Server 2005](https://msdn.microsoft.com/library/s0fk6z6e(VS.80).aspx) artigo observa que isso envolve duas etapas: (a) no computador de host do Visual Studio, você deverá adicionar `Devenv.exe` à lista de exceções e abrir a porta TCP 135; e (b) no computador remoto (SQL), você deve abrir o TCP 135 a porta e adicione `sqlservr.exe` à lista de exceções. Se sua diretiva de domínio requer comunicação de rede sejam feitas via IPSec, você deve abrir as portas UDP 4500 e UDP 500.
-
 
 ## <a name="summary"></a>Resumo
 

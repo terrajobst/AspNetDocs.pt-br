@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: bdea2003-e964-4db5-9092-d56cc7560616
 msc.legacyurl: /whitepapers/side-by-side-with-10
 msc.type: content
-ms.openlocfilehash: c4a371958d8de72628c037b3568551aaa91e0153
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d03919e8465c28cf00bf057193452396523cb1af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380698"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125622"
 ---
 # <a name="aspnet-side-by-side-execution-of-net-framework-10-and-11"></a>Execução lado a lado do ASP.NET no .NET Framework 1.0 e 1.1
 
 > Este white paper descreve como instalar o .NET 1.0 e 1.1 do .NET em seu computador, permitindo que um aplicativo Web ASP.NET seja executado em qualquer versão do framework.
 > 
 > Aplica-se para o ASP.NET 1.0 e ASP.NET 1.1.
-
 
 No ASP.NET, aplicativos devem estar em execução lado a lado quando eles são instalados no mesmo computador, mas usam diferentes versões do .NET Framework. O tópico a seguir descreve como configurar aplicativos do ASP.NET para execução lado a lado e fornece etapas detalhadas para:
 

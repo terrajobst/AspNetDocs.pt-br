@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 5755ec4c-60f1-4057-9ec0-3a5de3a20e23
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-viewdata-and-implement-viewmodel-classes
 msc.type: authoredcontent
-ms.openlocfilehash: a27f895d80e92686c9f1d7339b51185694661f78
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ca9775417c2e25952511a73096fb76d5d4edaea2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389538"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125455"
 ---
 # <a name="use-viewdata-and-implement-viewmodel-classes"></a>Usar ViewData e implementar classes ViewModel
 
@@ -27,7 +27,6 @@ por [Microsoft](https://github.com/microsoft)
 > 
 > Se você estiver usando o ASP.NET MVC 3, recomendamos que você siga a [obtendo iniciado com o MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de música do MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriais.
 
-
 ## <a name="nerddinner-step-6-viewdata-and-viewmodel"></a>Etapa 6 do NerdDinner: ViewData e ViewModel
 
 Nós coberto vários cenários de postagem de formulário e descreveu como implementar criar, atualizar e excluir suporte (CRUD). Agora vamos executar nossa implementação DinnersController adicional e habilitar o suporte para cenários de edição de formulários mais avançados. Ao fazer isso, abordaremos duas abordagens que podem ser usadas para passar dados de controladores para exibições: ViewData e ViewModel.
@@ -38,7 +37,7 @@ Uma das características que definem o padrão MVC é estrita "separação de pr
 
 Quando uma classe de controlador decide renderizar uma resposta HTML para um cliente, ele é responsável por passar explicitamente para o modelo de exibição de todos os dados necessários para processar a resposta. Modelos de exibição nunca devem executar qualquer lógica de aplicativo ou de recuperação de dados – e em vez disso, devem limitar-se para ter apenas o código de renderização que é controlado por fora do modelo/dados passados para ele pelo controlador.
 
-Agora os dados de modelo que está sendo passado por nossos DinnersController classe para os nossos modelos de exibição é simple e direto – uma lista de objetos de jantar no caso de Index () e um jantar único objeto no caso de Details(), Edit (), Create () e Delete (). Como podemos adicionar mais recursos de interface do usuário para o nosso aplicativo, geralmente vamos precisar passar mais do que apenas esses dados para processar respostas HTML dentro de nossos modelos de exibição. Por exemplo, queremos alterar o campo "País/Região" dentro do nosso editar e criar modos de exibição seja uma caixa de texto HTML para uma dropdownlist. Em vez de embutir a lista suspensa de nomes de países em que o modelo de exibição, queremos gerá-lo em uma lista de países com suporte que podemos preencher dinamicamente. Precisaremos de uma maneira de passar o objeto jantar *e* a lista de países com suporte do nosso controlador para nossos modelos de exibição.
+Agora os dados de modelo que está sendo passado por nossos DinnersController classe para os nossos modelos de exibição é simple e direto – uma lista de objetos de jantar no caso de Index () e um jantar único objeto no caso de Details(), Edit (), Create () e Delete (). Como podemos adicionar mais recursos de interface do usuário para o nosso aplicativo, geralmente vamos precisar passar mais do que apenas esses dados para processar respostas HTML dentro de nossos modelos de exibição. Por exemplo, queremos alterar o campo "País" dentro do nosso editar e criar modos de exibição seja uma caixa de texto HTML para uma dropdownlist. Em vez de embutir a lista suspensa de nomes de países em que o modelo de exibição, queremos gerá-lo em uma lista de países com suporte que podemos preencher dinamicamente. Precisaremos de uma maneira de passar o objeto jantar *e* a lista de países com suporte do nosso controlador para nossos modelos de exibição.
 
 Vejamos duas maneiras de que nós pode fazer isso.
 

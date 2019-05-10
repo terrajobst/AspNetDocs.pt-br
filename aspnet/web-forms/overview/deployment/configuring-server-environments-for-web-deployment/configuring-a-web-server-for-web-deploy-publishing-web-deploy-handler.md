@@ -8,12 +8,12 @@ ms.date: 01/29/2017
 ms.assetid: 90ebf911-1c46-4470-b876-1335bd0f590f
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler
 msc.type: authoredcontent
-ms.openlocfilehash: cf18a8860d34daa23f61e3dde13c2c79c6c0d4a5
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 51a8fdf44199b5a4735e0e00657639b191f51255
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57048113"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125989"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler"></a>Configuração de um servidor Web para publicação de Implantação da Web (manipulador de Implantação da Web)
 
@@ -28,7 +28,6 @@ ms.locfileid: "57048113"
 > - Use *implantação offline*. Essa abordagem requer o mínimo de configuração do servidor web, mas um administrador de servidor manualmente deve copiar o pacote da web no servidor e importá-lo por meio do Gerenciador do IIS.
 > 
 > Para obter mais informações sobre os principais recursos, as vantagens e desvantagens dessas abordagens, consulte [escolhendo a abordagem da direita para a implantação da Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 Sim, se você quiser permitir que os usuários não-administrador implantar conteúdo em sites específicos do IIS. Essa abordagem geralmente é desejável nesses tipos de cenários:
 
@@ -64,7 +63,6 @@ Este tópico mostra como executar cada um desses procedimentos. As tarefas e ins
 > [!NOTE]
 > Para obter mais informações sobre como adicionar computadores a um domínio, consulte [ingressando computadores no domínio e fazendo logon](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obter mais informações sobre como configurar endereços IP estáticos, consulte [configurar um endereço IP estático](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
 
-
 ## <a name="install-products-and-components"></a>Instalar produtos e componentes
 
 Esta seção orientará você instalar os componentes e produtos necessários no servidor web. Antes de começar, uma prática recomendada é executar o Windows Update para garantir que seu servidor está completamente atualizado.
@@ -80,7 +78,6 @@ Nesse caso, você precisa instalar essas coisas:
 
 > [!NOTE]
 > Este passo a passo descreve o uso do Web Platform Installer para instalar e configurar vários componentes. Embora você não precisa usar o Web Platform Installer, ele simplifica o processo de instalação automaticamente detectando as dependências e garantindo que você sempre obtenha as versões mais recentes do produto. Para obter mais informações, consulte [Microsoft Web Platform Installer](https://go.microsoft.com/?linkid=9805118).
-
 
 **Para instalar os componentes e produtos necessários**
 
@@ -239,7 +236,6 @@ A abordagem mais comum é atribuir permissões ao local **IIS\_IUSRS** agrupar, 
 > [!NOTE]
 > Para obter mais informações sobre identidades do pool de aplicativos no IIS 7.5, consulte [identidades do Pool de aplicativos](https://go.microsoft.com/?linkid=9805123).
 
-
 **Para configurar permissões de pasta para um site do IIS**
 
 1. No Windows Explorer, navegue até o local da pasta local.
@@ -281,7 +277,6 @@ Por padrão, o serviço de gerenciamento do IIS Web escuta na porta TCP 8172. Se
 | --- | --- | --- | --- |
 | De entrada | Qualquer | 8172 | TCP |
 | Saída | 8172 | Qualquer | TCP |
-  
 
 Para obter mais informações sobre como configurar regras no Firewall do Windows, consulte [Configurando regras de Firewall](https://technet.microsoft.com/library/dd448559(WS.10).aspx). Para firewalls de terceiros, consulte a documentação do produto.
 

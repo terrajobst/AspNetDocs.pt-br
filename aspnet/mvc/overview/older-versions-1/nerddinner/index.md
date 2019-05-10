@@ -8,17 +8,16 @@ ms.date: 09/28/2011
 ms.assetid: 6edfe14c-415a-4281-b6fa-69e9b38a82c8
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner
 msc.type: chapter
-ms.openlocfilehash: 263ffc1ab815c1f7d6c1ee008f4fbe61316b7231
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4d85781cbd792c6d553665f33d8e699ac3f8fbc3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380737"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125565"
 ---
 # <a name="nerddinner"></a>NerdDinner
 
 > Como criar o site do NerdDinner.com usando ASP.NET MVC 1. Para obter a versão do ASP.NET MVC, visite [NerdDinner no GitHub](https://github.com/AspNetMVPSamples/NerdDinner).
-
 
 - [Introdução ao Tutorial do NerdDinner](introducing-the-nerddinner-tutorial.md)
 - [Criar um novo projeto do ASP.NET MVC](create-a-new-aspnet-mvc-project.md)

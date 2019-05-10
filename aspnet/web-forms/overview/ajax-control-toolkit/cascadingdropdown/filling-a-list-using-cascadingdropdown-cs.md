@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a9a3bf12b721c8f5eec21f3090142e40e74b0b9c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 31319e0ad15825acead2b7e8b619985272fb8eaa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395635"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131451"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-c"></a>Preencher uma lista usando o CascadingDropDown (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown0.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown0CS.pdf)
 
 > O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associadas a valores em outra DropDownList. (Por exemplo, uma lista fornece uma lista de estados dos EUA e a lista seguinte, em seguida, é preenchida com principais cidades nesse estado.) O primeiro desafio para resolver é, na verdade, preencher uma lista suspensa usando esse controle.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -59,7 +58,6 @@ Portanto, o aspecto importante é que o método deve retornar uma matriz do tipo
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample5.aspx)]
 
 Carregamento da página no navegador disparará a lista a ser preenchido com três fornecedores.
-
 
 [![A lista é preenchida automaticamente](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
 

@@ -8,12 +8,12 @@ ms.date: 07/28/2008
 ms.assetid: 32b7fb6e-d74b-4048-91f8-70631b2523ee
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c25945fab554114478c6b2e080335a664251639b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6d39e898ea838b57b1cb33c91894e9ad11d58bc1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405346"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126782"
 ---
 # <a name="nested-master-pages-c"></a>Páginas mestras aninhadas (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_10_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_10_CS.pdf)
 
 > Mostra como aninhar uma página mestra dentro de outra.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -43,14 +42,12 @@ Este tutorial começa, realçando os benefícios das páginas mestras aninhadas.
 > [!NOTE]
 > Páginas mestras aninhadas tem sido possíveis desde a versão 2.0 do .NET Framework. No entanto, o Visual Studio 2005 não incluíam suporte de tempo de design para páginas mestras aninhadas. A boa notícia é que o Visual Studio 2008 oferece uma experiência avançada de tempo de design para páginas mestras aninhadas. Se você estiver interessado em usar páginas mestras aninhadas, mas ainda estiver usando o Visual Studio 2005, fazer check-out [Scott Guthrie](https://weblogs.asp.net/scottgu/)da entrada de blog [dicas para páginas mestras aninhadas em tempo de Design do VS 2005](https://weblogs.asp.net/scottgu/archive/2005/11/11/430382.aspx).
 
-
 ## <a name="the-benefits-of-nested-master-pages"></a>Os benefícios de páginas mestras aninhadas
 
 Muitos sites têm um design abrangente do site, bem como mais designs personalizados específicos para determinados tipos de páginas. Por exemplo, em nosso aplicativo web de demonstração criamos uma seção de administração rudimentar (as páginas no `~/Admin` pasta). Atualmente, as páginas da web na `~/Admin` pasta usar a mesma página mestra como essas páginas não na seção administration (ou seja, `Site.master` ou `Alternate.master`, dependendo da seleção do usuário).
 
 > [!NOTE]
 > Por enquanto, fingir que nosso site tem apenas uma página mestra, `Site.master`. Vamos abordar usando páginas mestras aninhadas com duas (ou mais) páginas mestras, começando com "Usando um aninhada mestre de página para a seção Administração" posteriormente no tutorial.
-
 
 Imagine que foi solicitado que personalizar o layout das páginas de administração para incluir informações adicionais ou links que normalmente não estariam presentes em outras páginas no site. Há quatro técnicas para implementar esse requisito:
 
@@ -73,21 +70,17 @@ Criar um mestre aninhado com base em um do mestre existente de páginas e, em se
 
 Criar uma nova pasta chamada `NestedMasterPages` e, em seguida, adicione um novo arquivo de página mestra para essa pasta denominada `Simple.master`. (Consulte a Figura 1 para uma captura de tela do Gerenciador de soluções depois que essa pasta e arquivo foram adicionadas.) Arraste o `AlternateStyles.css` arquivo de folha de estilo do Gerenciador de soluções para o Designer. Isso adiciona uma `<link>` elemento para o arquivo de folha de estilos em de `<head>` elemento após o qual a página mestra `<head>` marcação do elemento deve parecer com:
 
-
 [!code-aspx[Main](nested-master-pages-cs/samples/sample1.aspx)]
 
 Em seguida, adicione a seguinte marcação dentro do formulário da Web de `Simple.master`:
-
 
 [!code-aspx[Main](nested-master-pages-cs/samples/sample2.aspx)]
 
 Essa marcação exibe um link intitulado "Nested as páginas mestras (simples)" na parte superior da página em uma fonte branca grande em um plano de fundo azul marinho. Além disso, é o `MainContent` ContentPlaceHolder. A Figura 1 mostra o `Simple.master` página mestra quando carregado no Designer do Visual Studio.
 
-
 [![A página mestra aninhada define o conteúdo específico para as páginas na seção Administração](nested-master-pages-cs/_static/image2.png)](nested-master-pages-cs/_static/image1.png)
 
 **Figura 01**: O aninhados mestre página define conteúdo específicos para as páginas na seção Administration ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image3.png))
-
 
 ## <a name="step-2-creating-a-simple-nested-master-page"></a>Etapa 2: Criando uma página mestra aninhada simples
 
@@ -100,19 +93,15 @@ Em seguida, clique no botão Adicionar. Isso exibirá o mesmo selecione uma caix
 > [!NOTE]
 > Se você tiver criado seu site da Web ASP.NET usando o modelo de projeto de aplicativo Web em vez do modelo de projeto de Site, você não verá a caixa de seleção "Selecionar a página mestra" na caixa de diálogo Add New Item, mostrada na Figura 2. Para criar uma página mestra aninhada ao usar o modelo de projeto de aplicativo Web, você deve escolher o modelo de página mestra aninhada (em vez do modelo de página mestra). Depois de selecionar o modelo de página mestra aninhada e clicando em Adicionar, o mesmo selecionar uma página mestra que será exibida a caixa de diálogo mostrada na Figura 3.
 
-
 [![Verifique a &quot;página mestra selecione&quot; caixa de seleção para adicionar uma página de mestra aninhada](nested-master-pages-cs/_static/image5.png)](nested-master-pages-cs/_static/image4.png)
 
 **Figura 02**: Marque a caixa de seleção "Selecionar a página mestra" para adicionar uma página de mestra aninhada ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image6.png))
-
 
 [![Associar a página mestra aninhada para a página mestra Simple](nested-master-pages-cs/_static/image8.png)](nested-master-pages-cs/_static/image7.png)
 
 **Figura 03**: Associar a página mestra aninhada para o `Simple.master` página mestra ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image9.png))
 
-
 Marcação declarativa da página mestra aninhada, mostrada abaixo, contém dois controles de conteúdo, fazendo referência a dois controles de ContentPlaceHolder o nível superior da página mestra.
-
 
 [!code-aspx[Main](nested-master-pages-cs/samples/sample3.aspx)]
 
@@ -120,16 +109,13 @@ Exceto para o `<%@ Master %>` diretiva, marcação declarativa do inicial da pá
 
 Atualizar esta página mestra aninhada para que ele exibe o texto "Olá, de SimpleNested!" no controle de conteúdo que corresponde ao `MainContent` controle ContentPlaceHolder.
 
-
 [!code-aspx[Main](nested-master-pages-cs/samples/sample4.aspx)]
 
 Depois de fazer essa adição, salve a página mestra aninhada e, em seguida, adicione uma nova página de conteúdo para o `NestedMasterPages` pasta chamada `Default.aspx`e associá-lo para o `SimpleNested.master` página mestra. Após a adição desta página, você pode se surpreender ao ver que ele contém sem controles de conteúdo (consulte a Figura 4)! Uma página de conteúdo só pode acessar seus *pai* mestre ContentPlaceHolders da página. `SimpleNested.master` não contém todos os controles ContentPlaceHolder; Portanto, qualquer página de conteúdo associada a essa página mestra não pode conter quaisquer controles de conteúdo.
 
-
 [![Nova página de conteúdo não contém nenhum controle de conteúdo](nested-master-pages-cs/_static/image11.png)](nested-master-pages-cs/_static/image10.png)
 
 **Figura 04**: A nova página contém nenhum conteúdo controles de conteúdo ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image12.png))
-
 
 O que precisamos fazer é atualizar a página mestra aninhada (`SimpleNested.master`) para incluir controles ContentPlaceHolder. Normalmente você desejará que suas páginas mestras aninhadas para incluir um ContentPlaceHolder para cada ContentPlaceHolder definido pela página mestra pai, permitindo assim que sua página mestra filha ou a página conteúdo para trabalhar com qualquer um ContentPlaceHolder de nível superior da página mestra controles.
 
@@ -138,9 +124,7 @@ Atualização de `SimpleNested.master` página mestra para incluir um ContentPla
 > [!NOTE]
 > Embora eu recomende nomear os controles de ContentPlaceHolder na página mestra aninhada o mesmo que o ContentPlaceHolders na página mestre de nível superior, essa nomenclatura simetria não é necessária. Você pode atribuir controles ContentPlaceHolder na sua página mestra aninhada qualquer nome que você deseja. No entanto, eu acho mais fácil lembrar o que ContentPlaceHolders correspondem com quais regiões da página se minha página mestre de nível superior e páginas mestras aninhadas usam os mesmos nomes.
 
-
 Depois de fazer essas adições seu `SimpleNested.master` marcação declarativa da página mestra deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](nested-master-pages-cs/samples/sample5.aspx)]
 
@@ -148,34 +132,27 @@ Excluir o `Default.aspx` que acabamos de criar de página de conteúdo e, em seg
 
 A Figura 5 mostra as três entidades envolvidas aqui – `Simple.master`, `SimpleNested.master`, e `Default.aspx` – e como elas se relacionam entre si. Como mostra o diagrama, a página mestra aninhada implementa controles de conteúdo para ContentPlaceHolder do seu pai. Se essas regiões precisam estar acessíveis para a página de conteúdo, a página mestra aninhada deve adicionar seu próprio ContentPlaceHolders aos controles de conteúdo.
 
-
 [![As páginas mestras aninhadas e de alto nível das ditam o Layout da página de conteúdo](nested-master-pages-cs/_static/image14.png)](nested-master-pages-cs/_static/image13.png)
 
 **Figura 05**: As páginas mestras aninhadas e de alto nível ditam o Layout da página de conteúdo ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image15.png))
 
-
 Esse comportamento ilustra como uma página de conteúdo ou a página mestra só está ciente da página mestra pai. Esse comportamento também é indicado pelo Designer do Visual Studio. A Figura 6 mostra o Designer para `Default.aspx`. Enquanto o Designer mostra claramente quais regiões são editáveis da página de conteúdo e não são as partes, ele não resolver a ambiguidade do que são regiões não editáveis da página mestra aninhada e quais regiões são da página mestre de nível superior.
-
 
 [![O conteúdo agora de página inclui controles de conteúdo para ContentPlaceHolders a página mestra aninhada](nested-master-pages-cs/_static/image17.png)](nested-master-pages-cs/_static/image16.png)
 
 **Figura 06**: O conteúdo página agora inclui controles de conteúdo para ContentPlaceHolders a página mestra aninhada ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image18.png))
 
-
 ## <a name="step-3-adding-a-second-simple-nested-master-page"></a>Etapa 3: Adicionando uma segunda página de mestre aninhados simples
 
 O benefício de páginas mestras aninhadas é mais evidente quando há várias páginas mestras aninhadas. Para ilustrar esse benefício, crie outra página mestra aninhada na `NestedMasterPages` pasta; Nomeie esse novo aninhado de página mestra `SimpleNestedAlternate.master` e associá-lo para o `Simple.master` página mestra. Adicione controles ContentPlaceHolder em dois controles de conteúdo da página mestra aninhada, como fizemos na etapa 2. Também adicione o texto, "Olá, de SimpleNestedAlternate!" no controle de conteúdo que corresponde da nível superior da página mestra `MainContent` ContentPlaceHolder. Depois de fazer essas alterações marcação declarativa do sua nova página mestra aninhada deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](nested-master-pages-cs/samples/sample6.aspx)]
 
 Criar uma página de conteúdo denominada `Alternate.aspx` no `NestedMasterPages` pasta e associá-lo para o `SimpleNestedAlternate.master` página mestra aninhada. Adicione o texto, "Olá, da alternativa!" no controle de conteúdo que corresponde ao `MainContent`. A Figura 7 mostra `Alternate.aspx` quando visualizado no Designer do Visual Studio.
 
-
 [![Alternate.aspx é vinculada à página mestra SimpleNestedAlternate.master](nested-master-pages-cs/_static/image20.png)](nested-master-pages-cs/_static/image19.png)
 
 **Figura 07**: `Alternate.aspx` está associado a `SimpleNestedAlternate.master` página mestra ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image21.png))
-
 
 Compare o Designer na Figura 7 para o Designer na Figura 6. Ambas as páginas de conteúdo compartilham o mesmo layout definido na página mestre de nível superior (`Simple.master`), ou seja, o título de "Aninhado mestre Tutorial das páginas (simples)". Ainda têm conteúdo distinto definido em suas páginas mestras do pai – o texto "Olá, de SimpleNested!" na Figura 6 e "Olá, de SimpleNestedAlternate!" Figura 7. Tudo bem, essas diferenças aqui são triviais, mas você pode estender este exemplo para incluir as diferenças mais significativas. Por exemplo, o `SimpleNested.master` página pode incluir um menu com opções específicas para suas páginas de conteúdo, enquanto `SimpleNestedAlternate.master` pode ter informações pertinentes para as páginas de conteúdo que se associam a ela.
 
@@ -183,16 +160,13 @@ Agora, imagine que precisávamos fazer uma alteração para o layout geral do si
 
 Para demonstrar a facilidade com a qual podemos alterar o layout geral do site, abra o `Simple.master` página mestra e adicione a seguinte marcação entre o `topContent` e `mainContent` `<div>` elementos:
 
-
 [!code-aspx[Main](nested-master-pages-cs/samples/sample7.aspx)]
 
 Isso adiciona dois links na parte superior de cada página que é associado a `Simple.master`, `SimpleNested.master`, ou `SimpleNestedAlternate.master`; essas alterações se aplicam a todas as páginas mestras e de suas páginas de conteúdo imediatamente. A Figura 8 mostra `Alternate.aspx` quando visualizado por meio de um navegador. Observe a adição dos links na parte superior da página (em comparação comparada a Figura 7).
 
-
 [![Alterado para a página mestra de nível superior são refletidas imediatamente em suas páginas mestras aninhadas e suas páginas de conteúdo](nested-master-pages-cs/_static/image23.png)](nested-master-pages-cs/_static/image22.png)
 
 **Figura 08**: Alterado para a página mestra de nível superior são refletidas imediatamente em suas páginas mestras aninhadas e suas páginas de conteúdo ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image24.png))
-
 
 ## <a name="using-a-nested-master-page-for-the-administration-section"></a>Usando uma página mestra aninhada para a seção de administração
 
@@ -218,19 +192,15 @@ Como podemos configurar nosso página mestra aninhada para que ele use a página
 
 Vamos usar a segunda opção. Criar um único aninhada mestre arquivo de paginação na `~/Admin` pasta chamada `AdminNested.master`. Porque ambos `Site.master` e `Alternate.master` têm o mesmo conjunto de controles ContentPlaceHolder, não importa qual página mestre você associá-lo, embora eu recomendo que você associe-o a `Site.master` para exemplificar entre a consistência.
 
-
 [![Adicione uma página mestra aninhada para a pasta ~/Admin.](nested-master-pages-cs/_static/image26.png)](nested-master-pages-cs/_static/image25.png)
 
 **Figura 09**: Adicionar uma página mestra aninhada para o `~/Admin` pasta. ([Clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image27.png))
 
-
 Como a página mestra aninhada é associada a uma página mestra com quatro controles ContentPlaceHolder, o Visual Studio adiciona quatro controles de conteúdo para marcação de inicial do novo arquivo de página mestra aninhada. Como fizemos nas etapas 2 e 3, adicione um controle ContentPlaceHolder em cada controle de conteúdo, dando a ele o mesmo nome que o controle de ContentPlaceHolder o nível superior da página mestra. Também adicione a seguinte marcação para o controle de conteúdo que corresponde ao `MainContent` ContentPlaceHolder:
-
 
 [!code-html[Main](nested-master-pages-cs/samples/sample8.html)]
 
 Em seguida, defina as `instructions` da classe CSS em de `Styles.css` e `AlternateStyles.css` arquivos CSS. As regras CSS a seguir fazem com que os elementos HTML com o estilo de `instructions` classe a ser exibido com uma cor de plano de fundo amarelo claro e uma borda preta sólida:
-
 
 [!code-css[Main](nested-master-pages-cs/samples/sample9.css)]
 
@@ -238,18 +208,15 @@ Porque essa marcação foi adicionada à página mestra aninhada, ele será exib
 
 Depois de fazer essas adições para sua página mestra aninhada, sua marcação declarativa deve ser semelhante ao seguinte:
 
-
 [!code-aspx[Main](nested-master-pages-cs/samples/sample10.aspx)]
 
 Observe que cada controle de conteúdo tem um controle ContentPlaceHolder e que os controles ContentPlaceHolder `ID` propriedades recebem os mesmos valores que os controles de ContentPlaceHolder correspondentes na página mestre de nível superior. Além disso, a marcação da seção específica de administração aparece no `MainContent` ContentPlaceHolder.
 
 A Figura 10 mostra a `AdminNested.master` página mestra aninhada quando visualizado no Designer do Visual Studio. Você pode ver as instruções na caixa amarela na parte superior do `MainContent` controle de conteúdo.
 
-
 [![A página mestra aninhada estende a página mestre de nível superior para incluir instruções para o administrador.](nested-master-pages-cs/_static/image29.png)](nested-master-pages-cs/_static/image28.png)
 
 **Figura 10**: A página mestra aninhada estende a página mestre de nível superior para incluir instruções para o administrador. ([Clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image30.png))
-
 
 ## <a name="step-5-updating-the-existing-content-pages-to-use-the-new-nested-master-page"></a>Etapa 5: Atualizando as páginas de conteúdo existentes para usar a nova página mestra aninhada
 
@@ -259,26 +226,21 @@ A melhor maneira de conseguir isso desejado comportamento é criar uma nova clas
 
 Comece adicionando um novo arquivo de classe para o `App_Code` pasta chamada `AdminBasePage.cs`. Ter `AdminBasePage` estender `BasePage` e, em seguida, substituir o `SetMasterPageFile` método. Nesse método, atribua o `MasterPageFile` o valor "~ / Admin/AdminNested.master". Depois de fazer essas alterações em sua classe de arquivo deve ser semelhante ao seguinte:
 
-
 [!code-csharp[Main](nested-master-pages-cs/samples/sample11.cs)]
 
 Agora, é necessário ter as páginas de conteúdo existentes na administração seção derivam `AdminBasePage` em vez de `BasePage`. Vá para o arquivo de classe code-behind para cada página de conteúdo no `~/Admin` pasta e fazer essa alteração. Por exemplo, no `~/Admin/Default.aspx` você alteraria a declaração de classe de lógica de:
-
 
 [!code-csharp[Main](nested-master-pages-cs/samples/sample12.cs)]
 
 Para:
 
-
 [!code-csharp[Main](nested-master-pages-cs/samples/sample13.cs)]
 
 Figura 11 ilustra como a página mestre de nível superior (`Site.master` ou `Alternate.master`), a página mestra aninhada (`AdminNested.master`), e as páginas de conteúdo seção Administração se relacionam entre si.
 
-
 [![A página mestra aninhada define o conteúdo específico para as páginas na seção Administração](nested-master-pages-cs/_static/image32.png)](nested-master-pages-cs/_static/image31.png)
 
 **Figura 11**: O aninhados mestre página define conteúdo específicos para as páginas na seção Administration ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image33.png))
-
 
 ## <a name="step-6-mirroring-the-master-pages-public-methods-and-properties"></a>Etapa 6: Espelhamento de propriedades e métodos públicos da página mestra
 
@@ -288,11 +250,9 @@ O `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx` páginas supõem que sua p
 
 Para corrigir isso, precisamos ter o `AdminNested.master` estender classe code-behind `BaseMasterPage`. Atualize a declaração de classe da página mestra aninhada de lógica de:
 
-
 [!code-csharp[Main](nested-master-pages-cs/samples/sample14.cs)]
 
 Para:
-
 
 [!code-csharp[Main](nested-master-pages-cs/samples/sample15.cs)]
 
@@ -302,21 +262,17 @@ Embora, precisamos implementar esses membros de `AdminNested.master`, tudo o que
 
 Para fazer isso, comece adicionando o seguinte `@MasterType` diretiva na parte superior do `AdminNested.master`:
 
-
 [!code-aspx[Main](nested-master-pages-cs/samples/sample16.aspx)]
 
 Lembre-se de que o `@MasterType` diretiva adiciona uma propriedade fortemente tipada para a classe code-behind chamado `Master`. Em seguida, substituir os `RefreshRecentProductsGrid` e `GridMessageText` membros e simplesmente delegar a chamada para o `Master`correspondente do método:
-
 
 [!code-csharp[Main](nested-master-pages-cs/samples/sample17.cs)]
 
 Com esse código em vigor, você poderá visitar e usar as páginas de conteúdo na seção Administração. A Figura 12 mostra o `~/Admin/Products.aspx` página quando visualizado por meio de um navegador. Como você pode ver, a página inclui a caixa de instruções de administração, que é definida na página mestra aninhada.
 
-
 [![As páginas de conteúdo na seção Administração incluem instruções na parte superior de cada página](nested-master-pages-cs/_static/image35.png)](nested-master-pages-cs/_static/image34.png)
 
 **Figura 12**: As páginas de conteúdo a seção Administração incluem instruções na parte superior de cada página ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image36.png))
-
 
 ## <a name="step-7-using-the-appropriate-top-level-master-page-at-runtime"></a>Etapa 7: Usando a página de mestre de nível superior apropriado em tempo de execução
 
@@ -326,18 +282,15 @@ Para usar a página mestre de nível superior selecionada pelo usuário final, p
 
 Portanto, precisamos definir da página mestra aninhada `MasterPageFile` propriedade de páginas de conteúdo. O único conteúdo de páginas que usam o `AdminNested.master` derivam de página mestra `AdminBasePage`. Portanto, podemos colocar essa lógica existe. Na etapa 5 ou seja, substituímos o `SetMasterPageFile` método, configurando a `Page` do objeto `MasterPageFile` propriedade como "~ / Admin/AdminNested.master". Atualização `SetMasterPageFile` para definir também a página mestra `MasterPageFile` propriedade para o resultado armazenado na sessão:
 
-
 [!code-csharp[Main](nested-master-pages-cs/samples/sample18.cs)]
 
 O `GetMasterPageFileFromSession` método, que adicionamos ao `BasePage` classe no tutorial anterior, retorna o caminho do arquivo de página mestra apropriado com base no valor da variável de sessão.
 
 Com essa alteração em vigor, a seleção do usuário página mestra é transportado para a seção de administração. Figura 13 mostra a mesma página como a Figura 12, mas depois que o usuário alterou sua seleção de página mestra para `Alternate.master`.
 
-
 [![A página de administração aninhada usa a página mestre de nível superior selecionado pelo usuário](nested-master-pages-cs/_static/image38.png)](nested-master-pages-cs/_static/image37.png)
 
 **Figura 13**: A página de administração Nested usa a página mestre de nível superior selecionado pelo usuário ([clique para exibir a imagem em tamanho normal](nested-master-pages-cs/_static/image39.png))
-
 
 ## <a name="summary"></a>Resumo
 

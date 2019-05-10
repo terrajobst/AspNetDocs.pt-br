@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 5a2a927b-14cb-40bc-867a-f0680f9febd7
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
 msc.type: authoredcontent
-ms.openlocfilehash: 15a5984048ba2aca9fedcb7bc4bb77eb440f21ee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 595723d9c6ea9cc40bb0ae896524ee828c4ebce2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379450"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128424"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Implantação da Web do ASP.NET usando o Visual Studio: Transformações de arquivo Web.config
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usando o Visual Studio 2012 ou Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -106,7 +105,6 @@ Quando você testar o site após a implantação, você também vai testar para 
 > 
 > **Observação de segurança** nunca exibir detalhes do erro para o público em um aplicativo de produção, ou armazenar essas informações em um local público. Os invasores podem usar informações de erro para descobrir vulnerabilidades em um site. Se você usar o ELMAH no seu próprio aplicativo, configure para ELMAH para minimizar os riscos de segurança. O exemplo do ELMAH neste tutorial não deve ser considerado uma configuração recomendada. É um exemplo que foi escolhido para ilustrar como lidar com uma pasta que o aplicativo deve ser capaz de criar arquivos. Para obter mais informações, consulte [proteger o ponto de extremidade do ELMAH](https://code.google.com/p/elmah/wiki/SecuringErrorLogPages).
 
-
 ## <a name="a-setting-that-youll-handle-in-publish-profile-transformation-files"></a>Arquivos de transformação de perfil de publicação de uma configuração que você lidará na
 
 Um cenário comum é ter *Web. config* as configurações que devem ser diferentes em cada ambiente que você implanta em arquivos. Por exemplo, um aplicativo que chama um serviço WCF talvez seja necessário um ponto de extremidade diferente em ambientes de teste e produção. O aplicativo Contoso University inclui uma configuração desse tipo também. Essa configuração controla um indicador visível nas páginas de um site que informa qual ambiente você está no, como desenvolvimento, teste ou produção. O valor da configuração determina se o aplicativo acrescentará "(desenvolvimento)" ou "(teste)" no cabeçalho principal do *Master* página mestra:
@@ -131,7 +129,6 @@ Essa transformação pertence nos arquivos de transformação do perfil de publi
 
 > [!NOTE]
 > Porque essa configuração está na `<appSettings>` elemento, você tem outra alternativa para especificar a transformação quando você estiver implantando em aplicativos Web no serviço de aplicativo do Azure ver [Web. config especificando configurações no Azure](#watransforms) anteriormente neste tópico.
-
 
 ## <a name="setting-connection-strings"></a>Configurar cadeias de conexão
 

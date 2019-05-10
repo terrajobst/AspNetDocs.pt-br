@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 848e6bcf-4c3f-4d14-974d-e45b9444ab79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1b955c43a0fc95bda87843fc4a5c9e56aef3dfc6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 72c697bc2a2005d3ff116cf2f73d80e23bb526dd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400991"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124915"
 ---
 # <a name="drag-and-drop-via-reorderlist-vb"></a>Arrastar e soltar por meio de ReorderList (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/ReorderList5.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/reorderlist5VB.pdf)
 
 > O controle ReorderList no AJAX Control Toolkit fornece uma lista que pode ser reordenada por usuário por meio de arrastar e soltar. O pedido atual da lista deverá ser persistente no servidor.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -43,19 +42,15 @@ Neste banco de dados, criar uma nova tabela chamada `AJAX` com as seguintes quat
 - `description` (varchar(50), NULL)
 - `position` NULL (int)
 
-
 [![O layout da tabela AJAX](drag-and-drop-via-reorderlist-vb/_static/image2.png)](drag-and-drop-via-reorderlist-vb/_static/image1.png)
 
 O layout da tabela AJAX ([clique para exibir a imagem em tamanho normal](drag-and-drop-via-reorderlist-vb/_static/image3.png))
 
-
 Em seguida, preencha a tabela com um par de valores. Observe que o `position` coluna mantém a ordem de classificação dos elementos.
-
 
 [![Os dados iniciais na tabela de AJAX](drag-and-drop-via-reorderlist-vb/_static/image5.png)](drag-and-drop-via-reorderlist-vb/_static/image4.png)
 
 Os dados iniciais na tabela de AJAX ([clique para exibir a imagem em tamanho normal](drag-and-drop-via-reorderlist-vb/_static/image6.png))
-
 
 A próxima etapa requer para gerar um `SqlDataSource` controle para se comunicar com o novo banco de dados e sua tabela. A fonte de dados deve dar suporte a `SELECT` e `UPDATE` comandos SQL. Quando a ordem dos elementos de lista for alterada posteriormente, o `ReorderList` controle envia automaticamente os dois valores para a fonte de dados `Update` comando: a nova posição e a ID do elemento. Portanto, a fonte de dados necessidades um `<UpdateParameters>` seção para esses dois valores:
 
@@ -81,7 +76,6 @@ Por fim, um `ScriptManager` controle inicializa o ASP.NET AJAX para a página:
 [!code-aspx[Main](drag-and-drop-via-reorderlist-vb/samples/sample4.aspx)]
 
 Executar este exemplo no navegador e reorganizar os itens da lista um pouco. Em seguida, recarregue a página e/ou dar uma olhada no banco de dados. As posições alteradas ter sido mantidas e também são refletidas pelos valores no `position` coluna no banco de dados e que tudo isso sem qualquer código, apenas usando marcação.
-
 
 [![Os dados em que as alterações de banco de dados de acordo com a nova ordem de item de lista](drag-and-drop-via-reorderlist-vb/_static/image8.png)](drag-and-drop-via-reorderlist-vb/_static/image7.png)
 

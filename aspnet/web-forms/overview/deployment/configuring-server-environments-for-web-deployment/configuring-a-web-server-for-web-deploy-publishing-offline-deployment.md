@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: ba92788f-9f03-44b1-b6b2-af8413e6a35d
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 66a784430de734c8b1387c950382472ce59d5ccc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 873eb9e350d5fadb017b20c4b6d2889e0df00091
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422129"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126032"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-offline-deployment"></a>Configuração de um servidor Web para publicação de Implantação da Web (implantação offline)
 
@@ -30,7 +30,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > - Use *implantação offline*. Essa abordagem requer o mínimo de configuração do servidor web, mas um administrador de servidor manualmente deve copiar o pacote da web no servidor e importá-lo por meio do Gerenciador do IIS.
 > 
 > Para obter mais informações sobre os principais recursos, as vantagens e desvantagens dessas abordagens, consulte [escolhendo a abordagem da direita para a implantação da Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 Sim, se as restrições de infraestrutura ou de segurança de rede impediram a implantação remota. Isso é mais provável de ser o caso em ambientes de produção para a Internet, em que os servidores web são isolados&#x2014;seja fisicamente ou por firewalls e subredes&#x2014;do restante da sua infraestrutura de servidor.
 
@@ -59,7 +58,6 @@ Este tópico mostra como executar cada um desses procedimentos. As tarefas e ins
 > [!NOTE]
 > Para obter mais informações sobre como adicionar computadores a um domínio, consulte [ingressando computadores no domínio e fazendo logon](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obter mais informações sobre como configurar endereços IP estáticos, consulte [configurar um endereço IP estático](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
 
-
 ## <a name="install-products-and-components"></a>Instalar produtos e componentes
 
 Esta seção orientará você instalar os componentes e produtos necessários no servidor web. Antes de começar, uma prática recomendada é executar o Windows Update para garantir que seu servidor está completamente atualizado.
@@ -73,7 +71,6 @@ Nesse caso, você precisa instalar essas coisas:
 
 > [!NOTE]
 > Este passo a passo descreve o uso do Web Platform Installer para instalar e configurar vários componentes. Embora você não precisa usar o Web Platform Installer, ele simplifica o processo de instalação automaticamente detectando as dependências e garantindo que você sempre obtenha as versões mais recentes do produto. Para obter mais informações, consulte [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/?linkid=9805118).
-
 
 **Para instalar os componentes e produtos necessários**
 
@@ -180,7 +177,6 @@ A abordagem mais comum é atribuir permissões ao local **IIS\_IUSRS** agrupar, 
 > [!NOTE]
 > Para obter mais informações sobre identidades do pool de aplicativos no IIS 7.5, consulte [identidades do Pool de aplicativos](https://go.microsoft.com/?linkid=9805123).
 
-
 **Para configurar permissões de pasta para um site do IIS**
 
 1. No Windows Explorer, navegue até o local da pasta local.
@@ -199,7 +195,6 @@ Quando você instala a implantação da Web, o serviço de agente de implantaç�
 
 > [!NOTE]
 > Você não precisa interromper o serviço de agente remoto a fim de importar e implantar um pacote da web manualmente. No entanto, é uma boa prática para interromper e desabilitar o serviço se você não planeja usá-lo.
-
 
 Você pode interromper e desabilitar um serviço de várias maneiras, usando vários utilitários de linha de comando ou cmdlets do Windows PowerShell. Este procedimento descreve uma abordagem simples baseada em interface do usuário.
 

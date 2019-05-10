@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 96fc5552-05cd-4547-909f-9bb3176e44d6
 msc.legacyurl: /web-forms/overview/older-versions-security/membership
 msc.type: chapter
-ms.openlocfilehash: 7cb965a79cf9d367b74efa2fe1fd1493cce1c19e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eca16fea2cce2cef84e0a66e18c1bee0b9e54e94
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414602"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133082"
 ---
 # <a name="aspnet-35---membership"></a>ASP.NET 3.5 – Associação
 
 > Esta série de tutoriais examina as técnicas para usar o sistema de associação interna (segurança) para criar contas de usuário e configurar regras de autorização.
-
 
 - [Criação do esquema de associação no SQL Server (C#)](creating-the-membership-schema-in-sql-server-cs.md)
 - [Criação de contas de usuário (C#)](creating-user-accounts-cs.md)

@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 521c9117-81cd-4d8d-9d96-0256dc7bf50f
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 5dd5b96d0365c55cbbfa2dfe0856beda41f915e1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 548c5bea2e9cf26e0574e72d2c0ea204dbd90f9c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384754"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123381"
 ---
 # <a name="improving-performance-with-output-caching-c"></a>Melhorar o desempenho com o cache de saída (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, você aprenderá como você pode melhorar drasticamente o desempenho dos aplicativos web ASP.NET MVC, aproveitando o cache de saída. Você aprenderá a armazenar em cache o resultado retornado de uma ação do controlador para que o mesmo conteúdo não precisa ser criado um novo usuário invoca a ação de cada vez.
-
 
 O objetivo deste tutorial é explicar como você pode melhorar drasticamente o desempenho de um aplicativo ASP.NET MVC, aproveitando o cache de saída. O cache de saída permite armazenar em cache o conteúdo retornado por uma ação do controlador. Dessa forma, o mesmo conteúdo não precisa ser gerado a cada vez que a mesma ação de controlador é invocada.
 
@@ -78,7 +77,6 @@ Você pode definir a propriedade Location em qualquer um dos seguintes valores:
 > 
 > · ServerAndClient
 
-
 Por padrão, a propriedade Location tem o valor Any. No entanto, há situações em que você talvez queira apenas no navegador ou apenas no servidor de cache. Por exemplo, se você estiver armazenando em cache informações que são personalizadas para cada usuário, em seguida, você deve não armazenar em cache as informações no servidor. Se você estiver exibindo informações diferentes para diferentes usuários, em seguida, você deve armazenar em cache as informações apenas no cliente.
 
 Por exemplo, o controlador na listagem 3 expõe uma ação chamada GetName () que retorna o nome de usuário atual. Se Jack faz logon no site e invoca a ação GetName (), em seguida, a ação retorna a cadeia de caracteres "Hi Jack". Se, posteriormente, Jill faz logon no site e invoca a ação GetName (), em seguida, ela também obterá a cadeia de caracteres "Hi Jack". A cadeia de caracteres é armazenado em cache no servidor web para todos os usuários depois Jack inicialmente invoca a ação do controlador.
@@ -134,7 +132,6 @@ Você pode definir a propriedade VaryByParam com os seguintes valores:
 > None = nunca criar diferentes versões armazenadas em cache
 > 
 > Lista de ponto e vírgula dos parâmetros = criar diferentes versões em cache sempre que qualquer um dos parâmetros de cadeia de caracteres de formulário ou a consulta na lista varia de acordo
-
 
 ## <a name="creating-a-cache-profile"></a>Criando um perfil de Cache
 

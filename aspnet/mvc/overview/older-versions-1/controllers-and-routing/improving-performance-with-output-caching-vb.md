@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 0e7b4d85-2c46-4eaf-b6a8-6cd566a67334
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/improving-performance-with-output-caching-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0f824bd5e080d42a9df3525ca47b87bcef407f7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b713b56e149f196794b3223ba88e3b41bf3e34c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405619"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123367"
 ---
 # <a name="improving-performance-with-output-caching-vb"></a>Melhorar o desempenho com o cache de saída (VB)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, você aprenderá como você pode melhorar drasticamente o desempenho dos aplicativos web ASP.NET MVC, aproveitando o cache de saída. Você aprenderá a armazenar em cache o resultado retornado de uma ação do controlador para que o mesmo conteúdo não precisa ser criado um novo usuário invoca a ação de cada vez.
-
 
 O objetivo deste tutorial é explicar como você pode melhorar drasticamente o desempenho de um aplicativo ASP.NET MVC, aproveitando o cache de saída. O cache de saída permite armazenar em cache o conteúdo retornado por uma ação do controlador. Dessa forma, o mesmo conteúdo não precisa ser gerado a cada vez que a mesma ação de controlador é invocada.
 
@@ -36,9 +35,7 @@ Habilitar o cache de saída com a adição de um &lt;OutputCache&gt; de atributo
 
 [!code-vb[Main](improving-performance-with-output-caching-vb/samples/sample1.vb)]
 
-
 Nas versões Beta do ASP.NET MVC, o cache de saída não funciona para uma URL como [ http://www.MySite.com/ ](http://www.mysite.com/). Em vez disso, você deve inserir uma URL como [ http://www.MySite.com/Home/Index ](http://www.mysite.com/Home/Index).
-
 
 Na listagem 1, a saída da ação Index () é armazenado em cache por 10 segundos. Se você preferir, você pode especificar uma duração de cache muito maior. Por exemplo, se você quiser armazenar em cache a saída de uma ação do controlador para um dia, em seguida, você pode especificar uma duração de cache de 86400 segundos (60 segundos \* 60 minutos \* 24 horas).
 
@@ -79,7 +76,6 @@ Você pode definir a propriedade Location em qualquer um dos seguintes valores:
 > · None
 > 
 > · ServerAndClient
-
 
 Por padrão, a propriedade Location tem o valor Any. No entanto, há situações em que você talvez queira apenas no navegador ou apenas no servidor de cache. Por exemplo, se você estiver armazenando em cache informações que são personalizadas para cada usuário, em seguida, você deve não armazenar em cache as informações no servidor. Se você estiver exibindo informações diferentes para diferentes usuários, em seguida, você deve armazenar em cache as informações apenas no cliente.
 
@@ -136,7 +132,6 @@ Você pode definir a propriedade VaryByParam com os seguintes valores:
 > None = nunca criar diferentes versões armazenadas em cache
 > 
 > Lista de ponto e vírgula dos parâmetros = criar diferentes versões em cache sempre que qualquer um dos parâmetros de cadeia de caracteres de formulário ou a consulta na lista varia de acordo
-
 
 #### <a name="creating-a-cache-profile"></a>Criando um perfil de Cache
 

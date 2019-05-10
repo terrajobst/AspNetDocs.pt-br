@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 2e861511-450e-4752-a61e-4a01933f9b6e
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 586508039b9a3d78492aa02a77a1f29c64668b5e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2d76e715cdbf6ec484fa0ff98b3b3d1d8dfd3961
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409688"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125844"
 ---
 # <a name="scenario-configuring-a-production-environment-for-web-deployment"></a>Cenário: Configuração de um ambiente de produção para a Implantação da Web
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve um cenário de implantação da web típico para um ambiente de produção e explica as tarefas que você precisa concluir para configurar um ambiente semelhante.
-
 
 O ambiente de produção é o destino final para um aplicativo web ou um site. Nesse ponto, seu aplicativo tiver sido por meio de testes, tiver sido implantado em um ambiente de preparo e está pronto para "entrar no ar." As características de um ambiente de produção podem variar amplamente de acordo com a natureza e a finalidade do seu conteúdo da web, o tamanho da sua organização, seu público-alvo e muitos outros fatores. Em um cenário de escala empresarial, o ambiente de produção pode ter as seguintes características:
 
@@ -33,7 +32,6 @@ O ambiente de produção é o destino final para um aplicativo web ou um site. N
 
 > [!NOTE]
 > Escalar horizontalmente uma implantação de banco de dados em vários servidores está além do escopo deste tutorial. Para obter mais informações sobre essa área, consulte [Manuais Online do SQL Server](https://technet.microsoft.com/library/ms130214.aspx).
-
 
 Por exemplo, no nosso [cenário do tutorial](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), um servidor do Team Build inclui definições de compilação que permitem aos usuários criar a solução de Gerenciador de contatos e implantá-lo em um ambiente de preparo em uma única etapa. Quando o aplicativo está pronto para ser implantado para produção, devido às restrições impostas por requisitos de segurança e a infraestrutura de rede, o administrador do ambiente de produção deve copiar o pacote da web em um servidor web de produção e importar manualmente ele por meio do Gerenciador de serviços de informações da Internet (IIS).
 

@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 2dcb44a4-5cbf-4d62-b363-718104082d86
 msc.legacyurl: /mvc/overview/older-versions-1/overview/asp-net-mvc-overview
 msc.type: authoredcontent
-ms.openlocfilehash: 149312e2ddf0a5023a4a12f5b05852f7da6b18f8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73965c71f37de13e3813df089a253fde528ea7ee
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418164"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128220"
 ---
 # <a name="aspnet-mvc-overview"></a>Visão geral do ASP.NET MVC
 
@@ -21,18 +21,15 @@ por [Microsoft](https://github.com/microsoft)
 
 > Saiba mais sobre as diferenças entre o aplicativo ASP.NET MVC e aplicativos de Web Forms do ASP.NET. Saiba como decidir quando criar um aplicativo ASP.NET MVC.
 
-
 O padrão de arquitetura do Model-View-Controller (MVC) separa um aplicativo em três componentes principais: o modelo, o modo de exibição e o controlador. A estrutura ASP.NET MVC fornece uma alternativa ao padrão de Web Forms do ASP.NET para a criação de aplicativos Web baseados no MVC. A estrutura ASP.NET MVC é uma estrutura de apresentação leve e altamente testável que (assim como acontece com aplicativos baseados em Web Forms) é integrado com os recursos existentes do ASP.NET, como páginas mestras e autenticação baseada em associação. A estrutura do MVC é definida na **System.Web.Mvc** namespace e é uma parte fundamental, com suporte das **System. Web** namespace.   
   
 O MVC é um padrão de design padrão que muitos desenvolvedores estão familiarizados com. Alguns tipos de aplicativos Web serão beneficiados com a estrutura do MVC. Outros continuarão a usar o padrão de aplicativo ASP.NET tradicional baseado em Web Forms e postbacks. Outros tipos de aplicativos Web combina as duas abordagens; uma abordagem não exclui o outro.   
   
 A estrutura MVC inclui os seguintes componentes:
 
-
 [![Invocar uma ação do controlador que espera um valor de parâmetro](asp-net-mvc-overview/_static/image1.jpg)](asp-net-mvc-overview/_static/image1.png)
 
 **Figura 01**: Invocar uma ação do controlador que espera um valor de parâmetro ([clique para exibir a imagem em tamanho normal](asp-net-mvc-overview/_static/image2.png))
-
 
 - **Modelos de**. Objetos de modelo são as partes do aplicativo que implementam a lógica do domínio de dados do aplicativo s. Muitas vezes, os objetos de modelo recuperam e armazenam o estado de modelo em um banco de dados. Por exemplo, um objeto de produto pode recuperar informações de um banco de dados, operar nele e, em seguida, gravar informações atualizadas de volta para uma tabela de produtos no SQL Server.
 

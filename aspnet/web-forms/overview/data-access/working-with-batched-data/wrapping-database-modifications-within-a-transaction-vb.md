@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: 7d821db5-6cbb-4b38-af14-198f9155fc82
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 2fc7ba3d62d41685c234756709707ff14f81b316
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c759df39f30b69264187babdb6d3422aff17e99c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380308"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132823"
 ---
 # <a name="wrapping-database-modifications-within-a-transaction-vb"></a>Encapsulamento de modificações de banco de dados em uma transação (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_63_VB.zip) ou [baixar PDF](wrapping-database-modifications-within-a-transaction-vb/_static/datatutorial63vb1.pdf)
 
 > Este tutorial é o primeiro de quatro que examina a atualização, exclusão e inserção de lotes de dados. Neste tutorial, saiba como as transações de banco de dados permitem que as modificações de lote a ser realizada como uma operação atômica, o que garante que todas as etapas de êxito ou falham de todas as etapas.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -38,7 +37,6 @@ Neste tutorial, examinaremos como estender a DAL para usar transações de banco
 
 > [!NOTE]
 > Ao modificar dados em uma transação em lote, atomicidade nem sempre é necessário. Em alguns cenários, pode ser aceitável ter algumas modificações de dados tenha êxito e outros no mesmo lote falharem, por exemplo, quando a exclusão de um conjunto de emails de um cliente de email baseado na web. Se não houver s um midway de erro de banco de dados por meio da exclusão processar, ele s provavelmente aceitável que os registros processados sem erro permaneçam excluídos. Nesses casos, a DAL não precisa ser modificado para dar suporte a transações de banco de dados. Há outros lote cenários de operação, no entanto, onde é vital a atomicidade. Quando um cliente move-lhe os fundos de uma conta bancária para outra, as duas operações devem ser executadas: os fundos devem ser deduzidos da primeira conta e, em seguida, adicionados ao segundo. Enquanto o banco não pode se importar com a primeira etapa ter êxito, mas a segunda etapa falhar, seus clientes compreensivelmente seria aborrecidos. Eu recomendo que você trabalhe com este tutorial e implementar os aprimoramentos para a DAL para dar suporte a transações de banco de dados, mesmo se você não planeja usá-los na inserção de lote, atualização e exclusão de interfaces, criarei nos tutoriais de três a seguir.
-
 
 ## <a name="an-overview-of-transactions"></a>Uma visão geral de transações
 
@@ -56,9 +54,7 @@ As instruções SQL usadas para criar, confirmar e reverter a transação pode s
 > [!NOTE]
 > O [ `TransactionScope` classe](https://msdn.microsoft.com/library/system.transactions.transactionscope.aspx) no `System.Transactions` namespace permite que os desenvolvedores por meio de programação encapsular uma série de instruções dentro do escopo de uma transação e inclui suporte para transações complexas que envolvem vários fontes, como dois bancos de dados diferentes ou até mesmo heterogêneos tipos de armazenamentos de dados, como um banco de dados do Microsoft SQL Server, um banco de dados Oracle e um serviço Web. Eu ve decidiu usar as transações do ADO.NET para este tutorial em vez do `TransactionScope` classe porque ADO.NET é mais específica para transações de banco de dados e, em muitos casos, é muito menor com uso intensivo de recursos. Além disso, em alguns cenários de `TransactionScope` classe usa o Microsoft Distributed Transaction coordenador (MSDTC). Os problemas de desempenho, implementação e configuração ao redor do MSDTC torna um tópico em vez disso, especializado e avançado e além do escopo destes tutoriais.
 
-
 Ao trabalhar com o provedor do SqlClient no ADO.NET, as transações são iniciadas por meio de uma chamada para o [ `SqlConnection` classe](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.aspx) s [ `BeginTransaction` método](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.begintransaction.aspx), que retorna um [ `SqlTransaction` objeto](https://msdn.microsoft.com/library/system.data.sqlclient.sqltransaction.aspx). As instruções de modificação de dados que a transação de composição são colocados dentro de um `try...catch` bloco. Se ocorrer um erro em uma instrução no `try` bloquear transferências de execução para o `catch` bloco em que a transação pode ser revertida por meio de `SqlTransaction` objeto s [ `Rollback` método](https://msdn.microsoft.com/library/system.data.sqlclient.sqltransaction.rollback.aspx). Se todas as instruções concluída com êxito, uma chamada para o `SqlTransaction` objeto s [ `Commit` método](https://msdn.microsoft.com/library/system.data.sqlclient.sqltransaction.commit.aspx) no final o `try` bloco confirma a transação. O trecho de código a seguir ilustra esse padrão. Ver [manter a consistência de banco de dados com transações](http://aspnet.4guysfromrolla.com/articles/072705-1.aspx) para sintaxe adicional e exemplos do uso de transações com o ADO.NET.
-
 
 [!code-vb[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample1.vb)]
 
@@ -74,32 +70,25 @@ Antes de começarmos a explorar como incrementar a DAL para dar suporte a transa
 - `BatchDelete.aspx`
 - `BatchInsert.aspx`
 
-
 ![Adicione as páginas do ASP.NET para que os tutoriais relacionados SqlDataSource](wrapping-database-modifications-within-a-transaction-vb/_static/image1.gif)
 
 **Figura 1**: Adicione as páginas do ASP.NET para que os tutoriais relacionados SqlDataSource
 
-
 Assim como acontece com as outras pastas `Default.aspx` usará o `SectionLevelTutorialListing.ascx` controle de usuário para listar os tutoriais dentro da própria seção. Portanto, adicionar esse controle de usuário `Default.aspx` arrastando-no Gerenciador de soluções para a página de exibição de Design de s.
-
 
 [![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](wrapping-database-modifications-within-a-transaction-vb/_static/image2.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image1.png)
 
 **Figura 2**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image2.png))
 
-
 Por fim, adicione esses quatro páginas como entradas para o `Web.sitemap` arquivo. Especificamente, adicione a seguinte marcação após Personalizando o mapa do Site `<siteMapNode>`:
-
 
 [!code-xml[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample2.xml)]
 
 Depois de atualizar `Web.sitemap`, reserve um tempo para exibir o site de tutoriais através de um navegador. No menu à esquerda agora inclui itens para o trabalho com os tutoriais de dados em lote.
 
-
 ![O mapa do Site agora inclui entradas para o trabalho com os tutoriais de dados em lote](wrapping-database-modifications-within-a-transaction-vb/_static/image3.gif)
 
 **Figura 3**: O mapa do Site agora inclui entradas para o trabalho com os tutoriais de dados em lote
-
 
 ## <a name="step-2-updating-the-data-access-layer-to-support-database-transactions"></a>Etapa 2: Atualizando a camada de acesso a dados para dar suporte a transações de banco de dados
 
@@ -111,14 +100,11 @@ Em determinados cenários, queremos garantir a atomicidade em uma série de modi
 
 O conjunto de dados tipado `Northwind.xsd` está localizado em de `App_Code` pasta s `DAL` subpasta. Crie uma subpasta na `DAL` pasta chamada `TransactionSupport` e adicione um novo arquivo de classe chamado `ProductsTableAdapter.TransactionSupport.vb` (veja a Figura 4). Esse arquivo conterá a implementação parcial do `ProductsTableAdapter` que inclui métodos para executar modificações de dados usando uma transação.
 
-
 ![Adicionar uma pasta chamada TransactionSupport e um arquivo de classe chamado ProductsTableAdapter.TransactionSupport.vb](wrapping-database-modifications-within-a-transaction-vb/_static/image4.gif)
 
 **Figura 4**: Adicione uma pasta chamada `TransactionSupport` e um arquivo de classe chamado `ProductsTableAdapter.TransactionSupport.vb`
 
-
 Digite o seguinte código para o `ProductsTableAdapter.TransactionSupport.vb` arquivo:
-
 
 [!code-vb[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample3.vb)]
 
@@ -130,13 +116,11 @@ Esses métodos fornecem os blocos de construção necessários para iniciar a re
 
 Com esses métodos é concluídos, podemos re está pronto para adicionar métodos para `ProductsDataTable` ou a BLL que executam uma série de comandos sob o guarda-chuva de uma transação. O método a seguir usa o padrão de atualização em lotes para atualizar um `ProductsDataTable` instância usando uma transação. Inicia uma transação chamando o `BeginTransaction` método e, em seguida, usa um `Try...Catch` bloco para emitir as instruções de modificação de dados. Se a chamada para o `Adapter` objeto s `Update` método resulta em uma exceção, a execução será transferido para o `catch` bloco em que a transação será revertida e a exceção gerada novamente. Lembre-se de que o `Update` método implementa o padrão de atualização em lotes, enumerando as linhas de fornecido `ProductsDataTable` e executar o necessário `InsertCommand`, `UpdateCommand`, e `DeleteCommand` s. Se qualquer um desses resultados de comandos em um erro, a transação será revertida, desfazendo as modificações anteriores feitas durante o tempo de vida de s de transação. Deve o `Update` instrução concluída sem erros, a transação é confirmada em sua totalidade.
 
-
 [!code-vb[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample4.vb)]
 
 Adicione a `UpdateWithTransaction` método para o `ProductsTableAdapter` classe por meio da classe parcial no `ProductsTableAdapter.TransactionSupport.vb`. Como alternativa, esse método pode ser adicionado ao s a camada de lógica comercial `ProductsBLL` classe com algumas pequenas alterações sintáticas. Ou seja, a palavra-chave `Me` na `Me.BeginTransaction()`, `Me.CommitTransaction()`, e `Me.RollbackTransaction()` precisaria ser substituídos por `Adapter` (Lembre-se de que `Adapter` é o nome de uma propriedade em `ProductsBLL` do tipo `ProductsTableAdapter`).
 
 O `UpdateWithTransaction` método usa o padrão de atualização em lotes, mas uma série de chamadas diretas de banco de dados também pode ser usada dentro do escopo de uma transação, como mostra o método a seguir. O `DeleteProductsWithTransaction` método aceita como entrada uma `List(Of T)` do tipo `Integer`, que são o `ProductID` s a serem excluídos. O método inicia a transação por meio de uma chamada para `BeginTransaction` e, em seguida, no `Try` blocos, itera através da lista fornecida chamando o padrão de DB-Direct `Delete` método para cada `ProductID` valor. Se qualquer uma das chamadas para `Delete` falhar, o controle é transferido para o `Catch` bloco em que a transação é revertida e a exceção gerada novamente. Se todas as chamadas para `Delete` bem-sucedida, em seguida, a transação é confirmada. Adicione este método para o `ProductsBLL` classe.
-
 
 [!code-vb[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample5.vb)]
 
@@ -154,12 +138,10 @@ Na etapa 3, adicionamos uma `UpdateWithTransaction` método para o `ProductsTabl
 
 Abra o `ProductsBLL` arquivo de classe e adicione um método chamado `UpdateWithTransaction` que simplesmente chama para baixo até o método correspondente da DAL. Agora deve haver dois novos métodos na `ProductsBLL`: `UpdateWithTransaction`, que você acabou de adicionar e `DeleteProductsWithTransaction`, que foi adicionado na etapa 3.
 
-
 [!code-vb[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample6.vb)]
 
 > [!NOTE]
 > Esses métodos não incluem o `DataObjectMethodAttribute` atributo atribuído para a maioria dos outros métodos no `ProductsBLL` classe porque podemos invocar esses métodos diretamente as classes de code-behind de páginas ASP.NET. Lembre-se de que `DataObjectMethodAttribute` é usada para sinalizar a quais métodos devem aparecer em s ObjectDataSource configurar fonte de dados do assistente e em quais guia (SELECT, UPDATE, INSERT ou DELETE). Uma vez que o GridView não tem suporte interno para o lote, editando ou excluindo, teremos que invocar esses métodos por meio de programação em vez de usar a abordagem sem código declarativa.
-
 
 ## <a name="step-5-atomically-updating-database-data-from-the-presentation-layer"></a>Etapa 5: Atualizar atomicamente o banco de dados da camada de apresentação
 
@@ -167,37 +149,29 @@ Para ilustrar o efeito que a transação tenha ao atualizar um lote de registros
 
 Comece abrindo o `Transactions.aspx` página o `BatchData` pasta e arraste um controle GridView na caixa de ferramentas para o Designer. Defina suas `ID` ao `Products` e, na marca inteligente, de associá-lo a um novo ObjectDataSource chamado `ProductsDataSource`. Configurar o ObjectDataSource para efetuar pull de seus dados a partir de `ProductsBLL` classe s `GetProducts` método. Isso será um GridView somente leitura, portanto, defina as listas suspensas na atualização, inserção e excluir guias como (nenhum) e clique em Concluir.
 
-
 [![Configurar o ObjectDataSource para usar o método de GetProducts ProductsBLL classe s](wrapping-database-modifications-within-a-transaction-vb/_static/image5.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image3.png)
 
 **Figura 5**: Configurar o ObjectDataSource para usar o `ProductsBLL` classe s `GetProducts` método ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image4.png))
-
 
 [![Definir as listas suspensas na atualização, inserção e excluir guias como (nenhum)](wrapping-database-modifications-within-a-transaction-vb/_static/image6.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image5.png)
 
 **Figura 6**: Defina a lista suspensa no UPDATE, INSERT e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image6.png))
 
-
 Depois de concluir o Assistente Configurar fonte de dados, o Visual Studio criará BoundFields e um CheckBoxField para os campos de dados do produto. Remover todos esses campos, exceto `ProductID`, `ProductName`, `CategoryID`, e `CategoryName` e renomeie o `ProductName` e `CategoryName` BoundFields `HeaderText` propriedades para o produto e categoria, respectivamente. Na marca inteligente, marque a opção de habilitar a paginação. Depois de fazer essas modificações, GridView e ObjectDataSource s marcação declarativa deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample7.aspx)]
 
 Em seguida, adicione três controles da Web de botão acima GridView. Defina o primeiro botão s propriedade Text para atualização de grade, o segundo s para modificar categorias (com transação) e o terceiro s para modificar categorias (sem transação).
 
-
 [!code-aspx[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample8.aspx)]
 
 Neste ponto, o modo de exibição de Design no Visual Studio deve ser semelhante à mostrada na Figura 7 de captura de tela.
-
 
 [![A página contém um GridView e três controles de Web de botão](wrapping-database-modifications-within-a-transaction-vb/_static/image7.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image7.png)
 
 **Figura 7**: A página contém um GridView e três controles de Web de botão ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image8.png))
 
-
 Criar manipuladores de eventos para cada um dos três botão s `Click` eventos e use o código a seguir:
-
 
 [!code-vb[Main](wrapping-database-modifications-within-a-transaction-vb/samples/sample9.vb)]
 
@@ -209,26 +183,21 @@ O terceiro `Click` manipulador de eventos atualiza os produtos `CategoryID` s da
 
 Para demonstrar esse comportamento, visite esta página por meio de um navegador. Inicialmente, você verá a primeira página de dados conforme mostrado na Figura 8. Em seguida, clique no botão Modificar categorias (com transação). Isso fará com que um postback-lo e tentar atualizar todos os produtos `CategoryID` valores, mas resultará em uma violação de restrição de chave estrangeira (consulte a Figura 9).
 
-
 [![Os produtos são exibidos em um GridView paginável](wrapping-database-modifications-within-a-transaction-vb/_static/image8.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image9.png)
 
 **Figura 8**: Os produtos são exibidos em um GridView paginável ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image10.png))
-
 
 [![Reatribuindo os resultados de categorias em uma violação de restrição de chave estrangeira](wrapping-database-modifications-within-a-transaction-vb/_static/image9.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image11.png)
 
 **Figura 9**: Reatribuindo os resultados de categorias em uma violação de restrição de chave estrangeira ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image12.png))
 
-
 Agora, pressione o botão de voltar do navegador s e, em seguida, clique no botão de atualização de grade. Após atualizar os dados você deverá ver a mesma saída exatamente conforme mostrado na Figura 8. Ou seja, mesmo que alguns dos produtos `CategoryID` s eram valores alterados para legal e atualizado no banco de dados, eles foram revertidos quando ocorreu a violação de restrição de chave estrangeira.
 
 Agora, tente clicar no botão Modificar categorias (sem transação). Isso resultará no mesmo erro de violação de restrição de chave estrangeira (consulte a Figura 9), mas desta vez, esses produtos cuja `CategoryID` valores foram alterados para um legal valor serão não será revertido. Pressione o botão de voltar do navegador s e, em seguida, no botão de atualização de grade. Como mostra a Figura 10, o `CategoryID` s os oito primeiros produtos foram reatribuídos. Por exemplo, na Figura 8, Chang tinha um `CategoryID` de 1, mas na Figura 10 it s foi reatribuída a 2.
 
-
 [![Alguns produtos CategoryID valores não pudessem ser atualizada enquanto outros foram](wrapping-database-modifications-within-a-transaction-vb/_static/image10.gif)](wrapping-database-modifications-within-a-transaction-vb/_static/image13.png)
 
 **Figura 10**: Alguns produtos `CategoryID` valores não pudessem ser atualizada enquanto outros eram ([clique para exibir a imagem em tamanho normal](wrapping-database-modifications-within-a-transaction-vb/_static/image14.png))
-
 
 ## <a name="summary"></a>Resumo
 

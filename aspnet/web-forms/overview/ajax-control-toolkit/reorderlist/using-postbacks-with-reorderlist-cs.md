@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 70d5d106-b547-442c-a7fd-3492b3e3d646
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/using-postbacks-with-reorderlist-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 6f8f74b74080104980e1db866d695fe7c6d9d5fc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 86fb3475b8c2a9578b59945e40539183b967bbed
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393347"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124702"
 ---
 # <a name="using-postbacks-with-reorderlist-c"></a>Uso de postbacks com ReorderList (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/ReorderList4.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/reorderlist4CS.pdf)
 
 > O controle ReorderList no AJAX Control Toolkit fornece uma lista que pode ser reordenada por usuário por meio de arrastar e soltar. Sempre que a lista for reordenada, deverá informar o servidor da alteração de um postback.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -60,7 +59,6 @@ Esse rótulo é preenchido com o texto no código do lado do servidor, manipular
 Por fim, para ativar a funcionalidade do AJAX ASP.NET e o Kit de ferramentas de controle, o `ScriptManager` controle deve ser colocada na página:
 
 [!code-aspx[Main](using-postbacks-with-reorderlist-cs/samples/sample6.aspx)]
-
 
 [![Cada reordenação dispara um postback](using-postbacks-with-reorderlist-cs/_static/image2.png)](using-postbacks-with-reorderlist-cs/_static/image1.png)
 

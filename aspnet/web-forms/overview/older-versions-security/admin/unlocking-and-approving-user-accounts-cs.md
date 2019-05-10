@@ -8,12 +8,12 @@ ms.date: 04/01/2008
 ms.assetid: 5346aab1-9974-489f-a065-ae3883b8a350
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d4e8591f3090de8f931ffd8eb1dd0a1138674842
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b27be9dff132989a37eca7d5ef3af7b0e1aaeb74
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410039"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131298"
 ---
 # <a name="unlocking-and-approving-user-accounts-c"></a>Desbloqueio e aprovação de contas de usuário (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.14.zip) ou [baixar PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial14_UnlockAndApprove_cs.pdf)
 
 > Este tutorial mostra como criar uma página da web para os administradores gerenciarem bloqueada e aprovado o status dos usuários. Também veremos como aprovar novos usuários somente depois que eles confirmaram seu endereço de email.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -41,18 +40,15 @@ Para este tutorial vamos usar duas páginas do ASP.NET: `ManageUsers.aspx` e `Us
 > [!NOTE]
 > Se você baixou o código para o <a id="Tutorial13"> </a> [ *Recovering e alterar as senhas* ](recovering-and-changing-passwords-cs.md) tutorial, você deve ter observado que o `ManageUsers.aspx` página já contém um conjunto de " Gerenciar"links e o `UserInformation.aspx` página fornece uma interface para alterar a senha do usuário selecionado. Decidi não replicar essa funcionalidade no código associado com este tutorial porque funcionou, evitando a API Membership e operar diretamente com o banco de dados do SQL Server para alterar a senha do usuário. Este tutorial começa do zero com o `UserInformation.aspx` página.
 
-
 ### <a name="adding-manage-links-to-theuseraccountsgridview"></a>Adicionando "gerenciar" Links para o`UserAccounts`GridView
 
 Abra o `ManageUsers.aspx` da página e adicionar um HyperLinkField para o `UserAccounts` GridView. Defina o HyperLinkField `Text` propriedade para "Gerenciar" e seu `DataNavigateUrlFields` e `DataNavigateUrlFormatString` propriedades a serem `UserName` e "UserInformation.aspx?user={0}", respectivamente. Essas configurações definem o HyperLinkField, de modo que todos os hiperlinks exibem o texto "Gerenciar", mas cada link passa no respectivo *nome de usuário* valor na cadeia de consulta.
 
 Depois de adicionar o HyperLinkField a GridView, reserve um tempo para exibir o `ManageUsers.aspx` página por meio de um navegador. Como mostra a Figura 1, cada linha de GridView agora inclui um link "Gerenciar". O link "Gerenciar" para Bruce aponta para `UserInformation.aspx?user=Bruce`, enquanto que o link "Gerenciar" de Dave aponta para `UserInformation.aspx?user=Dave`.
 
-
 [![Adiciona o HyperLinkField um](unlocking-and-approving-user-accounts-cs/_static/image2.png)](unlocking-and-approving-user-accounts-cs/_static/image1.png)
 
 **Figura 1**: O HyperLinkField adiciona um Link "Gerenciar" para cada conta de usuário ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image3.png))
-
 
 Criaremos a interface do usuário e de código para o `UserInformation.aspx` página em um momento, mas primeiro vamos falar sobre como alterar programaticamente um usuário do bloqueada e status de aprovação. O [ `MembershipUser` classe](https://msdn.microsoft.com/library/system.web.security.membershipuser.aspx) tem [ `IsLockedOut` ](https://msdn.microsoft.com/library/system.web.security.membershipuser.islockedout.aspx) e [ `IsApproved` propriedades](https://msdn.microsoft.com/library/system.web.security.membershipuser.isapproved.aspx). A propriedade `IsLockedOut` é somente leitura. Não há nenhum mecanismo para bloquear um usuário; por meio de programação para desbloquear um usuário, use o `MembershipUser` da classe [ `UnlockUser` método](https://msdn.microsoft.com/library/system.web.security.membershipuser.unlockuser.aspx). O `IsApproved` propriedade é legível e gravável. Para salvar as alterações a essa propriedade, precisamos chamar o `Membership` da classe [ `UpdateUser` método](https://msdn.microsoft.com/library/system.web.security.membership.updateuser.aspx), passando o modificado `MembershipUser` objeto.
 
@@ -71,11 +67,9 @@ Agora estamos prontos para implementar a interface do usuário em `UserInformati
 
 Depois de adicionar esses controles, o modo de exibição de Design no Visual Studio deve ser semelhante para a tela na Figura 2.
 
-
 [![Criar a Interface do usuário para UserInformation.aspx](unlocking-and-approving-user-accounts-cs/_static/image5.png)](unlocking-and-approving-user-accounts-cs/_static/image4.png)
 
 **Figura 2**: Criar a Interface do usuário para `UserInformation.aspx` ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image6.png))
-
 
 Com a interface de usuário completa, nossa próxima tarefa é definir o `IsApproved` caixa de seleção e outros controles com base nas informações do usuário selecionado. Criar um manipulador de eventos para a página `Load` eventos e adicione o seguinte código:
 
@@ -97,29 +91,23 @@ Retorne ao Visual Studio e criar manipuladores de eventos para o `IsApproved` da
 
 Com esses manipuladores de eventos em vigor, revisita a página aprovadas e um usuário. Como mostra a Figura 3, você deverá ver um resumo da mensagem na página indicando que o usuário `IsApproved` propriedade foi modificada com êxito.
 
-
 [![Chris foi reprovado](unlocking-and-approving-user-accounts-cs/_static/image8.png)](unlocking-and-approving-user-accounts-cs/_static/image7.png)
 
 **Figura 3**: Chris foi reprovado ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image9.png))
 
-
 Em seguida, logout e tente fazer logon como o usuário cuja conta foi apenas não aprovados. Porque o usuário não for aprovado, eles não podem fazer logon. Por padrão, o controle de logon exibe a mesma mensagem se o usuário não pode fazer logon, independentemente do motivo. Mas no <a id="Tutorial6"> </a> [ *Validar usuário as credenciais contra a associação de usuário Store* ](../membership/validating-user-credentials-against-the-membership-user-store-cs.md) tutorial vimos aprimorando o controle de logon para exibir uma mensagem mais apropriada. Como mostra a Figura 4, Chris é mostrado uma mensagem explicando o que ele não pode fazer logon porque sua conta ainda não foi aprovada.
-
 
 [![Chris não é possível porque o His conta de logon é reprovado](unlocking-and-approving-user-accounts-cs/_static/image11.png)](unlocking-and-approving-user-accounts-cs/_static/image10.png)
 
 **Figura 4**: Chris não é possível porque o His conta de logon é reprovado ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image12.png))
 
-
 Para testar a funcionalidade bloqueada, tente fazer logon como um usuário aprovado, mas usar uma senha incorreta. Repita esse processo, o número necessário de vezes até que a conta do usuário foi bloqueada. O controle de logon também foi atualizado para mostrar um personalizado de mensagem se a tentativa de logon em uma conta bloqueada. Você sabe que uma conta foi bloqueada depois que você começar a ver a seguinte mensagem na página de logon: "Sua conta foi bloqueada devido a muitas tentativas de logon inválido. Entre em contato com o administrador para configurar o desbloqueio da conta."
 
 Volte para o `ManageUsers.aspx` da página e clique no link Gerenciar para o usuário bloqueado. Como mostra a Figura 5, você deverá ver um valor no `LastLockedOutDateLabel` botão Desbloquear o usuário deve ser habilitado. Clique no botão Desbloquear usuário para desbloquear a conta de usuário. Depois que você conquistou o usuário, eles poderão fazer logon novamente.
 
-
 [![Dave foi bloqueado para o sistema](unlocking-and-approving-user-accounts-cs/_static/image14.png)](unlocking-and-approving-user-accounts-cs/_static/image13.png)
 
 **Figura 5**: Dave tem foram bloqueados fora do sistema ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image15.png))
-
 
 ## <a name="step-2-specifying-new-users-approved-status"></a>Etapa 2: Especificar novos usuários aprovados Status
 
@@ -129,7 +117,6 @@ Por padrão, o controle CreateUserWizard aprova novas contas. Você pode configu
 
 > [!NOTE]
 > Por padrão o controle CreateUserWizard registra automaticamente na nova conta de usuário. Esse comportamento é determinado pelo controle [ `LoginCreatedUser` propriedade](https://msdn.microsoft.com/en-gb/library/system.web.ui.webcontrols.createuserwizard.logincreateduser.aspx). Porque não aprovados que os usuários não podem fazer logon no site, quando `DisableCreatedUser` é `true` nova conta de usuário não está conectada ao site, independentemente do valor de `LoginCreatedUser` propriedade.
-
 
 Se você estiver criando programaticamente novas contas de usuário por meio de `Membership.CreateUser` método para criar uma conta de usuário não aprovados usam uma das sobrecargas que aceitam o novo usuário `IsApproved` valor da propriedade como um parâmetro de entrada.
 
@@ -148,7 +135,6 @@ Para enviar um email do controle CreateUserWizard, configure seu `MailDefinition
 > [!NOTE]
 > Para usar o `MailDefinition` opções de propriedade que você precisa para especificar a entrega de email no `Web.config`. Para obter mais informações, consulte [envio de Email no ASP.NET](http://aspnet.4guysfromrolla.com/articles/072606-1.aspx).
 
-
 Comece criando um novo modelo de email chamado `CreateUserWizard.txt` no `EmailTemplates` pasta. Use o seguinte texto para o modelo:
 
 [!code-aspx[Main](unlocking-and-approving-user-accounts-cs/samples/sample3.aspx)]
@@ -165,15 +151,12 @@ O `SendingMail` evento é acionado depois que o `CreatedUser` evento, o que sign
 
 O efeito líquido é que novos usuários são não aprovados, o que significa que eles não podem fazer logon no site. Além disso, elas são enviadas automaticamente um email com um link para a URL de verificação (veja a Figura 6).
 
-
 [![O novo usuário recebe um Email com um Link para a URL de verificação](unlocking-and-approving-user-accounts-cs/_static/image17.png)](unlocking-and-approving-user-accounts-cs/_static/image16.png)
 
 **Figura 6**: O novo usuário recebe um Email com um Link para a URL de verificação ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image18.png))
 
-
 > [!NOTE]
 > Etapa de CreateUserWizard padrão do controle CreateUserWizard exibe uma mensagem informando ao usuário sua conta foi criada e exibe um botão continuar. Se você clicar nesta leva o usuário para a URL especificada pelo controle de `ContinueDestinationPageUrl` propriedade. O CreateUserWizard na `EnhancedCreateUserWizard.aspx` está configurado para enviar os novos usuários a `~/Membership/AdditionalUserInfo.aspx`, que solicita ao usuário sua cidade natal, a URL da home page e a assinatura. Como essas informações só podem ser adicionadas por usuários conectados, faz sentido para atualizar essa propriedade para enviar aos usuários para a home page do site (`~/Default.aspx`). Além disso, o `EnhancedCreateUserWizard.aspx` página ou a etapa CreateUserWizard deve ser aumentada para informar ao usuário que eles receberam um email de verificação e sua conta não será ativada até que eles sigam as instruções neste email. Vou deixar essas modificações como um exercício para o leitor.
-
 
 ### <a name="creating-the-verification-page"></a>Criando a página de verificação
 
@@ -187,11 +170,9 @@ A maior parte do código acima verifica se o `UserId` fornecido por meio de quer
 
 A Figura 7 mostra o `Verification.aspx` página quando acessadas por meio de um navegador.
 
-
 [![A nova conta de usuário é agora aprovadas](unlocking-and-approving-user-accounts-cs/_static/image20.png)](unlocking-and-approving-user-accounts-cs/_static/image19.png)
 
 **Figura 7**: A nova conta de usuário é agora aprovadas ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image21.png))
-
 
 ## <a name="summary"></a>Resumo
 

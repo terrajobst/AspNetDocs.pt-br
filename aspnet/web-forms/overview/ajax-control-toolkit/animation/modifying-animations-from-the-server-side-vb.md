@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: addcf4aa-340a-460b-9c64-506424a1f725
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb
 msc.type: authoredcontent
-ms.openlocfilehash: fb7e992246b9c630d99a1493f344c4089540d67e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5ba5a32b53fc304ec3a3f1af5c6533a6a0622ac0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398079"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127346"
 ---
 # <a name="modifying-animations-from-the-server-side-vb"></a>Modificando animações pelo lado do servidor (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. As animações também podem ser alteradas no lado do servidor
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -53,7 +52,6 @@ No entanto, o Kit de ferramentas de controle atualmente não fornece um acesso d
 Por fim, adicione a `AnimationExtender` dentro de controle para a página atual, o `<form runat="server">` elemento, certificando-se de que a animação está incluída e é executado:
 
 [!code-vb[Main](modifying-animations-from-the-server-side-vb/samples/sample6.vb)]
-
 
 [![A animação é criada usando o código do lado do servidor C# /VB](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)
 

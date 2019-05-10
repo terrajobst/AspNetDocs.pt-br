@@ -8,12 +8,12 @@ ms.date: 11/28/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 5e3c049ba4349301c3c2d173d4311b3d0883bf68
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3e35c2bc0e46dfdb4544b772775eddd533f27be3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401738"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125236"
 ---
 # <a name="get-started-with-aspnet-web-api-2-c"></a>Introdução ao ASP.NET Web API 2 (c#)
 
@@ -52,7 +52,6 @@ Na caixa de diálogo **Novo Aplicativo Web ASP.NET**, selecione o modelo **Vazio
 
 > [!NOTE]
 > Você também pode criar um projeto de Web API usando o modelo &quot;Web API&quot;. O modelo de Web API usa o ASP.NET MVC para fornecer páginas de Ajuda da API. Estou usando o modelo vazio para este tutorial porque Mostrar Web API sem MVC. Em geral, você não precisa saber o ASP.NET MVC para usar a Web API.
-
 
 ## <a name="adding-a-model"></a>Adicionar um modelo
 
@@ -93,7 +92,6 @@ O scaffolding cria um arquivo chamado ProductsController.cs na pasta controlador
 
 > [!NOTE]
 > Você não precisa colocar seus controladores em uma pasta chamada controladores. O nome da pasta é apenas uma maneira conveniente de organizar seus arquivos de origem.
-
 
 Se esse arquivo ainda não estiver aberto, clique duas vezes no arquivo para abri-lo. Substitua o código nesse arquivo com o seguinte:
 

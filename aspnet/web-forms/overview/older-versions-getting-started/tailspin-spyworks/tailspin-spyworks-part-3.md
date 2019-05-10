@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: 94ea1a70-a9bc-4241-8f36-08366d64bab9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: badae58d5b43fb2674f4918f54f999ff48d0b5b0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a223b97fd362ecf73ecde431e141021c1dcc6a6d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59418008"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131024"
 ---
 # <a name="part-3-layout-and-category-menu"></a>Parte 3: Layout e menu de categoria
 
@@ -22,7 +22,6 @@ por [Joe Stagner](https://github.com/JoeStagner)
 > Tailspin Spyworks demonstra como incrivelmente simples é criar aplicativos avançados e escalonáveis para a plataforma .NET. Ele mostra como usar os novos recursos no ASP.NET 4 para criar uma loja online, incluindo as compras, check-out e administração.
 > 
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo Tailspin Spyworks. Parte 3 aborda a adição de layout e um menu de categoria.
-
 
 ## <a id="_Toc260221669"></a>  Adicionando alguns Layout e um Menu de categoria
 

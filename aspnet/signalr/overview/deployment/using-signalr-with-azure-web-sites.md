@@ -8,12 +8,12 @@ ms.date: 07/01/2015
 ms.assetid: 2a7517a0-b88c-4162-ade3-9bf6ca7062fd
 msc.legacyurl: /signalr/overview/deployment/using-signalr-with-azure-web-sites
 msc.type: authoredcontent
-ms.openlocfilehash: 531aba3753bf97b8bf1763a22615fb811b375286
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e6a18bdbe9cc47e89b5a458753845afb53595f1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379138"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128138"
 ---
 # <a name="using-signalr-with-web-apps-in-azure-app-service"></a>Usar o SignalR com aplicativos Web no Serviço de Aplicativo do Azure
 
@@ -36,7 +36,6 @@ por [Patrick Fletcher](https://github.com/pfletcher)
 > ## <a name="questions-and-comments"></a>Perguntas e comentários
 >
 > Deixe comentários sobre como você gostou neste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR), [StackOverflow.com](http://stackoverflow.com/), ou o [fóruns do Microsoft Azure](https://social.msdn.microsoft.com/Forums/windowsazure/home?category=windowsazureplatform).
-
 
 ## <a name="table-of-contents"></a>Sumário
 

@@ -8,12 +8,12 @@ ms.date: 01/13/2008
 ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 1b6675a933f04b3eb7f5111b2ccd16c44baab7ba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 731c007fd162e541af5ba1f559ae5caedf80c948
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414342"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126804"
 ---
 # <a name="security-basics-and-aspnet-support-vb"></a>Noções básicas sobre segurança e suporte do ASP.NET (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial01_Basics_vb.pdf)
 
 > Este é o primeiro tutorial de uma série de tutoriais que exploram técnicas para autenticar os visitantes por meio de um formulário da web, autorizar o acesso a páginas específicas e funcionalidade e gerenciamento de contas de usuário em um aplicativo ASP.NET.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -45,7 +44,6 @@ Neste tutorial, abordaremos os conceitos de segurança importantes e quais recur
 
 > [!NOTE]
 > A segurança é um aspecto importante de qualquer aplicativo que abrange físico, tecnológico e decisões de política e requer um alto grau de planejamento e conhecimento do domínio. Esta série de tutoriais não destina-se como um guia para o desenvolvimento de aplicativos da web seguros. Em vez disso, ele se concentra especificamente nos formulários de autenticação, autorização, contas de usuário e funções. Enquanto alguns conceitos de segurança revolução em torno desses problemas são discutidos nesta série, outros são deixados inexplorado.
-
 
 ## <a name="authentication-authorization-user-accounts-and-roles"></a>Autenticação, autorização, contas de usuário e funções
 
@@ -75,11 +73,9 @@ O fluxo de trabalho de autenticação do Windows usa uma das seguintes técnicas
 
 Todas as três técnicas funcionam em aproximadamente da mesma forma: quando um não autorizado, chega de solicitação anônima, o servidor web envia de volta uma resposta HTTP que indica que a autorização é necessária para continuar. O navegador, em seguida, exibe uma caixa de diálogo modal que solicita ao usuário seu nome de usuário e senha (veja a Figura 1). Essas informações são enviadas, em seguida, volta para o servidor web por meio de um cabeçalho HTTP.
 
-
 ![Caixa de diálogo Modal solicita ao usuário credenciais](security-basics-and-asp-net-support-vb/_static/image1.png)
 
 **Figura 1**: Caixa de diálogo Modal solicita ao usuário credenciais
-
 
 As credenciais fornecidas são validadas em relação a Store de usuário do Windows do servidor web. Isso significa que cada usuário autenticado no aplicativo web deve ter uma conta do Windows em sua organização. Isso é comum em cenários de intranet. Na verdade, ao usar a autenticação integrada do Windows em uma configuração de intranet, o navegador fornece automaticamente o servidor web com as credenciais usadas para efetuar logon na rede, suprimindo, assim, a caixa de diálogo mostrada na Figura 1. Enquanto a autenticação do Windows é excelente para aplicativos de intranet, é impraticável normalmente para aplicativos da Internet, pois você não deseja criar contas do Windows para cada usuário que se inscreve em seu site.
 
@@ -93,11 +89,9 @@ Figura 2 ilustra o fluxo de trabalho de autenticação de formulários de uma po
 
 Depois que o usuário fez logon com êxito, as solicitações HTTP subsequentes incluem o tíquete de autenticação de formulários. O sistema de autenticação de formulários simplesmente identifica o usuário – ele é o sistema de autorização que determina se o usuário pode acessar o recurso solicitado.
 
-
 ![O fluxo de trabalho de autenticação de formulários](security-basics-and-asp-net-support-vb/_static/image2.png)
 
 **Figura 2**: O fluxo de trabalho de autenticação de formulários
-
 
 Podemos aprofundarão sobre a autenticação de formulários muito mais detalhadamente nos próximos dois tutoriais,[uma visão geral de formulários de autenticação](an-overview-of-forms-authentication-vb.md) e [configuração de autenticação de formulários e tópicos avançados](forms-authentication-configuration-and-advanced-topics-vb.md). Para obter mais informações sobre o ASP. Opções de autenticação da rede, consulte [autenticação do ASP.NET](https://msdn.microsoft.com/library/eeyk640h.aspx).
 
@@ -138,11 +132,9 @@ A Microsoft fornece duas classes de provedor de associação no .NET Framework:
 
 Esta série de tutoriais se concentra exclusivamente no SqlMembershipProvider.
 
-
 [![O modelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework](security-basics-and-asp-net-support-vb/_static/image4.png)](security-basics-and-asp-net-support-vb/_static/image3.png)
 
 **Figura 03**: O modelo permite que diferentes implementações do provedor ser perfeitamente conectado para o Framework ([clique para exibir a imagem em tamanho normal](security-basics-and-asp-net-support-vb/_static/image5.png))
-
 
 O benefício do modelo do provedor é implementações alternativas podem ser desenvolvidas pela Microsoft, fornecedores de terceiros ou desenvolvedores individuais e conectadas diretamente a estrutura de associação. Por exemplo, a Microsoft lançou [um provedor de associação para bancos de dados do Microsoft Access](https://download.microsoft.com/download/5/5/b/55bc291f-4316-4fd7-9269-dbf9edbaada8/sampleaccessproviders.vsi). Para obter mais informações sobre os provedores de associação, consulte o [Kit de ferramentas do provedor](https://msdn.microsoft.com/asp.net/aa336558.aspx), que inclui um passo a passo de provedores de associação, provedores personalizados de exemplo, mais de 100 páginas de documentação sobre o modelo de provedor e o Conclua o código-fonte para os provedores de associação internos (ou seja, ActiveDirectoryMembershipProvider e SqlMembershipProvider).
 

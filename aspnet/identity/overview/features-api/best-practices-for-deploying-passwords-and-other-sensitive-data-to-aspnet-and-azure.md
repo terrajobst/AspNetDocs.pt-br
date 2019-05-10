@@ -9,12 +9,12 @@ ms.assetid: 97902c66-cb61-4d11-be52-73f962f2db0a
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure
 msc.type: authoredcontent
-ms.openlocfilehash: 2620d9e2eaf3c7719d9a289e42bb91270708ae79
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e02df967df8acf346b9fcd1c75dbe304cc5407b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419438"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121557"
 ---
 # <a name="best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure-app-service"></a>Melhores práticas para implantar senhas e outros dados confidenciais no ASP.NET e no Serviço de Aplicativo do Azure
 
@@ -25,7 +25,6 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > O código de exemplo é um aplicativo de console simples do trabalho Web e um aplicativo ASP.NET MVC que precisa acessar um banco de dados conexão cadeia de caracteres senha, Twilio, Google e SendGrid as chaves seguras.
 > 
 > No local configurações e o PHP também é mencionado.
-
 
 - [Trabalhando com senhas no ambiente de desenvolvimento](#pwd)
 - [Trabalhando com cadeias de caracteres de conexão no ambiente de desenvolvimento](#con)
@@ -54,7 +53,6 @@ O tempo de execução do ASP.NET mescla o conteúdo do arquivo externo com a mar
 > [!WARNING]
 > Security - não adicione suas *. config de segredos* arquivo ao seu projeto ou verificá-lo no controle de origem. Por padrão, o Visual Studio define o `Build Action` para `Content`, que significa que o arquivo é implantado. Para obter mais informações, consulte [por que não todos os arquivos na pasta Meu projeto são implantados?](https://msdn.microsoft.com/library/ee942158(v=vs.110).aspx#can_i_exclude_specific_files_or_folders_from_deployment) Embora você possa usar qualquer extensão para o *. config de segredos* arquivo, é melhor para mantê-lo *. config*, como arquivos de configuração não são realizados pelo IIS. Observe também que o *AppSettingsSecrets.config* arquivo é de dois níveis de diretório acima da *Web. config* arquivo, para que ele está completamente fora do diretório da solução. Movendo o arquivo fora do diretório da solução, &quot;adicionar git \* &quot; não adicioná-lo ao seu repositório.
 
-
 <a id="con"></a>
 ## <a name="working-with-connection-strings-in-the-development-environment"></a>Trabalhando com cadeias de caracteres de conexão no ambiente de desenvolvimento
 
@@ -67,14 +65,11 @@ Você pode usar o `configSource` atributo para substituir todo o `<connectionStr
 > [!NOTE]
 > Se você usar o `configSource` atributo conforme mostrado acima para mover suas cadeias de caracteres de conexão para um arquivo externo e tiver o Visual Studio a criar um novo site, ele não será capaz de detectar você estiver usando um banco de dados, e você não terá a opção de configurar o banco de dados quando você pu Publicar no Azure do Visual Studio. Se você estiver usando o `configSource` atributo, você pode usar o PowerShell para criar e implantar seu site da web e banco de dados, ou você pode criar o site da web e o banco de dados no portal antes de publicar. O [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) script criará um novo site da web e o banco de dados.
 
-
 > [!WARNING]
 > Segurança – ao contrário o *AppSettingsSecrets.config* arquivo, o arquivo de cadeias de caracteres de conexão externa deve estar no mesmo diretório raiz *Web. config* arquivo, portanto, você precisará tomar precauções para garantir que você não verificá-lo no seu repositório de origem.
 
-
 > [!NOTE]
 > **Aviso de segurança no arquivo de segredos:** Uma prática recomendada é não usar segredos de produção em desenvolvimento e teste. Uso de senhas de produção em teste ou desenvolvimento vazamentos desses segredos.
-
 
 <a id="wj"></a>
 ## <a name="webjobs-console-apps"></a>Aplicativos de console do WebJobs
@@ -105,7 +100,6 @@ No script acima, 'Name' é o nome da chave secreta, tais como '&quot;FB\_AppSecr
 > [!WARNING]
 > Security - não incluem senhas ou outros segredos no script do PowerShell, fazendo derrotas caso a finalidade do uso de um script do PowerShell para implantar dados confidenciais. O [Get-Credential](https://technet.microsoft.com/library/hh849815.aspx) cmdlet fornece um mecanismo seguro para obter uma senha. Usando um prompt de interface do usuário pode impedir o vazamento de uma senha.
 
-
 ### <a name="deploying-db-connection-strings"></a>Implantação de cadeias de caracteres de conexão de banco de dados
 
 Cadeias de caracteres de conexão de banco de dados são tratadas da mesma forma para as configurações do aplicativo. Se você implantar seu aplicativo web do Visual Studio, a cadeia de caracteres de conexão será configurada para você. Você pode verificar isso no portal. É a maneira recomendada para definir a cadeia de conexão com o PowerShell. Para obter um exemplo de um script do PowerShell a cria um site e um banco de dados e define a cadeia de caracteres de conexão no site de download [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) da [biblioteca de Script do Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure).
@@ -125,6 +119,5 @@ Se você estiver implantando em servidores da web no local, você pode ajudar a 
 Para obter um exemplo de um PowerShell script que cria um aplicativo web + banco de dados, define a cadeia de caracteres de conexão + configurações do aplicativo, download [New-AzureWebsitewithDB.ps1](https://gallery.technet.microsoft.com/scriptcenter/Ultimate-Create-Web-SQL-DB-9e0fdfd3) da [biblioteca de Script do Azure](https://gallery.technet.microsoft.com/scriptcenter/site/search?f%5B0%5D.Type=RootCategory&amp;f%5B0%5D.Value=WindowsAzure). 
 
 Consulte de Stefan Schackow [Windows Azure Web Sites: Como cadeias de caracteres de aplicativo e cadeias de caracteres de Conexão funcionam](https://azure.microsoft.com/blog/2013/07/17/windows-azure-web-sites-how-application-strings-and-connection-strings-work/)
-
 
 Agradecemos Barry Dorrans ( [ @blowdart ](https://twitter.com/blowdart) ) e Carlos Farre revisão.

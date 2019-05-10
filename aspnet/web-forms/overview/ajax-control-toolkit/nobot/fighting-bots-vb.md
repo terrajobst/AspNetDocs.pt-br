@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e9803150-452d-4521-97e3-d75d5599383c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 6baf5447d31d00b89cb7ddf526553456fecbbf6e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e493ecfb31716355f33c320bb4467fcef1a2437d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409467"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132562"
 ---
 # <a name="fighting-bots-vb"></a>Bots de combate (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/NoBot0.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/nobot0VB.pdf)
 
 > Os bots automatizados Estuque blogs e outros sites com spams, Enviar comentário formulários sem qualquer interação do usuário. O controle NoBot do ASP.NET AJAX Control Toolkit pode ajudar a combater esses bots.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -63,7 +62,6 @@ Por fim, você precisa de um formulário para enviar e um elemento de rótulo pa
 [!code-aspx[Main](fighting-bots-vb/samples/sample4.aspx)]
 
 Quando você executa esse script e desativar JavaScript ou enviar o formulário durante os primeiros dois segundos ou enviar o formulário de sete vezes dentro de trinta segundos, você receberá uma mensagem de erro. No entanto, usar esse controle com sabedoria, como apenas cerca de 90-95% dos usuários têm ativados por JavaScript, portanto 5 a 10% dos usuários falharão `NoBot`do teste.
-
 
 [![Essa mensagem de erro pode ter sido causada por um bot](fighting-bots-vb/_static/image2.png)](fighting-bots-vb/_static/image1.png)
 

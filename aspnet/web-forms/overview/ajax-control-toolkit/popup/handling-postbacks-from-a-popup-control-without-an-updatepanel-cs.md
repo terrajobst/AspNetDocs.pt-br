@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 25444121-5a72-4dac-8e50-ad2b7ac667af
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-without-an-updatepanel-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 06713aaf84ecfa5a793c32e3762cb4790235bf8c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 05a365e26a1d66c7d4034dbbec2d7f158e0b4164
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385989"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132495"
 ---
 # <a name="handling-postbacks-from-a-popup-control-without-an-updatepanel-c"></a>Tratamento de postbacks de um controle pop-up sem um UpdatePanel (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PopupControl3.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/popupcontrol3CS.pdf)
 
 > O extensor PopupControl no AJAX Control Toolkit oferece uma maneira fácil de disparar um pop-up quando qualquer outro controle é ativado. Quando ocorre um postback em tal um painel e há vários painéis na página é difícil determinar qual painel foi clicado.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -48,11 +47,9 @@ No código do lado do servidor, o valor do campo oculto deve ser lido. Como os c
 
 [!code-aspx[Main](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/samples/sample4.aspx)]
 
-
 [![O calendário é exibido quando o usuário clica na caixa de texto](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image2.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image1.png)
 
 O calendário é exibido quando o usuário clica na caixa de texto ([clique para exibir a imagem em tamanho normal](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image3.png))
-
 
 [![Clicar em uma data coloca na caixa de texto](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image5.png)](handling-postbacks-from-a-popup-control-without-an-updatepanel-cs/_static/image4.png)
 

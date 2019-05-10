@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: 2ece0bf4-aae5-4ff4-8f62-28e0819d4f86
 msc.legacyurl: /web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
 msc.type: authoredcontent
-ms.openlocfilehash: c39e1cf42fde382a9e74d7f865f0dac1aa62ddc8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c165bbea505b4cb8eae1312cdd587f4ed36541a0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384224"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127942"
 ---
 # <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Uso do Inspetor de Página para Visual Studio 2012 em Web Forms do ASP.NET
 
@@ -43,7 +43,6 @@ por Tim Ammann
 > 
 > [Usando o seletor de cor CSS](#css_color_picker)
 
-
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -52,7 +51,6 @@ por Tim Ammann
 
 > [!NOTE]
 > Para obter a versão mais recente do Inspetor de página, use [Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=255386) para instalar o SDK do Azure para .NET 2.0.
-
 
 O Page Inspector é fornecido com o Microsoft Web Developer Tools. A versão mais recente é 1.3. Para verificar qual versão você tem, execute o Visual Studio e selecione **sobre o Microsoft Visual Studio** da **ajudar** menu.
 
@@ -190,7 +188,6 @@ O **estilos** torna a janela fácil de testar e visualizar o CSS é alterado ant
 
 > [!NOTE]
 > Este recurso requer a versão 1.3 do Inspetor de página.
-
 
 O recurso de sincronização automática de CSS permite que você editar um arquivo CSS diretamente e ver as alterações imediatamente no navegador Inspetor de página.
 

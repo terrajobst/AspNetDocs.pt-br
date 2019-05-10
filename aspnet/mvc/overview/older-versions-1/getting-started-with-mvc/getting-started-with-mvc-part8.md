@@ -8,19 +8,18 @@ ms.date: 08/14/2010
 ms.assetid: 7ae696b9-348f-4993-8ebb-a838acbe0c28
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part8
 msc.type: authoredcontent
-ms.openlocfilehash: 029234cf9a28a80c487504e4e0980c214e45f53a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1cf092c3db3959d6f47006f1be2ba82833c5dc06
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381959"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122857"
 ---
 # <a name="adding-a-column-to-the-model"></a>Adicionar uma coluna ao modelo
 
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este é um tutorial para iniciantes que apresenta os conceitos básicos do ASP.NET MVC. Você criará um aplicativo web simples que lê e grava de um banco de dados. Visite o [Central de informações do ASP.NET MVC](../../../index.md) para localizar outros ASP.NET MVC, tutoriais e exemplos.
-
 
 Nesta seção, vamos examinar como podemos fazer alterações no esquema de nosso banco de dados e lidar com as alterações dentro do nosso aplicativo.
 

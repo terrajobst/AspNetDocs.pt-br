@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 0b34f7f6-a0cc-4b9f-9761-643fb0bb3ece
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 433756839532393b36935df8f237e93706b4f18c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e2374f05fb471c2b35a851eadb8c9f4a98f61e11
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383143"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126075"
 ---
 # <a name="using-auto-postback-with-cascadingdropdown-vb"></a>Uso de postback automático com CascadingDropDown (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown3.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown3VB.pdf)
 
 > O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associadas a valores em outra DropDownList. No entanto ao usar o controle CascadingDropDown, ASP. Recurso de AutoPostBack do controle de DropDownList da rede não funciona, pois assincronamente Carregando dados na lista gera um postback (desnecessário) em si. Com um código JavaScript, esse efeito pode ser evitado.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -55,7 +54,6 @@ Carregamento da página no navegador preencherá a lista suspensa com três forn
 [!code-html[Main](using-auto-postback-with-cascadingdropdown-vb/samples/sample6.html)]
 
 Dessa forma, um postback é executado apenas quando há, na verdade, os elementos na lista e o usuário seleciona uma entrada.
-
 
 [![Selecionar um elemento de lista faz com que um postback](using-auto-postback-with-cascadingdropdown-vb/_static/image2.png)](using-auto-postback-with-cascadingdropdown-vb/_static/image1.png)
 

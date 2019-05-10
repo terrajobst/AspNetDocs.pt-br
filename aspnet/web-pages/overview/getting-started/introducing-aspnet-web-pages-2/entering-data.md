@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
-ms.openlocfilehash: d76f607f1d5e779d43ee15d8f2d697e7b0f147ae
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9354a7b97a7df9020a681f709e16a92650cfcf0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380113"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132966"
 ---
 # <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introdução ao ASP.NET Web Pages - inserindo o banco de dados usando formulários
 
@@ -36,7 +36,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - O SQL `Insert Into` instrução
 > - O `Validation` auxiliar.
 > - O método `Response.Redirect`.
-
 
 ## <a name="what-youll-build"></a>O que você vai criar
 
@@ -155,7 +154,6 @@ Obviamente, você não deseja permitir que os usuários a inserir informações 
 > Agora e, em seguida, é importante compreender exatamente quando um valor é nulo e quando ele é apenas uma cadeia de caracteres vazia. No código para o *AddMovie* página, você obtém os valores das caixas de texto usando `Request.Form["title"]` e assim por diante. Quando a página executa pela primeira vez (antes de você clicar no botão), o valor de `Request.Form["title"]` é nulo. Mas quando você enviar o formulário `Request.Form["title"]` obtém o valor da `title` caixa de texto. Não é óbvio, mas uma caixa de texto vazia não é nula. Ele apenas tem uma cadeia de caracteres vazia. Portanto, quando o código é executado em resposta ao botão clique, `Request.Form["title"]` tem uma cadeia de caracteres vazia em si.
 > 
 > Por que essa distinção é importante? Quando você criou o *filmes* tabela, você explicitamente disse que nenhum dos campos pode ser nulo. Mas aqui, você tem um formulário de entrada para novos filmes e que está saindo campos em branco. Você seria razoável esperar o banco de dados reclamará quando você tentou salvar novos filmes que não têm valores para gênero ou ano. Mas esse é o ponto &mdash; mesmo se você deixar essas caixas de texto em branco, os valores não nulos; elas estão cadeias de caracteres vazias. Como resultado, você é capaz de salvar novos filmes no banco de dados com essas colunas vazias &mdash; , mas não nulo! valores &mdash;. Portanto, é necessário que certificar-se de que os usuários não enviar uma cadeia de caracteres vazia, o que pode ser feito por meio da validação de entrada do usuário.
-
 
 ### <a name="the-validation-helper"></a>O auxiliar de validação
 

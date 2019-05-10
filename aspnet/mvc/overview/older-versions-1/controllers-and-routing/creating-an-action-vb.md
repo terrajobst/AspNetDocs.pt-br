@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: c8d93e11-ef78-4a30-afbc-f30419000a60
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-an-action-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5f8eeeaa9bd77c0259f680198e57ade8d49cd06b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b1b53bea899deecef203551b23c087944e3990ab
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382604"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123443"
 ---
 # <a name="creating-an-action-vb"></a>Criar uma ação (VB)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como adicionar uma nova ação para um controlador ASP.NET MVC. Saiba mais sobre os requisitos para um método a ser uma ação.
-
 
 O objetivo deste tutorial é explicar como você pode criar uma nova ação de controlador. Você aprenderá sobre os requisitos de um método de ação. Você também aprenderá a impedir que um método que está sendo exposto como uma ação.
 
@@ -55,7 +54,6 @@ Se você precisa criar um método público em uma classe de controlador e você 
 [!code-vb[Main](creating-an-action-vb/samples/sample2.vb)]
 
 Se você tentar invocar a ação do controlador CompanySecrets() digitando /Work/CompanySecrets na barra de endereços do navegador, em seguida, você obterá a mensagem de erro na Figura 1.
-
 
 [![Invocando um método NonAction](creating-an-action-vb/_static/image1.jpg)](creating-an-action-vb/_static/image1.png)
 

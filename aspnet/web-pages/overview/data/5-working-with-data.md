@@ -8,12 +8,12 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: 0fc828e39cfcce22d4cc226954cf7d1731b04e42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ed2a2a1ee3cff7a50e67b6571b85f74d01efab7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379770"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133225"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introdução ao trabalho com um banco de dados da Web do ASP.NET (Razor) Sites de páginas
 
@@ -44,7 +44,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial também funciona com o WebMatrix 3. Você pode usar 3 de páginas da Web do ASP.NET e Visual Studio 2013 (ou o Visual Studio Express 2013 para Web); No entanto, a interface do usuário será diferente.
 
-
 ## <a name="introduction-to-databases"></a>Introdução aos bancos de dados
 
 Imagine um catálogo de endereços típico. Para cada entrada no catálogo de endereços (ou seja, para cada pessoa) você tem várias partes de informações como nome, sobrenome, endereço, endereço de email e número de telefone.
@@ -67,7 +66,6 @@ Com essa compreensão básica dos bancos de dados, você está pronto para apren
 > Você pode armazenar dados de várias formas, incluindo planilhas e arquivos de texto. Para a maioria dos usos de negócios, no entanto, dados são armazenados no banco de dados relacional.
 > 
 > Este artigo não vai muito profundamente em bancos de dados. No entanto, talvez seja útil para entender um pouco sobre eles. Em um banco de dados relacional, as informações é logicamente divididas em tabelas separadas. Por exemplo, um banco de dados de uma escola pode conter tabelas separadas para os alunos em ofertas de classe. Os banco de dados software (como o SQL Server) oferece suporte a comandos poderosos que permitem que você dinamicamente estabelecem relações entre as tabelas. Por exemplo, você pode usar o banco de dados relacional para estabelecer uma relação lógica entre classes e os alunos para criar uma agenda. Armazenando dados em tabelas separadas reduz a complexidade da estrutura de tabela e reduz a necessidade de manter dados redundantes em tabelas.
-
 
 ## <a name="creating-a-database"></a>Criar um banco de dados
 
@@ -173,7 +171,6 @@ Depois que você tem um banco de dados com os dados contidos nela, você pode ex
 > 
 > Existem dezenas de comandos SQL, mas todos eles seguem um padrão como este. Você pode usar comandos SQL para criar tabelas de banco de dados, contar o número de registros em uma tabela, calcular preços e realizar várias operações mais.
 
-
 ## <a name="inserting-data-in-a-database"></a>Inserindo dados em um banco de dados
 
 Esta seção mostra como criar uma página que permite aos usuários adicionar um novo produto para o *produto* tabela de banco de dados. Depois de inserir um novo registro de produto, a página exibe a tabela atualizada usando o *ListProducts.cshtml* página que você criou na seção anterior.
@@ -238,7 +235,6 @@ Depois que dados foram inseridos em uma tabela, talvez seja necessário atualiz�
 > [!NOTE] 
 > 
 > **Importante** em um site de produção, você normalmente restringir quem tem permissão para fazer alterações aos dados. Para obter informações sobre como configurar a associação e sobre as maneiras de autorizar usuários a executar tarefas no site, consulte [adicionando segurança e associação a um Site de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202904).
-
 
 1. No site, criar um novo arquivo CSHTML chamado *EditProducts.cshtml*.
 2. Substitua a marcação existente no arquivo pelo seguinte:
@@ -321,7 +317,6 @@ Esta seção mostra como permitir que os usuários a excluir um produto do *prod
 > 
 > **Importante** em um site de produção, você normalmente restringir quem tem permissão para fazer alterações aos dados. Para obter informações sobre como configurar a associação e sobre as maneiras de autorizar o usuário executar tarefas no site, consulte [adicionando segurança e associação a um Site de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202904).
 
-
 1. No site, criar um novo arquivo CSHTML chamado *ListProductsForDelete.cshtml*.
 2. Substitua a marcação existente pelo seguinte:
 
@@ -384,7 +379,6 @@ Esta seção mostra como permitir que os usuários a excluir um produto do *prod
 > Conforme observado, o `Database.Open` método permite que você passe um nome de banco de dados ou uma cadeia de caracteres de conexão, e ele vai descobrir qual deles usar. Isso é muito útil quando você implantar (publicar) seu site. Você pode usar um *. sdf* arquivo na *App\_dados* pasta quando você está desenvolvendo e testando o seu site. Quando você move o seu site para um servidor de produção, você pode usar uma cadeia de caracteres de conexão na *Web. config* arquivo que tem o mesmo nome que sua *. sdf* de arquivos, mas que aponta para o provedor de hospedagem de banco de dados &#8212;tudo isso sem precisar alterar seu código.
 > 
 > Por fim, se você quiser trabalhar diretamente com uma cadeia de caracteres de conexão, você pode chamar o `Database.OpenConnectionString` método e passar ele a conexão real da cadeia de caracteres em vez de apenas o nome de um em de *Web. config* arquivo. Isso pode ser útil em situações em que, por algum motivo, você não tem acesso à cadeia de conexão (ou valores, como o *sdf* nome de arquivo) até que a página está em execução. No entanto, na maioria dos cenários, você pode usar `Database.Open` conforme descrito neste artigo.
-
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

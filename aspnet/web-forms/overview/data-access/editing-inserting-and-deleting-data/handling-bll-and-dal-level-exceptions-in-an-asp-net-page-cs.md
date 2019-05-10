@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 49d8a66c-3ea8-4087-839f-179d1d94512a
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 14b9070a462741aab7230963e3e1298368b8e6aa
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bf3e7ffe6122db33f8cf28f7544fdfa064f9c612
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420985"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131176"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-in-an-aspnet-page-c"></a>Tratar de exceções de nível BLL e DAL em uma página do ASP.NET (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_18_CS.exe) ou [baixar PDF](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/datatutorial18cs1.pdf)
 
 > Neste tutorial, veremos como exibir uma mensagem de erro informativa e amigável se uma exceção ocorrer durante uma inserção, atualização ou operação de exclusão de um controle da Web de dados do ASP.NET.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -44,16 +43,13 @@ No tutorial anterior, criamos um GridView editável com apenas dois campos, `Pro
 
 Para acomodar esse cenário, precisaremos outra sobrecarga da `UpdateProduct` método, que aceita quatro parâmetros: o nome do produto, preço unitário, unidades em estoque e ID. Adicione o seguinte método para o `ProductsBLL` classe:
 
-
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/samples/sample1.cs)]
 
 Com esse método completo, estamos prontos para criar a página do ASP.NET que permite a edição dessas quatro campos de produto específico. Abra o `ErrorHandling.aspx` página o `EditInsertDelete` pasta e adicione um controle GridView à página por meio do Designer. Associar o GridView para um novo ObjectDataSource, mapeamento a `Select()` método para o `ProductsBLL` da classe `GetProducts()` método e o `Update()` método para o `UpdateProduct` sobrecarga que acabou de criar.
 
-
 [![Use a sobrecarga de método UpdateProduct que aceita quatro parâmetros de entrada](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image1.png)
 
 **Figura 1**: Use o `UpdateProduct` método de sobrecarga que aceita quatro parâmetros de entrada ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image3.png))
-
 
 Isso criará um ObjectDataSource com uma `UpdateParameters` coleção com quatro parâmetros e um GridView com um campo para cada um dos campos do produto. Marcação declarativa do ObjectDataSource atribui a `OldValuesParameterFormatString` o valor da propriedade `original_{0}`, que fará com que uma exceção, pois a nossa classe BLL não espera um parâmetro de entrada chamado `original_productID` ser passados. Não se esqueça de remover essa configuração completamente da sintaxe declarativa (ou defina-o como o valor padrão, `{0}`).
 
@@ -61,40 +57,31 @@ Em seguida, diminuir o GridView para incluir somente o `ProductName`, `QuantityP
 
 No tutorial anterior analisamos como formatar o `UnitPrice` BoundField como uma moeda no modo somente leitura e modo de edição. Vamos fazer o mesmo aqui. Lembre-se de que essa configuração exigida a BoundField `DataFormatString` propriedade para `{0:c}`, sua `HtmlEncode` propriedade `false`e sua `ApplyFormatInEditMode` para `true`, conforme mostrado na Figura 2.
 
-
 [![Configurar o UnitPrice BoundField à exibição como uma moeda](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image4.png)
 
 **Figura 2**: Configurar o `UnitPrice` BoundField à exibição como uma moeda ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image6.png))
 
-
 Formatação de `UnitPrice` como uma moeda na interface de edição exige a criação de um manipulador de eventos para o GridView `RowUpdating` evento que analisa a cadeia de caracteres de formato de moeda em um `decimal` valor. Lembre-se de que o `RowUpdating` manipulador de eventos do último tutorial também são verificados para garantir que o usuário fornecido um `UnitPrice` valor. No entanto, para este tutorial vamos permitir que o usuário omita o preço.
-
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/samples/sample2.cs)]
 
 Nosso GridView inclui um `QuantityPerUnit` BoundField, mas esse BoundField deve ser apenas para fins de exibição e não deve ser editável pelo usuário. Para organizar a isso, basta definir 'BoundFields `ReadOnly` propriedade para `true`.
 
-
 [![Tornar o QuantityPerUnit BoundField somente leitura](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image8.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image7.png)
 
 **Figura 3**: Verifique as `QuantityPerUnit` BoundField somente leitura ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image9.png))
 
-
 Por fim, marque a caixa de seleção Habilitar edição na marca inteligente do GridView. Depois de concluir essas etapas o `ErrorHandling.aspx` Designer da página deve ser semelhante à Figura 4.
-
 
 [![Remover tudo, exceto os necessários BoundFields e verifique a habilitar a caixa de seleção de edição](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image11.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image10.png)
 
 **Figura 4**: Remover tudo, exceto as necessárias BoundFields e marcar a opção Habilitar edição ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image12.png))
 
-
 Neste ponto, temos uma lista de todos os produtos `ProductName`, `QuantityPerUnit`, `UnitPrice`, e `UnitsInStock` campos; no entanto, apenas o `ProductName`, `UnitPrice`, e `UnitsInStock` campos podem ser editados.
-
 
 [![Os usuários agora podem editar facilmente os nomes dos produtos, preços e unidades no estoque campos](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image14.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image13.png)
 
 **Figura 5**: Nomes de usuários pode agora facilmente editar produtos, preços e campos de unidades em estoque ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image15.png))
-
 
 ## <a name="step-2-gracefully-handling-dal-level-exceptions"></a>Etapa 2: Normalmente a tratamento de exceções de nível de DAL
 
@@ -104,11 +91,9 @@ Dependendo de como seu aplicativo web é configurado e se você está visitando 
 
 Figura 6 mostra a tela encontrada ao tentar atualizar um produto sem especificar o `ProductName` valor. Esse é o padrão de relatório de erro detalhadas exibido quando chegando `localhost`.
 
-
 [![Detalhes da exceção do produto nome exibirão a omissão](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image17.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image16.png)
 
 **Figura 6**: A omissão de detalhes da exibição serão exceção do produto nome ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image18.png))
-
 
 Embora esses detalhes da exceção são úteis ao testar um aplicativo, apresentando um usuário final com a tela diante de uma exceção é inferior ao ideal. Um usuário final provavelmente não sabe o que um `NoNullAllowedException` é ou por que ele foi causado. Uma abordagem melhor é apresentar ao usuário uma mensagem mais amigável, explicando que ocorreram problemas ao tentar atualizar o produto.
 
@@ -116,14 +101,11 @@ Se ocorrer uma exceção ao executar a operação, os eventos pós-níveis em Ob
 
 Comece adicionando um rótulo para a página do ASP.NET, definindo sua `ID` propriedade para `ExceptionDetails` e a limpeza dos seus `Text` propriedade. Para chamar a atenção do usuário a essa mensagem, defina suas `CssClass` propriedade para `Warning`, que é uma classe CSS que adicionamos o `Styles.css` arquivo no tutorial anterior. Lembre-se de que essa classe CSS faz com que o texto do rótulo a ser exibido em uma fonte vermelha, itálico, negrito, extra grande.
 
-
 [![Adicionar um controle de Web do rótulo para a página](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image20.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image19.png)
 
 **Figura 7**: Adicionar um controle de Web do rótulo para a página ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image21.png))
 
-
 Como queremos que esse controle de rótulo Web fique visível apenas imediatamente após uma exceção ocorreu, defina suas `Visible` a propriedade como false no `Page_Load` manipulador de eventos:
-
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/samples/sample3.cs)]
 
@@ -132,21 +114,16 @@ Com esse código, na primeira visita de página e postbacks subsequentes de `Exc
 > [!NOTE]
 > Como alternativa, podemos pode remover a necessidade de configuração de `ExceptionDetails` do controle `Visible` propriedade no `Page_Load` atribuindo seu `Visible` propriedade `false` na sintaxe declarativa e desabilitando o estado de exibição (definindo seu `EnableViewState` propriedade para `false`). Vamos usar essa abordagem alternativa em um tutorial futuro.
 
-
 Com o controle de rótulo adicionado, nossa próxima etapa é criar o manipulador de eventos para o GridView `RowUpdated` eventos. Seleciona o GridView no Designer, vá para a janela de propriedades e clique no ícone de raio, listando os eventos do GridView. Já deve haver uma entrada para o GridView `RowUpdating` evento, como criamos um manipulador de eventos para este evento neste tutorial. Crie um manipulador de eventos para o `RowUpdated` evento também.
-
 
 ![Criar um manipulador de eventos para eventos de RowUpdated do GridView](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image22.png)
 
 **Figura 8**: Criar um manipulador de eventos para o GridView `RowUpdated` evento
 
-
 > [!NOTE]
 > Você também pode criar o manipulador de eventos por meio de listas suspensas na parte superior do arquivo de classe code-behind. Selecione o GridView na lista suspensa à esquerda e o `RowUpdated` evento à direita.
 
-
 Criar esse manipulador de eventos, você adicionará o código a seguir à classe de code-behind da página ASP.NET:
-
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/samples/sample4.cs)]
 
@@ -164,29 +141,24 @@ Nosso código, em seguida, verifique se `Exception` não é `null`, que signific
 
 O código a seguir realiza esses objetivos:
 
-
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/samples/sample5.cs)]
 
 Esse manipulador de eventos começa verificando se `e.Exception` é `null`. Se não estiver, o `ExceptionDetails` do rótulo `Visible` estiver definida como `true` e sua `Text` propriedade como "Ocorreu um problema ao atualizar o produto." Os detalhes da exceção real que foi lançada residem na `e.Exception` do objeto `InnerException` propriedade. A exceção interna é examinada e, se ele for de um tipo específico, uma mensagem adicional e útil é acrescentada para o `ExceptionDetails` do rótulo `Text` propriedade. Por fim, o `ExceptionHandled` e `KeepInEditMode` propriedades são definidas como `true`.
 
 A Figura 9 mostra uma captura de tela desta página ao omitir o nome do produto; Figura 10 mostra os resultados ao inserir um ilegal `UnitPrice` valor (-50).
 
-
 [![O ProductName BoundField deve conter um valor](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image24.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image23.png)
 
 **Figura 9**: O `ProductName` BoundField deve conter um valor ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image25.png))
-
 
 [![Os valores de UnitPrice negativos não são permitido](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image27.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image26.png)
 
 **Figura 10**: Negativo `UnitPrice` os valores não são permitido ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image28.png))
 
-
 Definindo o `e.ExceptionHandled` propriedade para `true`, o `RowUpdated` manipulador de eventos indicou que tratou a exceção. Portanto, a exceção não serão propagadas até o tempo de execução do ASP.NET.
 
 > [!NOTE]
 > As figuras 9 e 10 mostram uma forma amigável para lidar com as exceções geradas devido a entrada do usuário inválido. O ideal é que, no entanto, tal de entrada inválido será nunca alcance a camada de lógica de negócios em primeiro lugar, como a página ASP.NET deve garantir entradas do usuário são válidas antes de invocar o `ProductsBLL` da classe `UpdateProduct` método. Em nosso próximo tutorial, veremos como adicionar controles de validação às interfaces de edição e inserção para garantir que os dados enviados para a camada de lógica comercial está em conformidade com as regras de negócio. Os controles de validação não somente impedirá que a invocação do `UpdateProduct` método até que os dados fornecidos pelo usuário é válidos, mas também fornecem uma experiência de usuário mais informativa para identificar problemas de entrada de dados.
-
 
 ## <a name="step-3-gracefully-handling-bll-level-exceptions"></a>Etapa 3: Normalmente, tratando exceções de nível BLL
 
@@ -194,20 +166,16 @@ Ao inserir, atualizar ou excluir dados, a camada de acesso a dados pode gerar um
 
 Para o `UpdateProduct` sobrecarga criado neste tutorial, vamos adicionar uma regra de negócio que proíbe a `UnitPrice` campo que está sendo definido como um novo valor que é mais de duas vezes o original `UnitPrice` valor. Para fazer isso, ajustar o `UpdateProduct` sobrecarga para que ele executa essa verificação e lança um `ApplicationException` se a regra é violada. O método atualizado a seguir:
 
-
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/samples/sample6.cs)]
 
 Com essa alteração, qualquer atualização de preço é mais de duas vezes o preço existente fará com que um `ApplicationException` seja lançada. Assim como a exceção gerada da DAL, acionado nesse BLL `ApplicationException` pode ser detectado e manipulado no GridView `RowUpdated` manipulador de eventos. Na verdade, o `RowUpdated` código do manipulador de eventos, como escrito, corretamente detectará essa exceção e exibirá o `ApplicationException`do `Message` valor da propriedade. Figura 11 mostra uma tela de captura quando um usuário tenta atualizar o preço de Chai para US $50,00, que é a mais de duas vezes seu preço atual de US $ 19,95 para venda.
-
 
 [![As regras de negócio não permitir a aumentos de preço que mais de duas vezes o preço de um produto](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image30.png)](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image29.png)
 
 **Figura 11**: Aumentos de preço não permitir que mais de duas vezes o preço de um produto de regras de negócio ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs/_static/image31.png))
 
-
 > [!NOTE]
 > O ideal é que nossas regras de lógica de negócios fosse refatoradas do `UpdateProduct` sobrecargas de método e, em um método comum. Isso é deixado como um exercício para o leitor.
-
 
 ## <a name="summary"></a>Resumo
 
