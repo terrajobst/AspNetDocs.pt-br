@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: 09a6c74e-936a-4c04-8547-5bb313a4e4a3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a9dd4268ef20b58b674f8ec8313132398fc5f19d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 053b88594e961246d4d9ed6f16d9716d0b9ca955
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413120"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132376"
 ---
 # <a name="logging-error-details-with-aspnet-health-monitoring-vb"></a>Registro em log de detalhes de erros com o monitoramento de integridade do ASP.NET (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/1/0/C/10CC829F-A808-4302-97D3-59989B8F9C01/ASPNET_Hosting_Tutorial_13_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/5/C/5/5C57DB8C-5DEA-4B3A-92CA-4405544D313B/aspnet_tutorial13_HealthMonitoring_vb.pdf)
 
 > Sistema de monitoramento de integridade da Microsoft fornece uma maneira fácil e personalizável para fazer logon de vários eventos da web, incluindo as exceções sem tratamento. Este tutorial orienta pela configuração de sistema de monitoramento de integridade para registrar exceções sem tratamento para um banco de dados e notificar os desenvolvedores por meio de uma mensagem de email.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -67,7 +66,6 @@ O `SqlWebEventProvider` classe faz parte do sistema de monitoramento de integrid
 > [!NOTE]
 > O `aspnet_regsql.exe` ferramenta foi discutida em de [ *Configurando um site que usa serviços de aplicativos* tutorial](configuring-a-website-that-uses-application-services-vb.md) quando adicionamos suporte para ASP. Serviços de aplicativos do NET. Consequentemente, o banco de dados do site resenhas de livros já contém o `aspnet_WebEvent_LogEvent` procedimento armazenado, que armazena as informações de evento em uma tabela chamada `aspnet_WebEvent_Events`.
 
-
 Depois que o procedimento armazenado necessário e a tabela adicionada ao seu banco de dados, tudo o que resta é instruir para registrar em log todas as exceções sem tratamento no banco de dados de monitoramento de integridade. Fazer isso, adicione a seguinte marcação ao seu site `Web.config` arquivo:
 
 [!code-xml[Main](logging-error-details-with-asp-net-health-monitoring-vb/samples/sample2.xml)]
@@ -82,7 +80,6 @@ Essas informações de configuração instrui o sistema para registrar em log to
 
 > [!NOTE]
 > O `WebBaseErrorEvent` evento é gerado apenas para erros de servidor; ele não será gerado para erros HTTP, como uma solicitação para um recurso do ASP.NET que não foi encontrado. Isso é diferente do comportamento do `HttpApplication` da classe `Error` evento, que é gerado para o servidor e erros de HTTP.
-
 
 Para ver o sistema em ação de monitoramento de integridade, visite o site e gerar um erro de tempo de execução visitando `Genre.aspx?ID=foo`. Você verá a página de erro apropriado - a exceção detalhes amarelo tela da morte (quando visitar localmente) ou a página de erro personalizada (quando visitar o site em produção). Nos bastidores, o sistema de monitoramento de integridade registradas as informações de erro no banco de dados. Deve haver um registro na `aspnet_WebEvent_Events` tabela (consulte **Figura 1**); esse registro contém informações sobre o erro de tempo de execução que acabou de ocorrer.
 
@@ -99,7 +96,6 @@ Se você criar esse tipo de página, verifique se que você tomar medidas para p
 
 > [!NOTE]
 > O tutorial subsequente explora um sistema de registro em log e notificação de erro alternativas chamado ELMAH. O ELMAH inclui um mecanismo interno para exibir o log de erros de ambas as uma página da web e como um RSS feed.
-
 
 ## <a name="logging-events-to-email"></a>Log de eventos ao Email
 

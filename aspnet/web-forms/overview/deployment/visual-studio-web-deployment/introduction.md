@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: 0edab77cd973af129e54c7867265f86b47c349a6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ed7414c0b27fc41360e259bfb0a4c82e88a4e15
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410130"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128670"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Implantação da Web do ASP.NET usando o Visual Studio: Introdução
 
@@ -30,7 +30,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum de implantação do ASP.NET](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment) ou [StackOverflow](http://stackoverflow.com).
 > 
 > Este conteúdo também está disponível como um livro eletrônico gratuito no [na Galeria do TechNet E-Book](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#ASPNETWebDeploymentusingVisualStudio).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -133,7 +132,6 @@ Dependendo de quantas dependências de SDK você já tem em seu computador, inst
 
 > [!NOTE]
 > Este tutorial foi escrito com a versão 1.8.1 do SDK do Azure. Desde então, foram lançadas as versões mais recentes com recursos adicionais. Os tutoriais foram atualizados para mencionar esses recursos e um link para recursos que têm mais informações sobre eles.
-
 
 As instruções e capturas de tela são baseadas no Windows 8, mas os tutoriais explicam as diferenças para o Windows 7.
 

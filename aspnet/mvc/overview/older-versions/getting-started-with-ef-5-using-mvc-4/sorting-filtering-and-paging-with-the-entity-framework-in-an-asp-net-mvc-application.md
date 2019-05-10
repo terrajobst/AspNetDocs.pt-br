@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 8af630e0-fffa-4110-9eca-c96e201b2724
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 4220327388703b773011921bb206976b04b07e34
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9510eb8094a55346bec2e0dab2a15ee79d211c88
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397897"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126511"
 ---
 # <a name="sorting-filtering-and-paging-with-the-entity-framework-in-an-aspnet-mvc-application-3-of-10"></a>Classificação, filtragem e paginação com o Entity Framework em um aplicativo ASP.NET MVC (3 de 10)
 
@@ -26,7 +26,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se você enfrentar um problema que você não conseguir resolver, [baixar o capítulo concluído](building-the-ef5-mvc4-chapter-downloads.md) e tente reproduzir o problema. Em geral, você pode encontrar a solução ao problema comparando seu código com o código completo. Para alguns erros comuns e como resolvê-los, consulte [erros e soluções alternativas.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 No tutorial anterior, você implementou um conjunto de páginas da web para operações CRUD básicas para `Student` entidades. Neste tutorial você adicionará classificação, filtragem e a funcionalidade de paginação para o **alunos** página de índice. Você também criará uma página que faz um agrupamento simples.
 
@@ -93,7 +92,6 @@ Você adicionou um parâmetro `searchString` ao método `Index`. Você também a
 
 > [!NOTE]
 > Em muitos casos, você pode chamar o mesmo método em um conjunto de entidades do Entity Framework ou como um método de extensão em uma coleção em memória. Os resultados são normalmente os mesmos, mas em alguns casos podem ser diferentes. Por exemplo, a implementação do .NET Framework a `Contains` método retorna todas as linhas quando você passar uma cadeia de caracteres vazia para ele, mas o provedor do Entity Framework para SQL Server Compact 4.0 retorna zero linhas de cadeias de caracteres vazias. Portanto, o código de exemplo (colocando a `Where` instrução dentro de um `if` instrução) torna-se de que você obter os mesmos resultados para todas as versões do SQL Server. Além disso, a implementação do .NET Framework a `Contains` método executa uma comparação que diferencia maiusculas de minúsculas por padrão, mas os provedores SQL Server do Entity Framework executam comparações de maiusculas e minúsculas por padrão. Portanto, chamar o `ToUpper` método para fazer o teste de maiusculas e minúsculas explicitamente garante que eles não são alterados quando você altera o código mais tarde para usar um repositório, que retornará um `IEnumerable` coleção em vez de um `IQueryable` objeto. (Quando você chama o método `Contains` em uma coleção `IEnumerable`, obtém a implementação do .NET Framework; quando chama-o em um objeto `IQueryable`, obtém a implementação do provedor de banco de dados.)
-
 
 ### <a name="add-a-search-box-to-the-student-index-view"></a>Adicionar uma Caixa de Pesquisa à exibição Índice de Alunos
 
@@ -245,7 +243,7 @@ Execute o aplicativo e clique no **sobre** link. A contagem de alunos para cada 
 
 ![About_page](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image10.png)
 
-## <a name="optional-deploy-the-app-to-windows-azure"></a>Opcionais: Implantar o aplicativo no Windows Azure
+## <a name="optional-deploy-the-app-to-windows-azure"></a>Opcional: Implantar o aplicativo no Windows Azure
 
 Até agora seu aplicativo ser executado localmente no IIS Express no computador de desenvolvimento. Para torná-lo disponível para que outras pessoas usem a Internet, você precisará implantá-lo em um provedor de hospedagem na web. Nesta seção opcional do tutorial você irá implantá-lo para um Site do Windows Azure.
 
@@ -378,7 +376,6 @@ Você pode encontrar a versão implantada do arquivo Web. config em seu próprio
 
 > [!NOTE]
 > O aplicativo web não implementa a segurança, portanto, qualquer pessoa que encontre a URL pode alterar os dados. Para obter instruções sobre como proteger o site da web, consulte [implantar um aplicativo ASP.NET MVC seguro com associação, OAuth e banco de dados SQL para um Site do Windows Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Você pode impedir que outras pessoas usando o site usando o Portal de gerenciamento do Windows Azure ou **Gerenciador de servidores** no Visual Studio para parar o site.
-
 
 ![](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image35.png)
 

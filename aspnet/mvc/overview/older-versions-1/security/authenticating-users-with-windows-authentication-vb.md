@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 532fa051-7d5c-4d6d-87f6-339ce4b84c44
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-windows-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d6b48d676c2dd90fc052b338f31a389e0fb809be
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: aa64b1f9ef6461a81611ca066310dca2d545baa3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402304"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126825"
 ---
 # <a name="authenticating-users-with-windows-authentication-vb"></a>Autenticar usuários com a autenticação do Windows (VB)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como usar a autenticação do Windows no contexto de um aplicativo MVC. Você aprenderá como habilitar a autenticação do Windows dentro do arquivo de configuração do seu aplicativo web e como configurar a autenticação com o IIS. Por fim, você aprenderá como usar o atributo [autorizar] para restringir o acesso a ações do controlador para determinados usuários do Windows ou grupos.
-
 
 O objetivo deste tutorial é explicar como você pode tirar proveito da segurança recursos integrados do serviços de informações da Internet para senha protegem os modos de exibição em seus aplicativos MVC. Você aprenderá a permitir que as ações do controlador ser invocada apenas por usuários específicos do Windows ou os usuários que são membros de grupos específicos do Windows.
 
@@ -50,7 +49,6 @@ Para um aplicativo web de produção, em mãos, você usa o IIS como seu servido
 > 
 > Para obter uma visão mais detalhada desses tipos diferentes de autenticação, consulte [ https://msdn.microsoft.com/library/aa292114(VS.71).aspx ](https://msdn.microsoft.com/library/aa292114(VS.71).aspx).
 
-
 Você pode usar o Gerenciador de serviços de informações da Internet para habilitar um determinado tipo de autenticação. Lembre-se de que todos os tipos de autenticação não estão disponíveis no caso de todos os sistemas operacionais. Além disso, se você estiver usando o IIS 7.0 com o Windows Vista, você precisará habilitar os diferentes tipos de autenticação do Windows antes de aparecerem no Gerenciador de serviços de informações da Internet. Abra **painel de controle, programas, programas e recursos, ou desativar recursos do Windows ativar**e expanda o nó Serviços de informações da Internet (veja a Figura 2).
 
 **Figura 2 – recursos do IIS do Windows habilitando**
@@ -75,7 +73,6 @@ Por exemplo, o controlador Home na listagem 1 expõe três ações chamadas Inde
 
 > [!NOTE]
 > Devido ao Windows User Account Control (UAC), ao trabalhar com o Windows Vista ou Windows Server 2008, o grupo de administradores local se comportará diferente dos outros grupos. O &lt;autorizar&gt; atributo não reconhece corretamente um membro do grupo Administradores local, a menos que você modifique as configurações de UAC do seu computador.
-
 
 Exatamente o que acontece quando você tentar invocar uma ação de controlador sem ser as permissões corretas depende do tipo de autenticação habilitado. Por padrão, ao usar o ASP.NET Development Server, você simplesmente obtém uma página em branco. A página é atendida com um **401 não autorizado** Status de resposta HTTP.
 

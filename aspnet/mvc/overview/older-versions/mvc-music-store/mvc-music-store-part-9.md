@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: d65c5c2b-a039-463f-ad29-25cf9fb7a1ba
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-9
 msc.type: authoredcontent
-ms.openlocfilehash: c7151351b087439f17457b254cd9e373af21cae3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 040bc0ccef889fb9a7c3d9b5ce88c75b7b754248
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380893"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129620"
 ---
 # <a name="part-9-registration-and-checkout"></a>Parte 9: Registro e check-out
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.  
 >   
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 9 aborda o registro e check-out.
-
 
 Nesta seção, criaremos um CheckoutController que coletará informações de pagamento e endereço do comprador. Será exigido que os usuários registrem-se em nosso site antes de fazer check-out, portanto, esse controlador exigirá autorização.
 
@@ -158,7 +157,6 @@ O modelo padrão inclui uma exibição de erro na pasta de exibições de compar
 Como essa é uma página de erro genérica, o conteúdo é muito simple. Incluiremos uma mensagem e um link para navegar até a página anterior no histórico se o usuário deseja tentar novamente sua ação.
 
 [!code-cshtml[Main](mvc-music-store-part-9/samples/sample13.cshtml)]
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-8.md)

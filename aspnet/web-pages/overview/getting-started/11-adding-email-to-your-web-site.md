@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: fc49bcb9-f1a9-4048-8c3f-b60951853200
 msc.legacyurl: /web-pages/overview/getting-started/11-adding-email-to-your-web-site
 msc.type: authoredcontent
-ms.openlocfilehash: 0263f736b96f8e8572536f3783d86c261d7c0512
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 23e9717329525fb5a0ed505c9dc94505d4f9dbbe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411222"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130543"
 ---
 # <a name="sending-email-from-an-aspnet-web-pages-razor-site"></a>Enviar Email de um Site do ASP.NET Web Pages (Razor)
 
@@ -39,7 +39,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial também funciona com ASP.NET Web Pages 2.
 
-
 <a id="Sending_Email_Messages"></a>
 ## <a name="sending-email-messages-from-your-website"></a>Enviar mensagens de Email do seu site
 
@@ -57,7 +56,6 @@ Neste procedimento, você criará duas páginas. A primeira página tem um formu
 
 > [!NOTE]
 > Para simplificar este exemplo, o código inicializa o `WebMail` direita de auxiliar na página em que você usá-lo. No entanto, para sites real, é uma ideia melhor colocar o código de inicialização como este em um arquivo global, para que você inicializa o `WebMail` auxiliar para todos os arquivos em seu site. Para obter mais informações, consulte [Personalizando o comportamento de todo o Site do ASP.NET Web Pages](https://go.microsoft.com/fwlink/?LinkId=202906#Setting_Values_For_Helpers).
-
 
 1. Crie um novo site.
 2. Adicionar uma nova página chamada *EmailRequest.cshtml* e adicione a seguinte marcação: 
@@ -133,7 +131,6 @@ Você também pode enviar os arquivos que estão anexados a mensagens de email. 
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionais
-
 
 - [Guia de solução de problemas de Páginas da Web do ASP.NET (Razor)](https://go.microsoft.com/fwlink/?LinkId=253001)
 - [Protocolo SMTP](https://msdn.microsoft.com/library/aa480435.aspx)

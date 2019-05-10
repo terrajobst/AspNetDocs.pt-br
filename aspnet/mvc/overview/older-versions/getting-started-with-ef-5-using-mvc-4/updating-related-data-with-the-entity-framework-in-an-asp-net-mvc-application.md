@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 7871dc05-2750-470f-8b4c-3a52511949bc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 5dc49d7467db01e62db147c7083ed62379d23940
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 68f8bdeeb85bc66cf790c2005cf0f0ff24b3b653
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394153"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129763"
 ---
 # <a name="updating-related-data-with-the-entity-framework-in-an-aspnet-mvc-application-6-of-10"></a>Atualizando dados relacionados com o Entity Framework em um aplicativo ASP.NET MVC (6 de 10)
 
@@ -26,7 +26,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se você enfrentar um problema que você não conseguir resolver, [baixar o capítulo concluído](building-the-ef5-mvc4-chapter-downloads.md) e tente reproduzir o problema. Em geral, você pode encontrar a solução ao problema comparando seu código com o código completo. Para alguns erros comuns e como resolvê-los, consulte [erros e soluções alternativas.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 No tutorial anterior, você exibiu dados relacionados; Neste tutorial, você atualizará dados relacionados. Para a maioria das relações, isso pode ser feito atualizando os campos de chave estrangeiros apropriados. Para relações muitos-para-muitos, o Entity Framework não expõe a tabela de junção diretamente, portanto, explicitamente, você deve adicionar e remover entidades de e para as propriedades de navegação apropriado.
 
@@ -107,7 +106,7 @@ Substitua os `HttpPost` `Edit` método com o código a seguir. que trata de atua
 O código faz o seguinte:
 
 - Obtém a entidade `Instructor` atual do banco de dados usando o carregamento adiantado para a propriedade de navegação `OfficeAssignment`. Isso é o mesmo que você fez `HttpGet` `Edit` método.
-- Atualiza a entidade `Instructor` recuperada com valores do associador de modelos. O [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) usada permite que você coloque na *lista de permissões* as propriedades que você deseja incluir. Isso impede o excesso de postagem, conforme explicado em [segundo tutorial](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
+- Atualiza a entidade `Instructor` recuperada com valores do associador de modelos. O [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) sobrecarga usada permite que você *lista branca* as propriedades que você deseja incluir. Isso impede o excesso de postagem, conforme explicado em [segundo tutorial](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
 
     [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample10.cs)]
 - Define se o local do escritório estiver em branco, o `Instructor.OfficeAssignment` propriedade como nulo, de modo que a linha relacionada no `OfficeAssignment` tabela será excluída.
@@ -194,14 +193,12 @@ Clique em **editar** em um instrutor para ver a página de edição.
 Altere algumas atribuições de curso e clique em **salvar**. As alterações feitas são refletidas na página Índice.
 
  Observação: A abordagem usada para editar os dados de curso do instrutor funciona bem quando há uma quantidade limitada de cursos. Para coleções muito maiores, uma interface do usuário e um método de atualização diferentes são necessários.  
- 
 
 ## <a name="update-the-delete-method"></a>Atualize o método Delete
 
 Altere o código no método HttpPost Delete para que o registro de atribuição do office (se houver) é excluído quando o instrutor é excluído:
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample22.cs?highlight=6,10)]
-
 
 Se você tentar excluir um instrutor que é atribuído a um departamento como administrador, você obterá um erro de integridade referencial. Ver [a versão atual deste tutorial](../../getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md) de código adicional que removerá automaticamente o instrutor de qualquer departamento em que o instrutor é atribuído como administrador.
 

@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: f81f3d80-3674-4d8e-a9b1-87feed1a93c9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 15bdaa588792c3cf4a8e6eee651e0675f959f942
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2ba7ca22074fe3c131209482180f8f7706714dd5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382220"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129830"
 ---
 # <a name="creating-a-more-complex-data-model-for-an-aspnet-mvc-application-4-of-10"></a>Criando um modelo de dados mais complexo para um aplicativo ASP.NET MVC (4 de 10)
 
@@ -26,7 +26,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > > [!NOTE] 
 > > 
 > > Se você enfrentar um problema que você não conseguir resolver, [baixar o capítulo concluído](building-the-ef5-mvc4-chapter-downloads.md) e tente reproduzir o problema. Em geral, você pode encontrar a solução ao problema comparando seu código com o código completo. Para alguns erros comuns e como resolvê-los, consulte [erros e soluções alternativas.](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#errors)
-
 
 Nos tutoriais anteriores trabalharam com um modelo de dados simples composto por três entidades. Neste tutorial você adicionará mais entidades e relações e personalizará o modelo de dados especificando formatação, validação e regras de mapeamento de banco de dados. Você verá duas maneiras de personalizar o modelo de dados: adicionando atributos a classes de entidade e adicionando código para a classe de contexto do banco de dados.
 
@@ -52,9 +51,7 @@ O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannota
 
 O atributo `DisplayFormat` é usado para especificar explicitamente o formato de data:
 
-
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample2.cs)]
-
 
 O `ApplyFormatInEditMode` configuração especifica que a formatação especificado deve também ser aplicada quando o valor é exibido em uma caixa de texto para edição. (Talvez você não deseje isso em alguns campos – por exemplo, para valores de moeda, você talvez não deseja o símbolo de moeda na caixa de texto para edição.)
 
@@ -124,7 +121,6 @@ Você também pode fazer banco de dados de alterações de mapeamento usando o [
 
 > [!NOTE]
 > Se você tentar compilar antes de concluir a criação de todas essas classes de entidade, você poderá receber erros de compilador.
-
 
 ## <a name="create-the-instructor-entity"></a>Criar a entidade Instructor
 
@@ -260,7 +256,6 @@ As propriedades de navegação e de chave estrangeira refletem as seguintes rela
 
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample24.cs)]
 
-
 ## <a name="modifying-the-student-entity"></a>Modificando a entidade Student
 
 ![Student_entity](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/_static/image10.png)
@@ -378,7 +373,6 @@ Depois de concluir a edição do &lt; *timestamp&gt;\_Chap4.cs* arquivo, insira 
 > [!code-xml[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample35.xml?highlight=1-2)]
 > 
 > Com um novo banco de dados, não há nenhum dado para migrar e o `update-database` comando é muito mais provável de ser concluído sem erros. Para obter instruções sobre como excluir o banco de dados, consulte [como descartar um banco de dados do Visual Studio 2012](http://romiller.com/2013/05/17/how-to-drop-a-database-from-visual-studio-2012/).
-
 
 Abra o banco de dados **Gerenciador de servidores** como você fez anteriormente e expanda o **tabelas** nó para ver se todas as tabelas foram criadas. (Se você ainda tiver **Gerenciador de servidores** aberto do momento anterior, clique o **atualizar** botão.)
 

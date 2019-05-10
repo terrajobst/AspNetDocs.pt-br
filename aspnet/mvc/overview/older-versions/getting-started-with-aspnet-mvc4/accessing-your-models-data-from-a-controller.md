@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 61e0206d-7f32-4018-992d-0a51b48b37dc
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 45683fc2b40f58a6344ec8670e6a93df89b587fe
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b40bb8b06ae7c89a33ae2aead9578cf507503531
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59402898"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129946"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Acessar dados do seu modelo por meio de um controlador
 
@@ -21,7 +21,6 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Uma versão atualizada deste tutorial está disponível [aqui](../../getting-started/introduction/getting-started.md) que usa o ASP.NET MVC 5 e Visual Studio 2013. É mais seguro e muito mais simples a seguir e apresenta mais recursos.
-
 
 Nesta seção, você criará um novo `MoviesController` de classe e escrever um código que recupera os dados do filme e o exibe no navegador usando um modelo de exibição.
 
@@ -37,7 +36,7 @@ Clique com botão direito do *controladores* pasta e crie um novo `MoviesControl
 
 ![AddScaffoldedMovieController](accessing-your-models-data-from-a-controller/_static/image1.png)
 
-Clique em **Adicionar**. Visual Studio Express cria os seguintes arquivos e pastas:
+ Clique em **Adicionar**. Visual Studio Express cria os seguintes arquivos e pastas:
 
 - *Um MoviesController.cs* arquivo do projeto *controladores* pasta.
 - Um *filmes* pasta do projeto *modos de exibição* pasta.
@@ -120,7 +119,6 @@ Clique duas vezes em *Movies.mdf* para abrir **DATABASE EXPLORER**, em seguida, 
 > [!NOTE]
 > Se o Gerenciador de banco de dados não aparecer, do **ferramentas** menu, selecione **conectar-se ao banco de dados**, cancelar, em seguida, o **Escolher fonte de dados** caixa de diálogo. Isso forçará abrir o Gerenciador de banco de dados.
 
-
 > [!NOTE]
 > Se você estiver usando VWD ou o Visual Studio 2010 e receber um erro semelhante a qualquer um dos seguintes procedimentos:
 > 
@@ -128,7 +126,6 @@ Clique duas vezes em *Movies.mdf* para abrir **DATABASE EXPLORER**, em seguida, 
 > - &quot;Exceção InvalidOperation não foi tratada pelo código do usuário&quot; o SqlConnection fornecido não especifica um catálogo inicial.
 > 
 > Você precisa instalar o [SQL Server Data Tools](https://blogs.msdn.com/b/rickandy/archive/2012/08/02/installing-and-using-sql-server-data-tools-ssdt-on-visual-studio-2010-and-vwd.aspx) e [LocalDB](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLLocalDBOnly_11_0). Verifique se o `MovieDBContext` cadeia de caracteres de conexão especificada na página anterior.
-
 
 Clique com botão direito do `Movies` de tabela e selecione **Mostrar dados da tabela** para ver os dados que você criou.
 

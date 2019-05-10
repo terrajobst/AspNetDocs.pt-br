@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 239c7aa8-d09a-4d02-9c0e-6bd52be5f0d5
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent
 msc.type: authoredcontent
-ms.openlocfilehash: d915cb5d7d40bb2cc355a5e45befe124a7b60dc4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b3293a9b6a35a162d4e27f061dfd3bfd28e0eda5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398482"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125998"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-remote-agent"></a>Configuração de um servidor Web para publicação de Implantação da Web (agente remoto)
 
@@ -30,7 +30,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > - Use *implantação offline*. Essa abordagem requer o mínimo de configuração do servidor web, mas um administrador de servidor manualmente deve copiar o pacote da web no servidor e importá-lo por meio do Gerenciador do IIS.
 > 
 > Para obter mais informações sobre os principais recursos, as vantagens e desvantagens dessas abordagens, consulte [escolhendo a abordagem da direita para a implantação da Web](choosing-the-right-approach-to-web-deployment.md).
-
 
 ## <a name="is-the-web-deploy-remote-agent-the-right-approach-for-you"></a>É a Web implantar o agente remoto a abordagem certa para você?
 
@@ -64,7 +63,6 @@ Este tópico mostra como executar cada um desses procedimentos. As tarefas e ins
 > [!NOTE]
 > Para obter mais informações sobre como adicionar computadores a um domínio, consulte [ingressando computadores no domínio e fazendo logon](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obter mais informações sobre como configurar endereços IP estáticos, consulte [configurar um endereço IP estático](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx). O serviço de agente remoto é compatível com o IIS 6 em diante e não exige que você ingresse em um domínio. No entanto, as etapas neste tutorial foram desenvolvidas e testadas no IIS 7.5 e procedimentos para outras versões podem variar.
 
-
 ## <a name="install-products-and-components"></a>Instalar produtos e componentes
 
 Esta seção orientará você instalar os componentes e produtos necessários no servidor web. Antes de começar, uma prática recomendada é executar o Windows Update para garantir que seu servidor está completamente atualizado.
@@ -78,7 +76,6 @@ Nesse caso, você precisa instalar essas coisas:
 
 > [!NOTE]
 > Este passo a passo descreve o uso do Web Platform Installer para instalar e configurar os componentes necessários. Embora você não precisa usar o Web Platform Installer, ele simplifica o processo de instalação automaticamente detectando as dependências e garantindo que você sempre obtenha as versões mais recentes do produto. Para obter mais informações, consulte [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/?linkid=9805118).
-
 
 **Para instalar os componentes e produtos necessários**
 
@@ -184,7 +181,6 @@ A abordagem mais comum é atribuir permissões ao local **IIS\_IUSRS** grupo por
 
 > [!NOTE]
 > Para obter mais informações sobre identidades do pool de aplicativos no IIS 7.5, consulte [identidades do Pool de aplicativos](https://go.microsoft.com/?linkid=9805123).
-
 
 **Para configurar permissões de pasta para um site do IIS**
 

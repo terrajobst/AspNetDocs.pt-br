@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 94297aa0-1f2d-4d72-bbcb-63f64653e0c0
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-3
 msc.type: authoredcontent
-ms.openlocfilehash: ce866a169e69c0d85fe18ddeccf271f1f235d440
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3fcfc816cde22c697a78bab2c9ea7ace1bf68501
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381114"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129674"
 ---
 # <a name="part-3-views-and-viewmodels"></a>Parte 3: Exibições e ViewModels
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.  
 >   
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 3 aborda Views e ViewModels.
-
 
 Até agora podemos ter apenas foi retornar cadeias de caracteres de ações do controlador. Isso é uma excelente forma de obter uma ideia de como funcionam os controladores, mas é não como convém criar um aplicativo web real. Vamos querer uma maneira melhor de gerar HTML para navegadores visitar nosso site – uma em que podemos usar arquivos de modelo para personalizar mais facilmente o conteúdo HTML enviada de volta. Isso é exatamente o que fazem os modos de exibição.
 
@@ -257,7 +256,6 @@ Agora quando podemos executar nosso projeto novamente e acesse a URL /Store/ ver
 O HTML para a lista de gênero tem esta aparência:
 
 [!code-html[Main](mvc-music-store-part-3/samples/sample22.html)]
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-2.md)

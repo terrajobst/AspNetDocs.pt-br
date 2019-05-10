@@ -8,12 +8,12 @@ ms.date: 11/13/2006
 ms.assetid: f52c302a-1b7c-46fe-8a13-8412c95cbf6d
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting-with-the-datalist-and-repeater/sorting-data-in-a-datalist-or-repeater-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d45e5cb1efd5f67acc94f4118d96c62ea08dc617
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e3512758dbfdf43d788eca643fe48ca918c142fe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387146"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128060"
 ---
 # <a name="sorting-data-in-a-datalist-or-repeater-control-c"></a>Classificação de dados em um controle DataList ou Repeater (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/4/a/7/4a7a3b18-d80e-4014-8e53-a6a2427f0d93/ASPNET_Data_Tutorial_45_CS.exe) ou [baixar PDF](sorting-data-in-a-datalist-or-repeater-control-cs/_static/datatutorial45cs1.pdf)
 
 > Neste tutorial, examinaremos como incluir a classificação de suporte no DataList e Repeater, bem como construir um DataList ou Repeater cujos dados podem ser paginados e classificados.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -50,31 +49,25 @@ Que abordaremos esses três tarefas nas etapas 3 e 4. Depois disso, vamos examin
 
 Antes de nos preocupamos implementar qualquer uma das funcionalidades relacionadas à classificação, deixe s começar listando os produtos em um controle Repeater. Comece abrindo o `Sorting.aspx` página o `PagingSortingDataListRepeater` pasta. Adicionar um controle Repeater para a página da web, definindo sua `ID` propriedade para `SortableProducts`. De marca inteligente Repeater s, crie um novo ObjectDataSource denominado `ProductsDataSource` e configurá-lo para recuperar dados, o `ProductsBLL` classe s `GetProducts()` método. Selecione a que opção das listas suspensas nas guias de INSERT, UPDATE e DELETE (nenhum).
 
-
 [![Criar um ObjectDataSource e configurá-lo para usar o método GetProductsAsPagedDataSource()](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image2.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image1.png)
 
 **Figura 1**: Criar um ObjectDataSource e configurá-lo para usar o `GetProductsAsPagedDataSource()` método ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image3.png))
-
 
 [![Defina a lista suspensa na atualização, inserção e excluir guias como (nenhum)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image5.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image4.png)
 
 **Figura 2**: Defina a lista suspensa na atualização, inserção e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image6.png))
 
-
 Ao contrário de com DataList, o Visual Studio não cria automaticamente um `ItemTemplate` para o controle Repeater depois de associá-lo a uma fonte de dados. Além disso, devemos adicionar isso `ItemTemplate` declarativamente, como a marca inteligente do repetidor controle s não tem a opção de editar modelos encontrada no DataList s. Let s usam o mesmo `ItemTemplate` no tutorial anterior, a que é exibido o nome do produto s, fornecedor e categoria.
 
 Depois de adicionar o `ItemTemplate`, Repeater e ObjectDataSource s marcação declarativa deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample1.aspx)]
 
 Figura 3 mostra essa página quando visualizado por meio de um navegador.
 
-
 [![Cada produto s nome, categoria e fornecedor é exibido](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image8.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image7.png)
 
 **Figura 3**: Cada nome de produto, fornecedor e categoria é exibida ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image9.png))
-
 
 ## <a name="step-3-instructing-the-objectdatasource-to-sort-the-data"></a>Etapa 3: Instruindo o ObjectDataSource para classificar os dados
 
@@ -82,18 +75,15 @@ Para classificar os dados exibidos no repetidor, precisamos informar o ObjectDat
 
 Para passar informações de classificação da página ASP.NET para o ObjectDataSource, crie um manipulador de eventos para o `Selecting` evento e use o código a seguir:
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample2.cs)]
 
 O *sortExpression* valor deve ser atribuído como o nome do campo de dados para classificar os dados por (como ProductName). Não há nenhuma propriedade relacionada a direção de classificação, portanto, se você quiser classificar os dados em ordem decrescente, acrescente a cadeia de caracteres DESC para o *sortExpression* valor (como ProductName DESC).
 
 Vá em frente e experimente alguns valores embutidos diferentes para *sortExpression* e testar os resultados em um navegador. Como mostra a Figura 4, ao usar ProductName DESC como o *sortExpression*, os produtos são classificados por nome em ordem alfabética inversa.
 
-
 [![Os produtos são classificados por nome em ordem alfabética inversa](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image11.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image10.png)
 
 **Figura 4**: Os produtos são classificados por nome em ordem alfabética inversa ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image12.png))
-
 
 ## <a name="step-4-creating-the-sorting-interface-and-remembering-the-sort-expression-and-direction"></a>Etapa 4: Criando a Interface de classificação e lembrar-se a expressão de classificação e a direção
 
@@ -103,40 +93,32 @@ Adicionar um controle DropDownList da Web acima a `SortableProducts` Repeater e 
 
 O `ListItem` `Text` propriedades podem ser definidas para qualquer valor (como nome), mas o `Value` propriedades devem ser definidas para o nome do campo de dados (como ProductName). Para classificar os resultados em ordem decrescente, acrescente a cadeia de caracteres DESC para o nome do campo de dados, como ProductName DESC.
 
-
 ![Adicionar um item de lista para cada um dos campos de dados classificável](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image13.png)
 
 **Figura 5**: Adicionar um `ListItem` para cada um dos campos de dados classificável
-
 
 Finalmente, adicione um controle da Web de botão à direita da DropDownList. Defina suas `ID` para `RefreshRepeater` e seu `Text` propriedade para a atualização.
 
 Depois de criar o `ListItem` s e adicionar o botão de atualização, a sintaxe declarativa de s do DropDownList e botão deve ser semelhante ao seguinte:
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample3.aspx)]
 
 Com a classificação DropDownList completa, em seguida precisamos atualizar o s ObjectDataSource `Selecting` manipulador de eventos, por isso que ele usa o selecionado `SortBy``ListItem` s `Value` propriedade em vez de uma expressão de classificação embutido em código.
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample4.cs)]
 
 Neste ponto, quando o primeiro visitando a página de produtos inicialmente serão classificados pela `ProductName` campo de dados, como ela s a `SortBy` `ListItem` selecionada por padrão (veja a Figura 6). Selecionando a opção, como a categoria de classificação um diferentes e você clicar em atualizar, fazer com que um postback e reclassifica os dados pelo nome da categoria, como mostra a Figura 7.
 
-
 [![Os produtos são inicialmente classificadas por seu nome](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image15.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image14.png)
 
 **Figura 6**: Os produtos são inicialmente classificadas por seu nome ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image16.png))
-
 
 [![Os produtos são agora são classificados por categoria](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image18.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image17.png)
 
 **Figura 7**: Os produtos são agora são classificados por categoria ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image19.png))
 
-
 > [!NOTE]
 > Clicar no botão de atualização faz com que os dados automaticamente sejam classificados novamente porque o estado de exibição do repetidor s foi desabilitado, causando assim o Repeater reassociar a fonte de dados em cada postagem. Se você ve deixado o estado de exibição do repetidor s habilitado, alterar a classificação de lista suspensa lista não terá qualquer efeito sobre a ordem de classificação. Para corrigir isso, crie um manipulador de eventos para o botão Atualizar s `Click` reassociar o Repeater para sua fonte de dados e eventos (chamando o Repeater s `DataBind()` método).
-
 
 ## <a name="remembering-the-sort-expression-and-direction"></a>Lembrar-se a expressão de classificação e a direção
 
@@ -150,11 +132,9 @@ Futuras exemplos neste tutorial exploram como manter os detalhes de classificaç
 
 No [tutorial anterior](paging-report-data-in-a-datalist-or-repeater-control-cs.md) , examinamos como implementar a paginação padrão com um DataList. Deixe o s estender este exemplo anterior para incluir a capacidade de classificar os dados paginados. Comece abrindo o `SortingWithDefaultPaging.aspx` e `Paging.aspx` páginas no `PagingSortingDataListRepeater` pasta. Do `Paging.aspx` , clique no botão fonte para exibir a marcação declarativa de s de página. Copie o texto selecionado (consulte a Figura 8) e cole-o na marcação declarativa de `SortingWithDefaultPaging.aspx` entre o `<asp:Content>` marcas.
 
-
 [![Replicar a marcação declarativa na &lt;asp: Content&gt; marcas de Paging.aspx para SortingWithDefaultPaging.aspx](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image21.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image20.png)
 
 **Figura 8**: Replicar a marcação declarativa na `<asp:Content>` marcas da `Paging.aspx` ao `SortingWithDefaultPaging.aspx` ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image22.png))
-
 
 Depois de copiar a marcação declarativa, copie os métodos e propriedades na `Paging.aspx` página de classe code-behind de s para a classe code-behind para `SortingWithDefaultPaging.aspx`. Em seguida, reserve um tempo para exibir o `SortingWithDefaultPaging.aspx` página em um navegador. Ele deve exibir a mesma funcionalidade e a mesma aparência que `Paging.aspx`.
 
@@ -165,7 +145,6 @@ No tutorial anterior, criamos uma `GetProductsAsPagedDataSource(pageIndex, pageS
 Neste tutorial, adicionamos suporte à classificação, especificando a expressão de classificação de s ObjectDataSource `Selecting` manipulador de eventos. Isso funciona bem quando o ObjectDataSource é retornado um objeto que pode ser classificado, como o `ProductsDataTable` retornado pelo `GetProducts()` método. No entanto, o `PagedDataSource` objeto retornado pelo `GetProductsAsPagedDataSource` método não dá suporte a classificação de fonte de dados interna. Em vez disso, é necessário classificar os resultados retornados do `GetProducts()` método *antes de* colocamos no `PagedDataSource`.
 
 Para fazer isso, crie um novo método na `ProductsBLL` classe, `GetProductsSortedAsPagedDataSource(sortExpression, pageIndex, pageSize)`. Para classificar os `ProductsDataTable` retornado pelo `GetProducts()` método, especifique a `Sort` propriedade do seu padrão `DataTableView`:
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample5.cs)]
 
@@ -179,16 +158,13 @@ Atualizar o s ObjectDataSource `SelectMethod` propriedade para que ele chama o n
 
 Após essas alterações, a marcação declarativa do ObjectDataSource s deve ser semelhante:
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample6.aspx)]
 
 Neste ponto, o `SortingWithDefaultPaging.aspx` página será classificar seus resultados em ordem alfabética pelo nome do produto (veja a Figura 9). Isso ocorre porque, por padrão, um valor de ProductName é passado como o `GetProductsSortedAsPagedDataSource` método s *sortExpression* parâmetro.
 
-
 [![Por padrão, os resultados são classificados por ProductName](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image24.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image23.png)
 
 **Figura 9**: Por padrão, os resultados são classificados por `ProductName` ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image25.png))
-
 
 Se você adicionar manualmente uma `sortExpression` campo de cadeia de consulta, como `SortingWithDefaultPaging.aspx?sortExpression=CategoryName` os resultados serão classificados pelo `sortExpression`. No entanto, isso `sortExpression` parâmetro não está incluído na querystring ao mudar para uma página de dados diferente. Na verdade, clicando na página do próximo ou último botões usa nós de volta para `Paging.aspx`! Além disso, s há atualmente nenhuma classificação de interface. É a única maneira de que um usuário pode alterar a ordem de classificação dos dados paginados pela manipulação de cadeia de consulta diretamente.
 
@@ -198,31 +174,25 @@ Primeiro, precisamos atualizar o `RedirectUser` método para enviar ao usuário 
 
 Atualmente, o `RedirectUser` método aceita apenas um único parâmetro de entrada de índice da página para exibir. No entanto, pode haver ocasiões em que é útil para redirecionar o usuário para uma determinada página de dados usando uma expressão de classificação que não seja o que é especificado na cadeia de consulta. Em alguns instantes, criaremos a interface de classificação para essa página, que inclui uma série de controles da Web de botão para classificar os dados por uma coluna especificada. Quando um desses botões é clicado, queremos que redirecionará o usuário passando o valor da expressão de classificação apropriado. Para fornecer essa funcionalidade, crie duas versões do `RedirectUser` método. O primeiro deles deverá aceitar apenas o índice de página para exibir, enquanto o segundo é aceita a expressão de índice e de classificação de página.
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample7.cs)]
 
 No primeiro exemplo neste tutorial, criamos uma interface de classificação usando DropDownList. Neste exemplo, let s usar três controles da Web de botão posicionados acima uma DataList para classificar por `ProductName`, um para `CategoryName`e outro para `SupplierName`. Adicione três controles da Web de botão, definindo sua `ID` e `Text` propriedades adequadamente:
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample8.aspx)]
 
 Em seguida, crie um `Click` manipulador de eventos para cada um. Os manipuladores de eventos deverá chamar o `RedirectUser` método, retornando o usuário para a primeira página usando a expressão de classificação apropriado.
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample9.cs)]
 
 Quando o primeiro visitando a página, os dados são classificados em ordem alfabética pelo nome do produto (consulte novamente a Figura 9). Clique no botão Avançar para Avançar para a segunda página de dados e clique na classificação por botão de categoria. Isso retorna nós para a primeira página de dados, classificados por nome de categoria (consulte a Figura 10). Da mesma forma, clicando em Classificar por botão de fornecedor classifica os dados por fornecedor a partir da primeira página de dados. A opção de classificação será lembrada conforme os dados são paginados por meio do. Figura 11 mostra a página após a classificação por categoria e, em seguida, avançando para a décimo terceiro página de dados.
-
 
 [![Os produtos são classificados por categoria](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image27.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image26.png)
 
 **Figura 10**: Os produtos são classificados por categoria ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image28.png))
 
-
 [![A expressão de classificação é lembrada quando paginação por meio de dados do](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image30.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image29.png)
 
 **Figura 11**: A expressão de classificação é lembrada quando paginação por meio de dados do ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image31.png))
-
 
 ## <a name="step-6-custom-paging-through-records-in-a-repeater"></a>Etapa 6: Paginação personalizada por meio de registros em um repetidor
 
@@ -236,53 +206,41 @@ Esses métodos podem ser usados com eficiência, página e classificar dados usa
 
 Abra o `SortingWithCustomPaging.aspx` página na `PagingSortingDataListRepeater` pasta e adicione um repetidor para a página, definindo seu `ID` propriedade para `Products`. De marca inteligente Repeater s, crie um novo ObjectDataSource chamado `ProductsDataSource`. Configurá-lo para selecionar seus dados a partir de `ProductsBLL` classe s `GetProductsPaged` método.
 
-
 [![Configurar o ObjectDataSource para usar o método de GetProductsPaged ProductsBLL classe s](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image33.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image32.png)
 
 **Figura 12**: Configurar o ObjectDataSource para usar o `ProductsBLL` classe s `GetProductsPaged` método ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image34.png))
 
-
 Defina as listas suspensas na atualização, inserção e excluir guias como (nenhum) e, em seguida, clique no botão Avançar. O Assistente Configurar fonte de dados agora solicita as fontes do `GetProductsPaged` método s *startRowIndex* e *maximumRows* parâmetros de entrada. Na realidade, esses parâmetros de entrada são ignorados. Em vez disso, o *startRowIndex* e *maximumRows* valores serão passados por meio de `Arguments` propriedade em s ObjectDataSource `Selecting` manipulador de eventos, assim como como especificamos o *sortExpression* nesta demonstração de tutorial s primeiro. Portanto, deixe a fonte de parâmetro nas listas suspensas no assistente definido em nenhum.
-
 
 [![Deixe o conjunto de fontes de parâmetros como None](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image36.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image35.png)
 
 **Figura 13**: Deixe as fontes de parâmetro definido como None ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image37.png))
 
-
 > [!NOTE]
 > Fazer *não* definir o s ObjectDataSource `EnablePaging` propriedade `true`. Isso fará com que o ObjectDataSource incluir automaticamente seu próprio *startRowIndex* e *maximumRows* parâmetros para o `SelectMethod` s lista existente de parâmetro. O `EnablePaging` propriedade é útil quando a associação personalizada porque esses controles esperam que o comportamento específico do ObjectDataSource que s de dados a um controle GridView, DetailsView ou FormView paginados disponível apenas quando `EnablePaging` é de propriedade `true`. Já que temos que adicionar manualmente o suporte de paginação para o DataList e Repeater, deixe essa propriedade definida como `false` (o padrão), como vai inserir na funcionalidade necessária diretamente em nossa página do ASP.NET.
 
-
 Finalmente, defina o Repeater s `ItemTemplate` para que o nome do produto s, categoria e fornecedor são mostrados. Após essas alterações, a sintaxe de declarativa Repeater e ObjectDataSource s deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample10.aspx)]
 
 Reserve um tempo para visitar a página por meio de um navegador e observe que os registros não são retornados. Isso ocorre porque estamos ve ainda para especificar o *startRowIndex* e *maximumRows* valores de parâmetros; portanto, os valores de 0 estão sendo passados para ambos. Para especificar esses valores, crie um manipulador de eventos para o s ObjectDataSource `Selecting` eventos e definir esses parâmetros de valores de programaticamente para valores codificados de 0 a 5, respectivamente:
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample11.cs)]
 
 Com essa alteração, a página, quando visualizado por meio de um navegador, mostra os cinco primeiros produtos.
-
 
 [![Os cinco primeiros registros são exibidos](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image39.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image38.png)
 
 **Figura 14**: Os cinco primeiros registros são exibidos ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image40.png))
 
-
 > [!NOTE]
 > Os produtos listados na Figura 14 acontecem seja classificada por nome do produto, porque o `GetProductsPaged` procedimento armazenado que executa a consulta de paginação personalizada eficiente ordena os resultados por `ProductName`.
 
-
 Para permitir que o usuário percorrer as páginas, é necessário controlar o índice de linha de início e o número máximo de linhas e lembre-se esses valores em postagens. No exemplo de paginação padrão, usamos os campos de cadeia de consulta para manter esses valores; para esta demonstração, deixe s manter essas informações no estado de exibição de s de página. Crie as duas propriedades a seguir:
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample12.cs)]
 
 Em seguida, atualize o código no manipulador de eventos de seleção para que ele use o `StartRowIndex` e `MaximumRows` propriedades em vez dos valores embutidos de 0 a 5:
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample13.cs)]
 
@@ -292,41 +250,33 @@ Neste momento, nossa página ainda mostra apenas os cinco primeiros registros. N
 
 Use s permitem que o mesmo primeiro, anterior, Avançar, paginação de última interface usada no exemplo de paginação padrão, incluindo a Web de rótulo de controle que exibe qual página de dados estiver sendo exibido e o número total de páginas existem. Adicione os quatro controles da Web de botão e o rótulo abaixo Repetidor.
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample14.aspx)]
 
 Em seguida, crie `Click` manipuladores de eventos para os quatro botões. Quando um desses botões é clicado, precisamos atualizar o `StartRowIndex` e associar novamente os dados a serem Repetidor. O código para os botões First, anterior e próxima é bastante simple, mas para o último botão como podemos determinar o índice de linha de início para a última página de dados? Para esse índice, bem como ser capaz de determinar que se os botões Próximo e último devem ser habilitados precisamos saber quantos registros no total estão sendo paginados por meio de computação. Podemos determinar isso chamando o `ProductsBLL` classe s `TotalNumberOfProducts()` método. Let s criar uma propriedade somente leitura, o nível de página chamada `TotalRowCount` que retorna os resultados do `TotalNumberOfProducts()` método:
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample15.cs)]
 
 Com essa propriedade agora podemos determinar o último índice de linha de início s de página. Especificamente, ele s o resultado de inteiro do `TotalRowCount` menos 1 dividido por `MaximumRows`, multiplicado pelo `MaximumRows`. Agora podemos escrever a `Click` manipuladores de eventos para os quatro botões de interface de paginação:
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample16.cs)]
 
 Por fim, precisamos desabilitar os botões de primeiro e anterior na interface de paginação ao exibir a primeira página de dados e os botões Próximo e último ao exibir a última página. Para fazer isso, adicione o seguinte código para o s ObjectDataSource `Selecting` manipulador de eventos:
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample17.cs)]
 
 Depois de adicionar essas `Click` manipuladores de eventos e o código para habilitar ou desabilitar os elementos de interface de paginação com base no índice de linha de início atual, a página de teste em um navegador. Como a Figura 15 ilustra ao primeiro visitar a página na primeira e botões anterior serão estão desabilitados. Clicar em Avançar mostra a segunda página de dados, enquanto clicar em último exibe a última página (consulte as figuras de 16 e 17). Ao exibir a última página de dados de botões de próximo e último estão desabilitados.
 
-
 [![Os botões anterior e último estão desabilitadas ao exibir a primeira página de produtos](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image42.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image41.png)
 
 **Figura 15**: Os botões anterior e último estão desabilitadas ao exibir a primeira página de produtos ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image43.png))
-
 
 [![A segunda página de produtos são exibidos](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image45.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image44.png)
 
 **Figura 16**: A segunda página de produtos são exibidos ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image46.png))
 
-
 [![Clicar em último exibirá a página Final de dados](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image48.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image47.png)
 
 **Figura 17**: Clicar em último exibe a página de dados Final ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image49.png))
-
 
 ## <a name="step-7-including-sorting-support-with-the-custom-paged-repeater"></a>Etapa 7: Incluindo a classificação de suporte com personalizado paginável Repeater
 
@@ -340,40 +290,32 @@ Agora que a paginação personalizada tiver sido implementada, oferecemos está 
 
 Comece atualizando o s ObjectDataSource `SelectMethod` propriedade e a adição de um *sortExpression* `Parameter`. Certifique-se de que o *sortExpression* `Parameter` s `Type` estiver definida como `String`. Depois de concluir essas duas primeiras tarefas, a marcação declarativa do ObjectDataSource s deve ser semelhante ao seguinte:
 
-
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample18.aspx)]
 
 Em seguida, precisamos de um nível de página `SortExpression` propriedade cujo valor é serializado no estado de exibição. Se nenhum valor de expressão de classificação tiver sido definido, use ProductName como o padrão:
-
 
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample19.cs)]
 
 Antes do ObjectDataSource invoca o `GetProductsPagedAndSorted` método, precisamos definir o *sortExpression* `Parameter` para o valor da `SortExpression` propriedade. No `Selecting` manipulador de eventos, adicione a seguinte linha de código:
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample20.cs)]
 
 Tudo o que resta é implementar a interface de classificação. Como fizemos no último exemplo, permite que s tenham a interface de classificação implementada usando três controles da Web de botão que permitem ao usuário classificar os resultados por fornecedor, categoria ou nome do produto.
-
 
 [!code-aspx[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample21.aspx)]
 
 Criar `Click` manipuladores de eventos para esses três controles de botão. No evento de redefinição de manipulador, o `StartRowIndex` como 0, defina o `SortExpression` para o valor apropriado e reassociar os dados a serem repetidor:
 
-
 [!code-csharp[Main](sorting-data-in-a-datalist-or-repeater-control-cs/samples/sample22.cs)]
 
 Tudo que s é a ele! Embora houvesse um número de etapas para obter a paginação personalizada e a classificação implementado, as etapas eram muito semelhantes àquelas necessárias para a paginação padrão. Figura 18 mostra os produtos ao exibir a última página de dados quando classificadas por categoria.
-
 
 [![A última página de dados, a classificação por categoria, é exibido](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image51.png)](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image50.png)
 
 **Figura 18**: A última página de dados, a classificação por categoria, é exibida ([clique para exibir a imagem em tamanho normal](sorting-data-in-a-datalist-or-repeater-control-cs/_static/image52.png))
 
-
 > [!NOTE]
 > Nos exemplos anteriores, quando a classificação por fornecedor que NomeDoFornecedor foi usado como a expressão de classificação. No entanto, para a implementação de paginação personalizada, precisamos usar CompanyName. Isso ocorre porque o procedimento armazenado responsável por implementar a paginação personalizada `GetProductsPagedAndSorted` passa a expressão de classificação para o `ROW_NUMBER()` palavra-chave, o `ROW_NUMBER()` palavra-chave requer o nome da coluna real em vez de um alias. Portanto, devemos usar `CompanyName` (o nome da coluna na `Suppliers` tabela) em vez do alias usado na `SELECT` consulta (`SupplierName`) para a expressão de classificação.
-
 
 ## <a name="summary"></a>Resumo
 

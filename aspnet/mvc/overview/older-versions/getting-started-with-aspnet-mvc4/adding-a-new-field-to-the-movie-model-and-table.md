@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 9ef2c4f1-a305-4e0a-9fb8-bfbd9ef331d9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-new-field-to-the-movie-model-and-table
 msc.type: authoredcontent
-ms.openlocfilehash: 307719f30c9efc8001f63f3ab068e50f82e1c5c0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b0a66cf62c34a59ca5c89c2f380093165e765100
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59399613"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129895"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-table"></a>Adicionar um novo campo ao modelo de filme e à tabela
 
@@ -21,7 +21,6 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Uma versão atualizada deste tutorial está disponível [aqui](../../getting-started/introduction/getting-started.md) que usa o ASP.NET MVC 5 e Visual Studio 2013. É mais seguro e muito mais simples a seguir e apresenta mais recursos.
-
 
 Nesta seção, você usará migrações do Entity Framework Code First para migrar algumas alterações para as classes de modelo para que a alteração será aplicada ao banco de dados.
 
@@ -68,7 +67,6 @@ Isso adiciona a seguinte instrução using:
 > [!NOTE] 
 > 
 > Code First Migrations chamadas a `Seed` método após cada migração (ou seja, chamando **Atualizar banco de dados** no Console do Gerenciador de pacotes), e esse método atualiza as linhas que já foram inseridas ou insere-os se eles ainda não existem.
-
 
 **Pressione CTRL-SHIFT-B para compilar o projeto.** (As etapas a seguir falhará se seu não crie neste momento.)
 
@@ -122,13 +120,11 @@ Agora, execute o aplicativo e navegue até a */Movies* URL. Quando você fizer i
 
 Você está vendo esse erro porque atualizada `Movie` classe de modelo no aplicativo agora é diferente do esquema do `Movie` tabela do banco de dados existente. (Não há nenhuma coluna `Rating` na tabela de banco de dados.)
 
-
 Existem algumas abordagens para resolver o erro:
 
 1. Faça com que o Entity Framework remova automaticamente e recrie o banco de dados com base no novo esquema de classe de modelo. Essa abordagem é muito conveniente ao fazer o desenvolvimento ativo em um banco de dados de teste; Ele permite que você desenvolva rapidamente o esquema de modelo e o banco de dados juntos. A desvantagem, no entanto, é que você perde os dados existentes no banco de dados — para que você *não* para usar essa abordagem em um banco de dados de produção! Geralmente é uma maneira produtiva de desenvolver um aplicativo usar um inicializador para propagar automaticamente um banco de dados com dados de teste. Para obter mais informações sobre inicializadores de banco de dados do Entity Framework, consulte de Tom Dykstra [tutorial do ASP.NET MVC/Entity Framework](../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 2. Modifique explicitamente o esquema do banco de dados existente para que ele corresponda às classes de modelo. A vantagem dessa abordagem é que você mantém os dados. Faça essa alteração manualmente ou criando um script de alteração de banco de dados.
 3. Use as Migrações do Code First para atualizar o esquema de banco de dados.
-
 
 Para este tutorial, usaremos as Migrações do Code First.
 

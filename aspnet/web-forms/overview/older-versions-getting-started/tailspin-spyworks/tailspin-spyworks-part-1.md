@@ -8,12 +8,12 @@ ms.date: 07/21/2010
 ms.assetid: 15d4652b-d5aa-4172-b186-2c7f96ba316d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: 70d2efb789d694a0aaecc046615c7b3622079dc1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 05a3ace3d8fef9c1f3593f7948e42b4725d70134
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385352"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130576"
 ---
 # <a name="part-1-file--new-project"></a>Parte 1: Arquivo -> Novo Projeto
 
@@ -23,7 +23,6 @@ por [Joe Stagner](https://github.com/JoeStagner)
 > 
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo Tailspin Spyworks. Parte 1 aborda a visão geral e o arquivo/novo projeto.
 
-
 ## <a id="_Toc260221666"></a>  Visão geral
 
 Este tutorial é uma introdução ao ASP.NET WebForms. Podemos vai iniciar lentamente, portanto, a experiência de desenvolvimento para a web de nível iniciante é okey.
@@ -31,7 +30,6 @@ Este tutorial é uma introdução ao ASP.NET WebForms. Podemos vai iniciar lenta
 O aplicativo, vou desenvolver é um repositório online simples.
 
 ![](tailspin-spyworks-part-1/_static/image1.jpg)
-
 
 Os visitantes podem procurar produtos por categoria:
 
@@ -54,7 +52,6 @@ Continuar a fazer check-out pedirá para
 Após a ordenação, eles veem uma tela de confirmação simples:
 
 ![](tailspin-spyworks-part-1/_static/image7.jpg)
-
 
 Vamos começar criando um novo projeto de formulários da Web do ASP.NET no Visual Studio 2010, e vamos incrementalmente adicionar recursos para criar um aplicativo funcional completo. Ao longo do caminho, vamos abordar o acesso de banco de dados, modos de exibição de lista e grade, páginas de atualização de dados, validação de dados, usando as páginas mestras para layout de página consistente, AJAX, validação, associação de usuário e muito mais.
 

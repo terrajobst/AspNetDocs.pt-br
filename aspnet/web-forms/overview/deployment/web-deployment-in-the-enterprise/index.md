@@ -8,17 +8,16 @@ ms.date: 05/16/2012
 ms.assetid: 83e0a572-428f-4bea-9638-1a031c6901c0
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise
 msc.type: chapter
-ms.openlocfilehash: 109a0dc1e1ebe0b644e9414561c798a7bb3d0531
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7701f7d73aa8f0bae28f16dc2381317e6e02a4a5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414823"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131755"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-1"></a>ASP.NET 4 – Série 1 sobre implantação corporativa
 
 > Este tutorial descreve como atender a muitos dos desafios que você encontrará ao gerenciar a implantação de aplicativos web em escala empresarial para ambientes de desenvolvimento, teste, preparação e produção. O tutorial inclui uma solução de referência junto com uma mistura de conteúdo conceitual e orientados a tarefas para orientá-lo por meio de várias tarefas comuns e procedimentos.
-
 
 - [Implantação da Web na empresa](web-deployment-in-the-enterprise.md)
 - [A solução Gerenciador de Contatos](the-contact-manager-solution.md)

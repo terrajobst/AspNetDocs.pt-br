@@ -8,12 +8,12 @@ ms.date: 11/01/2010
 ms.assetid: 658b149b-d770-46bf-8b4b-4e47cca242f3
 msc.legacyurl: /mvc/overview/older-versions/creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript
 msc.type: authoredcontent
-ms.openlocfilehash: 91c96cc413e63ad2fc160ffbb473c4f3e1ada3e4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fb63493ff22c9261fc5746a998a32f2511141f87
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401056"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130395"
 ---
 # <a name="creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript"></a>Criação de um aplicativo do MVC 3 com Razor e JavaScript não obstrusivo
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 > O aplicativo de web de exemplo de lista de usuários demonstra como é simples criar aplicativos ASP.NET MVC 3 usando o mecanismo de exibição do Razor. O aplicativo de exemplo mostra como usar o novo mecanismo de exibição do Razor com o ASP.NET MVC versão 3 e o Visual Studio 2010 para criar um site fictício de lista de usuários que inclui a funcionalidade, como criar, exibir, editar e excluir usuários.
 > 
 > Este tutorial descreve as etapas que foram executadas a fim de criar o aplicativo de ASP.NET MVC 3 de exemplo de lista de usuários. Um projeto do Visual Studio com o C# e o código do VB-fonte está disponível para acompanhar este tópico: [Baixe o](https://code.msdn.microsoft.com/aspnetmvcsamples/Release/ProjectReleases.aspx?ReleaseId=5114). Se você tiver dúvidas sobre este tutorial, publique-os para o [Fórum do MVC](https://forums.asp.net/1146.aspx).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -185,7 +184,6 @@ Para obter mais informações sobre a validação não invasiva do cliente, cons
 
 > [!NOTE]
 > No ASP.NET MVC 3 Beta, às vezes você precisa enviar o formulário para iniciar a validação do lado do cliente. Isso pode ser alterado na versão final.
-
 
 ## <a name="creating-the-create-view"></a>Criar modo de exibição criar
 

@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: 7e85c70e-1a88-4408-8b3d-29611c7713ed
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/publishing
 msc.type: authoredcontent
-ms.openlocfilehash: ece436d44908497d6cf10017ba1ee285bfb4a5b2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 49a841dbda183bf1d59153b83f694c9f517e0b94
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382089"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127755"
 ---
 # <a name="introducing-aspnet-web-pages---publishing-a-site-by-using-webmatrix"></a>Introdução ao ASP.NET Web Pages - publicar um Site usando o WebMatrix
 
@@ -26,7 +26,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - Microsoft Azure
 > - Empresa de hospedagem da Web
 
-
 ## <a name="about-publishing-your-site"></a>Sobre como publicar seu Site
 
 Até agora, você fez seu trabalho em um computador local, incluindo testes de suas páginas. Para executar sua<em>. cshtml</em> páginas, você já usou o servidor web que está incorporado ao WebMatrix, ou seja, o IIS Express. Mas é claro, ninguém pode ver o site que você criou, exceto que você. Para permitir que outras pessoas trabalhem com o seu site, você precisa publicá-lo com a Internet.
@@ -35,7 +34,6 @@ A menos que você já tiver acesso a um servidor web pública, a publicação si
 
 > [!NOTE]
 > Você pode ter acesso a um servidor web público por meio do provedor de serviço da internet (ISP) que você usa para obter o serviço de internet em casa. No entanto, seu provedor de hospedagem deve dar suporte a páginas da Web ASP.NET. Muitos provedores de Internet não, mas sempre vale a pena verificar.
-
 
 Neste tutorial, daremos a você uma visão geral de como publicar. Não é prático fornecer detalhes exatos para tudo, porque o processo um pouco diferente para cada provedor de hospedagem. Mas, você obterá uma boa ideia de como funciona o processo.
 
@@ -142,7 +140,6 @@ Escolha um que você deseja. Para este tutorial, selecionamos DiscountASP.NET, p
 > [!NOTE]
 > Nossa escolha de um provedor de hospedagem para este tutorial não deve ser interpretada como um endosso dessa empresa sobre qualquer outro. Mas tivemos que escolher uma para fins ilustrativos e DiscountASP.NET é uma das muitas empresas que dá suporte a páginas da Web ASP.NET e o protocolo de implantação da Web para publicação.
 
-
 Normalmente, depois que você se inscrever com o provedor de hospedagem, a empresa envia um email que contém um nome de usuário e senha, a URL do servidor web e assim por diante. Se a empresa de hospedagem oferece suporte ao protocolo de implantação da Web, eles podem enviar você é um arquivo que contém as configurações de publicação ou permitem que você baixe um. Um arquivo de configurações de publicação simplifica o processo para você.
 
 Quando você se inscrever e está pronto para publicar, clique no **publicar** botão na faixa de opções do WebMatrix. O **configurações de publicação** caixa de diálogo é exibida.
@@ -196,7 +193,6 @@ Clique o **publicar** botão na faixa de opções. O WebMatrix determina o que �
 > 
 > Por padrão, o WebMatrix publica seu banco de dados (*sdf* arquivo) somente na primeira vez que você publicar o site. Depois que o site é publicado e as pessoas estão interagindo com o site, o banco de dados no site ativo normalmente tem dados reais do site. Você precisa ter muito cuidado para não substituir o banco de dados ao vivo com o *sdf* arquivo no seu computador, que geralmente contém somente os dados de teste. É por isso que você veja o aviso **publicação irá substituir quaisquer bancos de dados remotos**, e por que a caixa de seleção *WebPagesMovies.sdf* está desmarcada por padrão.
 
-
 Clique em **Continue**. O WebMatrix publica os arquivos alterados e mostra uma mensagem de êxito, como ele fez na primeira vez que você publicou.
 
 Vá para o site ativo (você pode clicar no link na mensagem de êxito, se ele ainda está mostrando) e verifique se que a alteração foi publicada.
@@ -210,7 +206,6 @@ Vá para o site ativo (você pode clicar no link na mensagem de êxito, se ele a
 > Edição remota é uma maneira fácil de fazer alterações em seu site ativo. No entanto, as alterações feitas dessa maneira não estão sincronizadas com os arquivos em seu site local. Para sincronizar os arquivos locais com o site remoto, você pode baixar os arquivos remotos. Esse processo funciona muito parecida com a publicação, exceto na ordem inversa.
 > 
 > Não descreveremos mais sobre os recursos de edição remota e remote-download do WebMatrix aqui. Eles são bastante úteis se várias pessoas precisam trabalhar no mesmo site em computadores diferentes. Para obter mais informações, consulte [publicar e editar um local remoto com o WebMatrix 2 Beta](https://go.microsoft.com/fwlink/?LinkId=251591).
-
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

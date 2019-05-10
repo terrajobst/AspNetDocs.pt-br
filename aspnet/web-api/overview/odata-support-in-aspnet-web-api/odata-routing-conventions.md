@@ -9,19 +9,18 @@ ms.custom: seoapril2019
 ms.assetid: adbc175a-14eb-4ab2-a441-d056ffa8266f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
 msc.type: authoredcontent
-ms.openlocfilehash: 8916f8b7a024636be1be055457081487f46a7936
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 63df4a82cd8df92631485b2544117844cfd0ca56
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421622"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130481"
 ---
 # <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenções de roteamento na API Web ASP.NET 2 Odata
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
 > Este artigo descreve as convenções de roteamento dessa API Web 2 no ASP.NET 4. x usa pontos de extremidade OData.
-
 
 Quando a API Web recebe uma solicitação de OData, ele mapeia a solicitação para um nome de controlador e um nome de ação. O mapeamento é baseado no método HTTP e o URI. Por exemplo, `GET /odata/Products(1)` mapeia para `ProductsController.GetProduct`.
 
@@ -53,7 +52,6 @@ Portanto, esse caminho selecionará o fornecedor do produto 1.
 
 > [!NOTE]
 > Segmentos de caminho OData nem sempre correspondem aos segmentos URI. Por exemplo, "1" é considerado um segmento de caminho.
-
 
 **Nomes do controlador.** O nome de controlador sempre é derivado da entidade definidas na raiz do caminho do recurso. Por exemplo, se o caminho do recurso é `/Products(1)/Supplier`, API da Web procura por um controlador chamado `ProductsController`.
 

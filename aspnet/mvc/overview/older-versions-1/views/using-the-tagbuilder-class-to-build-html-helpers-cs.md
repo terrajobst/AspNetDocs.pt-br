@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: 3975a52f-bd15-4edd-8f3d-1df93672515b
 msc.legacyurl: /mvc/overview/older-versions-1/views/using-the-tagbuilder-class-to-build-html-helpers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3227560c1d0c48f7738e26c87a0dbb140c410eee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c8eaea9932a30c744b9a69861619ce9458b5a23a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410091"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130301"
 ---
 # <a name="using-the-tagbuilder-class-to-build-html-helpers-c"></a>Usando a classe TagBuilder para criar auxiliares de HTML (c#)
 
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Stephen Walther apresenta uma classe de utilitário útil na estrutura do ASP.NET MVC, a classe TagBuilder nomeada. Você pode usar a classe TagBuilder para criar facilmente as marcas HTML.
-
 
 A estrutura ASP.NET MVC inclui uma classe de utilitário útil nomeada a classe TagBuilder que você pode usar ao criar auxiliares HTML. A classe TagBuilder, como sugere o nome da classe, permite criar facilmente as marcas HTML. Neste breve tutorial, você é provido com uma visão geral da classe TagBuilder e você aprenderá a usar essa classe quando a criação de um auxiliar HTML simple que renderiza o HTML &lt;img&gt; marcas.
 
@@ -33,7 +32,6 @@ A classe TagBuilder está contida no namespace System.Web.Mvc. Ele tem cinco mé
 - MergeAttribute() - permite que você adicione atributos a uma marca. Há várias sobrecargas desse método.
 - SetInnerText() - permite que você defina o texto interno da marca. O texto interno é a codificação HTML automaticamente.
 - ToString () - permite que você renderize a marca. Você pode especificar se deseja criar uma marca normal, uma marca de início, uma marca de fim ou uma marca de fechamento automático.
-  
 
 A classe TagBuilder tem quatro propriedades importantes:
 
@@ -64,11 +62,9 @@ Depois de criar o auxiliar de imagem, você pode usar o auxiliar em suas exibiç
 
 [!code-aspx[Main](using-the-tagbuilder-class-to-build-html-helpers-cs/samples/sample2.aspx)]
 
-
 [![A caixa de diálogo Novo projeto](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.jpg)](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image1.png)
 
 **Figura 01**: Usando o auxiliar de imagem ([clique para exibir a imagem em tamanho normal](using-the-tagbuilder-class-to-build-html-helpers-cs/_static/image2.png))
-
 
 Observe que você deve importar o namespace associado com o auxiliar de imagem na parte superior do modo de exibição aspx. O auxiliar é importado com a seguinte diretiva:
 

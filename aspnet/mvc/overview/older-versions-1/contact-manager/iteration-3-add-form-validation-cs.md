@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 51a0d175-913b-43d8-95e3-840fb96ad1a9
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-3-add-form-validation-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 973878ef0afd62035b3fc840371e6c6223c8951c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: af2e86e820f60f0a3d8e3db8f78eba67ef63579a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413783"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123956"
 ---
 # <a name="iteration-3--add-form-validation-c"></a>Iteração #3 – adicionar validação de formulário (c#)
 
@@ -23,9 +23,7 @@ por [Microsoft](https://github.com/microsoft)
 
 > Na terceira iteração, podemos adicionar validação de formulário básico. Podemos impedir que pessoas enviando um formulário sem preencher os campos obrigatórios do formulário. Podemos também validar endereços de email e números de telefone.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (c#)
-  
 
 Esta série de tutoriais, vamos criar um aplicativo de gerenciamento de contatos inteiro do início ao fim. O aplicativo Gerenciador de contatos permite que você armazene informações de contato - nomes, números de telefone e endereços de email - para obter uma lista de pessoas.
 
@@ -45,16 +43,13 @@ Criamos o aplicativo ao longo de várias iterações. Com cada iteração, podem
 
 - Iteração #7 - adicionar a funcionalidade do Ajax. A sétima iteração, podemos melhorar a capacidade de resposta e o desempenho do nosso aplicativo, adicionando suporte para Ajax.
 
-
 ## <a name="this-iteration"></a>Essa iteração
 
 Nesta segunda iteração do aplicativo Contact Manager, podemos adicionar validação de formulário básico. Podemos impedir que pessoas enviando um contato sem inserir valores para os campos de formulário necessária. Podemos também validar números de telefone e endereços de email (veja a Figura 1).
 
-
 [![A caixa de diálogo Novo projeto](iteration-3-add-form-validation-cs/_static/image1.jpg)](iteration-3-add-form-validation-cs/_static/image1.png)
 
 **Figura 01**: Um formulário com a validação ([clique para exibir a imagem em tamanho normal](iteration-3-add-form-validation-cs/_static/image2.png))
-
 
 Essa iteração, adicionamos a lógica de validação diretamente para as ações do controlador. Em geral, isso não é a maneira recomendada para adicionar validação a um aplicativo ASP.NET MVC. Uma abordagem melhor é colocar uma lógica de validação de s do aplicativo em um separado [camada de serviço](http://martinfowler.com/eaaCatalog/serviceLayer.html). Na próxima iteração, podemos refatorar o aplicativo Gerenciador de contatos para tornar o aplicativo mais sustentável.
 
@@ -86,7 +81,6 @@ A classe de erro de validação de campo é usada para definir o estilo a saída
 > 
 > Você pode modificar as classes de folha de estilo descritas nesta seção para personalizar a aparência das mensagens de erro de validação.
 
-
 ## <a name="adding-validation-logic-to-the-create-action"></a>Adicionando lógica de validação para a ação de criar
 
 Agora, o modo de exibição criar nunca exibe mensagens de erro de validação porque não poderíamos ter escrito a lógica para gerar todas as mensagens. Para exibir mensagens de erro de validação, você precisará adicionar as mensagens de erro para o ModelState.
@@ -94,7 +88,6 @@ Agora, o modo de exibição criar nunca exibe mensagens de erro de validação p
 > [!NOTE] 
 > 
 > O método UpdateModel() adiciona mensagens de erro para o ModelState automaticamente quando ocorre um erro de atribuição do valor de um campo de formulário a uma propriedade. Por exemplo, se você tentar atribuir a cadeia de caracteres "apple" a uma propriedade de data de nascimento que aceita valores de data e hora, o método UpdateModel() adiciona um erro para o ModelState.
-
 
 O método Create () modificado na listagem 2 contém uma nova seção que valida as propriedades da classe Contact antes que o novo contato é inserido no banco de dados.
 
@@ -116,7 +109,6 @@ Depois que as regras de validação são executadas, a propriedade IsValid de Mo
 > [!NOTE] 
 > 
 > Eu tenho as expressões regulares para validar o telefone e endereço de email do repositório em expressões regulares [*http://regexlib.com*](http://regexlib.com)
-
 
 ## <a name="adding-validation-logic-to-the-edit-action"></a>Adicionar lógica de validação para a ação Editar
 

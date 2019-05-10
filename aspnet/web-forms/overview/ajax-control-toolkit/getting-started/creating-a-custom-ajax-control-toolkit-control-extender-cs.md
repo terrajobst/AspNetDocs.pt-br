@@ -8,19 +8,18 @@ ms.date: 05/12/2009
 ms.assetid: 96b56eca-a892-45a4-96b4-67e61178650a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/getting-started/creating-a-custom-ajax-control-toolkit-control-extender-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 4428ef0a6cec4c348bc48d069b990798508c21d4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7850e745f5985688c95fc7f649ccbb06b2f66e20
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391657"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127171"
 ---
 # <a name="creating-a-custom-ajax-control-toolkit-control-extender-c"></a>Criação de um extensor personalizado do AJAX Control Toolkit (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Extensores personalizados permitem personalizar e estender os recursos dos controles do ASP.NET sem precisar criar novas classes.
-
 
 Neste tutorial, você aprenderá como criar um extensor de controle personalizado do AJAX Control Toolkit. Podemos criar um simples, mas útil, novo extensor que altera o estado de um botão de desabilitado para habilitado quando você digita texto em uma caixa de texto. Depois de ler este tutorial, você poderá estender o ASP.NET AJAX Toolkit com seus próprio extensores de controle.
 
@@ -36,19 +35,15 @@ O extensor DisabledButton é chamado de nosso novo extensor de controle. Desse e
 
 Você vincular o extensor DisabledButton a um controle TextBox e Button. Antes de digitar qualquer texto, o botão está desabilitado e a caixa de texto e o botão ter esta aparência:
 
-
 [![](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image2.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image1.png)
 
 ([Clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image3.png))
 
-
 Depois de começar a digitar texto, o botão está habilitado e a caixa de texto e o botão ter esta aparência:
-
 
 [![](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image5.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image4.png)
 
 ([Clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image6.png))
-
 
 Para criar nosso extensor de controle, é preciso criar três arquivos a seguir:
 
@@ -78,11 +73,9 @@ Em seguida, precisamos criar o projeto de biblioteca de classes que contém o c�
 
 Depois de concluir essas etapas, a janela do Gerenciador de soluções deve ser semelhante a Figura 1.
 
-
 [![Solução de projeto de biblioteca de classe e de site](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image8.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image7.png)
 
 **Figura 01**: Solução de projeto de biblioteca de classe e de site ([clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image9.png))
-
 
 Em seguida, você precisará adicionar todas as referências de assembly necessárias para o projeto de biblioteca de classes:
 
@@ -99,11 +92,9 @@ Em seguida, você precisará adicionar todas as referências de assembly necess�
 
 Depois de concluir essas etapas, sua pasta de referências de projeto de biblioteca de classes deve ser semelhante a Figura 2.
 
-
 [![Pasta de referências com as referências necessárias](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image11.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image10.png)
 
 **Figura 02**: Pasta de referências com as referências necessárias ([clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image12.png))
-
 
 ## <a name="creating-the-custom-control-extender"></a>Criando o extensor do controle personalizado
 
@@ -122,9 +113,7 @@ Em seguida, observe que a classe inclui os seguintes dois atributos relacionados
 
 O atributo WebResource é usado para inserir o arquivo MyControlBehavior.js JavaScript no assembly quando o extensor personalizado é compilado. O atributo ClientScriptResource é usado para recuperar o script MyControlBehavior.js do assembly quando o extensor personalizado é usado em uma página da web.
 
-
 Em ordem para os atributos WebResource e ClientScriptResource funcione, você deve compilar o arquivo JavaScript como um recurso inserido. Selecione o arquivo na janela do Gerenciador de soluções, abra a folha de propriedades e atribua o valor *Embedded Resource* para o **Build Action** propriedade.
-
 
 Observe que o extensor do controle também inclui um atributo TargetControlType. Esse atributo é usado para especificar o tipo de controle que será estendido para o extensor do controle. No caso da listagem 1, o extensor do controle é usado para estender uma caixa de texto.
 
@@ -154,11 +143,9 @@ O método Initialize () associa um manipulador de evento keyup com o elemento de
 
 Lembre-se de que você deve compilar o arquivo JavaScript na listagem 3 como um recurso inserido. Selecione o arquivo na janela do Gerenciador de soluções, abra a folha de propriedades e atribua o valor *Embedded Resource* para o **Build Action** propriedade (veja a Figura 3). Essa opção está disponível no Visual Studio e Visual Web Developer.
 
-
 [![Adicionando um arquivo JavaScript como um recurso inserido](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image14.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image13.png)
 
 **Figura 03**: Adicionando um arquivo JavaScript como um recurso inserido ([clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image15.png))
-
 
 ## <a name="creating-the-custom-extender-designer"></a>Criando o Designer personalizado de extensão
 
@@ -183,11 +170,9 @@ Agora que podemos terminar de criar o extensor do controle DisabledButton, é ho
 
 Depois de concluir essas etapas, o extensor do controle DisabledButton deve aparecer na caixa de ferramentas (veja a Figura 4).
 
-
 [![DisabledButton na caixa de ferramentas](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image17.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image16.png)
 
 **Figura 04**: DisabledButton na caixa de ferramentas ([clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image18.png))
-
 
 Em seguida, precisamos criar uma nova página ASP.NET. Siga estas etapas:
 
@@ -196,7 +181,6 @@ Em seguida, precisamos criar uma nova página ASP.NET. Siga estas etapas:
 3. Arraste um controle de caixa de texto para a página.
 4. Arraste um controle de botão para a página.
 5. Na janela Propriedades, altere a propriedade ID do botão para o valor <em>btnSave</em> e a propriedade de texto como o valor *salve\**.
-  
 
 Criamos uma página com um controle TextBox do ASP.NET e o botão padrão.
 
@@ -205,11 +189,9 @@ Em seguida, precisamos estender o controle de caixa de texto com o extensor Disa
 1. Selecione o **adicionar extensor** opção para abrir a caixa de diálogo do Assistente de extensor de tarefa (consulte a Figura 5). Observe que a caixa de diálogo inclui nosso extensor DisabledButton personalizado.
 2. Selecione o extensor DisabledButton e clique no **Okey** botão.
 
-
 [![A caixa de diálogo do Assistente de extensor](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image20.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image19.png)
 
 **Figura 05**: A caixa de diálogo do Assistente de extensor ([clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image21.png))
-
 
 Por fim, podemos pode definir as propriedades do extensor DisabledButton. Você pode modificar as propriedades do extensor DisabledButton modificando as propriedades do controle de caixa de texto:
 
@@ -217,19 +199,15 @@ Por fim, podemos pode definir as propriedades do extensor DisabledButton. Você 
 2. Na janela Propriedades, expanda o nó de extensores (veja a Figura 6).
 3. Atribua o valor *salve* para a propriedade DisabledText e o valor *btnSave* à propriedade TargetButtonID.
 
-
 [![Definindo propriedades do extensor](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image23.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image22.png)
 
 **Figura 06**: Definindo propriedades do extensor ([clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image24.png))
 
-
 Quando você executa a página (pressionando F5), o controle de botão é inicialmente desabilitado. Assim que você começar a inserir texto na caixa de texto, o botão de controle está habilitado (veja a Figura 7).
-
 
 [![O extensor DisabledButton em ação](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image26.png)](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image25.png)
 
 **Figura 07**: O extensor DisabledButton em ação ([clique para exibir a imagem em tamanho normal](creating-a-custom-ajax-control-toolkit-control-extender-cs/_static/image27.png))
-
 
 ## <a name="summary"></a>Resumo
 

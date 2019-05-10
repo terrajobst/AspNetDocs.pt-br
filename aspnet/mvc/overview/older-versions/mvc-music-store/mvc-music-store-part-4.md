@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: ab55ca81-ab9b-44a0-8700-dc6da2599335
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-4
 msc.type: authoredcontent
-ms.openlocfilehash: 40fec3a2ef4ee8d5e4abe4be4dfa144720a88a41
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 402be340f1ea3344675e7b859cea8c5130cfc8ee
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59391176"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129646"
 ---
 # <a name="part-4-models-and-data-access"></a>Parte 4: Modelos e Acesso a Dados
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.
 > 
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 4 aborda o acesso a dados e modelos.
-
 
 Até agora, podemos tiver apenas foi passando "dados fictícios" de nossos controladores para nossos modelos de exibição. Agora estamos prontos para ligar a um banco de dados real. Neste tutorial falaremos sobre como usar o SQL Server Compact Edition (geralmente chamado de SQL CE) como nosso mecanismo de banco de dados. SQL CE é um banco de dados de arquivo incorporado, gratuito, com base em que não requer qualquer instalação ou configuração, o que torna muito conveniente para o desenvolvimento local.
 

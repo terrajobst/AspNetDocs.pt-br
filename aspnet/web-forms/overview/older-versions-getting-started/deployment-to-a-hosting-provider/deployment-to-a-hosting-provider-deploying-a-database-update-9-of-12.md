@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a8d776af-4735-4612-87f6-9f326587f2d3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 3bae4d72c8b653a5cda500b05dde50c6a7201589
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3a5600aff3ba63cb7046e42d0bfd587c4181d99e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413107"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130278"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-database-update---9-of-12"></a>Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Implantando uma atualização de banco de dados - 9 de 12
 
@@ -24,7 +24,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET projeto de aplicativo web que inclui um banco de dados do SQL Server Compact usando o Visual Studio 2012 RC ou Visual Studio Express 2012 RC para Web. Você também pode usar o Visual Studio 2010 se você instalar a atualização de publicação na Web. Para obter uma introdução à série, consulte [o primeiro tutorial na série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Para obter um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar as edições do SQL Server que não seja o SQL Server Compact e mostra como implantar aplicativos de Web do serviço de aplicativo do Azure, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -88,7 +87,6 @@ Agora, você pode implantar para produção. A única diferença é que você us
 
 > [!NOTE]
 > Enquanto seu aplicativo está em uso no ambiente de produção deve implementar um plano de backup. Ou seja, você deve ser periodicamente copiando o *School-Prod.sdf* e *Prod.sdf aspnet* arquivos da produção de site para um local de armazenamento seguro e você deve manter várias gerações de tais backups. Quando você atualiza o banco de dados, você deve fazer uma cópia de backup de imediatamente antes da alteração. Em seguida, se você comete um erro e não Descubra até depois que você implantou em produção, você ainda poderá recuperar o banco de dados para o estado que estava antes de ele se tornou corrompido.
-
 
 Quando o Visual Studio abre a URL da home page no navegador, o *app\_offline.htm* página é exibida. Depois de excluir o *app\_offline.htm* arquivo, você pode navegar para a home page novamente para verificar se a atualização foi implantada com êxito.
 

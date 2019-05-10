@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 6331e02e-c465-4cdf-bd3f-f07680c289d6
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-client-side-confirmation-when-deleting-vb
 msc.type: authoredcontent
-ms.openlocfilehash: fc5c99ce6c5da7d004b95462a3338aefbed31b36
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 94c84a6d40b594bbab16ca1778c545389b40f595
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388699"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126095"
 ---
 # <a name="adding-client-side-confirmation-when-deleting-vb"></a>Adicionar confirmação do lado do cliente ao excluir (VB)
 
@@ -23,7 +23,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > As interfaces que criamos até agora, um usuário pode excluir acidentalmente dados clicando no botão Excluir quando pretendiam clicar no botão Editar. Neste tutorial, adicionaremos uma caixa de diálogo de confirmação do lado do cliente que é exibido quando o botão Excluir é clicado.
 
-
 ## <a name="introduction"></a>Introdução
 
 Sobre os últimos tutoriais de vários nós ve viu como usar nossa arquitetura de aplicativo, ObjectDataSource e os dados de controles da Web em conjunto para fornecer a inserção, edição e exclusão de recursos. A exclusão de interfaces podemos ve examinada até agora foram composto de uma exclusão de botão que, quando clicado, faz com que um postback e invoca o s ObjectDataSource `Delete()` método. O `Delete()` método, em seguida, invoca o método configurado da camada de lógica de negócios, que propaga a chamada para baixo até a camada de acesso a dados, o valor real de emissão `DELETE` instrução no banco de dados.
@@ -32,11 +31,9 @@ Embora essa interface do usuário permite que os visitantes excluir registros pe
 
 O JavaScript `confirm(string)` função exibe seu parâmetro de entrada de cadeia de caracteres como o texto dentro de uma caixa de diálogo modal que vem equipado com dois botões - Okey e Cancelar (veja a Figura 1). O `confirm(string)` função retorna um valor booliano, dependendo de qual botão é clicado (`true`, se o usuário clica em Okey, e `false` clicando em ' Cancelar ').
 
-
 ![O método de confirm(string) de JavaScript exibe uma Modal Messagebox do lado do cliente](adding-client-side-confirmation-when-deleting-vb/_static/image1.png)
 
 **Figura 1**: O JavaScript `confirm(string)` método exibe uma caixa de mensagem Modal, no lado do cliente
-
 
 Durante o envio de um formulário, se o valor de `false` é retornado de um manipulador de eventos do lado do cliente, em seguida, o envio do formulário é cancelado. Usando esse recurso, podemos ter exclusão botão s lado do cliente `onclick` manipulador de eventos retornar o valor de uma chamada para `confirm("Are you sure you want to delete this product?")`. Se o usuário clicar em Cancelar, `confirm(string)` retornará false e, portanto, fazendo com que o envio do formulário Cancelar. Com nenhum postback, o produto cuja exclusão foi clicada não será excluído. Se, no entanto, o usuário clica Okey na caixa de diálogo de confirmação, o postback continua sem interrupções e o produto será excluído. Consultar [s usando JavaScript `confirm()` método de envio do formulário de controle](http://www.webreference.com/programming/javascript/confirm/) para obter mais informações sobre essa técnica.
 
@@ -45,13 +42,11 @@ Adicionar o script do lado do cliente necessário um pouco diferente se usando m
 > [!NOTE]
 > Usando técnicas de confirmação do lado do cliente, como aquelas discutidas neste tutorial pressupõe que seus usuários estão visitando com navegadores que oferecem suporte a JavaScript e que tenham JavaScript habilitado. Se qualquer uma dessas suposições não forem verdadeira para um usuário específico, clicando no botão Excluir imediatamente causará um postback (não exibir uma messagebox de confirmar).
 
-
 ## <a name="step-1-creating-a-formview-that-supports-deletion"></a>Etapa 1: Criando um FormView que dá suporte à exclusão
 
 Comece adicionando um FormView para o `ConfirmationOnDelete.aspx` página no `EditInsertDelete` pasta, associação a um novo ObjectDataSource que extrai as informações do produto por meio de `ProductsBLL` classe s `GetProducts()` método. Também configurar o ObjectDataSource para que o `ProductsBLL` classe s `DeleteProduct(productID)` método é mapeado para o s ObjectDataSource `Delete()` método; Certifique-se de que as guias INSERT e UPDATE listas suspensas são definidas como (nenhum). Por fim, marque a caixa de seleção Habilitar paginação na marca inteligente s FormView.
 
 Após essas etapas, o novo ObjectDataSource s marcação declarativa ficará semelhante ao seguinte:
-
 
 [!code-aspx[Main](adding-client-side-confirmation-when-deleting-vb/samples/sample1.aspx)]
 
@@ -59,23 +54,19 @@ Como em nossos exemplos anteriores que não usou a simultaneidade otimista, rese
 
 Uma vez que ele foi associado a um controle ObjectDataSource que dá suporte somente a exclusão, o s FormView `ItemTemplate` oferece apenas o botão de exclusão, que não tem os botões novo e atualização. No entanto, FormView s marcação declarativa, inclui um supérfluo `EditItemTemplate` e `InsertItemTemplate`, que pode ser removido. Dedique uns momentos para personalizar o `ItemTemplate` é assim que mostra os campos de dados de apenas um subconjunto do produto. Eu ve configurado meu para mostrar o nome do produto s em um `<h3>` título acima seus nomes de categoria e fornecedor (juntamente com o botão Excluir).
 
-
 [!code-aspx[Main](adding-client-side-confirmation-when-deleting-vb/samples/sample2.aspx)]
 
 Com essas alterações, temos uma página da web totalmente funcional que permite que um usuário alternar entre os produtos de uma vez, com a capacidade de excluir um produto, simplesmente clicando no botão Excluir. Figura 2 mostra uma captura de tela de nosso progresso até o momento quando visualizado por meio de um navegador.
 
-
 [![FormView mostra informações sobre um único produto](adding-client-side-confirmation-when-deleting-vb/_static/image3.png)](adding-client-side-confirmation-when-deleting-vb/_static/image2.png)
 
 **Figura 2**: O FormView mostra informações sobre um único produto ([clique para exibir a imagem em tamanho normal](adding-client-side-confirmation-when-deleting-vb/_static/image4.png))
-
 
 ## <a name="step-2-calling-the-confirmstring-function-from-the-delete-buttons-client-side-onclick-event"></a>Etapa 2: Chamando a função confirm(string) da excluir botões onclick de cliente eventos
 
 FormView criado, a etapa final é configurar o botão excluir tais que, quando ele s clicado pelo visitante, o JavaScript `confirm(string)` função é invocada. Adicionar script do lado do cliente a um botão, LinkButton ou ImageButton s lado do cliente `onclick` evento pode ser feito por meio do uso do `OnClientClick property`, que é nova para o ASP.NET 2.0. Como queremos ter o valor da `confirm(string)` simplesmente retornado da função, defina essa propriedade como: `return confirm('Are you certain that you want to delete this product?');`
 
 Após essa alteração a sintaxe declarativa do LinkButton excluir s deve ser semelhante:
-
 
 [!code-aspx[Main](adding-client-side-confirmation-when-deleting-vb/samples/sample3.aspx)]
 
@@ -84,11 +75,9 @@ Tudo que s é a ele! Figura 3 mostra uma captura de tela dessa confirmação em 
 > [!NOTE]
 > A cadeia de caracteres passada para o `confirm(string)` função JavaScript é delimitada com apóstrofos (em vez de aspas). No JavaScript, cadeias de caracteres podem ser delimitadas usando qualquer um dos caracteres. Usamos apóstrofos aqui para que os delimitadores para a cadeia de caracteres passada para `confirm(string)` não introduzem ambiguidade com os delimitadores usados para o `OnClientClick` valor da propriedade.
 
-
 [![Uma confirmação é agora exibido ao clicar no botão Excluir](adding-client-side-confirmation-when-deleting-vb/_static/image6.png)](adding-client-side-confirmation-when-deleting-vb/_static/image5.png)
 
 **Figura 3**: Uma confirmação é agora exibido ao clicar no botão Excluir ([clique para exibir a imagem em tamanho normal](adding-client-side-confirmation-when-deleting-vb/_static/image7.png))
-
 
 ## <a name="step-3-configuring-the-onclientclick-property-for-the-delete-button-in-a-commandfield"></a>Etapa 3: Configurando a propriedade OnClientClick do botão Delete em um CommandField
 
@@ -97,21 +86,17 @@ Ao trabalhar com um botão, LinkButton ou ImageButton diretamente em um modelo, 
 > [!NOTE]
 > Ao definir o botão excluir s `OnClientClick` propriedade no respectivo `DataBound` manipulador de eventos, temos acesso a dados foi associados ao registro atual. Isso significa que podemos estender a mensagem de confirmação para incluir detalhes sobre o registro específico, como "Tem certeza de que deseja excluir o produto Chai?" Tal personalização também é possível em modelos usando a sintaxe de associação de dados.
 
-
 A configuração de prática de `OnClientClick` propriedade para a exclusão correspondentes em um CommandField, s permitem que adicione um controle GridView à página. Configure este GridView para usar o controle ObjectDataSource mesmo que usa o FormView. Também limite o s GridView BoundFields para incluir apenas o nome do produto s, categoria e fornecedor. Por fim, marque a caixa de seleção Habilitar exclusão da marca inteligente s GridView. Isso adicionará um CommandField s o GridView `Columns` coleção com seus `ShowDeleteButton` propriedade definida como `true`.
 
 Depois de fazer essas alterações, sua marcação declarativa do GridView s deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](adding-client-side-confirmation-when-deleting-vb/samples/sample4.aspx)]
 
 O CommandField contém uma única instância de excluir LinkButton que pode ser acessada por meio de programação de s GridView `RowDataBound` manipulador de eventos. Quando referenciado, podemos definir seu `OnClientClick` propriedade adequadamente. Crie um manipulador de eventos para o `RowDataBound` eventos usando o seguinte código:
 
-
 [!code-vb[Main](adding-client-side-confirmation-when-deleting-vb/samples/sample5.vb)]
 
 Esse manipulador de eventos funciona com linhas de dados (aquelas que terá o botão de exclusão) e começa fazendo referência programaticamente no botão Excluir. Em geral, use o seguinte padrão:
-
 
 [!code-vb[Main](adding-client-side-confirmation-when-deleting-vb/samples/sample6.vb)]
 
@@ -126,18 +111,15 @@ Com essas alterações completas, clicando em um botão Excluir no GridView most
 > [!NOTE]
 > Essa técnica também pode ser usada para acessar programaticamente o botão Excluir no CommandField em um DetailsView. Para DetailsView, no entanto, você d cria um manipulador de eventos para o `DataBound` evento, como DetailsView não tem um `RowDataBound` eventos.
 
-
 [![Clicar no botão de exclusão de s GridView exibe uma caixa de diálogo de confirmação personalizado](adding-client-side-confirmation-when-deleting-vb/_static/image9.png)](adding-client-side-confirmation-when-deleting-vb/_static/image8.png)
 
 **Figura 4**: Clicar o botão de exclusão do s GridView exibe uma caixa de diálogo de confirmação personalizado ([clique para exibir a imagem em tamanho normal](adding-client-side-confirmation-when-deleting-vb/_static/image10.png))
-
 
 ## <a name="using-templatefields"></a>Usando TemplateFields
 
 Uma das desvantagens do CommandField é que seus botões devem ser acessados por meio de indexação e que o objeto resultante deve ser convertido para o tipo de botão apropriado (Button, LinkButton ou ImageButton). Usando tipos de embutido em código e "números mágicos" convida problemas que não podem ser descobertos até o tempo de execução. Por exemplo, se você ou outro desenvolvedor, adiciona novos botões a CommandField em algum momento no futuro (como um botão Editar) ou alterações a `ButtonType` propriedade, o código existente ainda será compilado sem erros, mas visitando a página pode causar uma exceção ou comportamento inesperado, dependendo de como seu código foi escrito e quais alterações foram feitas.
 
 Uma abordagem alternativa é converter o GridView e DetailsView s CommandFields em TemplateFields. Isso irá gerar um TemplateField com um `ItemTemplate` que tem um LinkButton (ou botão ou ImageButton) para cada botão no CommandField. Esses botões `OnClientClick` propriedades podem ser atribuídas de forma declarativa, conforme é visto com FormView ou podem ser acessados por meio de programação no respectivo `DataBound` manipulador de eventos usando o seguinte padrão:
-
 
 [!code-vb[Main](adding-client-side-confirmation-when-deleting-vb/samples/sample7.vb)]
 

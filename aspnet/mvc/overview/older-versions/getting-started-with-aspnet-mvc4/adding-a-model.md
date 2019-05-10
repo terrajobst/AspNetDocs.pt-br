@@ -8,12 +8,12 @@ ms.date: 08/28/2012
 ms.assetid: 53db72da-e0b9-44d9-b60b-6e6988c00b28
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-model
 msc.type: authoredcontent
-ms.openlocfilehash: 2d0f3813c0c8df0fa7d13ca601f172bc370efe78
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5b26b79de99763bd41d0c3471a666cd6bb4d2d75
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59379944"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129905"
 ---
 # <a name="adding-a-model"></a>Adicionar um modelo
 
@@ -21,7 +21,6 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > > [!NOTE]
 > > Uma versão atualizada deste tutorial está disponível [aqui](../../getting-started/introduction/getting-started.md) que usa o ASP.NET MVC 5 e Visual Studio 2013. É mais seguro e muito mais simples a seguir e apresenta mais recursos.
-
 
 Nesta seção, você adicionará algumas classes para o gerenciamento de filmes em um banco de dados. Essas classes serão a &quot;modelo&quot; faz parte do aplicativo ASP.NET MVC.
 

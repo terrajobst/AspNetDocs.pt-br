@@ -8,19 +8,18 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: de65e01b888d9ed15da3903f086b40c49b32b9fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 62050f561440a2c0fbbe91ec49fb1f9e30885e9f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402408"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130358"
 ---
 # <a name="aspnet-mvc-4-mobile-features"></a>Recursos móveis do ASP.NET MVC 4
 
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Agora há uma versão do MVC 5 deste tutorial com exemplos de código em [implantar um aplicativo da Web do ASP.NET MVC 5 móveis nos Sites do Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
-
 
 Este tutorial ensinará os fundamentos de como trabalhar com recursos móveis em um aplicativo Web do ASP.NET MVC 4. Para este tutorial, você pode usar [Visual Studio Express 2012](https://www.microsoft.com/visualstudio/11/products/express) ou o Visual Web Developer 2010 Express Service Pack 1 (&quot;Visual Web Developer ou VWD&quot;). Se você já tiver isso, você pode usar a versão professional do Visual Studio.
 
@@ -214,7 +213,6 @@ O código a seguir mostra todo *global. asax* arquivo.
 > [!NOTE]
 > Se você estiver usando o Internet Explorer 9 e você não vir as `BundleMobileConfig` linha acima no realce amarelo, clique em de [botão de exibição de compatibilidade](https://windows.microsoft.com/windows7/How-to-use-Compatibility-View-in-Internet-Explorer-9)![imagem do botão de exibição de compatibilidade (desativado)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg " Imagem do botão de exibição de compatibilidade (desativado)") no IE para alterar o ícone de uma estrutura de tópicos ![imagem do botão de exibição de compatibilidade (desativado)](http://res2.windows.microsoft.com/resbox/en/Windows 7/main/f080e77f-9b66-4ac8-9af0-803c4f8a859c_15.jpg "imagem do botão de exibição de compatibilidade (desativado) ") para uma cor sólida ![imagem do botão de exibição de compatibilidade (on)](http://res1.windows.microsoft.com/resbox/en/Windows 7/main/156805ff-3130-481b-a12d-4d3a96470f36_14.jpg "imagem do botão de exibição de compatibilidade (on)"). Como alternativa, você pode exibir este tutorial no FireFox ou Chrome.
 
-
 Abra o *MvcMobile\Views\Shared\\cshtml* arquivo e adicione a marcação a seguir diretamente após o `Html.Partial` chamar:
 
 [!code-cshtml[Main](aspnet-mvc-4-mobile-features/samples/sample12.cshtml)]
@@ -229,7 +227,6 @@ Compilar o aplicativo e no seu emulador de navegador móvel, navegue até a *All
 
 > [!NOTE]
 > Você pode depurar o código específico do móvel por [definindo a cadeia de caracteres de agente do usuário](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/) para o Internet Explorer ou Chrome para iPhone e, em seguida, usando as ferramentas de desenvolvedor F-12. Se o navegador móvel não exibir o **página inicial**, **alto-falante**, **marca**, e **data** links como botões, as referências ao jQuery Mobile scripts e arquivos CSS provavelmente não estão corretos.
-
 
 Além das alterações de estilo, você verá **exibição do celular** e um link que permite que você alternar do modo de exibição móvel para a exibição da área de trabalho. Escolha o **modo de exibição da área de trabalho** link e o modo de exibição da área de trabalho é exibida.
 
@@ -251,7 +248,6 @@ Atualizar o *AllTags* exibir no navegador móvel. Agora você pode navegar entre
 > e adicionar o título para o *Views\Shared\\layout. cshtml* arquivo.
 >
 > [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample16.html)]
-
 
 Navegue até a *AllTags* página em um navegador da área de trabalho. O widget do alternador de exibição não é exibido em um navegador da área de trabalho porque ele é adicionado somente para a página de layout para dispositivos móveis. Posteriormente no tutorial, você verá como é possível adicionar o widget do alternador de exibição para a exibição da área de trabalho.
 

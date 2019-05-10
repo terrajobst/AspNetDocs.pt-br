@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 84c7baca-1c54-4c44-8f52-4282122d6acb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 86781a1f46ce0c01a5d70b1f0cf8a81f3f96a032
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 15c9d4dcb9e2c6b9f6adf54d65d15737b32cca3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405918"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129738"
 ---
 # <a name="aspnet-mvc-4-dependency-injection"></a>Injeção de dependência do ASP.NET MVC 4
 
@@ -41,7 +41,7 @@ O padrão de injeção de dependência é uma implementação específica de inv
 <a id="The_Dependency_Injection_DI_Design_Pattern"></a>
 ### <a name="the-dependency-injection-di-design-pattern"></a>O padrão de Design de DI (injeção) de dependência
 
-Em um alto nível, o objetivo da injeção de dependência é que uma classe de cliente (por exemplo, *o jogador*) precisa de algo que satisfaz uma interface (por exemplo, *IClub*). Não importa o que é o tipo concreto (por exemplo, *WedgeClub WoodClub, IronClub,* ou *PutterClub*), ele quer alguém para lidar com isso (por exemplo, uma boa *caddy*). O resolvedor de dependência no ASP.NET MVC pode permitir que você registre sua lógica de dependência em outro lugar (por exemplo, um contêiner ou uma *bolsa para tacos*).
+Em um alto nível, o objetivo da injeção de dependência é que uma classe de cliente (por exemplo, *o jogador*) precisa de algo que satisfaz uma interface (por exemplo, *IClub*). Não importa o que é o tipo concreto (por exemplo, *WedgeClub WoodClub, IronClub,* ou *PutterClub*), ele quer alguém para lidar com isso (por exemplo, uma boa *caddy*). O resolvedor de dependência no ASP.NET MVC pode permitir que você registre sua lógica de dependência em outro lugar (por exemplo, um contêiner ou um *recipiente de paus*).
 
 ![Diagrama de injeção de dependência](aspnet-mvc-4-dependency-injection/_static/image2.png "ilustração de injeção de dependência")
 
@@ -57,7 +57,6 @@ As vantagens de usar o padrão de injeção de dependência e inversão de contr
 > [!NOTE]
 > Injeção de dependência às vezes é comparada com o padrão de Design fábrica abstrata, mas há uma pequena diferença entre as duas abordagens. Injeção de dependência tem uma estrutura trabalhando por trás para resolver as dependências, chamando as fábricas e os serviços registrados.
 
-
 Agora que você entende o padrão de injeção de dependência, você aprenderá em todo este laboratório para aplicá-la no ASP.NET MVC 4. Você começará a usar a injeção de dependência na **controladores** para incluir um serviço de acesso do banco de dados. Em seguida, você aplicará a injeção de dependência para o **modos de exibição** para consumir um serviço e mostram informações. Por fim, você estenderá a DI para filtros do ASP.NET MVC 4, injetando um filtro de ação personalizada na solução.
 
 Neste laboratório prático, você aprenderá como:
@@ -69,7 +68,6 @@ Neste laboratório prático, você aprenderá como:
 
 > [!NOTE]
 > Este laboratório é usando o pacote do NuGet Unity.Mvc3 para resolução de dependência, mas é possível adaptar qualquer estrutura de injeção de dependência para trabalhar com o ASP.NET MVC 4.
-
 
 <a id="Prerequisites"></a>
 
@@ -107,7 +105,6 @@ Este laboratório prático é composto pelos seguintes exercícios:
 > [!NOTE]
 > Cada exercício é acompanhado por um **final** pasta que contém a solução resultante, você deve obter depois de concluir os exercícios. Você pode usar essa solução como um guia se você precisar trabalhar com os exercícios de ajuda adicional.
 
-
 Tempo estimado para concluir este laboratório: **30 minutos**.
 
 <a id="Exercise1"></a>
@@ -137,12 +134,10 @@ Abaixo disso, você encontrará os **StoreController** implementação tem uma d
 > 
 > Para resolver a dependência, o controlador deve ser criado por uma fábrica abstrata (uma classe que retorna qualquer objeto do tipo especificado).
 
-
 [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample2.cs)]
 
 > [!NOTE]
 > Você receberá um erro quando a classe tenta criar a StoreController sem enviar o objeto de serviço, pois não há nenhum construtor sem parâmetros declarado.
-
 
 <a id="Ex1Task1"></a>
 
@@ -181,7 +176,6 @@ Nesta tarefa, você incluirá **Unity.Mvc3** pacote do NuGet para a solução.
 > Pacote de Unity.Mvc3 foi designado para ASP.NET MVC 3, mas ele é totalmente compatível com o ASP.NET MVC 4.
 > 
 > O Unity é um contêiner de injeção de dependência leve e extensível com suporte opcional por instância e interceptação de tipo. Ele é um contêiner de finalidade geral para uso em qualquer tipo de aplicativo do .NET. Ele fornece todos os recursos comuns encontrados em mecanismos de injeção de dependência incluindo: criação de objetos, a abstração de requisitos com a especificação de dependências em tempo de execução e a flexibilidade, adiando a configuração de componente para o contêiner.
-
 
 1. Instale **Unity.Mvc3** pacote do NuGet na **MvcMusicStore** projeto. Para fazer isso, abra o **Package Manager Console** partir **exibição** | **Other Windows**.
 2. Execute o seguinte comando.
@@ -310,7 +304,6 @@ Na tarefa anterior, que injetou uma nova dependência dentro de um modo de exibi
 > 
 > 
 > [!code-csharp[Main](aspnet-mvc-4-dependency-injection/samples/sample11.cs)]
-
 
 1. Criar o /**fábricas** pasta na pasta raiz do projeto.
 2. Incluir **CustomViewPageActivator.cs** à sua solução de **/fontes/ativos/** para **fábricas** pasta. Para fazer isso, clique com botão direito do **/Factories** pasta, selecione **adicionar | Item existente** e, em seguida, selecione **CustomViewPageActivator.cs**. Essa classe implementa a **IViewPageActivator** interface para manter o contêiner do Unity.

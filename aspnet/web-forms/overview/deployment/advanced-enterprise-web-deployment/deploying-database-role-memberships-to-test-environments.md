@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 9b2af539-7ad9-47aa-b66e-873bd9906e79
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/deploying-database-role-memberships-to-test-environments
 msc.type: authoredcontent
-ms.openlocfilehash: fd0914ed62a280fea290b9f1b150fc25c8ed6d40
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a15f5bf5f659d151e91ef9e53c5ad55bcd8e2b01
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385326"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130404"
 ---
 # <a name="deploying-database-role-memberships-to-test-environments"></a>Implantação das associações de função de banco de dados em ambientes de teste
 
@@ -32,7 +32,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > Nesse cenário, geralmente é útil para automaticamente criar usuários de banco de dados e atribuir as associações de função de banco de dados como parte do processo de implantação.
 > 
 > O principal fator é que essa operação precisa ser condicional com base no ambiente de destino. Se você estiver implantando para um preparo ou de um ambiente de produção, você deseja ignorar a operação. Se você estiver implantando para um desenvolvedor ou ambiente de teste, você deseja implantar as associações de função sem intervenção adicional. Este tópico descreve uma abordagem que você pode usar para enfrentar esse desafio.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -79,13 +78,10 @@ Você pode criar um script Transact-SQL em uma grande quantidade de diferentes m
 
 O ideal é que você executaria os scripts Transact-SQL necessários como parte de um script de pós-implantação quando você implanta seu projeto de banco de dados. No entanto, os scripts de pós-implantação não permitem que você execute lógica condicionalmente com base em configurações da solução ou as propriedades de compilação. A alternativa é executar seus scripts SQL diretamente do arquivo de projeto MSBuild, criando uma **destino** elemento que executa um comando sqlcmd.exe. Você pode usar esse comando para executar o script no banco de dados de destino:
 
-
 [!code-console[Main](deploying-database-role-memberships-to-test-environments/samples/sample2.cmd)]
-
 
 > [!NOTE]
 > Para obter mais informações sobre opções de linha de comando sqlcmd, consulte [utilitário sqlcmd](https://msdn.microsoft.com/library/ms162773.aspx).
-
 
 Antes de você incorporar este comando em um destino do MSBuild, você precisa considerar sob quais condições você deseja que o script seja executado:
 
@@ -100,15 +96,11 @@ Se você estiver usando a abordagem de arquivo de projeto divisão descrita [No�
 
 No arquivo de projeto específicas do ambiente, você precisa definir uma propriedade booleana que permite que o usuário especifique se deseja implantar as associações de função, o nome do banco de dados de destino e o nome do servidor de banco de dados.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample3.xml)]
-
 
 No arquivo de projeto universal, você precisa fornecer o local do sqlcmd executável e o local do script SQL que você deseja executar. Essas propriedades permanecerá o mesmo, independentemente do ambiente de destino. Você também precisará criar um destino do MSBuild para executar o comando sqlcmd.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample4.xml)]
-
 
 Observe que você adiciona o local do sqlcmd executável como uma propriedade estática, como isso pode ser útil para outros destinos. Por outro lado, você define o local do seu script SQL e a sintaxe do comando sqlcmd como propriedades dinâmicas dentro do destino, pois elas não serão necessárias antes do destino é executado. Nesse caso, o **DeployTestDBPermissions** destino será executado somente se essas condições forem atendidas:
 
@@ -117,9 +109,7 @@ Observe que você adiciona o local do sqlcmd executável como uma propriedade es
 
 Por fim, não se esqueça de invocar o destino. No *Publish.proj* arquivo, você pode fazer isso adicionando o destino para a lista de dependências para o padrão **FullPublish** destino. Você precisa garantir que o **DeployTestDBPermissions** destino não é executado até que o **PublishDbPackages** destino foi executado.
 
-
 [!code-xml[Main](deploying-database-role-memberships-to-test-environments/samples/sample5.xml)]
-
 
 ## <a name="conclusion"></a>Conclusão
 

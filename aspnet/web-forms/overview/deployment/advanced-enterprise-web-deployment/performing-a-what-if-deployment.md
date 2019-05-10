@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: c711b453-01ac-4e65-a48c-93d99bf22e58
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/performing-a-what-if-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: a222aa6bf52ee72e6a0f4ac5503b4b4f78d294fb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73a0e038cc0d4ebae0ffc8ed3fd2de4c9dad673c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414316"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127073"
 ---
 # <a name="performing-a-what-if-deployment"></a>Execução de uma implantação "What If"
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve como executar "what if" (ou simulados) usando a ferramenta de implantação da Web de serviços de informações da Internet (IIS) (implantação da Web) e VSDBCMD de implantações. Isso lhe permite determinar os efeitos de sua lógica de implantação em um ambiente de destino em particular antes de realmente implantar seu aplicativo.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -42,31 +41,23 @@ Conforme descrito em [Implantando pacotes da Web](../web-deployment-in-the-enter
 
 Se você estiver usando MSDeploy.exe diretamente, você pode executar uma implantação "what if", adicionando a **– whatif** sinalizador ao seu comando. Por exemplo, para avaliar o que aconteceria se você implantar o pacote de ContactManager.Mvc.zip em um ambiente de preparo, o comando MSDeploy deve ter esta aparência:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample1.cmd)]
-
 
 Quando estiver satisfeito com os resultados da implantação "what if", você pode remover o **– whatif** sinalizador para executar uma implantação em tempo real.
 
 > [!NOTE]
 > Para obter mais informações sobre opções de linha de comando para MSDeploy.exe, consulte [Web implantar as configurações de operação](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
-
 Se você estiver usando o *. Deploy. cmd* arquivo, você pode executar uma implantação "what if", incluindo o **/t** sinalizador sinalizador (modo de avaliação), em vez da **/y** sinalizador ("Sim", ou o modo de atualização) no seu comando. Por exemplo, para avaliar o que aconteceria se você implantar o pacote de ContactManager.Mvc.zip executando o *. Deploy. cmd* arquivo, seu comando deve ter esta aparência:
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample2.cmd)]
 
-
 Quando estiver satisfeito com os resultados da implantação do "modo de avaliação", você pode substituir a **/t** sinalizador com um **/y** sinalizador para executar uma implantação em tempo real:
-
 
 [!code-console[Main](performing-a-what-if-deployment/samples/sample3.cmd)]
 
-
 > [!NOTE]
 > Para obter mais informações sobre opções de linha de comando para *. Deploy. cmd* arquivos, consulte [como: Instalar um pacote de implantação usando o arquivo Deploy. cmd](https://msdn.microsoft.com/library/ff356104.aspx). Se você executar o *. Deploy. cmd* arquivo sem especificar quaisquer sinalizadores, o prompt de comando exibirá uma lista de sinalizadores disponíveis.
-
 
 ## <a name="performing-a-what-if-deployment-for-databases"></a>Executando uma implantação "What If" para bancos de dados
 
@@ -80,12 +71,9 @@ Quando você usa VSDBCMD na **Deploy** modo, você pode usar o **/dd** (ou **/De
 > [!NOTE]
 > Se você estiver implantando um arquivo .deploymanifest em vez de um arquivo .dbschema, o comportamento do **/dd** switch é muito mais complicado. Essencialmente, VSDBCMD ignorará o valor da **/dd** mudar se o arquivo .deploymanifest inclui um **DeployToDatabase** elemento com um valor de **verdadeiro**. [Implantação de projetos de banco de dados](../web-deployment-in-the-enterprise/deploying-database-projects.md) descreve esse comportamento por completo.
 
-
 Por exemplo, para gerar um script de implantação para o **ContactManager** banco de dados sem realmente implantar o banco de dados, seu comando VSDBCMD deve ter esta aparência:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample4.cmd)]
-
 
 VSDBCMD é uma ferramenta de implantação de banco de dados diferencial, e como tal, o script de implantação é gerado dinamicamente para conter todos os comandos SQL necessários para atualizar o banco de dados atual, se existir, o esquema especificado. Revisar o script de implantação é uma maneira útil para determinar o que afeta sua implantação terá no banco de dados atual e os dados que ele contém. Por exemplo, talvez você queira determinar:
 
@@ -107,29 +95,21 @@ Ao integrar a implantação de vários pacotes da web e/ou bancos de dados em um
 
 O *Publish.proj* arquivo demonstra como você pode fazer isso. Primeiro, você precisa criar uma propriedade para armazenar o valor "what if":
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample5.xml)]
-
 
 Nesse caso, você criou uma propriedade chamada **WhatIf** com um valor padrão de **falso**. Os usuários podem substituir esse valor definindo a propriedade como **verdadeira** em um parâmetro de linha de comando, como você verá em breve.
 
 A próxima etapa é parametrizar a qualquer implantação da Web e VSDBCMD comandos para que os sinalizadores de refletem a **WhatIf** valor da propriedade. Por exemplo, o próximo destino (tirados o *Publish.proj* do arquivo e simplificado) executa o *. Deploy. cmd* arquivo para implantar um pacote da web. Por padrão, o comando inclui uma **/Y** switch ("Sim" ou o modo de atualização). Se **WhatIf** é definido como **verdadeiro**, isso é substituído por um **/T** switch (versão de avaliação ou modo de "what if").
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample6.xml)]
-
 
 Da mesma forma, o próximo destino usa o utilitário VSDBCMD para implantar um banco de dados. Por padrão, uma **/dd** comutador não está incluído. Isso significa que VSDBCMD irá gerar um script de implantação, mas não implantará o banco de dados&#x2014;em outras palavras, um "what if" cenário. Se o **WhatIf** não está definida **verdadeiro**, um **/dd** switch é adicionado e VSDBCMD implantará o banco de dados.
 
-
 [!code-xml[Main](performing-a-what-if-deployment/samples/sample7.xml)]
-
 
 Você pode usar a mesma abordagem para parametrizar todos os comandos relevantes no arquivo de projeto. Quando você deseja executar uma implantação "what if", você poderá simplesmente fornecer um **WhatIf** valor da propriedade da linha de comando:
 
-
 [!code-console[Main](performing-a-what-if-deployment/samples/sample8.cmd)]
-
 
 Dessa forma, você pode executar uma implantação "what if" para todos os componentes de projeto em uma única etapa.
 

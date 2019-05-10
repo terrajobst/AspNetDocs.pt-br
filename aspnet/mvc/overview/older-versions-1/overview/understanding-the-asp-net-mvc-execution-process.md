@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: d1608db3-660d-4079-8c15-f452ff01f1db
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process
 msc.type: authoredcontent
-ms.openlocfilehash: 4a47f51b08b66dfe9636b3992786df19d0ad72ad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 28940947253e0af43886cf1231f8aaf4615526cc
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414921"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125477"
 ---
 # <a name="understanding-the-aspnet-mvc-execution-process"></a>Noções básicas sobre o processo de execução do ASP.NET MVC
 
@@ -21,14 +21,12 @@ por [Microsoft](https://github.com/microsoft)
 
 > Saiba como o ASP.NET MVC framework processa uma solicitação do navegador passo a passo.
 
-
 As solicitações para um aplicativo Web com base no ASP.NET MVC primeiro passam por meio de **UrlRoutingModule** objeto, que é um módulo HTTP. Esse módulo analisa a solicitação e executa a seleção de rota. O **UrlRoutingModule** objeto seleciona o primeiro objeto de rota que corresponde à solicitação atual. (Um objeto de rota é uma classe que implementa **RouteBase**, e normalmente é uma instância das **rota** classe.) Se nenhuma rota corresponde a, o **UrlRoutingModule** objeto não faz nada e permite que a solicitação de fallback para a solicitação ASP.NET ou IIS regular processamento.
 
 De selecionado **rota** objeto, o **UrlRoutingModule** objeto obtém os **IRouteHandler** objeto que está associado com o **rota**objeto. Normalmente, em um aplicativo MVC, isso será uma instância do **MvcRouteHandler**. O **IRouteHandler** instância cria um **IHttpHandler** do objeto e o passa a **IHttpContext** objeto. Por padrão, o **IHttpHandler** da instância para o MVC é a **MvcHandler** objeto. O **MvcHandler** objeto, em seguida, seleciona o controlador que, por fim, tratará a solicitação.
 
 > [!NOTE]
 > Quando um aplicativo Web ASP.NET MVC é executado no IIS 7.0, sem extensão de nome de arquivo é necessário para projetos MVC. No entanto, no IIS 6.0, o manipulador requer que você mapear a extensão de nome de arquivo. MVC para a DLL ISAPI do ASP.NET.
-
 
 O módulo e o manipulador são os pontos de entrada para a estrutura MVC do ASP.NET. Eles executam as seguintes ações:
 

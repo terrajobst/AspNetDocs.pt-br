@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 92df4051-77c6-492c-bd34-23d24189cea4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/profiles-themes-and-web-parts
 msc.type: authoredcontent
-ms.openlocfilehash: 0f3b376cee8d391eb087664a51cc25e3b58d16b9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cf5c45781be6d003d28c6aa27efa08032579a6dd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390032"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132780"
 ---
 # <a name="profiles-themes-and-web-parts"></a>Perfis, temas e Web Parts
 
 por [Microsoft](https://github.com/microsoft)
 
 > Há grandes alterações na configuração e instrumentação no ASP.NET 2.0. A nova API de configuração do ASP.NET permite que as alterações de configuração sejam feitas de forma programática. Além disso, existem a muitas novas definições de configuração Permitir novas configurações e instrumentação.
-
 
 O ASP.NET 2.0 representa uma melhoria significativa na área de sites personalizados. Além dos recursos de associação que já abordamos, perfis do ASP.NET, temas e Web parts significativamente aprimoram a personalização em sites da Web.
 
@@ -155,16 +154,13 @@ O arquivo de capa é um arquivo XML que contém definições de propriedade para
 
 **Figura 1** abaixo mostra uma página ASP.NET pequena procurados sem um tema aplicado. **Figura 2** mostra o mesmo arquivo com um tema aplicado. A cor de plano de fundo e a cor do texto são configuradas por meio de um arquivo CSS. A aparência do botão e caixa de texto são configurados usando o arquivo de capa listado acima.
 
-
 ![Nenhum tema](profiles-themes-and-web-parts/_static/image1.gif)
 
 **Figura 1**: Nenhum tema
 
-
 ![Tema aplicado](profiles-themes-and-web-parts/_static/image2.gif)
 
 **Figura 2**: Tema aplicado
-
 
 O arquivo de capa listado acima define uma aparência padrão para todos os controles de caixa de texto e controles de botão. Isso significa que cada controle de caixa de texto e inserido em uma página de controle de botão levará esta aparência. Você também pode definir uma aparência que pode ser aplicada a instâncias específicas desses controles usando o **SkinID** propriedade do controle.
 
@@ -329,7 +325,6 @@ Nesta parte do passo a passo, você deve criar uma página que usa controles de 
 > [!NOTE]
 > Você não precisa fazer nada para habilitar a personalização de Web Parts; ele é habilitado por padrão para o conjunto de controles de Web Parts. Quando você executa uma página de Web Parts em um site, o ASP.NET configura um provedor de personalização padrão para armazenar as configurações de personalização do usuário. Para obter mais informações sobre personalização, consulte Visão geral de personalização de partes de Web.
 
-
 ### <a name="to-create-a-page-for-containing-web-parts-controls"></a>Para criar uma página que contém controles de Web Parts
 
 1. Feche a página padrão e adicione uma nova página ao site chamado WebPartsDemo.
@@ -402,11 +397,9 @@ Agora você pode testar sua página navegando até ele no seu navegador. A pági
 
 **Página de demonstração de partes da Web com duas zonas**
 
-
 ![Captura de tela do Web Parts do VS passo a passo 1](profiles-themes-and-web-parts/_static/image3.gif)
 
 **Figura 3**: Captura de tela do Web Parts do VS passo a passo 1
-
 
 No título da barra de cada controle é uma seta para baixo que fornece acesso a um menu das ações disponíveis, que você pode executar em um controle. Clique no menu de verbos para um dos controles, clique o **minimizar** verbo e observe que o controle é minimizado. No menu de verbos, clique em **restaurar**, e o controle retorna ao seu tamanho normal.
 
@@ -449,11 +442,9 @@ Agora você pode testar a capacidade de editar páginas e alterar o layout.
 
 ### <a name="web-parts-demo-page-with-my-links-control-moved"></a>Página de demonstração de partes da Web com o controle de Meus Links movido
 
-
 ![Captura de tela do Web Parts do VS passo a passo 2](profiles-themes-and-web-parts/_static/image4.gif)
 
 **Figura 4**: Captura de tela do Web Parts do VS passo a passo 2
-
 
 1. Clique o **modo de exibição** menu suspenso e selecione **procurar**. A página for atualizada, os nomes de zona desaparecem e o **Meus Links** controle permanece onde é posicionado.
 2. Para demonstrar que a personalização está funcionando, feche o navegador e, em seguida, carregue a página novamente. As alterações feitas são salvas para sessões futuras do navegador.
@@ -467,22 +458,18 @@ Agora você pode testar a capacidade de editar páginas e alterar o layout.
 
 ### <a name="web-parts-demo-page-in-edit-mode"></a>Página de demonstração de partes da Web no modo de edição
 
-
 ![Captura de tela de passo a passo 3 Web Parts do VS](profiles-themes-and-web-parts/_static/image5.gif)
 
 **Figura 5**: Captura de tela de passo a passo 3 Web Parts do VS
-
 
 1. Clique o **modo de exibição** menu e selecione **procurar** para retornar ao modo de procura.
 2. O controle agora tem um título atualizado e nenhuma borda, como mostrado na seguinte captura de tela.
 
 ### <a name="edited-web-parts-demo-page"></a>Página de Web Parts demonstração editada
 
-
 ![Captura de tela do Web Parts do VS passo a passo 4](profiles-themes-and-web-parts/_static/image6.gif)
 
 **Figura 4**: Captura de tela do Web Parts do VS passo a passo 4
-
 
 ### <a name="adding-web-parts-at-run-time"></a>Adição de Web Parts em tempo de execução
 

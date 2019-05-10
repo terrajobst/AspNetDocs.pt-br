@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 969fb28f-2bff-4fc4-b24a-27f5e2534a37
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: fa118b4d733d7848b838f80e9918d62ae60033af
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1fde131086d4fb29c499f7f7c6281153c2766166
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59378969"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125060"
 ---
 # <a name="creating-a-rating-control-c"></a>Criação de um controle Classificação (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/rating0.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/rating0CS.pdf)
 
 > Muitos sites, de comércio eletrônico para sites de comunidades, oferecem seus usuários para artigos de taxa ou itens. Isso geralmente exige algum esforço de codificação, mas temos o Kit de ferramentas de controle à nossa disposição.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -64,7 +63,6 @@ No código do lado do servidor, acessar o controle de classificação por meio d
 [!code-aspx[Main](creating-a-rating-control-cs/samples/sample5.aspx)]
 
 Salve a página e carregá-lo em seu navegador. Quando você focaliza os itens de classificação (inicialmente vazio), ocorre um efeito de JavaScript: As alterações de classificação. Quando você clica no conjunto de estrelas, a classificação atual é mantida. Por fim, quando você envia o formulário, o código do lado do servidor gera a classificação selecionada.
-
 
 [![Criando um sistema de classificação com o mínimo de código](creating-a-rating-control-cs/_static/image2.png)](creating-a-rating-control-cs/_static/image1.png)
 

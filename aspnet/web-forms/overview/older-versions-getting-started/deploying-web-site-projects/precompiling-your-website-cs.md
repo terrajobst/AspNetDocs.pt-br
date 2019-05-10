@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: ecd5a4de-beb7-4d1d-bbbb-e31003633267
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/precompiling-your-website-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ccd265f0aa4e9e12dfa19b48f4715e498a429ece
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8805f874b7c686cecde02629cf1ea8406663ff2a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402070"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133140"
 ---
 # <a name="precompiling-your-website-c"></a>Pré-compilação do seu site (C#)
 
@@ -23,14 +23,12 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Visual Studio oferece dois tipos de projetos de desenvolvedores do ASP.NET: Projetos de aplicativos Web (WAPs) e projetos de Site da Web (WSPs). Uma das principais diferenças entre os dois tipos de projeto é que WAPs devem ter o código compilado explicitamente antes da implantação, enquanto o código em um WSP pode ser compilado automaticamente no servidor web. No entanto, é possível pré-compilar um WSP antes da implantação. Este tutorial explora os benefícios de pré-compilação e mostra como pré-compilar um site de dentro do Visual Studio e da linha de comando.
 
-
 ## <a name="introduction"></a>Introdução
 
 Visual Studio oferece dois tipos de projeto diferente de desenvolvedores do ASP.NET: Projetos de aplicativos Web (WAP) e projetos de Site (WSP). Uma das principais diferenças entre esses tipos de projeto é que exigem que WAPs *compilação explícita* enquanto usam WSPs *compilação automática*, por padrão. Com WAPs, você compila código do aplicativo web em um único assembly, que é criado em um site do `Bin` pasta. Implantação envolve copiar o conteúdo de marcação (a `.aspx.ascx`, e `.master` arquivos) no projeto, juntamente com o assembly no `Bin` pasta; o code-behind arquivos de classe em si não precisa ser implantado. Por outro lado, você deve implantar WSPs, copiando as páginas de marcação e suas classes code-behind correspondente para o ambiente de produção. As classes code-behind são compiladas sob demanda no servidor web.
 
 > [!NOTE]
 > Consulte a seção "Explícita compilação em comparação com compilação automática" a [ *determinando quais arquivos precisam ser implantados* tutorial](determining-what-files-need-to-be-deployed-cs.md) para obter mais informações sobre as diferenças entre o projeto modelos de compilação explícita e automática e como o modelo de compilação afeta a implantação.
-
 
 A opção de compilação automática é simple de usar. Não há nenhuma etapa de compilação explícita e somente os arquivos que foram modificados precisam ser implantados, enquanto a compilação explícita exige a implantação de páginas alteradas de marcação e o assembly compilado por just. No entanto, a implantação automática tem duas desvantagens:
 
@@ -49,7 +47,6 @@ Com WSPs e compilação automática, não há nenhuma etapa de compilação expl
 
 > [!NOTE]
 > Como você esperaria, há um pequeno atraso ao solicitar uma página pela primeira vez (ou pela primeira vez, pois ele é alterado) em um site que usa a compilação automática conforme ele demora algum tempo para o servidor compilar o código da página e salvar o assembly resultante disco.
-
 
 Em resumo, com a compilação explícita você é necessárias para compilar código-fonte do site antes da implantação, evitando que o tempo de execução realizar essa etapa. Com a compilação automática o tempo de execução lida com a compilação do código-fonte das páginas, mas com um custo de inicialização de pequena para a primeira visita a página, pois ele foi criado ou atualizado pela última vez.
 
@@ -70,7 +67,6 @@ A ferramenta de compilação oferece dois formulários gerais da compilação: i
 > [!NOTE]
 > Para obter mais informações sobre a pré-compilação in-loco, fazer check-out [How To: Pré-compilar Sites da Web ASP.NET](https://msdn.microsoft.com/library/ms227972.aspx) e [pré-compilação do ASP.NET 2.0](http://www.odetocode.com/Articles/417.aspx).
 
-
 Em vez de compilar as páginas no site da Web para o `Temporary ASP.NET Files` pasta pré-compilação para implantação compila as páginas em um diretório de sua escolha e, em um formato que pode ser implantado no ambiente de produção.
 
 Existem dois tipos de pré-compilação para implantação que exploramos neste tutorial: pré-compilação com uma interface de usuário atualizável e pré-compilação com uma interface do usuário não atualizável. Pré-compilação com uma interface de usuário atualizável deixa a marcação declarativa na `.aspx`, `.ascx`, e `.master` arquivos, permitindo assim que um desenvolvedor exibir e, se desejado, modificar a marcação declarativa no servidor de produção. Pré-compilação com uma interface do usuário não atualizável gera `.aspx` páginas que são nulos de qualquer conteúdo e remove `.ascx` e `.master` arquivos, assim, ocultando a marcação declarativa e proibindo um desenvolvedor de alterando-o da ambiente de produção.
@@ -88,7 +84,6 @@ Abra o livro revisão WSP no Visual Studio, vá para o menu de compilação e se
 
 > [!NOTE]
 > A opção de Publicar Site no menu de compilação não está disponível no Visual Web Developer. Se você estiver usando o Visual Web Developer, você precisará usar a versão de linha de comando da ferramenta de compilação do ASP.NET, que é abordada na seção "pré-compilação da linha de comando".
-
 
 Depois de pré-compilar o site, navegue até o local de destino que você inseriu na caixa de diálogo Publish Web Site. Reserve um tempo para comparar o conteúdo dessa pasta com o conteúdo de seu site. **Figura 2** mostra a pasta do site resenhas de livros. Observe que ele contém ambos `.aspx` e `.aspx.cs` arquivos. Além disso, observe que o `Bin` diretório inclui apenas um arquivo, `Elmah.dll`, que adicionamos o [tutorial anterior](logging-error-details-with-elmah-cs.md)
 
@@ -108,7 +103,6 @@ Ao contrário de compilação explícita no WAPs, a pré-compilação para o pro
 
 > [!NOTE]
 > Você pode instruir a ferramenta de compilação para criar um assembly por página ASP.NET, controle de usuário ou página mestra, marcando a caixa de seleção "Usado fixed naming and assemblies de página única" na caixa de diálogo Publish Web Site. Ter cada página do ASP.NET compilada em seu próprio assembly permite controle mais refinado sobre a implantação. Por exemplo, se você atualizou uma única página da web ASP.NET e necessários para implantar essa alteração, você só precisa implantar nessa página `.aspx` arquivo e assembly associado ao ambiente de produção. Consulte [como: Gerar nomes fixos com a ferramenta de compilação do ASP.NET](https://msdn.microsoft.com/library/ms228040.aspx) para obter mais informações.
-
 
 O diretório local de destino também contém um arquivo que não fazia parte do projeto da web pré-compilado, ou seja, `PrecompiledApp.config`. Esse arquivo informa o tempo de execução do ASP.NET que o aplicativo estava pré-compilado e se ele estava pré-compilado com uma interface do usuário atualizável ou meio-dia atualizável.
 

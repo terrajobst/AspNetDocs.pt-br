@@ -8,19 +8,18 @@ ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 078382191595d1f65b5ebe9d0de8d41cd70e376d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 051253d1e7a09f6285ebe0a83f87155de8467536
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419880"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129422"
 ---
 # <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Analisar e depurar seu aplicativo do ASP.NET MVC com Glimpse
 
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Visão rápida é prosperando e aumentando a família de pacotes do NuGet de software livre que fornece desempenho detalhados, depuração e informações de diagnóstico para aplicativos ASP.NET. Ele é trivial para instalar, leve, com rapidez e exibe as principais métricas de desempenho na parte inferior de cada página. Ele permite fazer uma busca detalhada em seu aplicativo quando você precisa descobrir o que está acontecendo no servidor. Visão rápida fornece informações muito valiosas que é recomendável que usá-lo em todo seu ciclo de desenvolvimento, incluindo o seu ambiente de teste do Azure. Enquanto [Fiddler](http://www.telerik.com/fiddler) e o [ferramentas de desenvolvimento F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) fornecem um cliente modo de exibição, a visão rápida fornece uma exibição detalhada do servidor. Este tutorial se concentrará em usando o ASP.NET MVC de amostra e pacotes do EF, mas muitos outros pacotes estão disponíveis. Sempre que possível, eu vinculará a apropriado [dê uma olhada docs](http://getglimpse.com/Docs/) que ajudam a manter. Visão rápida é um projeto de código-fonte aberto, você também pode contribuir com o código-fonte e os documentos.
-
 
 - [Instalando a amostra](#ig)
 - [Habilitar Glimpse para localhost](#eg)
@@ -116,7 +115,6 @@ Remova os comentários do *GlimpseSecurityPolicy.cs* do arquivo e altere o [IsIn
 
 > [!WARNING]
 > Security - dados avançados fornecidos pelo ideia poderia expor a segurança do seu aplicativo. Microsoft não realizou uma auditoria de segurança do Glimpse para uso em aplicativos de produções.
-
 
 Para obter informações sobre como adicionar funções, consulte minha [implantar um aplicativo da web ASP.NET MVC 5 seguro com associação, OAuth e banco de dados SQL no Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/) tutorial.
 

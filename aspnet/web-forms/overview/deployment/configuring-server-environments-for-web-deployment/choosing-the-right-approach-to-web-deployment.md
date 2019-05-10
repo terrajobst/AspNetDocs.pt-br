@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 787a53fd-9901-4a11-9d58-61e0509cda45
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 65b77b016e02c2d9c8ff2b925b1567f26a6a05cc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 13f784dd8e6404806104d56b026b3c41ca178892
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407907"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128479"
 ---
 # <a name="choosing-the-right-approach-to-web-deployment"></a>Escolha da abordagem correta para a Implantação da Web
 
@@ -30,7 +30,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > 
 > Como você pode configurar seus servidores web de destino dependem de qual abordagem de implantação que você deseja usar. Este tópico ajudará você a decidir qual abordagem de implantação é adequada para você.
 
-
 Esta tabela mostra as principais vantagens e desvantagens de cada abordagem de implantação, juntamente com os cenários que geralmente se adequar às cada abordagem.
 
 | Abordagem | Vantagens | Desvantagens | Cenários típicos |
@@ -39,35 +38,26 @@ Esta tabela mostra as principais vantagens e desvantagens de cada abordagem de i
 | Agente Temp | Não é necessário para instalar a implantação da Web no computador de destino. A versão mais recente da implantação da Web é usada automaticamente. | O usuário deve ser um administrador no servidor de destino. o usuário não é possível fornecer credenciais alternativas. | Ambientes de desenvolvimento. Ambientes de teste. |
 | Manipulador de implantação da Web | Os usuários não administradores podem implantar o conteúdo. Ele é adequado para atualizações regulares em aplicativos da web e o conteúdo. | É muito mais complexa para configurar. | Ambientes de preparo. Ambientes de produção de intranet. Ambientes hospedados. |
 | Implantação offline | É muito fácil de configurar. Ele é adequado para ambientes isolados. | O administrador do servidor manualmente deve copiar e importar o pacote da web sempre. | Ambientes de produção para a Internet. Ambientes isolados da rede. |
-  
 
 ## <a name="using-the-remote-agent"></a>Usando o agente remoto
 
 Quando você instala a implantação da Web usando as configurações padrão em um servidor de destino, o serviço de agente de implantação da Web (o "agente remoto") é automaticamente instalado e iniciado. Por padrão, o agente remoto expõe um ponto de extremidade HTTP neste endereço:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > Você pode substituir [*server*] com o nome da máquina do servidor web, um endereço IP para seu servidor web ou um nome de host que é resolvido para seu servidor web.
 
-
 Os administradores de servidor podem implantar pacotes de web de um local remoto, como um computador de desenvolvedor ou um servidor de compilação, ao especificar esse endereço de ponto de extremidade. Por exemplo, suponha que Matt Hink Fabrikam, Inc. criou o projeto de aplicativo web ContactManager.Mvc em sua máquina de desenvolvedor. O processo de compilação gera um pacote da web, juntamente com uma *. Deploy. cmd* arquivo que contém os comandos de implantação da Web necessários para instalar o pacote. Se um administrador de servidor no servidor TESTWEB1 Matt, ele pode implantar o aplicativo web para o servidor web de teste executando este comando em sua máquina de desenvolvedor:
-
 
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample2.cmd)]
 
-
 Na verdade real, o executável de implantação da Web pode inferir o endereço do ponto de extremidade do agente remoto, se você fornecer o nome da máquina, portanto, Matt só precisa digitar isso:
-
 
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample3.cmd)]
 
-
 > [!NOTE]
 > Para obter mais informações sobre a sintaxe de linha de comando de implantação da Web e *. Deploy. cmd* arquivos, consulte [como: Instalar um pacote de implantação usando o arquivo Deploy. cmd](https://msdn.microsoft.com/library/ff356104.aspx).
-
 
 O agente remoto oferece uma maneira simples de implantar o conteúdo de um local remoto, e essa abordagem pode funcionar bem com implantação automatizada ou de um clique. No entanto, o usuário que executa o comando de implantação também deve ser um administrador de domínio ou um membro do grupo Administradores local no servidor de destino. Além disso, o agente remoto não dá suporte a autenticação básica, portanto, você não pode passar credenciais alternativas na linha de comando.
 
@@ -81,13 +71,10 @@ A abordagem de agente temp para implantação é semelhante à abordagem do agen
 
 Se você quiser usar o configuração de provedor de agente temp, adicione a **/g** sinalizador ao seu comando de implantação:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample4.cmd)]
-
 
 > [!NOTE]
 > Você não pode usar o agente temporário se o serviço de agente de implantação da web estiver instalado no computador de destino, mesmo se o serviço não está em execução.
-
 
 A vantagem dessa abordagem é que você não precisa manter instalações da implantação da Web em seus servidores de destino. Além disso, você não precisa garantir que os computadores de origem e de destino estejam executando a mesma versão da implantação da Web. No entanto, essa abordagem tem as mesmas limitações de entidade de segurança que a abordagem de agente remoto, ou seja, que deve ser um administrador local no servidor de destino para implantar conteúdo, e tem suporte apenas a autenticação NTLM. A abordagem de temp agente também requer a configuração inicial muito mais do ambiente de destino.
 
@@ -99,31 +86,23 @@ Para o IIS 7 em diante, a implantação da Web oferece uma abordagem de implanta
 
 Por padrão, o agente remoto expõe um ponto de extremidade HTTP neste endereço:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample5.cmd)]
-
 
 > [!NOTE]
 > Você pode substituir [*server*] com o nome da máquina do servidor web, um endereço IP para seu servidor web ou um nome de host que é resolvido para seu servidor web.
-
 
 A grande vantagem do manipulador de implantar a Web sobre o agente remoto e o agente temp, é que você pode configurar o IIS para permitir que usuários não administradores implantar aplicativos e conteúdo em sites específicos do IIS. O manipulador de implantação da Web também dá suporte à autenticação básica, para que você possa fornecer credenciais alternativas como parâmetros em seus comandos de implantação da Web. A principal desvantagem é que o manipulador de implantação da Web é inicialmente muito mais complicado instalar e configurar.
 
 No caso de usuários não-administrador, o serviço de gerenciamento da Web (WMSvc) permitirá apenas que o usuário para se conectar ao IIS usando uma conexão de nível de site, em vez de uma conexão de nível de servidor. Para acessar um site específico, você pode incluir uma cadeia de caracteres de consulta específicos do site no endereço do ponto de extremidade:
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample6.cmd)]
-
 
 Por exemplo, suponha que um processo de compilação está configurado para implantar automaticamente um aplicativo web em um ambiente de preparo após cada compilação bem-sucedida. Se você usou a abordagem de agente remoto, você precisa tornar a identidade do processo de compilação de um administrador nos servidores de destino. Em contraste, usando a abordagem do manipulador de implantação da Web você pode fornecer um usuário não administrador&#x2014;**FABRIKAM\stagingdeployer** nesse caso,&#x2014;permissão para um determinado site IIS e o processo de compilação pode fornecer esses credenciais para implantar o pacote da web.
 
-
 [!code-console[Main](choosing-the-right-approach-to-web-deployment/samples/sample7.cmd)]
-
 
 > [!NOTE]
 > Para obter mais informações sobre operações de linha de comando de implantação da Web e a sintaxe, consulte [referência de linha de comando de implantação da Web](https://technet.microsoft.com/library/dd568991(v=ws.10).aspx). Para obter mais informações sobre como usar o *. Deploy. cmd* arquivos, consulte [como: Instalar um pacote de implantação usando o arquivo Deploy. cmd](https://msdn.microsoft.com/library/ff356104.aspx).
-
 
 O manipulador de implantação da Web fornece uma abordagem útil para implantação em ambientes de produção baseados na intranet, onde o acesso remoto para o servidor está disponível, mas não são credenciais de administrador, ambientes hospedados e ambientes de preparo.
 

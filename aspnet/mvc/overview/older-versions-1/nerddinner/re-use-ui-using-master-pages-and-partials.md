@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: d4243a4a-e91c-4116-9ae0-5c08e5285677
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/re-use-ui-using-master-pages-and-partials
 msc.type: authoredcontent
-ms.openlocfilehash: e50fb6edb175bd1651212ae6b3daf7b1bf605068
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0b17cb6ac14b7f187bf1f175097a37907689d46e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390136"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128348"
 ---
 # <a name="re-use-ui-using-master-pages-and-partials"></a>Reutilizar a interface do usuário usando páginas mestras e parciais
 
@@ -26,7 +26,6 @@ por [Microsoft](https://github.com/microsoft)
 > Etapa 7 examina de maneiras que podemos aplicar o "princípio de DRY" dentro de nossos modelos de exibição para eliminar a duplicação de código, usando as páginas mestras e modelos de exibição parcial.
 > 
 > Se você estiver usando o ASP.NET MVC 3, recomendamos que você siga a [obtendo iniciado com o MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de música do MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriais.
-
 
 ## <a name="nerddinner-step-7-partials-and-master-pages"></a>Etapa 7 do NerdDinner: Parciais e páginas mestras
 

@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: ea918f62-c9d6-4a7f-9bc6-e054d3764b2c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/determining-what-files-need-to-be-deployed-vb
 msc.type: authoredcontent
-ms.openlocfilehash: fe19910d693a784b8dc207462591c9f4d51cec14
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 00d820ff2fb0925d299bb17713435f8612e4b25a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382141"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130642"
 ---
 # <a name="determining-what-files-need-to-be-deployed-vb"></a>Determinar quais arquivos precisam ser implantados (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/4/5/F/45F815EC-8B0E-46D3-9FB8-2DC015CCA306/ASPNET_Hosting_Tutorial_02_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial02_FilesToDeploy_vb.pdf)
 
 > Quais arquivos precisam ser implantados do ambiente de desenvolvimento para o ambiente de produção depende em parte se o aplicativo ASP.NET tiver sido criado usando o modelo de Site da Web ou o modelo de aplicativo Web. Saiba mais sobre esses dois modelos de projeto e como o modelo de projeto afeta a implantação.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -92,20 +91,16 @@ O download para este tutorial inclui um aplicativo ASP.NET chamado resenhas de l
 
 Figura 1 mostra uma captura de tela do site resenhas de livros quando visualizado por meio de um navegador. Aqui você verá a página ~ / Tech/TYASP35.aspx, que analisa o livro *ensinar por conta própria ASP.NET 3.5 in 24 horas*. A trilha de navegação que abrange a parte superior da página e no menu na coluna à esquerda são baseados na estrutura de mapa de site definida em `Web.sitemap`. A imagem no canto superior direito é uma da tampa de livro imagens localizadas no `Images` pasta. Aparência do site da Web são definidas por meio de regras de folha de estilos em cascata escritas pelos arquivos CSS na `Styles` pasta, enquanto o layout de página abrangente é definido na página mestra, `Site.master`.
 
-
 [![O site do livro analisa oferece revisões em uma variedade de títulos](determining-what-files-need-to-be-deployed-vb/_static/image2.png)](determining-what-files-need-to-be-deployed-vb/_static/image1.png)
 
 **Figura 1**: O site do livro analisa oferece revisões em uma variedade de títulos ([clique para exibir a imagem em tamanho normal](determining-what-files-need-to-be-deployed-vb/_static/image3.png))
-
 
 Este aplicativo não usa um banco de dados; cada revisão é implementado como uma página da web separada no aplicativo. Neste tutorial (e os próximo vários tutoriais) orientam durante a implantação de um aplicativo web que não tem um banco de dados. No entanto, em um tutorial futuro podemos melhorar este aplicativo para armazenar as revisões, comentários dos leitores e outras informações dentro de um banco de dados e irá explorar quais etapas precisam ser executadas para implantar corretamente um aplicativo web controlado por dados.
 
 > [!NOTE]
 > Esses tutoriais se concentrar em hospedar aplicativos ASP.NET com um provedor de host da web e não explorar tópicos complementares, como o ASP. Do NET sistema de site do mapa ou usando uma classe base da página. Para obter mais informações sobre essas tecnologias e para obter mais informações sobre outros tópicos abordados em todo o tutorial, consulte a seção leitura adicional no final da cada tutorial.
 
-
 Download deste tutorial tem duas cópias do aplicativo web, cada um implementado como um tipo diferente de projeto do Visual Studio: BookReviewsWAP, um projeto de aplicativo Web e BookReviewsWSP, um projeto de Site da Web. Ambos os projetos criados com o Visual Web Developer 2008 SP1 e usam o ASP.NET 3.5 SP1. Para trabalhar com esses projetos são iniciados ao descompactar o conteúdo em sua área de trabalho. Para abrir o projeto de aplicativo Web (BookReviewsWAP), navegue até a `BookReviewsWAP` pasta e clique duas vezes no arquivo de solução, `BookReviewsWAP.sln`. Para abrir o projeto de Site da Web (BookReviewsWSP), inicie o Visual Studio e em seguida, no menu Arquivo, escolha a opção de abrir o Site da Web, navegue até o `BookReviewsWSP` pasta na área de trabalho e clique em Okey.
-
 
 As duas seções restantes neste tutorial examinar quais arquivos você precisará copiar para o ambiente de produção ao implantar o aplicativo. Os próximos dois tutoriais - [ *Implantando seu Site usando FTP* ](deploying-your-site-using-an-ftp-client-vb.md) e [ *implantando seu Site usando o Visual Studio* ](deploying-your-site-using-visual-studio-vb.md) -mostram diferentes maneiras Copie esses arquivos em um provedor de host da web.
 
@@ -115,15 +110,12 @@ O modelo de projeto de aplicativo Web usa a compilação explícita - código-fo
 
 Figura 2 mostra os arquivos que compõem o projeto de aplicativo Web do livro revisões.
 
-
 [![O Gerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web.](determining-what-files-need-to-be-deployed-vb/_static/image5.png)](determining-what-files-need-to-be-deployed-vb/_static/image4.png)
 
 **Figura 2**: O Gerenciador de soluções lista os arquivos que compõem o projeto de aplicativo Web
 
-
 > [!NOTE]
 > Como mostra a Figura 2, arquivos code-behind das páginas do ASP.NET não são exibidos no Gerenciador de soluções para um projeto de aplicativo de Web do Visual Basic. Para exibir a classe code-behind para uma página, clique com botão direito na página no Gerenciador de soluções e escolha View Code.
-
 
 Para implantar um aplicativo ASP.NET desenvolvido usando o início do modelo de projeto de aplicativo Web, criando o aplicativo para compilar o código-fonte mais recente de explicitamente em um assembly. Em seguida, copie os seguintes arquivos para o ambiente de produção:
 
@@ -135,7 +127,6 @@ Você não precisa copiar os arquivos de código-fonte as páginas do ASP.NET pa
 > [!NOTE]
 > Como mostra a Figura 2, o `BasePage` classe é implementada como um arquivo de classe no projeto, colocado na pasta denominada `HelperClasses`. Quando o projeto for compilado o código a `BasePage.vb` arquivo é compilado, juntamente com classes code-behind das páginas do ASP.NET no único assembly, `BookReviewsWAP.dll`. O ASP.NET tem uma pasta especial denominada `App_Code` que foi projetado para manter os arquivos de classe para projetos de Site. O código a `App_Code` pasta será compilada automaticamente e, portanto, não deve ser usada com projetos de aplicativos Web. Em vez disso, você deve colocar os arquivos de classe do seu aplicativo em uma pasta normal chamada `HelperClasses`, ou `Classes`, ou algo parecido. Como alternativa, você pode colocar arquivos de classe em um projeto de biblioteca de classes separado.
 
-
 Além de copiar os arquivos de marcação relacionados ao ASP.NET e o assembly na `Bin` pasta, você também precisará copiar os arquivos de suporte do lado do cliente – imagens e arquivos CSS –, bem como os outros arquivos de suporte do lado do servidor, `Web.config` e `Web.sitemap`. Esse e servidor-cliente dão suporte a necessidade de arquivos a serem copiados para o ambiente de produção, independentemente de você usar compilação explícita ou automática.
 
 ## <a name="determining-the-files-to-deploy-for-the-web-site-project-files"></a>Determinando os arquivos para implantar para os arquivos de projeto de Site da Web
@@ -146,11 +137,9 @@ A opção de menu de compilação no Visual Studio está presente em projetos de
 
 Figura 3 mostra os arquivos que compõem o projeto de Site da Web do catálogo de revisões.
 
-
 [![O Gerenciador de soluções lista os arquivos que compõem o projeto de Site da Web.](determining-what-files-need-to-be-deployed-vb/_static/image7.png)](determining-what-files-need-to-be-deployed-vb/_static/image6.png)
 
 **Figura 3**: O Gerenciador de soluções lista os arquivos que compõem o projeto de Site da Web
-
 
 Implantando um projeto de Site da Web envolve a cópia de todos os arquivos relacionados ao ASP.NET para o ambiente de produção – que inclui as páginas de marcação para páginas ASP.NET, páginas mestras e controles de usuário, juntamente com seus arquivos de código. Você também precisará copiar backup de quaisquer arquivos de classe, como `BasePage.vb`. Observe que o `BasePage.vb` arquivo está localizado no `App_Code` pasta, que é uma pasta especial do ASP.NET usada em projetos de Site da Web para arquivos de classe. A pasta especial precisa ser criado em produção, além disso, como os arquivos de classe na `App_Code` pasta no ambiente de desenvolvimento deve ser copiada para o `App_Code` pasta em produção.
 
@@ -158,7 +147,6 @@ Além de copiar os arquivos de código de marcação e código-fonte do ASP.NET,
 
 > [!NOTE]
 > Projetos de Site também pode usar a compilação explícita. Um tutorial futuro examinará como explicitamente compilar um projeto de Site da Web.
-
 
 ## <a name="summary"></a>Resumo
 

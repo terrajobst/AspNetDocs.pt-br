@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: c7e4e1ab-4932-4614-9f53-aaf7c706d498
 msc.legacyurl: /mvc/overview/views/using-page-inspector-in-aspnet-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: ef0ae42e1c6114849a311164eac242db6dab2b1d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5da3e142c52a770f59222c21d9f9a53cbbdbf498
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385785"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65126348"
 ---
 # <a name="using-page-inspector-in-aspnet-mvc"></a>Usando o Inspetor de Página no ASP.NET MVC
 
@@ -38,7 +38,6 @@ por Tim Ammann
 > - [Usando o seletor de cor CSS](#css_color_picker)
 > - [Mapeamento de elementos de página dinâmica para JavaScript](#map_dynamic_elements)
 
-
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -47,7 +46,6 @@ por Tim Ammann
 
 > [!NOTE]
 > Para obter a versão mais recente do Inspetor de página, use [Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=255386) para instalar o SDK do Windows Azure para .NET 2.0.
-
 
 O Page Inspector é fornecido com o Microsoft Web Developer Tools. A versão mais recente é 1.3. Para verificar qual versão você tem, execute o Visual Studio e selecione **sobre o Microsoft Visual Studio** da **ajudar** menu.
 
@@ -179,7 +177,6 @@ O **estilos** torna a janela fácil de testar e visualizar o CSS é alterado ant
 > [!NOTE]
 > Este recurso requer a versão 1.3 do Inspetor de página.
 
-
 O recurso de sincronização automática de CSS permite que você editar um arquivo CSS diretamente e ver as alterações imediatamente no navegador Inspetor de página.
 
 Clique em **inspecionar** para colocar o Inspetor de página no modo de inspeção.
@@ -238,7 +235,6 @@ Com a versão 1.3, o Page Inspector agora pode mapear itens que foram adicionado
 
 > [!NOTE]
 > O modelo SPA requer o [ASP.NET e Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) atualizar.
-
 
 No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#**, selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**. Clique em **OK**.
 

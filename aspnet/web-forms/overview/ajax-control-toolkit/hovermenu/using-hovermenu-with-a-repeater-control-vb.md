@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 7f07c112-cd4f-4427-9699-57cfab2791fd
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 963850e1048d4fde573f28244fd32d0c4232fda4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fa9b11ea064bd8181381f8374cc96b8eea6aa72b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399184"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127085"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-vb"></a>Uso de HoverMenu com um controle repetidor (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/b/0/6/b06fe835-5b8f-4c00-aef8-062c19d75b95/HoverMenu1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/hovermenu1VB.pdf)
 
 > O controle de HoverMenu no AJAX Control Toolkit fornece um efeito de pop-up simples: Quando o ponteiro do mouse passa sobre um elemento, um pop-up aparece em uma posição especificada. Também é possível usar esse controle em um repetidor.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -51,7 +50,6 @@ Agora, o `HoverMenuExtender` entra em cena. Para que todos os elementos na fonte
 [!code-aspx[Main](using-hovermenu-with-a-repeater-control-vb/samples/sample4.aspx)]
 
 Agora cada item na fonte de dados exibe um pop-up para a direita (`PopupPosition` atributo) após um atraso de 50 milissegundos (`PopDelay` atributo).
-
 
 [![O menu de foco é exibido ao lado de cada item no repetidor](using-hovermenu-with-a-repeater-control-vb/_static/image2.png)](using-hovermenu-with-a-repeater-control-vb/_static/image1.png)
 

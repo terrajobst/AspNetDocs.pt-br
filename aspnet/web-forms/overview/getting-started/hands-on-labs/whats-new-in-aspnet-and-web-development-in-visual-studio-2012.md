@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 6d40d276-1642-4a77-b6c9-02ac914f6805
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-aspnet-and-web-development-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: 3833e3f3c6c49ff2b317ad04aff33c9119cb1f41
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 80c77ec65ed86b06e417d3f6ba608e404c46768b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420205"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132095"
 ---
 # <a name="whats-new-in-aspnet-and-web-development-in-visual-studio-2012"></a>Novidades no ASP.NET e desenvolvimento da Web no Visual Studio 2012
 
@@ -30,7 +30,6 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > Este laboratório orienta os aprimoramentos e novos recursos descritos anteriormente, aplicando alterações secundárias a um aplicativo Web de exemplo fornecido na pasta de origem.
 > 
 > Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 
@@ -331,7 +330,6 @@ Uma das melhores práticas em HTML é recuar os elementos aninhados para manter 
 > [!NOTE]
 > Na versão anterior do Visual Studio, o recuo inteligente estava disponível no editor de XML, mas não no editor de HTML.
 
-
 1. Certifique-se de que a configuração de recuo no Editor de HTML é definida como o recuo inteligente. Para fazer isso, selecione o **ferramentas | As opções** opção de menu e selecione o **Editor de texto | HTML | Guias** página no painel esquerdo da tela. Selecione a opção de recuo inteligente.
 
     ![Configurações do Editor de HTML](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image33.png "configurações do Editor de HTML")
@@ -433,7 +431,6 @@ Nesta tarefa, você descobrirá que a nova validação de JavaScript para o padr
 > [!NOTE]
 > Visual Studio 2010 implementou ECMAStript3 conformidade, enquanto o Visual Studio 2012 fornece conformidade ECMAScript5.
 
-
 1. Abra **ECMA5script5.js** localizado sob a **Scripts\custom** pasta do projeto. Agora você irá testar validação ecmascript5 padrão.
 
     [!code-html[Main](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/samples/sample8.html)]
@@ -493,7 +490,6 @@ Nesta tarefa, você irá explorar os recursos do Visual Studio para obter a docu
 
 > [!NOTE]
 > Certifique-se de que GotoDefinition.js não tem nenhum erro de sintaxe antes de salvar o arquivo.
-
 
 <a id="Exercise4"></a>
 
@@ -675,7 +671,6 @@ Neste exemplo, você aprenderá como usar o **DynamicFolderBundle** classe para 
 
 > [!NOTE]
 > Além disso, você pode implantar esse aplicativo para Windows Azure Web Sites seguinte [apêndice b: Publicando um aplicativo ASP.NET MVC 4 usando a implantação da Web](#AppendixB).
-
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo

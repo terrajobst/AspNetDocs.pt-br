@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: 002ada5c-f114-47ab-a441-57dbdb728ea0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: a2e2957ffe766282f127b6fb537af00673aa440f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 48fe7af73a5e5d8a3cd4c4ec152c57726fb021ba
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389837"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130203"
 ---
 # <a name="accessing-your-models-data-from-a-controller-c"></a>Acessar dados de seu modelo por meio de um controlador (C#)
 
@@ -45,7 +45,7 @@ Clique com botão direito do *controladores* pasta e crie um novo `MoviesControl
 
 [![AddScaffoldedMovieController](accessing-your-models-data-from-a-controller/_static/image2.png "AddScaffoldedMovieController")](accessing-your-models-data-from-a-controller/_static/image1.png)
 
-Clique em **Adicionar**. O Visual Web Developer cria os seguintes arquivos e pastas:
+ Clique em **Adicionar**. O Visual Web Developer cria os seguintes arquivos e pastas:
 
 - *Um MoviesController.cs* arquivo do projeto *controladores* pasta.
 - Um *filmes* pasta do projeto *modos de exibição* pasta.
@@ -115,7 +115,6 @@ Clique duas vezes em *Movies.sdf* para abrir **Gerenciador de servidores**. Em s
 
 > [!NOTE]
 > Se você receber um erro quando você clica duas vezes *Movies.sdf*, verifique se você instalou [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(tempo de execução de ferramentas de suporte +). (Para obter links para o software, consulte a lista de pré-requisitos na parte 1 desta série de tutoriais). Se você instalar a versão, agora, você terá que fechar e reabrir o Visual Web Developer.
-
 
 [![DB_explorer](accessing-your-models-data-from-a-controller/_static/image14.png "DB_explorer")](accessing-your-models-data-from-a-controller/_static/image13.png)
 

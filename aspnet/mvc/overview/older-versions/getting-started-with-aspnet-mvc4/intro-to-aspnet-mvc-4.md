@@ -8,12 +8,12 @@ ms.date: 08/15/2012
 ms.assetid: ed66530a-04d5-49eb-b76a-85be1f57c437
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4
 msc.type: authoredcontent
-ms.openlocfilehash: ecc0733c2850bc157c7ee5b251787152393481fc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9762ac77f7460cc123e67b9eb57a17f4b83ed54c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385237"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129869"
 ---
 # <a name="intro-to-aspnet-mvc-4"></a>Introdução ao ASP.NET MVC 4
 
@@ -36,12 +36,10 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 >
 > Este tutorial foi escrito por Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ).
 
-
 ## <a name="what-youll-build"></a>O que você vai criar
 
 > [!NOTE]
 > Uma versão atualizada, se este tutorial está disponível [aqui](../../getting-started/introduction/getting-started.md) usando [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013). O novo tutorial usa o ASP.NET MVC 5, que fornece muitos aprimoramentos ao longo deste tutorial.
-
 
 Você implementará um simples aplicativo de listagem de filmes que dá suporte à criação, edição, pesquisando e listagem de filmes de um banco de dados. Abaixo estão as duas capturas de tela do aplicativo que você criará. Ele inclui uma página que exibe uma lista de filmes de um banco de dados:
 

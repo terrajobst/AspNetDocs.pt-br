@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 719727b7-bef3-45ad-bfe9-ba5bcdb2305f
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
 msc.type: authoredcontent
-ms.openlocfilehash: 1f093e348216750cbadb6e52f524e5edd4d6c498
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 86833a890da759e489dd11dc9afb128a9b7a75e3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390266"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125252"
 ---
 # <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET API Web e o Angular.js
 
@@ -34,7 +34,6 @@ Em aplicativos web tradicionais, o cliente (navegador) inicia a comunicação co
 > 
 > 
 > Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -66,7 +65,6 @@ Para executar os exercícios neste laboratório prático, você precisará confi
 > [!NOTE]
 > Verifique se que você tiver marcado todas as dependências para este laboratório antes de executar a instalação.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando os trechos de código
 
@@ -74,7 +72,6 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 
 > [!NOTE]
 > Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
-
 
 ---
 
@@ -91,16 +88,15 @@ Tempo estimado para concluir este laboratório: **60 minutos**
 > [!NOTE]
 > Quando você inicia o Visual Studio pela primeira vez, você deve selecionar uma das coleções de configurações predefinidas. Cada coleção predefinida foi projetada para corresponder a um estilo de desenvolvimento específico e determina o comportamento do editor, layouts de janela, trechos de código IntelliSense e opções da caixa de diálogo. Os procedimentos neste laboratório descrevem as ações necessárias para realizar uma determinada tarefa no Visual Studio ao usar o **configurações gerais de desenvolvimento** coleção. Se você escolher uma coleção de configurações diferentes para seu ambiente de desenvolvimento, pode haver diferenças nas etapas que você deve levar em conta.
 
-
 <a id="Exercise1"></a>
 ### <a name="exercise-1-creating-a-web-api"></a>Exercício 1: Criando uma API da Web
 
 Uma das principais partes de um SPA é a camada de serviço. Ele é responsável por processar chamadas Ajax enviadas pela interface do usuário e os dados retornados em resposta a essa chamada. Os dados recuperados devem ser apresentados em um formato legível para ser analisado e consumido pelo cliente.
 
-A estrutura da API Web é parte da pilha do ASP.NET e é projetada para facilitar a implementar os serviços HTTP, geralmente, enviar e receber dados formatados em XML ou JSON por meio de uma API RESTful. Neste exercício, você criará o site da Web para hospedar o aplicativo Geek Quis e, em seguida, implementará o serviço de back-end para expor e persistir os dados de teste usando a API Web do ASP.NET.
+A estrutura da API Web é parte da pilha do ASP.NET e é projetada para facilitar a implementar os serviços HTTP, geralmente, enviar e receber dados formatados em XML ou JSON por meio de uma API RESTful. Neste exercício, você criará o site da Web para hospedar o aplicativo de teste de Pau e, em seguida, implementar o serviço de back-end para expor e persistir os dados de teste usando a API Web do ASP.NET.
 
 <a id="Ex1Task1"></a>
-#### <a name="task-1--creating-the-initial-project-for-geek-quiz"></a>Tarefa 1 – Criar o projeto inicial para Geek Quiz
+#### <a name="task-1--creating-the-initial-project-for-geek-quiz"></a>Tarefa 1 – criar o projeto inicial para teste de pau
 
 Nesta tarefa você começará criando um novo projeto ASP.NET MVC com suporte para API Web ASP.NET com base nas **One ASP.NET** tipo que vem com o Visual Studio de projeto. **One ASP.NET** unifica todas as tecnologias do ASP.NET e lhe dá a opção de misturar e combiná-los conforme desejado. Em seguida, você irá adicionar classes de modelo do Entity Framework e o inicializador de banco de dados para inserir as perguntas de teste.
 
@@ -154,13 +150,13 @@ Nesta tarefa você começará criando um novo projeto ASP.NET MVC com suporte pa
 
     > [!NOTE]
     > O **autorizar** filtrar verifica se o usuário é autenticado. Se o usuário não é autenticado, ele retorna o código de status HTTP 401 (não autorizado) sem invocar a ação. Você pode aplicar o filtro globalmente, no nível do controlador ou no nível de ações individuais.
-9. Agora você irá personalizar o layout de páginas da web e a identidade visual. Para fazer isso, abra o  **\_layout. cshtml** dentro do arquivo a **exibições | Compartilhado** pasta e atualizar o conteúdo do **&lt;título&gt;** elemento, substituindo *meu aplicativo ASP.NET* com *Geek Quiz* .
+9. Agora você irá personalizar o layout de páginas da web e a identidade visual. Para fazer isso, abra o  **\_layout. cshtml** dentro do arquivo a **exibições | Compartilhado** pasta e atualizar o conteúdo do **&lt;título&gt;** elemento, substituindo *meu aplicativo ASP.NET* com *Pau do teste* .
 
     [!code-cshtml[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample4.cshtml)]
-10. No mesmo arquivo, atualizar a barra de navegação, removendo o *sobre* e *entre em contato com* links e renomear o *página inicial* vincular ao *reproduzir*. Além disso, renomeie o *nome do aplicativo* vincular ao *Geek Quiz*. O HTML para a barra de navegação deve parecer com o código a seguir.
+10. No mesmo arquivo, atualizar a barra de navegação, removendo o *sobre* e *entre em contato com* links e renomear o *página inicial* vincular ao *reproduzir*. Além disso, renomeie o *nome do aplicativo* vincular ao *Pau teste*. O HTML para a barra de navegação deve parecer com o código a seguir.
 
     [!code-cshtml[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample5.cshtml)]
-11. Atualize o rodapé da página de layout, substituindo *meu aplicativo ASP.NET* com *Geek Quiz*. Para fazer isso, substitua o conteúdo a **&lt;rodapé&gt;** elemento com o seguinte código realçado.
+11. Atualize o rodapé da página de layout, substituindo *meu aplicativo ASP.NET* com *Pau teste*. Para fazer isso, substitua o conteúdo a **&lt;rodapé&gt;** elemento com o seguinte código realçado.
 
     [!code-html[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample6.html)]
 
@@ -251,7 +247,6 @@ Nesta tarefa, você verificará se o serviço de API da Web que você criou na t
 > 
 > ![Opção do Internet Explorer](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image9.png)
 
-
 1. Pressione **F5** para executar a solução. O **faça logon no** página deve ser exibida no navegador.
 
     > [!NOTE]
@@ -298,7 +293,7 @@ Nesta tarefa, você verificará se o serviço de API da Web que você criou na t
 <a id="Exercise2"></a>
 ### <a name="exercise-2-creating-the-spa-interface"></a>Exercício 2: Criando a Interface do SPA
 
-Neste exercício primeiro você criará a parte de front-end da web do Geek Quiz, concentrando-se no aplicativo de página única interação usando **AngularJS**. Em seguida, você será aprimorar a experiência do usuário com o CSS3 para executar animações avançadas e fornecer um efeito visual de alternância quando a transição de uma pergunta para a próxima de contexto.
+Neste exercício primeiro você criará a parte de front-end da web de teste de Pau, concentrando-se no aplicativo de página única interação usando **AngularJS**. Em seguida, você será aprimorar a experiência do usuário com o CSS3 para executar animações avançadas e fornecer um efeito visual de alternância quando a transição de uma pergunta para a próxima de contexto.
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-the-spa-interface-using-angularjs"></a>Tarefa 1 – criar a Interface do SPA usando o AngularJS
@@ -309,7 +304,6 @@ Você irá iniciar instalando AngularJS por meio do Console do Gerenciador de pa
 
 > [!NOTE]
 > Para obter mais informações sobre como AngularJS, consulte [ [ http://angularjs.org/ ](http://angularjs.org/) ](http://angularjs.org/).
-
 
 1. Abra **Visual Studio Express 2013 para Web** e abra o **GeekQuiz.sln** solução localizada no **origem/o Ex2-CreatingASPAInterface/início** pasta. Como alternativa, você pode continuar com a solução que você obteve no exercício anterior.
 2. Abra o **Package Manager Console** de **ferramentas** > **NuGet Package Manager**. Digite o seguinte comando para instalar o **AngularJS.Core** pacote do NuGet.

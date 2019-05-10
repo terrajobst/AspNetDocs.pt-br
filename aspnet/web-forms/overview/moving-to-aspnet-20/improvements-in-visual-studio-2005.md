@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 72d90cd0-b3d9-454c-b2eb-ed0d9812f32c
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/improvements-in-visual-studio-2005
 msc.type: authoredcontent
-ms.openlocfilehash: a580b678a943695969b7f3acd2f7a033bd0b6ee3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 64215d556ded0850537a13856fe69b094116ebca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379762"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130323"
 ---
 # <a name="improvements-in-visual-studio-2005"></a>Aprimoramentos no Visual Studio 2005
 
 por [Microsoft](https://github.com/microsoft)
 
 > Visual Studio 2005 fornece aos desenvolvedores de aplicativos Web uma longa lista de aprimoramentos e melhorias para projetos da Web.
-
 
 Visual Studio 2005 fornece aos desenvolvedores de aplicativos Web uma longa lista de aprimoramentos e melhorias para projetos da Web. Tão potente assim como o Visual Studio .NET 2002 e 2003, havia muitas reclamações da maneira que os projetos da Web foram tratados. Visual Studio 2005 adiciona um número significativo de novos recursos para solucionar esses reclamações. Para aqueles que preferem a maneira que o Visual Studio .NET 2003 manipulados compilação de aplicativos da Web, consulte [Web Application Projects](https://go.microsoft.com/fwlink/?LinkId=57870).
 
@@ -36,7 +35,6 @@ Para os desenvolvedores que desejam usar extensões FrontPage Server Extensions 
 
 > [!NOTE]
 > Extensões FrontPage Server Extensions ainda são necessárias para a criação de projeto remoto, abertura, etc.
-
 
 ## <a name="aspnet-development-server"></a>ASP.NET Development Server
 
@@ -64,12 +62,9 @@ Os desenvolvedores da Web têm muitas novas opções disponíveis para a criaç�
 
 Clique aqui para exibir uma vídeo passo a passo da criação de projetos da Web no Visual Studio 2005.
 
-
 ![](improvements-in-visual-studio-2005/_static/image1.png)
 
-
 [Abra vídeo de tela inteira](improvements-in-visual-studio-2005/_static/creating_projects1.wmv)
-
 
 ### <a name="file-system-projects"></a>Projetos do sistema de arquivos
 
@@ -77,7 +72,6 @@ Como você viu no passo a passo de vídeo, você pode optar por criar sites da W
 
 > [!NOTE]
 > O ASP.NET Development Server pode causar alguma confusão para os clientes. Se um projeto Web é criado no sistema de arquivos na estrutura de diretório IISs (ou seja, c: / inetpub/wwwroot), o site da Web ainda será possível procurar por meio do ASP.NET Development Server quando iniciado a partir do Visual Studio 2005. Portanto, qualquer configuração do IIS (ou seja, métodos de autenticação) não é aplicável.
-
 
 O projeto da web padrão também remove muito a sobrecarga por inclui apenas uma página Default. aspx, o arquivo default.cs e uma pasta de Data. O Web. config e pastas especiais (ou seja, Code) são adicionadas como eles são necessários. Seu projeto da web inclui apenas os arquivos e pastas que você precisa.
 
@@ -90,22 +84,17 @@ A opção de Local IIS lê as informações do site da metabase no computador lo
 > [!NOTE]
 > O arquivo vs###/_tmp.htm e get/_aspx/_ver.aspx não são usados para determinar as informações de versão.
 
-
 A opção de HTTP padrão é o Local do IIS. Essa opção lê a Metabase do IIS para determinar quais sites estão disponíveis e o local no qual criar o conteúdo. Você pode selecionar uma pasta diferente ou um diretório virtual, selecionando-o na exibição de árvore. Você pode também criar um novo diretório virtual, marque pastas como aplicativos, bem como excluir diretórios virtuais existentes nessa caixa de diálogo.
-
 
 ![A escolha da caixa de diálogo local](improvements-in-visual-studio-2005/_static/image1.gif)
 
 **Figura 1**: A escolha da caixa de diálogo local
 
-
 Ao contrário em versões anteriores do Visual Studio, se você verificar a **usar Secure Sockets Layer** caixa de seleção e o certificado SSL não coincide com a URL que você está pesquisando, você verá uma caixa de diálogo alerta de segurança, perguntando se você faria gostaria de continuar. Usando o Visual Studio .NET 2003, se o certificado não era uma correspondência, criando o projeto falharia.
-
 
 ![Alerta certificado de SSL sobre segurança](improvements-in-visual-studio-2005/_static/image2.gif)
 
 **Figura 2**: Alerta certificado de SSL sobre segurança
-
 
 ### <a name="note-on-host-headers"></a>Observação sobre cabeçalhos de Host
 
@@ -113,19 +102,15 @@ Se você estiver criando um aplicativo Web em um site associado a um IP específ
 
 Se você selecionar a opção de Site remoto, a caixa de diálogo é alterado para permitir que você insira a URL de destino para o novo site da Web. Essa URL deve estar em um servidor que tenha habilitado o FrontPage Server Extensions. Se você quiser trabalhar com seu servidor Web local usando o FrontPage Server Extensions, você pode usar a opção de Site remoto e especificar uma URL local.
 
-
 ![Criando um Site da Web em um servidor remoto](improvements-in-visual-studio-2005/_static/image1.jpg)
 
 **Figura 3**: Criando um Site da Web em um servidor remoto
 
-
 Ao criar um aplicativo em um site remoto via SSL, se o certificado SSL não corresponder, a caixa de diálogo de confirmação é ligeiramente diferente do que a caixa de diálogo exibida ao usar a opção de IIS Local.
-
 
 ![O alerta de segurança do Site remoto](improvements-in-visual-studio-2005/_static/image3.gif)
 
 **Figura 4**: O alerta de segurança do Site remoto
-
 
 <a id="_Toc116100243"></a>
 
@@ -136,14 +121,11 @@ Visual Studio 2005 apresenta a opção de criar sites da Web via FTP. Quando voc
 > [!NOTE]
 > O local da pasta temp é c: / Documents and Settings /&lt;usuário&gt;/Local Temp/configurações/VWDWebCache/&lt;Server&gt;/_&lt;nome do aplicativo&gt;
 
-
 Ao usar a opção de FTP, você verá uma caixa de diálogo Escolher local. Você pode inserir as informações de conexão de FTP necessárias essa caixa de diálogo, conforme mostrado abaixo.
-
 
 ![A escolha da caixa de diálogo de local de FTP](improvements-in-visual-studio-2005/_static/image2.jpg)
 
 **Figura 5**: A escolha da caixa de diálogo de local de FTP
-
 
 ## <a name="lab-setup-ftp-site-and-create-a-project"></a>Laboratório: Configurar o site FTP e crie um projeto
 
@@ -199,7 +181,6 @@ As seguintes etapas configuram o site FTP para que um usuário tenha um local qu
 > [!NOTE]
 > Se você receber um erro que indica a impossibilidade de carregar o tipo /_Default, certifique-se de que você está executando o ASP.NET 2.0 em seu site da Web e não uma versão anterior. Você pode fazer isso a partir da guia do ASP.NET nos serviços de informações da Internet.
 
-
 ## <a name="opening-web-projects"></a>Abrindo projetos da Web
 
 Abrir projetos Web é semelhante à criação de projetos. As seções a seguir destacar as áreas para manter o olho para enquanto estiver trabalhando dentro do IDE. Ele também aborda o trabalho com projetos da Web usando HTTP e FTP.
@@ -212,11 +193,9 @@ Para abrir um projeto da Web, selecione Abrir Site da Web no menu arquivo. Você
 
 Como indicado anteriormente neste módulo, o Visual Studio não usa um arquivo de projeto. Portanto, se você optar por abrir um site do sistema de arquivos, você realmente tem a opção de escolher qualquer pasta que você deseja, mesmo se a pasta que você escolher não foi criada como um projeto Web inicialmente no Visual Studio. Por exemplo, você pode optar por abrir a pasta Meus documentos como um site da Web e o Visual Studio Felizmente abri-lo e exibir os arquivos, conforme mostrado abaixo.
 
-
 ![Meus documentos abertos como um Site da Web](improvements-in-visual-studio-2005/_static/image3.jpg)
 
 **Figura 6**: *Meus documentos* aberto como um Site da Web
-
 
 Porque o Visual Studio cria somente outros arquivos e pastas quando necessário, sem arquivos ou pastas adicionais são adicionadas para o local em que você abrir. Um efeito colateral dessa arquitetura é que ele impede a sites da Web de aninhamento no sistema de arquivos. Por exemplo, considere a seguinte estrutura de diretório.
 
@@ -234,11 +213,9 @@ Ao abrir sites da Web via HTTP, as configurações são lidas a partir da metaba
 
 Mesmo que o Visual Studio exibirá um ícone para aplicativos que estão aninhadas sob o aplicativo que está aberto no momento dentro do IDE, ele não permitirá que você expanda-las para ver seu conteúdo. No entanto, você pode clicar duas vezes neles para abri-los. Quando você fizer isso, você verá uma caixa de diálogo solicitando que você abrir o aplicativo web (e substituir a solução atualmente aberta) ou adiciona o aplicativo Web à sua solução atual.
 
-
 ![Clicar duas vezes em um ícone do aplicativo aninhada apresenta esta caixa de diálogo](improvements-in-visual-studio-2005/_static/image4.jpg)
 
 **Figura 7**: Clicar duas vezes em um ícone do aplicativo aninhada apresenta esta caixa de diálogo
-
 
 <a id="_Toc116100247"></a>
 
@@ -250,11 +227,9 @@ C: / Documents and Settings /&lt;usuário&gt;/Local Temp/configurações/VWDWebC
 
 Ao usar o FTP, o Visual Studio será preciso especificar a URL base para o seu projeto para que você pode procurar conforme mostrado abaixo. Se você não especificar uma URL base, o Visual Studio perguntará para ele na primeira vez que você tentar navegar em uma página no site da Web.
 
-
 ![Especificando uma URL Base para Sites FTP](improvements-in-visual-studio-2005/_static/image5.jpg)
 
 **Figura 8**: Especificando uma URL Base para Sites FTP
-
 
 ## <a name="improvements-in-compilation"></a>Melhorias na compilação
 
@@ -265,27 +240,21 @@ No Visual Studio 2002 e 2003, os aplicativos da Web foram compilados em um assem
 > [!NOTE]
 > O utilitário de linha de comando do MSBuild também pode ser usado para criar aplicativos do ASP.NET. Essa ferramenta será abordada no módulo 9.
 
-
 Outra melhoria de compilação é a nova opção de página de Build no menu compilar. Esse recurso permite que um desenvolvedor recompilar somente a página atual (juntamente com, do curso e dependências) para que as alterações podem ser compiladas mais rapidamente. Porque o c# não oferece a compilação em segundo plano para fins de atualização do IntelliSense, etc., eles serão beneficiados imensamente com esse recurso porque ele permitirá o IntelliSense para ser atualizada rapidamente por simplesmente recriar uma única página.
 
 As propriedades de Build para um projeto permitem que você configurar o tipo de compilação que ocorre antes que a página de inicialização é executada. Os desenvolvedores podem optar por compilar apenas a página atual para que o Visual Studio pode iniciar a depuração de aplicativos mais rapidamente após as alterações de código.
-
 
 ![A ação de início da página de Build](improvements-in-visual-studio-2005/_static/image6.jpg)
 
 **Figura 9**: A ação de início da página de Build
 
-
 Outro ótimo aprimoramento para Visual Studio e a arquitetura do ASP.NET está na área de editar e continuar. No Visual Studio 2005, os desenvolvedores podem iniciar a depuração de um projeto e fazer alterações de código no projeto sem desanexar o depurador. Na verdade, literalmente, você pode iniciar a depuração de um projeto, adicione uma nova classe, adicione código à classe, adicione código para a página que cria uma nova instância da classe e executar um método da classe, tudo sem desanexar o depurador. Executar o novo código é literalmente tão fácil como atualizar o navegador!
 
 Clique aqui para ver uma vídeo passo a passo da edição e continuar o recurso no Visual Studio 2005.
 
-
 ![](improvements-in-visual-studio-2005/_static/image2.png)
 
-
 [Abra vídeo de tela inteira](improvements-in-visual-studio-2005/_static/editcontinue1.wmv)
-
 
 A robusta de editar e continuar a funcionalidade no ASP.NET 2.0 e o Visual Studio 2005 é devido a uma alteração de arquitetura para aplicativos ASP.NET. No ASP.NET 1. x, os aplicativos criados no Visual Studio 2002/2003 foram compilados em um assembly principal que foi armazenado na pasta /bin. Todas as classes, páginas, etc. para o aplicativo foram compiladas em uma DLL. Em seguida, no tempo de execução ASP.NET seria compilar todos os controles, marcação e código do ASP.NET em páginas e copie essas DLLs na pasta temporária ASP.NET.
 
@@ -293,28 +262,21 @@ No Visual Studio 2005 usando o ASP.NET 2.0, os modelos de dois compilação desc
 
 Clique aqui para ver uma vídeo passo a passo de suporte de designer para controles de usuário.
 
-
 ![](improvements-in-visual-studio-2005/_static/image3.png)
 
-
 [Abra vídeo de tela inteira](improvements-in-visual-studio-2005/_static/usercontrols1.wmv)
-
 
 > [!NOTE]
 > Quando um controle de usuário é removido de uma página, o @Register diretiva permanece na marcação e devem ser removida manualmente para evitar erros do analisador, se o controle de usuário é excluído do site da Web.
 
-
 Outro aperfeiçoamento no modelo de compilação do Visual Studio é o recurso de Publicar Site. Porque o recurso de publicação pré-compila um site da Web, os desenvolvedores podem aproveitar o melhor desempenho de não precisar compilar tudo sob demanda. Ele também pré-compila todo o código-fonte na pasta do Code em uma DLL para que nenhum código-fonte deve ser implantado.
-
 
 ![A caixa de diálogo Publicar Web Site](improvements-in-visual-studio-2005/_static/image7.jpg)
 
 **Figura 10**: A caixa de diálogo Publicar Web Site
 
-
 > [!NOTE]
 > O utilitário de aspnet/_compile.exe também pode ser usado para pré-compilar um aplicativo Web ASP.NET. Essa ferramenta será abordada no módulo 9.
-
 
 Quando você publicar um site da Web, os arquivos pré-compilado é armazenados na pasta Temporary ASP.NET Files, conforme mostrado abaixo. Arquivos com um *Compiled* extensão de arquivo são arquivos XML que definem as dependências para DLLs em particulares. Os controles de formulário da Web ou de usuário são compilados em DLLs aleatórias que começam com *aplicativo /_Web /_*.
 
@@ -327,15 +289,12 @@ O *habilitar nomes fortes em assemblies de pré-compilado* caixa de seleção pe
 > [!NOTE]
 > No ASP.NET 1. x, assemblies de nome forte precisava ser instalado no Cache de Assembly Global (GAC). No ASP.NET 2.0, não é necessário instalar assemblies de nome forte no GAC.
 
-
 ![Um arquivos pré-compiladas de aplicativos do ASP.NET](improvements-in-visual-studio-2005/_static/image8.jpg)
 
 **Figura 11**: Um arquivos pré-compiladas de aplicativos do ASP.NET
 
-
 > [!NOTE]
 > No aplicativo, não houve nenhum arquivo Web. config. Se tivesse sido, ele poderia ter sido chamado *PrecompiledApp.config* processo do site depois de publicar na Web.
-
 
 ## <a name="improvements-in-deployment"></a>Aprimoramentos na implantação
 
@@ -348,15 +307,11 @@ Se você estiver copiando um projeto para um site remoto, o site deve ter as ext
 > [!NOTE]
 > Se você tentar criar um novo site na instância local do IIS e as extensões de servidor do FrontPage 2002 estiverem instalados, você receberá uma mensagem de erro informando que a criação de sites da Web não é suportado em um servidor do SharePoint. Nesse caso, você tem a opção de instalar as extensões de servidor do FrontPage 2000 ou remover as extensões FrontPage Server Extensions.
 
-
 Clique aqui para obter uma explicação de vídeo do recurso Copy Web Site.
-
 
 ![](improvements-in-visual-studio-2005/_static/image4.png)
 
-
 [Abra vídeo de tela inteira](improvements-in-visual-studio-2005/_static/copysite1.wmv)
-
 
 ## <a name="improvements-in-debugging"></a>Melhorias na depuração
 
@@ -389,19 +344,15 @@ O requisito para a depuração remota no Visual Studio 2005 é bastante simple. 
 
 Quando você executa msvsmon.exe, é provável que ele vai reclamar sobre portas sendo bloqueadas para a depuração remota. Felizmente, você pode desbloquear as portas diretamente de dentro da caixa de diálogo de aviso facilmente conforme mostrado abaixo.
 
-
 ![Notificação de que o Firewall do Windows está bloqueando a depuração remota](improvements-in-visual-studio-2005/_static/image9.jpg)
 
 **Figura 12**: Notificação de que o Firewall do Windows está bloqueando a depuração remota
 
-
 Quando você tiver desbloqueado as portas necessárias para a depuração, você verá o Monitor de depuração remota conforme mostrado abaixo. Essa interface, você pode monitorar as conexões e alterar permissões de depuração com facilidade.
-
 
 ![O Monitor de depuração remota](improvements-in-visual-studio-2005/_static/image10.jpg)
 
 **Figura 13**: O Monitor de depuração remota
-
 
 Também é possível depurar remotamente um aplicativo Web aberto por meio de FTP. As etapas são as mesmas que as abordadas anteriormente. No entanto, você precisará especificar uma URL base para procurar o projeto FTP, conforme descrito neste módulo.
 
@@ -413,12 +364,9 @@ Este laboratório orientará você por meio de depuração remota com o Visual S
 
 Clique aqui para obter uma explicação de vídeo deste laboratório.
 
-
 ![](improvements-in-visual-studio-2005/_static/image5.png)
 
-
 [Abra vídeo de tela inteira](improvements-in-visual-studio-2005/_static/remdebug1.wmv)
-
 
 Este laboratório requer que você tenha duas máquinas, um executando o Visual Studio 2005 e o outro em execução do IIS 5 ou superior.
 
@@ -426,7 +374,6 @@ Este laboratório requer que você tenha duas máquinas, um executando o Visual 
 
 > [!NOTE]
 > Você pode criar o site da Web em uma instância remota do IIS ou por meio de FTP.
-
 
 1. Do servidor Web remoto, localize msvsmon.exe na máquina de desenvolvimento usando um caminho UNC e executá-lo.  
  O local padrão para msvsmon.exe é //server/c$/Program Files/Microsoft Visual Studio 8/Common7/IDE/Remote Debugger/x86.
@@ -444,11 +391,9 @@ O ASP.NET Development Server é um servidor Web restrito. Ele não permite conex
 
 O ASP.NET Development Server podem ser iniciado por meio da linha de comando, executando o arquivo WebDev.WebServer.exe localizado em c:/Windows/Microsoft.NET/Framework/v2.0./*/* /  */*/*. A caixa de diálogo a seguir exibe os parâmetros que estão disponíveis.
 
-
 ![](improvements-in-visual-studio-2005/_static/image11.jpg)
 
 **Figura 14**
-
 
 > [!NOTE]
 > Não há suporte para o ASP.NET Development Server quando iniciado explicitamente por meio da linha de comando.

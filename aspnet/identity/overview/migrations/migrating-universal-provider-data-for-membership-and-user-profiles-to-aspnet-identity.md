@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 2e260430-d13c-4658-bd05-e256fc0d63b8
 msc.legacyurl: /identity/overview/migrations/migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 1043dce4cdd62f94ae9d2344a9301c1b03426f3d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: de154dde122886976054159ad745982669ca9315
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422259"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121382"
 ---
 # <a name="migrating-universal-provider-data-for-membership-and-user-profiles-to-aspnet-identity-c"></a>Migração de dados de Associação e Perfis de usuário do provedor universal para a Identidade do ASP.NET (C#)
 
@@ -22,14 +22,12 @@ por [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter
 
 > Este tutorial descreve as etapas necessárias migrar dados de perfil de usuário criados usando provedores universais de um aplicativo existente para o modelo de identidade do ASP.NET e de usuário e dados de função. A abordagem mencionada aqui migrar dados de perfil do usuário pode ser usados em um aplicativo com a associação do SQL também.
 
-
 Com o lançamento do Visual Studio 2013, a equipe do ASP.NET introduziu um novo sistema ASP.NET Identity, e você pode ler mais sobre essa versão [aqui](../../index.md). Dando o artigo para migrar aplicativos web contra [associação de SQL para o novo sistema de identidade](migrating-an-existing-website-from-sql-membership-to-aspnet-identity.md), este artigo ilustra as etapas para migrar aplicativos existentes que seguem o modelo de provedores para o gerenciamento de usuário e a função para o novo modelo de identidade. O foco deste tutorial será principalmente sobre como migrar os dados de perfil do usuário para perfeitamente vinculá-lo no novo sistema. Migração de informações de usuário e a função é semelhante para a associação do SQL. A abordagem seguida para migrar dados de perfil pode ser usada em um aplicativo com a associação do SQL também.
 
 Por exemplo, vamos começar com um aplicativo web criado usando o Visual Studio 2012 usa o modelo de provedores. Podemos será, em seguida, adicione código para gerenciamento de perfil, registrar um usuário, adicionar dados de perfil para os usuários, migrar o esquema de banco de dados e, em seguida, altere o aplicativo para usar o sistema de identidade para o gerenciamento de usuário e a função. Como um teste de migração, os usuários criados usando provedores Universal devem ser capazes de fazer logon e novos usuários devem ser capazes de se registrar.
 
 > [!NOTE]
 > Você pode encontrar o exemplo completo em [ https://github.com/suhasj/UniversalProviders-Identity-Migrations ](https://github.com/suhasj/UniversalProviders-Identity-Migrations).
-
 
 ## <a name="profile-data-migration-summary"></a>Resumo de migração de dados de perfil
 

@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: fa429113-5f8f-4ef4-97c5-5c04900a19fa
 msc.legacyurl: /whitepapers/request-validation
 msc.type: content
-ms.openlocfilehash: d721bb14b9907ae594d1d5207b6f802e84326c9c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 807cccd6fe1acdd6359b014387abd3878840d4cd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59414719"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130489"
 ---
 # <a name="request-validation---preventing-script-attacks"></a>Solicitação de validação – Impedir ataques de Script
 
 > Este documento descreve o recurso de validação de solicitação do ASP.NET, onde, por padrão, o aplicativo será impedido de processamento de conteúdo HTML não codificado enviado ao servidor. Esse recurso de validação de solicitação pode ser desabilitado quando o aplicativo foi projetado para processar com segurança dados HTML.
 > 
 > Aplica-se para o ASP.NET 1.1 e ASP.NET 2.0.
-
 
 Validação de solicitação, um recurso do ASP.NET desde a versão 1.1, impede que o servidor aceite conteúdo sem HTML codificado. Esse recurso é criado para ajudar a evitar alguns ataques de injeção de script no qual código de script de cliente ou HTML pode ser enviado inadvertidamente para um servidor, armazenado e, em seguida, apresentado a outros usuários. Ainda recomendamos que você validar a entrada de todos os dados e a codificação HTML quando for apropriado.
 

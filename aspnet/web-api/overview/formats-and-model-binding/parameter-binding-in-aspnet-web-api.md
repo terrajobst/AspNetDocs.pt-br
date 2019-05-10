@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: f121f12ce689a079412bbd5392fde4fea863ff1f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da0b9e12fcbe5cd2bfb5478162b7453d34931edf
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401966"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127518"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Associação de parâmetro na API Web ASP.NET
 
@@ -173,7 +173,6 @@ O **ExecuteBindingAsync** método faz a associação. Dentro desse método, adic
 
 > [!NOTE]
 > Se sua **ExecuteBindingAsync** método lê o corpo da mensagem de solicitação, substitua o **WillReadBody** propriedade retornar true. O corpo da solicitação pode ser um fluxo não armazenado em buffer que só pode ser lidos uma vez, portanto, a API da Web impõe uma regra que no máximo uma associação pode ler o corpo da mensagem.
-
 
 Para aplicar um personalizado **HttpParameterBinding**, você pode definir um atributo derivado de **ParameterBindingAttribute**. Para `ETagParameterBinding`, vamos definir dois atributos, um para `if-match` cabeçalhos e outro para `if-none-match` cabeçalhos. Ambos derivam de uma classe base abstrata.
 

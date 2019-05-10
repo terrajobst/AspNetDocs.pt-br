@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 5c6371c0-a944-4adf-a28e-5afbdd011ca8
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/nerddinner-wrap-up
 msc.type: authoredcontent
-ms.openlocfilehash: 49c5f762fdd6d99f1af8a10d057852299a266e50
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4e25a4a3a953e97c9a292506a9511f28874925ab
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421037"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128360"
 ---
 # <a name="nerddinner-wrap-up"></a>Conclusão do NerdDinner
 
@@ -24,7 +24,6 @@ por [Microsoft](https://github.com/microsoft)
 > Isso é a conclusão do tutorial do NerdDinner e fornece informações sobre como obter mais informações.
 > 
 > Se você estiver usando o ASP.NET MVC 3, recomendamos que você siga a [obtendo iniciado com o MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de música do MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriais.
-
 
 Nosso aplicativo NerdDinner agora está concluído e pronto para implantar na web.
 

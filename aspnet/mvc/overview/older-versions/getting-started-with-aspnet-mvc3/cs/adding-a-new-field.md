@@ -8,12 +8,12 @@ ms.date: 01/12/2011
 ms.assetid: b4e76c1a-f66e-43a0-aa72-f39df79c07c1
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: a06def9c434bd79d63bb74d105c1788e993e231a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: acac3ade54cc51c8004f9ea5f0ee4157d15251e5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383846"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130185"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-table-c"></a>Adicionar um novo campo ao modelo de filme e à tabela (C#)
 
@@ -32,7 +32,6 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 > Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
 > Um projeto do Visual Web Developer com código-fonte c# está disponível para acompanhar este tópico. [Baixe a versão c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
-
 
 Nesta seção, você vai fazer algumas alterações para as classes de modelo e saiba como você pode atualizar o esquema de banco de dados de acordo com as alterações do modelo.
 
@@ -84,7 +83,6 @@ Vamos atualizar o aplicativo para que o Code First automaticamente descarta e re
 > [!NOTE] 
 > 
 > **Aviso** você deve habilitar essa abordagem de automaticamente descartar e recriar o banco de dados somente quando você estiver usando um banco de dados de desenvolvimento ou teste, e *nunca* em um banco de dados de produção que contém dados reais. Usá-lo em um servidor de produção pode levar à perda de dados.
-
 
 Na **Gerenciador de soluções**, clique com botão direito do *modelos* pasta, selecione **Add**e, em seguida, selecione **classe**.
 

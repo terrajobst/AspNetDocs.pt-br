@@ -8,19 +8,18 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 9e4a2a9fc56393ac816f25a1039b233aa8961608
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 79d6b38c6464a749db9cd6d35e1f277b0adf2a02
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383831"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65129428"
 ---
 # <a name="bundling-and-minification"></a>Agrupamento e minificação
 
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 > Agrupamento e minificação são duas técnicas você pode usar no ASP.NET 4.5 para melhorar o tempo de carregamento da solicitação. Agrupamento e minificação melhora o tempo de carregamento, reduzindo o número de solicitações para o servidor e reduzindo o tamanho dos ativos mais solicitados (como CSS e JavaScript.)
-
 
 A maioria dos principais navegadores atuais limita o número de [conexões simultâneas](http://www.browserscope.org/?category=network) por cada nome de host para seis. Isso significa que, enquanto estão sendo processadas seis solicitações, solicitações adicionais para ativos em um host serão enfileiradas pelo navegador. Na imagem abaixo, as guias de rede de ferramentas de desenvolvedor F12 do IE mostra o tempo para os ativos necessários para a exibição sobre de um aplicativo de exemplo.
 
@@ -96,7 +95,6 @@ Para habilitar o agrupamento e minificação, defina o `debug` valor como "false
 
 > [!NOTE]
 > A menos que `EnableOptimizations` é `true` ou o atributo de depuração na [elemento compilation](https://msdn.microsoft.com/library/s10awwz0.aspx) no *Web. config* arquivo é definido como `false`, arquivos não serão agrupados ou reduzidos. Além disso, a versão .min dos arquivos não será usada, as versões de depuração completa serão selecionadas. `EnableOptimizations` substitui o atributo de depuração na [Prvek compilation](https://msdn.microsoft.com/library/s10awwz0.aspx) na *Web. config* arquivo
-
 
 ## <a name="using-bundling-and-minification-with-aspnet-web-forms-and-web-pages"></a>Usando o agrupamento e Minificação com Web Forms do ASP.NET e páginas da Web
 

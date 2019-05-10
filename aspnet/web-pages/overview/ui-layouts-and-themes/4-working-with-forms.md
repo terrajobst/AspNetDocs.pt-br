@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: f3f4b8c8-e8f6-4474-ad94-69228a6c01ee
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/4-working-with-forms
 msc.type: authoredcontent
-ms.openlocfilehash: 680739cbcf54bc9ca7a3bd8167d043ff537eaad5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ec5ad784978b2d5191d59398fc4b5ed25ae516fb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417527"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128398"
 ---
 # <a name="working-with-html-forms-in-aspnet-web-pages-razor-sites"></a>Trabalhando com formulários HTML em Sites do ASP.NET Web Pages (Razor)
 
@@ -42,7 +42,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial também funciona com ASP.NET Web Pages 2.
-
 
 ## <a name="creating-a-simple-html-form"></a>Criando um formulário HTML simples
 
@@ -89,7 +88,6 @@ Para processar o formulário, você deve adicionar código que lê os valores de
 > É uma boa ideia usar a qualquer momento que você exibe cadeias de caracteres de codificação HTML (entrada) que você obteve de um usuário. Se você não fizer isso, um usuário pode tentar obter sua página da web para executar um script mal-intencionado ou fazer outras coisas que compromete a segurança de seu site ou que é simplesmente não o que você pretende. (Isso é particularmente importante se você aceita entrada do usuário, armazená-lo em um local e, em seguida, exibi-lo mais tarde &#8212; por exemplo, como um comentário de blog, revisão de usuário ou algo assim.)
 > 
 > Para ajudar a evitar esses problemas, páginas da Web ASP.NET automaticamente codifica em HTML qualquer texto de conteúdo que você a partir do código de saída. Por exemplo, quando você exibe o conteúdo de uma variável ou uma expressão usando um código como `@MyVar`, páginas da Web ASP.NET codifica automaticamente a saída.
-
 
 ## <a name="validating-user-input"></a>Validação de entrada do usuário
 
