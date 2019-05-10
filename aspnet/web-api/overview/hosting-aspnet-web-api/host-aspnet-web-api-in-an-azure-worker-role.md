@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 6980ee2e-d6b0-4a08-8fb6-ab96362dd0e3
 msc.legacyurl: /web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role
 msc.type: authoredcontent
-ms.openlocfilehash: bfb23aafb814010e8651965dad91ca20a37fd786
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ec9904e0bff090be0f504036ae73977cfca0cb31
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404618"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130829"
 ---
 # <a name="host-aspnet-web-api-2-in-an-azure-worker-role"></a>Hospedar a API Web ASP.NET 2 em uma função de trabalho do Azure
 
@@ -32,7 +32,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)
 > - API Web 2
 > - [SDK do Azure para .NET 2.3](https://azure.microsoft.com/downloads/)
-
 
 ## <a name="create-a-microsoft-azure-project"></a>Criar um projeto do Microsoft Azure
 
@@ -123,7 +122,6 @@ Compile a solução e pressione F5 para executar o aplicativo localmente no emul
 
 > [!NOTE]
 > Se você receber uma exceção semelhante à seguinte, consulte [esta postagem de blog](https://blogs.msdn.com/b/praburaj/archive/2013/11/20/fileloadexception-on-microsoft-owin-when-running-on-worker-role.aspx) para uma solução alternativa. "Não foi possível carregar arquivo ou assembly ' Microsoft. owin, versão = 2.0.2.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' ou uma de suas dependências. Definição do manifesto do assembly localizado não coincide com a referência de assembly. (Exceção de HRESULT: 0x80131040)"
-
 
 O emulador de computação atribui um endereço IP local para o ponto de extremidade. Você pode encontrar o endereço IP, exibindo a interface de usuário do emulador de computação. Clique com botão direito no ícone do emulador na tarefa de área de notificação da barra e, em seguida, selecione **mostrar IU do emulador de computação**.
 

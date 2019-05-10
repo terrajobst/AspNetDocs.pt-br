@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: a8aac1ac-89de-4415-afe0-97a41c6423d2
 msc.legacyurl: /web-pages/overview/routing/creating-readable-urls-in-aspnet-web-pages-sites
 msc.type: authoredcontent
-ms.openlocfilehash: bfce6120b76d68a3f212639eafa6aa091d7e345d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 832db8e144cab730f16c78f67c12feb9b7c92c7c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59381777"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131765"
 ---
 # <a name="creating-readable-urls-in-aspnet-web-pages-razor-sites"></a>Criação de URLs legíveis em Sites do ASP.NET Web Pages (Razor)
 
@@ -33,7 +33,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial também funciona com ASP.NET Web Pages 2.
-
 
 ## <a name="about-routing"></a>Sobre roteamento
 
@@ -77,7 +76,6 @@ Se a pesquisa encontrada exata não corresponde a para *. cshtml* arquivos em su
 > [!NOTE]
 > Para ser honesto, as solicitações para páginas específicas (ou seja, as solicitações que incluem o *. cshtml* extensão de nome de arquivo) funcionará da mesma forma que você esperaria. Uma solicitação como `http://www.contoso.com/a/b.cshtml` executará a página *cshtml* bem.
 
-
 Dentro de uma página, você pode obter as informações de caminho por meio da página `UrlData` propriedade, que é um dicionário. Imagine que você tenha um arquivo chamado *ViewCustomers.cshtml* e seu site recebe essa solicitação:
 
 `http://mysite.com/myWebSite/ViewCustomers/1000`
@@ -88,7 +86,6 @@ Conforme descrito nas regras acima, a solicitação irá para a página. Dentro 
 
 > [!NOTE]
 > Como o roteamento não envolve a nomes de arquivo completos, pode haver ambiguidade se você tiver páginas que têm o mesmo nome, mas diferentes extensões de nome de arquivo (por exemplo, *MyPage.cshtml* e *MyPage.html*) . Para evitar problemas com o roteamento, é melhor certificar-se de que você não tem páginas em seu site cujos nomes diferem apenas em sua extensão.
-
 
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionais

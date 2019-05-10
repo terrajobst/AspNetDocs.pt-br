@@ -8,12 +8,12 @@ ms.date: 03/28/2008
 ms.assetid: 7f9380c6-19f7-4c82-a019-916ec6dffc9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities
 msc.type: authoredcontent
-ms.openlocfilehash: 1203825a1fb6b2034d9180fcf416aba7d0012fb7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d33c45c50d4f8edc899f3fe63ede11ad98d45823
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383207"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131896"
 ---
 # <a name="understanding-aspnet-ajax-debugging-capabilities"></a>Noções básicas sobre os recursos de depuração do AJAX ASP.NET
 
@@ -22,7 +22,6 @@ por [Scott Cate](https://github.com/scottcate)
 [Baixar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial06_Debugging_MS_Ajax_Applications_cs.pdf)
 
 > A capacidade de depurar o código é uma habilidade que todo desenvolvedor deve ter em seu arsenal independentemente da tecnologia que está sendo usada. Embora muitos desenvolvedores estão acostumados a usar o Visual Studio .NET ou o Web Developer Express para depurar aplicativos ASP.NET que usam código VB.NET ou c#, alguns não estão cientes de que também é extremamente útil para depurar o código do lado do cliente, como JavaScript. Também pode ser aplicado o mesmo tipo de técnicas usadas para depurar aplicativos .NET para aplicativos habilitados para AJAX e mais especificamente os aplicativos do ASP.NET AJAX.
-
 
 ## <a name="debugging-aspnet-ajax-applications"></a>Depuração de aplicativos do ASP.NET AJAX
 
@@ -47,11 +46,9 @@ Embora não obrigatório, se você está tentando depurar um aplicativo que voc�
 
 Figura 1 mostra que o Internet Explorer avançada da caixa de diálogo deve parecer depois que ele foi configurado corretamente para depuração.
 
-
 [![Configurando o Internet Explorer para depuração.](understanding-asp-net-ajax-debugging-capabilities/_static/image2.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image1.png)
 
 **Figura 1**: Configurando o Internet Explorer para depuração.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image3.png))
-
 
 Depois que a depuração foi ativada, você verá um novo item de menu aparecem no menu de exibição denominado depurador de Script. Ele tem duas opções disponíveis, incluindo abrir e quebra na próxima instrução. Quando abertos for marcado você será solicitado a depurar a página no Visual Studio 2008 (Observe que o Visual Web Developer Express também pode ser usado para depuração). Se estiver executando o Visual Studio .NET, você pode escolher para usar essa instância ou para criar uma nova instância. Quando a interrupção na próxima instrução é selecionada você será solicitado a depurar a página quando o código JavaScript é executado. Se o código JavaScript é executado no evento onLoad da página, você pode atualizar a página para disparar uma sessão de depuração. Se o código JavaScript é executado depois que um botão é clicado, em seguida, o depurador será executado imediatamente depois que o botão é clicado.
 
@@ -72,7 +69,6 @@ O depurador do Visual Studio 2008 trata JavaScript inserido em uma página difer
 
 Você pode contornar esse problema, movendo o código em um arquivo. js externo e fazer referência a ele usando o atributo src do &lt;script&gt; marca:
 
-
 [!code-html[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample1.html)]
 
 E se movendo o código em um arquivo externo não é uma opção ou requer mais trabalho do que vale a pena? Embora você não pode definir um ponto de interrupção usando o editor, você pode adicionar a instrução de depurador diretamente no código onde você deseja iniciar a depuração. Você também pode usar a classe Sys. Debug disponível na biblioteca do AJAX ASP.NET para forçar a depuração para iniciar. Você aprenderá mais sobre a classe Sys. Debug neste artigo.
@@ -80,7 +76,6 @@ E se movendo o código em um arquivo externo não é uma opção ou requer mais 
 Um exemplo de como usar o `debugger` palavra-chave é mostrada na listagem 1. Este exemplo força o depurador para interromper correto antes de uma chamada para uma função de atualização é feita.
 
 **Listagem 1. Usando a palavra-chave do depurador para forçar o depurador do Visual Studio .NET para interromper.**
-
 
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample2.js)]
 
@@ -90,11 +85,9 @@ Depois que a instrução de depurador é atingida, você será solicitado a depu
 
 Depois de uma sessão de depuração é iniciada e começar a percorrer o código usando a tecla F11 padrão, você pode encontrar a caixa de diálogo de erro mostrada na veja a Figura 2, a menos que todos os arquivos de script usados na página de estejam abertas e disponíveis para depuração.
 
-
 [![Caixa de diálogo de erro mostrada quando nenhum código-fonte está disponível para depuração.](understanding-asp-net-ajax-debugging-capabilities/_static/image5.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image4.png)
 
 **Figura 2**: Caixa de diálogo de erro mostrada quando nenhum código-fonte está disponível para depuração.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image6.png))
-
 
 Essa caixa de diálogo é mostrada porque o Visual Studio .NET não estiver certo sobre como obter o código-fonte de alguns dos scripts referenciados pela página. Embora isso possa ser muito frustrante primeiro, há uma correção simple. Depois de iniciada uma sessão de depuração e um ponto de interrupção, vá para a janela do Gerenciador de Script do Windows de depuração no menu do Visual Studio 2008 ou use a tecla de atalho Ctrl + Alt + N.
 
@@ -103,11 +96,9 @@ Essa caixa de diálogo é mostrada porque o Visual Studio .NET não estiver cert
 
 O Gerenciador de Script pode ser usado para exibir todos os scripts usados em uma página e abri-los no editor de códigos. Quando o Gerenciador de Script é aberto, clique duas vezes na página. aspx que estão sendo depurada no momento para abri-lo na janela do editor de código. Execute a mesma ação para todos os outros scripts mostrados no Gerenciador de Script. Depois que todos os scripts estão abertos na janela de código, você pode pressione F11 (e use as outras teclas de atalho de depuração) para percorrer seu código. Figura 3 mostra um exemplo de como o Gerenciador de Script. Ela lista o arquivo atual que está sendo depurado (Demo.aspx), bem como dois scripts personalizados e dois scripts dinamicamente injetados na página pelo ScriptManager ASP.NET AJAX.
 
-
 [![O Gerenciador de Script fornece acesso fácil a scripts usados em uma página.](understanding-asp-net-ajax-debugging-capabilities/_static/image8.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image7.png)
 
 **Figura 3**. O Gerenciador de Script fornece acesso fácil a scripts usados em uma página.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image9.png))
-
 
 Várias outras windows também podem ser usados para fornecer informações úteis conforme você percorre o código em uma página. Por exemplo, você pode usar a janela locais para ver os valores de variáveis diferentes usados na página, a janela imediata para avaliar variáveis específicas ou condições e exibir a saída. Você também pode usar a janela de saída para exibir instruções de rastreamento gravadas usando a função Sys.Debug.trace (que será abordada neste artigo) ou uma função de Debug. writeln do Internet Explorer.
 
@@ -121,11 +112,9 @@ Embora o Visual Studio 2008 (e o Visual Web Developer Express 2008) são muito c
 
 Auxiliar de desenvolvimento da Web pode ser usado diretamente dentro do Internet Explorer, que é conveniente usar. Ele é iniciado, selecionando Ferramentas Web Development Helper de menu do Internet Explorer. Isso abrirá a ferramenta na parte inferior do navegador que é bom, pois você não precisa deixar o navegador para executar várias tarefas, como o log de mensagem de solicitação e resposta HTTP. Figura 4 mostra a aparência de Web Development Helper em ação.
 
-
 [![Web Development Helper](understanding-asp-net-ajax-debugging-capabilities/_static/image11.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image10.png)
 
 **Figura 4**: Web Development Helper ([clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image12.png))
-
 
 Auxiliar de desenvolvimento da Web não é uma ferramenta que você usará para percorrer o código linha por linha enquanto o Visual Studio 2008. No entanto, ele pode ser usado para exibir a saída de rastreamento, facilmente avaliar as variáveis em um script ou explorar os dados são dentro de um objeto JSON. Também é muito útil para exibir os dados que são passados de e para uma página ASP.NET AJAX e um servidor.
 
@@ -137,13 +126,11 @@ A janela imediata pode ser usada para executar comandos de script ou até mesmo 
 
 **Listagem 2. Gravar uma mensagem de rastreamento do lado do cliente usando a classe de depuração.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample3.js)]
 
 Se a propriedade LastName contiver um valor de Doe, o Web Development Helper exibirá a mensagem "nome de pessoa: Doe"na janela de comando do console de script (supondo que a depuração foi habilitada). Web Development Helper também adiciona um objeto de nível superior debugService em páginas que podem ser usadas para gravar informações de rastreamento ou exibir o conteúdo dos objetos JSON. Listagem 3 mostra um exemplo de como usar a função de rastreamento da classe debugService.
 
 **Listagem 3. Usando a classe de debugService da Web Development Helper para gravar uma mensagem de rastreamento.**
-
 
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample4.js)]
 
@@ -153,7 +140,6 @@ A classe debugService também permite que os dados de objeto JSON ser exibido us
 
 **Listagem 4. Usando a função debugService.inspect para exibir dados de objeto JSON.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample5.js)]
 
 Chamar a função de GetPerson() na página ou por meio da janela imediata resultará na janela de diálogo do Inspetor de objetos que aparecem conforme mostrado na Figura 5. Propriedades em um objeto podem ser alteradas dinamicamente, realçando-os, alterando o valor exibido na caixa de texto valor e, em seguida, clicando no link de atualização. Usando o Inspetor de objeto simplifica exibir dados de objeto JSON e fazer experiências com aplicando diferentes valores a propriedades.
@@ -162,19 +148,15 @@ Chamar a função de GetPerson() na página ou por meio da janela imediata resul
 
 Além de permitir que os dados de rastreamento e objetos do JSON a ser exibido, o Web Development helper também pode ajudar na depuração de erros em uma página. Se um erro for encontrado, você será solicitado a continuar para a próxima linha de código ou depurar o script (consulte a Figura 6). A janela de caixa de diálogo de erro de Script mostra a chamada completa de pilha, bem como os números de linha para que você pode facilmente identificar onde os problemas estão dentro de um script.
 
-
 [![Usando a janela Inspetor de objeto para exibir um objeto JSON.](understanding-asp-net-ajax-debugging-capabilities/_static/image14.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image13.png)
 
 **Figura 5**: Usando a janela Inspetor de objeto para exibir um objeto JSON.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image15.png))
 
-
 Selecionando a opção de depuração permite que você execute instruções de script diretamente na janela de imediato do Web Development Helper para exibir o valor de variáveis, gravar objetos JSON, e muito mais. Se a mesma ação que disparou o erro é executada novamente e o Visual Studio 2008 está disponível no computador, você será solicitado para iniciar uma sessão de depuração para que você pode percorrer o código linha por linha conforme discutido na seção anterior.
-
 
 [![Caixa de diálogo de erro de Script do auxiliar de desenvolvimento de Web](understanding-asp-net-ajax-debugging-capabilities/_static/image17.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image16.png)
 
 **Figura 6**: Caixa de diálogo de erro de Script do auxiliar de desenvolvimento de Web ([clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image18.png))
-
 
 *Inspecionar mensagens de resposta e solicitação*
 
@@ -184,19 +166,15 @@ Para exibir mensagens de solicitação e resposta do ASP.NET AJAX, o agente de l
 
 Embora a exibir o texto não processado enviado em cada mensagem de solicitação/resposta é certamente útil (e uma opção no Web Development Helper), geralmente é mais fácil de exibir dados de mensagem em um formato mais gráfico. Depois que o log HTTP foi habilitado e foram registradas mensagens, os dados de mensagem podem ser exibidos clicando duas vezes na mensagem no Visualizador de log HTTP. Isso permite que você exiba todos os cabeçalhos associados com uma mensagem, bem como a mensagem real conteúdo. Figura 7 mostra um exemplo de uma mensagem de solicitação e a mensagem de resposta exibidos na janela do Visualizador de Log de HTTP.
 
-
 [![Usando o Visualizador de Log de HTTP para exibir dados de mensagem de solicitação e resposta.](understanding-asp-net-ajax-debugging-capabilities/_static/image20.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image19.png)
 
 **Figura 7**: Usando o Visualizador de Log de HTTP para exibir dados de mensagem de solicitação e resposta.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image21.png))
 
-
 O Visualizador de Log HTTP automaticamente analisa os objetos JSON e exibe-os usando uma exibição de árvore, tornando rápido e fácil de exibir dados de propriedade do objeto. Quando um UpdatePanel é usado em uma página ASP.NET AJAX, o Visualizador de quebra em cada parte da mensagem em partes individuais, conforme mostrado na Figura 8. Isso é um ótimo recurso que torna muito mais fácil de ver e entender o que está na mensagem em comparação com a exibição dos dados brutos de mensagem.
-
 
 [![Uma mensagem de resposta de UpdatePanel exibida usando o Visualizador de Log de HTTP.](understanding-asp-net-ajax-debugging-capabilities/_static/image23.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image22.png)
 
 **Figura 8**: Uma mensagem de resposta de UpdatePanel exibida usando o Visualizador de Log de HTTP.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image24.png))
-
 
 Há várias outras ferramentas que podem ser usadas para exibir mensagens de solicitação e resposta, além de Web Development Helper. Outra boa opção é o Fiddler, que está disponível gratuitamente no [ http://www.fiddlertool.com ](http://www.fiddlertool.com). Embora o Fiddler não será discutida aqui, também é uma boa opção quando você precisar inspecione completamente os dados e os cabeçalhos da mensagem.
 
@@ -210,11 +188,9 @@ Depois que estiver executando o Firebug, pontos de interrupção podem ser defin
 
 Depois que um ponto de interrupção foi definido no Firebug, você pode executar a ação necessária para executar o script que precisa ser depurado, como clicar em um botão ou atualizar o navegador para disparar o evento onLoad. Automaticamente, a execução será interrompida na linha que contém o ponto de interrupção. Figura 9 mostra um exemplo de um ponto de interrupção foi acionado no Firebug.
 
-
 [![Tratamento de pontos de interrupção no Firebug.](understanding-asp-net-ajax-debugging-capabilities/_static/image26.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image25.png)
 
 **Figura 9**: Tratamento de pontos de interrupção no Firebug.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image27.png))
-
 
 Depois que um ponto de interrupção é atingido pode intervir, depuração parcial ou sair do código usando os botões de seta. Conforme você percorre o código, as variáveis de script são exibidas na parte direita do depurador, permitindo que você veja valores e uma busca detalhada em objetos. O Firebug também inclui uma lista suspensa de pilha de chamadas para exibir as etapas de execução do script que levam à linha atual que está sendo depurada.
 
@@ -222,11 +198,9 @@ O Firebug também inclui uma janela de console que pode ser usada para testar as
 
 Figura 10 mostra um exemplo de como usar o Inspetor de DOM para localizar uma caixa de texto chamada txtCountry na página. O Inspetor de Firebug também pode ser usado para exibir os estilos CSS usados em uma página, bem como os eventos que ocorrem como acompanhar os movimentos do mouse, cliques de botão e muito mais.
 
-
 [![Usando o Inspetor de DOM do Firebug.](understanding-asp-net-ajax-debugging-capabilities/_static/image29.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image28.png)
 
 **Figura 10**: Usando o Inspetor de DOM do Firebug.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image30.png))
-
 
 O Firebug fornece uma maneira leve rapidamente depurar uma página diretamente no Firefox, bem como uma ferramenta excelente para inspecionar os diferentes elementos dentro da página.
 
@@ -254,11 +228,9 @@ Rastreamento do lado do cliente pode ser usado da mesma forma como a funcionalid
 
 **Listagem 5. Usando a função Sys.Debug.trace.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample6.js)]
 
 Se você executar o código mostrado na listagem 5, você não verá nenhuma saída de rastreamento na página. A única maneira de vê-lo é usar uma janela do console disponível no Visual Studio .NET, Web Development Helper ou Firebug. Se você quiser ver a saída de rastreamento na página, em seguida, você precisará adicionar uma marca de área de texto e dê a ele uma identificação de TraceConsole conforme mostrado a seguir:
-
 
 [!code-html[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample7.html)]
 
@@ -268,7 +240,6 @@ Em casos onde você deseja ver os dados contidos em um objeto JSON você pode us
 
 **Listagem 6. Usando a função Sys.Debug.traceDump.**
 
-
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample8.js)]
 
 Figura 11 mostra a saída da chamada da função Sys.Debug.traceDump. Observe que, além de gravar dados do objeto de pessoa, ele também grava os dados de endereço subdo objeto.
@@ -277,14 +248,11 @@ Além de rastreamento, a classe Sys. Debug também pode ser usada para executar 
 
 Listagem 7 mostra um exemplo de como usar a função Sys.Debug.assert para testar uma condição. O código testa se o objeto de endereço é nulo antes de atualizar um objeto Person.
 
-
 [![Saída da função Sys.Debug.traceDump.](understanding-asp-net-ajax-debugging-capabilities/_static/image32.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image31.png)
 
 **Figura 11**: Saída da função Sys.Debug.traceDump.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image33.png))
 
-
 **Listagem 7. Usando a função Debug. Assert.**
-
 
 [!code-javascript[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample9.js)]
 
@@ -292,14 +260,11 @@ Três parâmetros são passados, incluindo a condição a ser avaliada, a mensag
 
 A função final para cobrir é Sys.Debug.fail. Quando você deseja forçar o código falhar em uma linha específica em um script, você pode adicionar uma chamada Sys.Debug.fail em vez da instrução do depurador geralmente usadas em aplicativos JavaScript. A função Sys.Debug.fail aceita um parâmetro único de cadeia de caracteres que representa o motivo da falha, conforme mostrado a seguir:
 
-
 [!code-css[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample10.css)]
-
 
 [![Uma mensagem de falha de Sys.Debug.assert.](understanding-asp-net-ajax-debugging-capabilities/_static/image35.png)](understanding-asp-net-ajax-debugging-capabilities/_static/image34.png)
 
 **Figura 12**: Uma mensagem de falha de Sys.Debug.assert.  ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-debugging-capabilities/_static/image36.png))
-
 
 Quando uma instrução Sys.Debug.fail é encontrada durante a execução de um script, o valor do parâmetro de mensagem será exibido no console de um aplicativo de depuração, como o Visual Studio 2008 e você será solicitado para depurar o aplicativo. Um caso em que isso pode ser muito útil é quando você não pode definir um ponto de interrupção com o Visual Studio 2008 em um script embutido, mas gostaria de ter o código para parar na linha específica para que você possa inspecionar o valor de variáveis.
 
@@ -313,19 +278,16 @@ ScriptMode assume como padrão um valor de Auto, que significa que o ScriptManag
 
 **Listagem 8. Carregamento de scripts de depuração usando o ScriptManager**.
 
-
 [!code-aspx[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample11.aspx)]
 
 Você também pode carregar versões diferentes (debug ou release) de seus próprios scripts personalizados usando a propriedade de Scripts do ScriptManager, juntamente com o componente ScriptReference conforme mostrado na listagem 9.
 
 **Listagem 9. Carregamento de scripts personalizados que usam o ScriptManager.**
 
-
 [!code-aspx[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample12.aspx)]
 
 > [!NOTE]
 > Se você está carregando scripts personalizados que usam o componente ScriptReference deve notificar o ScriptManager, quando o script tiver concluído o carregamento, adicionando o seguinte código na parte inferior do script:
-
 
 [!code-csharp[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample13.cs)]
 
@@ -334,7 +296,6 @@ O código mostrado na listagem 9 informa o ScriptManager para procurar por uma v
 Em casos em que você deseja uma depuração ou versão de lançamento de um script personalizado a ser carregado com base no valor da propriedade ScriptMode definido no controle do ScriptManager, você pode definir a ScriptReference propriedade do controle ScriptMode para herdar. Isso fará com que a versão apropriada do script personalizado para ser carregado com base na propriedade de ScriptMode do ScriptManager como mostrado na listagem 10. Como a propriedade ScriptMode do controle ScriptManager está definida para depuração, o script Person.debug.js será carregado e usado na página.
 
 **Listagem 10. Herdando o ScriptMode do ScriptManager para scripts personalizados.**
-
 
 [!code-aspx[Main](understanding-asp-net-ajax-debugging-capabilities/samples/sample14.aspx)]
 

@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: baa03541-3f84-4e46-8a2c-2395e64f484d
 msc.legacyurl: /web-forms/videos/migrating
 msc.type: chapter
-ms.openlocfilehash: c2a5b3ae768012156b0f46eda8caeb43451af258
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a876326749f4a3b63bdedfccd77d6d5d19c9f644
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413744"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131707"
 ---
 # <a name="migrating"></a>Migração
 
 > Migrando para o ASP.NET
-
 
 - [[Introdução ao ASP.NET 2.0:] conceitos básicos do ASP.NET 2.0](intro-to-aspnet-20-aspnet-20-fundamentals.md)
 - [[Introdução ao ASP.NET 2.0:] elementos da interface do usuário](intro-to-aspnet-20-user-interface-elements.md)

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 3e9f6e7d-8967-4586-94d5-d3a122f12529
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/taking-web-applications-offline-with-web-deploy
 msc.type: authoredcontent
-ms.openlocfilehash: 017eceb8567859fdbe28bb87af844eee20dfa525
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ba54454bcb6f5e4ceb269b128a6b72a4b75f64be
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415473"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131404"
 ---
 # <a name="taking-web-applications-offline-with-web-deploy"></a>Colocar aplicativos Web em offline com a Implantação da Web
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve como utilizar um aplicativo da web offline para a duração de uma implantação automatizada usando a ferramenta de implantação do Internet Information Services (IIS) da Web (implantação da Web). Os usuários que navegam para o aplicativo web são redirecionados para um *App\_offline.htm* arquivo até que a implantação for concluída.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -70,18 +69,13 @@ A próxima etapa é modificar sua lógica de implantação para copiar o arquivo
 > [!NOTE]
 > O próximo procedimento supõe que você está usando um arquivo de projeto personalizado do MSBuild para controlar o processo de implantação, conforme descrito em [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Se você estiver implantando direto do Visual Studio, você precisará usar uma abordagem diferente. Sayed Ibrahim Hashimi descreve um exemplo dessa abordagem em [levar seu Offline durante a publicação de aplicativos Web como](http://sedodream.com/2012/01/08/HowToTakeYourWebAppOfflineDuringPublishing.aspx).
 
-
 Para implantar um *App\_offline* arquivo para um site do IIS de destino, você precisa invocar MSDeploy.exe usando o [implantação da Web **contentPath** provedor](https://technet.microsoft.com/library/dd569034(WS.10).aspx). O **contentPath** provedor oferece suporte a caminhos de diretório físico e caminhos de site ou aplicativo do IIS, que torna a escolha ideal para a sincronização de um arquivo entre uma pasta de projeto do Visual Studio e um aplicativo web do IIS. Para implantar o arquivo, seu comando MSDeploy deve ter esta aparência:
-
 
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample1.cmd)]
 
-
 Para remover o arquivo do site de destino no final do processo de implantação, o comando MSDeploy deve ter esta aparência:
 
-
 [!code-console[Main](taking-web-applications-offline-with-web-deploy/samples/sample2.cmd)]
-
 
 Para automatizar esses comandos como parte de um processo de compilação e implantação, você precisará integrá-las ao seu arquivo de projeto personalizado do MSBuild. O procedimento a seguir descreve como fazer isso.
 
@@ -129,9 +123,7 @@ O Pipeline de publicação de Web (WPP) usa uma lista de itens chamada **FilesFo
 
 O *. wpp.targets* arquivo deve ter esta aparência:
 
-
 [!code-xml[Main](taking-web-applications-offline-with-web-deploy/samples/sample8.xml)]
-
 
 Estes são os principais pontos da observação neste exemplo:
 
@@ -160,7 +152,6 @@ Na próxima vez que você compilar e empacotar seu projeto de aplicativo web, o 
 
 > [!NOTE]
 > Se sua implantação falhar, o *App\_offline.htm* arquivo permanecerá em vigor e seu aplicativo permanecerá offline. Isso normalmente é o comportamento desejado. Para colocar o aplicativo novamente online, você pode excluir o *App\_offline.htm* arquivo do seu servidor web. Como alternativa, se você corrigir os erros e executar uma implantação bem-sucedida, o *App\_offline.htm* arquivo será removido.
-
 
 ## <a name="conclusion"></a>Conclusão
 

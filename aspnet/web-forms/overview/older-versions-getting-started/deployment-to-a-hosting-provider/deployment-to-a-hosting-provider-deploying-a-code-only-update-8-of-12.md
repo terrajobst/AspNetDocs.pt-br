@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: ddf6252f-9413-4c0c-a360-2cef8d231717
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-code-only-update-8-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: f06fd5d28613ba8f881df2d1422fead2fff8c35f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: df6fd11485836345707ac74ec9e97c769e60ac82
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399886"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132347"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-code-only-update---8-of-12"></a>Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Implantando uma atualização somente de código – 8 de 12
 
@@ -24,7 +24,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET projeto de aplicativo web que inclui um banco de dados do SQL Server Compact usando o Visual Studio 2012 RC ou Visual Studio Express 2012 RC para Web. Você também pode usar o Visual Studio 2010 se você instalar a atualização de publicação na Web. Para obter uma introdução à série, consulte [o primeiro tutorial na série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Para obter um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar as edições do SQL Server que não seja o SQL Server Compact e mostra como implantar aplicativos de Web do serviço de aplicativo do Azure, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -86,7 +85,6 @@ Salve e feche o **empacotar/Publicar Web** guia.
 > 
 > [!IMPORTANT]
 > Certifique-se de que você não tem **remover arquivos adicionais no destino** selecionado em seus perfis de publicação. Se você selecionar essa opção, o processo de implantação excluirá os bancos de dados que você tem no aplicativo\_dados no site implantado e ele excluirá o aplicativo\_própria pasta de dados.
-
 
 ## <a name="preventing-user-access-to-the-production-site-during-update"></a>Impedindo o acesso de usuário ao Site de produção durante a atualização
 

@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: f2339485-5d78-4c5e-8c0a-dc9b8a315345
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/membership
 msc.type: authoredcontent
-ms.openlocfilehash: f3f8c649932682fd96e0640ddf4595c19c755909
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: da6fc205bd852a818d65425586cec38fdb08d310
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408180"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131050"
 ---
 # <a name="membership"></a>Associação
 
 por [Microsoft](https://github.com/microsoft)
 
 > Associação do ASP.NET compila o sucesso do modelo de autenticação de formulários do ASP.NET 1. x. Autenticação de formulários do ASP.NET fornece uma maneira conveniente de incorporar um formulário de logon em seu aplicativo ASP.NET e validar os usuários em relação a um banco de dados ou outro armazenamento de dados.
-
 
 Associação do ASP.NET compila o sucesso do modelo de autenticação de formulários do ASP.NET 1. x. Autenticação de formulários do ASP.NET fornece uma maneira conveniente de incorporar um formulário de logon em seu aplicativo ASP.NET e validar os usuários em relação a um banco de dados ou outro armazenamento de dados. Os membros da classe FormsAuthentication tornam possível lidar com cookies de autenticação, verificar se há um logon válido, faça o logon de um usuário etc. No entanto, a implementação da autenticação de formulários em um aplicativo do ASP.NET 1. x pode exigir uma quantidade razoável de código.
 
@@ -48,11 +47,9 @@ Se você estiver usando o SQL Server 7.0 ou posterior como o armazenamento de as
 
 Depois de executar esse comando, você será apresentado com o Assistente de instalação de servidor do ASP.NET SQL conforme mostrado abaixo.
 
-
 ![](membership/_static/image1.jpg)
 
 **Figura 1**
-
 
 O Assistente de instalação do ASP.NET SQL Server cria o site da Web na instância que você especifica no assistente. No entanto, o ASP.NET usará a cadeia de caracteres de conexão no arquivo Machine. config para se conectar ao seu banco de dados. Por padrão, essa cadeia de caracteres de conexão aponta para uma instância do SQL Server 2005, portanto, se você estiver usando uma instância do SQL Server 2000 ou SQL Server 7.0, você precisará modificar a cadeia de caracteres de conexão no arquivo Machine. config. Essa cadeia de caracteres de conexão pode ser localizada aqui:
 
@@ -66,11 +63,9 @@ A próxima etapa na configuração de associação é adicionar as informações
 
 Você pode iniciar a interface da Web clicando no botão de configuração do ASP.NET na barra de ferramentas Solution Explorer conforme mostrado abaixo. Você também pode iniciar a interface da Web por meio de pop-ups que são exibidos quando os controles de logon são inseridos.
 
-
 ![](membership/_static/image2.jpg)
 
 **Figura 2**
-
 
 Isso inicia a ferramenta de administração de Site da Web do ASP.NET mostrado abaixo. A administração de Site da Web do ASP.NET é uma interface de guia de quatro que torna mais fácil de gerenciar configurações de aplicativo. As seguintes guias estão disponíveis:
 
@@ -83,21 +78,17 @@ A ferramenta de administração de Site da Web permite que você facilmente cria
 
 Para iniciar a interface do Windows, abra o snap-in Internet Information Services, clique com botão direito em seu aplicativo e escolha Propriedades. Clique na guia ASP.NET e, em seguida, clique no botão Editar configuração. (O aplicativo deve estar executando em ASP.NET 2.0 para o botão Editar configuração a ser habilitado. Você pode configurar a versão do ASP.NET no diálogo do ASP.NET.) A caixa de diálogo de configurações do ASP.NET é exibida conforme mostrado abaixo.
 
-
 ![](membership/_static/image3.jpg)
 
 **Figura 3**
-
 
 Na guia geral, cadeias de caracteres de conexão e as configurações do aplicativo são listadas. Todas as configurações em itálico são definidas em um arquivo de configuração pai (Machine. config ou um Web. config em um nível mais alto) e configurações não está em itálico são do arquivo de configuração de aplicativos. Se uma configuração for adicionada, removido ou editado no nível do aplicativo, ASP.NET será adicionar, remover ou modificar a configuração no Web. config a níveis de aplicativo em vez de remover a configuração do arquivo de configuração do qual ele é herdado.
 
 A guia de autenticação é mostrada abaixo. Isso é onde você irá configurar as configurações de associação. Configurações de autenticação, provedores de associação de formulários e provedores de função podem ser configurados aqui.
 
-
 ![](membership/_static/image4.jpg)
 
 **Figura 4**
-
 
 ## <a name="implementing-membership-in-your-application"></a>Implementando a associação em seu aplicativo
 
@@ -133,11 +124,9 @@ O controle LoginName exibe o nome de usuário do usuário atualmente conectado a
 
 O controle CreateUserWizard fornece aos usuários uma maneira conveniente de se registrar para o seu sistema de associação. Você pode adicionar etapas (implementadas como uma coleção de WizardSteps) por meio da interface mostrada abaixo.
 
-
 ![](membership/_static/image5.jpg)
 
 **Figura 5**
-
 
 O CreateUserWizard é um controle personalizado que deriva da classe de assistente e fornece os seguintes modelos:
 
@@ -167,29 +156,23 @@ Para habilitar o gerenciamento de função em seu aplicativo, faça a seguinte a
 
 Quando o **cacheRolesInCookie** atributo é definido como true, o ASP.NET armazena uma associação de função de usuários em um cookie no cliente. Isso permite que as pesquisas de função para ocorrer sem chamadas em RoleProvider. Ao usar esse atributo, os desenvolvedores são incentivados a garantir que o **cookieProtection** atributo será definido como All. (Isso é a configuração padrão). Isso garante que os dados de cookie são criptografados e ajuda a garantir que o conteúdo de cookies não foram alterado. As funções podem ser adicionadas usando a ferramenta de administração de Site da Web. Ele permite que você facilmente definir funções, configurar o acesso a partes do site com base nessas funções e atribuir usuários às funções.
 
-
 ![](membership/_static/image6.jpg)
 
 **Figura 6**
-
 
 Como mostrado acima, novas funções podem ser adicionadas simplesmente inserir o nome da função e, em seguida, clicando em Adicionar função. As funções existentes podem ser gerenciadas ou excluídas, clicando no link apropriado na lista de funções existentes.
 
 Quando você gerencia uma função, você pode adicionar ou remover usuários, conforme mostrado abaixo.
 
-
 ![](membership/_static/image7.jpg)
 
 **Figura 7**
 
-
 Ao marcar a caixa de seleção está na função de usuário, você pode facilmente adicionar um usuário a uma função específica. ASP.NET atualizará automaticamente o banco de dados de associação com as entradas apropriadas. Você também desejará configurar regras de acesso para seu aplicativo. Os desenvolvedores do ASP.NET 1. x estiver familiarizados com isso por meio de &lt;autorização&gt; elemento no arquivo Web. config e essa opção ainda está disponível no ASP.NET 2.0. No entanto, é mais fácil gerenciar o acesso regras usando a ferramenta Web Site Administration conforme mostrado abaixo.
-
 
 ![](membership/_static/image8.jpg)
 
 **Figura 8**
-
 
 Nesse caso, a pasta de administração é realçada (difícil ver porque a ferramenta destaca em cinza claro) e a função de administradores foi concedida acesso. Todos os outros usuários serão negados. Você pode clicar no ícone principal para selecionar uma regra e, em seguida, use os botões Mover para cima e mover para baixo para organizar as regras. Assim como acontece com o ASP.NET &lt;autorização&gt; elemento, as regras são processadas na ordem em que aparecem. Em outras palavras, se a ordem de regras na captura a acima foram revertida, ninguém teria acesso à pasta de administração porque a primeira regra que encontra ASP.NET seria a regra que nega todas as pessoas para a pasta.
 
@@ -209,19 +192,15 @@ ASP.NET também cria uma instância de RolePrincipal como um membro do contexto 
 
 Agora que você tem uma compreensão de gerenciamento de função e associação, permite que abordam brevemente como o controle LoginView tira proveito desse recurso no ASP.NET 2.0. Conforme discutido anteriormente, o controle LoginView é um controle modelo que contém dois modelos por padrão. o LoginView e o LoggedInTemplate. Dentro das tarefas LoginView caixa de diálogo é um link (mostrado abaixo) que permite que você edite RoleGroups.
 
-
 ![](membership/_static/image9.jpg)
 
 **Figura 9**
 
-
 Cada objeto RoleGroup contém uma matriz de cadeias de caracteres que define quais funções que RoleGroup aplica-se a. Para adicionar um novo RoleGroup para o controle LoginView, clique no link Editar RoleGroups. Na imagem acima, você pode ver que adicionei um novo RoleGroup para administradores. Ao selecionar esse RoleGroup (RoleGroup[0]) no menu suspenso de modos de exibição, posso configurar um modelo que será exibido apenas aos membros da função de administradores. Na imagem abaixo, adicionei um novo RoleGroup que se aplica a membros da função de vendas e a função de distribuição. Isso adiciona um segunda RoleGroup ao menu suspenso de modos de exibição na caixa de diálogo Tarefas LoginView e nada acrescentado a esse modelo será visível por qualquer usuário em Sales ou distribuição de função.
-
 
 ![](membership/_static/image10.jpg)
 
 **Figura 10**
-
 
 ## <a name="overriding-the-existing-membership-provider"></a>Substituindo o provedor de associação existente
 

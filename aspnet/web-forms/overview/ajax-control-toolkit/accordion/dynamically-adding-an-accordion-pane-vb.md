@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: fae968c9-1902-487d-b053-86a46dd52c3f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 27823e6b65dda80391d494af6f8d8da539bc3334
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e3f99cbe31707f535809da0ad12f67832040b0d2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393204"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131232"
 ---
 # <a name="dynamically-adding-an-accordion-pane-vb"></a>Adição dinâmica de um painel Accordion (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/5/6/d/56d50cef-2011-4c8f-9891-7edc6dc57df9/Accordion2.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/accordion2VB.pdf)
 
 > O controle Accordion no AJAX Control Toolkit fornece vários painéis e permite que o usuário exibir um por vez. Painéis geralmente são declaradas dentro da página em si, mas o código do lado do servidor pode ser usado para alcançar o mesmo resultado.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -53,7 +52,6 @@ O único elemento ausente é Accordion em si, que depende da presença do ASP.NE
 Para concluir o exemplo, as duas classes CSS referenciadas no controle Accordion fornecem informações de estilo para o navegador:
 
 [!code-css[Main](dynamically-adding-an-accordion-pane-vb/samples/sample6.css)]
-
 
 [![Os dados em um acordeão dinamicamente foi adicionados pelo código do lado do servidor](dynamically-adding-an-accordion-pane-vb/_static/image2.png)](dynamically-adding-an-accordion-pane-vb/_static/image1.png)
 

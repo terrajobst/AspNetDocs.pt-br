@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 786be61d48f26e5765eac0c8d6fad7551897f711
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 72d69c0690c52c41f899e6cbe7cc656e537fe112
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387679"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131112"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: Preparação para implantação de banco de dados
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usando o Visual Studio 2012 ou Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -134,7 +133,6 @@ O projeto agora está pronto para implantar o *ContosoUniversity* banco de dados
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 
-
 ## <a name="create-scripts-for-membership-database-deployment"></a>Criar scripts para implantação de banco de dados de associação
 
 O aplicativo Contoso University usa a autenticação de formulários e sistema de associação do ASP.NET para autenticar e autorizar usuários. O **atualização créditos** está acessível somente a usuários que estão na função de administrador.
@@ -160,14 +158,12 @@ Este banco de dados não é gerenciado pelo Entity Framework Code First, portant
 > [!NOTE]
 > Um novo sistema de associação do ASP.NET (agora chamado de identidade do ASP.NET) foi introduzido com o Visual Studio 2013. O novo sistema permite que você mantenha o aplicativo e tabelas de associação no mesmo banco de dados, e você pode usar as migrações Code First para implantar ambas. O aplicativo de exemplo usa o sistema de associação ASP.NET anterior, que não pode ser implantado por meio de migrações do Code First. Os procedimentos para implantar esse banco de dados de associação também se aplicam a qualquer outro cenário em que seu aplicativo precisa para implantar um banco de dados do SQL Server que não é criado pelo Entity Framework Code First.
 
-
 Aqui também, você normalmente não quer os mesmos dados em produção que você tem em desenvolvimento. Quando você implanta um site pela primeira vez, é comum para excluir a maioria ou todas as contas de usuário que criar para teste. Portanto, o projeto baixado tem dois bancos de dados de associação: *ContosoUniversity.mdf aspnet* com usuários de desenvolvimento e *aspnet-ContosoUniversity-Prod.mdf* com usuários de produção. Para este tutorial, os nomes de usuário são os mesmos em ambos os bancos de dados: *admin* e *nonadmin*. Os dois usuários possuírem a senha *devpwd* no banco de dados de desenvolvimento e *prodpwd* no banco de dados de produção.
 
 Você implantará os usuários de desenvolvimento para o ambiente de teste e os usuários de produção para preparação e produção. Para fazer isso você criará dois scripts SQL neste tutorial, um para desenvolvimento e outra para produção e, em tutoriais posteriores, você vai configurar o processo de publicação para executá-los.
 
 > [!NOTE]
 > O banco de dados de associação armazena um hash de senhas de conta. Para implantar contas de um computador para outro, você deve garantir que as rotinas de hash não geram hashes de diferentes no servidor de destino do que em um computador de origem. Eles irá gerar os hashes mesmos quando você usa o ASP.NET Universal Providers, desde que você não altere o algoritmo padrão. O algoritmo padrão é HMACSHA256 e é especificado na **validação** atributo da **[machineKey](https://msdn.microsoft.com/library/system.web.configuration.machinekeysection.aspx)** elemento no arquivo Web. config.
-
 
 Você pode criar scripts de implantação de dados manualmente, usando o SQL Server Management Studio (SSMS) ou usando uma ferramenta de terceiros. O restante deste tutorial mostrará como fazê-lo no SSMS, mas se você não quiser instalar e usar o SSMS, você pode obter os scripts da versão concluída do projeto e vá para a seção em que você armazená-los na pasta da solução.
 

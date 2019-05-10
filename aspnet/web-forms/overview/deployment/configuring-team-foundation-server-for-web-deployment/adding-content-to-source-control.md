@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 86c14aab-c2dd-4f73-b40c-c6d52fa44950
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/adding-content-to-source-control
 msc.type: authoredcontent
-ms.openlocfilehash: a609b761543e4994aa4a7f86636bd16e9cd74683
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 16073dd2fb0ea1cc4ddbc94c843181933dc174c1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396714"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131553"
 ---
 # <a name="adding-content-to-source-control"></a>Adição de conteúdo ao controle do código-fonte
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico explica como adicionar conteúdo ao controle do código-fonte no Team Foundation Server (TFS) 2010. Ele descreve como adicionar soluções e projetos para um projeto de equipe no TFS e explica como adicionar dependências externas, como estruturas ou assemblies ao controle de origem.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -116,7 +115,6 @@ Por exemplo, a estrutura de pasta para a solução de exemplo do Contact Manager
 
 > [!NOTE]
 > A inclusão de uma pasta de pacotes é típica do que acontece quando você adiciona o Entity Framework, ou recursos semelhantes, a sua solução usando a extensão do NuGet para Visual Studio 2010.
-
 
 **Para adicionar o conteúdo do projeto ao controle de origem**
 

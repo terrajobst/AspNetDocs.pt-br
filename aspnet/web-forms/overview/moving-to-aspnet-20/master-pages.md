@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 9c0cce4d-efd9-4c14-b0e8-a1a140abb3f4
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/master-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 348e28778e0e7d96230534df1d61386ed39f8f11
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36f2caf7c2c9bcafd22c8f6681c1d6b19fe5078a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381140"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131066"
 ---
 # <a name="master-pages"></a>Páginas mestras
 
 por [Microsoft](https://github.com/microsoft)
 
 > Um dos principais componentes para o êxito de um site da Web é uma aparência consistente. No ASP.NET 1. x, os desenvolvedores usavam os controles de usuário para replicar os elementos de página comuns entre um aplicativo da Web. Embora seja certamente uma solução viável, usando controles de usuário tem algumas desvantagens. Por exemplo, uma alteração na posição de um controle de usuário requer uma alteração em várias páginas em um site. Controles de usuário também não são renderizados no modo de exibição de Design depois que está sendo inserido em uma página.
-
 
 Um dos principais componentes para o êxito de um site da Web é uma aparência consistente. No ASP.NET 1. x, os desenvolvedores usavam os controles de usuário para replicar os elementos de página comuns entre um aplicativo da Web. Embora seja certamente uma solução viável, usando controles de usuário tem algumas desvantagens. Por exemplo, uma alteração na posição de um controle de usuário requer uma alteração em várias páginas em um site. Controles de usuário também não são renderizados no modo de exibição de Design depois que está sendo inserido em uma página.
 
@@ -47,14 +46,11 @@ Uma página mestra pode conter qualquer número de controles ContentPlaceHolder 
 > [!NOTE]
 > Normalmente as pessoas descrevem as páginas mestras como sendo uma classe base para outras páginas. Que, na verdade, não é verdade. A relação entre as páginas mestras e páginas de conteúdo não é um de herança.
 
-
 **Figura 1** mostra uma página mestra e uma página de conteúdo associada que aparecem no Visual Studio 2005. Você pode ver o controle ContentPlaceHolder na página mestra e o correspondente controle na página de conteúdo de conteúdo. Observe que o conteúdo de páginas mestras que está fora de ContentPlaceHolder é visível, mas esmaecidos na página de conteúdo. Somente o conteúdo dentro de ContentPlaceHolder pode ser suplantado pela página de conteúdo. Todos os outros conteúdos que vem da página mestra é imutável.
-
 
 ![Uma página mestra e sua página de conteúdo associada](master-pages/_static/image1.jpg)
 
 **Figura 1**: Uma página mestra e sua página de conteúdo associada
-
 
 ## <a name="creating-a-master-page"></a>Criando uma página mestra
 
@@ -65,11 +61,9 @@ Para criar uma nova página mestra:
 3. Escolha o arquivo mestre na caixa de diálogo Add New Item, como mostrado na **Figura 2**.
 4. Clique em Adicionar.
 
-
 ![Criando uma nova página mestra](master-pages/_static/image2.jpg)
 
 **Figura 2**: Criando uma nova página mestra
-
 
 Observe que é a extensão de arquivo para uma página mestra *. master*. Essa é uma das maneiras que uma página mestra difere de uma página comum. A principal diferença é que no lugar de um @Page diretiva, a página mestra contém um @Master diretiva. Alternar a exibição da fonte para o mestre de página que você acabou de criar e revisar o código.
 
@@ -86,29 +80,23 @@ Neste laboratório, você criará uma nova página mestra e definir três contro
     3. Selecione o controle ContentPlaceHolder clicando na borda sombreada superior do controle e, em seguida, excluí-lo pressionando a tecla DEL no seu teclado.
     4. Inserir uma nova tabela usando o *cabeçalho e o lado* modelo conforme mostrado na Figura 3. Altere a largura e altura para 90% cada para que a tabela inteira está visível no designer.
 
-
 ![](master-pages/_static/image3.jpg)
 
 **Figura 3**
-
 
 1. Coloque o cursor em cada célula da tabela e defina as *valign* propriedade *superior*.
 2. Na caixa de ferramentas, inserir um controle ContentPlaceHolder na célula superior da tabela (a célula de cabeçalho).
 3. Quando você insere esse controle ContentPlaceHolder, você observará que a altura da linha será levar até quase toda a página, conforme mostrado na Figura 4. Não estar preocupado que neste momento.
 
-
 ![O espaço vazio está na mesma célula como o ContentPlaceHolder](master-pages/_static/image1.gif)
 
 **Figura 4**: O espaço vazio está na mesma célula como o ContentPlaceHolder
 
-
 1. Coloque um controle de ContentPlaceHolder nas outras duas células. Depois que os outros controles ContentPlaceHolder foram inseridos, o tamanho das células da tabela deve ser como você esperaria. A página agora deve ser semelhante a página mostrada na **Figura 5**.
-
 
 ![O mestre com todos os controles de ContentPlaceHolder. Observe que a altura da célula para a célula de cabeçalho é agora o que deve ser](master-pages/_static/image2.gif)
 
 **Figura 5**: O mestre com todos os controles de ContentPlaceHolder. Observe que a altura da célula para a célula de cabeçalho é agora o que deve ser
-
 
 1. Digite algum texto de sua escolha em cada um dos três controles ContentPlaceHolder.
 2. Salve a página mestra como exercise1.master.
@@ -117,11 +105,9 @@ Neste laboratório, você criará uma nova página mestra e definir três contro
 5. Selecione **Web Form** na caixa de diálogo Adicionar Novo Item.
 6. Certifique-se de que a caixa de seleção Selecionar página mestre é verificada, conforme mostrado na Figura 6.
 
-
 ![Adicionando uma nova página de conteúdo](master-pages/_static/image3.gif)
 
 **Figura 6**: Adicionando uma nova página de conteúdo
-
 
 1. Clique em Adicionar.
 2. Selecione exercise1.master no, selecione uma caixa de diálogo de página mestra conforme mostrado na Figura 7.
@@ -129,11 +115,9 @@ Neste laboratório, você criará uma nova página mestra e definir três contro
 
 Nova página de conteúdo é exibido no Visual Studio com um controle de conteúdo para cada controle ContentPlaceHolder na página mestra. Por padrão, os controles de conteúdo estão vazios, para que você possa adicionar seu próprio conteúdo. Se você gostaria de usar o conteúdo do controle ContentPlaceHolder na página mestra, basta clicar no símbolo de marca inteligente (a pequena seta preta no canto superior direito do controle) e escolha *padrão para o conteúdo de mestres* da marca inteligente conforme mostrado na **Figura 8**. Quando você fizer isso, o item de menu muda para *criar conteúdo personalizado*. Ao clicar nesse ponto remove o conteúdo da página mestra, permitindo que você defina o conteúdo personalizado para esse determinado controle de conteúdo.
 
-
 ![Definir um controle de conteúdo padrão para o conteúdo de páginas mestras](master-pages/_static/image4.gif)
 
 **Figura 7**: Definir um controle de conteúdo padrão para o conteúdo de páginas mestras
-
 
 ## <a name="connecting-master-page-and-content-pages"></a>Conectar-se a página mestra e páginas de conteúdo
 
@@ -183,15 +167,11 @@ Observe que, nesse cenário, o mestre de filho também é uma página de conteú
 > [!NOTE]
 > Suporte do Designer não está disponível para páginas mestras aninhadas. Quando você estiver desenvolvendo usando mestres aninhadas, você precisará usar exibição da fonte.
 
-
 Este vídeo mostra um passo a passo de como usar páginas mestras aninhadas.
-
 
 ![](master-pages/_static/image1.png)
 
-
 [Abra vídeo de tela inteira](master-pages/_static/nested1.wmv)
-
 
 ![Selecionar uma página mestra](master-pages/_static/image4.jpg)
 

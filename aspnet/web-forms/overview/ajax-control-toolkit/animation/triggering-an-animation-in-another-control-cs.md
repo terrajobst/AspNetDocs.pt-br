@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: e5d99c2b-d8ee-413c-80d5-c120cffb0a4c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/triggering-an-animation-in-another-control-cs
 msc.type: authoredcontent
-ms.openlocfilehash: ca383b7a82b754c7556dcea3bcdb8e28e5c7a45d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1db5468d3c1d35b25aea0d5ff331a742ce421191
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384845"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132920"
 ---
 # <a name="triggering-an-animation-in-another-control-c"></a>Disparar uma animação em outro controle (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation8.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation8CS.pdf)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Em geral, iniciar uma animação é disparada pela interação do usuário com o mesmo controle. No entanto, também é possível interagir com um controle e, em seguida, a animação de outro controle.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -55,7 +54,6 @@ Dentro de `<Animations>` nó, as animações de lugar como de costume. Para torn
 [!code-aspx[Main](triggering-an-animation-in-another-control-cs/samples/sample6.aspx)]
 
 Observe a ordem especial em que as animações individuais aparecem. Em primeiro lugar, o botão é desativado depois que a animação é executada. Como não há nenhuma `AnimationTarget` de atributo no `<EnableAction>` elemento, essa animação é aplicado ao controle de origem: o botão. As duas próximas animação etapas deverão ser executadas em paralelo (`<Parallel>` elemento). Ambos têm seus `AnimationTarget` os atributos definidos para `"Panel1"`, animação, portanto, o painel, não o botão.
-
 
 [![Um clique do mouse no botão inicia a animação de painel](triggering-an-animation-in-another-control-cs/_static/image2.png)](triggering-an-animation-in-another-control-cs/_static/image1.png)
 

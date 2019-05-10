@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
-ms.openlocfilehash: 9e2cd1beca03b81140b9d58c5e43dbf7c6b8808b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1819704a4cfd3e6b82de1d8db916e729459d244f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393048"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130905"
 ---
 # <a name="create-the-project"></a>Criar o projeto
 
@@ -22,7 +22,6 @@ by [Erik Reitan](https://github.com/Erikre)
 [Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
-
 
 Neste tutorial você criar, revise e execute o projeto padrão no Visual Studio, o que permitirá que você se familiarizar com os recursos do ASP.NET. Além disso, você revisará o ambiente do Visual Studio.
 
@@ -83,7 +82,6 @@ Você pode alternar entre **Design** exibição e **origem** exibição selecion
 > 
 > - [API Web ASP.NET](../../../../web-api/index.md) -uma estrutura para criar serviços HTTP que alcançam uma ampla gama de clientes, incluindo navegadores e dispositivos móveis.
 > - [ASP.NET SignalR](../../../../signalr/index.md) -uma biblioteca que facilita a funcionalidade de desenvolvimento da web em tempo real.
-
 
 ### <a name="reviewing-the-project"></a>Revisando o projeto
 

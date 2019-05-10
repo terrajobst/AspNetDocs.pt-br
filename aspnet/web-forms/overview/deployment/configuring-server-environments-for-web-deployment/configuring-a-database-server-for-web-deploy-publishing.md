@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: e7c447f9-eddf-4bbe-9f18-3326d965d093
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-database-server-for-web-deploy-publishing
 msc.type: authoredcontent
-ms.openlocfilehash: 2cd99e23904276e89cf043a2332ad07c0f01716d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ade3c1ba1c470092f512436f39b8831458408c2c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415343"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131569"
 ---
 # <a name="configuring-a-database-server-for-web-deploy-publishing"></a>Configuração de um servidor de banco de dados para publicação de Implantação da Web
 
@@ -24,7 +24,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > Este tópico descreve como configurar um servidor de banco de dados do SQL Server 2008 R2 para dar suporte à publicação e implantação da web.
 > 
 > As tarefas descritas neste tópico são comuns a todos os cenários de implantação&#x2014;não importa se os servidores web são configurados para usar o serviço de agente remoto de ferramenta de implantação da Web de IIS (implantação da Web), o manipulador de implantação da Web ou implantação offline ou seu aplicativo está em execução em um único servidor web ou um farm de servidores. Da maneira que implanta o banco de dados pode ser alterado de acordo com os requisitos de segurança e outras considerações. Por exemplo, você pode implantar o banco de dados com ou sem dados de exemplo e você pode implantar os mapeamentos de função de usuário ou configurá-los manualmente após a implantação. No entanto, a maneira como você configura o servidor de banco de dados permanece o mesmo.
-
 
 Você não precisa instalar quaisquer produtos adicionais ou ferramentas para configurar um servidor de banco de dados para dar suporte à implantação da web. Supondo que o servidor de banco de dados e seu servidor web executados em máquinas diferentes, você simplesmente precisa:
 
@@ -46,7 +45,6 @@ Instância do SQL Server só precisa incluir o **serviços de mecanismo de banco
 
 > [!NOTE]
 > Para obter mais informações sobre como adicionar computadores a um domínio, consulte [ingressando computadores no domínio e fazendo logon](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obter mais informações sobre como configurar endereços IP estáticos, consulte [configurar um endereço IP estático](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx). Para obter mais informações sobre como instalar o SQL Server, consulte [instalando o SQL Server 2008 R2](https://technet.microsoft.com/library/bb500395.aspx).
-
 
 ## <a name="enable-remote-access-to-sql-server"></a>Habilitar o acesso remoto para o SQL Server
 
@@ -96,11 +94,9 @@ Supondo que você está usando uma instância padrão do SQL Server, você preci
 | --- | --- | --- | --- |
 | De entrada | Qualquer | 1433 | TCP |
 | Saída | 1433 | Qualquer | TCP |
-  
 
 > [!NOTE]
 > Tecnicamente, um computador cliente usará uma porta atribuída aleatoriamente do TCP entre 1024 e 5000 para se comunicar com o SQL Server, e você pode restringir suas regras de firewall adequadamente. Para obter mais informações sobre firewalls e portas do SQL Server, consulte [números de porta de TCP/IP necessários para se comunicar ao SQL por um firewall](https://go.microsoft.com/?linkid=9805125) e [como: Configurar um servidor para escutar em uma porta de TCP específica (SQL Server Configuration Manager)](https://msdn.microsoft.com/library/ms177440.aspx).
-
 
 Na maioria dos ambientes do Windows Server, provavelmente você precisará configurar o Firewall do Windows no servidor de banco de dados. Por padrão, o Firewall do Windows permite todo o tráfego de saída, a menos que uma regra proíbe especificamente. Para habilitar o servidor web para acessar seu banco de dados, você precisará configurar uma regra de entrada que permita o tráfego TCP no número da porta usada pela instância do SQL Server. Se você estiver usando uma instância padrão do SQL Server, você pode usar o procedimento a seguir para configurar essa regra.
 
@@ -136,7 +132,6 @@ Se seu aplicativo web estiver em execução em um farm de servidores, em vez de 
 
 > [!NOTE]
 > Para obter mais informações sobre as identidades de pool de aplicativos e acessando recursos de rede, consulte [identidades do Pool de aplicativos](https://go.microsoft.com/?linkid=9805123).
-
 
 Você pode abordar essas tarefas de várias maneiras. Para criar o logon, você pode:
 
@@ -182,14 +177,12 @@ Enquanto o mapeamento manual de funções de banco de dados geralmente é mais d
 > [!NOTE]
 > Para obter mais informações sobre projetos de banco de dados e servidor, consulte [projetos de banco de dados do Visual Studio 2010 SQL Server](https://msdn.microsoft.com/library/ff678491.aspx).
 
-
 ## <a name="configure-permissions-for-the-deployment-account"></a>Configurar permissões para a conta de implantação
 
 Se a conta que você usará para executar a implantação não for um administrador do SQL Server, também precisará criar um logon para essa conta. Para criar o banco de dados, a conta deve ser um membro do **dbcreator** função de servidor ou ter permissões equivalentes.
 
 > [!NOTE]
 > Quando você usa a implantação da Web ou VSDBCMD para implantar um banco de dados, você pode usar as credenciais do Windows ou credenciais do SQL Server (se a instância do SQL Server está configurada para dar suporte à autenticação de modo misto). O procedimento a seguir pressupõe que você deseja usar as credenciais do Windows, mas não há nada que impeça você especificar um nome de usuário do SQL Server e uma senha em sua cadeia de conexão quando você configura a implantação.
-
 
 **Para configurar as permissões para a conta de implantação**
 

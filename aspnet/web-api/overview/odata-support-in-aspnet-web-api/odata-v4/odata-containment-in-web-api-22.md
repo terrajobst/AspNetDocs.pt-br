@@ -8,19 +8,18 @@ ms.date: 06/27/2014
 ms.assetid: 5fbfefad-a17a-4c46-8646-f1ccd154cd56
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
 msc.type: authoredcontent
-ms.openlocfilehash: fed55a4bf01e82af5167018f03e28a6274fcda78
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 50050e40c4c42bf6d769d077c27864ee6417d4db
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382187"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131634"
 ---
 # <a name="containment-in-odata-v4-using-web-api-22"></a>Contenção no OData v4 usando a API Web 2.2
 
 by Jinfu Tan
 
 > Tradicionalmente, uma entidade pode ser acessada somente se ele foi encapsulado dentro de um conjunto de entidades. Mas o OData v4 fornece duas opções adicionais, Singleton e contenção, que oferece suporte da API Web 2.2.
-
 
 Este tópico mostra como definir um conjunto de contenção em um ponto de extremidade OData na API Web 2.2. Para obter mais informações sobre a contenção, consulte [confinamento estará disponível com o OData v4](https://blogs.msdn.com/b/odatateam/archive/2014/03/13/containment-is-coming-with-odata-v4.aspx). Para criar um ponto de extremidade OData V4 no API da Web, consulte [criar um OData v4 ponto de extremidade usando API Web ASP.NET 2.2](create-an-odata-v4-endpoint.md).
 

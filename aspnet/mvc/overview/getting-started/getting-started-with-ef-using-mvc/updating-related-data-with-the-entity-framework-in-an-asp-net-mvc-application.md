@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 7ba88418-5d0a-437d-b6dc-7c3816d4ec07
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: d90a327da40ffd6d7956c5fbe019cf9de30c706d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4d5f6447fdccefdcdf9497a9e94f23243302a0e1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407504"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120906"
 ---
 # <a name="tutorial-update-related-data-with-ef-in-an-aspnet-mvc-app"></a>Tutorial: Atualizar dados relacionados com o EF em um aplicativo ASP.NET MVC
 
@@ -126,7 +126,6 @@ Substitua os `HttpPost` `Edit` método com o código a seguir. que trata de atua
 
 A referência ao `RetryLimitExceededException` exige um `using` instrução; para adicioná-lo - passe o mouse sobre `RetryLimitExceededException`. A seguinte mensagem será exibida: ![ Tente novamente a mensagem de exceção](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image13.png)
 
-
 Selecione **Mostrar possíveis correções**, em seguida, **usando System.Data.Entity.Infrastructure**
 
 ![Resolver as exceções de repetição](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image14.png)
@@ -135,7 +134,7 @@ O código faz o seguinte:
 
 - Altera o nome do método para `EditPost` porque a assinatura agora é igual a `HttpGet` método (o `ActionName` atributo especifica que a URL /Edit/ ainda é usada).
 - Obtém a entidade `Instructor` atual do banco de dados usando o carregamento adiantado para a propriedade de navegação `OfficeAssignment`. Isso é o mesmo que você fez `HttpGet` `Edit` método.
-- Atualiza a entidade `Instructor` recuperada com valores do associador de modelos. O [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) usada permite que você coloque na *lista de permissões* as propriedades que você deseja incluir. Isso impede o excesso de postagem, conforme explicado em [segundo tutorial](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
+- Atualiza a entidade `Instructor` recuperada com valores do associador de modelos. O [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) sobrecarga usada permite que você *lista branca* as propriedades que você deseja incluir. Isso impede o excesso de postagem, conforme explicado em [segundo tutorial](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
 
     [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample12.cs)]
 - Define se o local do escritório estiver em branco, o `Instructor.OfficeAssignment` propriedade como nulo, de modo que a linha relacionada no `OfficeAssignment` tabela será excluída.
@@ -234,7 +233,6 @@ Esse código não tratará o cenário de um instrutor atribuído como administra
 ## <a name="add-office-location-and-courses-to-the-create-page"></a>Adicionar local de escritório e cursos para a página Criar
 
 Na *InstructorController.cs*, exclua o `HttpGet` e `HttpPost` `Create` métodos e, em seguida, adicione o código a seguir em seu lugar:
-
 
 [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample25.cs)]
 

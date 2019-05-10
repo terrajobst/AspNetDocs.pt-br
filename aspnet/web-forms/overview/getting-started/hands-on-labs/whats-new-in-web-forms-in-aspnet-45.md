@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 0a1f88bd-97da-4ed1-86f1-605199dc75a4
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/whats-new-in-web-forms-in-aspnet-45
 msc.type: authoredcontent
-ms.openlocfilehash: 52f6ec17fb21019e93ebf2795e95d5b27e4edbe6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 301af8ed877b58624e419c04f605c41f27dbdd0c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401732"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132080"
 ---
 # <a name="whats-new-in-web-forms-in-aspnet-45"></a>Novidades em Web Forms no ASP.NET 4.5
 
@@ -40,7 +40,6 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > No portal oficial do ASP.NET, você pode encontrar mais exemplos dos novos recursos no ASP.NET WebForms 4.5: [Novidades no ASP.NET 4.5 e no Visual Studio 2012](../../../../whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012.md#_Toc318097385)
 > 
 > Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Objetivos
@@ -82,7 +81,6 @@ Este laboratório prático inclui os seguintes exercícios:
 
 > [!NOTE]
 > Cada exercício é acompanhado por um **final** pasta que contém a solução resultante, você deve obter depois de concluir os exercícios. Você pode usar essa solução como um guia se você precisar trabalhar com os exercícios de ajuda adicional.
-
 
 Tempo estimado para concluir este laboratório: **60 minutos**.
 
@@ -610,7 +608,6 @@ Operações demoradas em seu site da web são bons candidatos para programação
 
 > [!NOTE]
 > Além disso, você pode implantar esse aplicativo do Azure seguinte [apêndice b: Publicando um aplicativo ASP.NET MVC 4 usando a implantação da Web](#AppendixB).
-
 
 ---
 

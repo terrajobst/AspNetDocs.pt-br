@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 2aebcde0-b04c-47db-b9c9-077714a5db77
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc
 msc.type: chapter
-ms.openlocfilehash: 34fd3fb357c7a6c33b3a551b0cda7029e807da2c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6a420d5658c40bd6cc7d306f08c894651e1e74eb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399054"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121093"
 ---
 # <a name="getting-started-with-entity-framework-6-code-first-using-mvc-5"></a>Introdução ao Entity Framework 6 Code First usando o MVC 5
 
 > Noções básicas de como usar o Entity Framework 6 para exibir e editar dados em um aplicativo do ASP.NET MVC 5.
-
 
 - [Criando um modelo de dados do Entity Framework](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
 - [Implementar a funcionalidade CRUD básica](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)

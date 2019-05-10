@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: a5aa22a6-fb7f-4f41-9c7f-addda151940b
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: fc9ce539005bce1790c726dfb859305f4ff78a6b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3df5f7d9c8fb22e1ea34fe16560bdb9a1309bb56
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422558"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131890"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-40-in-an-aspnet-4-web-application"></a>Tratamento de simultaneidade com o Entity Framework 4.0 em um aplicativo ASP.NET 4
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais baseia-se no aplicativo web Contoso University que é criado pela [Introdução ao Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de tutoriais. Se você não concluir os tutoriais anteriores, como um ponto de partida para este tutorial, você pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que você teria criado. Você também pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) que é criado pela série de tutoriais completa. Se você tiver dúvidas sobre os tutoriais, você pode postá-los para o [Fórum do Entity Framework do ASP.NET](https://forums.asp.net/1227.aspx).
-
 
 No tutorial anterior, você aprendeu como classificar e filtrar dados usando o `ObjectDataSource` controle e o Entity Framework. Este tutorial mostra as opções para tratamento de simultaneidade em um aplicativo web ASP.NET que usa o Entity Framework. Você criará uma nova página da web que é dedicado a atualizar as atribuições de escritório do instrutor. Você lidará com problemas de simultaneidade nessa página e na página de departamentos que você criou anteriormente.
 

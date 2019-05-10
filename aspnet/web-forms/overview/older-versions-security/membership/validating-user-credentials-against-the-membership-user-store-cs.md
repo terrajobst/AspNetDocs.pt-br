@@ -8,12 +8,12 @@ ms.date: 01/18/2008
 ms.assetid: 61aa4e08-aa81-4aeb-8ebe-19ba7a65e04c
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d962036213d779f73e5d837af1de42a01f08a329
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 469fc9c52bd3d1e5dd69b80399b250ba46f72405
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389213"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131823"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-c"></a>Validar credenciais de usuário no repositório de usuário associado (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/ASPNET_Security_Tutorial_06_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/3/f/5/3f5a8605-c526-4b34-b3fd-a34167117633/aspnet_tutorial06_LoggingIn_cs.pdf)
 
 > Neste tutorial, examinaremos como validar as credenciais do usuário no repositório de usuário associado usando o meio programático e o controle de logon. Podemos também examinar como personalizar a aparência e o comportamento do controle de logon.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -42,11 +41,9 @@ O `SqlMembershipProvider` valida as credenciais fornecidas por meio da obtençã
 
 Vamos atualizar nossa página de logon (~ /`Login.aspx`), de modo que ele valida as credenciais fornecidas no repositório de usuário associado do framework. Criamos essa página de logon novamente o <a id="Tutorial02"> </a> [ *uma visão geral de formulários de autenticação* ](../introduction/an-overview-of-forms-authentication-cs.md) tutorial, criando uma interface com duas caixas de texto para o nome de usuário e senha, um Lembrar-Me checkbox e um botão de Login (veja a Figura 1). O código valida as credenciais inseridas em uma lista de embutido em código de pares de nome de usuário e senha (Scott/Jisun/senha, senha e Sam /). No <a id="Tutorial03"> </a> [ *configuração de autenticação de formulários e tópicos avançados* ](../introduction/forms-authentication-configuration-and-advanced-topics-cs.md) tutorial atualizamos o código da página de logon para armazenar informações adicionais em formulários tíquete de autenticação `UserData` propriedade.
 
-
 [![Interface a página de logon inclui duas caixas de texto, um CheckBoxList e um botão](validating-user-credentials-against-the-membership-user-store-cs/_static/image2.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image1.png)
 
 **Figura 1**: Interface inclui duas caixas de texto a página de logon, um CheckBoxList e um botão ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image3.png))
-
 
 Interface do usuário da página de logon pode permanecer inalterado, mas precisamos substituir o botão de logon `Click` manipulador de eventos com o código que valida o usuário no repositório de usuário associado do framework. Atualize o manipulador de eventos para que seu código aparece da seguinte maneira:
 
@@ -60,7 +57,6 @@ Para testar se a página de login funciona conforme o esperado, tente fazer logo
 
 > [!NOTE]
 > Quando o usuário insere suas credenciais e envia o formulário da página de logon, as credenciais, incluindo sua senha, são transmitidas pela Internet para o servidor web no *texto sem formatação*. Isso significa que qualquer hacker detecção o tráfego de rede pode ver o nome de usuário e senha. Para evitar isso, é essencial para criptografar o tráfego de rede usando [camadas de soquete seguro (SSL)](http://en.wikipedia.org/wiki/Secure_Sockets_Layer). Isso garantirá que as credenciais (bem como uma marcação HTML da página inteira) é criptografada desde o momento em que eles deixam o navegador até que elas são recebidas pelo servidor web.
-
 
 ### <a name="how-the-membership-framework-handles-invalid-login-attempts"></a>Como a estrutura de associação lida com tentativas inválidas de logon
 
@@ -78,30 +74,24 @@ Infelizmente, não há nenhuma ferramenta interna para desbloquear uma conta de 
 > [!NOTE]
 > A desvantagem de `ValidateUser` método é que quando as credenciais fornecidas são inválidas, ele não fornece nenhuma explicação sobre o motivo. As credenciais podem estar inválidas porque não há nenhum par de nome de usuário/senha correspondente no repositório do usuário, ou porque o usuário ainda não foram aprovado ou porque o usuário foi bloqueado. Na etapa 4, veremos como mostrar uma mensagem mais detalhada para o usuário quando sua tentativa de logon falha.
 
-
 ## <a name="step-2-collecting-credentials-through-the-login-web-control"></a>Etapa 2: Coletando credenciais por meio do controle de Web de logon
 
 O [controle de Web de logon](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.aspx) renderiza uma interface de usuário padrão muito semelhante ao que criamos na <a id="SKM5"> </a> [ *uma visão geral de formulários de autenticação* ](../introduction/an-overview-of-forms-authentication-cs.md) tutorial. Usar o controle de logon nos poupa o trabalho de ter de criar a interface para coletar as credenciais de s visitante. Além disso, o controle de logon entra automaticamente no usuário (supondo que as credenciais enviadas forem válidas), assim, salvando da necessidade de escrever nenhum código.
 
 Vamos atualizar `Login.aspx`, substituindo a interface criada manualmente e de código com um controle de logon. Inicie removendo a marcação existente e o código em `Login.aspx`. Você pode excluí-lo imediatamente, ou simplesmente comentá-lo. Para comentar marcação declarativa, coloque-o com o `<%--` e `--%>` delimitadores. Você pode inserir esses delimitadores manualmente ou, como mostra a Figura 2, você pode selecionar o texto para comentar e, em seguida, clique no comente o ícone de linhas selecionadas na barra de ferramentas. Da mesma forma, você pode usar o comente o ícone de linhas selecionadas para comentar o código selecionado na classe code-behind.
 
-
 [![Comente o código-fonte no login. aspx e marcação declarativa existente](validating-user-credentials-against-the-membership-user-store-cs/_static/image5.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image4.png)
 
 **Figura 2**: Comentário horizontalmente o existente marcação declarativa e código-fonte no `Login.aspx` ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image6.png))
 
-
 > [!NOTE]
 > O comentário no ícone de linhas selecionadas não está disponível ao exibir a marcação declarativa no Visual Studio 2005. Se você não estiver usando o Visual Studio 2008, você precisará adicionar manualmente os `<%--` e `--%>` delimitadores.
 
-
 Em seguida, arraste um controle de logon da caixa de ferramentas para a página e defina suas `ID` propriedade para `myLogin`. Neste ponto, sua tela deve ser semelhante à Figura 3. Observe que a interface de padrão do controle Login inclui controles de caixa de texto para o nome de usuário e senha, um lembrar-me próxima vez que caixa de seleção e um botão Log. Também há `RequiredFieldValidator` controles para as duas caixas de texto.
-
 
 [![Adicionar um controle de logon para a página](validating-user-credentials-against-the-membership-user-store-cs/_static/image8.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image7.png)
 
 **Figura 3**: Adicionar um controle de logon para a página ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image9.png))
-
 
 E pronto! Quando Log no botão do controle de logon é clicado, ocorrerá um postback e o controle de logon chamará o `Membership.ValidateUser` método, passando o nome de usuário inserido e a senha. Se as credenciais forem inválidas, o controle de logon exibe uma mensagem informando tal. Se, no entanto, as credenciais forem válidas, o controle de logon cria os formulários de tíquete de autenticação e redireciona o usuário para a página apropriada.
 
@@ -114,11 +104,9 @@ O controle de logon usa quatro fatores para determinar a página apropriada para
 
 A Figura 4 ilustra como o controle de logon usa essas quatro parâmetros para chegar a sua decisão de página apropriado.
 
-
 [![Adicionar um controle de logon para a página](validating-user-credentials-against-the-membership-user-store-cs/_static/image11.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image10.png)
 
 **Figura 4**: Adicionar um controle de logon para a página ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image12.png))
-
 
 Reserve um tempo para testar o controle de logon visitando o site por meio de um navegador e fazer logon como um usuário existente no framework de associação.
 
@@ -139,16 +127,13 @@ O controle de logon oferece duas propriedades para ajustar o layout de seus cont
 > [!NOTE]
 > Na próxima seção, configurando o Layout do controle de logon, vamos examinar usando modelos para definir o layout preciso dos elementos de interface do usuário do controle de Layout.
 
-
 Encapsular as configurações de propriedade do controle de logon, definindo o [ `CreateUserText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.createusertext.aspx) e [ `CreateUserUrl` propriedades](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.createuserurl.aspx) para Not registrado ainda? Crie uma conta! e `~/Membership/CreatingUserAccounts.aspx`, respectivamente. Isso adiciona um hiperlink a interface do controle de logon que aponta para a página criada na <a id="SKM6"> </a> [tutorial anterior](creating-user-accounts-cs.md). O controle de logon [ `HelpPageText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.helppagetext.aspx) e [ `HelpPageUrl` propriedades](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.helppageurl.aspx) e [ `PasswordRecoveryText` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.passwordrecoverytext.aspx) e [ `PasswordRecoveryUrl` propriedades](https://msdn.microsoft.com/library/system.web.ui.webcontrols.login.passwordrecoveryurl.aspx) funcionam da mesma maneira, renderização de links para uma página de Ajuda e uma página de recuperação de senha.
 
 Depois de fazer essas alterações de propriedade, marcação declarativa e a aparência do seu controle de logon devem ser semelhantes ao mostrado na Figura 5.
 
-
 [![Os valores de propriedades do controle Login determinam sua aparência](validating-user-credentials-against-the-membership-user-store-cs/_static/image14.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image13.png)
 
 **Figura 5**: Valores determinam sua aparência propriedades do controle Login ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image15.png))
-
 
 ### <a name="configuring-the-login-controls-layout"></a>Configurando o Layout do controle de logon
 
@@ -163,23 +148,18 @@ Para executar a tarefa de primeiro, precisamos converter o controle de logon em 
 
 Vamos atualizar o controle de logon para que ele solicita aos usuários por nome de usuário, senha e endereço de email e autentica o usuário apenas se o endereço de email fornecido corresponde ao seu endereço de email no arquivo. Primeiro, precisamos converter a interface do controle de logon em um modelo. Na Smart Tag do controle de logon, escolha a converter para a opção de modelo.
 
-
 [![Converter o controle de logon em um modelo](validating-user-credentials-against-the-membership-user-store-cs/_static/image17.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image16.png)
 
 **Figura 6**: Converter o controle de logon em um modelo ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image18.png))
 
-
 > [!NOTE]
 > Para reverter o controle de logon para sua versão de pré-template, clique no link de redefinição de Smart Tag do controle.
 
-
 Convertendo o controle de logon em um modelo adiciona um `LayoutTemplate` para marcação declarativa do controle com elementos HTML e controles da Web definindo a interface do usuário. Como mostra a Figura 7, convertendo o controle em um modelo remove um número de propriedades na janela Propriedades, tais como `TitleText`, `CreateUserUrl`e assim por diante, pois esses valores de propriedade são ignorados ao usar um modelo.
-
 
 [![Menos propriedades estão que disponíveis quando o controle de logon é convertido em um modelo](validating-user-credentials-against-the-membership-user-store-cs/_static/image20.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image19.png)
 
 **Figura 7**: Menos propriedades estão disponíveis quando o controle de logon é convertido em um modelo ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image21.png))
-
 
 A marcação HTML no `LayoutTemplate` podem ser modificados conforme necessário. Da mesma forma, fique à vontade adicionar todos os novos controles da Web para o modelo. No entanto, é importante controles de Web core desse controle Login permanecem no modelo e manter atribuído `ID` valores. Em particular, não remova ou renomeie o `UserName` ou `Password` caixas de texto, o `RememberMe` caixa de seleção, o `LoginButton` botão, o `FailureText` rótulo, ou o `RequiredFieldValidator` controles.
 
@@ -189,11 +169,9 @@ Para coletar o endereço de email do visitante, precisamos adicionar uma caixa d
 
 Depois de adicionar o `Email` caixa de texto, visite a página por meio de um navegador. Como mostra a Figura 8, a interface do usuário do controle de logon agora inclui uma terceira caixa de texto.
 
-
 [![O controle de logon agora inclui uma caixa de texto para o endereço de Email do usuário](validating-user-credentials-against-the-membership-user-store-cs/_static/image23.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image22.png)
 
 **Figura 8**: O controle de logon agora inclui uma caixa de texto para o endereço de Email do usuário ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image24.png))
-
 
 Neste ponto, o controle de logon ainda está usando o `Membership.ValidateUser` método para validar as credenciais fornecidas. Do mesmo modo, o valor digitado para o `Email` caixa de texto não tem nenhuma relevância em se o usuário pode fazer logon. Na etapa 3 vamos examinar como substituir a lógica de autenticação do controle de logon para que as credenciais só são consideradas válidas se o nome de usuário e senha são válidos e o endereço de email fornecido correspondências com o endereço de email no arquivo.
 
@@ -207,15 +185,12 @@ Se as credenciais fornecidas são válidas e, em seguida, o tíquete de autentic
 
 Figura 9 oferece um fluxograma de fluxo de trabalho de autenticação.
 
-
 [![Fluxo de trabalho de autenticação de logon do controle](validating-user-credentials-against-the-membership-user-store-cs/_static/image26.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image25.png)
 
 **Figura 9**: Fluxo de trabalho de autenticação de logon do controle ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image27.png))
 
-
 > [!NOTE]
 > Se você estiver se perguntando quando você usaria o `FailureAction`do `RedirectToLogin` página de opção, considere o cenário a seguir. Agora nosso `Site.master` página mestra atualmente tem o texto Hello, stranger exibido na coluna à esquerda quando visitado por um usuário anônimo, mas imagine que queremos substituir esse texto com um controle de logon. Isso permitiria que um usuário anônimo fazer logon em qualquer página no site, em vez de exigir que eles para visitar a página de logon diretamente. No entanto, se um usuário não pôde fazer logon por meio do controle Login renderizado pela página mestre, ele pode fazer sentido redirecioná-las para a página de logon (`Login.aspx`) porque essa página provavelmente inclui instruções adicionais, links e outras ajuda – como links para criar um nova conta ou recuperar uma senha perdida - que não foram adicionados à página mestra.
-
 
 ### <a name="creating-theauthenticateevent-handler"></a>Criando o`Authenticate`manipulador de eventos
 
@@ -246,15 +221,12 @@ O código a seguir implementa essas duas verificações. Se ambos, em seguida, p
 
 Com esse código funcionando, tente fazer logon como um usuário válido, inserindo o nome de usuário correto, senha e endereço de email. Tente novamente, mas desta vez propositadamente usar um endereço de email incorreto (consulte a Figura 10). Por fim, tente uma terceira vez usando um nome de usuário inexistente. No primeiro caso você deve estar com êxito conectado ao site, mas nos dois últimos casos, você deve ver a mensagem de credenciais inválidas do controle de logon.
 
-
 [![Tito não consegue fazer logon ao fornecer um endereço de Email incorreto](validating-user-credentials-against-the-membership-user-store-cs/_static/image29.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image28.png)
 
 **Figura 10**: Tito não é possível Log em quando fornecendo um endereço de Email incorreto ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image30.png))
 
-
 > [!NOTE]
 > Conforme discutido na seção como a associação do Framework manipula inválido tentativas de logon na etapa 1, quando o `Membership.ValidateUser` método é chamado e passado credenciais inválidas, ele controla a tentativa de logon inválido e impeça o usuário se eles excederem um determinado limite de tentativas inválidas de dentro de uma janela de tempo especificado. Desde nossas chamadas de lógica de autenticação personalizada a `ValidateUser` método, uma senha incorreta para um nome de usuário válido incrementará o contador de tentativas de logon inválidas, mas esse contador não é incrementado no caso em que o nome de usuário e senha são válidos, mas o endereço de email está incorreto. Provavelmente, esse comportamento é adequado, pois é improvável que um hacker souber o nome de usuário e senha mas precisa usar técnicas de força bruta para determinar o endereço de email do usuário.
-
 
 ## <a name="step-4-improving-the-login-controls-invalid-credentials-message"></a>Etapa 4: Melhorando a mensagem de credenciais inválidas de logon do controle
 
@@ -279,11 +251,9 @@ O código acima inicia, definindo o controle de logon `FailureText` propriedade 
 
 Para testar esse código, propositadamente tente fazer logon como um usuário existente, mas usar uma senha incorreta. Faça isso cinco vezes em uma linha em um período de 10 minutos e a conta será bloqueada. Conforme mostrado na Figura 11, logon subsequentes tentativas sempre irá falhar (até mesmo com a senha correta), mas agora exibe o mais descritivo sua conta foi bloqueada devido a muitas tentativas de logon inválido. Entre em contato com o administrador para configurar sua mensagem desbloqueada da conta.
 
-
 [![Tito executada muitas tentativas de logon inválidas e foi bloqueada](validating-user-credentials-against-the-membership-user-store-cs/_static/image32.png)](validating-user-credentials-against-the-membership-user-store-cs/_static/image31.png)
 
 **Figura 11**: Tito executadas muito muitas tentativas inválidas de logon e tem sido bloqueada ([clique para exibir a imagem em tamanho normal](validating-user-credentials-against-the-membership-user-store-cs/_static/image33.png))
-
 
 ## <a name="summary"></a>Resumo
 

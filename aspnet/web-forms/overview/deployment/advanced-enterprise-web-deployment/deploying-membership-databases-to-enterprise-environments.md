@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 3cf765df-d311-4f68-a295-c9685ceea830
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/deploying-membership-databases-to-enterprise-environments
 msc.type: authoredcontent
-ms.openlocfilehash: eea0761ac85693553808e581a8712c822d19c226
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 50f49af502b75aa5ad52756a76a5e7340aca53f7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390474"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131955"
 ---
 # <a name="deploying-membership-databases-to-enterprise-environments"></a>Implantação do bancos de dados de associação em ambientes corporativos
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico explica as principais considerações e desafios que você precisará superar quando você provisionar aplicativo ASP.NET serviços bancos de dados (mais comumente conhecidos como bancos de dados de associação) em ambientes de teste, preparo ou produção. Ele também descreve as abordagens que você pode usar para atender a esses desafios.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 

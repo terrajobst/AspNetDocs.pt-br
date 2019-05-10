@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 104e4d22-22cf-44a4-aefe-f604f62e0cf8
 msc.legacyurl: /web-forms/overview/data-access/masterdetail
 msc.type: chapter
-ms.openlocfilehash: 24fa671ae633cb0816d689ce4189598f62f13525
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9ae348f6af0188364cb3ac2973dccf05f4bb11a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394621"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131154"
 ---
 # <a name="masterdetail"></a>Mestre/Detalhes
 
 > Esses tutoriais mostram como exibir registros mestres em detalhes em um controle GridView e uma lista suspensa.
-
 
 - [Filtragem mestre/detalhes com uma DropDownList (C#)](master-detail-filtering-with-a-dropdownlist-cs.md)
 - [Filtragem mestre/detalhes com duas DropDownLists (C#)](master-detail-filtering-with-two-dropdownlists-cs.md)

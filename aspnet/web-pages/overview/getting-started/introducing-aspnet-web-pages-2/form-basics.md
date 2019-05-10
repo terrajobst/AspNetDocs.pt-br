@@ -8,12 +8,12 @@ ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
-ms.openlocfilehash: f88f7a31551abda029bee0ec16aa35ce2ef5d2f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f57661077ec3bb13f3d4ec41b130bda4d2fb9070
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385950"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132956"
 ---
 # <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introdução ao ASP.NET Web Pages - Noções básicas de formulário HTML
 
@@ -33,7 +33,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - O objeto `Request`.
 > - O SQL `Where` cláusula.
-
 
 ## <a name="what-youll-build"></a>O que você vai criar
 
@@ -82,7 +81,6 @@ O `<form>` elemento abrange elementos HTML para serem enviadas. (Um erro fácil 
 > 
 > (Para saber mais sobre verbos HTTP, consulte o [definições de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) artigo no site do W3C.)
 
-
 A maioria dos elementos de entrada do usuário são HTML `<input>` elementos. Elas se pareçam com `<input type="type" name="name">,` onde *tipo* indica o tipo de controle de entrada do usuário desejado. Esses elementos são mais comuns:
 
 - Caixa de texto: `<input type="text">`
@@ -104,7 +102,6 @@ A parte interessante é que você, o desenvolvedor da página, fazer com a entra
 > Como você deve saber, HTML está em transição; a versão mais recente (HTML5) inclui suporte para as formas mais intuitivas para que os usuários insiram informações. Por exemplo, em HTML5, você (o desenvolvedor da página) pode informar a página que você deseja que o usuário insira uma data. O navegador pode exibir automaticamente um calendário, em vez de exigir que o usuário insira uma data manualmente. No entanto, o HTML5 é novo e ainda não é suportado em todos os navegadores.
 > 
 > Páginas da Web do ASP.NET oferece suporte a HTML5 na medida em que faz o navegador do usuário de entrada. Para ter uma ideia dos novos atributos para o `<input>` elemento em HTML5, consulte [HTML &lt;entrada&gt; atributo de tipo](http://www.w3schools.com/html/html_form_input_types.asp) no site W3Schools.
-
 
 ## <a name="creating-the-form"></a>Criando o formulário
 
@@ -176,7 +173,6 @@ Este bloco prepara o terreno para a criação de uma consulta que usa o termo de
 > 
 > Ele é uma boa prática para ser específico e usar o subconjunto de `Request` que você está interessado, como `Request.Form` ou `Request.QueryString`. Para as páginas simples que você está criando neste tutorial, provavelmente não realmente faz alguma diferença. No entanto, quando você cria páginas mais complexas, usando a versão explícita `Request.Form` ou `Request.QueryString` pode ajudá-lo a evitar problemas que podem surgir quando a página contém um formulário (ou vários formulários), cookies, valores de cadeia de caracteres de consulta e assim por diante.
 
-
 ## <a name="creating-a-query-by-using-a-search-term"></a>Criando uma consulta usando um termo de pesquisa
 
 Agora que você sabe como obter o termo de pesquisa que o usuário inseriu, você pode criar uma consulta que usa a ele. Lembre-se de que, para obter todos os itens de filme do banco de dados, você está usando uma consulta SQL que se parece com esta instrução:
@@ -218,7 +214,6 @@ Se você reunir todos esses elementos, você obterá o código a seguir:
 > **Importante!** Uso de espaços reservados (como `@0`) passar valores para um comando SQL está *extremamente importante* para segurança. A maneira que você vê-la aqui, com espaços reservados para dados da variável, é a única maneira de você deve construir comandos SQL.
 > 
 > Nunca construa uma instrução SQL reunindo valores que obter do usuário e texto literal (concatenar). Concatenação de entrada do usuário em uma instrução SQL é aberta no seu site para um *ataque de injeção de SQL* em que um usuário mal-intencionado envia valores para sua página que hack seu banco de dados. (Você pode ler mais no artigo [injeção de SQL](https://msdn.microsoft.com/library/ms161953.aspx) site do MSDN.)
-
 
 ## <a name="updating-the-movies-page-with-search-code"></a>Atualizar a página de filmes com código de pesquisa
 
@@ -280,7 +275,6 @@ Nessa página, você pode ter também definir a `value` de atributo para o `sear
 
 > [!NOTE]
 > Você não pode "lembrar" o valor de uma caixa de texto que é usado para senhas. Seria uma brecha de segurança para permitir que pessoas preencher um campo de senha por meio de código.
-
 
 Execute novamente a página, insira um gênero e clique em **gênero pesquisa**. Desta vez não só você ver os resultados da pesquisa, mas a caixa de texto se lembra de que você inseriu última vez:
 

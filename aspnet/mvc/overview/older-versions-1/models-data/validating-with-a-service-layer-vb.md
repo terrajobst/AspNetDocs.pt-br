@@ -8,19 +8,18 @@ ms.date: 03/02/2009
 ms.assetid: 344bb38e-4965-4c47-bda1-f6d29ae5b83a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validating-with-a-service-layer-vb
 msc.type: authoredcontent
-ms.openlocfilehash: fc819494ef58824d485144396e3a995d906c8b42
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 704657ffe6f50eaf3eb0d91d0d334567003ab7f4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398703"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122339"
 ---
 # <a name="validating-with-a-service-layer-vb"></a>Validação com uma camada de serviço (VB)
 
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > Aprenda a mover sua lógica de validação fora de suas ações do controlador e uma camada de serviço separado. Neste tutorial, Stephen Walther explica como você pode manter uma nítida separação de preocupações, isolando sua camada de serviço de camada do seu controlador.
-
 
 O objetivo deste tutorial é descrever um método de execução de validação em um aplicativo ASP.NET MVC. Neste tutorial, você aprenderá como mover sua lógica de validação para fora de seus controladores de e para uma camada de serviço separado.
 

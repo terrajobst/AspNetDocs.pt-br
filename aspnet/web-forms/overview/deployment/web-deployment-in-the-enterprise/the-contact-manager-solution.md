@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 4d8c8d19-055b-4b70-9ee1-f748f0db3a01
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: 7998b5bb2983410479123514661a4ddb67afc8c6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 12ed7827f7392e559e04121386f7cd045de8462b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398365"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130926"
 ---
 # <a name="the-contact-manager-solution"></a>A solução Gerenciador de Contatos
 
@@ -24,7 +24,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > Isso [série de tutoriais](web-deployment-in-the-enterprise.md) usa uma solução de exemplo&#x2014;a solução do Contact Manager&#x2014;para representar um aplicativo de escala empresarial com um nível de complexidade de realista. Este tópico apresenta a solução do Contact Manager, descreve os principais componentes da solução e identifica os desafios de implantação desse tipo de aplicativo para várias plataformas de destino em um ambiente corporativo.
 > 
 > Como trabalhar com os tópicos nesses tutoriais, você pode usar a solução de Gerenciador de contatos como uma implementação de referência que demonstra como você pode atender aos desafios específicos em cenários de implantação do enterprise. Próximo tópico [configuração de solução de Gerenciador de contatos a](setting-up-the-contact-manager-solution.md), descreve como baixar e executar a solução em sua estação de trabalho do desenvolvedor.
-
 
 ## <a name="solution-overview"></a>Visão geral da solução
 
@@ -45,7 +44,6 @@ Em um nível conceitual, os componentes da solução se encaixam como este:
 
 > [!NOTE]
 > Enquanto o aplicativo web ASP.NET MVC 3 usa o provedor de associação do ASP.NET, todas as páginas dentro do aplicativo web permitem o acesso anônimo. Isso claramente não é uma configuração realista. No entanto, a solução é configurada dessa forma, para tornar mais fácil para você implantar e testar a solução sem configurar funções e contas de usuário.
-
 
 ## <a name="deployment-challenges"></a>Desafios de implantação
 

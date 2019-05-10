@@ -8,12 +8,12 @@ ms.date: 06/05/2013
 ms.assetid: e608e263-264d-448b-b0eb-6eeb77713b22
 msc.legacyurl: /signalr/overview/older-versions/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: a8121a2d7c4ed14e296dc72c72ca7c25939a2b50
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2fb671e730a1d41c07b350bf1d64ac1d0b1be55c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59414004"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128789"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr-1x"></a>Noções básicas sobre e manipular eventos de tempo de vida de Conexão no SignalR 1.x
 
@@ -28,7 +28,6 @@ by [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://githu
 > - [Como manipular eventos de tempo de vida de conexão na classe Hub](index.md)
 > - [Como manipular eventos de tempo de vida de conexão nos clientes JavaScript](index.md)
 > - [Como manipular eventos de tempo de vida de conexão em clientes .NET](index.md)
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -132,7 +131,6 @@ Alguns ambientes de rede fechar deliberadamente conexões ociosas e outra funç�
 > 
 > [!IMPORTANT]
 > A sequência de eventos descritas aqui não é garantida. Torna o SignalR cada tentativa de gerar eventos de tempo de vida de conexão de uma maneira previsível de acordo com esse esquema, mas há muitas variações de eventos de rede e de várias maneiras em que estruturas de comunicação subjacente como transporte APIs tratarão-los. Por exemplo, o `Reconnected` evento não pode ser gerado quando o cliente se reconecta, ou o `OnConnected` manipulador no servidor pode ser executados quando a tentativa de estabelecer uma conexão não for bem-sucedida. Este tópico descreve somente os efeitos que normalmente seriam produzidos por determinadas circunstâncias normais.
-
 
 <a id="clientdisconnect"></a>
 

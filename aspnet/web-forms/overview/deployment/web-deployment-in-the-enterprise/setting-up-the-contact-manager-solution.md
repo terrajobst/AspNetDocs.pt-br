@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 200b973c-776b-4a9b-9e82-39fda6120a52
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/setting-up-the-contact-manager-solution
 msc.type: authoredcontent
-ms.openlocfilehash: d0a7c29a590fcde504e5f5227806df62454f6add
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9774ee01cb0515d7e733b24baa661f2648bd7c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410481"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131038"
 ---
 # <a name="setting-up-the-contact-manager-solution"></a>Configuração da solução Gerenciador de Contatos
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve como baixar e configurar a solução de Gerenciador de contatos para executar localmente em uma estação de trabalho do desenvolvedor.
-
 
 ## <a name="system-requirements"></a>Requisitos de sistema
 
@@ -70,7 +69,6 @@ O restante desta seção fornece mais orientação sobre como concluir cada uma 
 > [!NOTE]
 > Para obter mais informações sobre o aspnet\_regsql utilitário, consulte [ferramenta de registro do ASP.NET SQL Server (Aspnet\_regsql.exe)](https://msdn.microsoft.com/library/ms229862(v=vs.100).aspx).
 
-
 A próxima etapa é certificar-se de que as cadeias de caracteres de conexão da solução do Contact Manager apontam para sua instância local do SQL Server Express.
 
 **Para atualizar as cadeias de conexão**
@@ -97,7 +95,6 @@ Você deve agora estar pronto para executar a solução de Gerenciador de contat
 
 > [!NOTE]
 > Se você seguir estas etapas sem primeiro criar um banco de dados de serviços de aplicativo, o ASP.NET criará o banco de dados na primeira vez que você tentar criar um usuário. No entanto, criar manualmente o banco de dados fornece muito mais controle sobre o conjunto de recursos de serviços de aplicativo que você deseja dar suporte.
-
 
 **Para executar a solução de Gerenciador de contatos**
 

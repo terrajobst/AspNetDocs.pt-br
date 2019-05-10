@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: e079318b37563b1b7afe0f842f5b463541de0a81
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c54449e778eac96133cccdc90d86cbbaf05a70f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405424"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132104"
 ---
 # <a name="shopping-cart"></a>Carrinho de compras
 
@@ -22,7 +22,6 @@ by [Erik Reitan](https://github.com/Erikre)
 [Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
-
 
 Este tutorial descreve a lógica comercial necessária para adicionar um carrinho de compras para o aplicativo de Web Forms do ASP.NET de exemplo Wingtip Toys. Este tutorial se baseia no tutorial anterior "Exibir dados de itens e detalhes" e faz parte da série de tutoriais de Wingtip Toys Store. Depois de concluir este tutorial, os usuários do seu aplicativo de exemplo será capazes de adicionar, remover e modificar os produtos no carrinho de compras.
 
@@ -49,7 +48,6 @@ Anteriormente nesta série de tutoriais, você adicionou páginas e código para
 > [!NOTE] 
 > 
 > O estado de sessão do ASP.NET é um local conveniente para armazenar informações específicas do usuário que irá expirar depois que o usuário deixar o site. Embora o uso indevido do estado da sessão pode ter implicações de desempenho em sites maiores, claro do uso de sessão estado funciona bem para fins de demonstração. O projeto de exemplo Wingtip Toys mostra como usar o estado de sessão sem um provedor externo, em que o estado de sessão é armazenado em processo no servidor web que hospeda o site. Locais maiores que fornecem várias instâncias de um aplicativo ou para sites que executam várias instâncias de um aplicativo em diferentes servidores, considere usar **serviço de Cache do Windows Azure**. Esse serviço de Cache fornece um serviço de cache distribuído que é externo ao site da web e resolve o problema de usar o estado de sessão em processo. Para obter mais informações, consulte [como usar estado de sessão do ASP.NET com o Windows Azure Web Sites](https://docs.microsoft.com/azure/redis-cache/cache-aspnet-session-state-provider).
-
 
 ### <a name="add-cartitem-as-a-model-class"></a>Adicionar CartItem como uma classe de modelo
 
@@ -128,7 +126,6 @@ Como mencionado anteriormente, você criará uma página de processamento de cha
 > [!NOTE] 
 > 
 > Vamos modificar o code-behind (*AddToCart.aspx.cs*) para essa página, não na página da interface do usuário (*AddToCart.aspx*).
-
 
 #### <a name="to-create-the-add-to-cart-functionality"></a>Para criar o adicionar ao carrinho funcionalidade:
 
@@ -215,7 +212,6 @@ Primeiro, o `GetTotal` método obtém a ID do carrinho de compras para o usuári
 > [!NOTE] 
 > 
 > O código acima usa o tipo anulável "`int?`". Tipos que permitem valor nulos podem representar todos os valores de um tipo subjacente e também como um valor nulo. Para obter mais informações, consulte [usando tipos anuláveis](https://msdn.microsoft.com/library/2cf62fcy(v=vs.110).aspx).
-
 
 ### <a name="modify-the-shopping-cart-display"></a>Modificar a exibição de carrinho de compras
 

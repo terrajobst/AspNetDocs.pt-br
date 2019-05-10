@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 664ec95e-b0c9-4f43-a39f-798d0f2a7e08
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/checkout-and-payment-with-paypal
 msc.type: authoredcontent
-ms.openlocfilehash: a0895c2246bc08f50645a865ce2dfffecfbb56a6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0fc4e85a86289667566a76537dd1573f4d9b2bf0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391150"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131724"
 ---
 # <a name="checkout-and-payment-with-paypal"></a>Check-out e pagamento com o PayPal
 
@@ -23,7 +23,6 @@ by [Erik Reitan](https://github.com/Erikre)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
 
-
 Este tutorial descreve como modificar o aplicativo de exemplo Wingtip Toys para incluir a autorização do usuário, registro e pagamento usando PayPal. Somente os usuários que estão conectados no terá autorização para adquirir produtos. Funcionalidade de registro de usuário internas do modelo de projeto Web Forms do ASP.NET 4.5 já inclui muito o que você precisa. Você adicionará a funcionalidade de check-out PayPal Express. Neste tutorial você estar usando o desenvolvedor PayPal ambiente, de teste para que nenhum fundos reais serão transferidos. No final do tutorial, você testará o aplicativo, selecionando os produtos para adicionar ao carrinho de compras, clicando no botão de check-out e transferir dados para o site de teste do PayPal. No site de web de teste do PayPal, você confirmar suas informações de envio e de pagamento e, em seguida, retornar ao aplicativo de exemplo Wingtip Toys local para confirmar e concluir a compra.
 
 Há vários processadores de pagamento de terceiros experientes especializados em compras online, essa segurança e escalabilidade do endereço. Os desenvolvedores ASP.NET devem considerar as vantagens de utilização de uma solução de pagamento de terceiros antes de implementar um processo de compras e comprar a solução.
@@ -31,7 +30,6 @@ Há vários processadores de pagamento de terceiros experientes especializados e
 > [!NOTE] 
 > 
 > O aplicativo de exemplo Wingtip Toys foi projetado para mostrado conceitos específicos do ASP.NET e os recursos disponíveis para os desenvolvedores da web do ASP.NET. Este aplicativo de exemplo não estava otimizado para todas as circunstâncias possíveis em relação à segurança e escalabilidade.
-
 
 ## <a name="what-youll-learn"></a>O que você aprenderá:
 
@@ -150,7 +148,6 @@ Além da autenticação, o tutorial também usará funções para implementar a 
 > [!NOTE] 
 > 
 > Aplicativos do Windows Live só aceitam uma URL ao vivo para um site de trabalho, portanto você não pode usar uma URL do site local para logons de teste.
-
 
 As etapas a seguir permitirá que você adicionar um provedor de autenticação do Google.
 
@@ -293,7 +290,7 @@ Coloque a maioria do código PayPal em uma única classe. Essa classe contém m�
    A caixa de diálogo **Adicionar Novo Item** é exibida.
 2. Sob **Visual c#** da **instalado** painel à esquerda, selecione **código**.
 3. No painel central, selecione **classe**. Nomeie essa nova classe **PayPalFunctions.cs**.
-4. Clique em **Adicionar**.  
+4.  Clique em **Adicionar**.  
    O novo arquivo de classe é exibido no editor.
 5. Substitua o código padrão pelo código a seguir:  
 
@@ -306,7 +303,6 @@ Coloque a maioria do código PayPal em uma única classe. Essa classe contém m�
 > 
 > Este aplicativo de exemplo simplesmente você está adicionando as credenciais para um arquivo c# (. cs). No entanto, em uma solução implementada, você deve considerar suas credenciais em um arquivo de configuração de criptografia.
 
-
 A classe NVPAPICaller contém a maioria da funcionalidade PayPal. O código na classe fornece os métodos necessários para fazer um teste de compra do ambiente de teste do PayPal. As três funções PayPal a seguir são usadas para fazer compras:
 
 - `SetExpressCheckout` função
@@ -318,7 +314,6 @@ O `ShortcutExpressCheckout` método de coleta os detalhes de produto e informaç
 > [!NOTE] 
 > 
 > PayPal permite que você inclua os detalhes de compra opcional com base em [especificação de API do PayPal](https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&amp;content_ID=developer/e_howto_api_nvp_r_SetExpressCheckout). Estendendo o código no aplicativo de exemplo Wingtip Toys, você pode incluir detalhes de localização, as descrições de produto, imposto, um número de serviço do cliente, bem como muitos outros campos opcionais.
-
 
 Observe que as URLs de retorno e de cancelamento que são especificadas na **ShortcutExpressCheckout** método usar um número de porta.
 
@@ -395,7 +390,6 @@ O **DetailsView** controle é usado para exibir os detalhes do pedido que foram 
 > Selecionando **editar campos**, o **campos** caixa de diálogo será exibida. Na caixa de diálogo você pode controlar facilmente as propriedades visuais, tais como **ItemStyle**, da **DetailsView** controle.
 > 
 > ![Check-out e pagamento com o PayPal - caixa de diálogo campos](checkout-and-payment-with-paypal/_static/image19.png)
-
 
 ### <a name="complete-purchase"></a>Finalizar compra
 

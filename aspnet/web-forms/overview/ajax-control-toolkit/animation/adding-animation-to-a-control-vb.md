@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: c120187e-963e-4439-bb85-32771bc7f1f4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/adding-animation-to-a-control-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c55bbeb383b15f4dc9cb95d25905cade1e8c5c29
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: edc80db42c7b1adf25214e1d6ae6d8a938a4be12
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418892"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130774"
 ---
 # <a name="adding-animation-to-a-control-vb"></a>Adição de animação a um controle (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation1VB.pdf)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Este tutorial mostra como configurar uma animação desse tipo.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -70,7 +69,6 @@ Neste exemplo, o painel deve desaparecer. A animação deverão utilizar 1,5 seg
 [!code-aspx[Main](adding-animation-to-a-control-vb/samples/sample5.aspx)]
 
 Quando você executa esse script, o painel é exibido e fade out em um e meio segundos.
-
 
 [![O painel está desaparecendo](adding-animation-to-a-control-vb/_static/image2.png)](adding-animation-to-a-control-vb/_static/image1.png)
 

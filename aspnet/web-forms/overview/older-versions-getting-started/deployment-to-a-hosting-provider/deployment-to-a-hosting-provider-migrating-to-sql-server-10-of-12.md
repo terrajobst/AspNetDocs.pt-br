@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: 98e521f348cdf1c2bd563f96badbaea6b23f4bcf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cc4db5b1fcedca675a18f1b78e28f65e51b6cf09
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398950"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132761"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Migrando para o SQL Server - 10 a 12
 
@@ -24,7 +24,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET projeto de aplicativo web que inclui um banco de dados do SQL Server Compact usando o Visual Studio 2012 RC ou Visual Studio Express 2012 RC para Web. Você também pode usar o Visual Studio 2010 se você instalar a atualização de publicação na Web. Para obter uma introdução à série, consulte [o primeiro tutorial na série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Para obter um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar as edições do SQL Server que não seja o SQL Server Compact e mostra como implantar aplicativos de Web do serviço de aplicativo do Azure, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -89,11 +88,9 @@ A solução *SolutionFiles* pasta que você criou na [implantando no ambiente de
 > [!NOTE]
 > Este script foi desenvolvido para funcionar com o SQL Server 2008 e com as configurações do IIS no Windows 7, conforme elas são especificadas neste tutorial. Se você estiver usando uma versão diferente do SQL Server ou do Windows, ou se você configurar o IIS no computador de forma diferente, as alterações a esse script podem ser necessárias. Para obter mais informações sobre scripts do SQL Server, consulte [Manuais Online do SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
-
 > [!NOTE] 
 > 
 > **Observação de segurança** este script dá db\_permissões de proprietário para o usuário que acessa o banco de dados em tempo de execução, o que é o que você terá no ambiente de produção. Em alguns cenários, você talvez queira especificar um usuário que tem o esquema de banco de dados completo permissões apenas para a implantação de atualização e especificar para o tempo de execução de um usuário diferente que tenha permissões apenas para ler e gravar dados. Para obter mais informações, consulte **revisar as alterações da Web. config automática para migrações do Code First** na [implantando no IIS como um ambiente de teste](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md).
-
 
 ## <a name="configuring-database-deployment-for-the-test-environment"></a>Configurando a implantação de banco de dados para o ambiente de teste
 

@@ -8,19 +8,18 @@ ms.date: 12/03/2010
 ms.assetid: f8afb245-b705-419c-8790-0b295e90d5e2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: b976e8d611596f2cb58661a2e91b7a640ac04b9f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 18d4b44c5e23fd6942c3adf48a33a5602e6df6d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416071"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133096"
 ---
 # <a name="getting-started-with-entity-framework-40-database-first-and-aspnet-4-web-forms---part-7"></a>Introdução ao banco de dados do Entity Framework 4.0 First e 4 do Web Forms do ASP.NET – parte 7
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Aplicativo web de exemplo Contoso University demonstra como criar aplicativos Web Forms do ASP.NET usando o Entity Framework 4.0 e o Visual Studio 2010. Para obter informações sobre a série de tutoriais, consulte [o primeiro tutorial na série](the-entity-framework-and-aspnet-getting-started-part-1.md)
-
 
 ## <a name="using-stored-procedures"></a>Usando procedimentos armazenados
 
