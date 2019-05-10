@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: a19ff2ce-3f7e-4358-9a51-a1403da9c63e
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/enable-automated-unit-testing
 msc.type: authoredcontent
-ms.openlocfilehash: b0c9cd7ab36a8414e0d7d50a68b05bb09a5f24f1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 09a7aa186605a6cce48ee94028425ded957c00d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387900"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117351"
 ---
 # <a name="enable-automated-unit-testing"></a>Habilitar o teste de unidade automatizado
 
@@ -26,7 +26,6 @@ por [Microsoft](https://github.com/microsoft)
 > Etapa 12 mostra como desenvolver um conjunto de testes de unidade automatizados que verifique nossa funcionalidade NerdDinner, e que nos fornecerá a confiança para fazer alterações e aprimoramentos para o aplicativo no futuro.
 > 
 > Se você estiver usando o ASP.NET MVC 3, recomendamos que você siga a [obtendo iniciado com o MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de música do MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriais.
-
 
 ## <a name="nerddinner-step-12-unit-testing"></a>Etapa 12 do NerdDinner: Teste de unidade
 
@@ -264,7 +263,6 @@ O cenário de teste de interessante novos para nosso suporte com esse método de
 Abaixo estão dois testes que demonstra como podemos fornecer de formulário postados valores para o método auxiliar UpdateModel() usado. Vamos fazer isso criando e preenchendo um objeto FormCollection e, em seguida, atribuí-lo à propriedade "ValueProvider" no controlador.
 
 O primeiro teste verifica que, em Salvar com êxito, o navegador é redirecionado para a ação de detalhes. O segundo teste verifica quando uma entrada inválida é lançada a ação exibe novamente a exibição de edição novamente com uma mensagem de erro.
-
 
 [!code-csharp[Main](enable-automated-unit-testing/samples/sample17.cs)]
 

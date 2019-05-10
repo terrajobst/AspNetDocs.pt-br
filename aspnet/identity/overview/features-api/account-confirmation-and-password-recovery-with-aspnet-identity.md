@@ -9,12 +9,12 @@ ms.assetid: 8d54180d-f826-4df7-b503-7debf5ed9fb3
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 2e4cd21d66e69590fb1642d7974e4b7f82cba0cb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ded3a9d931cc4cd4b99c1cb5012469fe66209f76
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396415"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118033"
 ---
 # <a name="account-confirmation-and-password-recovery-with-aspnet-identity-c"></a>Confirmação e a senha de recuperação com o ASP.NET Identity da conta (C#)
 
@@ -66,7 +66,6 @@ Selecionando o **redefinir** botão confirmará a senha foi redefinida.
 ## <a name="create-an-aspnet-web-app"></a>Criar um aplicativo Web ASP.NET
 
 Comece instalando e executando [Visual Studio 2017](https://visualstudio.microsoft.com/).
-
 
 1. Crie um novo projeto da Web do ASP.NET e selecione o modelo MVC. Formulários da Web também dão suporte a identidade do ASP.NET, portanto, você pode seguir etapas semelhantes em um aplicativo de formulários da web.
 2. Alterar a autenticação do **contas de usuário individuais**.
@@ -153,7 +152,6 @@ Nesta seção, você usará o NuGet para baixar um exemplo mais completo, com qu
 > [!WARNING]
 > Se você alterar as configurações de segurança neste exemplo, aplicativos de produções precisará passar por uma auditoria de segurança que chama explicitamente as alterações feitas.
 
-
 ## <a name="examine-the-code-in-appstartidentityconfigcs"></a>Examine o código no aplicativo\_Start\IdentityConfig.cs
 
 O exemplo mostra como criar uma conta e adicioná-lo para o *Admin* função. Você deve substituir o email no exemplo com o email que você usará para a conta de administrador. A maneira mais fácil no momento para criar uma conta de administrador está em modo programático o `Seed` método. Esperamos ter no futuro uma ferramenta que permitirá que você criar e administrar usuários e funções. O exemplo de código permitem que você criar e gerenciar usuários e funções, mas você deve primeiramente ter uma conta de administradores para executar as funções e as páginas de administração de usuário. Neste exemplo, a conta de administrador é criada quando o BD será propagado.
@@ -184,14 +182,12 @@ Vá para o [página de inscrição do Azure SendGrid](https://azure.microsoft.co
 > [!NOTE]
 > Clientes de email com frequência aceitam apenas mensagens de texto (nenhum HTML). Você deve fornecer a mensagem de texto e HTML. No exemplo de SendGrid acima, isso é feito com o `myMessage.Text` e `myMessage.Html` código mostrado acima.
 
-
 O código a seguir mostra como enviar email usando o [MailMessage](https://msdn.microsoft.com/library/system.net.mail.mailmessage.aspx) classe onde `message.Body` retorna somente o link.
 
 [!code-csharp[Main](account-confirmation-and-password-recovery-with-aspnet-identity/samples/sample8.cs)]
 
 > [!WARNING]
 > Security - nunca armazenar os dados confidenciais em seu código-fonte. A conta e as credenciais são armazenadas na appSetting. No Azure, você pode armazenar com segurança esses valores sobre o **[configurar](https://blogs.msdn.com/b/webdev/archive/2014/06/04/queuebackgroundworkitem-to-reliably-schedule-and-run-long-background-process-in-asp-net.aspx)** guia no portal do Azure. Ver [práticas recomendadas para implantar senhas e outros dados confidenciais no ASP.NET e o Azure](best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
-
 
 Insira suas credenciais do SendGrid, executar o aplicativo, registre-se com um alias de email pode selecionar o link de confirmação em seu email. Para ver como fazer isso com seus [Outlook.com](http://outlook.com) conta de email, consulte de John Atten [ C# configuração de SMTP para o Host de SMTP do Outlook.Com](http://typecastexception.com/post/2013/12/20/C-SMTP-Configuration-for-OutlookCom-SMTP-Host.aspx) e o seu[ASP.NET 2.0 de identidade: Configuração de backup de validação da conta e a autorização de dois fatores](http://typecastexception.com/post/2014/04/20/ASPNET-Identity-20-Setting-Up-Account-Validation-and-Two-Factor-Authorization.aspx) postagens.
 

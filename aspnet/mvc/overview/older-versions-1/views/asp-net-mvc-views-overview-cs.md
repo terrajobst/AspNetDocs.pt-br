@@ -8,19 +8,18 @@ ms.date: 02/16/2008
 ms.assetid: 152ab1e5-aec2-4ea7-b8cc-27a24dd9acb8
 msc.legacyurl: /mvc/overview/older-versions-1/views/asp-net-mvc-views-overview-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b4c35761f9cd44c866242cfe6f4f2d924e81d754
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b3f44aa9654a2a718381eaf9c856ca3e15ed1e27
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421323"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117313"
 ---
 # <a name="aspnet-mvc-views-overview-c"></a>Visão geral de exibições do ASP.NET MVC (C#)
 
 por [Stephen Walther](https://github.com/StephenWalther)
 
 > O que é um modo de exibição de MVC do ASP.NET e como ela difere de uma página HTML? Neste tutorial, Stephen Walther apresenta a modos de exibição e demonstra como você pode tirar proveito dos dados de exibição e auxiliares HTML dentro de um modo de exibição.
-
 
 O objetivo deste tutorial é fornecer uma breve introdução ao ASP.NET MVC exibições, exibir dados e auxiliares HTML. No final deste tutorial, você deve compreender como criar novas exibições, passar dados de um controlador para um modo de exibição e usar os auxiliares HTML para gerar o conteúdo em uma exibição.
 
@@ -68,7 +67,6 @@ Quando esta linha de código é executada, uma exibição é retornada do caminh
 > 
 > Se você planeja criar testes de unidade para seu aplicativo ASP.NET MVC é uma boa ideia para ser explícito sobre nomes de exibição. Dessa forma, você pode criar um teste de unidade para verificar se o modo de exibição esperado foi retornado por uma ação do controlador.
 
-
 ## <a name="adding-content-to-a-view"></a>Adicionando conteúdo a um modo de exibição
 
 Um modo de exibição é um padrão de (documento HTML que pode conter scripts X). Você pode usar scripts para adicionar conteúdo dinâmico a um modo de exibição.
@@ -103,11 +101,9 @@ Por exemplo, a exibição na listagem 4 tira proveito dos três auxiliares de HT
 
 [!code-aspx[Main](asp-net-mvc-views-overview-cs/samples/sample4.aspx)]
 
-
 [![A caixa de diálogo Novo projeto](asp-net-mvc-views-overview-cs/_static/image1.jpg)](asp-net-mvc-views-overview-cs/_static/image1.png)
 
 **Figura 01**: Um formulário de logon padrão ([clique para exibir a imagem em tamanho normal](asp-net-mvc-views-overview-cs/_static/image2.png))
-
 
 Todos os métodos auxiliares HTML são chamados na propriedade Html da exibição. Por exemplo, você deve processar uma caixa de texto chamando o método Html.TextBox().
 

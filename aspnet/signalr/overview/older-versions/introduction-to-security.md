@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 715a4059-d307-4631-abbb-c789c95d6eb4
 msc.legacyurl: /signalr/overview/older-versions/introduction-to-security
 msc.type: authoredcontent
-ms.openlocfilehash: 08106dd6df491da817e0d449e85a09a8bc0fc77c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 34172c0a2a15a7ab0d782704d5831ce236f5c989
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422051"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117077"
 ---
 # <a name="introduction-to-signalr-security-signalr-1x"></a>Introdução à segurança do SignalR (SignalR 1.x)
 
@@ -22,7 +22,6 @@ by [Patrick Fletcher](https://github.com/pfletcher), [Tom FitzMacken](https://gi
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > Este artigo descreve os problemas de segurança, que você deve considerar ao desenvolver um aplicativo do SignalR.
-
 
 ## <a name="overview"></a>Visão geral
 

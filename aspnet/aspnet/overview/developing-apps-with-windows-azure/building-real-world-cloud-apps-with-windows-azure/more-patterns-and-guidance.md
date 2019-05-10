@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: 95943222a9869349784d4fd2686fb81725c65d44
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 42066d4154758fce7ebd1529edf41ba49df07d93
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409220"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118709"
 ---
 # <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Mais padrões e diretrizes (Criando aplicativos de nuvem do mundo Real com o Azure)
 
@@ -22,7 +22,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
-
 
 Você tem agora 13 padrões vistos que fornecem orientação sobre como ser bem-sucedido em computação em nuvem. Esses são apenas alguns dos padrões que se aplicam aos aplicativos de nuvem. Aqui estão alguns mais tópicos de computação em nuvem e recursos para ajudá-lo com elas:
 

@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 5e16415df5bd4203995bec943ffa682f7da82357
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 39f4eb7b0859cf52fe3ed2531e9c349b465b9327
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400198"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116863"
 ---
 # <a name="caching"></a>Cache
 
 por [Microsoft](https://github.com/microsoft)
 
 > Uma compreensão de armazenamento em cache é importante para um aplicativo ASP.NET de bom desempenho. ASP.NET 1.x oferecidos três opções diferentes para armazenamento em cache. o cache de saída, cache de fragmento e a API de cache.
-
 
 Uma compreensão de armazenamento em cache é importante para um aplicativo ASP.NET de bom desempenho. ASP.NET 1.x oferecidos três opções diferentes para armazenamento em cache. o cache de saída, cache de fragmento e a API de cache. O ASP.NET 2.0 oferece todos os três métodos, mas adiciona alguns recursos adicionais significativos. Há várias novas dependências de cache e os desenvolvedores agora têm a opção de criar dependências de cache personalizadas também. A configuração de armazenamento em cache também foi aprimorada significativamente no ASP.NET 2.0.
 
@@ -63,7 +62,6 @@ SQL Server 7 e 2000 usam o modelo baseado em sondagem para dependências de cach
 > [!NOTE]
 > SQL Server 2005 também pode usar o modelo baseado em sondagem, mas como o modelo de sondagem não é o modelo mais eficiente, é aconselhável usar um modelo baseado em consulta (discutido posteriormente) com o SQL Server 2005.
 
-
 Em ordem de uma dependência de cache SQL usando o modelo de sondagem para funcionar corretamente, as tabelas devem ter as notificações habilitadas. Isso pode ser feito por meio de programação usando a classe SqlCacheDependencyAdmin ou usando o aspnet\_regsql.exe utilitário.
 
 A linha de comando a seguir registra a tabela Produtos no banco de dados Northwind, localizado em uma instância do SQL Server denominada *dbase* para SQL dependência de cache.
@@ -84,12 +82,10 @@ Veja a seguir uma explicação sobre as opções de linha de comando usada no co
 > [!NOTE]
 > Há outras opções disponíveis para aspnet\_regsql.exe. Para obter uma lista completa, execute aspnet\_regsql.exe-? em uma linha de comando.
 
-
 Quando esse comando executa as seguintes alterações são feitas no banco de dados do SQL Server:
 
 - Uma **AspNet\_SqlCacheTablesForChangeNotification** tabela é adicionada. Esta tabela contém uma linha para cada tabela no banco de dados para o qual uma dependência de cache SQL foi habilitada.
 - Os seguintes procedimentos armazenados são criados dentro do banco de dados:
-
 
 | AspNet\_SqlCachePollingStoredProcedure | Consulta o AspNet\_SqlCacheTablesForChangeNotification tabela e retorna todas as tabelas habilitadas para a dependência de cache SQL e o valor de changeId para cada tabela. Esse procedimento armazenado é usado para sondar para determinar se os dados foram alterados. |
 | --- | --- |
@@ -97,7 +93,6 @@ Quando esse comando executa as seguintes alterações são feitas no banco de da
 | AspNet\_SqlCacheRegisterTableStoredProcedure | Registra uma tabela para a dependência de cache SQL, adicionando a entrada necessária na tabela de notificação e adiciona o gatilho. |
 | AspNet\_SqlCacheUnRegisterTableStoredProcedure | Cancela o registro de uma tabela para a dependência de cache SQL, removendo a entrada na tabela de notificação e remove o gatilho. |
 | AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Atualiza a tabela de notificação ao incrementar o changeId para a tabela alterada. O ASP.NET usa esse valor para determinar se os dados foram alterados. Conforme indicado a seguir, esse procedimento armazenado é executado pelo gatilho criado quando a tabela está habilitada. |
-
 
 - Um gatilho do SQL Server chamado ***tabela\_nome *\_AspNet\_SqlCacheNotification\_gatilho** é criado para a tabela. Esse gatilho executa o AspNet\_SqlCacheUpdateChangeIdStoredProcedure quando um INSERT, UPDATE ou DELETE é executada na tabela.
 - Uma função de servidor SQL chamado **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** é adicionado ao banco de dados.
@@ -161,7 +156,6 @@ Você também pode especificar que todas as suas fontes de dados ser habilitada 
 
 > [!NOTE]
 > Para obter mais informações sobre notificações de consulta no SQL Server 2005, consulte o SQL Server Books Online.
-
 
 Outro método de configuração de uma dependência de cache baseada em consulta SQL é para fazer isso programaticamente usando a classe de SqlCacheDependency. O exemplo de código a seguir ilustra como isso é feito.
 
@@ -233,7 +227,6 @@ Os seguintes atributos estão disponíveis na &lt;cache&gt; elemento:
 ### <a name="the-ltoutputcachegt-element"></a>O &lt;outputCache&gt; elemento
 
 Os seguintes atributos estão disponíveis para o &lt;outputCache&gt; elemento.
-
 
 |       <strong>Atributo</strong>        |                                                                                                                                                                                                                                                       <strong>Descrição</strong>                                                                                                                                                                                                                                                       |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

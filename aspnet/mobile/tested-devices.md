@@ -8,12 +8,12 @@ ms.date: 01/28/2011
 ms.assetid: 51b447d5-eaa1-4df1-917c-f4f2746ed62d
 msc.legacyurl: /mobile/tested-devices
 msc.type: content
-ms.openlocfilehash: ecf8b7d90358fa0410ded9bd33c711016b4cd1d4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a4ba973dc67244aa8e2ebf04714c3867de36da2d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59411053"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121354"
 ---
 # <a name="aspnet-mobile-controls-tested-devices"></a>Dispositivos testados de controles móveis do ASP.NET
 
@@ -24,7 +24,6 @@ ms.locfileid: "59411053"
 > - Atualização 2 [DU 2.0] do dispositivo: *(28 de outubro, 2002)*
 > - Atualização do dispositivo 3 [DU 3.0]: *(5 de agosto, 2003)*
 > - Atualização do dispositivo 4 [DU 4.0]: *(18 de dezembro, 2003)*
-
 
 |    Fabricante     |                      Modelo                      |       Fabricante do navegador        |               Modelo de navegador               | Liberado |
 |---------------------|-------------------------------------------------|-----------------------------------|-------------------------------------------|----------|

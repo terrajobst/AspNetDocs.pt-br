@@ -8,12 +8,12 @@ ms.date: 03/14/2008
 ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
-ms.openlocfilehash: 11e70493478d6810d63ba6b3ac813e32f03052eb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ef4ee57496337fb13b4d1c09c058e89e04eb3138
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381322"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114602"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Noções básicas sobre a localização do AJAX ASP.NET
 
@@ -22,7 +22,6 @@ por [Scott Cate](https://github.com/scottcate)
 [Baixar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial04_Localization_cs.pdf)
 
 > Localização é o processo de criação e a integração do suporte para um idioma ou cultura específico em um aplicativo ou um componente de aplicativo. A plataforma Microsoft ASP.NET fornece amplo suporte para a localização para aplicativos do ASP.NET padrão, integrando o modelo de localização do .NET standard; a estrutura do Microsoft AJAX utilizam o modelo integrado para dar suporte os diversos cenários em que localização pode ser executada.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -105,16 +104,13 @@ Para aqueles familiarizados com a sintaxe JavaScript Regex, o texto dentro do ú
 1. Pressione F5. Se solicitado, habilite a depuração. Quando a página for carregada, pressione o botão Excluir. Observe que você será solicitado em inglês (a menos que seu computador é configurado para dar preferência a recursos de idioma espanhol por padrão) para confirmação.
 2. Feche a janela do navegador e retorne para default. aspx. No @Page diretiva de cabeçalho, automática de substituição para Culture e UICulture com es-ES. Pressione F5 novamente para iniciar o aplicativo web no navegador novamente. Desta vez, observe que você será solicitado para excluir o arquivo em espanhol:
 
-
 [![](understanding-asp-net-ajax-localization/_static/image2.png)](understanding-asp-net-ajax-localization/_static/image1.png)
 
 ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-localization/_static/image3.png))
 
-
 [![](understanding-asp-net-ajax-localization/_static/image5.png)](understanding-asp-net-ajax-localization/_static/image4.png)
 
 ([Clique para exibir a imagem em tamanho normal](understanding-asp-net-ajax-localization/_static/image6.png))
-
 
 Observe que há diversas variações para este passo a passo. Por exemplo, scripts pôde ser registrados com o controle ScriptManager programaticamente durante o carregamento da página.
 

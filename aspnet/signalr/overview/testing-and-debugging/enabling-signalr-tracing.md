@@ -8,12 +8,12 @@ ms.date: 08/08/2014
 ms.assetid: 30060acb-be3e-4347-996f-3870f0c37829
 msc.legacyurl: /signalr/overview/testing-and-debugging/enabling-signalr-tracing
 msc.type: authoredcontent
-ms.openlocfilehash: 1dadbdb6fa1dc58b855402f1d6f18e8af861f756
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 34fe2cdb10c4b41a6e8cac7fb1741d53c02dfc80
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399353"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114397"
 ---
 # <a name="enabling-signalr-tracing"></a>Habilitar o rastreamento do SignalR
 
@@ -37,7 +37,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > ## <a name="questions-and-comments"></a>Perguntas e comentários
 >
 > Deixe comentários sobre como você gostou neste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 Quando o rastreamento está habilitado, um aplicativo de SignalR cria entradas de log de eventos. Você pode registrar eventos de cliente e o servidor. Rastreamento na conexão de logs do servidor, provedor de expansão e eventos do barramento de mensagem. Rastreamento sobre os cliente registra eventos de conexão. No SignalR 2.1 e posterior, o rastreamento no cliente registra o conteúdo completo das mensagens de invocação de hub.
 

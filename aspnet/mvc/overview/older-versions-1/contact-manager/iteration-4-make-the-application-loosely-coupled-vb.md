@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 92c70297-4430-4e4e-919a-9c2333a8d09a
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-4-make-the-application-loosely-coupled-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 256536150a585a4bb0304f23c3524b18d0f552f0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 422c75406d9c08279d0c2224ee4b6db3a71eb1b3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392372"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117725"
 ---
 # <a name="iteration-4--make-the-application-loosely-coupled-vb"></a>Iteração #4 – tornar o aplicativo fracamente acoplado (VB)
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 [Baixar o código](iteration-4-make-the-application-loosely-coupled-vb/_static/contactmanager_4_vb1.zip)
 
 > Nesta quarta iteração, podemos tirar proveito dos diversos padrões de design de software para facilitar a manutenção e modificar o aplicativo Gerenciador de contatos. Por exemplo, podemos refatorar nosso aplicativo para usar o padrão de repositório e o padrão de injeção de dependência.
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-vb"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (VB)
 
@@ -54,7 +53,6 @@ Atualmente, toda a lógica de acesso e a validação de dados usada pelo aplicat
 > 
 > (SRP), uma classe nunca deve ter mais de um motivo para alterar. Mistura de controlador, validação e lógica de banco de dados é uma violação maciça do princípio da responsabilidade única.
 
-
 Há várias razões pelas quais você talvez precise modificar seu aplicativo. Você talvez precise adicionar um novo recurso ao seu aplicativo, talvez você precise corrigir um bug em seu aplicativo ou você talvez precise modificar como um recurso do seu aplicativo é implementado. Os aplicativos são raramente estáticos. Eles tendem a crescer e seja modificado ao longo do tempo.
 
 Por exemplo, imagine que você decidir alterar como você implementa sua camada de acesso a dados. Direita agora, o aplicativo Contact Manager usa o Entity Framework da Microsoft para acessar o banco de dados. No entanto, você pode decidir migrar para uma tecnologia de acesso de dados novas ou alternativas, como serviços de dados ADO.NET ou NHibernate. No entanto, como o código de acesso a dados não é isolado do código de validação e o controlador, não há nenhuma maneira de modificar o código de acesso de dados em seu aplicativo sem modificar o outro código que não está diretamente relacionado ao acesso a dados.
@@ -66,7 +64,6 @@ Nesta iteração, podemos tirar proveito dos diversos padrões de design de soft
 > [!NOTE] 
 > 
 > Refatoração é o processo de reconfiguração de um aplicativo de tal forma que não perca nenhuma funcionalidade existente.
-
 
 ## <a name="using-the-repository-software-design-pattern"></a>Usando o padrão de Design de Software do repositório
 
@@ -105,7 +102,6 @@ Programação em relação a interfaces (abstrações) em vez de classes concret
 > 
 > Você pode criar rapidamente uma interface de uma classe concreta dentro do Visual Studio selecionando a opção de menu Refatorar, extrair Interface. Por exemplo, você pode criar a classe EntityContactManagerRepository primeiro e, em seguida, usar extrair Interface para gerar a interface IContactManagerRepository automaticamente.
 
-
 ## <a name="using-the-dependency-injection-software-design-pattern"></a>Usando o padrão de Design de Software de injeção de dependência
 
 Agora que podemos ter migrado nosso código de acesso a dados para uma classe separada de repositório, precisamos modificar nosso controlador de contato para usar essa classe. Faremos a vantagem de um padrão de design de software chamado injeção de dependência para usar a classe de repositório no nosso controlador.
@@ -127,7 +123,6 @@ Injeção de dependência de construtor também torna a classe de controlador de
 > [!NOTE] 
 > 
 > Se você quiser desacoplar completamente a classe de controlador de contato de uma implementação específica da interface IContactManagerRepository, em seguida, você pode tirar proveito de uma estrutura que dá suporte à injeção de dependência, como StructureMap ou da Microsoft Entity Framework (MEF). Ao tirar proveito de uma estrutura de injeção de dependência, você nunca precisa para se referir a uma classe concreta em seu código.
-
 
 ## <a name="creating-a-service-layer"></a>Criando uma camada de serviço
 

@@ -8,12 +8,12 @@ ms.date: 07/27/2010
 ms.assetid: 0bc191b2-4311-479a-a83a-7f1b1c32e6fe
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/build-a-model-with-business-rule-validations
 msc.type: authoredcontent
-ms.openlocfilehash: 078614c6e7ba18ac09bbd5e23b90b08c97aee658
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6ebf1b71c089229ba9139ff7dc788b8978724046
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387289"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117613"
 ---
 # <a name="build-a-model-with-business-rule-validations"></a>Compilar um modelo com validações de regra de negócios
 
@@ -26,7 +26,6 @@ por [Microsoft](https://github.com/microsoft)
 > Etapa 3 mostra como criar um modelo que podemos usar para ambas as consultas e atualizar o banco de dados de nosso aplicativo NerdDinner.
 > 
 > Se você estiver usando o ASP.NET MVC 3, recomendamos que você siga a [obtendo iniciado com o MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de música do MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriais.
-
 
 ## <a name="nerddinner-step-3-building-the-model"></a>Etapa 3 do NerdDinner: Criação do modelo
 
@@ -133,7 +132,6 @@ Agora que criamos nossa classe DinnerRepository, vamos examinar alguns exemplos 
 #### <a name="querying-examples"></a>Exemplos de consultas
 
 O código a seguir recupera um jantar único usando o valor de DinnerID:
-
 
 [!code-csharp[Main](build-a-model-with-business-rule-validations/samples/sample4.cs)]
 

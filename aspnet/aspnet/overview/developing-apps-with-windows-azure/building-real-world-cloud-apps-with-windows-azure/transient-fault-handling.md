@@ -8,12 +8,12 @@ ms.date: 11/03/2015
 ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
-ms.openlocfilehash: 9076ce7d933d9bbaaf4d34ccb6df7b6823cd38bf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e15cba87b6ff4093aeac428542ce421b82e1bba1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59417007"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118505"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Transient Fault Handling (criação de aplicativos de nuvem do mundo Real com o Azure)
 
@@ -22,7 +22,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
-
 
 Quando você estiver criando um aplicativo de nuvem do mundo real, uma das coisas que você precisa pensar é como lidar com interrupções de serviço temporário. Esse problema é importante exclusivamente em aplicativos de nuvem, porque você está tão dependente de conexões de rede e serviços externos. Com frequência, você pode obter pequenos problemas que normalmente são autorrecuperação, e se você não estiver preparado para tratá-las de forma inteligente, eles serão resultam em uma experiência ruim para seus clientes.
 

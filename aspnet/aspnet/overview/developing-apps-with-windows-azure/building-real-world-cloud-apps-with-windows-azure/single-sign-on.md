@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: da1136e085776c63886b6ac25533521fa1479d4f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8f6c23eb71ea323b6ab06943097f927f717a8099
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59406282"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118739"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>O logon único (Criando aplicativos de nuvem do mundo Real com o Azure)
 
@@ -22,7 +22,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
-
 
 Há muitos problemas de segurança para pensar quando você estiver desenvolvendo um aplicativo de nuvem, mas para esta série nos concentraremos em apenas um: logon único. Esta é uma questão as pessoas frequentemente perguntam: "Estou principalmente criando aplicativos para os funcionários da minha empresa; como hospedar esses aplicativos na nuvem e ainda permitir que eles usam o mesmo modelo de segurança que Meus funcionários conhecem e usam no ambiente local quando eles estão executando aplicativos que são hospedados dentro do firewall?" Uma das maneiras em que podemos habilitar esse cenário é chamada Azure Active Directory (Azure AD). Azure AD permite que você disponibilizar enterprise linha de negócios (LOB) aplicativos pela Internet e permite que você disponibilizar esses aplicativos para parceiros de negócios também.
 

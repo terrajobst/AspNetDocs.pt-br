@@ -9,12 +9,12 @@ ms.assetid: 44925849-5762-4504-a8cd-8f0cd06f6dc3
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/change-primary-key-for-users-in-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 212b07494381d13f6ded96a41b846dcdf7e8ff16
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 540a355819ac2b2e58d7c73284899f6ca2f684d1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393737"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118090"
 ---
 # <a name="change-primary-key-for-users-in-aspnet-identity"></a>Alterar a chave primária de usuários na Identidade do ASP.NET
 
@@ -29,7 +29,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Visual Studio 2013 com atualização 2 (ou posterior)
 > - Identidade do ASP.NET 2.1 ou posterior
-
 
 Para executar as etapas neste tutorial, você deve ter o Visual Studio 2013 atualização 2 (ou posterior) e um aplicativo da web criados usando o modelo de aplicativo Web ASP.NET. O modelo foi alterado na atualização 3. Este tópico mostra como alterar o modelo na atualização 2 e 3 da atualização.
 

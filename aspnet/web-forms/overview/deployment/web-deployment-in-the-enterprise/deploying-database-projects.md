@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 832f226a-1aa3-4093-8c29-ce4196793259
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-database-projects
 msc.type: authoredcontent
-ms.openlocfilehash: f5b7cecdd1a8dbd9be1bd781cec31c53c9096546
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 221808758492aedb8e8329364e511df28fd11105
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383209"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119330"
 ---
 # <a name="deploying-database-projects"></a>Implantação de projetos de banco de dados
 
@@ -23,7 +23,6 @@ by [Jason Lee](https://github.com/jrjlee)
 
 > [!NOTE]
 > Em vários cenários de implantação do enterprise, você precisa ter a capacidade de publicar atualizações incrementais para um banco de dados implantado. A alternativa é recriar o banco de dados em cada implantação, o que significa que você perderá os dados no banco de dados existente. Quando você trabalha com o Visual Studio 2010, usar VSDBCMD é a abordagem recomendada para publicação de banco de dados incrementais. No entanto, a próxima versão do Visual Studio e o Pipeline de publicação de Web (WPP) incluirá as ferramentas que oferece suporte à publicação incremental diretamente.
-
 
 Se você abrir a solução de exemplo do Gerenciador de contatos no Visual Studio 2010, você verá que o projeto de banco de dados inclui uma pasta de propriedades que contém quatro arquivos.
 
@@ -81,9 +80,7 @@ O restante deste tópico descreve o uso de VSDBCMD com o MSBuild para implantar 
 
 O utilitário VSDBCMD permite implantar um banco de dados usando o esquema de banco de dados (o arquivo .dbschema) ou o manifesto de implantação (o arquivo .deploymanifest). Na prática, você quase sempre usará o manifesto de implantação, como o manifesto de implantação permite que você fornecer valores padrão para várias propriedades de implantação e identificar quaisquer scripts de pré-implantação ou pós-implantação de SQL, que você deseja executar. Por exemplo, este comando VSDBCMD é usado para implantar o **ContactManager** banco de dados para um servidor de banco de dados em um ambiente de teste:
 
-
 [!code-console[Main](deploying-database-projects/samples/sample1.cmd)]
-
 
 Nesse caso:
 
@@ -107,21 +104,17 @@ O comportamento do **/dd** ou **/DeployToDatabase** switch depende se você esti
 
 Se você estiver usando um arquivo .deploymanifest, o comportamento é muito mais complicado. Isso ocorre porque o arquivo .deploymanifest contém um nome de propriedade **DeployToDatabase** que também determina se o banco de dados é implantado.
 
-
 [!code-xml[Main](deploying-database-projects/samples/sample2.xml)]
-
 
 O valor dessa propriedade é definido de acordo com as propriedades do projeto de banco de dados. Se você definir a **ação de implantação** à **criar um script de implantação (. SQL)**, o valor será **False**. Se você definir a **ação de implantação** à **criar um script de implantação (. SQL) e implantar o banco de dados**, o valor será **verdadeiro**.
 
 > [!NOTE]
 > Essas configurações são associadas com uma plataforma e configuração de compilação específica. Por exemplo, se você definir configurações para o **Debug** configuration e, em seguida, publicar usando o **versão** configuração, suas configurações não serão usadas.
 
-
 ![](deploying-database-projects/_static/image3.png)
 
 > [!NOTE]
 > Nesse cenário, o **ação de implantação** sempre deve ser definido como **criar um script de implantação (. SQL)**, porque você não quer o Visual Studio 2010 para implantar seu banco de dados. Em outras palavras, o **DeployToDatabase** propriedade deve ser sempre **falso**.
-
 
 Quando um **DeployToDatabase** propriedade for especificada, o **/dd** switch substituirá a propriedade somente se o valor da propriedade for **false**:
 

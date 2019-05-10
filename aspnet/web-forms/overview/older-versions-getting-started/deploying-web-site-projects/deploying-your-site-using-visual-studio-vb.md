@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 977105f3-7987-4e50-8be7-afb53b4ca28a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/deploying-your-site-using-visual-studio-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 23861c4ae9af7d410411b582a8245b178f791c83
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0a1dcb9ebd658ebd0d60bf422b4bd6aa20f53c59
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389658"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116683"
 ---
 # <a name="deploying-your-site-using-visual-studio-vb"></a>Implantação do site com o uso do Visual Studio (VB)
 
@@ -23,15 +23,12 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Visual Studio inclui ferramentas para implantar um site. Saiba mais sobre essas ferramentas neste tutorial.
 
-
 ## <a name="introduction"></a>Introdução
 
 O tutorial anterior analisamos como implantar um aplicativo simples da web ASP.NET em um provedor de host da web. Especificamente, o tutorial mostrado como usar um cliente FTP como o FileZilla para transferir os arquivos necessários do ambiente de desenvolvimento para o ambiente de produção. Visual Studio também oferece as ferramentas internas para facilitar a implantação em um provedor de host da web. Este tutorial examina duas dessas ferramentas: a ferramenta Copy Web Site, onde você pode mover os arquivos de e para um servidor web remoto usando o FTP ou o FrontPage Server Extensions; e a ferramenta de publicação, que copia todo o site para um local especificado.
 
-
 > [!NOTE]
 > Outras ferramentas relacionadas à implantação oferecidas pelo Visual Studio incluem [projetos de instalação da Web](https://msdn.microsoft.com/library/wx3b589t.aspx) e [Web Deployment Projects](https://www.microsoft.com/downloads/details.aspx?FamilyId=0AA30AE8-C73B-4BDD-BB1B-FE697256C459&amp;displaylang=en) Add-In. Projetos de instalação da Web o conteúdo de um site e informações de configuração em um único arquivo MSI do pacote. Essa opção é mais útil para sites que são implantados em uma intranet ou para as empresas que vendem um aplicativo web pré-empacotados que os clientes instalem em seus próprios servidores web. O Add-In de projetos de implantação de Web é que um Visual Studio Add-In que facilita a especificação de diferenças de configuração entre compilações para ambientes de produção e ambientes de desenvolvimento. Projetos de instalação da Web não são abordados nesta série de tutoriais; Projetos de implantação da Web são resumidos na [ *diferenças de configuração comuns entre desenvolvimento e produção* ](common-configuration-differences-between-development-and-production-vb.md) tutorial.
-
 
 ## <a name="deploying-your-site-using-the-copy-web-site-tool"></a>Implantando o Site usando a ferramenta Copy Web Site
 
@@ -40,16 +37,13 @@ Ferramenta de Copy Web Site do Visual Studio é semelhante em funcionalidade a u
 > [!NOTE]
 > A ferramenta Copy Web Site só está disponível para projetos de Site. Visual Studio oferecem essa ferramenta quando você estiver trabalhando com um projeto de aplicativo Web.
 
-
 Vamos dar uma olhada em como usar a ferramenta Copy Web Site para publicar o aplicativo resenha de livro para produção. Porque a ferramenta Copy Web Site só funciona com projetos que usam o modelo de projeto de Site que só pode examinar usando essa ferramenta com o projeto BookReviewsWSP. Abra o projeto.
 
 Inicie o projeto da ferramenta Copy Web Site clicando no ícone de Copy Web Site no Gerenciador de soluções (esse ícone é circulado na Figura 1); Como alternativa, você pode selecionar a opção Copy Web Site no menu do site. Qualquer uma das abordagens inicia a interface do usuário Copy Web Site mostrada na Figura 1; apenas o painel esquerdo na Figura 1 é popular porque ainda temos para se conectar a um servidor remoto.
 
-
 [![Interface do usuário da ferramenta do Site da Web a cópia é dividido em dois painéis](deploying-your-site-using-visual-studio-vb/_static/image2.png)](deploying-your-site-using-visual-studio-vb/_static/image1.png)
 
 **Figura 1**: Interface do usuário da ferramenta do Site da Web a cópia é dividido em dois painéis ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image3.png))
-
 
 Para implantar nosso site, precisamos primeiro se conectar ao provedor de host da web. Clique no botão Conectar na parte superior da interface do usuário Copy Web Site. Isso exibe a caixa de diálogo Abrir Site mostrada na Figura 2.
 
@@ -62,39 +56,31 @@ Você pode se conectar ao site de destino, selecionando uma das quatro opções 
 
 A maioria dos provedores de host da web oferecem suporte a FTP, mas menos oferecem suporte à extensão de servidor do FrontPage. Por esse motivo, selecionamos a opção do Site de FTP e, em seguida, inserir as informações de conexão, conforme mostrado na Figura 2.
 
-
 [![Especifique o site de destino](deploying-your-site-using-visual-studio-vb/_static/image5.png)](deploying-your-site-using-visual-studio-vb/_static/image4.png)
 
 **Figura 2**: Especifique o site de destino ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image6.png))
-
 
 Depois de se conectar, a ferramenta Copy Web Site carrega os arquivos no site remoto no painel direito e indica o status de cada arquivo: Novos, excluídos, alterados ou inalterado. Você pode copiar um arquivo do site local para o site remoto, ou vice-versa um.
 
 Vamos adicionar uma nova página ao projeto BookReviewsWSP e, em seguida, implantá-lo para que possamos ver a ferramenta Copy Web Site em ação. Criar uma nova página ASP.NET no Visual Studio no diretório raiz chamado `Privacy.aspx`. Fazer com que a página use a página mestra `Site.master` e adicionar a política de privacidade do seu site a esta página. Figura 3 mostra o Visual Studio depois que esta página foi criada.
 
-
 [![Adicionar uma nova página nomeada &lt;código&gt;Privacy.aspx&lt;/code&gt; para a pasta da raiz do site](deploying-your-site-using-visual-studio-vb/_static/image8.png)](deploying-your-site-using-visual-studio-vb/_static/image7.png)
 
 **Figura 3**: Adicionar uma nova página nomeada `Privacy.aspx` à pasta da raiz do site ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image9.png))
 
-
 Em seguida, retorne para a interface do usuário Copy Web Site. Como mostra a Figura 4, o painel esquerdo agora inclui os novos arquivos - `Policy.aspx` e `Policy.aspx.vb`. Além disso, esses arquivos são marcados com um ícone de seta e um Status de novo, indicando que eles existem no site local, mas não no site remoto.
-
 
 [![A ferramenta Copy Web Site inclui o novo &lt;código&gt;Privacy.aspx&lt;lt;Code>#Date(2011&gt; página em seu painel mais à esquerda](deploying-your-site-using-visual-studio-vb/_static/image11.png)](deploying-your-site-using-visual-studio-vb/_static/image10.png)
 
 **Figura 4**: A ferramenta Copy Web Site inclui o novo `Privacy.aspx` página no seu painel mais à esquerda ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image12.png))
 
-
 Para implantar os novos arquivos, selecione-os e, em seguida, clique no ícone de seta para transferi-las para o site remoto. Após a conclusão da transferência de `Policy.aspx` e `Policy.aspx.vb` arquivos existem em ambos os sites locais e remotos com o status Unchanged.
 
 Junto com a listagem de novos arquivos, a ferramenta Copy Web Site destaca todos os arquivos que diferem entre os sites locais e remotos. Para ver isso em ação, retornar o `Privacy.aspx` página e adicione mais algumas palavras para a política de privacidade. Salve a página e, em seguida, retornar para a ferramenta Copy Web Site. Como mostra a Figura 5, o `Privacy.aspx` página no painel à esquerda tem um status de Changed indicando que ele está fora de sincronia com o site remoto.
 
-
 [![A ferramenta Copy Web Site indica que o &lt;código&gt;Privacy.aspx&lt;lt;Code>#Date(2011&gt; página foi alterada](deploying-your-site-using-visual-studio-vb/_static/image14.png)](deploying-your-site-using-visual-studio-vb/_static/image13.png)
 
 **Figura 5**: A ferramenta Copy Web Site indica que o `Privacy.aspx` página foi alterada ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image15.png))
-
 
 A ferramenta Copy Web Site também indica se um arquivo tiver sido excluído desde a última operação de cópia. Excluir o `Privacy.aspx` do projeto local e atualizar a ferramenta Copy Web Site. O `Privacy.aspx` e `Privacy.aspx.vb` arquivos permanecem listados no painel esquerdo, mas têm um status excluído indicando que eles foram removidos desde a última operação de cópia.
 
@@ -102,12 +88,10 @@ A ferramenta Copy Web Site também indica se um arquivo tiver sido excluído des
 
 Outra maneira de implantar o aplicativo web no Visual Studio é usar a opção de publicar, que pode ser acessada por meio do menu Build. A opção Publicar explicitamente compila o aplicativo e, em seguida, copia todos os arquivos necessários até o site remoto especificado. Como você verá em breve, a opção Publicar é mais direta do que a ferramenta Copy Web Site. Enquanto a ferramenta Copy Web Site permite que você examine os arquivos nos sites locais e remotos e permite que você carregar ou baixar arquivos individuais conforme necessário, a opção de publicação implanta o aplicativo web inteiro.
 
-
 Além de copiar todos os arquivos necessários para o site remoto especificado, a opção Publicar explicitamente compila o aplicativo. Considerando que os projetos de aplicativos Web precisam ser explicitamente compilado deve ser nenhuma surpresa que a opção de publicação está disponível para projetos de aplicativos Web. O que pode ser um pouco surpreendente é que a opção de publicação também está disponível para projetos de Site. Conforme observado na [ *determinando quais arquivos precisam ser implantados* ](determining-what-files-need-to-be-deployed-vb.md) tutorial, os projetos de Site pode ser compilado explicitamente por meio de um processo conhecido como *pré-compilação*. Este tutorial concentra-se sobre como usar a opção de publicação com projetos de aplicativos Web; um tutorial futuro explorará pré-compilação, no ponto em que vamos voltar para ver como usar a opção de publicação com projetos de Site.
 
 > [!NOTE]
 > Enquanto a opção de publicação está disponível no Visual Studio para projetos de Site e projetos de aplicativos Web, o Visual Web Developer oferece apenas a opção de publicar projetos de aplicativos Web.
-
 
 Vamos dar uma olhada em como implantar o aplicativo de resenhas de livros usando a opção de publicação. Comece abrindo BookReviewsWAP (no projeto de aplicativo Web) no Visual Studio. No menu Publish, escolha o projeto de Build BookReviewsWAP. Isso abre uma caixa de diálogo que solicita o local de destino, entre outras opções de configuração (veja a Figura 6). Muito semelhante com a ferramenta Copy Web Site você pode inserir um local que aponta para uma pasta local, um site local no IIS, um site remoto que dá suporte a extensões FrontPage Server Extensions, ou um endereço do servidor FTP. Você pode escolher se deseja substituir os arquivos no servidor web remoto com os arquivos implantados ou excluir todo o conteúdo no site remoto antes da publicação. Você também pode especificar se deseja copiar:
 
@@ -117,21 +101,17 @@ Vamos dar uma olhada em como implantar o aplicativo de resenhas de livros usando
 
 Também há uma opção para carregar o conteúdo do `App_Data` pasta.
 
-
 [![Especifique o site de destino](deploying-your-site-using-visual-studio-vb/_static/image17.png)](deploying-your-site-using-visual-studio-vb/_static/image16.png)
 
 **Figura 6**: Especifique o site de destino ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image18.png))
-
 
 Para o aplicativo resenha de livro site remoto contém os arquivos sejam implantados ao copiar o projeto BookReviewsWSP por meio da ferramenta Copy Web Site. Portanto, vamos ter a opção Publicar iniciar excluindo todo o conteúdo existente. Além disso, vamos simplesmente copiar os arquivos necessários em vez de desorganizar o ambiente de produção com arquivos de código e projeto de origem desnecessários. Depois de especificar essas opções, clique no botão Publicar. Sobre os próximos segundos Visual Studio implantará os arquivos necessários para o site de destino, exibindo o progresso na janela de saída.
 
 Figura 7 mostra os arquivos no site de FTP depois que a operação de publicação foi concluída. Observe que apenas as páginas de marcação e os arquivos de suporte necessário sever-lado do cliente e foram carregados.
 
-
 [![Somente os arquivos necessários foram publicados no ambiente de produção](deploying-your-site-using-visual-studio-vb/_static/image20.png)](deploying-your-site-using-visual-studio-vb/_static/image19.png)
 
 **Figura 7**: Apenas o necessário arquivos foram publicadas no ambiente de produção ([clique para exibir a imagem em tamanho normal](deploying-your-site-using-visual-studio-vb/_static/image21.png))
-
 
 A opção de publicação é uma ferramenta menos sutil que a ferramenta Copy Web Site. Enquanto a ferramenta Copy Web Site permite que você inspecione os arquivos nos sites locais e remotos e ver como eles diferem, a opção Publicar não fornece nenhuma interface deste tipo. Além disso, a ferramenta Copy Web Site permite que você faça alterações unitárias, carregar ou excluir arquivos individuais. A opção de publicação não permite esse controle refinado; em vez disso, ele publica os *inteira* aplicativo. Esse comportamento tem seus prós e contras. O lado bom, você pode saber ao usar a opção Publicar que não se esquecer para carregar um arquivo importante. Mas considere o que acontece se você tiver feito uma pequena alteração para um site da Web - muito grande, com a opção de publicação não é possível atualizar essa página, ou duas que foi modificado, mas em vez disso, você deverá aguardar até que o Visual Studio implanta o site inteiro.
 

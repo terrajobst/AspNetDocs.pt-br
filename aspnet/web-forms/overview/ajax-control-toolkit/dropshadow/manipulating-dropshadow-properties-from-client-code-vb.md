@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 11be4211-2fb9-4e15-b6d4-2aa623d81f3e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/manipulating-dropshadow-properties-from-client-code-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c9b0946568063b9e5cf1454bd7a57c43304c3543
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5c44a1e95564c668f017f6116f3e62652e87eeac
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390305"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116945"
 ---
 # <a name="manipulating-dropshadow-properties-from-client-code-vb"></a>Manipular propriedades de DropShadow através de código de cliente (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow2.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow2VB.pdf)
 
 > O controle de DropShadow no AJAX Control Toolkit, um painel com uma sombra. Propriedades desse extensor também podem ser alteradas usando o código de JavaScript do cliente.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -53,7 +52,6 @@ Outro painel contém dois links de JavaScript para definir a opacidade da sombra
 A função JavaScript `changeOpacity()` , em seguida, deve primeiro localizar o `DropShadowExtender` controle na página. ASP.NET AJAX define o `$find()` método para exatamente essa tarefa. Em seguida, o `get_Opacity()` método recupera a opacidade atual, o `set_Opacity()` método define a ele. O código JavaScript, em seguida, coloca o valor de opacidade atual no `<label>` elemento:
 
 [!code-html[Main](manipulating-dropshadow-properties-from-client-code-vb/samples/sample6.html)]
-
 
 [![A opacidade é alterada no lado do cliente](manipulating-dropshadow-properties-from-client-code-vb/_static/image2.png)](manipulating-dropshadow-properties-from-client-code-vb/_static/image1.png)
 

@@ -8,12 +8,12 @@ ms.date: 04/10/2013
 ms.assetid: ab7b2554-956a-4f6d-b2a0-4ae0c62e8580
 msc.legacyurl: /signalr/overview/older-versions/tutorial-server-broadcast-with-aspnet-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: a63bca69f137a4d4765db6a4925ff027c9d8bf7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 68908be34f6b010e512677fe5f5e31bfdefab592
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403578"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116063"
 ---
 # <a name="tutorial-server-broadcast-with-aspnet-signalr-1x"></a>Tutorial: Transmissão de servidor com SignalR 1.x do ASP.NET
 
@@ -26,7 +26,6 @@ by [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://githu
 > O aplicativo que você criará neste tutorial simula uma bolsa, um cenário típico para a funcionalidade de difusão de servidor.
 > 
 > O tutorial, os comentários são boas-vindos. Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -54,7 +53,6 @@ Este tutorial contém as seções a seguir:
 
 > [!NOTE]
 > Se você não quiser trabalhar com as etapas de criação do aplicativo, você pode instalar o pacote de SignalR.Sample em uma nova **aplicativo Web ASP.NET vazio** de projeto e ler essas etapas para obter explicações do código. A primeira parte do tutorial abrange um subconjunto do código SignalR.Sample e a segunda parte explica os principais recursos da funcionalidade adicional no pacote SignalR.Sample.
-
 
 <a id="prerequisites"></a>
 

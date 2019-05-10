@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: b7dba543-73c3-4534-a9a0-ba70fa2c6a8a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-fundamentals
 msc.type: authoredcontent
-ms.openlocfilehash: 38aea3b3480dde6ec6182a45c4f61f44eea8e05e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 95e9b9f55b2080c0ed01dc34e3a32f9f1c905644
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380217"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117243"
 ---
 # <a name="aspnet-mvc-4-fundamentals"></a>Conceitos básicos do ASP.NET MVC 4
 
@@ -107,7 +107,6 @@ Este laboratório prático é composto pelos seguintes exercícios:
 
 > [!NOTE]
 > Cada exercício é acompanhado por um **final** pasta que contém a solução resultante, você deve obter depois de concluir os exercícios. Você pode usar essa solução como um guia se você precisar trabalhar com os exercícios de ajuda adicional.
-
 
 Tempo estimado para concluir este laboratório: **60 minutos**.
 
@@ -945,7 +944,6 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
 
 > [!NOTE]
 > Além disso, você pode implantar esse aplicativo para Windows Azure Web Sites seguinte [apêndice b: Publicando um aplicativo ASP.NET MVC 4 usando a implantação da Web](#AppendixB).
-
 
 ---
 

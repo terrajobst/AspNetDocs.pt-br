@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: 9969a68a3e1aa043845fb5affd6d3b73dec4136d
-ms.sourcegitcommit: 289e051cc8a90e8f7127e239fda73047bde4de12
+ms.openlocfilehash: 8656f4a4211c2e97d71d76dd2f799412539896ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58425386"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118845"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opções de armazenamento de dados (compilando aplicativos de nuvem do mundo Real com o Azure)
 
@@ -22,7 +22,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
-
 
 A maioria das pessoas são usadas para bancos de dados relacionais, e eles tendem a ignorar outras opções de armazenamento de dados quando eles estiver projetando um aplicativo de nuvem. O resultado pode ser desempenho abaixo do ideal, despesas alta – ou pior, pois [NoSQL](http://en.wikipedia.org/wiki/NoSQL) bancos de dados (não relacionais) podem lidar com algumas tarefas de forma mais eficiente que bancos de dados relacionais. Quando os clientes nos pedem para ajudar a resolver um problema de armazenamento de dados críticos, muitas vezes é porque eles têm um banco de dados relacional em que uma das opções NoSQL teria funcionado melhor. Nessas situações o cliente teria sido melhor se tivesse a solução NoSQL implementadas antes de implantar o aplicativo em produção.
 

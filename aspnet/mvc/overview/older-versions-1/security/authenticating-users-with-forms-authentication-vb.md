@@ -8,19 +8,18 @@ ms.date: 01/27/2009
 ms.assetid: 4341f5b1-6fe5-44c5-8b8a-18fa84f80177
 msc.legacyurl: /mvc/overview/older-versions-1/security/authenticating-users-with-forms-authentication-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 0a4e8dc3ce5764c6b2ec59c7e3f507064f8a8cb5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a2c2140631d59a7f8b21aa73613a92ea5c7a91d0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422155"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122076"
 ---
 # <a name="authenticating-users-with-forms-authentication-vb"></a>Autenticar usuários com a autenticação de formulários (VB)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Saiba como usar o atributo [autorizar] senha proteger páginas específicas em seu aplicativo MVC. Você aprenderá a usar a ferramenta de administração de Site da Web para criar e gerenciar usuários e funções. Você também aprenderá a configurar onde as informações de conta e a função de usuário são armazenadas.
-
 
 O objetivo deste tutorial é explicar como você pode usar formulários de autenticação de senha de proteger os modos de exibição em seus aplicativos ASP.NET MVC. Você aprenderá como usar a ferramenta Web Site Administration para criar usuários e funções. Você também aprenderá a impedir que usuários não autorizados invocar ações do controlador. Por fim, você aprenderá a configurar onde os nomes de usuário e senhas são armazenadas.
 
@@ -117,7 +116,6 @@ O Assistente de instalação do ASP.NET SQL Server permite que você selecione u
 > 
 > 
 > C:\Windows\Microsoft.NET\Framework\v2.0.50727
-
 
 Depois de criar os objetos de banco de dados necessários, você precisa modificar a conexão de banco de dados usado pelo seu aplicativo MVC. Modifique a cadeia de conexão do ApplicationServices no seu arquivo de configuração (Web. config) de web para que ele aponte para o banco de dados de produção. Por exemplo, a conexão modificado na listagem 3 aponta para um banco de dados denominado MyProductionDB (a cadeia de caracteres de conexão do ApplicationServices original foi comentada).
 

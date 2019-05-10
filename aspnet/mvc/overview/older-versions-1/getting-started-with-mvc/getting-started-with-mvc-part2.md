@@ -8,12 +8,12 @@ ms.date: 08/14/2010
 ms.assetid: ff03dcc0-da97-458d-838f-0823e7482642
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part2
 msc.type: authoredcontent
-ms.openlocfilehash: 84f9c822f041808184b2c586ce933ba3b24615dc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e2a298584473f57c2b14edf507f0f6886d906ea3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419828"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123060"
 ---
 # <a name="adding-a-controller"></a>Adicionando um controlador
 
@@ -24,7 +24,6 @@ por [Scott Hanselman](https://github.com/shanselman)
 >
 >
 > Este é um tutorial para iniciantes que apresenta os conceitos básicos do ASP.NET MVC. Você criará um aplicativo web simples que lê e grava de um banco de dados. Visite o [Central de informações do ASP.NET MVC](../../../index.md) para localizar outros ASP.NET MVC, tutoriais e exemplos.
-
 
 MVC representa o modelo, o modo de exibição, o controlador. O MVC é um padrão para o desenvolvimento de aplicativos, de modo que cada parte tem uma responsabilidade que é diferente de outro.
 

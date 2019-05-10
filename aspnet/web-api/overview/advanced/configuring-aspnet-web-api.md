@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9e10a700-8d91-4d2e-a31e-b8b569fe867c
 msc.legacyurl: /web-api/overview/advanced/configuring-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 39629ba404e536b29318db00bce8c4443a782497
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4f76728fa5e4602e35e1b7cb2d41b2245093cad8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411937"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115955"
 ---
 # <a name="configuring-aspnet-web-api-2"></a>Configurando a API Web ASP.NET 2
 
@@ -45,7 +45,6 @@ Definições de configuração de API da Web são definidas na [HttpConfiguratio
 | **Propriedades** | Um recipiente de propriedades genérico. |
 | **Rotas** | A coleção de rotas. Ver [roteamento na API Web ASP.NET](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
 | **Serviços** | A coleção de serviços. Ver [Services](#services). |
-
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
@@ -91,11 +90,9 @@ O **HttpConfiguration.Services** coleção contém um conjunto de serviços glob
 > [!NOTE]
 > O **Services** coleção não é um mecanismo de finalidade geral para injeção de dependência ou de descoberta de serviço. Ele armazena somente os tipos de serviço que são conhecidos como a estrutura da API da Web.
 
-
 O **Services** coleção foi inicializada com um conjunto padrão de serviços, e você pode fornecer suas próprias implementações personalizadas. Alguns serviços dão suporte a várias instâncias, enquanto outros podem ter apenas uma instância. (No entanto, você também pode fornecer serviços no nível do controlador, consulte [por controlador configuração](#percontrollerconfig).
 
 Serviços de instância única
-
 
 | Serviço | Descrição |
 | --- | --- |
@@ -116,7 +113,6 @@ Serviços de instância única
 | **IModelValidatorCache** | Fornece um cache de validadores de modelo. |
 
 Serviços de várias instâncias
-
 
 |                 Serviço                 |                                                                                                              Descrição                                                                                                               |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

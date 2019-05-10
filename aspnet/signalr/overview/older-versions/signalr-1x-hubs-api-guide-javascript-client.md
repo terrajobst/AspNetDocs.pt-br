@@ -8,12 +8,12 @@ ms.date: 04/17/2013
 ms.assetid: dcd4593b-1118-418a-af71-d12ff33fb36d
 msc.legacyurl: /signalr/overview/older-versions/signalr-1x-hubs-api-guide-javascript-client
 msc.type: authoredcontent
-ms.openlocfilehash: a28b6043ac183ceb66e3ef2ad322436901aa50bc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 24850fe5229490bf600e09ad4718abb575a845fa
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412834"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116970"
 ---
 # <a name="signalr-1x-hubs-api-guide---javascript-client"></a>Guia da API Hubs do SignalR 1.x – Cliente JavaScript
 
@@ -26,7 +26,6 @@ by [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://githu
 > A API de Hubs de SignalR permite que você faça chamadas de procedimento remoto (RPCs) de um servidor para clientes conectados e de clientes para o servidor. No código do servidor, você define métodos que podem ser chamados por clientes e você chamar métodos que são executados no cliente. No código do cliente, você define métodos que podem ser chamados a partir do servidor e você chamar métodos que são executados no servidor. O SignalR é responsável por todos os detalhes de cliente-servidor para você.
 > 
 > O SignalR também oferece uma API de nível inferior chamada conexões persistentes. Para obter uma introdução ao SignalR, Hubs e conexões persistentes, ou para um tutorial que mostra como criar um aplicativo completo do SignalR, consulte [SignalR - Introdução ao](../getting-started/index.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -109,7 +108,6 @@ No exemplo anterior, a referência para o proxy SignalR gerado é código JavaSc
 > [!NOTE]
 > Para clientes de JavaScript do Windows 8 (Windows Store), use o arquivo físico do proxy em vez daquele gerado dinamicamente. Para obter mais informações, consulte [como criar um arquivo físico para o SignalR gerado proxy](#manualproxy) mais adiante neste tópico.
 
-
 Em um modo de exibição do Razor do ASP.NET MVC 4, use o til para referir-se a raiz do aplicativo na sua referência de arquivo de proxy:
 
 [!code-html[Main](signalr-1x-hubs-api-guide-javascript-client/samples/sample5.html)]
@@ -176,7 +174,6 @@ O código de exemplo usa o padrão "/ signalr" URL para se conectar ao seu servi
 > [!NOTE]
 > Normalmente você registrar manipuladores de eventos antes de chamar o `start` método para estabelecer a conexão. Se você deseja registrar alguns manipuladores de eventos depois de estabelecer a conexão, você pode fazer isso, mas você deve registrar pelo menos um dos seus os manipuladores de eventos antes de chamar o `start` método. Um motivo para isso é que pode haver vários Hubs em um aplicativo, mas você não iria querer disparar o `OnConnected` evento em cada Hub se você apenas for ser usado para um deles. Quando a conexão é estabelecida, a presença de um método de cliente no proxy de um Hub é o que informa ao SignalR para disparar o `OnConnected` eventos. Se você não registrar quaisquer manipuladores de evento antes de chamar o `start` método, você poderá invocar métodos em Hub, mas o Hub `OnConnected` método não será chamado e nenhum método de cliente será invocado do servidor.
 
-
 <a id="connequivalence"></a>
 
 ### <a name="connectionhub-is-the-same-object-that-hubconnection-creates"></a>$. connection.hub é o mesmo objeto que $.hubConnection() cria
@@ -234,7 +231,6 @@ Você pode criar várias conexões com pontos de extremidade diferentes.
 > - Para obter informações sobre como usar conexões entre domínios com o Internet Explorer 9, consulte [esse thread de StackOverflow](http://stackoverflow.com/questions/13573397/siganlr-ie9-cross-domain-request-dont-work).
 > - Para obter informações sobre como usar conexões entre domínios com o Chrome, consulte [esse thread de StackOverflow](http://stackoverflow.com/questions/15467373/signalr-1-0-1-cross-domain-request-cors-with-chrome).
 > - O código de exemplo usa o padrão "/ signalr" URL para se conectar ao seu serviço SignalR. Para obter informações sobre como especificar uma URL de base diferente, consulte [o guia da API de Hubs de SignalR do ASP.NET - Server - URL /signalr](../guide-to-the-api/hubs-api-guide-server.md#signalrurl).
-
 
 <a id="configureconnection"></a>
 

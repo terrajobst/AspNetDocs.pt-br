@@ -8,12 +8,12 @@ ms.date: 02/20/2007
 ms.assetid: df999966-ac48-460e-b82b-4877a57d6ab9
 msc.legacyurl: /web-forms/overview/data-access/accessing-the-database-directly-from-an-aspnet-page/implementing-optimistic-concurrency-with-the-sqldatasource-cs
 msc.type: authoredcontent
-ms.openlocfilehash: e8ed68e10d2924a2174494943b654e1f46284be4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: dd2b44803f00f7e194e2c41f448d579865da58b6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59420699"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115110"
 ---
 # <a name="implementing-optimistic-concurrency-with-the-sqldatasource-c"></a>Implementar a simultaneidade otimista com o SqlDataSource (C#)
 
@@ -23,18 +23,15 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Neste tutorial, examine os conceitos básicos de controle de simultaneidade otimista e, em seguida, explore como implementá-lo usando o controle SqlDataSource.
 
-
 ## <a name="introduction"></a>Introdução
 
 O tutorial anterior, examinamos como adicionar a inserção, atualização e exclusão de recursos para o controle SqlDataSource. Em resumo, para fornecer esses recursos que precisávamos especificar correspondente `INSERT`, `UPDATE`, ou `DELETE` instrução SQL no controle s `InsertCommand`, `UpdateCommand`, ou `DeleteCommand` propriedades, junto com o apropriada parâmetros de `InsertParameters`, `UpdateParameters`, e `DeleteParameters` coleções. Embora essas propriedades e coleções podem ser especificadas manualmente, o botão Avançado do s de Assistente Configurar fonte de dados oferece um gerar `INSERT`, `UPDATE`, e `DELETE` caixa de seleção de instruções que irá criar automaticamente essas instruções com base no `SELECT` instrução.
 
 Juntamente com o gere `INSERT`, `UPDATE`, e `DELETE` instruções de caixa de seleção, a caixa de diálogo Advanced SQL Generation Options inclui uma opção de simultaneidade otimista de uso (veja a Figura 1). Quando marcada, o `WHERE` cláusulas em gerada automaticamente `UPDATE` e `DELETE` instruções são modificadas apenas para executar a atualização ou exclua se o banco de dados subjacente não tenha sido modificado desde que o usuário carregado pela última vez os dados na grade.
 
-
 ![Você pode adicionar suporte à simultaneidade otimista de avançada caixa de diálogo de opções de geração SQL](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image1.gif)
 
 **Figura 1**: Você pode adicionar suporte à simultaneidade otimista de avançada caixa de diálogo de opções de geração SQL
-
 
 Volta a [Implementando a simultaneidade otimista](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) tutorial, examinamos os conceitos básicos do controle de simultaneidade otimista e como adicioná-lo a ObjectDataSource. Neste tutorial, vamos Retocar essenciais do controle de simultaneidade otimista e, em seguida, explore como implementá-lo usando o SqlDataSource.
 
@@ -46,28 +43,22 @@ Imagine-se de que ambos dois usuários, Jisun e Sam, foram visitar uma página e
 
 Figura 2 ilustra essa interação.
 
-
 [![Quando dois usuários simultaneamente atualizam um registro lá s potencial para um usuário s é alterada para substituir os outros s](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image2.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image1.png)
 
 **Figura 2**: Quando dois usuários simultaneamente atualizar um registro lá s potencial para um usuário s alterações para substituir os outros s ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image2.png))
-
 
 Para impedir que esse cenário abrindo um formulário da [controle de simultaneidade](http://en.wikipedia.org/wiki/Concurrency_control) deve ser implementado. [A simultaneidade otimista](http://en.wikipedia.org/wiki/Optimistic_concurrency_control) o foco deste tutorial funciona na suposição de que, embora lá, pode ser conflitos de simultaneidade vira e mexe, a grande maioria do tempo tais conflitos não ocorrer. Portanto, se ocorrer um conflito, controle de simultaneidade otimista simplesmente informa ao usuário que suas alterações pode ser salva porque outro usuário modificou os mesmos dados.
 
 > [!NOTE]
 > Para aplicativos em que ele é presumido que haja muitos conflitos de simultaneidade ou se tais conflitos não são toleráveis, em seguida, controle de simultaneidade pessimista pode ser usado em vez disso. Voltar para o [Implementando a simultaneidade otimista](../editing-inserting-and-deleting-data/implementing-optimistic-concurrency-cs.md) tutorial para uma discussão mais completa sobre o controle de simultaneidade pessimista.
 
-
 Controle de simultaneidade otimista funciona, garantindo que o registro que está sendo atualizada ou excluída tem os mesmos valores de quando a atualização ou exclusão de processo iniciado. Por exemplo, ao clicar no botão Editar em um GridView editável, os valores de registro s são de leitura do banco de dados e exibidos em caixas de texto e outros controles de Web. Esses valores originais são salvos por GridView. Posteriormente, depois que o usuário faz as alterações dela e clica no botão de atualização, o `UPDATE` instrução usada deve levar em conta os valores originais e os novos valores e só atualizar o registro de banco de dados subjacente se os valores originais que o usuário iniciou a edição são idênticos aos valores ainda no banco de dados. Figura 3 ilustra essa sequência de eventos.
-
 
 [![Para a atualização ou exclusão seja bem-sucedida, os valores originais devem ser iguais aos valores atuais do banco de dados](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image3.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image3.png)
 
 **Figura 3**: Para a atualização ou exclusão para forem bem-sucedidas, o Original valores deve ser igual aos valores atuais do banco de dados ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image4.png))
 
-
 Há várias abordagens para implementar a simultaneidade otimista (consulte [Peter A. Bromberg](http://www.eggheadcafe.com/articles/pbrombergresume.asp)do [lógica de atualização de simultaneidade otimista](http://www.eggheadcafe.com/articles/20050719.asp) para examinar uma série de opções). A técnica usada pelo SqlDataSource (bem como pelo ADO.NET digitado conjuntos de dados usados em nossa camada de acesso a dados) aumenta a `WHERE` cláusula para incluir uma comparação de todos os valores originais. O seguinte `UPDATE` instrução, por exemplo, atualiza o nome e o preço de um produto somente se os valores atuais do banco de dados são iguais aos valores que foram originalmente recuperados ao atualizar o registro em um GridView. O `@ProductName` e `@UnitPrice` parâmetros contêm os novos valores inseridos pelo usuário, enquanto `@original_ProductName` e `@original_UnitPrice` contêm os valores que foram carregados originalmente no GridView, quando o botão de edição foi clicado:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample1.sql)]
 
@@ -77,37 +68,29 @@ Como veremos neste tutorial, permitindo o controle de simultaneidade otimista co
 
 Comece abrindo o `OptimisticConcurrency.aspx` página a partir de `SqlDataSource` pasta. Arraste um controle SqlDataSource da caixa de ferramentas para o Designer, as configurações de seu `ID` propriedade para `ProductsDataSourceWithOptimisticConcurrency`. Em seguida, clique no link configurar fonte de dados do que a marca inteligente do controle s. Na primeira tela do assistente, escolha para trabalhar com o `NORTHWINDConnectionString` e clique em Avançar.
 
-
 [![Optar por trabalhar com o NORTHWINDConnectionString](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image4.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image5.png)
 
 **Figura 4**: Optar por trabalhar com o `NORTHWINDConnectionString` ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image6.png))
 
-
 Para este exemplo, estaremos adicionando um GridView que permite que os usuários editem o `Products` tabela. Portanto, de configurar a tela de instrução Select, escolha o `Products` da tabela na lista suspensa e selecione o `ProductID`, `ProductName`, `UnitPrice`, e `Discontinued` colunas, conforme mostrado na Figura 5.
-
 
 [![Da tabela produtos, retornar o ProductID, ProductName, UnitPrice e colunas descontinuadas](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image5.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image7.png)
 
 **Figura 5**: Dos `Products` da tabela, retornar o `ProductID`, `ProductName`, `UnitPrice`, e `Discontinued` colunas ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image8.png))
 
-
 Depois de escolher as colunas, clique no botão Avançado para abrir a caixa de diálogo Advanced SQL Generation Options. Verifique o gere `INSERT`, `UPDATE`, e `DELETE` instruções e Use as caixas de seleção de simultaneidade otimista e clique em Okey (consulte novamente a Figura 1 para uma captura de tela). Conclua o assistente clicando em Avançar e em seguida concluir.
 
 Depois de concluir o Assistente Configurar fonte de dados, reserve um tempo para examinar resultante `DeleteCommand` e `UpdateCommand` propriedades e o `DeleteParameters` e `UpdateParameters` coleções. A maneira mais fácil de fazer isso é clicar na guia origem no canto inferior esquerdo para ver a sintaxe declarativa de s de página. Lá você encontrará um `UpdateCommand` valor:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample2.sql)]
 
 Com sete parâmetros de `UpdateParameters` coleção:
 
-
 [!code-aspx[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample3.aspx)]
 
 Da mesma forma, o `DeleteCommand` propriedade e `DeleteParameters` coleção deve ser semelhante ao seguinte:
 
-
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample4.sql)]
-
 
 [!code-aspx[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample5.aspx)]
 
@@ -121,11 +104,9 @@ Quando os dados de controle de Web invoca o s SqlDataSource `Update()` ou `Delet
 > [!NOTE]
 > Uma vez que estamos não estiver usando o controle SqlDataSource s inserindo recursos, fique à vontade remover o `InsertCommand` propriedade e seu `InsertParameters` coleção.
 
-
 ## <a name="correctly-handlingnullvalues"></a>Tratar corretamente`NULL`valores
 
 Infelizmente, o aumentadas `UPDATE` e `DELETE` gerado automaticamente de instruções pelo Assistente Configurar fonte de dados ao usar a simultaneidade otimista fazer *não* funcionam com os registros que contêm `NULL` valores. Para ver o porquê, considere o nosso s SqlDataSource `UpdateCommand`:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample6.sql)]
 
@@ -134,9 +115,7 @@ O `UnitPrice` coluna o `Products` tabela pode ter `NULL` valores. Se um determin
 > [!NOTE]
 > Esse bug foi reportado pela primeira vez para a Microsoft em junho de 2004 na [SqlDataSource gera instruções SQL incorretas](https://connect.microsoft.com/VisualStudio/feedback/ViewFeedback.aspx?FeedbackID=93937) e supostamente está programado para ser corrigido na próxima versão do ASP.NET.
 
-
 Para corrigir isso, temos que atualizar manualmente a `WHERE` cláusulas em ambos os `UpdateCommand` e `DeleteCommand` propriedades para **todos os** colunas que pode ter `NULL` valores. Em geral, alterar `[ColumnName] = @original_ColumnName` para:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample7.sql)]
 
@@ -144,27 +123,22 @@ Essa modificação pode ser feita diretamente por meio de marcação declarativa
 
 Aplicar isso ao nosso exemplo resulta no seguinte modificada `UpdateCommand` e `DeleteCommand` valores:
 
-
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample8.sql)]
 
 ## <a name="step-2-adding-a-gridview-with-edit-and-delete-options"></a>Etapa 2: Adicionando um GridView com editar e opções de exclusão
 
 Com o SqlDataSource configurado para dar suporte à simultaneidade otimista, tudo o que resta é adicionar um controle da Web de dados para a página que utiliza esse controle de simultaneidade. Para este tutorial, deixe s um GridView que fornece de edição e a funcionalidade de exclusão. Para fazer isso, arraste um GridView Toolbox para o Designer e defina suas `ID` para `Products`. Da GridView s marca inteligente, associá-lo para o `ProductsDataSourceWithOptimisticConcurrency` controle SqlDataSource adicionado na etapa 1. Por fim, verifique as opções de permitir edição e habilitar a exclusão da marca inteligente.
 
-
 [![Vincular o GridView a SqlDataSource e permitir a edição e exclusão](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image6.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image9.png)
 
 **Figura 6**: Associar o GridView SqlDataSource e habilitar edição e exclusão ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image10.png))
-
 
 Depois de adicionar o GridView, configuram sua aparência, removendo o `ProductID` BoundField, alterando a `ProductName` s BoundField `HeaderText` propriedade ao produto e atualizando o `UnitPrice` BoundField, de modo que seu `HeaderText` é de propriedade simplesmente preço. O ideal é que podemos d aprimorar a interface de edição para incluir um RequiredFieldValidator para o `ProductName` valor e um CompareValidator para o `UnitPrice` valor (para assegurar que ele s um valor numérico formatado corretamente). Consulte a [Personalizando a Interface de modificação de dados](../editing-inserting-and-deleting-data/customizing-the-data-modification-interface-cs.md) tutorial para uma análise mais detalhada Personalizando o s GridView interface de edição.
 
 > [!NOTE]
 > O GridView, o estado de exibição s deve ser habilitado, pois os valores originais passados do GridView para o SqlDataSource são armazenados na exibição de estado.
 
-
 Depois de fazer essas modificações para o GridView, a marcação declarativa GridView e SqlDataSource deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample9.aspx)]
 
@@ -172,14 +146,11 @@ Para ver o controle de simultaneidade otimista em ação, abra duas janelas de n
 
 Na segunda janela do navegador, altere o preço (mas deixe o nome do produto como seu valor original) e clique em Atualizar. No postback, a grade de retorna para o modo de edição previamente, mas a alteração no preço não será registrada. O segundo navegador mostra o mesmo valor que a primeira é o novo nome de produto com o preço antigo. As alterações feitas na segunda janela do navegador foram perdidas. Além disso, as alterações foram perdidas em vez disso, no modo silencioso, pois não houve nenhuma exceção ou uma mensagem indicando que uma violação de simultaneidade ocorreu.
 
-
 [![As alterações na segunda janela do navegador foram perdidas silenciosamente](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image7.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image11.png)
 
 **Figura 7**: As alterações em como o segundo navegador janela foram silenciosamente perdidas ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image12.png))
 
-
 O motivo por que as alterações de navegador s segunda não foram confirmadas era porque o `UPDATE` instrução s `WHERE` cláusula filtrou todos os registros e, portanto, não afetou nenhuma linha. Permitir que o s examinar o `UPDATE` novamente a instrução:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample10.sql)]
 
@@ -188,23 +159,19 @@ Quando a segunda janela do navegador atualiza o registro, o nome do produto orig
 > [!NOTE]
 > Exclua funciona da mesma maneira. Com duas janelas de navegador abertas, começar a edição de um determinado produto com um e, em seguida, salvando suas alterações. Depois de salvar as alterações em um navegador, clique no botão de exclusão para o mesmo produto na outra. Uma vez que o original don valores t coincidir as `DELETE` instrução s `WHERE` cláusula, a exclusão falhará silenciosamente.
 
-
 Da perspectiva do usuário final s na segunda janela do navegador, depois de clicar no botão atualizar a grade retorna ao modo de edição previamente, mas suas alterações foram perdidas. No entanto, há s sem comentários visuais que suas alterações não fique. O ideal é que, se um alterações de usuário s são perdidas para uma violação de simultaneidade, podemos d notificá-lo e, talvez, mantenha a grade no modo de edição. Deixe o s examinar como fazer isso.
 
 ## <a name="step-3-determining-when-a-concurrency-violation-has-occurred"></a>Etapa 3: Determinando quando ocorreu uma violação de simultaneidade
 
 Uma vez que uma violação de simultaneidade rejeita as alterações feitas por um, seria bom alertar o usuário quando ocorreu uma violação de simultaneidade. Para alertar o usuário, let s adicionar um controle de Web de rótulo na parte superior da página denominada `ConcurrencyViolationMessage` cujo `Text` propriedade exibirá a seguinte mensagem: Você tentou atualizar ou excluir um registro que foi atualizado simultaneamente por outro usuário. Examine as alterações de outros usuários e refaça sua atualização ou excluir. Defina o controle de rótulo s `CssClass` propriedade para aviso, que é uma classe CSS definida no arquivo `Styles.css` que exibe texto em uma fonte vermelha, itálico, negrito e grande. Por fim, defina o rótulo s `Visible` e `EnableViewState` propriedades a serem `false`. Isso ocultará o rótulo, exceto apenas essas postagens onde definimos seu `Visible` propriedade para `true`.
 
-
 [![Adicionar um controle de rótulo para a página para exibir o aviso](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image8.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image13.png)
 
 **Figura 8**: Adicionar um controle de rótulo para a página para exibir o aviso ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image14.png))
 
-
 Ao executar uma atualização ou exclusão, o s GridView `RowUpdated` e `RowDeleted` manipuladores de eventos é acionado depois que seu controle de fonte de dados tiver efetuado solicitada update ou delete. Podemos determinar quantas linhas foram afetadas pela operação desses manipuladores de eventos. Se nenhuma linha foi afetada, queremos exibir o `ConcurrencyViolationMessage` rótulo.
 
 Criar um manipulador de eventos para ambos os `RowUpdated` e `RowDeleted` eventos e adicione o seguinte código:
-
 
 [!code-csharp[Main](implementing-optimistic-concurrency-with-the-sqldatasource-cs/samples/sample11.cs)]
 
@@ -212,11 +179,9 @@ Em ambos os manipuladores de eventos verificamos a `e.AffectedRows` propriedade 
 
 Como mostra a Figura 9, com esses dois manipuladores de evento, será exibida uma mensagem muito notável sempre que ocorre uma violação de simultaneidade.
 
-
 [![Será exibida uma mensagem em caso de uma violação de simultaneidade](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image9.gif)](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image15.png)
 
 **Figura 9**: Será exibida uma mensagem em caso de uma violação de simultaneidade ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-with-the-sqldatasource-cs/_static/image16.png))
-
 
 ## <a name="summary"></a>Resumo
 

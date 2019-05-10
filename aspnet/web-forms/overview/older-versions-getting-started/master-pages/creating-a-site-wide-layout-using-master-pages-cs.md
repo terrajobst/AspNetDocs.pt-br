@@ -8,12 +8,12 @@ ms.date: 05/21/2008
 ms.assetid: 78f8d194-03b9-44a5-8255-90e7cd1c2ee1
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/creating-a-site-wide-layout-using-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 866aea01488cee26a7419fe12b7ffa7a0655e9ce
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 4ef4cc44a5d1adb936beea421a295ae84052d3c4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385040"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65116615"
 ---
 # <a name="creating-a-site-wide-layout-using-master-pages-c"></a>Criação de um layout de todo o site usando páginas mestras (C#)
 
@@ -23,16 +23,13 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Este tutorial mostrará as Noções básicas de página mestra. Ou seja, quais são as páginas mestras, como é criar uma página mestra, o que são o conteúdo de espaços reservados, como um cria uma página ASP.NET que usa uma página mestra, como modificar a página mestra é refletida automaticamente em suas páginas de conteúdo associadas e assim por diante.
 
-
 ## <a name="introduction"></a>Introdução
 
 Um atributo de um site bem projetado é um layout de página consistente em todo o site. Veja o site www.asp.net, por exemplo. No momento da redação deste artigo, cada página tem o mesmo conteúdo na parte superior e inferior da página. Como mostra a Figura 1, a parte superior de cada página exibe uma barra cinza com uma lista de Communities da Microsoft. Abaixo do que é o logotipo do site, a lista de idiomas para a qual o site foi traduzido e as seções principais: Página inicial, começar, saiba mais, Downloads e assim por diante. Da mesma forma, a parte inferior da página inclui informações sobre anúncios em www.asp.net, uma declaração de direitos autorais e um link para a declaração de privacidade.
 
-
 [![O site www.asp.net emprega uma aparência consistente em todas as páginas](creating-a-site-wide-layout-using-master-pages-cs/_static/image2.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image1.png)
 
 <strong>Figura 01</strong>: O site www.asp.net emprega uma aparência consistente e sinta-se em todas as páginas ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image3.png))
-
 
 Outro atributo de um site bem projetado é a facilidade com que a aparência do site pode ser alterada. A Figura 1 mostra a home page de www.asp.net a partir de março de 2008, mas entre agora e publicação deste tutorial, a aparência pode ter sido alterado. Talvez os itens de menu na parte superior se expandirá para incluir uma nova seção para a estrutura do MVC. Ou talvez um radicalmente novo design com diferentes cores, fontes e layout será unveiled. Aplicar essas alterações para o site inteiro deve ser um processo rápido e simple que não requer modificação de milhares de páginas da web que compõem o site.
 
@@ -64,28 +61,22 @@ As limitações do uso de controles de usuário foram resolvidas no ASP.NET vers
 > [!NOTE]
 > Os principais conceitos e a funcionalidade das páginas mestras não foi alterado desde o ASP.NET versão 2.0. No entanto, o Visual Studio 2008 oferece suporte de tempo de design para páginas mestras aninhadas, um recurso que não existia no Visual Studio 2005. Vamos examinar usando páginas mestras aninhadas em um tutorial futuro.
 
-
 Figura 2 mostra a página mestra para www.asp.net aparência. Observe que a página mestra define o layout de todo o site - a marcação na parte superior, inferior e à direita de cada página - comuns, bem como um ContentPlaceHolder na parte intermediária esquerda, onde se encontra o conteúdo exclusivo para cada página da web.
-
 
 ![Uma página mestra define o Layout de todo o Site e as regiões editáveis em uma base de página de conteúdo a página conteúdo](creating-a-site-wide-layout-using-master-pages-cs/_static/image4.png)
 
 **Figura 02**: Uma página mestra define o Layout de todo o Site e as regiões editáveis em uma base de página de conteúdo a página conteúdo
 
-
 Depois que uma página mestra foi definida, ele pode ser ligado a novas páginas do ASP.NET por meio de escala de uma caixa de seleção. Essas páginas ASP.NET - chamadas páginas de conteúdo - incluem um controle de conteúdo para cada um dos controles de ContentPlaceHolder da página mestra. Quando a página de conteúdo é visitada por meio de um navegador o mecanismo do ASP.NET cria a hierarquia de controle da página mestra e injeta a hierarquia de controle da página de conteúdo em locais apropriados. Essa hierarquia de controle combinado é renderizada e o HTML resultante é retornado ao navegador do usuário final. Consequentemente, a página de conteúdo emite a marcação comuns definidos na sua página mestre fora controles ContentPlaceHolder e a marcação de específico da página definida dentro de seu próprios controles de conteúdo. Figura 3 ilustra esse conceito.
-
 
 [![Marcação da página solicitada tem fusível para a página mestra](creating-a-site-wide-layout-using-master-pages-cs/_static/image6.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image5.png)
 
 **Figura 03**: Marcação da página solicitada é fundida na página mestra ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image7.png))
 
-
 Agora que já discutimos como páginas mestras funcionam, vamos dar uma olhada na criação de uma página mestra e páginas de conteúdo associadas usando o Visual Web Developer.
 
 > [!NOTE]
 > Para acessar o maior público possível, o site do ASP.NET que criamos em toda esta série de tutoriais será criado usando ASP.NET 3.5 com a versão gratuita da Microsoft do Visual Studio 2008, [Visual Web Developer 2008](https://www.microsoft.com/express/vwd/). Se você ainda não foram atualizados para o ASP.NET 3.5, não se preocupe – conceitos discutidos esses tutoriais de trabalho igualmente bem com o ASP.NET 2.0 e o Visual Studio 2005. No entanto, alguns aplicativos de demonstração podem usar recursos que são novos para o .NET Framework versão 3.5; Quando são usados recursos específicos de 3.5, posso incluir uma observação que discute como implementar uma funcionalidade semelhante na versão 2.0. Tenha em mente que os aplicativos de demonstração disponíveis para baixar cada destino do tutorial de .NET Framework versão 3.5, que resulta em um `Web.config` arquivo que inclui elementos de configuração de 3.5 específicos e as referências aos namespaces específicos 3.5 no `using` instruções em classes code-behind de páginas do ASP.NET. Encurtar a história, se você ainda precisa instalar o .NET 3.5 em seu computador, em seguida, o aplicativo web que pode ser baixado não funcionará sem primeiro remover a marcação específica do 3.5 de `Web.config`. Ver [do dissecando ASP.NET versão 3.5 `Web.config` arquivo](http://www.4guysfromrolla.com/articles/121207-1.aspx) para obter mais informações sobre esse tópico. Também será necessário remover o `using` instruções que fazem referência a namespaces específicos 3.5.
-
 
 ## <a name="step-1-creating-a-master-page"></a>Etapa 1: Criando uma página mestra
 
@@ -94,19 +85,15 @@ Antes que podemos explorar criando e usando páginas mestras e de conteúdo, pri
 > [!NOTE]
 > Visual Studio dá suporte a dois modos de gerenciamento de projeto: Projetos de Site e projetos de aplicativos Web. Projetos de Site não têm um arquivo de projeto, enquanto que o Web Application Projects imitar a arquitetura do projeto no Visual Studio .NET 2002/2003 – eles incluem um arquivo de projeto e compilar o código-fonte do projeto em um único assembly, que é colocado no `/bin` pasta. Projetos do Visual Studio 2005 inicialmente apenas com suporte Site da Web, embora o [modelo de projeto de aplicativo Web](https://msdn.microsoft.com/library/aa730880(vs.80).aspx) foi reintroduzido com Service Pack 1. O Visual Studio 2008 oferece os dois modelos de projeto. Visual Web Developer 2005 e edições de 2008, no entanto, somente dão suporte a projetos de Site da Web. Posso usar o modelo de projeto de Site para minhas demonstrações nessa série de tutoriais. Se você estiver usando uma edição não Express e deseja usar o modelo de projeto de aplicativo Web em vez disso, fique à vontade para fazer isso, mas lembre-se de que pode haver algumas discrepâncias entre o que você vê na tela e as etapas que você deve tomar versus o instructio e capturas de tela mostradas NS fornecidos nestes tutoriais.
 
-
 [![Criar um novo arquivo com base no sistema Web Site](creating-a-site-wide-layout-using-master-pages-cs/_static/image9.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image8.png)
 
 **Figura 04**: Criar um Site New File System-Based ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image10.png))
 
-
 Em seguida, adicione uma página mestra para o site no diretório raiz clicando duas vezes no nome do projeto, escolhendo Add New Item e selecionando o modelo de página mestra. Observe que as páginas mestras terminam com a extensão `.master`. Nomeie essa nova página mestra `Site.master` e clique em Adicionar.
-
 
 [![Adicionar uma página mestra chamado site a site](creating-a-site-wide-layout-using-master-pages-cs/_static/image12.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image11.png)
 
 **Figura 05**: Adicionar um nome de página mestra `Site.master` para o site ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image13.png))
-
 
 Adicionando um novo arquivo de página mestra por meio do Visual Web Developer cria uma página mestra com a seguinte marcação declarativa:
 
@@ -126,16 +113,13 @@ Essa marcação declarativa de página mestra padrão serve como um ponto de par
 > [!NOTE]
 > Ao projetar uma página mestra Verifique se a página mestra contém um formulário da Web e pelo menos um controle ContentPlaceHolder aparece dentro desse formulário da Web.
 
-
 ### <a name="creating-a-simple-site-layout"></a>Criação de um Layout de Site simples
 
 Vamos expandir `Site.master`da marcação declarativa de padrão para criar um layout de site em que todas as páginas compartilhem: um cabeçalho comum; uma coluna à esquerda com a navegação, notícias e outros tipos de conteúdo em todo o site; e um rodapé que exibe o ícone de "Alimentado pelo Microsoft ASP.NET". Figura 6 mostra o resultado final da página mestra, quando uma das suas páginas de conteúdo é exibida por meio de um navegador. A região dentro de um círculo vermelha na Figura 6 é específica para a página que está sendo visitada (`Default.aspx`); o outro conteúdo é definida na página mestre e, portanto, consistente em todas as páginas de conteúdo.
 
-
 [![A página mestra define a marcação para a parte superior, esquerda e inferior partes](creating-a-site-wide-layout-using-master-pages-cs/_static/image15.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image14.png)
 
 **Figura 06**: A página de mestre define a marcação para a parte superior, esquerda e inferior partes ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image16.png))
-
 
 Para obter o layout de site mostrado na Figura 6, comece atualizando o `Site.master` página mestra para que ele contenha a seguinte marcação declarativa:
 
@@ -152,7 +136,6 @@ Se você estiver acompanhando em seu computador, você precisará baixar o códi
 > [!NOTE]
 > Uma discussão sobre CSS e formatação de página da web está além do escopo deste artigo. Para obter mais informações sobre CSS, confira a [CSS tutoriais](http://www.w3schools.com/css/default.asp) na [W3Schools.com](http://www.w3schools.com/). Também recomendo que você baixe o código que acompanha este artigo deste tutorial e brincar com as configurações de CSS no `Styles.css` para ver os efeitos das regras de formatação diferentes.
 
-
 ### <a name="creating-a-master-page-using-an-existing-design-template"></a>Criando uma página mestra usando um modelo de projeto existente
 
 Ao longo dos anos, eu criei um número de aplicativos web ASP.NET para empresas de pequeno a médio porte. Alguns dos meus clientes tinham um layout de site existente que quisessem usar; outras pessoas contrataram um designer de gráficos competente. Alguns confiados-me para criar o layout do site. Como você pode ver pela Figura 6, um programador para projetar o layout de um site de execução de tarefas normalmente, é tão inteligente como tendo seu contador executar open-heart surgery enquanto o médico tem seus impostos.
@@ -161,7 +144,6 @@ Felizmente, existem sites innumerous que oferece modelos de design HTML gratuito
 
 > [!NOTE]
 > A Microsoft também oferece um número de [Liberar modelos de Kit de início do ASP.NET Design](https://msdn.microsoft.com/asp.net/aa336613.aspx) que se integram na caixa de diálogo Novo Site da Web no Visual Studio.
-
 
 ## <a name="step-2-creating-associated-content-pages"></a>Etapa 2: Criando associados a páginas de conteúdo
 
@@ -172,16 +154,13 @@ Vamos adicionar uma nova página ASP.NET ao projeto e associá-lo para o `Site.m
 > [!NOTE]
 > Se você tiver criado seu site da Web ASP.NET usando o modelo de projeto de aplicativo Web em vez do modelo de projeto de Site, você não verá a caixa de seleção "Selecionar a página mestra" na caixa de diálogo Add New Item, mostrada na Figura 7. Para criar um conteúdo de página quando o projeto de aplicativo Web usando o modelo que você deve escolher o modelo de formulário de conteúdo da Web em vez do modelo de formulário da Web. Depois de selecionar o modelo de formulário de conteúdo da Web e clicando em Adicionar, o mesmo selecionar uma página mestra que será exibida a caixa de diálogo mostrada na Figura 8.
 
-
 [![Adicione uma nova página de conteúdo](creating-a-site-wide-layout-using-master-pages-cs/_static/image18.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image17.png)
 
 **Figura 07**: Adicione uma nova página de conteúdo ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image19.png))
 
-
 [![Selecione a página mestra do site](creating-a-site-wide-layout-using-master-pages-cs/_static/image21.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image20.png)
 
 **Figura 08**: Selecione o `Site.master` página mestra ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image22.png))
-
 
 Como mostra a seguinte marcação declarativa, uma página de conteúdo contém um `@Page` diretiva que aponta de volta para seu mestre página e um controle de conteúdo para cada um dos controles de ContentPlaceHolder da página mestra.
 
@@ -190,28 +169,23 @@ Como mostra a seguinte marcação declarativa, uma página de conteúdo contém 
 > [!NOTE]
 > Na seção "Criando um Layout de Site simples" na etapa 1, renomeei `ContentPlaceHolder1` para `MainContent`. Se você não renomear este controle de ContentPlaceHolder `ID` da mesma forma, marcação declarativa da página de conteúdo serão um pouco diferentes da marcação mostrada acima. Do ou seja, o segundo controle de conteúdo `ContentPlaceHolderID` refletirá a `ID` do ContentPlaceHolder correspondente de controle na sua página mestra.
 
-
 Durante a renderização de uma página de conteúdo, o mecanismo do ASP.NET deve fuse da página de conteúdo controles com controles de ContentPlaceHolder da sua página mestra. O mecanismo do ASP.NET determina o conteúdo da página mestra do `@Page` da diretiva `MasterPageFile` atributo. Como mostra a marcação acima, esta página de conteúdo está associada a `~/Site.master`.
 
 Como a página mestra tem dois controles de ContentPlaceHolder - `head` e `MainContent` -Visual Web Developer gerados dois controles de conteúdo. Cada controle de conteúdo faz referência a um determinado ContentPlaceHolder por meio de seu `ContentPlaceHolderID` propriedade.
 
 Onde as páginas mestras brilham sobre técnicas de todo o site modelo anterior é com o suporte de tempo de design. A Figura 9 mostra o `About.aspx` página de conteúdo quando visualizado no modo de Design do Visual Web Developer. Observe que enquanto o conteúdo da página mestra estiver visível, ele fica esmaecido e não pode ser modificado. Os controles de conteúdo correspondente ContentPlaceHolders da página mestra são, no entanto, editáveis. E, assim como com qualquer outra página do ASP.NET, você pode criar interface da página de conteúdo com a adição de controles da Web através das exibições de origem ou de Design.
 
-
 [![Modo de Design da página de conteúdo exibe a página mestre e de específico da página conteúdo](creating-a-site-wide-layout-using-master-pages-cs/_static/image24.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image23.png)
 
 **Figura 09**: A página de conteúdo Design View exibe tanto o específico da página e conteúdo da página mestra ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image25.png))
-
 
 ### <a name="adding-markup-and-web-controls-to-the-content-page"></a>Adicionando marcação e controles da Web para a página de conteúdo
 
 Reserve um tempo para criar algum conteúdo para o `About.aspx` página. Como você pode ver na Figura 10, que eu inseri um título de "Sobre o autor" e alguns parágrafos de texto, mas fique à vontade para adicionar controles de Web, também. Depois de criar essa interface, visite o `About.aspx` página por meio de um navegador.
 
-
 [![Visite a página About através de um navegador](creating-a-site-wide-layout-using-master-pages-cs/_static/image27.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image26.png)
 
 **Figura 10**: Visite o `About.aspx` página por meio de um navegador ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image28.png))
-
 
 É importante entender que a página de conteúdo solicitada e a página mestra associada são combinados e renderizados como um todo inteiramente no servidor web. Navegador do usuário final, em seguida, é enviado para o HTML resultante, adição múltipla. Para verificar isso, exiba o HTML recebido pelo navegador indo até o menu Exibir e escolhendo o código-fonte. Observe que há nenhum quadro ou outras técnicas especializadas para exibir duas páginas da web diferentes em uma única janela.
 
@@ -232,7 +206,6 @@ Como é muito mais fácil criar novas páginas de conteúdo que é converter as 
 > [!NOTE]
 > Ao criar um novo aplicativo ASP.NET, Visual Web Developer adiciona um `Default.aspx` página que não está associada a uma página mestra. Se você quiser praticar a conversão de uma página ASP.NET existente em uma página de conteúdo, vá em frente e fazê-lo com `Default.aspx`. Como alternativa, você pode excluir `Default.aspx` e, em seguida, adicione novamente, mas desta vez, marcando a caixa de seleção "Selecione página mestra".
 
-
 ## <a name="step-3-updating-the-master-pages-markup"></a>Etapa 3: Atualizando a marcação da página mestra
 
 Um dos principais benefícios das páginas mestras é que uma única página mestra pode ser usada para definir o layout geral para várias páginas no site. Portanto, atualizar e a aparência do site exige a atualização de um único arquivo - a página mestra.
@@ -247,15 +220,12 @@ Em seguida, crie um `Page_Load` manipulador de eventos para o mestre de página 
 
 O código acima define o rótulo `Text` formatada de propriedade para a data e hora atuais como o dia da semana, o nome do mês e dia de dois dígitos (veja a Figura 11). Com essa alteração, examine uma das suas páginas de conteúdo. Como mostra a Figura 11, a marcação resultante é imediatamente atualizada para incluir a alteração para a página mestra.
 
-
 [![As alterações para a página mestra são refletidas quando exibindo a página de conteúdo](creating-a-site-wide-layout-using-master-pages-cs/_static/image30.png)](creating-a-site-wide-layout-using-master-pages-cs/_static/image29.png)
 
 **Figura 11**: As alterações para a página mestra são refletidas quando exibindo a página de conteúdo ([clique para exibir a imagem em tamanho normal](creating-a-site-wide-layout-using-master-pages-cs/_static/image31.png))
 
-
 > [!NOTE]
 > Como este exemplo ilustra, as páginas mestras podem conter controles do lado do servidor da Web, código e manipuladores de eventos.
-
 
 ## <a name="summary"></a>Resumo
 

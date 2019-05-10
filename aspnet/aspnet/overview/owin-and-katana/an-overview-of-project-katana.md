@@ -8,19 +8,18 @@ ms.date: 08/30/2013
 ms.assetid: 0ee21741-c1bf-4025-a9b0-24580cae24bc
 msc.legacyurl: /aspnet/overview/owin-and-katana/an-overview-of-project-katana
 msc.type: authoredcontent
-ms.openlocfilehash: 72f70faa151007558ecbb270143ecd5b37c2134d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1f28db822930cdfd2ebf4cf9bb27d173f4aa4201
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392567"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118290"
 ---
 # <a name="an-overview-of-project-katana"></a>Uma visão geral do projeto Katana
 
 por [Howard Dierking](https://github.com/howarddierking)
 
 > A estrutura do ASP.NET já existe há mais de dez anos, e a plataforma habilitou o desenvolvimento de inúmeros sites da Web e serviços. Conforme as estratégias de desenvolvimento de aplicativos Web evoluíram, o framework foi capaz de evoluir em etapa com tecnologias como ASP.NET MVC e API Web ASP.NET. Desenvolvimento de aplicativo Web leva sua próxima etapa revolucionário no mundo da computação em nuvem, do projeto [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) fornece o conjunto subjacente de componentes para aplicativos ASP.NET, permitindo que eles ser flexível e portátil, leve e fornecer um desempenho melhor – em outras palavras, o projeto [Katana](https://channel9.msdn.com/Shows/Web+Camps+TV/The-Katana-Project-OWIN-for-ASPNET) nuvem otimiza a seus aplicativos ASP.NET.
-
 
 ## <a name="why-katana--why-now"></a>Por que Katana – por que agora?
 
@@ -214,7 +213,6 @@ Para Katana 2.0, os componentes de middleware estão concentrados principalmente
 ## <a name="conclusion"></a>Conclusão
 
  Desde seu início, meta do projeto Katana não foi criar e, assim, forçar os desenvolvedores precisam aprender outra estrutura de Web. Em vez disso, a meta foi criar uma abstração para dar mais uma opção que anteriormente foi possível de desenvolvedores de aplicativos Web do .NET. Ao dividir as camadas lógicas de uma pilha de aplicativo Web típica em um conjunto de componentes substituíveis, o projeto Katana permite que componentes em toda a pilha para melhorar o acordo com qualquer taxa faz sentido para esses componentes. Ao compilar todos os componentes em torno de abstração simples do OWIN, o Katana permite que estruturas e os aplicativos criados sobrelos como portáteis entre uma variedade de diferentes servidores e os hosts. Colocando o desenvolvedor no controle da pilha, o Katana garante que o desenvolvedor torna a escolha final sobre como leve ou rico de recursos como sua pilha da Web deve ser.  
-  
 
 ## <a name="for-more-information-about-katana"></a>Para obter mais informações sobre o Katana
 

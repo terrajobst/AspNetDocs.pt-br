@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: ecfd0eb4-c4ad-44e6-9db9-a2a66611ff6a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/maintainable-azure-websites-managing-change-and-scale
 msc.type: authoredcontent
-ms.openlocfilehash: ec0058472f8bc1d8d58e7c78deeb8b6097532510
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c88bae40a8aa092037c0b359ee391acaf161cf10
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409727"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118305"
 ---
 # <a name="hands-on-lab-maintainable-azure-websites-managing-change-and-scale"></a>Laboratório prático: Sites sustentáveis do Azure: Gerenciamento da alteração e escala
 
@@ -34,7 +34,6 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
 >
 > Para obter mais cobertura detalhada deste tópico, consulte o [criando aplicativos de nuvem do mundo Real com o Azure de livro eletrônico](building-real-world-cloud-apps-with-windows-azure/introduction.md).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Visão geral
@@ -79,7 +78,6 @@ Para executar os exercícios neste laboratório prático, você precisará confi
 > [!NOTE]
 > Verifique se que você tiver marcado todas as dependências para este laboratório antes de executar a instalação.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando os trechos de código
 
@@ -87,7 +85,6 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 
 > [!NOTE]
 > Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
-
 
 ---
 
@@ -106,7 +103,6 @@ Tempo estimado para concluir este laboratório: **75 minutos**
 
 > [!NOTE]
 > Quando você inicia o Visual Studio pela primeira vez, você deve selecionar uma das coleções de configurações predefinidas. Cada coleção predefinida foi projetada para corresponder a um estilo de desenvolvimento específico e determina o comportamento do editor, layouts de janela, trechos de código IntelliSense e opções da caixa de diálogo. Os procedimentos neste laboratório descrevem as ações necessárias para realizar uma determinada tarefa no Visual Studio ao usar o **configurações gerais de desenvolvimento** coleção. Se você escolher uma coleção de configurações diferentes para seu ambiente de desenvolvimento, pode haver diferenças nas etapas que você deve levar em conta.
-
 
 <a id="Exercise1"></a>
 ### <a name="exercise-1-using-entity-framework-migrations"></a>Exercício 1: Usando as migrações do Entity Framework
@@ -135,7 +131,7 @@ Nesta tarefa, você passará pelas etapas de habilitação **Entity Framework Co
 
     > [!NOTE]
     > Este comando adiciona uma **migrações** pasta ao projeto de Geek Quiz que contém um arquivo chamado **Configuration.cs**. O **configuração** classe permite que você configurar o comportamento de migrações para o seu contexto.
-5. Com as migrações habilitadas, você precisará atualizar o **Configuration** classe para popular o banco de dados com os dados iniciais que **Geek Quiz** requer. Sob **migrações**, substitua o **Configuration.cs** arquivo com aquele localizado na **Source\Assets** pasta deste laboratório.
+5. Com as migrações habilitadas, você precisará atualizar o **Configuration** classe para popular o banco de dados com os dados iniciais que **Pau teste** requer. Sob **migrações**, substitua o **Configuration.cs** arquivo com aquele localizado na **Source\Assets** pasta deste laboratório.
 
     > [!NOTE]
     > Uma vez que **migrações** chamará o **semente** método com cada atualização do banco de dados, você precisa ter certeza de que os registros não são duplicados no banco de dados. O **AddOrUpdate** método ajudará a evitar dados duplicados.
@@ -249,7 +245,6 @@ Neste exercício, você implantará o aplicativo **Geek Quiz** ao ambiente de pr
 
 > [!NOTE]
 > Para habilitar a publicação em etapas, o aplicativo web deve estar no **o modo padrão**. Observe que encargos adicionais serão gerados se você alterar o seu aplicativo web para o modo padrão. Para obter mais informações sobre preços, consulte [preços do serviço de aplicativo](https://azure.microsoft.com/pricing/details/app-service/).
-
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-a-web-app-in-azure-app-service"></a>Tarefa 1 – criar um aplicativo Web no serviço de aplicativo do Azure
@@ -730,7 +725,6 @@ Essa tarefa, você usará **Internet Explorer** para procurar o aplicativo **Gee
 
 > [!NOTE]
 > Este exercício é opcional, porque ele requer suporte para a carga da Web &amp; que está disponível somente para o teste de desempenho **Visual Studio 2013 Ultimate Edition**. Para obter mais informações sobre recursos específicos do Visual Studio 2013, comparar versões [aqui](https://www.microsoft.com/visualstudio/eng/products/compare).
-
 
 **Aplicativos de Web do serviço de aplicativo do Azure** fornece o recurso de dimensionamento automático para aplicativos web em execução **o modo padrão**. Dimensionamento automático permite que o Azure dimensione automaticamente a contagem de instâncias do aplicativo web, dependendo da carga. Quando o dimensionamento automático está habilitado, o Azure verifica a CPU do seu aplicativo web uma vez a cada cinco minutos e adiciona instâncias conforme necessário nesse ponto no tempo. Se o uso da CPU for baixo, Azure removerá instâncias de uma vez a cada duas horas para garantir que o desempenho do seu aplicativo web não está degradado.
 

@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: fbe618acfc70711933996f97657a4326d389b3dd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 54bfa40a7d853e29c42512ba375271587fb6f565
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59411235"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118838"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Design para resistir a falhas (Criando aplicativos de nuvem do mundo Real com o Azure)
 
@@ -22,7 +22,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
-
 
 Uma das coisas que você precisa pensar quando você compilar qualquer tipo de aplicativo, mas especialmente um que será executado na nuvem em que muitas pessoas usarão, é como projetar o aplicativo para que ele normalmente pode lidar com falhas e continuar a fornecer o valor máximo é possível. Dada a tempo suficiente, as coisas vão dar errado em qualquer ambiente ou em qualquer sistema de software. Como o seu aplicativo lida com essas situações determina como aborrecida obterá seus clientes e o tempo gasto analisando e correção de problemas.
 

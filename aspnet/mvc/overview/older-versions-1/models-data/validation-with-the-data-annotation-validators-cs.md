@@ -8,12 +8,12 @@ ms.date: 05/29/2009
 ms.assetid: 7ca8013e-9dfc-4e33-8336-cdccfd5f9414
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/validation-with-the-data-annotation-validators-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 300fc9f7e82fe8201b083de9e740e1620f5d09b9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e154384c08adf0c14920afff85e983a67b41707c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411807"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122295"
 ---
 # <a name="validation-with-the-data-annotation-validators-c"></a>Validação com os validadores de anotação de dados (C#)
 
@@ -21,14 +21,11 @@ por [Microsoft](https://github.com/microsoft)
 
 > Aproveite o associador de modelo de anotação de dados para executar a validação dentro de um aplicativo ASP.NET MVC. Saiba como usar os diferentes tipos de atributos de validador e trabalhar com eles no Microsoft Entity Framework.
 
-
 Neste tutorial, você aprenderá como usar os validadores de anotação de dados para executar a validação em um aplicativo ASP.NET MVC. A vantagem de usar os validadores de anotação de dados é que eles permitem que você executar a validação simplesmente adicionando um ou mais atributos – como exigida ou o atributo StringLength – para uma propriedade de classe.
 
 Antes de usar os validadores de anotação de dados, você deve baixar o associador de modelo de anotações de dados. Você pode baixar a amostra de associador de modelo de anotações de dados do site do CodePlex clicando [aqui](http://aspnet.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=24471).
 
-
 É importante entender que o associador de modelo de anotações de dados não é uma parte oficial da Microsoft ASP.NET MVC framework. Embora o associador de modelo de anotações de dados foi criado pela equipe do Microsoft ASP.NET MVC, a Microsoft não oferece suporte oficial do produto para o associador de modelo de anotações de dados descrito e usado neste tutorial.
-
 
 ## <a name="using-the-data-annotation-model-binder"></a>Usando o associador de modelo de anotação de dados
 
@@ -40,9 +37,7 @@ Para usar o associador de modelo de anotações de dados em um aplicativo ASP.NE
 
 Selecione o assembly Microsoft.Web.Mvc.DataAnnotations.dll e o assembly de unirem às e clique o **Okey** botão.
 
-
 Você não pode usar o assembly de unirem às incluído com o .NET Framework Service Pack 1 com o associador de modelo de anotações de dados. Você deve usar a versão do assembly unirem às incluído no download de amostra de associador de modelo de anotações de dados.
-
 
 Por fim, você precisa registrar o associador de modelo de DataAnnotations no arquivo global. asax. Adicione a seguinte linha de código para o aplicativo\_manipulador de eventos Start () para que o aplicativo\_método Start () tem esta aparência:
 
@@ -64,7 +59,6 @@ Quando você usa o associador de modelo de anotações de dados, você use atrib
 > 
 > Se suas necessidades de validação não são atendidas por qualquer um dos validadores padrão, em seguida, você sempre terá a opção de criação de um atributo de validador personalizado herdando de um novo atributo de validador de atributo de validação de base.
 
-
 A classe de produto na **listagem 1** ilustra como usar esses atributos de validador. As propriedades de nome, descrição e UnitPrice são marcadas conforme necessário. A propriedade de nome deve ter um comprimento de cadeia de caracteres que é menor que 10 caracteres. Por fim, a propriedade UnitPrice deve corresponder a um padrão de expressão regular que representa um valor de moeda.
 
 [!code-csharp[Main](validation-with-the-data-annotation-validators-cs/samples/sample2.cs)]
@@ -76,7 +70,6 @@ A classe Product ilustra como usar um atributo adicional: o atributo DisplayName
 > [!NOTE] 
 > 
 > Se você quiser personalizar completamente a mensagem de erro exibida por um validador pode atribuir uma mensagem de erro personalizado à propriedade de ErrorMessage do validador como este: `<Required(ErrorMessage:="This field needs a value!")>`
-
 
 Você pode usar a classe de produto na **listagem 1** com a ação de controlador de Create () em **listagem 2**. Esta ação do controlador exibe novamente a exibição criar quando o estado do modelo contém erros.
 
@@ -97,7 +90,6 @@ Por fim, você pode criar o modo de exibição **listagem 3** clicando duas veze
 > [!NOTE] 
 > 
 > Remover o campo de Id do formulário Criar gerado pelo **adicionar exibição** opção de menu. Como o campo de Id corresponde a uma coluna de identidade, você não deseja permitir que os usuários a inserir um valor para esse campo.
-
 
 Se você envia o formulário para a criação de um produto e você não inserir valores para os campos obrigatórios, então as mensagens de erro de validação no **Figura 3** são exibidos.
 
@@ -138,7 +130,6 @@ Os atributos de validação são aplicados às propriedades da classe MovieMetaD
 > [!NOTE] 
 > 
 > Observe que as propriedades de proxy na classe MovieMetaData não precisam representar os mesmos tipos de propriedades correspondentes na classe de filme. Por exemplo, a propriedade de diretor é uma propriedade de cadeia de caracteres na classe de filme e uma propriedade de objeto na classe MovieMetaData.
-
 
 A página no **Figura 6** ilustra as mensagens de erro retornadas quando você insere valores inválidos para as propriedades do filme.
 

@@ -8,12 +8,12 @@ ms.date: 02/21/2014
 ms.assetid: 03c342f9-b35c-4d7c-b9ed-cd9aaaffedb6
 msc.legacyurl: /web-pages/overview/getting-started/13-adding-social-networking-to-your-web-site
 msc.type: authoredcontent
-ms.openlocfilehash: 19ef447659f2edb75089f39888a6e98c801eb430
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1637464b0473bba8133acbbf8918d92b4f552701
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59415746"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114485"
 ---
 # <a name="adding-social-networking-to-aspnet-web-pages-razor-sites"></a>Adicionando rede Social para páginas da Web ASP.NET (Razor) Sites
 
@@ -38,7 +38,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 >   
 > 
 > Este tutorial também funciona com 3 de páginas da Web do ASP.NET, exceto para as partes que usam a biblioteca de auxiliar de Web do ASP.NET.
-
 
 <a id="Linking_Your_Website"></a>
 ## <a name="linking-your-website-on-social-networking-sites"></a>Vinculando seu site em Sites de rede Social

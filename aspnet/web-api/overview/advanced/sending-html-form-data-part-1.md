@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 585351c4-809a-4bf5-bcbe-35d624f565fe
 msc.legacyurl: /web-api/overview/advanced/sending-html-form-data-part-1
 msc.type: authoredcontent
-ms.openlocfilehash: fb0309af11910125943737ebb721b356b7bd08bc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7243069dbd8051b1374ed6e0112c273b8fe26f61
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418294"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115467"
 ---
 # <a name="sending-html-form-data-in-aspnet-web-api-form-urlencoded-data"></a>Enviando dados de formulário HTML na API Web ASP.NET: Dados de formulário urlencoded
 
@@ -31,7 +31,6 @@ Este artigo mostra como publicar dados de formulário urlencoded para um control
 
 > [!NOTE]
 > [Baixe o projeto concluído](https://code.msdn.microsoft.com/ASPNET-Web-API-Sending-a6f9d007).
-
 
 <a id="overview_of_html_forms"></a>
 ## <a name="overview-of-html-forms"></a>Visão geral de formulários HTML
@@ -62,7 +61,6 @@ Aqui está um controlador de API da Web que aceita um `Update` objeto por meio d
 
 > [!NOTE]
 > Este controlador usa [roteamento com base na ação](../web-api-routing-and-actions/routing-in-aspnet-web-api.md#routing_by_action_name), portanto, é o modelo de rota &quot;api / {controller} / {action} / {id}&quot;. O cliente irá postar os dados a serem &quot;/api/updates/complex&quot;.
-
 
 Agora vamos escrever um formulário HTML para os usuários enviem uma atualização de status.
 
@@ -101,7 +99,6 @@ Nas seções anteriores, enviamos um tipo complexo, que a API Web desserializada
 > [!NOTE]
 > Antes de enviar um tipo simples, considere a possibilidade de encapsular o valor em um tipo complexo em vez disso. Isso lhe oferece os benefícios da validação do modelo no lado do servidor e torna mais fácil de estender o modelo, se necessário.
 
-
 As etapas básicas para enviar um tipo simples são os mesmos, mas há duas diferenças sutis. Primeiro, no controlador, é necessário decorar o nome do parâmetro com o **FromBody** atributo.
 
 [!code-csharp[Main](sending-html-form-data-part-1/samples/sample7.cs?highlight=3)]
@@ -110,7 +107,6 @@ Por padrão, a API da Web tenta obter tipos simples do URI da solicitação. O *
 
 > [!NOTE]
 > API da Web lê o corpo da resposta no máximo uma vez, apenas um parâmetro de uma ação pode vir de corpo da solicitação. Se você precisar obter vários valores do corpo da solicitação, defina um tipo complexo.
-
 
 Em segundo lugar, o cliente precisa enviar o valor com o seguinte formato:
 

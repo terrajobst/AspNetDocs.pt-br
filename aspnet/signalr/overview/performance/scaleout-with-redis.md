@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 6ecd08c1-e364-4cd7-ad4c-806521911585
 msc.legacyurl: /signalr/overview/performance/scaleout-with-redis
 msc.type: authoredcontent
-ms.openlocfilehash: 78efe409ab59df17ae71c26d4e280cc9971a64d2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 58a7affa1769523955adc76455a1c33be6f49751
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393243"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114307"
 ---
 # <a name="signalr-scaleout-with-redis"></a>Expansão do SignalR com Redis
 
@@ -38,7 +38,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 >
 > Deixe comentários sobre como você gostou neste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
 
-
 Neste tutorial, você usará [Redis](http://redis.io/) para distribuir mensagens através de um aplicativo de SignalR é implantado em duas instâncias separadas do IIS.
 
 O redis é um repositório de chave-valor na memória. Ele também dá suporte a um sistema de mensagens com um modelo de publicação/assinatura. O backplane SignalR Redis usa o recurso de publicação/assinatura para encaminhar mensagens para outros servidores.
@@ -57,7 +56,6 @@ Embora este tutorial usa a implementação do Redis oficial, há também uma [po
 > [!NOTE]
 >
 > Expansão do SignalR com Redis não oferece suporte a clusters do Redis.
-
 
 ## <a name="overview"></a>Visão geral
 
