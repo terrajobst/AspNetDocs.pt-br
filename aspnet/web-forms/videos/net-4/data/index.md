@@ -8,16 +8,15 @@ ms.date: 11/14/2011
 ms.assetid: fdc32a00-aab5-458b-8303-67147cbd9277
 msc.legacyurl: /web-forms/videos/net-4/data
 msc.type: chapter
-ms.openlocfilehash: ccd558f7777b1398bf1615ebbe7f18a82bc65985
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7a1e7be9fdce7516830d8f2504a63f34ae6609dd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408323"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128554"
 ---
-# <a name="data"></a><span data-ttu-id="93ede-103">Dados</span><span class="sxs-lookup"><span data-stu-id="93ede-103">Data</span></span>
+# <a name="data"></a><span data-ttu-id="ff118-103">Dados</span><span class="sxs-lookup"><span data-stu-id="ff118-103">Data</span></span>
 
-> <span data-ttu-id="93ede-104">Este vídeo mostra os novos recursos para controles de dados do ASP.NET 4.</span><span class="sxs-lookup"><span data-stu-id="93ede-104">This video shows you new features for ASP.NET 4 data controls.</span></span>
+> <span data-ttu-id="ff118-104">Este vídeo mostra os novos recursos para controles de dados do ASP.NET 4.</span><span class="sxs-lookup"><span data-stu-id="ff118-104">This video shows you new features for ASP.NET 4 data controls.</span></span>
 
-
-- [<span data-ttu-id="93ede-105">Seleção de linha de GridView persistente</span><span class="sxs-lookup"><span data-stu-id="93ede-105">Persistent GridView Row Selection</span></span>](aspnet-4-quick-hit-persistent-gridview-row-selection.md)
+- [<span data-ttu-id="ff118-105">Seleção de linha de GridView persistente</span><span class="sxs-lookup"><span data-stu-id="ff118-105">Persistent GridView Row Selection</span></span>](aspnet-4-quick-hit-persistent-gridview-row-selection.md)
