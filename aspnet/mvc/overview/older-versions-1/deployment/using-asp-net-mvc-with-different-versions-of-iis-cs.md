@@ -8,19 +8,18 @@ ms.date: 08/19/2008
 ms.assetid: b0cf4a34-2c1d-4717-bb54-ff029e722990
 msc.legacyurl: /mvc/overview/older-versions-1/deployment/using-asp-net-mvc-with-different-versions-of-iis-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 0ca34f670202a35c627a514d3394fa430f5d8f26
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3b0a9509c0600f3598fd1218a7b383430548d4c0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396337"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123234"
 ---
 # <a name="using-aspnet-mvc-with-different-versions-of-iis-c"></a>Uso do ASP.NET MVC com diferentes versões de IIS (C#)
 
 por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, você aprenderá como usar o ASP.NET MVC e o roteamento de URL, com diferentes versões dos serviços de informações da Internet. Você aprenderá as diferentes estratégias para usar o ASP.NET MVC com o IIS 7.0 (modo clássico), o IIS 6.0 e versões anteriores do IIS.
-
 
 A estrutura ASP.NET MVC depende do roteamento do ASP.NET para rotear solicitações de navegador às ações do controlador. Para tirar proveito do roteamento do ASP.NET, você talvez precise executar etapas de configuração adicionais em seu servidor web. Tudo depende da versão dos serviços de informações da Internet (IIS) e o modo para seu aplicativo de processamento de solicitação.
 

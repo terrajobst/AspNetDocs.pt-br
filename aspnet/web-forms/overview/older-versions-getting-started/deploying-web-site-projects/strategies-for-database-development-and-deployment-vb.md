@@ -8,12 +8,12 @@ ms.date: 04/23/2009
 ms.assetid: 07b8905d-78ac-4252-97fb-8675b3fb0bbf
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb
 msc.type: authoredcontent
-ms.openlocfilehash: afd287836337d0f9411daac805c3e9bcbb2dbadb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 27a5ceda5f9b5227e26036c5405612dcbc15b48e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385066"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130246"
 ---
 # <a name="strategies-for-database-development-and-deployment-vb"></a>Estratégias de desenvolvimento e implantação de banco de dados (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar PDF](http://download.microsoft.com/download/C/3/9/C391A649-B357-4A7B-BAA4-48C96871FEA6/aspnet_tutorial10_DBDevel_vb.pdf)
 
 > Ao implantar um aplicativo controlado por dados pela primeira vez você cegamente pode copiar o banco de dados no ambiente de desenvolvimento para o ambiente de produção. Mas, executando um cego cópia nas próximas implantações substituirá todos os dados inseridos no banco de dados de produção. Em vez disso, implantar um banco de dados envolve a aplicação das alterações feitas no banco de dados de desenvolvimento, desde a última implantação no banco de dados de produção. Este tutorial examina esses desafios e oferece várias estratégias para ajudá-lo com o chronicling e aplicando as alterações feitas no banco de dados desde a última implantação.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -54,13 +53,11 @@ Há uma variedade de ferramentas à sua disposição para gerar um script SQL da
 
 <a id="0.8_table01"></a>
 
-
 | **Data da alteração** | **Alterar detalhes** |
 | --- | --- |
 | 2009-02-03: | Coluna adicionada `DepartmentID` (`int`, NOT NULL) para o `Employees` tabela. Adicionada uma restrição de chave estrangeira da `Departments.DepartmentID` para `Employees.DepartmentID`. |
 | 2009-02-05: | A coluna removida `TotalWeight` do `Orders` tabela. Associado a dados já capturados no `OrderDetails` registros. |
 | 2009-02-12: | Criado o `ProductCategories` tabela. Há três colunas: `ProductCategoryID` (`int`, `IDENTITY`, `NOT NULL`), `CategoryName` (`nvarchar(50)`, `NOT NULL`), e `Active` (`bit`, `NOT NULL`). Adicionada uma restrição primary key para `ProductCategoryID`e o valor padrão de 1 a `Active`. |
-
 
 Há várias desvantagens nessa abordagem. Para começar, não há nenhuma esperança para automação. A qualquer momento essas alterações precisam ser aplicados a um banco de dados -, como quando o aplicativo é implantado – um desenvolvedor deve implementar manualmente cada alteração, um de cada vez. Além disso, se você precisar reconstruir uma versão específica do banco de dados da linha de base usando o log de alterações, fazendo assim levará mais tempo à medida que aumenta o tamanho do log. Outra desvantagem para esse método é que a clareza e o nível de detalhes de cada entrada de log de alteração é da esquerda para a pessoa que registra a alteração. Em uma equipe com vários desenvolvedores alguns podem tornar as entradas mais detalhadas, mais legíveis ou mais precisas que outros. Além disso, os erros de digitação e outros erros de entrada de dados relacionados a humanos são possíveis.
 
@@ -70,7 +67,6 @@ Manter seu log de alterações em um texto é, sem dúvida, não muito sofistica
 
 > [!NOTE]
 > Enquanto as informações no log de alterações são, tecnicamente, só é necessário até o momento da implantação, é recomendável manter um histórico das alterações. Mas, em vez de manter um único, crescendo cada arquivo de log de alteração, considere ter um arquivo de log de alteração diferente para cada versão do banco de dados. Normalmente você desejará versão do banco de dados cada vez que ele é implantado. Ao manter um log dos logs de alteração pode, a partir da linha de base, recriar qualquer versão do banco de dados executando os scripts de log de alteração a partir da versão 1 e continuando até que a versão que você precise recriar.
-
 
 ## <a name="recording-the-sql-change-statements"></a>Gravando as instruções de alteração SQL
 
@@ -95,18 +91,14 @@ Há uma variedade de ferramentas de comparação do banco de dados de terceiros 
 > [!NOTE]
 > No momento da redação deste artigo, a versão atual do SQL Compare era versão 7.1, com a edição Standard de US $395 de custos. Você pode acompanhar baixando uma avaliação gratuita de 14 dias.
 
-
 Quando a comparação do SQL inicia a caixa de diálogo de projetos de comparação é aberta, mostrando os projetos de SQL Compare salvos. Crie um novo projeto. Isso inicia o Assistente de configuração de projeto, que solicita informações sobre os bancos de dados a ser comparado (veja a Figura 1). Insira as informações para os bancos de dados de desenvolvimento e produção de ambiente.
-
 
 [![Comparar o desenvolvimento e os bancos de dados de produção](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
 
 **Figura 1**: Comparar o desenvolvimento e os bancos de dados de produção ([clique para exibir a imagem em tamanho normal](strategies-for-database-development-and-deployment-vb/_static/image3.jpg))
 
-
 > [!NOTE]
 > Se seu banco de dados do ambiente de desenvolvimento é um arquivo de banco de dados do SQL Express Edition no `App_Data` pasta do seu site, você precisará registrar o banco de dados no servidor de banco de dados do SQL Server Express para selecioná-lo na caixa de diálogo mostrada na Figura 1. A maneira mais fácil de fazer isso é abrir o SQL Server Management Studio (SSMS), conecte-se ao servidor de banco de dados SQL Server Express e anexar o banco de dados. Se você não tiver o SSMS instalado em seu computador, você pode baixar e instalar a versão gratuita [ *versão do SQL Server 2008 Management Studio Basic*](https://www.microsoft.com/downloads/details.aspx?FamilyId=7522A683-4CB2-454E-B908-E805E9BD4E28&amp;displaylang=en).
-
 
 Além de selecionar os bancos de dados a ser comparado, você também pode especificar uma variedade de configurações na guia Opções de comparação. Uma opção que você talvez queira ativar é os "Ignorar restrição e índice nomes". Lembre-se de que o tutorial anterior, adicionamos que o aplicativo de serviços de objetos de banco de dados para os bancos de dados de desenvolvimento e produção. Se você tiver usado o `aspnet_regsql.exe` ferramenta para criar esses objetos no banco de dados de produção, em seguida, você descobrirá que a chave primária e nomes de restrição exclusiva diferem entre os bancos de dados de desenvolvimento e produção. Consequentemente, a comparação do SQL sinalizará todas as tabelas dos serviços de aplicativo como diferentes. Você pode deixar os "Ignorar restrição e índice nomes" desmarcada e sincronizar os nomes de restrição ou instruir a comparação do SQL para ignorar essas diferenças.
 
@@ -115,11 +107,9 @@ Depois de selecionar os bancos de dados compare (e revisar as opções de compar
 > [!NOTE]
 > As alterações do modelo de dados feitas neste tutorial foram feitas para ilustrar o uso de uma ferramenta de comparação do banco de dados. Você não encontrará essas alterações no banco de dados em tutoriais futuros.
 
-
 [![Comparação SQL lista as diferenças entre o desenvolvimento e os bancos de dados de produção](strategies-for-database-development-and-deployment-vb/_static/image5.jpg)](strategies-for-database-development-and-deployment-vb/_static/image4.jpg)
 
 **Figura 2**: Comparação SQL lista as diferenças entre o desenvolvimento e os bancos de dados de produção ([clique para exibir a imagem em tamanho normal](strategies-for-database-development-and-deployment-vb/_static/image6.jpg))
-
 
 Comparação do SQL divide os objetos de banco de dados em grupos, rapidamente mostrando a você quais objetos existem em ambos os bancos de dados, mas são diferente, que existem objetos em um banco de dados, mas não a outra e quais objetos são idênticos. Como você pode ver, há dois objetos que existem em ambos os bancos de dados, mas são diferentes: a `Authors` tabela, que tinha uma coluna adicionada, e o `Books` tabela, que tinha um removido. Há um objeto que existe apenas no desenvolvimento banco de dados, ou seja, recém-criado `Ratings` tabela. E há 117 objetos que são idênticos em ambos os bancos de dados.
 
@@ -127,17 +117,14 @@ Selecionando um objeto de banco de dados exibe a janela de diferenças de SQL, q
 
 Depois de revisar as diferenças e selecionar quais objetos você deseja sincronizar, a próxima etapa é gerar comandos SQL necessários para atualizar o esquema de s de banco de dados de produção para coincidir com o banco de dados de desenvolvimento. Isso é feito através do Assistente de sincronização. O Assistente de sincronização confirma que objetos para sincronizar e resume a ação de plano (consulte a Figura 3). Você pode sincronizar os bancos de dados imediatamente ou gerar um script com os comandos SQL que pode ser executado em seu tempo livre.
 
-
 [![Use o Assistente de sincronização para sincronizar seus esquemas de bancos de dados](strategies-for-database-development-and-deployment-vb/_static/image8.jpg)](strategies-for-database-development-and-deployment-vb/_static/image7.jpg)
 
 **Figura 3**: Use o Assistente de sincronização para sincronizar seus esquemas de bancos de dados ([clique para exibir a imagem em tamanho normal](strategies-for-database-development-and-deployment-vb/_static/image9.jpg))
-
 
 Ferramentas de comparação do banco de dados, como Red Gate Software s SQL Compare tornar aplicando as alterações no esquema de banco de dados de desenvolvimento para o banco de dados de produção tão fácil quanto apontar e clicar.
 
 > [!NOTE]
 > Comparação do SQL compara e sincroniza dois bancos de dados *esquemas*. Infelizmente, ele não comparar e sincronizar os dados nas tabelas de dois bancos de dados. Red Gate Software oferece um produto chamado [ *SQL Data Compare* ](http://www.red-gate.com/products/SQL_Data_Compare/) que compara e sincroniza os dados entre dois bancos de dados, mas ele é um produto separado do SQL Compare e outro US $395 de custos.
-
 
 ## <a name="taking-the-application-offline-during-deployment"></a>Colocar o aplicativo Offline durante a implantação
 

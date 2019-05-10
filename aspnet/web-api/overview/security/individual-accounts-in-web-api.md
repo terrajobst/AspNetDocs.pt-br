@@ -8,12 +8,12 @@ ms.date: 10/15/2014
 ms.assetid: 92c84846-f0ea-4b5e-94b6-5004874eb060
 msc.legacyurl: /web-api/overview/security/individual-accounts-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 29c3670ad7ab93acb0be878e5bd961d0ea446eee
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7492c4aa4c2a0a8aeed64c3462bda8fc51f35a6b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396220"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134306"
 ---
 # <a name="secure-a-web-api-with-individual-accounts-and-local-login-in-aspnet-web-api-22"></a>Proteger uma API Web com contas individuais e logon Local na API Web ASP.NET 2.2
 
@@ -29,7 +29,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > - [Visual Studio 2013 Atualização 3](https://www.microsoft.com/visualstudio/eng/2013-downloads)
 > - [API Web 2.2](../releases/whats-new-in-aspnet-web-api-22.md)
 > - [Identidade do ASP.NET 2.1](../../../identity/index.md)
-
 
 No Visual Studio 2013, o modelo de projeto de API Web fornece três opções para autenticação:
 
@@ -239,7 +238,6 @@ O **SuppressDefaultHostAuthentication** método informa a API da Web para ignora
 
 > [!NOTE]
 > Em particular, a parte MVC do seu aplicativo pode usar a autenticação de formulários, que armazena as credenciais em um cookie. Autenticação baseada em cookie requer o uso de tokens antifalsificação, para evitar ataques de CSRF. Isso é um problema para APIs web, porque não há nenhuma maneira conveniente para a API da web para enviar o token antifalsificação ao cliente. (Para obter mais informações sobre esse problema, consulte [impedindo ataques de CSRF na API Web](preventing-cross-site-request-forgery-csrf-attacks.md).) Chamando **SuppressDefaultHostAuthentication** garante que a API da Web não está vulnerável a ataques de CSRF de credenciais armazenadas em cookies.
-
 
 Quando o cliente solicita um recurso protegido, aqui está o que acontece no pipeline da API Web:
 

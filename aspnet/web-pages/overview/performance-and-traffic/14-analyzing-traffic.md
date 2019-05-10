@@ -8,12 +8,12 @@ ms.date: 02/17/2014
 ms.assetid: 360bc6e1-84c5-4b8e-a84c-ea48ab807aa4
 msc.legacyurl: /web-pages/overview/performance-and-traffic/14-analyzing-traffic
 msc.type: authoredcontent
-ms.openlocfilehash: a99ed5cc8875ef9f39234e3f394b46b5782d0bc1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 095a5572c755446e0661c052ca9de82d636429fd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390214"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134591"
 ---
 # <a name="tracking-visitor-information-analytics-for-an-aspnet-web-pages-razor-site"></a>Controlando as informações de visitante (análise) para um Site do ASP.NET Web Pages (Razor)
 
@@ -35,7 +35,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Páginas da Web do ASP.NET (Razor) 2
 > - ASP.NET Web Helpers Library (pacote do NuGet)
-
 
 Análise é um termo geral para a tecnologia que mede o tráfego em seu site para que você possa entender como as pessoas usam o site. Muitos serviços de análise estão disponíveis, incluindo os serviços do Google, Yahoo, StatCounter e outras pessoas.
 
@@ -60,7 +59,6 @@ Neste procedimento, você criará uma página de layout que usa o `GetGoogleHtml
 
 > [!NOTE]
 > Quando você cria uma conta da análise, você pode registrar a URL do site que você deseja acompanhar. Se você estiver testando tudo em seu computador local, você não rastreando tráfego real (somente o tráfego é você), portanto, não será capaz de registro e exibir estatísticas de site. Mas esse procedimento mostra como adicionar um auxiliar de análise para uma página. Quando você publica seu site, o site ao vivo enviará informações para seu provedor de análise.
-
 
 1. Adicionar o ASP.NET Web Helpers Library ao seu site, conforme descrito em [auxiliares de instalação em um Site de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=252372), se você ainda não tenha adicionado.
 2. Criar uma conta com o Google Analytics e registre o nome da conta.

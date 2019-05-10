@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: cc4c2def-e88c-4456-ae8b-a6ae0ff8cc2d
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-using-javascript-code-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a6b433f187495b8dcd874bcab8ddc607e6de61c9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 58084a65a2e34534b89daabdd74d8d7b19f6b4ae
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422519"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65127005"
 ---
 # <a name="dynamically-populating-a-control-using-javascript-code-c"></a>Preenchimento dinâmico de um controle com código de JavaScript (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/d/8/f/d8f2f6f9-1b7c-46ad-9252-e1fc81bdea3e/dynamicpopulate1.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dynamicpopulate1CS.pdf)
 
 > O controle de DynamicPopulate no ASP.NET AJAX Control Toolkit chama um serviço web (ou o método de página) e preenche o valor resultante em um controle de destino na página, sem uma atualização de página. Também é possível disparar a população usando código personalizado de JavaScript do lado do cliente.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -53,7 +52,6 @@ Para tornar o exemplo um pouco mais flexível, o usuário pode escolher entre v�
 [!code-aspx[Main](dynamically-populating-a-control-using-javascript-code-cs/samples/sample5.aspx)]
 
 Observe que dentro do contexto de um botão de opção, a expressão JavaScript `this.value` refere-se ao valor do botão atual, o que vem a ser exatamente as mesmas informações de `getDate()` método pode trabalhar com.
-
 
 [![Um clique no botão recupera a data do servidor, no formato especificado](dynamically-populating-a-control-using-javascript-code-cs/_static/image2.png)](dynamically-populating-a-control-using-javascript-code-cs/_static/image1.png)
 

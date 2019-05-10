@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 669367cf-8e30-4eb6-821d-10a7d9bb906c
 msc.legacyurl: /mvc/overview/getting-started/database-first-development/generating-views
 msc.type: authoredcontent
-ms.openlocfilehash: 7a56c0f9197a99427bcde6103ebc69d245e8ce63
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: e71e13e22d8a72e1699cfc70d4d93af603edba5b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57025753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121223"
 ---
 # <a name="tutorial-generate-views-for-ef-database-first-with-aspnet-mvc-app"></a>Tutorial: Gerar exibições para Database First do EF com o aplicativo ASP.NET MVC
 
@@ -46,12 +46,11 @@ Selecione o **controlador MVC 5 com modos de exibição usando o Entity Framewor
 
 Selecione **aluno (ContosoSite.Models)** para a classe de modelo e selecione o **ContosoUniversityDataEntities (ContosoSite.Models)** para a classe de contexto. Mantenha o nome do controlador como **StudentsController**.
 
-Clique em **Adicionar**.
+ Clique em **Adicionar**.
 
 Se você receber um erro, pode ser porque você não tiver criado o projeto na seção anterior. Nesse caso, tente compilar o projeto e, em seguida, adicione o item com Scaffold novamente.
 
 Após a conclusão do processo de geração de código, você verá um novo controlador e exibições em seu projeto **controladores** e **exibições** > **alunos** pastas .
-
 
 Execute as mesmas etapas novamente, mas adicionar um scaffold para o **registro** classe. Quando terminar, você tem um **EnrollmentsController.cs** arquivo e uma pasta sob **exibições** denominada **registros** com as exibições de criar, excluir, detalhes, editar e índice.
 

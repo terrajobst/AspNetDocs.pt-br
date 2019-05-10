@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: f1b0809e-8909-444e-b6bb-a5cd1dea3f72
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-7-add-ajax-functionality-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 34fce0bef5163ba0423ea00cf4b7507947c45c68
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 7c8eb3d3688674dd2c220b4bd1b5982f2610d0eb
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398066"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123835"
 ---
 # <a name="iteration-7--add-ajax-functionality-c"></a>Iteração #7 – adicionar funcionalidade do Ajax (c#)
 
@@ -22,7 +22,6 @@ por [Microsoft](https://github.com/microsoft)
 [Baixar o código](iteration-7-add-ajax-functionality-cs/_static/contactmanager_7_cs1.zip)
 
 > A sétima iteração, podemos melhorar a capacidade de resposta e o desempenho do nosso aplicativo, adicionando suporte para Ajax.
-
 
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (c#)
 
@@ -92,11 +91,9 @@ Adicione o seguinte JavaScript inclui dentro de &lt;head&gt; marca da sua págin
 
 Permitir que o s comece modificando nossa exibição de índice, de modo que apenas clicando em um grupo de contatos atualiza a região da exibição que exibe os contatos. A caixa vermelha na Figura 1 contém a região que queremos atualizar.
 
-
 [![Atualizar somente os contatos](iteration-7-add-ajax-functionality-cs/_static/image1.jpg)](iteration-7-add-ajax-functionality-cs/_static/image1.png)
 
 **Figura 01**: Atualizar somente os contatos ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-cs/_static/image2.png))
-
 
 A primeira etapa é separar a parte do modo de exibição que desejamos atualize de forma assíncrona em um parcial separado (controle de usuário do modo de exibição). A seção da exibição índice que exibe a tabela de contatos foi movida para parcial na listagem 1.
 
@@ -132,9 +129,7 @@ Observe que a ação Index () não precisa retornar a quantidade de dados quando
 
 Nossa exibição índice modificado funciona no caso de navegadores uplevel e de nível inferior. Se você clicar em um grupo de contatos e o navegador dá suporte a JavaScript, somente a região da exibição que contém a lista de contatos é atualizada. Se, por outro lado, o seu navegador não dá suporte a JavaScript, toda a exibição é atualizada.
 
-
 Nossa exibição atualizada do índice tem um problema. Quando você clica em um grupo de contatos, o grupo selecionado não é realçado. Como a lista de grupos é exibida fora da região que é atualizada durante uma solicitação Ajax, o grupo correto não obter realçado. Corrigiremos esse problema na próxima seção.
-
 
 ## <a name="adding-jquery-animation-effects"></a>A adição de efeitos de animação do jQuery
 
@@ -192,11 +187,9 @@ Quando um usuário pressiona o botão Avançar ou voltar do navegador, o evento 
 
 No momento, para excluir um contato, você precisa clicar no link excluir e, em seguida, clique no botão de exclusão exibido na página de confirmação de exclusão (veja a Figura 2). Isso parece muito de solicitações de página para fazer algo simples, como a exclusão de um registro de banco de dados.
 
-
 [![A página de confirmação de exclusão](iteration-7-add-ajax-functionality-cs/_static/image2.jpg)](iteration-7-add-ajax-functionality-cs/_static/image3.png)
 
 **Figura 02**: A página de confirmação de exclusão ([clique para exibir a imagem em tamanho normal](iteration-7-add-ajax-functionality-cs/_static/image4.png))
-
 
 É tentador para ignorar a página de confirmação de exclusão e excluir um contato diretamente da exibição índice. Você deve evitar essa tentação porque essa abordagem abre seu aplicativo para brechas de segurança. Em geral, don t deseja executar uma operação HTTP GET ao invocar uma ação que modifica o estado do seu aplicativo web. Quando executar um delete, que você deseja executar um HTTP POST, ou melhor ainda, uma operação HTTP DELETE.
 
@@ -213,7 +206,6 @@ O link de exclusão é renderizado com a seguinte chamada para o método Ajax.Im
 > [!NOTE] 
 > 
 > O Ajax.ImageActionLink() não é uma parte padrão da estrutura MVC do ASP.NET. O Ajax.ImageActionLink() é um método auxiliar personalizado incluído no projeto do Gerenciador de contatos.
-
 
 O parâmetro AjaxOptions tem duas propriedades. Em primeiro lugar, a propriedade confirmar é usada para exibir uma caixa de diálogo de confirmação de JavaScript do pop-up. Em segundo lugar, a propriedade HttpMethod é usada para executar uma operação HTTP DELETE.
 

@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: c76dbc35-a914-4ee3-919c-4f4d1fa05104
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update
 msc.type: authoredcontent
-ms.openlocfilehash: 6e66c03a4521f339f0ee9c7c0e7b8129f241113c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 36d1575808925de38b909d6816e46bb6cb69cf72
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379398"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134259"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação de uma atualização de código
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usando o Visual Studio 2012 ou Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -54,7 +53,7 @@ Antes de usar seus perfis de publicação para implantar em teste, preparação 
 
 1. Abra o **Publicar Web** assistente clicando com botão direito no projeto ContosoUniversity e clicando em **publicar**.
 2. Clique o **teste** perfil na **perfil** lista suspensa.
-3. Clique o **configurações** guia.
+3. Clique na guia **Configurações** .
 4. Sob **DefaultConnection** na **bancos de dados** seção, desmarque o **Atualizar banco de dados** caixa de seleção.
 5. Clique o **perfil** guia e, em seguida, clique no **preparo** perfil na **perfil** lista suspensa.
 6. Quando for perguntado se você deseja salvar as alterações feitas para o **teste** de perfil, clique em **Sim**.

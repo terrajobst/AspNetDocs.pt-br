@@ -8,12 +8,12 @@ ms.date: 07/11/2008
 ms.assetid: 3282df5e-516c-4972-8666-313828b90fb5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-content-page-from-the-master-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: a2b6d3a5ceb66c14a78b02182f49d76c72becbd4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 341724253e9149724ff988232b0e312897756f58
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413640"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134368"
 ---
 # <a name="interacting-with-the-content-page-from-the-master-page-c"></a>Interagir com a página de conteúdo através da página mestra (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/1/8/4/184e24fa-fcc8-47fa-ac99-4b6a52d41e97/ASPNET_MasterPages_Tutorial_07_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/e/b/4/eb4abb10-c416-4ba4-9899-32577715b1bd/ASPNET_MasterPages_Tutorial_07_CS.pdf)
 
 > Examina como chamar métodos, definir propriedades, etc. da página de conteúdo do código na página mestra.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -50,16 +49,13 @@ O restante deste tutorial implementa o exemplo descrito na introdução; ou seja
 
 Nossa tarefa prioritária é criar uma página de conteúdo que lista os produtos do banco de dados Northwind. (Adicionamos o banco de dados Northwind ao projeto no tutorial anterior, [ *interagindo com a página mestra através da página de conteúdo*](interacting-with-the-master-page-from-the-content-page-cs.md).) Comece adicionando uma nova página ASP.NET para o `~/Admin` pasta chamada `Products.aspx`, deixando de associá-lo para o `Site.master` página mestra. Figura 1 mostra o Gerenciador de soluções depois que esta página foi adicionada ao site.
 
-
 [![Adicionar uma nova página ASP.NET para a pasta Admin](interacting-with-the-content-page-from-the-master-page-cs/_static/image2.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image1.png)
 
 **Figura 01**: Adicione uma nova página ASP.NET para o `Admin` pasta ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image3.png))
 
-
 Lembre-se de que no [ *especificando o título, marcas Meta e outros cabeçalhos de HTML na página mestra* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) tutorial, criamos uma classe de página de base personalizada chamada `BasePage` que gera o título da página, se não for defina explicitamente. Vá para o `Products.aspx` de lógica da página de classe e fazer com que ele derivam `BasePage` (em vez do `System.Web.UI.Page`).
 
 Por fim, atualize o `Web.sitemap` arquivo para incluir uma entrada para esta lição. Adicione a seguinte marcação abaixo o `<siteMapNode>` para o conteúdo a lição de interação de página mestra:
-
 
 [!code-xml[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample1.xml)]
 
@@ -67,42 +63,32 @@ A adição deste `<siteMapNode>` elemento é refletido nas lições lista (veja 
 
 Retorne ao `Products.aspx`. No controle de conteúdo de `MainContent`, adicione um controle GridView e nomeie- `ProductsGrid`. Associar o GridView para um novo controle SqlDataSource chamado `ProductsDataSource`.
 
-
 [![Associar o GridView para um novo controle SqlDataSource](interacting-with-the-content-page-from-the-master-page-cs/_static/image5.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image4.png)
 
 **Figura 02**: Associar o GridView para um novo controle SqlDataSource ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image6.png))
 
-
 Configure o Assistente para que ele usa o banco de dados Northwind. Se você trabalhou com o tutorial anterior, você já deve ter uma cadeia de caracteres de conexão denominada `NorthwindConnectionString` em `Web.config`. Escolha essa cadeia de caracteres de conexão na lista suspensa, conforme mostrado na Figura 3.
-
 
 [![Configurar o SqlDataSource para usar o banco de dados Northwind](interacting-with-the-content-page-from-the-master-page-cs/_static/image8.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image7.png)
 
 **Figura 03**: Configurar o SqlDataSource para usar o banco de dados Northwind ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image9.png))
 
-
 Em seguida, especifique o controle de fonte de dados `SELECT` instrução escolhendo a tabela de produtos na lista suspensa e retornando o `ProductName` e `UnitPrice` colunas (veja a Figura 4). Clique em Avançar e em seguida Concluir para concluir o Assistente Configurar fonte de dados.
-
 
 [![Retornar os campos de UnitPrice e ProductName da tabela produtos](interacting-with-the-content-page-from-the-master-page-cs/_static/image11.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image10.png)
 
 **Figura 04**: Retornar o `ProductName` e `UnitPrice` campos das `Products` tabela ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image12.png))
 
-
 E isso é tudo! Depois de concluir o Assistente para o Visual Studio adiciona dois BoundFields ao GridView para espelhar os dois campos retornados pelo controle SqlDataSource. Marcação dos controles GridView e SqlDataSource segue. Figura 5 mostra os resultados quando exibidos por meio de um navegador.
 
-
 [!code-aspx[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample2.aspx)]
-
 
 [![Cada produto e seu preço está listado em GridView](interacting-with-the-content-page-from-the-master-page-cs/_static/image14.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image13.png)
 
 **Figura 05**: Cada produto e seu preço está listado no GridView ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image15.png))
 
-
 > [!NOTE]
 > Fique à vontade limpar a aparência de GridView. Algumas sugestões incluem o valor de UnitPrice exibido como uma moeda de formatação e o uso de fontes e cores de plano de fundo para melhorar a aparência da grade. Para obter mais informações sobre como exibir e formatar dados no ASP.NET, consulte a minha [trabalhando com a série de tutoriais de dados](../../data-access/index.md).
-
 
 ## <a name="step-2-adding-a-double-prices-button-to-the-master-page"></a>Etapa 2: Adicionando um botão de preços de Double para a página mestra
 
@@ -110,32 +96,25 @@ Nossa próxima tarefa é adicionar um controle da Web de botão para o mestre de
 
 Em seguida, adicione um controle SqlDataSource para a página mestra, nomeando- `DoublePricesDataSource`. Este SqlDataSource será usado para executar o `UPDATE` instrução duplicar todos os preços. Especificamente, precisamos definir seus `ConnectionString` e `UpdateCommand` propriedades para a cadeia de caracteres de conexão apropriado e `UPDATE` instrução. Em seguida, precisamos chamar deste controle SqlDataSource `Update` método quando o `DoublePrice` botão é clicado. Para definir a `ConnectionString` e `UpdateCommand` propriedades, selecione o controle SqlDataSource e, em seguida, vá para a janela de propriedades. O `ConnectionString` essas cadeias de caracteres de conexão já armazenadas em listas de propriedades `Web.config` em uma lista suspensa; escolha o `NorthwindConnectionString` opção conforme mostrado na Figura 6.
 
-
 [![Configurar o SqlDataSource para usar o NorthwindConnectionString](interacting-with-the-content-page-from-the-master-page-cs/_static/image17.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image16.png)
 
 **Figura 06**: Configurar o SqlDataSource para usar o `NorthwindConnectionString` ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image18.png))
 
-
 Para definir o `UpdateCommand` propriedade, localize a opção UpdateQuery na janela Propriedades. Essa propriedade, quando selecionado, exibe um botão com reticências; Clique neste botão para exibir a caixa de diálogo Editor de comando e parâmetro, mostrada na Figura 7. Digite o seguinte `UPDATE` instrução na caixa de texto da caixa de diálogo:
-
 
 [!code-sql[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample3.sql)]
 
 Essa instrução, quando executada, dobre o `UnitPrice` valor para cada registro no `Products` tabela.
 
-
 [![Definir propriedade de UpdateCommand do SqlDataSource](interacting-with-the-content-page-from-the-master-page-cs/_static/image20.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image19.png)
 
 **Figura 07**: Definir do SqlDataSource `UpdateCommand` propriedade ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image21.png))
 
-
 Depois de definir essas propriedades, a marcação declarativa de seu botão e SqlDataSource dos controles deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample4.aspx)]
 
 Tudo o que resta é chamar seu `Update` método quando o `DoublePrice` botão é clicado. Criar uma `Click` manipulador de eventos para o `DoublePrice` botão e adicione o seguinte código:
-
 
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample5.cs)]
 
@@ -157,26 +136,21 @@ O segundo parâmetro passado para um manipulador de eventos pode incluir informa
 > [!NOTE]
 > Para obter mais informações sobre como criar, gerando e manipulando eventos, consulte [eventos e delegados](https://msdn.microsoft.com/library/17sde2xt.aspx) e [representantes de eventos em inglês simples](http://www.codeproject.com/KB/cs/eventdelegates.aspx).
 
-
 Para definir um evento use a seguinte sintaxe:
-
 
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample6.cs)]
 
 Como precisamos apenas para a página de conteúdo de alerta quando o usuário clicou com o `DoublePrice` botão e não precisar passar ao longo de qualquer outra informação, podemos usar o delegado do evento `EventHandler`, que define um manipulador de eventos que aceita como seu segundo um objeto do tipo de parâmetro `System.EventArgs`. Para criar o evento na página mestra, adicione a seguinte linha de código à classe de code-behind da página mestra:
 
-
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample7.cs)]
 
 O código acima adiciona um evento público para a página mestra chamada `PricesDoubled`. Agora, precisamos gere este evento após os preços duplicou. Para elevar um evento use a seguinte sintaxe:
-
 
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample8.cs)]
 
 Em que *remetente* e *eventArgs* são os valores que você deseja passar para o manipulador de eventos do assinante.
 
 Atualizar o `DoublePrice` `Click` manipulador de eventos com o código a seguir:
-
 
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample9.cs)]
 
@@ -188,11 +162,9 @@ Neste momento a página mestra aciona seu `PricesDoubled` evento sempre que o `D
 
 Comece criando um manipulador de eventos chamado `Master_PricesDoubled`. Devido a como definimos os `PricesDoubled` evento na página mestra dois parâmetros de entrada do manipulador de eventos devem ser de tipos `Object` e `EventArgs`, respectivamente. Na chamada do manipulador de eventos do `ProductsGrid` do GridView `DataBind` método associar novamente os dados à grade.
 
-
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample10.cs)]
 
 O código para o manipulador de eventos está concluído, mas ainda não encontramos a página mestra na transmissão `PricesDoubled` eventos para este manipulador de eventos. O assinante conecta um evento para um manipulador de eventos por meio da sintaxe a seguir:
-
 
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample11.cs)]
 
@@ -201,7 +173,6 @@ O código para o manipulador de eventos está concluído, mas ainda não encontr
 Esse código de fiação de evento deve ser executado na primeira visita de página e postbacks subsequentes e deve ocorrer em um ponto do ciclo de vida de página anterior quando o evento pode ser gerado. Um bom momento para adicionar o código de fiação de evento está no estágio de PreInit, que ocorre muito cedo no ciclo de vida de página.
 
 Abra `~/Admin/Products.aspx` e crie um `Page_PreInit` manipulador de eventos:
-
 
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample12.cs)]
 
@@ -212,11 +183,9 @@ Para concluir esse código de fiação precisamos de uma referência de programa
 
 Vamos usar a segunda abordagem. Adicione o seguinte `@MasterType` diretiva na parte superior da marcação declarativa da página:
 
-
 [!code-aspx[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample13.aspx)]
 
 Em seguida, adicione o seguinte código de fiação de evento no `Page_PreInit` manipulador de eventos:
-
 
 [!code-csharp[Main](interacting-with-the-content-page-from-the-master-page-cs/samples/sample14.cs)]
 
@@ -224,16 +193,13 @@ Com esse código em vigor, o GridView na página de conteúdo é atualizado semp
 
 As figuras 8 e 9 ilustram esse comportamento. Figura 8 mostra a página quando visitado pela primeira vez. Observe que os valores de preço em ambos os `RecentProducts` GridView (na coluna esquerda da página mestra) e o `ProductsGrid` GridView (na página de conteúdo). Mostra a Figura 9 a mesma tela imediatamente após o `DoublePrice` botão foi clicado. Como você pode ver, os novos preços instantaneamente são refletidos em ambos os GridViews.
 
-
 [![Os valores de preço inicial](interacting-with-the-content-page-from-the-master-page-cs/_static/image23.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image22.png)
 
 **Figura 08**: Os valores iniciais de preço ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image24.png))
 
-
 [![Os preços Just-Doubled são exibidos no GridViews](interacting-with-the-content-page-from-the-master-page-cs/_static/image26.png)](interacting-with-the-content-page-from-the-master-page-cs/_static/image25.png)
 
 **Figura 09**: Os preços Just-Doubled são exibidos no GridViews ([clique para exibir a imagem em tamanho normal](interacting-with-the-content-page-from-the-master-page-cs/_static/image27.png))
-
 
 ## <a name="summary"></a>Resumo
 

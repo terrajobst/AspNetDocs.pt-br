@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: 3cb27b8a-354f-4332-bfe0-232b13bbf8aa
 msc.legacyurl: /whitepapers/denied-access-to-iis-directories
 msc.type: content
-ms.openlocfilehash: 789bf26df82d275c45e633de50c3cce1d82838b6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a3a53aa88abbe1bcaaea7d691406800c8f9b988b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59406620"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134551"
 ---
 # <a name="aspnet-denied-access-to-iis-directories"></a>Acesso negado do ASP.NET a diretórios do IIS
 
 > Este white paper descreve o que você deve fazer uma solicitação para seu aplicativo ASP.NET retorna o erro "acesso negado ao *Nomedodiretório* directory. Falha ao iniciar o monitoramento de alterações de diretório".
 > 
 > Aplica-se para o ASP.NET 1.0 e ASP.NET 1.1.
-
 
 ASP.NET V1 RTM agora é executada usando um menor com privilégios de conta do windows - registrada como a conta "ASPNET" em um computador local.
 

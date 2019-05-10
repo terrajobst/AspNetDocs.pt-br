@@ -8,15 +8,14 @@ ms.date: 01/15/2019
 ms.assetid: 03960de2-8d95-4444-9169-4426dcc64913
 msc.legacyurl: /signalr/overview/guide-to-the-api/handling-connection-lifetime-events
 msc.type: authoredcontent
-ms.openlocfilehash: 9e6b0b3b86839efa393659531d8b74770226f383
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5bdf20549fccab5d644e35fdf4ce351540c8620d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401459"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119893"
 ---
 # <a name="understanding-and-handling-connection-lifetime-events-in-signalr"></a>Noções básicas e tratamento de eventos de tempo de vida de conexão no SignalR
-
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
@@ -148,7 +147,6 @@ Alguns ambientes de rede fechar deliberadamente conexões ociosas e outra funç�
 >
 > **Importante**: A sequência de eventos descritas aqui não é garantida. Torna o SignalR cada tentativa de gerar eventos de tempo de vida de conexão de uma maneira previsível de acordo com esse esquema, mas há muitas variações de eventos de rede e de várias maneiras em que estruturas de comunicação subjacente como transporte APIs tratarão-los. Por exemplo, o `Reconnected` evento não pode ser gerado quando o cliente se reconecta, ou o `OnConnected` manipulador no servidor pode ser executados quando a tentativa de estabelecer uma conexão não for bem-sucedida. Este tópico descreve somente os efeitos que normalmente seriam produzidos por determinadas circunstâncias normais.
 
-
 <a id="clientdisconnect"></a>
 
 ### <a name="client-disconnection-scenarios"></a>Cenários de desconexão do cliente
@@ -247,7 +245,6 @@ O SignalR versão 2 não tem uma API de servidor interno para desconexão de cli
 
 > [!WARNING]
 > Security - nem esse método para desconexão de clientes, nem a API interna proposta abordarão o cenário de atacados clientes que estão executando o código mal-intencionado, desde que os clientes podem se reconectar ou o código atacados por um hacker pode remover o `stopClient` método ou alteração o que ele faz. O local adequado para implementar a proteção de (DOS) de negação de serviço com monitoração de estado não está na estrutura ou da camada de servidor, mas em vez disso, na infraestrutura de front-end.
-
 
 <a id="detectingreasonfordisconnection"></a>
 ## <a name="detecting-the-reason-for-a-disconnection"></a>Detectando o motivo de uma desconexão

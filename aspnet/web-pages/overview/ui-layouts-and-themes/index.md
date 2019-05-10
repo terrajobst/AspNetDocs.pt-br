@@ -8,17 +8,16 @@ ms.date: 09/08/2014
 ms.assetid: d7ec6e8a-3e05-4c0d-9207-d17a49f9a64d
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes
 msc.type: chapter
-ms.openlocfilehash: d1b0a8bb4cd9758af4f77526584e3b1198c70e01
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ae3e20f24f2d1bef39ff44ff15bdab212583310
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59399041"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133942"
 ---
 # <a name="ui-layouts-and-themes"></a>Interface do usuário, layouts e temas
 
 > Como personalizar o interface do usuário do site em um aplicativo de páginas da Web ASP.NET.
-
 
 - [Trabalhando com formulários](4-working-with-forms.md)
 - [Validação da entrada do usuário em sites de Páginas da Web do ASP.NET](validating-user-input-in-aspnet-web-pages-sites.md)

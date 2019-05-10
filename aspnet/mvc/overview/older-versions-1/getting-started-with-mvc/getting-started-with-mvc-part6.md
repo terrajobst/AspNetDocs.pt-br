@@ -8,19 +8,18 @@ ms.date: 08/14/2010
 ms.assetid: a3a90963-0286-4fa0-9b3d-c230cc18b0a3
 msc.legacyurl: /mvc/overview/older-versions-1/getting-started-with-mvc/getting-started-with-mvc-part6
 msc.type: authoredcontent
-ms.openlocfilehash: f648e0cb53dd410105adc22401f19a5a15f9e8c1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 05a281720f76b107fe8d902ef60d5d2e72af3ef5
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380802"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122908"
 ---
 # <a name="adding-a-create-method-and-create-view"></a>Adicionar um Criar Método e um Criar Exibição
 
 por [Scott Hanselman](https://github.com/shanselman)
 
 > Este é um tutorial para iniciantes que apresenta os conceitos básicos do ASP.NET MVC. Você criará um aplicativo web simples que lê e grava de um banco de dados. Visite o [Central de informações do ASP.NET MVC](../../../index.md) para localizar outros ASP.NET MVC, tutoriais e exemplos.
-
 
 Nesta seção, vamos implementar o suporte necessário para permitir que os usuários criem novos filmes em nosso banco de dados. Faremos isso Implementando a ação de URL Movies/Create.
 

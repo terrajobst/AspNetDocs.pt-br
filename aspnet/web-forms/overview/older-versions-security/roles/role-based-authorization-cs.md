@@ -8,12 +8,12 @@ ms.date: 03/24/2008
 ms.assetid: 4d9b63fa-c3d4-4e85-82b1-26ae3ba3ca1c
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/role-based-authorization-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9c6dbfee1a1a05af7bdd82ad96b0ca52774274b1
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d0c58bcbcc294fa6fc7d194864a3e7b67356cf2c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59383129"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133821"
 ---
 # <a name="role-based-authorization-c"></a>Autorização baseada em função (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/CS.11.zip) ou [baixar PDF](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial11_RoleAuth_cs.pdf)
 
 > Este tutorial começa com uma olhada em como o framework de funções associa uma função do usuário com seu contexto de segurança. Ele, em seguida, examina como aplicar regras de autorização de URL baseada em função. A seguir que, vamos examinar usando meios programáticos e declarativos para alterar os dados exibidos e a funcionalidade oferecida por uma página ASP.NET.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -46,11 +45,9 @@ Figura 1 ilustra o fluxo de trabalho de pipeline do ASP.NET ao usar a autentica�
 
 Se um usuário anônimo visita o site, nem o `FormsAuthenticationModule` nem o `RoleManagerModule` cria um objeto de entidade.
 
-
 [![Os eventos de Pipeline do ASP.NET para um usuário autenticado ao usar a autenticação de formulários e a estrutura de funções](role-based-authorization-cs/_static/image2.png)](role-based-authorization-cs/_static/image1.png)
 
 **Figura 1**: Os eventos de Pipeline do ASP.NET para um autenticado quando usando formulários de autenticação de usuário e a estrutura de funções ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image3.png))
-
 
 ### <a name="caching-role-information-in-a-cookie"></a>Armazenar em cache informações de função em um Cookie
 
@@ -58,17 +55,14 @@ O `RolePrincipal` do objeto `IsInRole(roleName)` chamadas de método `Roles.GetR
 
 Se a estrutura de funções é configurada para armazenar em cache as funções do usuário em um cookie, o `RoleManagerModule` cria o cookie durante o pipeline do ASP.NET [ `EndRequest` evento](https://msdn.microsoft.com/library/system.web.httpapplication.endrequest.aspx). Esse cookie é usado em solicitações subsequentes na `PostAuthenticateRequest`, que é quando o `RolePrincipal` objeto é criado. Se o cookie for válido e não expirou, os dados no cookie são analisados e usados para preencher as funções do usuário, economizando a `RolePrincipal` precise fazer uma chamada para o `Roles` classe para determinar as funções do usuário. Figura 2 ilustra esse fluxo de trabalho.
 
-
 [![Informações de função do usuário podem ser armazenadas em um Cookie para melhorar o desempenho](role-based-authorization-cs/_static/image5.png)](role-based-authorization-cs/_static/image4.png)
 
 **Figura 2**: Função informações podem ser armazenadas o usuário em um Cookie para melhorar o desempenho ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image6.png))
-
 
 Por padrão, o mecanismo de cookie do cache de função está desabilitado. Ele pode ser habilitado por meio de `<roleManager>` marcação de configuração em `Web.config`. Discutimos o uso de [ `<roleManager>` elemento](https://msdn.microsoft.com/library/ms164660.aspx) para especificar provedores de função no <a id="_msoanchor_4"> </a> [ *criando e gerenciando funções* ](creating-and-managing-roles-cs.md) tutorial, Portanto, você já deve ter esse elemento em seu aplicativo `Web.config` arquivo. As configurações de cookie do cache de função são especificadas como atributos do `<roleManager>` elemento e são resumidos na tabela 1.
 
 > [!NOTE]
 > As definições de configuração listadas na tabela 1 especificam as propriedades do cookie de cache de função resultante. Para obter mais informações sobre cookies, como elas funcionam e suas várias propriedades, leia [este tutorial de Cookies](http://www.quirksmode.org/js/cookies.html).
-
 
 | <strong>Property</strong> |                                                                                                                                                                                                                                                                                                                                                         <strong>Descrição</strong>                                                                                                                                                                                                                                                                                                                                                          |
 |---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -96,7 +90,6 @@ E isso é tudo! Daqui em diante, o framework de funções armazenará em cache a
 > [!NOTE]
 > Padrões da Microsoft &amp; Practices group desencoraja o uso de cookies de cache de função persistente. Uma vez que a posse do cookie de cache de função é suficiente para comprovar a associação de função, se um hacker pode ter alguma forma o acesso ao cookie de um usuário válido ele pode representar o usuário. A probabilidade disso acontecer aumenta se o cookie é persistente no navegador do usuário. Para obter mais informações sobre essa recomendação de segurança, bem como outras preocupações de segurança, consulte o [lista de perguntas de segurança para o ASP.NET 2.0](https://msdn.microsoft.com/library/ms998375.aspx).
 
-
 ## <a name="step-1-defining-role-based-url-authorization-rules"></a>Etapa 1: Definindo regras de autorização de URL baseada em função
 
 Conforme discutido na <a id="_msoanchor_6"> </a> [ *autorização baseada em usuário* ](../membership/user-based-authorization-cs.md) tutorial, a autorização de URL oferece um meio para restringir o acesso a um conjunto de páginas em um usuário por usuário ou função por função base. As regras de autorização de URL são indicadas claramente no `Web.config` usando o [ `<authorization>` elemento](https://msdn.microsoft.com/library/8d82143t.aspx) com `<allow>` e `<deny>` elementos filho. Além das regras relacionadas ao usuário autorização discutidas nos tutoriais anteriores, cada `<allow>` e `<deny>` elemento filho também pode incluir:
@@ -114,11 +107,9 @@ Vamos configurar nosso aplicativo para que o `ManageRoles.aspx`, `UsersAndRoles.
 
 Para fazer isso, comece adicionando um `Web.config` o arquivo para o `Roles` pasta.
 
-
 [![Adicionar um arquivo Web. config para o diretório de funções](role-based-authorization-cs/_static/image8.png)](role-based-authorization-cs/_static/image7.png)
 
 **Figura 3**: Adicionar um `Web.config` o arquivo para o `Roles` diretório ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image9.png))
-
 
 Em seguida, adicione a seguinte marcação de configuração ao `Web.config`:
 
@@ -128,23 +119,18 @@ O `<authorization>` elemento na `<system.web>` seção indica que somente os usu
 
 Depois de salvar suas alterações para `Web.config`, faça logon como um usuário que não está na função de administradores e, em seguida, tentar visitar uma das páginas protegidas. O `UrlAuthorizationModule` detectará que você não tem permissão para visitar o recurso solicitado; Consequentemente, o `FormsAuthenticationModule` redirecionará você para a página de logon. A página de logon, em seguida, você será encaminhado para o `UnauthorizedAccess.aspx` página (consulte a Figura 4). Esse redirecionamento final da página de logon para `UnauthorizedAccess.aspx` ocorre devido ao código que adicionamos à página de logon na etapa 2 do <a id="_msoanchor_7"> </a> [ *autorização baseada em usuário* ](../membership/user-based-authorization-cs.md) tutorial. Em particular, a página de logon redireciona automaticamente qualquer usuário autenticado `UnauthorizedAccess.aspx` se a cadeia de consulta contém um `ReturnUrl` parâmetro, como esse parâmetro indica que o usuário acessou a página de logon depois de tentar exibir uma página em que ele não era autorizado a exibir.
 
-
 [![Somente os usuários na função de administradores podem exibir as páginas protegidas](role-based-authorization-cs/_static/image11.png)](role-based-authorization-cs/_static/image10.png)
 
 **Figura 4**: Somente os usuários na função de administradores podem exibir as páginas protegidas ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image12.png))
 
-
 Faça logoff e, em seguida, faça logon como um usuário que está na função de administradores. Agora você deve ser capaz de exibir três páginas protegidas.
-
 
 [![Tito pode visitar que o UsersAndRoles.aspx página porque ele está na função de administradores](role-based-authorization-cs/_static/image14.png)](role-based-authorization-cs/_static/image13.png)
 
 **Figura 5**: Tito pode visitar o `UsersAndRoles.aspx` página porque ele está na função de administradores ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image15.png))
 
-
 > [!NOTE]
 > Ao especificar regras de autorização de URL – para funções ou usuários – é importante ter em mente que as regras são analisados um por vez, de cima para baixo. Assim que uma correspondência for encontrada, o usuário é concedido ou negado acesso, dependendo se a correspondência foi encontrada em um `<allow>` ou `<deny>` elemento. **Se nenhuma correspondência for encontrada, o usuário recebe acesso.** Consequentemente, se você quiser restringir o acesso a uma ou mais contas de usuário, é imperativo que você use um `<deny>` como o último elemento na configuração de autorização de URL. **Se as regras de autorização de URL não incluir um**`<deny>`**elemento, todos os usuários terão acesso.** Para obter uma discussão mais completa sobre como as regras de autorização de URL são analisadas, consulte o "uma olhada em como o `UrlAuthorizationModule` usa as regras de autorização para conceder ou negar acesso" seção do <a id="_msoanchor_8"> </a> [  *Autorização baseada em usuário* ](../membership/user-based-authorization-cs.md) tutorial.
-
 
 ## <a name="step-2-limiting-functionality-based-on-the-currently-logged-in-users-roles"></a>Etapa 2: Limitando a funcionalidade de acordo com as funções do usuário atualmente conectado
 
@@ -157,7 +143,6 @@ Vamos criar uma página que lista todas as contas de usuário no sistema em um G
 > [!NOTE]
 > Estamos prestes a criar a página do ASP.NET usa um controle GridView para exibir as contas de usuário. Desde neste tutorial na série se concentra em formulários de autenticação, autorização, contas de usuário e funções, não quero dedicar muito tempo discutindo o funcionamento interno do controle GridView. Enquanto este tutorial fornece instruções passo a passo específicas para a configuração nesta página, ele não me aprofundar nos detalhes de por que determinadas escolhas feitas ou o que tem propriedades específicas do efeito na saída renderizada. Para obter uma análise minuciosa do controle GridView, confira minha *[trabalhando com dados no ASP.NET 2.0](../../data-access/index.md)* série de tutoriais.
 
-
 Comece abrindo o `RoleBasedAuthorization.aspx` página o `Roles` pasta. Arraste um GridView da página para o Designer e defina suas `ID` para `UserGrid`. Daqui a pouco vamos escrever código que chama o `Membership.GetAllUsers` método e associa resultante `MembershipUserCollection` objeto para o GridView. O `MembershipUserCollection` contém um `MembershipUser` objeto para cada conta de usuário no sistema; `MembershipUser` objetos têm propriedades como `UserName`, `Email`, `LastLoginDate`e assim por diante.
 
 Antes que escrevemos o código que associa as contas de usuário para a grade, vamos primeiro definir os campos do GridView. Na marca inteligente do GridView, clique no link "Edit Columns" para iniciar a caixa de diálogo campos caixa (veja a Figura 6). A partir daqui, desmarque a caixa de seleção "gerar automaticamente campos" no canto inferior esquerdo. Como queremos que essa GridView para incluir a edição e exclusão de recursos, adicione um CommandField e defina suas `ShowEditButton` e `ShowDeleteButton` propriedades como True. Em seguida, adicione quatro campos para exibir o `UserName`, `Email`, `LastLoginDate`, e `Comment` propriedades. Usar um BoundField para as duas propriedades somente leitura (`UserName` e `LastLoginDate`) e TemplateFields nos dois campos editáveis (`Email` e `Comment`).
@@ -166,11 +151,9 @@ Ter a primeira exibição BoundField a `UserName` propriedade; defina seus `Head
 
 Defina o `HeaderText` propriedades de as dois TemplateFields "Email" e "Comment".
 
-
 [![Campos do GridView podem ser configurados por meio da caixa de diálogo de campos](role-based-authorization-cs/_static/image17.png)](role-based-authorization-cs/_static/image16.png)
 
 **Figura 6**: Campos pode ser configurado por meio da caixa do GridView de diálogo campos ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image18.png))
-
 
 Agora, precisamos definir a `ItemTemplate` e `EditItemTemplate` para o "Email" e "Comentário" TemplateFields. Adicionar um controle de Web de rótulo para cada um dos `ItemTemplate` s e associar seus `Text` propriedades para o `Email` e `Comment` propriedades, respectivamente.
 
@@ -192,15 +175,12 @@ Agora concluímos marcação declarativa dessa página. Nossa próxima tarefa é
 
 Com esse código, visite a página por meio de um navegador. Como mostra a Figura 7, você deverá ver um GridView listando as informações sobre cada conta de usuário no sistema.
 
-
 [![O UserGrid GridView lista informações sobre cada usuário no sistema](role-based-authorization-cs/_static/image20.png)](role-based-authorization-cs/_static/image19.png)
 
 **Figura 7**: O `UserGrid` GridView lista informações sobre cada usuário no sistema ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image21.png))
 
-
 > [!NOTE]
 > O `UserGrid` GridView lista todos os usuários em uma interface não-paginável. Essa interface de grade simples não é adequado para cenários onde vários usuários dúzia ou mais. Uma opção é configurar o GridView para habilitar a paginação. O `Membership.GetAllUsers` método tem duas sobrecargas: uma que não aceita a nenhum parâmetro de entrada e retorna todos os usuários e outro que usa valores de inteiro para o índice da página e o tamanho de página e retorna somente o subconjunto especificado dos usuários. A segunda sobrecarga pode ser usado com mais eficiência uma página por meio dos usuários, pois ele retorna apenas o subconjunto exato das contas de usuário em vez de *todos os* deles. Se você tiver milhares de contas de usuário, você talvez queira considerar uma interface baseada em filtro, que mostra apenas os usuários cujo nome de usuário começa com um caractere selecionado, por exemplo. O [ `Membership.FindUsersByName method` ](https://msdn.microsoft.com/library/system.web.security.membership.findusersbyname.aspx) é ideal para a criação de uma interface do usuário baseada em filtros. Vamos examinar a criação de uma interface desse tipo em um tutorial futuro.
-
 
 O controle GridView oferece edição e exclusão de suporte quando o controle é associado a um controle de fonte de dados configurados corretamente, como o SqlDataSource ou ObjectDataSource internos. O `UserGrid` GridView, no entanto, tem seus dados por meio de programação associados; portanto, precisamos escrever código para executar essas duas tarefas. Em particular, precisamos criar manipuladores de eventos para o GridView `RowEditing`, `RowCancelingEdit`, `RowUpdating`, e `RowDeleting` eventos, que são acionados quando um visitante clica o GridView editar, cancelar, atualização, ou botões de exclusão.
 
@@ -221,7 +201,6 @@ O manipulador de eventos acima começa captando a `UserName` valor a partir do G
 > [!NOTE]
 > O botão de exclusão não exige qualquer tipo de confirmação do usuário antes de excluir a conta de usuário. Eu recomendo que você adicionar alguma forma de confirmação do usuário para reduzir a chance de uma conta que está sendo excluída acidentalmente. Uma das maneiras mais fáceis para confirmar uma ação é por meio de uma caixa de diálogo de confirmação do lado do cliente. Para obter mais informações sobre essa técnica, consulte [' adicionando confirmação do lado do cliente quando excluindo](https://asp.net/learn/data-access/tutorial-42-cs.aspx).
 
-
 Verifique se que essa página funciona conforme o esperado. Você deve ser capaz de editar o endereço de email de qualquer usuário e comentário, bem como excluir qualquer conta de usuário. Uma vez que o `RoleBasedAuthorization.aspx` está acessível a todos os usuários, qualquer usuário – visitantes anônimos mesmo – visite essa página e editar e excluir contas de usuário! Vamos atualizar esta página para que somente os usuários nas funções de supervisores e os administradores podem editar endereço de email do usuário e o comentário, e somente os administradores podem excluir uma conta de usuário.
 
 A seção "Usando o controle LoginView" aborda usando o controle LoginView para mostrar as instruções específicas para a função do usuário. Se uma pessoa na função de administradores visitar essa página, mostraremos as instruções sobre como editar e excluir usuários. Se um usuário na função de supervisores atingir essa página, mostraremos as instruções sobre como editar os usuários. E se o visitante é anônimo ou não está na função de supervisores ou administradores, podemos exibirá uma mensagem explicando o que eles não é possível editar ou excluir informações de conta de usuário. Na seção "Programaticamente limitando a funcionalidade" Vamos escrever código que mostra ou oculta os botões Editar e excluir com base na função do usuário programaticamente.
@@ -238,11 +217,9 @@ Além de `AnonymousTemplate` e `LoggedInTemplate`, o controle LoginView pode inc
 
 Para gerenciar o RoleGroups, clique no link "Editar RoleGroups" da marca inteligente do controle para transferir anterior o Editor de coleção de RoleGroup. Adicione dois RoleGroups novo. Defina o RoleGroup de primeira `Roles` propriedade como "Administradores" e a segunda para "Supervisores".
 
-
 [![Gerenciar modelos de específicas de função do LoginView através do Editor de coleção de RoleGroup.](role-based-authorization-cs/_static/image23.png)](role-based-authorization-cs/_static/image22.png)
 
 **Figura 8**: Gerenciar específicas de função modelos por meio do Editor do LoginView Kolekce RoleGroup. ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image24.png))
-
 
 Clique em Okey para fechar o Editor de coleção de RoleGroup; Isso atualiza a marcação declarativa do LoginView para incluir um `<RoleGroups>` seção com um `<asp:RoleGroup>` elemento filho para cada RoleGroup definido no Editor de coleção de RoleGroup. Além disso, na lista suspensa "Exibições" Listar na marca inteligente do LoginView - que inicialmente listadas apenas o `AnonymousTemplate` e `LoggedInTemplate` – agora inclui também o RoleGroups adicionado.
 
@@ -254,26 +231,21 @@ Depois de fazer essas alterações, salve a página e, em seguida, visite-o por 
 
 Em seguida, faça logon como um usuário que seja um membro da função de supervisores. Neste momento, você deve ver os supervisores específicas de função da mensagem (veja a Figura 9). E se você fazer logon como um usuário em administradores de função, você deve ver os administradores de função específicos de mensagem (consulte a Figura 10).
 
-
 [![Bruce é mostrado a mensagem de função específica de supervisores](role-based-authorization-cs/_static/image26.png)](role-based-authorization-cs/_static/image25.png)
 
 **Figura 9**: Bruce é mostrado a mensagem de função específica de supervisores ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image27.png))
-
 
 [![Tito é mostrada a mensagem específicas de função de administradores](role-based-authorization-cs/_static/image29.png)](role-based-authorization-cs/_static/image28.png)
 
 **Figura 10**: Tito é mostrada a mensagem específicas de função de administradores ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image30.png))
 
-
 Como capturas de tela figuras 9 e 10 mostram, o LoginView processa apenas um modelo, mesmo se aplicam vários modelos. Bruce e Tito são registradas em usuários, ainda que o LoginView renderiza apenas o RoleGroup correspondente e não o `LoggedInTemplate`. Além disso, Tito pertence às funções de administradores e supervisores, ainda que o controle LoginView renderiza o modelo de função específica de administradores em vez de supervisores um.
 
 Figura 11 ilustra o fluxo de trabalho usado pelo controle LoginView para determinar qual modelo para renderizar. Observe que se houver mais de um RoleGroup especificado, o modelo de LoginView renderiza os *primeiro* RoleGroup corresponde. Em outras palavras, se tinha colocamos o RoleGroup supervisores, como o primeiro RoleGroup e os administradores como o segundo, em seguida, quando Tito visita essa página ele veria a mensagem de supervisores.
 
-
 [![Fluxo de trabalho do controle LoginView para determinar qual modelo de renderização](role-based-authorization-cs/_static/image32.png)](role-based-authorization-cs/_static/image31.png)
 
 **Figura 11**: Fluxo de trabalho do controle LoginView para determinar qual modelo de renderização ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image33.png))
-
 
 ### <a name="programmatically-limiting-functionality"></a>Limitando a funcionalidade de forma programática
 
@@ -281,11 +253,9 @@ Enquanto o controle LoginView exibe instruções diferentes com base na função
 
 A maneira mais fácil para fazer referência a controles em um CommandField programaticamente é primeiro convertê-lo em um modelo. Para fazer isso, clique no link "Edit Columns" na marca inteligente do GridView, selecione o CommandField na lista de campos atuais e clique no link "Converter este campo em um TemplateField". Isso transforma o CommandField em um TemplateField com um `ItemTemplate` e `EditItemTemplate`. O `ItemTemplate` contém o editar e excluir LinkButtons enquanto o `EditItemTemplate` abriga a atualização e botões de link Cancelar.
 
-
 [![Converter o CommandField em um TemplateField](role-based-authorization-cs/_static/image35.png)](role-based-authorization-cs/_static/image34.png)
 
 **Figura 12**: Converter o CommandField em um TemplateField ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image36.png))
-
 
 Atualizar o editar e excluir LinkButtons na `ItemTemplate`, definindo suas `ID` propriedades para valores de `EditButton` e `DeleteButton`, respectivamente.
 
@@ -304,7 +274,6 @@ Se estivermos lidando com uma linha de dados que não está no modo de edição,
 > [!NOTE]
 > Poderíamos ter usado a classe de funções diretamente, substituindo a chamada para `User.IsInRole(roleName)` com uma chamada para o [ `Roles.IsUserInRole(roleName)` método](https://msdn.microsoft.com/library/system.web.security.roles.isuserinrole.aspx). Decidi usar o objeto de entidade `IsInRole(roleName)` método neste exemplo porque é mais eficiente do que usar a API de funções diretamente. Neste tutorial, configuramos o Gerenciador de funções para armazenar em cache as funções do usuário em um cookie. Esse cookie dados armazenados em cache é utilizado apenas quando a entidade de segurança `IsInRole(roleName)` é chamado de método; chamadas diretas para a API de funções sempre envolvem uma viagem para o repositório da função. Mesmo se as funções não são armazenados em cache em um cookie, chamar o objeto de entidade `IsInRole(roleName)` método é geralmente mais eficiente, porque quando ele é chamado na primeira vez durante uma solicitação armazena em cache os resultados. A API de funções, por outro lado, não execute nenhum cache. Porque o `RowCreated` evento é acionado uma vez para cada linha de GridView, usando `User.IsInRole(roleName)` envolve apenas uma viagem para o repositório da função, enquanto `Roles.IsUserInRole(roleName)` requer *N* viagens, onde *N* é o número de contas de usuário exibidas na grade.
 
-
 O botão de edição `Visible` estiver definida como `true` se o usuário ao visitar essa página está na função de administradores ou os supervisores; caso contrário, ele será definido como `false`. O botão de exclusão `Visible` estiver definida como `true` somente se o usuário está na função de administradores.
 
 Teste esta página por meio de um navegador. Se você visitar a página como um visitante anônimo ou como um usuário que não é um Supervisor nem um administrador, o CommandField está vazio. ele ainda existe, mas como uma thin prata sem de editar ou excluir botões.
@@ -312,27 +281,21 @@ Teste esta página por meio de um navegador. Se você visitar a página como um 
 > [!NOTE]
 > É possível ocultar o CommandField completamente quando um não-Supervisor e não-administrador está visitando a página. Posso deixar isso como um exercício para o leitor.
 
-
 [![Os botões Editar e excluir são ocultados para não supervisores e não-administradores](role-based-authorization-cs/_static/image38.png)](role-based-authorization-cs/_static/image37.png)
 
 **Figura 13**: Os botões Editar e excluir são ocultados para não supervisores e não-administradores ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image39.png))
 
-
 Se um usuário que pertence à função de supervisores (mas não à função de administradores) visita, ele vê apenas o botão Editar.
-
 
 [![Enquanto o botão Editar está disponível para os supervisores, o botão Excluir está oculto](role-based-authorization-cs/_static/image41.png)](role-based-authorization-cs/_static/image40.png)
 
 **Figura 14**: Enquanto o botão Editar está disponível para os supervisores, o botão Excluir é oculto ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image42.png))
 
-
 E se a visita de um administrador, ela tem acesso a ambos os botões Editar e excluir.
-
 
 [![Os botões Editar e excluir estão disponíveis somente para administradores](role-based-authorization-cs/_static/image44.png)](role-based-authorization-cs/_static/image43.png)
 
 **Figura 15**: Os botões Editar e excluir estão disponíveis somente para administradores ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image45.png))
-
 
 ## <a name="step-3-applying-role-based-authorization-rules-to-classes-and-methods"></a>Etapa 3: Aplicando regras de autorização baseada em função para Classes e métodos
 
@@ -348,18 +311,14 @@ Vamos demonstrar o uso de `PrincipalPermission` atributo do GridView `RowUpdatin
 
 O atributo para o `RowUpdating` manipulador de eventos que dita que somente os usuários nas funções de administradores ou os supervisores podem executar o manipulador de eventos, enquanto que o atributo no `RowDeleting` manipulador de eventos limita a execução para usuários em que os administradores função.
 
-
 > [!NOTE]
 > O `PrincipalPermission` atributo é representado como uma classe no `System.Security.Permissions` namespace. Certifique-se de adicionar um `using System.Security.Permissions` instrução na parte superior do seu arquivo de classe code-behind para importar esse namespace.
 
-
 Se, de alguma forma, um não administrador tenta executar o `RowDeleting` manipulador de eventos ou se um não-Supervisor ou não-administrador tenta executar o `RowUpdating` manipulador de eventos, o tempo de execução do .NET irá gerar um `SecurityException`.
-
 
 [![Se o contexto de segurança não está autorizado a executar o método, um SecurityException é gerado](role-based-authorization-cs/_static/image47.png)](role-based-authorization-cs/_static/image46.png)
 
 **Figura 16**: Se o contexto de segurança não está autorizado a executar o método, uma `SecurityException` é lançada ([clique para exibir a imagem em tamanho normal](role-based-authorization-cs/_static/image48.png))
-
 
 Além das páginas ASP.NET, muitos aplicativos também têm uma arquitetura que inclui várias camadas, como lógica de negócios e as camadas de acesso de dados. Essas camadas normalmente são implementadas como bibliotecas de classes e classes e métodos para executar a funcionalidade de relacionadas a dados e lógica de negócios da oferta. O `PrincipalPermission` atributo é útil para aplicar as regras de autorização para essas camadas também.
 

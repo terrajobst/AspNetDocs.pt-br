@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: a14121ae-02cf-4024-8af0-9dd0dc810690
 msc.legacyurl: /signalr/overview/advanced/dependency-injection
 msc.type: authoredcontent
-ms.openlocfilehash: 1b5d36529b52dfcbebf34cbfa230b3b3b4e83b81
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 52978b10b6c131ac8eff4535216cc60b43fdf3de
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405372"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120112"
 ---
 # <a name="dependency-injection-in-signalr"></a>Injeção de dependência no SignalR
 
@@ -37,7 +37,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 > ## <a name="questions-and-comments"></a>Perguntas e comentários
 >
 > Deixe comentários sobre como você gostou neste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 Injeção de dependência é uma maneira de remover dependências embutidas entre objetos, tornando mais fácil para substituir as dependências de um objeto, seja por testes (usando objetos fictícios) ou para alterar o comportamento de tempo de execução. Este tutorial mostra como realizar a injeção de dependência em hubs do SignalR. Ele também mostra como usar contêineres IoC com SignalR. Um contêiner IoC é uma estrutura geral para injeção de dependência.
 
@@ -93,7 +92,6 @@ Uma solução é usar um contêiner IoC. Um contêiner IoC é um componente de s
 
 > [!NOTE]
 > "IoC" significa "inversão de controle", que é um padrão geral em que uma estrutura chama o código do aplicativo. Um contêiner IoC constrói seus objetos para você, o que "inverte" o fluxo normal de controle.
-
 
 ## <a name="using-ioc-containers-in-signalr"></a>Usando contêineres IoC no SignalR
 

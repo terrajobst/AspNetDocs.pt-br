@@ -8,12 +8,12 @@ ms.date: 07/17/2006
 ms.assetid: 2646968c-2826-4418-b1d0-62610ed177e3
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/implementing-optimistic-concurrency-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bab4dd5180f0064a4fa8b0c50045f97100ce7d10
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 130e1cb7034d57e5d85729497072808c711a08f9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422961"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134498"
 ---
 # <a name="implementing-optimistic-concurrency-vb"></a>Implementar a simultaneidade otimista (VB)
 
@@ -23,18 +23,15 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Para um aplicativo web que permite aos usuários editarem dados, há o risco de que dois usuários podem estar editando os mesmos dados ao mesmo tempo. Neste tutorial, implementaremos o controle de simultaneidade otimista para tratar desse risco.
 
-
 ## <a name="introduction"></a>Introdução
 
 Para aplicativos web que só permitem que os usuários exibam dados ou para aqueles que incluem apenas um único usuário quem pode modificar dados, não há nenhuma ameaça de dois usuários simultâneos substituição acidental de alterações uma da outra. Para aplicativos web que permitem que vários usuários atualizar ou excluir dados, no entanto, há o potencial para que as modificações de um usuário podem conflitar com outro usuário simultâneo. Sem qualquer política de simultaneidade em vigor, quando dois usuários simultaneamente estiver editando um único registro, o usuário que confirma as alterações pela última vez substituirá as alterações feitas pelo primeiro.
 
 Por exemplo, imagine que ambos dois usuários, Jisun e Sam, foram visitar uma página em nosso aplicativo que os visitantes para atualizar e excluir os produtos por meio de um controle GridView de permissão. Ambos clique no botão Editar em GridView quase ao mesmo tempo. Jisun altera o nome do produto para "Chai chá" e clicar no botão de atualização. O resultado é um `UPDATE` instrução é enviada para o banco de dados que define *todas as* dos campos de atualizável do produto (embora Jisun atualizados somente um campo, `ProductName`). Neste momento, o banco de dados tem os valores "Chai chá," a categoria Bebidas, o fornecedor líquidos exóticos, e assim por diante para este produto específico. No entanto, o GridView na tela de Samuel ainda mostra o nome do produto na linha de GridView editável como "Chai". Alguns segundos depois de alterações do Jisun foram confirmadas, Sam atualiza a categoria para Condimentos e clica em Atualizar. Isso resulta em uma `UPDATE` instrução enviada ao banco de dados que define o nome do produto a Chai"," o `CategoryID` para a ID da categoria Bebidas correspondente e assim por diante. Alterações do Jisun para o nome do produto foram substituídas. Figura 1 representa graficamente a esta série de eventos.
 
-
 [![Quando dois usuários atualizam simultaneamente um potencial de registro s não existe para que as alterações de um usuário substituir a outra](implementing-optimistic-concurrency-vb/_static/image2.png)](implementing-optimistic-concurrency-vb/_static/image1.png)
 
 **Figura 1**: Quando dois usuários simultaneamente atualizar um registro lá s potencial para alterações de um usuário para substituir o outro ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image3.png))
-
 
 Da mesma forma, quando dois usuários visitam uma página, um usuário pode ser no meio da atualização de um registro quando ele é excluído por outro usuário. Ou então, entre quando um usuário carrega uma página e ao clicar no botão Excluir, outro usuário pode ter modificado o conteúdo desse registro.
 
@@ -49,25 +46,20 @@ Até agora todos os nossos tutoriais de tem usado a estratégia de resolução d
 > [!NOTE]
 > Não vamos ver exemplos de simultaneidade pessimista nessa série de tutoriais. Simultaneidade pessimista é raramente usada porque, como bloqueios, se não for liberada à medida corretamente, pode impedir que outros usuários atualizem os dados. Por exemplo, se um usuário bloqueia um registro para edição e, em seguida, sai para o dia anterior desbloqueá-lo, nenhum outro usuário será capaz de atualizar esse registro até que o usuário original retorna e conclui sua atualização. Portanto, em situações em que a simultaneidade pessimista é usada, normalmente há um tempo limite que, se atingido, cancela o bloqueio. Sites de vendas tíquete, que bloquearem um local específico de assentos por curto período enquanto o usuário conclui o processo de pedido, são um exemplo de controle de simultaneidade pessimista.
 
-
 ## <a name="step-1-looking-at-how-optimistic-concurrency-is-implemented"></a>Etapa 1: Examinar como a simultaneidade otimista é implementada
 
 Controle de simultaneidade otimista funciona, garantindo que o registro que está sendo atualizada ou excluída tem os mesmos valores de quando a atualização ou exclusão de processo iniciado. Por exemplo, ao clicar no botão Editar em um GridView editável, os valores do registro são de leitura do banco de dados e exibidos em caixas de texto e outros controles de Web. Esses valores originais são salvos por GridView. Posteriormente, depois que o usuário faz as alterações dela e clica no botão de atualização, os valores originais e os novos valores são enviados para a camada de lógica de negócios e, em seguida, para baixo até a camada de acesso a dados. A camada de acesso a dados deve emitir uma instrução SQL que será apenas atualizar o registro se os valores originais que o usuário iniciou a edição são idênticos aos valores ainda no banco de dados. Figura 2 ilustra essa sequência de eventos.
-
 
 [![Para a atualização ou exclusão seja bem-sucedida, os valores originais devem ser iguais aos valores atuais do banco de dados](implementing-optimistic-concurrency-vb/_static/image5.png)](implementing-optimistic-concurrency-vb/_static/image4.png)
 
 **Figura 2**: Para a atualização ou exclusão para forem bem-sucedidas, o Original valores deve ser igual aos valores atuais do banco de dados ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image6.png))
 
-
 Há várias abordagens para implementar a simultaneidade otimista (consulte [Peter A. Bromberg](http://peterbromberg.net/)do [lógica de atualização de simultaneidade otimista](http://www.eggheadcafe.com/articles/20050719.asp) para examinar uma série de opções). O conjunto de dados tipados do ADO.NET fornece uma implementação que pode ser configurada com a escala de uma caixa de seleção. Habilitar a simultaneidade otimista para um TableAdapter no conjunto de dados tipado aumenta o TableAdapter `UPDATE` e `DELETE` instruções para incluir uma comparação de todos os valores originais no `WHERE` cláusula. O seguinte `UPDATE` instrução, por exemplo, atualiza o nome e o preço de um produto somente se os valores atuais do banco de dados são iguais aos valores que foram originalmente recuperados ao atualizar o registro em um GridView. O `@ProductName` e `@UnitPrice` parâmetros contêm os novos valores inseridos pelo usuário, enquanto `@original_ProductName` e `@original_UnitPrice` contêm os valores que foram carregados originalmente no GridView, quando o botão de edição foi clicado:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-vb/samples/sample1.sql)]
 
 > [!NOTE]
 > Isso `UPDATE` instrução foi simplificada para facilitar a leitura. Na prática, o `UnitPrice` check-in a `WHERE` cláusula seria mais complicada desde `UnitPrice` pode conter `NULL` s e verificando se `NULL = NULL` sempre retorna False (em vez disso, você deve usar `IS NULL`).
-
 
 Além de usar um diferente subjacente `UPDATE` métodos diretos de instrução, configurando um TableAdapter para usar otimista de simultaneidade também modifica a assinatura do seu banco de dados. Lembre-se de nosso primeiro tutorial, [ *criando uma camada de acesso de dados*](../introduction/creating-a-data-access-layer-cs.md), que o banco de dados de métodos diretos são aquelas que aceita uma lista de escalar valores como parâmetros de entrada (em vez de uma DataRow fortemente tipada ou Instância de DataTable). Ao usar a simultaneidade otimista, o banco de dados direta `Update()` e `Delete()` métodos incluem parâmetros de entrada para os valores originais. Além disso, o código na BLL para usar o lote atualizar padrão (o `Update()` sobrecargas de método que aceitam DataRows e tabelas de dados em vez de valores escalares) deve ser alterada também.
 
@@ -77,62 +69,47 @@ Em vez disso, que estendem o nosso existente TableAdapters da DAL para usar a si
 
 Para criar um novo DataSet digitado, clique duas vezes no `DAL` pasta dentro de `App_Code` pasta e adicione um novo DataSet denominado `NorthwindOptimisticConcurrency`. Como vimos no primeiro tutorial, fazer irá adicionar um novo TableAdapter para o conjunto de dados tipado, inicie automaticamente o Assistente de configuração do TableAdapter. Na primeira tela, serão solicitados a especificar o banco de dados para se conectar ao – conectar ao mesmo banco de dados Northwind usando o `NORTHWNDConnectionString` configuração do `Web.config`.
 
-
 [![Conectar-se ao mesmo banco de dados Northwind](implementing-optimistic-concurrency-vb/_static/image8.png)](implementing-optimistic-concurrency-vb/_static/image7.png)
 
 **Figura 3**: Conectar-se ao mesmo banco de dados Northwind ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image9.png))
 
-
 Em seguida, podemos são solicitados a confirmar como consultar os dados: por meio de uma instrução SQL ad hoc, um novo procedimento armazenado ou procedimento armazenado de um existente. Como usamos consultas SQL ad hoc em nossa DAL original, use essa opção aqui também.
-
 
 [![Especifique os dados a serem recuperados usando uma instrução de SQL Ad Hoc](implementing-optimistic-concurrency-vb/_static/image11.png)](implementing-optimistic-concurrency-vb/_static/image10.png)
 
 **Figura 4**: Especifica os dados para recuperar usando uma instrução de SQL Ad Hoc ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image12.png))
 
-
 Na tela seguinte, insira a consulta SQL a ser usada para recuperar as informações do produto. Vamos usar a mesma exata consulta SQL usada para o `Products` TableAdapter de nossa DAL original, que retorna todos os `Product` colunas junto com os nomes de categoria e fornecedor do produto:
 
-
 [!code-sql[Main](implementing-optimistic-concurrency-vb/samples/sample2.sql)]
-
 
 [![Usar a mesma consulta SQL do TableAdapter de produtos em DAL Original](implementing-optimistic-concurrency-vb/_static/image14.png)](implementing-optimistic-concurrency-vb/_static/image13.png)
 
 **Figura 5**: Usar a mesma consulta SQL do `Products` TableAdapter no Original DAL ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image15.png))
 
-
 Antes de passar para a próxima tela, clique no botão Opções avançadas. Para que esse controle de simultaneidade otimista empregam TableAdapter, basta marcar a caixa de seleção "Usar simultaneidade otimista".
-
 
 [![Habilitar o controle de simultaneidade otimista, verificando o &quot;usar a simultaneidade otimista&quot; caixa de seleção](implementing-optimistic-concurrency-vb/_static/image17.png)](implementing-optimistic-concurrency-vb/_static/image16.png)
 
 **Figura 6**: Habilitar o controle de simultaneidade otimista, marcando a caixa de seleção "Usar simultaneidade otimista" ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image18.png))
 
-
 Por fim, indicam que o TableAdapter deve usar os padrões de acesso a dados que preencher uma DataTable e retornam uma DataTable; também indicam que os métodos diretos do banco de dados devem ser criados. Altere o nome do método para o retorno de um padrão de DataTable de GetData GetProducts, para espelhar as convenções de nomenclatura que usamos em nossa DAL original.
-
 
 [![Ter o TableAdapter utilizar todos os padrões de acesso a dados](implementing-optimistic-concurrency-vb/_static/image20.png)](implementing-optimistic-concurrency-vb/_static/image19.png)
 
 **Figura 7**: Ter o TableAdapter utilizar todos os dados de padrões de acesso ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image21.png))
 
-
 Depois de concluir o assistente, o Designer de conjunto de dados incluirá fortemente tipado `Products` DataTable e TableAdapter. Reserve um tempo para renomear o DataTable do `Products` para `ProductsOptimisticConcurrency`, que pode ser feito clicando duas vezes na barra de título da DataTable e escolhendo Renomear no menu de contexto.
-
 
 [![A DataTable e TableAdapter foram adicionados ao conjunto de dados tipado](implementing-optimistic-concurrency-vb/_static/image23.png)](implementing-optimistic-concurrency-vb/_static/image22.png)
 
 **Figura 8**: A DataTable e TableAdapter foram adicionados ao conjunto de dados tipado ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image24.png))
 
-
 Para ver as diferenças entre o `UPDATE` e `DELETE` consultas entre o `ProductsOptimisticConcurrency` TableAdapter (que usa a simultaneidade otimista) e o TableAdapter de produtos (que não), clique no TableAdapter e vá para a janela Propriedades. No `DeleteCommand` e `UpdateCommand` propriedades `CommandText` subpropriedades que você pode ver a sintaxe SQL real que é enviada para o banco de dados quando a DAL update ou métodos de exclusão são invocados. Para o `ProductsOptimisticConcurrency` TableAdapter o `DELETE` instrução usada é:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-vb/samples/sample3.sql)]
 
 Enquanto o `DELETE` instrução para o TableAdapter de produto na nossa DAL original é muito mais simples:
-
 
 [!code-sql[Main](implementing-optimistic-concurrency-vb/samples/sample4.sql)]
 
@@ -142,27 +119,21 @@ Nós não adicionar qualquer DataTables adicionais ao DataSet habilitados para s
 
 Para fazer isso, clique com botão direito na barra de título do TableAdapter (à direita da área acima de `Fill` e `GetProducts` nomes de método) e escolha Add Query no menu de contexto. Isso iniciará o Assistente de configuração de consulta do TableAdapter. Como com a configuração inicial do nosso TableAdapter, optar por criar o `GetProductByProductID(productID)` método usando uma instrução de SQL ad hoc (veja a Figura 4). Uma vez que o `GetProductByProductID(productID)` método retorna informações sobre um produto específico, para indicar que esta consulta é um `SELECT` tipo que retorna linhas de consulta.
 
-
 [![Marque o tipo de consulta como um &quot;SELECT que retorna linhas&quot;](implementing-optimistic-concurrency-vb/_static/image26.png)](implementing-optimistic-concurrency-vb/_static/image25.png)
 
 **Figura 9**: Marque o tipo de consulta como um "`SELECT` que retorna linhas" ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image27.png))
 
-
 Na próxima tela, serão solicitados para a consulta SQL usar com a consulta do TableAdapter padrão previamente carregada. Ampliar a consulta existente para incluir a cláusula `WHERE ProductID = @ProductID`, conforme mostrado na Figura 10.
-
 
 [![Adicionar um onde cláusula para a consulta previamente carregada para retornar um registro de produto específico](implementing-optimistic-concurrency-vb/_static/image29.png)](implementing-optimistic-concurrency-vb/_static/image28.png)
 
 **Figura 10**: Adicionar um `WHERE` cláusula para a consulta Pre-Loaded para retornar um registro de produto específica ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image30.png))
 
-
 Por fim, altere os nomes de método gerado `FillByProductID` e `GetProductByProductID`.
-
 
 [![Renomear os métodos FillByProductID e GetProductByProductID](implementing-optimistic-concurrency-vb/_static/image32.png)](implementing-optimistic-concurrency-vb/_static/image31.png)
 
 **Figura 11**: Renomear os métodos a serem `FillByProductID` e `GetProductByProductID` ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image33.png))
-
 
 Com este assistente for concluído, o TableAdapter agora contém dois métodos para recuperar dados: `GetProducts()`, que retorna *todas as* produtos; e `GetProductByProductID(productID)`, que retorna o produto especificado.
 
@@ -176,14 +147,11 @@ Enquanto a assinatura do método para o TableAdapter `Update` método usado no p
 
 Adicione uma classe chamada `ProductsOptimisticConcurrencyBLL` para o `BLL` pasta dentro de `App_Code` pasta.
 
-
 ![Adicione a classe ProductsOptimisticConcurrencyBLL à pasta BLL](implementing-optimistic-concurrency-vb/_static/image34.png)
 
 **Figura 12**: Adicionar o `ProductsOptimisticConcurrencyBLL` classe para a pasta BLL
 
-
 Em seguida, adicione o seguinte código para o `ProductsOptimisticConcurrencyBLL` classe:
-
 
 [!code-vb[Main](implementing-optimistic-concurrency-vb/samples/sample5.vb)]
 
@@ -194,7 +162,6 @@ O `ProductsOptimisticConcurrencyBLL`do `Adapter` propriedade fornece acesso ráp
 ## <a name="deleting-a-product-using-the-db-direct-pattern-with-optimistic-concurrency"></a>Excluindo um produto usando o padrão de banco de dados direto com a simultaneidade otimista
 
 Ao usar o padrão de banco de dados direto contra uma DAL que usa a simultaneidade otimista, os métodos devem ser passados para os valores novos e originais. Para excluir, não existem novos valores, portanto, apenas os valores originais precisam ser passados. Em nosso BLL, em seguida, podemos deve aceitar todos os parâmetros originais como parâmetros de entrada. Vamos ter o `DeleteProduct` método no `ProductsOptimisticConcurrencyBLL` classe usar o método direto de banco de dados. Isso significa que esse método precisa levar em todos os campos de dados de produto dez como parâmetros de entrada e passá-los para o DAL a conforme mostrado no código a seguir:
-
 
 [!code-vb[Main](implementing-optimistic-concurrency-vb/samples/sample6.vb)]
 
@@ -222,7 +189,6 @@ Leituras de etapa 1 em todos os valores atuais do banco de dados para o registro
 
 O seguinte código mostra o `UpdateProduct` sobrecarga que aceita todos os dados de produto campos como parâmetros de entrada. Embora não mostrado aqui, o `ProductsOptimisticConcurrencyBLL` classe incluído no download para este tutorial também contém um `UpdateProduct` sobrecarga que aceita apenas o produto nome e preço como parâmetros de entrada.
 
-
 [!code-vb[Main](implementing-optimistic-concurrency-vb/samples/sample7.vb)]
 
 ## <a name="step-4-passing-the-original-and-new-values-from-the-aspnet-page-to-the-bll-methods"></a>Etapa 4: Passando os valores novos e originais da página ASP.NET aos métodos BLL
@@ -231,18 +197,15 @@ Com o DAL e BLL concluída, tudo o que resta é criar uma página ASP.NET que po
 
 Comece abrindo o `OptimisticConcurrency.aspx` página o `EditInsertDelete` pasta e adicionando um GridView para o Designer, definindo seu `ID` propriedade para `ProductsGrid`. Na marca inteligente do GridView, optar por criar um novo ObjectDataSource chamado `ProductsOptimisticConcurrencyDataSource`. Como queremos que essa ObjectDataSource para usar a DAL que dá suporte à simultaneidade otimista, configurá-lo para usar o `ProductsOptimisticConcurrencyBLL` objeto.
 
-
 [![Poderá usar o ObjectDataSource o objeto ProductsOptimisticConcurrencyBLL](implementing-optimistic-concurrency-vb/_static/image36.png)](implementing-optimistic-concurrency-vb/_static/image35.png)
 
 **Figura 13**: Poderá usar o ObjectDataSource a `ProductsOptimisticConcurrencyBLL` objeto ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image37.png))
-
 
 Escolha o `GetProducts`, `UpdateProduct`, e `DeleteProduct` métodos de listas suspensas no assistente. Para o método UpdateProduct, use a sobrecarga que aceita todos os campos de dados do produto.
 
 ## <a name="configuring-the-objectdatasource-controls-properties"></a>Configurando propriedades do controle ObjectDataSource
 
 Depois de concluir o assistente, a marcação declarativa do ObjectDataSource deve ser semelhante ao seguinte:
-
 
 [!code-aspx[Main](implementing-optimistic-concurrency-vb/samples/sample8.aspx)]
 
@@ -252,7 +215,6 @@ Para esses tutoriais anteriores que envolvia a modificação de dados, podemos r
 
 > [!NOTE]
 > O valor da `OldValuesParameterFormatString` propriedade deve mapear para os nomes de parâmetro de entrada na BLL que espera que os valores originais. Uma vez que estamos esses parâmetros nomeados `original_productName`, `original_supplierID`e assim por diante, você pode deixar o `OldValuesParameterFormatString` valor da propriedade como `original_{0}`. Se, no entanto, os parâmetros de entrada de métodos a BLL tinham nomes como `old_productName`, `old_supplierID`e assim por diante, você precisa para atualizar o `OldValuesParameterFormatString` propriedade `old_{0}`.
-
 
 Há uma configuração de propriedade final que precisa ser feita para que o ObjectDataSource passar corretamente os valores originais para os métodos BLL. O ObjectDataSource tem um [propriedade ConflictDetection](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.conflictdetection.aspx) que pode ser atribuído a [um dos dois valores](https://msdn.microsoft.com/library/system.web.ui.conflictoptions.aspx):
 
@@ -276,14 +238,12 @@ Como discutimos na *adicionando controles de validação para a edição e inser
 
 Uma vez que já examinamos como realizar essas tarefas nos tutoriais anteriores, vou apenas lista a sintaxe final declarativa aqui e deixar a implementação prática.
 
-
 [!code-aspx[Main](implementing-optimistic-concurrency-vb/samples/sample9.aspx)]
 
 Estamos muito perto tendo um exemplo totalmente funcional. No entanto, existem algumas sutilezas que surgir durante backup e causar nos problemas. Além disso, ainda precisamos alguma interface que alerta o usuário quando ocorreu uma violação de simultaneidade.
 
 > [!NOTE]
 > Para que um controle da Web de dados para passar corretamente os valores originais para o ObjectDataSource (que são então passados para a BLL), é vital que o GridView `EnableViewState` estiver definida como `true` (o padrão). Se você desabilitar o estado de exibição, os valores originais são perdidos no postback.
-
 
 ## <a name="passing-the-correct-original-values-to-the-objectdatasource"></a>Passando os valores originais corretos para o ObjectDataSource
 
@@ -293,25 +253,20 @@ Especificamente, os valores originais do GridView recebem os valores nas instru�
 
 Para ver por que isso é importante, reserve um tempo para visite nossa página em um navegador. Conforme o esperado, GridView lista cada produto com um botão Editar e excluir na coluna mais à esquerda.
 
-
 [![Os produtos são listados em um GridView](implementing-optimistic-concurrency-vb/_static/image39.png)](implementing-optimistic-concurrency-vb/_static/image38.png)
 
 **Figura 14**: Os produtos são listados em um GridView ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image40.png))
 
-
 Se você clicar no botão Excluir para qualquer produto, um `FormatException` é gerada.
-
 
 [![Tentativa de excluir qualquer resultado de produto em uma FormatException](implementing-optimistic-concurrency-vb/_static/image42.png)](implementing-optimistic-concurrency-vb/_static/image41.png)
 
 **Figura 15**: A tentativa de excluir qualquer produto os resultados em uma `FormatException` ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image43.png))
 
-
 O `FormatException` é gerado quando o ObjectDataSource tenta ler no original `UnitPrice` valor. Uma vez que o `ItemTemplate` tem o `UnitPrice` formatada como uma moeda (`<%# Bind("UnitPrice", "{0:C}") %>`), ele inclui um símbolo de moeda como US $ 19,95 para venda. O `FormatException` ocorre conforme o ObjectDataSource tenta converter essa cadeia de caracteres em um `decimal`. Para contornar esse problema, temos várias opções:
 
 - Remover formatação de moeda a `ItemTemplate`. Ou seja, em vez de usar `<%# Bind("UnitPrice", "{0:C}") %>`, basta usar `<%# Bind("UnitPrice") %>`. A desvantagem disso é que o preço não está formatado.
 - Exibição de `UnitPrice` formatado como uma moeda no `ItemTemplate`, mas usar o `Eval` palavra-chave para fazer isso. Lembre-se de que `Eval` executa a associação de dados unidirecional. Precisamos fornecer o `UnitPrice` valor para os valores originais, portanto, ainda precisaremos de uma instrução de vinculação de dados bidirecional na `ItemTemplate`, mas isso pode ser colocado em um controle de rótulo Web cuja `Visible` estiver definida como `false`. Poderíamos usar a seguinte marcação do ItemTemplate:
-
 
 [!code-aspx[Main](implementing-optimistic-concurrency-vb/samples/sample10.aspx)]
 
@@ -322,14 +277,11 @@ Para o meu exemplo, escolhi a segunda abordagem, adicionando uma Web oculto do r
 
 Depois de resolver esse problema, tente clicar no botão Excluir para qualquer produto novamente. Neste momento, você obterá um `InvalidOperationException` quando o ObjectDataSource tenta invocar a BLL `UpdateProduct` método.
 
-
 [![O ObjectDataSource não é possível encontrar um método com os parâmetros de entrada, ele quer enviar](implementing-optimistic-concurrency-vb/_static/image45.png)](implementing-optimistic-concurrency-vb/_static/image44.png)
 
 **Figura 16**: O ObjectDataSource não é possível encontrar um método com os parâmetros de entrada que deseja enviar ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image46.png))
 
-
 Examinando a mensagem de exceção, é claro que o ObjectDataSource quer invocar um BLL `DeleteProduct` método inclui `original_CategoryName` e `original_SupplierName` parâmetros de entrada. Isso ocorre porque o `ItemTemplate` s para o `CategoryID` e `SupplierID` TemplateFields atualmente contêm instruções de ligação bidirecionais com o `CategoryName` e `SupplierName` campos de dados. Em vez disso, precisamos incluir `Bind` instruções com o `CategoryID` e `SupplierID` campos de dados. Para fazer isso, substitua as instruções existentes de associação com `Eval` instruções e, em seguida, adicionar controles de rótulo oculto cujo `Text` propriedades são vinculadas aos `CategoryID` e `SupplierID` campos de dados usando a associação de dados bidirecional, conforme mostrado abaixo:
-
 
 [!code-aspx[Main](implementing-optimistic-concurrency-vb/samples/sample11.aspx)]
 
@@ -341,11 +293,9 @@ Para verificar se as violações de simultaneidade estão sendo detectadas (em v
 
 A outra instância de janela do navegador, no entanto, o caixa de texto Nome do produto ainda mostra "Chai". Na janela de navegador segundo, atualize o `UnitPrice` para `25.00`. Sem suporte a simultaneidade otimista, clicando em Atualizar na segunda instância de navegador alteraria o nome do produto para "Chai", substituindo as alterações feitas pela primeira instância do navegador. Com a simultaneidade otimista empregada, no entanto, clicando no botão de atualização na segunda instância de navegador resulta em uma [DBConcurrencyException](https://msdn.microsoft.com/library/system.data.dbconcurrencyexception.aspx).
 
-
 [![Quando uma violação de simultaneidade é detectada, um DBConcurrencyException é lançada](implementing-optimistic-concurrency-vb/_static/image48.png)](implementing-optimistic-concurrency-vb/_static/image47.png)
 
 **Figura 17**: Quando uma violação de simultaneidade é detectada, um `DBConcurrencyException` é lançada ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image49.png))
-
 
 O `DBConcurrencyException` é acionada somente quando padrão de atualização em lotes da DAL é utilizada. O padrão de banco de dados direto não gera uma exceção, ela simplesmente indica que nenhuma linha foi afetada. Para ilustrar isso, retorne GridView de ambas as instâncias do navegador para seu estado de edição previamente. Em seguida, na primeira instância do navegador, clique no botão Editar e alterar o nome do produto de "Chai chá" para "Chai" e clique em Atualizar. Na segunda janela do navegador, clique no botão Excluir para Chai.
 
@@ -361,18 +311,15 @@ Para corrigir esses dois problemas, podemos criar controles da Web do rótulo da
 
 Quando ocorre uma violação de simultaneidade, o comportamento exibido depende se foi utilizado o DAL atualização em lotes ou padrão de banco de dados direta. Nosso tutorial usa ambos os padrões, com o padrão de atualização de lote que está sendo usado para atualizar e o padrão de direta de banco de dados usada para excluir. Para começar, vamos adicionar dois controles de Web de rótulo à nossa página que explicam o que ocorreu uma violação de simultaneidade durante a tentativa de excluir ou atualizar dados. Defina o controle de rótulo `Visible` e `EnableViewState` propriedades a serem `false`; isso fará com que-los para serem ocultadas em cada visita de página, exceto para aqueles que determinada página visita onde seus `Visible` propriedade é definida por meio de programação como `true`.
 
-
 [!code-aspx[Main](implementing-optimistic-concurrency-vb/samples/sample12.aspx)]
 
 Além de configuração de suas `Visible`, `EnabledViewState`, e `Text` propriedades, defini também o `CssClass` propriedade `Warning`, que faz com que o rótulo da ser exibido em uma fonte grande, vermelha, itálico, negrito. Esse CSS `Warning` classe foi definida e adicionado ao Styles volta a *examinando os eventos associados inserindo, atualizando e excluindo* tutorial.
 
 Depois de adicionar esses rótulos, o Designer no Visual Studio deve ser semelhante a Figura 18.
 
-
 [![Foram adicionados dois controles de rótulo para a página](implementing-optimistic-concurrency-vb/_static/image51.png)](implementing-optimistic-concurrency-vb/_static/image50.png)
 
 **Figura 18**: Dois rótulo controles foram adicionados à página ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image52.png))
-
 
 Com esses controles de Web Label em vigor, estamos prontos para examinar como determinar quando uma violação de simultaneidade tiver ocorrido, em que ponto o rótulo apropriado `Visible` propriedade pode ser definida como `true`, exibindo a mensagem informativa.
 
@@ -382,20 +329,16 @@ Vamos primeiro examinar como lidar com violações de simultaneidade ao usar o p
 
 Como vimos na *tratamento BLL - e exceções de nível DAL em uma página ASP.NET* tutorial, essas exceções podem ser detectadas e suprimidas em manipuladores de evento de pós-nível do controle de Web de dados. Portanto, precisamos criar um manipulador de eventos para o GridView `RowUpdated` evento verifica se um `DBConcurrencyException` exceção foi lançada. Esse manipulador de eventos é passado uma referência a qualquer exceção gerada durante o processo de atualização, conforme mostrado no caso de manipulador de código abaixo:
 
-
 [!code-vb[Main](implementing-optimistic-concurrency-vb/samples/sample13.vb)]
 
 A enfrentar de um `DBConcurrencyException` esse manipulador de eventos de exceção, exibe o `UpdateConflictMessage` controle de rótulo e indica que a exceção foi tratada. Com esse código, quando uma violação de simultaneidade ocorre ao atualizar um registro, as alterações do usuário são perdidas, já que eles talvez tenham sido substituídos modificações de outro usuário ao mesmo tempo. Em particular, o GridView é retornado para seu estado de edição previamente e associado aos dados do banco de dados atual. Isso atualizará a linha de GridView com as outras alterações do usuário, que eram anteriormente não é visíveis. Além disso, o `UpdateConflictMessage` controle de rótulo será explicar ao usuário que acabou de ocorrer. Essa sequência de eventos é detalhada na Figura 19.
-
 
 [![Um usuário s atualizações são perdidas na Face de uma violação de simultaneidade](implementing-optimistic-concurrency-vb/_static/image54.png)](implementing-optimistic-concurrency-vb/_static/image53.png)
 
 **Figura 19**: Um usuário s atualizações são perdidas na Face de uma violação de simultaneidade ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image55.png))
 
-
 > [!NOTE]
 > Como alternativa, em vez de retornar o GridView para o estado de edição previamente, podemos pode deixar o GridView em seu estado de edição, definindo o `KeepInEditMode` propriedade do passado `GridViewUpdatedEventArgs` objeto como true. Se você usar essa abordagem, no entanto, certifique-se associar novamente os dados para o GridView (invocando seus `DataBind()` método) para que os outros valores do usuário são carregados na interface de edição. O código disponível para download com este tutorial tem estas duas linhas de código no `RowUpdated` comentado do manipulador de eventos; simplesmente remova essas linhas de código para que o GridView permanecem no modo de edição após uma violação de simultaneidade.
-
 
 ## <a name="responding-to-concurrency-violations-when-deleting"></a>Responder a violações de simultaneidade ao excluir
 
@@ -403,16 +346,13 @@ Com o padrão de banco de dados direto, não há nenhuma exceção gerada em cas
 
 O valor de retorno para um método BLL pode ser examinado em manipuladores de evento de pós-nível do ObjectDataSource por meio de `ReturnValue` propriedade do `ObjectDataSourceStatusEventArgs` objeto passado para o manipulador de eventos. Como estamos interessados na determinação do valor de retorno de `DeleteProduct` método, precisamos criar um manipulador de eventos para o ObjectDataSource `Deleted` eventos. O `ReturnValue` propriedade é do tipo `object` e pode ser `null` se uma exceção foi gerada e o método foi interrompido antes que ele poderia retornar um valor. Portanto, podemos deve certificar-se que o `ReturnValue` propriedade não é `null` e é um valor booliano. Supondo que essa verificação passa, vamos mostrar o `DeleteConflictMessage` controle de rótulo, se o `ReturnValue` é `false`. Isso pode ser feito usando o código a seguir:
 
-
 [!code-vb[Main](implementing-optimistic-concurrency-vb/samples/sample14.vb)]
 
 Diante de uma violação de simultaneidade, a solicitação de exclusão do usuário será cancelada. O GridView é atualizado, mostrando as alterações que ocorreram para esse registro entre a hora em que o usuário carregar a página e quando ele clica no botão Excluir. Quando ocorre uma violação desse tipo, o `DeleteConflictMessage` rótulo é exibido, explicando o que aconteceu (consulte a Figura 20).
 
-
 [![Um usuário s Delete é cancelado diante de uma violação de simultaneidade](implementing-optimistic-concurrency-vb/_static/image57.png)](implementing-optimistic-concurrency-vb/_static/image56.png)
 
 **Figura 20**: Um usuário s Delete é cancelado diante de uma violação de simultaneidade ([clique para exibir a imagem em tamanho normal](implementing-optimistic-concurrency-vb/_static/image58.png))
-
 
 ## <a name="summary"></a>Resumo
 

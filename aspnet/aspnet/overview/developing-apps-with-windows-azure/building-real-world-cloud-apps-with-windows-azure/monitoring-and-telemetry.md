@@ -8,12 +8,12 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: 48a66eea839f7f48899040ad20bbfee95b9a1902
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2fc8f6cdefe1e940f3e3eafc2b9acc9144690284
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59403903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118726"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoramento e telemetria (compilando aplicativos de nuvem do mundo Real com o Azure)
 
@@ -23,14 +23,12 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 
 > O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
 
-
 Muitas pessoas contam com os clientes para que ele saiba quando seu aplicativo está inativo. Que não é realmente uma prática recomendada em qualquer lugar e especialmente não na nuvem. Não há nenhuma garantia de notificação rápida, e quando você seja notificado, você geralmente pode obter dados falsos ou mínimo sobre o que aconteceu. Com bons sistemas de telemetria e registro em log que você pode estar informado do que está acontecendo com seu aplicativo e quando algo dá errado você descobre imediatamente e tem informações úteis de solução de problemas para trabalhar com.
 
 ## <a name="buy-or-rent-a-telemetry-solution"></a>Comprar ou alugar uma solução de telemetria
 
 > [!NOTE]
 > Este artigo foi escrito antes [Application Insights](/azure/application-insights/app-insights-overview) foi lançado. O Application Insights é a abordagem preferencial para soluções de telemetria no Azure. Ver [configurar o Application Insights para seu site ASP.NET](/azure/application-insights/app-insights-asp-net) para obter mais informações.
-
 
 Uma das coisas que é excelente sobre o ambiente de nuvem é que é muito fácil comprar ou alugar sua maneira de vitória. Telemetria é um exemplo. Sem muito esforço, você pode obter um sistema de telemetria muito bom para cima e em execução, muito econômico. Há um monte de parceiros excelentes que se integram com o Azure e alguns deles têm camadas gratuitas – portanto, você pode obter Telemetria básica para nada. Aqui estão apenas alguns daqueles disponíveis atualmente no Azure:
 

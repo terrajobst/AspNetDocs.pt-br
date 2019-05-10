@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 5c76891d-e515-4885-b576-76bd2c494efe
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation
 msc.type: authoredcontent
-ms.openlocfilehash: 7834b5c418de9d05ee870641cfd7c7f9956ab210
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 06816f3555a806d41caf562b910a4ec4427b13bd
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402993"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134227"
 ---
 # <a name="ui-and-navigation"></a>Interface do usuário e navegação
 
@@ -22,7 +22,6 @@ by [Erik Reitan](https://github.com/Erikre)
 [Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
-
 
 Neste tutorial, você modificará a interface do usuário do aplicativo da Web padrão para dar suporte a recursos do aplicativo Wingtip Toys store frontal. Além disso, você adicionará simples e dados associados a navegação. Este tutorial se baseia no tutorial anterior, "Criar a camada de acesso de dados" e faz parte da série de tutoriais de Wingtip Toys.
 
@@ -75,7 +74,6 @@ Se você não incluir um `@Page` diretiva na página, ou se a diretiva não incl
 > [!NOTE] 
 > 
 > O *Machine. config* também fornece detalhes sobre todas as definições de configuração possíveis.
-
 
 ### <a name="web-server-controls"></a>Controles de servidor Web
 
@@ -181,7 +179,6 @@ Neste tutorial, você irá alterar a aparência do aplicativo Wingtip Toys, subs
 > 
 > O modelo de aplicativo Web do ASP.NET usa o *Bundle.config* arquivo na raiz do projeto para armazenar o caminho dos arquivos CSS do Bootstrap.
 
-
 ### <a name="modifying-the-default-navigation"></a>Modificar a navegação padrão
 
 A navegação padrão para todas as páginas no aplicativo pode ser modificada ao alterar o elemento da lista não ordenada de navegação que está na *Master* página.
@@ -196,7 +193,6 @@ Como você pode ver no HTML acima, você modificou cada item de linha `<li>` que
 > [!NOTE] 
 > 
 > O til (`~`) caractere é usado para especificar que o `href` caminho começa na raiz do projeto.
-
 
 ### <a name="adding-a-data-control-to-display-navigation-data"></a>Adicionando um controle de dados para exibir dados de navegação
 
@@ -215,7 +211,6 @@ Esse código exibirá todas as categorias do banco de dados. O **ListView** cont
 > **Dica**
 > 
 > Quando você adiciona código digitando durante o desenvolvimento, você pode ter certeza de que um membro válido de um objeto é encontrado como fortemente tipada controles de dados mostram os membros disponíveis com base no IntelliSense. Conforme você digita o código, como propriedades, métodos e objetos, o IntelliSense oferece opções de código apropriada ao contexto.
-
 
 A próxima etapa, você implementará o `GetCategories` método para recuperar dados.
 
@@ -253,7 +248,6 @@ Abra o *Web. config* de arquivo e examine a seção da cadeia de caracteres de c
 > [!NOTE] 
 > 
 > Se o *App\_dados* pasta não estiver visível ou se a pasta estiver vazia, selecione o **atualizar** ícone e, em seguida, o **Show All Files** ícone na parte superior do **Solution Explorer** janela. Expandir a largura dos **Gerenciador de soluções** windows podem ser necessárias para mostrar todos os ícones disponíveis.
-
 
 Agora você pode inspecionar os dados contidos na *wingtiptoys.mdf* arquivo de banco de dados usando o **Server Explorer** janela.
 

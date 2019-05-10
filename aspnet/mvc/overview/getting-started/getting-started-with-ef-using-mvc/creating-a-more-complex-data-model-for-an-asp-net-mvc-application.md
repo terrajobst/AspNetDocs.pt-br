@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: 46f7f3c9-274f-4649-811d-92222a9b27e2
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-a-more-complex-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 5deab7da776c3c43e3e2cdf42b04922678f956c7
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 5c27f6fe07856db2b2961abc8fa797343d361d97
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57041853"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120946"
 ---
 # <a name="tutorial-create-a-more-complex-data-model-for-an-aspnet-mvc-app"></a>Tutorial: Criar um modelo de dados mais complexo para um aplicativo ASP.NET MVC
 
@@ -61,9 +61,7 @@ O [DataType](https://msdn.microsoft.com/library/system.componentmodel.dataannota
 
 O atributo `DisplayFormat` é usado para especificar explicitamente o formato de data:
 
-
 [!code-csharp[Main](creating-a-more-complex-data-model-for-an-asp-net-mvc-application/samples/sample2.cs)]
-
 
 O `ApplyFormatInEditMode` configuração especifica que a formatação especificado deve também ser aplicada quando o valor é exibido em uma caixa de texto para edição. (Talvez você não deseje isso em alguns campos – por exemplo, para valores de moeda, você talvez não deseja o símbolo de moeda na caixa de texto para edição.)
 

@@ -9,12 +9,12 @@ ms.assetid: 457d7eaf-ee76-4ceb-9082-c7c1721435ad
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
-ms.openlocfilehash: 6f8b926c78097b68e6a159f2fdd30e7b8a6477a0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 97c00494c210b5edb1894d1642cc6e40486c146f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395167"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121454"
 ---
 # <a name="developing-aspnet-apps-with-azure-active-directory"></a>Desenvolver aplicativos do ASP.NET com o Azure Active Directory
 
@@ -130,7 +130,6 @@ As etapas a seguir mostram como implantar o aplicativo no Azure. Nas etapas ante
 Se você receber o erro a seguir: Valor não pode ser nulo ou vazio. Nome do parâmetro: linkText
 
 ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image19.png)
-
 
 Substitua o código na *Views\Shared\\loginpartial* arquivo com o seguinte:
 

@@ -8,12 +8,12 @@ ms.date: 01/06/2019
 ms.assetid: 52a4d5fe-aa31-4471-b3cb-a064f82cb791
 msc.legacyurl: /mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view
 msc.type: authoredcontent
-ms.openlocfilehash: 4a4627bdce8b8f2085150aa08cdc4c1271e09e09
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c42ec77b5d5107f3ef70e13b779fc1bebef70a14
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421999"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120710"
 ---
 # <a name="examining-the-edit-methods-and-edit-view"></a>Examinar os métodos de edição e a exibição de edição
 
@@ -98,7 +98,6 @@ Todos os `HttpGet` métodos seguem um padrão semelhante. Obtêm um objeto de fi
 ## <a name="jquery-validation-for-non-english-locales"></a>validação do jQuery para idiomas diferentes do inglês
 
 Se você estiver usando um computador de inglês dos EUA, você pode ignorar esta seção e vá para o próximo tutorial. Você pode baixar a versão de Globalize deste tutorial [aqui](https://archive.msdn.microsoft.com/Project/Download/FileDownload.aspx?ProjectName=aspnetmvcsamples&amp;DownloadId=16475). Para obter um tutorial de duas partes excelente sobre internacionalização, consulte [ASP.NET MVC 5 internacionalização do Nadeem](http://afana.me/post/aspnet-mvc-internationalization.aspx).
-
 
 > [!NOTE]
 > para dar suporte a validação do jQuery para idiomas diferentes do inglês que usam uma vírgula (&quot;,&quot;) para um ponto decimal e formatos de data do inglês dos EUA, você deve incluir *globalize.js* seu específicas e  *cultures/globalize.cultures.js* arquivo (do [ https://github.com/jquery/globalize ](https://github.com/jquery/globalize) ) e JavaScript para usar `Globalize.parseFloat`. Você pode obter a validação do jQuery diferente do inglês do NuGet. (Não instale Globalize se você estiver usando uma localidade em inglês.)

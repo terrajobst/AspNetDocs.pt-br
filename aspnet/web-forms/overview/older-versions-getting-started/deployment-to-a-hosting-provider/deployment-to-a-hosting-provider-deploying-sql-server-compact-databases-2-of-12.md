@@ -8,12 +8,12 @@ ms.date: 11/17/2011
 ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: cc8568847e050e868a3e7563b5fc1fc6fbf25d86
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b265d210ff3b1eeb8697a973cc245f6c97b3eb07
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405476"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134173"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Implantando o SQL Server Compact os bancos de dados - 2 de 12
 
@@ -24,7 +24,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET projeto de aplicativo web que inclui um banco de dados do SQL Server Compact usando o Visual Studio 2012 RC ou Visual Studio Express 2012 RC para Web. Você também pode usar o Visual Studio 2010 se você instalar a atualização de publicação na Web. Para obter uma introdução à série, consulte [o primeiro tutorial na série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
 > Para obter um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar as edições do SQL Server que não seja o SQL Server Compact e mostra como implantar aplicativos de Web do serviço de aplicativo do Azure, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -144,7 +143,6 @@ Essa seleção de menu adiciona o código a seguir para o `using` instruções n
 > 
 > Este exemplo mostrado para este tutorial usa o `AddOrUpdate` método na `Seed` método das migrações do Code First `Configuration` classe. Código migrações primeiro chama o `Seed` método após cada migração e esse método atualiza as linhas que já foram inseridas ou insere-os se ainda não existirem. O `AddOrUpdate` método não pode ser a melhor opção para seu cenário. Para obter mais informações, consulte [tome cuidado com o EF 4.3 AddOrUpdate método](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) no blog de Julie.
 
-
 Pressione CTRL-SHIFT-B para compilar o projeto.
 
 A próxima etapa é criar um `DbMigration` classe para a migração inicial. Você deseja que essa migração para criar um novo banco de dados, portanto, você precisa excluir o banco de dados que já existe. Bancos de dados do SQL Server Compact estão contidos em *sdf* arquivos na *App\_dados* pasta. Na **Gerenciador de soluções**, expanda *App\_Data* no projeto ContosoUniversity para ver dois bancos de dados do SQL Server Compact, que é representado por *. sdf*arquivos.
@@ -187,7 +185,6 @@ Quando você implanta um site pela primeira vez, é comum para excluir a maioria
 
 > [!NOTE]
 > O banco de dados de associação armazena um hash de senhas de conta. Para implantar contas de um computador para outro, você deve garantir que as rotinas de hash não geram hashes de diferentes no servidor de destino do que em um computador de origem. Eles irá gerar os hashes mesmos quando você usa o ASP.NET Universal Providers, desde que você não altere o algoritmo padrão. O algoritmo padrão é HMACSHA256 e é especificado na **validação** atributo da **[machineKey](https://msdn.microsoft.com/library/w8h3skw9.aspx)** elemento no arquivo Web. config.
-
 
 O banco de dados de associação não é mantido por migrações do Code First, e não há nenhum automático inicializador que propaga o banco de dados com as contas de teste (que existe para o banco de dados de estudante). Portanto, para manter dados de teste disponíveis você vai fazer uma cópia do banco de dados de teste antes de criar um novo.
 

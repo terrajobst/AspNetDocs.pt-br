@@ -8,12 +8,12 @@ ms.date: 10/17/2013
 ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: a5de73d93d0af21a3b59d6c21014810184292adb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 55e635c967e07e193dda0358b020638af46c688e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379346"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65120832"
 ---
 # <a name="adding-a-new-field"></a>Adicionando um Novo Campo
 
@@ -79,7 +79,6 @@ Isso adiciona a seguinte instrução using:
 > 
 > Para obter mais informações sobre o [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método, consulte [tome cuidado com o EF 4.3 AddOrUpdate método](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/)...
 
-
 **Pressione CTRL-SHIFT-B para compilar o projeto.** (As etapas a seguir falhará se você não criar neste momento).
 
 A próxima etapa é criar um `DbMigration` classe para a migração inicial. Essa migração cria um novo banco de dados, é por isso que você excluiu o *movie.mdf* arquivo em uma etapa anterior.
@@ -112,7 +111,7 @@ Completo `Movie` classe agora parece o código a seguir:
 
 Compile o aplicativo (Ctrl + Shift + B).
 
-adicionou um novo campo para a propriedade `Movie` , você também precisará atualizar *lista de permissões* da associação para que essa nova propriedade seja incluída. Atualizar o `bind` de atributo para `Create` e `Edit` métodos de ação para incluir o `Rating` propriedade:
+Como você adicionou um novo campo para o `Movie` classe, você também precisará atualizar a associação *lista branca* para que essa nova propriedade seja incluída. Atualizar o `bind` de atributo para `Create` e `Edit` métodos de ação para incluir o `Rating` propriedade:
 
 [!code-csharp[Main](adding-a-new-field/samples/sample7.cs?highlight=1)]
 
@@ -138,13 +137,11 @@ O modelo fazendo o contexto de 'MovieDBContext' foi alterado desde que o banco d
 
 Você está vendo esse erro porque atualizada `Movie` classe de modelo no aplicativo agora é diferente do esquema do `Movie` tabela do banco de dados existente. (Não há nenhuma coluna `Rating` na tabela de banco de dados.)
 
-
 Existem algumas abordagens para resolver o erro:
 
 1. Faça com que o Entity Framework remova automaticamente e recrie o banco de dados com base no novo esquema de classe de modelo. Essa abordagem é muito conveniente no início do ciclo de desenvolvimento, quando você está fazendo o desenvolvimento ativo em um banco de dados de teste; ela permite que você desenvolva rapidamente o modelo e o esquema de banco de dados juntos. A desvantagem, no entanto, é que você perde os dados existentes no banco de dados — para que você *não* para usar essa abordagem em um banco de dados de produção! Muitas vezes, o uso de um inicializador para propagar um banco de dados com os dados de teste automaticamente é uma maneira produtiva de desenvolver um aplicativo. Para obter mais informações sobre inicializadores de banco de dados do Entity Framework, consulte [tutorial do ASP.NET MVC/Entity Framework](../getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
 2. Modifique explicitamente o esquema do banco de dados existente para que ele corresponda às classes de modelo. A vantagem dessa abordagem é que você mantém os dados. Faça essa alteração manualmente ou criando um script de alteração de banco de dados.
 3. Use as Migrações do Code First para atualizar o esquema de banco de dados.
-
 
 Para este tutorial, usaremos as Migrações do Code First.
 

@@ -8,12 +8,12 @@ ms.date: 10/16/2008
 ms.assetid: 37a1ebae-8773-408f-8645-d21da7ff9ae1
 msc.legacyurl: /mvc/overview/older-versions-1/views/passing-data-to-view-master-pages-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 7de5a1545ee59e671058f09789ce69d5062d3655
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: ebf670fc0d8cf2cfd7df01d07d4119122b61a6a1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380971"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65130414"
 ---
 # <a name="passing-data-to-view-master-pages-vb"></a>Transmitir dados para Exibir páginas mestras (VB)
 
@@ -23,7 +23,6 @@ por [Microsoft](https://github.com/microsoft)
 
 > O objetivo deste tutorial é explicar como você pode passar dados de um controlador para uma página de exibição mestre. Examinamos duas estratégias para passar dados para uma página de exibição mestre. Primeiro, discutiremos uma solução fácil que resulta em um aplicativo que é difícil de manter. Em seguida, vamos examinar uma solução muito melhor que requer um pouco mais de trabalho inicial, mas isso resulta em um aplicativo muito mais fácil de manter.
 
-
 ## <a name="passing-data-to-view-master-pages"></a>Transmitindo dados para exibir páginas mestras
 
 O objetivo deste tutorial é explicar como você pode passar dados de um controlador para uma página de exibição mestre. Examinamos duas estratégias para passar dados para uma página de exibição mestre. Primeiro, discutiremos uma solução fácil que resulta em um aplicativo que é difícil de manter. Em seguida, vamos examinar uma solução muito melhor que requer um pouco mais de trabalho inicial, mas isso resulta em um aplicativo muito mais fácil de manter.
@@ -32,11 +31,9 @@ O objetivo deste tutorial é explicar como você pode passar dados de um control
 
 Imagine que você está criando um aplicativo de banco de dados de filme e você deseja exibir a lista de categorias de filmes em todas as páginas em seu aplicativo (veja a Figura 1). Além disso, imagine que a lista de categorias de filmes é armazenada em uma tabela de banco de dados. Nesse caso, faria sentido para recuperar as categorias do banco de dados e renderizar a lista de categorias de filmes dentro de uma página de exibição mestre.
 
-
 [![Exibir categorias de filmes em uma página mestra do modo de exibição](passing-data-to-view-master-pages-vb/_static/image2.png)](passing-data-to-view-master-pages-vb/_static/image1.png)
 
 **Figura 01**: Exibir categorias de filmes em uma página de exibição mestre ([clique para exibir a imagem em tamanho normal](passing-data-to-view-master-pages-vb/_static/image3.png))
-
 
 Aqui está o problema. Como você recupera a lista de categorias de filme na página mestra? É tentador para chamar métodos de suas classes de modelo na página mestra diretamente. Em outras palavras, é tentador para incluir o código para recuperar os dados à direita do banco de dados na sua página mestra. No entanto, ignorar os controladores de MVC para acessar o banco de dados violaria a separação limpa de preocupações que é um dos principais benefícios da criação de um aplicativo MVC.
 
@@ -58,11 +55,9 @@ Observe que tanto a `Index()` e o `Details()` ações adicionam dois itens para 
 
 O `Details()` ação também adiciona duas chaves nomeadas categorias e filmes. A chave de categorias, mais uma vez, representa a lista de categorias de filmes exibido pela página modo de exibição mestre. A chave de filmes representa a lista de filmes em uma determinada categoria exibidos por página de exibição de detalhes (consulte a Figura 2).
 
-
 [![A exibição de detalhes](passing-data-to-view-master-pages-vb/_static/image5.png)](passing-data-to-view-master-pages-vb/_static/image4.png)
 
 **Figura 02**: A exibição de detalhes ([clique para exibir a imagem em tamanho normal](passing-data-to-view-master-pages-vb/_static/image6.png))
-
 
 O modo de exibição de índice está contido na listagem 2. Ele simplesmente itera através da lista de filmes representado pelo item de filmes em dados de exibição.
 

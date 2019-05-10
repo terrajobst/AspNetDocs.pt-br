@@ -8,12 +8,12 @@ ms.date: 01/27/2009
 ms.assetid: 2ddd4407-d143-4a94-877c-21771bfb97a6
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c126270304178d178f4b8f9739fa5c51e5dd0551
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: be43712d3dd5235117558e991d9dd71aa30ec470
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415356"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123729"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-c"></a>Adicionar conteúdo dinâmico a uma página em cache (C#)
 
@@ -21,16 +21,13 @@ por [Microsoft](https://github.com/microsoft)
 
 > Saiba como a combinação de conteúdo dinâmico e armazenados em cache na mesma página. Substituição do pós-cache de permite que você exiba o conteúdo dinâmico, como anúncios de banner ou itens de notícias, dentro de uma página que tem sido a saída armazenada em cache.
 
-
 Aproveitando o cache de saída, você pode melhorar consideravelmente o desempenho de um aplicativo ASP.NET MVC. Em vez de regenerar uma página de cada vez que a página é solicitada, a página pode ser gerada uma vez e armazenado em cache na memória para vários usuários.
 
 Mas há um problema. E se você precisa exibir o conteúdo dinâmico na página? Por exemplo, imagine que você deseja exibir uma faixa de anúncio na página. Você não quer o anúncio em faixa sejam armazenados em cache para que cada usuário vê o anúncio do mesmo. Você não faria qualquer dinheiro dessa maneira!
 
 Felizmente, há uma solução fácil. Você pode tirar proveito de um recurso da estrutura do ASP.NET chamado *pós-cache substituição*. Substituição do pós-cache de permite que você substitua o conteúdo dinâmico em uma página que foi armazenado em cache na memória.
 
-
 Normalmente, quando uma página de cache de saída usando o atributo [OutputCache], a página é armazenada em cache no servidor e o cliente (navegador da web). Quando você usa a substituição do cache de postagem, uma página é armazenada em cache apenas no servidor.
-
 
 #### <a name="using-post-cache-substitution"></a>Usando a substituição do Cache de postagem
 

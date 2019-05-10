@@ -8,12 +8,12 @@ ms.date: 04/01/2009
 ms.assetid: 492f5ae2-bad7-4107-89a9-f04a9525dee7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 8651ab58cb79a2c7b2ac67b0095542ab3a575534
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c926901f3c307d83ade5149b010a44ce8ed946f6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418398"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133901"
 ---
 # <a name="aspnet-hosting-options-vb"></a>Opções de hospedagem do ASP.NET (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar PDF](http://download.microsoft.com/download/E/8/9/E8920AE6-D441-41A7-8A77-9EF8FF970D8B/aspnet_tutorial01_Basics_vb.pdf)
 
 > Aplicativos web ASP.NET normalmente são projetados, criados e testados em um ambiente de desenvolvimento local e precisa ser implantado em um ambiente de produção quando ele estiver pronto para lançamento. Este tutorial fornece uma visão geral do processo de implantação e serve como uma introdução para esta série de tutoriais.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -57,7 +56,6 @@ Normalmente, as informações de configuração para um aplicativo web estão lo
 
 Além das alterações de configuração do aplicativo web, etapa 1 também pode envolver a configuração para o servidor web e o banco de dados. Por exemplo, se uma página ASP.NET cria ou exclui arquivos de um diretório no servidor web, em seguida, o servidor web precisará estar configurado para permitir essas modificações no sistema de arquivos. Da mesma forma, pode haver configurações de permissão ou de autenticação que precisam ser feitas no banco de dados.
 
-
 Etapa 2 envolve sincronizando o conjunto de páginas do ASP.NET essencial e arquivos de suporte entre os ambientes de desenvolvimento e produção. O conjunto específico de ASP. Arquivos relacionados NET que precisam ser sincronizados entre os dois ambientes depende do tipo de projeto criado no Visual Studio e é a discussão no próximo tutorial  <em>[determinando quais arquivos precisam ser implantados](determining-what-files-need-to-be-deployed-vb.md)</em>. Os tutoriais de terceiro e quarto -  <em>[Implantando seu Site usando FTP](deploying-your-site-using-an-ftp-client-vb.md)</em>e <em>[implantando seu Site usando o Visual Studio](deploying-your-site-using-visual-studio-vb.md)</em> -examinar diferentes ferramentas e técnicas para esses arquivos de sincronização.
 
 Ao criar aplicativos controlados por dados, há geralmente dois bancos de dados que está sendo usados: um para desenvolvimento e outro na produção. Durante o desenvolvimento, o esquema do banco de dados de desenvolvimento pode ser modificada para incluir novas tabelas, colunas, procedimentos armazenados e gatilhos ou pode ser modificada para remover ou renomear objetos de banco de dados existente. Entre a hora em que essas alterações são feitas e a hora em que o aplicativo é implantado em produção, os bancos de dados de desenvolvimento e produção estão fora de sincronizado. Este assincronismo precisa ser corrigido durante o processo de implantação. Esses desafios serão examinados em tutoriais futuros.
@@ -69,7 +67,6 @@ Aplicativos ASP.NET podem ser implantados em qualquer servidor web que tem o .NE
 > [!NOTE]
 > [IIS](https://www.iis.net/) é o servidor de web de nível empresarial da Microsoft. Ele é fornecido com as edições de não-Home do Windows, como o Windows Server 2008 e em algumas edições do Windows Vista. Você não precisa instalar o IIS para servir aplicativos ASP.NET em um ambiente de desenvolvimento, como o Visual Studio inclui o servidor de Web de desenvolvimento do ASP.NET. No entanto, o servidor Web de desenvolvimento ASP.NET aceita apenas conexões locais e, portanto, não pode ser usado em um ambiente de produção.
 
-
 Antes de implantar seu site em um provedor de host da web, primeiro você deve decidir o que fazer negócios com a empresa. Há inúmeras web empresas no marketplace; de hospedagem uma pesquisa por "da empresa de hospedagem na web" retorna mais de cinco milhões de resultados. Como encontrar aquele que é ideal para você? Seu mecanismo de pesquisa favorito é um bom ponto de partida, como sites, como [TopHosts](http://www.tophosts.com/) e [HostCritique](http://www.hostcritique.net/), que comparam e contrastam vários serviços de hospedagem. Eu também de aviso solicitando que seus colegas e colegas de trabalho para todas as recomendações; Você também pode solicitar recomendações na [hospedagem Open Forum](https://forums.asp.net/158.aspx) aqui na [fóruns do ASP.NET](https://forums.asp.net/).
 
 Empresas de hospedagem da Web normalmente oferecem planos de hospedagem compartilhados e dedicado a planos de hospedagem. Com hospedagem compartilhada um hosts de servidor web único dezenas se não centenas de diferentes sites. Com a hospedagem dedicada, você concede um computador da empresa, que serve seu site e seu site sozinho. Um plano de hospedagem compartilhado pode incluir suporte para páginas ASP.NET, a capacidade de trabalhar com bancos de dados do Microsoft Access, 5 GB de espaço em disco e de tráfego mensal de largura de banda de 100 GB por US $9,95 por mês. Outro plano de hospedagem compartilhado pode incluir suporte para páginas ASP.NET, acesso ao servidor de banco de dados Microsoft SQL Server 2008, 10 GB de espaço em disco e 250 GB de tráfego mensal de largura de banda por US $19,95 por mês. Dedicado a planos de hospedagem são geralmente muito mais caros, custando centenas de dólares por mês, mas oferecem um desempenho melhor e mais controle do que compartilhado as opções de hospedagem. O plano escolhido depende de seu orçamento, a quantidade de tráfego recebe de seu site e os recursos que você prevê que você precisará.
@@ -78,7 +75,6 @@ Duas considerações importantes ao escolher um provedor de host da web são a q
 
 > [!NOTE]
 > Algumas empresas de hospedagem da web se concentrar seus negócios em uma pilha de tecnologia em particular, como .NET ou [LAMP](http://en.wikipedia.org/wiki/LAMP_stack) (**L** inux, **um** pache, **M** ySQL, e **P** HP), portanto, certifique-se de que a empresa que você selecione hospeda aplicativos ASP.NET. Também verifique se que eles dão suporte a versão do ASP.NET que você está usando para criar seu aplicativo. E se você estiver criando um aplicativo controlado por dados, certifique-se de que o host da web oferece o mesmo servidor de banco de dados e a mesma versão que você está usando.
-
 
 ## <a name="summary"></a>Resumo
 

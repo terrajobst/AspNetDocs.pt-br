@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: 9274a72e-34dd-4dae-8452-ed733ae71377
 msc.legacyurl: /mvc/overview/older-versions-1/security/preventing-javascript-injection-attacks-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d988b2ed6b7d1760557cbfbb543afa85b320c984
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 844d7209d3efbe0acf92fbc25e9b06c25c4d269a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402434"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125420"
 ---
 # <a name="preventing-javascript-injection-attacks-vb"></a>Impedir ataques de injeção de JavaScript (VB)
 
@@ -23,7 +23,6 @@ por [Stephen Walther](https://github.com/StephenWalther)
 
 > Impedir ataques de injeção de JavaScript e ataques de scripts entre sites está acontecendo para você. Neste tutorial, Stephen Walther explica como você pode facilmente anular esses tipos de ataques por seu conteúdo de codificação HTML.
 
-
 O objetivo deste tutorial é explicar como você pode impedir ataques de injeção de JavaScript em aplicativos ASP.NET MVC. Este tutorial aborda duas abordagens para proteger seu site contra um ataque de injeção de JavaScript. Você aprenderá a evitar ataques de injeção de JavaScript codificação dos dados que você exibir. Você também aprenderá a evitar ataques de injeção de JavaScript codificação dos dados que você aceite.
 
 ## <a name="what-is-a-javascript-injection-attack"></a>O que é um ataque de injeção de JavaScript?
@@ -32,11 +31,9 @@ Sempre que você aceita a entrada do usuário e exibir novamente a entrada do us
 
 Imagine que você tenha criado um site de comentários do cliente (veja a Figura 1). Os clientes podem visitar o site e inserir comentários em sua experiência usando seus produtos. Quando um cliente envia seus comentários, comentários é exibida novamente na página de comentários.
 
-
 [![Site de comentários do cliente](preventing-javascript-injection-attacks-vb/_static/image2.png)](preventing-javascript-injection-attacks-vb/_static/image1.png)
 
 **Figura 01**: Site de comentários do cliente ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-vb/_static/image3.png))
-
 
 O site de comentários do cliente usa o `controller` na listagem 1. Isso `controller` contém duas ações denominadas `Index()` e `Create()`.
 
@@ -64,11 +61,9 @@ Imagine que você insira o texto a seguir no formulário de comentários do clie
 
 Esse texto representa um script JavaScript que exibe uma caixa de mensagem de alerta. Depois que alguém envia esse script em comentários de formulário, a mensagem <em>Boo!</em> será exibida sempre que qualquer pessoa que visita o site de comentários do cliente no futuro (veja a Figura 2).
 
-
 [![Injeção de JavaScript](preventing-javascript-injection-attacks-vb/_static/image5.png)](preventing-javascript-injection-attacks-vb/_static/image4.png)
 
 **Figura 02**: Injeção de JavaScript ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-vb/_static/image6.png))
-
 
 Agora, sua resposta inicial a ataques de injeção de JavaScript pode ser apatia. Você pode pensar que os ataques de injeção de JavaScript são simplesmente um tipo de *desfiguração* ataque. Você pode achar que ninguém pode fazer algo realmente ruim ao confirmar um ataque de injeção de JavaScript.
 
@@ -92,11 +87,9 @@ Observe que o valor de `feedback.Message` é codificado em HTML antes que o valo
 
 O que significa para o HTML codificar uma cadeia de caracteres? Quando o HTML codificar uma cadeia de caracteres, perigoso caracteres, como `<` e `>` são substituídos por referências a entidades, como HTML `&lt;` e `&gt;`. Portanto, quando a cadeia de caracteres `<script>alert("Boo!")</script>` é o HTML codificado, eles serão convertidos em `&lt;script&gt;alert(&quot;Boo!&quot;)&lt;/script&gt;`. A cadeia de caracteres codificada não executa como um script JavaScript quando interpretada por um navegador. Em vez disso, você obtém a página inofensiva na Figura 3.
 
-
 [![Ataque de JavaScript derrotada](preventing-javascript-injection-attacks-vb/_static/image8.png)](preventing-javascript-injection-attacks-vb/_static/image7.png)
 
 **Figura 03**: Anulou o ataque de JavaScript ([clique para exibir a imagem em tamanho normal](preventing-javascript-injection-attacks-vb/_static/image9.png))
-
 
 Observe que, nos `Index` exibir na listagem 3 apenas o valor de `feedback.Message` é codificado. O valor de `feedback.EntryDate` não é codificado. Você somente precisa codificar dados inseridos por um usuário. Como o valor de EntryDate foi gerado no controlador, você não precisa para HTML codificar esse valor.
 

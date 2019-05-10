@@ -8,12 +8,12 @@ ms.date: 08/15/2006
 ms.assetid: 6f81b633-9d01-4e52-ae4a-2ea6bc109475
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/creating-a-customized-sorting-user-interface-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 34a182278cfa57369643ab151492532bc92bd623
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: af4f91ffed7b8884a7441b5ccf4f390aba867fed
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59393490"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121898"
 ---
 # <a name="creating-a-customized-sorting-user-interface-c"></a>Criação de uma interface do usuário de classificação personalizada (C#)
 
@@ -23,18 +23,15 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Ao exibir uma lista longa de dados classificados, pode ser muito útil para agrupar os dados relacionados com a introdução de linhas de separador. Neste tutorial, veremos como criar cada interface do usuário uma classificação.
 
-
 ## <a name="introduction"></a>Introdução
 
 Ao exibir uma lista longa de dados classificados em que há apenas alguns valores diferentes na coluna classificada, um usuário final talvez seja difícil de discernir onde, exatamente, ocorrem os limites de diferença. Por exemplo, há 81 produtos no banco de dados, mas apenas nove opções de categoria diferentes (oito categorias exclusivas mais o `NULL` opção). Considere o caso de um usuário que está interessado em avaliar os produtos que se enquadram na categoria Frutos do mar. De uma página que liste *todos os* os produtos em uma única GridView, o usuário pode decidir sua melhor aposta é classificar os resultados por categoria, que serão agrupados todos os produtos de Frutos do mar juntos. Depois da classificação por categoria, o usuário, em seguida, precisa procurar em lista, procurando por onde os produtos agrupados de Frutos do mar começar e terminar. Uma vez que os resultados são classificados em ordem alfabética pelo nome da categoria Localizando os produtos de Frutos do mar não é difícil, mas ainda requer verificar atentamente a lista de itens na grade.
 
 Para ajudar a realçar os limites entre grupos classificados, muitos sites empregam uma interface do usuário que adiciona um separador entre esses grupos. Separadores de como as mostradas na Figura 1 permite que um usuário localizar um grupo específico e identificar seus limites mais rapidamente, bem como determinar quais grupos distintos existem nos dados.
 
-
 [![Cada grupo de categorias é claramente identificado](creating-a-customized-sorting-user-interface-cs/_static/image2.png)](creating-a-customized-sorting-user-interface-cs/_static/image1.png)
 
 **Figura 1**: Cada grupo de categorias é claramente identificado ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-cs/_static/image3.png))
-
 
 Neste tutorial, veremos como criar cada interface do usuário uma classificação.
 
@@ -44,16 +41,13 @@ Antes, exploraremos como ampliar o GridView para fornecer a interface de classif
 
 Em seguida, configure o GridView, de modo que ele contém apenas o `ProductName`, `CategoryName`, `SupplierName`, e `UnitPrice` BoundFields e CheckBoxField descontinuado. Finalmente, configure o GridView para oferecer suporte à classificação, marcando a caixa de seleção Habilitar classificação na marca inteligente GridView s (ou definindo sua `AllowSorting` propriedade para `true`). Depois de fazer essas adições para o `CustomSortingUI.aspx` página, a marcação declarativa deve ser semelhante ao seguinte:
 
-
 [!code-aspx[Main](creating-a-customized-sorting-user-interface-cs/samples/sample1.aspx)]
 
 Reserve um tempo para exibir nosso progresso até o momento em um navegador. Figura 2 mostra o GridView classificável quando seus dados são classificados por categoria em ordem alfabética.
 
-
 [![O s GridView classificável os dados são ordenados por categoria](creating-a-customized-sorting-user-interface-cs/_static/image5.png)](creating-a-customized-sorting-user-interface-cs/_static/image4.png)
 
 **Figura 2**: O s GridView classificável dados são ordenados por categoria ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-cs/_static/image6.png))
-
 
 ## <a name="step-2-exploring-techniques-for-adding-the-separator-rows"></a>Etapa 2: Explorar técnicas para adicionar as linhas de separador
 
@@ -73,11 +67,9 @@ As outras duas opções adicionando linhas de separador para os dados reais que 
 
 Quando o GridView está associado a uma fonte de dados, ele cria um `GridViewRow` para cada registro retornado pela fonte de dados. Portanto, podemos pode injetar as linhas de separador necessário com a adição de registros de separador à fonte de dados antes de associá-lo ao GridView. Figura 3 ilustra esse conceito.
 
-
 ![Uma técnica envolve a adição de linhas de separador à fonte de dados](creating-a-customized-sorting-user-interface-cs/_static/image7.png)
 
 **Figura 3**: Uma técnica envolve a adição de linhas de separador à fonte de dados
-
 
 Posso usar os registros de separador de termos entre aspas, porque não há nenhum registro do separador especial; em vez disso, podemos alguma forma deve sinalizar que um registro específico na fonte de dados serve como um separador em vez de uma linha de dados normal. Para nossos exemplos, podemos re associação de um `ProductsDataTable` instância de GridView, que é composta de `ProductRows`. Podemos pode sinalizar um registro como uma linha definindo sua `CategoryID` propriedade para `-1` (uma vez que esse valor não foi possível existe normalmente).
 
@@ -99,22 +91,18 @@ Em vez dos dados de mensagens antes de associá-lo ao GridView, podemos adiciona
 
 Para adicionar linhas de separador entre cada grupo de classificação, é possível manipular diretamente essa hierarquia de controle quando ele tiver sido criado. Podemos pode ter certeza de que a hierarquia de controle GridView s foi criada pela última vez no momento em que a página está sendo processada. Portanto, essa abordagem substitui o `Page` classe s `Render` método, no ponto em que a hierarquia de controle final s GridView é atualizada para incluir as linhas de separador necessários. Figura 4 ilustra esse processo.
 
-
 [![Uma técnica alternativa manipula a hierarquia de controle GridView s](creating-a-customized-sorting-user-interface-cs/_static/image9.png)](creating-a-customized-sorting-user-interface-cs/_static/image8.png)
 
 **Figura 4**: Uma técnica alternativa manipula o s GridView hierarquia de controle ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-cs/_static/image10.png))
-
 
 Para este tutorial, vamos usar essa última abordagem para personalizar a experiência de usuário de classificação.
 
 > [!NOTE]
 > O código m apresentando neste tutorial se baseia no exemplo fornecido em [Teemu Keiski](http://aspadvice.com/blogs/joteke/default.aspx) entrada de blog s [reproduzindo um pouco com o agrupamento de classificação de GridView](http://aspadvice.com/blogs/joteke/archive/2006/02/11/15130.aspx).
 
-
 ## <a name="step-3-adding-the-separator-rows-to-the-gridview-s-control-hierarchy"></a>Etapa 3: Adicionando as linhas de separador a hierarquia de controle GridView s
 
 Como queremos adicionar as linhas de separador a hierarquia de controle GridView s depois de sua hierarquia de controle foi criada e criada pela última vez em que visita de página, que queremos executar essa adição ao final do ciclo de vida de página, mas antes do real c de GridView hierarquia de controle foi renderizada em HTML. O último ponto possível no qual podemos pode fazer isso é o `Page` classe s `Render` evento, que podemos podem ser substituídos em nossa classe code-behind usando a assinatura de método a seguir:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample2.cs)]
 
@@ -125,16 +113,13 @@ Para inserir os cabeçalhos do grupo classificar primeiro precisamos garantir qu
 > [!NOTE]
 > Se você quiser que o GridView seja classificada por uma coluna específica quando a página é carregada pela primeira vez, chamar o GridView s `Sort` método na primeira visita de página (mas não em postbacks subsequentes). Para fazer isso, adicione essa chamada na `Page_Load` manipulador de eventos dentro de um `if (!Page.IsPostBack)` condicional. Voltar para o [paginação e classificação de dados do relatório](paging-and-sorting-report-data-cs.md) informações tutoriais para saber mais sobre o `Sort` método.
 
-
 Supondo que os dados foram classificados, nossa próxima tarefa é determinar qual coluna de dados foi classificados por e, em seguida, para verificar as linhas procurando diferenças nessa coluna s valores. O código a seguir garante que os dados foram classificados e localiza a coluna pela qual os dados foram classificados:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample3.cs)]
 
 Se o GridView tem ainda a ser classificada, o GridView s `SortExpression` propriedade será não tiver sido definida. Portanto, só queremos adicionar as linhas de separador se essa propriedade tem algum valor. Se isso acontecer, em seguida precisamos determinar o índice da coluna pela qual os dados foi classificados. Isso é feito ao fazer loop por meio de s GridView `Columns` coleta, a pesquisa para a coluna cuja `SortExpression` propriedade for igual a s GridView `SortExpression` propriedade. O índice da coluna s, além de também capturamos o `HeaderText` propriedade, que é usada ao exibir as linhas de separador.
 
 Com o índice da coluna pela qual os dados são classificados, a etapa final é enumerar as linhas de GridView. Para cada linha, precisamos determinar se o valor de s coluna classificada é diferente do valor de s de coluna de s classificados linha anterior. Se, por isso, precisamos inserir um novo `GridViewRow` instância para a hierarquia de controle. Isso é feito com o código a seguir:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample4.cs)]
 
@@ -143,33 +128,27 @@ Esse código começa fazendo referência a programaticamente os `Table` do objet
 > [!NOTE]
 > Para determinar o valor da coluna s classificados linha específica, posso usar a célula s `Text` propriedade. Isso funciona bem para BoundFields, mas não funciona conforme o desejado para TemplateFields, CheckBoxFields e assim por diante. Vamos examinar como conta para os campos de GridView alternativos em breve.
 
-
 O `currentValue` e `lastValue` , em seguida, em comparação com as variáveis. Se eles forem diferentes, precisamos adicionar uma nova linha do separador para a hierarquia de controle. Isso é feito por meio da determinação o índice do `GridViewRow` no `Table` objeto s `Rows` coleção, criando novos `GridViewRow` e `TableCell` instâncias e, em seguida, adicionando o `TableCell` e `GridViewRow` para o hierarquia de controle.
 
 Observe que o separador de linha s solitário `TableCell` é formatado, de modo que se estende por toda a largura do GridView, é formatado usando o `SortHeaderRowStyle` classe CSS e tem seu `Text` tal que ela mostra ambos os grupo de classificação de nome de propriedade (como categoria) e o valor do grupo s (como bebidas). Por fim, `lastValue` é atualizado para o valor de `currentValue`.
 
 A classe CSS usada para formatar a linha de cabeçalho de grupo classificação `SortHeaderRowStyle` deve ser especificado no `Styles.css` arquivo. Fique à vontade para usar quaisquer configurações de estilo agradá-lo; Eu usei o seguinte:
 
-
 [!code-css[Main](creating-a-customized-sorting-user-interface-cs/samples/sample5.css)]
 
 Com o código atual, a interface de classificação adiciona cabeçalhos de grupo de classificação ao classificar por qualquer BoundField (consulte a Figura 5, que mostra uma captura de tela durante a classificação por fornecedor). No entanto, ao classificar por qualquer outro tipo de campo (como um CheckBoxField ou TemplateField), os cabeçalhos do grupo de classificação são nenhum lugar a ser localizada (veja a Figura 6).
-
 
 [![A Interface de classificação inclui os cabeçalhos de grupo de classificação ao classificar por BoundFields](creating-a-customized-sorting-user-interface-cs/_static/image12.png)](creating-a-customized-sorting-user-interface-cs/_static/image11.png)
 
 **Figura 5**: A classificação Interface inclui classificação grupo cabeçalhos quando a classificação por BoundFields ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-cs/_static/image13.png))
 
-
 [![Os cabeçalhos do grupo de classificação estão ausentes ao classificar um CheckBoxField](creating-a-customized-sorting-user-interface-cs/_static/image15.png)](creating-a-customized-sorting-user-interface-cs/_static/image14.png)
 
 **Figura 6**: Os cabeçalhos do grupo de classificação estão ausentes ao classificar um CheckBoxField ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-cs/_static/image16.png))
 
-
 O motivo que faltam os cabeçalhos do grupo de classificação ao classificar por um CheckBoxField é porque o código atualmente usa apenas o `TableCell` s `Text` propriedade para determinar o valor da coluna classificada para cada linha. Para CheckBoxFields, o `TableCell` s `Text` propriedade é uma cadeia de caracteres vazia; em vez disso, o valor está disponível por meio de um controle de Web de caixa de seleção que reside dentro de `TableCell` s `Controls` coleção.
 
 Para lidar com tipos de campo que não seja BoundFields, precisamos para ampliar o código em que o `currentValue` variável é atribuída para verificar a existência de uma caixa de seleção na `TableCell` s `Controls` coleção. Em vez de usar `currentValue = gvr.Cells[sortColumnIndex].Text`, substitua este código a seguir:
-
 
 [!code-csharp[Main](creating-a-customized-sorting-user-interface-cs/samples/sample6.cs)]
 
@@ -177,15 +156,12 @@ Esse código examina a coluna classificada `TableCell` para a linha atual determ
 
 Com a adição de código acima, os cabeçalhos do grupo de classificação agora estão presentes quando a classificação por CheckBoxField descontinuados (veja a Figura 7).
 
-
 [![Os cabeçalhos de grupo de classificação são agora presente ao classificar um CheckBoxField](creating-a-customized-sorting-user-interface-cs/_static/image18.png)](creating-a-customized-sorting-user-interface-cs/_static/image17.png)
 
 **Figura 7**: Os cabeçalhos de grupo de classificação são agora presente ao classificar um CheckBoxField ([clique para exibir a imagem em tamanho normal](creating-a-customized-sorting-user-interface-cs/_static/image19.png))
 
-
 > [!NOTE]
 > Se você tiver os produtos com `NULL` banco de dados valores para o `CategoryID`, `SupplierID`, ou `UnitPrice` campos, esses valores serão exibidos como cadeias de caracteres vazias GridView por padrão, o que significa que o texto de linha s separador para esses produtos com `NULL`valores serão lidas como categoria: (ou seja, não há s sem nome após a categoria: como ocorre com categoria: Bebidas). Se você desejar um valor exibido aqui você pode definir o BoundFields [ `NullDisplayText` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.boundfield.nulldisplaytext.aspx) ao texto a ser exibido ou você pode adicionar uma instrução condicional ao método Render ao atribuir o `currentValue` para o separador linha s `Text` propriedade.
-
 
 ## <a name="summary"></a>Resumo
 

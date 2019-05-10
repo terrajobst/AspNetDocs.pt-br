@@ -8,12 +8,12 @@ ms.date: 01/02/2018
 ms.assetid: 75b5c1cf-84bd-434f-8a86-85c568eb5b09
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
 msc.type: authoredcontent
-ms.openlocfilehash: e9ffe0ea3e2bf817675a4a771d3471ec6eb91133
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c8620fc1abc61d514bdc039c66f7a84e67e89abe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406737"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133483"
 ---
 # <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Introdução ao ASP.NET Web Pages – excluindo o banco de dados
 
@@ -33,7 +33,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - O `WebGrid` auxiliar.
 > - O SQL `Delete` comando.
 > - O `Database.Execute` método para executar um SQL `Delete` comando.
-
 
 ## <a name="what-youll-build"></a>O que você vai criar
 
@@ -86,7 +85,6 @@ Agora você pode criar a página que será o destino para o **excluir** link na 
 > Quando seu aplicativo permite que as pessoas alterar um registro, você precisa apresentar o registro para o usuário para edição de qualquer forma. Mas você pode ficar tentado a ignorar esta etapa para exclusão de um registro. Não ignore essa etapa, no entanto. (Também é útil para os usuários ver o registro e confirmar que ele está excluindo o registro que eles se destinam.)
 > 
 > Um conjunto de tutoriais subsequente, você verá como adicionar funcionalidade de logon para que um usuário precise entrar antes de excluir um registro.
-
 
 Crie uma página chamada *DeleteMovie.cshtml* e substituir o que está no arquivo com a seguinte marcação:
 

@@ -8,12 +8,12 @@ ms.date: 05/21/2012
 ms.assetid: 2b381a41-2cb3-40c0-8545-1d393e22877f
 msc.legacyurl: /web-pages/overview/security/using-a-catpcha-to-prevent-automated-programs-bots-from-using-your-aspnet-web-site
 msc.type: authoredcontent
-ms.openlocfilehash: e7baafda8c5b6de4ab0de46948f969a6f0cc21ad
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2647a3155893a3dfb3214795a5f9cf1e8931fa91
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65128451"
 ---
 # <a name="using-a-captcha-to-prevent-bots-from-using-your-aspnet-web-razor-site"></a>Site usando um CAPTCHA para evitar que os Bots usando o Razor da Web do ASP.NET)
 
@@ -31,7 +31,6 @@ por [Microsoft](https://github.com/microsoft)
 > 
 > > [!NOTE]
 > > As informações neste artigo se aplica a 1.0 de páginas da Web do ASP.NET e Web Pages 2.
-
 
 ## <a name="about-captchas"></a>Sobre CAPTCHAs
 
@@ -67,10 +66,8 @@ Em páginas ASP.NET, você pode usar o `ReCaptcha` auxiliar para renderizar um t
 > 
 > [!code-xml[Main](using-a-catpcha-to-prevent-automated-programs-bots-from-using-your-aspnet-web-site/samples/sample3.xml)]
 
-
 <a id="Additional_Resources"></a>
 ## <a name="additional-resources"></a>Recursos adicionais
-
 
 - [Personalizando o comportamento de todo o Site para Sites de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202906)
 - [Site ReCaptcha](https://www.google.com/recaptcha)

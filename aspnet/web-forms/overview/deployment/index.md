@@ -8,17 +8,16 @@ ms.date: 08/18/2011
 ms.assetid: 05e4c88f-5101-4277-a323-b6774d98f69e
 msc.legacyurl: /web-forms/overview/deployment
 msc.type: chapter
-ms.openlocfilehash: 8536c771e5e343bd545b6824bec6f8b85489a7d4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1483abc212b5f122ad3e2b88474c42b208bb748e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416526"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134299"
 ---
 # <a name="deployment"></a>Implantação
 
 > Como implantar projetos de Web Forms do ASP.NET em um servidor.
-
 
 - [Implantação da Web do ASP.NET com uso do Visual Studio](visual-studio-web-deployment/index.md)
 

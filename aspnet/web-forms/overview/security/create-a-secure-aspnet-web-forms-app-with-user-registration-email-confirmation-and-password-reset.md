@@ -8,19 +8,18 @@ ms.date: 10/02/2014
 ms.assetid: 0a8d6044-5fab-4213-82d6-5618d5601358
 msc.legacyurl: /web-forms/overview/security/create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 3df728891103de9c8e461ab9507237c9b14e8251
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: af3653bc164810126bc3bf8f1b1794d75642d807
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390682"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133797"
 ---
 # <a name="create-a-secure-aspnet-web-forms-app-with-user-registration-email-confirmation-and-password-reset-c"></a>Criar um aplicativo de Web Forms do ASP.NET seguro com registro de usuário, confirmação por email e redefinição de senha (C#)
 
 by [Erik Reitan](https://github.com/Erikre)
 
 > Este tutorial mostra como criar um aplicativo de Web Forms do ASP.NET com o registro do usuário, confirmação por email e redefinição de senha usando o sistema de associação do ASP.NET Identity. Este tutorial se baseia de Rick Anderson [tutorial MVC](../../../mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md).
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -43,7 +42,6 @@ Comece instalando e executando [Visual Studio Express 2013 para Web](https://go.
 
 > [!NOTE]
 > Aviso: Você deve instalar [Visual Studio 2013 atualização 3](https://go.microsoft.com/fwlink/?LinkId=390465) ou superior para concluir este tutorial.
-
 
 1. Criar um novo projeto (**arquivo**  - &gt; **novo projeto**) e selecione o **aplicativo Web ASP.NET** modelo e o .NET Framework mais recente versão dos **novo projeto** caixa de diálogo.
 2. Dos **novo projeto ASP.NET** caixa de diálogo, selecione o **Web Forms** modelo. Deixe a autenticação padrão como **contas de usuário individuais**. Se você quiser hospedar o aplicativo no Azure, deixe o **hospedar na nuvem** caixa de seleção marcada.   
@@ -95,7 +93,6 @@ Embora este tutorial apenas mostra como adicionar notificação por email por me
 ### <a name="enable-email-confirmation"></a>Habilitar o Email de confirmação
 
  Para habilitar o email de confirmação, você modificará o código de registro usando as etapas a seguir.  
- 
 
 1. No *conta* pasta, abra o *Register.aspx.cs* code-behind e atualizar o `CreateUser_Click` método para habilitar as seguintes alterações realçadas: 
 

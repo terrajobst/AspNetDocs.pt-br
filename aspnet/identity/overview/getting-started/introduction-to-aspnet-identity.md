@@ -9,18 +9,16 @@ ms.assetid: 38717fc1-5989-43cf-952d-4007cc1dd923
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/introduction-to-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 34a0d62d7afcaffa8fbac0bc774d9266efb6b165
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0268dfc16cd2cfb1e79ee14997a4c5eb247af950
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413042"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65121561"
 ---
 # <a name="introduction-to-aspnet-identity"></a>Introdução à Identidade do ASP.NET
 
-
 > O sistema de associação do ASP.NET foi introduzido com o ASP.NET 2.0 voltar em 2005 e desde a época houve muitas alterações das maneiras a aplicativos da web geralmente lidar com a autenticação e autorização. O ASP.NET Identity é um novo olhar sobre o que o sistema de associação deve ser durante a criação de aplicativos modernos para a web, telefone ou tablet.
-
 
 ## <a name="background-membership-in-aspnet"></a>Segundo plano: Associação no ASP.NET
 
@@ -122,7 +120,6 @@ Identidade do ASP.NET é implementada usando o procedimento a seguir. A finalida
    Se o usuário foi criado com êxito, ela está assinada pelo `SignInAsync` método.  
 
     [!code-csharp[Main](introduction-to-aspnet-identity/samples/sample6.cs?highlight=12)]
-
 
    O `SignInManager.SignInAsync` método gera uma [ClaimsIdentity](https://msdn.microsoft.com/library/system.security.claims.claimsidentity.aspx). Como o ASP.NET Identity e autenticação de Cookie OWIN são sistema baseado em declarações, o framework requer que o aplicativo para gerar uma ClaimsIdentity para o usuário. ClaimsIdentity tem informações sobre todas as declarações para o usuário, como as funções que o usuário pertence.   
  

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: fe47a018-f6d0-4979-80e7-5b1fa75a5865
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/creating-a-build-definition-that-supports-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 97a60274d9306ea0ee332fcc1ab9e487355dbedb
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e11c91a824446572aaf0b3bc6954b9b8ffb4eaff
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384929"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133953"
 ---
 # <a name="creating-a-build-definition-that-supports-deployment"></a>Criação de uma definição de build compatível com a implantação
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Se você quiser executar qualquer tipo de compilação no Team Foundation Server (TFS) 2010, você precisará criar uma definição de compilação dentro do seu projeto de equipe. Este tópico descreve como criar uma nova definição de compilação no TFS e como controlar a implantação da web como parte do processo de compilação no Team Build.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -40,7 +39,6 @@ Uma definição de compilação é o mecanismo que controla como e quando as com
 
 > [!NOTE]
 > Para obter mais informações sobre as definições de compilação, consulte [definem seu processo de criação](https://msdn.microsoft.com/library/ms181715.aspx).
-
 
 Este tópico mostra como criar uma definição de compilação que usa o CI, para que uma compilação é disparada quando um desenvolvedor faz check-in novo conteúdo. Se a compilação for bem-sucedida, o serviço de compilação é executado em um arquivo de projeto personalizado para implantar a solução em um ambiente de teste.
 
@@ -60,7 +58,6 @@ A próxima seção explica como implementar esse processo, criando uma nova defi
 
 > [!NOTE]
 > Este procedimento&#x2014;no qual um único automatizada processo cria, testa e implanta uma solução&#x2014;provavelmente será mais adequado para implantação em ambientes de teste. Para ambientes de preparo e produção, você está muito mais provável que queira implantar o conteúdo de um build anterior que você já tiver verificado e validado em um ambiente de teste. Essa abordagem é descrita no próximo tópico [Implantando um Build específico](deploying-a-specific-build.md).
-
 
 ### <a name="who-performs-this-procedure"></a>Quem executa este procedimento?
 
@@ -142,7 +139,6 @@ Você pode usar essas informações para solucionar problemas de compilações c
 
 > [!NOTE]
 > As compilações que executar a lógica de implantação são provavelmente falhará até que você tiver concedido o servidor de compilação as permissões necessárias no ambiente de destino. Para obter mais informações, consulte [Configurando permissões para a implantação do Team Build](configuring-permissions-for-team-build-deployment.md).
-
 
 ## <a name="monitor-the-build-process"></a>Monitorar o processo de compilação
 

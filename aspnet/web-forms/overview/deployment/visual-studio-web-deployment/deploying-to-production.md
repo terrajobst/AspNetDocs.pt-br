@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
-ms.openlocfilehash: 19cda45ce1b425462ec491bcc86b7a0b76dec162
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: b9c4a4d035c78b4f4c53942219ccfa3048c7a82b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409792"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133813"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação para produção
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usando o Visual Studio 2012 ou Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -41,7 +40,6 @@ Se você ainda não tiver uma conta do Azure, você pode criar uma conta de aval
 > [!NOTE]
 > Uma vez que este tutorial foi escrito, o serviço de aplicativo do Azure adicionou um novo recurso para automatizar vários processos para a criação de ambientes de preparo e produção. Ver [configurar ambientes de preparo para aplicativos web no serviço de aplicativo do Azure](https://azure.microsoft.com/documentation/articles/web-sites-staged-publishing/).
 
-
 Conforme explicado a [implantar para o tutorial do ambiente de teste](deploying-to-iis.md), a maioria dos ambiente de teste confiáveis é um site da web no provedor de hospedagem que é exatamente como o site da web de produção. Muitos provedores de hospedagem, seria necessário ponderar os benefícios deste significativo custo adicional, mas no Azure, você pode criar um aplicativo web gratuito adicionais como seu aplicativo de preparo. Você também precisa de um banco de dados, e a despesa adicional para fazer isso pela despesa de seu banco de dados de produção será nenhum ou mínimo. No Azure você paga pela quantidade de armazenamento de banco de dados usado em vez de para cada banco de dados e a quantidade de armazenamento adicional, que você usará no ambiente de preparo será mínima.
 
 Conforme explicado a [implantar para o tutorial do ambiente de teste](deploying-to-iis.md), em preparação e produção que você pretende implantar dois bancos de dados em um banco de dados. Se você quiser mantê-los separados, o processo seria o mesmo, exceto que você deve criar um banco de dados adicional para cada ambiente e selecione a cadeia de caracteres de destino correto para cada banco de dados quando você cria o perfil de publicação.
@@ -50,7 +48,6 @@ Nesta seção do tutorial, você vai criar um aplicativo web e o banco de dados 
 
 > [!NOTE]
 > As etapas a seguir mostram como criar um aplicativo web no serviço de aplicativo do Azure usando o portal de gerenciamento do Azure. Na versão mais recente do SDK do Azure, você também pode fazer isso sem sair do Visual Studio, usando o Gerenciador de servidores. No Visual Studio 2013, você também pode criar um aplicativo web diretamente na caixa de diálogo Publicar. Para obter mais informações, consulte [criar um aplicativo web ASP.NET no serviço de aplicativo do Azure.](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet)
-
 
 1. No [Portal de gerenciamento](https://manage.windowsazure.com/), clique em **sites**e, em seguida, clique em **New**.
 2. Clique em **site**e, em seguida, clique em **criação personalizada**.
@@ -97,7 +94,6 @@ Agora que você criou um aplicativo web e o banco de dados para o ambiente de pr
 
 > [!NOTE]
 > Estas instruções mostram como criar um perfil de publicação, baixando uma *. publishsettings* arquivo, que funciona não só para o Azure, mas também para provedores de hospedagem de terceiros. A versão mais recente do SDK do Azure também permite que você se conectar diretamente no Azure do Visual Studio e escolha em uma lista de aplicativos web que você tem em sua conta do Azure. No Visual Studio 2013, você pode entrar no Azure a partir de **Web Publish** caixa de diálogo ou do **Gerenciador de servidores** janela. Para obter mais informações, consulte [criar um aplicativo web ASP.NET no serviço de aplicativo do Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet).
-
 
 ### <a name="download-the-publishsettings-file"></a>Baixe o arquivo. publishsettings
 
@@ -165,7 +161,6 @@ Agora que você criou um aplicativo web e o banco de dados para o ambiente de pr
 
 > [!NOTE]
 > Esta seção mostra como configurar uma transformação de Web. config para o indicador de ambiente. Como o indicador é no `<appSettings>` elemento, você tem outra alternativa para especificar a transformação quando você estiver implantando no serviço de aplicativo do Azure. Para obter mais informações, consulte [Web. config especificando configurações no Azure](web-config-transformations.md#watransforms).
-
 
 1. Na **Gerenciador de soluções**, expanda **Properties**e, em seguida, expanda **PublishProfiles**.
 2. Clique com botão direito *Staging.pubxml*e, em seguida, clique em **adicionar Config transformar**.

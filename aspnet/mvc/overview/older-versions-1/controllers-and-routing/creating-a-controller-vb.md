@@ -8,12 +8,12 @@ ms.date: 03/02/2009
 ms.assetid: 204b7e86-f560-4611-8adb-785b33e777b9
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-controller-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 180b34e45ae97c64c82906c93aa647c4924d8539
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 60636b79ab5fc06ca904dee90ce74f256e046d12
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398095"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65123634"
 ---
 # <a name="creating-a-controller-vb"></a>Criar um controlador (VB)
 
@@ -21,29 +21,23 @@ por [Stephen Walther](https://github.com/StephenWalther)
 
 > Neste tutorial, Stephen Walther demonstra como você pode adicionar um controlador a um aplicativo ASP.NET MVC.
 
-
 O objetivo deste tutorial é explicar como você pode criar novas ASP.NET MVC controladores. Você aprenderá a criar controladores usando a opção de menu do Visual Studio Adicionar controlador e criando um arquivo de classe manualmente.
 
 ### <a name="using-the-add-controller-menu-option"></a>Usando o adicionar a opção de Menu do controlador
 
 A maneira mais fácil de criar um novo controlador é com o botão direito na pasta controladores na janela do Gerenciador de soluções do Visual Studio e selecione o **Add, controlador** opção de menu (veja a Figura 1). Selecionar essa opção de menu abre a **Adicionar controlador** caixa de diálogo (consulte a Figura 2).
 
-
 [![A caixa de diálogo Novo projeto](creating-a-controller-vb/_static/image1.jpg)](creating-a-controller-vb/_static/image1.png)
 
 **Figura 01**: Adicionando um novo controlador ([clique para exibir a imagem em tamanho normal](creating-a-controller-vb/_static/image2.png))
-
 
 [![A caixa de diálogo Novo projeto](creating-a-controller-vb/_static/image2.jpg)](creating-a-controller-vb/_static/image3.png)
 
 **Figura 02**: A caixa de diálogo Adicionar controlador ([clique para exibir a imagem em tamanho normal](creating-a-controller-vb/_static/image4.png))
 
-
 Observe que a primeira parte do nome do controlador está realçada na **Adicionar controlador** caixa de diálogo. Cada nome de controlador deve terminar com o sufixo *controlador*. Por exemplo, você pode criar um controlador chamado *ProductController* , mas não um controlador chamado *produto*.
 
-
 Se você criar um controlador que está faltando a *controlador* sufixo e em seguida, você não poderá invocar o controlador. Não fizer isso, eu já desperdiçado incontáveis horas da minha vida depois de cometer esse erro.
-
 
 **Listagem 1 - Controllers\ProductController.vb**
 
@@ -55,11 +49,9 @@ Você deve sempre criar controladores na pasta controladores. Caso contrário, v
 
 Quando você cria um controlador, você tem a opção para gerar os métodos de ação de criar, atualizar e detalhes automaticamente (veja a Figura 3). Se você selecionar essa opção, em seguida, a classe do controlador na listagem 2 é gerada.
 
-
 [![Criação automática de métodos de ação](creating-a-controller-vb/_static/image3.jpg)](creating-a-controller-vb/_static/image5.png)
 
 **Figura 03**: Criação automática de métodos de ação ([clique para exibir a imagem em tamanho normal](creating-a-controller-vb/_static/image6.png))
-
 
 **Listagem 2 - Controllers\CustomerController.vb**
 
@@ -75,11 +67,9 @@ O controlador MVC do ASP.NET é apenas uma classe. Se você preferir, você pode
 2. Nomeie a nova classe PersonController.vb e clique no **adicionar** botão.
 3. Modifique o arquivo de classe resultante para que a classe herda da classe Controller base (consulte a listagem 3).
 
-
 [![Criando uma nova classe](creating-a-controller-vb/_static/image4.jpg)](creating-a-controller-vb/_static/image7.png)
 
 **Figura 04**: Criando uma nova classe ([clique para exibir a imagem em tamanho normal](creating-a-controller-vb/_static/image8.png))
-
 
 **Listagem 3 - Controllers\PersonController.vb**
 

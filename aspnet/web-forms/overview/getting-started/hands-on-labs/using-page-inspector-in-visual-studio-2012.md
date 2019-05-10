@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 73232292-a5fe-4720-82a1-8f6553effd1f
 msc.legacyurl: /web-forms/overview/getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012
 msc.type: authoredcontent
-ms.openlocfilehash: d85fab0aeec86013761fc07ada1789b7719b24d9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f42b1be2697ba7d1145b3e334fe8f4ebf019cd12
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396546"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133548"
 ---
 # <a name="using-page-inspector-in-visual-studio-2012"></a>Uso do Inspetor de Página no Visual Studio 2012
 
@@ -36,7 +36,6 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > Este laboratório orienta os aprimoramentos e novos recursos descritos anteriormente, aplicando alterações secundárias a um aplicativo Web de exemplo fornecido na pasta de origem.
 > 
 > Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409 ](https://go.microsoft.com/fwlink/?LinkID=248297&clcid=0x409).
-
 
 <a id="Objectives"></a>
 
@@ -73,7 +72,6 @@ Este laboratório prático inclui os seguintes exercícios:
 
 > [!NOTE]
 > Cada exercício é acompanhado por uma solução inicial, localizada na pasta de início do exercício, que permite que você siga cada exercício independentemente dos outros. Dentro do código-fonte para um exercício, você também encontrará uma pasta final que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
-
 
 Tempo estimado para concluir este laboratório: **30 minutos**.
 

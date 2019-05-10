@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 298789b4-2964-49f5-a0a8-d4dbeb9ff2c2
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b41423cb1e587df121828b1e57045cabfede7cb5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f9e279e8700024f28cf589581f09a4bbd95118de
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390825"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133542"
 ---
 # <a name="collapsing-and-expanding-a-panel-from-javascript-vb"></a>Recolher e expandir um painel de JavaScript (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/8/a/a/8aab3c3e-de6f-463f-805c-5fda567eef6e/CollapsiblePanel1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/collapsiblepanel1VB.pdf)
 
 > O controle CollapsiblePanel no ASP.NET AJAX Control Toolkit estende um painel e fornece-o com a capacidade de seu conteúdo de recolher e expandi-la novamente. Essas duas ações também podem ser disparadas do código JavaScript personalizado.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -63,7 +62,6 @@ Para fechar ou recolher o painel, o `_doClose()` método precisa ser executado. 
 O terceiro botão alterna o estado do painel: de recolhidos para expandido e vice-versa. O `CollapsiblePanelExtender` expõe o `toggle()` método que faz exatamente isso: reverte o estado do painel. No entanto há também outra abordagem (que é usado internamente pelo `toggle()` método): O `get_Collapsed()` método da `CollapsiblePanelExtender()` nos informa se o painel é recolhido ou não. Dependendo do valor retornado dessa função, o painel é, em seguida, seja expandido (`_doOpen()` método) ou recolhido (`_doClose()`) método:
 
 [!code-javascript[Main](collapsing-and-expanding-a-panel-from-javascript-vb/samples/sample8.js)]
-
 
 [![O terceiro botão altera o estado do painel: de recolhidos para voltar e expandido](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image2.png)](collapsing-and-expanding-a-panel-from-javascript-vb/_static/image1.png)
 

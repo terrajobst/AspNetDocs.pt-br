@@ -8,17 +8,16 @@ ms.date: 05/16/2012
 ms.assetid: 6f72bde8-f2f1-4e4a-94e5-494c3c153c14
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects
 msc.type: chapter
-ms.openlocfilehash: 79e09dddb39bd00019584da2ab199c03a42c67f8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 43c2397ef4ccc5eacb2ff4c5d04f62b9c8c481b7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412535"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134418"
 ---
 # <a name="deploying-web-site-projects-in-visual-studio-2008-and-earlier"></a>Implantação de projetos de site da Web no Visual Studio 2008 e versões anteriores
 
 > Aplicativos web ASP.NET normalmente são projetados, criados e testados em um ambiente de desenvolvimento local e precisa ser implantado em um ambiente de produção quando ele estiver pronto para lançamento. Esta série de tutoriais fornece detalhes sobre o processo de implantação.
-
 
 - [Opções de hospedagem do ASP.NET (C#)](asp-net-hosting-options-cs.md)
 - [Determinando quais arquivos precisam ser implantados (C#)](determining-what-files-need-to-be-deployed-cs.md)

@@ -8,12 +8,12 @@ ms.date: 06/26/2007
 ms.assetid: ac6916d0-a5ab-4218-9760-7ba9e72d258c
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-deleting-cs
 msc.type: authoredcontent
-ms.openlocfilehash: da913e08cd007a89b659f87ef30ea15160692c09
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9ee8834cdcf9f8ec5bbdd5188113ea28aa2a9ec7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416942"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134463"
 ---
 # <a name="batch-deleting-c"></a>Exclusão em lote (C#)
 
@@ -23,48 +23,39 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
 > Saiba como excluir vários registros de banco de dados em uma única operação. Na camada de Interface do usuário, aproveitam um GridView aprimorado criado em um tutorial anterior. Na camada de acesso a dados, podemos encapsular as várias operações de exclusão em uma transação para garantir que todas as exclusões de êxito ou todas as exclusões são revertidas.
 
-
 ## <a name="introduction"></a>Introdução
 
 O [tutorial anterior](batch-updating-cs.md) explorou como criar um lote usando um GridView editável totalmente de interface de edição. Em situações onde os usuários são normalmente editando vários registros ao mesmo tempo, um lote de interface de edição será exigem muito menos postbacks e contexto de teclado ao mouse switches, melhorando a eficiência do usuário final s. Essa técnica é da mesma forma útil para páginas em que é comum que os usuários excluam muitos registros de uma só vez.
 
 Qualquer pessoa que tenha usado um cliente de email online já está familiarizada com uma das mais comuns lote excluindo interfaces: uma caixa de seleção em cada linha em uma grade com um correspondente excluir todos os itens verificados botão (consulte a Figura 1). Este tutorial é curto em vez disso porque estamos ve feita todo o trabalho pesado nos tutoriais anteriores na criação de interface baseada na web e um método para excluir uma série de registros como uma única operação atômica. No [adicionando uma coluna de GridView de caixas de seleção](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) tutorial, criamos um GridView com uma coluna de caixas de seleção e, nas [encapsulamento de modificações de banco de dados em uma transação](wrapping-database-modifications-within-a-transaction-cs.md) tutorial, criamos um método em a BLL que usaria uma transação para excluir uma `List<T>` de `ProductID` valores. Neste tutorial, vamos aproveitam e nossas experiências anteriores para criar um lote de trabalho, excluindo o exemplo de mesclagem.
 
-
 [![Cada linha inclui uma caixa de seleção](batch-deleting-cs/_static/image1.gif)](batch-deleting-cs/_static/image1.png)
 
 **Figura 1**: Cada linha inclui uma caixa de seleção ([clique para exibir a imagem em tamanho normal](batch-deleting-cs/_static/image2.png))
-
 
 ## <a name="step-1-creating-the-batch-deleting-interface"></a>Etapa 1: Criando o lote de exclusão de Interface
 
 Como já criamos o lote excluindo a interface na [adicionando uma coluna de GridView de caixas de seleção](../enhancing-the-gridview/adding-a-gridview-column-of-checkboxes-cs.md) tutorial, podemos pode simplesmente copiá-lo para `BatchDelete.aspx` em vez de criá-lo a partir do zero. Comece abrindo o `BatchDelete.aspx` página o `BatchData` pasta e o `CheckBoxField.aspx` página no `EnhancedGridView` pasta. Dos `CheckBoxField.aspx` página, vá para a exibição da fonte e copie a marcação entre o `<asp:Content>` marcas conforme mostrado na Figura 2.
 
-
 [![A marcação declarativa de CheckBoxField.aspx na área de transferência de cópia](batch-deleting-cs/_static/image2.gif)](batch-deleting-cs/_static/image3.png)
 
 **Figura 2**: Copie a marcação declarativa de `CheckBoxField.aspx` na área de transferência ([clique para exibir a imagem em tamanho normal](batch-deleting-cs/_static/image4.png))
 
-
 Em seguida, vá para a exibição da fonte no `BatchDelete.aspx` e cole o conteúdo da área de transferência dentro a `<asp:Content>` marcas. Copie e cole o código de dentro a classe code-behind no também `CheckBoxField.aspx.cs` para dentro a classe code-behind no `BatchDelete.aspx.cs` (o `DeleteSelectedProducts` botão s `Click` manipulador de eventos, o `ToggleCheckState` método e o `Click` manipuladores de eventos para o `CheckAll` e `UncheckAll` botões). Depois de copiar sobre esse conteúdo, o `BatchDelete.aspx` classe code-behind de página s deve conter o código a seguir:
-
 
 [!code-csharp[Main](batch-deleting-cs/samples/sample1.cs)]
 
 Depois de copiar sobre a marcação declarativa e código-fonte, reserve um tempo para testar `BatchDelete.aspx` exibindo-o por meio de um navegador. Você deve ver um GridView listando os dez primeiros produtos em um GridView com cada linha que lista o nome do produto s, categoria e preço, juntamente com uma caixa de seleção. Deve haver três botões: Verifique todas, desmarcar todos e excluir produtos selecionados. Clicar no botão Verificar todos os seleciona todas as caixas de seleção, enquanto desmarcar todos os limpa todas as caixas de seleção. Clicar em excluir produtos selecionados exibe uma mensagem que lista o `ProductID` valores dos produtos selecionados, mas não exclui os produtos.
 
-
 [![A Interface de CheckBoxField.aspx foi movida para BatchDeleting.aspx](batch-deleting-cs/_static/image3.gif)](batch-deleting-cs/_static/image5.png)
 
 **Figura 3**: A Interface de `CheckBoxField.aspx` foi movido para `BatchDeleting.aspx` ([clique para exibir a imagem em tamanho normal](batch-deleting-cs/_static/image6.png))
-
 
 ## <a name="step-2-deleting-the-checked-products-using-transactions"></a>Etapa 2: Excluindo os produtos verificados usando transações
 
 Com o lote interface copiada com êxito para a exclusão `BatchDeleting.aspx`, tudo o que resta fazer é atualizar o código para que o botão excluir produtos selecionados exclui os produtos verificados usando o `DeleteProductsWithTransaction` método no `ProductsBLL` classe. Esse método, adicionado na [de encapsulamento de modificações de banco de dados em uma transação](wrapping-database-modifications-within-a-transaction-cs.md) tutorial, aceita como entrada uma `List<T>` de `ProductID` valores e exclui cada um correspondendo `ProductID` dentro do escopo de um transação.
 
 O `DeleteSelectedProducts` botão s `Click` manipulador de eventos atualmente usa o seguinte `foreach` para iterar por meio de cada linha de GridView:
-
 
 [!code-csharp[Main](batch-deleting-cs/samples/sample2.cs)]
 
@@ -74,27 +65,22 @@ O código acima não exclui todos os registros que a chamada para o `ProductsBLL
 
 Para garantir a atomicidade, precisamos usar em vez disso, o `ProductsBLL` classe s `DeleteProductsWithTransaction` método. Como esse método aceita uma lista de `ProductID` valores, precisamos primeiro compilar essa lista na grade e, em seguida, passá-lo como um parâmetro. Primeiro, criamos uma instância de um `List<T>` do tipo `int`. Dentro de `foreach` loop, precisamos adicionar os produtos selecionados `ProductID` valores a esse `List<T>`. Após o loop isso `List<T>` deve ser passado para o `ProductsBLL` classe s `DeleteProductsWithTransaction` método. Atualizar o `DeleteSelectedProducts` botão s `Click` manipulador de eventos com o código a seguir:
 
-
 [!code-csharp[Main](batch-deleting-cs/samples/sample3.cs)]
 
 O código atualizado cria uma `List<T>` do tipo `int` (`productIDsToDelete`) e a preenche com o `ProductID` valores para excluir. Após o `foreach` loop, se houver pelo menos um produto selecionado, o `ProductsBLL` classe s `DeleteProductsWithTransaction` método é chamado e passado nesta lista. O `DeleteResults` rótulo também é exibido e os dados se a GridView (de modo que os registros excluídos recentemente não serão exibidos como linhas na grade).
 
 Figura 4 mostra o GridView após um número de linhas foram selecionado para exclusão. Figura 5 mostra a tela imediatamente depois que foi clicado no botão excluir produtos selecionados. Observe que na Figura 5 o `ProductID` valores dos registros excluídos são exibidos no rótulo abaixo GridView e essas linhas não estão mais em GridView.
 
-
 [![Os produtos selecionados serão excluídos](batch-deleting-cs/_static/image4.gif)](batch-deleting-cs/_static/image7.png)
 
 **Figura 4**: O selecionado produtos serão excluídos ([clique para exibir a imagem em tamanho normal](batch-deleting-cs/_static/image8.png))
-
 
 [![Os valores de ProductID de produtos excluídos são listados sob o controle GridView](batch-deleting-cs/_static/image5.gif)](batch-deleting-cs/_static/image9.png)
 
 **Figura 5**: Os produtos excluídos `ProductID` os valores são listados sob o controle GridView ([clique para exibir a imagem em tamanho normal](batch-deleting-cs/_static/image10.png))
 
-
 > [!NOTE]
 > Para testar o `DeleteProductsWithTransaction` atomicidade método s, adicionar manualmente uma entrada de um produto a `Order Details` de tabela e, em seguida, tente excluir o produto (juntamente com outras pessoas). Você receberá uma violação de restrição de chave estrangeira durante a tentativa de excluir o produto com um pedido associado, mas observe como as outras exclusões de produtos selecionados serão revertidas.
-
 
 ## <a name="summary"></a>Resumo
 

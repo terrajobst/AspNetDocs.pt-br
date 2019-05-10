@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a5c5eed2-8683-40a5-a2e1-35c9f8d17c29
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/deploying-web-packages
 msc.type: authoredcontent
-ms.openlocfilehash: c42fa327c324ac2b721268c56782a24755ec7225
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 91b99e6e250342851aea6860164b6f6af54818d1
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391059"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65119313"
 ---
 # <a name="deploying-web-packages"></a>Implantação de pacotes da Web
 
@@ -37,7 +37,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > - Você criou e empacotados de seu aplicativo web, conforme descrito em [compilação e empacotamento Web Application Projects](building-and-packaging-web-application-projects.md).
 > - Você modificou o *SetParameters.xml* arquivo para fornecer os valores de parâmetro certo para seu ambiente de destino, conforme descrito em [Configurando parâmetros para a implantação de pacote da Web](configuring-parameters-for-web-package-deployment.md).
 
-
 Executando o [*nome do projeto*]*. Deploy. cmd* arquivo é a maneira mais simples de implantar um pacote da web. Em particular, usando o *. Deploy. cmd* arquivo oferece estas vantagens em relação ao uso MSDeploy.exe diretamente:
 
 - Você não precisa especificar o local do pacote de implantação da web&#x2014;o *. Deploy. cmd* arquivo já sabe onde ele está.
@@ -52,9 +51,7 @@ Antes de usar o *. Deploy. cmd* arquivo para implantar um pacote da web, você d
 
 O *. Deploy. cmd* arquivo dá suporte a várias opções de linha de comando. Quando você executar o arquivo em um prompt de comando, esta é a sintaxe básica:
 
-
 [!code-console[Main](deploying-web-packages/samples/sample1.cmd)]
-
 
 Você deve especificar uma **/T** sinalizador ou uma **/Y** sinalizador para indicar se deseja executar uma execução de teste ou uma implantação em tempo real, respectivamente (não use ambos os sinalizadores no mesmo comando). Esta tabela explica a finalidade de cada um desses sinalizadores.
 
@@ -71,7 +68,6 @@ Você deve especificar uma **/T** sinalizador ou uma **/Y** sinalizador para ind
 
 > [!NOTE]
 > Sempre que o processo de compilação cria um pacote da web, ele também cria um arquivo chamado *[nome do projeto] Readme. txt. Deploy* que explica essas opções de implantação.
-
 
 Além desses sinalizadores, você pode especificar as configurações de implantação da Web de operação como adicionais *. Deploy. cmd* parâmetros. As configurações adicionais que você especificar simplesmente são passadas para o comando MSDeploy.exe subjacente. Para obter mais informações sobre essas configurações, consulte [Web implantar as configurações de operação](https://technet.microsoft.com/library/dd569089(WS.10).aspx).
 
@@ -94,9 +90,7 @@ Neste exemplo:
 
 Para ilustrar como usar o *. Deploy. cmd* arquivo simplifica o processo de implantação, dê uma olhada no que obtém gerado e executado quando você executa o comando MSDeploy.exe *ContactManager.Mvc.deploy.cmd* usando as opções mostradas acima.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample3.cmd)]
-
 
 Para obter mais informações sobre como usar o *. Deploy. cmd* arquivo para implantar um pacote da web, consulte [como: Instalar um pacote de implantação usando o arquivo Deploy. cmd](https://msdn.microsoft.com/library/ff356104.aspx).
 
@@ -152,13 +146,10 @@ Em muitos cenários empresariais, você vai querer implantar seus pacotes de web
 
 Na solução de exemplo Contact Manager, dê uma olhada a **PublishWebPackages** de destino na *Publish.proj* arquivo. Este destino será executado uma vez para cada *. Deploy. cmd* arquivo identificado por uma lista de itens chamada **PublishPackages**. O destino usa propriedades e metadados de item para criar um conjunto completo de valores de argumento para cada *. Deploy. cmd* arquivo e, em seguida, usa o **Exec** tarefa para executar o comando.
 
-
 [!code-xml[Main](deploying-web-packages/samples/sample8.xml)]
-
 
 > [!NOTE]
 > Para obter uma visão mais ampla do modelo de arquivo de projeto na solução de exemplo e uma introdução aos arquivos de projeto personalizado em geral, consulte [Noções básicas sobre o arquivo de projeto](understanding-the-project-file.md) e [Noções básicas sobre o processo de compilação](understanding-the-build-process.md).
-
 
 ## <a name="endpoint-considerations"></a>Considerações sobre o ponto de extremidade
 
@@ -166,33 +157,24 @@ Independentemente se você implanta o pacote da web executando o *. Deploy. cmd*
 
 Se o servidor web de destino está configurado para implantação usando o serviço Web implantar o agente remoto, você especifica a URL do serviço de destino como seu destino.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample9.cmd)]
-
 
 Como alternativa, você pode especificar somente o nome de servidor como seu destino, e implantação da Web irá inferir a URL do serviço de agente remoto.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample10.cmd)]
-
 
 Se o servidor web de destino está configurado para implantação usando o manipulador de implantação da Web, você precisa especificar o endereço do ponto de extremidade do serviço de gerenciamento do IIS da Web (WMSvc) como seu destino. Por padrão, isso assume a forma:
 
-
 [!code-console[Main](deploying-web-packages/samples/sample11.cmd)]
-
 
 Você pode direcionar qualquer um desses pontos de extremidade usando o *. Deploy. cmd* MSDeploy.exe diretamente ou arquivo. No entanto, se você quiser implantar o manipulador de implantação da Web como um usuário não administrador, conforme descrito em [configurar um servidor Web para publicação de implantação do Web (manipulador de implantação da Web)](../configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md), você precisa adicionar uma cadeia de caracteres de consulta para o endereço do ponto de extremidade de serviço.
 
-
 [!code-console[Main](deploying-web-packages/samples/sample12.cmd)]
-
 
 Isso ocorre porque o usuário não administrador não tem acesso de nível de servidor no IIS; ele só tem acesso a um site do IIS específico. No momento da escrita, devido a um bug no Web Publishing Pipeline (WPP), você não pode executar o *. Deploy. cmd* de arquivos usando um endereço de ponto de extremidade que inclui uma cadeia de caracteres de consulta. Nesse cenário, você precisará implantar o pacote da web usando MSDeploy.exe diretamente.
 
 > [!NOTE]
 > Para obter mais informações sobre o serviço Web implantar o agente remoto e o manipulador de implantação da Web, consulte [escolhendo a abordagem da direita para a implantação da Web](../configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md). Para obter orientação sobre como configurar seus arquivos de projeto específicas do ambiente para implantar esses pontos de extremidade, consulte [configurar propriedades de implantação para um ambiente de destino](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
-
 
 ## <a name="authentication-considerations"></a>Considerações sobre autenticação
 

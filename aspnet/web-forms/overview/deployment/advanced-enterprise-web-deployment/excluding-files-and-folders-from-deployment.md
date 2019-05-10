@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: f4cc2d40-6a78-429b-b06f-07d000d4caad
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/excluding-files-and-folders-from-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 4da291af4042e6e09c6917703b160ca717eecd15
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a262ce43d7199fb1015d54d0b7c213857c360946
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59407985"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133891"
 ---
 # <a name="excluding-files-and-folders-from-deployment"></a>Exclusão de arquivos e pastas da implantação
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve como você pode excluir arquivos e pastas de um pacote de implantação da web quando você compilar e empacotar um projeto de aplicativo web.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -48,7 +47,6 @@ Quando você escolhe **somente os arquivos necessários para executar este aplic
 > [!NOTE]
 > A lógica que determina quais arquivos serão incluídos está contida neste arquivo:   
 > *%PROGRAMFILES%\MSBuild\Microsoft\VisualStudio\v10.0\Web\ Microsoft.Web.Publishing.OnlyFilesToRunTheApp.targets*
-
 
 ## <a name="excluding-specific-files-and-folders"></a>Excluindo arquivos e pastas específicas
 
@@ -77,9 +75,7 @@ Embora você pode manipular seus arquivos de projeto para excluir arquivos e pas
 
 Esta é a estrutura básica desse *. wpp.targets* arquivo:
 
-
 [!code-xml[Main](excluding-files-and-folders-from-deployment/samples/sample1.xml)]
-
 
 Observe que cada item inclui um elemento de metadados de item nomeado **FromTarget**. Esse é um valor opcional que não afeta o processo de compilação. ele simplesmente serve para indicar por que determinados arquivos ou pastas foram omitidas se alguém analisa os logs de build.
 

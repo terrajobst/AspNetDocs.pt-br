@@ -8,12 +8,12 @@ ms.date: 10/07/2008
 ms.assetid: d6e758b6-6571-484d-a132-34ee6c47747a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 99b18de33e266adb626f4ab53ff20b1f52102900
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c5ee59873468b4928b45ec586386e28cbe94c728
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417579"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65122433"
 ---
 # <a name="displaying-a-table-of-database-data-c"></a>Exibir uma tabela de dados de banco de dados (C#)
 
@@ -23,7 +23,6 @@ por [Microsoft](https://github.com/microsoft)
 
 > Neste tutorial, demonstrarei dois métodos de exibição de um conjunto de registros do banco de dados. Eu mostro dois métodos de formatação de um conjunto de registros de banco de dados em uma tabela HTML. Primeiro, vou mostrar como você pode formatar os registros de banco de dados diretamente dentro de um modo de exibição. Em seguida, demonstrarei como você pode tirar proveito de parciais ao formatar os registros de banco de dados.
 
-
 O objetivo deste tutorial é explicar como você pode exibir uma tabela HTML de dados do banco de dados em um aplicativo ASP.NET MVC. Primeiro, você aprenderá a usar as ferramentas de scaffolding incluídas no Visual Studio para gerar uma exibição que exibe um conjunto de registros automaticamente. Em seguida, você aprenderá a usar um parcial como um modelo ao formatar os registros de banco de dados.
 
 ## <a name="create-the-model-classes"></a>Criar as Classes de modelo
@@ -32,7 +31,6 @@ Vamos para exibir o conjunto de registros da tabela de banco de dados de filmes.
 
 <a id="0.3_table01"></a>
 
-
 | **Nome da coluna** | **Tipo de dados** | **Permitir nulos** |
 | --- | --- | --- |
 | Id | int | False |
@@ -40,13 +38,11 @@ Vamos para exibir o conjunto de registros da tabela de banco de dados de filmes.
 | Diretor | NVarchar(50) | False |
 | DateReleased | DateTime | False |
 
-
 Para representar a tabela de filmes em nosso aplicativo ASP.NET MVC, precisamos criar uma classe de modelo. Neste tutorial, usamos o Microsoft Entity Framework para criar nossas classes de modelo.
 
 > [!NOTE] 
 > 
 > Neste tutorial, usamos o Microsoft Entity Framework. No entanto, é importante entender que você pode usar uma variedade de tecnologias diferentes para interagir com um banco de dados de um aplicativo ASP.NET MVC incluindo LINQ to SQL, NHibernate ou ADO.NET.
-
 
 Siga estas etapas para iniciar o Assistente de modelo de dados de entidade:
 
@@ -60,19 +56,15 @@ Depois de clicar no botão Add, o Assistente de modelo de dados de entidade é e
 2. No **escolha sua Conexão de dados** etapa, use o *MoviesDB.mdf* conexão de dados e o nome *MoviesDBEntities* para as configurações de conexão. Clique o **próxima** botão.
 3. No **Choose Your Database Objects** etapa, expanda o nó Tables, selecione a tabela de filmes. Insira o namespace *modelos* e clique no **concluir** botão.
 
-
 [![Criando o LINQ para classes SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)
 
 **Figura 01**: Criando o LINQ para SQL classes ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-cs/_static/image2.png))
 
-
 Depois de concluir o Assistente de modelo de dados de entidade, o Designer de modelo de dados de entidade é aberto. O Designer deve exibir a entidade de filmes (veja a Figura 2).
-
 
 [![O Designer de modelo de dados de entidade](displaying-a-table-of-database-data-cs/_static/image2.jpg)](displaying-a-table-of-database-data-cs/_static/image3.png)
 
 **Figura 02**: O Designer de modelo de dados de entidade ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-cs/_static/image4.png))
-
 
 Precisamos fazer uma alteração antes de continuar. O Assistente de dados de entidade gera uma classe de modelo chamada *filmes* que representa a tabela de banco de dados de filmes. Como vamos usar a classe de filmes para representar um filme específico, precisamos modificar o nome da classe para ser *filme* em vez de *filmes* (singular em vez de no plural).
 
@@ -82,19 +74,15 @@ Duas vezes no nome da classe na superfície do designer e altere o nome da class
 
 Agora que temos uma forma de representar nossos registros do banco de dados, podemos criar um controlador que retorna a coleção de filmes. Dentro da janela do Gerenciador de soluções do Visual Studio, clique com botão direito na pasta controladores e selecione a opção de menu **Add, controlador** (veja a Figura 3).
 
-
 [![O controlador Menu adicionar](displaying-a-table-of-database-data-cs/_static/image3.jpg)](displaying-a-table-of-database-data-cs/_static/image5.png)
 
 **Figura 03**: Adicionar Menu de controlador ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-cs/_static/image6.png))
 
-
 Quando o **Adicionar controlador** caixa de diálogo for exibida, insira o nome do controlador MovieController (veja a Figura 4). Clique o **adicionar** botão para adicionar o novo controlador.
-
 
 [![A caixa de diálogo Adicionar controlador](displaying-a-table-of-database-data-cs/_static/image4.jpg)](displaying-a-table-of-database-data-cs/_static/image7.png)
 
 **Figura 04**: A caixa de diálogo Adicionar controlador ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-cs/_static/image8.png))
-
 
 Precisamos modificar a ação Index () exposta pelo controlador de filmes para que ele retorne o conjunto de registros do banco de dados. Modificar o controlador para que ele se parece com o controlador na listagem 1.
 
@@ -116,19 +104,15 @@ Criar seu aplicativo, selecionando a opção de menu **Build Build Solution**. V
 
 A ação Index () com o botão direito e selecione a opção de menu **adicionar exibição** (consulte a Figura 5).
 
-
 [![Adicionando uma exibição](displaying-a-table-of-database-data-cs/_static/image5.jpg)](displaying-a-table-of-database-data-cs/_static/image9.png)
 
 **Figura 05**: Adicionando uma exibição ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-cs/_static/image10.png))
 
-
 No **adicionar exibição** caixa de diálogo, marque a caixa de seleção **criar uma exibição fortemente tipada**. Selecione a classe de filme como a **exibir dados de classe**. Selecione *lista* como o **exibir conteúdo** (veja a Figura 6). Selecione essas opções irá gerar uma exibição fortemente tipada que exibe uma lista de filmes.
-
 
 [![A caixa de diálogo Adicionar modo de exibição](displaying-a-table-of-database-data-cs/_static/image6.jpg)](displaying-a-table-of-database-data-cs/_static/image11.png)
 
 **Figura 06**: A caixa de diálogo Adicionar modo de exibição ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-cs/_static/image12.png))
-
 
 Depois de clicar na **adicionar** botão, o modo de exibição na listagem 2 é gerado automaticamente. Essa exibição contém o código necessário para iterar pela coleção de filmes e exibir cada uma das propriedades de um filme.
 
@@ -138,11 +122,9 @@ Depois de clicar na **adicionar** botão, o modo de exibição na listagem 2 é 
 
 Você pode executar o aplicativo, selecionando a opção de menu **depurar, iniciar depuração** (ou pressionando a tecla F5). Executando o aplicativo inicia o Internet Explorer. Se você navegar até a URL /Movie, em seguida, você verá a página na Figura 7.
 
-
 [![Uma tabela de filmes](displaying-a-table-of-database-data-cs/_static/image7.jpg)](displaying-a-table-of-database-data-cs/_static/image13.png)
 
 **Figura 07**: Uma tabela de filmes ([clique para exibir a imagem em tamanho normal](displaying-a-table-of-database-data-cs/_static/image14.png))
-
 
 Se você não gostar nada sobre a aparência da grade de registros de banco de dados na Figura 7, em seguida, você pode simplesmente modificar o modo de exibição de índice. Por exemplo, você pode alterar o *DateReleased* cabeçalho *data de lançamento* modificando a exibição de índice.
 
@@ -178,9 +160,7 @@ A exibição na listagem 4 contém um loop foreach que itera em todos os filmes.
 
 O modo de exibição do índice modificado renderiza a mesma tabela HTML de registros de banco de dados. No entanto, o modo de exibição foi bastante simplificado.
 
-
 O método RenderPartial() é diferente da maioria dos outros métodos auxiliares, porque ele não retorna uma cadeia de caracteres. Portanto, você deve chamar o método RenderPartial() usando &lt;% Html.RenderPartial(); %&gt; em vez de &lt;% = Html.RenderPartial(); %&gt;.
-
 
 ## <a name="summary"></a>Resumo
 

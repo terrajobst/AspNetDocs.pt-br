@@ -8,12 +8,12 @@ ms.date: 12/14/2018
 ms.assetid: bcf2d223-cb7f-411e-be05-f43e96a14015
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions/routing-and-action-selection
 msc.type: authoredcontent
-ms.openlocfilehash: 238efd312a73e2452ca5f679f2b8f5ed1336c4dc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 62114e56fb29e80c93b82dcb78ce2bc2a123a83b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59385872"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133664"
 ---
 # <a name="routing-and-action-selection-in-aspnet-web-api"></a>Roteamento e seleção de ação na API Web ASP.NET
 
@@ -23,7 +23,6 @@ Este artigo descreve como o API Web ASP.NET encaminha uma solicitação HTTP par
 
 > [!NOTE]
 > Para obter uma visão geral do roteamento, consulte [roteamento na API Web ASP.NET](routing-in-aspnet-web-api.md).
-
 
 Este artigo examina os detalhes do processo de roteamento. Se você criar um projeto de API da Web e localizar que algumas solicitações não obtém roteado da maneira esperada, espero que este artigo vai ajudar.
 
@@ -135,7 +134,6 @@ Tipos simples incluem todos os [tipos primitivos do .NET Framework](https://msdn
 
 > [!NOTE]
 > É possível substituir as regras de associação padrão. Ver [associação de parâmetros de API da Web nos bastidores](https://blogs.msdn.com/b/jmstall/archive/2012/05/11/webapi-parameter-binding-under-the-hood.aspx).
-
 
 Com esse plano de fundo, aqui está o algoritmo de seleção de ação.
 

@@ -8,12 +8,12 @@ ms.date: 07/18/2007
 ms.assetid: 07fa47ae-e491-4a2f-b265-d342b9ddef46
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-cs
 msc.type: authoredcontent
-ms.openlocfilehash: d6b5c234c8d0da5500ecf554c5e23cb52e94f411
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bfd6f02fe30f4fe5d82d6f72eba6935e1a776c99
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421843"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134486"
 ---
 # <a name="masterdetail-filtering-with-a-dropdownlist-c"></a>Filtragem mestre/detalhes com uma DropDownList (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_33_CS.exe) ou [baixar PDF](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/datatutorial33cs1.pdf)
 
 > Neste tutorial, podemos ver como exibir relatórios mestre/detalhes em uma única página da web usando DropDownLists para exibir os registros "mestres" e uma DataList para exibir os "Detalhes".
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -40,73 +39,57 @@ Antes de começar este tutorial, primeiro vamos adicionar a pasta e as páginas 
 - `ProductsForCategoryDetails.aspx`
 - `CategoriesAndProducts.aspx`
 
-
 ![Crie uma pasta DataListRepeaterFiltering e adicione as páginas do Tutorial do ASP.NET](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image1.png)
 
 **Figura 1**: Criar um `DataListRepeaterFiltering` pasta e adicione as páginas do Tutorial do ASP.NET
 
-
 Em seguida, abra o `Default.aspx` da página e arraste o `SectionLevelTutorialListing.ascx` controle de usuário do `UserControls` pasta para a superfície de Design. Esse controle de usuário que criamos na [páginas mestras e navegação no Site](../introduction/master-pages-and-site-navigation-cs.md) tutorial, enumera o mapa do site e exibe os tutoriais da seção atual em uma lista com marcadores.
-
 
 [![Adicionar o controle de usuário SectionLevelTutorialListing.ascx para default. aspx](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image3.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image2.png)
 
 **Figura 2**: Adicione a `SectionLevelTutorialListing.ascx` controle de usuário `Default.aspx` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image4.png))
 
-
 Para ter a exibição de lista com marcadores os tutoriais de mestre/detalhes, criaremos, precisamos adicioná-los ao mapa do site. Abra o `Web.sitemap` arquivo e adicione a marcação a seguir após a marcação de nó de mapa de site "Exibindo dados com o DataList e Repeater":
 
 [!code-xml[Main](master-detail-filtering-with-a-dropdownlist-datalist-cs/samples/sample1.xml)]
-
 
 ![Atualizar o mapa de Site para incluir as novas páginas do ASP.NET](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image5.png)
 
 **Figura 3**: Atualizar o mapa de Site para incluir as novas páginas do ASP.NET
 
-
 ## <a name="step-2-displaying-the-categories-in-a-dropdownlist"></a>Etapa 2: Exibindo as categorias na DropDownList
 
 Nosso relatório mestre/detalhes listará as categorias na DropDownList, com produtos do item de lista selecionado exibidos mais adiante na página em um DataList. A primeira tarefa à frente de nós, em seguida, é ter as categorias exibidas na DropDownList. Comece abrindo o `FilterByDropDownList.aspx` página o `DataListRepeaterFiltering` pasta e arraste uma DropDownList da caixa de ferramentas para o designer da página. Em seguida, defina a DropDownList `ID` propriedade para `Categories`. Clique no link na marca inteligente do DropDownList Escolher fonte de dados e criar um novo ObjectDataSource chamado `CategoriesDataSource`.
-
 
 [![Adicionar um novo ObjectDataSource chamado CategoriesDataSource](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image7.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image6.png)
 
 **Figura 4**: Adicionar um novo ObjectDataSource nomeado `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image8.png))
 
-
 Configurar o novo ObjectDataSource, de modo que ele chama o `CategoriesBLL` da classe `GetCategories()` método. Depois de configurar o ObjectDataSource ainda precisamos especificar qual campo de fonte de dados deve ser exibido na DropDownList e que um deve ser associado como o valor para cada item de lista. Ter o `CategoryName` campo, como a exibição e `CategoryID` como o valor para cada item de lista.
-
 
 [![Ter a exibição DropDownList CategoryName campo e Use CategoryID como o valor](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image10.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image9.png)
 
 **Figura 5**: Ter a exibição DropDownList a `CategoryName` campo e Use `CategoryID` como o valor ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image11.png))
 
-
 Neste ponto, temos um controle DropDownList que é preenchido com os registros da `Categories` tabela (tudo feito em cerca de seis segundos). Figura 6 mostra nosso progresso até o momento quando visualizado por meio de um navegador.
-
 
 [![Uma lista suspensa lista as categorias atuais](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image13.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image12.png)
 
 **Figura 6**: Menu suspenso que lista as categorias atual ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image14.png))
 
-
 ## <a name="step-2-adding-the-products-datalist"></a>Etapa 2: Adicionar produtos DataList
 
 A última etapa do nosso relatório mestre/detalhes é listar os produtos associados a categoria selecionada. Para fazer isso, adicione uma DataList à página e criar um novo ObjectDataSource chamado `ProductsByCategoryDataSource`. Ter o `ProductsByCategoryDataSource` recuperar seus dados, controle de `ProductsBLL` da classe `GetProductsByCategoryID(categoryID)` método. Como esse relatório mestre/detalhes é somente leitura, escolha a que opção nas guias de INSERT, UPDATE e DELETE (nenhum).
-
 
 [![Selecione o método GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image16.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image15.png)
 
 **Figura 7**: Selecione o `GetProductsByCategoryID(categoryID)` método ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image17.png))
 
-
 Depois de clicar em Avançar, o assistente ObjectDataSource nos solicita a origem do valor para o `GetProductsByCategoryID(categoryID)` do método *`categoryID`* parâmetro. Para usar o valor de selecionado `categories` DropDownList item define a origem do parâmetro ControlID para e de controle `Categories`.
-
 
 [![Defina o parâmetro categoryID como o valor de Categories DropDownList](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image19.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image18.png)
 
 **Figura 8**: Defina as *`categoryID`* parâmetro para o valor da `Categories` DropDownList ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image20.png))
-
 
 Após a conclusão do Assistente Configurar fonte de dados, o Visual Studio gerará automaticamente um `ItemTemplate` para DataList que exibe o nome e o valor de cada campo de dados. Vamos melhorar DataList em vez disso, usar um `ItemTemplate` que exibe apenas o nome do produto, categoria, fornecedor, quantidade por unidade e preço junto com um `SeparatorTemplate` que injeta um `<hr>` elemento entre cada item. Vou usar o `ItemTemplate` de um exemplo na [exibindo dados com os controles DataList e Repeater](../displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-cs.md) tutorial, mas fique à vontade para usar qualquer marcação de modelo que você encontre visualmente mais atraente.
 
@@ -118,16 +101,13 @@ Reserve um tempo para fazer check-out de nosso progresso em um navegador. Quando
 
 As figuras 9 e 10 ilustram o relatório mestre/detalhes em ação.
 
-
 [![Quando o primeiro visitando a página, os produtos de bebidas são exibidos](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image22.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image21.png)
 
 **Figura 9**: Quando o primeiro visitando a página, os produtos de bebidas são exibidos ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image23.png))
 
-
 [![Selecionar um novo produto (produzir) automaticamente faz com que um PostBack, atualizando DataList](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image25.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image24.png)
 
 **Figura 10**: Selecionar um novo produto (produzir) automaticamente faz com que um PostBack, atualizando DataList ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image26.png))
-
 
 ## <a name="adding-a----choose-a-category----list-item"></a>Adicionando um Item de lista "-- Escolha uma categoria –"
 
@@ -135,11 +115,9 @@ Ao visitar primeiro o `FilterByDropDownList.aspx` página categorias primeiro it
 
 Para adicionar um novo item de lista a DropDownList, vá para a janela Propriedades e clique nas elipses no `Items` propriedade. Adicionar um novo item de lista com o `Text` "-- Escolha uma categoria –" e o `Value` `0`.
 
-
 ![Adicionar um](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image27.png)
 
 **Figura 11**: Adicionar um Item de lista "-- Escolha uma categoria –"
-
 
 Como alternativa, você pode adicionar o item de lista, adicionando a seguinte marcação ao DropDownList:
 
@@ -147,19 +125,15 @@ Como alternativa, você pode adicionar o item de lista, adicionando a seguinte m
 
 Além disso, precisamos definir o controle de DropDownList `AppendDataBoundItems` à `true` porque se ele for definido como `false` (o padrão), quando as categorias são associadas ao DropDownList do ObjectDataSource elas vão substituir qualquer lista adicionados manualmente itens.
 
-
 ![Defina a propriedade AppendDataBoundItems como True](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image28.png)
 
 **Figura 12**: Defina o `AppendDataBoundItems` propriedade como True
 
-
 O motivo pelo qual escolhemos o valor `0` para obter a lista de "-- Escolha uma categoria –" item é porque não há nenhuma categoria no sistema com um valor de `0`, portanto, não há registros de produto serão retornados quando o item de lista "-- Escolha uma categoria –" está selecionado. Para confirmar isso, reserve um tempo para visitar a página por meio de um navegador. Como mostra a Figura 13, quando inicialmente exibindo a página que o item de lista "-- Escolha uma categoria –" está selecionado e nenhum produto é exibido.
-
 
 [![Quando o](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image30.png)](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image29.png)
 
 **Figura 13**: Quando o Item de lista "-- Escolha uma categoria –" é selecionado, os produtos não são exibidos ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image31.png))
-
 
 Se, em vez disso, exibiria *todos os* dos produtos quando a opção "-- Escolha uma categoria –" é selecionada, use um valor de `-1` em vez disso. O leitor astuto deve se lembrar que back na *filtragem de mestre/detalhes com uma DropDownList* tutorial, atualizamos o `ProductsBLL` da classe `GetProductsByCategoryID(categoryID)` método para que se um *`categoryID`* valor de `-1` foi passado no produto de todos os registros foram retornados.
 

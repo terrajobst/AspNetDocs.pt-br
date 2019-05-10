@@ -8,12 +8,12 @@ ms.date: 01/14/2008
 ms.assetid: b9c29865-a34e-48bb-92c0-c443a72cb860
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 9665dafb23b885fdf9e4ea5f1a515a0c6dcc9a9a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 75e7da4c993bc59a2ff34c2838f36312e1571668
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410624"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65134399"
 ---
 # <a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configuração de autenticação de formulários e tópicos avançados (C#)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixar o código](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/ASPNET_Security_Tutorial_03_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/2/F/7/2F705A34-F9DE-4112-BBDE-60098089645E/aspnet_tutorial03_AuthAdvanced_cs.pdf)
 
 > Neste tutorial examinaremos as várias configurações de autenticação de formulários e veja como modificá-los por meio do elemento de formulários. Isso envolvem uma visão detalhada de como personalizar o valor de tempo limite do tíquete de autenticação de formulários, usando uma página de logon com uma URL personalizada (como SignIn.aspx em vez de login. aspx) e tíquetes de autenticação de formulários sem cookies.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -37,7 +36,6 @@ O sistema de autenticação de formulários no ASP.NET oferece uma série de def
 [!code-xml[Main](forms-authentication-configuration-and-advanced-topics-cs/samples/sample1.xml)]
 
 A tabela 1 resume as propriedades que podem ser personalizadas por meio de &lt;formulários&gt; elemento. Como o Web. config é um arquivo XML, os nomes de atributo na coluna esquerda diferenciam maiusculas de minúsculas.
-
 
 | <strong>Atributo</strong> |                                                                                                                                                                                                                                     <strong>Descrição</strong>                                                                                                                                                                                                                                      |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +58,6 @@ No ASP.NET 2.0 e posteriores, o padrão a valores de autenticação de formulár
 > [!NOTE]
 > Várias configurações de autenticação de formulários, como o tempo limite, o domínio e o caminho, especificam os detalhes para o cookie de tíquete de autenticação de formulários resultante. Para obter mais informações sobre cookies, como elas funcionam e suas várias propriedades, leia [este tutorial de Cookies](http://www.quirksmode.org/js/cookies.html).
 
-
 ### <a name="specifying-the-tickets-timeout-value"></a>Especificando o valor de tempo limite do tíquete
 
 O tíquete de autenticação de formulários é um token que representa uma identidade. Com permissões de autenticação baseada em cookies, esse token é mantido na forma de um cookie e enviado para o servidor web em cada solicitação. A posse do token, em essência, declara, eu sou *nome de usuário*, eu já fez logon e é usado para que a identidade do usuário pode ser lembrada em visitas à página.
@@ -72,7 +69,6 @@ Um tal bit de informações incluídas no tíquete é um *expiração*, que é a
 > [!NOTE]
 > Etapa 3 técnicas adicionais de detalhes usadas pelo sistema de autenticação de formulários para proteger o tíquete de autenticação.
 
-
 Ao criar o tíquete de autenticação, o sistema de autenticação de formulários determina sua expiração consultando a configuração de tempo limite. Conforme observado na tabela 1, o tempo limite configurando padrões para 30 minutos, o que significa que, quando o tíquete de autenticação de formulários é criado sua expiração é definida como uma data e hora, 30 minutos no futuro.
 
 A expiração define um tempo absoluto no futuro em que o tíquete de autenticação de formulários expira. Mas, normalmente, os desenvolvedores querem implementar uma expiração deslizante, que é redefinida toda vez que o usuário revisitar o site. Esse comportamento é determinado pelas configurações slidingExpiration. Se definido como true (padrão), cada vez que o FormsAuthenticationModule autentica um usuário, ele de atualizações de expiração do tíquete. Se definido como false, a expiração não é atualizado em cada solicitação, causando assim o tíquete expirar exatamente tempo limite número de minutos passados quando o tíquete foi inicialmente criado.
@@ -80,28 +76,22 @@ A expiração define um tempo absoluto no futuro em que o tíquete de autentica�
 > [!NOTE]
 > A expiração armazenada no tíquete de autenticação é uma data absoluta e o valor de tempo, como em 2 de agosto de 2008 11:34 AM. Além disso, a data e hora são em relação à hora do local do servidor web. Essa decisão de design pode ter alguns efeitos colaterais de interessantes em torno do horário de verão (DST), que é quando os relógios dos Estados Unidos são movidos com antecedência (supondo que o servidor web está hospedado em uma localidade em que o horário de verão é observada) de uma hora. Considere o que aconteceria para um site ASP.NET com uma expiração de 30 minutos próximos ao horário em que horário de verão começa (que é às 2 horas). Imagine que um visitante se inscreve para o site em 11 de março de 2008 à 1h: 55. Isso geraria um tíquete de autenticação de formulários expira no dia 11 de março de 2008 às: 25 2H (30 minutos no futuro). No entanto, depois de chegar às 2H, o relógio salta para 3:00 AM devido ao horário de verão. Quando o usuário carregar uma nova página de seis minutos depois de entrar (em 3:01 AM), o FormsAuthenticationModule observa que o tíquete expirou e redireciona o usuário para a página de logon. Para obter uma discussão mais completa sobre esse e outros Singularidades do tempo limite de tíquete de autenticação, bem como soluções alternativas, escolher um exemplar de Stefan Schackow *Professional ASP.NET 2.0 segurança, associação e gerenciamento de função* (ISBN: 978-0-7645-9698-8).
 
-
 Figura 1 ilustra o fluxo de trabalho quando slidingExpiration é definido como false e o tempo limite é definido como 30. Observe que o tíquete de autenticação gerado no logon contém a data de validade, e esse valor não é atualizado em solicitações subsequentes. Se o FormsAuthenticationModule localiza o tíquete expirou, ele descarta e trata a solicitação como anônimo.
-
 
 [![Uma representação gráfica dos slidingExpiration do tíquete de autenticação de formulários de expiração quando for false](forms-authentication-configuration-and-advanced-topics-cs/_static/image2.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image1.png)
 
 **Figura 01**: Uma representação gráfica dos slidingExpiration do tíquete de autenticação de formulários de expiração quando for false ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image3.png))
 
-
 A Figura 2 mostra o fluxo de trabalho quando slidingExpiration é definido como true e o tempo limite é definido como 30. Quando uma solicitação autenticada é recebida (com um tíquete não expirados) sua expiração é atualizada para o tempo limite número de minutos no futuro.
-
 
 [![Uma representação gráfica do tíquete de autenticação de formulários quando slidingExpiration é true](forms-authentication-configuration-and-advanced-topics-cs/_static/image5.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image4.png)
 
 **Figura 02**: Uma representação gráfica do tíquete de autenticação de formulários quando slidingExpiration é true ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image6.png))
 
-
 Ao usar os tíquetes de autenticação baseada em cookie (o padrão), esta discussão se torna um pouco mais confusa porque cookies também podem ter seus próprios expirações especificadas. Expiração de um cookie (ou falta de preparação) instrui o navegador quando o cookie deve ser destruído. Se o cookie não tiver uma expiração, ele é destruído quando o navegador é fechado. Se houver uma expiração, no entanto, o cookie permanecerá armazenado no computador do usuário até a data e especificado na expiração do tempo. Quando um cookie for destruído pelo navegador, ele não é enviado ao servidor web. Portanto, a destruição de um cookie é análoga ao usuário fazer logoff do site.
 
 > [!NOTE]
 > É claro, é possível que um usuário proativamente remover quaisquer cookies armazenados em seu computador. No Internet Explorer 7, você teria vá para ferramentas, opções e clique no botão Excluir na seção de histórico de navegação. A partir daí, clique no botão Excluir cookies.
-
 
 O sistema de autenticação de formulários cria cookies com base em sessão ou com base em expiração, dependendo do valor passado para o *persistCookie* parâmetro. Lembre-se que os métodos da classe FormsAuthentication de GetAuthCookie, SetAuthCookie e RedirectFromLoginPage levar dois parâmetros de entrada: *nome de usuário* e *persistCookie*. A página de logon que criamos no tutorial anterior incluído um CheckBox lembrar-me, que determinado se um cookie persistente foi criado. Cookies persistentes são baseados em expiração; cookies não persistentes são baseadas em sessão.
 
@@ -137,7 +127,6 @@ As configurações de detecção automática e UseDeviceProfile dependem de um *
 > [!NOTE]
 > Este banco de dados de recursos do dispositivo é armazenado em um número de arquivos XML que seguem a [esquema de arquivo de definição do navegador](https://msdn.microsoft.com/library/ms228122.aspx). Os arquivos de perfil de dispositivo padrão estão localizados em % WINDIR%\Microsoft.Net\Framework\v2.0.50727\CONFIG\Browsers. Você também pode adicionar arquivos personalizados ao aplicativo do seu aplicativo\_pasta navegadores. Para obter mais informações, consulte [How To: Detectar tipos de navegador em páginas da Web ASP.NET](https://msdn.microsoft.com/library/3yekbd5b.aspx).
 
-
 Como a configuração padrão é UseDeviceProfile, tíquetes de autenticação de formulários sem cookies serão usadas quando o site é visitado por um dispositivo cujo perfil informa que ele não dá suporte a cookies.
 
 ### <a name="encoding-the-authentication-ticket-in-the-url"></a>O tíquete de autenticação na URL de codificação
@@ -169,7 +158,6 @@ O SomePage.aspx de URL no link foi convertida automaticamente em uma URL que inc
 > [!NOTE]
 > Tíquetes de autenticação de formulários sem cookies seguem as mesmas políticas de tempo limite como tíquetes de autenticação baseada em cookie. No entanto, os tíquetes de autenticação sem cookies são mais propensos a ataques de repetição, pois o tíquete de autenticação é inserido diretamente na URL. Imagine que um usuário que visita um site, faz logon no e, em seguida, cola a URL em um email a um colega. Se o colega clicar nesse link antes que a expiração é atingida, eles serão estar conectados como o usuário que enviou o email!
 
-
 ## <a name="step-3-securing-the-authentication-ticket"></a>Etapa 3: Protegendo o tíquete de autenticação
 
 O tíquete de autenticação de formulários é transmitido durante a transmissão em um cookie ou inserido diretamente na URL. Além das informações de identidade, o tíquete de autenticação também pode incluir dados de usuário (conforme veremos na etapa 4). Consequentemente, é importante que os dados do tíquete são criptografados das pessoas curiosas e (ainda mais importante) que o sistema de autenticação de formulários pode garantir que o tíquete não foi violado.
@@ -180,11 +168,9 @@ Para garantir a autenticidade de um tíquete, o sistema de autenticação de for
 
 Ao criar (ou modificação) um tíquete, o sistema de autenticação de formulários cria um MAC e o anexa aos dados do tíquete. Quando chega uma solicitação subsequente, o sistema de autenticação de formulários compara os dados de MAC e tíquete para validar a autenticidade dos dados de tíquete. Figura 3 ilustra esse fluxo de trabalho graficamente.
 
-
 [![Autenticidade do tíquete é garantida por meio de um MAC](forms-authentication-configuration-and-advanced-topics-cs/_static/image8.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image7.png)
 
 **Figura 03**: Autenticidade do tíquete é garantida por meio de um MAC ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image9.png))
-
 
 Quais medidas de segurança são aplicadas para o tíquete de autenticação depende da configuração de proteção na &lt;formulários&gt; elemento. A configuração de proteção pode ser atribuída a um dos seguintes três valores:
 
@@ -226,7 +212,6 @@ Para obter mais informações Confira [How To: Configurar MachineKey no ASP.NET 
 > [!NOTE]
 > Os valores de validationKey decryptionKey foram tirados [Steve Gibson](http://www.grc.com/stevegibson.htm)do [página de web de senhas perfeito](https://www.grc.com/passwords.htm), que gera a 64 caracteres hexadecimais aleatórios em cada visita de página. Para reduzir a probabilidade de que essas chaves até seus aplicativos de produção, você é incentivado a substituir as chaves acima por aqueles gerados aleatoriamente da página de senhas perfeito.
 
-
 ## <a name="step-4-storing-additional-user-data-in-the-ticket"></a>Etapa 4: Armazenar dados de usuário adicionais no tíquete
 
 Muitos aplicativos da web exibem informações sobre ou exibição da página de base no usuário conectado no momento. Por exemplo, uma página da web pode mostrar o nome do usuário e a data em que ela último logon na parte superior de cada página. O tíquete de autenticação de formulários armazena o nome de usuário do usuário conectado no momento, mas quando qualquer outra informação é necessária, a página deve ir para o repositório do usuário - normalmente um banco de dados - para pesquisar as informações não armazenadas em do tíquete de autenticação.
@@ -237,11 +222,9 @@ Para armazenar dados de usuário em que o tíquete de autenticação, precisamos
 
 Sempre que é necessário acessar os dados armazenados no tíquete, podemos fazer isso captando FormsAuthenticationTicket da solicitação atual e desserializar a propriedade de dados do usuário. No caso a data de nascimento e empregador exemplo de nome, podemos seria dividir a cadeia de caracteres de dados do usuário em duas subcadeias de caracteres com base no delimitador (|).
 
-
 [![Informações adicionais do usuário podem ser armazenadas no tíquete de autenticação](forms-authentication-configuration-and-advanced-topics-cs/_static/image11.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image10.png)
 
 **Figura 04**: Adicionais usuário informações podem ser armazenados no tíquete de autenticação ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image12.png))
-
 
 ### <a name="writing-information-to-userdata"></a>Gravando informações UserData
 
@@ -288,7 +271,6 @@ Todo esse código é necessária porque a propriedade de dados do usuário é so
 > [!NOTE]
 > O código que acabamos de examinar armazena informações específicas do usuário em um tíquete de autenticação baseada em cookies. As classes responsáveis pela serialização o tíquete de autenticação de formulários para a URL são internas ao .NET Framework. Encurtar a história, é possível armazenar dados de usuário em um tíquete de autenticação de formulários sem cookies.
 
-
 ### <a name="accessing-the-userdata-information"></a>Acessar as informações de dados do usuário
 
 Neste ponto nome da empresa e o título de cada usuário é armazenada na propriedade de dados do usuário do tíquete de autenticação de formulários quando ele fizer logon. Essas informações podem ser acessadas no tíquete de autenticação em qualquer página sem a necessidade de uma viagem para o repositório do usuário. Para ilustrar como essas informações podem ser recuperadas da propriedade UserData, vamos atualizar default. aspx para que sua mensagem de boas-vinda inclui não apenas o nome do usuário, mas também a empresa trabalham e seu título.
@@ -301,15 +283,12 @@ Se Request.IsAuthenticated for true, então a propriedade de texto do WelcomeBac
 
 Figura 5 mostra uma captura de tela nessa exibição em ação. Fazer logon como Scott exibe uma mensagem de back-boas-vinda que inclui a empresa e o título de Scott.
 
-
 [![Título e empresa atualmente registradas do usuário são exibidos](forms-authentication-configuration-and-advanced-topics-cs/_static/image14.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image13.png)
 
 **Figura 05**: Título e empresa atualmente registradas do usuário são exibidas ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image15.png))
 
-
 > [!NOTE]
 > Propriedade de dados do usuário do tíquete de autenticação serve como um cache para o repositório do usuário. Como qualquer cache, ele precisa ser atualizada quando os dados subjacentes são modificados. Por exemplo, se houver uma página da web do qual os usuários podem atualizar seu perfil, os campos armazenados em cache na propriedade UserData devem atualizados para refletir as alterações feitas pelo usuário.
-
 
 ## <a name="step-5-using-a-custom-principal"></a>Etapa 5: Usando uma entidade de segurança personalizada
 
@@ -322,7 +301,6 @@ A classe GenericPrincipal atende às necessidades para a maioria dos cenários d
 > [!NOTE]
 > Como veremos no futuro tutoriais, ao ASP. Framework de funções do .NET está habilitado ele cria um objeto de entidade personalizado do tipo [RolePrincipal](https://msdn.microsoft.com/library/system.web.security.roleprincipal.aspx) e substitui o objeto de GenericPrincipal formulários criados para autenticação. Ela faz isso para personalizar o IsInRole método principal para interagir com a API da estrutura de funções.
 
-
 Uma vez que podemos ter não entende sozinhos com funções ainda, o único motivo pelo qual que temos para criar uma entidade personalizada nesse momento seria associar um objeto de IIdentity personalizado para a entidade de segurança. Na etapa 4, examinamos armazenar informações adicionais do usuário na propriedade de dados do usuário do tíquete de autenticação, em particular, o nome do usuário da empresa e seu título. No entanto, as informações de dados do usuário só estão acessível por meio do tíquete de autenticação e, em seguida, apenas como uma cadeia de caracteres serializada, que significa que sempre que desejamos exibir as informações de usuário armazenadas no tíquete, precisamos analisar a propriedade de dados do usuário.
 
 Podemos melhorar a experiência do desenvolvedor, criando uma classe que implementa IIdentity e inclui propriedades CompanyName e título. Dessa forma, um desenvolvedor pode acessar o nome da empresa do usuário conectado no momento e título diretamente por meio das propriedades de título e o CompanyName sem precisava saber como analisar a propriedade de dados do usuário.
@@ -334,14 +312,11 @@ Para este tutorial, vamos criar os objetos personalizados de entidade de seguran
 > [!NOTE]
 > O aplicativo\_pasta de código deve ser usada somente durante o gerenciamento de seu projeto por meio do modelo de projeto de site. Se você estiver usando o [modelo de projeto de aplicativo Web](https://msdn.microsoft.com/asp.net/Aa336618.aspx), criar uma pasta padrão e adicionar as classes a ele. Por exemplo, você poderia adicionar uma nova pasta chamada Classes e colocar seu código lá.
 
-
 Em seguida, adicione dois novos arquivos de classe para o aplicativo\_pasta de código, um CustomIdentity.cs nomeado e outro chamado CustomPrincipal.cs.
-
 
 [![Adicione as Classes de CustomPrincipal e CustomIdentity ao seu projeto](forms-authentication-configuration-and-advanced-topics-cs/_static/image17.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image16.png)
 
 **Figura 06**: Adicione as Classes de CustomPrincipal e CustomIdentity ao seu projeto ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image18.png))
-
 
 A classe CustomIdentity é responsável por implementar a interface IIdentity, que define as propriedades AuthenticationType, IsAuthenticated e nome. Além dessas propriedades necessárias, estamos interessados em expor o subjacente tíquete de autenticação de formulários, bem como as propriedades para o nome da empresa e o título do usuário. Insira o código a seguir para a classe CustomIdentity.
 
@@ -361,19 +336,15 @@ O pipeline do ASP.NET leva uma solicitação de entrada e processa-o por meio de
 
 Após o evento AuthenticateRequest, o pipeline do ASP.NET gera o [PostAuthenticateRequest evento](https://msdn.microsoft.com/library/system.web.httpapplication.postauthenticaterequest.aspx), que é onde podemos pode substituir o objeto GenericPrincipal criado pelo FormsAuthenticationModule com uma instância do nosso Objeto CustomPrincipal. Figura 7 ilustra esse fluxo de trabalho.
 
-
 [![O GenericPrincipal é substituído por um CustomPrincipal no evento PostAuthenticationRequest](forms-authentication-configuration-and-advanced-topics-cs/_static/image20.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image19.png)
 
 **Figura 07**: O GenericPrincipal é substituído por um CustomPrincipal no evento PostAuthenticationRequest ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image21.png))
 
-
 Para executar código em resposta a um evento de pipeline do ASP.NET, podemos pode criar o manipulador de eventos apropriado no global. asax ou criar nosso próprio módulo de HTTP. Para este tutorial vamos criar o manipulador de eventos no global. asax. Comece adicionando global. asax ao seu site. Clique com botão direito no nome do projeto no Gerenciador de soluções e adicione um item de tipo de classe de aplicativo Global chamado global. asax.
-
 
 [![Adicionar um arquivo global asax ao seu site](forms-authentication-configuration-and-advanced-topics-cs/_static/image23.png)](forms-authentication-configuration-and-advanced-topics-cs/_static/image22.png)
 
 **Figura 08**: Adicionar um arquivo global asax ao seu site ([clique para exibir a imagem em tamanho normal](forms-authentication-configuration-and-advanced-topics-cs/_static/image24.png))
-
 
 O modelo padrão do global. asax inclui manipuladores de eventos para um número de eventos do pipeline ASP.NET, incluindo o início, fim e [evento de erro](https://msdn.microsoft.com/library/system.web.httpapplication.error.aspx), entre outros. Fique à vontade remover esses manipuladores de eventos, como não precisamos delas para este aplicativo. O evento que estamos interessados em é PostAuthenticateRequest. Atualize o arquivo global. asax para que sua marcação fique semelhante ao seguinte:
 

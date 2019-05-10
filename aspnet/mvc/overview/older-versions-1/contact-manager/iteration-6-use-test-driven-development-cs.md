@@ -8,12 +8,12 @@ ms.date: 02/20/2009
 ms.assetid: 013c3c26-7dc3-41d1-8064-f233c86008b5
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager/iteration-6-use-test-driven-development-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 94885984ebad90523369dcf5771d0f77a753008f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: aee0ff9d8d7f17e8a00dab12467bd3a3457fbe18
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59405658"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65117749"
 ---
 # <a name="iteration-6--use-test-driven-development-c"></a>Iteração #6 – usar desenvolvimento controlado por testes (c#)
 
@@ -23,9 +23,7 @@ por [Microsoft](https://github.com/microsoft)
 
 > Essa iteração sexta, adicionamos novas funcionalidades ao nosso aplicativo escrevendo testes de unidade pela primeira vez e escrever código contra os testes de unidade. Essa iteração, adicionamos os grupos de contatos.
 
-
 ## <a name="building-a-contact-management-aspnet-mvc-application-c"></a>Criando um aplicativo ASP.NET MVC de gerenciamento de contatos (c#)
-  
 
 Esta série de tutoriais, vamos criar um aplicativo de gerenciamento de contatos inteiro do início ao fim. O aplicativo Gerenciador de contatos permite que você armazene informações de contato - nomes, números de telefone e endereços de email - para obter uma lista de pessoas.
 
@@ -73,7 +71,6 @@ Por fim, o desenvolvimento controlado por teste força você a escrever testes d
 > 
 > Para saber mais sobre o desenvolvimento controlado por teste, recomendo que você leia o livro de Michael Feathers **Working Effectively with Legacy Code**.
 
-
 Essa iteração, adicionamos um novo recurso ao nosso aplicativo Contact Manager. Adicionamos suporte para grupos de contato. Você pode usar grupos de contato para organizar seus contatos em categorias, como Business e Friend.
 
 Vamos adicionar essa nova funcionalidade ao nosso aplicativo seguindo um processo de desenvolvimento controlado por teste. Vamos escrever nossos testes de unidade pela primeira vez, e vamos escrever todo o nosso código contra esses testes.
@@ -112,11 +109,9 @@ Nossa história de usuário a primeira é que um usuário deve ser capaz de exib
 
 Criar um novo teste de unidade pelo botão direito do mouse na pasta controladores no projeto ContactManager.Tests, selecionando **Add, New Test**e selecionando o **de teste de unidade** modelo (consulte a Figura 1). Nome da nova unidade GroupControllerTest.cs de teste e clique no **Okey** botão.
 
-
 [![Adicionando o teste de unidade GroupControllerTest](iteration-6-use-test-driven-development-cs/_static/image1.jpg)](iteration-6-use-test-driven-development-cs/_static/image1.png)
 
 **Figura 01**: Adicionando o teste de unidade GroupControllerTest ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image2.png))
-
 
 Nosso primeiro teste de unidade está contido na listagem 1. Esse teste verifica que o método Index () do controlador grupo retorna um conjunto de grupos. O teste verifica que uma coleção de grupos é retornada no modo de exibição dados.
 
@@ -140,11 +135,9 @@ A classe de controlador de grupo na listagem 2 contém o mínimo de código nece
 
 Depois de adicionar as classes GroupController e o grupo ao nosso projeto, o nosso primeiro teste de unidade for concluída com êxito (veja a Figura 2). Fizemos o trabalho mínimo necessário para passar no teste. É hora de celebrar.
 
-
 [![Sucesso!](iteration-6-use-test-driven-development-cs/_static/image2.jpg)](iteration-6-use-test-driven-development-cs/_static/image3.png)
 
 **Figura 02**: Sucesso! ([Clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image4.png))
-
 
 ## <a name="creating-contact-groups"></a>Criando grupos de contatos
 
@@ -220,7 +213,6 @@ Modificando o IContactManagerRepository interface requer que usar para implement
 
 [!code-csharp[Main](iteration-6-use-test-driven-development-cs/samples/sample12.cs)]
 
-
 Por fim, essas alterações no design do nosso aplicativo exigem que fazer algumas modificações para nossos testes de unidade. Agora, precisamos usar o FakeContactManagerRepository ao executar os testes de unidade. A classe GroupControllerTest atualizada está contida na listagem 12.
 
 **Listing 12 - Controllers\GroupControllerTest.cs**
@@ -242,12 +234,10 @@ Infelizmente, mesmo que podemos ter atendido todos os requisitos expressados por
 
 <a id="0.11_table01"></a>
 
-
 | **Nome da coluna** | **Tipo de dados** | **Permitir nulos** |
 | --- | --- | --- |
 | Id | int | False |
 | Nome | nvarchar(50) | False |
-
 
 Em seguida, é preciso excluir todos os dados da tabela de contatos (caso contrário, nós não conseguirá criar uma relação entre as tabelas de contatos e grupos). Siga estas etapas:
 
@@ -266,16 +256,13 @@ Em seguida, precisamos definir uma relação entre a tabela de banco de dados de
 8. Clique no botão Fechar para fechar a caixa de diálogo relações de chave estrangeira.
 9. Clique no botão Salvar para salvar as alterações à tabela Contatos.
 
-
 [![Criando uma relação de tabela do banco de dados](iteration-6-use-test-driven-development-cs/_static/image3.jpg)](iteration-6-use-test-driven-development-cs/_static/image5.png)
 
 **Figura 03**: Criando uma relação de tabela do banco de dados ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image6.png))
 
-
 [![Especificando relações de tabela](iteration-6-use-test-driven-development-cs/_static/image4.jpg)](iteration-6-use-test-driven-development-cs/_static/image7.png)
 
 **Figura 04**: Especificando relações de tabela ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image8.png))
-
 
 ### <a name="updating-our-data-model"></a>Atualizando o nosso modelo de dados
 
@@ -287,19 +274,15 @@ Em seguida, precisamos atualizar nosso modelo de dados para representar a nova t
 4. A entidade de grupos com o botão direito e selecione a opção de menu **Renomear**. Altere o nome da *grupos* entidade *grupo* (singular).
 5. Clique com botão direito a propriedade de navegação de grupos aparece na parte inferior da entidade contato. Altere o nome da *grupos* propriedade de navegação *grupo* (singular).
 
-
 [![Atualizando um modelo do Entity Framework do banco de dados](iteration-6-use-test-driven-development-cs/_static/image5.jpg)](iteration-6-use-test-driven-development-cs/_static/image9.png)
 
 **Figura 05**: Atualizando um modelo do Entity Framework do banco de dados ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image10.png))
 
-
 Depois de concluir essas etapas, seu modelo de dados representará a tabelas de contatos e grupos. O Designer de entidade deve mostrar as duas entidades (veja a Figura 6).
-
 
 [![Designer de entidade exibindo Group e Contact](iteration-6-use-test-driven-development-cs/_static/image6.jpg)](iteration-6-use-test-driven-development-cs/_static/image11.png)
 
 **Figura 06**: Designer de entidade exibindo Group e Contact ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image12.png))
-
 
 ### <a name="creating-our-repository-classes"></a>Criando a nossas Classes de repositório
 
@@ -328,11 +311,9 @@ Quando você usa o mecanismo de exibição do ASP.NET padrão de aplicativo do A
 - Views\Group\Index.aspx - exibe a lista de grupos de contatos
 - Views\Group\Delete.aspx - formulário de confirmação exibida para a exclusão de um grupo de contatos
 
-
 [![O modo de exibição de índice do grupo](iteration-6-use-test-driven-development-cs/_static/image7.jpg)](iteration-6-use-test-driven-development-cs/_static/image13.png)
 
 **Figura 07**: O modo de exibição do grupo de índice ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image14.png))
-
 
 Precisamos modificar as seguintes exibições existentes para que elas incluem grupos de contato:
 
@@ -342,11 +323,9 @@ Precisamos modificar as seguintes exibições existentes para que elas incluem g
 
 Você pode ver os modos de exibição modificados, observando o aplicativo do Visual Studio que acompanha este tutorial. Por exemplo, a Figura 8 ilustra o modo de exibição de índice de contatos.
 
-
 [![O modo de exibição de índice de contatos](iteration-6-use-test-driven-development-cs/_static/image8.jpg)](iteration-6-use-test-driven-development-cs/_static/image15.png)
 
 **Figura 08**: O modo de exibição de índice de contatos ([clique para exibir a imagem em tamanho normal](iteration-6-use-test-driven-development-cs/_static/image16.png))
-
 
 ## <a name="summary"></a>Resumo
 

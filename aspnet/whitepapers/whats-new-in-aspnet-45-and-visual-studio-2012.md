@@ -8,17 +8,16 @@ ms.date: 02/29/2012
 ms.assetid: ba1fabb4-31a3-4ebf-8327-41a6bbba6eaf
 msc.legacyurl: /whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012
 msc.type: content
-ms.openlocfilehash: 5f50721b6f263b9cb025f5fa57c923dadeddcd28
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 32fbf7c25b00f3f0796c4c3fdd38ca2a86c89199
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410585"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133684"
 ---
 # <a name="whats-new-in-aspnet-45-and-visual-studio-2012"></a>Novidades no ASP.NET 4.5 e no Visual Studio 2012
 
 > Este documento descreve novos recursos e aprimoramentos que estão sendo introduzidos no ASP.NET 4.5. Ele também descreve as melhorias que estão sendo feitas para o desenvolvimento da web no Visual Studio 2012. Este documento foi publicado originalmente em 29 de fevereiro de 2012.
-
 
 - [Estrutura e o tempo de execução do ASP.NET Core](#_Toc318097372)
 
@@ -190,10 +189,8 @@ Você pode usar o *HttpRequest.Unvalidated* propriedade para ler o valor de form
 
 [!code-csharp[Main](whats-new-in-aspnet-45-and-visual-studio-2012/samples/sample6.cs)]
 
-
 > [!WARNING]
 > Security - *usar dados de solicitação invalidados com cuidado!* ASP.NET 4.5 adicionadas as propriedades de solicitação invalidados e coleções para tornar mais fácil de acessar dados de solicitação invalidados muito específicas. No entanto, você ainda deve executar a validação personalizada nos dados brutos de solicitação para garantir que perigoso texto não será renderizado para os usuários.
-
 
 <a id="_Toc318097382"></a>
 ### <a name="antixss-library"></a>Biblioteca AntiXSS
@@ -383,11 +380,9 @@ No entanto, as expressões de associação de dados como este não dão suporte 
 
 Para resolver esse problema, o ASP.NET 4.5 adiciona a capacidade de declarar o tipo de dados dos dados que um controle está vinculado a. Você faz isso usando o novo *ItemType* propriedade. Quando você definir essa propriedade, duas novas variáveis tipadas estão disponíveis no escopo das expressões de associação de dados: *Item* e *BindItem*. Porque as variáveis são fortemente tipadas, você obtém os benefícios da experiência de desenvolvimento do Visual Studio.
 
-
 Para expressões de associação de dados bidirecionais, use o *BindItem* variável:
 
 [!code-aspx[Main](whats-new-in-aspnet-45-and-visual-studio-2012/samples/sample21.aspx)]
-
 
 A maioria dos controles no framework do Web Forms do ASP.NET que dão suporte à vinculação de dados foram atualizados para dar suporte a *ItemType* propriedade.
 

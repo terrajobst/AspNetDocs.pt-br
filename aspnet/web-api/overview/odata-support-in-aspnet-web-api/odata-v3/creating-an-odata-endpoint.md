@@ -8,12 +8,12 @@ ms.date: 02/25/2014
 ms.assetid: 262843d6-43a2-4f1c-82d9-0b90ae6df0cf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint
 msc.type: authoredcontent
-ms.openlocfilehash: fa0573738fee8f1decc13c9797f644002931e09d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e31bf3215155b4b45bcf2eb90dd6947caf99b7f8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381484"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65125274"
 ---
 # <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Criando um ponto de extremidade OData v3 com a API Web 2
 
@@ -35,7 +35,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > - [Web Fiddler (opcional) do Proxy de depuração](http://www.fiddler2.com)
 >
 > Suporte de OData da API da Web foi adicionado no [ASP.NET e Web Tools 2012.2 atualização](https://go.microsoft.com/fwlink/?LinkId=282650). No entanto, este tutorial usa scaffolding que foi adicionado no Visual Studio 2013.
-
 
 Neste tutorial, você criará um simple ponto de extremidade OData que os clientes podem consultar. Você também criará um cliente c# para o ponto de extremidade. Depois de concluir este tutorial, o próximo conjunto de tutoriais mostram como adicionar mais funcionalidade, incluindo as relações de entidade, ações, e selecione $Expandir / $.
 
@@ -77,7 +76,6 @@ No **adicionar novo** Item de caixa de diálogo, nomeie a classe &quot;produto&q
 
 > [!NOTE]
 > Por convenção, as classes de modelo são colocadas na pasta de modelos. Você não precisa seguir essa convenção em seus próprios projetos, mas usaremos para este tutorial.
-
 
 No arquivo Product.cs, adicione a seguinte definição de classe:
 

@@ -8,12 +8,12 @@ ms.date: 06/09/2009
 ms.assetid: 051296f0-9519-4e78-835c-d868da13b0a0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d917982d5bd97bf1fa9d926e761c6fe847bb0574
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1c28f520f710f77689548158e88d87d1051235d8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59394192"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65124226"
 ---
 # <a name="processing-unhandled-exceptions-vb"></a>Processamento de exceções sem tratamento (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Exibir ou baixar código de exemplo](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/processing-unhandled-exceptions-vb/samples) ([como baixar](/aspnet/core/tutorials/index#how-to-download-a-sample))
 
 > Quando ocorre um erro de tempo de execução em um aplicativo web em produção é importante para notificar um desenvolvedor e para registrar o erro, de modo que podem ser diagnosticado em um momento posterior no tempo. Este tutorial fornece uma visão geral de como o ASP.NET processa os erros de tempo de execução e examina uma maneira de ter o código personalizado executado sempre que um bolhas de exceção sem tratamento até o tempo de execução do ASP.NET.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -34,7 +33,6 @@ Este tutorial mostra como acessar os detalhes de uma exceção sem tratamento pa
 
 > [!NOTE]
 > As informações examinadas neste tutorial são mais útil se você precisar processar exceções não manipuladas de alguma maneira exclusiva ou personalizada. Em casos em que você só precisa registrar a exceção e notificar um desenvolvedor, usando uma biblioteca de registro em log de erro é a melhor opção. Os próximos dois tutoriais fornecem uma visão geral dos dois essas bibliotecas.
-
 
 ## <a name="executing-code-when-theerrorevent-is-raised"></a>Executar código quando o`Error`é gerado
 
@@ -56,7 +54,6 @@ O `Global.asax` arquivo criado em um WAP pelo modelo de classe de aplicativo Glo
 > [!NOTE]
 > Ao implantar o aplicativo ASP.NET, você precisa copiar o `Global.asax` arquivo para o ambiente de produção. O `Global.asax.vb` arquivo, que é criado no WAP, não precisam ser copiados para a produção porque esse código é compilado no assembly do projeto.
 
-
 Os manipuladores de eventos criados pelo modelo de classe de aplicativo Global do Visual Studio não são exaustivos. Você pode adicionar um manipulador de eventos para qualquer `HttpApplication` evento ao nomear o manipulador de eventos `Application_EventName`. Por exemplo, você poderia adicionar o código a seguir para o `Global.asax` arquivo para criar um manipulador de eventos para o [ `AuthorizeRequest` evento](https://msdn.microsoft.com/library/system.web.httpapplication.authorizerequest.aspx):
 
 [!code-vb[Main](processing-unhandled-exceptions-vb/samples/sample1.vb)]
@@ -65,7 +62,6 @@ Da mesma forma, você pode remover quaisquer manipuladores de eventos criados pe
 
 > [!NOTE]
 > *Módulos HTTP* oferecem outra maneira de definir manipuladores de eventos para `HttpApplication` eventos. Módulos HTTP são criados como um arquivo de classe que pode ser colocado diretamente dentro do projeto de aplicativo web ou separado em uma biblioteca de classe separada. Porque eles podem ser separados em uma biblioteca de classes, módulos HTTP oferecem um modelo mais flexível e reutilizável para a criação de `HttpApplication` manipuladores de eventos. Enquanto o `Global.asax` arquivo é específico ao aplicativo web onde eles residem, módulos HTTP podem ser compilados em assemblies, no ponto em que adicionar o módulo HTTP para um site da Web é tão simple quanto soltando o assembly `Bin` pasta e registrando o Módulo no `Web.config`. Este tutorial não é afetada de criação e uso de módulos HTTP, mas as bibliotecas de log de erros de dois usadas nos dois tutoriais a seguir são implementadas como módulos HTTP. Para obter mais informações sobre os benefícios dos módulos HTTP, consulte [usando módulos e manipuladores HTTP para criar componentes do ASP.NET conectáveis](https://msdn.microsoft.com/library/aa479332.aspx).
-
 
 ## <a name="retrieving-information-about-the-unhandled-exception"></a>Recuperando informações sobre a exceção sem tratamento
 
@@ -92,7 +88,6 @@ As classes .NET Framework na [ `System.Net.Mail` namespace](https://msdn.microso
 > [!NOTE]
 > O `<system.net>` elemento contém as configurações do servidor SMTP usadas pelo `SmtpClient` ao enviar um email de classe. Hospedagem da empresa provavelmente tem um servidor SMTP que você pode usar para enviar o email do seu aplicativo. Consulte a seção de suporte do host da web para obter informações sobre configurações do servidor SMTP, que você deve usar em seu aplicativo web.
 
-
 Adicione o seguinte código para o `Application_Error` manipulador de eventos para enviar um email de um desenvolvedor quando ocorre um erro:
 
 [!code-vb[Main](processing-unhandled-exceptions-vb/samples/sample4.vb)]
@@ -105,7 +100,6 @@ A etapa final é enviar o `MailMessage`. Isso é feito criando um novo `SmtpClie
 
 > [!NOTE]
 > Antes de usar esse código em seu aplicativo web você desejará alterar os valores na `ToAddress` e `FromAddress` constantes da support@example.com a qualquer email endereço de email de notificação de erro devem ser enviados para e originam. Você também precisará especificar as configurações do servidor SMTP na `<system.net>` seção `Web.config`. Consulte seu provedor de host da web para determinar as configurações do servidor SMTP para usar.
-
 
 Com este código em lugar sempre que houver um erro, o desenvolvedor é enviado uma mensagem de email que resume o erro e inclui o YSOD. No tutorial anterior, demonstramos um erro de tempo de execução visitando Genre.aspx e passando um inválido `ID` de valor por meio da cadeia de consulta, como `Genre.aspx?ID=foo`. Visitar a página com o `Global.asax` arquivo in-loco produz a mesma experiência de usuário, como no tutorial anterior - no ambiente de desenvolvimento você continuará vendo a exceção detalhes amarelo tela de morte, enquanto no ambiente de produção, você vai Consulte a página de erro personalizada. Além desse comportamento existente, o desenvolvedor é enviado um email.
 
