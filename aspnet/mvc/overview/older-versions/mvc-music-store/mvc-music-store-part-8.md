@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 26b2f55e-ed42-4277-89b0-c941eb754145
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-8
 msc.type: authoredcontent
-ms.openlocfilehash: 2ba210d8c541c6c330dda74706470fa73a81474a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 89897ad41b217764cbd17317d4bf5d6a5c5d488f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59379476"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112903"
 ---
 # <a name="part-8-shopping-cart-with-ajax-updates"></a>Parte 8: Carrinho de compras com atualizações do Ajax
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.  
 >   
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 8 aborda o carrinho de compras com atualizações do Ajax.
-
 
 Permitiremos que os usuários a colocar álbuns no carrinho sem registro, mas precisará se registrar como convidados fazer check-out completa. O processo de compras e check-out será separado em dois controladores: um controlador de ShoppingCart que permite anonimamente adicionar itens a um carrinho e um controlador de check-out que manipula o processo de check-out. Podemos vai começar com o carrinho de compras nesta seção, em seguida, crie o processo de check-out na seção a seguir.
 
@@ -156,7 +155,6 @@ Após o carregamento de carrinho de compras, você pode clicar na remover do lin
 ![](mvc-music-store-part-8/_static/image8.png)
 
 Criamos um carrinho que permite que os usuários não registrados adicionar itens ao carrinho de compras em funcionamento. Na seção a seguir, permitiremos que eles possam registrar e concluir o processo de check-out.
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-7.md)

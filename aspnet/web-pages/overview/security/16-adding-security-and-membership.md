@@ -8,12 +8,12 @@ ms.date: 02/24/2014
 ms.assetid: 7a77c2c0-deea-4290-a9c3-97958891758e
 msc.legacyurl: /web-pages/overview/security/16-adding-security-and-membership
 msc.type: authoredcontent
-ms.openlocfilehash: 1291417755e3fa4fb030bc6ba3089c38c4719c71
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0be3e767a42939a3c343f6d4a730eb1d9a6b367c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389655"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112371"
 ---
 # <a name="adding-security-and-membership-to-an-aspnet-web-pages-razor-site"></a>Adição de segurança e associação a um Site do ASP.NET Web Pages (Razor)
 
@@ -42,7 +42,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - Páginas da Web do ASP.NET (Razor) 2
 > - WebMatrix 3
 > - ASP.NET Web Helpers Library
-
 
 Você pode configurar seu site para que os usuários podem fazer nele &#8212; ou seja, para que o site suporta *associação*. Isso pode ser útil por vários motivos. Por exemplo, seu site pode ter páginas que devem estar disponíveis apenas para membros. Em alguns casos, você pode exigir que os usuários façam logon no fim de enviar comentários ou deixe um comentário.
 

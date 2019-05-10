@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: 4b559e6c-4fb0-4a04-9812-45cf08ae5779
 msc.legacyurl: /signalr/overview/testing-and-debugging/troubleshooting
 msc.type: authoredcontent
-ms.openlocfilehash: 3e3ba353184f94621ffc0fb1c50647caf1a89514
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: bcd273d839aed64ad2712eb503dd1942a2d4e355
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402759"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113482"
 ---
 # <a name="signalr-troubleshooting"></a>Solução de problemas do SignalR
 
@@ -39,7 +39,6 @@ por [Patrick Fletcher](https://github.com/pfletcher)
 > ## <a name="questions-and-comments"></a>Perguntas e comentários
 >
 > Deixe comentários sobre como você gostou neste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 Este documento contém as seções a seguir.
 

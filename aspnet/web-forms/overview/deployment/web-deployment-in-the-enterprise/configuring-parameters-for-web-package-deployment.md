@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 37947d79-ab1e-4ba9-9017-52e7a2757414
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/configuring-parameters-for-web-package-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: f738d1c0b3cd99bb6df5f8b24dca907fa0b31f4d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f04ace98d81a33053b10cab7e40dbd75a6c0992c
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413094"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108720"
 ---
 # <a name="configuring-parameters-for-web-package-deployment"></a>Configuração de parâmetros para a implantação de pacote da Web
 
@@ -23,7 +23,6 @@ by [Jason Lee](https://github.com/jrjlee)
 
 > Este tópico descreve como definir valores de parâmetro, como nomes de aplicativo web de serviços de informações da Internet (IIS), cadeias de caracteres de conexão e pontos de extremidade de serviço, quando você implanta um pacote da web em um servidor web IIS remoto.
 
-
 Quando você compila um projeto de aplicativo web, a compilação e o processo de empacotamento gera três arquivos principais:
 
 - Um *[nome do projeto]. zip* arquivo. Isso é o pacote de implantação da web para seu projeto de aplicativo web. Este pacote contém todos os assemblies, arquivos, scripts de banco de dados e recursos necessários para recriar seu aplicativo web em um servidor de web IIS remoto.
@@ -32,7 +31,6 @@ Quando você compila um projeto de aplicativo web, a compilação e o processo d
 
 > [!NOTE]
 > Para obter mais informações sobre o processo de empacotamento e a compilação, consulte [compilação e empacotamento Web Application Projects](building-and-packaging-web-application-projects.md).
-
 
 O *SetParameters.xml* arquivo é gerado dinamicamente do seu arquivo de projeto de aplicativo web e quaisquer arquivos de configuração dentro de seu projeto. Quando você compila e empacotar seu projeto, o Pipeline de publicação de Web (WPP) detectará automaticamente muitas das variáveis que têm probabilidade de mudar entre ambientes de implantação, como o destino do aplicativo web do IIS e quaisquer cadeias de caracteres de conexão de banco de dados. Esses valores são parametrizados no pacote de implantação da web e adicionados automaticamente à *SetParameters.xml* arquivo. Por exemplo, se você adicionar uma cadeia de caracteres de conexão para o *Web. config* arquivo no seu projeto de aplicativo web, o processo de build detectará essa alteração e adicionará uma entrada para o *SetParameters.xml* arquivo adequadamente.
 
@@ -48,9 +46,7 @@ Quando você compilar e empacota um aplicativo web, o WPP parametrizar automatic
 
 Por exemplo, se você compilar e empacotar o [Contact Manager](the-contact-manager-solution.md) solução de exemplo sem tocar o processo de parametrização de qualquer forma, o WPP isso geraria *ContactManager.Mvc.SetParameters.xml* arquivo:
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample1.xml)]
-
 
 Nesse caso:
 
@@ -73,15 +69,11 @@ A maneira mais fácil para parametrizar dessas propriedades é adicionar um *par
 
 Se você abrir esse arquivo, você verá que ele contém uma única **parâmetro** entrada. A entrada usa uma consulta XML Path Language (XPath) para localizar e parametrizar a URL de ponto de extremidade do serviço no Windows Communication Foundation (WCF) ContactService a *Web. config* arquivo.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample2.xml)]
-
 
 Além de parametrizar a URL de ponto de extremidade no pacote de implantação, o WPP também adiciona uma entrada correspondente para o *SetParameters.xml* arquivo gerado junto com o pacote de implantação.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample3.xml)]
-
 
 Se você instalar o pacote de implantação manualmente, o Gerenciador do IIS solicitará o endereço do ponto de extremidade de serviço junto com as propriedades que foram parametrizadas automaticamente. Se você instalar o pacote de implantação executando o *. Deploy. cmd* arquivo, você pode editar o *SetParameters.xml* arquivo para fornecer um valor para o endereço do ponto de extremidade de serviço junto com os valores para o propriedades que foram parametrizadas automaticamente.
 
@@ -96,22 +88,16 @@ O [solução de exemplo do Gerenciador de contatos](the-contact-manager-solution
 > [!NOTE]
 > Para obter uma visão mais ampla do modelo de arquivo de projeto na solução de exemplo e uma introdução aos arquivos de projeto personalizado em geral, consulte [Noções básicas sobre o arquivo de projeto](understanding-the-project-file.md) e [Noções básicas sobre o processo de compilação](understanding-the-build-process.md).
 
-
 Primeiro, os valores de parâmetro de interesse são definidos como propriedades no arquivo de projeto específicas do ambiente (por exemplo, *Env Dev.proj*).
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample4.xml)]
-
 
 > [!NOTE]
 > Para obter orientação sobre como personalizar os arquivos de projeto de ambiente específicas para seus próprios ambientes de servidor, consulte [configurar propriedades de implantação para um ambiente de destino](../configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment.md).
 
-
 Em seguida, o *Publish.proj* arquivo importa essas propriedades. Porque cada *SetParameters.xml* arquivo está associado com um *. Deploy. cmd* arquivo e podemos, por fim, deseja que o arquivo de projeto para invocar cada *. Deploy. cmd* de arquivo do projeto arquivo cria um MSBuild *item* para cada *. Deploy. cmd* de arquivo e define as propriedades de interesse como *metadados de item*.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample5.xml)]
-
 
 Nesse caso:
 
@@ -122,9 +108,7 @@ Nesse caso:
 
 Por fim, na *Publish.proj* arquivo, o **PublishWebPackages** destino usa a **XmlPoke** tarefas para modificar esses valores no *SetParameters.xml* arquivo.
 
-
 [!code-xml[Main](configuring-parameters-for-web-package-deployment/samples/sample6.xml)]
-
 
 Você perceberá que cada **XmlPoke** tarefa especifica quatro valores de atributo:
 

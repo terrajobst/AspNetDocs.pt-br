@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: b5b86e03-b8ed-46e6-90fa-e1da88ef34e9
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-deployment-properties-for-a-target-environment
 msc.type: authoredcontent
-ms.openlocfilehash: 74fc0f4cb7d3ed7d1ef091cdb8fa829091af5a7a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9742be7d718384c1b108d5f2c0c43e8e8d4fe8a9
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388680"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108670"
 ---
 # <a name="configuring-deployment-properties-for-a-target-environment"></a>Configuração de propriedades de implantação para um ambiente de destino
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve como configurar as propriedades específicas de ambiente para implantar a solução de Gerenciador de contatos de exemplo em um ambiente de destino específico.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md) solução&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -64,7 +63,6 @@ Para implantar a solução de Gerenciador de contatos em seu próprio ambiente d
 
 Esta tabela descreve a finalidade de cada propriedade no arquivo de projeto específicas do ambiente de exemplo, *Env Dev.proj*e fornece algumas diretrizes sobre os valores que você deve fornecer.
 
-
 |                                                        Nome da Propriedade                                                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Detalhes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |              <strong>MSDeployComputerName</strong> o nome do destino da web server ou o serviço de ponto de extremidade.               |                                                                                                                                                                                                                                              Se você estiver implantando o serviço de agente remoto no servidor web de destino, você pode especificar o nome do computador de destino (por exemplo, <strong>TESTWEB1</strong> ou <strong>TESTWEB1.fabrikam.net</strong>), ou você pode especificar o computador remoto ponto de extremidade do agente (por exemplo, `http://TESTWEB1/MSDEPLOYAGENTSERVICE`). A implantação funciona da mesma maneira em cada caso. Se você estiver implantando o manipulador de implantação da Web no servidor web de destino, você deve especificar o ponto de extremidade de serviço e incluir o nome do site do IIS como um parâmetro de cadeia de caracteres de consulta (por exemplo, `https://STAGEWEB1:8172/MSDeploy.axd?site=DemoSite`).                                                                                                                                                                                                                                              |
@@ -87,9 +85,7 @@ Neste exemplo:
 - Você está instruindo a implantação da Web para usar a autenticação NTLM. A implantação da Web será executado usando as credenciais usadas para invocar o Microsoft Build Engine (MSBuild).
 - Você está usando a autenticação integrada para implantar o **ContactManager** banco de dados para TESTDB1. O banco de dados será implantado usando as credenciais usadas para chamar o MSBuild.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample1.xml)]
-
 
 ### <a name="example-2x2014deployment-to-the-web-deploy-handler-endpoint"></a>Exemplo 2&#x2014;ponto de extremidade do manipulador de implantar de implantação na Web
 
@@ -100,9 +96,7 @@ Neste exemplo:
 - Você está especificando que a implantação da Web deve representar a conta de FABRIKAM\stagingdeployer no computador remoto.
 - Você está usando a autenticação do SQL Server para implantar o **ContactManager** banco de dados para STAGEDB1.
 
-
 [!code-xml[Main](configuring-deployment-properties-for-a-target-environment/samples/sample2.xml)]
-
 
 ## <a name="conclusion"></a>Conclusão
 

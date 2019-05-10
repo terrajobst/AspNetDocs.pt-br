@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 1050018794526e12aad43cd473665de5ff575d7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3aecd64bc59ffa961aa97dd30b037f9aeb2acdd8
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59403552"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65118903"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>(Criando aplicativos de nuvem do mundo Real com o Azure) de estratégias de particionamento de dados
 
@@ -22,7 +22,6 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 [Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
 > O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre a série, consulte [o primeiro capítulo](introduction.md).
-
 
 Anteriormente, vimos como é fácil dimensionar a camada da web de um aplicativo de nuvem, adicionando e removendo servidores web. Mas, se eles todos atingindo o mesmo armazenamento de dados, move de afunilamento do seu aplicativo de front-end para o back-end e a camada de dados é mais difíceis de dimensionar. Neste capítulo vamos ver como você pode fazer sua camada de dados escalonáveis por meio do particionamento de dados em vários bancos de dados relacionais ou pela combinação de armazenamento do banco de dados relacional com outras opções de armazenamento de dados.
 

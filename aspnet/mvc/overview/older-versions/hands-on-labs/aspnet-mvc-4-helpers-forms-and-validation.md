@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: 187ee9cd-bc70-479b-bfed-f568b8da96eb
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-helpers-forms-and-validation
 msc.type: authoredcontent
-ms.openlocfilehash: 639a8e0e5fd9557221c95aee1bef0294df047ae8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 0e2605a4188eaf814f6ab0ebfeaabed4457bcfa3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406308"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112500"
 ---
 # <a name="aspnet-mvc-4-helpers-forms-and-validation"></a>Validação, formulários e auxiliares do ASP.NET MVC 4
 
@@ -89,7 +89,6 @@ Os seguintes exercícios compõem esse laboratório prático:
 
 > [!NOTE]
 > Cada exercício é acompanhado por um **final** pasta que contém a solução resultante, você deve obter depois de concluir os exercícios. Você pode usar essa solução como um guia se você precisar trabalhar com os exercícios de ajuda adicional.
-
 
 Tempo estimado para concluir este laboratório: **60 minutos**
 
@@ -177,7 +176,6 @@ Nesta tarefa, você irá ajustar o modelo de exibição simple criado com o recu
 > [!NOTE]
 > O **scaffolding** suporte dentro do ASP.NET MVC gera um modelo de exibição simple que lista todos os campos no modelo de álbum. **Scaffolding** fornece uma maneira rápida de começar a usar em uma exibição fortemente tipada: em vez de precisar gravar o modelo de exibição manualmente, rapidamente o scaffolding gera um modelo padrão e, em seguida, você pode modificar o código gerado.
 
-
 1. Examine o código criado. Lista de campos gerada farão parte das seguintes tabela HTML **Scaffolding** está usando para exibir dados tabulares.
 
     [!code-cshtml[Main](aspnet-mvc-4-helpers-forms-and-validation/samples/sample4.cshtml)]
@@ -224,7 +222,6 @@ Nesta tarefa, você adicionará um novo método **Truncate** para o **HTML** obj
 
 > [!NOTE]
 > Para ler mais sobre **métodos de extensão**, visite este artigo do msdn. [https://msdn.microsoft.com/library/bb383977.aspx](https://msdn.microsoft.com/library/bb383977.aspx).
-
 
 1. Abra o **começar** solução localizado em **origem/o Ex2-AddingAnHTMLHelper/início/** pasta. Caso contrário, você pode continuar usando o **final** solução obtida ao concluir o exercício anterior.
 
@@ -665,7 +662,6 @@ Neste exercício, você aprenderá como habilitar a validação não invasiva MV
 
 > [!NOTE]
 > O jQuery Unobtrusive usa o prefixo de dados ajax JavaScript para invocar métodos de ação no servidor em vez de scripts de cliente forma invasiva emitindo embutido.
-
 
 <a id="Ex7Task1"></a>
 

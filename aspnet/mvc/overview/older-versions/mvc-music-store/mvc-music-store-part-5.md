@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 6b09413a-6d6a-425a-87c9-629f91b91b28
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-5
 msc.type: authoredcontent
-ms.openlocfilehash: e02e15a8955fa42692fac486dadfa426540295f7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 20b99cbe57b5dfa623205838a5929733a6c2d70d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59387460"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112981"
 ---
 # <a name="part-5-edit-forms-and-templating"></a>Parte 5: Formulários de edição e modelagem
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.
 > 
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 5 aborda os formulários de edição e modelagem.
-
 
 No capítulo anterior, estávamos Carregando dados de nosso banco de dados e exibi-la. Neste capítulo, também será habilitar edição de dados.
 
@@ -260,7 +259,6 @@ Agora quando pesquisamos a URL /StoreManager/, os álbuns e títulos são mantid
 ![](mvc-music-store-part-5/_static/image18.png)
 
 Observação: Isso mostra o caso mais simples de criar e usar um auxiliar em um modo de exibição. Para saber mais sobre a criação de auxiliares que podem ser usados em todo o site, consulte a postagem do meu blog: [http://bit.ly/mvc3-helper-options](http://bit.ly/mvc3-helper-options)
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-4.md)

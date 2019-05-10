@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 4f4bf092-c400-471f-a876-78fda0417890
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing
 msc.type: authoredcontent
-ms.openlocfilehash: 992cea256302231ee7031a21c798117b73eaa01c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: f8a374be79a41b34dc8f17fa8d44c6e0680984d7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384312"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108613"
 ---
 # <a name="url-routing"></a>Roteamento de URL
 
@@ -22,7 +22,6 @@ by [Erik Reitan](https://github.com/Erikre)
 [Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
-
 
 Neste tutorial, você modificará o aplicativo de exemplo Wingtip Toys para dar suporte ao roteamento de URL. O roteamento permite que seu aplicativo web para usar URLs que são mais fáceis de lembrar, amigável e melhor com suporte pelos mecanismos de pesquisa. Este tutorial se baseia no tutorial anterior "Associação e administração" e faz parte da série de tutoriais de Wingtip Toys.
 
@@ -82,7 +81,6 @@ O segundo parâmetro da rota inclui um valor dinâmico especificado por chaves (
 > **Opcional**
 > 
 > Você talvez ache mais fácil de gerenciar seu código, movendo o `RegisterCustomRoutes` método para uma classe separada. No *lógica* pasta, crie uma `RouteActions` classe. Mover os itens acima `RegisterCustomRoutes` método a partir de *Global.asax.cs* arquivo para a nova `RoutesActions` classe. Use o `RoleActions` classe e o `createAdmin` método como um exemplo de como chamar o `RegisterCustomRoutes` método da *Global.asax.cs* arquivo.
-
 
 Você talvez tenha observado também a `RegisterRoutes` chamada de método usando o `RouteConfig` objeto no início do `Application_Start` manipulador de eventos. Essa chamada é feita para implementar o roteamento padrão. Ele estava incluído como código padrão quando você criou o aplicativo usando o modelo de Web Forms do Visual Studio.
 

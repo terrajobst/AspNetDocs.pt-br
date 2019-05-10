@@ -8,12 +8,12 @@ ms.date: 09/09/2011
 ms.assetid: 666407bb-81de-4319-89ba-0302c382a208
 msc.legacyurl: /whitepapers/mvc4-beta-release-notes
 msc.type: content
-ms.openlocfilehash: b7722d5c282f07b35dd18d08911fa562dae6afc2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 17800dfe091bbb7afb25f7f41e3bd885b882edb0
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387926"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108352"
 ---
 # <a name="aspnet-mvc-4"></a>ASP.NET MVC 4
 
@@ -22,7 +22,6 @@ ms.locfileid: "59387926"
 > > [!NOTE]
 > > Isso não é a versão mais atual. As notas de versão RC do ASP.NET MVC 4 estão disponíveis [aqui](mvc4-release-notes.md).
 
-
 - [Notas de instalação](#_Toc303253802)
 - [Documentação](#_Toc303253803)
 - [Suporte](#_Toc303253804)
@@ -30,7 +29,7 @@ ms.locfileid: "59387926"
 - [Atualizando um projeto do ASP.NET MVC 3 para o ASP.NET MVC 4](#_Toc303253806)
 - [Novos recursos na versão Beta do ASP.NET MVC 4](#_Toc303253807)
 
-    - [ASP.NET Web API](#_Toc317096197)
+    - [API Web ASP.NET](#_Toc317096197)
     - [Aplicativo de página única do ASP.NET](#_Toc317096198)
     - [Aprimoramentos para modelos de projeto padrão](#_Toc303253808)
     - [Modelo de projeto móvel](#_Toc303253809)
@@ -119,7 +118,7 @@ Para atualizar manualmente um aplicativo existente do ASP.NET MVC 3 para a vers�
 Esta seção descreve os recursos que foram introduzidos na versão Beta do ASP.NET MVC 4.
 
 <a id="_Toc317096197"></a>
-### <a name="aspnet-web-api"></a>ASP.NET Web API
+### <a name="aspnet-web-api"></a>API da Web do ASP.NET
 
 ASP.NET MVC 4 agora inclui a API Web ASP.NET, uma nova estrutura para criar serviços HTTP que pode acessar uma ampla gama de clientes, incluindo navegadores e dispositivos móveis. API Web ASP.NET também é uma plataforma ideal para criar serviços RESTful.
 

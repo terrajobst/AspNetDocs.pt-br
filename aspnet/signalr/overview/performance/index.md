@@ -8,17 +8,16 @@ ms.date: 09/19/2014
 ms.assetid: fda81611-b67b-4c62-915e-8adc1924a401
 msc.legacyurl: /signalr/overview/performance
 msc.type: chapter
-ms.openlocfilehash: 6292ec084bbacdd41b5df63d9ac1017c43407b37
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 91ca2688f3d5fd21e6f5eb818fe94e3b2985ff1a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402499"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113719"
 ---
 # <a name="signalr-performance"></a>Desempenho do SignalR
 
 > Como maximizar o desempenho de aplicativos do SignalR.
-
 
 - [Desempenho do SignalR](signalr-performance.md)
 - [Introdução à expansão no SignalR](scaleout-in-signalr.md)

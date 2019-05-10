@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: ce1305f9-30fd-49e3-bf38-d0a78dfb06c3
 msc.legacyurl: /signalr/overview/performance/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
-ms.openlocfilehash: d0e7dcb0317c403c5cf7df1db7decbdda4ada8e9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73ed95c5027f57c7e390069dcb36b18a3714973f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417371"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113627"
 ---
 # <a name="signalr-scaleout-with-azure-service-bus"></a>Expansão do SignalR com o Barramento de Serviço do Azure
 
@@ -67,7 +67,6 @@ Crie um novo namespace do barramento de serviço, conforme descrito em [como o b
 
 > [!NOTE]
 > Certifique-se de selecionar a mesma região para o serviço de nuvem e o namespace do barramento de serviço.
-
 
 ## <a name="create-the-visual-studio-project"></a>Criar o projeto do Visual Studio
 

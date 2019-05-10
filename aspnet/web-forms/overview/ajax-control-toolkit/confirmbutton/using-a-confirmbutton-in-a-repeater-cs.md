@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: a973ed3e-400c-4925-ace2-0b086b479301
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 1ab979f220c06d22f51931c7c00fc4d273731f85
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 783562bb1a8790e1254dab5bff92da480a6fd56d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59413939"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109159"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-c"></a>Uso de um ConfirmButton em um repetidor (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/8/6/d/86dea6c6-bb92-4fa6-aa14-f8c0f82100f5/ConfirmButton1.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/confirmbutton1CS.pdf)
 
 > O extensor ConfirmButton no AJAX Control Toolkit cria um Sim/não pop-up quando o usuário clica em um botão (incluindo um controle LinkButton). Somente se Sim for selecionada, a ação do botão é executada, caso contrário, foi cancelada. Isso também é possível em um repetidor.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -45,7 +44,6 @@ Em seguida, uma fonte de dados é necessária. Para simplificar, somente as prim
 Esta fonte de dados, em seguida, pode ser usada em um repetidor. Como de costume, o `DataBinder.Eval()` método recupera dados da fonte de dados. O `ConfirmButtonExtender` , em seguida, deve ser colocado dentro do controle a `<ItemTemplate>` seção do repetidor de modo que ele apareça para cada entrada na fonte de dados.
 
 [!code-aspx[Main](using-a-confirmbutton-in-a-repeater-cs/samples/sample3.aspx)]
-
 
 [![O botão Confirmar aparece ao lado de cada entrada da fonte de dados](using-a-confirmbutton-in-a-repeater-cs/_static/image2.png)](using-a-confirmbutton-in-a-repeater-cs/_static/image1.png)
 

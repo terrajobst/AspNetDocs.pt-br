@@ -8,12 +8,12 @@ ms.date: 01/30/2013
 ms.assetid: f9c07af0-4b20-4b08-af8f-47fc3df169a2
 msc.legacyurl: /single-page-application/overview/introduction/knockoutjs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 20d2d4412345399acdde1535447cc18b6611b572
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3a551db1caa9636eb7f2e04c287d3ef371263584
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412847"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113460"
 ---
 # <a name="single-page-application-knockoutjs-template"></a>Aplicativo de página única: Modelo KnockoutJS
 
@@ -22,7 +22,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > O modelo MVC Knockout é parte do ASP.NET e Web Tools 2012.2
 > 
 > [Baixar o ASP.NET and Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650)
-
 
 A atualização do ASP.NET e Web Tools 2012.2 inclui um modelo de aplicativo de página única (SPA) para o ASP.NET MVC 4. Esse modelo é projetado para ajudá-lo a começar a criar rapidamente aplicativos web interativos do lado do cliente.
 

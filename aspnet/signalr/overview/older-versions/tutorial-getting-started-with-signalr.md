@@ -8,12 +8,12 @@ ms.date: 02/18/2013
 ms.assetid: fdc3599a-5217-44c1-951f-0eec9812dce7
 msc.legacyurl: /signalr/overview/older-versions/tutorial-getting-started-with-signalr
 msc.type: authoredcontent
-ms.openlocfilehash: 288f5017acde5a103460ace688933609fba0b02c
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 87a90b47ae30bee43e0b0c1e078597db54b8e67d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391020"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113865"
 ---
 # <a name="tutorial-getting-started-with-signalr-1x"></a>Tutorial: Introdução ao SignalR 1.x
 
@@ -22,7 +22,6 @@ by [Patrick Fletcher](https://github.com/pfletcher), [Tim Teebken](https://githu
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
 > Este tutorial mostra como usar o SignalR para criar um aplicativo de chat em tempo real. Você adicionar o SignalR para um aplicativo de web ASP.NET vazio e criar uma página HTML para enviar e exibir as mensagens.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -148,7 +147,6 @@ O código a seguir declara um proxy para um hub.
 > [!NOTE]
 > No jQuery a referência para a classe de servidor e seus membros é em minúsculas concatenadas. O exemplo de código faz referência de c# **ChatHub** classe no jQuery como **chatHub**.
 
-
 O código a seguir é como criar uma função de retorno de chamada no script. A classe hub no servidor chama essa função para enviar atualizações de conteúdo para cada cliente. As duas linhas em que o HTML codificar o conteúdo antes de exibi-los são opcionais e mostram uma maneira simples de evitar a injeção de script.
 
 [!code-html[Main](tutorial-getting-started-with-signalr/samples/sample7.html)]
@@ -157,7 +155,6 @@ O código a seguir mostra como abrir uma conexão com o hub. O código começa a
 
 > [!NOTE]
 > Essa abordagem garante que a conexão seja estabelecida antes de ser executado o manipulador de eventos.
-
 
 [!code-javascript[Main](tutorial-getting-started-with-signalr/samples/sample8.js)]
 

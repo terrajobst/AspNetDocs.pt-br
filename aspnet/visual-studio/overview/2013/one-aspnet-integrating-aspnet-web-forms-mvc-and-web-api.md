@@ -8,12 +8,12 @@ ms.date: 07/16/2014
 ms.assetid: 4fe2558d-67cc-4d12-a5c1-6fb9f6f16137
 msc.legacyurl: /visual-studio/overview/2013/one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 1023d9bef311e58fb5fb0bb24cde80e8320e6bac
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 165d104b5d3ef3281af449cc8673ad96f531d628
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419048"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113077"
 ---
 # <a name="hands-on-lab-one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api"></a>Laboratório prático: Um único ASP.NET: Integração do Web Forms, MVC e da API Web do ASP.NET
 
@@ -26,7 +26,6 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 > Visual Studio 2013 apresenta um novo sistema de projeto unificado que permite criar um aplicativo e usar todas as tecnologias do ASP.NET em um único projeto. Esse recurso elimina a necessidade de escolher uma tecnologia no início de um projeto e um pen drive com ele e, em vez disso, incentiva o uso de várias estruturas do ASP.NET dentro de um projeto.
 > 
 > Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
-
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Visão geral
@@ -62,7 +61,6 @@ Para executar os exercícios neste laboratório prático, você precisará confi
 > [!NOTE]
 > Verifique se que você tiver marcado todas as dependências para este laboratório antes de executar a instalação.
 
-
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando os trechos de código
 
@@ -70,7 +68,6 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 
 > [!NOTE]
 > Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
-
 
 ---
 
@@ -87,7 +84,6 @@ Tempo estimado para concluir este laboratório: **60 minutos**
 
 > [!NOTE]
 > Quando você inicia o Visual Studio pela primeira vez, você deve selecionar uma das coleções de configurações predefinidas. Cada coleção predefinida foi projetada para corresponder a um estilo de desenvolvimento específico e determina o comportamento do editor, layouts de janela, trechos de código IntelliSense e opções da caixa de diálogo. Os procedimentos neste laboratório descrevem as ações necessárias para realizar uma determinada tarefa no Visual Studio ao usar o **configurações gerais de desenvolvimento** coleção. Se você escolher uma coleção de configurações diferentes para seu ambiente de desenvolvimento, pode haver diferenças nas etapas que você deve levar em conta.
-
 
 <a id="Exercise1"></a>
 ### <a name="exercise-1-creating-a-new-web-forms-project"></a>Exercício 1: Criar um novo projeto de formulários da Web
@@ -189,7 +185,6 @@ O fluxo de trabalho de modelagem do Entity Framework Code First permite que voc�
 
 > [!NOTE]
 > Você pode aprender mais sobre o Entity Framework [aqui](../../../entity-framework.md).
-
 
 <a id="Ex2Task1"></a>
 #### <a name="task-1--creating-a-new-model"></a>Tarefa 1 – criar um novo modelo
@@ -342,7 +337,6 @@ Nesta tarefa, você usará o Internet Explorer **ferramentas de desenvolvedor F1
 > ![Opção do Internet Explorer](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image27.png)
 > 
 > O **ferramentas de desenvolvedor F12** têm um amplo conjunto de funcionalidade que não é abordada neste laboratório prático. Se você quiser saber mais sobre isso, consulte [usando as ferramentas de desenvolvedor F12](https://msdn.microsoft.com/library/ie/bg182326(v=vs.85)).
-
 
 1. Pressione **F5** para executar a solução.
 

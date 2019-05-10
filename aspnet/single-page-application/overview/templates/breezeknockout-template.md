@@ -8,12 +8,12 @@ ms.date: 01/30/2013
 ms.assetid: 3bd94827-3c59-448f-abc3-36e6df4858db
 msc.legacyurl: /single-page-application/overview/templates/breezeknockout-template
 msc.type: authoredcontent
-ms.openlocfilehash: 482119a97f30e24472231897e8db31685c451a0f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5bb9ee8f758a25afa6baf3ccbaf7d5864754c7df
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400783"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113364"
 ---
 # <a name="breezeknockout-template"></a>Modelo Breeze/Knockout
 
@@ -22,7 +22,6 @@ por [Mads Kristensen](https://github.com/madskristensen)
 > Modelo Breeze/Knockout MVC foi escrito por Ward Bell
 > 
 > [Baixe o modelo do MVC Breeze/Knockout](https://go.microsoft.com/fwlink/?LinkId=282649)
-
 
 Você já ouviu falar do "aplicativo de página única" (SPA) e se perguntou o que é. Enquanto você pode ler sobre isso, você faria em vez disso, a experiência por conta própria. Mas quem tem tempo para baixar um exemplo? Se você tiver o Visual Studio, você terá um SPA de exemplo para cima e em execução em menos de 60 segundos com o ASP.NET MVC 4 modelo de "Breeze/Knockout aplicativo de página única".
 

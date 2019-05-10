@@ -8,17 +8,16 @@ ms.date: 11/14/2012
 ms.assetid: f0643c61-c310-4906-a238-dfc86f09b940
 msc.legacyurl: /single-page-application/overview/introduction
 msc.type: chapter
-ms.openlocfilehash: 81a708b5badecbb5bd134078d079a0fe3a63bb5f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 73dbc3bee99f22b83cbf2c4eb8f35c3dca3eb94b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59380672"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113437"
 ---
 # <a name="introduction-to-aspnet-single-page-application"></a>Introdução ao aplicativo de página única do ASP.NET
 
 > Conteúdo para usar o novo modelo do SPA e Knockoutjs.
-
 
 - [Aplicativo de página única: Modelo KnockoutJS](knockoutjs-template.md)
 - [Conhece uma biblioteca diferente do Knockout?](other-libraries.md)

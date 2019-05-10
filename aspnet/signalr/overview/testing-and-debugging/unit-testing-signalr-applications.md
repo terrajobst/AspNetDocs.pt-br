@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: d1983524-e0d5-4ee6-9d87-1f552f7cb964
 msc.legacyurl: /signalr/overview/testing-and-debugging/unit-testing-signalr-applications
 msc.type: authoredcontent
-ms.openlocfilehash: 1556e8275da446e285c88d1f850d072725de057b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2cf2e88f141d89971439dc1fc4979849f8dded47
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415668"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113463"
 ---
 # <a name="unit-testing-signalr-applications"></a>Teste de unidade em aplicativos do SignalR
 
@@ -35,7 +35,6 @@ por [Patrick Fletcher](https://github.com/pfletcher)
 > ## <a name="questions-and-comments"></a>Perguntas e comentários
 >
 > Deixe comentários sobre como você gostou neste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [StackOverflow.com](http://stackoverflow.com/).
-
 
 <a id="unit"></a>
 ## <a name="unit-testing-signalr-applications"></a>Aplicativos do SignalR de teste de unidade

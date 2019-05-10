@@ -8,12 +8,12 @@ ms.date: 04/17/2013
 ms.assetid: 03e4b9f5-0fea-4d94-959f-014b2762a301
 msc.legacyurl: /signalr/overview/older-versions/signalr-1x-hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: 7d75c832f704ea88d365f6a8b83c1c3a024b30ca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d9cd3fad36c0300d96c6dbdc61291ef119da2327
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59382245"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113040"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---server-signalr-1x"></a>Guia de API de Hubs do SignalR do ASP.NET – servidor (SignalR 1.x)
 
@@ -26,7 +26,6 @@ by [Patrick Fletcher](https://github.com/pfletcher), [Tom Dykstra](https://githu
 > A API de Hubs de SignalR permite que você faça chamadas de procedimento remoto (RPCs) de um servidor para clientes conectados e de clientes para o servidor. No código do servidor, você define métodos que podem ser chamados por clientes e você chamar métodos que são executados no cliente. No código do cliente, você define métodos que podem ser chamados a partir do servidor e você chamar métodos que são executados no servidor. O SignalR é responsável por todos os detalhes de cliente-servidor para você.
 > 
 > O SignalR também oferece uma API de nível inferior chamada conexões persistentes. Para obter uma introdução ao SignalR, Hubs e conexões persistentes, ou para um tutorial que mostra como criar um aplicativo completo do SignalR, consulte [SignalR - Introdução ao](index.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -516,7 +515,6 @@ Em sua classe Hub, você pode acessar esses dados no `Clients.Caller` propriedad
 
 > [!NOTE]
 > Esse mecanismo para persistir o estado não é destinado para grandes quantidades de dados, desde que tudo o que você colocar nas `state` ou `Clients.Caller` propriedade é recuperado com cada invocação de método. É útil para itens menores, como nomes de usuário ou contadores.
-
 
 <a id="handleErrors"></a>
 

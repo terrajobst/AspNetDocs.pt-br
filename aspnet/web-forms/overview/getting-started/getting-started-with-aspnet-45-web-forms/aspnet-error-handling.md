@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 423498f7-1a4b-44a1-b342-5f39d0bcf94f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling
 msc.type: authoredcontent
-ms.openlocfilehash: e4b8f059974dec33d6305e7b84919550713bf4e4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3aff277a6e09504d9f7b610478c27af00c1d2d94
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59409875"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108523"
 ---
 # <a name="aspnet-error-handling"></a>Tratamento de erro do ASP.NET
 
@@ -22,7 +22,6 @@ by [Erik Reitan](https://github.com/Erikre)
 [Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
-
 
 Neste tutorial, você modificará o aplicativo de exemplo Wingtip Toys para incluir o tratamento de erros e log de erros. Tratamento de erro permitirá que o aplicativo tratar erros normalmente e exibir mensagens de erro adequadamente. Log de erros permitirá que você localizar e corrigir erros que ocorreram. Este tutorial se baseia no tutorial anterior, "URL de roteamento" e faz parte da série de tutoriais de Wingtip Toys.
 
@@ -117,7 +116,7 @@ No aplicativo de exemplo Wingtip Toys, uma página será usada para exibir os er
 1. Clique com botão direito no nome do projeto (**Wingtip Toys**) em **Gerenciador de soluções** e selecione **Add**  - &gt; **Novo Item**.   
    A caixa de diálogo **Adicionar Novo Item** é exibida.
 2. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Na lista do meio, selecione **Web Form com página mestra**e nomeie-o **ErrorPage**.
-3. Clique em **Adicionar**.
+3.  Clique em **Adicionar**.
 4. Selecione o *Master* file como a página mestra e, em seguida, escolha **Okey**.
 5. Substitua a marcação existente pelo seguinte:   
 

@@ -8,12 +8,12 @@ ms.date: 04/04/2013
 ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
-ms.openlocfilehash: 8148974eacd1db05947ba54fe40776df69f92290
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e5c98b7a9678f8251eccce05344c2014a769fc3b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404111"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113344"
 ---
 # <a name="backbone-template"></a>Modelo Backbone
 
@@ -22,7 +22,6 @@ por [Mads Kristensen](https://github.com/madskristensen)
 > O modelo do SPA Backbone foi escrito por Kazi Manzur Rashid
 > 
 > [Baixe o modelo SPA backbone. js](https://go.microsoft.com/fwlink/?LinkId=293631)
-
 
 O modelo backbone. js SPA é projetado para ajudá-lo a começar a criar rapidamente aplicativos web interativos do lado do cliente usando [backbone. js.](http://backbonejs.org/)
 

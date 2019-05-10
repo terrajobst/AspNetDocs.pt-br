@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: 9002018b-3aa3-4358-bb1c-fbb5bc751d01
 msc.legacyurl: /web-api/overview/advanced/http-message-handlers
 msc.type: authoredcontent
-ms.openlocfilehash: 308d2e3dd21917e7656f7ffe889dc965d9275d74
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a8e6f1da8df4802e1acf7779a2fc75bfe8ab876f
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59392099"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65115544"
 ---
 # <a name="http-message-handlers-in-aspnet-web-api"></a>Manipuladores de mensagens de HTTP na API Web ASP.NET
 
@@ -47,7 +47,6 @@ Este diagrama mostra dois manipuladores personalizados inseridos no pipeline:
 > [!NOTE]
 > No lado do cliente, o HttpClient também utiliza manipuladores de mensagens. Para obter mais informações, consulte [manipuladores de mensagens de HttpClient](httpclient-message-handlers.md).
 
-
 ## <a name="custom-message-handlers"></a>Manipuladores de mensagens personalizado
 
 Para escrever um manipulador de mensagens personalizadas, derivam **System.Net.Http.DelegatingHandler** e substitua o **SendAsync** método. Esse método tem a seguinte assinatura:
@@ -67,7 +66,6 @@ Aqui está um exemplo trivial:
 
 > [!NOTE]
 > A chamada para `base.SendAsync` é assíncrona. Se o manipulador faz qualquer trabalho após esta chamada, use o **await** palavra-chave, conforme mostrado.
-
 
 Um manipulador de delegação pode também ignorar o manipulador interno e criar diretamente a resposta:
 
@@ -131,7 +129,6 @@ Se a solicitação não tiver uma chave válida, o manipulador cria uma mensagem
 
 > [!NOTE]
 > Se a chave de API se aplica apenas a determinadas ações do controlador, considere usar um filtro de ação em vez de um manipulador de mensagens. Filtros de ação executado após o roteamento do URI é executado.
-
 
 ## <a name="per-route-message-handlers"></a>Manipuladores de mensagens por rota
 

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 94e92f80-a7e3-4d18-9375-ff8be5d666ac
 msc.legacyurl: /web-forms/overview/deployment/web-deployment-in-the-enterprise/building-and-packaging-web-application-projects
 msc.type: authoredcontent
-ms.openlocfilehash: 82134b8da7ab5ca49fef8e769128db9010fd231f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1d0ee0264ce6461d7b0159f1a44de4de31e2d079
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396324"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65114659"
 ---
 # <a name="building-and-packaging-web-application-projects"></a>Criação e a empacotamento de projetos de aplicativos Web
 
@@ -27,7 +27,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > - Como a ferramenta de implantação do Internet Information Services (IIS) da Web (implantação da Web) ativa o aplicativo web em um pacote de implantação.
 > - Como a compilação e empacotamento o processo funciona e quais arquivos são criados.
 
-
 No Visual Studio 2010, o processo de compilação e implantação para projetos de aplicativos web é compatível com o WPP. O WPP fornece um conjunto de destinos do Microsoft Build Engine (MSBuild) que estendem a funcionalidade do MSBuild e habilitá-lo a integrar a implantação da Web. No Visual Studio, você pode ver essa funcionalidade estendida nas páginas de propriedades do projeto de aplicativo da web. O **empacotar/Publicar Web** página, junto com o **empacotar/publicar SQL** página permite que você configure como o seu projeto de aplicativo web é empacotado para implantação quando o processo de compilação for concluído.
 
 ![](building-and-packaging-web-application-projects/_static/image1.png)
@@ -36,17 +35,13 @@ No Visual Studio 2010, o processo de compilação e implantação para projetos 
 
 Se você dê uma olhada no arquivo de projeto para um c# – projeto de aplicativo web com base, você pode ver que ele importa dois arquivos. targets.
 
-
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample1.xml)]
-
 
 A primeira **importação** instrução é comum a todos os projetos do Visual c#. Esse arquivo, *targets*, contém os destinos e tarefas que são específicas para o Visual c#. Por exemplo, o compilador c# (**Csc**) tarefa é invocada aqui. O *targets* importações de arquivo por sua vez as *targets* arquivo. Isso define os destinos que são comuns a todos os projetos, como **construir**, **recompilar**, **execute**, **compilar**, e **Clean** . A segunda **importação** instrução é específica para projetos de aplicativos web. O *WebApplication* importações de arquivo por sua vez as *Microsoft.Web.Publishing.targets* arquivo. O *Microsoft.Web.Publishing.targets* do arquivo essencialmente *é* o WPP. Ele define como o destino do **pacote** e **MSDeployPublish**, que invocam a implantação da Web para concluir várias tarefas de implantação.
 
 Para entender como esses destinos adicionais são usados na solução de exemplo Contact Manager, abra o *Publish.proj* do arquivo e dê uma olhada a **BuildProjects** destino.
 
-
 [!code-xml[Main](building-and-packaging-web-application-projects/samples/sample2.xml)]
-
 
 Esse destino usa a **MSBuild** tarefas para compilar vários projetos. Observe que o **DeployOnBuild** e **DeployTarget** propriedades:
 
@@ -58,7 +53,6 @@ O **pacote** destino está definido na *Microsoft.Web.Publishing.targets* arquiv
 > [!NOTE]
 > Para exibir um arquivo de projeto (por exemplo, <em>ContactManager.Mvc.csproj</em>) no Visual Studio 2010, você precisa primeiro Descarregue o projeto da sua solução. No <strong>Gerenciador de soluções</strong> , clique com botão direito no nó do projeto e, em seguida, clique em <strong>descarregar projeto</strong>. Clique com botão direito no nó do projeto novamente e, em seguida, clique em <strong>edite</strong><em>[arquivo de projeto]</em>). O arquivo de projeto será aberto na forma de XML bruta. Lembre-se de recarregar o projeto quando você terminar.  
 > Para obter mais informações sobre destinos do MSBuild, tarefas, e <strong>importação</strong> instruções, consulte [Noções básicas sobre o arquivo de projeto](understanding-the-project-file.md). Para obter uma introdução mais detalhada dos arquivos de projeto e o WPP, consulte [dentro do Microsoft Build Engine: Usando MSBuild e o Team Foundation Build](http://amzn.com/0735645248) Sayed Ibrahim Hashimi e William Bartholomew, ISBN: 978-0-7356-4524-0.
-
 
 ## <a name="what-is-a-web-deployment-package"></a>O que é um pacote de implantação da Web?
 
@@ -87,7 +81,6 @@ O *SetParameters.xml* arquivo é essencial para gerenciar o processo de implanta
 
 > [!NOTE]
 > No Visual Studio 2010, o WPP não oferece suporte a pré-compilação as páginas em um aplicativo web antes do empacotamento. A próxima versão do Visual Studio e o WPP incluirá a capacidade para pré-compilar um aplicativo web como uma opção de empacotamento.
-
 
 ## <a name="conclusion"></a>Conclusão
 

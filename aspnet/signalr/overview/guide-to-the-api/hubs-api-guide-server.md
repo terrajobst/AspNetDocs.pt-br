@@ -8,12 +8,12 @@ ms.date: 06/10/2014
 ms.assetid: b19913e5-cd8a-4e4b-a872-5ac7a858a934
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-server
 msc.type: authoredcontent
-ms.openlocfilehash: adfd540562ec54938860740ab280c770e24f492e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: c681b104b15bfc4a04587c7abf685dcf20def2ca
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59411404"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112785"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---server-c"></a>Guia de API de Hubs do SignalR do ASP.NET – servidor (c#)
 
@@ -562,7 +562,6 @@ Em sua classe Hub, você pode acessar esses dados no `Clients.Caller` propriedad
 
 > [!NOTE]
 > Esse mecanismo para persistir o estado não é destinado para grandes quantidades de dados, desde que tudo o que você colocar nas `state` ou `Clients.Caller` propriedade é recuperado com cada invocação de método. É útil para itens menores, como nomes de usuário ou contadores.
-
 
 No VB.NET ou em um hub fortemente tipada, o objeto de estado do chamador não pode ser acessado por meio `Clients.Caller`; em vez disso, use `Clients.CallerState` (introduzida no SignalR 2.1):
 

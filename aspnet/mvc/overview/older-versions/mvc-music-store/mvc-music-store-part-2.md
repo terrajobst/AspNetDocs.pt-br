@@ -8,12 +8,12 @@ ms.date: 04/21/2011
 ms.assetid: 998ce4e1-9d72-435b-8f1c-399a10ae4360
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-2
 msc.type: authoredcontent
-ms.openlocfilehash: b452c59f16107be6d356f86e6c313ba3229dbce6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9dc2226f4951d4bed122df37d35bbb94730a00ad
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392749"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112407"
 ---
 # <a name="part-2-controllers"></a>Parte 2: Controladores
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.  
 >   
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 2 aborda controladores.
-
 
 Com estruturas da web tradicional, URLs de entrada são mapeadas normalmente a arquivos no disco. Por exemplo: uma solicitação para uma URL como "/ products. aspx" ou "/ products" pode ser processada por um arquivo de "Products. aspx" ou "Products".
 
@@ -136,7 +135,6 @@ Vamos recapitular o que fizemos até agora:
 - Aprendemos como executar nosso site usando o ASP.NET Development Server
 - Nós criamos duas classes de controlador: existe um HomeController e um StoreController
 - Adicionamos os métodos de ação ao nosso controladores que respondem às solicitações de URL e retornam o texto para o navegador
-
 
 > [!div class="step-by-step"]
 > [Anterior](mvc-music-store-part-1.md)

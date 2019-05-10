@@ -8,12 +8,12 @@ ms.date: 12/01/2014
 ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
-ms.openlocfilehash: a62c821159cd097507019d5efb29e01958ec9fba
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3a446be8e2dff2ac66e2432c51b2d9f43bcb817d
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59398092"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65113178"
 ---
 # <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Criação de Projetos Web do ASP.NET no Visual Studio 2013
 
@@ -29,7 +29,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > - Novos recursos para formulários da Web que eram oferecidos apenas para MVC, como [criação do projeto de teste automático](#testproj) e uma [modelo de site de Intranet](#winauth).
 > 
 > Para obter informações sobre como criar projetos da web para serviços de nuvem do Azure ou serviços móveis do Azure, consulte [Introdução aos serviços de nuvem do Azure e ASP.NET](https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started/) e [criando um App Leaderboard com .NET de serviços móveis do Azure Back-end](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-leaderboard/).
-
 
 <a id="prerequisites"></a>
 ## <a name="prerequisites"></a>Pré-requisitos
@@ -350,7 +349,6 @@ Se você quiser tentar uma das opções do Azure AD, mas ainda não tiver uma co
 > Se você escolher uma das opções do Azure AD, seu projeto requer um banco de dados e você precisará entrar uma conta de administrador global para seu locatário do AD do Azure. Insira o nome e senha para uma conta organizacional (por exemplo, admin@contoso.onmicrosoft.com) que tenha permissões administrativas para seu locatário do Azure AD.
 > 
 > **Não insira as credenciais para uma conta da Microsoft (por exemplo, contoso@hotmail.com) na caixa de diálogo de logon.**
-
 
 <a id="orgauthsingle"></a>
 ### <a name="cloud---single-organization-authentication"></a>Nuvem - organização única autenticação
