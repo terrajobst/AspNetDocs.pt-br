@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: c125ca47-606a-4d6f-a1fc-1fc62928af93
 msc.legacyurl: /web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
 msc.type: authoredcontent
-ms.openlocfilehash: 855c3fa35d82173c87d13adb51e10fd13698ade5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 3c2a41482b7f9b60a8864b853df23ab5991b6da7
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381342"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108741"
 ---
 # <a name="enabling-crud-operations-in-aspnet-web-api-1"></a>Habilitar operações CRUD na API 1 da Web ASP.NET
 
@@ -29,7 +29,6 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > 
 > - Visual Studio 2012
 > - API Web 1 (também funciona com a API Web 2)
-
 
 Representa o CRUD &quot;criação, leitura, atualização e exclusão,&quot; que são as quatro operações de banco de dados básico. Muitos serviços HTTP do modelo também operações CRUD por meio do REST ou APIs de REST.
 
@@ -136,7 +135,6 @@ No **Adicionar controlador** assistente, nomeie o controlador &quot;ProductsCont
 > [!NOTE]
 > Não é necessário colocar seus controladores em uma pasta chamada controladores. O nome da pasta não é importante; é simplesmente uma maneira conveniente de organizar seus arquivos de origem.
 
-
 O **Adicionar controlador** assistente criará um arquivo chamado ProductsController.cs na pasta controladores. Se esse arquivo ainda não estiver aberto, clique duas vezes no arquivo para abri-lo. Adicione o seguinte **usando** instrução:
 
 [!code-csharp[Main](creating-a-web-api-that-supports-crud-operations/samples/sample4.cs)]
@@ -147,7 +145,6 @@ Adicionar um campo que contém um **IProductRepository** instância.
 
 > [!NOTE]
 > Chamando `new ProductRepository()` no controlador não é o melhor design, porque ele liga o controlador para uma implementação específica de `IProductRepository`. Para uma abordagem melhor, consulte [usando o resolvedor de dependência do Web API](../advanced/dependency-injection.md).
-
 
 ## <a name="getting-a-resource"></a>Introdução a um recurso
 
@@ -205,7 +202,6 @@ O **CreateResponse** método cria um **HttpResponseMessage** e gravará automati
 
 > [!NOTE]
 > Este exemplo não valida o `Product`. Para obter informações sobre a validação de modelo, consulte [validação do modelo na API Web ASP.NET](../formats-and-model-binding/model-validation-in-aspnet-web-api.md).
-
 
 ## <a name="updating-a-resource"></a>Atualizar um recurso
 

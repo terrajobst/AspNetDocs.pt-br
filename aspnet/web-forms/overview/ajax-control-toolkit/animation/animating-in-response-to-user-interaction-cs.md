@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: ea26549d-fbbf-4973-a108-b14cd1d6de26
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animating-in-response-to-user-interaction-cs
 msc.type: authoredcontent
-ms.openlocfilehash: c0e2888207e4fa0363fc3b357ae00108ffe817f5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 6bf69927c5a73f89d94282937d1d4e21ec75ea53
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415213"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108134"
 ---
 # <a name="animating-in-response-to-user-interaction-c"></a>Animação em resposta à interação do usuário (C#)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation6.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation6CS.pdf)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. As animações podem iniciar automaticamente ou podem ser disparadas pela interação do usuário, por exemplo, clicando com o mouse.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -57,7 +56,6 @@ Dentro de `<Animations>` nó, há cinco maneiras de iniciar a animação por mei
 Nesse cenário, `<OnClick>` é usado. Quando o usuário clica no painel, ele é redimensionado e fade out ao mesmo tempo.
 
 [!code-aspx[Main](animating-in-response-to-user-interaction-cs/samples/sample5.aspx)]
-
 
 [![Um clique do mouse inicia a animação](animating-in-response-to-user-interaction-cs/_static/image2.png)](animating-in-response-to-user-interaction-cs/_static/image1.png)
 

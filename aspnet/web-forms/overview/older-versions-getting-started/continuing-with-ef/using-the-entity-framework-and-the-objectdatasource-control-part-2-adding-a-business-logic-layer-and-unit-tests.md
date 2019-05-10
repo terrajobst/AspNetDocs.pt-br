@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: efb0e677-10b8-48dc-93d3-9ba3902dd807
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests
 msc.type: authoredcontent
-ms.openlocfilehash: 4d436b0e5d605027cfcf5243f615f9ac167c5888
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 24344cc33d7c26d7c408db26c0530ef2c708a7d3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388043"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133446"
 ---
 # <a name="using-the-entity-framework-40-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests"></a>Usando o Entity Framework 4.0 e o controle ObjectDataSource, parte 2: Adição de uma Camada de lógica de negócios (VB) e Testes de unidade
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais baseia-se no aplicativo web Contoso University que é criado pela [Introdução ao Entity Framework 4.0](https://asp.net/entity-framework/tutorials#Getting%20Started) série de tutoriais. Se você não concluir os tutoriais anteriores, como um ponto de partida para este tutorial, você pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que você teria criado. Você também pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) que é criado pela série de tutoriais completa. Se você tiver dúvidas sobre os tutoriais, você pode postá-los para o [Fórum do Entity Framework do ASP.NET](https://forums.asp.net/1227.aspx).
-
 
 No tutorial anterior, você criou um aplicativo web de n camadas usando o Entity Framework e o `ObjectDataSource` controle. Este tutorial mostra como adicionar lógica de negócios, mantendo a camada de lógica de negócios (BLL) e a camada de acesso a dados (DAL) separada, e mostra como criar testes de unidade automatizados para a BLL.
 
@@ -72,7 +71,6 @@ Os métodos CRUD que chamam a classe de repositório e os dois construtores torn
 
 > [!NOTE]
 > Tecnicamente, os objetos de entidade são ainda não com ignorância de persistência, porque eles são instanciados de classes que herdam do Entity Framework `EntityObject` classe. Ignorância de persistência concluída, você pode usar *objetos CLR antigos simples*, ou *POCOs*, em vez de objetos que herdam a `EntityObject` classe. Usar POCOs está além do escopo deste tutorial. Para obter mais informações, consulte [possibilidade de teste e o Entity Framework 4.0](https://msdn.microsoft.com/library/ff714955.aspx) no site do MSDN.)
-
 
 Agora, você pode conectar o `ObjectDataSource` controles para a lógica de negócios de classe em vez de no repositório e verificar se tudo está funcionando como antes.
 

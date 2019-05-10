@@ -8,12 +8,12 @@ ms.date: 03/31/2010
 ms.assetid: df5a1525-386f-4632-972c-57b199870bc3
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/custom-formatting-based-upon-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: a408134b4e26e8ad1f7c22c9d2005a7c551b00c6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 064bbc94b466ecb43bd0f7985433a0acb986d757
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392853"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108891"
 ---
 # <a name="custom-formatting-based-upon-data-vb"></a>Formatação personalizada baseada em dados (VB)
 
@@ -22,7 +22,6 @@ por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 [Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/7/0/57084608-dfb3-4781-991c-407d086e2adc/ASPNET_Data_Tutorial_11_VB.exe) ou [baixar PDF](custom-formatting-based-upon-data-vb/_static/datatutorial11vb1.pdf)
 
 > Ajustar o formato do GridView, DetailsView ou FormView com base nos dados associados a ele pode ser feito de várias maneiras. Neste tutorial, examinaremos como realizar a formatação de dados associados com o uso de manipuladores de eventos DataBound e RowDataBound.
-
 
 ## <a name="introduction"></a>Introdução
 
@@ -48,41 +47,32 @@ Abra o `CustomColors.aspx` página na `CustomFormatting` pasta, arraste um contr
 
 Depois que você tiver associado o ObjectDataSource a DetailsView, reserve um tempo para modificar a lista de campos. Optamos por para remover o `ProductID`, `SupplierID`, `CategoryID`, `UnitsInStock`, `UnitsOnOrder`, `ReorderLevel`, e `Discontinued` BoundFields e renomeado e reformatado o BoundFields restantes. Eu também limpo a `Width` e `Height` configurações. Como DetailsView exibe somente um único registro, é necessário habilitar a paginação para permitir que o usuário final exibir todos os produtos. Para fazer isso marcando a caixa de seleção Habilitar paginação na marca inteligente do ovládacího prvku DetailsView.
 
-
 [![Figura 1: Marque a caixa de seleção Habilitar paginação na marca inteligente do ovládacího prvku DetailsView.](custom-formatting-based-upon-data-vb/_static/image2.png)](custom-formatting-based-upon-data-vb/_static/image1.png)
 
 **Figura 1**: Figura 1: Marcar a opção habilitar paginação na marca inteligente de DetailsView ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image3.png))
 
-
 Após essas alterações, a marcação de DetailsView será:
-
 
 [!code-aspx[Main](custom-formatting-based-upon-data-vb/samples/sample1.aspx)]
 
 Reserve um tempo para testar esta página no navegador.
 
-
 [![O controle DetailsView exibe um produto de cada vez](custom-formatting-based-upon-data-vb/_static/image5.png)](custom-formatting-based-upon-data-vb/_static/image4.png)
 
 **Figura 2**: O produto DetailsView controle exibe um por vez ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image6.png))
-
 
 ## <a name="step-2-programmatically-determining-the-value-of-the-data-in-the-databound-event-handler"></a>Etapa 2: Determinar programaticamente o valor dos dados no manipulador de eventos de vinculação de dados
 
 Para exibir o preço em uma fonte em negrito, itálico para esses produtos cujos `UnitPrice` excede o valor de US $75.00, precisamos primeiro ser capaz de determinar de forma programática o `UnitPrice` valor. Para DetailsView, isso pode ser feito no `DataBound` manipulador de eventos. Para criar o evento manipulador de clique em DetailsView no Designer e navegue até a janela de propriedades. Pressione F4 para ativá-la, se não estiver visível, ou vá até o menu Exibir e selecione a opção de menu da janela Propriedades. Na janela Propriedades, clique no ícone de raio para listar os eventos de DetailsView. Em seguida, clique duas vezes o `DataBound` evento ou digite o nome do manipulador de eventos que você deseja criar.
 
-
 ![Criar um manipulador de eventos para o evento de vinculação de dados](custom-formatting-based-upon-data-vb/_static/image7.png)
 
 **Figura 3**: Crie um manipulador de eventos para o `DataBound` evento
 
-
 > [!NOTE]
 > Você também pode criar um manipulador de eventos da parte de código da página ASP.NET. Lá você encontrará duas listas suspensas na parte superior da página. Selecione o objeto na lista suspensa à esquerda e o evento que você deseja criar um manipulador para na lista suspensa à direita e o Visual Studio cria automaticamente o manipulador de eventos apropriado.
 
-
 Isso criará automaticamente o manipulador de eventos e levá-lo para a parte do código em que ele foi adicionado. Agora você verá:
-
 
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample2.vb)]
 
@@ -90,12 +80,10 @@ Os dados associados a DetailsView podem ser acessados por meio de `DataItem` pro
 
 O código a seguir ilustra como determinar se o `UnitPrice` associado ao controle DetailsView de valor é maior que US $75.00:
 
-
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample3.vb)]
 
 > [!NOTE]
 > Uma vez que `UnitPrice` pode ter um `NULL` valor no banco de dados, nós primeiro verificamos para certificar-se de que estamos não lidando com um `NULL` valor antes de acessar o `ProductsRow`do `UnitPrice` propriedade. Essa verificação é importante porque se podemos tentar acessar o `UnitPrice` propriedade quando ele tem um `NULL` valor o `ProductsRow` objeto lançará um [StrongTypingException.&lt;1 exceção](https://msdn.microsoft.com/library/system.data.strongtypingexception.aspx).
-
 
 ## <a name="step-3-formatting-the-unitprice-value-in-the-detailsview"></a>Etapa 3: Formatar o valor de UnitPrice em DetailsView
 
@@ -103,36 +91,29 @@ Agora podemos determinar se o `UnitPrice` valor associado a DetailsView tem um v
 
 Acessar uma linha por meio de programação requer que você saiba que o índice da linha que começa em 0. O `UnitPrice` linha é a quinta linha em DetailsView, dando a ele um índice de 4 e tornando-o acessível por meio de programação usando `ExpensiveProductsPriceInBoldItalic.Rows(4)`. Neste ponto poderíamos ter conteúdo do toda a linha exibido em uma fonte em negrito, itálico, usando o código a seguir:
 
-
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample4.vb)]
 
 No entanto, isso tornará *ambos* o rótulo (preço) e o valor em negrito e itálico. Se quisermos fazer apenas o valor em negrito e itálico, precisamos aplicar esta formatação para a segunda célula na linha, que pode ser feita usando o seguinte:
-
 
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample5.vb)]
 
 Como nossos tutoriais até o momento usou folhas de estilo para manter uma separação clara entre a marcação renderizada e informações relacionadas ao estilo, em vez de definir as propriedades de estilo específico, conforme mostrado acima vamos em vez disso, use uma classe CSS. Abra o `Styles.css` folha de estilos e adicione uma nova classe CSS denominada `ExpensivePriceEmphasis` com a seguinte definição:
 
-
 [!code-css[Main](custom-formatting-based-upon-data-vb/samples/sample6.css)]
 
 Em seguida, nos `DataBound` manipulador de eventos, defina a célula `CssClass` propriedade `ExpensivePriceEmphasis`. O seguinte código mostra o `DataBound` manipulador de eventos em sua totalidade:
-
 
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample7.vb)]
 
 Ao exibir Chai, que custa menos de US $75.00, o preço é exibido em uma fonte normal (veja a Figura 4). No entanto, ao exibir Mishi Kobe Niku, que tem um preço de US $97.00, o preço é exibido em uma fonte em negrito, itálico (consulte a Figura 5).
 
-
 [![Os preços inferiores a US $75.00 são exibidos em uma fonte Normal](custom-formatting-based-upon-data-vb/_static/image9.png)](custom-formatting-based-upon-data-vb/_static/image8.png)
 
 **Figura 4**: Os preços inferiores a US $75.00 são exibidos em uma fonte Normal ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image10.png))
 
-
 [![Os preços de produtos caros são exibidos em um negrito, itálico fonte](custom-formatting-based-upon-data-vb/_static/image12.png)](custom-formatting-based-upon-data-vb/_static/image11.png)
 
 **Figura 5**: Os preços de produtos caros são exibidos em um negrito, itálico fonte ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image13.png))
-
 
 ## <a name="using-the-formview-controlsdataboundevent-handler"></a>Usando o controle de FormView`DataBound`manipulador de eventos
 
@@ -148,7 +129,6 @@ Adicionar um FormView para o `CustomColors.aspx` página sob a DetailsView e def
 
 Após essas edições marcação de seu FormView deve ser semelhante ao seguinte:
 
-
 [!code-aspx[Main](custom-formatting-based-upon-data-vb/samples/sample8.aspx)]
 
 Observe que o `ItemTemplate` contém:
@@ -161,14 +141,11 @@ Observe que o `ItemTemplate` contém:
 
 Com a marcação de FormView completa, a próxima etapa é determinar programaticamente se a `UnitsInStock` valor é menor ou igual a 10. Isso é feito da mesma maneira exata FormView como era com DetailsView. Comece criando um manipulador de eventos para o FormView `DataBound` eventos.
 
-
 ![Criar o manipulador de eventos de vinculação de dados](custom-formatting-based-upon-data-vb/_static/image14.png)
 
 **Figura 6**: Criar o `DataBound` manipulador de eventos
 
-
 No evento manipulador de conversão de FormView `DataItem` propriedade para um `ProductsRow` da instância e determinar se o `UnitsInPrice` valor é, de modo que precisamos para exibi-lo em uma fonte vermelha.
-
 
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample9.vb)]
 
@@ -176,35 +153,28 @@ No evento manipulador de conversão de FormView `DataItem` propriedade para um `
 
 A etapa final é formatar exibidos `UnitsInStock` valor em uma fonte vermelha se o valor é 10 ou menos. Para fazer isso, precisamos acessar programaticamente o `UnitsInStockLabel` no controlar o `ItemTemplate` e defina suas propriedades de estilo para que o texto é exibido em vermelho. Para acessar um controle da Web em um modelo, use o `FindControl("controlID")` método como este:
 
-
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample10.vb)]
 
 Para nosso exemplo, queremos acessar um rótulo de controle cuja `ID` valor é `UnitsInStockLabel`, portanto, usaríamos:
 
-
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample11.vb)]
 
 Assim que tivermos uma referência através de programação para o controle da Web, podemos modificar suas propriedades relacionadas a estilo conforme necessário. Como no exemplo anterior, eu criei uma classe CSS em `Styles.css` chamado `LowUnitsInStockEmphasis`. Para aplicar esse estilo para o controle da Web de rótulo, defina seu `CssClass` propriedade adequadamente.
-
 
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample12.vb)]
 
 > [!NOTE]
 > A sintaxe de um modelo programaticamente acessando a Web usando o controle de formatação `FindControl("controlID")` e, em seguida, definir suas propriedades relacionadas a estilo também pode ser usado ao usar [TemplateFields](https://msdn.microsoft.com/library/system.web.ui.webcontrols.templatefield(VS.80).aspx) na DetailsView ou GridView controles. Vamos examinar TemplateFields em nosso próximo tutorial.
 
-
 As figuras 7 mostra FormView ao exibir um produto cujo `UnitsInStock` valor é maior que 10, enquanto o produto na Figura 8 tem seu valor menor que 10.
-
 
 [![Para produtos com um suficientemente grande unidades no estoque, formatação de personalizada não é aplicada](custom-formatting-based-upon-data-vb/_static/image16.png)](custom-formatting-based-upon-data-vb/_static/image15.png)
 
 **Figura 7**: Para produtos com um suficientemente grande unidades no estoque, formatação de personalizada não é aplicada ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image17.png))
 
-
 [![As unidades em estoque número é mostrada em vermelho para os produtos com valores de 10 ou menos](custom-formatting-based-upon-data-vb/_static/image19.png)](custom-formatting-based-upon-data-vb/_static/image18.png)
 
 **Figura 8**: As unidades em estoque número é mostrada em vermelho para os produtos com valores de 10 ou menos ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image20.png))
-
 
 ## <a name="formatting-with-the-gridviewsrowdataboundevent"></a>Formatação com o GridView`RowDataBound`evento
 
@@ -241,16 +211,13 @@ Para personalizar o formato dos registros de individuais do GridView, em seguida
 
 Adicione um GridView abaixo FormView do exemplo anterior e defina suas `ID` propriedade para `HighlightCheapProducts`. Como já temos um ObjectDataSource que retorna todos os produtos na página, fazer a ligação GridView. Por fim, edite BoundFields do GridView para incluir apenas dos produtos nomes, categorias e preços. Após essas edições, a marcação do GridView deve parecer com:
 
-
 [!code-aspx[Main](custom-formatting-based-upon-data-vb/samples/sample13.aspx)]
 
 Figura 9 mostra nosso progresso até o momento quando visualizado por meio de um navegador.
 
-
 [![O GridView lista o nome, categoria e preço para cada produto](custom-formatting-based-upon-data-vb/_static/image22.png)](custom-formatting-based-upon-data-vb/_static/image21.png)
 
 **Figura 9**: O GridView lista o nome, categoria e preço para cada produto ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image23.png))
-
 
 ## <a name="step-8-programmatically-determining-the-value-of-the-data-in-the-rowdatabound-event-handler"></a>Etapa 8: Determinar programaticamente o valor dos dados no manipulador de evento RowDataBound
 
@@ -258,19 +225,15 @@ Quando o `ProductsDataTable` está associado a GridView seus `ProductsRow` inst�
 
 Esse manipulador de eventos pode ser criado usando a mesma série de etapas com o FormView e DetailsView.
 
-
 ![Criar um manipulador de eventos para eventos de RowDataBound do GridView](custom-formatting-based-upon-data-vb/_static/image24.png)
 
 **Figura 10**: Criar um manipulador de eventos para o GridView `RowDataBound` evento
 
-
 Criar o manipulador de eventos dessa maneira fará com que o código a seguir sejam adicionados automaticamente à parte do código da página ASP.NET:
-
 
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample14.vb)]
 
 Quando o `RowDataBound` evento é acionado, o manipulador de eventos é passado como seu segundo parâmetro um objeto do tipo `GridViewRowEventArgs`, que tem uma propriedade chamada `Row`. Essa propriedade retorna uma referência para o `GridViewRow` que estava associada a dados apenas. Para acessar o `ProductsRow` instância associada ao `GridViewRow` usamos o `DataItem` propriedade desta forma:
-
 
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample15.vb)]
 
@@ -285,7 +248,6 @@ Ao trabalhar com o `RowDataBound` manipulador de eventos, é importante ter em m
 
 Uma vez que o `EmptyDataRow`, `Header`, `Footer`, e `Pager` linhas não são associadas com um `DataSource` registros, eles sempre terá um valor de `Nothing` para seus `DataItem` propriedade. Por esse motivo, antes de tentar trabalhar com o atual `GridViewRow`do `DataItem` propriedade, podemos primeiro certifique-se de que estamos lidando com um `DataRow`. Isso pode ser feito verificando o `GridViewRow`do `RowType` propriedade desta forma:
 
-
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample16.vb)]
 
 ## <a name="step-9-highlighting-the-row-yellow-when-the-unitprice-value-is-less-than-1000"></a>Etapa 9: Realce a linha amarela quando o UnitPrice valor for menor que US $10,00
@@ -294,19 +256,15 @@ A última etapa é realçar programaticamente todo o `GridViewRow` se o `UnitPri
 
 Em vez de `GridViewID.Rows(index)`, podemos fazer referência a atual `GridViewRow` da instância na `RowDataBound` manipulador de eventos usando `e.Row`. Ou seja, a fim de realçar atual `GridViewRow` da instância da `RowDataBound` usaríamos do manipulador de eventos:
 
-
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample17.vb)]
 
 Em vez de definir a `GridViewRow`do `BackColor` propriedade diretamente, vamos continuar com o uso de classes CSS. Eu criei uma classe CSS chamada `AffordablePriceEmphasis` que define a cor do plano de fundo como amarelo. Concluído `RowDataBound` manipulador de eventos segue:
 
-
 [!code-vb[Main](custom-formatting-based-upon-data-vb/samples/sample18.vb)]
-
 
 [![Os produtos mais acessíveis são realçados amarelo](custom-formatting-based-upon-data-vb/_static/image26.png)](custom-formatting-based-upon-data-vb/_static/image25.png)
 
 **Figura 11**: Os produtos mais acessíveis são realçados amarelo ([clique para exibir a imagem em tamanho normal](custom-formatting-based-upon-data-vb/_static/image27.png))
-
 
 ## <a name="summary"></a>Resumo
 

@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 44a22ac7-1fc7-4174-b946-c6129fb6a19b
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 7ea8c74a6621200e3a0d52a7c37fed6b5eeff4e5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d580e550f2461837f0e8a4e477273348b49cb53e
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59391618"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132391"
 ---
 # <a name="scenario-configuring-a-test-environment-for-web-deployment"></a>Cenário: Configuração de ambientes de teste para a Implantação da Web
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve um cenário de implantação da web para o desenvolvedor ou ambientes de teste e explica as tarefas que você precisa concluir para configurar um ambiente semelhante.
-
 
 Quando os desenvolvedores trabalham em aplicativos da web, geralmente recebem acesso para um ambiente de servidor que eles podem usar para testar as alterações em seus aplicativos em uma configuração realista. Normalmente, esse tipo de ambiente de desenvolvimento ou teste tem as seguintes características:
 
@@ -47,7 +46,6 @@ O ambiente de teste precisa dar suporte a única etapa ou a implantação automa
 
 > [!NOTE]
 > Você também pode usar [implantar sob demanda Web](https://technet.microsoft.com/library/ee517345(WS.10).aspx) (o "agente temp"). Isso é semelhante à abordagem do agente remoto em termos de requisitos e restrições.
-
 
 Nesse caso, os desenvolvedores tenham privilégios de administrador nos servidores de destino e o ambiente de teste não está sujeita às restrições de segurança estrita, portanto, a escolha lógica é configurar o servidor web de teste para dar suporte à implantação usando o agente remoto. Isso é menos complexo e requer a configuração inicial menor que a abordagem do manipulador de implantação da Web. Você também precisará configurar seu servidor de banco de dados para dar suporte à implantação e acesso remoto.
 

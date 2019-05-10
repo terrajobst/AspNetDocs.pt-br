@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
-ms.openlocfilehash: 865e901618b48bc4bfdc6d7a3ca4e8868d4cb46b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 8ae8cb1a322afb95c5d2e8d5e73c7825c7b2fe5a
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59412977"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108324"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personalização das implantações de banco de dados para vários ambientes
 
@@ -30,7 +30,6 @@ by [Jason Lee](https://github.com/jrjlee)
 > Quando você implanta um projeto de banco de dados para vários destinos, muitas vezes você desejará personalizar as propriedades de implantação de banco de dados para cada ambiente de destino. Por exemplo, em ambientes de teste seria normalmente recriar o banco de dados em todas as implantações, ao passo que em ambientes de preparo ou produção, você seria muito mais provável que faça atualizações incrementais para preservar seus dados.
 > 
 > Em um projeto de banco de dados do Visual Studio 2010, as configurações de implantação estão contidas em um arquivo de configuração (.sqldeployment) de implantação. Este tópico mostra como criar arquivos de configuração específicas do ambiente de implantação e especificar a que você deseja usar como um parâmetro VSDBCMD.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -68,7 +67,7 @@ Esta tabela mostra as configurações comuns de implantação para ambientes de 
 
 |  | Desenvolvedor/teste | Preparo/integração | Produção |
 | --- | --- | --- | --- |
-| **Agrupamento de comparação de implantação** | Source | Destino | Destino |
+| **Agrupamento de comparação de implantação** | Origem | Destino | Destino |
 | **Implantar propriedades do banco de dados** | verdadeiro | Apenas na primeira vez | Apenas na primeira vez |
 | **Sempre recriar banco de dados** | verdadeiro | False | False |
 | **Bloquear implantação incremental se puder ocorrer perda de dados** | False | Talvez | verdadeiro |
@@ -76,11 +75,9 @@ Esta tabela mostra as configurações comuns de implantação para ambientes de 
 | **Fazer backup de banco de dados antes da implantação** | False | Talvez | verdadeiro |
 | **Gerar instruções DROP para objetos que estão no banco de dados de destino, mas que não estão no projeto de banco de dados** | False | verdadeiro | verdadeiro |
 | **Não usar instruções ALTER ASSEMBLY para atualizar tipos CLR** | False | False | False |
-  
 
 > [!NOTE]
 > Para obter mais informações sobre propriedades de implantação de banco de dados e considerações sobre o ambiente, consulte [uma visão geral do banco de dados de configurações do projeto](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx), [como: Configurar propriedades para obter detalhes de implantação](https://msdn.microsoft.com/library/dd172125.aspx), [compilar e implantar o banco de dados em um ambiente de desenvolvimento isolado](https://msdn.microsoft.com/library/dd193409.aspx), e [compilar e implantar bancos de dados para um preparo ou ambiente de produção](https://msdn.microsoft.com/library/dd193413.aspx).
-
 
 Para dar suporte a implantação de um projeto de banco de dados para vários destinos, você deve criar um arquivo de configuração de implantação para cada ambiente de destino.
 
@@ -104,13 +101,10 @@ Quando você usa as configurações da solução (como depuração e versão) de
 
 Para especificar um arquivo de configuração de implantação em seu VSDBCMD, use o **p/DeploymentConfigurationFile** alternar e forneça o caminho completo para o arquivo. Isso substituirá o arquivo de configuração de implantação que identifica o manifesto de implantação. Por exemplo, você pode usar esse comando VSDBCMD para implantar o **ContactManager** banco de dados para um ambiente de teste:
 
-
 [!code-console[Main](customizing-database-deployments-for-multiple-environments/samples/sample1.cmd)]
-
 
 > [!NOTE]
 > Observe que o processo de compilação pode renomear seu arquivo .sqldeployment quando ele copia o arquivo para o diretório de saída.
-
 
 Se você usar variáveis de comando do SQL em seus scripts de pré-implantação ou pós-implantação SQL, você pode usar uma abordagem semelhante para associar um arquivo de .sqlcmdvars específicas do ambiente com sua implantação. Nesse caso, você usa o **p/SqlCommandVariablesFile** switch para identificar seu arquivo .sqlcmdvars.
 
@@ -118,9 +112,7 @@ Se você usar variáveis de comando do SQL em seus scripts de pré-implantação
 
 Você pode invocar um comando VSDBCMD de um arquivo de projeto do MSBuild usando um **Exec** tarefa dentro de um destino do MSBuild. Em sua forma mais simples, ela teria esta aparência:
 
-
 [!code-xml[Main](customizing-database-deployments-for-multiple-environments/samples/sample2.xml)]
-
 
 - Na prática, para tornar seus arquivos de projeto fácil de ler e reutilizar, você desejará criar propriedades para armazenar os vários parâmetros de linha de comando. Isso torna mais fácil para os usuários para fornecer valores de propriedade em um arquivo de projeto de ambiente específicas ou para substituir os valores padrão da linha de comando MSBuild. Se você usar a abordagem de arquivo de projeto divisão descrita [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), você deve dividir suas propriedades entre os dois arquivos e as instruções de build adequadamente:
 - Configurações de ambiente específicas, como o nome de arquivo de configuração de implantação, a cadeia de caracteres de conexão de banco de dados e o nome do banco de dados de destino, devem ir no arquivo de projeto específicas do ambiente.

@@ -8,12 +8,12 @@ ms.date: 10/13/2010
 ms.assetid: c8511ebe-68bc-4240-87c3-d5ced84a3f37
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-7
 msc.type: authoredcontent
-ms.openlocfilehash: f5431d60506f5b0a0f4bbcd8e86b316c728a1191
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a6a1a936e0ea29ea36721ba78f35845401f74c01
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59415915"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65112461"
 ---
 # <a name="part-7-membership-and-authorization"></a>Parte 7: Associação e a autorização
 
@@ -24,7 +24,6 @@ por [Jon Galloway](https://github.com/jongalloway)
 > A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.  
 >   
 > Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 7 aborda a associação e a autorização.
-
 
 Nosso controlador Store Manager é acessível no momento para qualquer pessoa que visitar nosso site. Vamos alterar isso para restringir a permissão para administradores de site.
 

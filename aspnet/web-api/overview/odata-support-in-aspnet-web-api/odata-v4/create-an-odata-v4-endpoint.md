@@ -8,12 +8,12 @@ ms.date: 01/23/2019
 ms.assetid: 1e1927c0-ded1-4752-80fd-a146628d2f09
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/create-an-odata-v4-endpoint
 msc.type: authoredcontent
-ms.openlocfilehash: c6a4aa4eb563fd77d5afd9248175d5f5b7984d19
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: 81d134cbd3231b9a0d5537ccbd1bbfe6419254af
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57042593"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108709"
 ---
 # <a name="create-an-odata-v4-endpoint-using-aspnet-web-api"></a>Criar um ponto de extremidade OData v4 usando a API Web ASP.NET 
 
@@ -45,8 +45,6 @@ Expandir **Installed** &gt; **Visual C#**  &gt; **Web**e selecione o **aplicativ
 
 Selecione **OK**.
 
-
-
 [![](create-an-odata-v4-endpoint/_static/image8.png)](create-an-odata-v4-endpoint/_static/image8.png)
 
 Selecione o **vazio** modelo. Sob **adicionar pastas e os principais referências para:**, selecione **API da Web**. Selecione **OK**.
@@ -70,7 +68,6 @@ No Gerenciador de Soluções, clique com o botão direito na pasta de modelos (M
 > [!NOTE]
 > Por convenção, as classes de modelo são colocadas na pasta modelos, mas você não precisa seguir essa convenção em seus próprios projetos.
 
-
 Nomeie a classe `Product`. No arquivo Product.cs, substitua o código clichê com o seguinte:
 
 [!code-csharp[Main](create-an-odata-v4-endpoint/samples/sample2.cs)]
@@ -83,7 +80,6 @@ Para este tutorial, vamos usar Code First do Entity Framework (EF) para criar o 
 
 > [!NOTE]
 > Web API OData não exige que o EF. Use qualquer camada de acesso a dados que pode ser traduzidos a entidades de banco de dados em modelos.
-
 
 Primeiro, instale o pacote do NuGet para o EF. No menu **Ferramentas**, selecione **Gerenciador de Pacotes NuGet** &gt; **Console do Gerenciador de Pacotes**. Na janela do Console do Gerenciador de pacotes, digite:
 
@@ -130,7 +126,6 @@ No Gerenciador de soluções, clique com botão direito na pasta controladores e
 
 > [!NOTE]
 > A versão deste tutorial para OData v3 usa o **Adicionar controlador** scaffolding. Atualmente, não há nenhum scaffolding para OData v4.
-
 
 Substitua o código clichê em ProductsController.cs pelo seguinte.
 

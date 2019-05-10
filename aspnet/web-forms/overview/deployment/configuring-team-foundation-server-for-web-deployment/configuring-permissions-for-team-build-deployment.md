@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 2488a91e-b0a8-465a-b874-3233f724b56b
 msc.legacyurl: /web-forms/overview/deployment/configuring-team-foundation-server-for-web-deployment/configuring-permissions-for-team-build-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 62e5c5622743447e1119141469c894dc905e6b43
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 5699f72af6b8d7f18d1a2c631dfdedd63c66e1e6
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381049"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65133849"
 ---
 # <a name="configuring-permissions-for-team-build-deployment"></a>Configuração de permissões para a implantação do Team Build
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve como configurar permissões para permitir que o servidor de compilação implantar conteúdo em servidores web e servidores de banco de dados como parte de um processo de compilação automatizado.
-
 
 Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
 
@@ -36,7 +35,6 @@ As tarefas de implantação que exigem a autenticação do Windows e que você p
 
 > [!NOTE]
 > A conta de serviço de rede usa a conta do computador para autenticar em outros computadores. Contas de computador assumem a forma * [nome do domínio]\[nome do computador] ***$**&#x2014;, por exemplo, **FABRIKAM\TFSBUILD$**. Dessa forma, se seu serviço de compilação é executada usando a identidade do serviço de rede, você deve conceder as permissões necessárias para a identidade da conta de computador para seu servidor de compilação.
-
 
 ## <a name="configuring-web-server-permissions"></a>Configurando permissões do servidor Web
 

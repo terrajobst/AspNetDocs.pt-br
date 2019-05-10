@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 5a8e49b7-5317-4125-b107-7e2466b47bb3
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment
 msc.type: authoredcontent
-ms.openlocfilehash: 7e66c6cd8c7296b889dfe6cc1ebd1eb62cda10ea
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: eaa61ca850817f8dd98955b59e94be93389bf256
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384316"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106841"
 ---
 # <a name="scenario-configuring-a-staging-environment-for-web-deployment"></a>Cenário: Configuração de ambientes de preparo para a Implantação da Web
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve um cenário de implantação da web típico para um ambiente de preparo e explica as tarefas que você precisa concluir para configurar um ambiente semelhante.
-
 
 Muitas organizações usam ambientes de preparo para visualizar as atualizações de aplicativos da web ou sites. Isso dá a pessoas dentro da organização a oportunidade de explorar e examinar os novos recursos ou conteúdo antes do site "entra no ar", ou em outras palavras, é implantado em um ambiente de produção. O ambiente de preparo foi projetado para replicar o ambiente de produção mais próximo possível, para fornecer uma visualização realista. Normalmente, esse tipo de ambiente de preparo tem as seguintes características:
 
@@ -33,7 +32,6 @@ Muitas organizações usam ambientes de preparo para visualizar as atualizaçõe
 
 > [!NOTE]
 > Escalar horizontalmente uma implantação de banco de dados em vários servidores está além do escopo deste tutorial. Para obter mais informações sobre essa área, consulte [Manuais Online do SQL Server](https://technet.microsoft.com/library/ms130214.aspx).
-
 
 Por exemplo, no nosso [cenário do tutorial](../deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md), Team Foundation Server (TFS) gerencia a solução de Gerenciador de contatos. O administrador do TFS, Rob Walters, criou uma definição de compilação que permite aos desenvolvedores disparar uma implantação no ambiente de preparo conforme necessário.
 

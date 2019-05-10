@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: 4eb060cc-cf14-41ae-bab1-14a2c15332d0
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites
 msc.type: authoredcontent
-ms.openlocfilehash: fd3ba36891aa66f78c28c538a4d3ba0da6736765
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e6f8e1051d09d11f1756bfada44a73ba7c2a1db2
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59392983"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108592"
 ---
 # <a name="validating-user-input-in-aspnet-web-pages-razor-sites"></a>Validando a entrada do usuário em Sites do ASP.NET Web Pages (Razor)
 
@@ -42,7 +42,6 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > Este tutorial também funciona com ASP.NET Web Pages 2.
 
-
 Este artigo contém as seguintes seções:
 
 - [Visão geral da validação de entrada do usuário](#Overview_of_User_Input_Validation)
@@ -65,7 +64,6 @@ Você também pode ter algumas restrições nos valores. Mesmo que os usuários 
 > [!NOTE] 
 > 
 > **Importante** validar a entrada do usuário também é importante para a segurança. Quando você restringe os valores que os usuários podem inserir em formulários, você pode reduzir a chance de que alguém pode inserir um valor que pode comprometer a segurança de seu site.
-
 
 <a id="Validating_User_Input"></a>
 ## <a name="validating-user-input"></a>Validação de entrada do usuário
@@ -114,7 +112,6 @@ Você pode adicionar suporte para executar a validação no script de cliente. N
 > [!NOTE]
 > Mesmo se você usa a validação do lado do cliente, validação também sempre é executada no código do servidor. Executar a validação no código do servidor é uma medida de segurança, no caso de usuários ignorar a validação do cliente.
 
-
 1. Registre as seguintes bibliotecas JavaScript na página:  
 
     [!code-html[Main](validating-user-input-in-aspnet-web-pages-sites/samples/sample3.html)]
@@ -159,7 +156,6 @@ Se você incluir este bloco de estilo nas páginas de exemplo do anteriormente n
 > [!NOTE]
 > Se você não estiver usando a validação do cliente no ASP.NET Web Pages 2, o CSS classes para o `<input>` elementos (`input-validation-error` e `input-validation-valid` não têm qualquer efeito.
 
-
 ### <a name="static-and-dynamic-error-display"></a>Exibição de erro estáticas e dinâmicas
 
 As regras de CSS vêm em pares, como `validation-summary-errors` e `validation-summary-valid`. Esses pares permitem que você defina regras para as duas condições: uma condição de erro e uma condição (não de erro) "normal". É importante entender que a marcação para a exibição de erro sempre é processada, mesmo se não houver nenhum erro. Por exemplo, se uma página tiver um `Html.ValidationSummary` método na marcação, a origem da página conterá a seguinte marcação, mesmo quando a página é solicitada pela primeira vez:
@@ -182,7 +178,6 @@ Nesse caso, você deseja ter certeza de que o valor que é passado para a págin
 > [!NOTE] 
 > 
 > **Importante** sempre valide valores obtidos *qualquer* fonte, incluindo valores de campo de formulário, os valores de cadeia de caracteres de consulta e valores de cookie. É fácil para as pessoas alterar esses valores (talvez para fins mal-intencionados). Portanto, você deve verificar esses valores para proteger seu aplicativo.
-
 
 O exemplo a seguir mostra como você pode validar um valor que é passado em uma cadeia de caracteres de consulta. O código testa se o valor não está vazio e que ele é um inteiro.
 

@@ -8,17 +8,16 @@ ms.date: 10/05/2011
 ms.assetid: 80010898-5cb0-49ae-a678-cc2f3fe3ca6c
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview
 msc.type: chapter
-ms.openlocfilehash: b2547e11225ba4d89b2907efa9f65646db2f0eb4
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d4664511d2464ed667e87bb3716aef2000def279
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400744"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109501"
 ---
 # <a name="enhancing-the-gridview"></a>Aprimorar o GridView
 
 > Esses tutoriais mostram como adicionar uma coluna de botões de opção em um controle GridView para fornecer uma maneira intuitiva para selecionar uma única linha.
-
 
 - [Adicionando uma coluna de GridView de botões de opção (C#)](adding-a-gridview-column-of-radio-buttons-cs.md)
 - [Adicionando uma coluna de GridView de caixas de seleção (C#)](adding-a-gridview-column-of-checkboxes-cs.md)

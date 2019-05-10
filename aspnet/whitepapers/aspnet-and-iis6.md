@@ -8,19 +8,18 @@ ms.date: 02/10/2010
 ms.assetid: 5a5537bf-2aaa-49e7-839f-9e6522b829d8
 msc.legacyurl: /whitepapers/aspnet-and-iis6
 msc.type: content
-ms.openlocfilehash: dbdf6d2815a05465b0ffb7bb322c9f80af13a251
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 2e7812f34481afe9a71927c0d9ba2a9abc9632e4
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59405151"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106802"
 ---
 # <a name="running-aspnet-11-with-iis-60"></a>Executar o ASP.NET 1.1 com o IIS 6.0
 
 > Embora o Windows Server 2003 inclui o IIS 6.0 e ASP.NET 1.1, esses componentes são desabilitados por padrão. Este white paper descreve como habilitar o IIS 6.0 e ASP.NET 1.1 e recomenda várias definições de configuração para obter o desempenho ideal do IIS e ASP.NET.
 > 
 > Aplica-se para o ASP.NET 1.1 e o IIS 6.0.
-
 
 O ASP.NET 1.1 é fornecido com o Windows Server 2003, que também inclui a versão mais recente do Internet Information Server (IIS) versão 6.0. IIS 6.0 e ASP.NET 1.1 são projetados para integrar perfeitamente e ASP.NET agora assume como padrão para o novo modelo de processo de trabalho do IIS 6.0.
 

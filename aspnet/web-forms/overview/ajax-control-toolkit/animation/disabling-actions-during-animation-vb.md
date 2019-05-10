@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: a86c0276-6481-46ee-8b4f-8c2009399ee9
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/disabling-actions-during-animation-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 3f8073b468a431d5c4b0d222bf385c8c6d32b2a8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fcfa03998778888f2e64a8079d3119ce86de7fc3
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59419087"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108810"
 ---
 # <a name="disabling-actions-during-animation-vb"></a>Desabilitar ações durante a animação (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation7.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation7VB.pdf)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Ele também dá suporte a ações, como cliques do mouse. No entanto, quando um clique do mouse inicia uma animação, é desejável para desabilitar os cliques do mouse durante a animação.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -53,7 +52,6 @@ Também seria possível habilitar novamente o botão após a animação, usando 
 [!code-xml[Main](disabling-actions-during-animation-vb/samples/sample5.xml)]
 
 No entanto em determinado cenário seria inútil desde o botão fade out e não fica visível no final da animação.
-
 
 [![O botão estiver desabilitado, assim que a animação é executada](disabling-actions-during-animation-vb/_static/image2.png)](disabling-actions-during-animation-vb/_static/image1.png)
 

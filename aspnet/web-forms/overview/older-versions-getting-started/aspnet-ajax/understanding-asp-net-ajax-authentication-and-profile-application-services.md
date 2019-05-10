@@ -8,12 +8,12 @@ ms.date: 03/14/2008
 ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
-ms.openlocfilehash: 18056c917b32680678c536229e8e26d5cc7db161
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 1087d9120411e51fd61d073169a88cac6cdaf15b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59395128"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109486"
 ---
 # <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Noções básicas sobre Serviços de Aplicativos de perfil e autenticação do AJAX ASP.NET
 
@@ -22,7 +22,6 @@ por [Scott Cate](https://github.com/scottcate)
 [Baixar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
 
 > O serviço de autenticação permite que os usuários forneçam credenciais para receber um cookie de autenticação e o serviço de gateway para permitir que os perfis de usuário personalizada que é fornecido pelo ASP.NET. O uso do serviço de autenticação do ASP.NET AJAX é compatível com a autenticação de formulários do ASP.NET padrão, para que aplicativos que atualmente usam autenticação de formulários (por exemplo, com o logon de controle) não quebrará atualizando para o serviço de autenticação do AJAX.
-
 
 ## <a name="introduction"></a>Introdução
 

@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
-ms.openlocfilehash: 7263a7d7ee791be8a1369934aac4d091736a658b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 59f859ea30572fbe66184f29555ac2c5c2f22f82
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59417475"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132136"
 ---
 # <a name="membership-and-administration"></a>Associação e administração
 
@@ -22,7 +22,6 @@ by [Erik Reitan](https://github.com/Erikre)
 [Baixe o projeto de exemplo do Wingtip Toys (c#)](http://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) ou [Baixe o livro eletrônico (PDF)](http://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/Getting%20Started%20with%20ASP.NET%204.5%20Web%20Forms%20and%20Visual%20Studio%202013.pdf)
 
 > Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um Visual Studio 2013 [projeto com código-fonte c#](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) está disponível para acompanhar esta série de tutoriais.
-
 
 Este tutorial mostra como atualizar o aplicativo de exemplo Wingtip Toys para adicionar uma função personalizada e usar a identidade do ASP.NET. Ele também mostra como implementar uma página de administração do qual o usuário com uma função personalizada pode adicionar e remover produtos no site.
 
@@ -81,7 +80,6 @@ Primeiro, o código acima estabelece um contexto de banco de dados para o banco 
 > 
 > Se você deseja armazenar os dados de associação, juntamente com os dados do produto, você pode considerar usar o mesmo **DbContext** que você usou para armazenar os dados de produto no código acima.
 
-
  O *interno* palavra-chave é um modificador de acesso para membros de tipo (como métodos ou propriedades) e tipos (como classes). Tipos ou membros internos são acessíveis somente em arquivos contidos no mesmo assembly *(. dll* arquivo). Quando você compila seu aplicativo, um arquivo de assembly *(. dll*) é criado que contém o código que é executado quando você executar o aplicativo. 
 
 Um `RoleStore` objeto, que fornece gerenciamento de função, é criado com base no contexto do banco de dados.
@@ -89,7 +87,6 @@ Um `RoleStore` objeto, que fornece gerenciamento de função, é criado com base
 > [!NOTE] 
 > 
 > Observe que, quando o `RoleStore` objeto é criado ele usa um genérico `IdentityRole` tipo. Isso significa que o `RoleStore` só pode conter `IdentityRole` objetos. Também, usando os genéricos, recursos na memória são tratados melhor.
-
 
 Em seguida, o `RoleManager` de objeto, é criado com base no `RoleStore` objeto que você acabou de criar. o `RoleManager` objeto expõe relacionada à função API que pode ser usado para salvar automaticamente as alterações para o `RoleStore`. O `RoleManager` só pode conter `IdentityRole` objetos porque o código usa o `<IdentityRole>` tipo genérico.
 
@@ -102,7 +99,6 @@ Em seguida crie o usuário "canEditUser", criando um novo `ApplicationUser` obje
 > [!NOTE] 
 > 
 > O tratamento de erros será atualizado durante o tutorial "Tratamento de erros do ASP.NET" mais adiante nesta série de tutoriais.
-
 
 Na próxima vez que o aplicativo é iniciado, o usuário chamado "canEditUser" será adicionado como a função "canEdit" do aplicativo de chamada. Posteriormente no tutorial, você fará logon como o usuário "canEditUser" para exibir os recursos adicionais que você será adicionado durante este tutorial. Para obter detalhes de API sobre a identidade do ASP.NET, consulte o [ASPNET Namespace](https://msdn.microsoft.com/library/microsoft.aspnet.identity(v=vs.111).aspx). Para obter mais detalhes sobre como inicializar o sistema de identidade do ASP.NET, consulte o [AspnetIdentitySample](https://github.com/rustd/AspnetIdentitySample/blob/master/AspnetIdentitySample/App_Start/IdentityConfig.cs).
 

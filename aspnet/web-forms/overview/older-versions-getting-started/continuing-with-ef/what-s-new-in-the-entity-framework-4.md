@@ -8,19 +8,18 @@ ms.date: 01/26/2011
 ms.assetid: 393df4a8-b1db-44c4-9db7-2b533ca887d0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4
 msc.type: authoredcontent
-ms.openlocfilehash: 0bc24a59e09728a5ecb6e18378c4cde0c8e046f2
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 29d2bd61e8361b130e7b9415dad4fe1d5b847945
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387445"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109315"
 ---
 # <a name="whats-new-in-the-entity-framework-40"></a>Novidades no Entity Framework 4.0
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais baseia-se no aplicativo web Contoso University que é criado pela [guia de Introdução com o Entity Framework](../getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md) série de tutoriais. Se você não concluir os tutoriais anteriores, como um ponto de partida para este tutorial, você pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-97f8ee9a) que você teria criado. Você também pode [baixar o aplicativo](https://code.msdn.microsoft.com/ASPNET-Web-Forms-6c7197aa) que é criado pela série de tutoriais completa. Se você tiver dúvidas sobre os tutoriais, você pode postá-los para o [Fórum do Entity Framework do ASP.NET](https://forums.asp.net/1227.aspx).
-
 
 No tutorial anterior, você viu alguns métodos para maximizar o desempenho de um aplicativo web que usa o Entity Framework. Este tutorial analisa alguns dos novos recursos mais importantes na versão 4 do Entity Framework, e ele links para recursos que fornecem uma introdução mais completa para todos os novos recursos. Os recursos destacados neste tutorial incluem o seguinte:
 

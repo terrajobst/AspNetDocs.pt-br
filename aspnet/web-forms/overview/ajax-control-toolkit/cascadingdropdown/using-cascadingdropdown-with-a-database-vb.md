@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 97a3d33c-c856-43f3-8acb-f1ccbc48221a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-cascadingdropdown-with-a-database-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d0b6f8651e327cf9ad2a3051edd323efba4f64fc
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 9e3f842faea2ec04225d779c1b8d71c62d4c1f35
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418723"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108177"
 ---
 # <a name="using-cascadingdropdown-with-a-database-vb"></a>Uso de CascadingDropDown com um banco de dados (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown1VB.pdf)
 
 > O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associadas a valores em outra DropDownList. Para isso funcionar, um serviço web especial deve ser criado.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -85,11 +84,9 @@ O restante do método é bastante direto, em seguida. ID do fornecedor é usado 
 
 Carregar a página ASP.NET e pouco tempo depois, a lista de fornecedores é preenchida com 25 entradas. Selecione uma entrada e observe como a segunda lista suspensa é preenchida com dados.
 
-
 [![A primeira lista é preenchida automaticamente](using-cascadingdropdown-with-a-database-vb/_static/image2.png)](using-cascadingdropdown-with-a-database-vb/_static/image1.png)
 
 A primeira lista é preenchida automaticamente ([clique para exibir a imagem em tamanho normal](using-cascadingdropdown-with-a-database-vb/_static/image3.png))
-
 
 [![A segunda lista é preenchida de acordo com a seleção na primeira lista](using-cascadingdropdown-with-a-database-vb/_static/image5.png)](using-cascadingdropdown-with-a-database-vb/_static/image4.png)
 

@@ -8,12 +8,12 @@ ms.date: 12/13/2013
 ms.assetid: cd844025-ccad-41ce-8694-595f1022a49f
 msc.legacyurl: /web-api/overview/testing-and-debugging/mocking-entity-framework-when-unit-testing-aspnet-web-api-2
 msc.type: authoredcontent
-ms.openlocfilehash: 3dddc1fd38a5384e40f9fa109da9d8c1424ef01a
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 258450107ee7443c4efd43a3b8e4851249745227
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59387250"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108169"
 ---
 # <a name="mocking-entity-framework-when-unit-testing-aspnet-web-api-2"></a>Simulação do Entity Framework quando a API Web ASP.NET 2 de teste de unidade
 
@@ -119,7 +119,6 @@ Abra o arquivo StoreAppContext.cs e faça as seguintes alterações realçadas. 
 
 - Classe StoreAppContext implementa a interface IStoreAppContext
 - Método MarkAsModified é implementado
-
 
 [!code-csharp[Main](mocking-entity-framework-when-unit-testing-aspnet-web-api-2/samples/sample4.cs?highlight=6,14-17)]
 

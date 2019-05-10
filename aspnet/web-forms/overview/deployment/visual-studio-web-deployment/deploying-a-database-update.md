@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: 9cad0833-486a-4474-a7f3-7715542ec4ce
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-database-update
 msc.type: authoredcontent
-ms.openlocfilehash: 86dcac0b95f07a310bdaaa4e69db0a83f8734744
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 942cc3cbf472f76d2521247df97c856deb19b06b
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416630"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65131922"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-database-update"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação de uma atualização de banco de dados
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usando o Visual Studio 2012 ou Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -130,7 +129,7 @@ Para implantar usando o provedor dbDacFx, basta selecionar o **Atualizar banco d
 
 1. Abra o **Publicar Web** assistente clicando com botão direito no projeto ContosoUniversity e clicando em **publicar**.
 2. Selecione o **teste** perfil.
-3. Clique o **configurações** guia.
+3. Clique na guia **Configurações** .
 4. Sob **DefaultConnection**, selecione **Atualizar banco de dados**.
 5. Desabilite os scripts adicionais que você configurou para executar a implantação inicial:
 

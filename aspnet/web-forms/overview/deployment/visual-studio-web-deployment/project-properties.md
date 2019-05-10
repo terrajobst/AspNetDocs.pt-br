@@ -8,12 +8,12 @@ ms.date: 02/15/2013
 ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
-ms.openlocfilehash: 464146bc8af5cf978902a3e634398ed3f8d15404
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: e17155317e484c8efdf87a1598fb2795b1619587
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59400042"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109629"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Implantação da Web do ASP.NET usando o Visual Studio: Propriedades do projeto
 
@@ -22,7 +22,6 @@ por [Tom Dykstra](https://github.com/tdykstra)
 [Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 > Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usando o Visual Studio 2012 ou Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).
-
 
 ## <a name="overview"></a>Visão geral
 

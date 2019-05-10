@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: 1b87d8d6-b3f7-4126-b51c-d41442fbf947
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/animation-depending-on-a-condition-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 78140f56184e88fb4dbe29f234aebd5732b69ad9
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: cfac2d5ac7ea652648db3c11a8357d95c8f78ffe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418866"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65132245"
 ---
 # <a name="animation-depending-on-a-condition-vb"></a>Animação dependendo de uma condição (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation4.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation4VB.pdf)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Se uma animação é executada ou não também pode depender uma condição na forma de um código JavaScript.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -51,7 +50,6 @@ Dentro de `<Animations>` nó, use `<OnLoad>` para as animações são executadas
 [!code-aspx[Main](animation-depending-on-a-condition-vb/samples/sample5.aspx)]
 
 Observe que o sinal de menor que (`<`) na `ConditionScript` atributo deve ser (escape). Quando você executar esse script, nenhuma animação será executado, ou uma das duas delas, ou ambos fazem.
-
 
 [![O painel está desaparecendo sem redimensionamento, portanto, o segunda animação é executado, o primeiro deles não](animation-depending-on-a-condition-vb/_static/image2.png)](animation-depending-on-a-condition-vb/_static/image1.png)
 

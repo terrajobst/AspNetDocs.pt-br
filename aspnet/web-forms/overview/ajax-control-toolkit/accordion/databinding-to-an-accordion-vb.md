@@ -8,12 +8,12 @@ ms.date: 06/02/2008
 ms.assetid: b19f0875-7d3e-4ecf-baa1-a0c693c765b3
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-vb
 msc.type: authoredcontent
-ms.openlocfilehash: dde3d60f82bb5f32fdd8b6b5cf8a0e1accebd1a7
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a5032fa1438594796ea774776f13f4909f24f2fe
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408921"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65108400"
 ---
 # <a name="databinding-to-an-accordion-vb"></a>Associação de Dados com um Accordion (VB)
 
@@ -22,7 +22,6 @@ por [Christian Wenz](https://github.com/wenz)
 [Baixar o código](http://download.microsoft.com/download/5/6/d/56d50cef-2011-4c8f-9891-7edc6dc57df9/Accordion1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/accordion1VB.pdf)
 
 > O controle Accordion no AJAX Control Toolkit fornece vários painéis e permite que o usuário exibir um por vez. Painéis geralmente são declarados dentro da página em si, mas a associação a uma fonte de dados oferece mais flexibilidade.
-
 
 ## <a name="overview"></a>Visão geral
 
@@ -57,7 +56,6 @@ Quando a página é carregada, a fonte de dados deve ser vinculada a Acordeão c
 Para concluir este exemplo, você precisa definir as duas classes CSS que são referenciadas no controle Accordion (em suas propriedades `HeaderCssClass` e `ContentCssClass`). Coloque a seguinte marcação no `<head>` seção da página:
 
 [!code-css[Main](databinding-to-an-accordion-vb/samples/sample6.css)]
-
 
 [![Os dados no acordeão vêm diretamente da fonte de dados](databinding-to-an-accordion-vb/_static/image2.png)](databinding-to-an-accordion-vb/_static/image1.png)
 

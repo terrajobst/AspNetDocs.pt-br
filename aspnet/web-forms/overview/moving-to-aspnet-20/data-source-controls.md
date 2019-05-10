@@ -8,19 +8,18 @@ ms.date: 02/20/2005
 ms.assetid: 78fd0e92-f9c6-4e96-a5e9-0375b307a828
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/data-source-controls
 msc.type: authoredcontent
-ms.openlocfilehash: 3ba9fdaaf655f6510d3ebf6ce0930fbf4000add3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: a2e2cfbec3e5aebf42a2de30bab7d45b4b610298
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59388862"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65109568"
 ---
 # <a name="data-source-controls"></a>Controles de fonte de dados
 
 por [Microsoft](https://github.com/microsoft)
 
 > O controle DataGrid no ASP.NET 1. x marcado como um grande aprimoramento em acesso a dados em aplicativos da Web. No entanto, não era amigável poderia ter sido. Ela ainda exigia uma quantidade considerável de código para obter uma funcionalidade muito útil dele. Esse é o modelo em todos os esforços de acesso de dados em 1. x.
-
 
 O controle DataGrid no ASP.NET 1. x marcado como um grande aprimoramento em acesso a dados em aplicativos da Web. No entanto, não era amigável poderia ter sido. Ela ainda exigia uma quantidade considerável de código para obter uma funcionalidade muito útil dele. Esse é o modelo em todos os esforços de acesso de dados em 1. x.
 
@@ -30,7 +29,6 @@ Controles de fonte de dados não tem nenhuma interface de usuário. Eles são im
 
 > [!NOTE]
 > Como você verá mais tarde, são também cache benefícios obtidos usando controles de fonte de dados.
-
 
 ## <a name="storing-connection-strings"></a>O armazenamento de cadeias de Conexão
 
@@ -42,7 +40,6 @@ O trecho a seguir adiciona uma nova cadeia de caracteres de conexão.
 
 > [!NOTE]
 > Assim como ocorre com o &lt;appSettings&gt; seção, o &lt;connectionStrings&gt; seção aparece fora do &lt;System. Web&gt; seção no arquivo de configuração.
-
 
 Para usar essa cadeia de caracteres de conexão, você pode usar a sintaxe a seguir ao definir o atributo ConnectionString de um controle de servidor.
 
@@ -81,7 +78,6 @@ Para usar o SqlDataSource, você simplesmente fornece um valor para a propriedad
 > [!NOTE]
 > Porque a classe DataSourceControl fecha automaticamente a conexão para você, ele deve reduzir o número de chamadas de cliente gerado pelo vazamento de conexões de banco de dados.
 
-
 O trecho de código a seguir associa um controle DropDownList a um controle SqlDataSource usando a cadeia de conexão que é armazenada no arquivo de configuração, conforme mostrado acima.
 
 [!code-aspx[Main](data-source-controls/samples/sample3.aspx)]
@@ -90,7 +86,6 @@ Conforme ilustrado acima, a propriedade DataSourceMode do SqlDataSource Especifi
 
 > [!NOTE]
 > Ao armazenar em cache um SqlDataSource ou um AccessDataSource, a propriedade de DataSourceMode deve ser definida para o conjunto de dados. Se você habilitar o cache com um DataSourceMode do DataReader, ocorrerá uma exceção.
-
 
 ## <a name="sqldatasource-properties"></a>Propriedades do SqlDataSource
 
@@ -162,7 +157,6 @@ O AccessDataSource sempre definiremos o ProviderName de base SqlDataSource para 
 
 > [!NOTE]
 > Bancos de dados do Access armazenados dentro do site devem ser colocados no aplicativo\_diretório de dados. O ASP.NET não permite arquivos nesse diretório a serem procurados. Você precisará conceder permissões de leitura e gravação para o aplicativo da conta de processo\_diretório de dados ao usar bancos de dados do Access.
-
 
 ## <a name="the-xmldatasource-control"></a>O controle XmlDataSource
 

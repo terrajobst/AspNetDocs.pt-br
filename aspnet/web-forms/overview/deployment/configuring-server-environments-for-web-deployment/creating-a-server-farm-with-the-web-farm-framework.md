@@ -8,12 +8,12 @@ ms.date: 05/04/2012
 ms.assetid: 656dd06d-806c-467c-863d-9fc45e5ba3ab
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/creating-a-server-farm-with-the-web-farm-framework
 msc.type: authoredcontent
-ms.openlocfilehash: 19c061e83257e118aee74c9373a627b8c56defe3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 204996514bed336e60ab77f184a923f04e7e2bba
+ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59421232"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106901"
 ---
 # <a name="creating-a-server-farm-with-the-web-farm-framework"></a>Criação de um farm de servidores com o Web Farm Framework
 
@@ -22,7 +22,6 @@ by [Jason Lee](https://github.com/jrjlee)
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
 > Este tópico descreve como usar o Web Farm Framework (WFF) 2.0 para criar e configurar um farm de servidores web de uma coleção de servidores.
-
 
 WFF permite sincronizar os produtos de plataforma da web e componentes, aplicativos web, sites e as definições de configuração em vários servidores web com balanceamento de carga. Em cenários em que você precisa de mais de um servidor web, como ambientes de preparo e produção, isso pode simplificar muito o processo de implantação e configuração. Você pode implantar um aplicativo web em um único servidor&#x2014;o *servidor primário*&#x2014;e WFF automaticamente serão replicadas para esse aplicativo web em todos os outros servidores de web no farm de servidores.
 
@@ -63,7 +62,6 @@ As tarefas e instruções passo a passo neste tópico pressupõem que você est�
 
 > [!NOTE]
 > Para obter mais informações sobre como adicionar computadores a um domínio, consulte [ingressando computadores no domínio e fazendo logon](https://technet.microsoft.com/library/cc725618(v=WS.10).aspx). Para obter mais informações sobre como configurar endereços IP estáticos, consulte [configurar um endereço IP estático](https://technet.microsoft.com/library/cc754203(v=ws.10).aspx).
-
 
 ## <a name="create-the-wff-controller-server"></a>Criar o servidor de controlador WFF
 
@@ -185,7 +183,6 @@ WFF foi projetado para integração estreita com o IIS ARR. Para aproveitar essa
 
 > [!NOTE]
 > Você não precisa usar o ARR com WFF; Você pode configurar WFF para trabalhar com soluções de balanceamento de carga de terceiros. Para obter mais informações, consulte [visão geral do Web Farm Framework 2.0 para o IIS 7](https://go.microsoft.com/?linkid=9805126).
-
 
 Balanceamento de carga usando ARR é um tópico complexo, mais do que está além do escopo deste tutorial. No entanto, você pode usar o procedimento a seguir para instalar o módulo do ARR e começar a trabalhar com balanceamento de carga.
 
