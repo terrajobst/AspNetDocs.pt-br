@@ -164,7 +164,7 @@ Primeiro, observe que a marca de abertura inclui um **saídas** atributo.
 
 [!code-xml[Main](understanding-the-build-process/samples/sample10.xml)]
 
-Este é um exemplo da *envio em lote de destino*. Em arquivos de projeto do MSBuild, o envio em lote é uma técnica para iterar em coleções. O valor da **saídas** atributo, **"% (DbPublishPackages.Identity)"**, refere-se ao **identidade** propriedade de metadados do **DbPublishPackages**  lista de itens. Essa notação **Outputs=%***(ItemList.ItemMetadataName)*, é convertido como:
+Este é um exemplo da *envio em lote de destino*. Em arquivos de projeto do MSBuild, o envio em lote é uma técnica para iterar em coleções. O valor da **saídas** atributo, **"% (DbPublishPackages.Identity)"** , refere-se ao **identidade** propriedade de metadados do **DbPublishPackages**  lista de itens. Essa notação **Outputs=%** *(ItemList.ItemMetadataName)* , é convertido como:
 
 - Dividir os itens na **DbPublishPackages** em lotes de itens que contêm os mesmos **identidade** valor de metadados.
 - Execute o destino de uma vez por lote.
@@ -178,7 +178,7 @@ Você pode ver uma notação semelhante na  **\_Cmd** propriedade, que cria um c
 
 [!code-xml[Main](understanding-the-build-process/samples/sample11.xml)]
 
-Nesse caso, **%(DbPublishPackages.DatabaseConnectionString)**, **%(DbPublishPackages.TargetDatabase)**, e **%(DbPublishPackages.FullPath)** todas se referem a valores de metadados do **DbPublishPackages** coleção de itens. O  **\_Cmd** propriedade é usada pelo **Exec** tarefa, que chama o comando.
+Nesse caso, **%(DbPublishPackages.DatabaseConnectionString)** , **%(DbPublishPackages.TargetDatabase)** , e **%(DbPublishPackages.FullPath)** todas se referem a valores de metadados do **DbPublishPackages** coleção de itens. O **\_Cmd** propriedade é usada pelo **Exec** tarefa, que chama o comando.
 
 [!code-xml[Main](understanding-the-build-process/samples/sample12.xml)]
 
