@@ -88,7 +88,7 @@ Para dar suporte a implantação de um projeto de banco de dados para vários de
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image1.png)
 3. No **novo arquivo de configuração de implantação** diálogo caixa, dê um nome significativo ao arquivo (por exemplo, **TestEnvironment.sqldeployment**) e, em seguida, clique em **salvar**.
-4. Sobre o *[Filename]***.sqldeployment** página, defina as propriedades de implantação para atender às necessidades do seu ambiente de destino e, em seguida, salve o arquivo.
+4. Sobre o *[Filename]* **.sqldeployment** página, defina as propriedades de implantação para atender às necessidades do seu ambiente de destino e, em seguida, salve o arquivo.
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image2.png)
 5. Observe que o novo arquivo é adicionado à pasta propriedades em seu projeto de banco de dados.
