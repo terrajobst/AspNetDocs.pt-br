@@ -34,7 +34,7 @@ Quando você instala o serviço de compilação de 2010 do Team Foundation Serve
 As tarefas de implantação que exigem a autenticação do Windows e que você pretende automatizar usando o Team Build, serão executado usando a identidade de serviço de compilação. Como tal, você precisará conceder a identidade do serviço de compilação quaisquer permissões necessárias em seus servidores web e os servidores de banco de dados.
 
 > [!NOTE]
-> A conta de serviço de rede usa a conta do computador para autenticar em outros computadores. Contas de computador assumem a forma * [nome do domínio]\[nome do computador] ***$**&#x2014;, por exemplo, **FABRIKAM\TFSBUILD$**. Dessa forma, se seu serviço de compilação é executada usando a identidade do serviço de rede, você deve conceder as permissões necessárias para a identidade da conta de computador para seu servidor de compilação.
+> A conta de serviço de rede usa a conta do computador para autenticar em outros computadores. Contas de computador assumem a forma *[nome do domínio]\[nome do computador]* **$** &#x2014;, por exemplo, **FABRIKAM\TFSBUILD$** . Dessa forma, se seu serviço de compilação é executada usando a identidade do serviço de rede, você deve conceder as permissões necessárias para a identidade da conta de computador para seu servidor de compilação.
 
 ## <a name="configuring-web-server-permissions"></a>Configurando permissões do servidor Web
 
