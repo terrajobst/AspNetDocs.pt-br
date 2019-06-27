@@ -8,12 +8,12 @@ ms.date: 02/10/2014
 ms.assetid: f3f4b8c8-e8f6-4474-ad94-69228a6c01ee
 msc.legacyurl: /web-pages/overview/ui-layouts-and-themes/4-working-with-forms
 msc.type: authoredcontent
-ms.openlocfilehash: ec5ad784978b2d5191d59398fc4b5ed25ae516fb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c7d4802063c8610a246afe67bd15eea429f7304a
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128398"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410837"
 ---
 # <a name="working-with-html-forms-in-aspnet-web-pages-razor-sites"></a>Trabalhando com formulários HTML em Sites do ASP.NET Web Pages (Razor)
 
@@ -51,7 +51,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
     [!code-html[Main](4-working-with-forms/samples/sample1.html)]
 3. Abrir a página no seu navegador. (No WebMatrix, nos **arquivos** espaço de trabalho, o arquivo com o botão direito e, em seguida, selecione **iniciar no navegador**.) Um formulário simples com três campos de entrada e uma **enviar** botão é exibido.
 
-    ![Captura de tela de um formulário com três caixas de texto.](4-working-with-forms/_static/image1.jpg)
+    ![Captura de tela de um formulário com três caixas de texto.](4-working-with-forms/_static/image1.png)
 
     Neste ponto, se você clicar na **enviar** botão, nada acontece. Para tornar o formulário útil, você precisa adicionar algum código que será executado no servidor.
 
@@ -67,7 +67,7 @@ Para processar o formulário, você deve adicionar código que lê os valores de
 
     Quando você envia a página neste momento, os valores inseridos são exibidos apenas acima do formulário:
 
-    ![Captura de tela que mostra os valores que você inseriu exibidos na página.](4-working-with-forms/_static/image2.jpg)
+    ![Captura de tela que mostra os valores que você inseriu exibidos na página.](4-working-with-forms/_static/image2.png)
 
     Examinar o código para a página. Primeiro use o `IsPost` método para determinar se a página está sendo lançada &#8212; ou seja, se um usuário clicou o **enviar** botão. Quando se trata de uma postagem, `IsPost` retorna true. Essa é a maneira padrão em páginas da Web do ASP.NET para determinar se você estiver trabalhando com uma solicitação inicial (uma solicitação GET) ou um postback (uma solicitação POST). (Para obter mais informações sobre como GET e POST, consulte a barra lateral "HTTP GET e POST e a IsPost propriedade" em [Introdução ao ASP.NET páginas da Web de programação usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkId=202890#SB_HttpGetPost).)
 

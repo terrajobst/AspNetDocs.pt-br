@@ -8,12 +8,12 @@ ms.date: 02/18/2014
 ms.assetid: 673d502f-2c16-4a6f-bb63-dbfd9a77ef47
 msc.legacyurl: /web-pages/overview/data/5-working-with-data
 msc.type: authoredcontent
-ms.openlocfilehash: 4ed2a2a1ee3cff7a50e67b6571b85f74d01efab7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 45e988d037465e59ad352bb9444af2c69fd3cd70
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133225"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411263"
 ---
 # <a name="introduction-to-working-with-a-database-in-aspnet-web-pages-razor-sites"></a>Introdução ao trabalho com um banco de dados da Web do ASP.NET (Razor) Sites de páginas
 
@@ -32,7 +32,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > 
 > - Trabalhando com um banco de dados do Microsoft SQL Server Compact Edition.
 > - Trabalhando com consultas SQL.
-> - O `Database` classe.
+> - A classe `Database`.
 >   
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
@@ -94,7 +94,7 @@ Este procedimento mostra como criar um banco de dados denominado SmallBakery usa
 
     Quando terminar, a definição terá esta aparência:
 
-    ![[image]](5-working-with-data/_static/image2.jpg)
+    ![[image]](5-working-with-data/_static/image2.png)
 17. Pressione Ctrl + S para salvar a tabela.
 
 ## <a name="adding-data-to-the-database"></a>Adicionando dados ao banco de dados

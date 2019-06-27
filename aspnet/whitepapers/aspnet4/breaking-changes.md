@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d601c540-f86b-4feb-890c-20c806b3da6c
 msc.legacyurl: /whitepapers/aspnet4/breaking-changes
 msc.type: content
-ms.openlocfilehash: 65b13065ae5324ce64ec1b87b2127e5277542fb8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8ccad3b40a723c92a3164de082e1f94577141008
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125672"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411206"
 ---
 # <a name="aspnet-4-breaking-changes"></a>Alterações significativas do ASP.NET 4
 
@@ -362,7 +362,7 @@ Quando você reverter para o modelo CAS herdado, os seguintes comportamentos de 
 - Vários conjuntos de permissões diferentes em um único domínio de aplicativo são permitidos.
 - Declarações de permissão explícita não são necessárias para assemblies no GAC que são invocados quando somente o ASP.NET ou outro código do .NET Framework está na pilha.
 
-Um cenário não pode ser revertido no .NET Framework 4: aplicativos de confiança parcial não Web não podem mais chamar determinadas APIs na dll e Extensions. Nas versões anteriores do .NET Framework, era possível para aplicativos de confiança parcial não Web ser concedido explicitamente <strong>AspNetHostingPermission</strong> permissões. Esses aplicativos, em seguida, poderia usar <strong>System.Web.HttpUtility</strong>, tipos na <strong>System.Web.ClientServices.\< / strong > * namespaces e tipos relacionam à associação, funções e perfis. Não há suporte para chamar esses tipos de aplicativos de confiança parcial do não Web no .NET Framework 4.
+Um cenário não pode ser revertido no .NET Framework 4: aplicativos de confiança parcial não Web não podem mais chamar determinadas APIs na dll e Extensions. Nas versões anteriores do .NET Framework, era possível para aplicativos de confiança parcial não Web ser concedido explicitamente **AspNetHostingPermission** permissões. Esses aplicativos, em seguida, poderia usar **System.Web.HttpUtility**, tipos na **System.Web.ClientServices.\***  namespaces e tipos relacionam à associação, funções e perfis. Não há suporte para chamar esses tipos de aplicativos de confiança parcial do não Web no .NET Framework 4.
 
 > [!NOTE]
 > O **HtmlEncode** e **HtmlDecode** funcionalidade dos **System.Web.HttpUtility** classe foi movido para o novo .NET Framework 4  **System.Net.WebUtility** classe. Se esta for a única funcionalidade do ASP.NET que estava sendo usada, modifique o código do aplicativo para usar a nova **WebUtility** classe em vez disso.

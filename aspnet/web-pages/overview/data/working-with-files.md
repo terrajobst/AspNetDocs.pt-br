@@ -8,12 +8,12 @@ ms.date: 02/20/2014
 ms.assetid: eee916e4-ba4c-439a-a24e-68df7d45a569
 msc.legacyurl: /web-pages/overview/data/working-with-files
 msc.type: authoredcontent
-ms.openlocfilehash: 3ff852232212ddda4930597731911be60c092667
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 684c47a8a8480dc040e5144144577c94c35d39e5
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108940"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411195"
 ---
 # <a name="working-with-files-in-an-aspnet-web-pages-razor-site"></a>Trabalhando com arquivos em um Site do ASP.NET Web Pages (Razor)
 
@@ -22,7 +22,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > Este artigo explica como ler, gravar, acrescentar, excluir e carregar arquivos em um site de páginas da Web do ASP.NET (Razor).
 > 
 > > [!NOTE]
-> > Se você quiser carregar imagens e manipulá-los (por exemplo, inverter ou redimensioná-las), consulte [trabalhando com imagens em um Site de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202897).
+> > Se você quiser carregar imagens e manipulá-los (por exemplo, inverter ou redimensioná-las), consulte [trabalhando com imagens em um Site de páginas da Web do ASP.NET](/aspnet/web-pages/overview/ui-layouts-and-themes/9-working-with-images).
 > 
 > 
 > **O que você aprenderá:** 
@@ -72,7 +72,7 @@ Se você quiser armazenar dados em um arquivo de texto, você pode usar o `File.
 
     Em seguida, crie uma variável (`dataFile`) que contém o local e o nome do arquivo para armazenar os dados. Definir o local requer algum tratamento especial. Em sites, é uma prática inadequada para referir-se no código para caminhos absolutos, como *C:\Folder\File.txt* para arquivos no servidor web. Se for movido um site, um caminho absoluto estará incorreto. Além disso, para um site hospedado (em oposição a em seu próprio computador) normalmente não souber qual é o caminho correto quando você está escrevendo o código.
 
-    Mas, às vezes, (como now, para gravar um arquivo) é necessário um caminho completo. A solução é usar o `MapPath` método da `Server` objeto. Isso retorna o caminho completo para o seu site. Para obter o caminho para a raiz do site, você é usuário do `~` operador (para foram reproduzidos o site do virtual raiz) para `MapPath`. (Você também pode passar um nome de subpasta a ele, como *~/App\_dados /*, para obter o caminho para essa subpasta.) Em seguida, você pode concatenar informações adicionais em qualquer que seja o método retorna para criar um caminho completo. Neste exemplo, você adiciona um nome de arquivo. (Você pode ler mais sobre como trabalhar com caminhos de arquivo e pasta no [Introdução ao ASP.NET páginas da Web de programação usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
+    Mas, às vezes, (como now, para gravar um arquivo) é necessário um caminho completo. A solução é usar o `MapPath` método da `Server` objeto. Isso retorna o caminho completo para o seu site. Para obter o caminho para a raiz do site, você é usuário do `~` operador (para foram reproduzidos o site do virtual raiz) para `MapPath`. (Você também pode passar um nome de subpasta a ele, como *~/App\_dados /* , para obter o caminho para essa subpasta.) Em seguida, você pode concatenar informações adicionais em qualquer que seja o método retorna para criar um caminho completo. Neste exemplo, você adiciona um nome de arquivo. (Você pode ler mais sobre como trabalhar com caminhos de arquivo e pasta no [Introdução ao ASP.NET páginas da Web de programação usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkId=195205#ID_WorkingWithFileAndFolderPaths).)
 
     O arquivo é salvo na *App\_dados* pasta. Essa pasta é uma pasta especial no ASP.NET que é usado para armazenar arquivos de dados, conforme descrito em [Introdução ao trabalho com um banco de dados em Sites de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=195209).
 
@@ -142,12 +142,12 @@ Este procedimento mostra como ler e exibir os dados que você criou no exemplo a
 > 
 > **Exibindo dados de um arquivo delimitado por vírgula do Microsoft Excel**
 > 
-> Você pode usar o Microsoft Excel para salvar os dados contidos em uma planilha como um arquivo delimitado por vírgula (*. csv* arquivo). Quando você fizer isso, o arquivo é salvo em texto sem formatação, não está no formato do Excel. Cada linha da planilha é separada por uma quebra de linha no arquivo de texto, e cada item de dados é separado por uma vírgula. Você pode usar o código mostrado no exemplo anterior para ler um arquivo delimitado por vírgula do Excel apenas alterando o nome do arquivo de dados em seu código.
+> Você pode usar o Microsoft Excel para salvar os dados contidos em uma planilha como um arquivo delimitado por vírgula ( *. csv* arquivo). Quando você fizer isso, o arquivo é salvo em texto sem formatação, não está no formato do Excel. Cada linha da planilha é separada por uma quebra de linha no arquivo de texto, e cada item de dados é separado por uma vírgula. Você pode usar o código mostrado no exemplo anterior para ler um arquivo delimitado por vírgula do Excel apenas alterando o nome do arquivo de dados em seu código.
 
 <a id="Deleting_Files"></a>
 ## <a name="deleting-files"></a>Excluindo arquivos
 
-Para excluir arquivos do seu site, você pode usar o `File.Delete` método. Este procedimento mostra como permitir que os usuários a excluir uma imagem (*. jpg* arquivo) de um *imagens* se souberem o nome do arquivo de pasta.
+Para excluir arquivos do seu site, você pode usar o `File.Delete` método. Este procedimento mostra como permitir que os usuários a excluir uma imagem ( *. jpg* arquivo) de um *imagens* se souberem o nome do arquivo de pasta.
 
 > [!NOTE] 
 > 

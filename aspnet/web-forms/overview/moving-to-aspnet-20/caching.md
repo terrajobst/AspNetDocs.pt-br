@@ -8,12 +8,12 @@ ms.date: 02/20/2005
 ms.assetid: 2bb109d2-e299-46ea-9054-fa0263b59165
 msc.legacyurl: /web-forms/overview/moving-to-aspnet-20/caching
 msc.type: authoredcontent
-ms.openlocfilehash: 39f4eb7b0859cf52fe3ed2531e9c349b465b9327
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 4f0b021ca6ca151544dd9fb0587ed9e0cf14ff65
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116863"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67411248"
 ---
 # <a name="caching"></a>Cache
 
@@ -94,7 +94,7 @@ Quando esse comando executa as seguintes alterações são feitas no banco de da
 | AspNet\_SqlCacheUnRegisterTableStoredProcedure | Cancela o registro de uma tabela para a dependência de cache SQL, removendo a entrada na tabela de notificação e remove o gatilho. |
 | AspNet\_SqlCacheUpdateChangeIdStoredProcedure | Atualiza a tabela de notificação ao incrementar o changeId para a tabela alterada. O ASP.NET usa esse valor para determinar se os dados foram alterados. Conforme indicado a seguir, esse procedimento armazenado é executado pelo gatilho criado quando a tabela está habilitada. |
 
-- Um gatilho do SQL Server chamado ***tabela\_nome *\_AspNet\_SqlCacheNotification\_gatilho** é criado para a tabela. Esse gatilho executa o AspNet\_SqlCacheUpdateChangeIdStoredProcedure quando um INSERT, UPDATE ou DELETE é executada na tabela.
+- Um gatilho do SQL Server chamado  **_tabela\_nome_\_AspNet\_SqlCacheNotification\_gatilho** é criado para a tabela. Esse gatilho executa o AspNet\_SqlCacheUpdateChangeIdStoredProcedure quando um INSERT, UPDATE ou DELETE é executada na tabela.
 - Uma função de servidor SQL chamado **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** é adicionado ao banco de dados.
 
 O **aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess** função do SQL Server tem permissões de EXEC para o AspNet\_SqlCachePollingStoredProcedure. Para o modelo de sondagem funcionar corretamente, você deve adicionar sua conta de processo para o aspnet\_ChangeNotification\_ReceiveNotificationsOnlyAccess função. O aspnet\_regsql.exe ferramenta não fará isso para você.

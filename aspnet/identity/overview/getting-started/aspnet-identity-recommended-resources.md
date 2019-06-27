@@ -9,12 +9,12 @@ ms.assetid: 0f78aec2-f509-46fa-b20f-d5208425d8ec
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-recommended-resources
 msc.type: authoredcontent
-ms.openlocfilehash: 8e476f8a4172ebbe55819cda1ceb5458426243bd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: fa4b22438fffe4f5b95a877e96eb4ec26b6de8d9
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381894"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410887"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Recursos recomendados da Identidade do ASP.NET
 
@@ -147,7 +147,6 @@ Se você quiser escrever seu próprio provedor, leia [visão geral dos provedore
 - Blog: [Implementar a identidade do ASP.NET](http://odetocode.com/blogs/scott/archive/2014/01/20/implementing-asp-net-identity.aspx)
 - Tutorial:[Configurando as contas de identidade básicas e apontá-los em um banco de dados externo](http://typecastexception.com/post/2013/10/27/Configuring-Db-Connection-and-Code-First-Migration-for-Identity-Accounts-in-ASPNET-MVC-5-and-Visual-Studio-2013.aspx). Por [ @xivSolutions ](https://twitter.com/xivSolutions).
 - Tutorial[: Implementando um provedor de armazenamento de identidade do ASP.NET personalizado de MySQL](../extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)
-- [Entidades CodeFluent](http://blog.codefluententities.com/2014/04/30/asp-net-identity-v2-and-codefluent-entities/) por [SoftFluent](http://www.softfluent.com/)
 - [Armazenamento de tabelas do Azure](https://www.nuget.org/packages/accidentalfish.aspnet.identity.azure/) por James Randall.
 - Armazenamento de tabelas do Azure: [AspNet.Identity.TableStorage](https://github.com/stuartleeks/leeksnet.AspNet.Identity.TableStorage) pela [ @stuartleeks ](https://twitter.com/stuartleeks).
 - [O CouchDB / Cloudant por Daniel Wertheim.](https://github.com/danielwertheim/mycouch.aspnet.identity)

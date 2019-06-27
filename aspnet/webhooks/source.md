@@ -6,12 +6,12 @@ description: Links para código-fonte WebHooks do ASP.NET e pacotes do NuGet
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: 91a62bfa-ea3a-41f9-a2e1-e90d2c8fc8ca
-ms.openlocfilehash: ff716b476f7dc69b6071d3febd5b5871e4f02689
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.openlocfilehash: f88d9247f9d8aa0c5edc1ffc462be21d9319a725
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57027183"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410798"
 ---
 # <a name="aspnet-webhooks-source-code-and-nuget-packages"></a>Código-fonte WebHooks do ASP.NET e pacotes do NuGet
 
@@ -25,6 +25,6 @@ O [pacotes do NuGet](https://nuget.org/packages?q=Microsoft.AspNet.WebHooks) sã
 
 * [Common](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Common): Um pacote comum que é compartilhado entre remetentes e receptores.
 
-* [Remetente](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Custom): Um conjunto de pacotes que dão suporte a enviar seus próprios WebHooks a outras pessoas. A funcionalidade para o envio de WebHooks é descrita mais detalhadamente na [WebHooks enviando](sending/index.md).
+* [Remetente](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Custom): Um conjunto de pacotes que dão suporte a enviar seus próprios WebHooks a outras pessoas. A funcionalidade para o envio de WebHooks é descrita mais detalhadamente na [WebHooks enviando](sending/senders).
 
 * [Receptores](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Receivers): Um conjunto de pacotes que dão suporte a recebimento de WebHooks de outras pessoas. A funcionalidade para o recebimento de WebHooks é descrita mais detalhadamente na [WebHooks recebendo](receiving/index.md).

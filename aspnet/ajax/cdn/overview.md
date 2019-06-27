@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 6040f1fa32e9df340ebf3f8635b9d07be871ee40
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 7b0b42c02439fdb76bceecc80af881e1d58e470d
+ms.sourcegitcommit: dd0dc556a3d99a31d8fdbc763e9a2e53f3441b70
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118921"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410831"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rede de Distribuição de Conteúdo do Microsoft Ajax
 
@@ -776,7 +776,7 @@ As seguintes versões do [Globalize](https://github.com/jquery/globalize "Global
 
 ### <a name="respond-releases-on-the-cdn"></a>Responder a versões na CDN
 
-As seguintes versões do [ https://github.com/scottjehl/Respond ] (https://github.com/scottjehl/Respond " https://github.com/scottjehl/Respond ") responder são hospedados na CDN:
+As seguintes versões do [responder](https://github.com/scottjehl/Respond "responder") são hospedados na CDN:
 
 #### <a name="respond-version-142"></a>Responder a versão 1.4.2
 
@@ -1267,7 +1267,7 @@ Os seguintes arquivos ASP.NET SignalR JavaScript são hospedados em deste CDN:
 - https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.3.min.js
 - https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.3.js
 
-#### <a name="aspnet-signalr-112"></a>1.1.2 do ASP.NET SignalR
+#### <a name="aspnet-signalr-112"></a>1\.1.2 do ASP.NET SignalR
 
 - https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.2.min.js
 - https://ajax.aspnetcdn.com/ajax/signalr/jquery.signalr-1.1.2.js
