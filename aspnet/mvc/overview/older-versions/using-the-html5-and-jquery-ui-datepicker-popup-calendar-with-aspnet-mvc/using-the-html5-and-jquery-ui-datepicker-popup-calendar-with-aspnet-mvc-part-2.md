@@ -73,7 +73,7 @@ Selecione o **criar como uma exibição parcial** caixa de seleção. Certifique
 
 ![](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2/_static/image2.png)
 
- Clique em **Adicionar**. Um *DateTime* modelo for criado na *\ compartilhadas \ modelosdeexibição*.
+Clique em **Adicionar**. Um *DateTime* modelo for criado na *\ compartilhadas \ modelosdeexibição*.
 
 A imagem a seguir mostra o *modos de exibição* pasta **Gerenciador de soluções** depois que o `DateTime` exibição e o editor de modelos são criados.
 

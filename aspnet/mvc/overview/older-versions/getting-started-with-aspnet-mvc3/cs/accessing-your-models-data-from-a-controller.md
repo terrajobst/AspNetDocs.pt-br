@@ -39,13 +39,13 @@ Clique com botão direito do *controladores* pasta e crie um novo `MoviesControl
 
 - Nome do controlador: **MoviesController**. (Esse é o padrão. )
 - Modelo: **Controlador com ações de leitura/gravação e modos de exibição, usando o Entity Framework**.
-- Classe de modelo: **Movie (MvcMovie.Models)**.
-- Classe de contexto de dados: **MovieDBContext (MvcMovie.Models)**.
-- Modos de exibição: **O Razor (CSHTML)**. (O padrão).
+- Classe de modelo: **Movie (MvcMovie.Models)** .
+- Classe de contexto de dados: **MovieDBContext (MvcMovie.Models)** .
+- Modos de exibição: **O Razor (CSHTML)** . (O padrão).
 
 [![AddScaffoldedMovieController](accessing-your-models-data-from-a-controller/_static/image2.png "AddScaffoldedMovieController")](accessing-your-models-data-from-a-controller/_static/image1.png)
 
- Clique em **Adicionar**. O Visual Web Developer cria os seguintes arquivos e pastas:
+Clique em **Adicionar**. O Visual Web Developer cria os seguintes arquivos e pastas:
 
 - *Um MoviesController.cs* arquivo do projeto *controladores* pasta.
 - Um *filmes* pasta do projeto *modos de exibição* pasta.

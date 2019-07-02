@@ -69,7 +69,7 @@ Neste tutorial, você começará adicionando classes de entidade simples que rep
 
     ![Criar camada de acesso a dados - novo Menu de Item](create_the_data_access_layer/_static/image2.png)
 3. Selecione **classe** no painel central e nomeie essa nova classe *Product.cs*.
-4.  Clique em **Adicionar**.  
+4. Clique em **Adicionar**.  
    O novo arquivo de classe é exibido no editor.
 5. Substitua o código padrão pelo código a seguir:   
 

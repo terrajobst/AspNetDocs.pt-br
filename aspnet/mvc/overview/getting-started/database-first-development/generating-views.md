@@ -46,7 +46,7 @@ Selecione o **controlador MVC 5 com modos de exibição usando o Entity Framewor
 
 Selecione **aluno (ContosoSite.Models)** para a classe de modelo e selecione o **ContosoUniversityDataEntities (ContosoSite.Models)** para a classe de contexto. Mantenha o nome do controlador como **StudentsController**.
 
- Clique em **Adicionar**.
+Clique em **Adicionar**.
 
 Se você receber um erro, pode ser porque você não tiver criado o projeto na seção anterior. Nesse caso, tente compilar o projeto e, em seguida, adicione o item com Scaffold novamente.
 
