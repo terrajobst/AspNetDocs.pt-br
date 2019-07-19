@@ -41,7 +41,7 @@ No **adicionar Scaffold** caixa de diálogo, clique em **controlador MVC 5 com m
   
 ![](accessing-your-models-data-from-a-controller/_static/image3.png)   
 
- Clique em **Adicionar**. (Se você receber um erro, você provavelmente não compila o aplicativo antes de começar a adicionar o controlador.) Visual Studio cria os seguintes arquivos e pastas:
+Clique em **Adicionar**. (Se você receber um erro, você provavelmente não compila o aplicativo antes de começar a adicionar o controlador.) Visual Studio cria os seguintes arquivos e pastas:
 
 - *Um MoviesController.cs* arquivo o *controladores* pasta.
 - Um *exibições \ filmes* pasta.

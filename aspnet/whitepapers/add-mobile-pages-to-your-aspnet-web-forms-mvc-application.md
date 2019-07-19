@@ -234,7 +234,7 @@ Se você quiser /Mobile a URL para acessar a ação Index em HomeController dent
 
 Isso significa que a home page da móvel agora estará localizado em /Mobile, em vez de/móvel/Home, como "Home" agora é o implicitamente o nome de controlador padrão para páginas para dispositivos móveis.
 
-Em seguida, observe que, ao adicionar um segundo HomeController ao seu aplicativo (ou seja, móvel aquele, além de área de trabalho um existente), você vai ter dividido sua home page da área de trabalho regular. Ocorrerá uma falha com o erro "*foram encontrados vários tipos que correspondem ao controlador chamado 'Home'*". Para resolver esse problema, atualize sua configuração de roteamento de nível superior (em Global.asax.cs) para especificar que o HomeController da área de trabalho deve têm prioridade quando não há ambiguidade:
+Em seguida, observe que, ao adicionar um segundo HomeController ao seu aplicativo (ou seja, móvel aquele, além de área de trabalho um existente), você vai ter dividido sua home page da área de trabalho regular. Ocorrerá uma falha com o erro "*foram encontrados vários tipos que correspondem ao controlador chamado 'Home'* ". Para resolver esse problema, atualize sua configuração de roteamento de nível superior (em Global.asax.cs) para especificar que o HomeController da área de trabalho deve têm prioridade quando não há ambiguidade:
 
 [!code-csharp[Main](add-mobile-pages-to-your-aspnet-web-forms-mvc-application/samples/sample9.cs)]
 

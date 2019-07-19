@@ -116,7 +116,7 @@ No aplicativo de exemplo Wingtip Toys, uma página será usada para exibir os er
 1. Clique com botão direito no nome do projeto (**Wingtip Toys**) em **Gerenciador de soluções** e selecione **Add**  - &gt; **Novo Item**.   
    A caixa de diálogo **Adicionar Novo Item** é exibida.
 2. Selecione o **Visual c#**  - &gt; **Web** grupo de modelos à esquerda. Na lista do meio, selecione **Web Form com página mestra**e nomeie-o **ErrorPage**.
-3.  Clique em **Adicionar**.
+3. Clique em **Adicionar**.
 4. Selecione o *Master* file como a página mestra e, em seguida, escolha **Okey**.
 5. Substitua a marcação existente pelo seguinte:   
 
@@ -309,7 +309,7 @@ Neste tutorial, você aprendeu sobre tratamento de erros no nível do aplicativo
 
 ## <a name="tutorial-series-conclusion"></a>Conclusão da série de tutoriais
 
-*Obrigado por acompanhar. Espero que este conjunto de tutoriais ajudado você a se familiarizar com os Web Forms do ASP.NET. Se você precisar de mais informações sobre os recursos de Web Forms disponíveis no ASP.NET 4.5 e no Visual Studio 2013, consulte* [*ASP.NET e Web Tools para notas de versão do Visual Studio 2013*](../../../../visual-studio/overview/2013/release-notes.md)*. Além disso, certifique-se de examinar o tutorial mencionado no* ***próximas etapas****seção e defintely experimentar o* [*gratuita do Azure*](https://azure.microsoft.com/pricing/free-trial/)*.*
+*Obrigado por acompanhar. Espero que este conjunto de tutoriais ajudado você a se familiarizar com os Web Forms do ASP.NET. Se você precisar de mais informações sobre os recursos de Web Forms disponíveis no ASP.NET 4.5 e no Visual Studio 2013, consulte* [*ASP.NET e Web Tools para notas de versão do Visual Studio 2013*](../../../../visual-studio/overview/2013/release-notes.md) *. Além disso, certifique-se de examinar o tutorial mencionado no* * **próximas etapas****seção e defintely experimentar o* [*gratuita do Azure*](https://azure.microsoft.com/pricing/free-trial/)* .*
 
 ![Obrigado - Erik](aspnet-error-handling/_static/image10.png)  
 

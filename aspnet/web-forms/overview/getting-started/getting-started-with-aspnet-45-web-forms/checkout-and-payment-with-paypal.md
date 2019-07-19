@@ -177,7 +177,7 @@ As etapas a seguir permitirá que você adicionar um provedor de autenticação 
    Esse valor é o URI que o OAuth ASP.NET usuários para se comunicar com o servidor google OAuth. Lembre-se a URL do SSL usado acima ( `https://localhost:44300/` , a menos que você criou outros projetos SSL).
 10. Clique o **criar ID do cliente** botão.
 11. No menu à esquerda do Console de desenvolvedores do Google, clique no **tela de consentimento** item de menu, em seguida, defina seu nome de produto e o endereço de email. Quando você tiver preenchido o formulário, clique em **salvar**.
-12. Clique o **APIs** item de menu, role para baixo e clique no **off** lado **API do Google +**.   
+12. Clique o **APIs** item de menu, role para baixo e clique no **off** lado **API do Google +** .   
     Aceitar essa opção permitirá que a API do Google +.
 13. Você também deve atualizar o **Microsoft. owin** pacote do NuGet para a versão 3.0.0.   
     Dos **ferramentas** menu, selecione **Gerenciador de pacotes NuGet** e, em seguida, selecione **gerenciar pacotes NuGet para solução**.  
@@ -290,7 +290,7 @@ Coloque a maioria do código PayPal em uma única classe. Essa classe contém m�
    A caixa de diálogo **Adicionar Novo Item** é exibida.
 2. Sob **Visual c#** da **instalado** painel à esquerda, selecione **código**.
 3. No painel central, selecione **classe**. Nomeie essa nova classe **PayPalFunctions.cs**.
-4.  Clique em **Adicionar**.  
+4. Clique em **Adicionar**.  
    O novo arquivo de classe é exibido no editor.
 5. Substitua o código padrão pelo código a seguir:  
 
