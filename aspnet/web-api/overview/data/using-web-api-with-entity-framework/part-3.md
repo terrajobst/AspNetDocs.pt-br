@@ -63,18 +63,18 @@ A API permite que as operações CRUD no banco de dados. O exemplo a seguir resu
 
 | Autores |  |
 | --- | -- |
-| OBTER api/autores | Obter todos os autores. |
-| GET/os autores do api / {id} | Obter um autor por ID. |
-| Autores/api/POST | Crie um novo autor. |
+| GET api/authors | Obter todos os autores. |
+| GET api/authors/{id} | Obter um autor por ID. |
+| POST /api/authors | Crie um novo autor. |
 | PUT /api/authors/{id} | Atualize um autor existente. |
 | DELETE /api/authors/{id} | Exclua um autor. |
 
 | Livros |  |
 | --- | -- |
-| OBTER /api/books | Obter todos os livros. |
-| OBTER/API/manuais / {id} | Obtenha um livro por ID. |
-| Enviar/api/catálogos | Crie um novo catálogo. |
-| COLOCAR/API/manuais / {id} | Atualize um livro existente. |
+| GET /api/books | Obter todos os livros. |
+| GET /api/books/{id} | Obtenha um livro por ID. |
+| POST /api/books | Crie um novo catálogo. |
+| PUT /api/books/{id} | Atualize um livro existente. |
 | DELETE /api/books/{id} | Exclua um livro. |
 
 ## <a name="view-the-database-optional"></a>Exibir o banco de dados (opcional)
