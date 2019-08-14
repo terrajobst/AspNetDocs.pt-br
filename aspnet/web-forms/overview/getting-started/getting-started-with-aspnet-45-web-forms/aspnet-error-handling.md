@@ -309,7 +309,7 @@ Neste tutorial, você aprendeu sobre tratamento de erros no nível do aplicativo
 
 ## <a name="tutorial-series-conclusion"></a>Conclusão da série de tutoriais
 
-*Obrigado por acompanhar. Espero que este conjunto de tutoriais ajudado você a se familiarizar com os Web Forms do ASP.NET. Se você precisar de mais informações sobre os recursos de Web Forms disponíveis no ASP.NET 4.5 e no Visual Studio 2013, consulte* [*ASP.NET e Web Tools para notas de versão do Visual Studio 2013*](../../../../visual-studio/overview/2013/release-notes.md) *. Além disso, certifique-se de examinar o tutorial mencionado no* * **próximas etapas****seção e defintely experimentar o* [*gratuita do Azure*](https://azure.microsoft.com/pricing/free-trial/)* .*
+*Obrigado por acompanhar. Espero que este conjunto de tutoriais ajudado você a se familiarizar com os Web Forms do ASP.NET. Se você precisar de mais informações sobre os recursos de Web Forms disponíveis no ASP.NET 4.5 e no Visual Studio 2013, consulte* [*ASP.NET e Web Tools para notas de versão do Visual Studio 2013*](../../../../visual-studio/overview/2013/release-notes.md) *. Além disso, certifique-se de examinar o tutorial mencionado no ** **próximas etapas** **seção e defintely experimentar o* [*gratuita do Azure*](https://azure.microsoft.com/pricing/free-trial/)* .*
 
 ![Obrigado - Erik](aspnet-error-handling/_static/image10.png)  
 
