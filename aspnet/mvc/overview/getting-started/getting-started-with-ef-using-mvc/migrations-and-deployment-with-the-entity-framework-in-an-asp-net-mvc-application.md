@@ -1,244 +1,256 @@
 ---
 uid: mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
-title: 'Tutorial: Usar migrações do EF em um aplicativo ASP.NET MVC e implantar no Azure'
+title: 'Tutorial: Usar migrações do EF em um aplicativo MVC ASP.NET e implantar no Azure'
 author: tdykstra
-description: Neste tutorial, você pode habilitar migrações do Code First e implanta o aplicativo em nuvem no Azure.
+description: Neste tutorial, você habilita Code First migrações e implanta o aplicativo na nuvem no Azure.
 ms.author: riande
 ms.date: 01/16/2019
 ms.topic: tutorial
 ms.assetid: d4dfc435-bda6-4621-9762-9ba270f8de4e
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 1f25a9afdf379d725496bd88f6ac192ab19930ca
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: 989dd0f0e18b338be057b9c5657586eff996d8ea
+ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384507"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000761"
 ---
-# <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>Tutorial: Usar migrações do EF em um aplicativo ASP.NET MVC e implantar no Azure
+# <a name="tutorial-use-ef-migrations-in-an-aspnet-mvc-app-and-deploy-to-azure"></a>Tutorial: Usar migrações do EF em um aplicativo MVC ASP.NET e implantar no Azure
 
-Até agora o aplicativo web de exemplo Contoso University tiver sido executado localmente em IIS Express no computador de desenvolvimento. Para disponibilizar um aplicativo real para que outras pessoas usem a Internet, você precisará implantá-lo em um provedor de hospedagem na web. Neste tutorial, você pode habilitar migrações do Code First e implanta o aplicativo em nuvem no Azure:
+Até agora, o aplicativo Web de exemplo da Contoso University está em execução localmente em IIS Express no seu computador de desenvolvimento. Para tornar um aplicativo real disponível para outras pessoas usarem pela Internet, você precisa implantá-lo em um provedor de hospedagem na Web. Neste tutorial, você habilita Code First migrações e implanta o aplicativo na nuvem no Azure:
 
-- Habilite migrações do Code First. O recurso de migrações permite que você altere o modelo de dados e implantar suas alterações para a produção atualizando o esquema de banco de dados sem precisar descartar e recriar o banco de dados.
-- Implante no Azure. Esta etapa é opcional. Você pode continuar com os tutoriais restantes sem ter implantado o projeto.
+- Habilitar Migrações do Code First. O recurso de migrações permite que você altere o modelo de dados e implante suas alterações na produção atualizando o esquema de banco sem precisar remover e recriar o banco de dados.
+- Implante no Azure. Esta etapa é opcional; Você pode continuar com os tutoriais restantes sem ter implantado o projeto.
 
-É recomendável que você usar um processo de integração contínua com o controle do código-fonte para a implantação, mas este tutorial não aborda esses tópicos. Para obter mais informações, consulte o [controle de origem](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) e [integração contínua](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery) capítulos [criando aplicativos de nuvem do mundo Real com o Azure](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction).
+Recomendamos que você use um processo de integração contínua com controle do código-fonte para implantação, mas este tutorial não aborda esses tópicos. Para obter mais informações, consulte o [controle do código-fonte](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control) e os capítulos de [integração contínua](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery) da [criação de aplicativos de nuvem do mundo real com o Azure](xref:aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction).
 
 Neste tutorial, você:
 
 > [!div class="checklist"]
-> * Habilitar migrações do Code First
+> * Habilitar migrações de Code First
 > * Implantar o aplicativo no Azure (opcional)
 
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - [Resiliência de conexão e interceptação de comando](connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 
-## <a name="enable-code-first-migrations"></a>Habilitar migrações do Code First
+## <a name="enable-code-first-migrations"></a>Habilitar migrações de Code First
 
-Quando você desenvolve um novo aplicativo, o modelo de dados é alterado com frequência e, sempre que o modelo é alterado, ele fica fora de sincronia com o banco de dados. Você configurou o Entity Framework para descartar e recriar o banco de dados sempre que você alterar o modelo de dados automaticamente. Quando você adicionar, remover, ou alterar as classes de entidade ou alterar seu `DbContext` de classe, na próxima vez que você executar o aplicativo automaticamente exclui o banco de dados existente, cria um novo que corresponde ao modelo e o propagará com dados de teste.
+Quando você desenvolve um novo aplicativo, o modelo de dados é alterado com frequência e, sempre que o modelo é alterado, ele fica fora de sincronia com o banco de dados. Você configurou o Entity Framework para descartar e recriar o banco de dados automaticamente sempre que alterar o modelo. Quando você adiciona, remove ou altera classes de entidade ou altera sua `DbContext` classe, na próxima vez que você executar o aplicativo, ele excluirá automaticamente o banco de dados existente, criará um novo que corresponda ao modelo e propaga-o com os dado de teste.
 
-Esse método de manter o banco de dados em sincronia com o modelo de dados funciona bem até que você implante o aplicativo em produção. Quando o aplicativo está em execução na produção, ele normalmente armazena os dados que você deseja manter, e você não deseja perder tudo sempre que você fizer uma alteração, como adicionar uma nova coluna. O [migrações do Code First](https://msdn.microsoft.com/data/jj591621) recurso resolve esse problema, permitindo que o Code First atualizar o esquema de banco de dados, em vez de descartar e recriar o banco de dados. Neste tutorial, você implantará o aplicativo e para se preparar para fazer isso, você vai habilitar migrações.
+Esse método de manter o banco de dados em sincronia com o modelo de dados funciona bem até que você implante o aplicativo em produção. Quando o aplicativo está em execução na produção, ele geralmente armazena os dados que você deseja manter e você não deseja perder tudo sempre que fizer uma alteração, como adicionar uma nova coluna. O recurso [migrações do Code First](https://msdn.microsoft.com/data/jj591621) resolve esse problema habilitando Code First para atualizar o esquema de banco de dados em vez de descartar e recriar o banco de dados. Neste tutorial, você implantará o aplicativo e para se preparar para que você habilite as migrações.
 
-1. Desabilitar o inicializador que você configurou anteriormente comentando ou excluindo o `contexts` elemento que você adicionou ao arquivo de Web. config do aplicativo.
+1. Desabilite o inicializador que você configurou anteriormente comentando ou excluindo `contexts` o elemento que você adicionou ao arquivo Web. config do aplicativo.
 
     [!code-xml[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample1.xml?highlight=2,6)]
-2. Também no aplicativo *Web. config* file, altere o nome do banco de dados na cadeia de conexão para ContosoUniversity2.
+2. Também no arquivo *Web. config* do aplicativo, altere o nome do banco de dados na cadeia de conexão para ContosoUniversity2.
 
     [!code-xml[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample2.xml?highlight=2)]
 
-    Essa alteração configura o projeto para que a primeira migração crie um novo banco de dados. Isso não é obrigatório, mas você verá posteriormente por que é uma boa ideia.
+    Essa alteração configura o projeto para que a primeira migração crie um novo banco de dados. Isso não é necessário, mas você verá mais tarde por que é uma boa ideia.
 3. No menu **Ferramentas**, selecione **Gerenciador de pacotes NuGet** > **Console do Gerenciador de pacotes**.
 
-1. No `PM>` prompt digite os seguintes comandos:
+1. `PM>` No prompt, insira os seguintes comandos:
 
     ```text
     enable-migrations
     add-migration InitialCreate
     ```
 
-    O `enable-migrations` comando cria um *migrações* pasta no projeto ContosoUniversity e ele coloca nessa pasta um *Configuration.cs* arquivo que você pode editar para configurar migrações.
+    O `enable-migrations` comando cria uma pasta Migrations no projeto ContosoUniversity e coloca essa pasta em um arquivo *Configuration.cs* que você pode editar para configurar as migrações.
 
-    (Se você perdeu a etapa acima que direciona você para alterar o nome do banco de dados, as migrações encontrará o banco de dados existente e fazer automaticamente o `add-migration` comando. Isso é okey, que isso apenas significa que você não será executado um teste do código migrações antes de implantar o banco de dados. Posteriormente, quando você executar o `update-database` comando não acontece nada porque o banco de dados já existe.)
+    (Se você perdeu a etapa acima que o instrui a alterar o nome do banco de dados, as migrações encontrarão o banco de dados `add-migration` existente e executarão automaticamente o comando. Tudo bem, isso só significa que você não executará um teste do código de migrações antes de implantar o banco de dados. Posteriormente, quando você executar `update-database` o comando, nada acontecerá porque o banco de dados já existe.)
 
-    Abra o *ContosoUniversity\Migrations\Configuration.cs* arquivo. Como a classe de inicializador que vimos anteriormente, o `Configuration` classe inclui um `Seed` método.
+    Abra o arquivo *ContosoUniversity\Migrations\Configuration.cs* . Assim como a classe do inicializador que você viu `Configuration` anteriormente, a `Seed` classe inclui um método.
 
     [!code-csharp[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample3.cs)]
 
-    A finalidade de [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) método é para que você possa inserir ou atualizar dados de teste depois que o Code First cria ou atualiza o banco de dados. O método é chamado quando o banco de dados é criado e sempre que o esquema de banco de dados é atualizado após a alteração de um modelo de dados.
+    A finalidade do método de [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) é permitir que você insira ou atualize dados de teste depois que Code First criar ou atualizar o banco de dado. O método é chamado quando o banco de dados é criado e toda vez que o esquema de banco de dado é atualizado após uma alteração no modelo.
 
-### <a name="set-up-the-seed-method"></a>Configurar o método de semente
+### <a name="set-up-the-seed-method"></a>Configurar o método semente
 
-Quando você descartar e recria o banco de dados para cada alteração de modelo de dados, você usar a classe de inicializador `Seed` método para inserir dados de teste, porque após cada alteração de modelo de banco de dados é descartado e todos os dados de teste é perdido. Com migrações do Code First, teste os dados são mantidos após as alterações do banco de dados, portanto, incluindo dados de teste na [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) método normalmente não é necessário. Na verdade, você não deseja que o `Seed` método para inserir dados de teste se você usará as migrações para implantar o banco de dados em produção, pois o `Seed` método será executado na produção. Nesse caso, você deseja que o `Seed` método a ser inserido no banco de dados somente os dados que você precisa em produção. Por exemplo, você pode querer o banco de dados para incluir nomes de departamento real no `Department` tabela quando o aplicativo está disponível em produção.
+Quando você remove e recria o banco de dados para todas as alterações de modelo, você usa o método da `Seed` classe inicializador para inserir dados de teste, pois depois que cada modelo é alterado, o banco de dados é Descartado e todos os dado de teste são perdidos. Com o Migrações do Code First, os dados de teste são retidos após as alterações do banco de dados, de modo que, inclusive, o método de [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) não é necessário normalmente. Na verdade, você não quer que `Seed` o método insira dados de teste se você estiver usando migrações para implantar o Database para produção, pois o `Seed` método será executado em produção. Nesse caso, você deseja que o `Seed` método seja inserido no banco de dados somente os dados necessários na produção. Por exemplo, talvez você queira que o banco de dados inclua nomes de departamento `Department` reais na tabela quando o aplicativo se tornar disponível em produção.
 
-Para este tutorial, você usará as migrações para a implantação, mas seu `Seed` método vai inserir dados de teste de qualquer forma para torná-lo mais fácil de ver como a funcionalidade do aplicativo funciona sem precisar inserir manualmente o muitos dados.
+Para este tutorial, você usará migrações para implantação, mas o `Seed` método inserirá dados de teste de qualquer forma para facilitar a visualização de como a funcionalidade do aplicativo funciona sem a necessidade de inserir manualmente muitos dados.
 
-1. Substitua o conteúdo do *Configuration.cs* arquivo pelo código a seguir, que carrega dados de teste para o novo banco de dados.
+1. Substitua o conteúdo do arquivo *Configuration.cs* pelo código a seguir, que carrega os dados de teste para o novo banco de dado.
 
     [!code-csharp[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample4.cs)]
 
-    O [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) método usa o objeto de contexto do banco de dados como um parâmetro de entrada e o código no método utiliza o objeto para adicionar novas entidades no banco de dados. Para cada tipo de entidade, o código cria uma coleção de novas entidades e os adiciona ao apropriado [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=vs.103).aspx) propriedade e, em seguida, salva as alterações no banco de dados. Não é necessário chamar o [SaveChanges](https://msdn.microsoft.com/library/system.data.entity.dbcontext.savechanges(v=VS.103).aspx) método depois de cada grupo de entidades, assim como é feito aqui, mas fazer isso ajuda a localizar a origem de um problema se ocorrer uma exceção enquanto o código é escrito para o banco de dados.
+    O método [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) usa o objeto de contexto de banco de dados como um parâmetro de entrada, e o código no método usa esse objeto para adicionar novas entidades ao banco de dados. Para cada tipo de entidade, o código cria uma coleção de novas entidades, adiciona-as à propriedade [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=vs.103).aspx) apropriada e salva as alterações no banco de dados. Não é necessário chamar o método [SaveChanges](https://msdn.microsoft.com/library/system.data.entity.dbcontext.savechanges(v=VS.103).aspx) depois de cada grupo de entidades, como é feito aqui, mas fazer isso ajuda a localizar a origem de um problema se ocorrer uma exceção enquanto o código estiver gravando no banco de dados.
 
-    Algumas das instruções que inserem dados usam o [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método para executar uma operação "upsert". Porque o `Seed` método é executado sempre que você executar o `update-database` de comando, normalmente após cada migração, você simplesmente não é possível inserir dados, porque as linhas que você está tentando adicionar já estará lá após a primeira migração que cria o banco de dados. A operação "upsert" impede que os erros que acontecem se você tentar inserir uma linha que já existe, mas ***substituições*** as alterações nos dados feitas durante o teste o aplicativo. Com os dados de teste em algumas tabelas você talvez não queira que aconteça: em alguns casos quando você altera os dados durante o teste você deseja as suas alterações para permanecer após as atualizações do banco de dados. Nesse caso, você deseja fazer uma operação de inserção condicional: inserir uma linha apenas se ele ainda não existir. O método de propagação usa as duas abordagens.
+    Algumas das instruções que inserem dados usam o método [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) para executar uma operação "Upsert". Como o `Seed` método é executado toda vez que você `update-database` executa o comando, normalmente após cada migração, não é possível apenas inserir dados, pois as linhas que você está tentando adicionar já estarão lá após a primeira migração que cria o banco de dado. A operação "Upsert" impede erros que ocorrerão se você tentar inserir uma linha que já existe, mas ela ***substitui*** quaisquer alterações nos dados que você tenha feito durante o teste do aplicativo. Com os dados de teste em algumas tabelas, talvez você não queira que isso aconteça: em alguns casos, ao alterar os dados durante o teste, você deseja que as alterações permaneçam após as atualizações do banco. Nesse caso, você deseja fazer uma operação de inserção condicional: Insira uma linha somente se ela ainda não existir. O método semente usa ambas as abordagens.
 
-    O primeiro parâmetro passado para o [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método Especifica a propriedade a ser usada para verificar se já existe uma linha. Para os dados de aluno de teste que você fornecer, o `LastName` propriedade pode ser usada para essa finalidade, pois cada sobrenome na lista é exclusivo:
+    O primeiro parâmetro passado para o método [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) especifica a propriedade a ser usada para verificar se já existe uma linha. Para os dados de aluno de teste que você está fornecendo `LastName` , a propriedade pode ser usada para essa finalidade, pois cada sobrenome na lista é exclusivo:
 
     [!code-csharp[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample5.cs)]
 
-    Esse código supõe que o último nomes sejam exclusivos. Se você adicionar manualmente um aluno com um sobrenome duplicado, você obterá a seguinte exceção na próxima vez que você executar uma migração:
+    Esse código pressupõe que os últimos nomes são exclusivos. Se você adicionar manualmente um aluno com um sobrenome duplicado, obterá a seguinte exceção na próxima vez que executar uma migração:
 
-    **Sequência contém mais de um elemento**
+    **A sequência contém mais de um elemento**
 
-    Para obter informações sobre como lidar com dados redundantes, como dois alunos denominados "Alexander Carson", consulte [Seeding e bancos de dados de depuração Entity Framework (EF)](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) no blog de Rick Anderson. Para obter mais informações sobre o `AddOrUpdate` método, consulte [tome cuidado com o EF 4.3 AddOrUpdate método](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) no blog de Julie.
+    Para obter informações sobre como lidar com dados redundantes, como dois alunos nomeados como "Alexander Carson", consulte o de [FE (propagação e Entity Framework depuração) do EF](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) no blog de Rick Anderson. Para obter mais informações sobre `AddOrUpdate` o método, consulte [tome cuidado com o método EF 4,3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) no blog de Julie Lerman.
 
-    O código que cria `Enrollment` entidades pressupõe que você tenha o `ID` valor em entidades no `students` coleção, embora você não definir essa propriedade no código que cria a coleção.
+    O código que cria `Enrollment` entidades pressupõe que você tenha `ID` o valor `students` nas entidades na coleção, embora não tenha definido essa propriedade no código que cria a coleção.
 
     [!code-csharp[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample6.cs?highlight=2)]
 
-    Você pode usar o `ID` propriedade aqui porque o `ID` valor é definido quando você chama `SaveChanges` para o `students` coleção. O EF automaticamente obtém o valor de chave primária quando ele insere uma entidade no banco de dados e atualiza o `ID` propriedade da entidade na memória.
+    Você pode usar a `ID` Propriedade aqui porque o `ID` valor é definido quando você chama `SaveChanges` para a `students` coleção. O EF obtém automaticamente o valor de chave primária quando insere uma entidade no banco de dados e atualiza a `ID` propriedade da entidade na memória.
 
-    O código que adiciona cada `Enrollment` entidade para o `Enrollments` conjunto de entidades não usa o `AddOrUpdate` método. Ele verifica se uma entidade já existe e insere a entidade se ela não existir. Essa abordagem preserva as alterações feitas para um nível de registro usando o interface do usuário do aplicativo. O código executa um loop em cada membro do `Enrollment` [lista](https://msdn.microsoft.com/library/6sh2ey19.aspx) e se o registro não for encontrado no banco de dados, ele adiciona o registro no banco de dados. Na primeira vez que você atualizar o banco de dados, o banco de dados estará vazio, portanto, ele adicionará cada registro.
+    O código que adiciona cada `Enrollment` entidade `Enrollments` ao conjunto de entidades não usa o `AddOrUpdate` método. Ele verifica se uma entidade já existe e insere a entidade, caso ela não exista. Essa abordagem preservará as alterações feitas em uma classificação de registro usando a interface do usuário do aplicativo. O código percorre cada membro da `Enrollment` [lista](https://msdn.microsoft.com/library/6sh2ey19.aspx) e, se o registro não for encontrado no banco de dados, ele adicionará o registro ao banco de dados. Na primeira vez que você atualizar o banco de dados, o banco de dados estará vazio, portanto, ele adicionará cada registro.
 
     [!code-csharp[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample7.cs)]
 
 2. Compile o projeto.
 
-### <a name="execute-the-first-migration"></a>Execute a primeira migração
+### <a name="execute-the-first-migration"></a>Executar a primeira migração
 
-Quando você executou o `add-migration` de comando, as migrações gerou o código que cria o banco de dados do zero. Esse código também está na *migrações* pasta, no arquivo chamado  *&lt;timestamp&gt;\_InitialCreate.cs*. O `Up` método da `InitialCreate` classe cria as tabelas de banco de dados que correspondem aos conjuntos de entidade do modelo de dados, e o `Down` método exclui-los.
+Quando você executou `add-migration` o comando, as migrações geraram o código que criaria o banco de dados do zero. Esse código também está na pasta *migrações* , no arquivo chamado  *&lt;timestamp&gt;\_InitialCreate.cs*. O `Up` método `Down` da classe cria as tabelas de banco de dados que correspondem aos conjuntos de entidades de modelo de dado e o método os exclui. `InitialCreate`
 
 [!code-csharp[Main](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample8.cs)]
 
 As migrações chamam o método `Up` para implementar as alterações do modelo de dados para uma migração. Quando você insere um comando para reverter a atualização, as Migrações chamam o método `Down`.
 
-Essa é a migração inicial que foi criada quando você inseriu o `add-migration InitialCreate` comando. O parâmetro (`InitialCreate` no exemplo) é usado para o arquivo de nome e pode ser que você quiser; normalmente deve escolher uma palavra ou frase que resume o que está sendo feito na migração. Por exemplo, você pode nomear uma migração posterior &quot;AddDepartmentTable&quot;.
+Essa é a migração inicial que foi criada quando você inseriu `add-migration InitialCreate` o comando. O parâmetro (`InitialCreate` no exemplo) é usado para o nome do arquivo e pode ser o que você desejar. normalmente, você escolhe uma palavra ou frase que resume o que está sendo feito na migração. Por exemplo, você pode nomear uma migração &quot;mais tarde como&quot;adddepartmenttable.
 
-Se você criou a migração inicial quando o banco de dados já existia, o código de criação de banco de dados é gerado, mas ele não precisa ser executado porque o banco de dados já corresponde ao modelo de dados. Quando você implantar o aplicativo em outro ambiente no qual o banco de dados ainda não existe, esse código será executado para criar o banco de dados; portanto, é uma boa ideia testá-lo primeiro. É por isso que você alterou o nome do banco de dados na cadeia de conexão anteriormente&mdash;para que as migrações possam criar um novo do zero.
+Se você criou a migração inicial quando o banco de dados já existia, o código de criação de banco de dados é gerado, mas ele não precisa ser executado porque o banco de dados já corresponde ao modelo de dados. Quando você implantar o aplicativo em outro ambiente no qual o banco de dados ainda não existe, esse código será executado para criar o banco de dados; portanto, é uma boa ideia testá-lo primeiro. É por isso que você alterou o nome do banco de dados na cadeia&mdash;de conexão anterior para que as migrações possam criar um novo a partir do zero.
 
-1. No **Package Manager Console** janela, digite o seguinte comando:
+1. Na janela do **console do Gerenciador de pacotes** , digite o seguinte comando:
 
     `update-database`
 
-    O `update-database` comando executa o `Up` método para criar o banco de dados e, em seguida, ele é executado o `Seed` para popular o banco de dados. O mesmo processo será executado automaticamente em produção depois que você implantar o aplicativo, como você verá na seção a seguir.
-2. Use **Gerenciador de servidores** para inspecionar o banco de dados, como você fez no primeiro tutorial e executar o aplicativo para verificar que tudo ainda funciona como antes.
+    O `update-database` comando executa o `Up` método para criar o banco de dados e, em `Seed` seguida, executa o método para preencher o banco de dados. O mesmo processo será executado automaticamente na produção após a implantação do aplicativo, como você verá na seção a seguir.
+2. Use **Gerenciador de servidores** para inspecionar o banco de dados como você fez no primeiro tutorial e execute o aplicativo para verificar se tudo ainda funciona da mesma forma que antes.
 
 ## <a name="deploy-to-azure"></a>Implantar no Azure
 
-Até agora o aplicativo tiver sido executado localmente no IIS Express no computador de desenvolvimento. Para torná-lo disponível para que outras pessoas usem a Internet, você precisará implantá-lo em um provedor de hospedagem na web. Nesta seção do tutorial, você o implantará no Azure. Esta seção é opcional. Você pode ignorar essa etapa e continue com o tutorial a seguir, ou você pode adaptar as instruções nesta seção para um provedor de hospedagem diferente de sua escolha.
+Até agora, o aplicativo está em execução localmente em IIS Express no seu computador de desenvolvimento. Para torná-lo disponível para outras pessoas usarem pela Internet, você precisa implantá-lo em um provedor de hospedagem na Web. Nesta seção do tutorial, você o implantará no Azure. Esta seção é opcional; Você pode ignorar isso e continuar com o tutorial a seguir ou pode adaptar as instruções nesta seção para um provedor de hospedagem diferente de sua escolha.
 
-### <a name="use-code-first-migrations-to-deploy-the-database"></a>Usar migrações do Code First para implantar o banco de dados
+### <a name="use-code-first-migrations-to-deploy-the-database"></a>Usar Code First migrações para implantar o banco de dados
 
-Para implantar o banco de dados, você usará migrações do Code First. Quando você cria o perfil de publicação que você usa para definir as configurações para a implantação do Visual Studio, você selecionará uma caixa de seleção rotulada **Atualizar banco de dados**. Essa configuração faz com que o processo de implantação configurar automaticamente o aplicativo *Web. config* arquivo no servidor de destino, para que o Code First usa o `MigrateDatabaseToLatestVersion` a classe do inicializador.
+Para implantar o banco de dados, você usará Migrações do Code First. Ao criar o perfil de publicação que você usa para definir as configurações de implantação do Visual Studio, você marcará uma caixa de seleção rotulada **Atualizar banco de dados**. Essa configuração faz com que o processo de implantação configure automaticamente o arquivo *Web. config* do aplicativo no servidor de destino para que `MigrateDatabaseToLatestVersion` Code First use a classe do inicializador.
 
-Visual Studio não faz nada com o banco de dados durante o processo de implantação enquanto ela está copiando o seu projeto para o servidor de destino. Quando você executar o aplicativo implantado e acessa o banco de dados pela primeira vez após a implantação, o Code First verifica de se o banco de dados corresponde ao modelo de dados. Se houver uma incompatibilidade, Code First cria automaticamente o banco de dados (se ele ainda não exista) ou atualiza o esquema de banco de dados para a versão mais recente (se um banco de dados existe, mas não corresponde ao modelo). Se o aplicativo implementar um migrações `Seed` método, o método é executado depois que o banco de dados é criado ou o esquema é atualizado.
+O Visual Studio não faz nada com o banco de dados durante o processo de implantação enquanto copia seu projeto para o servidor de destino. Quando você executa o aplicativo implantado e acessa o banco de dados pela primeira vez após a implantação, o Code First verifica se o banco de dados corresponde ao modelo de dado. Se houver uma incompatibilidade, Code First criará automaticamente o banco de dados (se ele ainda não existir) ou atualizará o esquema de banco de dados para a versão mais recente (se existir um banco de dados, mas não corresponder ao modelo). Se o aplicativo implementar um `Seed` método de migrações, o método será executado depois que o banco de dados for criado ou o esquema for atualizado.
 
-Suas migrações `Seed` método insere dados de teste. Se você estivesse Implantando um ambiente de produção, você teria que alterar o `Seed` , de modo que ele insere apenas os dados que você deseja a ser inserido no seu banco de dados de produção. Por exemplo, no seu modelo de dados atual você talvez queira ter cursos real, mas os alunos fictícios no banco de dados de desenvolvimento. Você pode escrever um `Seed` método para carregar no desenvolvimento e comente os alunos fictícios antes de implantar em produção. Ou você pode escrever um `Seed` método carregar somente os cursos e insira os alunos fictícios no banco de dados de teste manualmente usando a interface do usuário do aplicativo.
+O `Seed` método Migrations insere dados de teste. Se você estivesse implantando em um ambiente de produção, precisaria alterar o `Seed` método para que ele apenas insira dados que você deseja inserir em seu banco de dados de produção. Por exemplo, em seu modelo de dados atual, talvez você queira ter cursos reais, mas os alunos fictícios no banco de dado de desenvolvimento. Você pode escrever um `Seed` método para carregar ambos no desenvolvimento e, em seguida, comentar os alunos fictícios antes de implantá-los na produção. Ou você pode escrever um `Seed` método para carregar apenas cursos e inserir os alunos fictícios no banco de dados de teste manualmente usando a interface do usuário do aplicativo.
 
 ### <a name="get-an-azure-account"></a>Obter uma conta do Azure
 
-Você precisará de uma conta do Azure. Se você ainda não tiver um, mas você tem uma assinatura do Visual Studio, você pode [ativar os benefícios da assinatura](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/
-). Caso contrário, você pode criar uma conta de avaliação gratuita em apenas alguns minutos. Para obter detalhes, consulte [avaliação gratuita do Azure](https://azure.microsoft.com/free/).
+Você precisará de uma conta do Azure. Se você ainda não tiver uma, mas tiver uma assinatura do Visual Studio, poderá [ativar os benefícios](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/
+)da sua assinatura. Caso contrário, você pode criar uma conta de avaliação gratuita em apenas alguns minutos. Para obter detalhes, consulte [avaliação gratuita do Azure](https://azure.microsoft.com/free/).
 
-### <a name="create-a-web-site-and-a-sql-database-in-azure"></a>Criar um site da web e um banco de dados SQL no Azure
+### <a name="create-a-web-site-and-a-sql-database-in-azure"></a>Criar um site da Web e um banco de dados SQL no Azure
 
-Seu aplicativo web no Azure será executado em um ambiente de hospedagem compartilhado, o que significa que ele é executado em máquinas virtuais (VMs) que são compartilhadas com outros clientes do Azure. Um ambiente de hospedagem compartilhado é uma maneira de baixo custo para começar a usar na nuvem. Posteriormente, se aumentar o tráfego da web, o aplicativo possa ser dimensionado para atender à necessidade executando em VMs dedicadas. Para saber mais sobre as opções de preço para o serviço de aplicativo do Azure, leia [preços do serviço de aplicativo](https://azure.microsoft.com/pricing/details/app-service/).
+Seu aplicativo Web no Azure será executado em um ambiente de hospedagem compartilhado, o que significa que ele é executado em máquinas virtuais (VMs) que são compartilhadas com outros clientes do Azure. Um ambiente de hospedagem compartilhado é uma maneira econômica de começar a usar a nuvem. Posteriormente, se o tráfego da Web aumentar, o aplicativo poderá ser dimensionado para atender à necessidade executando em VMs dedicadas. Para saber mais sobre as opções de preço para Azure App serviço, leia [preços do serviço de aplicativo](https://azure.microsoft.com/pricing/details/app-service/).
 
-Você implantará o banco de dados no banco de dados SQL do Azure. Banco de dados SQL é um serviço de banco de dados relacional baseado em nuvem que se baseia em tecnologias do SQL Server. Ferramentas e aplicativos que funcionam com o SQL Server também funcionam com o banco de dados SQL.
+Você implantará o banco de dados no banco de dados SQL do Azure. O banco de dados SQL é um serviço de banco de dados relacional baseado em nuvem criado em tecnologias de SQL Server. Ferramentas e aplicativos que funcionam com o SQL Server também funcionam com o banco de dados SQL.
 
-1. No [Portal de gerenciamento](https://portal.azure.com), escolha **criar um recurso** na parte esquerda guia e, em seguida, escolha **ver todos** no **novo** painel (ou *folha*) para ver todos os recursos disponíveis. Escolher **aplicativo Web + SQL** na **Web** seção o **tudo** folha. Por fim, escolha **criar**.
+1. Na [portal de gerenciamento do Azure](https://portal.azure.com), escolha **criar um recurso** na guia à esquerda e, em seguida, escolha **ver tudo** no **novo** painel (ou *folha*) para ver todos os recursos disponíveis. Escolha **aplicativo Web + SQL** na seção **da Web** da folha **tudo** . Por fim, escolha **criar**.
 
     ![Criar um recurso no Portal do Azure](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/create-azure-resource.png)
 
-   O formulário para criar um novo **novo aplicativo Web + SQL** recurso abre.
+   O formulário para criar um novo **aplicativo Web + novo recurso SQL** é aberto.
 
-2. Insira uma cadeia de caracteres a **nome do aplicativo** caixa para usar como a URL exclusiva para seu aplicativo. A URL completa consistirá em que você inserir aqui mais o domínio padrão dos serviços de aplicativo do Azure (. azurewebsites.net). Se o **nome do aplicativo** já está em uso, o assistente notifica um vermelho *o nome do aplicativo não está disponível* mensagem. Se o **nome do aplicativo** está disponível, você verá uma marca de seleção verde.
+2. Insira uma cadeia de caracteres na caixa **nome do aplicativo** para usar como a URL exclusiva para seu aplicativo. A URL completa consistirá no que você inserir aqui mais o domínio padrão dos serviços de Azure App (. azurewebsites.net). Se o **nome do aplicativo** já estiver em uso, o assistente o notificará com um vermelho *a mensagem o nome do aplicativo não está disponível* . Se o **nome do aplicativo** estiver disponível, você verá uma marca de seleção verde.
 
-3. No **assinatura** , escolha a assinatura do Azure no qual você deseja que o **serviço de aplicativo** deve residir.
+3. Na caixa **assinatura** , escolha a assinatura do Azure na qual você deseja que o **serviço de aplicativo** resida.
 
-4. No **grupo de recursos** caixa de texto, escolha um grupo de recursos ou criar um novo. Essa configuração especifica qual Datacenter seu site da web será executado em. Para obter mais informações sobre grupos de recursos, consulte [grupos de recursos](/azure/azure-resource-manager/resource-group-overview#resource-groups).
+4. Na caixa de texto **grupo de recursos** , escolha um grupo de recursos ou crie um novo. Essa configuração especifica em qual data center seu site será executado. Para obter mais informações sobre grupos de recursos, consulte [grupos de recursos](/azure/azure-resource-manager/resource-group-overview#resource-groups).
 
-5. Criar um novo **plano do serviço de aplicativo** clicando o *seção de serviço de aplicativo*, **criar novo**e preencha **plano do serviço de aplicativo** (pode ser mesmo nome Serviço de aplicativo), **local**, e **tipo de preço** (há uma opção gratuita).
+5. Crie um novo **plano do serviço de aplicativo** clicando na *seção serviço de aplicativo*, **criar novo**e preencher o plano do serviço de **aplicativo** (pode ser o mesmo nome que o serviço de aplicativo), o **local**e o **tipo de preço** (há uma opção gratuita).
 
-6. Clique em **banco de dados SQL**e, em seguida, escolha **criar um novo banco de dados** ou selecione um banco de dados existente.
+6. Clique em **banco de dados SQL**e escolha **criar um novo banco de dados** ou selecione um banco de dados existente.
 
-7. No **nome** , digite um nome para seu banco de dados.
-8. Clique o **servidor de destino** caixa e, em seguida, selecione **criar um novo servidor**. Como alternativa, se você tiver criado um servidor, você pode selecionar esse servidor na lista de servidores disponíveis.
-9. Escolher **tipo de preço** , escolha *gratuito*. Se forem necessários recursos adicionais, o banco de dados pode ser escalado verticalmente a qualquer momento. Para saber mais sobre os preços do Azure SQL, consulte [preços do banco de dados SQL](https://azure.microsoft.com/pricing/details/sql-database/managed/).
-10. Modifique [agrupamento](/sql/relational-databases/collations/collation-and-unicode-support) conforme necessário.
-11. Insira um administrador **nome de usuário de administrador de SQL** e **senha de administrador do SQL**.
+7. Na caixa **nome** , insira um nome para o banco de dados.
+8. Clique na caixa **servidor de destino** e selecione **criar um novo servidor**. Como alternativa, se você tiver criado anteriormente um servidor, poderá selecionar esse servidor na lista de servidores disponíveis.
+9. Escolha a seção **tipo de preço** , escolha *gratuito*. Se forem necessários recursos adicionais, o banco de dados poderá ser escalado verticalmente a qualquer momento. Para saber mais sobre os preços do SQL Azure, confira [preços do banco de dados SQL do Azure](https://azure.microsoft.com/pricing/details/sql-database/managed/).
+10. Modifique o [agrupamento](/sql/relational-databases/collations/collation-and-unicode-support) conforme necessário.
+11. Insira um administrador **SQL admin nome de usuário** e uma **senha de administrador do SQL**.
 
-    - Se você selecionou **servidor do novo banco de dados SQL**, definir um novo nome e uma senha que você usará mais tarde ao acessar o banco de dados.
-    - Se você selecionou um servidor que você criou anteriormente, insira as credenciais para o servidor.
+    - Se você selecionou **novo servidor de banco de dados SQL**, defina um novo nome e senha que você usará mais tarde ao acessar o banco de dados.
+    - Se você selecionou um servidor que você criou anteriormente, insira as credenciais para esse servidor.
 
-12. Coleta de telemetria pode ser habilitada para o serviço de aplicativo usando o Application Insights. Com pouca configuração, o Application Insights coleta eventos importantes, exceção, dependência, solicitação e informações de rastreamento. Para saber mais sobre o Application Insights, consulte [do Azure Monitor](https://azure.microsoft.com/services/monitor/).
-13. Clique em **criar** na parte inferior para indicar que tiver terminado.
+12. A coleção de telemetria pode ser habilitada para o serviço de aplicativo usando Application Insights. Com pouca configuração, Application Insights coleta informações valiosas de evento, exceção, dependência, solicitação e rastreamento. Para saber mais sobre Application Insights, consulte [Azure monitor](https://azure.microsoft.com/services/monitor/).
+13. Clique em **criar** na parte inferior para indicar que você terminou.
 
-    O Portal de gerenciamento retorna à página do painel e o **notificações** área na parte superior da página mostra que o site está sendo criado. Depois de algum tempo (normalmente menos de um minuto), há uma notificação de que a implantação foi bem-sucedida. Na barra de navegação à esquerda, o novo serviço de aplicativo aparece na **serviços de aplicativos** seção e o novo banco de dados SQL aparece na **bancos de dados SQL** seção.
+    O Portal de Gerenciamento retorna à página do painel e a área de **notificações** na parte superior da página mostra que o site está sendo criado. Após um tempo (normalmente menos de um minuto), há uma notificação de que a implantação foi bem-sucedida. Na barra de navegação à esquerda, o novo serviço de aplicativo é exibido na seção **serviços de aplicativos** e o novo banco de dados SQL é exibido na seção SQL databases.
 
 ### <a name="deploy-the-app-to-azure"></a>Implantar o aplicativo no Azure
 
-1. No Visual Studio, clique com botão direito no projeto no **Gerenciador de soluções** e selecione **publicar** no menu de contexto.
+1. No Visual Studio, clique com o botão direito do mouse no projeto em **Gerenciador de soluções** e selecione **publicar** no menu de contexto.
 
-2. Sobre o **escolher um destino de publicação** , escolha **serviço de aplicativo** e, em seguida, **selecionar existente**e, em seguida, escolha **publicar**.
+2. Na página **escolher um destino de publicação** , escolha **serviço de aplicativo** e, em seguida, **selecione existente**e, em seguida, escolha **publicar**.
 
-    ![Selecionar uma página de destino de publicação](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/publish-select-existing-azure-app-service.png)
+    ![Escolha uma página de destino de publicação](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/publish-select-existing-azure-app-service.png)
 
-3. Se você ainda não adicionou anteriormente sua assinatura do Azure no Visual Studio, execute as etapas na tela. Essas etapas habilitam o Visual Studio para se conectar à sua assinatura do Azure assim que a lista de **serviços de aplicativos** incluirá o seu site da web.
+3. Se você ainda não adicionou sua assinatura do Azure no Visual Studio, execute as etapas na tela. Essas etapas permitem que o Visual Studio se conecte à sua assinatura do Azure para que a lista de **serviços de aplicativos** inclua seu site.
 
-4. Sobre o **serviço de aplicativo** página, selecione o **assinatura** você adicionou o serviço de aplicativo. Sob **modo de exibição**, selecione **grupo de recursos**. Expanda o grupo de recursos que você adicionou o serviço de aplicativo e, em seguida, selecione o serviço de aplicativo. Escolher **Okey** para publicar o aplicativo.
+4. Na página **serviço de aplicativo** , selecione a **assinatura** à qual você adicionou o serviço de aplicativo. Em **Exibir**, selecione **grupo de recursos**. Expanda o grupo de recursos ao qual você adicionou o serviço de aplicativo e, em seguida, selecione o serviço de aplicativo. Escolha **OK** para publicar o aplicativo.
 
-5. O **saída** janela mostra quais ações de implantação foram executadas e relata a conclusão bem-sucedida da implantação.
+5. A janela **saída** mostra quais ações de implantação foram executadas e relata a conclusão bem-sucedida da implantação.
 
-6. Após a implantação bem-sucedida, o navegador padrão abre automaticamente a URL do site da web implantado.
+6. Após a implantação bem-sucedida, o navegador padrão será aberto automaticamente na URL do site implantado.
 
     ![Students_index_page_with_paging](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/cloud-app-browser.png)
 
     Seu aplicativo agora está em execução na nuvem.
 
-Neste ponto, o *SchoolContext* banco de dados tenha sido criado no banco de dados SQL do Azure porque você selecionou **executar migrações do Code First (executado na inicialização do aplicativo)**. O *Web. config* arquivo no site da web implantado foi alterado para que o [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx) inicializador é executado na primeira vez em que seu código lê ou grava dados no banco de dados (o que aconteceu Quando você selecionou o **alunos** guia):
+Neste ponto, o banco de dados *SchoolContext* foi criado no banco de dados SQL do Azure porque você selecionou **executar migrações do Code First (é executado no início do aplicativo)** . O arquivo *Web. config* no site implantado foi alterado para que o inicializador [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx) seja executado na primeira vez em que seu código lê ou grava dados no banco de dado (o que aconteceu quando você selecionou a guia **alunos** ):
 
-![Web.config file excerpt](https://asp.net/media/4367421/mig.png)
+![Trecho do arquivo Web. config](https://asp.net/media/4367421/mig.png)
 
-Além disso, o processo de implantação criada uma nova cadeia de caracteres de conexão *(SchoolContext\_DatabasePublish*) para migrações do Code First a ser usado para atualizar o esquema de banco de dados e a propagação do banco de dados.
+O processo de implantação também criou uma nova cadeia de conexão *\_(SchoolContext DatabasePublish*) para migrações do Code First usar para atualizar o esquema de banco de dados e propagar o banco de dados.
 
-![Cadeia de caracteres de Conexão no arquivo Web. config](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image26.png)
+![Cadeia de conexão no arquivo Web. config](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/image26.png)
 
-Você pode encontrar a versão implantada do arquivo Web. config em seu próprio computador *ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*. Você pode acessar o implantado *Web. config* próprio arquivo por meio de FTP. Para obter instruções, consulte [implantação de Web do ASP.NET usando o Visual Studio: Implantando uma atualização de código](xref:web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update). Siga as instruções que começam com "para usar uma ferramenta FTP, você precisa de três itens: a URL de FTP, o nome de usuário e a senha."
+Você pode encontrar a versão implantada do arquivo Web. config em seu próprio computador no *ContosoUniversity\obj\Release\Package\PackageTmp\Web.config*. Você pode acessar o próprio arquivo *Web. config* implantado usando FTP. Para obter instruções, [consulte implantação da Web do ASP.NET usando o Visual Studio: Implantando uma atualização](xref:web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update)de código. Siga as instruções que começam com "para usar uma ferramenta de FTP, você precisa de três coisas: a URL de FTP, o nome de usuário e a senha".
 
 > [!NOTE]
-> O aplicativo web não implementa a segurança, portanto, qualquer pessoa que encontre a URL pode alterar os dados. Para obter instruções sobre como proteger o site da web, consulte [implantar um aplicativo ASP.NET MVC seguro com o banco de dados de associação, OAuth e SQL no Azure](/aspnet/core/security/authorization/secure-data). Você pode impedir que outras pessoas usando o site, interrompendo o serviço usando o Portal de gerenciamento do Azure ou **Gerenciador de servidores** no Visual Studio.
+> O aplicativo Web não implementa a segurança, para que qualquer pessoa que encontre a URL possa alterar os dados. Para obter instruções sobre como proteger o site da Web, consulte [implantar um aplicativo MVC do secure ASP.NET com associação, OAuth e banco de dados SQL no Azure](/aspnet/core/security/authorization/secure-data). Você pode impedir que outras pessoas usem o site parando o serviço usando o Portal de Gerenciamento ou o **Gerenciador de servidores** do Azure no Visual Studio.
 
-![Parar o item de menu de serviço de aplicativo](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/server-explorer-stop-app-service.png)
+![Parar o item de menu do serviço de aplicativo](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application/_static/server-explorer-stop-app-service.png)
 
 ## <a name="advanced-migrations-scenarios"></a>Cenários de migrações avançadas
 
-Se você implantar um banco de dados, executando migrações automaticamente, conforme mostrado neste tutorial, e você estiver implantando em um site da web que é executado em vários servidores, você poderia obter vários servidores tentando executar migrações ao mesmo tempo. As migrações são atômicas, portanto, se dois servidores tentarem executar a migração do mesmo, um será bem-sucedida e o outro falhará (supondo que as operações não podem ser feitas de duas vezes). Nesse cenário para evitar esses problemas, você pode chamar migrações manualmente e definir seu próprio código para que ele ocorre apenas uma vez. Para obter mais informações, consulte [em execução e scripts de migrações de código](http://romiller.com/2012/02/09/running-scripting-migrations-from-code/) no blog de Rowan Miller e [Migrate.exe](/ef/ef6/modeling/code-first/migrations/migrate-exe) (para executar migrações a partir da linha de comando).
+Se você implantar um banco de dados executando migrações automaticamente, conforme mostrado neste tutorial, e estiver implantando em um site que é executado em vários servidores, poderá obter vários servidores tentando executar migrações ao mesmo tempo. As migrações são atômicas, portanto, se dois servidores tentarem executar a mesma migração, um será bem sucedido e o outro falhará (supondo que as operações não possam ser feitas duas vezes). Nesse cenário, se você quiser evitar esses problemas, poderá chamar as migrações manualmente e configurar seu próprio código para que isso ocorra apenas uma vez. Para obter mais informações, consulte [executando e realizando migrações de scripts do código](http://romiller.com/2012/02/09/running-scripting-migrations-from-code/) no blog de Rowan Miller e [Migrate. exe](/ef/ef6/modeling/code-first/migrations/migrate-exe) (para executar migrações na linha de comando).
 
-Para obter informações sobre outros cenários de migrações, consulte [a série Screencast migrações](https://blogs.msdn.com/b/adonet/archive/2014/03/12/migrations-screencast-series.aspx).
+Para obter informações sobre outros cenários de migração, consulte [Migrations screencast Series](https://blogs.msdn.com/b/adonet/archive/2014/03/12/migrations-screencast-series.aspx).
 
-## <a name="code-first-initializers"></a>Inicializadores de primeiro código
+## <a name="update-specific-migration"></a>Atualizar migração específica
 
-Na seção de implantação, você viu a [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx) inicializador que está sendo usado. Código pela primeira vez também fornece outros inicializadores, incluindo [CreateDatabaseIfNotExists](https://msdn.microsoft.com/library/gg679221(v=vs.103).aspx) (o padrão), [DropCreateDatabaseIfModelChanges](https://msdn.microsoft.com/library/gg679604(v=VS.103).aspx) (que você usou anteriormente) e [ DropCreateDatabaseAlways](https://msdn.microsoft.com/library/gg679506(v=VS.103).aspx). O `DropCreateAlways` inicializador pode ser útil para configurar condições para testes de unidade. Você também pode escrever seus próprios inicializadores, e você pode chamar um inicializador explicitamente, se você não quiser esperar até que o aplicativo lê ou grava no banco de dados.
+`update-database -target MigrationName`
 
-Para obter mais informações sobre inicializadores, consulte [Noções básicas sobre inicializadores de banco de dados no Entity Framework Code First](http://www.codeguru.com/csharp/article.php/c19999/Understanding-Database-Initializers-in-Entity-Framework-Code-First.htm) e o capítulo 6 do livro [Programming Entity Framework: Code First](http://shop.oreilly.com/product/0636920022220.do) por Julie Lerman e Rowan Miller.
+O `update-database -target MigrationName` comando executa a migração de destino.
+
+## <a name="ignore-migration-changes-to-database"></a>Ignorar alterações de migração no banco de dados
+
+`Add-migration MigrationName -ignoreChanges`
+
+`ignoreChanges`Cria uma migração vazia com o modelo atual como um instantâneo.
+
+## <a name="code-first-initializers"></a>Inicializadores de Code First
+
+Na seção de implantação, você viu o inicializador [MigrateDatabaseToLatestVersion](https://msdn.microsoft.com/library/hh829476(v=vs.103).aspx) que está sendo usado. Code First também fornece outros inicializadores, incluindo [CreateDatabaseIfNotExists](https://msdn.microsoft.com/library/gg679221(v=vs.103).aspx) (o padrão), [DropCreateDatabaseIfModelChanges](https://msdn.microsoft.com/library/gg679604(v=VS.103).aspx) (que você usou anteriormente) e [DropCreateDatabaseAlways](https://msdn.microsoft.com/library/gg679506(v=VS.103).aspx). O `DropCreateAlways` inicializador pode ser útil para configurar condições para testes de unidade. Você também pode escrever seus próprios inicializadores e pode chamar um inicializador explicitamente se não quiser esperar até que o aplicativo leia ou grave no banco de dados.
+
+Para obter mais informações sobre inicializadores, consulte [noções básicas sobre inicializadores de banco de dados no Entity Framework Code First](http://www.codeguru.com/csharp/article.php/c19999/Understanding-Database-Initializers-in-Entity-Framework-Code-First.htm) e o capítulo 6 da Entity Framework de programação de livros [: Code First](http://shop.oreilly.com/product/0636920022220.do) por Julie Lerman e Rowan Miller.
 
 ## <a name="get-the-code"></a>Obter o código
 
-[Baixe o projeto concluído](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
+[Baixar o projeto concluído](https://webpifeed.blob.core.windows.net/webpifeed/Partners/ASP.NET%20MVC%20Application%20Using%20Entity%20Framework%20Code%20First.zip)
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-Links para outros recursos do Entity Framework pode ser encontrado na [acesso a dados ASP.NET – recursos recomendados](xref:whitepapers/aspnet-data-access-content-map).
+Links para outros recursos de Entity Framework podem ser encontrados em [recursos de acesso a dados ASP.net-recomendado](xref:whitepapers/aspnet-data-access-content-map).
 
 ## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você:
 
 > [!div class="checklist"]
-> * Migrações do Code First habilitadas
+> * Migrações Code First habilitadas
 > * Implantou o aplicativo no Azure (opcional)
 
-Avance para o próximo artigo para saber como criar um modelo de dados mais complexo para um aplicativo ASP.NET MVC.
+Avance para o próximo artigo para saber como criar um modelo de dados mais complexo para um aplicativo MVC ASP.NET.
 > [!div class="nextstepaction"]
 > [Criar um modelo de dados mais complexo](creating-a-more-complex-data-model-for-an-asp-net-mvc-application.md)
