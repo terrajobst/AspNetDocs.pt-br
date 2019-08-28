@@ -1,6 +1,6 @@
 ---
 uid: web-api/videos/getting-started/getting-data
-title: 'ASP.NET API Web, parte 2: Obtendo dados | Microsoft Docs'
+title: 'ASP.NET Web API, parte 2: Obtendo dados | Microsoft Docs'
 author: jongalloway
 description: 'Observação: Este vídeo contém informações de uma versão de pré-lançamento do ASP.NET Web API'
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59391904"
 ---
-# <a name="aspnet-web-api-part-2-getting-data"></a>ASP.NET API Web, parte 2: Obter dados
+# <a name="aspnet-web-api-part-2-getting-data"></a>ASP.NET Web API, parte 2: Obter dados
 
 por [Jon Galloway](https://github.com/jongalloway)
 

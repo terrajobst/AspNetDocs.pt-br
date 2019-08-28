@@ -1,6 +1,6 @@
 ---
 uid: web-api/videos/getting-started/authorization
-title: 'ASP.NET API Web, parte 6: Autorização | Microsoft Docs'
+title: 'ASP.NET Web API, parte 6: Autorização | Microsoft Docs'
 author: jongalloway
 description: 'Observação: Este vídeo contém informações de uma versão de pré-lançamento do ASP.NET Web API'
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410897"
 ---
-# <a name="aspnet-web-api-part-6-authorization"></a>ASP.NET API Web, parte 6: Autorização
+# <a name="aspnet-web-api-part-6-authorization"></a>ASP.NET Web API, parte 6: Autorização
 
 por [Jon Galloway](https://github.com/jongalloway)
 

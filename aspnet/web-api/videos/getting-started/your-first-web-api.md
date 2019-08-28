@@ -1,6 +1,6 @@
 ---
 uid: web-api/videos/getting-started/your-first-web-api
-title: 'ASP.NET API Web, parte 1: Sua primeira API Web | Microsoft Docs'
+title: 'ASP.NET Web API, parte 1: Sua primeira API Web | Microsoft Docs'
 author: jongalloway
 description: 'Observação: Este vídeo contém informações de uma versão de pré-lançamento do ASP.NET Web API'
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59410871"
 ---
-# <a name="aspnet-web-api-part-1-your-first-web-api"></a>ASP.NET API Web, parte 1: Sua primeira API Web
+# <a name="aspnet-web-api-part-1-your-first-web-api"></a>ASP.NET Web API, parte 1: Sua primeira API Web
 
 por [Jon Galloway](https://github.com/jongalloway)
 

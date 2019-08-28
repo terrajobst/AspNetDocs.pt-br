@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/06/2019
 ms.locfileid: "65125252"
 ---
-# <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET API Web e o Angular.js
+# <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET Web API e o Angular.js
 
 por [Web Camps equipe](https://twitter.com/webcamps)
 
@@ -202,12 +202,12 @@ Você usará as ferramentas de Scaffolding do ASP.NET fornecidas pelo Visual Stu
     *Adicionando o controlador de desafios*
 7. O **TriviaController.cs** arquivo, em seguida, é adicionado à **controladores** pasta dos **GeekQuiz** projeto que contém um vazio **TriviaController** classe. Adicione o seguinte usando instruções no início do arquivo.
 
-    (Código de trecho de código – *TriviaControllerUsings AspNetWebApiSpa - Ex1 -*)
+    (Código de trecho de código – *TriviaControllerUsings AspNetWebApiSpa - Ex1 -* )
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample9.cs)]
 8. Adicione o seguinte código no início do **TriviaController** classe para definir, inicializar e descartar os **TriviaContext** instância no controlador.
 
-    (Código de trecho de código – *TriviaControllerContext AspNetWebApiSpa - Ex1 -*)
+    (Código de trecho de código – *TriviaControllerContext AspNetWebApiSpa - Ex1 -* )
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample10.cs)]
 
@@ -215,22 +215,22 @@ Você usará as ferramentas de Scaffolding do ASP.NET fornecidas pelo Visual Stu
     > O **Dispose** método de **TriviaController** invoca o **Dispose** o método da **TriviaContext** instância, o que garante que todos os os recursos usados pelo objeto de contexto são liberados quando a **TriviaContext** instância é descartada ou jogada fora. Isso inclui o fechamento de todas as conexões de banco de dados abertas pelo Entity Framework.
 9. Adicione o seguinte método auxiliar no final de **TriviaController** classe. Esse método recupera as seguintes perguntas de teste do banco de dados a serem respondidas pelo usuário especificado.
 
-    (Código de trecho de código – *TriviaControllerNextQuestion AspNetWebApiSpa - Ex1 -*)
+    (Código de trecho de código – *TriviaControllerNextQuestion AspNetWebApiSpa - Ex1 -* )
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample11.cs)]
 10. Adicione o seguinte **Obtenha** método de ação para o **TriviaController** classe. Esse método de ação chama o **NextQuestionAsync** método auxiliar definido na etapa anterior para recuperar a próxima pergunta para o usuário autenticado.
 
-    (Código de trecho de código – *TriviaControllerGetAction AspNetWebApiSpa - Ex1 -*)
+    (Código de trecho de código – *TriviaControllerGetAction AspNetWebApiSpa - Ex1 -* )
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample12.cs)]
 11. Adicione o seguinte método auxiliar no final de **TriviaController** classe. Este método armazena a resposta especificada no banco de dados e retorna um valor booliano que indica se a resposta está correta.
 
-    (Código de trecho de código – *TriviaControllerStoreAsync AspNetWebApiSpa - Ex1 -*)
+    (Código de trecho de código – *TriviaControllerStoreAsync AspNetWebApiSpa - Ex1 -* )
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample13.cs)]
 12. Adicione o seguinte **Post** método de ação para o **TriviaController** classe. Esse método de ação associa a resposta para o usuário autenticado e chama o **StoreAsync** método auxiliar. Em seguida, ele envia uma resposta com o valor booliano retornado pelo método auxiliar.
 
-    (Código de trecho de código – *TriviaControllerPostAction AspNetWebApiSpa - Ex1 -*)
+    (Código de trecho de código – *TriviaControllerPostAction AspNetWebApiSpa - Ex1 -* )
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample14.cs)]
 13. Modificar o controlador de API da Web para restringir o acesso a usuários autenticados, adicionando a **Authorize** atributo para o **TriviaController** definição de classe.
@@ -322,7 +322,7 @@ Você irá iniciar instalando AngularJS por meio do Console do Gerenciador de pa
     *Nomear o novo arquivo JavaScript*
 6. No **teste controller.js** do arquivo, adicione o seguinte código para declarar e inicializar o AngularJS **QuizCtrl** controlador.
 
-    (Código de trecho de código – *AngularQuizController AspNetWebApiSpa - o Ex2 -*)
+    (Código de trecho de código – *AngularQuizController AspNetWebApiSpa - o Ex2 -* )
 
     [!code-javascript[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample17.js)]
 
@@ -332,7 +332,7 @@ Você irá iniciar instalando AngularJS por meio do Console do Gerenciador de pa
     > O **QuizCtrl** controlador é definido dentro de um módulo chamado **QuizApp**. Os módulos são unidades de trabalho que permitem a você dividir seu aplicativo em componentes separados. As principais vantagens do uso de módulos é que o código é mais fácil de entender e facilita os testes de unidade, a capacidade de reutilização e a facilidade de manutenção.
 7. Agora você irá adicionar comportamento para o escopo para reagir a eventos disparados do modo de exibição. Adicione o seguinte código no final do **QuizCtrl** controlador para definir o **nextQuestion** funcionar a **$scope** objeto.
 
-    (Código de trecho de código – *AngularQuizControllerNextQuestion AspNetWebApiSpa - o Ex2 -*)
+    (Código de trecho de código – *AngularQuizControllerNextQuestion AspNetWebApiSpa - o Ex2 -* )
 
     [!code-javascript[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample18.js)]
 
@@ -340,7 +340,7 @@ Você irá iniciar instalando AngularJS por meio do Console do Gerenciador de pa
     > Essa função recupera a próxima pergunta do **Trívia** API da Web criado no exercício anterior e anexa os pergunta que os dados para o **$scope** objeto.
 8. Insira o seguinte código no final dos **QuizCtrl** controlador para definir o **sendAnswer** funcionar no **$scope** objeto.
 
-    (Código de trecho de código – *AngularQuizControllerSendAnswer AspNetWebApiSpa - o Ex2 -*)
+    (Código de trecho de código – *AngularQuizControllerSendAnswer AspNetWebApiSpa - o Ex2 -* )
 
     [!code-javascript[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample19.js)]
 
@@ -350,7 +350,7 @@ Você irá iniciar instalando AngularJS por meio do Console do Gerenciador de pa
     > O **nextQuestion** e **sendAnswer** funções acima usam o AngularJS **$http** objeto abstrair a comunicação com a API da Web via XMLHttpRequest Objeto de JavaScript do navegador. AngularJS oferece suporte a outro serviço que traz um nível mais alto de abstração para executar operações CRUD em relação a um recurso por meio de APIs RESTful. O AngularJS **$resource** objeto tem métodos de ação que fornecem os comportamentos de alto nível sem a necessidade de interagir com o **$http** objeto. Considere o uso de **$resource** objeto em cenários que requer o modelo CRUD (para obter informações, consulte o [$resource documentação](https://docs.angularjs.org/api/ngResource/service/$resource)).
 9. A próxima etapa é criar o modelo de AngularJS que define o modo de exibição para o teste. Para fazer isso, abra o **index. cshtml** dentro do arquivo a **exibições | Página inicial** pasta e substitua o conteúdo pelo código a seguir.
 
-    (Código de trecho de código – *GeekQuizView AspNetWebApiSpa - o Ex2 -*)
+    (Código de trecho de código – *GeekQuizView AspNetWebApiSpa - o Ex2 -* )
 
     [!code-cshtml[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample20.cshtml)]
 
@@ -363,7 +363,7 @@ Você irá iniciar instalando AngularJS por meio do Console do Gerenciador de pa
     > - O **ng-click** diretiva é usada para invocar as funções definidas no escopo em resposta a cliques do usuário.
 10. Abra o **CSS** dentro do arquivo a **conteúdo** pasta e adicione os seguintes estilos realçados no final do arquivo para fornecer uma aparência para o modo de exibição de teste.
 
-    (Código de trecho de código – *GeekQuizStyles AspNetWebApiSpa - o Ex2 -*)
+    (Código de trecho de código – *GeekQuizStyles AspNetWebApiSpa - o Ex2 -* )
 
     [!code-css[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample21.css)]
 

@@ -2765,7 +2765,7 @@
               href: web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md
             - name: Criar páginas de ajuda da API Web
               href: web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md
-            - name: 'Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET API Web e o Angular.js'
+            - name: 'Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET Web API e o Angular.js'
               href: web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md
         - name: Roteamento
           href: web-api/overview/web-api-routing-and-actions/index.md
@@ -2932,7 +2932,7 @@
               href: web-api/overview/advanced/sending-html-form-data-part-1.md
             - name: 'Enviar dados de formulário HTML na API Web: Carregamento do arquivo e MIME com diversas partes'
               href: web-api/overview/advanced/sending-html-form-data-part-2.md
-            - name: Cookies HTTP no ASP.NET API Web
+            - name: Cookies HTTP no ASP.NET Web API
               href: web-api/overview/advanced/http-cookies.md
         - name: Lançamentos
           href: web-api/overview/releases/index.md
@@ -2967,7 +2967,7 @@
                   href: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7.md
             - name: 'Auto-hospedar a API Web 1 (C#)'
               href: web-api/overview/older-versions/self-host-a-web-api.md
-            - name: Criar APIs RESTful com o ASP.NET API Web
+            - name: Criar APIs RESTful com o ASP.NET Web API
               href: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api.md
     - name: vídeos
       href: web-api/videos/index.md
@@ -2977,17 +2977,17 @@
           items:
             - name: ASP.NET Web API
               href: web-api/videos/getting-started/aspnet-web-api.md
-            - name: 'ASP.NET API Web, parte 1: Sua primeira API Web'
+            - name: 'ASP.NET Web API, parte 1: Sua primeira API Web'
               href: web-api/videos/getting-started/your-first-web-api.md
-            - name: 'ASP.NET API Web, parte 2: Obter dados'
+            - name: 'ASP.NET Web API, parte 2: Obter dados'
               href: web-api/videos/getting-started/getting-data.md
-            - name: 'ASP.NET API Web, parte 3: Excluir e atualizar'
+            - name: 'ASP.NET Web API, parte 3: Excluir e atualizar'
               href: web-api/videos/getting-started/delete-and-update.md
-            - name: 'ASP.NET API Web, parte 4: Paginação e consulta'
+            - name: 'ASP.NET Web API, parte 4: Paginação e consulta'
               href: web-api/videos/getting-started/paging-and-querying.md
-            - name: 'ASP.NET API Web, parte 5: Validação personalizada'
+            - name: 'ASP.NET Web API, parte 5: Validação personalizada'
               href: web-api/videos/getting-started/custom-validation.md
-            - name: 'ASP.NET API Web, parte 6: Autorização'
+            - name: 'ASP.NET Web API, parte 6: Autorização'
               href: web-api/videos/getting-started/authorization.md
     - name: Lista de exemplos de API Web
       href: web-api/samples-list.md

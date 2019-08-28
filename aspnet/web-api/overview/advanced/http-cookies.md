@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 05/06/2019
 ms.locfileid: "65126246"
 ---
-# <a name="http-cookies-in-aspnet-web-api"></a>Cookies HTTP no ASP.NET API Web
+# <a name="http-cookies-in-aspnet-web-api"></a>Cookies HTTP no ASP.NET Web API
 
 por [Mike Wasson](https://github.com/MikeWasson)
 

@@ -1,6 +1,6 @@
 ---
 uid: web-api/videos/getting-started/paging-and-querying
-title: 'ASP.NET API Web, parte 4: Paginação e consulta | Microsoft Docs'
+title: 'ASP.NET Web API, parte 4: Paginação e consulta | Microsoft Docs'
 author: jongalloway
 description: 'Observação: Este vídeo contém informações de uma versão de pré-lançamento do ASP.NET Web API'
 ms.author: riande
@@ -15,7 +15,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59401043"
 ---
-# <a name="aspnet-web-api-part-4-paging-and-querying"></a>ASP.NET API Web, parte 4: Paginação e consulta
+# <a name="aspnet-web-api-part-4-paging-and-querying"></a>ASP.NET Web API, parte 4: Paginação e consulta
 
 por [Jon Galloway](https://github.com/jongalloway)
 
