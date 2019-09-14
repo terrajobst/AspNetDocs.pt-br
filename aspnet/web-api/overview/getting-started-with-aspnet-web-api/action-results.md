@@ -9,14 +9,16 @@ ms.custom: seoapril2019
 ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
-ms.openlocfilehash: 1eaaf8e87168096683212fa66d3ddf415ad6b22b
-ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
+ms.openlocfilehash: f00ac0db453053e53d6d6942dd1557b409f4167b
+ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000714"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70985847"
 ---
 # <a name="action-results-in-web-api-2"></a>Resultados da ação na API Web 2
+
+[!INCLUDE[](~/includes/coreWebAPI.md)]
 
 Este tópico descreve como ASP.NET Web API converte o valor de retorno de uma ação do controlador em uma mensagem de resposta HTTP.
 
@@ -62,7 +64,7 @@ Responde
 
 [!code-console[Main](action-results/samples/sample4.cmd?highlight=2)]
 
-Se você passar um modelo de domínio para o método CreateResponse, a API da Web usará um formatador de [mídia](../formats-and-model-binding/media-formatters.md) para gravar o modelo serializado no corpo da resposta.
+Se você passar um modelo de domínio para o método **CreateResponse** , a API da Web usará um [formatador de mídia](../formats-and-model-binding/media-formatters.md) para gravar o modelo serializado no corpo da resposta.
 
 [!code-csharp[Main](action-results/samples/sample5.cs)]
 
@@ -102,11 +104,11 @@ No exemplo a seguir, se a solicitação não corresponder a uma ID de produto ex
 
 ## <a name="other-return-types"></a>Outros tipos de retorno
 
-Para todos os outros tipos de retorno, a API da Web usa um formatador de [mídia](../formats-and-model-binding/media-formatters.md) para serializar o valor de retorno. A API da Web grava o valor serializado no corpo da resposta. O código de status de resposta é 200 (OK).
+Para todos os outros tipos de retorno, a API da Web usa um [formatador de mídia](../formats-and-model-binding/media-formatters.md) para serializar o valor de retorno. A API da Web grava o valor serializado no corpo da resposta. O código de status de resposta é 200 (OK).
 
 [!code-csharp[Main](action-results/samples/sample11.cs)]
 
-Uma desvantagem dessa abordagem é que você não pode retornar diretamente um código de erro, como 404. No entanto, você pode gerar um httpresponseexception para códigos de erro. Para obter mais informações, consulte [tratamento de exceção em ASP.NET Web API](../error-handling/exception-handling.md).
+Uma desvantagem dessa abordagem é que você não pode retornar diretamente um código de erro, como 404. No entanto, você pode gerar um **httpresponseexception** para códigos de erro. Para obter mais informações, consulte [tratamento de exceção em ASP.NET Web API](../error-handling/exception-handling.md).
 
 A API Web usa o cabeçalho Accept na solicitação para escolher o formatador. Para obter mais informações, consulte [negociação de conteúdo](../formats-and-model-binding/content-negotiation.md).
 
