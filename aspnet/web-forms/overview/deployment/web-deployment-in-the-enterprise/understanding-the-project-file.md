@@ -117,7 +117,7 @@ Ao especificar vários elementos de **Item** com o mesmo nome, você está crian
 
 [!code-xml[Main](understanding-the-project-file/samples/sample7.xml)]
 
-Dessa forma, o arquivo de projeto está instruindo o MSBuild a construir listas de arquivos que precisam ser processados da mesma maneira&#x2014;que a lista de **referência** inclui assemblies que devem estar em vigor para uma compilação bem-sucedida, a lista de **compilações** inclui código arquivos que devem ser compilados e a lista de **conteúdo** inclui recursos que devem ser copiados inalterados. Veremos como o processo de compilação referencia e usa esses itens mais adiante neste tópico.
+Dessa forma, o arquivo de projeto está instruindo o MSBuild a construir listas de arquivos que precisam ser processados da mesma maneira&#x2014;que a lista de **referência** inclui assemblies que devem estar em vigor para uma compilação bem-sucedida, a lista de **compilações** inclui arquivos de código que devem ser compilados e a lista de **conteúdo** inclui recursos que devem ser copiados inalterados. Veremos como o processo de compilação referencia e usa esses itens mais adiante neste tópico.
 
 Elementos de item também podem incluir elementos filho [ItemMetadata](https://msdn.microsoft.com/library/ms164284.aspx) . Esses são pares chave-valor definidos pelo usuário e basicamente representam propriedades que são específicas para esse item. Por exemplo, muitos dos elementos de item de **compilação** no arquivo de projeto incluem elementos filho **DependentUpon** .
 

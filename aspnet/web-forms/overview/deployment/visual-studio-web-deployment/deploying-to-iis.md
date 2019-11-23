@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
-title: 'Implantação da Web do ASP.NET usando o Visual Studio: Implantando no teste | Microsoft Docs'
+title: 'Implantação da Web do ASP.NET usando o Visual Studio: implantando no teste | Microsoft Docs'
 author: tdykstra
 description: Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros, por usin...
 ms.author: riande
@@ -15,9 +15,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/13/2019
 ms.locfileid: "70985850"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantação para teste
+# <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implantação da Web do ASP.NET usando o Visual Studio: implantação no teste
 
-Por [Tom Dykstra](https://github.com/tdykstra)
+por [Tom Dykstra](https://github.com/tdykstra)
 
 Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2017. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
@@ -43,7 +43,7 @@ A opção 2 é a maneira mais confiável de testar. Se você usar a opção 2, n
 
 Para obter mais informações sobre como usar servidores Web no Visual Studio, consulte [servidores Web no Visual Studio para projetos Web do ASP.net](https://msdn.microsoft.com/library/58wxa9w5.aspx).
 
-Funcionário Se você receber uma mensagem de erro ou algo não funcionar enquanto percorre o tutorial, certifique-se de verificar a [página de solução de problemas](troubleshooting.md).
+Lembrete: se você receber uma mensagem de erro ou algo não funcionar enquanto percorre o tutorial, certifique-se de verificar a [página de solução de problemas](troubleshooting.md).
 
 ## <a name="download-the-contoso-university-starter-project"></a>Baixe o projeto inicial da Contoso University
 
@@ -67,7 +67,7 @@ Para implantar no IIS em seu computador de desenvolvimento, confirme se o IIS e 
 
      Você verá mensagens indicando que o IIS 7 será instalado. O link funciona para o IIS 8 no Windows 8; Mas para o Windows 8 e posterior, siga as etapas a seguir para verificar se o ASP.NET 4,7 está instalado:
 
-   * Abra **o painel** > de controle**programas** > programas**e recursos** > **Ativar ou desativar recursos do Windows**.
+   * Abra **o painel de controle** > **programas** > **programas e recursos** > **Ativar ou desativar recursos do Windows**.
 
    * Expanda **serviços de informações da Internet**, **serviços de World Wide Web**e recursos de **desenvolvimento de aplicativos**.
    
@@ -95,7 +95,7 @@ Depois de instalar o IIS, execute o **Gerenciador do IIS** para certificar-se de
 
 4. Se você vir apenas dois pools de aplicativos e ambos estiverem definidos como .NET Framework 2,0, instale o ASP.NET 4 no IIS.
 
-   Para o Windows 8 ou posterior, consulte as instruções da seção anterior para verificar se o ASP.NET 4,7 está instalado ou confira [como instalar o ASP.NET 4,5 no Windows 8 e no Windows Server 2012](https://support.microsoft.com/kb/2736284). Para o Windows 7, abra uma janela de prompt de comando clicando com o botão direito do mouse em **prompt de comando** no menu **Iniciar** do Windows e selecionando **Executar como administrador**. Execute [ASPNET\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) para instalar o ASP.NET 4 no IIS usando os comandos a seguir. (Em sistemas de 32 bits, substitua "Framework64" por "Framework".)
+   Para o Windows 8 ou posterior, consulte as instruções da seção anterior para verificar se o ASP.NET 4,7 está instalado ou confira [como instalar o ASP.NET 4,5 no Windows 8 e no Windows Server 2012](https://support.microsoft.com/kb/2736284). Para o Windows 7, abra uma janela de prompt de comando clicando com o botão direito do mouse em **prompt de comando** no menu **Iniciar** do Windows e selecionando **Executar como administrador**. Execute o [aspnet\_regiis. exe](https://msdn.microsoft.com/library/k6h9cz8h.aspx) para instalar o ASP.NET 4 no IIS usando os comandos a seguir. (Em sistemas de 32 bits, substitua "Framework64" por "Framework".)
 
    [!code-console[Main](deploying-to-iis/samples/sample1.cmd)]
 
@@ -109,7 +109,7 @@ Depois de instalar o IIS, execute o **Gerenciador do IIS** para certificar-se de
 
 7. Na caixa de diálogo **Editar pool de aplicativos** , altere a **versão .NET CLR** para **.NET CLR v 4.0.30319**. Selecione **OK**.
 
-   ![Selecting_. NET _4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
+   ![Selecting_. NET_4_for_DefaultAppPool](deploying-to-iis/_static/image6a.png)
 
 Agora você está pronto para publicar um aplicativo Web no IIS. No entanto, primeiro crie bancos de dados para teste.
 
@@ -119,7 +119,7 @@ Agora você está pronto para publicar um aplicativo Web no IIS. No entanto, pri
 
 O LocalDB não foi projetado para funcionar no IIS, portanto, o ambiente de teste precisa ter SQL Server Express instalado. Se você estiver usando o Visual Studio 2010 SQL Server Express, ele já estará instalado por padrão. Se você estiver usando o Visual Studio 2012 ou posterior, instale SQL Server Express.
 
-Para instalar o SQL Server Express, baixe e instale- [o no centro de download: Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
+Para instalar o SQL Server Express, baixe e instale-o no [centro de download: Microsoft SQL Server 2017 Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express). 
 
 Na primeira página da central de instalação do SQL Server, selecione **novo SQL Server instalação autônoma ou adicionar recursos a uma instalação existente** e siga as instruções que aceitam as opções padrão. No assistente de instalação, aceite as configurações padrão. Para obter mais informações sobre as opções de instalação, consulte [instalar o SQL Server do assistente de instalação (instalação)](https://msdn.microsoft.com/library/ms143219.aspx).
 
@@ -144,7 +144,7 @@ Na caixa de diálogo **criar novo banco de dados SQL Server** , digite ".\sqlexp
 
 ![Criar ASPNET-ContosoUniversity](deploying-to-iis/_static/image9.png)
 
-Siga o mesmo procedimento para criar um novo banco de dados SQL Server Express `ContosoUniversity`School chamado.
+Siga o mesmo procedimento para criar um novo banco de dados SQL Server Express School chamado `ContosoUniversity`.
 
 **Gerenciador de servidores** mostra os dois novos bancos de dados.
 
@@ -164,7 +164,7 @@ No Visual Studio, abra a solução Contoso University. Clique com o botão direi
 > Esse script foi projetado para trabalhar com o SQL Server Express 2012 ou posterior e com as configurações do IIS no Windows 10, Windows 8 ou Windows 7, já que elas são especificadas neste tutorial. Se você estiver usando uma versão diferente do SQL Server ou do Windows, ou se configurar o IIS em seu computador de forma diferente, as alterações nesse script poderão ser necessárias. Para obter mais informações sobre scripts de SQL Server, consulte [manuais online do SQL Server](https://go.microsoft.com/fwlink/?LinkId=132511).
 
 > [!NOTE] 
-> **Observação de segurança** Esse script concede `db_owner` permissões ao usuário que acessa o banco de dados em tempo de execução, que é o que você terá no ambiente de produção. Em alguns cenários, talvez você queira especificar um usuário que tenha permissões completas de atualização de esquema de banco de dados somente para implantação e especificar para tempo de execução um usuário diferente que tenha permissões somente para ler e gravar dados. Para obter mais informações, consulte [revisando as alterações automáticas de Web. config para migrações do Code First](#reviewingmigrations) mais adiante neste tutorial.
+> **Observação de segurança** Esse script fornece `db_owner` permissões para o usuário que acessa o banco de dados em tempo de execução, que é o que você terá no ambiente de produção. Em alguns cenários, talvez você queira especificar um usuário que tenha permissões completas de atualização de esquema de banco de dados somente para implantação e especificar para tempo de execução um usuário diferente que tenha permissões somente para ler e gravar dados. Para obter mais informações, consulte [revisando as alterações automáticas de Web. config para migrações do Code First](#reviewingmigrations) mais adiante neste tutorial.
 
 <a id="publish"></a>
 
@@ -205,7 +205,7 @@ Antes de publicar, verifique se você está executando o Visual Studio no modo d
 
 2. Selecione **novo perfil**. A caixa de diálogo **selecionar um destino de publicação** é exibida.
 
-3. Selecione **IIS, FTP, etc**. Selecione **Criar Perfil**. O assistente de **publicação** é exibido.
+3. Selecione **IIS, FTP, etc**. Selecione **Criar perfil**. O assistente de **publicação** é exibido.
 
    ![Guia perfil do assistente publicar Web](deploying-to-iis/_static/image26.png)
 
@@ -215,7 +215,7 @@ Antes de publicar, verifique se você está executando o Visual Studio no modo d
 
 6. Para **nome do site**, digite *Default Web site/ContosoUniversity*.
 
-7. Para **URL de destino**, *http://localhost/ContosoUniversity* insira.
+7. Para **URL de destino**, insira *http://localhost/ContosoUniversity* .
 
    A configuração da **URL de destino** não é necessária. Quando o Visual Studio termina de implantar o aplicativo, ele abre automaticamente o navegador padrão para essa URL. Se você não quiser que o navegador abra automaticamente após a implantação, deixe essa caixa em branco.
 
@@ -229,9 +229,9 @@ Antes de publicar, verifique se você está executando o Visual Studio no modo d
 
 10. A caixa suspensa **configuração** especifica a configuração de compilação a ser implantada. Deixe-o definido como o valor padrão de **versão**. Você não implantará compilações de depuração neste tutorial.
 
-11. Expanda **Opções de publicação de arquivo**. Selecione **Excluir arquivos na pasta dados\_do aplicativo**.
+11. Expanda **Opções de publicação de arquivo**. Selecione **Excluir arquivos da pasta de dados do\_de aplicativos**.
 
-    No ambiente de teste, o aplicativo acessa os bancos de dados que você criou na instância de SQL Server Express local, não os arquivos. MDF na pasta de *dados\_do aplicativo* .
+    No ambiente de teste, o aplicativo acessa os bancos de dados que você criou na instância de SQL Server Express local, não os arquivos. MDF na pasta de *dados do aplicativo\_* .
 
 12. Deixe as caixas de seleção **pré-compilar durante a publicação** e **remover arquivos adicionais no destino** desmarcadas.
 
@@ -246,7 +246,7 @@ Antes de publicar, verifique se você está executando o Visual Studio no modo d
     > 
     > Por exemplo, se você tiver um aplicativo Web em uma subpasta no servidor ao implantar um projeto na pasta raiz, a subpasta será excluída. Você pode ter um projeto para o site principal em contoso.com e outro projeto para um blog em contoso.com/blog. O aplicativo de blog está em uma subpasta. Se você selecionar **remover arquivos adicionais no destino** quando implantar o site principal, o aplicativo de blog será excluído.
     > 
-    > Para outro exemplo, sua pasta\_de dados de aplicativo pode ser excluída inesperadamente. Certos bancos de dados, como SQL Server Compact armazenam arquivos de banco de\_dados na pasta Data app. Após a implantação inicial, você não deseja continuar copiando os arquivos de banco de dados em implantações subsequentes, portanto, selecione **excluir dados do aplicativo\_** na guia pacote/publicar Web. Depois de fazer isso, se você tiver **removido arquivos adicionais no destino** selecionado, os arquivos de banco de\_dados e a pasta Data de aplicativo serão excluídos da próxima vez que você publicar.
+    > Para outro exemplo, sua pasta de dados de\_de aplicativo pode ser excluída inesperadamente. Determinados bancos de dados, como SQL Server Compact armazenam arquivos de banco de dados na pasta\_data do aplicativo. Após a implantação inicial, você não deseja continuar copiando os arquivos de banco de dados em implantações subsequentes, portanto, selecione **excluir aplicativo\_dados** na guia pacote/publicar Web. Depois de fazer isso, se você tiver **removido arquivos adicionais no destino** selecionado, os arquivos de banco de dados e a pasta de\_do aplicativo serão excluídos da próxima vez que você publicar.
 
 ### <a name="configure-deployment-for-the-membership-database"></a>Configurar a implantação para o banco de dados de associação
 
@@ -258,7 +258,7 @@ As etapas a seguir se aplicam ao banco de dados **DefaultConnection** na seção
 
    O processo de implantação coloca essa cadeia de conexão no arquivo Web. config implantado porque **Use esta cadeia de conexão em tempo de execução** está selecionado.
 
-    Você também pode obter a cadeia de conexão de **Gerenciador de servidores**. Em **Gerenciador de servidores**, expanda **Data Connections** e selecione o banco de  **&lt;&gt;dados MachineName \SQLEXPRESS.AspNet-ContosoUniversity** e, em seguida, na janela **Propriedades** , copie a **cadeia de conexão** valor. Essa cadeia de conexão terá uma configuração adicional que você pode excluir: `Pooling=False`.
+    Você também pode obter a cadeia de conexão de **Gerenciador de servidores**. Em **Gerenciador de servidores**, expanda **conexões de dados** e selecione a **&lt;MachineName&gt;** banco de \SQLEXPRESS.AspNet-ContosoUniversity. em seguida, na janela **Propriedades** , copie o valor da **cadeia de conexão** . Essa cadeia de conexão terá uma configuração adicional que você pode excluir: `Pooling=False`.
 
 2. Selecione **Atualizar banco de dados**.
 
@@ -276,9 +276,9 @@ As etapas a seguir se aplicam ao banco de dados **DefaultConnection** na seção
 
 ### <a name="configure-deployment-for-the-application-database"></a>Configurar a implantação para o banco de dados do aplicativo
 
-Quando o Visual Studio detecta uma `DbContext` classe de Entity Framework, ele cria uma entrada na seção **bancos** de dados que tem uma caixa de seleção **executar migrações do Code First** em vez de uma caixa de seleção **Atualizar banco de dados** . Para este tutorial, você usará essa caixa de seleção para especificar Migrações do Code First implantação.
+Quando o Visual Studio detecta uma classe de `DbContext` Entity Framework, ele cria uma entrada na seção **bancos** de dados que tem uma caixa de seleção **executar migrações do Code First** em vez de uma caixa de seleção **Atualizar banco de dados** . Para este tutorial, você usará essa caixa de seleção para especificar Migrações do Code First implantação.
 
-Em alguns cenários, você pode estar usando um `DbContext` banco de dados, mas deseja usar o provedor dbDacFx em vez de migrações para implantar o banco de dados. Nesse caso, consulte [como fazer implantar um banco de dados Code First sem migrações?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) nas perguntas frequentes sobre implantação da Web do ASP.net no msdn.
+Em alguns cenários, você pode estar usando um banco de dados `DbContext`, mas deseja usar o provedor dbDacFx em vez de migrações para implantar o banco de dados. Nesse caso, consulte [como fazer implantar um banco de dados Code First sem migrações?](https://msdn.microsoft.com/library/ee942158.aspx#deploy_code_first_without_migrations) nas perguntas frequentes sobre implantação da Web do ASP.net no msdn.
 
 As etapas a seguir se aplicam ao banco de dados **SchoolContext** na seção **databases** da caixa de diálogo.
 
@@ -292,7 +292,7 @@ As etapas a seguir se aplicam ao banco de dados **SchoolContext** na seção **d
 
 2. Selecione **executar migrações do Code First (é executado no início do aplicativo)** .
 
-   Essa opção faz com que o processo de implantação configure o arquivo Web. config implantado para especificar o `MigrateDatabaseToLatestVersion` inicializador. Esse inicializador atualiza automaticamente o banco de dados para a versão mais recente quando o aplicativo acessa o banco de dados pela primeira vez após a implantação.
+   Essa opção faz com que o processo de implantação configure o arquivo Web. config implantado para especificar o inicializador de `MigrateDatabaseToLatestVersion`. Esse inicializador atualiza automaticamente o banco de dados para a versão mais recente quando o aplicativo acessa o banco de dados pela primeira vez após a implantação.
 
 ### <a name="configure-publish-profile-transforms"></a>Configurar transformações de perfil de publicação
 
@@ -344,7 +344,7 @@ As etapas a seguir se aplicam ao banco de dados **SchoolContext** na seção **d
 
 Observe que o indicador de ambiente mostra "(teste)" em vez de "(dev)", que mostra que a transformação *Web. config* do indicador de ambiente foi bem-sucedida.
 
-Execute a página de **instrutores** para verificar se Code First propagam o banco de dados com os dados do instrutor. Quando você seleciona essa página, pode levar alguns minutos para carregar porque Code First cria o banco de dados e, em seguida `Seed` , executa o método. (Ele não fazia isso quando você estava na home page porque o aplicativo não tentou acessar o banco de dados ainda.)
+Execute a página de **instrutores** para verificar se Code First propagam o banco de dados com os dados do instrutor. Quando você seleciona essa página, pode levar alguns minutos para carregar porque Code First cria o banco de dados e, em seguida, executa o método `Seed`. (Ele não fazia isso quando você estava na home page porque o aplicativo não tentou acessar o banco de dados ainda.)
 
 Selecione a guia **alunos** para verificar se o banco de dados implantado não tem nenhum aluno.
 
@@ -364,11 +364,11 @@ Abra o arquivo *Web. config* no aplicativo implantado em *C:\inetpub\wwwroot\Con
 
 O processo de implantação também criou uma nova cadeia de conexão para Migrações do Code First usar exclusivamente para atualizar o esquema de banco de dados:
 
-![Cadeia de conexão Database_Publish](deploying-to-iis/_static/image22.png)
+![Database_Publish cadeia de conexão](deploying-to-iis/_static/image22.png)
 
-Essa cadeia de conexão adicional permite que você especifique uma conta de usuário para atualizações de esquema de banco de dados e uma conta de usuário diferente para acesso a dados de aplicativo. Por exemplo, você pode atribuir a função de **proprietário do banco de BD\_** para migrações do Code First e o DataReader do **BD\_** com as funções do **BD\_DataWriter** ao aplicativo. Esse é um padrão comum de defesa aprofundada que impede que códigos potencialmente mal-intencionados no aplicativo alterem o esquema de banco de dados. (Por exemplo, isso pode acontecer em um ataque de injeção de SQL bem-sucedido.) Esses tutoriais não usam esse padrão. Para implementar esse padrão em seu cenário, siga estas etapas:
+Essa cadeia de conexão adicional permite que você especifique uma conta de usuário para atualizações de esquema de banco de dados e uma conta de usuário diferente para acesso a dados de aplicativo. Por exemplo, você pode atribuir o **banco de\_** função de proprietário a migrações do Code First e **DB\_DataReader** com as funções de **BD\_DataWriter** para o aplicativo. Esse é um padrão comum de defesa aprofundada que impede que códigos potencialmente mal-intencionados no aplicativo alterem o esquema de banco de dados. (Por exemplo, isso pode acontecer em um ataque de injeção de SQL bem-sucedido.) Esses tutoriais não usam esse padrão. Para implementar esse padrão em seu cenário, siga estas etapas:
 
-1. No assistente **publicar Web** na guia **configurações** , insira a cadeia de conexão que especifica um usuário com permissões completas de atualização do esquema de banco de dados. Desmarque a caixa de seleção **usar esta cadeia de conexão em tempo de execução** . No arquivo Web. config implantado, isso se `DatabasePublish` torna a cadeia de conexão.
+1. No assistente **publicar Web** na guia **configurações** , insira a cadeia de conexão que especifica um usuário com permissões completas de atualização do esquema de banco de dados. Desmarque a caixa de seleção **usar esta cadeia de conexão em tempo de execução** . No arquivo Web. config implantado, isso se torna a cadeia de conexão `DatabasePublish`.
 
 2. Crie uma transformação de arquivo Web. config para a cadeia de conexão que você deseja que o aplicativo use em tempo de execução.
 
