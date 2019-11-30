@@ -1,137 +1,137 @@
 ---
 uid: web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
-title: Tratamento de exceções de nível BLL e DAL (c#) | Microsoft Docs
+title: Manipulando exceções de nível de BLL e DALC#() | Microsoft Docs
 author: rick-anderson
-description: Neste tutorial, veremos como tactfully tratar as exceções geradas durante o fluxo de trabalho de atualização do DataList um editável.
+description: Neste tutorial, veremos como tactfully tratar exceções geradas durante um fluxo de trabalho de atualização de DataList editável.
 ms.author: riande
 ms.date: 10/30/2006
 ms.assetid: f8fd58e2-f932-4f08-ab3d-fbf8ff3295d2
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/handling-bll-and-dal-level-exceptions-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 3edd37259a3624757dd5bc69ffba7159c9b85ad1
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 35ff60be6ed67ea8d1bf226ae70f590100597757
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113737"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74634098"
 ---
 # <a name="handling-bll--and-dal-level-exceptions-c"></a>Tratar de exceções de nível BLL e DAL (C#)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_38_CS.exe) ou [baixar PDF](handling-bll-and-dal-level-exceptions-cs/_static/datatutorial38cs1.pdf)
+[Baixar o aplicativo de exemplo](https://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_38_CS.exe) ou [baixar PDF](handling-bll-and-dal-level-exceptions-cs/_static/datatutorial38cs1.pdf)
 
-> Neste tutorial, veremos como tactfully tratar as exceções geradas durante o fluxo de trabalho de atualização do DataList um editável.
+> Neste tutorial, veremos como tactfully tratar exceções geradas durante um fluxo de trabalho de atualização de DataList editável.
 
 ## <a name="introduction"></a>Introdução
 
-No [visão geral de edição e exclusão de dados no DataList](an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md) tutorial, criamos uma DataList que oferecidos simples de edição e exclusão de recursos. Embora seja totalmente funcional, foi mal amigável, como os erros ocorridos durante a edição ou exclusão de processo resultou em uma exceção sem tratamento. Por exemplo, omitindo o nome do produto s ou, ao editar um produto, inserir um valor de preço de muito acessível!, gera uma exceção. Uma vez que essa exceção não for capturada no código, ele propaga-se até o tempo de execução do ASP.NET, que, em seguida, exibe os detalhes da exceção s na página da web.
+Na [visão geral da edição e exclusão de dados no tutorial DataList](an-overview-of-editing-and-deleting-data-in-the-datalist-cs.md) , criamos um DataList que oferecia recursos simples de edição e exclusão. Embora seja totalmente funcional, ele não era amigável para o usuário, pois qualquer erro ocorrido durante o processo de edição ou exclusão resultou em uma exceção sem tratamento. Por exemplo, omitir o nome do produto ou, ao editar um produto, inserir um valor de preço muito acessível!, gera uma exceção. Como essa exceção não é capturada no código, ela se parece com o tempo de execução ASP.NET, que exibe os detalhes da exceção na página da Web.
 
-Como vimos na [tratamento BLL - e exceções de nível DAL em uma página ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) tutorial, se uma exceção for gerada das profundezas da lógica de negócios ou camadas de acesso de dados, os detalhes da exceção são retornados para o ObjectDataSource e em seguida, para o GridView. Vimos como lidar normalmente com essas exceções, criando `Updated` ou `RowUpdated` manipuladores de eventos para o ObjectDataSource ou GridView, verificando uma exceção e, em seguida, indicando que a exceção foi tratada.
+Como vimos na manipulação de [exceções de nível de BLL e Dal em um tutorial de página do ASP.net](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) , se uma exceção for gerada a partir das profundidades da lógica de negócios ou das camadas de acesso a dados, os detalhes da exceção serão retornados para o ObjectDataSource e, em seguida, para o GridView. Vimos como lidar normalmente com essas exceções criando `Updated` ou `RowUpdated` manipuladores de eventos para ObjectDataSource ou GridView, verificando uma exceção e, em seguida, indicando que a exceção foi tratada.
 
-Nossos tutoriais DataList, no entanto, não estiverem usando o ObjectDataSource para atualizar e excluir dados. Em vez disso, estamos trabalhando diretamente em relação a BLL. Para detectar exceções originadas da BLL ou DAL, precisamos implementar o código no code-behind da página ASP.NET de tratamento de exceções. Neste tutorial, veremos como mais tactfully tratar as exceções geradas durante um s DataList editável atualizando fluxo de trabalho.
+No entanto, nossos tutoriais de DataList não estão usando o ObjectDataSource para atualizar e excluir dados. Em vez disso, estamos trabalhando diretamente em relação à BLL. Para detectar exceções provenientes da BLL ou da DAL, precisamos implementar o código de tratamento de exceção dentro do code-behind de nossa página ASP.NET. Neste tutorial, veremos como mais tactfully tratar exceções geradas durante um fluxo de trabalho de atualização de DataList s editável.
 
 > [!NOTE]
-> No *An de visão geral de edição e exclusão de dados no DataList* envolvido de algumas técnicas de tutorial discutimos diferentes técnicas para edição e exclusão de dados do DataList, usando um ObjectDataSource para a atualização e a exclusão. Se você usar essas técnicas, você pode tratar exceções da BLL ou DAL por meio de s ObjectDataSource `Updated` ou `Deleted` manipuladores de eventos.
+> Na *visão geral da edição e exclusão de dados no tutorial DataList* , discutimos técnicas diferentes para editar e excluir dados do DataList, algumas técnicas envolvidas usando um ObjectDataSource para atualização e exclusão. Se você empregar essas técnicas, poderá manipular exceções da BLL ou da DAL por meio dos manipuladores de eventos ObjectDataSource s `Updated` ou `Deleted`.
 
-## <a name="step-1-creating-an-editable-datalist"></a>Etapa 1: Criando uma DataList editável
+## <a name="step-1-creating-an-editable-datalist"></a>Etapa 1: Criando um DataList editável
 
-Antes de nos preocupamos com tratamento de exceções que ocorrem durante o fluxo de trabalho de atualização, deixe s primeiro criar uma DataList editável. Abra o `ErrorHandling.aspx` página na `EditDeleteDataList` pasta, adicionar uma DataList ao Designer de conjunto seu `ID` propriedade a ser `Products`, e adicione um novo ObjectDataSource chamado `ProductsDataSource`. Configurar o ObjectDataSource para usar o `ProductsBLL` classe s `GetProducts()` método para selecionar registros; definir as listas suspensas em INSERT, UPDATE e excluir guias como (nenhum).
+Antes de nos preocuparmos em manipular exceções que ocorrem durante o fluxo de trabalho de atualização, vamos primeiro criar um DataList editável. Abra a página `ErrorHandling.aspx` na pasta `EditDeleteDataList`, adicione um DataList ao designer, defina sua propriedade `ID` como `Products`e adicione um novo ObjectDataSource chamado `ProductsDataSource`. Configure o ObjectDataSource para usar o método de `GetProducts()` da classe `ProductsBLL` para selecionar registros; Defina as listas suspensas nas guias inserir, atualizar e excluir como (nenhum).
 
-[![Retornar as informações de produto usando o método GetProducts()](handling-bll-and-dal-level-exceptions-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-cs/_static/image1.png)
+[![retornar as informações do produto usando o método GetProducts ()](handling-bll-and-dal-level-exceptions-cs/_static/image2.png)](handling-bll-and-dal-level-exceptions-cs/_static/image1.png)
 
-**Figura 1**: Retornar as informações de produto usando o `GetProducts()` método ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image3.png))
+**Figura 1**: retornar as informações do produto usando o método `GetProducts()` ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image3.png))
 
-Depois de concluir o assistente ObjectDataSource, Visual Studio criará automaticamente um `ItemTemplate` para DataList. Substitua-o por um `ItemTemplate` que exibe o nome do produto s e o preço e inclui um botão Editar. Em seguida, crie um `EditItemTemplate` com um controle de TextBox Web para o nome e o preço e botões de atualização e Cancelar. Por fim, defina DataList s `RepeatColumns` propriedade como 2.
+Depois de concluir o assistente ObjectDataSource, o Visual Studio criará automaticamente um `ItemTemplate` para o DataList. Substitua isso por um `ItemTemplate` que exibe o nome e o preço de cada produto e inclui um botão de edição. Em seguida, crie um `EditItemTemplate` com um controle de caixa de texto da Web para os botões nome e preço e atualizar e cancelar. Por fim, defina a propriedade DataList s `RepeatColumns` como 2.
 
-Após essas alterações, sua marcação declarativa de s de página deve ser semelhante ao seguinte. Verifique novamente para fazer a certeza de que a edição, cancelar, e botões de atualização têm seus `CommandName` propriedades definidas para editar, cancelar e atualizar, respectivamente.
+Após essas alterações, a marcação declarativa de s de página deve ser semelhante à seguinte. Clique duas vezes para certificar-se de que os botões editar, cancelar e atualizar tenham suas propriedades `CommandName` definidas como editar, cancelar e atualizar, respectivamente.
 
 [!code-aspx[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample1.aspx)]
 
 > [!NOTE]
-> Para este tutorial DataList o estado de exibição s deve ser habilitado.
+> Para este tutorial, o estado de exibição DataList s deve ser habilitado.
 
-Reserve um tempo para exibir nosso progresso através de um navegador (veja a Figura 2).
+Reserve um tempo para exibir nosso progresso por meio de um navegador (veja a Figura 2).
 
-[![Cada produto inclui um botão Editar](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
+[![cada produto inclui um botão de edição](handling-bll-and-dal-level-exceptions-cs/_static/image5.png)](handling-bll-and-dal-level-exceptions-cs/_static/image4.png)
 
-**Figura 2**: Cada produto inclui um botão Editar ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image6.png))
+**Figura 2**: cada produto inclui um botão de edição ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image6.png))
 
-Atualmente, o botão Editar apenas faz com que um postback-t ainda tornam o produto editável. Para habilitar a edição, precisamos criar manipuladores de eventos para o s DataList `EditCommand`, `CancelCommand`, e `UpdateCommand` eventos. O `EditCommand` e `CancelCommand` eventos simplesmente atualizar DataList s `EditItemIndex` reassociar os dados para o DataList e propriedade:
+Atualmente, o botão Editar só causa um postback que ainda não torna o produto editável. Para habilitar a edição, precisamos criar manipuladores de eventos para os eventos DataList s `EditCommand`, `CancelCommand`e `UpdateCommand`. Os eventos `EditCommand` e `CancelCommand` simplesmente atualizam a propriedade DataList s `EditItemIndex` e reassociam os dados ao DataList:
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample2.cs)]
 
-O `UpdateCommand` manipulador de eventos é um pouco mais complicado. Ele precisa ler no produto editado s `ProductID` do `DataKeys` coleção juntamente com o nome do produto s e o preço de TextBoxes a `EditItemTemplate`e, em seguida, chame o `ProductsBLL` classe s `UpdateProduct` método antes de retornar do DataList para seu estado de edição previamente.
+O manipulador de eventos `UpdateCommand` é um pouco mais envolvido. Ele precisa ler o `ProductID` do produto editado na coleção de `DataKeys` junto com o nome e o preço do produto das caixas de Textno `EditItemTemplate`e, em seguida, chamar o método de `UpdateProduct` da classe `ProductsBLL` antes de retornar o DataList ao estado de pré-edição.
 
-Por enquanto, let s apenas usar o mesmo código do `UpdateCommand` manipulador de eventos em de *visão geral de edição e exclusão de dados no DataList* tutorial. Adicionaremos o código para tratar normalmente exceções na etapa 2.
+Por enquanto, vamos usar exatamente o mesmo código do manipulador de eventos `UpdateCommand` na *visão geral da edição e exclusão de dados no tutorial DataList* . Vamos adicionar o código para tratar exceções normalmente na etapa 2.
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample3.cs)]
 
-Diante de uma entrada inválida, que pode ser na forma de um preço de unidade formatada incorretamente, um valor de preço de unidade ilegal, como - US $5,00 ou a omissão do nome de s do produto, que uma exceção será gerada. Uma vez que o `UpdateCommand` manipulador de eventos não inclui qualquer neste ponto de código de tratamento de exceção, a exceção serão propagados o tempo de execução do ASP.NET, onde ele será exibido para o usuário final (veja a Figura 3).
+Diante de uma entrada inválida que pode estar na forma de um preço unitário formatado incorretamente, um valor de preço unitário ilegal como-$5 ou a omissão do nome do produto s, uma exceção será gerada. Como o manipulador de eventos `UpdateCommand` não inclui nenhum código de tratamento de exceção neste ponto, a exceção será propagada até o tempo de execução ASP.NET, onde ele será exibido para o usuário final (consulte a Figura 3).
 
 ![Quando ocorre uma exceção sem tratamento, o usuário final vê uma página de erro](handling-bll-and-dal-level-exceptions-cs/_static/image7.png)
 
-**Figura 3**: Quando ocorre uma exceção sem tratamento, o usuário final vê uma página de erro
+**Figura 3**: quando ocorre uma exceção sem tratamento, o usuário final vê uma página de erro
 
-## <a name="step-2-gracefully-handling-exceptions-in-the-updatecommand-event-handler"></a>Etapa 2: Normalmente, manipulando exceções no manipulador de eventos UpdateCommand
+## <a name="step-2-gracefully-handling-exceptions-in-the-updatecommand-event-handler"></a>Etapa 2: manipulando exceções normalmente no manipulador de eventos UpdateCommand
 
-Durante o fluxo de trabalho de atualização, poderão ocorrer exceções no `UpdateCommand` a DAL, a BLL ou manipulador de eventos. Por exemplo, se um usuário inserir um preço de muito caro, o `Decimal.Parse` instrução na `UpdateCommand` lançará o manipulador de eventos um `FormatException` exceção. Se o usuário omite o nome do produto s ou se o preço tem um valor negativo, a DAL irá gerar uma exceção.
+Durante o fluxo de trabalho de atualização, as exceções podem ocorrer no manipulador de eventos `UpdateCommand`, na BLL ou na DAL. Por exemplo, se um usuário inserir um preço muito caro, a instrução `Decimal.Parse` no manipulador de eventos `UpdateCommand` gerará uma exceção `FormatException`. Se o usuário omitir o nome do produto ou se o preço tiver um valor negativo, a DAL emitirá uma exceção.
 
-Quando ocorre uma exceção, queremos exibir uma mensagem informativa da página em si. Adicionar uma Web de rótulo de controle para a página cuja `ID` é definido como `ExceptionDetails`. Configurar o texto do rótulo s para exibir em vermelho, extra grande, a fonte em negrito e itálico, atribuindo suas `CssClass` propriedade para o `Warning` classe CSS, que é definido no `Styles.css` arquivo.
+Quando ocorre uma exceção, queremos exibir uma mensagem informativa dentro da própria página. Adicione um controle de rótulo da Web à página cujo `ID` está definido como `ExceptionDetails`. Configure o texto do rótulo para exibir em uma fonte vermelha, extra grande, negrito e itálico atribuindo sua propriedade `CssClass` à classe CSS `Warning`, que é definida no arquivo `Styles.css`.
 
-Quando ocorre um erro, só queremos o rótulo a ser exibido uma vez. Ou seja, em postbacks subsequentes, a mensagem de aviso de rótulo s deve desaparecer. Isso pode ser feito limpando qualquer rótulo s `Text` propriedade ou as configurações de seu `Visible` propriedade a ser `False` no `Page_Load` manipulador de eventos (como fizemos no [BLL tratando - e exceções de nível DAL em um ASP Página do .NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) tutorial) ou desativando o suporte de estado de exibição de rótulo s. Permitir que o s use a última opção.
+Quando ocorre um erro, queremos apenas que o rótulo seja exibido uma vez. Ou seja, em postbacks subsequentes, a mensagem de aviso do rótulo s deve desaparecer. Isso pode ser feito desmarcando o rótulo s `Text` propriedade ou configurações sua propriedade `Visible` como `False` no manipulador de eventos de `Page_Load` (como fizemos de volta no [tratamento de exceções de nível de BLL e Dal em um tutorial de página ASP.net](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) ) ou desabilitando o rótulo s Exibir suporte ao estado. Deixe que os s usem a última opção.
 
 [!code-aspx[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample4.aspx)]
 
-Quando uma exceção é gerada, vamos atribuir os detalhes da exceção para o `ExceptionDetails` s de controle de rótulo `Text` propriedade. Uma vez que seu estado de exibição estiver desabilitado, em postbacks subsequentes a `Text` alterações programáticas de propriedade s serão perdidas, reverter para o texto padrão (uma cadeia de caracteres vazia), ocultando assim a mensagem de aviso.
+Quando uma exceção é gerada, atribuíremos os detalhes da exceção à propriedade do `ExceptionDetails` controle de rótulo s `Text`. Como seu estado de exibição é desabilitado, nos postbacks subsequentes as alterações programáticas de propriedade de `Text` s serão perdidas, revertendo para o texto padrão (uma cadeia de caracteres vazia), ocultando assim a mensagem de aviso.
 
-Para determinar quando um erro foi ativado para exibir uma mensagem útil na página, precisamos adicionar um `Try ... Catch` bloco para o `UpdateCommand` manipulador de eventos. O `Try` parte contém o código que pode levar a uma exceção, enquanto o `Catch` bloco contém código que é executado diante de uma exceção. Confira o [conceitos básicos de manipulação de exceção](https://msdn.microsoft.com/library/2w8f0bss.aspx) seção na documentação do .NET Framework para obter mais informações sobre o `Try ... Catch` bloco.
+Para determinar quando um erro foi gerado para exibir uma mensagem útil na página, precisamos adicionar um bloco de `Try ... Catch` ao manipulador de eventos `UpdateCommand`. A parte `Try` contém código que pode levar a uma exceção, enquanto o bloco de `Catch` contém código que é executado na face de uma exceção. Confira a seção [conceitos básicos de manipulação de exceções](https://msdn.microsoft.com/library/2w8f0bss.aspx) na documentação do .NET Framework para obter mais informações sobre o bloco de `Try ... Catch`.
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample5.cs)]
 
-Quando uma exceção de qualquer tipo é lançada pelo código dentro de `Try` bloco, o `Catch` código do bloco s inicia a execução. O tipo de exceção que é lançada `DbException`, `NoNullAllowedException`, `ArgumentException`e assim por diante depende de qual, exatamente, precipitou o erro em primeiro lugar. Se há um problema de s no nível do banco de dados, um `DbException` será lançada. Se um valor inválido for inserido para o `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`, ou `ReorderLevel` campos, uma `ArgumentException` será gerada, como adicionamos código para validar esses valores de campo no `ProductsDataTable` classe (consulte a [ Criando uma camada de lógica de negócios](../introduction/creating-a-business-logic-layer-cs.md) tutorial).
+Quando uma exceção de qualquer tipo é gerada pelo código dentro do bloco de `Try`, o código s do bloco de `Catch` começará a ser executado. O tipo de exceção que é gerada `DbException`, `NoNullAllowedException`, `ArgumentException`e assim por diante depende do que, exatamente, precipitou o erro em primeiro lugar. Se houver um problema no nível do banco de dados, um `DbException` será gerado. Se um valor ilegal for inserido para os campos `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`ou `ReorderLevel`, um `ArgumentException` será gerado, à medida que adicionamos o código para validar esses valores de campo na classe `ProductsDataTable` (consulte o tutorial [criando uma camada de lógica de negócios](../introduction/creating-a-business-logic-layer-cs.md) ).
 
-Podemos fornecer uma explicação mais úteis para o usuário final baseando-se o texto da mensagem no tipo de exceção capturada. O seguinte código que foi usado de forma praticamente idêntica volta a [tratamento BLL - e exceções de nível DAL em uma página ASP.NET](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) tutorial fornece esse nível de detalhe:
+Podemos fornecer uma explicação mais útil para o usuário final, baseando o texto da mensagem no tipo de exceção detectada. O código a seguir, que foi usado de forma praticamente idêntica no [tratamento de exceções de nível de BLL e Dal em um tutorial de página do ASP.net](../editing-inserting-and-deleting-data/handling-bll-and-dal-level-exceptions-in-an-asp-net-page-cs.md) , fornece esse nível de detalhe:
 
 [!code-csharp[Main](handling-bll-and-dal-level-exceptions-cs/samples/sample6.cs)]
 
-Para concluir este tutorial, simplesmente chame o `DisplayExceptionDetails` método a partir de `Catch` bloco passando capturado `Exception` instância (`ex`).
+Para concluir este tutorial, basta chamar o método `DisplayExceptionDetails` do bloco de `Catch` passando pela instância `Exception` capturada (`ex`).
 
-Com o `Try ... Catch` bloquear em vigor, os usuários são apresentados com uma mensagem de erro mais informativa, como as figuras 4 e 5 show. Observe que, diante de uma exceção DataList permanece no modo de edição. Isso ocorre porque quando a exceção ocorre, o fluxo de controle é imediatamente redirecionado para o `Catch` bloco, ignorando o código que retorna DataList para seu estado de edição previamente.
+Com o bloco de `Try ... Catch` em vigor, os usuários recebem uma mensagem de erro mais informativa, conforme as figuras 4 e 5 são mostradas. Observe que, diante de uma exceção, o DataList permanece no modo de edição. Isso ocorre porque, após a exceção, o fluxo de controle é redirecionado imediatamente para o bloco de `Catch`, ignorando o código que retorna o DataList para seu estado de pré-edição.
 
-[![Uma mensagem de erro será exibida se um usuário omite um campo obrigatório](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
+[![uma mensagem de erro será exibida se um usuário omitir um campo obrigatório](handling-bll-and-dal-level-exceptions-cs/_static/image9.png)](handling-bll-and-dal-level-exceptions-cs/_static/image8.png)
 
-**Figura 4**: Uma mensagem de erro será exibida se um usuário omite um campo obrigatório ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image10.png))
+**Figura 4**: uma mensagem de erro será exibida se um usuário omitir um campo necessário ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image10.png))
 
-[![Uma mensagem de erro é exibido ao inserir um preço negativo](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
+[![uma mensagem de erro é exibida ao inserir um preço negativo](handling-bll-and-dal-level-exceptions-cs/_static/image12.png)](handling-bll-and-dal-level-exceptions-cs/_static/image11.png)
 
-**Figura 5**: Uma mensagem de erro é exibido ao inserir um preço negativo ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image13.png))
+**Figura 5**: uma mensagem de erro é exibida ao inserir um preço negativo ([clique para exibir a imagem em tamanho normal](handling-bll-and-dal-level-exceptions-cs/_static/image13.png))
 
 ## <a name="summary"></a>Resumo
 
-O GridView e ObjectDataSource oferecem manipuladores de evento de pós-nível que incluem informações sobre quaisquer exceções que foram geradas durante o fluxo de trabalho de atualização e exclusão, bem como as propriedades que podem ser definidas para indicar se a exceção tiver sido manipulado. Esses recursos, no entanto, não estão disponíveis ao trabalhar com o DataList e usando a BLL diretamente. Em vez disso, somos responsáveis por implementar o tratamento de exceção.
+O GridView e o ObjectDataSource fornecem manipuladores de eventos de nível posterior que incluem informações sobre quaisquer exceções que foram geradas durante o fluxo de trabalho de atualização e exclusão, bem como propriedades que podem ser definidas para indicar se a exceção foi ou não cargo. No entanto, esses recursos não estão disponíveis ao trabalhar com o DataList e usar a BLL diretamente. Em vez disso, somos responsáveis por implementar a manipulação de exceções.
 
-Neste tutorial vimos como adicionar tratamento de exceções para um s DataList editável atualizar o fluxo de trabalho adicionando um `Try ... Catch` bloco para o `UpdateCommand` manipulador de eventos. Se uma exceção for gerada durante o fluxo de trabalho de atualização, o `Catch` s de bloco de código é executado, exibindo informações úteis no `ExceptionDetails` rótulo.
+Neste tutorial, vimos como adicionar tratamento de exceções a um fluxo de trabalho de atualização do DataList s editável adicionando um bloco de `Try ... Catch` ao manipulador de eventos `UpdateCommand`. Se uma exceção for gerada durante o fluxo de trabalho de atualização, o código s do bloco de `Catch` será executado, exibindo informações úteis no rótulo de `ExceptionDetails`.
 
-Neste ponto, DataList não faz nenhum esforço para impedir exceções aconteçam em primeiro lugar. Mesmo que nós sabemos que um preço negativo resultará em uma exceção, nós ainda não tenha adicionado nenhuma funcionalidade para proativamente impedir que um usuário insira essa entrada inválida. Em nosso próximo tutorial, veremos como ajudar a reduzir as exceções causadas pela entrada de usuário inválido, adicionando controles de validação no `EditItemTemplate`.
+Neste ponto, o DataList não faz nenhum esforço para evitar que exceções ocorram em primeiro lugar. Mesmo que saibamos que um preço negativo resultará em uma exceção, ainda não adicionamos nenhuma funcionalidade para impedir que um usuário insira tal entrada inválida. Em nosso próximo tutorial, veremos como ajudar a reduzir as exceções causadas por entrada de usuário inválida adicionando controles de validação no `EditItemTemplate`.
 
 Boa programação!
 
 ## <a name="further-reading"></a>Leitura adicional
 
-Para obter mais informações sobre os tópicos abordados neste tutorial, consulte os seguintes recursos:
+Para obter mais informações sobre os tópicos discutidos neste tutorial, consulte os seguintes recursos:
 
 - [Diretrizes de design para exceções](https://msdn.microsoft.com/library/ms298399.aspx)
-- [Módulos de log de erros e manipuladores (ELMAH)](http://workspaces.gotdotnet.com/elmah) (uma biblioteca de código-fonte aberto para o log de erros)
-- [A Enterprise Library para o .NET Framework 2.0](https://www.microsoft.com/downloads/details.aspx?familyid=5A14E870-406B-4F2A-B723-97BA84AE80B5&amp;displaylang=en) (inclui o Exception Management Application Block)
+- [Módulos e manipuladores de log de erros (ELMAH)](http://workspaces.gotdotnet.com/elmah) (uma biblioteca de código aberto para registrar erros)
+- [Enterprise Library para .NET Framework 2,0](https://www.microsoft.com/downloads/details.aspx?familyid=5A14E870-406B-4F2A-B723-97BA84AE80B5&amp;displaylang=en) (inclui o bloco de aplicativo de gerenciamento de exceções)
 
 ## <a name="about-the-author"></a>Sobre o autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP.NET e fundador da [4GuysFromRolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Microsoft Web desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 2.0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser contatado pelo [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP. net e fundador da [4guysfromrolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 2,0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser acessado em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 ## <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi Ken Pespisa. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. O revisor de cliente potencial para este tutorial foi Ken Pespisa. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](performing-batch-updates-cs.md)

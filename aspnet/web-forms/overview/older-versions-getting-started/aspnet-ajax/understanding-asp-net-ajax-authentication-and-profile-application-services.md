@@ -1,45 +1,45 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
-title: Noções básicas sobre a autenticação do AJAX ASP.NET e serviços de aplicativo de perfil | Microsoft Docs
+title: Noções básicas sobre Serviços de Aplicativos de autenticação e perfil do ASP.NET AJAX | Microsoft Docs
 author: scottcate
-description: O serviço de autenticação permite que os usuários forneçam credenciais para receber um cookie de autenticação e é o serviço de gateway para permitir que o usuário personalizada...
+description: O serviço de autenticação permite que os usuários forneçam credenciais para receber um cookie de autenticação e é o serviço de gateway para permitir usuário personalizado...
 ms.author: riande
 ms.date: 03/14/2008
 ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
-ms.openlocfilehash: 1087d9120411e51fd61d073169a88cac6cdaf15b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: cab9acb1ffd75cca87f6c575a6abdd000235828e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109486"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74635687"
 ---
 # <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Noções básicas sobre Serviços de Aplicativos de perfil e autenticação do AJAX ASP.NET
 
 por [Scott Cate](https://github.com/scottcate)
 
-[Baixar PDF](http://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
+[Baixar PDF](https://download.microsoft.com/download/C/1/9/C19A3451-1D14-477C-B703-54EF22E197EE/AJAX_tutorial03_MSAjax_ASP.NET_Services_cs.pdf)
 
-> O serviço de autenticação permite que os usuários forneçam credenciais para receber um cookie de autenticação e o serviço de gateway para permitir que os perfis de usuário personalizada que é fornecido pelo ASP.NET. O uso do serviço de autenticação do ASP.NET AJAX é compatível com a autenticação de formulários do ASP.NET padrão, para que aplicativos que atualmente usam autenticação de formulários (por exemplo, com o logon de controle) não quebrará atualizando para o serviço de autenticação do AJAX.
+> O serviço de autenticação permite que os usuários forneçam credenciais para receber um cookie de autenticação e é o serviço de gateway para permitir perfis de usuário personalizados fornecidos pelo ASP.NET. O uso do serviço de autenticação AJAX ASP.NET é compatível com a autenticação de formulários padrão do ASP.NET, para que os aplicativos que atualmente usam a autenticação de formulários (como com o controle de logon) não sejam desfeitos pela atualização para o serviço de autenticação AJAX.
 
 ## <a name="introduction"></a>Introdução
 
-Como parte do .NET Framework 3.5, a Microsoft está fornecendo uma atualização no ambiente dimensionável; não só está disponível um novo ambiente de desenvolvimento, mas os novos recursos de consulta integrada à linguagem (LINQ) e outros aprimoramentos de linguagem serão disponibilizados em breve. Além disso, alguns recursos familiares do outros conjuntos de ferramentas, especialmente as extensões do AJAX ASP.NET, estão sendo incluídos como membros de primeira classe da biblioteca de classe Base do .NET Framework. Essas extensões permitem vários novos recursos de cliente avançados, inclusive a renderização parcial de páginas sem exigir uma atualização de página inteira, a capacidade de acessar serviços Web por meio de script de cliente (incluindo a API de criação de perfil do ASP.NET) e uma extensa API do lado do cliente projetado para espelhar a muitos dos esquemas de controle vistos no conjunto de controle de servidor ASP.NET.
+Como parte do .NET Framework 3,5, a Microsoft está oferecendo uma atualização de ambiente dimensionável; o não é apenas um novo ambiente de desenvolvimento disponível, mas os novos recursos de LINQ (consulta integrada à linguagem) e outros aprimoramentos de linguagem estão em breve. Além disso, alguns recursos familiares de outros conjuntos de ferramentas, especialmente as extensões AJAX do ASP.NET, estão sendo incluídos como membros de primeira classe da biblioteca de classes base .NET Framework. Essas extensões habilitam muitos novos recursos avançados de cliente, incluindo o processamento parcial de páginas sem a necessidade de uma atualização de página completa, a capacidade de acessar serviços Web por meio de script de cliente (incluindo a API de criação de perfil do ASP.NET) e uma API extensiva do lado do cliente projetado para espelhar muitos dos esquemas de controle vistos no conjunto de controle do lado do servidor ASP.NET.
 
-Este white paper aborda a implementação e o uso de criação de perfil do ASP.NET e serviços de autenticação de formulários como eles são expostos por extensões de AJAX do Microsoft ASP.NET AJAX ExtensionsThe fazer autenticação de formulários incrivelmente fácil o suporte, como ela (bem como o serviço de criação de perfil) é exposto por meio de um script de proxy de serviço Web. As extensões AJAX também dão suporte a autenticação personalizada por meio da classe AuthenticationServiceManager.
+Este White Paper analisa a implementação e o uso dos serviços de criação de perfil e autenticação de formulários do ASP.NET, pois eles são expostos pelo Microsoft ASP.NET AJAX ExtensionsThe Ajax Extensions tornam a autenticação de formulários incrivelmente fácil de dar suporte, como ele (bem como o serviço de criação de perfil) é exposto por meio de um script de proxy de serviço da Web. As extensões AJAX também oferecem suporte à autenticação personalizada por meio da classe AuthenticationServicemanager.
 
-Este white paper se baseia na versão Beta 2 do Visual Studio 2008 e o .NET Framework 3.5. Este white paper também pressupõe que você estará trabalhando com o Visual Studio 2008 Beta 2, não Visual Web Developer Express e fornecerá instruções passo a passo de acordo com a interface do usuário do Visual Studio. Alguns exemplos de código podem utilizar modelos de projeto não está disponíveis no Visual Web Developer Express.
+Este White Paper se baseia na versão beta 2 do Visual Studio 2008 e do .NET Framework 3,5. Este White Paper também pressupõe que você trabalhará com o Visual Studio 2008 Beta 2, não com o Visual Web Developer Express, e fornecerá orientações de orientação de acordo com a interface do usuário do Visual Studio. Alguns exemplos de código podem utilizar modelos de projeto indisponíveis no Visual Web Developer Express.
 
-## <a name="profiles-and-authentication"></a>*Autenticação e perfis*
+## <a name="profiles-and-authentication"></a>*Perfis e autenticação*
 
-Os perfis do Microsoft ASP.NET e serviços de autenticação são fornecidos pelo sistema de autenticação de formulários ASP.NET e são componentes padrão do ASP.NET. As extensões do AJAX ASP.NET fornecem acesso de script para esses serviços por meio de proxies de script, através de um modelo bastante simples sob o namespace sys da biblioteca cliente AJAX.
+Os perfis de Microsoft ASP.NET e os serviços de autenticação são fornecidos pelo sistema de autenticação de formulários ASP.NET e são componentes padrão do ASP.NET. As extensões do AJAX ASP.NET fornecem acesso de script a esses serviços por meio de proxies de script, por meio de um modelo bastante direto no namespace sys. Services da biblioteca AJAX do cliente.
 
-O serviço de autenticação permite que os usuários forneçam credenciais para receber um cookie de autenticação e o serviço de gateway para permitir que os perfis de usuário personalizada que é fornecido pelo ASP.NET. O uso do serviço de autenticação do ASP.NET AJAX é compatível com a autenticação de formulários do ASP.NET padrão, para que aplicativos que atualmente usam autenticação de formulários (por exemplo, com o logon de controle) não quebrará atualizando para o serviço de autenticação do AJAX.
+O serviço de autenticação permite que os usuários forneçam credenciais para receber um cookie de autenticação e é o serviço de gateway para permitir perfis de usuário personalizados fornecidos pelo ASP.NET. O uso do serviço de autenticação AJAX ASP.NET é compatível com a autenticação de formulários padrão do ASP.NET, para que os aplicativos que atualmente usam a autenticação de formulários (como com o controle de logon) não sejam desfeitos pela atualização para o serviço de autenticação AJAX.
 
-O serviço de perfil permite a integração automática e o armazenamento de dados do usuário com base na associação, conforme fornecido pelo serviço de autenticação. Os dados armazenados são especificados pelo arquivo Web. config, e os vários provedores de serviço de criação de perfil lidar com o gerenciamento de dados. Assim como acontece com o serviço de autenticação, o serviço de perfil do AJAX é compatível com o serviço de perfil do ASP.NET padrão, para que as páginas no momento, incorporando recursos do serviço de perfil do ASP.NET não devem ser quebradas, incluindo suporte a AJAX.
+O serviço de perfil permite a integração automática e o armazenamento de dados do usuário com base na associação, conforme fornecido pelo serviço de autenticação. Os dados armazenados são especificados pelo arquivo Web. config, e os vários provedores de serviço de criação de perfil manipulam o gerenciamento de dados. Assim como no serviço de autenticação, o serviço de perfil AJAX é compatível com o serviço de perfil ASP.NET padrão, de modo que as páginas que atualmente incorporam recursos do serviço de perfil ASP.NET não devem ser desfeitas, incluindo o suporte a AJAX.
 
-Incorporar a autenticação do ASP.NET e os próprios serviços de criação de perfil em um aplicativo está fora do escopo deste white paper. Para obter mais informações sobre o tópico, consulte Biblioteca MSDN Gerenciando usuários usando associação no artigo de referência [ https://msdn.microsoft.com/library/tw292whz.aspx ](https://msdn.microsoft.com/library/tw292whz.aspx). ASP.NET também inclui um utilitário para configurar automaticamente a associação com o SQL Server, que é o provedor de serviço de autenticação padrão para a associação ASP.NET. Para obter mais informações, consulte o artigo da ferramenta de registro do ASP.NET SQL Server (Aspnet\_regsql.exe) no [ https://msdn.microsoft.com/library/ms229862(vs.80).aspx ](https://msdn.microsoft.com/library/ms229862(vs.80).aspx).
+A incorporação da autenticação ASP.NET e dos próprios serviços de criação de perfil em um aplicativo está fora do escopo deste White Paper. Para obter mais informações sobre o tópico, consulte o artigo de referência da biblioteca do MSDN Gerenciando usuários usando a associação em [https://msdn.microsoft.com/library/tw292whz.aspx](https://msdn.microsoft.com/library/tw292whz.aspx). O ASP.NET também inclui um utilitário para configurar automaticamente a associação com um SQL Server, que é o provedor de serviço de autenticação padrão para associação ASP.NET. Para obter mais informações, consulte o artigo ASP.NET SQL Server a ferramenta de registro (ASPNET\_RegSql. exe) em [https://msdn.microsoft.com/library/ms229862(vs.80).aspx](https://msdn.microsoft.com/library/ms229862(vs.80).aspx).
 
 ## <a name="using-the-aspnet-ajax-authentication-service"></a>*Usando o serviço de autenticação do ASP.NET AJAX*
 
@@ -47,299 +47,299 @@ O serviço de autenticação do ASP.NET AJAX deve ser habilitado no arquivo Web.
 
 [!code-xml[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample1.xml)]
 
-O serviço de autenticação requer autenticação de formulários do ASP.NET para ser habilitado e os cookies estejam habilitados no navegador do cliente (um script não é possível habilitar a uma sessão sem cookies, pois sessões sem cookie exigem parâmetros de URL).
+O serviço de autenticação requer que a autenticação de formulários do ASP.NET seja habilitada e requer que os cookies sejam habilitados no navegador do cliente (um script não pode habilitar uma sessão sem cookie, pois as sessões sem cookie exigem parâmetros de URL).
 
-Depois que o serviço de autenticação do AJAX é habilitado e configurado, o script de cliente imediatamente pode tirar proveito do objeto AuthenticationService. Basicamente, script de cliente vai querer aproveitar o `login` método e `isLoggedIn` propriedade. Existem várias propriedades para fornecer padrões para o método de logon, que pode aceitar um grande número de parâmetros.
+Depois que o serviço de autenticação AJAX estiver habilitado e configurado, o script de cliente poderá aproveitar imediatamente o objeto Sys. Services. AuthenticationService. Principalmente, o script de cliente desejará aproveitar o método de `login` e a propriedade `isLoggedIn`. Existem várias propriedades para fornecer padrões para o método login, que pode aceitar um grande número de parâmetros.
 
-*Membros de AuthenticationService*
+*Membros sys. Services. AuthenticationService*
 
 *método de logon:*
 
 O método login () inicia uma solicitação para autenticar as credenciais do usuário. Esse método é assíncrono e não bloqueia a execução.
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| userName | Necessário. O nome de usuário para autenticar. |
-| password | Opcional (o padrão é nulo). A senha do usuário. |
-| isPersistent | Opcional (o padrão é false). Se o cookie de autenticação do usuário deve persistir entre as sessões. Se for false, o usuário será fazer logoff quando o navegador é fechado ou a sessão expirar. |
-| redirectUrl | Opcional (o padrão é nulo). A URL para redirecionar o navegador após a autenticação bem-sucedida. Se esse parâmetro for nulo ou uma cadeia de caracteres vazia, nenhum redirecionamento ocorrerá. |
-| customInfo | Opcional (o padrão é nulo). Esse parâmetro não está sendo utilizado e é reservado para uso futuro. |
-| loginCompletedCallback | Opcional (o padrão é nulo). A função ser chamada quando o logon for concluída com êxito. Se for especificado, esse parâmetro substitui a propriedade defaultLoginCompleted. |
-| failedCallback | Opcional (o padrão é nulo). A função ser chamada quando o logon falhou. Se for especificado, esse parâmetro substitui a propriedade defaultFailedCallback. |
-| userContext | Opcional (o padrão é nulo). Dados de contexto de usuário personalizada que devem ser passados para as funções de retorno de chamada. |
+| Usu | Necessária. O nome de usuário a ser autenticado. |
+| senha do | Opcional (o padrão é NULL). A senha do usuário. |
+| IsPersistent | Opcional (o padrão é false). Se o cookie de autenticação do usuário deve persistir entre as sessões. Se for false, o usuário fará logoff quando o navegador for fechado ou a sessão expirar. |
+| redirectUrl | Opcional (o padrão é NULL). A URL para redirecionar o navegador para após a autenticação bem-sucedida. Se esse parâmetro for nulo ou uma cadeia de caracteres vazia, nenhum redirecionamento ocorrerá. |
+| customInfo | Opcional (o padrão é NULL). Este parâmetro não é usado no momento e está reservado para uso futuro. |
+| loginCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logon for concluído com êxito. Se especificado, esse parâmetro substitui a propriedade defaultLoginCompleted. |
+| failedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logon tiver falhado. Se especificado, esse parâmetro substitui a propriedade defaultFailedCallback. |
+| Context | Opcional (o padrão é NULL). Dados de contexto de usuário personalizados que devem ser passados para as funções de retorno de chamada. |
 
 *Valor de retorno:*
 
-Essa função não inclui um valor de retorno. No entanto, um número de comportamentos está incluído após a conclusão de uma chamada para essa função:
+Essa função não inclui um valor de retorno. No entanto, vários comportamentos são incluídos na conclusão de uma chamada para esta função:
 
-- A página atual será atualizada ou ser alterada se o `redirectUrl` parâmetro não era nulo nem uma cadeia de caracteres vazia.
-- No entanto, se o parâmetro era nulo ou uma cadeia de caracteres vazia, o `loginCompletedCallback` parâmetro, ou `defaultLoginCompletedCallback` propriedade é chamada.
-- Se a chamada para o serviço web falhar, o `failedCallback` parâmetro de `defaultFailedCallback` propriedade é chamada.
+- A página atual será atualizada ou será alterada se o parâmetro `redirectUrl` não for nulo nem uma cadeia de caracteres vazia.
+- No entanto, se o parâmetro era nulo ou uma cadeia de caracteres vazia, o parâmetro `loginCompletedCallback` ou a propriedade `defaultLoginCompletedCallback` é chamada.
+- Se a chamada para o serviço Web falhar, o parâmetro `failedCallback` da propriedade `defaultFailedCallback` será chamado.
 
-*método logoff:*
+*método de logout:*
 
-O método logout() remove o cookie de credenciais e faz logoff do usuário atual do aplicativo web.
+O método logout () remove o cookie de credenciais e faz logoff do usuário atual do aplicativo Web.
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| redirectUrl | Opcional (o padrão é nulo). A URL para redirecionar o navegador após a autenticação bem-sucedida. Se esse parâmetro for nulo ou uma cadeia de caracteres vazia, nenhum redirecionamento ocorrerá. |
-| logoutCompletedCallback | Opcional (o padrão é nulo). A função ser chamada quando o logout foi concluída com êxito. Se for especificado, esse parâmetro substitui a propriedade defaultLogoutCompleted. |
-| failedCallback | Opcional (o padrão é nulo). A função ser chamada quando o logon falhou. Se for especificado, esse parâmetro substitui a propriedade defaultFailedCallback. |
-| userContext | Opcional (o padrão é nulo). Dados de contexto de usuário personalizada que devem ser passados para as funções de retorno de chamada. |
+| redirectUrl | Opcional (o padrão é NULL). A URL para redirecionar o navegador para após a autenticação bem-sucedida. Se esse parâmetro for nulo ou uma cadeia de caracteres vazia, nenhum redirecionamento ocorrerá. |
+| logoutCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logout for concluído com êxito. Se especificado, esse parâmetro substitui a propriedade defaultLogoutCompleted. |
+| failedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logon tiver falhado. Se especificado, esse parâmetro substitui a propriedade defaultFailedCallback. |
+| Context | Opcional (o padrão é NULL). Dados de contexto de usuário personalizados que devem ser passados para as funções de retorno de chamada. |
 
 *Valor de retorno:*
 
-Essa função não inclui um valor de retorno. No entanto, um número de comportamentos está incluído após a conclusão de uma chamada para essa função:
+Essa função não inclui um valor de retorno. No entanto, vários comportamentos são incluídos na conclusão de uma chamada para esta função:
 
-- A página atual será atualizada ou ser alterada se o `redirectUrl` parâmetro não era nulo nem uma cadeia de caracteres vazia.
-- No entanto, se o parâmetro era nulo ou uma cadeia de caracteres vazia, o `logoutCompletedCallback` parâmetro, ou `defaultLogoutCompletedCallback` propriedade é chamada.
-- Se a chamada para o serviço web falhar, o `failedCallback` parâmetro de `defaultFailedCallback` propriedade é chamada.
+- A página atual será atualizada ou será alterada se o parâmetro `redirectUrl` não for nulo nem uma cadeia de caracteres vazia.
+- No entanto, se o parâmetro era nulo ou uma cadeia de caracteres vazia, o parâmetro `logoutCompletedCallback` ou a propriedade `defaultLogoutCompletedCallback` é chamada.
+- Se a chamada para o serviço Web falhar, o parâmetro `failedCallback` da propriedade `defaultFailedCallback` será chamado.
 
-*propriedade defaultFailedCallback (get, set):*
+*Propriedade defaultFailedCallback (Get, Set):*
 
-Esta propriedade especifica uma função que deve ser chamada se ocorrer uma falha na comunicação com o serviço web. Ele deve receber um delegado (ou uma referência de função).
+Esta propriedade especifica uma função que deve ser chamada se ocorrer uma falha na comunicação com o serviço Web. Ele deve receber um delegado (ou referência de função).
 
 A referência de função especificada por essa propriedade deve ter a seguinte assinatura:
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample2.js)]
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| error | Especifica as informações de erro. |
-| userContext | Especifica as informações de contexto de usuário fornecidas quando a função de logon ou logoff foi chamada. |
-| methodName | O nome do método de chamada. |
+| erro | Especifica as informações de erro. |
+| Context | Especifica as informações de contexto de usuário fornecidas quando a função de logon ou logout foi chamada. |
+| MethodName | O nome do método de chamada. |
 
-*propriedade defaultLoginCompletedCallback (get, set):*
+*Propriedade defaultLoginCompletedCallback (Get, Set):*
 
-Esta propriedade especifica uma função que deve ser chamada quando a chamada de serviço da web de logon foi concluída. Ele deve receber um delegado (ou uma referência de função).
+Esta propriedade especifica uma função que deve ser chamada quando a chamada de serviço Web de logon for concluída. Ele deve receber um delegado (ou referência de função).
 
 A referência de função especificada por essa propriedade deve ter a seguinte assinatura:
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample3.js)]
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| validCredentials | Especifica se o usuário forneceu credenciais válidas. `true` Se o usuário fez logon com êxito em; Caso contrário, `false`. |
-| userContext | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
-| methodName | O nome do método de chamada. |
+| validCredentials | Especifica se o usuário forneceu credenciais válidas. `true` se o usuário fez logon com êxito; caso contrário `false`. |
+| Context | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
+| MethodName | O nome do método de chamada. |
 
-*propriedade defaultLogoutCompletedCallback (get, set):*
+*Propriedade defaultLogoutCompletedCallback (Get, Set):*
 
-Esta propriedade especifica uma função que deve ser chamada quando a chamada de serviço da web de logout foi concluída. Ele deve receber um delegado (ou uma referência de função).
+Esta propriedade especifica uma função que deve ser chamada quando a chamada de serviço Web de logout for concluída. Ele deve receber um delegado (ou referência de função).
 
 A referência de função especificada por essa propriedade deve ter a seguinte assinatura:
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample4.js)]
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| resultado | Esse parâmetro sempre será `null`; ela é reservada para uso futuro. |
-| userContext | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
-| methodName | O nome do método de chamada. |
+| disso | Esse parâmetro sempre será `null`; Ele é reservado para uso futuro. |
+| Context | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
+| MethodName | O nome do método de chamada. |
 
-*Propriedade isLoggedIn (get):*
+*Propriedade islogind (Get):*
 
-Essa propriedade obtém o estado atual de autenticação do usuário; ele é definido pelo objeto ScriptManager durante uma solicitação de página.
+Esta propriedade Obtém o estado de autenticação atual do usuário; Ele é definido pelo objeto ScriptManager durante uma solicitação de página.
 
-Essa propriedade retornará `true` se o usuário está conectado no momento; caso contrário, ele retornará `false`.
+Essa propriedade retornará `true` se o usuário estiver conectado no momento; caso contrário, ele retornará `false`.
 
-*propriedade de caminho (get, set):*
+*Propriedade Path (Get, Set):*
 
-Programaticamente, essa propriedade determina o local do serviço de autenticação da web. Ele pode ser usado para substituir o provedor de autenticação padrão, bem como uma definidas declarativamente na propriedade do caminho do nó do filho do controle ScriptManager AuthenticationService (para obter mais informações, consulte usando um provedor de serviço de autenticação personalizado tópico abaixo).
+Essa propriedade determina programaticamente o local do serviço Web de autenticação. Ele pode ser usado para substituir o provedor de autenticação padrão, bem como um conjunto declarativamente na propriedade Path do nó filho de AuthenticationService do controle do ScriptManager (para obter mais informações, consulte usando um provedor de serviço de autenticação personalizado tópico abaixo).
 
-Observe que não altera o local do serviço de autenticação padrão. No entanto, ASP.NET AJAX permite que você especifique o local de um serviço web que fornece a mesma interface de classe que o proxy de serviço de autenticação do ASP.NET AJAX.
+Observe que o local do serviço de autenticação padrão não é alterado. No entanto, o ASP.NET AJAX permite que você especifique o local de um serviço Web que fornece a mesma interface de classe do proxy do serviço de autenticação do ASP.NET AJAX.
 
-Observe também que essa propriedade não deve ser definida como um valor que direciona a solicitação de script fora do site atual. Como o aplicativo atual não deve receber as credenciais de autenticação, seria inútil. Além disso, o AJAX de tecnologia subjacente não deve lançar solicitações entre sites e pode gerar uma exceção de segurança no navegador do cliente.
+Observe também que essa propriedade não deve ser definida como um valor que direcione a solicitação de script para fora do site atual. Como o aplicativo atual não receberá as credenciais de autenticação, ele seria inútil; Além disso, o AJAX subjacente à tecnologia não deve lançar solicitações entre sites e pode gerar uma exceção de segurança no navegador do cliente.
 
-Esta propriedade é um `String` objeto que representa o caminho para o serviço de autenticação da web.
+Essa propriedade é um objeto `String` que representa o caminho para o serviço Web de autenticação.
 
-*propriedade de tempo limite (get, set):*
+*Propriedade Timeout (Get, Set):*
 
-Essa propriedade determina o período de tempo de espera para o serviço de autenticação antes de assumir que a solicitação de logon falhou. Se o tempo limite expirar enquanto aguarda uma chamada ser concluído, o retorno de chamada com falha na solicitação será chamado e a chamada não será concluída.
+Esta propriedade determina o período de tempo de espera para o serviço de autenticação antes de assumir que a solicitação de logon falhou. Se o tempo limite expirar enquanto aguarda a conclusão de uma chamada, o retorno de chamada da solicitação-falha será chamado e a chamada não será concluída.
 
-Esta propriedade é um `Number` objeto que representa o número de milissegundos para aguardar os resultados do serviço de autenticação.
+Essa propriedade é um objeto `Number` que representa o número de milissegundos para aguardar os resultados do serviço de autenticação.
 
-*Exemplo de código: Registro em log para o serviço de autenticação*
+*Exemplo de código: fazendo logon no serviço de autenticação*
 
-A marcação a seguir é um exemplo de página ASP.NET com uma chamada de script simples para os métodos de logon e logoff da classe AuthenticationService.
+A marcação a seguir é uma página ASP.NET de exemplo com uma chamada de script simples para os métodos login e logout da classe AuthenticationService.
 
 [!code-aspx[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample5.aspx)]
 
-## <a name="accessing-aspnet-profiling-data-via-ajax"></a>Acessando a criação de perfil dados por meio do AJAX ASP.NET
+## <a name="accessing-aspnet-profiling-data-via-ajax"></a>Acessando dados de criação de perfil do ASP.NET via AJAX
 
-O serviço de criação de perfil do ASP.NET também é exposta por meio de extensões AJAX do ASP.NET. Como o serviço de criação de perfil do ASP.NET fornece uma API rica e granular por para armazenar e recuperar dados do usuário, isso pode ser uma ferramenta excelente produtividade.
+O serviço de criação de perfil do ASP.NET também é exposto por meio das extensões AJAX do ASP.NET. Como o serviço de criação de perfil do ASP.NET fornece uma API sofisticada e granular pela qual armazenar e recuperar dados do usuário, essa pode ser uma excelente ferramenta de produtividade.
 
-O serviço de perfil deve ser habilitado em Web. config; não é por padrão. Para fazer isso, certifique-se de que o `profileService` elemento filho tiver habilitado = Web. config especificado em true e, se você especificou as propriedades que podem ser lidos ou gravadas da seguinte maneira:
+O serviço de perfil deve ser habilitado em Web. config; Ele não é por padrão. Para fazer isso, verifique se o elemento filho `profileService` foi habilitado = true especificado em Web. config e se você especificou quais propriedades podem ser lidas ou gravadas da seguinte maneira:
 
 [!code-xml[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample6.xml)]
 
-O serviço de perfil também deve ser configurado. Embora a configuração do serviço de criação de perfil está fora do escopo deste white paper, vale a pena observar que os grupos, conforme definido nas configurações de perfil poderá ser acessados como subpropriedades do nome do grupo. Por exemplo, com a seguinte seção de perfil especificada:
+O serviço de perfil também deve ser configurado. Embora a configuração do serviço de criação de perfil esteja fora do escopo deste White Paper, vale a pena observar que os grupos conforme definidos nas definições de configuração do perfil estarão acessíveis como subpropriedades do nome do grupo. Por exemplo, com a seguinte seção de perfil especificada:
 
 [!code-xml[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample7.xml)]
 
-Script de cliente seja capaz de acessar o nome, Address.Line1, Address.Line2, Address.City, Address.State, Address.Zip e BackgroundColor como propriedades do campo de propriedades da classe ProfileService.
+O script de cliente seria capaz de acessar Name, address. linha1, address. linhafinal, address. City, address. State, address. zip e BackgroundColor como propriedades do campo Properties da classe ProfileService.
 
-Depois que o serviço de criação de perfil do AJAX é configurado, ele estará imediatamente disponível nas páginas; No entanto, ele precisa ser carregado uma vez antes de usar.
+Depois que o serviço de criação de perfil do AJAX estiver configurado, ele estará imediatamente disponível em páginas; no entanto, ele precisará ser carregado uma vez antes do uso.
 
-*ProfileService membros*
+*Membros sys. Services. ProfileService*
 
 *campo de propriedades:*
 
-O campo de propriedades expõe todos os dados de perfil configurado como propriedades filho que podem ser referenciadas pela convenção de nome de operador de ponto. As propriedades que são filhos dos grupos de propriedade são chamadas de GroupName.PropertyName. Na configuração de perfil de exemplo apresentada acima para obter o estado do usuário, você pode usar o seguinte identificador:
+O campo Propriedades expõe todos os dados de perfil configurados como propriedades filho que podem ser referenciadas pela Convenção ponto-operador-nome. Propriedades que são filhos de grupos de propriedades são referenciadas como GroupName. PropertyName. Na configuração de perfil de exemplo apresentada acima, para obter o estado do usuário, você pode usar o seguinte identificador:
 
 [!code-csharp[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample8.cs)]
 
-*método Load:*
+*método de carregamento:*
 
 Carrega uma lista selecionada ou todas as propriedades do servidor.
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| propertyNames | Opcional (o padrão é nulo). As propriedades a ser carregada do servidor. |
-| loadCompletedCallback | Opcional (o padrão é nulo). A função ser chamada durante o carregamento foi concluído. |
-| failedCallback | Opcional (o padrão é nulo). A função ser chamada se ocorrer um erro. |
-| userContext | Opcional (o padrão é nulo). Informações de contexto a ser passado para a função de retorno de chamada. |
+| propriedadenames | Opcional (o padrão é NULL). As propriedades a serem carregadas do servidor. |
+| loadCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o carregamento for concluído. |
+| failedCallback | Opcional (o padrão é NULL). A função a ser chamada se ocorrer um erro. |
+| Context | Opcional (o padrão é NULL). Informações de contexto a serem passadas para a função de retorno de chamada. |
 
-A função de carregamento não tem um valor de retorno. Se a chamada foi concluída com êxito, ele irá chamar qualquer uma de `loadCompletedCallback` parâmetro ou `defaultLoadCompletedCallback` propriedade. Se a chamada falhou ou o tempo limite expirou, ou o `failedCallback` parâmetro ou `defaultFailedCallback` propriedade será chamada.
+A função load não tem um valor de retorno. Se a chamada for concluída com êxito, ela chamará o parâmetro `loadCompletedCallback` ou a propriedade `defaultLoadCompletedCallback`. Se a chamada tiver falhado ou o tempo limite expirar, o parâmetro `failedCallback` ou a propriedade `defaultFailedCallback` será chamada.
 
-Se o `propertyNames` parâmetro não for fornecido, todas as propriedades configuradas de leitura são recuperadas do servidor.
+Se o parâmetro `propertyNames` não for fornecido, todas as propriedades de leitura configuradas serão recuperadas do servidor.
 
-*Salve método:*
+*salvar método:*
 
-O método Save () salva a lista de propriedades especificada (ou todas as propriedades) para o perfil do usuário ASP.NET.
+O método Save () salva a lista de propriedades especificada (ou todas as propriedades) no perfil ASP.NET do usuário.
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| propertyNames | Opcional (o padrão é nulo). As propriedades a ser salvo no servidor. |
-| saveCompletedCallback | Opcional (o padrão é nulo). A função ser chamada quando o salvamento foi concluída. |
-| failedCallback | Opcional (o padrão é nulo). A função ser chamada se ocorrer um erro. |
-| userContext | Opcional (o padrão é nulo). Informações de contexto a ser passado para a função de retorno de chamada. |
+| propriedadenames | Opcional (o padrão é NULL). As propriedades a serem salvas no servidor. |
+| saveCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o salvamento for concluído. |
+| failedCallback | Opcional (o padrão é NULL). A função a ser chamada se ocorrer um erro. |
+| Context | Opcional (o padrão é NULL). Informações de contexto a serem passadas para a função de retorno de chamada. |
 
-Salvar função não tem um valor de retorno. Se a chamada for concluída com êxito, ele irá chamar o `saveCompletedCallback` parâmetro ou `defaultSaveCompletedCallback` propriedade. Se a chamada falhou ou o tempo limite expirou, ou o `failedCallback` ou `defaultFailedCallback` propriedade será chamada.
+A função Save não tem um valor de retorno. Se a chamada for concluída com êxito, ela chamará o parâmetro `saveCompletedCallback` ou a propriedade `defaultSaveCompletedCallback`. Se a chamada tiver falhado ou o tempo limite expirar, a propriedade `failedCallback` ou `defaultFailedCallback` será chamada.
 
-Se o `propertyNames` parâmetro for nulo, todas as propriedades de perfil serão enviadas para o servidor e o servidor decidirá quais propriedades podem ser salvos e quais não podem.
+Se o parâmetro `propertyNames` for nulo, todas as propriedades de perfil serão enviadas ao servidor e o servidor decidirá quais propriedades podem ser salvas e quais não podem.
 
-*propriedade defaultFailedCallback (get, set):*
+*Propriedade defaultFailedCallback (Get, Set):*
 
-Esta propriedade especifica uma função que deve ser chamada se ocorrer uma falha na comunicação com o serviço web. Ele deve receber um delegado (ou uma referência de função).
+Esta propriedade especifica uma função que deve ser chamada se ocorrer uma falha na comunicação com o serviço Web. Ele deve receber um delegado (ou referência de função).
 
 A referência de função especificada por essa propriedade deve ter a seguinte assinatura:
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample9.js)]
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| Erro | Especifica as informações de erro. |
-| userContext | Especifica as informações de contexto de usuário fornecidas quando a carga ou a função de salvamento foi chamado. |
-| methodName | O nome do método de chamada. |
+| Erro do | Especifica as informações de erro. |
+| Context | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
+| MethodName | O nome do método de chamada. |
 
-*propriedade defaultSaveCompleted (get, set):*
+*Propriedade defaultSaveCompleted (Get, Set):*
 
-Esta propriedade especifica uma função que deve ser chamada após a conclusão de salvar os dados de perfil do usuário. Ele deve receber um delegado (ou uma referência de função).
+Esta propriedade especifica uma função que deve ser chamada após a conclusão do salvamento dos dados de perfil do usuário. Ele deve receber um delegado (ou referência de função).
 
 A referência de função especificada por essa propriedade deve ter a seguinte assinatura:
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample10.js)]
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| numPropsSaved | Especifica o número de propriedades que foram salvos. |
-| userContext | Especifica as informações de contexto de usuário fornecidas quando a carga ou a função de salvamento foi chamado. |
-| methodName | O nome do método de chamada. |
+| numPropsSaved | Especifica o número de propriedades que foram salvas. |
+| Context | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
+| MethodName | O nome do método de chamada. |
 
-*propriedade defaultLoadCompleted (get, set):*
+*Propriedade defaultLoadCompleted (Get, Set):*
 
-Esta propriedade especifica uma função que deve ser chamada após a conclusão do carregamento dos dados de perfil do usuário. Ele deve receber um delegado (ou uma referência de função).
+Esta propriedade especifica uma função que deve ser chamada após a conclusão do carregamento dos dados de perfil do usuário. Ele deve receber um delegado (ou referência de função).
 
 A referência de função especificada por essa propriedade deve ter a seguinte assinatura:
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample11.js)]
 
-*Parâmetros:*
+*Parâmetro*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| numPropsLoaded | Especifica o número de propriedades carregado. |
-| userContext | Especifica as informações de contexto de usuário fornecidas quando a carga ou a função de salvamento foi chamado. |
-| methodName | O nome do método de chamada. |
+| numPropsLoaded | Especifica o número de propriedades carregadas. |
+| Context | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
+| MethodName | O nome do método de chamada. |
 
-*propriedade de caminho (get, set):*
+*Propriedade Path (Get, Set):*
 
-Programaticamente, essa propriedade determina o local do serviço da web de perfil. Ele pode ser usado para substituir o provedor de serviço de perfil de padrão, bem como uma definidas declarativamente na propriedade do caminho do nó do filho do controle ScriptManager ProfileService.
+Essa propriedade determina programaticamente o local do serviço Web de perfil. Ele pode ser usado para substituir o provedor de serviços de perfil padrão, bem como um conjunto declarativamente na propriedade Path do nó filho ProfileService do controle ScriptManager.
 
-Observe que não altera o local do serviço de perfil padrão. No entanto, ASP.NET AJAX permite que você especifique o local de um serviço web que fornece a mesma interface de classe que o proxy de serviço de autenticação do ASP.NET AJAX.
+Observe que o local do serviço de perfil padrão não é alterado. No entanto, o ASP.NET AJAX permite que você especifique o local de um serviço Web que fornece a mesma interface de classe do proxy do serviço de autenticação do ASP.NET AJAX.
 
-Observe também que essa propriedade não deve ser definida como um valor que direciona a solicitação de script fora do site atual. O AJAX de tecnologia subjacente não deve lançar solicitações entre sites e pode gerar uma exceção de segurança no navegador do cliente.
+Observe também que essa propriedade não deve ser definida como um valor que direcione a solicitação de script para fora do site atual. O AJAX subjacente à tecnologia não deve lançar solicitações entre sites e pode gerar uma exceção de segurança no navegador do cliente.
 
-Esta propriedade é um `String` objeto que representa o caminho para o serviço web de perfil.
+Essa propriedade é um objeto `String` que representa o caminho para o serviço Web de perfil.
 
-*propriedade de tempo limite (get, set):*
+*Propriedade Timeout (Get, Set):*
 
-Essa propriedade determina o período de tempo para aguardar o serviço de perfil antes de assumir a carga ou salvar a solicitação falhou. Se o tempo limite expirar enquanto aguarda uma chamada ser concluído, o retorno de chamada com falha na solicitação será chamado e a chamada não será concluída.
+Esta propriedade determina o período de tempo de espera para o serviço de perfil antes de assumir que a solicitação de carregamento ou gravação falhou. Se o tempo limite expirar enquanto aguarda a conclusão de uma chamada, o retorno de chamada da solicitação-falha será chamado e a chamada não será concluída.
 
-Esta propriedade é um `Number` objeto que representa o número de milissegundos para aguardar os resultados do serviço de perfil.
+Essa propriedade é um objeto `Number` que representa o número de milissegundos para aguardar os resultados do serviço de perfil.
 
-*Exemplo de código: Carregando dados de perfil no carregamento da página*
+*Exemplo de código: carregando dados de perfil no carregamento de página*
 
-O código a seguir verifica se um usuário é autenticado e nesse caso, carregará cor de plano de fundo preferencial do usuário como a página.
+O código a seguir verificará se um usuário está autenticado e, nesse caso, carregará a cor de plano de fundo preferencial do usuário como a página.
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample12.js)]
 
-## <a name="using-a-custom-authentication-service-provider"></a>*Usando um provedor de serviços de autenticação personalizada*
+## <a name="using-a-custom-authentication-service-provider"></a>*Usando um provedor de serviços de autenticação personalizado*
 
-Extensões AJAX do ASP.NET permitem que você crie um provedor de serviços de autenticação de script personalizado ao expor sua funcionalidade por meio de um serviço da web personalizado. Para ser usado, o serviço web deve expor dois métodos, `Login` e `Logout`; e esses métodos devem ser especificados com as mesmas assinaturas de método como um serviço da web de autenticação do ASP.NET AJAX padrão.
+As extensões AJAX do ASP.NET permitem que você crie um provedor de serviço de autenticação de script personalizado expondo sua funcionalidade por meio de um serviço Web personalizado. Para ser usado, seu serviço Web deve expor dois métodos, `Login` e `Logout`; e esses métodos devem ser especificados com as mesmas assinaturas de método que o serviço Web de autenticação do ASP.NET AJAX padrão.
 
-Depois de criar o serviço da web personalizado, você precisará especificar o caminho para ele, seja declarativamente em sua página, por meio de programação em código, ou por meio de script de cliente.
+Depois de criar o serviço Web personalizado, você precisará especificar o caminho para ele, seja declarativamente em sua página, programaticamente no código ou por meio do script do cliente.
 
 *Para definir o caminho declarativamente:*
 
-Para definir o caminho de forma declarativa, incluem AuthenticationService filho do objeto ScriptManager na sua página ASP.NET:
+Para definir o caminho de forma declarativa, inclua o filho de AuthenticationService do objeto ScriptManager em sua página do ASP.NET:
 
 [!code-aspx[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample13.aspx)]
 
 *Para definir o caminho no código:*
 
-Para definir o caminho por meio de programação, especifique o caminho pela instância do seu Gerenciador de scripts:
+Para definir o caminho programaticamente, especifique o caminho por meio da instância do seu Gerenciador de scripts:
 
 [!code-csharp[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample14.cs)]
 
 *Para definir o caminho no script:*
 
-Para definir o caminho programaticamente no script, utilize o `path` propriedade da classe AuthenticationService:
+Para definir o caminho programaticamente no script, utilize a propriedade `path` da classe AuthenticationService:
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample15.js)]
 
-*Sample Web Service de autenticação personalizada*
+*Serviço Web de exemplo para autenticação personalizada*
 
 [!code-aspx[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample16.aspx)]
 
 ## <a name="summary"></a>Resumo
 
-Serviços do ASP.NET – especificamente, os serviços de criação de perfil, a associação e autenticação - são facilmente expostos ao JavaScript no navegador do cliente. Isso permite que os desenvolvedores integrem perfeitamente, seu código do lado do cliente com o mecanismo de autenticação sem depender de controles como UpdatePanels para fazer o trabalho pesado. Dados de perfil podem ser protegidos do cliente, utilizando as definições de configuração da web; Nenhum dado está disponível por padrão, e os desenvolvedores devem participar de propriedades de perfil.
+Serviços ASP.NETs – especificamente os serviços de criação de perfil, associação e autenticação – são facilmente expostos ao JavaScript no navegador do cliente. Isso permite que os desenvolvedores integrem o código do lado do cliente com o mecanismo de autenticação de forma direta, sem depender de controles como UpdatePanels para fazer o trabalho pesado. Os dados de perfil também podem ser protegidos do cliente, utilizando as definições de configuração da Web; nenhum dado está disponível por padrão e os desenvolvedores devem optar por propriedades de perfil.
 
-Além disso, ao criar implementações de serviço web simplificada com assinaturas de método equivalente, os desenvolvedores podem criar provedores de script personalizado para esses serviços ASP.NET intrínseco. Suporte para essas técnicas simplifica o desenvolvimento de aplicativos cliente avançados, além de fornecer aos desenvolvedores uma ampla gama de flexibilidade para atender às necessidades específicas.
+Além disso, ao criar implementações simplificadas do serviço Web com assinaturas de método equivalentes, os desenvolvedores podem criar provedores de script personalizados para esses serviços ASP.NET intrínsecos. O suporte para essas técnicas simplifica o desenvolvimento de aplicativos cliente avançados, fornecendo aos desenvolvedores uma ampla variedade de flexibilidade para atender a necessidades específicas.
 
-## <a name="bio"></a>*Bio*
+## <a name="bio"></a>*Biografia*
 
-Scott Cate tem trabalhado com tecnologias Web Microsoft desde 1997 e é o presidente da myKB.com ([www.myKB.com](http://www.myKB.com)) onde ele é especialista na escrita de ASP.NET com base em aplicativos com foco em soluções de Software da Base de dados de Conhecimento. Scott pode ser contatado através do email [ scott.cate@myKB.com ](mailto:scott.cate@myKB.com) ou em seu blog em [ScottCate.com](http://ScottCate.com)
+Scott Cate tem trabalhado com tecnologias Web da Microsoft desde 1997 e é presidente da myKB.com ([www.myKB.com](http://www.myKB.com)), onde é especialista em escrever aplicativos baseados em ASP.net voltados para as soluções de software da base de dados de conhecimento. Scott pode ser contatado por email em [scott.cate@myKB.com](mailto:scott.cate@myKB.com) ou em seu blog em [ScottCate.com](http://ScottCate.com)
 
 > [!div class="step-by-step"]
 > [Anterior](understanding-asp-net-ajax-updatepanel-triggers.md)

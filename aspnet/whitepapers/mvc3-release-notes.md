@@ -8,12 +8,12 @@ ms.date: 10/06/2010
 ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
-ms.openlocfilehash: 46d051a5eba6501cf36910b7674ce6400597de8a
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.openlocfilehash: 504202068f5db4f8614bba02e8066ffecfd15b48
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057024"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74619233"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
 
@@ -91,7 +91,7 @@ ms.locfileid: "74057024"
 - [Enção](#0.1__Toc274034231)
 
 <a id="overview"></a>
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 Este documento descreve o lançamento do ASP.NET MVC 3 RTM para Visual Studio 2010. O ASP.NET MVC é uma estrutura para o desenvolvimento de aplicativos Web que usa o padrão MVC (Model-View-Controller). O instalador do ASP.NET MVC 3 inclui os seguintes componentes:
 
@@ -120,7 +120,7 @@ https://go.microsoft.com/fwlink/?LinkID=208140
 O ASP.NET MVC 3 pode ser instalado e pode ser executado lado a lado com o ASP.NET MVC 2.
 
 <a id="software-requirements"></a>
-## <a name="software-requirements"></a>Requisitos de software
+## <a name="software-requirements"></a>Requisitos de software do
 
 Os componentes de tempo de execução do ASP.NET MVC 3 exigem o seguinte software:
 
@@ -141,7 +141,7 @@ Os tutoriais e outras informações sobre o ASP.NET MVC estão disponíveis na p
 [https://www.asp.net/mvc/](../mvc/index.md)
 
 <a id="support"></a>
-## <a name="support"></a>Suporte
+## <a name="support"></a>Suporte do
 
 Esta é uma versão totalmente suportada. Informações sobre como obter suporte técnico podem ser encontradas no [site suporte da Microsoft](https://support.microsoft.com/).
 
@@ -298,7 +298,7 @@ Como o jQuery inclui o número de versão no nome do arquivo, atualizar o jQuery
 - Em alguns casos, a instalação pode falhar com a mensagem de erro "falha na instalação com código de erro (0x80070643)". Para obter informações sobre como contornar esse problema, consulte o [artigo 2531566 da base de conhecimento](https://support.microsoft.com/kb/2531566).
 - O scaffolding para adicionar um controlador não Scaffold entidades que aproveitam o suporte à herança de entidade no Entity Framework. Por exemplo, considerando uma classe *Person* base herdada por uma classe *Student* , scaffolding a classe *Student* resultará em um código gerado que não é compilado.
 - Criar um novo projeto do ASP.NET MVC 3 dentro de uma pasta de solução causa um erro *NullReferenceException* . A solução alternativa é criar o projeto do ASP.NET MVC 3 na raiz da solução e, em seguida, movê-lo para a pasta da solução.
-- O IntelliSense para sintaxe Razor não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e quiser aproveitar o suporte ao IntelliSense do Razor no MVC 3, consulte a entrada [Razor IntelliSense e](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) retomar no blog do Hadi Hariri, que discute maneiras de usá-los em conjunto hoje.
+- O IntelliSense para sintaxe Razor não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e quiser aproveitar o suporte ao IntelliSense do Razor no MVC 3, consulte a entrada [Razor IntelliSense e](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) retomar no blog do Hadi Hariri, que discute maneiras de usá-los em conjunto hoje.
 - Durante a instalação, a caixa de diálogo aceitação do EULA exibe os termos de licença em uma janela que é menor do que o esperado.
 - Quando você estiver editando um modo de exibição Razor (. cshtml ou. *arquivo vbhtml* ), exibições. O ASP.NET MVC 3 não inclui nenhum trecho de código para exibições do Razor. aspxselecting um trecho de código para o ASP.NET MVC mostrará trechos para
 - Se você instalar o ASP.NET MVC 3 para Visual Web Developer Express em um computador em que o Visual Studio não está instalado e depois instalar o Visual Studio, será necessário reinstalar o ASP.NET MVC 3. O Visual Studio e o Visual Web Developer Express compartilham componentes que são atualizados pelo instalador do ASP.NET MVC 3. O mesmo problema se aplica se você instalar o ASP.NET MVC 3 para Visual Studio em um computador que não tenha o Visual Web Developer Express e, depois, instalar o Visual Web Developer Express.
@@ -347,7 +347,7 @@ Renomear um arquivo Razor usando Gerenciador de Soluções enquanto o arquivo é
 - O instalador do ASP.NET MVC 3 é capaz de instalar apenas uma versão inicial do Gerenciador de pacotes NuGet. Depois de instalar a versão inicial, o NuGet pode ser instalado e atualizado usando o Gerenciador de extensões do Visual Studio. Se você já tiver o NuGet instalado, vá para a Galeria de extensões do Visual Studio para atualizar para a versão mais recente do NuGet.
 - Criar um novo projeto do ASP.NET MVC 3 dentro de uma pasta de solução causa um erro *NullReferenceException* . A solução alternativa é criar o projeto do ASP.NET MVC 3 na raiz da solução e, em seguida, movê-lo para a pasta da solução.
 - O instalador pode levar muito mais tempo do que as versões anteriores do ASP.NET MVC para serem concluídas. Isso ocorre porque ele atualiza os componentes do Visual Studio 2010.
-- O IntelliSense para sintaxe Razor não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e quiser aproveitar o suporte ao IntelliSense do Razor no MVC 3, consulte a entrada [Razor IntelliSense e](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) retomar no blog do Hadi Hariri, que discute maneiras de usá-los em conjunto hoje.
+- O IntelliSense para sintaxe Razor não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e quiser aproveitar o suporte ao IntelliSense do Razor no MVC 3, consulte a entrada [Razor IntelliSense e](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) retomar no blog do Hadi Hariri, que discute maneiras de usá-los em conjunto hoje.
 - As exibições CCSHTML e VBHTML criadas com a versão beta do ASP.NET MVC 3 não têm suas ações de compilação definidas corretamente, com o resultado de que esses tipos de exibição são omitidos quando o projeto é publicado. O valor da ação de compilação para esses arquivos deve ser definido como "conteúdo". O ASP.NET MVC 3 RTM corrige esse problema para novos arquivos, mas não corrige a configuração de arquivos existentes para um projeto criado com versões de pré-lançamento.
 - ![](mvc3-release-notes/_static/image3.png)
 - Durante a instalação, a caixa de diálogo aceitação do EULA exibe os termos de licença em uma janela que é menor do que o esperado.
@@ -470,7 +470,7 @@ Em versões anteriores, os valores explícitos que foram passados para o método
 - O instalador do ASP.NET MVC 3 é capaz de instalar apenas uma versão inicial do Gerenciador de pacotes NuGet. Depois de instalar a versão inicial, o NuGet pode ser instalado e atualizado usando o Gerenciador de extensões do Visual Studio. Se você já tiver o NuGet instalado, vá para a Galeria de extensões do Visual Studio para atualizar para a versão mais recente do NuGet.
 - Criar um novo projeto do ASP.NET MVC 3 dentro de uma pasta de solução causa um erro *NullReferenceException* . A solução alternativa é criar o projeto do ASP.NET MVC 3 na raiz da solução e, em seguida, movê-lo para a pasta da solução.
 - O instalador pode levar muito mais tempo do que as versões anteriores do ASP.NET MVC para serem concluídas. Isso ocorre porque ele atualiza os componentes do Visual Studio 2010.
-- O IntelliSense para sintaxe Razor não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e desejar tirar proveito do suporte ao IntelliSense do Razor no Hadi MVC 3 RC2, consulte a entrada [Razor IntelliSense e](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) retomar no blog do Hariri, que discute maneiras de usá-los em conjunto hoje.
+- O IntelliSense para sintaxe Razor não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e desejar tirar proveito do suporte ao IntelliSense do Razor no Hadi MVC 3 RC2, consulte a entrada [Razor IntelliSense e](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) retomar no blog do Hariri, que discute maneiras de usá-los em conjunto hoje.
 - As exibições CSHTML e VBHTML criadas com a versão beta do ASP.NET MVC 3 não têm suas ações de compilação definidas corretamente, com o resultado de que esses tipos de exibição são omitidos quando o projeto é publicado. O valor da *ação de compilação* para esses arquivos deve ser definido como conteúdo ". O ASP.NET MVC 3 RC2 corrige esse problema para novos arquivos, mas não corrige a configuração de arquivos existentes para um projeto criado com a versão beta.![](mvc3-release-notes/_static/image4.png)
 - Durante a instalação, a caixa de diálogo aceitação do EULA exibe os termos de licença em uma janela que é menor do que o esperado.
 - Quando você estiver editando uma exibição Razor (arquivo. cshtml), o item de menu ir para controlador no Visual Studio não estará disponível e não haverá trechos de código.
@@ -613,7 +613,7 @@ Como alternativa, para desativar a validação de solicitação para cada propri
 - O instalador pode levar muito mais tempo do que as versões anteriores do ASP.NET MVC para serem concluídas porque atualiza os componentes do Visual Studio 2010.
 - O Add View scaffolding ao selecionar a exibição tipada astrongly aplica Scaffold propriedades somente gravação. Eles devem ser sempre ignorados pelo scaffolding. A caixa de diálogo Adicionar exibição também aplica Scaffold propriedades somente leitura ao gerar uma exibição "Editar" ou "criar". As propriedades somente leitura só devem ser com Scaffold para as exibições de exibição e lista.
 - A depuração não funciona quando o ASP.NET MVC 3 é instalado junto com a CTP assíncrona. O ASP.NET MVC 3 não pode ser instalado lado a lado com o CTP assíncrono. Desinstale a CTP assíncrona para reparar a depuração. Para obter mais detalhes, leia [esta postagem de blog](http://drew-prog.blogspot.com/2010/11/how-to-uninstall-microsoft-aspnet-mvc-3.html) sobre como desinstalar todas as partes do ASP.NET MVC 3 RC.
-- O Razor IntelliSense não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e desejar tirar proveito do suporte ao IntelliSense do Razor no MVC 3 RC, leia [esta postagem de blog](http://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) de JetBrains que discute maneiras de usá-las em conjunto hoje.
+- O Razor IntelliSense não funciona quando o remais nítido é instalado. Se você tiver o reASP.NET instalado e desejar tirar proveito do suporte ao IntelliSense do Razor no MVC 3 RC, leia [esta postagem de blog](https://blogs.jetbrains.com/dotnet/2010/11/razor-intellisense-and-resharper/) de JetBrains que discute maneiras de usá-las em conjunto hoje.
 - As exibições CSHTML e VBHTML criadas com beta do ASP.NET MVC 3 não têm sua ação de compilação corretamente, o que as omite da publicação. A *ação de Build* para esses arquivos deve ser definida como "conteúdo". O ASP.NET MVC 3 RC corrige esse problema para novos arquivos, mas não corrige a configuração de arquivos existentes para um projeto criado com a versão beta.
 - O instalador pode levar muito mais tempo do que as versões anteriores do ASP.NET MVC para serem concluídas porque atualiza os componentes do Visual Studio 2010.
 - O Add View scaffolding ao selecionar uma exibição com rigidez de tipos aplica Scaffold propriedades somente leitura. Da mesma forma, as propriedades somente gravação são com Scaffold para exibições de "exibição".
@@ -861,6 +861,6 @@ Há um problema conhecido que faz com que a autenticação de formulários sempr
 
 ## <a id="0.1__Toc274034231"></a>Enção
 
-© 2011 Microsoft Corporation. Todos os direitos reservados. Este documento é fornecido "no estado em que se encontra". As informações e as exibições expressas neste documento, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio. Você assume o risco de utilizá-las.
+© 2011 Microsoft Corporation. Todos os direitos reservados. Este documento é fornecido "no estado em que se encontra". As informações e visualizações apresentadas neste documento, incluindo URL e outras referências a sites da Web, podem ser alteradas sem aviso prévio. O usuário assume os riscos de utilizar este conteúdo.
 
-Este documento não lhe concede nenhum direito legal à nenhuma propriedade intelectual de nenhum produto da Microsoft. Você pode copiar e usar este documento para fins internos de referência.
+Este documento não oferece a você quaisquer direitos legais sobre propriedade intelectual para qualquer produto da Microsoft. Você pode copiar e usar este documento para fins internos de referência.

@@ -1,231 +1,231 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
-title: Monitoramento e telemetria (compilando aplicativos de nuvem do mundo Real com o Azure) | Microsoft Docs
+title: Monitoramento e telemetria (criando aplicativos de nuvem do mundo real com o Azure) | Microsoft Docs
 author: MikeWasson
-description: Os aplicativos de nuvem construção Real World com o livro eletrônico do Azure baseia-se em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem a ele...
+description: A criação de aplicativos de nuvem do mundo real com o livro eletrônico do Azure é baseada em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas que podem...
 ms.author: riande
 ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: 2fc8f6cdefe1e940f3e3eafc2b9acc9144690284
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 44941c9fd0dcd3223604fc4a4f2836f587578acb
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118726"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74585602"
 ---
-# <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoramento e telemetria (compilando aplicativos de nuvem do mundo Real com o Azure)
+# <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoramento e telemetria (criando aplicativos de nuvem do mundo real com o Azure)
 
 por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
+> A **criação de aplicativos de nuvem do mundo real com** o livro eletrônico do Azure é baseada em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas que podem ajudá-lo a desenvolver com sucesso aplicativos Web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
 
-Muitas pessoas contam com os clientes para que ele saiba quando seu aplicativo está inativo. Que não é realmente uma prática recomendada em qualquer lugar e especialmente não na nuvem. Não há nenhuma garantia de notificação rápida, e quando você seja notificado, você geralmente pode obter dados falsos ou mínimo sobre o que aconteceu. Com bons sistemas de telemetria e registro em log que você pode estar informado do que está acontecendo com seu aplicativo e quando algo dá errado você descobre imediatamente e tem informações úteis de solução de problemas para trabalhar com.
+Muitas pessoas contam com os clientes para informá-los quando seu aplicativo está inativo. Isso não é realmente uma prática recomendada em qualquer lugar e, especialmente, não na nuvem. Não há nenhuma garantia de notificação rápida e, quando você for notificado, geralmente obterá dados mínimos ou enganosos sobre o que aconteceu. Com bons sistemas de telemetria e registro em log, você pode estar atento ao que está acontecendo com seu aplicativo, e quando algo dá errado, você descobre imediatamente e tem informações úteis de solução de problemas com as quais trabalhar.
 
 ## <a name="buy-or-rent-a-telemetry-solution"></a>Comprar ou alugar uma solução de telemetria
 
 > [!NOTE]
-> Este artigo foi escrito antes [Application Insights](/azure/application-insights/app-insights-overview) foi lançado. O Application Insights é a abordagem preferencial para soluções de telemetria no Azure. Ver [configurar o Application Insights para seu site ASP.NET](/azure/application-insights/app-insights-asp-net) para obter mais informações.
+> Este artigo foi escrito antes da liberação de [Application insights](/azure/application-insights/app-insights-overview) . Application Insights é a abordagem preferida para soluções de telemetria no Azure. Consulte [configurar Application insights para o site do ASP.net](/azure/application-insights/app-insights-asp-net) para obter mais informações.
 
-Uma das coisas que é excelente sobre o ambiente de nuvem é que é muito fácil comprar ou alugar sua maneira de vitória. Telemetria é um exemplo. Sem muito esforço, você pode obter um sistema de telemetria muito bom para cima e em execução, muito econômico. Há um monte de parceiros excelentes que se integram com o Azure e alguns deles têm camadas gratuitas – portanto, você pode obter Telemetria básica para nada. Aqui estão apenas alguns daqueles disponíveis atualmente no Azure:
+Uma das coisas que é excelente no ambiente de nuvem é que é realmente fácil comprar ou alugar sua forma de vitória. Telemetria é um exemplo. Sem muita esforço, você pode obter um sistema de telemetria realmente bom em funcionamento, de forma muito econômica. Há um monte de grandes parceiros que se integram ao Azure e alguns deles têm camadas gratuitas, para que você possa obter a telemetria básica para nada. Aqui estão apenas alguns dos disponíveis no Azure:
 
-- [New Relic](http://newrelic.com/)
+- [Novo Relic](http://newrelic.com/)
 - [AppDynamics](http://www.appdynamics.com/)
-- [Dynatrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
+- [DynaTrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
 
-[Microsoft System Center](http://www.petri.co.il/microsoft-system-center-introduction.htm#) também inclui recursos de monitoramento.
+[O Microsoft System Center](http://www.petri.co.il/microsoft-system-center-introduction.htm#) também inclui recursos de monitoramento.
 
-Examinaremos rapidamente a configuração do New Relic para mostrar como isso pode ser fácil usar um sistema de telemetria.
+Vamos percorrer rapidamente a configuração de New Relic para mostrar como é fácil usar um sistema de telemetria.
 
-No portal de gerenciamento do Azure, inscreva-se para o serviço. Clique em **New**e, em seguida, clique em **Store**. O **escolher um complemento** caixa de diálogo é exibida. Role para baixo e clique em **New Relic**.
+No portal de gerenciamento do Azure, Inscreva-se no serviço. Clique em **novo**e em **armazenar**. A caixa de diálogo **escolher um complemento** é exibida. Role para baixo e clique em **novo Relic**.
 
 ![Escolher um complemento](monitoring-and-telemetry/_static/image1.png)
 
-Clique na seta à direita e escolha a camada de serviço que você deseja. Para esta demonstração, usaremos a camada gratuita.
+Clique na seta para a direita e escolha a camada de serviço desejada. Para esta demonstração, usaremos a camada gratuita.
 
 ![Personalizar complemento](monitoring-and-telemetry/_static/image2.png)
 
-Clique na seta à direita, confirme a "comprar" e New Relic agora aparece como um complemento no portal.
+Clique na seta para a direita, confirme a "compra" e o novo Relic agora aparece como um complemento no Portal.
 
-![Revisar compra](monitoring-and-telemetry/_static/image3.png)
+![Examinar compra](monitoring-and-telemetry/_static/image3.png)
 
-![Complemento de Relíquia de novo no portal de gerenciamento](monitoring-and-telemetry/_static/image4.png)
+![Novo complemento do Relic no portal de gerenciamento](monitoring-and-telemetry/_static/image4.png)
 
-Clique em **informações de Conexão**e copie a chave de licença.
+Clique em **informações de conexão**e copie a chave de licença.
 
-![Informações de Conexão](monitoring-and-telemetry/_static/image5.png)
+![Informações de conexão](monitoring-and-telemetry/_static/image5.png)
 
-Vá para o **configurar** guia para seu aplicativo web no portal, defina **monitoramento de desempenho** para **complemento**e defina o **escolher complemento** a lista suspensa para **New Relic**. Em seguida, clique em **salvar**.
+Vá para a guia **Configurar** para seu aplicativo Web no portal, defina **monitoramento de desempenho** como **complemento**e defina a lista suspensa **escolher complemento** para **novo Relic**. Em seguida, clique em **salvar**.
 
-![New Relic na guia Configurar](monitoring-and-telemetry/_static/image6.png)
+![Nova Relic na guia Configurar](monitoring-and-telemetry/_static/image6.png)
 
-No Visual Studio, instale o pacote do New Relic NuGet em seu aplicativo.
+No Visual Studio, instale o novo pacote NuGet do Relic em seu aplicativo.
 
 ![Análise do desenvolvedor na guia Configurar](monitoring-and-telemetry/_static/image7.png)
 
-Implantar o aplicativo no Azure e começar a usá-lo. Crie alguns Fix It tarefas para fornecer alguma atividade New relic monitorar.
+Implante o aplicativo no Azure e comece a usá-lo. Crie algumas tarefas Fix it para fornecer alguma atividade para o novo Relic monitorar.
 
-Em seguida, volte para o **New Relic** página na **complementos** guia do portal e clique em **gerenciar**. O portal envia para o portal de gerenciamento do New Relic, usando o logon único para autenticação para que você não precise digitar suas credenciais novamente. A página de visão geral apresenta uma variedade de estatísticas de desempenho. (Clique na imagem para ver o tamanho total da página Visão geral).
+Em seguida, volte para a página **novo Relic** na guia **Complementos** do portal e clique em **gerenciar**. O portal envia para o novo portal de gerenciamento do Relic, usando o logon único para autenticação, para que você não precise inserir suas credenciais novamente. A página Visão geral apresenta uma variedade de estatísticas de desempenho. (Clique na imagem para ver o tamanho total da página de visão geral.)
 
-[![Guia de monitoramento do Relíquia nova](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
+[![nova guia monitoramento de Relic](monitoring-and-telemetry/_static/image9.png)](monitoring-and-telemetry/_static/image8.png)
 
-Aqui estão algumas das estatísticas que você pode ver:
+Aqui estão apenas algumas das estatísticas que você pode ver:
 
 - Tempo médio de resposta em diferentes momentos do dia.
 
     ![Tempo de resposta](monitoring-and-telemetry/_static/image10.png)
-- Taxas de transferência (em solicitações por minuto) em diferentes momentos do dia.
+- Taxas de taxa de transferência (em solicitações por minuto) em diferentes momentos do dia.
 
     ![Taxa de transferência](monitoring-and-telemetry/_static/image11.png)
-- Tempo de CPU do servidor gasto no tratamento de solicitações HTTP diferentes.
+- Tempo de CPU do servidor gasto lidando com solicitações HTTP diferentes.
 
     ![Tempos de transação da Web](monitoring-and-telemetry/_static/image12.png)
 - Tempo de CPU gasto em diferentes partes do código do aplicativo:
 
-    ![Detalhes de rastreamento](monitoring-and-telemetry/_static/image13.png)
-- Estatísticas de desempenho histórico.
+    ![Detalhes do rastreamento](monitoring-and-telemetry/_static/image13.png)
+- Estatísticas históricas de desempenho.
 
-    ![Histórico de desempenho](monitoring-and-telemetry/_static/image14.png)
-- Chamadas para serviços externos, como o serviço Blob e estatísticas sobre como confiável e responsivo em que o serviço tiver sido.
+    ![Desempenho histórico](monitoring-and-telemetry/_static/image14.png)
+- Chamadas para serviços externos, como o serviço BLOB e estatísticas sobre a confiabilidade e a resposta do serviço.
 
     ![Serviços externos](monitoring-and-telemetry/_static/image15.png)
 
     ![Serviços externos](monitoring-and-telemetry/_static/image16.png)
 
     ![Serviço externo](monitoring-and-telemetry/_static/image17.png)
-- Informações sobre onde no mundo ou local no aplicativo web dos EUA tráfego de origem.
+- As informações sobre o local no mundo ou onde vieram o tráfego do aplicativo Web dos EUA.
 
     ![Geografia](monitoring-and-telemetry/_static/image18.png)
 
-Você também pode configurar relatórios e eventos. Por exemplo, você pode dizer a qualquer momento que você começar a ver erros, envie um email à equipe de suporte de alerta para o problema.
+Você também pode configurar relatórios e eventos. Por exemplo, você pode dizer sempre que você começar a ver erros, enviar um email para alertar a equipe de suporte para o problema.
 
 ![Relatórios](monitoring-and-telemetry/_static/image19.png)
 
-O New Relic é apenas um exemplo de um sistema de telemetria. Você pode obter tudo isso de outros serviços também. A beleza da nuvem é que, sem precisar escrever nenhum código e para mínima ou nenhuma despesa, repentinamente pode obter muito mais informações sobre como seu aplicativo está sendo usado e o que seus clientes, na verdade, estão enfrentando.
+O New Relic é apenas um exemplo de um sistema de telemetria; Você também pode obter tudo isso de outros serviços. A beleza da nuvem é que, sem a necessidade de escrever nenhum código, e pelo mínimo ou nenhuma despesa, você pode obter muito mais informações sobre como seu aplicativo está sendo usado e o que os clientes estão realmente enfrentando.
 
 <a id="log"></a>
-## <a name="log-for-insight"></a>Log para mais informações
+## <a name="log-for-insight"></a>Registre-se para obter informações
 
-Um pacote de telemetria é uma boa primeira etapa, mas você ainda precisa instrumentar seu próprio código. O serviço de telemetria informa quando há um problema e informa o que os clientes estão experimentando, mas ele pode não lhe muitas informações sobre o que está acontecendo em seu código.
+Um pacote de telemetria é uma boa primeira etapa, mas você ainda precisa instrumentar seu próprio código. O serviço de telemetria informa quando há um problema e informa o que os clientes estão experimentando, mas ele pode não fornecer muita percepção sobre o que está acontecendo em seu código.
 
-Você não quer ter remotamente um servidor de produção para ver o que está fazendo o seu aplicativo. Quando você tem um servidor, mas e quando você tiver dimensionado para centenas de servidores e você não sabe quais delas precisam remotamente, que pode ser prático? O registro em log deve fornecer informações suficientes para que você nunca precisará remoto em servidores de produção para analisar e depurar problemas. Você deve ser registro em log informações suficientes para que você pode isolar problemas exclusivamente por meio dos logs.
+Você não quer ter de se tornar remoto em um servidor de produção para ver o que seu aplicativo está fazendo. Isso pode ser prático quando você tem um servidor, mas e quando você escala para centenas de servidores e você não sabe quais deles precisa para serem remotos? O registro em log deve fornecer informações suficientes que você nunca precise conectar remotamente aos servidores de produção para analisar e depurar problemas. Você deve estar registrando em log informações suficientes para poder isolar os problemas exclusivamente por meio dos logs.
 
-### <a name="log-in-production"></a>Faça logon em produção
+### <a name="log-in-production"></a>Fazer logon na produção
 
-Muitas pessoas ativar o rastreamento em produção somente quando há um problema e eles desejam depurar. Isso pode introduzir um atraso significativo entre a hora em que você esteja ciente de um problema e a hora em que você obtenha informações úteis de solução de problemas sobre ele. E as informações que você obtenha não possam ser úteis para erros intermitentes.
+Muitas pessoas ativam o rastreamento em produção somente quando há um problema e desejam Depurar. Isso pode apresentar um atraso significativo entre o tempo que você está ciente de um problema e o tempo que você obtém informações úteis de solução de problemas sobre ele. E as informações obtidas podem não ser úteis para erros intermitentes.
 
-No ambiente de nuvem em que o armazenamento é barato, é recomendável é que você deixe sempre fazendo logon em produção. Dessa forma, quando erros ocorrerem, você ainda tiver registrado e você tiver dados históricos que podem ajudar a você analisar problemas que desenvolvem ao longo do tempo ou ocorrem regularmente em momentos diferentes. Você pode automatizar um processo de limpeza para excluir logs antigos, mas você pode achar que é mais caro configurar um processo do que manter os logs.
+O que recomendamos no ambiente de nuvem em que o armazenamento é barato é que você sempre deixa o logon em produção. Dessa forma, quando ocorrem erros, você já os tem registrados e tem dados históricos que podem ajudá-lo a analisar os problemas que desenvolvem ao longo do tempo ou acontecem regularmente em momentos diferentes. É possível automatizar um processo de limpeza para excluir logs antigos, mas você pode achar mais caro configurar esse processo do que manter os logs.
 
-A despesa adicionada de registro em log é trivial em comparação com a quantidade de tempo e dinheiro, que você pode salvar fazendo com que todas as informações que você precisa já está disponível quando algo dá errado de solução de problemas. Em seguida, quando alguém que eles tinham um erro aleatórias em algum momento aproximadamente 8:00 ontem à noite, mas eles não se lembra o erro, prontamente pode descobrir qual era o problema.
+A despesa adicional de registro em log é trivial em comparação com a quantidade de tempo de solução de problemas e dinheiro que você pode economizar, tendo todas as informações de que você precisa já disponíveis quando algo der errado. Em seguida, quando alguém informa a você um erro aleatório durante cerca de 8:00 na noite passada, mas não se lembra do erro, você pode descobrir o problema.
 
-Para menos de US $4 um mês, você pode manter 50 gigabytes de logs por lado e o impacto no desempenho de registro em log é trivial desde que você mantenha uma coisa em mente, a fim de evitar gargalos de desempenho, verifique se sua biblioteca de registro em log é assíncrona.
+Por menos de $4 por mês, você pode manter 50 gigabytes de logs à mão, e o impacto no desempenho do registro em log é trivial, desde que você mantenha uma coisa em mente – para evitar gargalos de desempenho, verifique se sua biblioteca de registro em log é assíncrona.
 
-### <a name="differentiate-logs-that-inform-from-logs-that-require-action"></a>Diferenciar os logs que informam de logs que exigem ação
+### <a name="differentiate-logs-that-inform-from-logs-that-require-action"></a>Diferenciar logs que informam os logs que exigem ação
 
-Os logs devem informar (quero saber algo) ou o ACT (que eu quero fazer alguma coisa). Tenha cuidado para gravar apenas os logs do ACT para problemas que exigem genuinamente uma pessoa ou um processo automatizado para agir. Muitos logs do ACT criará o ruído, que exigem muito trabalho a serem analisados tudo isso para localizar problemas originais. E se os logs do ACT disparam automaticamente alguma ação, como o envio de email para a equipe de suporte, evite permitindo que milhares de tais ações ser disparado por um único problema.
+Os logs devem informar (desejo que você saiba algo) ou agir (quero fazer algo). Tenha cuidado para gravar apenas os logs do ACT em busca de problemas que exigem uma pessoa ou um processo automatizado de forma genuína. Muitos logs do ACT criarão ruído, exigindo muito trabalho para buscar por tudo para encontrar problemas autênticos. E se os logs do ACT dispararem automaticamente alguma ação, como enviar email para a equipe de suporte, Evite deixar que milhares dessas ações sejam disparadas por um único problema.
 
-No rastreamento de System. Diagnostics do .NET, os logs podem ser atribuídos nível de erro, aviso, informações e depuração/detalhado. É possível diferenciar ACT de logs de informar reservando o nível de erro para os logs do ACT e usando os níveis inferiores para informar logs.
+No rastreamento do .NET System. Diagnostics, os logs podem receber erros, avisos, informações e nível de depuração/detalhe. Você pode diferenciar o ACT de logs de informação, reservando o nível de erro para logs do ACT e usando os níveis inferiores para logs de informação.
 
 ![Níveis de registro em log](monitoring-and-telemetry/_static/image20.png)
 
 ### <a name="configure-logging-levels-at-run-time"></a>Configurar níveis de log em tempo de execução
 
-Enquanto que vale a pena ter sempre fazendo logon em produção, outra prática recomendada é implementar uma estrutura de log que permite que você ajuste em tempo de execução, o nível de detalhe que você está fazendo, sem reimplantar ou reiniciar o aplicativo. Por exemplo quando você usa o recurso de rastreamento `System.Diagnostics` você pode criar o erro, aviso, informações e logs de depuração/detalhado. Recomendamos que você sempre que você fizer o erro, aviso, informações de logs em produção e você desejará ser capaz de adicionar dinamicamente o log de depuração/detalhado para solução de problemas caso a caso.
+Embora valha a pena ter o log Always on em produção, outra prática recomendada é implementar uma estrutura de log que permita que você ajuste em tempo de execução o nível de detalhes que você está registrando, sem reimplantar ou reiniciar o aplicativo. Por exemplo, ao usar o recurso de rastreamento no `System.Diagnostics` você pode criar logs de erro, aviso, informações e depuração/detalhado. É recomendável que você sempre Registre logs de erros, avisos e informações em produção, e você desejará adicionar dinamicamente logs de depuração/detalhado para solução de problemas caso a caso.
 
-Aplicativos Web no serviço de aplicativo do Azure têm suporte interno para gravação `System.Diagnostics` logs para o sistema de arquivos, armazenamento de tabela ou armazenamento de BLOBs. Você pode selecionar os níveis de log diferentes para cada destino de armazenamento, e você pode alterar o nível de log em tempo real sem reiniciar o aplicativo. O suporte ao armazenamento de Blob torna mais fácil de executar [HDInsight](https://docs.microsoft.com/azure/hdinsight/) trabalhos de análise em seus logs de aplicativo, porque HDInsight sabe como trabalhar diretamente com o armazenamento de BLOBs.
+Os aplicativos Web no serviço de Azure App têm suporte interno para gravar logs de `System.Diagnostics` no sistema de arquivos, armazenamento de tabelas ou armazenamento de BLOBs. Você pode selecionar diferentes níveis de log para cada destino de armazenamento e pode alterar o nível de log imediatamente sem reiniciar o aplicativo. O suporte ao armazenamento de BLOBs facilita a execução de trabalhos de análise do [hdinsight](https://docs.microsoft.com/azure/hdinsight/) em seus logs de aplicativo, pois o HDInsight sabe como trabalhar com o armazenamento de BLOBs diretamente.
 
 ### <a name="log-exceptions"></a>registrar exceções em log
 
-Não coloque apenas *exceção. ToString ()* em seu código de registro em log. Isso deixa as informações contextuais. No caso de erros do SQL, ele deixa de fora o número do erro SQL. Para todas as exceções, incluem informações de contexto, a própria exceção e exceções internas para certificar-se de que você está fornecendo tudo o que serão necessário para a solução de problemas. Por exemplo, informações de contexto podem incluir o nome do servidor, um identificador de transação e um nome de usuário (mas não a senha ou os segredos!).
+Não apenas coloque a *exceção. ToString ()* no seu código de registro em log. Isso deixa informações contextuais. No caso de erros SQL, ele deixa o número do erro SQL. Para todas as exceções, inclua informações de contexto, a própria exceção e as exceções internas para certificar-se de que você está fornecendo tudo o que será necessário para a solução de problemas. Por exemplo, as informações de contexto podem incluir o nome do servidor, um identificador de transação e um nome de usuário (mas não a senha ou os segredos!).
 
-Se você confiar em cada desenvolvedor deve fazer a coisa certa com exceção de registro em log, alguns deles não. Para garantir que seja feito o direito de forma toda vez, manipulação de exceções diretamente em sua interface de agente de compilação: passar o próprio objeto de exceção para a classe de agente e registrar os dados de exceção corretamente na classe de agente.
+Se você confiar em cada desenvolvedor para fazer a coisa certa com o log de exceções, alguns deles não serão. Para garantir que ele seja feito da maneira certa a cada vez, crie uma manipulação de exceção diretamente na sua interface do agente: passe o próprio objeto de exceção para a classe do agente e registre os dados de exceção corretamente na classe de agente.
 
 ### <a name="log-calls-to-services"></a>Chamadas de log para serviços
 
-É altamente recomendável que você grava um log sempre que seu aplicativo chama um serviço, se é para um banco de dados ou uma API REST ou qualquer serviço externo. Inclua em seus logs não só uma indicação de sucesso ou falha, mas quanto tempo levou cada solicitação. No ambiente de nuvem, verá com frequência problemas relacionados a problemas de lentidão em vez de interrupções completas. Algo que normalmente leva de 10 milissegundos, de repente, pode começar a fazer um segundo. Quando alguém diz ao que seu aplicativo está lento, você deseja ser capaz de examinar o New Relic ou qualquer serviço de telemetria, você tem e valida sua experiência e, em seguida, você deseja ser capaz de procurar são seus próprios logs de se aprofundar nos detalhes de por que está lenta.
+É altamente recomendável que você grave um log toda vez que seu aplicativo chamar um serviço, seja para um banco de dados ou uma API REST ou qualquer serviço externo. Inclua em seus logs não apenas uma indicação de êxito ou falha, mas por quanto tempo cada solicitação demorou. No ambiente de nuvem, você geralmente verá problemas relacionados a lentos em vez de interrupções completas. Algo que normalmente leva 10 milissegundos pode começar a levar um segundo. Quando alguém diz que seu aplicativo está lento, você deseja ser capaz de examinar novas Relic ou qualquer serviço de telemetria que você tenha e validar sua experiência e, em seguida, você deseja ser capaz de examinar seus próprios logs para se aprofundar nos detalhes de por que está lento.
 
 ### <a name="use-an-ilogger-interface"></a>Usar uma interface ILogger
 
-O que é recomendável fazer quando você cria um aplicativo de produção é criar um simples *ILogger* de interface e coloque a alguns métodos nele. Isso torna mais fácil alterar posteriormente a implementação de registro em log e não precisa passar por todo o seu código para fazê-lo. Podemos pode estar usando o `System.Diagnostics.Trace` classe em todo o aplicativo para corrigi-lo, mas em vez disso, estamos usando-nos bastidores em uma classe de registro em log que implementa *ILogger*, e fazemos *ILogger* chamadas de método em todo o aplicativo.
+O que recomendamos ao criar um aplicativo de produção é criar uma interface *ILogger* simples e colocar alguns métodos nela. Isso facilita a alteração da implementação de log posteriormente e não precisa passar por todo o seu código para fazê-lo. Poderíamos usar a classe `System.Diagnostics.Trace` em todo o aplicativo Fix it, mas, em vez disso, estamos usando-a nos bastidores em uma classe de log que implementa *ILogger*e fazemos chamadas de método *ILogger* em todo o aplicativo.
 
-Dessa forma, se você quiser fazer o registro em log mais avançada, você pode substituir [ `System.Diagnostics.Trace` ](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio#apptracelogs) com qualquer mecanismo de registro em log que você deseja. Por exemplo, à medida que aumenta de seu aplicativo pode decidir que deseja usar um pacote de registro em log mais abrangente, como [NLog](http://nlog-project.org/) ou [Enterprise Library Logging Application Block](https://msdn.microsoft.com/library/dn440731(v=pandp.60).aspx). ([Log4Net](http://logging.apache.org/log4net/) é outra estrutura de log populares, mas ele não faz o registro em log assíncrono.)
+Dessa forma, se você quiser tornar seu registro em log mais rico, poderá substituir [`System.Diagnostics.Trace`](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio#apptracelogs) com qualquer mecanismo de log desejado. Por exemplo, à medida que seu aplicativo cresce, você pode decidir que deseja usar um pacote de log mais abrangente, como o [NLog](http://nlog-project.org/) ou o [bloco de aplicativo de log do Enterprise Library](https://msdn.microsoft.com/library/dn440731(v=pandp.60).aspx). (O[log4net](http://logging.apache.org/log4net/) é outra estrutura de log popular, mas não faz log assíncrono.)
 
-Um motivo possível para usar uma estrutura, como NLog é facilitar a dividir a saída de log em armazenamentos de dados separados de alto volume e de alto valor. Que ajuda a armazenar de forma eficiente grandes volumes de dados informar que você não precisa executar consultas rápidas, mantendo acesso rápido aos dados do ACT.
+Um motivo possível para usar uma estrutura como o NLog é facilitar a divisão da saída de log em repositórios de dados separados de alto volume e de alto valor. Isso ajuda a armazenar com eficiência grandes volumes de dados de informação para os quais você não precisa executar consultas rápidas, ao mesmo tempo em que mantém acesso rápido aos dados do ACT.
 
-### <a name="semantic-logging"></a>Registro em log semântico
+### <a name="semantic-logging"></a>Log semântico
 
-Para uma maneira relativamente nova fazer o registro em log que pode gerar informações de diagnóstico mais úteis, consulte [Enterprise Library registro semântico aplicativo bloco (SLAB)](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). Usa SLAB [rastreamento de eventos para Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) (ETW) e [EventSource](https://msdn.microsoft.com/library/system.diagnostics.tracing.eventsource.aspx) suporte no .NET 4.5 para que você possa criar mais logs que podem ser consultados e não estruturados. Você define um método diferente para cada tipo de evento que você fizer logon, o que permite que você personalize as informações que você escreve. Por exemplo, para registrar um erro de banco de dados SQL você pode chamar um `LogSQLDatabaseError` método. Para esse tipo de exceção, você sabe que uma parte importante de informações é o número de erro, portanto, você poderia incluir um parâmetro de número do erro na assinatura do método e registre o número de erro como um campo separado no registro de log que você escreve. Porque o número está em um campo separado é possível mais fácil e confiável obter relatórios com base nos números de erro SQL do que seria possível se você apenas foram concatenando o número do erro em uma cadeia de caracteres de mensagem.
+Para uma maneira relativamente nova de fazer registro em log que possa produzir informações de diagnóstico mais úteis, consulte a [laje (opção de bloco de aplicativo de log semântico) da Enterprise Library](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). O SLAB usa o ETW ( [rastreamento de eventos para Windows](https://msdn.microsoft.com/library/windows/desktop/bb968803.aspx) ) e o suporte a [EventSource](https://msdn.microsoft.com/library/system.diagnostics.tracing.eventsource.aspx) no .NET 4,5 para permitir que você crie logs mais estruturados e consultáveis. Você define um método diferente para cada tipo de evento que você registra, o que permite que você personalize as informações gravadas. Por exemplo, para registrar um erro de banco de dados SQL, você pode chamar um método `LogSQLDatabaseError`. Para esse tipo de exceção, você sabe que uma informação importante é o número do erro, portanto, você pode incluir um parâmetro de número de erro na assinatura do método e registrar o número do erro como um campo separado no registro de log que você escreve. Como o número está em um campo separado, você pode obter relatórios com mais facilidade e confiança com base nos números de erro do SQL do que você poderia se estivesse apenas concatenando o número do erro em uma cadeia de caracteres de mensagem.
 
-## <a name="logging-in-the-fix-it-app"></a>Log a correção aplicativo
+## <a name="logging-in-the-fix-it-app"></a>Registrando em log o aplicativo corrigir ti
 
 ### <a name="the-ilogger-interface"></a>A interface ILogger
 
-Aqui está o *ILogger* interface no aplicativo corrigi-lo.
+Aqui está a interface *ILogger* no aplicativo Fix it.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample1.cs)]
 
-Esses métodos permitem que você gravar logs com os mesmos níveis de quatro com suporte pelo *System. Diagnostics*. Os métodos de TraceApi são para registrar em log as chamadas de serviço externo, com informações sobre a latência. Você também pode adicionar um conjunto de métodos para o nível de depuração/detalhado.
+Esses métodos permitem que você grave logs nos mesmos quatro níveis com suporte do *System. Diagnostics*. Os métodos TraceApi são para registrar chamadas de serviço externas com informações sobre latência. Você também pode adicionar um conjunto de métodos para o nível de depuração/detalhe.
 
-### <a name="the-logger-implementation-of-the-ilogger-interface"></a>A implementação da interface ILogger do agente
+### <a name="the-logger-implementation-of-the-ilogger-interface"></a>A implementação do agente da interface ILogger
 
-A implementação da interface é muito simple. Ele basicamente apenas chama no padrão *System. Diagnostics* métodos. O trecho a seguir mostra as três dos métodos de informações e um dos outros.
+A implementação da interface é realmente simples. Basicamente, ele apenas chama os métodos *System. Diagnostics* padrão. O trecho a seguir mostra todos os três métodos de informação e um dos outros.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample2.cs)]
 
-### <a name="calling-the-ilogger-methods"></a>Chamar os métodos de ILogger
+### <a name="calling-the-ilogger-methods"></a>Chamando os métodos ILogger
 
-Sempre que o código no aplicativo Fix It captura uma exceção, ele chama um *ILogger* método para registrar em log os detalhes da exceção. E toda vez que ele faz uma chamada para o banco de dados, serviço Blob ou uma API REST, ele inicia um cronômetro antes da chamada, que interrompe o cronômetro quando o serviço retorna e registra o tempo decorrido, juntamente com informações sobre o êxito ou falha.
+Toda vez que o código no aplicativo corrigir ti captura uma exceção, ele chama um método *ILogger* para registrar os detalhes da exceção. E sempre que fizer uma chamada para o banco de dados, o serviço BLOB ou uma API REST, ele iniciará um cronômetro antes da chamada, interromperá o cronômetro quando o serviço retornar e registrará o tempo decorrido junto com as informações sobre êxito ou falha.
 
-Observe que a mensagem de log inclui o nome de classe e o nome do método. É uma boa prática para certificar-se de que as mensagens de log identificam qual parte do código do aplicativo de existência.
+Observe que a mensagem de log inclui o nome da classe e o nome do método. É uma boa prática garantir que as mensagens de log identifiquem qual parte do código do aplicativo as escreveu.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample3.cs?highlight=6,14,20-21,25)]
 
-Portanto, agora para toda vez que o aplicativo Fix It fez uma chamada para o banco de dados SQL, você pode ver a chamada, o método que chamou, e exatamente quanto tempo ela levou.
+Então, agora, para cada vez que o aplicativo corrigir a ti fez uma chamada para o banco de dados SQL, você pode ver a chamada, o método que o chamou e exatamente quanto tempo demorou.
 
-![Consulta de banco de dados SQL nos logs](monitoring-and-telemetry/_static/image21.png)
+![Consulta do banco de dados SQL em logs](monitoring-and-telemetry/_static/image21.png)
 
 ![](monitoring-and-telemetry/_static/image22.png)
 
-Se você ir navegando por meio dos logs, você pode ver que o tempo necessário de chamadas de banco de dados é variável. Que informações podem ser úteis: porque o aplicativo faz tudo isso, você pode analisar as tendências históricas no desempenho do serviço do banco de dados ao longo do tempo. Por exemplo, um serviço pode ser rápido na maioria das vezes, mas as solicitações podem falhar ou respostas lentas em determinados momentos do dia.
+Se você navegar pelos logs, poderá ver que o tempo que as chamadas de banco de dados assumem é variável. Essas informações podem ser úteis: como o aplicativo registra tudo isso, você pode analisar as tendências históricas de como o serviço de banco de dados está sendo executado ao longo do tempo. Por exemplo, um serviço pode ser rápido na maior parte do tempo, mas as solicitações podem falhar ou as respostas podem ficar mais lentas em determinadas horas do dia.
 
-Você pode fazer a mesma coisa para o serviço Blob – para sempre que o aplicativo carrega um novo arquivo, há um log e você pode ver exatamente quanto tempo demorou para carregar cada arquivo.
+Você pode fazer a mesma coisa para o serviço blob – para cada vez que o aplicativo carrega um novo arquivo, há um log, e você pode ver exatamente quanto tempo demorou para carregar cada arquivo.
 
-![Log de upload de blob](monitoring-and-telemetry/_static/image23.png)
+![Log de carregamento de BLOB](monitoring-and-telemetry/_static/image23.png)
 
-Ele é apenas duas linhas extras de código para escrever toda vez que você chama um serviço agora sempre que alguém diz que tiveram um problema, você sabe exatamente qual foi o problema, se ele foi um erro, ou mesmo se ele foi apenas sendo executado lentamente. Você pode identificar a origem do problema sem precisar acessar remotamente um servidor ou ativar o registro em log depois que o erro ocorre e espero que recriá-lo.
+São apenas algumas linhas extras de código para escrever sempre que você chama um serviço e, agora, sempre que alguém diz que teve um problema, você sabe exatamente qual é o problema, se era um erro ou mesmo se ele estava apenas executando lentidão. Você pode identificar a origem do problema sem ter que se conectar remotamente a um servidor ou ativar o registro em log depois que o erro ocorrer e esperar recriá-lo.
 
-## <a name="dependency-injection-in-the-fix-it-app"></a>Injeção de dependência na correção-app
+## <a name="dependency-injection-in-the-fix-it-app"></a>Injeção de dependência no aplicativo corrigir ti
 
-Você talvez esteja se perguntando como o construtor de repositório no exemplo mostrado acima obtém o agente de implementação de interface:
+Você pode imaginar como o construtor do repositório no exemplo mostrado acima Obtém a implementação da interface do agente:
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample4.cs?highlight=6)]
 
-Para conectar a interface para a implementação do aplicativo usa [injeção de dependência](http://en.wikipedia.org/wiki/Dependency_injection)(DI) com [AutoFac](http://autofac.org/). Injeção de dependência permite que você use um objeto com base em uma interface em vários locais em todo o código e só precisa especificar em um só lugar, a implementação que é usada quando a interface é instanciada. Isso torna mais fácil alterar a implementação: por exemplo, você talvez queira substituir o agente do System. Diagnostics por um agente de log NLog. Ou, para testes automatizados você talvez queira substituir por uma versão fictícia do agente de log.
+Para conectar a interface à implementação, o aplicativo usa [injeção de dependência](http://en.wikipedia.org/wiki/Dependency_injection)(di) com [AutoFac](http://autofac.org/). A DI permite que você use um objeto baseado em uma interface em muitos locais em todo o seu código e precise apenas especificar em um local a implementação que é usada quando a interface é instanciada. Isso facilita a alteração da implementação: por exemplo, talvez você queira substituir o agente de log System. Diagnostics por um agente do NLog. Ou para testes automatizados, talvez você queira substituir uma versão fictícia do agente.
 
-O aplicativo Fix It usa DI em todos os repositórios e todos os controladores. Os construtores de classes do controlador é obter um *ITaskRepository* interface da mesma forma que o repositório obtém uma interface de agente:
+O aplicativo corrigir ti usa DI em todos os repositórios e todos os controladores. Os construtores das classes do controlador obtêm uma interface *ITaskRepository* da mesma maneira que o repositório Obtém uma interface do agente:
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample5.cs?highlight=5)]
 
-O aplicativo usa a biblioteca de DI AutoFac para fornecer automaticamente *TaskRepository* e *agente* instâncias para esses construtores.
+O aplicativo usa a biblioteca de DI AutoFac para fornecer automaticamente instâncias de *TaskRepository* e de *agente* para esses construtores.
 
 [!code-csharp[Main](monitoring-and-telemetry/samples/sample6.cs?highlight=8,10)]
 
-Esse código diz, basicamente, que precisa de um construtor em qualquer lugar uma *ILogger* interface, passe em uma instância das *agente* classe, e sempre que precisar um *IFixItTaskRepository*da interface, passe em uma instância das *FixItTaskRepository* classe.
+Basicamente, esse código diz que, em qualquer lugar, um Construtor precisa de uma interface *ILogger* , passar uma instância da classe de *agente* e sempre que precisa de uma interface *IFixItTaskRepository* , passar uma instância da classe *FixItTaskRepository* .
 
-[AutoFac](http://autofac.org/) é uma das várias estruturas de injeção de dependência que você pode usar. É outra popular [Unity](https://blogs.msdn.com/b/agile/archive/2013/08/20/new-guide-dependency-injection-with-unity.aspx), que é recomendado e com suporte pelo Microsoft Patterns and Practices.
+[AutoFac](http://autofac.org/) é uma das muitas estruturas de injeção de dependência que você pode usar. Outro conhecido é o [Unity](https://blogs.msdn.com/b/agile/archive/2013/08/20/new-guide-dependency-injection-with-unity.aspx), que é recomendado e suportado pelos padrões e pelas práticas da Microsoft.
 
-## <a name="built-in-logging-support-in-azure"></a>Suporte de registro em log internos no Azure
+## <a name="built-in-logging-support-in-azure"></a>Suporte a log interno no Azure
 
-Azure suporta os seguintes tipos de [registro em log para aplicativos Web no serviço de aplicativo do Azure](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio):
+O Azure dá suporte aos seguintes tipos de [log para aplicativos Web no serviço Azure app](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio):
 
 - Rastreamento de System. Diagnostics (você pode ativar e desativar e definir níveis imediatamente sem reiniciar o site).
 - Eventos do Windows.
 - Logs do IIS (HTTP/FREB).
 
-Azure suporta os seguintes tipos de [registro em log em serviços de nuvem](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-diagnostics):
+O Azure dá suporte aos seguintes tipos de [registro em log nos serviços de nuvem](https://docs.microsoft.com/azure/cloud-services/cloud-services-dotnet-diagnostics):
 
 - Rastreamento de System. Diagnostics.
 - Contadores de desempenho.
@@ -233,59 +233,59 @@ Azure suporta os seguintes tipos de [registro em log em serviços de nuvem](http
 - Logs do IIS (HTTP/FREB).
 - Monitoramento de diretório personalizado.
 
-O aplicativo Fix It usa o rastreamento de System. Diagnostics. Tudo o que você precisa fazer para habilitar o registro em log em um aplicativo web de System. Diagnostics é mudar uma opção no portal ou chamar a API REST. No portal, clique o **Configuration** guia para o seu site e role para baixo para ver a **Application Diagnostics** seção. Você pode ativar ou desativar o registro em log e selecione o nível de log desejado. Você pode fazer com que o Azure gravar os logs para o sistema de arquivos ou para uma conta de armazenamento.
+O aplicativo corrigir ti usa o rastreamento de System. Diagnostics. Tudo o que você precisa fazer para habilitar o log do System. Diagnostics em um aplicativo Web é inverter um comutador no portal ou chamar a API REST. No portal, clique na guia **configuração** do seu site e role para baixo para ver a seção **Application Diagnostics** . Você pode ativar ou desativar o registro em log e selecionar o nível de log desejado. Você pode fazer com que o Azure grave os logs no sistema de arquivos ou em uma conta de armazenamento.
 
-![Diagnóstico de aplicativo e o diagnóstico de site na guia Configurar](monitoring-and-telemetry/_static/image24.png)
+![Diagnóstico de aplicativo e diagnóstico de site na guia Configurar](monitoring-and-telemetry/_static/image24.png)
 
-Depois de habilitar o registro em log no Azure, você pode ver os logs na janela de saída do Visual Studio, conforme eles são criados.
+Depois de habilitar o registro em log no Azure, você pode ver os logs na janela de saída do Visual Studio à medida que eles são criados.
 
 ![Menu de logs de streaming](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-viewlogsmenu.png)
 
 ![Menu de logs de streaming](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-nologsyet.png)
 
-Você também pode ter logs gravados em sua conta de armazenamento e exiba-os com qualquer ferramenta que pode acessar o serviço de tabela de armazenamento do Azure, tais como **Gerenciador de servidores** no Visual Studio ou [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/).
+Você também pode ter logs gravados na sua conta de armazenamento e exibi-los com qualquer ferramenta que possa acessar o serviço tabela de armazenamento do Azure, como **Gerenciador de servidores** no Visual Studio ou [Gerenciador de armazenamento do Azure](https://azure.microsoft.com/features/storage-explorer/).
 
-![Logs no Gerenciador de servidores](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-storagelogs.png)
+![Logs em Gerenciador de Servidores](http://wacomdpsstorage.blob.core.windows.net/articlesmedia/content-ppe.windowsazure.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/20140115062810/tws-storagelogs.png)
 
 ## <a name="summary"></a>Resumo
 
-É muito simple implementar um sistema de telemetria, instrumentar o registro em log em seu próprio código e configurar o log no Azure. E quando você tiver problemas de produção, a combinação de um sistema de telemetria e logs personalizados ajudará a resolver problemas rapidamente antes que se tornem problemas importantes para seus clientes.
+É realmente simples implementar um sistema de telemetria pronto para uso, registro em log de instrumento em seu próprio código e configurar o registro em log no Azure. E, quando você tiver problemas de produção, a combinação de um sistema de telemetria e de logs personalizados ajudará você a resolver problemas rapidamente antes que eles se tornem grandes problemas para seus clientes.
 
-No [capítulo seguinte](transient-fault-handling.md) , examinaremos como tratar erros transitórios para que eles não se tornem problemas de produção que você deve investigar.
+No [próximo capítulo](transient-fault-handling.md) , veremos como lidar com erros transitórios para que eles não se tornem problemas de produção que você precisa investigar.
 
 ## <a name="resources"></a>Recursos
 
 Para obter mais informações, consulte os seguintes recursos.
 
-Documentação principalmente sobre a telemetria:
+Documentação principalmente sobre telemetria:
 
-- [Microsoft Patterns and Practices - diretrizes do Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consulte orientações de instrumentação e telemetria, orientação de medição de serviço, monitoramento de ponto de extremidade de integridade padrão e padrão de reconfiguração de tempo de execução.
-- [Centavos apertar na nuvem: Habilitando o monitoramento em sites do Azure de desempenho de Relíquia nova](http://www.hanselman.com/blog/PennyPinchingInTheCloudEnablingNewRelicPerformanceMonitoringOnWindowsAzureWebsites.aspx).
-- [Práticas recomendadas para o Design de serviços em grande escala em serviços de nuvem do Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). White paper, Mark Simms e Michael Thomassy. Consulte a seção de telemetria e diagnóstico.
-- [Desenvolvimento de última geração com o Application Insights](https://msdn.microsoft.com/magazine/dn683794.aspx). Artigo da MSDN Magazine.
+- [Práticas e padrões da Microsoft – diretrizes do Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consulte Diretrizes de instrumentação e telemetria, diretrizes de medição de serviço, padrão de monitoramento de ponto de extremidade de integridade e padrão de reconfiguração de tempo de execução.
+- [Pinçagem de centavos na nuvem: Habilitando o novo monitoramento de desempenho de Relic nos sites do Azure](http://www.hanselman.com/blog/PennyPinchingInTheCloudEnablingNewRelicPerformanceMonitoringOnWindowsAzureWebsites.aspx).
+- [Práticas recomendadas para o design de serviços em grande escala nos serviços de nuvem do Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). White Paper por Mark Simms e Michael Thomassy. Consulte a seção telemetria e diagnóstico.
+- [Desenvolvimento de última geração com o Application insights](https://msdn.microsoft.com/magazine/dn683794.aspx). Artigo da MSDN Magazine.
 
 Documentação principalmente sobre registro em log:
 
-- [O bloco de aplicativo de registro em log semântico (SLAB)](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). Neil Mackenzie apresenta o caso para registro em log semântico com a sessão.
-- [Criação de Logs significativos e não estruturados com registro em log semântico](https://channel9.msdn.com/Events/Build/2013/3-336). (Vídeo) Juliano Dominguez apresenta o caso para registro em log semântico com a sessão.
-- [EF6 Log do SQL – parte 1: Registro em log Simple](http://blog.oneunicorn.com/2013/05/08/ef6-sql-logging-part-1-simple-logging/). Arthur Vickers mostra como registrar em log consultas executadas pelo Entity Framework no EF 6.
-- [Resiliência de Conexão e interceptação de comando com o Entity Framework em um aplicativo ASP.NET MVC](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). Em quarto lugar em uma série de tutoriais de nove partes, mostra como usar o recurso de interceptação de comando do EF 6 para registrar os comandos SQL enviados ao banco de dados pelo Entity Framework.
-- [Melhorar o log usando o c# 5.0 atributos de informações](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Como registrar facilmente o nome do método de chamada sem embuti-la em literais ou usando a reflexão para obtê-lo manualmente.
+- [Slab (bloco de aplicativo de log semântico)](http://convective.wordpress.com/2013/08/12/semantic-logging-application-block-slab/). Neil Mackenzie apresenta o caso de log semântico com SLAB.
+- [Criação de logs estruturados e significativos com registro semântico](https://channel9.msdn.com/Events/Build/2013/3-336). Monitor O Juliano Dominguez apresenta o caso de log semântico com SLAB.
+- [Log SQL do EF6 – parte 1: log simples](http://blog.oneunicorn.com/2013/05/08/ef6-sql-logging-part-1-simple-logging/). Arthur Vicker mostra como registrar consultas executadas por Entity Framework no EF 6.
+- [Resiliência de conexão e interceptação de comando com o Entity Framework em um aplicativo MVC ASP.net](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). O quarto de uma série de tutoriais de nove partes, mostra como usar o recurso de interceptação de comando do EF 6 para registrar em log os comandos do SQL enviados ao banco de dados por Entity Framework.
+- [Melhorar o registro C# em log usando atributos de informações do chamador 5,0](http://www.dotnetcurry.com/showarticle.aspx?ID=972). Como registrar facilmente o nome do método de chamada sem codificá-lo embutidamente em literais ou usar a reflexão para obtê-lo manualmente.
 
 Documentação principalmente sobre solução de problemas:
 
-- [Solução de problemas do Azure &amp; depuração blog](https://blogs.msdn.com/b/kwill/).
-- [AzureTools – o utilitário de diagnóstico usado pela equipe de suporte do Azure Developer](https://blogs.msdn.com/b/kwill/archive/2013/08/26/azuretools-the-diagnostic-utility-used-by-the-windows-azure-developer-support-team.aspx?Redirected=true). Apresenta e fornece um link de download de uma ferramenta que pode ser usada em uma VM do Azure para baixar e executar uma ampla variedade de ferramentas de diagnóstico e monitoramento. É útil quando você precisa diagnosticar um problema em uma VM específica.
-- [Solucionar problemas de um aplicativo web no serviço de aplicativo do Azure usando o Visual Studio](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio). Um tutorial passo a passo de Introdução ao System. Diagnostics rastreamento e depuração remota.
+- [Blog de depuração &amp; solução de problemas do Azure](https://blogs.msdn.com/b/kwill/).
+- [AzureTools – o utilitário de diagnóstico usado pela equipe de suporte Developer do Azure](https://blogs.msdn.com/b/kwill/archive/2013/08/26/azuretools-the-diagnostic-utility-used-by-the-windows-azure-developer-support-team.aspx?Redirected=true). Apresenta e fornece um link de download para uma ferramenta que pode ser usada em uma VM do Azure para baixar e executar uma ampla variedade de ferramentas de diagnóstico e monitoramento. Útil quando você precisa diagnosticar um problema em uma determinada VM.
+- [Solucionar problemas de um aplicativo Web no serviço Azure App usando o Visual Studio](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio). Um tutorial passo a passo para a introdução ao rastreamento de System. Diagnostics e à depuração remota.
 
 Vídeos:
 
-- [À prova de falhas: Criação de serviços de nuvem escalonáveis, resilientes](https://channel9.msdn.com/Series/FailSafe). Série de nove partes por Marc Mercuri, Ulrich Homann e Mark Simms. Apresenta conceitos de alto nível e princípios de arquitetura de uma maneira muito acessível e interessante, histórias desenhadas da experiência do Microsoft Customer Advisory Team (CAT) com clientes reais. Episódios 4 e 9 são sobre monitoramento e telemetria. Episódio 9 inclui uma visão geral do monitoramento de serviços MetricsHub e PagerDuty, New Relic e AppDynamics.
-- [Intensa de construção: Lições aprendidas de clientes do Azure - parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms fala sobre design para a falha e instrumentar tudo. Semelhante a série à prova de falhas, mas entra em mais detalhes de instruções.
+- [FailSafe: criando serviços de nuvem escalonáveis e resilientes](https://channel9.msdn.com/Series/FailSafe). Série de nove partes de Ulrich Homann, Marc Mercuri e de Mark Simms. Apresenta conceitos de alto nível e princípios arquitetônicos de uma maneira muito acessível e interessante, com histórias extraídas da experiência CAT (equipe de consultoria para clientes) da Microsoft com os clientes reais. Os episódios 4 e 9 são sobre o monitoramento e a telemetria. O episódio 9 inclui uma visão geral dos serviços de monitoramento MetricsHub, AppDynamics, New Relic e PagerDuty.
+- [Criando Big: lições aprendidas de clientes do Azure-parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms fala sobre o design de falhas e instrumentação de tudo. Semelhante à série FailSafe, mas apresenta detalhes mais detalhados.
 
 Exemplo de código:
 
-- [Conceitos fundamentais do serviço no Azure na nuvem](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicativo de exemplo criado pelo Microsoft Azure Customer Advisory Team. Demonstra a telemetria e as práticas recomendadas de registro em log, conforme explicado nos artigos a seguir. O exemplo implementa o log de aplicativo por meio [NLog](http://nlog-project.org/). Para documentação relacionada, consulte o [série de quatro artigos wiki do TechNet sobre o registro em log e telemetria](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx#Telemetry_coming_soon).
+- [Conceitos básicos do serviço de nuvem no Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicativo de exemplo criado pela equipe de consultoria do cliente Microsoft Azure. Demonstra as práticas de telemetria e de registro em log, conforme explicado nos artigos a seguir. O exemplo implementa o log de aplicativo usando [NLog](http://nlog-project.org/). Para obter a documentação relacionada, consulte a [série de quatro artigos do TechNet wiki sobre telemetria e registro em log](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx#Telemetry_coming_soon).
 
 > [!div class="step-by-step"]
 > [Anterior](design-to-survive-failures.md)

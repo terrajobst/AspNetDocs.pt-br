@@ -1,60 +1,60 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-vb
-title: Criando um numérico para cima/para baixo do controle com um serviço back-end Web (VB) | Microsoft Docs
+title: Criação de um controle numérico para cima/para baixo com um back-end do serviço Web (VB) | Microsoft Docs
 author: wenz
-description: Em vez de deixar um usuário digitar um valor em uma caixa de seleção, um controle (o que existe no Windows e outros sistemas operacionais) para cima/baixo numérico pode revelar mais assim como c...
+description: Em vez de permitir que um usuário digite um valor em uma caixa de seleção, um controle numérico para cima/para baixo (que existe no Windows e em outros sistemas operacionais) poderia provar mais c...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: afa59dfa-fef1-43d3-8fdd-aea3be36ed3c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-vb
 msc.type: authoredcontent
-ms.openlocfilehash: fffa670134d5b9aa3523603c60accb4e887747c8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2bf6e1b27180589d39e308de62b5be1f47fa8fe2
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132542"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74606350"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-vb"></a>Criação um controle numérico para cima/para baixo com um back-end de serviço Web (VB)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/numericupdown1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/numericupdown1VB.pdf)
+[Baixar código](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/numericupdown1.vb.zip) ou [baixar PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/numericupdown1VB.pdf)
 
-> Em vez de deixar um usuário digitar um valor em uma caixa de seleção, um numérico para cima/para baixo do controle (o que existe no Windows e outros sistemas operacionais) pode provar conforme mais confortável. Por padrão, o controle NumericUpDown sempre aumenta ou diminui um valor 1, mas um serviço web prova mais flexibilidade.
+> Em vez de permitir que um usuário digite um valor em uma caixa de seleção, um controle numérico para cima/para baixo (que existe no Windows e em outros sistemas operacionais) pode provar o mais confortável. Por padrão, o controle NumericUpDown sempre aumenta ou diminui um valor em 1, mas um serviço Web comprova mais flexibilidade.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
-Em vez de deixar um usuário digitar um valor em uma caixa de seleção, um numérico para cima/para baixo do controle (o que existe no Windows e outros sistemas operacionais) pode provar conforme mais confortável. Por padrão, o `NumericUpDown` controle sempre aumenta ou diminui um valor 1, mas um serviço web prova mais flexibilidade.
+Em vez de permitir que um usuário digite um valor em uma caixa de seleção, um controle numérico para cima/para baixo (que existe no Windows e em outros sistemas operacionais) pode provar o mais confortável. Por padrão, o controle de `NumericUpDown` sempre aumenta ou diminui um valor em 1, mas um serviço Web comprova mais flexibilidade.
 
 ## <a name="steps"></a>Etapas
 
-O ASP.NET AJAX Control Toolkit contém o `NumericUpDown` extensor que adiciona dois botões automaticamente uma caixa de texto: Uma para aumentar seu valor, uma para reduzi-lo. No entanto o controle também dá suporte a uma chamada de serviço web (ou chamada de método de página). Sempre que o para cima ou para baixo do botão é clicado, o JavaScript de código conecta-se ao servidor web e executa um método lá. A assinatura do método é mostrada a seguir:
+O ASP.NET AJAX Control Toolkit contém o `NumericUpDown` Extender, que adiciona automaticamente dois botões a uma caixa de texto: um para aumentar seu valor, um para diminuir. No entanto, o controle também dá suporte a uma chamada de serviço Web (ou chamada de método de página). Sempre que o botão para cima ou para baixo é clicado, o código JavaScript se conecta ao servidor Web e executa um método lá. A assinatura do método é a seguinte:
 
 [!code-vb[Main](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/samples/sample1.vb)]
 
-O `current` argumento é o valor atual na caixa de texto; a `tag` atributo é dados de contexto adicional que podem ser definidos como uma propriedade do `NumericUpDown` extensor (mas não é necessário).
+O argumento `current` é o valor atual na caixa de texto; o atributo `tag` são dados de contexto adicionais que podem ser definidos como uma propriedade do extensor `NumericUpDown` (mas não é obrigatório).
 
-Para este exemplo, o controle para cima/baixo numérico só deve permitir valores que são potências de dois: 1, 2, 4, 8, 16, 32, 64 e assim por diante. Portanto, o método executado quando o usuário deseja aumentar o valor deve duas vezes o valor antigo; o outro método deve dividir o valor por dois. Aqui está o serviço web completo:
+Para este exemplo, o controle numérico para cima/para baixo só deve permitir valores que sejam potências de dois: 1, 2, 4, 8, 16, 32, 64 e assim por diante. Portanto, o método executado quando o usuário deseja aumentar o valor deve dobrar o valor antigo; o outro método deve dividir o valor em dois. Aqui está o serviço Web completo:
 
 [!code-aspx[Main](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/samples/sample2.aspx)]
 
-Por fim, crie uma nova página ASP.NET. Como de costume, você precisa de uma `ScriptManager` controle, um `TextBox` controle e um `NumericUpDownExtender` controle. Para o último, você precisará fornecer as informações do serviço web:
+Por fim, crie uma nova página do ASP.NET. Como de costume, você precisa de um controle de `ScriptManager`, um controle de `TextBox` e um controle de `NumericUpDownExtender`. Para o último, você precisa fornecer as informações do serviço Web:
 
-- `ServiceDownMethod` nome da busca método web ou método de página
-- `ServiceDownPath` caminho para o serviço web com o método de serviço para baixo; omitir se você estiver usando um método de página
-- `ServiceUpMethod` nome de cima método web ou método de página
-- `ServiceUpPath` caminho para o serviço web com o método de serviço de backup; omitir se você estiver usando um método de página
+- `ServiceDownMethod` nome do método da Web ou do método de página inoperante
+- `ServiceDownPath` caminho para o serviço Web com o método de serviço inoperante; omitir se você estiver usando um método de página
+- `ServiceUpMethod` nome do método ou da página da Web up
+- `ServiceUpPath` caminho para o serviço Web com o método de serviço up; omitir se você estiver usando um método de página
 
 Aqui está a marcação completa para a página:
 
 [!code-aspx[Main](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/samples/sample3.aspx)]
 
-Se você executar a página, observe como o valor na caixa de texto dobra sempre quando você clica no botão superior e é reduzido à metade quando você clica no botão inferior.
+Se você executar a página, observe como o valor na caixa de texto sempre é dobrado quando você clica no botão superior e é dividido quando você clica no botão inferior.
 
-[![São exibidos apenas os números sejam uma potência de 2](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image1.png)
+[![apenas números que são uma potência de 2 aparecem](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image2.png)](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image1.png)
 
-São exibidos apenas os números sejam uma potência de 2 ([clique para exibir a imagem em tamanho normal](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image3.png))
+Somente os números que são uma potência de 2 aparecem ([clique para exibir a imagem em tamanho normal](creating-a-numeric-up-down-control-with-a-web-service-backend-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](creating-a-numeric-up-down-control-with-a-web-service-backend-cs.md)

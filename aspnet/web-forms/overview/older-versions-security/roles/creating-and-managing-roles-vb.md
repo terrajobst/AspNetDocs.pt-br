@@ -1,249 +1,249 @@
 ---
 uid: web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb
-title: Criar e gerenciar funções (VB) | Microsoft Docs
+title: Criando e gerenciando funções (VB) | Microsoft Docs
 author: rick-anderson
-description: Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, vamos criar páginas da web para criar e excluir funções.
+description: Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, criaremos páginas da Web para criar e excluir funções.
 ms.author: riande
 ms.date: 03/24/2008
 ms.assetid: 83af9f5f-9a00-4f83-8afc-e98bdd49014e
 msc.legacyurl: /web-forms/overview/older-versions-security/roles/creating-and-managing-roles-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c6c18e78701ba6a62bf07cc1bc18e4f9e8d2cb3f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 825e2afb750925637d308b7ceb35e1b02b708c1d
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130989"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74586389"
 ---
 # <a name="creating-and-managing-roles-vb"></a>Criar e gerenciar funções (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixar o código](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/VB.09.zip) ou [baixar PDF](http://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial09_CreatingRoles_vb.pdf)
+[Baixar código](https://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/VB.09.zip) ou [baixar PDF](https://download.microsoft.com/download/6/0/3/6032582f-360d-4739-b935-38721fdb86ea/aspnet_tutorial09_CreatingRoles_vb.pdf)
 
-> Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, vamos criar páginas da web para criar e excluir funções.
+> Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, criaremos páginas da Web para criar e excluir funções.
 
 ## <a name="introduction"></a>Introdução
 
-No <a id="_msoanchor_1"> </a> [ *autorização baseada em usuário* ](../membership/user-based-authorization-vb.md) tutorial, examinamos usando a autorização de URL para impedir que determinados usuários de um conjunto de páginas e explorou declarativa e técnicas de programação para ajustar a funcionalidade de uma página ASP.NET com base no usuário visitante. Conceder permissão de acesso à página ou a funcionalidade em uma base por usuário, no entanto, pode se tornar um pesadelo em cenários em que há muitas contas de usuário ou quando os privilégios dos usuários são alterados com frequência. Sempre que um usuário ganha ou perde a autorização para executar uma tarefa específica, o administrador precisa atualizar as regras de autorização de URL apropriadas, marcação declarativa e código.
+No tutorial <a id="_msoanchor_1"> </a>de [*autorização baseada no usuário*](../membership/user-based-authorization-vb.md) , examinamos o uso da autorização de URL para restringir determinados usuários de um conjunto de páginas e exploramos técnicas declarativas e Programáticas para ajustar a funcionalidade de uma página ASP.NET com base no usuário visitante. No entanto, conceder permissão para acesso à página ou funcionalidade por usuário pode se tornar um pesadelo de manutenção em cenários em que há muitas contas de usuário ou quando os privilégios dos usuários são alterados com frequência. Sempre que um usuário Obtém ou perde autorização para executar uma tarefa específica, o administrador precisa atualizar as regras de autorização de URL apropriadas, a marcação declarativa e o código.
 
-Normalmente, é útil para classificar usuários em grupos ou *funções* e, em seguida, para aplicar permissões em uma base de função por função. Por exemplo, a maioria dos aplicativos web têm um determinado conjunto de páginas ou tarefas que são reservadas apenas para usuários administrativos. Usando as técnicas aprendidas na *autorização baseada em usuário* tutorial, estamos adicionaria as regras de autorização de URL apropriadas, marcação declarativa e código para permitir que as contas de usuário especificado executar tarefas administrativas. Mas, se um novo administrador foi adicionado ou se um administrador existente precisava ter seus direitos de administração revogados, teríamos que volte e atualize os arquivos de configuração e as páginas da web. Com as funções, no entanto, podemos pode criar uma função chamada de administradores e atribuir esses usuários confiáveis para a função de administradores. Em seguida, podemos adicionaria as regras de autorização de URL apropriadas, marcação declarativa e código para permitir que a função de administradores realizar as diversas tarefas administrativas. Com essa infra-estrutura in-loco, adicionando novos administradores para o site ou removendo existentes é tão simple quanto incluindo ou remover o usuário da função de administradores. Nenhuma configuração, marcação declarativa ou alterações de código são necessárias.
+Geralmente, ele ajuda a classificar os usuários em grupos ou *funções* e, em seguida, aplicar permissões a uma base função por função. Por exemplo, a maioria dos aplicativos Web tem um determinado conjunto de páginas ou tarefas que são reservadas somente para usuários administrativos. Usando as técnicas aprendidas no tutorial de *autorização baseada no usuário* , adicionaremos as regras de autorização de URL apropriadas, a marcação declarativa e o código para permitir que as contas de usuário especificadas executem tarefas administrativas. Mas se um novo administrador tiver sido adicionado ou se um administrador existente precisar ter seus direitos de administração revogados, precisaremos retornar e atualizar os arquivos de configuração e as páginas da Web. Com as funções, no entanto, poderíamos criar uma função chamada Administrators e atribuir esses usuários confiáveis à função Administrators. Em seguida, adicionaremos as regras de autorização de URL apropriadas, marcação declarativa e código para permitir que a função Administradores execute as várias tarefas administrativas. Com essa infraestrutura em vigor, adicionar novos administradores ao site ou remover os existentes é tão simples quanto incluir ou remover o usuário da função Administradores. Nenhuma configuração, marcação declarativa ou alteração de código é necessária.
 
-O ASP.NET oferece uma estrutura de funções para definir funções e associá-los a contas de usuário. Com a estrutura de funções, podemos criar e excluir funções, adicione usuários ou remover usuários de uma função, determinar o conjunto de usuários que pertencem a uma função específica e informar se um usuário pertence a uma função específica. Depois que a estrutura de funções tiver sido configurada, podemos pode limitar o acesso a páginas em uma base de função por função por meio de regras de autorização de URL e mostrar ou ocultar informações adicionais ou funcionalidade em uma página com base nas funções do usuário conectado no momento.
+O ASP.NET oferece uma estrutura de funções para definir funções e associá-las a contas de usuário. Com a estrutura de funções, podemos criar e excluir funções, adicionar usuários ou remover usuários de uma função, determinar o conjunto de usuários que pertencem a uma função específica e informar se um usuário pertence a uma função específica. Depois que a estrutura de funções tiver sido configurada, podemos limitar o acesso a páginas por função por meio de regras de autorização de URL e mostrar ou ocultar informações ou funcionalidades adicionais em uma página com base nas funções do usuário conectado no momento.
 
-Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, vamos criar páginas da web para criar e excluir funções. No <a id="_msoanchor_2"> </a> [ *atribuir funções a usuários* ](assigning-roles-to-users-vb.md) tutorial, veremos como adicionar e remover usuários das funções. E, na <a id="_msoanchor_3"> </a> [ *autorização baseada em função* ](role-based-authorization-vb.md) tutorial, veremos como limitar o acesso a páginas em uma base de função por função, juntamente com como ajustar dependendo da funcionalidade de página na função de usuário visitante. Vamos começar!
+Este tutorial examina as etapas necessárias para configurar a estrutura de funções. Depois disso, criaremos páginas da Web para criar e excluir funções. <a id="_msoanchor_2"> </a>No tutorial [*atribuindo funções a usuários*](assigning-roles-to-users-vb.md) , veremos como adicionar e remover usuários de funções. E, no <a id="_msoanchor_3"> </a>tutorial de [*autorização baseada em função*](role-based-authorization-vb.md) , veremos como limitar o acesso a páginas por função, juntamente com como ajustar a funcionalidade da página dependendo da função do usuário de visita. Vamos começar!
 
-## <a name="step-1-adding-new-aspnet-pages"></a>Etapa 1: Adição de novas páginas do ASP.NET
+## <a name="step-1-adding-new-aspnet-pages"></a>Etapa 1: adicionando novas páginas do ASP.NET
 
-Este tutorial e as próximas duas podemos será examinando várias funções relacionadas a funções e recursos. Precisaremos de uma série de páginas do ASP.NET para implementar os tópicos examinados durante esses tutoriais. Vamos criar essas páginas e atualizar o mapa de site.
+Neste tutorial e nos próximos dois, examinaremos várias funções e recursos relacionados a funções. Precisaremos de uma série de páginas do ASP.NET para implementar os tópicos examinados em todos esses tutoriais. Vamos criar essas páginas e atualizar o mapa do site.
 
-Comece criando uma nova pasta no projeto chamado `Roles`. Em seguida, adicione quatro novas páginas do ASP.NET para o `Roles` pasta, vinculando cada página com o `Site.master` página mestra. Nomeie as páginas:
+Comece criando uma nova pasta no projeto chamada `Roles`. Em seguida, adicione quatro novas páginas ASP.NET à pasta `Roles`, vinculando cada página com a `Site.master` página mestra. Nomeie as páginas:
 
 - `ManageRoles.aspx`
 - `UsersAndRoles.aspx`
 - `CreateUserWizardWithRoles.aspx`
 - `RoleBasedAuthorization.aspx`
 
-Neste ponto, Gerenciador de soluções do seu projeto deve ser semelhante à mostrada na Figura 1 de captura de tela.
+Neste ponto, o Gerenciador de Soluções do seu projeto deve ser semelhante à captura de tela mostrada na Figura 1.
 
-[![Quatro novas páginas foram adicionadas à pasta de funções](creating-and-managing-roles-vb/_static/image2.png)](creating-and-managing-roles-vb/_static/image1.png)
+[![quatro novas páginas foram adicionadas à pasta funções](creating-and-managing-roles-vb/_static/image2.png)](creating-and-managing-roles-vb/_static/image1.png)
 
-**Figura 1**: Quatro novas páginas foram adicionados para o `Roles` pasta ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image3.png))
+**Figura 1**: quatro novas páginas foram adicionadas à pasta `Roles` ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image3.png))
 
-Cada página, neste ponto, terá dois controles de conteúdo, uma para cada um dos ContentPlaceHolders da página mestra: `MainContent` e `LoginContent`.
+Cada página deve, neste ponto, ter os dois controles de conteúdo, um para cada um dos ContentPlaceHolders da página mestra: `MainContent` e `LoginContent`.
 
 [!code-aspx[Main](creating-and-managing-roles-vb/samples/sample1.aspx)]
 
-Lembre-se de que o `LoginContent` marcação de padrão do ContentPlaceHolder exibe um link para fazer logon ou logoff do site, dependendo se o usuário é autenticado. A presença do `Content2` conteúdo de controle na página ASP.NET, no entanto, substituirá a marcação de padrão da página mestra. Como discutimos no <a id="_msoanchor_4"> </a> [ *uma visão geral de formulários de autenticação* ](../introduction/an-overview-of-forms-authentication-vb.md) tutorial, substituindo a marcação padrão é útil para páginas em que não queremos exibir relacionadas a logon Opções da coluna à esquerda.
+Lembre-se de que a marcação padrão do `LoginContent` ContentPlaceHolder exibe um link para fazer logon ou logoff do site, dependendo se o usuário está autenticado. No entanto, a presença do controle de conteúdo de `Content2` na página ASP.NET substitui a marcação padrão da página mestra. Como discutimos em <a id="_msoanchor_4"> </a> [*uma visão geral do tutorial de autenticação de formulários*](../introduction/an-overview-of-forms-authentication-vb.md) , a substituição da marcação padrão é útil em páginas nas quais não queremos exibir opções relacionadas ao logon na coluna à esquerda.
 
-Para essas quatro páginas, no entanto, queremos mostrar a marcação de padrão da página mestra para o `LoginContent` ContentPlaceHolder. Portanto, remova a marcação declarativa para a `Content2` controle de conteúdo. Depois de fazer isso, cada uma a quatro marcação da página deve conter apenas um controle de conteúdo.
+Para essas quatro páginas, no entanto, queremos mostrar a marcação padrão da página mestra para o `LoginContent` ContentPlaceHolder. Portanto, remova a marcação declarativa para o controle de conteúdo `Content2`. Depois de fazer isso, cada uma das quatro marcas da página deve conter apenas um controle de conteúdo.
 
-Por fim, vamos atualizar o mapa do site (`Web.sitemap`) para incluir essas novas páginas da web. Adicione o seguinte XML após o `<siteMapNode>` adicionamos para os tutoriais de associação.
+Por fim, vamos atualizar o mapa do site (`Web.sitemap`) para incluir essas novas páginas da Web. Adicione o seguinte XML após o `<siteMapNode>` que adicionamos para os tutoriais de associação.
 
 [!code-xml[Main](creating-and-managing-roles-vb/samples/sample2.xml)]
 
-Com o mapa de site atualizado, visite o site por meio de um navegador. Como mostra a Figura 2, a navegação à esquerda agora inclui itens para os tutoriais de funções.
+Com o mapa do site atualizado, visite o site por meio de um navegador. Como mostra a Figura 2, a navegação à esquerda agora inclui itens para os tutoriais de funções.
 
-[![Quatro novas páginas foram adicionadas à pasta de funções](creating-and-managing-roles-vb/_static/image5.png)](creating-and-managing-roles-vb/_static/image4.png)
+[![quatro novas páginas foram adicionadas à pasta funções](creating-and-managing-roles-vb/_static/image5.png)](creating-and-managing-roles-vb/_static/image4.png)
 
-**Figura 2**: Quatro novas páginas foram adicionados para o `Roles` pasta ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image6.png))
+**Figura 2**: quatro novas páginas foram adicionadas à pasta `Roles` ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image6.png))
 
-## <a name="step-2-specifying-and-configuring-the-roles-framework-provider"></a>Etapa 2: Especificar e configurar o provedor de funções do Framework
+## <a name="step-2-specifying-and-configuring-the-roles-framework-provider"></a>Etapa 2: especificando e Configurando o provedor de funções de estrutura
 
-Como o framework de associação, a estrutura de funções é construída sobre o modelo de provedor. Conforme discutido na <a id="_msoanchor_5"> </a> [ *Noções básicas sobre segurança e suporte do ASP.NET* ](../introduction/security-basics-and-asp-net-support-vb.md) tutorial, o .NET Framework vem com três provedores de funções internos: [ `AuthorizationStoreRoleProvider` ](https://msdn.microsoft.com/library/system.web.security.authorizationstoreroleprovider.aspx) , [ `WindowsTokenRoleProvider` ](https://msdn.microsoft.com/library/system.web.security.windowstokenroleprovider.aspx), e [ `SqlRoleProvider` ](https://msdn.microsoft.com/library/system.web.security.sqlroleprovider.aspx). Esta série de tutoriais enfoca o `SqlRoleProvider`, que usa um banco de dados do Microsoft SQL Server como o repositório da função.
+Como a estrutura de associação, a estrutura de funções é criada acima do modelo de provedor. Conforme discutido no tutorial <a id="_msoanchor_5">de </a> [*suporte básico de segurança e ASP.net*](../introduction/security-basics-and-asp-net-support-vb.md) , o .NET Framework é fornecido com três provedores de funções internas: [`AuthorizationStoreRoleProvider`](https://msdn.microsoft.com/library/system.web.security.authorizationstoreroleprovider.aspx), [`WindowsTokenRoleProvider`](https://msdn.microsoft.com/library/system.web.security.windowstokenroleprovider.aspx)e [`SqlRoleProvider`](https://msdn.microsoft.com/library/system.web.security.sqlroleprovider.aspx). Esta série de tutoriais se concentra na `SqlRoleProvider`, que usa um banco de dados Microsoft SQL Server como o armazenamento de função.
 
-Nos bastidores a estrutura de funções e `SqlRoleProvider` funcionam exatamente como a estrutura de associação e `SqlMembershipProvider`. O .NET Framework contém um `Roles` classe que serve como a API para a estrutura de funções. O `Roles` classe compartilhou métodos como `CreateRole`, `DeleteRole`, `GetAllRoles`, `AddUserToRole`, `IsUserInRole`e assim por diante. Quando um desses métodos é invocado, o `Roles` classe delega a chamada para o provedor configurado. O `SqlRoleProvider` funciona com as tabelas específicas de função (`aspnet_Roles` e `aspnet_UsersInRoles`) em resposta.
+Embaixo do, a estrutura de funções e `SqlRoleProvider` funcionam da mesma forma que a estrutura de associação e `SqlMembershipProvider`. O .NET Framework contém uma classe `Roles` que serve como a API para a estrutura de funções. A classe `Roles` tem métodos compartilhados como `CreateRole`, `DeleteRole`, `GetAllRoles`, `AddUserToRole`, `IsUserInRole`e assim por diante. Quando um desses métodos é invocado, a classe `Roles` delega a chamada para o provedor configurado. O `SqlRoleProvider` funciona com as tabelas específicas de função (`aspnet_Roles` e `aspnet_UsersInRoles`) em resposta.
 
-Para usar o `SqlRoleProvider` provedor em nosso aplicativo, é necessário especificar qual banco de dados a ser usado como o repositório. O `SqlRoleProvider` espera que o repositório de função especificada para ter determinadas tabelas de banco de dados, exibições e procedimentos armazenados. Esses objetos de banco de dados necessárias podem ser adicionados usando o [ `aspnet_regsql.exe` ferramenta](https://msdn.microsoft.com/library/ms229862.aspx). Neste ponto já temos um banco de dados com o esquema necessário para o `SqlRoleProvider`. Volta a <a id="_msoanchor_6"> </a> [ *criando o esquema de associação no SQL Server* ](../membership/creating-the-membership-schema-in-sql-server-vb.md) tutorial, criamos um banco de dados denominado `SecurityTutorials.mdf` e usado `aspnet_regsql.exe` para adicionar o aplicativo serviços, que incluía os objetos de banco de dados necessários para o `SqlRoleProvider`. Portanto, só precisamos dizer à estrutura de funções para habilitar o suporte da função e usar o `SqlRoleProvider` com o `SecurityTutorials.mdf` banco de dados como o repositório da função.
+Para usar o provedor de `SqlRoleProvider` em nosso aplicativo, precisamos especificar qual banco de dados usar como repositório. O `SqlRoleProvider` espera que o repositório de função especificado tenha determinadas tabelas de banco de dados, exibições e procedimentos armazenados. Esses objetos de banco de dados de requisito podem ser adicionados usando a [ferramenta de`aspnet_regsql.exe`](https://msdn.microsoft.com/library/ms229862.aspx). Neste ponto, já temos um banco de dados com o esquema necessário para o `SqlRoleProvider`. De volta ao <a id="_msoanchor_6"> </a>tutorial [*criando o esquema de associação no SQL Server*](../membership/creating-the-membership-schema-in-sql-server-vb.md) , criamos um banco de dados chamado `SecurityTutorials.mdf` e usamos `aspnet_regsql.exe` para adicionar os serviços de aplicativo, que incluíam os objetos de banco de dados exigidos pelo `SqlRoleProvider`. Portanto, precisamos apenas dizer à estrutura de funções para habilitar o suporte de função e usar o `SqlRoleProvider` com o banco de dados `SecurityTutorials.mdf` como o armazenamento de função.
 
-A estrutura de funções é configurada por meio de `<roleManager>` elemento na caixa de diálogo `Web.config` arquivo. Por padrão, o suporte à função está desabilitado. Para habilitá-lo, você deve definir a [ `<roleManager>` ](https://msdn.microsoft.com/library/ms164660.aspx) do elemento `enabled` atributo `true` da seguinte forma:
+A estrutura de funções é configurada por meio do elemento `<roleManager>` no arquivo de `Web.config` do aplicativo. Por padrão, o suporte à função está desabilitado. Para habilitá-lo, você deve definir o atributo `enabled` do elemento de [`<roleManager>`](https://msdn.microsoft.com/library/ms164660.aspx) como `true` desta forma:
 
 [!code-xml[Main](creating-and-managing-roles-vb/samples/sample3.xml)]
 
-Por padrão, todos os aplicativos web têm um provedor de funções denominado `AspNetSqlRoleProvider` do tipo `SqlRoleProvider`. Esse provedor padrão é registrado no `machine.config` (localizado em `%WINDIR%\Microsoft.Net\Framework\v2.0.50727\CONFIG`):
+Por padrão, todos os aplicativos Web têm um provedor de funções chamado `AspNetSqlRoleProvider` do tipo `SqlRoleProvider`. Esse provedor padrão é registrado no `machine.config` (localizado em `%WINDIR%\Microsoft.Net\Framework\v2.0.50727\CONFIG`):
 
 [!code-xml[Main](creating-and-managing-roles-vb/samples/sample4.xml)]
 
-O provedor `connectionStringName` atributo especifica o repositório de função que é usado. O `AspNetSqlRoleProvider` provedor define esse atributo para `LocalSqlServer`, que também é definida no `machine.config` pontos, por padrão, para um banco de dados do SQL Server 2005 Express Edition e o `App_Data` pasta chamada `aspnet.mdf`.
+O atributo `connectionStringName` do provedor especifica o repositório de função que é usado. O provedor de `AspNetSqlRoleProvider` define esse atributo como `LocalSqlServer`, que também é definido em `machine.config` e pontos, por padrão, para um banco de dados SQL Server 2005 Express Edition na pasta `App_Data` chamada `aspnet.mdf`.
 
-Consequentemente, se podemos simplesmente ativar a estrutura de funções sem especificar quaisquer informações de provedor em nosso aplicativo `Web.config` arquivo, o aplicativo usa o provedor de funções padrão registrado, `AspNetSqlRoleProvider`. Se o `~/App_Data/aspnet.mdf` banco de dados não existe, o tempo de execução do ASP.NET automaticamente criá-lo e adicionar o esquema de serviços de aplicativo. No entanto, não queremos usar o `aspnet.mdf` banco de dados; em vez disso, queremos usar o `SecurityTutorials.mdf` banco de dados que já temos criado e adicionado o esquema de serviços de aplicativo para. Essa modificação pode ser feita de duas maneiras:
+Consequentemente, se simplesmente habilitarmos a estrutura de funções sem especificar nenhuma informação de provedor no arquivo de `Web.config` do nosso aplicativo, o aplicativo usará o provedor de funções registradas padrão, `AspNetSqlRoleProvider`. Se o banco de dados `~/App_Data/aspnet.mdf` não existir, o tempo de execução do ASP.NET o criará automaticamente e adicionará o esquema de serviços de aplicativo. No entanto, não queremos usar o banco de dados `aspnet.mdf`; em vez disso, queremos usar o banco de dados `SecurityTutorials.mdf` que já criamos e adicionamos o esquema de serviços de aplicativo ao. Essa modificação pode ser realizada de duas maneiras:
 
-- <strong>Especifique um valor para o</strong><strong>`LocalSqlServer`</strong><strong>nome de cadeia de caracteres de conexão no</strong><strong>`Web.config`</strong><strong>.</strong> Substituindo o `LocalSqlServer` o valor do nome da cadeia de conexão no `Web.config`, podemos usar o provedor de funções padrão registrado (`AspNetSqlRoleProvider`) e ainda funcionar corretamente com o `SecurityTutorials.mdf` banco de dados. Para obter mais informações sobre essa técnica, consulte [Scott Guthrie](https://weblogs.asp.net/scottgu/)da postagem de blog [Configurando serviços de aplicativos do ASP.NET 2.0 para usar o SQL Server 2000 ou SQL Server 2005](https://weblogs.asp.net/scottgu/archive/2005/08/25/423703.aspx).
-- <strong>Adicionar um novo provedor registrado do tipo</strong><strong>`SqlRoleProvider`</strong><strong>e configurar seu</strong><strong>`connectionStringName`</strong><strong>configuração para apontar para o</strong> <strong>`SecurityTutorials.mdf`</strong> <strong>banco de dados.</strong> Essa é a abordagem que eu recomendado e usado na <a id="_msoanchor_7"> </a> [ *criando o esquema de associação no SQL Server* ](../membership/creating-the-membership-schema-in-sql-server-vb.md) tutorial e é a abordagem que eu usarei neste tutorial também.
+- <strong>Especifique um valor para o nome da</strong> cadeia de conexão<strong>`LocalSqlServer`</strong> <strong>em</strong> <strong>`Web.config`</strong> <strong>.</strong> Ao substituir o valor do nome da cadeia de conexão `LocalSqlServer` no `Web.config`, podemos usar o provedor de funções registradas padrão (`AspNetSqlRoleProvider`) e fazê-lo funcionar corretamente com o banco de dados `SecurityTutorials.mdf`. Para obter mais informações sobre essa técnica, consulte a postagem de blog de [Scott Guthrie](https://weblogs.asp.net/scottgu/), [configurando ASP.NET 2,0 Serviços de Aplicativos para usar SQL Server 2000 ou SQL Server 2005](https://weblogs.asp.net/scottgu/archive/2005/08/25/423703.aspx).
+- <strong>Adicione um novo provedor registrado do tipo</strong> <strong>`SqlRoleProvider`</strong> <strong>e defina sua</strong> configuração de<strong>`connectionStringName`</strong> <strong>para apontar para o banco de</strong> dados<strong>`SecurityTutorials.mdf`</strong> <strong>.</strong> Essa é a abordagem recomendada e usada no <a id="_msoanchor_7"> </a>tutorial [*criando o esquema de associação no SQL Server*](../membership/creating-the-membership-schema-in-sql-server-vb.md) , e é a abordagem que usarei neste tutorial também.
 
-Adicione a seguinte marcação de configuração de funções para o `Web.config` arquivo. Essa marcação registra um novo provedor chamado `SecurityTutorialsSqlRoleProvider.`
+Adicione a seguinte marcação de configuração de funções ao arquivo de `Web.config`. Essa marcação registra um novo provedor chamado `SecurityTutorialsSqlRoleProvider.`
 
 [!code-xml[Main](creating-and-managing-roles-vb/samples/sample5.xml)]
 
-A marcação acima define a `SecurityTutorialsSqlRoleProvider` como o provedor padrão (via o `defaultProvider` atributo no `<roleManager>` elemento). Ele também define o `SecurityTutorialsSqlRoleProvider`do `applicationName` definir como `SecurityTutorials`, que é o mesmo `applicationName` configuração usada pelo provedor de associação (`SecurityTutorialsSqlMembershipProvider`). Embora não mostrado aqui, o [ `<add>` elemento](https://msdn.microsoft.com/library/ms164662.aspx) para o `SqlRoleProvider` também pode conter um `commandTimeout` atributo para especificar a duração de tempo limite de banco de dados, em segundos. O valor padrão é 30.
+A marcação acima define o `SecurityTutorialsSqlRoleProvider` como o provedor padrão (por meio do atributo `defaultProvider` no elemento `<roleManager>`). Ele também define a configuração de `applicationName` do `SecurityTutorialsSqlRoleProvider`como `SecurityTutorials`, que é a mesma `applicationName` configuração usada pelo provedor de associação (`SecurityTutorialsSqlMembershipProvider`). Embora não seja mostrado aqui, o [elemento`<add>`](https://msdn.microsoft.com/library/ms164662.aspx) para a `SqlRoleProvider` também pode conter um atributo `commandTimeout` para especificar a duração do tempo limite do banco de dados, em segundos. O valor padrão é 30.
 
-Com essa marcação de configuração em vigor, estamos prontos para começar a usar a funcionalidade de função dentro do nosso aplicativo.
-
-> [!NOTE]
-> A marcação de configuração acima ilustra o uso de `<roleManager>` prvku `enabled` e `defaultProvider` atributos. Há uma série de outros atributos que afetam como o framework de funções associa informações de função em uma base por usuário. Vamos examinar essas configurações na <a id="_msoanchor_8"> </a> [ *autorização baseada em função* ](role-based-authorization-vb.md) tutorial.
-
-## <a name="step-3-examining-the-roles-api"></a>Etapa 3: Examinando as funções de API
-
-Funcionalidade da estrutura de funções é exposta por meio de [ `Roles` classe](https://msdn.microsoft.com/library/system.web.security.roles.aspx), que contém treze métodos compartilhados para executar operações com base em função. Quando examinamos criação e exclusão de funções em etapas 4 e 6 nós usaremos o [ `CreateRole` ](https://msdn.microsoft.com/library/system.web.security.roles.createrole.aspx) e [ `DeleteRole` ](https://msdn.microsoft.com/library/system.web.security.roles.deleterole.aspx) métodos, que adicionar ou remover uma função do sistema.
-
-Para obter uma lista de todas as funções do sistema, use o [ `GetAllRoles` método](https://msdn.microsoft.com/library/system.web.security.roles.getallroles.aspx) (consulte a etapa 5). O [ `RoleExists` método](https://msdn.microsoft.com/library/system.web.security.roles.roleexists.aspx) retorna um valor booliano que indica se uma função especificada existe.
-
-O próximo tutorial, vamos examinar como associar usuários a funções. O `Roles` da classe [ `AddUserToRole` ](https://msdn.microsoft.com/library/system.web.security.roles.addusertorole.aspx), [ `AddUserToRoles` ](https://msdn.microsoft.com/library/system.web.security.roles.addusertoroles.aspx), [ `AddUsersToRole` ](https://msdn.microsoft.com/library/system.web.security.roles.adduserstorole.aspx), e [ `AddUsersToRoles` ](https://msdn.microsoft.com/library/system.web.security.roles.adduserstoroles.aspx) métodos de adicionam um ou mais usuários a uma ou mais funções. Para remover usuários das funções, use o [ `RemoveUserFromRole` ](https://msdn.microsoft.com/library/system.web.security.roles.removeuserfromrole.aspx), [ `RemoveUserFromRoles` ](https://msdn.microsoft.com/library/system.web.security.roles.removeuserfromroles.aspx), [ `RemoveUsersFromRole` ](https://msdn.microsoft.com/library/system.web.security.roles.removeusersfromrole.aspx), ou [ `RemoveUsersFromRoles` ](https://msdn.microsoft.com/library/system.web.security.roles.removeusersfromroles.aspx) métodos.
-
-No <a id="_msoanchor_9"> </a> [ *autorização baseada em função* ](role-based-authorization-vb.md) tutorial, veremos maneiras para mostrar ou ocultar com base na função do usuário conectado no momento a funcionalidade de programaticamente. Para fazer isso, podemos usar a classe de função [ `FindUsersInRole` ](https://msdn.microsoft.com/library/system.web.security.roles.findusersinrole.aspx), [ `GetRolesForUser` ](https://msdn.microsoft.com/library/system.web.security.roles.getrolesforuser.aspx), [ `GetUsersInRole` ](https://msdn.microsoft.com/library/system.web.security.roles.getusersinrole.aspx), ou [ `IsUserInRole` ](https://msdn.microsoft.com/library/system.web.security.roles.isuserinrole.aspx) métodos.
+Com essa marcação de configuração in-loco, estamos prontos para começar a usar a funcionalidade de função em nosso aplicativo.
 
 > [!NOTE]
-> Tenha em mente que sempre que um desses métodos é invocado, o `Roles` classe delega a chamada para o provedor configurado. Em nosso caso, isso significa que a chamada está sendo enviada para o `SqlRoleProvider`. O `SqlRoleProvider` , em seguida, executa a operação de banco de dados apropriado com base no método invocado. Por exemplo, o código `Roles.CreateRole("Administrators")` resulta nos `SqlRoleProvider` executando o `aspnet_Roles_CreateRole` procedimento armazenado, que insere um novo registro no `aspnet_Roles` tabela chamada Administrators.
+> A marcação de configuração acima ilustra o uso dos atributos `enabled` e `defaultProvider` do elemento `<roleManager>`. Há vários outros atributos que afetam o modo como a estrutura de funções associa as informações de função de cada usuário. Examinaremos essas configurações no <a id="_msoanchor_8"> </a>tutorial de [*autorização baseada em funções*](role-based-authorization-vb.md) .
 
-O restante deste tutorial examina usando o `Roles` da classe `CreateRole`, `GetAllRoles`, e `DeleteRole` métodos para gerenciar as funções do sistema.
+## <a name="step-3-examining-the-roles-api"></a>Etapa 3: examinando a API de funções
 
-## <a name="step-4-creating-new-roles"></a>Etapa 4: Criação de novas funções
+A funcionalidade da estrutura de funções é exposta por meio da [classe`Roles`](https://msdn.microsoft.com/library/system.web.security.roles.aspx), que contém treze métodos compartilhados para executar operações baseadas em funções. Quando examinamos a criação e a exclusão de funções nas etapas 4 e 6, usaremos os métodos [`CreateRole`](https://msdn.microsoft.com/library/system.web.security.roles.createrole.aspx) e [`DeleteRole`](https://msdn.microsoft.com/library/system.web.security.roles.deleterole.aspx) , que adicionam ou removem uma função do sistema.
 
-Funções oferecem uma maneira arbitrariamente os usuários do grupo e, mais comumente esse agrupamento é usado para uma forma mais conveniente aplicar as regras de autorização. Mas, para usar funções como um mecanismo de autorização, primeiro precisamos definir as funções que existem no aplicativo. Infelizmente, o ASP.NET não inclui um controle CreateRoleWizard. Para adicionar novas funções, é necessário criar uma interface do usuário adequada e chamar a API de funções sozinhos. A boa notícia é que isso é muito fácil de realizar.
+Para obter uma lista de todas as funções no sistema, use o [método`GetAllRoles`](https://msdn.microsoft.com/library/system.web.security.roles.getallroles.aspx) (consulte a etapa 5). O [método`RoleExists`](https://msdn.microsoft.com/library/system.web.security.roles.roleexists.aspx) retorna um valor booliano que indica se existe uma função especificada.
+
+No próximo tutorial, examinaremos como associar usuários a funções. Os métodos [`AddUserToRole`](https://msdn.microsoft.com/library/system.web.security.roles.addusertorole.aspx), [`AddUserToRoles`](https://msdn.microsoft.com/library/system.web.security.roles.addusertoroles.aspx), [`AddUsersToRole`](https://msdn.microsoft.com/library/system.web.security.roles.adduserstorole.aspx)e [`AddUsersToRoles`](https://msdn.microsoft.com/library/system.web.security.roles.adduserstoroles.aspx) da classe `Roles` adicionam um ou mais usuários a uma ou mais funções. Para remover usuários de funções, use os métodos [`RemoveUserFromRole`](https://msdn.microsoft.com/library/system.web.security.roles.removeuserfromrole.aspx), [`RemoveUserFromRoles`](https://msdn.microsoft.com/library/system.web.security.roles.removeuserfromroles.aspx), [`RemoveUsersFromRole`](https://msdn.microsoft.com/library/system.web.security.roles.removeusersfromrole.aspx)ou [`RemoveUsersFromRoles`](https://msdn.microsoft.com/library/system.web.security.roles.removeusersfromroles.aspx) .
+
+<a id="_msoanchor_9"> </a>No tutorial de [*autorização baseada em funções*](role-based-authorization-vb.md) , veremos maneiras de mostrar ou ocultar programaticamente a funcionalidade com base na função do usuário conectado no momento. Para isso, podemos usar os métodos [`FindUsersInRole`](https://msdn.microsoft.com/library/system.web.security.roles.findusersinrole.aspx), [`GetRolesForUser`](https://msdn.microsoft.com/library/system.web.security.roles.getrolesforuser.aspx), [`GetUsersInRole`](https://msdn.microsoft.com/library/system.web.security.roles.getusersinrole.aspx)ou [`IsUserInRole`](https://msdn.microsoft.com/library/system.web.security.roles.isuserinrole.aspx) da classe de função.
 
 > [!NOTE]
-> Embora não haja nenhum controle CreateRoleWizard Web, é o [ferramenta de administração de Site da Web do ASP.NET](https://msdn.microsoft.com/library/ms228053.aspx), que é um aplicativo ASP.NET local, projetado para ajudar a exibir e gerenciar a configuração do seu aplicativo web. No entanto, eu não sou muito fã da ferramenta de administração de Site da Web do ASP.NET por dois motivos. Primeiro, ele é um pouco com bugs e a experiência do usuário deixa muito a desejar. Em segundo lugar, a ferramenta de administração de Site da Web do ASP.NET foi projetada para apenas trabalhar localmente, o que significa que você precisará criar sua própria função páginas da web de gerenciamento se você precisar gerenciar funções em um site ao vivo remotamente. Para esses dois motivos, este tutorial e o próximo se concentrará em criar a função necessária ferramentas de gerenciamento em uma página da web em vez de contar com a ferramenta de administração de Site da Web do ASP.NET.
+> Tenha em mente que, sempre que um desses métodos for invocado, a classe `Roles` delegará a chamada para o provedor configurado. Em nosso caso, isso significa que a chamada está sendo enviada para o `SqlRoleProvider`. Em seguida, a `SqlRoleProvider` executa a operação de banco de dados apropriada com base no método invocado. Por exemplo, o código `Roles.CreateRole("Administrators")` resulta na `SqlRoleProvider` execução do procedimento armazenado `aspnet_Roles_CreateRole`, que insere um novo registro na tabela `aspnet_Roles` chamada Administrators.
 
-Abra o `ManageRoles.aspx` página o `Roles` pasta e adicione uma caixa de texto e um controle da Web de botão para a página. Defina o controle de caixa de texto `ID` propriedade para `RoleName` e o botão `ID` e `Text` propriedades a serem `CreateRoleButton` e criar uma função, respectivamente. Neste ponto, marcação declarativa de sua página deve ser semelhante ao seguinte:
+O restante deste tutorial analisa o uso dos métodos `CreateRole`, `GetAllRoles`e `DeleteRole` da classe `Roles` para gerenciar as funções no sistema.
+
+## <a name="step-4-creating-new-roles"></a>Etapa 4: criando novas funções
+
+As funções oferecem uma maneira de agrupar arbitrariamente os usuários e, mais comumente, esse agrupamento é usado para uma maneira mais conveniente de aplicar regras de autorização. Mas, para usar funções como um mecanismo de autorização, primeiro precisamos definir quais funções existem no aplicativo. Infelizmente, o ASP.NET não inclui um controle CreateRoleWizard. Para adicionar novas funções, precisamos criar uma interface do usuário adequada e invocar a API de funções sozinhos. A boa notícia é que isso é muito fácil de realizar.
+
+> [!NOTE]
+> Embora não haja nenhum controle da Web CreateRoleWizard, há a [ferramenta de administração de site da ASP.net](https://msdn.microsoft.com/library/ms228053.aspx), que é um aplicativo ASP.net local projetado para ajudar a exibir e gerenciar a configuração de seu aplicativo Web. No entanto, não sou um grande fã da ferramenta de administração de site ASP.NET por dois motivos. Primeiro, trata-se de um pouco de bugs e a experiência do usuário deixa muito a desejar. Segundo, a ferramenta de administração de site ASP.NET foi projetada para funcionar localmente, o que significa que você terá que criar suas próprias páginas da Web de gerenciamento de funções se precisar gerenciar funções em um site ativo remotamente. Por esses dois motivos, este tutorial e o próximo se concentrarão na criação das ferramentas de gerenciamento de função necessárias em uma página da Web, em vez de depender da ferramenta de administração de site ASP.NET.
+
+Abra a página `ManageRoles.aspx` na pasta `Roles` e adicione uma caixa de texto e um controle botão da Web para a página. Defina a propriedade `ID` do controle TextBox como `RoleName` e as propriedades `ID` e `Text` do botão como `CreateRoleButton` e crie a função, respectivamente. Neste ponto, a marcação declarativa de sua página deve ser semelhante ao seguinte:
 
 [!code-aspx[Main](creating-and-managing-roles-vb/samples/sample6.aspx)]
 
-Em seguida, clique duas vezes o `CreateRoleButton` botão controle no Designer para criar um `Click` manipulador de eventos e, em seguida, adicione o seguinte código:
+Em seguida, clique duas vezes no controle botão de `CreateRoleButton` no designer para criar um manipulador de eventos `Click` e, em seguida, adicione o seguinte código:
 
 [!code-vb[Main](creating-and-managing-roles-vb/samples/sample7.vb)]
 
-O código acima inicia atribuindo o nome da função cortado inserido na `RoleName` caixa de texto para o `newRoleName` variável. Em seguida, o `Roles` da classe `RoleExists` método é chamado para determinar se a função `newRoleName` já existe no sistema. Se a função não existir, ele será criado por meio de uma chamada para o `CreateRole` método. Se o `CreateRole` método recebe um nome de função que já existe no sistema, um `ProviderException` exceção é lançada. Isso ocorre porque o código primeiro verifica para garantir que a função ainda não existir no sistema antes de chamar `CreateRole`. O `Click` manipulador de eventos termina limpando os `RoleName` da caixa de texto `Text` propriedade.
+O código acima começa atribuindo o nome da função cortada inserida na caixa de texto `RoleName` à variável `newRoleName`. Em seguida, o método `RoleExists` da classe `Roles` é chamado para determinar se a função `newRoleName` já existe no sistema. Se a função não existir, ela será criada por meio de uma chamada para o método `CreateRole`. Se o método de `CreateRole` for passado um nome de função que já existe no sistema, uma exceção de `ProviderException` será lançada. É por isso que o código verifica primeiro se a função ainda não existe no sistema antes de chamar `CreateRole`. O manipulador de eventos `Click` é concluído desmarcando a propriedade `Text` da `RoleName` caixa de texto.
 
 > [!NOTE]
-> Você pode estar se perguntando o que acontecerá se o usuário não inserir qualquer valor para o `RoleName` caixa de texto. Se o valor passado para o `CreateRole` método é `Nothing` ou uma cadeia de caracteres vazia, uma exceção será gerada. Da mesma forma, se o nome da função contém uma vírgula uma exceção é gerada. Consequentemente, a página deve conter controles de validação para garantir que o usuário insere uma função e que não contém qualquer vírgulas. Eu deixo como um exercício para o leitor.
+> Você deve estar se perguntando o que acontecerá se o usuário não inserir nenhum valor na caixa de texto `RoleName`. Se o valor passado para o método `CreateRole` for `Nothing` ou uma cadeia de caracteres vazia, uma exceção será gerada. Da mesma forma, se o nome da função contiver uma vírgula, uma exceção será gerada. Consequentemente, a página deve conter controles de validação para garantir que o usuário insira uma função e que não contenha vírgulas. Eu deixe como um exercício para o leitor.
 
-Vamos criar uma função chamada Administrators. Visite o `ManageRoles.aspx` através de um navegador, digite Administradores na caixa de texto (veja a Figura 3) e, em seguida, clique no botão Create Role.
+Vamos criar uma função chamada Administrators. Visite a página `ManageRoles.aspx` por meio de um navegador, digite administradores na caixa de texto (veja a Figura 3) e, em seguida, clique no botão criar função.
 
-[![Criar uma função de administradores](creating-and-managing-roles-vb/_static/image8.png)](creating-and-managing-roles-vb/_static/image7.png)
+[![criar uma função de administradores](creating-and-managing-roles-vb/_static/image8.png)](creating-and-managing-roles-vb/_static/image7.png)
 
-**Figura 3**: Criar uma função de administradores ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image9.png))
+**Figura 3**: criar uma função de administradores ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image9.png))
 
-O que acontece? Ocorre um postback, mas não há nenhuma indicação visual que a função, na verdade, foi adicionado ao sistema. Atualizaremos esta página na etapa 5 para incluir comentários visuais. Por enquanto, no entanto, você pode verificar se a função foi criada, vá para o `SecurityTutorials.mdf` banco de dados e exibir os dados do `aspnet_Roles` tabela. Como mostra a Figura 4, o `aspnet_Roles` tabela contém um registro para as funções de administradores just-adicionado.
+O que acontece? Ocorre um postback, mas não há nenhuma indicação visual de que a função foi realmente adicionada ao sistema. Atualizaremos esta página na etapa 5 para incluir comentários visuais. Por enquanto, no entanto, você pode verificar se a função foi criada acessando o banco de dados `SecurityTutorials.mdf` e exibindo-os na tabela `aspnet_Roles`. Como mostra a Figura 4, a tabela `aspnet_Roles` contém um registro para as funções de administradores recém-adicionadas.
 
-[![A tabela aspnet_Roles tem uma linha para os administradores](creating-and-managing-roles-vb/_static/image11.png)](creating-and-managing-roles-vb/_static/image10.png)
+[![a tabela aspnet_Roles tem uma linha para os administradores](creating-and-managing-roles-vb/_static/image11.png)](creating-and-managing-roles-vb/_static/image10.png)
 
-**Figura 4**: O `aspnet_Roles` tabela tem uma linha para os administradores ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image12.png))
+**Figura 4**: a tabela `aspnet_Roles` tem uma linha para os administradores ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image12.png))
 
-## <a name="step-5-displaying-the-roles-in-the-system"></a>Etapa 5: Exibindo as funções do sistema
+## <a name="step-5-displaying-the-roles-in-the-system"></a>Etapa 5: exibindo as funções no sistema
 
-Vamos ampliar o `ManageRoles.aspx` página para incluir uma lista das funções atuais no sistema. Para fazer isso, adicione um controle GridView à página e defina suas `ID` propriedade para `RoleList`. Em seguida, adicionar um método à classe de code-behind da página denominada `DisplayRolesInGrid` usando o seguinte código:
+Vamos aumentar a `ManageRoles.aspx` página para incluir uma lista das funções atuais no sistema. Para fazer isso, adicione um controle GridView à página e defina sua propriedade `ID` como `RoleList`. Em seguida, adicione um método à classe code-behind da página chamada `DisplayRolesInGrid` usando o seguinte código:
 
 [!code-vb[Main](creating-and-managing-roles-vb/samples/sample8.vb)]
 
-O `Roles` da classe `GetAllRoles` método retorna todas as funções no sistema como uma matriz de cadeias de caracteres. Essa matriz de cadeia de caracteres é então associado ao GridView. Para associar a lista de funções a GridView quando a página é carregada pela primeira vez, precisamos chamar o `DisplayRolesInGrid` método a partir da página `Page_Load` manipulador de eventos. O código a seguir chama esse método quando a página é visitada pela primeira vez, mas não em postbacks subsequentes.
+O método `GetAllRoles` da classe `Roles` retorna todas as funções no sistema como uma matriz de cadeias de caracteres. Em seguida, essa matriz de cadeia de caracteres é associada ao GridView. Para associar a lista de funções ao GridView quando a página é carregada pela primeira vez, precisamos chamar o método `DisplayRolesInGrid` do manipulador de eventos `Page_Load` da página. O código a seguir chama esse método quando a página é visitada pela primeira vez, mas não em postbacks subsequentes.
 
 [!code-vb[Main](creating-and-managing-roles-vb/samples/sample9.vb)]
 
-Com esse código, visite a página por meio de um navegador. Como mostra a Figura 5, você deve ver uma grade com uma única coluna rotulada como o Item. A grade inclui uma linha para a função de administradores que adicionamos na etapa 4.
+Com esse código em vigor, visite a página por meio de um navegador. Como mostra a Figura 5, você deve ver uma grade com uma única coluna rotulada item. A grade inclui uma linha para a função administradores que adicionamos na etapa 4.
 
-[![O GridView exibe as funções em uma única coluna](creating-and-managing-roles-vb/_static/image14.png)](creating-and-managing-roles-vb/_static/image13.png)
+[![o GridView exibe as funções em uma única coluna](creating-and-managing-roles-vb/_static/image14.png)](creating-and-managing-roles-vb/_static/image13.png)
 
-**Figura 5**: O GridView exibe as funções em uma única coluna ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image15.png))
+**Figura 5**: o GridView exibe as funções em uma única coluna ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image15.png))
 
-O GridView exibe uma coluna solitário Item rotulada, pois o GridView `AutoGenerateColumns` estiver definida como True (padrão), que faz com que o GridView criar automaticamente uma coluna para cada propriedade no seu `DataSource`. Uma matriz tem uma única propriedade que representa os elementos na matriz, portanto, a única coluna em GridView.
+O GridView exibe uma coluna solitário rotulada como item porque a propriedade `AutoGenerateColumns` do GridView está definida como true (o padrão), o que faz com que o GridView crie automaticamente uma coluna para cada propriedade em seu `DataSource`. Uma matriz tem uma única propriedade que representa os elementos na matriz, portanto, a única coluna no GridView.
 
-Ao exibir dados com um GridView, eu prefiro explicitamente definir minhas colunas em vez de tê-los implicitamente gerado pelo GridView. Definindo explicitamente as colunas é muito mais fácil de formatar os dados, reorganizar as colunas e executar outras tarefas comuns. Portanto, vamos atualizar marcação declarativa do GridView para que suas colunas são definidas explicitamente.
+Ao exibir dados com um GridView, prefiro definir explicitamente minhas colunas em vez de tê-las implicitamente geradas pelo GridView. Ao definir explicitamente as colunas, é muito mais fácil formatar os dados, reorganizá-las e executar outras tarefas comuns. Portanto, vamos atualizar a marcação declarativa do GridView para que suas colunas sejam definidas explicitamente.
 
-Comece definindo o GridView `AutoGenerateColumns` propriedade como False. Em seguida, adicione um TemplateField à grade, defina suas `HeaderText` propriedade às funções e configurar seu `ItemTemplate` para que ele exibe o conteúdo da matriz. Para fazer isso, adicione um controle de rótulo Web chamado `RoleNameLabel` para o `ItemTemplate` e associar seu `Text` propriedade `Container.DataItem.`
+Comece definindo a propriedade `AutoGenerateColumns` do GridView como false. Em seguida, adicione um TemplateField à grade, defina sua propriedade `HeaderText` como funções e configure seu `ItemTemplate` para que ele exiba o conteúdo da matriz. Para fazer isso, adicione um controle da Web de rótulo chamado `RoleNameLabel` ao `ItemTemplate` e associe sua propriedade `Text` a `Container.DataItem.`
 
-Essas propriedades e o `ItemTemplate`do conteúdo pode ser definido de forma declarativa ou por meio de interface de editar modelos e a caixa de diálogo de campos do GridView. Para acessar os campos de caixa de diálogo, clique no link de editar colunas do GridView de marca inteligente. Em seguida, desmarque a opção Gerar automaticamente campos checkbox para definir a `AutoGenerateColumns` a propriedade como False e adicionar um TemplateField para o controle GridView, definindo seu `HeaderText` propriedade à função. Para definir o `ItemTemplate`do conteúdo, escolha a opção de editar modelos na marca inteligente do GridView. Arraste um controle de Web de rótulo para o `ItemTemplate`, defina seu `ID` propriedade a ser `RoleNameLabel`e definir suas configurações de associação de dados, de modo que seu `Text` propriedade é associada a `Container.DataItem`.
+Essas propriedades e o conteúdo do `ItemTemplate`podem ser definidos declarativamente ou por meio da caixa de diálogo campos do GridView e da interface de edição de modelos. Para acessar a caixa de diálogo campos, clique no link Editar colunas na marca inteligente do GridView. Em seguida, desmarque a caixa de seleção Gerar campos automaticamente para definir a propriedade `AutoGenerateColumns` como false e adicione um TemplateField ao GridView, definindo sua propriedade `HeaderText` como Role. Para definir o conteúdo do `ItemTemplate`, escolha a opção Editar modelos na marca inteligente do GridView. Arraste um controle de rótulo da Web para a `ItemTemplate`, defina sua propriedade `ID` como `RoleNameLabel`e defina suas configurações de associação de dados para que sua propriedade `Text` esteja associada a `Container.DataItem`.
 
-Independentemente de qual abordagem você usa, marcação declarativa do resultante do GridView deve ser semelhante à seguinte quando você terminar.
+Independentemente da abordagem que você usar, a marcação declarativa resultante do GridView deve ser semelhante ao seguinte quando você terminar.
 
 [!code-aspx[Main](creating-and-managing-roles-vb/samples/sample10.aspx)]
 
 > [!NOTE]
-> O conteúdo da matriz é exibido usando a sintaxe de associação de dados `<%# Container.DataItem %>`. Uma descrição completa de por que essa sintaxe é usada quando exibir o conteúdo de uma matriz associada a GridView está além do escopo deste tutorial. Para obter mais informações sobre essa questão, consulte [associando uma matriz de escalar a um controle de Web de dados](http://aspnet.4guysfromrolla.com/articles/082504-1.aspx).
+> O conteúdo da matriz é exibido usando a sintaxe de vinculação de dados `<%# Container.DataItem %>`. Uma descrição completa do motivo pelo qual essa sintaxe é usada ao exibir o conteúdo de uma matriz associada ao GridView está além do escopo deste tutorial. Para obter mais informações sobre esse assunto, consulte [associando uma matriz escalar a um controle da Web de dados](http://aspnet.4guysfromrolla.com/articles/082504-1.aspx).
 
-Atualmente, o `RoleList` GridView está associado apenas à lista de funções quando a página é visitada primeiro. É necessário atualizar a grade sempre que uma nova função é adicionada. Para fazer isso, atualize o `CreateRoleButton` do botão `Click` manipulador de eventos para que chame o `DisplayRolesInGrid` método se uma nova função é criada.
+Atualmente, o `RoleList` GridView só é associado à lista de funções quando a página é visitada pela primeira vez. Precisamos atualizar a grade sempre que uma nova função for adicionada. Para fazer isso, atualize o manipulador de eventos `Click` do botão `CreateRoleButton` para que ele chame o método `DisplayRolesInGrid` se uma nova função for criada.
 
 [!code-vb[Main](creating-and-managing-roles-vb/samples/sample11.vb)]
 
-Agora quando o usuário adiciona uma nova função de `RoleList` GridView mostra a função adicionada apenas no postback, fornecer comentários visuais que a função foi criada com êxito. Para ilustrar isso, visite o `ManageRoles.aspx` página por meio de um navegador e adicionar uma função chamada supervisores. Ao clicar no botão Create Role, ocorrerá um postback e a grade será atualizada para incluir os administradores, bem como a nova função, os supervisores.
+Agora, quando o usuário adiciona uma nova função, o `RoleList` GridView mostra a função recém-adicionada no postback, fornecendo comentários visuais de que a função foi criada com êxito. Para ilustrar isso, visite a página `ManageRoles.aspx` por meio de um navegador e adicione uma função denominada supervisores. Ao clicar no botão criar função, um postback será acontecerdo e a grade será atualizada para incluir administradores, bem como a nova função, supervisores.
 
-[![A função de supervisores tem foi adicionado](creating-and-managing-roles-vb/_static/image17.png)](creating-and-managing-roles-vb/_static/image16.png)
+[![a função de supervisores foi adicionada](creating-and-managing-roles-vb/_static/image17.png)](creating-and-managing-roles-vb/_static/image16.png)
 
-**Figura 6**: A função de supervisores tem foram adicionados ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image18.png))
+**Figura 6**: a função de supervisores foi adicionada ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image18.png))
 
-## <a name="step-6-deleting-roles"></a>Etapa 6: Excluindo funções
+## <a name="step-6-deleting-roles"></a>Etapa 6: excluindo funções
 
-Neste ponto, um usuário pode criar uma nova função e exibir todas as funções existentes do `ManageRoles.aspx` página. Vamos permitir que os usuários também excluir funções. O `Roles.DeleteRole` método tem duas sobrecargas:
+Neste ponto, um usuário pode criar uma nova função e exibir todas as funções existentes na página `ManageRoles.aspx`. Vamos permitir que os usuários também excluam funções. O método `Roles.DeleteRole` tem duas sobrecargas:
 
-- [`DeleteRole(roleName)`](https://msdn.microsoft.com/library/ek4sywc0.aspx) -Exclui a função *roleName*. Uma exceção é gerada se a função contém um ou mais membros.
-- [`DeleteRole(roleName, throwOnPopulatedRole)`](https://msdn.microsoft.com/library/38h6wf59.aspx) -Exclui a função *roleName*. Se *throwOnPopulateRole* é `True`, em seguida, uma exceção é lançada se a função contém um ou mais membros. Se *throwOnPopulateRole* é `False`, em seguida, a função será excluída se ele contém todos os membros ou não. Internamente, o `DeleteRole(roleName)` chamadas de método `DeleteRole(roleName, True)`.
+- [`DeleteRole(roleName)`](https://msdn.microsoft.com/library/ek4sywc0.aspx) -exclui a função *roleName*. Uma exceção será gerada se a função contiver um ou mais membros.
+- [`DeleteRole(roleName, throwOnPopulatedRole)`](https://msdn.microsoft.com/library/38h6wf59.aspx) -exclui a função *roleName*. Se *throwOnPopulateRole* for `True`, uma exceção será gerada se a função contiver um ou mais membros. Se *throwOnPopulateRole* for `False`, a função será excluída se ela contiver Membros ou não. Internamente, o método `DeleteRole(roleName)` chama `DeleteRole(roleName, True)`.
 
-O `DeleteRole` método também gerará uma exceção se *roleName* é `Nothing` ou uma cadeia de caracteres vazia ou se *roleName* contém uma vírgula. Se *roleName* não existe no sistema, `DeleteRole` falha silenciosamente, sem gerar uma exceção.
+O método `DeleteRole` também gerará uma exceção se *roleName* for `Nothing` ou uma cadeia de caracteres vazia ou se *roleName* contiver uma vírgula. Se *roleName* não existir no sistema, `DeleteRole` falha silenciosamente, sem gerar uma exceção.
 
-Vamos ampliar o GridView no `ManageRoles.aspx` para incluir a uma exclusão de botão que, quando clicado, exclui a função selecionada. Comece adicionando um botão Excluir ao GridView indo para a caixa de diálogo de campos e adicionar um botão Excluir, que está localizado sob a opção CommandField. Verifique a exclusão de coluna à extrema esquerda de botão e defina seu `DeleteText` propriedade à função de excluir.
+Vamos aumentar o GridView em `ManageRoles.aspx` para incluir um botão de exclusão que, quando clicado, exclui a função selecionada. Comece adicionando um botão excluir ao GridView acessando a caixa de diálogo campos e adicionando um botão excluir, que está localizado na opção CommandField. Faça com que o botão de exclusão seja a coluna à esquerda e defina sua propriedade `DeleteText` para excluir a função.
 
-[![Adicionar um botão Excluir ao RoleList GridView](creating-and-managing-roles-vb/_static/image20.png)](creating-and-managing-roles-vb/_static/image19.png)
+[![adicionar um botão excluir à Rolelist GridView](creating-and-managing-roles-vb/_static/image20.png)](creating-and-managing-roles-vb/_static/image19.png)
 
-**Figura 7**: Adicionar um botão Excluir para o `RoleList` GridView ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image21.png))
+**Figura 7**: adicionar um botão excluir ao `RoleList` GridView ([clique para exibir a imagem em tamanho normal](creating-and-managing-roles-vb/_static/image21.png))
 
-Depois de adicionar o botão de exclusão, marcação declarativa do seu GridView deve ser semelhante ao seguinte:
+Depois de adicionar o botão excluir, a marcação declarativa de GridView deve ser semelhante ao seguinte:
 
 [!code-aspx[Main](creating-and-managing-roles-vb/samples/sample12.aspx)]
 
-Em seguida, crie um manipulador de eventos para o GridView `RowDeleting` eventos. Esse é o evento que é gerado em um postback quando o botão de função excluir é clicado. Adicione o seguinte código ao manipulador de eventos.
+Em seguida, crie um manipulador de eventos para o evento `RowDeleting` do GridView. Esse é o evento que é gerado no postback quando o botão excluir função é clicado. Adicione o seguinte código ao manipulador de eventos.
 
 [!code-vb[Main](creating-and-managing-roles-vb/samples/sample13.vb)]
 
-O código começa fazendo referência a programaticamente o `RoleNameLabel` controle na linha cuja função excluir foi clicada da Web. O `Roles.DeleteRole` método, em seguida, é chamado, passando a `Text` da `RoleNameLabel` e `False`e, portanto, excluindo a função independentemente se houver usuários associados à função. Por fim, o `RoleList` GridView é atualizado para que a função just-excluído não aparece mais na grade.
+O código começa por meio de programação fazendo referência ao controle da Web `RoleNameLabel` na linha cujo botão excluir função foi clicado. O método `Roles.DeleteRole` é invocado, passando o `Text` do `RoleNameLabel` e `False`, excluindo, assim, a função, independentemente de haver algum usuário associado à função. Por fim, o `RoleList` GridView é atualizado para que a função recém-excluída não apareça mais na grade.
 
 > [!NOTE]
-> O botão Excluir função não requer qualquer tipo de confirmação do usuário antes de excluir a função. Uma das maneiras mais fáceis para confirmar uma ação é por meio de uma caixa de diálogo de confirmação do lado do cliente. Para obter mais informações sobre essa técnica, consulte [' adicionando confirmação do lado do cliente quando excluindo](https://asp.net/learn/data-access/tutorial-42-vb.aspx).
+> O botão excluir função não requer nenhum tipo de confirmação do usuário antes de excluir a função. Uma das maneiras mais fáceis de confirmar uma ação é por meio de uma caixa de diálogo de confirmação do lado do cliente. Para obter mais informações sobre essa técnica, consulte [adicionando confirmação do lado do cliente ao excluir](https://asp.net/learn/data-access/tutorial-42-vb.aspx).
 
 ## <a name="summary"></a>Resumo
 
-Muitos aplicativos web têm certas regras de autorização ou funcionalidade de nível de página que está disponível apenas para determinadas classes de usuários. Por exemplo, pode haver um conjunto de páginas da web que somente os administradores podem acessar. Em vez de definir essas regras de autorização em uma base por usuário, muitas vezes, é mais útil definir as regras com base em uma função. Ou seja, em vez de explicitamente, permitindo que os usuários Scott e Jisun para acessar as páginas da web administrativas, uma abordagem mais sustentável é permitir que os membros da função Administradores para acessar essas páginas e, em seguida, a fim de denotar Scott e Jisun como usuários que pertencem à Função de administradores.
+Muitos aplicativos Web têm determinadas regras de autorização ou funcionalidade de nível de página que só está disponível para determinadas classes de usuários. Por exemplo, pode haver um conjunto de páginas da Web que somente administradores podem acessar. Em vez de definir essas regras de autorização de usuário por usuário, muitas vezes é mais útil definir as regras com base em uma função. Ou seja, em vez de permitir explicitamente que os usuários Scott e Jisun acessem as páginas da Web administrativas, uma abordagem mais passível de manutenção é permitir que os membros da função administradores acessem essas páginas e, em seguida, denotarmos Scott e Jisun como usuários pertencentes ao Função de administradores.
 
-A estrutura de funções facilita criar e gerenciar funções. Neste tutorial, examinamos como configurar a estrutura de funções para usar o `SqlRoleProvider`, que usa um banco de dados do Microsoft SQL Server como o repositório da função. Além disso, criamos uma página da web que lista as funções existentes no sistema e permite que novas funções a serem criados e as existentes a serem excluídos. Nos tutoriais subsequentes veremos como atribuir usuários às funções e como aplicar a autorização baseada em função.
+A estrutura de funções facilita a criação e o gerenciamento de funções. Neste tutorial, examinamos como configurar a estrutura de funções para usar o `SqlRoleProvider`, que usa um banco de dados Microsoft SQL Server como o armazenamento de função. Também criamos uma página da Web que lista as funções existentes no sistema e permite que novas funções sejam criadas e as existentes sejam excluídas. Nos tutoriais subsequentes, veremos como atribuir usuários a funções e como aplicar a autorização baseada em funções.
 
 Boa programação!
 
 ### <a name="further-reading"></a>Leitura adicional
 
-Para obter mais informações sobre os tópicos abordados neste tutorial, consulte os seguintes recursos:
+Para obter mais informações sobre os tópicos discutidos neste tutorial, consulte os seguintes recursos:
 
-- [Examinando o ASP.NET da 2.0 associação, funções e perfil](http://aspnet.4guysfromrolla.com/articles/120705-1.aspx)
-- [Como: Usar o Gerenciador de funções no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998314.aspx)
+- [Examinando a associação, as funções e o perfil do ASP.NET 2.0](http://aspnet.4guysfromrolla.com/articles/120705-1.aspx)
+- [Como: usar o Gerenciador de funções no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998314.aspx)
 - [Provedores de função](https://msdn.microsoft.com/library/aa478950.aspx)
-- [Sem interrupção de sua própria ferramenta de administração de site](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx)
-- [Documentação técnica para o `<roleManager>` elemento](https://msdn.microsoft.com/library/ms164660.aspx)
-- [Usando a associação e APIs do Gerenciador de função](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/security/membership.aspx)
+- [Distribuindo sua própria ferramenta de administração de sites](http://aspnet.4guysfromrolla.com/articles/052307-1.aspx)
+- [Documentação técnica para o elemento `<roleManager>`](https://msdn.microsoft.com/library/ms164660.aspx)
+- [Usando as APIs de associação e Gerenciador de funções](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/security/membership.aspx)
 
 ### <a name="about-the-author"></a>Sobre o autor
 
-Scott Mitchell, autor de vários livros sobre ASP/ASP.NET e fundador da 4GuysFromRolla.com, trabalha com tecnologias Web Microsoft desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é  *[Sams Teach por conta própria ASP.NET 2.0 em 24 horas](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)*. Scott pode ser contatado pelo [ mitchell@4guysfromrolla.com ](mailto:mitchell@4guysfromrolla.com) ou por meio de seu blog em [ http://ScottOnWriting.NET ](http://scottonwriting.net/).
+Scott Mitchell, autor de vários livros sobre ASP/ASP. NET e fundador da 4GuysFromRolla.com, tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a *[Sams ensina a ASP.NET 2,0 em 24 horas](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)* . Scott pode ser contatado em [mitchell@4guysfromrolla.com](mailto:mitchell@4guysfromrolla.com) ou por meio de seu blog em [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
 ### <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores de avanço para este tutorial incluem Alicja Maziarz, Suchi Banerjee e Teresa Murphy. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, escreva-me em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial incluem Alicja Maziarz, como Banerjee e Teresa Murphy. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](role-based-authorization-cs.md)

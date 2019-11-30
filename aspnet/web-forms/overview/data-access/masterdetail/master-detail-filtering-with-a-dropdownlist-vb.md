@@ -1,146 +1,146 @@
 ---
 uid: web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-vb
-title: Mestre/detalhes filtragem com uma DropDownList (VB) | Microsoft Docs
+title: Filtragem de mestre/detalhes com DropDownList (VB) | Microsoft Docs
 author: rick-anderson
-description: Neste tutorial, veremos como exibir os registros principais em um controle DropDownList e os detalhes do item de lista selecionado em um GridView.
+description: Neste tutorial, veremos como exibir os registros mestres em um controle DropDownList e os detalhes do item de lista selecionado em um GridView.
 ms.author: riande
 ms.date: 03/31/2010
 ms.assetid: ea44717e-ab2e-46cd-a692-e4a9c0de194c
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 665acdc303b97d393b714f0b2605ee65b27e0feb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 62cd296a3f36e1779666a6b5db15b0ce2488d0e4
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124240"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74640226"
 ---
 # <a name="masterdetail-filtering-with-a-dropdownlist-vb"></a>Filtragem mestre/detalhes com uma DropDownList (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixe o aplicativo de exemplo](http://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_7_VB.exe) ou [baixar PDF](master-detail-filtering-with-a-dropdownlist-vb/_static/datatutorial07vb1.pdf)
+[Baixar o aplicativo de exemplo](https://download.microsoft.com/download/5/d/7/5d7571fc-d0b7-4798-ad4a-c976c02363ce/ASPNET_Data_Tutorial_7_VB.exe) ou [baixar PDF](master-detail-filtering-with-a-dropdownlist-vb/_static/datatutorial07vb1.pdf)
 
-> Neste tutorial, veremos como exibir os registros principais em um controle DropDownList e os detalhes do item de lista selecionado em um GridView.
+> Neste tutorial, veremos como exibir os registros mestres em um controle DropDownList e os detalhes do item de lista selecionado em um GridView.
 
 ## <a name="introduction"></a>Introdução
 
-Um tipo comum de relatório é o *relatório de mestre/detalhes*, no qual o relatório começa mostrando um conjunto de registros "mestres". O usuário pode, em seguida, fazer drill down em um dos registros mestres, assim, detalhes do registro mestre "." Mestre/detalhes relatórios é uma opção ideal para visualizar relações um-para-muitos, como um relatório que mostra todas as categorias e, em seguida, que permite ao usuário selecionar uma categoria específica e exibir seus produtos associados. Além disso, os relatórios mestre/detalhes são úteis para exibir informações detalhadas de tabelas particularmente "largos" (aqueles que têm muitas colunas). Por exemplo, o nível de "mestre" de um relatório de detalhes mestre pode mostrar apenas o nome e a unidade de preço do produto dos produtos no banco de dados e fazer uma busca detalhada em um determinado produto mostraria os campos adicionais do produto (categoria, fornecedor, quantidade por unidade, e assim por diante).
+Um tipo comum de relatório é o *relatório mestre/detalhado*, no qual o relatório começa mostrando um conjunto de registros "mestre". O usuário pode fazer uma busca detalhada em um dos registros mestres, exibindo assim os "detalhes" do registro mestre. Os relatórios mestre/de detalhes são uma opção ideal para a visualização de relações um-para-muitos, como um relatório que mostra todas as categorias e, em seguida, permite que um usuário selecione uma determinada categoria e exiba seus produtos associados. Além disso, os relatórios mestre/detalhados são úteis para exibir informações detalhadas de tabelas "amplas" (aquelas que têm muitas colunas). Por exemplo, o nível "mestre" de um relatório mestre/detalhado pode mostrar apenas o nome do produto e o preço unitário dos produtos no banco de dados, e fazer drill down em um determinado produto mostraria os campos de produto adicionais (categoria, fornecedor, quantidade por unidade e assim por diante).
 
-Há muitas maneiras com que um relatório mestre/detalhes pode ser implementado. Sobre isso e os próximos três tutoriais, examinaremos uma variedade de relatórios mestre/detalhes. Neste tutorial, veremos como exibir os registros principais em um [controle DropDownList](https://msdn.microsoft.com/library/dtx91y0z.aspx) e os detalhes do item de lista selecionado em um GridView. Em particular, o relatório de detalhes mestre deste tutorial lista as informações de categoria e produto.
+Há muitas maneiras com as quais um relatório mestre/detalhado pode ser implementado. Além dos próximos três tutoriais, veremos uma variedade de relatórios mestre/detalhados. Neste tutorial, veremos como exibir os registros mestres em um [controle DropDownList](https://msdn.microsoft.com/library/dtx91y0z.aspx) e os detalhes do item de lista selecionado em um GridView. Em particular, o relatório mestre/detalhes deste tutorial listará informações de categoria e produto.
 
-## <a name="step-1-displaying-the-categories-in-a-dropdownlist"></a>Etapa 1: Exibindo as categorias na DropDownList
+## <a name="step-1-displaying-the-categories-in-a-dropdownlist"></a>Etapa 1: exibindo as categorias em uma DropDownList
 
-Nosso relatório mestre/detalhes listará as categorias na DropDownList, com produtos do item de lista selecionado exibidos mais adiante na página em um GridView. A primeira tarefa à frente de nós, em seguida, é ter as categorias exibidas na DropDownList. Abrir o `FilterByDropDownList.aspx` página o `Filtering` pasta, arraste uma DropDownList da caixa de ferramentas para o designer da página e defina seu `ID` propriedade para `Categories`. Em seguida, clique no link na marca inteligente do DropDownList Escolher fonte de dados. Isso exibirá o Assistente de configuração de fonte de dados.
+Nosso relatório mestre/detalhado listará as categorias em uma DropDownList, com os produtos do item de lista selecionados exibidos mais abaixo na página em um GridView. A primeira tarefa à frente de nós, então, é ter as categorias exibidas em uma DropDownList. Abra a página `FilterByDropDownList.aspx` na pasta `Filtering`, arraste em uma DropDownList da caixa de ferramentas para o designer da página e defina sua propriedade `ID` como `Categories`. Em seguida, clique no link escolher fonte de dados na marca inteligente da DropDownList. Isso exibirá o assistente de configuração de fonte de dados.
 
-[![Especifique a fonte de dados do DropDownList](master-detail-filtering-with-a-dropdownlist-vb/_static/image2.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image1.png)
+[![especificar a fonte de dados da DropDownList](master-detail-filtering-with-a-dropdownlist-vb/_static/image2.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image1.png)
 
-**Figura 1**: Especifique fonte a DropDownList de dados ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image3.png))
+**Figura 1**: especificar a fonte de dados da DropDownList ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image3.png))
 
-Optar por adicionar um novo ObjectDataSource denominado `CategoriesDataSource` que invoca a `CategoriesBLL` da classe `GetCategories()` método.
+Escolha Adicionar um novo ObjectDataSource chamado `CategoriesDataSource` que invoca o método de `GetCategories()` da classe `CategoriesBLL`.
 
-[![Adicionar um novo ObjectDataSource chamado CategoriesDataSource](master-detail-filtering-with-a-dropdownlist-vb/_static/image5.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image4.png)
+[![adicionar um novo ObjectDataSource chamado CategoriesDataSource](master-detail-filtering-with-a-dropdownlist-vb/_static/image5.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image4.png)
 
-**Figura 2**: Adicionar um novo ObjectDataSource nomeado `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image6.png))
+**Figura 2**: adicionar um novo ObjectDataSource chamado `CategoriesDataSource` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image6.png))
 
-[![Optar por usar a classe CategoriesBLL](master-detail-filtering-with-a-dropdownlist-vb/_static/image8.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image7.png)
+[![optar por usar a classe CategoriesBLL](master-detail-filtering-with-a-dropdownlist-vb/_static/image8.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image7.png)
 
-**Figura 3**: Optar por usar o `CategoriesBLL` classe ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image9.png))
+**Figura 3**: escolha usar a classe `CategoriesBLL` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image9.png))
 
-[![Configurar o ObjectDataSource para usar o método GetCategories()](master-detail-filtering-with-a-dropdownlist-vb/_static/image11.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image10.png)
+[![configurar o ObjectDataSource para usar o método GetCategories ()](master-detail-filtering-with-a-dropdownlist-vb/_static/image11.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image10.png)
 
-**Figura 4**: Configurar o ObjectDataSource para usar o `GetCategories()` método ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image12.png))
+**Figura 4**: configurar o ObjectDataSource para usar o método `GetCategories()` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image12.png))
 
-Depois de configurar o ObjectDataSource ainda precisamos especificar qual campo de fonte de dados deve ser exibido na DropDownList e o que um deve ser associado como o valor do item de lista. Ter o `CategoryName` campo, como a exibição e `CategoryID` como o valor para cada item de lista.
+Depois de configurar o ObjectDataSource, ainda precisamos especificar qual campo de fonte de dados deve ser exibido em DropDownList e qual deles deve ser associado como o valor para o item de lista. Tenha o campo `CategoryName` como a exibição e `CategoryID` como o valor para cada item de lista.
 
-[![Ter a exibição DropDownList CategoryName campo e Use CategoryID como o valor](master-detail-filtering-with-a-dropdownlist-vb/_static/image14.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image13.png)
+[![fazer com que a DropDownList exiba o campo CategoryName e use CategoryID como o valor](master-detail-filtering-with-a-dropdownlist-vb/_static/image14.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image13.png)
 
-**Figura 5**: Ter a exibição DropDownList a `CategoryName` campo e Use `CategoryID` como o valor ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image15.png))
+**Figura 5**: fazer com que a DropDownList exiba o campo `CategoryName` e use `CategoryID` como o valor ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image15.png))
 
-Neste ponto, temos um controle DropDownList que é preenchido com os registros da `Categories` tabela (tudo feito em cerca de seis segundos). Figura 6 mostra nosso progresso até o momento quando visualizado por meio de um navegador.
+Neste ponto, temos um controle DropDownList que é preenchido com os registros da tabela `Categories` (todos são realizados em cerca de seis segundos). A Figura 6 mostra nosso progresso até o momento, quando visualizado por meio de um navegador.
 
-[![Uma lista suspensa lista as categorias atuais](master-detail-filtering-with-a-dropdownlist-vb/_static/image17.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image16.png)
+[![um menu suspenso lista as categorias atuais](master-detail-filtering-with-a-dropdownlist-vb/_static/image17.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image16.png)
 
-**Figura 6**: Menu suspenso que lista as categorias atual ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image18.png))
+**Figura 6**: um menu suspenso lista as categorias atuais ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image18.png))
 
-## <a name="step-2-adding-the-products-gridview"></a>Etapa 2: Adicionando o GridView de produtos
+## <a name="step-2-adding-the-products-gridview"></a>Etapa 2: adicionando os produtos GridView
 
-A última etapa em nosso relatório mestre/detalhes é listar os produtos associados a categoria selecionada. Para fazer isso, adicione um controle GridView à página e criar um novo ObjectDataSource chamado `productsDataSource`. Ter o `productsDataSource` controle selecionar seus dados do `ProductsBLL` da classe `GetProductsByCategoryID(categoryID)` método.
+A última etapa em nosso relatório mestre/detalhado é listar os produtos associados à categoria selecionada. Para fazer isso, adicione um GridView à página e crie um novo ObjectDataSource chamado `productsDataSource`. Fazer com que o controle de `productsDataSource` faça a remoção dos dados do método de `GetProductsByCategoryID(categoryID)` da classe `ProductsBLL`.
 
-[![Selecione o método GetProductsByCategoryID(categoryID)](master-detail-filtering-with-a-dropdownlist-vb/_static/image20.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image19.png)
+[![selecionar o método GetProductsByCategoryID (categoryID)](master-detail-filtering-with-a-dropdownlist-vb/_static/image20.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image19.png)
 
-**Figura 7**: Selecione o `GetProductsByCategoryID(categoryID)` método ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image21.png))
+**Figura 7**: selecione o método de `GetProductsByCategoryID(categoryID)` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image21.png))
 
-Depois de escolher esse método, o assistente ObjectDataSource nos solicita o valor para o método *`categoryID`* parâmetro. Para usar o valor de selecionado `categories` DropDownList item define a origem do parâmetro ControlID para e de controle `Categories`.
+Depois de escolher esse método, o assistente ObjectDataSource nos solicitará o valor do parâmetro *`categoryID`* do método. Para usar o valor do item `categories` DropDownList selecionado, defina a origem do parâmetro como Control e a ControlID como `Categories`.
 
-[![Defina o parâmetro categoryID como o valor de Categories DropDownList](master-detail-filtering-with-a-dropdownlist-vb/_static/image23.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image22.png)
+[![definir o parâmetro categoryID como o valor das categorias DropDownList](master-detail-filtering-with-a-dropdownlist-vb/_static/image23.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image22.png)
 
-**Figura 8**: Defina as *`categoryID`* parâmetro para o valor da `Categories` DropDownList ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image24.png))
+**Figura 8**: definir o parâmetro *`categoryID`* para o valor da `Categories` DropDownList ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image24.png))
 
-Reserve um tempo para fazer check-out de nosso progresso em um navegador. Quando o primeiro visitando a página, esses produtos pertencem à categoria selecionada (Bebidas) são exibidas (conforme mostrado na Figura 9), mas alterar DropDownList não atualiza os dados. Isso ocorre porque um postback deve ocorrer para que o GridView atualizar. Para fazer isso, temos duas opções (nenhum deles exige gravar nenhum código):
+Reserve um tempo para conferir nosso progresso em um navegador. Ao visitar a página pela primeira vez, os produtos que pertencem à categoria selecionada (bebidas) são exibidos (como mostra a Figura 9), mas a alteração da DropDownList não atualiza os dados. Isso ocorre porque um postback deve ocorrer para que o GridView seja atualizado. Para fazer isso, temos duas opções (nenhuma delas requer escrever qualquer código):
 
-- **Definir as categorias DropDownList**[propriedade AutoPostBack](https://msdn.microsoft.com/library/system.web.ui.webcontrols.listcontrol.autopostback%28VS.80%29.aspx)**como True.** (Você pode fazer isso, marcando a opção Enable AutoPostBack na marca inteligente da DropDownList.) Isso vai disparar um postback sempre que a DropDownList selecionado item for alterado pelo usuário. Portanto, quando o usuário seleciona uma nova categoria de erro do DropDownList ocorrerá um postback e GridView será atualizado com os produtos para a categoria selecionada recentemente. (Essa é a abordagem usada neste tutorial.)
-- **Adicione um controle da Web de botão ao lado do DropDownList.** Defina seu `Text` propriedade para a atualização ou algo semelhante. Com essa abordagem, o usuário precisará selecionar uma nova categoria e, em seguida, clique no botão. Clicando no botão causam um postback e atualizar o GridView para listar os produtos da categoria selecionada.
+- **Defina a**[propriedade AutoPostBack](https://msdn.microsoft.com/library/system.web.ui.webcontrols.listcontrol.autopostback%28VS.80%29.aspx)de categorias DropDownList**como true.** (Você pode fazer isso verificando a opção Enable AutoPostBack na marca inteligente da DropDownList.) Isso irá disparar um postback sempre que o item selecionado da DropDownList for alterado pelo usuário. Portanto, quando o usuário seleciona uma nova categoria da DropDownList, um postback será acontecerdo e o GridView será atualizado com os produtos para a categoria selecionada recentemente. (Essa é a abordagem que usei neste tutorial.)
+- **Adicione um controle Web de botão ao lado de DropDownList.** Defina sua propriedade `Text` como atualizar ou algo semelhante. Com essa abordagem, o usuário precisará selecionar uma nova categoria e clicar no botão. Clicar no botão causará um postback e atualizará o GridView para listar os produtos da categoria selecionada.
 
-As figuras 9 e 10 ilustram o relatório mestre/detalhes em ação.
+As figuras 9 e 10 ilustram o relatório mestre/detalhado em ação.
 
-[![Quando o primeiro visitando a página, os produtos de bebidas são exibidos](master-detail-filtering-with-a-dropdownlist-vb/_static/image26.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image25.png)
+[![ao visitar a página pela primeira vez, os produtos de bebidas são exibidos](master-detail-filtering-with-a-dropdownlist-vb/_static/image26.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image25.png)
 
-**Figura 9**: Quando o primeiro visitando a página, os produtos de bebidas são exibidos ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image27.png))
+**Figura 9**: ao visitar a página pela primeira vez, os produtos de bebidas são exibidos ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image27.png))
 
-[![Selecionar um novo produto (produzir) automaticamente faz com que um PostBack, atualizando o GridView](master-detail-filtering-with-a-dropdownlist-vb/_static/image29.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image28.png)
+[![selecionar um novo produto (produzir) gera automaticamente um PostBack, atualizando o GridView](master-detail-filtering-with-a-dropdownlist-vb/_static/image29.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image28.png)
 
-**Figura 10**: Selecionar um novo produto (produzir) automaticamente faz com que um PostBack, atualizando o GridView ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image30.png))
+**Figura 10**: selecionar um novo produto (produzir) gera automaticamente um postback, atualizando o GridView ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image30.png))
 
-## <a name="adding-a----choose-a-category----list-item"></a>Adicionando um Item de lista "-- Escolha uma categoria –"
+## <a name="adding-a----choose-a-category----list-item"></a>Adicionando um item de lista "--escolher uma categoria--"
 
-Ao visitar primeiro o `FilterByDropDownList.aspx` página categorias primeiro item da lista do DropDownList (Bebidas) é selecionado por padrão, mostrando os produtos de bebidas no GridView. Em vez de Mostrar produtos da primeira categoria, que podemos querer ter em vez disso, um item de DropDownList selecionado que diz algo como "-- Escolha uma categoria –".
+Ao visitar pela primeira vez o `FilterByDropDownList.aspx` página, o primeiro item de lista da DropDownList de categorias (bebidas) é selecionado por padrão, mostrando os produtos de bebidas no GridView. Em vez de mostrar os produtos da primeira categoria, poderemos, em vez disso, ter um item DropDownList selecionado que diz algo como, "--escolher uma categoria--".
 
-Para adicionar um novo item de lista a DropDownList, vá para a janela Propriedades e clique nas elipses no `Items` propriedade. Adicionar um novo item de lista com o `Text` "-- Escolha uma categoria –" e o `Value` `-1`.
+Para adicionar um novo item de lista à DropDownList, vá para a janela Propriedades e clique nas reticências na propriedade `Items`. Adicione um novo item de lista com o `Text` "--escolha uma categoria--" e o `Value` `-1`.
 
-[![Adicionar um – escolha uma categoria – Item de lista](master-detail-filtering-with-a-dropdownlist-vb/_static/image32.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image31.png)
+[![adicionar uma--escolha uma categoria--item de lista](master-detail-filtering-with-a-dropdownlist-vb/_static/image32.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image31.png)
 
-**Figura 11**: Adicionar um – escolha uma categoria – Item de lista ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image33.png))
+**Figura 11**: adicionar um – escolha uma categoria – item de lista ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image33.png))
 
-Como alternativa, você pode adicionar o item de lista, adicionando a seguinte marcação ao DropDownList:
+Como alternativa, você pode adicionar o item de lista adicionando a seguinte marcação ao DropDownList:
 
 [!code-aspx[Main](master-detail-filtering-with-a-dropdownlist-vb/samples/sample1.aspx)]
 
-Além disso, precisamos definir o controle de DropDownList `AppendDataBoundItems` como True porque quando as categorias são associadas ao DropDownList do ObjectDataSource elas vão substituir quaisquer itens da lista adicionados manualmente se `AppendDataBoundItems` não é True.
+Além disso, precisamos definir a `AppendDataBoundItems` do controle DropDownList como true porque, quando as categorias estiverem vinculadas a DropDownList do ObjectDataSource, eles substituirão quaisquer itens de lista adicionados manualmente se `AppendDataBoundItems` não for verdadeiro.
 
-![Defina a propriedade AppendDataBoundItems como True](master-detail-filtering-with-a-dropdownlist-vb/_static/image34.png)
+![Defina a propriedade AppendDataBoundItems como true](master-detail-filtering-with-a-dropdownlist-vb/_static/image34.png)
 
-**Figura 12**: Defina o `AppendDataBoundItems` propriedade como True
+**Figura 12**: definir a propriedade `AppendDataBoundItems` como true
 
-Após essas alterações, quando visitar a página é selecionada a opção "-- Escolha uma categoria –" pela primeira vez e nenhum produto é exibido.
+Após essas alterações, ao visitar a página a opção "--escolher uma categoria--" é selecionada e nenhum produto é exibido.
 
-[![O carregamento de página inicial sem produtos são exibidos.](master-detail-filtering-with-a-dropdownlist-vb/_static/image36.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image35.png)
+[![na página inicial carregar nenhum produto é exibido](master-detail-filtering-with-a-dropdownlist-vb/_static/image36.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image35.png)
 
-**Figura 13**: São exibidos nos produtos de não de carregamento de página inicial ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image37.png))
+**Figura 13**: na página inicial, não é possível carregar nenhum produto ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image37.png))
 
-O motivo pelo qual não há produtos são exibidos quando porque o item de lista "-- Escolha uma categoria –" está selecionado é porque seu valor é `-1` e não há nenhum produto no banco de dados com um `CategoryID` de `-1`. Se esse for o comportamento desejado, você terminou no momento! Se, no entanto, você deseja exibir *todos os* das categorias de quando o item de lista "-- Escolha uma categoria –" está selecionado, volte para o `ProductsBLL` classe e personalizar o `GetProductsByCategoryID(categoryID)` , de modo que ele invoca o `GetProducts()` método se o que for passado em *`categoryID`* parâmetro é menor que zero:
+O motivo pelo qual nenhum produto é exibido quando o item de lista "--escolher uma categoria--" é selecionado porque seu valor é `-1` e não há produtos no banco de dados com uma `CategoryID` de `-1`. Se esse for o comportamento desejado, você terminará neste ponto! No entanto, se você quiser exibir *todas* as categorias quando o item de lista "--escolher uma categoria--" for selecionado, retorne para a classe `ProductsBLL` e personalize o método `GetProductsByCategoryID(categoryID)` para que ele invoque o método `GetProducts()` se o parâmetro de *`categoryID`* passado for menor que zero:
 
 [!code-vb[Main](master-detail-filtering-with-a-dropdownlist-vb/samples/sample2.vb)]
 
-A técnica usada aqui é semelhante à abordagem que usamos para exibir todos os fornecedores de volta a [parâmetros declarativos](../basic-reporting/declarative-parameters-cs.md) tutorial, embora para este exemplo, estamos usando um valor de `-1` para indicar que todos os registros devem ser recuperado em oposição a `Nothing`. Isso ocorre porque o *`categoryID`* parâmetro do `GetProductsByCategoryID(categoryID)` método espera como o valor do inteiro passado, enquanto que no tutorial parâmetros declarativos que estavam passando um parâmetro de entrada de cadeia de caracteres.
+A técnica usada aqui é semelhante à abordagem que usamos para exibir todos os fornecedores de volta no tutorial de [parâmetros declarativos](../basic-reporting/declarative-parameters-cs.md) , embora, para este exemplo, estamos usando um valor de `-1` para indicar que todos os registros devem ser recuperados em oposição a `Nothing`. Isso ocorre porque o parâmetro *`categoryID`* do método `GetProductsByCategoryID(categoryID)` espera como um valor inteiro passado, enquanto no tutorial de parâmetros declarativos que estávamos passando em um parâmetro de entrada de cadeia de caracteres.
 
-A Figura 14 mostra uma captura de tela de `FilterByDropDownList.aspx` quando a opção "-- Escolha uma categoria –" estiver selecionada. Aqui, todos os produtos são exibidos por padrão, e o usuário pode restringir a exibição ao escolher uma categoria específica.
+A Figura 14 mostra uma captura de tela de `FilterByDropDownList.aspx` quando a opção "--escolher uma categoria--" está selecionada. Aqui, todos os produtos são exibidos por padrão e o usuário pode restringir a exibição escolhendo uma categoria específica.
 
-[![Todos os produtos estão agora listados por padrão](master-detail-filtering-with-a-dropdownlist-vb/_static/image39.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image38.png)
+[![todos os produtos agora estão listados por padrão](master-detail-filtering-with-a-dropdownlist-vb/_static/image39.png)](master-detail-filtering-with-a-dropdownlist-vb/_static/image38.png)
 
-**Figura 14**: Todos os produtos estão agora listados por padrão ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image40.png))
+**Figura 14**: todos os produtos agora são listados por padrão ([clique para exibir a imagem em tamanho normal](master-detail-filtering-with-a-dropdownlist-vb/_static/image40.png))
 
 ## <a name="summary"></a>Resumo
 
-Ao exibir dados relacionados hierarquicamente, isso geralmente ajuda a apresentar os dados usando os relatórios mestre/detalhes, do qual o usuário pode começar a ler os dados da parte superior da hierarquia e fazer drill down nos detalhes. Neste tutorial, examinamos a criação de um relatório simples mestre/detalhes mostrando produtos de uma determinada categoria. Isso foi realizado usando DropDownList para a lista de categorias e GridView para os produtos que pertencem à categoria selecionada.
+Ao exibir dados relacionados hierarquicamente, ele geralmente ajuda a apresentar os dados usando relatórios mestre/detalhados, dos quais o usuário pode começar a usar os dados da parte superior da hierarquia e fazer uma busca detalhada nos detalhes. Neste tutorial, examinamos a criação de um relatório mestre/detalhado simples que mostra os produtos de uma categoria selecionada. Isso foi feito usando uma DropDownList para a lista de categorias e um GridView para os produtos que pertencem à categoria selecionada.
 
-No [próximo tutorial](master-detail-filtering-with-two-dropdownlists-vb.md) , faremos o DropDownList interface, uma etapa adicional, usando duas DropDownLists.
+No [próximo tutorial](master-detail-filtering-with-two-dropdownlists-vb.md) , vamos pegar a interface DropDownList um passo adiante, usando dois DropDownLists.
 
 Boa programação!
 
 ## <a name="about-the-author"></a>Sobre o autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP.NET e fundador da [4GuysFromRolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Microsoft Web desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 2.0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser contatado pelo [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP. net e fundador da [4guysfromrolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 2,0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser acessado em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 > [!div class="step-by-step"]
 > [Anterior](master-detail-using-a-selectable-master-gridview-with-a-details-detailview-cs.md)

@@ -2,160 +2,160 @@
 uid: web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-vb
 title: Especificando a página mestra programaticamente (VB) | Microsoft Docs
 author: rick-anderson
-description: Examina a definir o conteúdo da página mestra programaticamente por meio do manipulador de eventos PreInit.
+description: Examina a configuração da página mestra da página de conteúdo programaticamente por meio do manipulador de eventos PreInit.
 ms.author: riande
 ms.date: 07/28/2008
 ms.assetid: 0edcd653-f24a-41aa-aef4-75f868fe5ac2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/specifying-the-master-page-programmatically-vb
 msc.type: authoredcontent
-ms.openlocfilehash: d075d0b66da8a0f4e2f0155c08b09a02a4ca71fb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 3b039b22bef38ae6ebf80be070820dc1638f87f4
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106941"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74618598"
 ---
 # <a name="specifying-the-master-page-programmatically-vb"></a>Especificar a página mestra programaticamente (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixar o código](http://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_09_VB.zip) ou [baixar PDF](http://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_09_VB.pdf)
+[Baixar código](https://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_09_VB.zip) ou [baixar PDF](https://download.microsoft.com/download/d/6/6/d66ad554-afdd-409e-a5c3-201b774fbb31/ASPNET_MasterPages_Tutorial_09_VB.pdf)
 
-> Examina a definir o conteúdo da página mestra programaticamente por meio do manipulador de eventos PreInit.
+> Examina a configuração da página mestra da página de conteúdo programaticamente por meio do manipulador de eventos PreInit.
 
 ## <a name="introduction"></a>Introdução
 
-Desde o Exemplo inaugural [ *criando um Layout de todo o Site usando páginas mestras*](creating-a-site-wide-layout-using-master-pages-vb.md), todo o conteúdo páginas referenciou sua página mestra declarativamente por meio o `MasterPageFile` atributo no `@Page`diretiva. Por exemplo, a seguinte `@Page` diretiva vincula a página de conteúdo para a página mestra `Site.master`:
+Como o exemplo inaugural na [*criação de um layout de todo o site usando páginas mestras*](creating-a-site-wide-layout-using-master-pages-vb.md), todas as páginas de conteúdo referenciaram sua página mestra declarativamente por meio do atributo `MasterPageFile` na diretiva `@Page`. Por exemplo, a diretiva de `@Page` a seguir vincula a página de conteúdo à página mestra `Site.master`:
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample1.aspx)]
 
-O [ `Page` classe](https://msdn.microsoft.com/library/system.web.ui.page.aspx) no `System.Web.UI` namespace inclui uma [ `MasterPageFile` propriedade](https://msdn.microsoft.com/library/system.web.ui.page.masterpagefile.aspx) que retorna o caminho para o conteúdo da página mestra; é essa propriedade definida pelo `@Page` diretiva. Essa propriedade também pode ser usada para especificar de forma programática o conteúdo da página mestra. Essa abordagem é útil se você quiser atribuir dinamicamente a página mestra com base em fatores externos, como o usuário visitar a página.
+A [classe`Page`](https://msdn.microsoft.com/library/system.web.ui.page.aspx) no namespace `System.Web.UI` inclui uma [Propriedade`MasterPageFile`](https://msdn.microsoft.com/library/system.web.ui.page.masterpagefile.aspx) que retorna o caminho para a página mestra da página de conteúdo; é essa propriedade definida pela diretiva `@Page`. Essa propriedade também pode ser usada para especificar programaticamente a página mestra da página de conteúdo. Essa abordagem será útil se você quiser atribuir dinamicamente a página mestra com base em fatores externos, como o usuário visitando a página.
 
-Neste tutorial adicionamos uma segunda página mestra ao nosso site e dinamicamente decidir qual página mestre a ser usada em tempo de execução.
+Neste tutorial, adicionamos uma segunda página mestra ao nosso site e decidimos dinamicamente qual página mestra usar no tempo de execução.
 
-## <a name="step-1-a-look-at-the-page-lifecycle"></a>Etapa 1: Examinar o ciclo de vida da página
+## <a name="step-1-a-look-at-the-page-lifecycle"></a>Etapa 1: uma olhada no ciclo de vida da página
 
-Sempre que uma solicitação chega ao servidor web para uma página ASP.NET que é uma página de conteúdo, o mecanismo do ASP.NET deve fuse da página de conteúdo de controles ContentPlaceHolder correspondente do controles na página mestra. Este fusion cria uma hierarquia de controle único pode, em seguida, percorrer o ciclo de vida da página típico.
+Sempre que uma solicitação chega ao servidor Web para uma página ASP.NET que é uma página de conteúdo, o mecanismo ASP.NET deve fundir os controles de conteúdo da página aos controles ContentPlaceHolder correspondentes da página mestra. Essa fusão cria uma única hierarquia de controle que pode prosseguir pelo ciclo de vida típico da página.
 
-Figura 1 ilustra essa fusion. Etapa 1 na Figura 1 mostra o conteúdo inicial e a hierarquias de controle de página mestra. No final de parte final do estágio PreInit o conteúdo de controles da página são adicionados ao ContentPlaceHolders correspondente na página mestra (etapa 2). Após essa fusion, a página mestra serve como a raiz da hierarquia de controle de adição múltipla. Isso fundida controle hierarquia, em seguida, é adicionada à página para produzir a hierarquia de controle finalizado (etapa 3). O resultado líquido é que a hierarquia de controle da página inclui a hierarquia de controle de adição múltipla.
+A Figura 1 ilustra essa fusão. A etapa 1 da Figura 1 mostra o conteúdo inicial e as hierarquias de controle da página mestra. Na extremidade final do estágio PreInit, os controles de conteúdo na página são adicionados aos ContentPlaceHolders correspondentes na página mestra (etapa 2). Após essa fusão, a página mestra serve como a raiz da hierarquia de controle com fusível. Essa hierarquia de controle com fusível é adicionada à página para produzir a hierarquia de controle finalizada (etapa 3). O resultado líquido é que a hierarquia de controle da página inclui a hierarquia de controle com fusível.
 
-[![A página mestra e hierarquias de controle da página de conteúdo são combinados juntos durante o estágio de PreInit](specifying-the-master-page-programmatically-vb/_static/image2.png)](specifying-the-master-page-programmatically-vb/_static/image1.png)
+[![as hierarquias de controle da página mestra e da página de conteúdo são combinadas em conjunto durante o estágio PreInit](specifying-the-master-page-programmatically-vb/_static/image2.png)](specifying-the-master-page-programmatically-vb/_static/image1.png)
 
-**Figura 01**: A página mestra e hierarquias de controle da página de conteúdo são combinados juntos durante o estágio de PreInit ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image3.png))
+**Figura 01**: a página mestra e as hierarquias de controle da página de conteúdo são combinadas em conjunto durante o estágio PreInit ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image3.png))
 
-## <a name="step-2-setting-themasterpagefileproperty-from-code"></a>Etapa 2: Definindo o`MasterPageFile`propriedade do código
+## <a name="step-2-setting-themasterpagefileproperty-from-code"></a>Etapa 2: definindo a propriedade`MasterPageFile`do código
 
-Qual página mestre partakes nesse fusion depende do valor da `Page` do objeto `MasterPageFile` propriedade. Definindo o `MasterPageFile` de atributo no `@Page` diretiva tem o efeito líquido de atribuir o `Page`do `MasterPageFile` propriedade durante o estágio de inicialização, que é o primeiro estágio do ciclo de vida da página. Como alternativa, podemos pode definir essa propriedade programaticamente. No entanto, é imperativo que essa propriedade ser definida antes que a fusão na Figura 1 ocorra.
+O que a página mestra partakes nessa fusão depende do valor da propriedade `MasterPageFile` do objeto de `Page`. Definir o atributo `MasterPageFile` na diretiva `@Page` tem o efeito líquido de atribuir a propriedade `MasterPageFile` do `Page`durante o estágio de inicialização, que é o primeiro estágio do ciclo de vida da página. Como alternativa, podemos definir essa propriedade programaticamente. No entanto, é imperativo que essa propriedade seja definida antes que a fusão da Figura 1 ocorra.
 
-No início do estágio PreInit a `Page` objeto gera sua [ `PreInit` evento](https://msdn.microsoft.com/library/system.web.ui.page.preinit.aspx) e chama seu [ `OnPreInit` método](https://msdn.microsoft.com/library/system.web.ui.page.onpreinit.aspx). Para definir a página mestra programaticamente, em seguida, podemos pode criar um manipulador de eventos para o `PreInit` evento ou substituir o `OnPreInit` método. Vamos examinar as duas abordagens.
+No início do estágio PreInit, o objeto `Page` gera seu [evento`PreInit`](https://msdn.microsoft.com/library/system.web.ui.page.preinit.aspx) e chama seu [método`OnPreInit`](https://msdn.microsoft.com/library/system.web.ui.page.onpreinit.aspx). Para definir a página mestra programaticamente, podemos criar um manipulador de eventos para o evento `PreInit` ou substituir o método `OnPreInit`. Vamos examinar ambas as abordagens.
 
-Comece abrindo `Default.aspx.vb`, o arquivo de classe code-behind para a home page do nosso site. Adicionar um manipulador de eventos para a página `PreInit` evento digitando o seguinte código:
+Comece abrindo `Default.aspx.vb`, o arquivo de classe code-behind para a home page do nosso site. Adicione um manipulador de eventos para o evento de `PreInit` da página digitando o seguinte código:
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample2.vb)]
 
-Aqui podemos definir o `MasterPageFile` propriedade. Atualize o código para que ele atribui o valor "~ / Master" para o `MasterPageFile` propriedade.
+Aqui, podemos definir a propriedade `MasterPageFile`. Atualize o código para que ele atribua o valor "~/site.Master" à propriedade `MasterPageFile`.
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample3.vb)]
 
-Se você definir um ponto de interrupção e iniciar com depuração, você verá que sempre que o `Default.aspx` página for visitada ou sempre que houver um postback para essa página, o `Page_PreInit` executa o manipulador de eventos e o `MasterPageFile` propriedade é atribuída a "~ / Master".
+Se você definir um ponto de interrupção e começar com a depuração, verá que sempre que a página de `Default.aspx` for visitada ou sempre que houver um postback para essa página, o manipulador de eventos de `Page_PreInit` será executado e a propriedade `MasterPageFile` será atribuída a "~/site.Master".
 
-Como alternativa, você pode substituir a `Page` da classe `OnPreInit` método e defina o `MasterPageFile` propriedade existe. Neste exemplo, vamos não definir a página mestra em uma página específica, mas ao invés de `BasePage`. Lembre-se de que criamos uma classe de página de base personalizada (`BasePage`) volta a [ *especificando o título, marcas Meta e outros cabeçalhos de HTML na página mestra* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md) tutorial. No momento `BasePage` substitui o `Page` da classe `OnLoadComplete` método, em que ele define a página `Title` propriedade com base nos dados de mapa do site. Vamos atualizar `BasePage` também substituir o `OnPreInit` método para especificar de forma programática a página mestra.
+Como alternativa, você pode substituir o método `OnPreInit` da classe `Page` e definir a propriedade `MasterPageFile` lá. Para este exemplo, não vamos definir a página mestra em uma página específica, mas em vez de `BasePage`. Lembre-se de que criamos uma classe de página de base personalizada (`BasePage`) de volta nos tutoriais [*especificando o título, as marcas meta e outros cabeçalhos HTML no tutorial da página mestra*](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-vb.md) . Atualmente `BasePage` substitui o método `OnLoadComplete` da classe `Page`, em que ele define a propriedade `Title` da página com base nos dados do mapa do site. Vamos atualizar `BasePage` também substituir o método `OnPreInit` para especificar programaticamente a página mestra.
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample4.vb)]
 
-Como todas as nossas páginas de conteúdo derivam `BasePage`, todos eles agora tem a sua página mestra programaticamente atribuída. Neste momento a `PreInit` manipulador de eventos no `Default.aspx.vb` é supérfluo; fique à vontade para removê-lo.
+Como todas as nossas páginas de conteúdo derivam de `BasePage`, todas elas agora têm sua página mestra programaticamente atribuída. Neste ponto, o manipulador de eventos `PreInit` no `Default.aspx.vb` é supérfluo; Fique à vontade para removê-lo.
 
-### <a name="what-about-thepagedirective"></a>E quanto a`@Page`diretiva?
+### <a name="what-about-thepagedirective"></a>E quanto à diretiva de`@Page`?
 
-O que pode ser um pouco confuso é que o conteúdo das páginas `MasterPageFile` propriedades agora estão sendo especificadas em dois lugares: por meio de programação na `BasePage` da classe `OnPreInit` método, bem como por meio o `MasterPageFile` atributo em cada página de conteúdo `@Page` diretiva.
+O que pode ser um pouco confuso é que as propriedades de `MasterPageFile` das páginas de conteúdo agora estão sendo especificadas em dois locais: programaticamente no método `OnPreInit` da classe `BasePage`, bem como pelo atributo `MasterPageFile` na diretiva `@Page` de cada página de conteúdo.
 
-O primeiro estágio do ciclo de vida da página é o estágio de inicialização. Durante esse estágio a `Page` do objeto `MasterPageFile` é atribuído o valor da propriedade de `MasterPageFile` atributo no `@Page` diretiva (se ele for fornecido). O estágio de PreInit segue o estágio de inicialização, e é aqui onde podemos definir programaticamente a `Page` do objeto `MasterPageFile` , substituindo o valor atribuído da propriedade a `@Page` diretiva. Porque estamos definindo a `Page` do objeto `MasterPageFile` propriedade por meio de programação, podemos pode remover o `MasterPageFile` de atributos da `@Page` diretiva sem afetar a experiência do usuário final. Para convencido de que isso, vá em frente e remova os `MasterPageFile` de atributos do `@Page` diretiva `Default.aspx` e, em seguida, visite a página por meio de um navegador. Como você poderia esperar, a saída é o mesmo que antes do atributo foi removido.
+O primeiro estágio no ciclo de vida da página é o estágio de inicialização. Durante esse estágio, a propriedade `MasterPageFile` do objeto de `Page` é atribuída ao valor do atributo `MasterPageFile` na diretiva `@Page` (se for fornecida). O estágio PreInit segue o estágio de inicialização e está aqui onde definimos de forma programática a propriedade `MasterPageFile` do objeto de `Page`, substituindo assim o valor atribuído da diretiva `@Page`. Como estamos definindo a propriedade de `MasterPageFile` do objeto de `Page` de forma programática, poderíamos remover o atributo `MasterPageFile` da diretiva `@Page` sem afetar a experiência do usuário final. Para convencê-lo, vá em frente e remova o atributo `MasterPageFile` da diretiva `@Page` no `Default.aspx` e visite a página por meio de um navegador. Como esperado, a saída é a mesma de antes de o atributo ser removido.
 
-Se o `MasterPageFile` propriedade é definida por meio de `@Page` diretiva ou por meio de programação é irrelevante para a experiência do usuário final. No entanto, o `MasterPageFile` de atributo no `@Page` diretiva é usada pelo Visual Studio durante o tempo de design para produzir o WYSIWYG exibição no Designer. Se você retornar ao `Default.aspx` no Visual Studio e navegue para o Designer, você verá a mensagem "Erro de página mestra: A página tem controles que exigem uma referência de página mestra, mas não for especificado nenhum"(veja a Figura 2).
+Se a propriedade de `MasterPageFile` é definida por meio da diretiva de `@Page` ou programaticamente, é irrelevante para a experiência do usuário final. No entanto, o atributo `MasterPageFile` na diretiva `@Page` é usado pelo Visual Studio durante o tempo de design para produzir a exibição WYSIWYG no designer. Se você retornar para `Default.aspx` no Visual Studio e navegar até o designer, verá a mensagem "erro de página mestra: a página tem controles que exigem uma referência de página mestra, mas nenhum é especificado" (consulte a Figura 2).
 
-Em resumo, você deve deixar o `MasterPageFile` de atributo no `@Page` diretiva para aproveitar uma experiência avançada de tempo de design no Visual Studio.
+Em suma, você precisa deixar o atributo `MasterPageFile` na diretiva `@Page` para desfrutar de uma experiência de tempo de design rica no Visual Studio.
 
-[![Visual Studio usa o @Page atributo de MasterPageFile da diretiva para renderizar a exibição de Design](specifying-the-master-page-programmatically-vb/_static/image5.png)](specifying-the-master-page-programmatically-vb/_static/image4.png)
+[![o Visual Studio usa o atributo MasterPagefile da diretiva de @Page para renderizar a exibição de design](specifying-the-master-page-programmatically-vb/_static/image5.png)](specifying-the-master-page-programmatically-vb/_static/image4.png)
 
-**Figura 02**: Visual Studio usa o `@Page` da diretiva `MasterPageFile` o modo de exibição de Design de atributo para renderização ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image6.png))
+**Figura 02**: o Visual Studio usa o atributo `MasterPageFile` da diretiva de `@Page` para renderizar o modo de exibição de design ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image6.png))
 
-## <a name="step-3-creating-an-alternative-master-page"></a>Etapa 3: Criando uma página mestra alternativa
+## <a name="step-3-creating-an-alternative-master-page"></a>Etapa 3: criando uma página mestra alternativa
 
-Porque um conteúdo da página mestra pode ser definida por meio de programação em tempo de execução é possível carregar dinamicamente uma página mestra específica com base em alguns critérios externos. Essa funcionalidade pode ser útil em situações onde layout do site precisará variam com base no usuário. Por exemplo, um aplicativo web do mecanismo de blog pode permitir que seus usuários a escolher um layout para o seu blog, onde cada layout é associada uma página mestre diferente. Em tempo de execução, quando um visitante está exibindo o blog de um usuário, o aplicativo web precisa determinar o layout do blog e associar dinamicamente a página mestra correspondente com a página de conteúdo.
+Como a página mestra de uma página de conteúdo pode ser definida programaticamente em tempo de execução, é possível carregar dinamicamente uma determinada página mestra com base em alguns critérios externos. Essa funcionalidade pode ser útil em situações em que o layout do site precisa variar com base no usuário. Por exemplo, um aplicativo Web do mecanismo de blog pode permitir que seus usuários escolham um layout para seu blog, onde cada layout é associado a uma página mestra diferente. Em tempo de execução, quando um visitante estiver visualizando o blog de um usuário, o aplicativo Web precisará determinar o layout do blog e associar dinamicamente a página mestra correspondente à página de conteúdo.
 
-Vamos examinar como carregar dinamicamente uma página mestra em tempo de execução com base em alguns critérios externos. Nosso site no momento, contém apenas uma página mestra (`Site.master`). Precisamos de outra página mestra para ilustrar a escolha de uma página mestra em tempo de execução. Esta etapa se concentra em criar e configurar a nova página mestra. Etapa 4 examina determinando qual página mestre para usar em tempo de execução.
+Vamos examinar como carregar dinamicamente uma página mestra no tempo de execução com base em alguns critérios externos. Nosso site contém atualmente apenas uma página mestra (`Site.master`). Precisamos de outra página mestra para ilustrar a escolha de uma página mestra em tempo de execução. Esta etapa se concentra na criação e configuração da nova página mestra. A etapa 4 examina a determinação da página mestra a ser usada no tempo de execução.
 
-Criar uma nova página mestre na pasta raiz chamada `Alternate.master`. Também adicione uma nova folha de estilo para o site da Web denominado `AlternateStyles.css`.
+Crie uma nova página mestra na pasta raiz chamada `Alternate.master`. Além disso, adicione uma nova folha de estilo ao site denominada `AlternateStyles.css`.
 
-[![Adicione outro arquivo de página mestra e CSS para o site](specifying-the-master-page-programmatically-vb/_static/image8.png)](specifying-the-master-page-programmatically-vb/_static/image7.png)
+[![adicionar outra página mestra e arquivo CSS ao site](specifying-the-master-page-programmatically-vb/_static/image8.png)](specifying-the-master-page-programmatically-vb/_static/image7.png)
 
-**Figura 03**: Adicionar outra página mestra e arquivo CSS ao site ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image9.png))
+**Figura 03**: adicionar outra página mestra e arquivo CSS ao site ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image9.png))
 
-Eu criei o `Alternate.master` página mestra para o título exibido na parte superior da página, centralizada e em um plano de fundo azul marinho. Eu liberadas da coluna esquerda e movido abaixo que o conteúdo a `MainContent` controle ContentPlaceHolder, que agora se estende por toda a largura da página. Além disso, eu nixed a lista não ordenada de lições e substituímos por uma lista horizontal acima `MainContent`. Atualizei também as fontes e cores usadas pela página mestre (e, por extensão, suas páginas de conteúdo). A Figura 4 mostra `Default.aspx` ao usar o `Alternate.master` página mestra.
+Eu projetei a página mestra de `Alternate.master` para que o título seja exibido na parte superior da página, centralizada e em um plano de fundo azul. Eu despercebii da coluna esquerda e movi esse conteúdo sob o controle `MainContent` ContentPlaceHolder, que agora abrange toda a largura da página. Além disso, eu nixed a lista de lições não ordenadas e a substituai por uma lista horizontal acima `MainContent`. Também atualizei as fontes e cores usadas pela página mestra (e, por extensão, suas páginas de conteúdo). A Figura 4 mostra `Default.aspx` ao usar a página mestra de `Alternate.master`.
 
 > [!NOTE]
-> O ASP.NET inclui a capacidade de definir *temas*. Um tema é uma coleção de imagens, arquivos CSS e relacionadas a estilo Web controle configurações de propriedade que podem ser aplicadas a uma página em tempo de execução. Os temas são a melhor opção se os layouts do seu site diferem apenas em imagens exibidas e por suas regras CSS. Se os layouts mais substancialmente, diferem como o uso de controles da Web diferentes ou com um layout radicalmente diferente, em seguida, você precisará usar separado de páginas mestras. Consulte a seção leitura adicional no final deste tutorial para obter mais informações sobre temas.
+> O ASP.NET inclui a capacidade de definir *temas*. Um tema é uma coleção de imagens, arquivos CSS e configurações de propriedade de controle da Web relacionadas a estilo que podem ser aplicadas a uma página em tempo de execução. Os temas são a melhor opção se os layouts do site diferirem apenas nas imagens exibidas e por suas regras de CSS. Se os layouts diferem mais substancialmente, como usar diferentes controles da Web ou ter um layout radicalmente diferente, você precisará usar páginas mestras separadas. Consulte a seção leitura adicional no final deste tutorial para obter mais informações sobre temas.
 
-[![Nossas páginas de conteúdo agora podem usar uma nova aparência](specifying-the-master-page-programmatically-vb/_static/image11.png)](specifying-the-master-page-programmatically-vb/_static/image10.png)
+[![nossas páginas de conteúdo agora podem usar uma nova aparência](specifying-the-master-page-programmatically-vb/_static/image11.png)](specifying-the-master-page-programmatically-vb/_static/image10.png)
 
-**Figura 04**: Nossas páginas de conteúdo agora podem usar uma nova aparência ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image12.png))
+**Figura 04**: nossas páginas de conteúdo agora podem usar uma nova aparência ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image12.png))
 
-Quando o mestre e a marcação de páginas de conteúdo são combinados, o `MasterPage` classe verificações para garantir que o conteúdo de cada controle na página de conteúdo faz referência a um ContentPlaceHolder na página mestra. Uma exceção é lançada se um controle de conteúdo que faz referência a um ContentPlaceHolder inexistente for encontrado. Em outras palavras, é imperativo que a página mestra que está sendo atribuída à página de conteúdo tenha um ContentPlaceHolder para cada controle na página de conteúdo de conteúdo.
+Quando a marcação mestre e as páginas de conteúdo são combinadas, a classe `MasterPage` verifica se cada controle de conteúdo na página de conteúdo faz referência a um ContentPlaceHolder na página mestra. Uma exceção será gerada se um controle de conteúdo que faz referência a um ContentPlaceHolder não existente for encontrado. Em outras palavras, é imperativo que a página mestra que está sendo atribuída à página de conteúdo tenha um ContentPlaceHolder para cada controle de conteúdo na página de conteúdo.
 
-O `Site.master` página mestra inclui quatro controles ContentPlaceHolder:
+A página mestra de `Site.master` inclui quatro controles ContentPlaceHolder:
 
 - `head`
 - `MainContent`
 - `QuickLoginUI`
 - `LeftColumnContent`
 
-Algumas das páginas de conteúdo no nosso site incluem apenas um ou dois controles de conteúdo; outras incluem um controle de conteúdo para cada um do ContentPlaceHolders disponíveis. Se nossa nova página mestra (`Alternate.master`) nunca pode ser atribuído a essas páginas de conteúdo que tem controles de conteúdo para todos os ContentPlaceHolders na `Site.master` e em seguida, é essencial que `Alternate.master` também incluem os mesmos controles de ContentPlaceHolder `Site.master`.
+Algumas das páginas de conteúdo em nosso site incluem apenas um ou dois controles de conteúdo; Outras incluem um controle de conteúdo para cada um dos ContentPlaceHolders disponíveis. Se nossa nova página mestra (`Alternate.master`) pode ser atribuída a essas páginas de conteúdo que têm controles de conteúdo para todos os ContentPlaceHolders em `Site.master`, é essencial que `Alternate.master` também inclua os mesmos controles ContentPlaceHolder que `Site.master`.
 
-Para obter sua `Alternate.master` página mestra para ser semelhante ao explorar (veja a Figura 4), comece definindo estilos da página mestra no `AlternateStyles.css` folha de estilos. Adicione as seguintes regras em `AlternateStyles.css`:
+Para que sua página mestra de `Alternate.master` seja semelhante a minha (consulte a Figura 4), Comece definindo os estilos da página mestra na folha estilo `AlternateStyles.css`. Adicione as seguintes regras ao `AlternateStyles.css`:
 
 [!code-css[Main](specifying-the-master-page-programmatically-vb/samples/sample5.css)]
 
-Em seguida, adicione a seguinte marcação declarativa para `Alternate.master`. Como você pode ver, `Alternate.master` contém quatro controles ContentPlaceHolder com o mesmo `ID` valores como controles ContentPlaceHolder na `Site.master`. Além disso, ele inclui um controle ScriptManager, que é necessário para as páginas que usam a estrutura ASP.NET AJAX em nosso site.
+Em seguida, adicione a seguinte marcação declarativa a `Alternate.master`. Como você pode ver, `Alternate.master` contém quatro controles ContentPlaceHolder com os mesmos valores de `ID` que os controles ContentPlaceHolder em `Site.master`. Além disso, ele inclui um controle ScriptManager, que é necessário para essas páginas em nosso site que usam a estrutura AJAX do ASP.NET.
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample6.aspx)]
 
-### <a name="testing-the-new-master-page"></a>Teste a nova página mestra
+### <a name="testing-the-new-master-page"></a>Testando a nova página mestra
 
-Para testar essa nova atualização de página mestra a `BasePage` da classe `OnPreInit` método para que o `MasterPageFile` é atribuído o valor da propriedade `"~/Alternate.maser"` e, em seguida, visite o site. Todas as páginas devem funcionar sem erros, exceto dois: `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx`. Adição de um produto a DetailsView na `~/Admin/AddProduct.aspx` resulta em uma `NullReferenceException` da linha de código que tenta definir a página mestra `GridMessageText` propriedade. Ao visitar `~/Admin/Products.aspx` um `InvalidCastException` é lançada no carregamento da página com a mensagem: "Não é possível converter o objeto do tipo ' ASP.alternate\_mestre ' para o tipo ' ASP.site\_mestre '."
+Para testar essa nova página mestra, atualize o método `OnPreInit` da classe `BasePage` de forma que a propriedade `MasterPageFile` receba o valor `"~/Alternate.maser"` e visite o site. Cada página deve funcionar sem erro, exceto duas: `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx`. Adicionar um produto ao DetailsView no `~/Admin/AddProduct.aspx` resulta em um `NullReferenceException` da linha de código que tenta definir a propriedade `GridMessageText` da página mestra. Ao visitar `~/Admin/Products.aspx` um `InvalidCastException` é gerado no carregamento da página com a mensagem: "não é possível converter o objeto do tipo ' ASP. Alternate\_mestre ' para o tipo ' ASP. site\_Master '."
 
-Esses erros acontecem porque o `Site.master` classe code-behind inclui eventos públicos, propriedades e métodos que não estão definidos na `Alternate.master`. A parte de marcação dessas duas páginas têm um `@MasterType` diretiva que faz referência a `Site.master` página mestra.
+Esses erros ocorrem porque a classe code-behind `Site.master` inclui eventos públicos, propriedades e métodos que não são definidos no `Alternate.master`. A parte de marcação dessas duas páginas tem uma diretiva `@MasterType` que faz referência à página mestra `Site.master`.
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample7.aspx)]
 
-Além disso, ovládacího prvku DetailsView `ItemInserted` manipulador de eventos no `~/Admin/AddProduct.aspx` inclui o código que projeta a tipagem `Page.Master` propriedade para um objeto do tipo `Site`. O `@MasterType` diretiva (usado dessa forma) e a conversão em de `ItemInserted` acople de manipulador de eventos a `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx` páginas para o `Site.master` página mestra.
+Além disso, o manipulador de eventos de `ItemInserted` do DetailsView em `~/Admin/AddProduct.aspx` inclui o código que converte a propriedade de `Page.Master` de tipo flexível em um objeto de tipos `Site`. A diretiva de `@MasterType` (usada dessa forma) e a conversão no manipulador de eventos `ItemInserted` acopla rigidamente as páginas `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx` à página mestra de `Site.master`.
 
-Para interromper esse acoplamento rígido, podemos ter `Site.master` e `Alternate.master` derivam de uma classe base comum que contém definições para os membros públicos. Depois disso, podemos atualizar o `@MasterType` diretiva para fazer referência a esse tipo de base comum.
+Para interromper esse acoplamento rígido, podemos ter `Site.master` e `Alternate.master` derivar de uma classe base comum que contém definições para os membros públicos. Depois disso, podemos atualizar a diretiva `@MasterType` para fazer referência a esse tipo base comum.
 
-### <a name="creating-a-custom-base-master-page-class"></a>Criando uma classe de página mestra de Base personalizada
+### <a name="creating-a-custom-base-master-page-class"></a>Criando uma classe de página mestra de base personalizada
 
-Adicione um novo arquivo de classe para o `App_Code` pasta chamada `BaseMasterPage.vb` que derivam de `System.Web.UI.MasterPage`. Precisamos definir a `RefreshRecentProductsGrid` método e o `GridMessageText` propriedade na `BaseMasterPage`, mas estamos simplesmente não é possível movê-los lá de `Site.master` porque esses membros trabalham com controles de Web que são específicos para o `Site.master` página mestra (o `RecentProducts` GridView e `GridMessage` rótulo).
+Adicione um novo arquivo de classe à pasta `App_Code` chamada `BaseMasterPage.vb` e faça com que ela derive de `System.Web.UI.MasterPage`. Precisamos definir o método `RefreshRecentProductsGrid` e a propriedade `GridMessageText` em `BaseMasterPage`, mas não podemos simplesmente movê-los para o `Site.master` porque esses membros trabalham com controles da Web que são específicos para a `Site.master` página mestra (o `RecentProducts` GridView e `GridMessage` rótulo).
 
-O que precisamos fazer é configurar `BaseMasterPage` de tal forma que esses membros são definidos por lá, mas, na verdade, são implementados por `BaseMasterPage`de classes derivadas (`Site.master` e `Alternate.master`). Esse tipo de herança é possível marcar a classe como `MustInherit` e seus membros como `MustOverride`. Em resumo, adicionar essas palavras-chave para a classe e seus dois membros anuncia que `BaseMasterPage` ainda não implementado `RefreshRecentProductsGrid` e `GridMessageText`, mas que serão de suas classes derivadas.
+O que precisamos fazer é configurar `BaseMasterPage` de forma que esses membros sejam definidos lá, mas que são realmente implementados pelas classes derivadas de `BaseMasterPage`(`Site.master` e `Alternate.master`). Esse tipo de herança é possível marcando a classe como `MustInherit` e seus membros como `MustOverride`. Em suma, adicionar essas palavras-chave à classe e seus dois membros anuncia que `BaseMasterPage` não implementou `RefreshRecentProductsGrid` e `GridMessageText`, mas que suas classes derivadas irão.
 
-Também precisamos definir a `PricesDoubled` evento no `BaseMasterPage` e fornecem um meio por classes derivadas para gerar o evento. O padrão usado no .NET Framework para facilitar esse comportamento é criar um evento público na classe base e adicionar um método protegido e substituível chamado `OnEventName`. As classes derivadas, em seguida, podem chamar esse método para gerar o evento ou podem substituí-la para executar código imediatamente antes ou depois que o evento é gerado.
+Também precisamos definir o evento `PricesDoubled` em `BaseMasterPage` e fornecer um meio pelas classes derivadas para gerar o evento. O padrão usado no .NET Framework para facilitar esse comportamento é criar um evento público na classe base e adicionar um método protegido e substituível chamado `OnEventName`. Classes derivadas podem então chamar esse método para gerar o evento ou pode substituí-lo para executar o código imediatamente antes ou depois que o evento é gerado.
 
-Atualização de seu `BaseMasterPage` de classe para que ele contenha o código a seguir:
+Atualize sua classe de `BaseMasterPage` para que ela contenha o seguinte código:
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample8.vb)]
 
-Em seguida, vá para o `Site.master` de lógica de classe e fazer com que ele derivam `BaseMasterPage`. Porque `BaseMasterPage` contém membros marcados `MustOverride` precisamos substituir esses membros no `Site.master`. Adicionar o `Overrides` palavra-chave para as definições de método e propriedade. Também atualizar o código que gera o `PricesDoubled` evento na `DoublePrice` do botão `Click` manipulador de eventos com uma chamada para a classe base `OnPricesDoubled` método.
+Em seguida, vá para a classe code-behind `Site.master` e faça com que ela derive de `BaseMasterPage`. Como `BaseMasterPage` contém membros marcados `MustOverride` precisamos substituir esses membros aqui no `Site.master`. Adicione a palavra-chave `Overrides` às definições de método e propriedade. Além disso, atualize o código que gera o evento `PricesDoubled` no manipulador de eventos `Click` do botão `DoublePrice` com uma chamada para o método `OnPricesDoubled` da classe base.
 
-Após essas modificações a `Site.master` classe code-behind deve conter o código a seguir:
+Depois dessas modificações, a classe code-behind `Site.master` deve conter o seguinte código:
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample9.vb)]
 
-Também precisamos atualizar `Alternate.master`da classe code-behind derivar `BaseMasterPage` e substitua os dois `MustOverride` membros. Mas, como `Alternate.master` não contém um GridView que lista os produtos mais recentes, nem um rótulo que exibe uma mensagem depois de um novo produto é adicionado ao banco de dados, esses métodos não precisam fazer nada.
+Também precisamos atualizar a classe code-behind de `Alternate.master`para derivar de `BaseMasterPage` e substituir os dois membros `MustOverride`. Mas como `Alternate.master` não contém um GridView que lista os produtos mais recentes nem um rótulo que exibe uma mensagem depois que um novo produto é adicionado ao banco de dados, esses métodos não precisam fazer nada.
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample10.vb)]
 
-### <a name="referencing-the-base-master-page-class"></a>Referência à classe de página mestre da Base de dados de
+### <a name="referencing-the-base-master-page-class"></a>Referenciando a classe de página mestra de base
 
-Agora que concluímos a `BaseMasterPage` da classe e ter nossas duas páginas mestras estendê-lo, a etapa final é atualizar o `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx` páginas para se referir a esse tipo comum. Comece alterando o `@MasterType` diretiva em ambas as páginas de:
+Agora que concluímos a classe `BaseMasterPage` e temos duas páginas mestras que a estendem, nossa etapa final é atualizar as páginas `~/Admin/AddProduct.aspx` e `~/Admin/Products.aspx` para fazer referência a esse tipo comum. Comece alterando a diretiva `@MasterType` em ambas as páginas de:
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample11.aspx)]
 
@@ -163,92 +163,92 @@ Para:
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample12.aspx)]
 
-Em vez de referenciar um caminho de arquivo, o `@MasterType` propriedade agora referencia o tipo base (`BaseMasterPage`). Consequentemente, o tipo mais acentuado `Master` usada em classes de code-behind das duas páginas de propriedade agora é do tipo `BaseMasterPage` (em vez do tipo `Site`). Com essa alteração em vigor revisitar `~/Admin/Products.aspx`. Anteriormente, isso resultou em um erro de conversão porque a página está configurada para usar o `Alternate.master` página mestra, mas o `@MasterType` diretiva referenciada a `Site.master` arquivo. Mas agora a página é renderizada sem erro. Isso ocorre porque o `Alternate.master` página mestra pode ser convertida em um objeto do tipo `BaseMasterPage` (já que ele estende-o).
+Em vez de referenciar um caminho de arquivo, a propriedade `@MasterType` agora faz referência ao tipo base (`BaseMasterPage`). Consequentemente, a propriedade de `Master` fortemente tipada usada em classes code-behind de páginas agora é do tipo `BaseMasterPage` (em vez do tipo `Site`). Com essa alteração em vigor, reveja `~/Admin/Products.aspx`. Anteriormente, isso resultou em um erro de conversão porque a página está configurada para usar a página mestra de `Alternate.master`, mas a diretiva `@MasterType` referenciou o arquivo `Site.master`. Mas agora a página é renderizada sem erro. Isso ocorre porque a página mestra de `Alternate.master` pode ser convertida em um objeto do tipo `BaseMasterPage` (já que ela a estende).
 
-Há uma pequena alteração que precisa ser feita no `~/Admin/AddProduct.aspx`. O controle de DetailsView `ItemInserted` manipulador de eventos usa ambos os fortemente tipado `Master` propriedade e a tipagem `Page.Master` propriedade. Corrigimos a referência fortemente tipada quando atualizamos a `@MasterType` diretiva, mas estamos ainda precisará atualizar a referência fracamente tipada. Substitua a linha de código a seguir:
+Há uma pequena alteração que precisa ser feita em `~/Admin/AddProduct.aspx`. O manipulador de eventos de `ItemInserted` do controle DetailsView usa a propriedade `Master` fortemente tipada e a propriedade `Page.Master` com rigidez de tipos. Corrigimos a referência fortemente tipada quando atualizamos a diretiva `@MasterType`, mas ainda precisamos atualizar a referência com rigidez de tipos. Substitua a seguinte linha de código:
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample13.vb)]
 
-Com o seguinte, que converte `Page.Master` para o tipo de base:
+Com o seguinte, que converte `Page.Master` para o tipo base:
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample14.vb)]
 
-## <a name="step-4-determining-what-master-page-to-bind-to-the-content-pages"></a>Etapa 4: Determinando qual página mestra para vincular a páginas de conteúdo
+## <a name="step-4-determining-what-master-page-to-bind-to-the-content-pages"></a>Etapa 4: determinando qual página mestra associar às páginas de conteúdo
 
-Nossos `BasePage` classe atualmente define todas as páginas conteúdas `MasterPageFile` propriedades para um valor embutido em código no estágio do ciclo de vida de página PreInit. Podemos atualizar esse código para basear a página mestra em alguns fatores externos. Talvez a página mestra para carregar depende das preferências do usuário conectado no momento. Nesse caso, seria preciso escrever o código na `OnPreInit` método no `BasePage` que procura as preferências de página mestra do usuário no momento, visitando.
+Nossa classe de `BasePage` atualmente define todas as propriedades de `MasterPageFile` de páginas de conteúdo para um valor embutido no estágio PreInit do ciclo de vida da página. Podemos atualizar esse código para basear a página mestra em algum fator externo. Talvez a página mestra a ser carregada dependa das preferências do usuário conectado no momento. Nesse caso, seria necessário escrever código no método `OnPreInit` no `BasePage` que pesquisa as preferências da página mestra do usuário que está visitando no momento.
 
-Vamos criar uma página da web que permite que o usuário escolha qual página mestre usar - `Site.master` ou `Alternate.master` - e salvar essa opção em uma variável de sessão. Comece criando uma nova página da web no diretório raiz chamado `ChooseMasterPage.aspx`. Ao criar essa página (ou quaisquer outras páginas de conteúdo daqui em diante) que você não precisa vinculá-la a uma página mestra, porque a página mestra está definida por meio de programação `BasePage`. No entanto, se você não associar a nova página a uma página mestra, em seguida, marcação declarativa de padrão da nova página contém um formulário da Web e outros tipos de conteúdo fornecido pela página mestre. Você precisará substituir manualmente essa marcação com os controles de conteúdo apropriados. Por esse motivo, acho mais fácil associar a nova página ASP.NET para uma página mestra.
+Vamos criar uma página da Web que permita ao usuário escolher qual página mestra usar-`Site.master` ou `Alternate.master`-e salvar essa opção em uma variável de sessão. Comece criando uma nova página da Web no diretório raiz chamado `ChooseMasterPage.aspx`. Ao criar esta página (ou quaisquer outras páginas de conteúdo daqui em diante), você não precisa associá-la a uma página mestra porque a página mestra está definida programaticamente no `BasePage`. No entanto, se você não associar a nova página a uma página mestra, a marcação declarativa padrão da nova página conterá um formulário da Web e outro conteúdo fornecido pela página mestra. Você precisará substituir manualmente essa marcação pelos controles de conteúdo apropriados. Por esse motivo, acho mais fácil associar a nova página ASP.NET a uma página mestra.
 
 > [!NOTE]
-> Porque `Site.master` e `Alternate.master` têm o mesmo conjunto de controles ContentPlaceHolder não importa o que você escolher ao criar a nova página de conteúdo de página mestra. Para manter a consistência, eu sugeriria usando `Site.master`.
+> Como `Site.master` e `Alternate.master` têm o mesmo conjunto de controles ContentPlaceHolder, não importa qual página mestra você escolhe ao criar a página novo conteúdo. Para fins de consistência, sugiro o uso de `Site.master`.
 
-[![Adicione uma nova página de conteúdo para o site](specifying-the-master-page-programmatically-vb/_static/image14.png)](specifying-the-master-page-programmatically-vb/_static/image13.png)
+[![adicionar uma nova página de conteúdo ao site](specifying-the-master-page-programmatically-vb/_static/image14.png)](specifying-the-master-page-programmatically-vb/_static/image13.png)
 
-**Figura 05**: Adicione uma nova página de conteúdo para o site ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image15.png))
+**Figura 05**: adicionar uma nova página de conteúdo ao site ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image15.png))
 
-Atualização de `Web.sitemap` arquivo para incluir uma entrada para esta lição. Adicione a seguinte marcação abaixo o `<siteMapNode>` da lição páginas mestras e AJAX ASP.NET:
+Atualize o arquivo de `Web.sitemap` para incluir uma entrada para esta lição. Adicione a seguinte marcação abaixo do `<siteMapNode>` para as páginas mestras e a lição do ASP.NET AJAX:
 
 [!code-xml[Main](specifying-the-master-page-programmatically-vb/samples/sample15.xml)]
 
-Antes de adicionar qualquer conteúdo para o `ChooseMasterPage.aspx` página Reserve um tempo para atualizar a classe de code-behind da página, de modo que ele deriva `BasePage` (em vez de `System.Web.UI.Page`). Em seguida, adicione um controle DropDownList para a página, defina suas `ID` propriedade para `MasterPageChoice`, e adicione dois ListItems com o `Text` valores de "~ / Master" e "~ / Alternate.master".
+Antes de adicionar qualquer conteúdo à página de `ChooseMasterPage.aspx` Reserve um tempo para atualizar a classe code-behind da página para que ela seja derivada de `BasePage` (em vez de `System.Web.UI.Page`). Em seguida, adicione um controle DropDownList à página, defina sua propriedade `ID` como `MasterPageChoice`e adicione duas ListItems com os valores de `Text` de "~/site.Master" e "~/Alternate.Master".
 
-Adicione um controle da Web de botão para a página e defina suas `ID` e `Text` propriedades a serem `SaveLayout` e "Salvar Layout escolha", respectivamente. Neste ponto marcação declarativa de sua página deve ser semelhante ao seguinte:
+Adicione um controle Web de botão à página e defina suas propriedades `ID` e `Text` como `SaveLayout` e "salvar layout Choice", respectivamente. Neste ponto, a marcação declarativa de sua página deve ser semelhante ao seguinte:
 
 [!code-aspx[Main](specifying-the-master-page-programmatically-vb/samples/sample16.aspx)]
 
-Quando a página é visitada primeiro é necessário exibir a opção do usuário selecionado no momento de página mestra. Criar um `Page_Load` manipulador de eventos e adicione o seguinte código:
+Quando a página é visitada pela primeira vez, precisamos exibir a opção de página mestra selecionada no momento do usuário. Crie um manipulador de eventos `Page_Load` e adicione o seguinte código:
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample17.vb)]
 
-O código acima é executado somente na primeira visita de página (e não em postbacks subsequentes). Ele primeiro verifica para ver se a variável de sessão `MyMasterPage` existe. Em caso afirmativo, ele tenta localizar o item de lista correspondente no `MasterPageChoice` DropDownList. Se um item de lista correspondente for encontrado, sua `Selected` estiver definida como `True`.
+O código acima é executado somente na primeira página de visita (e não em postbacks subsequentes). Ele verifica primeiro se a variável de sessão `MyMasterPage` existe. Se tiver, ele tentará localizar o ListItem correspondente no `MasterPageChoice` DropDownList. Se um ListItem correspondente for encontrado, sua propriedade `Selected` será definida como `True`.
 
-Também precisamos de código que salva a escolha do usuário para o `MyMasterPage` variável de sessão. Crie um manipulador de eventos para o `SaveLayout` do botão `Click` eventos e adicione o seguinte código:
+Também precisamos de um código que salve a opção do usuário na variável de sessão `MyMasterPage`. Crie um manipulador de eventos para o evento de `Click` do botão de `SaveLayout` e adicione o seguinte código:
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample18.vb)]
 
 > [!NOTE]
-> No momento o `Click` manipulador de eventos é executado em um postback, a página mestra já foi selecionada. Portanto, a seleção do usuário lista suspensa não entrarão em vigor até que a próxima página visitar. O `Response.Redirect` força o navegador para solicitar novamente `ChooseMasterPage.aspx`.
+> No momento em que o manipulador de eventos de `Click` é executado no postback, a página mestra já foi selecionada. Portanto, a seleção de lista suspensa do usuário não estará em vigor até que a próxima página seja visitada. O `Response.Redirect` força o navegador a solicitar novamente `ChooseMasterPage.aspx`.
 
-Com o `ChooseMasterPage.aspx` página completa, nossa tarefa final é ter `BasePage` atribuir a `MasterPageFile` propriedade com base no valor da `MyMasterPage` variável de sessão. Se não for definida a variável de sessão têm `BasePage` padrão para `Site.master`.
+Com a página de `ChooseMasterPage.aspx` concluída, nossa tarefa final é ter `BasePage` atribuir a propriedade `MasterPageFile` com base no valor da variável de sessão `MyMasterPage`. Se a variável de sessão não estiver definida, `BasePage` padrão será `Site.master`.
 
 [!code-vb[Main](specifying-the-master-page-programmatically-vb/samples/sample19.vb)]
 
 > [!NOTE]
-> Eu Movi o código que atribui a `Page` do objeto `MasterPageFile` propriedade do `OnPreInit` manipulador de eventos e em dois métodos separados. Esse método primeiro, `SetMasterPageFile`, atribui o `MasterPageFile` propriedade com o valor retornado pelo método segundo, `GetMasterPageFileFromSession`. Eu ter marcado a `SetMasterPageFile` método `Overridable` para que as futuras classes que estendem `BasePage` pode substituí-la para implementar a lógica personalizada, opcionalmente, se necessário. Veremos um exemplo de substituição `BasePage`do `SetMasterPageFile` propriedade no próximo tutorial.
+> Movi o código que atribui a propriedade `MasterPageFile` do objeto de `Page` do manipulador de eventos `OnPreInit` e em dois métodos separados. Esse primeiro método, `SetMasterPageFile`, atribui a propriedade `MasterPageFile` ao valor retornado pelo segundo método, `GetMasterPageFileFromSession`. Eu marcoui o método `SetMasterPageFile` `Overridable` para que as classes futuras que estendem `BasePage` possam opcionalmente substituí-lo para implementar a lógica personalizada, se necessário. Veremos um exemplo de substituição da propriedade `SetMasterPageFile` do `BasePage`no próximo tutorial.
 
-Com esse código, visite o `ChooseMasterPage.aspx` página. Inicialmente, o `Site.master` página mestra é selecionado (consulte a Figura 6), mas o usuário pode selecionar uma página mestra diferente na lista suspensa.
+Com esse código em vigor, visite a página `ChooseMasterPage.aspx`. Inicialmente, a página mestra de `Site.master` é selecionada (veja a Figura 6), mas o usuário pode escolher uma página mestra diferente na lista suspensa.
 
-[![Páginas de conteúdo são exibidas usando a página mestra do site](specifying-the-master-page-programmatically-vb/_static/image17.png)](specifying-the-master-page-programmatically-vb/_static/image16.png)
+[![páginas de conteúdo são exibidas usando a página mestra site. Master](specifying-the-master-page-programmatically-vb/_static/image17.png)](specifying-the-master-page-programmatically-vb/_static/image16.png)
 
-**Figura 06**: Conteúdo de páginas são exibidas usando o `Site.master` página mestra ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image18.png))
+**Figura 06**: as páginas de conteúdo são exibidas usando o `Site.master` página mestra ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image18.png))
 
-[![Páginas de conteúdo agora são exibidas usando a página mestra Alternate.master](specifying-the-master-page-programmatically-vb/_static/image20.png)](specifying-the-master-page-programmatically-vb/_static/image19.png)
+[![páginas de conteúdo são exibidas agora usando a página mestra. Master mestre](specifying-the-master-page-programmatically-vb/_static/image20.png)](specifying-the-master-page-programmatically-vb/_static/image19.png)
 
-**Figura 07**: Conteúdo de páginas são agora exibidos usando o `Alternate.master` página mestra ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image21.png))
+**Figura 07**: as páginas de conteúdo agora são exibidas usando a página mestra de `Alternate.master` ([clique para exibir a imagem em tamanho normal](specifying-the-master-page-programmatically-vb/_static/image21.png))
 
 ## <a name="summary"></a>Resumo
 
-Quando uma página de conteúdo é visitada, seus controles de conteúdo são combinados com controles de ContentPlaceHolder da sua página mestra. O conteúdo da página mestra é indicada pela `Page` da classe `MasterPageFile` propriedade, que é atribuída para o `@Page` da diretiva `MasterPageFile` atributo durante o estágio de inicialização. Como este tutorial mostrado, podemos atribuir um valor para o `MasterPageFile` , desde que fazemos antes do final do estágio PreInit da propriedade. Ser capaz de especificar de forma programática a página mestra abre as portas para cenários mais avançados, como associação dinâmica de uma página de conteúdo a uma página mestra com base em fatores externos.
+Quando uma página de conteúdo é visitada, seus controles de conteúdo são fundidos com os controles ContentPlaceHolder da página mestra. A página mestra da página de conteúdo é indicada pela propriedade `MasterPageFile` da classe `Page`, que é atribuída ao atributo `MasterPageFile` da diretiva de `@Page` durante o estágio de inicialização. Como mostra este tutorial, podemos atribuir um valor à propriedade `MasterPageFile`, desde que possamos fazer isso antes do final do estágio PreInit. Ser capaz de especificar programaticamente a página mestra abre a porta para cenários mais avançados, como associar dinamicamente uma página de conteúdo a uma página mestra com base em fatores externos.
 
 Boa programação!
 
 ### <a name="further-reading"></a>Leitura adicional
 
-Para obter mais informações sobre os tópicos abordados neste tutorial, consulte os seguintes recursos:
+Para obter mais informações sobre os tópicos discutidos neste tutorial, consulte os seguintes recursos:
 
-- [Diagrama de ciclo de vida de página do ASP.NET](http://emanish.googlepages.com/Asp.Net2.0Lifecycle.PNG)
-- [Visão geral do ciclo de vida de página ASP.NET](https://msdn.microsoft.com/library/ms178472.aspx)
-- [Visão geral de capas e temas do ASP.NET](https://msdn.microsoft.com/library/ykzx33wh.aspx)
-- [Páginas mestras: Dicas, truques e armadilhas](http://www.odetocode.com/articles/450.aspx)
-- [Temas do ASP.NET](http://www.odetocode.com/articles/423.aspx)
+- [Diagrama de ciclo de vida da página ASP.NET](http://emanish.googlepages.com/Asp.Net2.0Lifecycle.PNG)
+- [Visão geral do ciclo de vida da página ASP.NET](https://msdn.microsoft.com/library/ms178472.aspx)
+- [Visão geral de temas e capas do ASP.NET](https://msdn.microsoft.com/library/ykzx33wh.aspx)
+- [Páginas mestras: dicas, truques e armadilhas](http://www.odetocode.com/articles/450.aspx)
+- [Temas no ASP.NET](http://www.odetocode.com/articles/423.aspx)
 
 ### <a name="about-the-author"></a>Sobre o autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de vários livros sobre ASP/ASP.NET e fundador da 4GuysFromRolla.com, trabalha com tecnologias Web Microsoft desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 3.5 in 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672329972/4guysfromrollaco). Scott pode ser contatado pelo [ mitchell@4GuysFromRolla.com ](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog em [ http://ScottOnWriting.NET ](http://scottonwriting.net/).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de vários livros sobre ASP/ASP. net e fundador da 4GuysFromRolla.com, tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 3,5 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672329972/4guysfromrollaco). Scott pode ser contatado em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog em [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
 ### <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi Suchi Banerjee. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, escreva-me em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. O revisor de Lead para este tutorial foi Banerjee. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](master-pages-and-asp-net-ajax-vb.md)

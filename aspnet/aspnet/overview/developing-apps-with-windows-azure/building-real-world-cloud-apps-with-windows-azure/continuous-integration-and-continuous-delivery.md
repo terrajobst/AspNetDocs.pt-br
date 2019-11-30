@@ -1,75 +1,75 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
-title: Integração contínua e entrega contínua (Criando aplicativos de nuvem do mundo Real com o Azure) | Microsoft Docs
+title: Integração contínua e entrega contínua (criando aplicativos de nuvem do mundo real com o Azure) | Microsoft Docs
 author: MikeWasson
-description: Os aplicativos de nuvem construção Real World com o livro eletrônico do Azure baseia-se em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem a ele...
+description: A criação de aplicativos de nuvem do mundo real com o livro eletrônico do Azure é baseada em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas que podem...
 ms.author: riande
 ms.date: 06/12/2014
 ms.assetid: eaece9f5-f80c-428b-b771-5db66d275b7d
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery
 msc.type: authoredcontent
-ms.openlocfilehash: 25767303e3a8a3bfd9fc6c7c10cda32d73e9994d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 52c710053feca7872aa6fcc93c99bce90359f8fc
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118856"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74585875"
 ---
-# <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integração contínua e entrega contínua (Criando aplicativos de nuvem do mundo Real com o Azure)
+# <a name="continuous-integration-and-continuous-delivery-building-real-world-cloud-apps-with-azure"></a>Integração contínua e entrega contínua (criando aplicativos de nuvem do mundo real com o Azure)
 
 por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
 
-[Download corrigi-lo Project](http://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [Baixe o livro eletrônico](http://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
+[Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
-> O **aos aplicativos de nuvem Real mundo de construção com o Azure** livro eletrônico se baseia em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas recomendadas que podem ajudá-lo a ser bem-sucedido no desenvolvimento de aplicativos web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
+> A **criação de aplicativos de nuvem do mundo real com** o livro eletrônico do Azure é baseada em uma apresentação desenvolvida por Scott Guthrie. Ele explica 13 padrões e práticas que podem ajudá-lo a desenvolver com sucesso aplicativos Web para a nuvem. Para obter informações sobre o livro eletrônico, consulte [o primeiro capítulo](introduction.md).
 
-As duas primeiras recomendado padrões do processo de desenvolvimento foram [automatizar tudo](automate-everything.md) e [controle do código-fonte](source-control.md), e o terceiro padrão do processo combina-os. Integração contínua (CI) significa que, sempre que um desenvolvedor verifica no código para o repositório de origem, uma compilação é disparada automaticamente. Entrega contínua (CD) leva isso um passo além: depois que uma compilação e testes de unidade automatizados forem bem-sucedidas, você deseja implantar automaticamente o aplicativo para um ambiente onde você pode fazer o teste mais detalhado.
+Os dois primeiros padrões de processo de desenvolvimento recomendados foram [automatizar tudo](automate-everything.md) e o [controle do código-fonte](source-control.md), e o terceiro padrão de processo os combina. A CI (integração contínua) significa que sempre que um desenvolvedor fizer check-in no código para o repositório de origem, uma compilação será disparada automaticamente. A entrega contínua (CD) leva isso um pouco mais: depois que um Build e testes de unidade automatizados forem bem-sucedidos, você implantará automaticamente o aplicativo em um ambiente no qual poderá fazer testes mais detalhados.
 
-A nuvem permite minimizar o custo de manter um ambiente de teste, porque você paga apenas pelos recursos de ambiente desde que você está usando-os. O processo de CD pode configurar o ambiente de teste quando você precisa dele e pode desativar o ambiente quando você terminar de teste.
+A nuvem permite minimizar o custo de manutenção de um ambiente de teste, pois você paga apenas pelos recursos do ambiente, desde que esteja usando-os. O processo de CD pode configurar o ambiente de teste quando necessário, e você pode desligar o ambiente quando terminar o teste.
 
 ## <a name="continuous-integration-and-continuous-delivery-workflow"></a>Fluxo de trabalho de integração contínua e entrega contínua
 
-Em geral, recomendamos que você faça a entrega contínua para seu desenvolvimento e ambientes de preparo. A maioria das equipes, até mesmo na Microsoft, exigem um processo de revisão e aprovação manual para implantação de produção. Para uma produção implantação, que talvez você queira garantir que ele acontece quando principais pessoas com quem na equipe de desenvolvimento estão disponíveis para o suporte, ou durante os períodos de baixo tráfego. Mas não há nada para impedir que você automatizar completamente seus ambientes de desenvolvimento e teste para que tudo o que um desenvolvedor precisa fazer é verificar em um ambiente e uma alteração é configurado para o teste de aceitação.
+Em geral, recomendamos que você faça entrega contínua para seus ambientes de desenvolvimento e preparo. A maioria das equipes, mesmo na Microsoft, requer um processo manual de revisão e aprovação para a implantação de produção. Para uma implantação de produção, talvez você queira ter certeza de que ela acontece quando as principais pessoas da equipe de desenvolvimento estão disponíveis para suporte ou durante períodos de baixo tráfego. Mas não há nada para impedir que você automatize completamente seus ambientes de desenvolvimento e teste para que tudo o que um desenvolvedor precise fazer seja fazer o check-in de uma alteração e um ambiente esteja configurado para teste de aceitação.
 
-O diagrama a seguir da [um Microsoft Patterns and Practices livro eletrônico sobre a entrega contínua](https://aka.ms/ReleasePipeline) ilustra um fluxo de trabalho típico. Clique na imagem para vê-la em tamanho completo em seu contexto original.
+O diagrama a seguir de [um livro eletrônico de padrões e práticas da Microsoft sobre a entrega contínua](https://aka.ms/ReleasePipeline) ilustra um fluxo de trabalho típico. Clique na imagem para vê-la em tamanho total em seu contexto original.
 
-[![Fluxo de trabalho de entrega contínua](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
+[fluxo de trabalho de entrega contínua ![](continuous-integration-and-continuous-delivery/_static/image1.png)](https://msdn.microsoft.com/library/dn449955.aspx)
 
-## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Como a nuvem permite econômica CI e CD
+## <a name="how-the-cloud-enables-cost-effective-ci-and-cd"></a>Como a nuvem permite CI e CD econômicos
 
-Automatizar esses processos no Azure é fácil. Porque você está executando tudo na nuvem, você não precisa comprar ou gerenciar servidores para seus ambientes de teste ou de suas compilações. E você não precise esperar por um servidor esteja disponível para fazer o teste no. Com cada compilação que você faz, você poderia acelerar um ambiente de teste no Azure usando o script de automação, testes de aceitação de execução ou mais testes detalhados em relação a ela e, em seguida, quando você terminar apenas subdividi-lo. E se você executar o servidor somente por 2 horas ou 8 horas ou um dia, a quantidade de dinheiro que você precisa pagar por ele é mínima, porque você está pagando apenas para a hora em que um computador está realmente em execução. Por exemplo, o ambiente necessário para a correção de aplicativo basicamente custa aproximadamente US $ 1 por hora se ir um nível acima do nível gratuito. No decorrer de um mês, se você executou somente o ambiente de uma hora por vez, seu ambiente de teste seria provavelmente custam menos do que um café com leite que você compra na Starbucks.
+Automatizar esses processos no Azure é fácil. Como você está executando tudo na nuvem, não precisa comprar ou gerenciar servidores para suas compilações ou seus ambientes de teste. E você não precisa esperar que um servidor esteja disponível para fazer seu teste no. Com cada compilação que você faz, você poderia criar um ambiente de teste no Azure usando seu script de automação, executar testes de aceitação ou mais testes detalhados em relação a ele e, em seguida, quando terminar, bastará subdividi-lo. E se você só executar esse servidor por 2 horas ou 8 horas ou por dia, a quantidade de dinheiro que você precisa pagar por ele é mínima, pois você está pagando apenas pelo tempo em que um computador está realmente em execução. Por exemplo, o ambiente necessário para o aplicativo corrigir ti basicamente custa cerca de 1 cento por hora se você passar uma camada para cima do nível gratuito. Ao longo de um mês, se você só executou o ambiente uma hora por vez, seu ambiente de teste provavelmente custaria menos do que um expresso que você comprar em Starbucks.
 
 ## <a name="azure-devops-services"></a>Azure DevOps Services 
 
-Serviços de DevOps do Azure fornece uma série de recursos para ajudá-lo com o desenvolvimento de aplicativos desde o planejamento de implantação.
+O Azure DevOps Services fornece vários recursos para ajudá-lo com o desenvolvimento de aplicativos do planejamento à implantação.
 
-- Ele dá suporte a Git (distribuído) e controle de origem TFVC (centralizado).
-- Ele oferece um serviço de build Elástico, o que significa que ele cria servidores de compilação quando forem necessários e desativa quando elas são feitas dinamicamente. Você poderá iniciar uma compilação automaticamente quando alguém faz check-in das alterações de código fonte, e você não precisa ter alocar e pagar pelos seus próprios servidores de compilação ficam ociosos na maioria das vezes. O serviço de compilação é gratuito, desde que você não exceda um determinado número de compilações. Se você espera fazer um alto volume de compilações, você pode pagar um pouco mais para servidores de compilação reservado.
-- Ele dá suporte a entrega contínua no Azure.
-- Ele dá suporte a testes de carga automatizada. Teste de carga é essencial para um aplicativo de nuvem, mas muitas vezes é negligenciado até que seja tarde demais. Teste de carga simula o uso intenso de um aplicativo por milhares de usuários, permitindo que você Encontre afunilamentos e melhorar a taxa de transferência — antes de liberar o aplicativo para produção.
-- Ele dá suporte a colaboração da sala da equipe, que facilita a comunicação em tempo real e colaboração para pequenas equipes agile.
-- Ele dá suporte a gerenciamento de projeto agile.
+- Ele dá suporte ao controle de origem git (distribuído) e TFVC (centralizado).
+- Ele oferece um serviço de Build elástico, o que significa que ele cria servidores de compilação dinamicamente quando eles são necessários e os retira quando eles são concluídos. Você pode disparar automaticamente uma compilação quando alguém verificar as alterações no código-fonte e não precisar alocar e pagar por seus próprios servidores de compilação que estejam ociosos na maior parte do tempo. O serviço de compilação é gratuito contanto que você não exceda um determinado número de compilações. Se você pretende fazer um grande volume de compilações, você pode pagar um pouco mais para servidores de Build reservados.
+- Ele dá suporte à entrega contínua para o Azure.
+- Ele dá suporte ao teste de carga automatizado. O teste de carga é essencial para um aplicativo de nuvem, mas geralmente fica inativo até que seja tarde demais. O teste de carga simula o uso intensivo de um aplicativo por milhares de usuários, permitindo que você encontre gargalos e melhore a taxa de transferência — antes de liberar o aplicativo para produção.
+- Ele dá suporte à colaboração da sala de equipe, o que facilita a comunicação e a colaboração em tempo real para pequenas equipes Agile.
+- Ele dá suporte ao gerenciamento de projeto ágil.
 
-Para obter mais informações sobre a integração contínua e os recursos de entrega dos serviços de DevOps do Azure, consulte [a documentação do Azure DevOps](/azure/devops/index).
+Para obter mais informações sobre os recursos de integração e entrega contínua do Azure DevOps Services, consulte [a documentação do Azure DevOps](/azure/devops/index).
 
-Se você estiver procurando por uma verificação imediata de gerenciamento de projetos, colaboração em equipe e solução de controle do código-fonte, os serviços de DevOps do Azure. Inscreva-se em [serviços do Azure DevOps](https://dev.azure.com/).
+Se você estiver procurando uma solução de gerenciamento de projeto, de colaboração de equipe e de controle de código-chave, confira Azure DevOps Services. Inscreva-se em [Azure DevOps Services](https://dev.azure.com/).
 
 ## <a name="summary"></a>Resumo
 
-Os padrões de desenvolvimento de três nuvem primeiro tem sido sobre como implementar um processo de desenvolvimento repetível, confiável e previsível com o tempo de ciclo de baixa. No [próximo capítulo](web-development-best-practices.md) começamos a observar padrões de arquiteturas e codificação.
+Os três primeiros padrões de desenvolvimento em nuvem foram sobre como implementar um processo de desenvolvimento reproduzível, confiável e previsível, com tempo de ciclo baixo. No [próximo capítulo](web-development-best-practices.md) , começamos a examinar os padrões de arquitetura e de codificação.
 
 ## <a name="resources"></a>Recursos
 
-Para obter mais informações, consulte [implantar um aplicativo web no serviço de aplicativo do Azure](https://azure.microsoft.com/documentation/articles/web-sites-deploy/).
+Para obter mais informações, consulte [implantar um aplicativo Web no serviço Azure app](https://azure.microsoft.com/documentation/articles/web-sites-deploy/).
 
 Consulte também os seguintes recursos:
 
-- [Criando um Pipeline de lançamento com o Team Foundation Server 2012](https://aka.ms/ReleasePipeline). Livro eletrônico, laboratórios práticos e código de exemplo pelo Microsoft Patterns and Practices, fornece uma introdução detalhada para entrega contínua. Aborda o uso do Visual Studio Lab Management e o gerenciamento de versão do Visual Studio.
-- [ALM Rangers DevOps ferramentas e orientações](https://aka.ms/vsarsolutions/). ALM Rangers introduziu a Bancada de trabalho de DevOps exemplo complementar de solução e orientações práticas em colaboração com os padrões &amp; livro sobre práticas *criando um Pipeline de lançamento com o TFS 2012*, como uma ótima maneira de começar aprender os conceitos de DevOps &amp; Release Management para TFS 2012 e antes de se comprometer. A diretriz mostra como compilar uma vez e implantar em vários ambientes.
-- [Testando para entrega contínua com Visual Studio 2012](https://msdn.microsoft.com/library/jj159345.aspx). Livro eletrônico por Microsoft Patterns and Practices, explica como integrar testes automatizados com entrega contínua.
-- [WindowsAzureDeploymentTracker](https://github.com/RyanTBerry/WindowsAzureDeploymentTracker). Código-fonte para uma ferramenta projetada para capturar uma compilação do TFS (com base em um rótulo), compilá-lo, empacotá-lo, permitir que alguém na função de DevOps para configurar aspectos específicos dele e enviar por push para o Azure. A ferramenta acompanha o processo de implantação para permitir operações "reverter" para uma versão previamente implantada. A ferramenta não tem dependências externas e pode funcionar autônomo usando APIs do TFS e o SDK do Azure.
-- [Entrega contínua: Versões de Software confiável por meio de automação de implantação, teste e compilação](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1377126361). Livro de Jez humilde.
-- [Liberá-lo! Projetar e implantar Software pronto para produção](https://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213). Book by Michael T. Nygard.
+- [Criando um pipeline de versão com o Team Foundation Server 2012](https://aka.ms/ReleasePipeline). O livro eletrônico, laboratórios práticos e exemplos de código por meio de padrões e práticas da Microsoft, fornece uma introdução aprofundada à entrega contínua. Aborda o uso do Lab Management do Visual Studio e do Visual Studio Release Management.
+- [Ferramentas e diretrizes do ALM Rangers DevOps](https://aka.ms/vsarsolutions/). O ALM Rangers introduziu a solução complementar de exemplo do DevOps Workbench e a orientação prática em colaboração com os padrões &amp; livro de práticas *criando um pipeline de lançamento com o tfs 2012*, como uma ótima maneira de começar a aprender os conceitos do DevOps &amp; Release Management para o TFS 2012 e para iniciar os pneus. A orientação mostra como compilar uma vez e implantar em vários ambientes.
+- [Teste para entrega contínua com o Visual Studio 2012](https://msdn.microsoft.com/library/jj159345.aspx). O livro eletrônico de práticas e padrões da Microsoft explica como integrar testes automatizados com entrega contínua.
+- [WindowsAzureDeploymentTracker](https://github.com/RyanTBerry/WindowsAzureDeploymentTracker). Código-fonte para uma ferramenta projetada para capturar uma compilação do TFS (com base em um rótulo), compilá-la, empacotá-la, permitir que alguém na função DevOps configure aspectos específicos dela e envie-a por push para o Azure. A ferramenta rastreia o processo de implantação a fim de habilitar operações para "reverter" para uma versão implantada anteriormente. A ferramenta não tem dependências externas e pode funcionar de forma autônoma usando APIs do TFS e o SDK do Azure.
+- [Entrega contínua: versões de software confiáveis por meio da automação de compilação, teste e implantação](https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1377126361). Livro por Jez modesta.
+- [Versão! projete e implante o software pronto para produção](https://www.amazon.com/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213). Livro por Michael T. Nygard.
 
 > [!div class="step-by-step"]
 > [Anterior](source-control.md)

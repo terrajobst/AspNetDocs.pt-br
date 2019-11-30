@@ -1,147 +1,147 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
-title: 'Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Transformações do arquivo Web. config - 3 de 12 | Microsoft Docs'
+title: 'Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio ou o Visual Web Developer: transformações de arquivo Web. config-3 de 12 | Microsoft Docs'
 author: tdykstra
-description: Esta série de tutoriais mostra como implantar (publicar) um ASP.NET projeto de aplicativo web que inclui um banco de dados do SQL Server Compact usando o Visual Stu...
+description: Esta série de tutoriais mostra como implantar (publicar) um projeto de aplicativo Web ASP.NET que inclui um banco de dados SQL Server Compact usando o Visual Stu...
 ms.author: riande
 ms.date: 11/17/2011
 ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
-ms.openlocfilehash: ed442e2bd3140264facc7644d89589dbbe8840e7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: fe71e6cfb0f4c5f1d99b326e9d90edb6c8c5feee
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65119363"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74600517"
 ---
-# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Implantando um aplicativo da Web ASP.NET com o SQL Server Compact usando o Visual Studio ou Visual Web Developer: Transformações do arquivo Web. config - 3 de 12
+# <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio ou o Visual Web Developer: transformações de arquivo Web. config-3 de 12
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-[Baixe o projeto inicial](http://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
+[Baixar o projeto inicial](https://code.msdn.microsoft.com/Deploying-an-ASPNET-Web-4e31366b)
 
-> Esta série de tutoriais mostra como implantar (publicar) um ASP.NET projeto de aplicativo web que inclui um banco de dados do SQL Server Compact usando o Visual Studio 2012 RC ou Visual Studio Express 2012 RC para Web. Você também pode usar o Visual Studio 2010 se você instalar a atualização de publicação na Web. Para obter uma introdução à série, consulte [o primeiro tutorial na série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
+> Esta série de tutoriais mostra como implantar (publicar) um projeto de aplicativo Web ASP.NET que inclui um banco de dados SQL Server Compact usando o Visual Studio 2012 RC ou o Visual Studio Express 2012 RC para Web. Você também pode usar o Visual Studio 2010 se instalar a atualização de publicação na Web. Para obter uma introdução à série, consulte [o primeiro tutorial da série](deployment-to-a-hosting-provider-introduction-1-of-12.md).
 > 
-> Para obter um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar as edições do SQL Server que não seja o SQL Server Compact e mostra como implantar aplicativos de Web do serviço de aplicativo do Azure, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
+> Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
-Este tutorial mostra como automatizar o processo de alteração de *Web. config* arquivo quando você implantá-lo em ambientes de destino diferente. A maioria dos aplicativos têm configurações na *Web. config* arquivos que devem ser diferentes quando o aplicativo é implantado. Automatizando o processo de fazer essas alterações evita a necessidade para fazê-las manualmente sempre que você implanta, qual seria entediante e sujeito a erros.
+Este tutorial mostra como automatizar o processo de alteração do arquivo *Web. config* ao implantá-lo em ambientes de destino diferentes. A maioria dos aplicativos tem configurações no arquivo *Web. config* que devem ser diferentes quando o aplicativo é implantado. Automatizar o processo de fazer essas alterações evita que você precise fazê-las manualmente toda vez que implantar, o que seria entediante e propenso a erros.
 
-Lembrete: Se você receber uma mensagem de erro ou se algo não funciona ao percorrer o tutorial, certifique-se de verificar a [página de solução de problemas](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
+Lembrete: se você receber uma mensagem de erro ou algo não funcionar enquanto percorre o tutorial, certifique-se de verificar a [página de solução de problemas](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12.md).
 
-## <a name="webconfig-transformations-versus-web-deploy-parameters"></a>Transformações de Web. config versus Web implantar parâmetros
+## <a name="webconfig-transformations-versus-web-deploy-parameters"></a>Transformações de Web. config versus parâmetros de Implantação da Web
 
-Há duas maneiras para automatizar o processo de alteração *Web. config* configurações do arquivo: [Transformações de Web. config](https://msdn.microsoft.com/library/dd465326.aspx) e [parâmetros de implantação da Web](https://msdn.microsoft.com/library/ff398068.aspx). Um *Web. config* arquivo de transformação contém marcação XML que especifica como alterar a *Web. config* arquivo quando ele é implantado. Você pode especificar alterações diferentes para determinado compila as configurações e perfis de publicação para específico. As configurações de compilação padrão são Debug e Release e você pode criar configurações de compilação personalizada. Um perfil de publicação geralmente corresponde a um ambiente de destino. (Você aprenderá mais sobre como publicar perfis na [implantando no IIS como um ambiente de teste](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) tutorial.)
+Há duas maneiras de automatizar o processo de alteração das configurações do arquivo *Web. config* : [transformações de Web. config](https://msdn.microsoft.com/library/dd465326.aspx) e [parâmetros de implantação da Web](https://msdn.microsoft.com/library/ff398068.aspx). Um arquivo de transformação *Web. config* contém marcação XML que especifica como alterar o arquivo *Web. config* quando ele é implantado. Você pode especificar diferentes alterações para configurações de compilação específicas e para perfis de publicação específicos. As configurações de compilação padrão são Debug e Release, e você pode criar configurações de compilação personalizadas. Um perfil de publicação geralmente corresponde a um ambiente de destino. (Você aprenderá mais sobre os perfis de publicação no tutorial [implantando no IIS como um ambiente de teste](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12.md) .)
 
-Parâmetros de implantação da Web podem ser usados para especificar vários tipos diferentes de configurações que devem ser configurados durante a implantação, incluindo as configurações que são encontradas em *Web. config* arquivos. Quando usado para especificar *Web. config* alterações de arquivo, os parâmetros de implantação da Web são mais complexos para configurar, mas eles são úteis quando você não souber o valor a ser definido até que você implante. Por exemplo, em um ambiente corporativo, você pode criar uma *pacote de implantação* e dê a ele a uma pessoa no departamento de TI para instalar em produção e que a pessoa deve ser capaz de inserir cadeias de caracteres de conexão ou senhas que você não fizer isso sabe.
+Implantação da Web parâmetros podem ser usados para especificar vários tipos diferentes de configurações que devem ser configuradas durante a implantação, incluindo configurações que são encontradas em arquivos *Web. config* . Quando usado para especificar alterações no arquivo *Web. config* , implantação da Web parâmetros são mais complexos de configurar, mas eles são úteis quando você não sabe o valor a ser definido até implantar. Por exemplo, em um ambiente corporativo, você pode criar um *pacote de implantação* e fornecê-lo a uma pessoa no departamento de ti para instalar em produção, e essa pessoa precisa ser capaz de inserir cadeias de conexão ou senhas que você não conhece.
 
-Para o cenário que abrange este tutorial, você sabe tudo o que precisa ser feito para o *Web. config* de arquivos, portanto você não precisa usar parâmetros de implantação da Web. Você vai configurar algumas transformações que são diferentes dependendo da configuração de compilação usada, e algumas que são diferentes dependendo do perfil de publicação usado.
+Para o cenário que este tutorial aborda, você sabe tudo o que precisa ser feito no arquivo *Web. config* , portanto, não é necessário usar parâmetros de implantação da Web. Você configurará algumas transformações que diferem dependendo da configuração de compilação usada e algumas que diferem dependendo do perfil de publicação usado.
 
 ## <a name="creating-transformation-files-for-publish-profiles"></a>Criando arquivos de transformação para perfis de publicação
 
-Na **Gerenciador de soluções**, expanda *Web. config* para ver os *Debug* e *Release* arquivos de transformação são criados por padrão para as configurações de compilação padrão de dois.
+No **Gerenciador de soluções**, expanda *Web. config* para ver os arquivos de transformação *Web. Debug. config* e *Web. Release. config* que são criados por padrão para as duas configurações de compilação padrão.
 
-![Web.config_transform_files](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image1.png)
+![Web. config_transform_files](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image1.png)
 
-Você pode criar arquivos de transformação para configurações de compilação personalizada clicando duas vezes o arquivo Web. config e escolhendo **adicionar transformações de Config** no menu de contexto, mas para este tutorial não precisa fazer isso.
+Você pode criar arquivos de transformação para configurações de compilação personalizadas clicando com o botão direito do mouse no arquivo Web. config e escolhendo **Adicionar transformações de configuração** no menu de contexto, mas para este tutorial, você não precisa fazer isso.
 
-Mais dois arquivos transformação, é necessário para configurar as alterações que estão relacionadas para o destino de implantação em vez da configuração de compilação. Um exemplo típico desse tipo de configuração é um ponto de extremidade do WCF que é diferente para teste versus produção. Em tutoriais posteriores, você criará o chamado teste e produção, portanto, você precisa de perfis de publicação um *Web.Test.config* arquivo e um *Web.Production.config* arquivo.
+Você precisa de mais dois arquivos de transformação para configurar as alterações relacionadas ao destino da implantação em vez de à configuração da compilação. Um exemplo típico desse tipo de configuração é um ponto de extremidade do WCF que é diferente para teste versus produção. Em Tutoriais posteriores, você criará perfis de publicação chamados teste e produção, portanto, você precisa de um arquivo *Web. Test. config* e um arquivo *Web. Production. config* .
 
-Arquivos de transformação que estão vinculados para perfis de publicação devem ser criados manualmente. Na **Gerenciador de soluções**, clique com botão direito no projeto ContosoUniversity e selecione **Abrir pasta no Windows Explorer**.
+Os arquivos de transformação que estão vinculados a perfis de publicação devem ser criados manualmente. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto ContosoUniversity e selecione **abrir pasta no Windows Explorer**.
 
 ![Open_folder_in_Windows_Explorer](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image2.png)
 
-Na **Windows Explorer**, selecione o *Release* , copie o arquivo e, em seguida, cole as duas cópias dele. Renomear essas cópias *Web.Production.config* e *Web.Test.config*, em seguida, feche **Windows Explorer**.
+No **Windows Explorer**, selecione o arquivo *Web. Release. config* , copie o arquivo e, em seguida, Cole duas cópias dele. Renomeie essas cópias *Web. Production. config* e *Web. Test. config*e, em seguida, feche o **Windows Explorer**.
 
-Na **Gerenciador de soluções**, clique em **atualizar** para ver os novos arquivos.
+Em **Gerenciador de soluções**, clique em **Atualizar** para ver os novos arquivos.
 
-Selecione os novos arquivos, clique com botão direito e, em seguida, clique **Include in Project** no menu de contexto.
+Selecione os novos arquivos, clique com o botão direito do mouse e, em seguida, clique em **incluir no projeto** no menu de contexto.
 
-![Incluindo arquivos de configuração de teste e produção no projeto](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image3.png)
+![Incluindo arquivos de configuração de teste e de produção no projeto](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image3.png)
 
-Para impedir que esses arquivos que está sendo implantado, selecione-os na **Gerenciador de soluções**e, em seguida, no **propriedades** alteração de janela a **Build Action** propriedade **Conteúdo** para **None**. (Os arquivos de transformação se baseiam em configurações de build são impedidos automaticamente da implantação).
+Para impedir que esses arquivos sejam implantados, selecione-os em **Gerenciador de soluções**e, na janela **Propriedades** , altere a propriedade **ação de compilação** de **conteúdo** para **nenhum**. (Os arquivos de transformação baseados em configurações de compilação são impedidos automaticamente de serem implantados.)
 
-Agora você está pronto para inserir *Web. config* transformações a *Web. config* arquivos de transformação.
+Agora você está pronto para inserir as transformações de *Web. config* nos arquivos de transformação *Web. config* .
 
-## <a name="limiting-error-log-access-to-administrators"></a>Limitando o acesso de Log de erros para administradores
+## <a name="limiting-error-log-access-to-administrators"></a>Limitando o acesso ao log de erros aos administradores
 
-Se houver um erro enquanto o aplicativo é executado, o aplicativo exibe uma página de erro genérico no lugar da página de erro gerada pelo sistema e ele usa [pacote do NuGet do Elmah](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) para emissão de relatórios e log de erros. O `customErrors` elemento na *Web. config* arquivo Especifica a página de erro:
+Se houver um erro enquanto o aplicativo for executado, o aplicativo exibirá uma página de erro genérica no lugar da página de erro gerada pelo sistema e usará o [pacote NuGet do ELMAH](http://www.hanselman.com/blog/NuGetPackageOfTheWeek7ELMAHErrorLoggingModulesAndHandlersWithSQLServerCompact.aspx) para registro em log de erros e relatórios. O elemento `customErrors` no arquivo *Web. config* especifica a página de erro:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/samples/sample1.xml)]
 
-Para ver a página de erro, altere temporariamente o `mode` atributo do `customErrors` elemento do "RemoteOnly" para "Ativado" e execute o aplicativo do Visual Studio. Causar um erro ao solicitar uma URL inválida, como *Studentsxxx.aspx*. Em vez de uma página de erro gerado pelo IIS "página não encontrada", você verá a *GenericErrorPage* página.
+Para ver a página de erro, altere temporariamente o atributo `mode` do elemento `customErrors` de "RemoteOnly" para "on" e execute o aplicativo no Visual Studio. Causa um erro solicitando uma URL inválida, como *Studentsxxx. aspx*. Em vez de uma página de erro "página não encontrada" gerada pelo IIS, você verá a página *GenericErrorPage. aspx* .
 
 [![Error_page](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image5.png)](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image4.png)
 
-Para ver o log de erros, substitua tudo da URL após o número da porta com *elmah.axd* (por exemplo, a captura de tela, `http://localhost:51130/elmah.axd`) e pressione Enter:
+Para ver o log de erros, substitua tudo na URL após o número da porta com o *ELMAH. axd* (para obter o exemplo na captura de tela, `http://localhost:51130/elmah.axd`) e pressione ENTER:
 
 [![Elmah_log_page](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image7.png)](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image6.png)
 
-Não se esqueça de definir o `customErrors` elemento para o modo de "RemoteOnly" quando terminar.
+Não se esqueça de definir o elemento `customErrors` de volta para o modo "RemoteOnly" quando terminar.
 
-No computador de desenvolvimento é conveniente permitir o acesso gratuito à página de log de erro, mas em produção que seria um risco à segurança. Para o site de produção, você pode adicionar uma regra de autorização que restringe o acesso ao log de erros apenas para administradores, configurando uma transformação na *Web.Production.config* arquivo.
+No seu computador de desenvolvimento, é conveniente permitir acesso gratuito à página de log de erros, mas em produção que seria um risco de segurança. Para o site de produção, você pode adicionar uma regra de autorização que restringe o acesso ao log de erros apenas aos administradores Configurando uma transformação no arquivo *Web. Production. config* .
 
-Abra *Web.Production.config* e adicione um novo `location` elemento imediatamente após a abertura `configuration` de marca, conforme mostrado aqui. (Certifique-se de que você adicione apenas o `location` elemento e não a marcação próxima que é mostrada aqui somente para fornecer algum contexto.)
+Abra *Web. Production. config* e adicione um novo elemento `location` imediatamente após a marca de `configuration` de abertura, conforme mostrado aqui. (Certifique-se de adicionar apenas o elemento `location` e não a marcação ao redor, que é mostrada aqui apenas para fornecer algum contexto.)
 
 [!code-xml[Main](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/samples/sample2.xml?highlight=2-9)]
 
-O `Transform` valor de atributo de "Insert" faz com que essa `location` elemento a ser adicionado como um irmão qualquer existente `location` elementos no *Web. config* arquivo. (Já houver um `location` regras de elemento que especifica a autorização para o **atualização créditos** página.) Quando você testar o site de produção após a implantação, você vai testar para verificar se essa regra de autorização é eficiente.
+O valor de atributo `Transform` de "Insert" faz com que esse elemento `location` seja adicionado como um irmão a qualquer elemento de `location` existente no arquivo *Web. config* . (Já existe um elemento `location` que especifica regras de autorização para a página de **créditos de atualização** .) Ao testar o site de produção após a implantação, você testará para verificar se essa regra de autorização está em vigor.
 
-Não é necessário restringir o acesso ao log de erros no ambiente de teste, portanto, você não precisa adicionar esse código para o *Web.Test.config* arquivo.
+Você não precisa restringir o acesso ao log de erros no ambiente de teste, de modo que você não precisa adicionar esse código ao arquivo *Web. Test. config* .
 
 > [!NOTE] 
 > 
-> **Observação de segurança** nunca exibir detalhes do erro para o público em um aplicativo de produção, ou armazenar essas informações em um local público. Os invasores podem usar informações de erro para descobrir vulnerabilidades em um site. Se você usar o ELMAH no seu próprio aplicativo, certifique-se de investigar maneiras em que o ELMAH pode ser configurado para minimizar os riscos de segurança. O exemplo do ELMAH neste tutorial não deve ser considerado uma configuração recomendada. É um exemplo que foi escolhido para ilustrar como lidar com uma pasta que o aplicativo deve ser capaz de criar arquivos.
+> **Observação de segurança** Nunca exiba detalhes do erro para o público em um aplicativo de produção ou armazene essas informações em um local público. Os invasores podem usar informações de erro para descobrir vulnerabilidades em um site. Se você usar o ELMAH em seu próprio aplicativo, certifique-se de investigar maneiras em que o ELMAH pode ser configurado para minimizar os riscos de segurança. O exemplo do ELMAH neste tutorial não deve ser considerado uma configuração recomendada. É um exemplo que foi escolhido para ilustrar como lidar com uma pasta na qual o aplicativo deve ser capaz de criar arquivos.
 
-## <a name="setting-an-environment-indicator"></a>Definir um indicador de ambiente
+## <a name="setting-an-environment-indicator"></a>Configurando um indicador de ambiente
 
-Um cenário comum é ter *Web. config* as configurações que devem ser diferentes em cada ambiente que você implanta em arquivos. Por exemplo, um aplicativo que chama um serviço WCF talvez seja necessário um ponto de extremidade diferente em ambientes de teste e produção. O aplicativo Contoso University inclui uma configuração desse tipo também. Essa configuração controla um indicador visível nas páginas de um site que informa qual ambiente você está no, como desenvolvimento, teste ou produção. O valor da configuração determina se o aplicativo acrescentará "(desenvolvimento)" ou "(teste)" no cabeçalho principal do *Master* página mestra:
+Um cenário comum é ter configurações de arquivo *Web. config* que devem ser diferentes em cada ambiente implantado no. Por exemplo, um aplicativo que chama um serviço WCF pode precisar de um ponto de extremidade diferente em ambientes de teste e produção. O aplicativo Contoso University também inclui uma configuração desse tipo. Essa configuração controla um indicador visível nas páginas de um site que informa em qual ambiente você está, como desenvolvimento, teste ou produção. O valor da configuração determina se o aplicativo acrescentará "(dev)" ou "(teste)" ao título principal na página mestra do *site.* Master:
 
 [![Environment_indicator](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image9.png)](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/_static/image8.png)
 
-O indicador de ambiente é omitido quando o aplicativo está em execução na produção.
+O indicador de ambiente é omitido quando o aplicativo está sendo executado em produção.
 
-Páginas da web Contoso University ler um valor que é definido em `appSettings` no *Web. config* arquivo a fim de determinar qual o ambiente em que o aplicativo é executado no:
+As páginas da Web da Contoso University lêem um valor definido em `appSettings` no arquivo *Web. config* para determinar em qual ambiente o aplicativo está sendo executado:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/samples/sample3.xml)]
 
-O valor deve ser "Teste" no ambiente de teste e "Prod" no ambiente de produção.
+O valor deve ser "teste" no ambiente de teste e "Prod" no ambiente de produção.
 
-Abra *Web.Production.config* e adicione um `appSettings` elemento imediatamente antes da marca de abertura do `location` elemento que você adicionou anteriormente:
+Abra *Web. Production. config* e adicione um elemento `appSettings` imediatamente antes da marca de abertura do elemento `location` que você adicionou anteriormente:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/samples/sample4.xml)]
 
-O `xdt:Transform` valor "SetAttributes" indica que a finalidade dessa transformação é alterar os valores de atributo de um elemento existente no atributo o *Web. config* arquivo. O `xdt:Locator` "Match(key)" indica que o elemento a ser modificado é aquele do valor do atributo cujo `key` atributo corresponde a `key` atributo especificado aqui. O apenas outro atributo do `add` elemento é `value`, e isso é o que será alterado em implantado *Web. config* arquivo. Esse código faz com que o `value` atributo do `Environment` `appSettings` elemento a ser definido como "Prod" no *Web. config* arquivo que é implantado para produção.
+O valor do atributo `xdt:Transform` "SetAttributes" indica que a finalidade dessa transformação é alterar os valores de atributo de um elemento existente no arquivo *Web. config* . O valor do atributo de `xdt:Locator` "match (Key)" indica que o elemento a ser modificado é aquele cujo atributo `key` corresponde ao atributo `key` especificado aqui. O único atributo do elemento `add` é `value`, e isso é o que será alterado no arquivo *Web. config* implantado. Esse código faz com que o atributo `value` do elemento `Environment` `appSettings` seja definido como "Prod" no arquivo *Web. config* que é implantado para produção.
 
-Em seguida, aplique a mesma alteração *Web.Test.config* arquivo, exceto o conjunto de `value` para "Test" em vez de "Prod". Quando você terminar, o `appSettings` seção *Web.Test.config* se parecerá com o exemplo a seguir:
+Em seguida, aplique a mesma alteração ao arquivo *Web. Test. config* , exceto defina o `value` como "Test" em vez de "Prod". Quando terminar, a seção `appSettings` em *Web. Test. config* será parecida com o exemplo a seguir:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/samples/sample5.xml)]
 
-## <a name="disabling-debug-mode"></a>Desabilitar o modo de depuração
+## <a name="disabling-debug-mode"></a>Desabilitando o modo de depuração
 
-Para um build de versão, você não deseja depuração habilitada, independentemente de qual ambiente você está implantando. Por padrão o *Release* arquivo de transformação é criado automaticamente com o código que remove as `debug` de atributos do `compilation` elemento:
+Para uma compilação de versão, você não deseja que a depuração seja habilitada, independentemente de qual ambiente você está implantando. Por padrão, o arquivo de transformação *Web. Release. config* é criado automaticamente com o código que remove o atributo `debug` do elemento `compilation`:
 
 [!code-xml[Main](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/samples/sample6.xml)]
 
-O `Transform` atributo faz com que o `debug` atributo seja omitido da implantado *Web. config* sempre que você implantar uma compilação de versão do arquivo.
+O atributo `Transform` faz com que o atributo `debug` seja omitido do arquivo *Web. config* implantado sempre que você implantar uma compilação de versão.
 
-Essa mesma transformação está em teste e produção arquivos de transformação porque você criou, copiando o arquivo de transformação de versão. Você não precisa dela duplicado lá, então, abrir cada um desses arquivos, remova os **compilação** elemento e salve e feche cada arquivo.
+Essa mesma transformação está em arquivos de transformação de teste e de produção, pois você os criou copiando o arquivo de transformação de liberação. Você não precisa dele duplicado, portanto, abra cada um desses arquivos, remova o elemento **Compilation** e salve e feche cada arquivo.
 
-## <a name="setting-connection-strings"></a>Configurar cadeias de Conexão
+## <a name="setting-connection-strings"></a>Definindo cadeias de conexão
 
-Na maioria dos casos você não precisa configurar transformações de cadeia de caracteres de conexão, porque você pode especificar cadeias de caracteres de conexão no perfil de publicação. Mas há uma exceção quando você estiver implantando um banco de dados do SQL Server Compact e você estiver usando o Entity Framework Code First Migrations para atualizar o banco de dados no servidor de destino. Para este cenário, você precisa especificar uma cadeia de caracteres de conexão adicionais que será usada no servidor para atualizar o esquema de banco de dados. Para configurar essa transformação, adicione uma **&lt;connectionStrings&gt;** elemento imediatamente após a abertura **&lt;configuração&gt;** marca em ambos os o *Web.Test.config* e o *Web.Production.config* transformar arquivos:
+Na maioria dos casos, não é necessário configurar as transformações de cadeia de conexão, pois você pode especificar cadeias de conexão no perfil de publicação. Mas há uma exceção quando você está implantando um banco de dados SQL Server Compact e está usando Migrações do Entity Framework Code First para atualizar o banco de dados no servidor de destino. Para este cenário, você precisa especificar uma cadeia de conexão adicional que será usada no servidor para atualizar o esquema de banco de dados. Para configurar essa transformação, adicione um **&lt;connectionstrings&gt;** elemento imediatamente após a abertura&lt;marca de **configuração&gt;** nos arquivos de transformação *Web. Test. config* e *Web. Production. config* :
 
 [!code-xml[Main](deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12/samples/sample7.xml)]
 
-O `Transform` atributo especifica que essa cadeia de caracteres de conexão será adicionada para o *connectionStrings* elemento no implantado *Web. config* arquivo. (O processo de publicação cria essa cadeia de caracteres de conexão adicionais automaticamente para você se ele não existir, mas por padrão o **providerName** atributo é definido como `System.Data.SqlClient`, que não funciona não para o SQL Server Compact. Ao adicionar manualmente a cadeia de caracteres de conexão, você mantenha o processo de implantação desde a criação de um elemento de cadeia de caracteres de conexão com o nome do provedor errado.)
+O atributo `Transform` especifica que essa cadeia de conexão será adicionada ao elemento *connectionStrings* no arquivo *Web. config* implantado. (O processo de publicação cria essa cadeia de conexão adicional automaticamente para você se ela não existir, mas por padrão o atributo **ProviderName** é definido como `System.Data.SqlClient`, o que não funciona para SQL Server Compact. Ao adicionar a cadeia de conexão manualmente, você mantém o processo de implantação criando um elemento de cadeia de conexão com o nome do provedor errado.)
 
-Agora você tiver especificado todas as *Web. config* transformações que você precisa para implantar o aplicativo Contoso University para teste e produção. No tutorial a seguir, você vai cuidar das tarefas de configuração de implantação que requerem a definição de propriedades do projeto.
+Agora você especificou todas as transformações de *Web. config* necessárias para implantar o aplicativo da Contoso University para teste e produção. No tutorial a seguir, você cuidará das tarefas de configuração de implantação que exigem a definição de propriedades do projeto.
 
-## <a name="more-information"></a>Mais informações
+## <a name="more-information"></a>Mais Informações
 
-Para obter mais informações sobre os tópicos abordados por este tutorial, consulte o cenário de transformação Web. config no [mapa de conteúdo de implantação do ASP.NET](https://msdn.microsoft.com/library/bb386521.aspx).
+Para obter mais informações sobre os tópicos abordados por este tutorial, consulte o cenário de transformação Web. config no [mapa de conteúdo de implantação do ASP.net](https://msdn.microsoft.com/library/bb386521.aspx).
 
 > [!div class="step-by-step"]
 > [Anterior](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)

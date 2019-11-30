@@ -8,12 +8,12 @@ ms.date: 02/10/2010
 ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
-ms.openlocfilehash: 8c93952adb33d1ce7008ebff9d032a71eb2a5f74
-ms.sourcegitcommit: b67ffd5b2c5cff01ec4c8eb12a21f693f2e11887
+ms.openlocfilehash: ecde48f6bd88ee5f569bfeb8b70c26a50bc869c2
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69995351"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74576863"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
 
@@ -23,72 +23,72 @@ ms.locfileid: "69995351"
 
 **Conteúdo**
 
-**[Core Services](#0.2__Toc253429238 "_Toc253429238")**  
-Refatoração de [arquivo Web. config] (#0.2__Toc253429239 "_Toc253429239")  
-[Cache de saída extensível] (#0.2__Toc253429240 "_Toc253429240")  
-[Aplicativos Web de início automático] (#0.2__Toc253429241 "_Toc253429241")  
-[Redirecionando permanentemente uma página] (#0.2__Toc253429242 "_Toc253429242")  
-[Reduzindo o estado da sessão] (#0.2__Toc253429243 "_Toc253429243")  
-[Expandindo o intervalo de URLs permitidas] (#0.2__Toc253429244 "_Toc253429244")  
-[Validação de solicitação extensível] (#0.2__Toc253429245 "_Toc253429245")  
-[Cache de objetos e extensibilidade de objetos de cache] (#0.2__Toc253429246 "_Toc253429246")  
-[Codificação de Extensible HTML, URL e cabeçalho http] (#0.2__Toc253429247 "_Toc253429247")  
-[Monitoramento de desempenho para aplicativos individuais em um único processo de trabalho] (#0.2__Toc253429248 "_Toc253429248")  
-[Multi-Targeting](#0.2__Toc253429249 "_Toc253429249")
+**[Serviços principais](#0.2__Toc253429238 "_Toc253429238")**  
+[Refatoração de arquivo Web. config](#0.2__Toc253429239 "_Toc253429239")  
+[Cache de saída extensível](#0.2__Toc253429240 "_Toc253429240")  
+[Aplicativos Web de início automático](#0.2__Toc253429241 "_Toc253429241")  
+[Redirecionando permanentemente uma página](#0.2__Toc253429242 "_Toc253429242")  
+[Reduzindo o estado da sessão](#0.2__Toc253429243 "_Toc253429243")  
+[Expandindo o intervalo de URLs permitidas](#0.2__Toc253429244 "_Toc253429244")  
+[Validação de solicitação extensível](#0.2__Toc253429245 "_Toc253429245")  
+[Cache de objetos e extensibilidade de objetos de cache](#0.2__Toc253429246 "_Toc253429246")  
+[Codificação de Extensible HTML, URL e cabeçalho HTTP](#0.2__Toc253429247 "_Toc253429247")  
+[Monitoramento de desempenho para aplicativos individuais em um único processo de trabalho](#0.2__Toc253429248 "_Toc253429248")  
+[Vários destinos](#0.2__Toc253429249 "_Toc253429249")
 
 **[Ajax](#0.2__Toc253429250 "_Toc253429250")**  
-[jQuery incluído com Web Forms e MVC] (#0.2__Toc253429251 "_Toc253429251")  
-[Suporte à rede de distribuição de conteúdo] (#0.2__Toc253429252 "_Toc253429252")  
-[Scripts explícitos do ScriptManager] (#0.2__Toc253429253 "_Toc253429253")
+[jQuery incluído com Web Forms e MVC](#0.2__Toc253429251 "_Toc253429251")  
+[Suporte à rede de distribuição de conteúdo](#0.2__Toc253429252 "_Toc253429252")  
+[Scripts explícitos do ScriptManager](#0.2__Toc253429253 "_Toc253429253")
 
 **[Web Forms](#0.2__Toc253429256 "_Toc253429256")**  
-[Definindo marcas meta com as propriedades Page. Metapalavra-chave e Page. MetaDescription] (#0.2__Toc253429257 "_Toc253429257")  
-[Habilitando o estado de exibição para controles individuais] (#0.2__Toc253429258 "_Toc253429258")  
-[Alterações nos recursos do navegador] (#0.2__Toc253429259 "_Toc253429259")  
-[Roteamento no ASP.NET 4] (#0.2__Toc253429260 "_Toc253429260")  
-[Definindo IDs de cliente] (#0.2__Toc253429261 "_Toc253429261")  
-[Persistência da seleção de linha em controles de dados] (#0.2__Toc253429262 "_Toc253429262")  
-[Controle de gráfico ASP.net] (#0.2__Toc253429263 "_Toc253429263")  
-[Filtrando dados com o controle QueryExtender] (#0.2__Toc253429264 "_Toc253429264")  
-[Expressões de código codificadas em HTML] (#0.2__Toc253429265 "_Toc253429265")  
-[Alterações de modelo de projeto] (#0.2__Toc253429266 "_Toc253429266")  
-[Aprimoramentos de CSS] (#0.2__Toc253429267 "_Toc253429267")  
-[Ocultando elementos div em campos ocultos] (#0.2__Toc253429268 "_Toc253429268")  
-[Renderizando uma tabela externa para controles de modelo] (#0.2__Toc253429269 "_Toc253429269")  
-[Aprimoramentos de controle ListView] (#0.2__Toc253429270 "_Toc253429270")  
-[Aprimoramentos no controle CheckBoxList e RadioButtonList] (#0.2__Toc253429271 "_Toc253429271")  
-[Aprimoramentos de controle de menu] (#0.2__Toc253429272 "_Toc253429272")  
-[Assistente e controles CreateUserWizard 56] (#0.2__Toc253429273 "_Toc253429273")
+[Definindo marcas meta com as propriedades Page. metapalavra-chave e Page. MetaDescription](#0.2__Toc253429257 "_Toc253429257")  
+[Habilitando o estado de exibição para controles individuais](#0.2__Toc253429258 "_Toc253429258")  
+[Alterações nos recursos do navegador](#0.2__Toc253429259 "_Toc253429259")  
+[Roteamento no ASP.NET 4](#0.2__Toc253429260 "_Toc253429260")  
+[Definindo IDs de cliente](#0.2__Toc253429261 "_Toc253429261")  
+[Persistência da seleção de linha em controles de dados](#0.2__Toc253429262 "_Toc253429262")  
+[Controle de gráfico ASP.NET](#0.2__Toc253429263 "_Toc253429263")  
+[Filtrando dados com o controle QueryExtender](#0.2__Toc253429264 "_Toc253429264")  
+[Expressões de código codificadas em HTML](#0.2__Toc253429265 "_Toc253429265")  
+[Alterações de modelo de projeto](#0.2__Toc253429266 "_Toc253429266")  
+[Aprimoramentos de CSS](#0.2__Toc253429267 "_Toc253429267")  
+[Ocultando elementos div em campos ocultos](#0.2__Toc253429268 "_Toc253429268")  
+[Renderizando uma tabela externa para controles de modelo](#0.2__Toc253429269 "_Toc253429269")  
+[Aprimoramentos de controle ListView](#0.2__Toc253429270 "_Toc253429270")  
+[Aprimoramentos no controle CheckBoxList e RadioButtonList](#0.2__Toc253429271 "_Toc253429271")  
+[Aprimoramentos de controle de menu](#0.2__Toc253429272 "_Toc253429272")  
+[Assistente e controles CreateUserWizard 56](#0.2__Toc253429273 "_Toc253429273")
 
 **[ASP.NET MVC](#0.2__Toc253429274 "_Toc253429274")**  
-[Suporte a áreas] (#0.2__Toc253429275 "_Toc253429275")  
-[Suporte à validação de atributo de anotação de dados] (#0.2__Toc253429276 "_Toc253429276")  
-[Auxiliares] modelados (#0.2__Toc253429277 "_Toc253429277")
+[Suporte a áreas](#0.2__Toc253429275 "_Toc253429275")  
+[Suporte à validação de atributo de anotação de dados](#0.2__Toc253429276 "_Toc253429276")  
+[Auxiliares modelados](#0.2__Toc253429277 "_Toc253429277")
 
-**[Dynamic Data](#0.2__Toc253429278 "_Toc253429278")**  
-[Habilitando dados dinâmicos para projetos existentes] (#0.2__Toc253429279 "_Toc253429279")  
-[Sintaxe de controle declarativo DynamicDataManager] (#0.2__Toc253429280 "_Toc253429280")  
-[Modelos de entidade] (#0.2__Toc253429281 "_Toc253429281")  
-[Novos modelos de campo para URLs e endereços de email] (#0.2__Toc253429282 "_Toc253429282")  
-[Criando links com o controle DynamicHyperLink] (#0.2__Toc253429283 "_Toc253429283")  
-[Suporte para herança no modelo de dados] (#0.2__Toc253429284 "_Toc253429284")  
-[Suporte para relações muitos para muitos (somente Entity Framework)] (#0.2__Toc253429285 "_Toc253429285")  
-[Novos atributos para controlar as enumerações de exibição e suporte] (#0.2__Toc253429286 "_Toc253429286")  
-[Suporte aprimorado para filtros] (#0.2__Toc253429287 "_Toc253429287")
+**[Dados Dinâmicos](#0.2__Toc253429278 "_Toc253429278")**  
+[Habilitando Dados Dinâmicos para projetos existentes](#0.2__Toc253429279 "_Toc253429279")  
+[Sintaxe de controle declarativo DynamicDataManager](#0.2__Toc253429280 "_Toc253429280")  
+[Modelos de entidade](#0.2__Toc253429281 "_Toc253429281")  
+[Novos modelos de campo para URLs e endereços de email](#0.2__Toc253429282 "_Toc253429282")  
+[Criando links com o controle DynamicHyperLink](#0.2__Toc253429283 "_Toc253429283")  
+[Suporte para herança no modelo de dados](#0.2__Toc253429284 "_Toc253429284")  
+[Suporte para relações muitos para muitos (somente Entity Framework)](#0.2__Toc253429285 "_Toc253429285")  
+[Novos atributos para controlar as enumerações de exibição e suporte](#0.2__Toc253429286 "_Toc253429286")  
+[Suporte aprimorado para filtros](#0.2__Toc253429287 "_Toc253429287")
 
-**[Aprimoramentos no desenvolvimento para a Web do Visual Studio 2010] (#0.2__Toc253429288 "_Toc253429288")**  
-[Compatibilidade com CSS aprimorada] (#0.2__Toc253429289 "_Toc253429289")  
-[Trechos de código HTML e JavaScript] (#0.2__Toc253429290 "_Toc253429290")  
-[Aprimoramentos de IntelliSense do JavaScript] (#0.2__Toc253429291 "_Toc253429291")
+**[Aprimoramentos no desenvolvimento para a Web do Visual Studio 2010](#0.2__Toc253429288 "_Toc253429288")**  
+[Compatibilidade com CSS aprimorada](#0.2__Toc253429289 "_Toc253429289")  
+[Trechos de código HTML e JavaScript](#0.2__Toc253429290 "_Toc253429290")  
+[Aprimoramentos de IntelliSense do JavaScript](#0.2__Toc253429291 "_Toc253429291")
 
-**[Implantação de aplicativo Web com o Visual Studio 2010] (#0.2__Toc253429292 "_Toc253429292")**  
-[Web Packaging](#0.2__Toc253429293 "_Toc253429293")  
-[Web.config Transformation](#0.2__Toc253429294 "_Toc253429294")  
-[Implantação de banco de dados] (#0.2__Toc253429295 "_Toc253429295")  
-[Publicação com um clique para aplicativos Web] (#0.2__Toc253429296 "_Toc253429296")  
-[Resources](#0.2__Toc253429297 "_Toc253429297")
+**[Implantação de aplicativo Web com o Visual Studio 2010](#0.2__Toc253429292 "_Toc253429292")**  
+[Empacotamento da Web](#0.2__Toc253429293 "_Toc253429293")  
+[Transformação de Web. config](#0.2__Toc253429294 "_Toc253429294")  
+[Implantação de banco de dados](#0.2__Toc253429295 "_Toc253429295")  
+[Publicação com um clique para aplicativos Web](#0.2__Toc253429296 "_Toc253429296")  
+[Recursos](#0.2__Toc253429297 "_Toc253429297")
 
-**[Disclaimer](#0.2__Toc253429298 "_Toc253429298")**
+**[Enção](#0.2__Toc253429298 "_Toc253429298")**
 
 <a id="0.2__Toc224729018"></a><a id="0.2__Toc253429238"></a><a id="0.2__Toc243304612"></a>
 
@@ -100,7 +100,7 @@ O ASP.NET 4 introduz uma série de recursos que melhoram os principais serviços
 
 ### <a name="webconfig-file-refactoring"></a>Refatoração de arquivo Web. config
 
-O `Web.config` arquivo que contém a configuração de um aplicativo Web cresceu consideravelmente nas últimas versões do .NET Framework à medida que novos recursos foram adicionados, como AJAX, roteamento e integração com o IIS 7. Isso dificultou a configuração ou a inicialização de novos aplicativos Web sem uma ferramenta como o Visual Studio. No. o .NET Framework 4, os principais elementos de configuração foram movidos para `machine.config` o arquivo, e os aplicativos agora herdam essas configurações. Isso permite que `Web.config` o arquivo em ASP.NET 4 aplicativos seja vazio ou contenha apenas as seguintes linhas, que especificam para o Visual Studio qual versão do Framework o aplicativo está direcionando:
+O arquivo de `Web.config` que contém a configuração de um aplicativo Web cresceu consideravelmente nas últimas versões do .NET Framework à medida que novos recursos foram adicionados, como AJAX, roteamento e integração com o IIS 7. Isso dificultou a configuração ou a inicialização de novos aplicativos Web sem uma ferramenta como o Visual Studio. No. o .NET Framework 4, os principais elementos de configuração foram movidos para o arquivo de `machine.config`, e os aplicativos agora herdam essas configurações. Isso permite que o arquivo de `Web.config` nos aplicativos ASP.NET 4 seja vazio ou contenha apenas as linhas a seguir, que especificam para o Visual Studio qual versão do Framework o aplicativo está direcionando:
 
 [!code-xml[Main](overview/samples/sample1.xml)]
 
@@ -112,17 +112,17 @@ Desde o lançamento do ASP.NET 1,0, o cache de saída permitiu que os desenvolve
 
 O ASP.NET 4 adiciona um ponto de extensibilidade ao cache de saída que permite configurar um ou mais provedores de cache de saída personalizados. Provedores de cache de saída podem usar qualquer mecanismo de armazenamento para manter o conteúdo HTML. Isso possibilita criar provedores de cache de saída personalizados para diferentes mecanismos de persistência, que podem incluir discos locais ou remotos, armazenamento em nuvem e mecanismos de cache distribuído.
 
-Você cria um provedor de cache de saída personalizado como uma classe derivada do novo tipo *System. Web. Caching. OutputCacheProvider* . Em seguida, você pode configurar o provedor `Web.config` no arquivo usando a subseção novos *provedores* do elemento *OutputCache* , conforme mostrado no exemplo a seguir:
+Você cria um provedor de cache de saída personalizado como uma classe derivada do novo tipo *System. Web. Caching. OutputCacheProvider* . Em seguida, você pode configurar o provedor no arquivo `Web.config` usando a subseção novos *provedores* do elemento *OutputCache* , conforme mostrado no exemplo a seguir:
 
 [!code-xml[Main](overview/samples/sample2.xml)]
 
-Por padrão, no ASP.NET 4, todas as respostas HTTP, páginas renderizadas e controles usam o cache de saída na memória, conforme mostrado no exemplo anterior, em que o atributo defaultfornecetor está definido como AspNetInternalProvider. Você pode alterar o provedor de cache de saída padrão usado para um aplicativo Web especificando um nome de provedor diferentepara defaultProvider.
+Por padrão, no ASP.NET 4, todas as respostas HTTP, páginas renderizadas e controles usam o cache de saída na memória, conforme mostrado no exemplo anterior, em que o atributo *Defaultfornecetor* está definido como AspNetInternalProvider. Você pode alterar o provedor de cache de saída padrão usado para um aplicativo Web especificando um nome de provedor diferente para *DefaultProvider*.
 
 Além disso, você pode selecionar diferentes provedores de cache de saída por controle e por solicitação. A maneira mais fácil de escolher um provedor de cache de saída diferente para diferentes controles de usuário da Web é fazer isso de forma declarativa usando o novo atributo *ProviderName* em uma diretiva de controle, conforme mostrado no exemplo a seguir:
 
 [!code-aspx[Main](overview/samples/sample3.aspx)]
 
-A especificação de um provedor de cache de saída diferente para uma solicitação HTTP requer um pouco mais de trabalho. Em vez de especificar declarativamente o provedor, você substitui o novo método *GetOuputCacheProviderName* no `Global.asax` arquivo para especificar programaticamente qual provedor usar para uma solicitação específica. O exemplo a seguir mostra como fazer isso.
+A especificação de um provedor de cache de saída diferente para uma solicitação HTTP requer um pouco mais de trabalho. Em vez de especificar declarativamente o provedor, você substitui o novo método *GetOuputCacheProviderName* no arquivo `Global.asax` para especificar programaticamente qual provedor usar para uma solicitação específica. O exemplo a seguir mostra como fazer isso.
 
 [!code-csharp[Main](overview/samples/sample4.cs)]
 
@@ -132,7 +132,7 @@ Com a adição da extensibilidade do provedor de cache de saída ao ASP.NET 4, a
 
 ### <a name="auto-start-web-applications"></a>Aplicativos Web de início automático
 
-Alguns aplicativos Web precisam carregar grandes quantidades de dados ou executar um processamento de inicialização caro antes de atender à primeira solicitação. Em versões anteriores do ASP.net, para essas situações, era necessário planejar abordagens personalizadas para "acordar" um aplicativo ASP.net e, em seguida, executar o código de inicialização durante o método de `Global.asax` *carregamento do aplicativo\_* no arquivo.
+Alguns aplicativos Web precisam carregar grandes quantidades de dados ou executar um processamento de inicialização caro antes de atender à primeira solicitação. Em versões anteriores do ASP.NET, para essas situações, era necessário planejar abordagens personalizadas para "acordar" um aplicativo ASP.NET e, em seguida, executar o código de inicialização durante o método de *carregamento do aplicativo\_* no arquivo de `Global.asax`.
 
 Um novo recurso de escalabilidade denominado *início automático* que endereça diretamente esse cenário está disponível quando o ASP.NET 4 é executado no IIS 7,5 no Windows Server 2008 R2. O recurso de início automático fornece uma abordagem controlada para iniciar um pool de aplicativos, inicializar um aplicativo ASP.NET e, em seguida, aceitar solicitações HTTP.
 
@@ -144,15 +144,15 @@ Um novo recurso de escalabilidade denominado *início automático* que endereça
 > 
 > Para obter mais informações, consulte [aquecimento do aplicativo](https://www.iis.net/extensions/applicationwarmup%20on%20the%20IIS.net) no site da IIS.net. Para obter instruções que ilustram como usar o recurso de aquecimento, consulte [introdução com o módulo de aquecimento do aplicativo IIS 7,5](https://www.iis.net/learn/manage) no site do IIS.net.
 
-Para usar o recurso de início automático, um administrador do IIS define um pool de aplicativos no IIS 7,5 para ser iniciado automaticamente usando a seguinte configuração no `applicationHost.config` arquivo:
+Para usar o recurso de início automático, um administrador do IIS define um pool de aplicativos no IIS 7,5 para ser iniciado automaticamente usando a seguinte configuração no arquivo de `applicationHost.config`:
 
 [!code-xml[Main](overview/samples/sample5.xml)]
 
-Como um único pool de aplicativos pode conter vários aplicativos, você especifica que aplicativos individuais serão iniciados automaticamente usando a seguinte configuração no `applicationHost.config` arquivo:
+Como um único pool de aplicativos pode conter vários aplicativos, você especifica que aplicativos individuais serão iniciados automaticamente usando a seguinte configuração no arquivo de `applicationHost.config`:
 
 [!code-xml[Main](overview/samples/sample6.xml)]
 
-Quando um servidor IIS 7,5 é iniciado por frio ou quando um pool de aplicativos individual é reciclado, o IIS 7,5 usa as `applicationHost.config` informações no arquivo para determinar quais aplicativos Web precisam ser iniciados automaticamente. Para cada aplicativo marcado para inicialização automática, o IIS 7.5 envia uma solicitação para ASP.NET 4 para iniciar o aplicativo em um estado durante o qual o aplicativo temporariamente não aceita solicitações HTTP. Quando está nesse estado, ASP.NET instancia o tipo definido pelo atributo *serviceAutoStartProvider* (como mostrado no exemplo anterior) e chama seu ponto de entrada público.
+Quando um servidor IIS 7,5 é iniciado por frio ou quando um pool de aplicativos individual é reciclado, o IIS 7,5 usa as informações no arquivo `applicationHost.config` para determinar quais aplicativos Web precisam ser iniciados automaticamente. Para cada aplicativo marcado para inicialização automática, o IIS 7.5 envia uma solicitação para ASP.NET 4 para iniciar o aplicativo em um estado durante o qual o aplicativo temporariamente não aceita solicitações HTTP. Quando está nesse estado, ASP.NET instancia o tipo definido pelo atributo *serviceAutoStartProvider* (como mostrado no exemplo anterior) e chama seu ponto de entrada público.
 
 Você cria um tipo de início automático gerenciado com o ponto de entrada necessário implementando a interface *IProcessHostPreloadClient* , conforme mostrado no exemplo a seguir:
 
@@ -166,7 +166,7 @@ Com a adição de início automático ao IIS 0,5 e ASP.NET 4, agora você tem um
 
 ### <a name="permanently-redirecting-a-page"></a>Redirecionando permanentemente uma página
 
-É uma prática comum em aplicativos Web mover páginas e outros conteúdos ao longo do tempo, o que pode levar a uma acumulação de links obsoletos nos mecanismos de pesquisa. No ASP.NET, os desenvolvedores costumavam lidar com solicitações para URLs antigas usando o método *Response. reredirect* para encaminhar uma solicitação para a nova URL. No entanto , o método de redirecionamento emite uma resposta HTTP 302 encontrada (redirecionamento temporário), o que resulta em uma viagem de ida e volta http extra quando os usuários tentam acessar as URLs antigas.
+É uma prática comum em aplicativos Web mover páginas e outros conteúdos ao longo do tempo, o que pode levar a uma acumulação de links obsoletos nos mecanismos de pesquisa. No ASP.NET, os desenvolvedores costumavam lidar com solicitações para URLs antigas usando o método *Response. reredirect* para encaminhar uma solicitação para a nova URL. No entanto, o método de *redirecionamento* emite uma resposta HTTP 302 encontrada (redirecionamento temporário), o que resulta em uma viagem de ida e volta http extra quando os usuários tentam acessar as URLs antigas.
 
 O ASP.NET 4 adiciona um novo método auxiliar *RedirectPermanent* que torna mais fácil emitir respostas HTTP 301 movidas permanentemente, como no exemplo a seguir:
 
@@ -184,7 +184,7 @@ O ASP.NET 4 introduz uma nova opção de compactação para os dois tipos de pro
 
 [!code-xml[Main](overview/samples/sample9.xml)]
 
-Com a adição simples do novo atributo ao `Web.config` arquivo, os aplicativos com ciclos de CPU sobressalentes em servidores Web podem obter reduções substanciais no tamanho dos dados serializados de estado da sessão.
+Com a adição simples do novo atributo ao arquivo de `Web.config`, os aplicativos com ciclos de CPU sobressalentes em servidores Web podem obter reduções substanciais no tamanho dos dados serializados de estado da sessão.
 
 <a id="0.2__Toc253429244"></a><a id="0.2__Toc243304618"></a>
 
@@ -200,10 +200,10 @@ O ASP.NET 4 também permite que você configure os caracteres que são usados pe
 
 [!code-xml[Main](overview/samples/sample11.xml)]
 
-Por padrão, o atributo *RequestPathInvalidCharacters* define oito caracteres como inválidos. (Na cadeia de caracteres atribuída a *RequestPathInvalidCharacters* por padrão, os caracteres menor que (&lt;), maior que (&gt;) e e comercial (&amp;) são codificados, pois o `Web.config` arquivo é um arquivo XML.) Você pode personalizar o conjunto de caracteres inválidos conforme necessário.
+Por padrão, o atributo *RequestPathInvalidCharacters* define oito caracteres como inválidos. (Na cadeia de caracteres atribuída a *RequestPathInvalidCharacters* por padrão, os caracteres menor que (&lt;), maior que (&gt;) e e comercial (&amp;) são codificados, pois o arquivo de `Web.config` é um arquivo XML.) Você pode personalizar o conjunto de caracteres inválidos conforme necessário.
 
 > [!NOTE]
-> Observação ASP.NET 4 sempre rejeita caminhos de URL que contêm caracteres no intervalo ASCII de 0x00 a 0x1F, pois eles são caracteres de URL inválidos, conforme definido no RFC 2396 da[http://www.ietf.org/rfc/rfc2396.txt](http://www.ietf.org/rfc/rfc2396.txt)IETF (). Em versões do Windows Server que executam o IIS 6 ou superior, o driver de dispositivo do protocolo http. sys rejeita automaticamente as URLs com esses caracteres.
+> Observação ASP.NET 4 sempre rejeita caminhos de URL que contêm caracteres no intervalo ASCII de 0x00 a 0x1F, pois eles são caracteres de URL inválidos, conforme definido no RFC 2396 da IETF ([http://www.ietf.org/rfc/rfc2396.txt](http://www.ietf.org/rfc/rfc2396.txt)). Em versões do Windows Server que executam o IIS 6 ou superior, o driver de dispositivo do protocolo http. sys rejeita automaticamente as URLs com esses caracteres.
 
 <a id="0.2__Toc253429245"></a><a id="0.2__Toc243304619"></a>
 
@@ -211,7 +211,7 @@ Por padrão, o atributo *RequestPathInvalidCharacters* define oito caracteres co
 
 A validação de solicitação ASP.NET pesquisa dados de solicitação HTTP de entrada para cadeias de caracteres que são comumente usadas em ataques XSS (script entre sites). Se forem encontradas possíveis cadeias de erro de XSS, a validação da solicitação sinalizará a cadeia de caracteres suspeita e retornará um erro. A validação de solicitação interna retorna um erro somente quando encontra as cadeias de caracteres mais comuns usadas em ataques XSS. As tentativas anteriores de tornar a validação de XSS mais agressiva resultaram em muitos falsos positivos. No entanto, os clientes podem querer uma validação de solicitação mais agressiva ou, por outro lado, talvez queiram relaxar intencionalmente as verificações de XSS para páginas específicas ou para tipos específicos de solicitações.
 
-No ASP.NET 4, o recurso de validação de solicitação foi tornado extensível para que você possa usar a lógica de validação de solicitação personalizada. Para estender a validação de solicitação, você cria uma classe que deriva do novo tipo *System. Web. util. RequestValidator* e configura o aplicativo (na `Web.config` seção *httpRuntime* do arquivo) para usar o tipo personalizado. O exemplo a seguir mostra como configurar uma classe de validação de solicitação personalizada:
+No ASP.NET 4, o recurso de validação de solicitação foi tornado extensível para que você possa usar a lógica de validação de solicitação personalizada. Para estender a validação de solicitação, você cria uma classe que deriva do novo tipo *System. Web. util. RequestValidator* e configura o aplicativo (na seção *httpRuntime* do arquivo `Web.config`) para usar o tipo personalizado. O exemplo a seguir mostra como configurar uma classe de validação de solicitação personalizada:
 
 [!code-xml[Main](overview/samples/sample12.xml)]
 
@@ -225,16 +225,16 @@ Para casos em que você não deseja inspecionar uma parte dos dados HTTP de entr
 
 ### <a name="object-caching-and-object-caching-extensibility"></a>Cache de objetos e extensibilidade de objetos de cache
 
-Desde sua primeira versão, o ASP.NET incluiu um cache de objeto na memória poderoso (*System. Web. Caching. cache*). A implementação do cache foi tão popular que foi usada em aplicativos que não são da Web. No entanto, é estranho que um aplicativo Windows Forms ou WPF inclua uma referência a `System.Web.dll` apenas para poder usar o cache de objeto ASP.net.
+Desde sua primeira versão, o ASP.NET incluiu um cache de objeto na memória poderoso (*System. Web. Caching. cache*). A implementação do cache foi tão popular que foi usada em aplicativos que não são da Web. No entanto, é estranho que um aplicativo Windows Forms ou WPF inclua uma referência a `System.Web.dll` apenas para poder usar o cache de objetos ASP.NET.
 
-Para disponibilizar o Caching para todos os aplicativos, o .NET Framework 4 introduz um novo assembly, um novo namespace, alguns tipos base e uma implementação de cache concreto. O novo `System.Runtime.Caching.dll` assembly contém uma nova API de cache no namespace *System. Runtime. Caching* . O namespace contém dois conjuntos principais de classes:
+Para disponibilizar o Caching para todos os aplicativos, o .NET Framework 4 introduz um novo assembly, um novo namespace, alguns tipos base e uma implementação de cache concreto. O novo assembly `System.Runtime.Caching.dll` contém uma nova API de cache no namespace *System. Runtime. Caching* . O namespace contém dois conjuntos principais de classes:
 
 - Tipos abstratos que fornecem a base para a criação de qualquer tipo de implementação de cache personalizado.
 - Uma implementação concreta do cache de objetos na memória (a classe *System. Runtime. Caching. MemoryCache* ).
 
 A nova classe *MemoryCache* é modelada com mais detalhes no cache ASP.net e compartilha grande parte da lógica do mecanismo de cache interno com o ASP.net. Embora as APIs de cache público em *System. Runtime. Caching* tenham sido atualizadas para dar suporte ao desenvolvimento de caches personalizados, se você tiver usado o objeto de *cache* ASP.net, encontrará conceitos familiares nas novas APIs.
 
-Uma discussão detalhada da nova classe *MemoryCache* e das APIs base de suporte exigiria um documento inteiro. No entanto, o exemplo a seguir lhe dá uma ideia de como funciona a nova API de cache. O exemplo foi escrito para um aplicativo Windows Forms, sem nenhuma dependência `System.Web.dll`.
+Uma discussão detalhada da nova classe *MemoryCache* e das APIs base de suporte exigiria um documento inteiro. No entanto, o exemplo a seguir lhe dá uma ideia de como funciona a nova API de cache. O exemplo foi escrito para um aplicativo Windows Forms, sem nenhuma dependência de `System.Web.dll`.
 
 [!code-csharp[Main](overview/samples/sample14.cs)]
 
@@ -249,7 +249,7 @@ No ASP.NET 4, você pode criar rotinas de codificação personalizadas para as s
 - Codificação de atributo HTML.
 - Codificando cabeçalhos HTTP de saída.
 
-Você pode criar um codificador personalizado derivando do novo tipo *System. Web. util. HttpEncoder* e, em seguida, configurando ASP.net para usar o tipo personalizado na `Web.config` seção httpRuntime do arquivo, conforme mostrado no exemplo a seguir:
+Você pode criar um codificador personalizado derivando do novo tipo *System. Web. util. HttpEncoder* e, em seguida, configurando ASP.net para usar o tipo personalizado na seção *httpRuntime* do arquivo `Web.config`, conforme mostrado no exemplo a seguir:
 
 [!code-xml[Main](overview/samples/sample15.xml)]
 
@@ -261,12 +261,12 @@ Depois que um codificador personalizado tiver sido configurado, o ASP.NET chamar
 
 Para aumentar o número de sites da Web que podem ser hospedados em um único servidor, muitos hosters executam vários aplicativos ASP.NET em um único processo de trabalho. No entanto, se vários aplicativos usarem um único processo de trabalho compartilhado, será difícil para os administradores de servidor identificarem um aplicativo individual que está enfrentando problemas.
 
-O ASP.NET 4 aproveita a nova funcionalidade de monitoramento de recursos introduzida pelo CLR. Para habilitar essa funcionalidade, você pode adicionar o seguinte trecho de configuração XML ao `aspnet.config` arquivo de configuração.
+O ASP.NET 4 aproveita a nova funcionalidade de monitoramento de recursos introduzida pelo CLR. Para habilitar essa funcionalidade, você pode adicionar o seguinte trecho de configuração XML ao arquivo de configuração `aspnet.config`.
 
 [!code-xml[Main](overview/samples/sample16.xml)]
 
 > [!NOTE]
-> Observe que `aspnet.config` o arquivo está no diretório em que o .NET Framework está instalado. Não é o `Web.config` arquivo.
+> Observe que o arquivo de `aspnet.config` está no diretório em que o .NET Framework está instalado. Não é o arquivo `Web.config`.
 
 Quando o recurso *appDomainResourceMonitoring* foi habilitado, dois novos contadores de desempenho estão disponíveis na categoria de desempenho "aplicativos ASP.net": *% tempo de processador gerenciado* e *memória gerenciada usada*. Ambos os contadores de desempenho usam o novo recurso de gerenciamento de recursos de domínio do aplicativo CLR para acompanhar o tempo estimado de CPU e a utilização de memória gerenciada de aplicativos ASP.NET individuais. Como resultado, com o ASP.NET 4, os administradores agora têm uma visão mais granular do consumo de recursos de aplicativos individuais em execução em um único processo de trabalho.
 
@@ -274,18 +274,18 @@ Quando o recurso *appDomainResourceMonitoring* foi habilitado, dois novos contad
 
 ### <a name="multi-targeting"></a>Multiplataforma
 
-Você pode criar um aplicativo que se destina a uma versão específica do .NET Framework. No ASP.NET 4, um novo atributo no elemento *Compilation* do `Web.config` arquivo permite que você direcione o .NET Framework 4 e posterior. Se você destinar explicitamente o .NET Framework 4 e se incluir elementos opcionais no `Web.config` arquivo, como as entradas para *System. CodeDom*, esses elementos deverão estar corretos para o .NET Framework 4. (Se você não tiver como alvo explicitamente o .NET Framework 4, a estrutura de destino será inferida da falta de uma entrada no `Web.config` arquivo.)
+Você pode criar um aplicativo que se destina a uma versão específica do .NET Framework. No ASP.NET 4, um novo atributo no elemento *Compilation* do arquivo `Web.config` permite que você direcione o .NET Framework 4 e posterior. Se você destinar explicitamente o .NET Framework 4, e se você incluir elementos opcionais no arquivo de `Web.config`, como as entradas para *System. CodeDom*, esses elementos devem estar corretos para o .NET Framework 4. (Se você não tiver como alvo explicitamente o .NET Framework 4, a estrutura de destino será inferida da falta de uma entrada no arquivo de `Web.config`.)
 
-O exemplo a seguir mostra o uso do atributo *TargetFramework* no `Web.config` elemento *Compilation* do arquivo.
+O exemplo a seguir mostra o uso do atributo *TargetFramework* no elemento *compilation* do arquivo `Web.config`.
 
 [!code-xml[Main](overview/samples/sample17.xml)]
 
 Observe o seguinte sobre como direcionar uma versão específica do .NET Framework:
 
-- Em um pool de aplicativos .NET Framework 4, o sistema de compilação ASP.net assume o .NET Framework 4 como um destino `Web.config` se o arquivo não incluir o atributo *TargetFramework* ou se `Web.config` o arquivo estiver ausente. (Talvez você precise fazer alterações de codificação em seu aplicativo para que ele seja executado no .NET Framework 4.)
-- Se você incluir o atributo *TargetFramework* e se o elemento *System. CodeDom* for `Web.config` definido no arquivo, esse arquivo deverá conter as entradas corretas para o .NET Framework 4.
-- Se você estiver usando o comando do *compilador ASPNET\_* para pré-compilar seu aplicativo (como em um ambiente de compilação), deverá usar a versão correta do comando *do\_compilador ASPNET* para a estrutura de destino. Use o compilador fornecido com o .NET Framework 2,0 (%WINDIR%\Microsoft.NET\Framework\v2.0.50727) para compilar para o .NET Framework 3,5 e versões anteriores. Use o compilador fornecido com o .NET Framework 4 para compilar aplicativos criados usando essa estrutura ou usando versões posteriores.
-- Em tempo de execução, o compilador usa os assemblies de estrutura mais recentes que estão instalados no computador (e, portanto, no GAC). Se uma atualização for feita posteriormente na estrutura (por exemplo, uma versão hipotética 4,1 está instalada), você poderá usar os recursos na versão mais recente do Framework, embora o atributo *TargetFramework* tenha como alvo uma versão inferior (como 4,0). (No entanto, em tempo de design no Visual Studio 2010 ou quando você usa o comando do *compilador ASPNET\_* , o uso de recursos mais recentes da estrutura causará erros de compilador).
+- Em um pool de aplicativos .NET Framework 4, o sistema de compilação ASP.NET assume o .NET Framework 4 como um destino se o arquivo de `Web.config` não incluir o atributo *TargetFramework* ou se o arquivo `Web.config` estiver ausente. (Talvez você precise fazer alterações de codificação em seu aplicativo para que ele seja executado no .NET Framework 4.)
+- Se você incluir o atributo *TargetFramework* e se o elemento *System. CodeDom* for definido no arquivo `Web.config`, esse arquivo deverá conter as entradas corretas para o .NET Framework 4.
+- Se você estiver usando o comando *aspnet\_compilador* para pré-compilar seu aplicativo (como em um ambiente de compilação), deverá usar a versão correta do comando do *compilador do ASPNET\_* para a estrutura de destino. Use o compilador fornecido com o .NET Framework 2,0 (%WINDIR%\Microsoft.NET\Framework\v2.0.50727) para compilar para o .NET Framework 3,5 e versões anteriores. Use o compilador fornecido com o .NET Framework 4 para compilar aplicativos criados usando essa estrutura ou usando versões posteriores.
+- Em tempo de execução, o compilador usa os assemblies de estrutura mais recentes que estão instalados no computador (e, portanto, no GAC). Se uma atualização for feita posteriormente na estrutura (por exemplo, uma versão hipotética 4,1 está instalada), você poderá usar os recursos na versão mais recente do Framework, embora o atributo *TargetFramework* tenha como alvo uma versão inferior (como 4,0). (No entanto, em tempo de design no Visual Studio 2010 ou quando você usa o comando *aspnet\_Compiler* , usar os recursos mais recentes da estrutura causará erros de compilador).
 
 <a id="0.2__Toc224729023"></a><a id="0.2__Toc253429250"></a><a id="0.2__Toc243304624"></a>
 
@@ -311,7 +311,7 @@ Por exemplo, a página Web Forms a seguir ilustra como você pode usar o jQuery 
 
 ### <a name="content-delivery-network-support"></a>Suporte à rede de distribuição de conteúdo
 
-A CDN (rede de distribuição de conteúdo) do Microsoft Ajax permite que você adicione facilmente scripts ASP.NET AJAX e jQuery aos seus aplicativos Web. Por exemplo, você pode começar a usar a biblioteca jQuery simplesmente adicionando uma `<script>` marca à sua página que aponta para AJAX.Microsoft.com assim:
+A CDN (rede de distribuição de conteúdo) do Microsoft Ajax permite que você adicione facilmente scripts ASP.NET AJAX e jQuery aos seus aplicativos Web. Por exemplo, você pode começar a usar a biblioteca jQuery simplesmente adicionando uma marca `<script>` à sua página que aponta para Ajax.microsoft.com assim:
 
 [!code-html[Main](overview/samples/sample19.html)]
 
@@ -370,13 +370,13 @@ Web Forms tem sido um recurso fundamental no ASP.NET desde o lançamento do ASP.
 
 ### <a name="setting-meta-tags-with-the-pagemetakeywords-and-pagemetadescription-properties"></a>Definindo marcas meta com as propriedades Page. metapalavra-chave e Page. MetaDescription
 
-ASP.NET 4 adiciona duas propriedades à classe de *página* , *metapalavra-chave* e Metadescrição. Essas duas propriedades representam marcas *meta* correspondentes em sua página, conforme mostrado no exemplo a seguir:
+ASP.NET 4 adiciona duas propriedades à classe de *página* , *metapalavra-chave* e *Metadescrição*. Essas duas propriedades representam marcas *meta* correspondentes em sua página, conforme mostrado no exemplo a seguir:
 
 [!code-aspx[Main](overview/samples/sample23.aspx)]
 
 Essas duas propriedades funcionam da mesma forma que a propriedade *title* da página. Eles seguem estas regras:
 
-1. Se não houver marcas *meta* no elemento *Head* que correspondam aos nomes de propriedade (ou seja, nome = "palavras-chave" para *Page.* meta subpalavras e Name = "Description" para *Page. MetaDescription*, o que significa que essas propriedades não foram definidas ), as marcas *meta* serão adicionadas à página quando ela for renderizada.
+1. Se não houver marcas *meta* no elemento *Head* que correspondam aos nomes de propriedade (ou seja, Name = "keywords" para *Page. metapalavra-chave* e Name = "Description" para *Page. MetaDescription*, o que significa que essas propriedades não foram definidas), as marcas *meta* serão adicionadas à página quando ela for renderizada.
 2. Se já houver marcas *meta* com esses nomes, essas propriedades atuarão como métodos get e Set para o conteúdo das marcas existentes.
 
 Você pode definir essas propriedades em tempo de execução, o que permite obter o conteúdo de um banco de dados ou de outra fonte e que permite definir as marcas dinamicamente para descrever a finalidade de uma página específica.
@@ -387,7 +387,7 @@ Você também pode definir as propriedades de *palavras-chave* e *Descrição* n
 
 Isso substituirá o conteúdo da marca *meta* (se houver) já declarado na página.
 
-O conteúdo da marca *meta* de descrição é usado para melhorar as visualizações de listagem de pesquisa no Google. (Para obter detalhes, consulte [melhorar trechos de código com uma meta](http://googlewebmastercentral.blogspot.com/2007/09/improve-snippets-with-meta-description.html) de Metadescrição no blog do Google Webmaster Central.) O Google e o Windows Live Search não usam o conteúdo das palavras-chave para qualquer coisa, mas outros mecanismos de pesquisa podem. Para obter mais informações, consulte [dicas de palavras-chave de meta](http://www.searchengineguide.com/richard-ball/meta-keywords-a.php) no site do guia do mecanismo de pesquisa.
+O conteúdo da marca *meta* de descrição é usado para melhorar as visualizações de listagem de pesquisa no Google. (Para obter detalhes, consulte [melhorar trechos de código com uma meta de Metadescrição](https://googlewebmastercentral.blogspot.com/2007/09/improve-snippets-with-meta-description.html) no blog do Google Webmaster Central.) O Google e o Windows Live Search não usam o conteúdo das palavras-chave para qualquer coisa, mas outros mecanismos de pesquisa podem. Para obter mais informações, consulte [dicas de palavras-chave de meta](http://www.searchengineguide.com/richard-ball/meta-keywords-a.php) no site do guia do mecanismo de pesquisa.
 
 Essas novas propriedades são um recurso simples, mas elas o salvam da necessidade de adicioná-las manualmente ou de escrever seu próprio código para criar as marcas *meta* .
 
@@ -395,11 +395,11 @@ Essas novas propriedades são um recurso simples, mas elas o salvam da necessida
 
 ### <a name="enabling-view-state-for-individual-controls"></a>Habilitando o estado de exibição para controles individuais
 
-Por padrão, o estado de exibição é habilitado para a página, com o resultado de que cada controle na página potencialmente armazena o estado de exibição, mesmo que ele não seja necessário para o aplicativo. Os dados de estado de exibição são incluídos na marcação que uma página gera e aumenta a quantidade de tempo que leva para enviar uma página ao cliente e lançá-la de volta. Armazenar mais estado de exibição do que o necessário pode causar uma degradação significativa do desempenho. Em versões anteriores do ASP.NET, os desenvolvedores podiam desabilitar o estado de exibição de controles individuais para reduzir o tamanho da página, mas precisou fazê-lo explicitamente para controles individuais. No ASP.NET 4, os controles de servidor Web incluem uma propriedade ViewStateMode que permite desabilitar o estado de exibição por padrão e, em seguida, habilitá-lo somente para os controles que o exigem na página.
+Por padrão, o estado de exibição é habilitado para a página, com o resultado de que cada controle na página potencialmente armazena o estado de exibição, mesmo que ele não seja necessário para o aplicativo. Os dados de estado de exibição são incluídos na marcação que uma página gera e aumenta a quantidade de tempo que leva para enviar uma página ao cliente e lançá-la de volta. Armazenar mais estado de exibição do que o necessário pode causar uma degradação significativa do desempenho. Em versões anteriores do ASP.NET, os desenvolvedores podiam desabilitar o estado de exibição de controles individuais para reduzir o tamanho da página, mas precisou fazê-lo explicitamente para controles individuais. No ASP.NET 4, os controles de servidor Web incluem uma propriedade *ViewStateMode* que permite desabilitar o estado de exibição por padrão e, em seguida, habilitá-lo somente para os controles que o exigem na página.
 
-A Propriedade ViewStateMode usa uma enumeração que tem três valores: *Habilitado*, *desabilitado*e *herdado*. *Habilitado* habilita o estado de exibição para esse controle e para todos os controles filho definidos como *Inherit* ou que não têm nada definido. *Disabled desabilita* o estado de exibição e *Inherit* especifica que o controle usa a configuração *ViewStateMode* do controle pai.
+A propriedade *ViewStateMode* usa uma enumeração que tem três valores: *habilitado*, *desabilitado*e *herdado*. *Habilitado* habilita o estado de exibição para esse controle e para todos os controles filho definidos como *Inherit* ou que não têm nada definido. *Disabled desabilita* o estado de exibição e *Inherit* especifica que o controle usa a configuração *ViewStateMode* do controle pai.
 
-O exemplo a seguir mostra como a propriedade ViewStateMode funciona. A marcação e o código para os controles na página a seguir incluem valores para a propriedade ViewStateMode:
+O exemplo a seguir mostra como a propriedade *ViewStateMode* funciona. A marcação e o código para os controles na página a seguir incluem valores para a propriedade *ViewStateMode* :
 
 [!code-aspx[Main](overview/samples/sample25.aspx)]
 
@@ -407,23 +407,23 @@ Como você pode ver, o código desabilita o estado de exibição para o controle
 
 O efeito dessas configurações é que, quando a página é carregada pela primeira vez, a seguinte saída é exibida no navegador:
 
-Desabilitado`: [DynamicValue]`
+Desabilitado `: [DynamicValue]`
 
-Habilitado`[DynamicValue]`
+Habilitado:`[DynamicValue]`
 
 Depois de um postback, no entanto, a seguinte saída é exibida:
 
-Desabilitado`: [DeclaredValue]`
+Desabilitado `: [DeclaredValue]`
 
-Habilitado`[DynamicValue]`
+Habilitado:`[DynamicValue]`
 
-O controle Label1 (cujo valor de ViewStateMode está definidocomo desabilitado) não preserva o valor definido como no código. No entanto, o controle Label2 (cujo valor de ViewStateMode está definido como *habilitado*) preserva seu estado.
+O controle Label1 (cujo valor de *ViewStateMode* está definido como *desabilitado*) não preserva o valor definido como no código. No entanto, o controle Label2 (cujo valor de *ViewStateMode* está definido como *habilitado*) preserva seu estado.
 
 Você também pode definir *ViewStateMode* na diretiva *@ Page* , como no exemplo a seguir:
 
 [!code-aspx[Main](overview/samples/sample26.aspx)]
 
-A classe de *página* é apenas outro controle; Ele atua como o controle pai para todos os outros controles na página. O valor padrão de *ViewStateMode* é *habilitado* para instâncias da *página*. Como os controles padrãosão herdados, os controles herdarão o valor da propriedade *Enabled* , a menos que você defina *ViewStateMode* na página ou no nível de controle.
+A classe de *página* é apenas outro controle; Ele atua como o controle pai para todos os outros controles na página. O valor padrão de *ViewStateMode* é *habilitado* para instâncias da *página*. Como os controles padrão são *herdados*, os controles herdarão o valor da propriedade *Enabled* , a menos que você defina *ViewStateMode* na página ou no nível de controle.
 
 O valor da propriedade *ViewStateMode* determina se o estado de exibição será mantido somente se a propriedade *EnableViewState* estiver definida como *true*. Se a propriedade *EnableViewState* for definida como *false*, o estado de exibição não será mantido mesmo se *ViewStateMode* estiver definido como *habilitado*.
 
@@ -439,23 +439,23 @@ O objeto *HttpBrowserCapabilities* é controlado por um conjunto de arquivos de 
 
 A lista a seguir mostra novos arquivos de definição de navegador:
 
-- *blackberry.browser*
-- *chrome.browser*
-- *Default.browser*
-- *firefox.browser*
-- *gateway.browser*
-- *generic.browser*
-- *ie.browser*
-- *iemobile.browser*
-- *iphone.browser*
-- *opera.browser*
-- *safari.browser*
+- *Blackberry. browser*
+- *Chrome. browser*
+- *Padrão. navegador*
+- *Firefox. browser*
+- *Gateway. browser*
+- *genérico. navegador*
+- *navegador da IE*
+- *Iemobile. browser*
+- *iPhone. browser*
+- *Opera. browser*
+- *Safari. browser*
 
 #### <a name="using-browser-capabilities-providers"></a>Usando provedores de recursos de navegador
 
 No ASP.NET versão 3,5 Service Pack 1, você pode definir os recursos que um navegador tem das seguintes maneiras:
 
-- No nível do computador, você cria ou atualiza um `.browser` arquivo XML na seguinte pasta:
+- No nível do computador, você cria ou atualiza um arquivo XML `.browser` na seguinte pasta:
 
 - [!code-console[Main](overview/samples/sample27.cmd)]
 
@@ -463,13 +463,13 @@ No ASP.NET versão 3,5 Service Pack 1, você pode definir os recursos que um nav
 
 - [!code-console[Main](overview/samples/sample28.cmd)]
 
-- Para um aplicativo individual, você cria um `.browser` arquivo na pasta do `App_Browsers` aplicativo.
+- Para um aplicativo individual, você cria um arquivo de `.browser` na pasta `App_Browsers` do aplicativo.
 
-Essas abordagens exigem que você altere arquivos XML e, para alterações no nível do computador, você deve reiniciar o aplicativo depois de executar o\_processo ASPNET regbrowsers. exe.
+Essas abordagens exigem que você altere arquivos XML e, para alterações no nível do computador, você deve reiniciar o aplicativo depois de executar o processo ASPNET\_regbrowsers. exe.
 
 O ASP.NET 4 inclui um recurso chamado de *provedores de recursos de navegador*. Como o nome sugere, isso permite que você crie um provedor que, por sua vez, permite que você use seu próprio código para determinar os recursos do navegador.
 
-Na prática, os desenvolvedores geralmente não definem recursos de navegador personalizados. Os arquivos de navegador são difíceis de atualizar, o processo para atualizá-los é razoavelmente complicado, e `.browser` a sintaxe XML para arquivos pode ser complexa para uso e definição. O que tornaria esse processo muito mais fácil é se houvesse uma sintaxe de definição de navegador comum ou um banco de dados que contivesse definições de navegador atualizadas ou até mesmo um serviço Web para tal banco de dados. O novo recurso de provedores de recursos de navegador torna esses cenários possíveis e práticos para desenvolvedores de terceiros.
+Na prática, os desenvolvedores geralmente não definem recursos de navegador personalizados. Os arquivos de navegador são difíceis de atualizar, o processo para atualizá-los é razoavelmente complicado e a sintaxe XML para `.browser` arquivos pode ser complexa para usar e definir. O que tornaria esse processo muito mais fácil é se houvesse uma sintaxe de definição de navegador comum ou um banco de dados que contivesse definições de navegador atualizadas ou até mesmo um serviço Web para tal banco de dados. O novo recurso de provedores de recursos de navegador torna esses cenários possíveis e práticos para desenvolvedores de terceiros.
 
 Há duas abordagens principais para usar o novo recurso de provedor de recursos de navegador do ASP.NET 4: estendendo a funcionalidade de definição de funcionalidades de navegador ASP.NET ou substituindo-a totalmente. As seções a seguir descrevem primeiro como substituir a funcionalidade e como estendê-la.
 
@@ -484,7 +484,7 @@ Para substituir completamente a funcionalidade de definição de funcionalidades
     O código neste exemplo cria um novo objeto *HttpBrowserCapabilities* , especificando apenas o recurso chamado browser e definindo essa funcionalidade como MyCustomBrowser.
 2. Registre o provedor com o aplicativo. 
 
-    Para usar um provedor com um aplicativo, você deve adicionar o atributo do *provedor* à `Web.config` seção browserCaps nos arquivos ou. `Machine.config` (Você também pode definir os atributos do provedor em um elemento *Location* para diretórios específicos no aplicativo, como em uma pasta para um dispositivo móvel específico.) O exemplo a seguir mostra como definir o atributo do *provedor* em um arquivo de configuração:
+    Para usar um provedor com um aplicativo, você deve adicionar o atributo do *provedor* à seção *browserCaps* no `Web.config` ou `Machine.config` arquivos. (Você também pode definir os atributos do provedor em um elemento *Location* para diretórios específicos no aplicativo, como em uma pasta para um dispositivo móvel específico.) O exemplo a seguir mostra como definir o atributo do *provedor* em um arquivo de configuração:
 
     [!code-xml[Main](overview/samples/sample30.xml)]
 
@@ -492,7 +492,7 @@ Para substituir completamente a funcionalidade de definição de funcionalidades
 
     [!code-csharp[Main](overview/samples/sample31.cs)]
 
-    Esse código deve ser executado no evento de *início do aplicativo\_* do `Global.asax` arquivo. Qualquer alteração na classe *BrowserCapabilitiesProvider* deve ocorrer antes que qualquer código no aplicativo seja executado, a fim de garantir que o cache permaneça em um estado válido para o objeto *HttpCapabilitiesBase* resolvido.
+    Esse código deve ser executado no *\_* evento de início do aplicativo do arquivo de `Global.asax`. Qualquer alteração na classe *BrowserCapabilitiesProvider* deve ocorrer antes que qualquer código no aplicativo seja executado, a fim de garantir que o cache permaneça em um estado válido para o objeto *HttpCapabilitiesBase* resolvido.
 
 #### <a name="caching-the-httpbrowsercapabilities-object"></a>Armazenando em cache o objeto HttpBrowserCapabilities
 
@@ -513,7 +513,7 @@ A seção anterior descreveu como criar um novo objeto *HttpBrowserCapabilities*
 
     [!code-csharp[Main](overview/samples/sample33.cs)]
 
-    Esse código usa primeiro a funcionalidade de recursos do navegador ASP.NET para tentar identificar o navegador. No entanto, se nenhum navegador for identificado com base nas informações definidas na solicitação (ou seja, se a propriedade *browser* do objeto *HttpBrowserCapabilities* for a cadeia de caracteres "Unknown"), o código chamará o provedor personalizado ( MyBrowserCapabilitiesEvaluator) para identificar o navegador.
+    Esse código usa primeiro a funcionalidade de recursos do navegador ASP.NET para tentar identificar o navegador. No entanto, se nenhum navegador for identificado com base nas informações definidas na solicitação (ou seja, se a propriedade *browser* do objeto *HttpBrowserCapabilities* for a cadeia de caracteres "Unknown"), o código chamará o provedor personalizado (MyBrowserCapabilitiesEvaluator) para identificar o navegador.
 2. Registre o provedor com o aplicativo, conforme descrito no exemplo anterior.
 
 #### <a name="extending-browser-capabilities-functionality-by-adding-new-capabilities-to-existing-capabilities-definitions"></a>Estendendo a funcionalidade de recursos do navegador adicionando novos recursos às definições de recursos existentes
@@ -549,7 +549,7 @@ Usando o roteamento, você pode configurar o aplicativo para aceitar a seguinte 
 
 [!code-console[Main](overview/samples/sample37.cmd)]
 
-O roteamento foi disponibilizado a partir do ASP.NET 3,5 SP1. (Para obter um exemplo de como usar o roteamento no ASP.NET 3,5 SP1, consulte a entrada usando o título de [Roteamento com WebForms](http://haacked.com/archive/2008/03/11/using-routing-with-webforms.aspx "desta entrada.") no blog de Phil Haack.) No entanto, o ASP.NET 4 inclui alguns recursos que facilitam o uso do roteamento, incluindo o seguinte:
+O roteamento foi disponibilizado a partir do ASP.NET 3,5 SP1. (Para obter um exemplo de como usar o roteamento no ASP.NET 3,5 SP1, consulte a entrada [usando o roteamento com WebForms](http://haacked.com/archive/2008/03/11/using-routing-with-webforms.aspx "Título desta entrada.") no blog de Phil Haack.) No entanto, o ASP.NET 4 inclui alguns recursos que facilitam o uso do roteamento, incluindo o seguinte:
 
 - A classe *PageRouteHandler* , que é um manipulador http simples que você usa ao definir rotas. A classe passa dados para a página para a qual a solicitação é roteada.
 - As novas propriedades *HttpRequest. RequestContext* e *Page. RouteData* (que é um proxy para o objeto *HttpRequest. RequestContext. RouteData* ). Essas propriedades facilitam o acesso a informações passadas da rota.
@@ -572,15 +572,15 @@ O código no exemplo mapeia a rota para uma página física (na primeira rota, p
 
 O método *MapPageRoute* dá suporte às sobrecargas de método a seguir:
 
-- *MapPageRoute(string routeName, string routeUrl, string physicalFile, bool checkPhysicalUrlAccess)*
+- *MapPageRoute (cadeia de caracteres RouteName, Cadeia de caracteres routeUrl, String physicalfile, bool checkPhysicalUrlAccess)*
 - *MapPageRoute (cadeia de caracteres RouteName, Cadeia de caracteres routeUrl, String physicalfile, bool checkPhysicalUrlAccess, padrões de RouteValueDictionary)*
 - *MapPageRoute (cadeia de caracteres RouteName, Cadeia de caracteres routeUrl, Cadeia de caracteres physicalfile, bool checkPhysicalUrlAccess, padrões de RouteValueDictionary, restrições de RouteValueDictionary)*
 
-O parâmetro *checkPhysicalUrlAccess* especifica se a rota deve verificar as permissões de segurança para a página física que está sendo roteada (neste caso, Search. aspx) e as permissões na URL de entrada (nesse caso, Search/{SearchTerm}). Se o valor de *checkPhysicalUrlAccess* for *false*, somente as permissões da URL de entrada serão verificadas. Essas permissões são definidas no `Web.config` arquivo usando configurações como as seguintes:
+O parâmetro *checkPhysicalUrlAccess* especifica se a rota deve verificar as permissões de segurança para a página física que está sendo roteada (neste caso, Search. aspx) e as permissões na URL de entrada (nesse caso, Search/{SearchTerm}). Se o valor de *checkPhysicalUrlAccess* for *false*, somente as permissões da URL de entrada serão verificadas. Essas permissões são definidas no arquivo `Web.config` usando configurações como as seguintes:
 
 [!code-xml[Main](overview/samples/sample40.xml)]
 
-Na configuração de exemplo, o acesso é negado à página `search.aspx` física para todos os usuários, exceto aqueles que estão na função de administrador. Quando o parâmetro *checkPhysicalUrlAccess* é definido como *true* (que é seu valor padrão), somente usuários administradores têm permissão para acessar a URL/Search/{SearchTerm}, pois a página física Search. aspx é restrita aos usuários nessa função. Se *checkPhysicalUrlAccess* for definido como *false* e o site estiver configurado como mostrado no exemplo anterior, todos os usuários autenticados terão permissão para acessar a URL/Search/{SearchTerm}.
+Na configuração de exemplo, o acesso é negado à página física `search.aspx` para todos os usuários, exceto aqueles que estão na função de administrador. Quando o parâmetro *checkPhysicalUrlAccess* é definido como *true* (que é seu valor padrão), somente usuários administradores têm permissão para acessar a URL/Search/{SearchTerm}, pois a página física Search. aspx é restrita aos usuários nessa função. Se *checkPhysicalUrlAccess* for definido como *false* e o site estiver configurado como mostrado no exemplo anterior, todos os usuários autenticados terão permissão para acessar a URL/Search/{SearchTerm}.
 
 #### <a name="reading-routing-information-in-a-web-forms-page"></a>Lendo informações de roteamento em uma página de Web Forms
 
@@ -592,7 +592,7 @@ O código extrai o valor que foi passado para o parâmetro SearchTerm, conforme 
 
 [!code-console[Main](overview/samples/sample42.cmd)]
 
-Quando essa solicitação é feita, a palavra "Scott" seria renderizada na `search.aspx` página.
+Quando essa solicitação é feita, a palavra "Scott" seria renderizada na página `search.aspx`.
 
 #### <a name="accessing-routing-information-in-markup"></a>Acessando informações de roteamento na marcação
 
@@ -610,13 +610,13 @@ Com base na rota definida anteriormente, essa marcação gera a seguinte URL:
 
 O ASP.NET automaticamente funciona a rota correta (ou seja, gera a URL correta) com base nos parâmetros de entrada. Você também pode incluir um nome de rota na expressão, que permite especificar uma rota a ser usada.
 
-O exemplo a seguir mostra como usar a expressão RouteValue.
+O exemplo a seguir mostra como usar a expressão *RouteValue* .
 
 [!code-aspx[Main](overview/samples/sample45.aspx)]
 
 Quando a página que contém esse controle é executada, o valor "Scott" é exibido no rótulo.
 
-A expressão RouteValue torna simples o uso de dados de rota na marcação e evita que você precise trabalhar com a sintaxe de página mais complexa. RouteData ["x"] na marcação.
+A expressão *RouteValue* torna simples o uso de dados de rota na marcação e evita que você precise trabalhar com a sintaxe de página mais complexa. RouteData ["x"] na marcação.
 
 #### <a name="using-route-data-for-data-source-control-parameters"></a>Usando dados de rota para parâmetros de controle da fonte de dados
 
@@ -624,32 +624,32 @@ A classe *RouteParameter* permite especificar dados de rota como um valor de par
 
 [!code-aspx[Main](overview/samples/sample46.aspx)]
 
-Nesse caso, o valor do parâmetro de rota SearchTerm será usado para o @companyname parâmetro na instrução *Select* .
+Nesse caso, o valor do parâmetro de rota SearchTerm será usado para o parâmetro @companyname na instrução *Select* .
 
 <a id="0.2__Toc224729037"></a><a id="0.2__Toc253429261"></a><a id="0.2__Toc243304635"></a>
 
 ### <a name="setting-client-ids"></a>Definindo IDs de cliente
 
-A nova propriedade ClientIDMode aborda um problema de longa duração em ASP.net, ou seja, como os controles criam o atributo *ID* para os elementos que eles renderizam. Saber o atributo *ID* para elementos renderizados é importante se seu aplicativo incluir script de cliente que referencie esses elementos.
+A nova propriedade *ClientIDMode* aborda um problema de longa duração em ASP.net, ou seja, como os controles criam o atributo *ID* para os elementos que eles renderizam. Saber o atributo *ID* para elementos renderizados é importante se seu aplicativo incluir script de cliente que referencie esses elementos.
 
-O atributo de *ID* em HTML que é renderizado para controles de servidor Web é gerado com base na propriedade *ClientID* do controle. Até o ASP.NET 4, o algoritmo para gerar o atributo *ID* da propriedade *ClientID* foi concatenar o contêiner de nomenclatura (se houver) com a ID e, no caso de controles repetidos (como nos controles de dados), para adicionar um prefixo e uma sequência automática. Embora isso sempre tenha garantido que as IDs dos controles na página são exclusivas, o algoritmo resultou em IDs de controle que não eram previsíveis e, portanto, eram difíceis de fazer referência no script de cliente.
+O atributo de *ID* em HTML que é renderizado para controles de servidor Web é gerado com base na propriedade *ClientID* do controle. Até o ASP.NET 4, o algoritmo para gerar o atributo *ID* da propriedade *ClientID* foi concatenar o contêiner de nomenclatura (se houver) com a ID e, no caso de controles repetidos (como nos controles de dados), para adicionar um prefixo e um número sequencial. Embora isso sempre tenha garantido que as IDs dos controles na página são exclusivas, o algoritmo resultou em IDs de controle que não eram previsíveis e, portanto, eram difíceis de fazer referência no script de cliente.
 
-A nova propriedade ClientIDMode permite especificar mais precisamente como a ID do cliente é gerada para controles. Você pode definir a propriedade ClientIDMode para qualquer controle, incluindo para a página. As configurações possíveis são as seguintes:
+A nova propriedade *ClientIDMode* permite especificar mais precisamente como a ID do cliente é gerada para controles. Você pode definir a propriedade *ClientIDMode* para qualquer controle, incluindo para a página. As configurações possíveis são as seguintes:
 
 - *AutoID* – isso é equivalente ao algoritmo para gerar valores de propriedade *ClientID* que foram usados em versões anteriores do ASP.net.
-- *Estático* – isso especifica que o valor *ClientID* será o mesmo que a ID sem concatenar as IDs dos contêineres de nomenclatura pai. Isso pode ser útil em controles de usuário da Web. Como um controle de usuário da Web pode ser localizado em páginas diferentes e em controles de contêiner diferentes, pode ser difícil escrever script de cliente para controles que usam o algoritmo AutoID, pois não é possível prever quais serão os valores de ID.
+- *Estático* – isso especifica que o valor *ClientID* será o mesmo que a ID sem concatenar as IDs dos contêineres de nomenclatura pai. Isso pode ser útil em controles de usuário da Web. Como um controle de usuário da Web pode ser localizado em páginas diferentes e em controles de contêiner diferentes, pode ser difícil escrever script de cliente para controles que usam o algoritmo *AutoID* , pois não é possível prever quais serão os valores de ID.
 - *Previsível* – essa opção é usada principalmente em controles de dados que usam modelos repetitivos. Ele concatena as propriedades de ID dos contêineres de nomenclatura do controle, mas os valores *ClientID* gerados não contêm cadeias de caracteres como "ctlxxx". Essa configuração funciona em conjunto com a propriedade *ClientIDRowSuffix* do controle. Você define a propriedade *ClientIDRowSuffix* como o nome de um campo de dados e o valor desse campo é usado como o sufixo para o valor *ClientID* gerado. Normalmente, você usaria a chave primária de um registro de dados como o valor *ClientIDRowSuffix* .
 - *Inherit* – essa configuração é o comportamento padrão para controles; Ele especifica que a geração de ID de um controle é igual à do seu pai.
 
-Você pode definir a propriedade ClientIDMode no nível da página. Isso define o valor de ClientIDMode padrão para todos os controles na página atual.
+Você pode definir a propriedade *ClientIDMode* no nível da página. Isso define o valor de *ClientIDMode* padrão para todos os controles na página atual.
 
-O valor de ClientIDMode padrão no nível de páginaé AutoID, e o valor de *ClientIDMode* padrão no nível de controle é *Inherit*. Como resultado, se você não definir essa propriedade em qualquer lugar no seu código, todos os controles serão padronizados para o algoritmo AutoID.
+O valor de *ClientIDMode* padrão no nível de página é *AutoID*, e o valor de *ClientIDMode* padrão no nível de controle é *Inherit*. Como resultado, se você não definir essa propriedade em qualquer lugar no seu código, todos os controles serão padronizados para o algoritmo *AutoID* .
 
 Você define o valor de nível de página na diretiva *@ Page* , conforme mostrado no exemplo a seguir:
 
 [!code-aspx[Main](overview/samples/sample47.aspx)]
 
-Você também pode definir o valor ClientIDMode no arquivo de configuração, seja no nível do computador (máquina) ou no nível do aplicativo. Isso define a configuração padrão ClientIDMode para todos os controles em todas as páginas no aplicativo. Se você definir o valor no nível do computador, ele define a configuração padrão de ClientIDMode para todos os sites nesse computador. O exemplo a seguir mostra a configuração ClientIDMode no arquivo de configuração:
+Você também pode definir o valor *ClientIDMode* no arquivo de configuração, seja no nível do computador (máquina) ou no nível do aplicativo. Isso define a configuração padrão *ClientIDMode* para todos os controles em todas as páginas no aplicativo. Se você definir o valor no nível do computador, ele define a configuração padrão de *ClientIDMode* para todos os sites nesse computador. O exemplo a seguir mostra a configuração *ClientIDMode* no arquivo de configuração:
 
 [!code-xml[Main](overview/samples/sample48.xml)]
 
@@ -657,7 +657,7 @@ Conforme observado anteriormente, o valor da propriedade *ClientID* é derivado 
 
 [!code-html[Main](overview/samples/sample49.html)]
 
-Embora o elemento *Input* mostrado na marcação (de um controle *TextBox* ) seja apenas dois contêineres de nomenclatura em profundidade na página (os controles *ContentPlaceHolder* aninhados), devido à maneira como as páginas mestras são processadas, o resultado final é um ID de controle semelhante ao seguinte:
+Embora o elemento *Input* mostrado na marcação (de um controle *TextBox* ) seja apenas dois contêineres de nomenclatura em profundidade na página (os controles *ContentPlaceHolder* aninhados), devido à maneira como as páginas mestras são processadas, o resultado final é uma ID de controle como a seguinte:
 
 [!code-console[Main](overview/samples/sample50.cmd)]
 
@@ -676,7 +676,7 @@ A configuração *estática* tem o efeito de redefinir a hierarquia de nomenclat
 
 #### <a name="creating-predictable-client-ids-in-data-bound-controls"></a>Criando IDs de cliente previsíveis em controles vinculados a dados
 
-Os valores *ClientID* que são gerados para controles em um controle de lista associada a dados pelo algoritmo herdado podem ser longos e não são realmente previsíveis. A funcionalidade ClientIDMode pode ajudá-lo a ter mais controle sobre como essas IDs são geradas.
+Os valores *ClientID* que são gerados para controles em um controle de lista associada a dados pelo algoritmo herdado podem ser longos e não são realmente previsíveis. A funcionalidade *ClientIDMode* pode ajudá-lo a ter mais controle sobre como essas IDs são geradas.
 
 A marcação no exemplo a seguir inclui um controle *ListView* :
 
@@ -737,7 +737,7 @@ As figuras a seguir mostram exemplos de gráficos financeiros produzidos pelo co
 
 <a id="0.2_graphic17"></a>![](overview/_static/image1.png)
 
-Figura 2: Exemplos de controle do gráfico ASP.NET
+Figura 2: exemplos de controle do gráfico ASP.NET
 
 Para obter mais exemplos de como usar o controle de gráfico ASP.NET, baixe o código de exemplo na página de [exemplos do ambiente de modelo do Microsoft Chart](https://go.microsoft.com/fwlink/?LinkId=128300) no site do MSDN. Você pode encontrar mais exemplos de conteúdo da Comunidade no [Fórum de controle do gráfico](https://go.microsoft.com/fwlink/?LinkId=128713).
 
@@ -757,7 +757,7 @@ A figura a seguir mostra um gráfico 3D com quatro séries do tipo de gráfico d
 
 <a id="0.2_graphic18"></a>![](overview/_static/image2.png)
 
-Figura 3: Gráfico de barras 3-D
+Figura 3:3-gráfico de barras D
 
 #### <a name="using-scale-breaks-and-logarithmic-scales"></a>Usando quebras de escala e escalas logarítmicas
 
@@ -769,7 +769,7 @@ A figura a seguir mostra o eixo Y com quebras de escala habilitadas.
 
 <a id="0.2_graphic19"></a>![](overview/_static/image3.png)
 
-Figura 4: Quebras de escala
+Figura 4: quebras de escala
 
 <a id="0.2__QueryExtender"></a><a id="0.2__Toc224729041"></a><a id="0.2__Toc253429264"></a><a id="0.2__Toc243304638"></a>
 
@@ -783,19 +783,19 @@ O controle *QueryExtender* dá suporte a uma variedade de opções de filtro. As
 
 #### <a name="search"></a>Pesquisar
 
-Para a opção de pesquisa, o controle *QueryExtender* executa uma pesquisa em campos especificados. No exemplo a seguir, o controle usa o texto que é inserido no controle TextBoxSearch e procura seu conteúdo nas `ProductName` colunas e `Supplier.CompanyName` nos dados retornados do controle *LinqDataSource* .
+Para a opção de pesquisa, o controle *QueryExtender* executa uma pesquisa em campos especificados. No exemplo a seguir, o controle usa o texto que é inserido no controle TextBoxSearch e procura seu conteúdo nas colunas `ProductName` e `Supplier.CompanyName` nos dados retornados do controle *LinqDataSource* .
 
 [!code-aspx[Main](overview/samples/sample61.aspx)]
 
 #### <a name="range"></a>Intervalo
 
-A opção de intervalo é semelhante à opção de pesquisa, mas especifica um par de valores para definir o intervalo. No exemplo a seguir, o controle *QueryExtender* pesquisa a `UnitPrice` coluna nos dados retornados do controle *LinqDataSource* . O intervalo é lido nos controles TextBoxFrom e TextBoxto na página.
+A opção de intervalo é semelhante à opção de pesquisa, mas especifica um par de valores para definir o intervalo. No exemplo a seguir, o controle *QueryExtender* pesquisa a coluna `UnitPrice` nos dados retornados do controle *LinqDataSource* . O intervalo é lido nos controles TextBoxFrom e TextBoxto na página.
 
 [!code-aspx[Main](overview/samples/sample62.aspx)]
 
 #### <a name="propertyexpression"></a>PropertyExpression
 
-A opção expressão de propriedade permite definir uma comparação com um valor de propriedade. Se a expressão for avaliada como *true*, os dados que estão sendo examinados serão retornados. No exemplo a seguir, o controle *QueryExtender* filtra os dados comparando os dados `Discontinued` na coluna para o valor do controle CheckBoxDiscontinued na página.
+A opção expressão de propriedade permite definir uma comparação com um valor de propriedade. Se a expressão for avaliada como *true*, os dados que estão sendo examinados serão retornados. No exemplo a seguir, o controle *QueryExtender* filtra os dados comparando os dados na coluna `Discontinued` para o valor do controle CheckBoxDiscontinued na página.
 
 [!code-aspx[Main](overview/samples/sample63.aspx)]
 
@@ -815,7 +815,7 @@ Esses exemplos mostram apenas uma expressão que está sendo usada no controle *
 
 ### <a name="html-encoded-code-expressions"></a>Expressões de código codificadas em HTML
 
-Alguns sites ASP.net (especialmente com o ASP.NET MVC) dependem muito do `<%` uso =  `expression %>` da sintaxe (geralmente chamada de "código Nuggets") para gravar texto na resposta. Quando você usa expressões de código, é fácil esquecer de codificar o texto em HTML, se o texto vier da entrada do usuário, ele poderá deixar as páginas abertas para um ataque XSS (script entre sites).
+Alguns sites ASP.NET (especialmente com o ASP.NET MVC) dependem muito do uso de `<%`= `expression %>` sintaxe (geralmente chamada de "código Nuggets") para gravar texto na resposta. Quando você usa expressões de código, é fácil esquecer de codificar o texto em HTML, se o texto vier da entrada do usuário, ele poderá deixar as páginas abertas para um ataque XSS (script entre sites).
 
 O ASP.NET 4 apresenta a seguinte nova sintaxe para expressões de código:
 
@@ -825,7 +825,7 @@ Essa sintaxe usa a codificação HTML por padrão ao gravar na resposta. Essa no
 
 [!code-aspx[Main](overview/samples/sample67.aspx)]
 
-Por exemplo, &lt;%: A solicitação ["userinput"]&gt; % executa a codificação HTML no valor da *solicitação ["userinput"]* .
+Por exemplo, &lt;%: solicitação ["userinput"]%&gt; executa codificação HTML no valor da *solicitação ["userinput"]* .
 
 O objetivo desse recurso é tornar possível substituir todas as instâncias da sintaxe antiga pela nova sintaxe, de modo que você não seja forçado a decidir em cada etapa qual delas usar. No entanto, há casos em que o texto que está sendo impresso é destinado a ser HTML ou já está codificado; nesse caso, isso pode levar a uma codificação dupla.
 
@@ -843,7 +843,7 @@ Da mesma forma, essa sintaxe não executa a codificação JavaScript, como quand
 
 ### <a name="project-template-changes"></a>Alterações de modelo de projeto
 
-Em versões anteriores do ASP.net, quando você usa o Visual Studio para criar um novo projeto de site da Web ou projeto de aplicativo Web, os projetos resultantes contêm apenas uma página Default `Web.config` . aspx, um `App_Data` arquivo padrão e a pasta, conforme mostrado no seguinte ilustra
+Em versões anteriores do ASP.NET, quando você usa o Visual Studio para criar um novo projeto de site da Web ou projeto de aplicativo Web, os projetos resultantes contêm apenas uma página default. aspx, um arquivo de `Web.config` padrão e a pasta `App_Data`, conforme mostrado na ilustração a seguir:
 
 <a id="0.2_graphic1A"></a>![](overview/_static/image4.png)
 
@@ -865,7 +865,7 @@ Quando você cria um aplicativo Web ASP.NET vazio, o Visual Studio cria o seguin
 
 <a id="0.2_graphic1D"></a>![](overview/_static/image9.png)
 
-Isso é semelhante ao layout do site da Web vazio de versões anteriores do ASP.NET, com uma exceção. No Visual Studio 2010, o aplicativo Web vazio e os projetos de site vazio contêm o `Web.config` seguinte arquivo mínimo que contém informações usadas pelo Visual Studio para identificar a estrutura de destino do projeto:
+Isso é semelhante ao layout do site da Web vazio de versões anteriores do ASP.NET, com uma exceção. No Visual Studio 2010, os projetos de aplicativo Web vazio e de site vazio contêm o seguinte arquivo mínimo de `Web.config` que contém informações usadas pelo Visual Studio para identificar a estrutura de destino do projeto:
 
 <a id="0.2_graphic1E"></a>![](overview/_static/image10.png)
 
@@ -877,13 +877,13 @@ Os outros dois novos modelos de projeto que são fornecidos com o Visual Studio 
 
 - <a id="0.2_graphic1F"></a>![](overview/_static/image11.png)
 
-O projeto inclui vários arquivos que não foram criados em versões anteriores. Além disso, o novo projeto de aplicativo Web é configurado com a funcionalidade de associação básica, que permite que você comece rapidamente a proteger o acesso ao novo aplicativo. Devido a essa inclusão, o `Web.config` arquivo para o novo projeto inclui entradas que são usadas para configurar associação, funções e perfis. O exemplo a seguir mostra `Web.config` o arquivo para um novo projeto de aplicativo Web. (Nesse caso, *roleManager* está desabilitado.)
+O projeto inclui vários arquivos que não foram criados em versões anteriores. Além disso, o novo projeto de aplicativo Web é configurado com a funcionalidade de associação básica, que permite que você comece rapidamente a proteger o acesso ao novo aplicativo. Devido a essa inclusão, o arquivo de `Web.config` para o novo projeto inclui entradas que são usadas para configurar associação, funções e perfis. O exemplo a seguir mostra o arquivo `Web.config` para um novo projeto de aplicativo Web. (Nesse caso, *roleManager* está desabilitado.)
 
 [![](overview/_static/image13.png)](overview/_static/image12.png)
 
 ([Clique para exibir a imagem em tamanho normal](overview/_static/image14.png))
 
-O projeto também contém um segundo `Web.config` arquivo `Account` no diretório. O segundo arquivo de configuração fornece uma maneira de proteger o acesso à página ChangePassword. aspx para usuários não registrados. O exemplo a seguir mostra o conteúdo do segundo `Web.config` arquivo.
+O projeto também contém um segundo arquivo de `Web.config` no diretório `Account`. O segundo arquivo de configuração fornece uma maneira de proteger o acesso à página ChangePassword. aspx para usuários não registrados. O exemplo a seguir mostra o conteúdo do segundo arquivo de `Web.config`.
 
 ![](overview/_static/image15.png)
 
@@ -899,7 +899,7 @@ Por exemplo, imagine que, para um novo aplicativo Web, você queira alterar algu
 
 <a id="0.2_graphic23"></a>![](overview/_static/image19.png)
 
-Para adicionar a imagem à página, abra o `Site.Master` arquivo, localize onde o texto do aplicativo meu ASP.net está definido e substitua-o por um elemento *Image* cujo atributo *src* esteja definido como a nova imagem de logotipo, como no exemplo a seguir:
+Para adicionar a imagem à página, abra o arquivo de `Site.Master`, localize onde o texto do aplicativo meu ASP.NET está definido e substitua-o por um elemento *Image* cujo atributo *src* esteja definido como a nova imagem do logotipo, como no exemplo a seguir:
 
 [![](overview/_static/image21.png)](overview/_static/image20.png)
 
@@ -921,14 +921,14 @@ Uma das principais áreas de trabalho no ASP.NET 4 tem sido para ajudar a render
 
 #### <a name="compatibility-setting-for-rendering"></a>Configuração de compatibilidade para renderização
 
-Por padrão, quando um aplicativo ou site da Web tem como alvo o .NET Framework 4, o atributo *controlRenderingCompatibilityVersion* do elemento *pages* é definido como "4,0". Esse elemento é definido no arquivo de nível `Web.config` de máquina e, por padrão, se aplica a todos os aplicativos ASP.NET 4:
+Por padrão, quando um aplicativo ou site da Web tem como alvo o .NET Framework 4, o atributo *controlRenderingCompatibilityVersion* do elemento *pages* é definido como "4,0". Esse elemento é definido no arquivo de `Web.config` no nível da máquina e, por padrão, se aplica a todos os aplicativos do ASP.NET 4:
 
 [!code-xml[Main](overview/samples/sample69.xml)]
 
 O valor de *controlRenderingCompatibility* é uma cadeia de caracteres, que permite novas definições de versão em potencial em versões futuras. Na versão atual, os seguintes valores têm suporte para essa propriedade:
 
-- "3.5". Essa configuração indica renderização e marcação herdadas. A marcação renderizada por controles é de 100% compatível com versões anteriores e a configuração da propriedade *xhtmlConformance* é respeitada.
-- "4.0". Se a propriedade tiver essa configuração, os controles de servidor Web ASP.NET farão o seguinte:
+- "3,5". Essa configuração indica renderização e marcação herdadas. A marcação renderizada por controles é de 100% compatível com versões anteriores e a configuração da propriedade *xhtmlConformance* é respeitada.
+- "4,0". Se a propriedade tiver essa configuração, os controles de servidor Web ASP.NET farão o seguinte:
 - A propriedade *xhtmlConformance* é sempre tratada como "estrita". Como resultado, os controles renderizam a marcação de XHTML 1,0 estrita.
 - A desabilitação de controles que não são de entrada não renderiza mais estilos inválidos.
 - os elementos da *div* sobre os campos ocultos agora são estilizados para que não interfiram nas regras de CSS criadas pelo usuário.
@@ -966,7 +966,7 @@ O ASP.NET 2,0 e versões posteriores renderizam campos ocultos específicos do s
 
 [!code-html[Main](overview/samples/sample74.html)]
 
-Em seguida, você pode definir uma classe CSS que se aplica somente aos elementos ocultos que são gerados por ASP.net, como no exemplo a seguir:
+Em seguida, você pode definir uma classe CSS que se aplica somente aos elementos *ocultos* que são gerados por ASP.net, como no exemplo a seguir:
 
 [!code-css[Main](overview/samples/sample75.css)]
 
@@ -1038,7 +1038,7 @@ Como esses controles contêm listas de itens, para renderizar o HTML semanticame
 No ASP.NET 4, os controles *CheckBoxList* e *RadioButtonList* dão suporte aos seguintes novos valores para a propriedade *RepeatLayout* :
 
 - *Ordenadalist* – o conteúdo é renderizado como elementos *li* dentro de um elemento *ol* .
-- UnorderedList – o conteúdo é renderizado como elementos *li* em um elemento *UL* .
+- *UnorderedList* – o conteúdo é renderizado como elementos *li* em um elemento *UL* .
 
 O exemplo a seguir mostra como usar esses novos valores.
 
@@ -1049,7 +1049,7 @@ A marcação anterior gera o seguinte HTML:
 [!code-html[Main](overview/samples/sample84.html)]
 
 > [!NOTE]
-> Observação Se você definir *RepeatLayout* como *ordenadalist* ouUnorderedList, a propriedade *RepeatDirection* não poderá mais ser usada e gerará uma exceção em tempo de execução se a propriedade tiver sido definida dentro de sua marcação ou código. A propriedade não teria nenhum valor porque o layout visual desses controles é definido usando CSS em vez disso.
+> Observação Se você definir *RepeatLayout* como *ordenadalist* ou *UnorderedList*, a propriedade *RepeatDirection* não poderá mais ser usada e gerará uma exceção em tempo de execução se a propriedade tiver sido definida dentro de sua marcação ou código. A propriedade não teria nenhum valor porque o layout visual desses controles é definido usando CSS em vez disso.
 
 <a id="0.2__Toc253429272"></a><a id="0.2__Toc243304646"></a>
 
@@ -1061,11 +1061,11 @@ No ASP.NET 4, o controle agora renderiza HTML usando marcação semântica que c
 
 [!code-aspx[Main](overview/samples/sample85.aspx)]
 
-Quando a página é renderizada, o controle produz o seguinte HTML ( o código OnClick foi omitido para maior clareza):
+Quando a página é renderizada, o controle produz o seguinte HTML (o código *onclick* foi omitido para maior clareza):
 
 [!code-html[Main](overview/samples/sample86.html)]
 
-Além dos aprimoramentos de renderização, a navegação por teclado do menu foi aprimorada usando o gerenciamento de foco. Quando o controle de *menu* Obtém foco, você pode usar as teclas de direção para navegar pelos elementos. O controle *menu* agora também anexa funções e atributos de Aria (aplicativos avançados de Internet) acessíveis seg[o](http://www.w3.org/TR/wai-aria-practices/#menu "menu diretrizes do Aria")para melhorar a acessibilidade.
+Além dos aprimoramentos de renderização, a navegação por teclado do menu foi aprimorada usando o gerenciamento de foco. Quando o controle de *menu* Obtém foco, você pode usar as teclas de direção para navegar pelos elementos. O controle *menu* agora também anexa funções e atributos de Aria (aplicativos avançados de Internet) acessíveis e seg[o para uma](http://www.w3.org/TR/wai-aria-practices/#menu "Menu diretrizes do ARIA")acessibilidade aprimorada.
 
 Os estilos para o controle de menu são renderizados em um bloco style na parte superior da página, em vez de alinhar com os elementos HTML renderizados. Se você quiser assumir controle total sobre o estilo do controle, poderá definir a nova propriedade *IncludeStyleBlock* como *false*; nesse caso, o bloco de estilo não é emitido. Uma maneira de usar essa propriedade é usar o recurso de formatação automática no designer do Visual Studio para definir a aparência do menu. Em seguida, você pode executar a página, abrir a fonte da página e, em seguida, copiar o bloco de estilo processado para um arquivo CSS externo. No Visual Studio, desfaça o estilo e defina *IncludeStyleBlock* como *false*. O resultado é que a aparência do menu é definida usando estilos em uma folha de estilos externa.
 
@@ -1081,11 +1081,11 @@ O controle renderiza HTML semelhante ao seguinte:
 
 [!code-html[Main](overview/samples/sample88.html)]
 
-No ASP.NET 3,5 SP1, embora você possa alterar o conteúdo do modelo, ainda tem controle limitado sobre a saída do controle *Wizard* . No ASP.NET 4, você pode criar um modelo LayoutTemplate e inserir controles de *espaço reservado* (usando nomes reservados) para especificar como deseja que o *controle do assistente* seja renderizado. O exemplo a seguir mostra isso:
+No ASP.NET 3,5 SP1, embora você possa alterar o conteúdo do modelo, ainda tem controle limitado sobre a saída do controle *Wizard* . No ASP.NET 4, você pode criar um modelo *LayoutTemplate* e inserir controles de *espaço reservado* (usando nomes reservados) para especificar como deseja que o *controle do assistente* seja renderizado. O exemplo a seguir mostra isso:
 
 [!code-aspx[Main](overview/samples/sample89.aspx)]
 
-O exemplo contém os seguintes espaços reservados nomeados no elemento LayoutTemplate:
+O exemplo contém os seguintes espaços reservados nomeados no elemento *LayoutTemplate* :
 
 - *headerPlaceholder* – em tempo de execução, isso é substituído pelo conteúdo do elemento *HeaderTemplate* .
 - *sideBarPlaceholder* – em tempo de execução, isso é substituído pelo conteúdo do elemento *SideBarTemplate* .
@@ -1114,7 +1114,7 @@ As áreas permitem agrupar controladores e exibições em seções de um aplicat
 
 ### <a name="data-annotation-attribute-validation-support"></a>Suporte à validação de atributo de anotação de dados
 
-Os atributos Annotations permitem anexar lógica de validação a um modelo usando atributos de metadados. Os atributos Annotations foram introduzidos no ASP.net dados dinâmicos no ASP.net 3,5 SP1. Esses atributos foram integrados ao associador de modelo padrão e fornecem um meio controlado por metadados para validar a entrada do usuário.
+Os atributos *Annotations* permitem anexar lógica de validação a um modelo usando atributos de metadados. Os atributos *Annotations* foram introduzidos no ASP.net dados dinâmicos no ASP.net 3,5 SP1. Esses atributos foram integrados ao associador de modelo padrão e fornecem um meio controlado por metadados para validar a entrada do usuário.
 
 <a id="0.2__Toc253429277"></a>
 
@@ -1178,7 +1178,7 @@ O controle *DynamicDataManager* foi aprimorado para que você possa configurá-l
 
 [!code-aspx[Main](overview/samples/sample94.aspx)]
 
-Essa marcação habilita o comportamento de Dados Dinâmicos para o controle GridView1 que é referenciado na seção DataControls do controle *DynamicDataManager* .
+Essa marcação habilita o comportamento de Dados Dinâmicos para o controle GridView1 que é referenciado na seção *DataControls* do controle *DynamicDataManager* .
 
 <a id="0.2__Toc224729044"></a><a id="0.2__Toc253429281"></a><a id="0.2__Toc243304652"></a>
 
@@ -1190,7 +1190,7 @@ A lista a seguir mostra o novo layout do diretório do projeto que contém model
 
 [!code-console[Main](overview/samples/sample95.cmd)]
 
-O `EntityTemplate` diretório contém modelos de como exibir objetos de modelo de dados. Por padrão, os objetos são renderizados usando `Default.ascx` o modelo, que fornece marcação parecida com a marcação criada pelo controle *DetailsView* usado pelo dados dinâmicos no ASP.net 3,5 SP1. O exemplo a seguir mostra a marcação para `Default.ascx` o controle:
+O diretório `EntityTemplate` contém modelos de como exibir objetos de modelo de dados. Por padrão, os objetos são renderizados usando o modelo `Default.ascx`, que fornece marcação parecida com a marcação criada pelo controle *DetailsView* usado pelo Dados Dinâmicos no ASP.net 3,5 SP1. O exemplo a seguir mostra a marcação para o controle de `Default.ascx`:
 
 [!code-aspx[Main](overview/samples/sample96.aspx)]
 
@@ -1202,7 +1202,7 @@ O modelo pode conter a seguinte marcação:
 
 [!code-aspx[Main](overview/samples/sample98.aspx)]
 
-Os novos modelos de entidade são exibidos em uma página usando o novo controle *DynamicEntity* . Em tempo de execução, esse controle é substituído pelo conteúdo do modelo de entidade. A marcação a seguir mostra o controle *FormView* no `Detail.aspx` modelo de página que usa o modelo de entidade. Observe o elemento *DynamicEntity* na marcação.
+Os novos modelos de entidade são exibidos em uma página usando o novo controle *DynamicEntity* . Em tempo de execução, esse controle é substituído pelo conteúdo do modelo de entidade. A marcação a seguir mostra o controle *FormView* no modelo de página `Detail.aspx` que usa o modelo de entidade. Observe o elemento *DynamicEntity* na marcação.
 
 [!code-aspx[Main](overview/samples/sample99.aspx)]
 
@@ -1210,7 +1210,7 @@ Os novos modelos de entidade são exibidos em uma página usando o novo controle
 
 ### <a name="new-field-templates-for-urls-and-email-addresses"></a>Novos modelos de campo para URLs e endereços de email
 
-O ASP.NET 4 introduz dois novos modelos `EmailAddress.ascx` de campo internos e. `Url.ascx` Esses modelos são usados para campos marcados como *EmailAddress* ou *URL* com o atributo *DataType* . Para objetos *EmailAddress* , o campo é exibido como um hiperlink que é criado usando o protocolo *mailto:* . Quando os usuários clicam no link, ele abre o cliente de email do usuário e cria uma mensagem de esqueleto. Os objetos digitados como *URL* são exibidos como hiperlinks comuns.
+O ASP.NET 4 introduz dois novos modelos de campo internos, `EmailAddress.ascx` e `Url.ascx`. Esses modelos são usados para campos marcados como *EmailAddress* ou *URL* com o atributo *DataType* . Para objetos *EmailAddress* , o campo é exibido como um hiperlink que é criado usando o protocolo *mailto:* . Quando os usuários clicam no link, ele abre o cliente de email do usuário e cria uma mensagem de esqueleto. Os objetos digitados como *URL* são exibidos como hiperlinks comuns.
 
 O exemplo a seguir mostra como os campos seriam marcados.
 
@@ -1224,35 +1224,35 @@ Dados Dinâmicos usa o novo recurso de roteamento que foi adicionado no .NET Fra
 
 [!code-aspx[Main](overview/samples/sample101.aspx)]
 
-Essa marcação cria um link que aponta para a página de lista da `Products` tabela com base nas rotas definidas `Global.asax` no arquivo. O controle usa automaticamente o nome de tabela padrão no qual a página de Dados Dinâmicos se baseia.
+Essa marcação cria um link que aponta para a página de lista da tabela de `Products` com base em rotas que são definidas no arquivo `Global.asax`. O controle usa automaticamente o nome de tabela padrão no qual a página de Dados Dinâmicos se baseia.
 
 <a id="0.2__Toc224729047"></a><a id="0.2__Toc253429284"></a><a id="0.2__Toc243304655"></a>
 
 ### <a name="support-for-inheritance-in-the-data-model"></a>Suporte para herança no modelo de dados
 
-O Entity Framework e o LINQ to SQL dão suporte à herança em seus modelos de dados. Um exemplo disso pode ser um banco de dados que tem `InsurancePolicy` uma tabela. Ele também pode conter `CarPolicy` e `HousePolicy` tabelas que `InsurancePolicy` têm os mesmos campos de e, em seguida, adicionam mais campos. Dados Dinâmicos foi modificado para entender objetos herdados no modelo de dados e para dar suporte a scaffolding para as tabelas herdadas.
+O Entity Framework e o LINQ to SQL dão suporte à herança em seus modelos de dados. Um exemplo disso pode ser um banco de dados que tem uma tabela `InsurancePolicy`. Ele também pode conter `CarPolicy` e `HousePolicy` tabelas que têm os mesmos campos que `InsurancePolicy` e, em seguida, adicionar mais campos. Dados Dinâmicos foi modificado para entender objetos herdados no modelo de dados e para dar suporte a scaffolding para as tabelas herdadas.
 
 <a id="0.2__Toc224729048"></a><a id="0.2__Toc253429285"></a><a id="0.2__Toc243304656"></a>
 
 ### <a name="support-for-many-to-many-relationships-entity-framework-only"></a>Suporte para relações muitos para muitos (somente Entity Framework)
 
-O Entity Framework tem suporte avançado para relações muitos para muitos entre tabelas, que é implementada expondo a relação como uma coleção em um objeto de *entidade* . Novos `ManyToMany.ascx` e`ManyToMany_Edit.ascx` modelos de campo foram adicionados para fornecer suporte para exibir e editar dados envolvidos em relações muitos para muitos.
+O Entity Framework tem suporte avançado para relações muitos para muitos entre tabelas, que é implementada expondo a relação como uma coleção em um objeto de *entidade* . Novos modelos de campo de `ManyToMany.ascx` e `ManyToMany_Edit.ascx` foram adicionados para fornecer suporte para exibir e editar dados que estão envolvidos em relações muitos para muitos.
 
 <a id="0.2__Toc224729049"></a><a id="0.2__Toc253429286"></a><a id="0.2__Toc243304657"></a>
 
 ### <a name="new-attributes-to-control-display-and-support-enumerations"></a>Novos atributos para controlar as enumerações de exibição e suporte
 
-O DisplayAttribute foi adicionado para dar a você controle adicional sobre como os campos são exibidos. O atributo *DisplayName* em versões anteriores do dados dinâmicos permitia que você alterasse o nome usado como uma legenda para um campo. A nova classe DisplayAttribute permite que você especifique mais opções para exibir um campo, como a ordem na qual um campo é exibido e se um campo será usado como um filtro. O atributo também fornece controle independente do nome usado para os rótulos em um controle *GridView* , o nome usado em um controle *DetailsView* , o texto de ajuda para o campo e a marca-d ' água usada para o campo (se o campo aceitar entrada de texto).
+O *DisplayAttribute* foi adicionado para dar a você controle adicional sobre como os campos são exibidos. O atributo *DisplayName* em versões anteriores do dados dinâmicos permitia que você alterasse o nome usado como uma legenda para um campo. A nova classe *DisplayAttribute* permite que você especifique mais opções para exibir um campo, como a ordem na qual um campo é exibido e se um campo será usado como um filtro. O atributo também fornece controle independente do nome usado para os rótulos em um controle *GridView* , o nome usado em um controle *DetailsView* , o texto de ajuda para o campo e a marca-d ' água usada para o campo (se o campo aceitar entrada de texto).
 
-A classe *EnumDataTypeAttribute* foi adicionada para permitir que você mapeie campos para enumerações. Ao aplicar esse atributo a um campo, você especifica um tipo de enumeração. Dados dinâmicos usa o novo `Enumeration.ascx` modelo de campo para criar a interface do usuário para exibir e editar valores de enumeração. O modelo mapeia os valores do banco de dados para os nomes na enumeração.
+A classe *EnumDataTypeAttribute* foi adicionada para permitir que você mapeie campos para enumerações. Ao aplicar esse atributo a um campo, você especifica um tipo de enumeração. Dados Dinâmicos usa o novo modelo de campo de `Enumeration.ascx` para criar a interface do usuário para exibir e editar valores de enumeração. O modelo mapeia os valores do banco de dados para os nomes na enumeração.
 
 <a id="0.2__Toc224729050"></a><a id="0.2__Toc253429287"></a><a id="0.2__Toc243304658"></a>
 
 ### <a name="enhanced-support-for-filters"></a>Suporte aprimorado para filtros
 
-Dados Dinâmicos 1,0 fornecido com filtros internos para colunas booleanas e colunas de chave estrangeira. Os filtros não permitiram que você especifique se eles foram exibidos ou em qual ordem eles foram exibidos. O novo atributo DisplayAttribute aborda esses dois problemas fornecendo a você o controle sobre se uma coluna é exibida como um filtro e em qual ordem ela será exibida.
+Dados Dinâmicos 1,0 fornecido com filtros internos para colunas booleanas e colunas de chave estrangeira. Os filtros não permitiram que você especifique se eles foram exibidos ou em qual ordem eles foram exibidos. O novo atributo *DisplayAttribute* aborda esses dois problemas fornecendo a você o controle sobre se uma coluna é exibida como um filtro e em qual ordem ela será exibida.
 
-Um aprimoramento adicional é que o suporte à filtragem foi[reescrito para usar o novo]recurso(#0.2__QueryExtender "_QueryExtender") da Web Forms. Isso permite que você crie filtros sem a necessidade de conhecimento do controle da fonte de dados com o qual os filtros serão usados. Juntamente com essas extensões, os filtros também foram transformados em controles de modelo, o que permite que você adicione novos. Por fim, a classe DisplayAttribute mencionada anteriormente permite que o filtro padrão seja substituído, da mesma forma que *UIHint* permite que o modelo de campo padrão para uma coluna seja substituída.
+Um aprimoramento adicional é que o suporte à filtragem foi[escrito novamente para usar o novo](#0.2__QueryExtender "_QueryExtender") recurso do Web Forms. Isso permite que você crie filtros sem a necessidade de conhecimento do controle da fonte de dados com o qual os filtros serão usados. Juntamente com essas extensões, os filtros também foram transformados em controles de modelo, o que permite que você adicione novos. Por fim, a classe *DisplayAttribute* mencionada anteriormente permite que o filtro padrão seja substituído, da mesma forma que *UIHint* permite que o modelo de campo padrão para uma coluna seja substituída.
 
 <a id="0.2__Toc224729051"></a><a id="0.2__Toc253429288"></a><a id="0.2__Toc243304659"></a>
 
@@ -1272,7 +1272,7 @@ O designer do Visual Web Developer no Visual Studio 2010 foi atualizado para mel
 
 No editor de HTML, o IntelliSense conclui automaticamente nomes de marca. O recurso de trechos de código do IntelliSense conclui automaticamente as marcas inteiras e muito mais. No Visual Studio 2010, os trechos do IntelliSense têm suporte para JavaScript C# , juntamente com e Visual Basic, que eram compatíveis com versões anteriores do Visual Studio.
 
-O Visual Studio 2010 inclui mais de 200 trechos de código que ajudam você a completar automaticamente marcas ASP.NET e HTML comuns, incluindo atributos necessários (como runat = "Server") e atributos comuns específicos de uma marca (como *ID*, *DataSourceID*,  *ControlToValidate*e *Text*).
+O Visual Studio 2010 inclui mais de 200 trechos de código que ajudam você a completar automaticamente marcas ASP.NET e HTML comuns, incluindo atributos necessários (como runat = "Server") e atributos comuns específicos de uma marca (como *ID*, *DataSourceID*, *ControlToValidate*e *Text*).
 
 Você pode baixar trechos de código adicionais ou pode escrever seus próprios trechos de código que encapsulam os blocos de marcação que você ou sua equipe usam para tarefas comuns.
 
@@ -1321,13 +1321,13 @@ O Visual Studio 2010 fornece tarefas e destinos do MSBuild criados para criar pa
 
 ### <a name="webconfig-transformation"></a>Transformação de Web. config
 
-Para a implantação de aplicativos Web, o Visual Studio 2010 apresenta a [transformação de documento XML (xdt)](http://vishaljoshi.blogspot.com/2009/03/web-deployment-webconfig-transformation_23.html), que é um recurso `Web.config` que permite transformar um arquivo de configurações de desenvolvimento para as configurações de produção. As configurações de transformação são especificadas em arquivos `web.debug.config`de `web.release.config`transformação chamados, e assim por diante. (Os nomes desses arquivos correspondem às configurações do MSBuild.) Um arquivo de transformação inclui apenas as alterações que você precisa fazer em um arquivo `Web.config` implantado. Você especifica as alterações usando a sintaxe simples.
+Para a implantação de aplicativos Web, o Visual Studio 2010 apresenta a [transformação de documento XML (xdt)](http://vishaljoshi.blogspot.com/2009/03/web-deployment-webconfig-transformation_23.html), que é um recurso que permite transformar um arquivo de `Web.config` de configurações de desenvolvimento para as configurações de produção. As configurações de transformação são especificadas em arquivos de transformação chamados `web.debug.config`, `web.release.config`e assim por diante. (Os nomes desses arquivos correspondem às configurações do MSBuild.) Um arquivo de transformação inclui apenas as alterações que você precisa fazer em um arquivo de `Web.config` implantado. Você especifica as alterações usando a sintaxe simples.
 
-O exemplo a seguir mostra uma parte de `web.release.config` um arquivo que pode ser produzido para implantação da sua configuração de versão. A palavra-chave Replace no exemplo especifica que, durante a implantação, o `Web.config` nó ConnectionString no arquivo será substituído pelos valores listados no exemplo.
+O exemplo a seguir mostra uma parte de um arquivo `web.release.config` que pode ser produzido para implantação da sua configuração de versão. A palavra-chave Replace no exemplo especifica que, durante a implantação, o nó *ConnectionString* no arquivo de `Web.config` será substituído pelos valores listados no exemplo.
 
 [!code-xml[Main](overview/samples/sample102.xml)]
 
-Para obter mais informações, consulte [sintaxe de transformação Web. config para implantação de projeto de aplicativo Web](https://msdn.microsoft.com/library/dd465326%28VS.100%29.aspx) no site[do MSDN <a id="0.2_a"></a> e implantação da Web: Transformação](http://vishaljoshi.blogspot.com/2009/03/web-deployment-webconfig-transformation_23.html) de Web. config no blog de Vishal Joshi.
+Para obter mais informações, consulte [sintaxe de transformação Web. config para implantação de projeto de aplicativo Web](https://msdn.microsoft.com/library/dd465326%28VS.100%29.aspx) na Web site do MSDN <a id="0.2_a"></a> e[implantação da Web: transformação Web. config](http://vishaljoshi.blogspot.com/2009/03/web-deployment-webconfig-transformation_23.html) no blog de Vishal Joshi.
 
 <a id="0.2__Toc224729058"></a><a id="0.2__Toc253429295"></a><a id="0.2__Toc243304666"></a>
 
@@ -1335,7 +1335,7 @@ Para obter mais informações, consulte [sintaxe de transformação Web. config 
 
 Um pacote de implantação do Visual Studio 2010 pode incluir dependências em bancos de dados SQL Server. Como parte da definição do pacote, você fornece a cadeia de conexão para o banco de dados de origem. Quando você cria o pacote da Web, o Visual Studio 2010 cria scripts do SQL para o esquema de banco de dados e, opcionalmente, para o dado e, em seguida, os adiciona ao pacote. Você também pode fornecer scripts SQL personalizados e especificar a sequência na qual eles devem ser executados no servidor. No momento da implantação, você fornece uma cadeia de conexão apropriada para o servidor de destino; em seguida, o processo de implantação usa essa cadeia de conexão para executar os scripts que criam o esquema de banco de dados e os adicionam.
 
-Além disso, usando a publicação com um clique, você pode configurar a implantação para publicar seu banco de dados diretamente quando o aplicativo é publicado em um site de hospedagem compartilhado remoto. Para obter mais informações, confira [Como: Implante um banco de dados com um projeto](https://msdn.microsoft.com/library/dd465343%28VS.100%29.aspx) de aplicativo Web no site do MSDN e na [implantação de banco de dados com o vs 2010](http://vishaljoshi.blogspot.com/2009/03/web-deployment-webconfig-transformation_23.html) no blog de Vishal Joshi.
+Além disso, usando a publicação com um clique, você pode configurar a implantação para publicar seu banco de dados diretamente quando o aplicativo é publicado em um site de hospedagem compartilhado remoto. Para obter mais informações, consulte [como implantar um banco de dados com um projeto de aplicativo Web](https://msdn.microsoft.com/library/dd465343%28VS.100%29.aspx) no site do MSDN e [implantação de banco de dados com o vs 2010](http://vishaljoshi.blogspot.com/2009/03/web-deployment-webconfig-transformation_23.html) no blog de Vishal Joshi.
 
 <a id="0.2__Toc224729059"></a><a id="0.2__Toc253429296"></a><a id="0.2__Toc243304667"></a>
 
@@ -1343,7 +1343,7 @@ Além disso, usando a publicação com um clique, você pode configurar a implan
 
 O Visual Studio 2010 também permite que você use o serviço de gerenciamento remoto do IIS para publicar um aplicativo Web em um servidor remoto. Você pode criar um perfil de publicação para sua conta de hospedagem ou para servidores de teste ou servidores de preparo. Cada perfil pode salvar as credenciais apropriadas com segurança. Em seguida, você pode implantar em qualquer um dos servidores de destino com um clique usando a barra de ferramentas de publicação com um clique da Web. Com o Visual Studio 2010, você também pode publicar usando a linha de comando do MSBuild. Isso permite que você configure seu ambiente do Team Build para incluir a publicação em um modelo de integração contínua.
 
-Para obter mais informações, confira [Como: Implantar um projeto de aplicativo Web usando a publicação de um clique](https://msdn.microsoft.com/library/dd465337%28VS.100%29.aspx) e implantação da Web no site do MSDN e [na Web 1-clique em publicar com vs 2010](http://vishaljoshi.blogspot.com/2009/05/web-1-click-publish-with-vs-2010.html) no blog de Vishal Joshi. Para exibir apresentações em vídeo sobre a implantação de aplicativos Web no Visual Studio 2010, consulte [VS 2010 for Web Developer visualizações](http://vishaljoshi.blogspot.com/2008/12/vs-2010-for-web-developer-previews.html) no blog de Vishal Joshi.
+Para obter mais informações, consulte [como implantar um projeto de aplicativo Web usando a publicação de um clique e implantação da Web](https://msdn.microsoft.com/library/dd465337%28VS.100%29.aspx) no site do MSDN e [na Web 1-clique em publicar com vs 2010](http://vishaljoshi.blogspot.com/2009/05/web-1-click-publish-with-vs-2010.html) no blog do Vishal Joshi. Para exibir apresentações em vídeo sobre a implantação de aplicativos Web no Visual Studio 2010, consulte [VS 2010 for Web Developer visualizações](http://vishaljoshi.blogspot.com/2008/12/vs-2010-for-web-developer-previews.html) no blog de Vishal Joshi.
 
 <a id="0.2__Toc224729060"></a><a id="0.2__Toc253429297"></a><a id="0.2__Toc243304668"></a>
 
@@ -1352,10 +1352,10 @@ Para obter mais informações, confira [Como: Implantar um projeto de aplicativo
 Os sites a seguir fornecem informações adicionais sobre o ASP.NET 4 e o Visual Studio 2010.
 
 - [ASP.NET 4](https://msdn.microsoft.com/library/ee532866%28VS.100%29.aspx) – a documentação oficial do ASP.NET 4 no site do MSDN.
-- [https://www.asp.net/](https://www.asp.net/)— O próprio site da equipe do ASP.NET.
-- [https://www.asp.net/dynamicdata/](https://msdn.microsoft.com/library/cc488545.aspx)e [ASP.NET dados dinâmicos o mapa de conteúdo](https://msdn.microsoft.com/library/cc488545%28VS.100%29.aspx) — recursos online no site da equipe do ASP.net e na documentação oficial do ASP.net dados dinâmicos.
-- [https://www.asp.net/ajax/](../../ajax/index.md)— O principal recurso da Web para o desenvolvimento do ASP.NET AJAX.
-- [https://blogs.msdn.com/webdevtools/](https://blogs.msdn.com/webdevtools/)— O blog da equipe do Visual Web Developer, que inclui informações sobre os recursos do Visual Studio 2010.
+- [https://www.asp.net/](https://www.asp.net/) — o próprio site da equipe do ASP.net.
+- [https://www.asp.net/dynamicdata/](https://msdn.microsoft.com/library/cc488545.aspx) e [ASP.net dados dinâmicos o mapa de conteúdo](https://msdn.microsoft.com/library/cc488545%28VS.100%29.aspx) — recursos online no site da equipe do ASP.net e na documentação oficial do ASP.net dados dinâmicos.
+- [https://www.asp.net/ajax/](../../ajax/index.md) — o principal recurso da Web para o desenvolvimento do ASP.NET AJAX.
+- [https://blogs.msdn.com/webdevtools/](https://blogs.msdn.com/webdevtools/) — o blog da equipe do Visual Web Developer, que inclui informações sobre os recursos do Visual Studio 2010.
 - [Webstack do ASP.net](https://github.com/aspnet/AspNetWebStack) — o principal recurso da Web para versões de visualização do ASP.net.
 
 <a id="0.2__Toc224729061"></a><a id="0.2__Toc253429298"></a><a id="0.2__Toc243304669"></a>
@@ -1364,13 +1364,13 @@ Os sites a seguir fornecem informações adicionais sobre o ASP.NET 4 e o Visual
 
 Este é um documento preliminar e pode ser alterado substancialmente antes da versão comercial final do software descrito aqui.
 
-As informações contidas neste documento representam a visão atual da Microsoft Corporation sobre os problemas discutidos a partir da data da publicação. Como a Microsoft deve responder às condições do mercado em constante mudança, este documento não deve ser interpretado como um compromisso por parte da Microsoft, e a Microsoft não pode garantir a exatidão de nenhuma informação apresentada após a data da publicação.
+As informações contidas neste documento representam o ponto de vista atual da Microsoft Corporation em relação aos assuntos abordados na data da publicação. Como a Microsoft deve responder às mudanças das condições de mercado, este material não deve ser interpretado como um compromisso por parte da Microsoft, e a Microsoft não poderá garantir a precisão das informações apresentadas após a data da publicação.
 
-Este whitepaper é apenas para fins informativos. A MICROSOFT NÃO OFERECE GARANTIA, EXPRESSA, IMPLÍCITA OU ESTATUTÁRIA, DAS INFORMAÇÕES CONTIDAS NESTE DOCUMENTO.
+Este white paper é fornecido apenas para fins informativos. A MICROSOFT NÃO OFERECE NENHUMA GARANTIA EXPRESSA, IMPLÍCITA OU ESTATUTÁRIA EM RELAÇÃO ÀS INFORMAÇÕES CONTIDAS NESTE DOCUMENTO.
 
-Estar em conformidade com todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte deste documento pode ser reproduzida, armazenada ou inserida em um sistema de recuperação, ou transmitida de qualquer forma, por qualquer meio (eletrônico, mecânico, fotocópia, gravação ou outro) ou para qualquer fim, sem a permissão expressa, por escrito, da Microsoft Corporation.
+O cumprimento de todas as leis de direito autorais aplicáveis é de responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte deste documento pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.
 
-A Microsoft pode ter patentes, solicitações de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo deste documento. A não ser que especificado expressamente em um contrato de licença da Microsoft, o fornecimento deste documento não confere a você nenhum direito sobre as supracitadas patentes, marcas comerciais, direitos autorais ou outra propriedade intelectual.
+A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo deste documento. A posse deste documento não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.
 
 Salvo indicação em contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, logotipos, pessoas, lugares e eventos aqui mencionados são fictícios e nenhuma associação com qualquer empresa, organização, produto, nome de domínio, emails reais Endereço, logotipo, pessoa, local ou evento é intencional ou deve ser inferido.
 
@@ -1378,4 +1378,4 @@ Salvo indicação em contrário, os exemplos de empresas, organizações, produt
 
 Microsoft e Windows são marcas registradas ou comerciais da Microsoft Corporation nos Estados Unidos e/ou em outros países.
 
-Os nomes de empresas reais e produtos mencionados aqui podem ser marcas comerciais de seus respectivos proprietários.
+Os nomes de empresas e produtos reais mencionados aqui podem ser marcas comerciais de seus respectivos proprietários.

@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
-ms.openlocfilehash: c45003325832258466a787bc589bf40e844248a2
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.openlocfilehash: 738318cce442fdc5d58dd1e4c992d4941be2487e
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985850"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74591249"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implantação da Web do ASP.NET usando o Visual Studio: implantação no teste
 
@@ -23,7 +23,7 @@ Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.
 
 Para obter uma versão atual da implantação no Azure, consulte [criar um aplicativo web ASP.NET Core no Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 Neste tutorial, você implantará um aplicativo Web ASP.NET no IIS (servidor de informações da Internet) em seu computador local.
 
@@ -49,7 +49,7 @@ Lembrete: se você receber uma mensagem de erro ou algo não funcionar enquanto 
 
 Baixe e instale a solução e o projeto de início do Contoso University Visual Studio. Esta solução contém o tutorial concluído. 
 
-[Baixar o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Baixar o projeto inicial](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
 ## <a name="install-iis"></a>Instalar o IIS
 

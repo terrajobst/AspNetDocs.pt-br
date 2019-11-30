@@ -1,91 +1,91 @@
 ---
 uid: web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-vb
-title: Formatação do DataList e Repeater com base nos dados (VB) | Microsoft Docs
+title: Formatando o DataList e o Repeater com base nos dados (VB) | Microsoft Docs
 author: rick-anderson
-description: Neste tutorial vamos ver exemplos de como podemos formatar a aparência dos controles DataList e Repeater, usando funções de formatação com...
+description: Neste tutorial, vamos percorrer exemplos de como formatar a aparência dos controles DataList e Repeater, usando as funções de formatação com...
 ms.author: riande
 ms.date: 09/13/2006
 ms.assetid: e2f401ae-37bb-4b19-aa97-d6b385d40f88
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/formatting-the-datalist-and-repeater-based-upon-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 50e6ce94a807b9ca1e3634382aa72b87fc35502f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c9b60e4dacd992962942034e84c01cb82e039c81
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131183"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74636791"
 ---
 # <a name="formatting-the-datalist-and-repeater-based-upon-data-vb"></a>Formatação do DataList e Repeater com base nos dados (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_30_VB.exe) ou [baixar PDF](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/datatutorial30vb1.pdf)
+[Baixar o aplicativo de exemplo](https://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_30_VB.exe) ou [baixar PDF](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/datatutorial30vb1.pdf)
 
-> Neste tutorial vamos ver exemplos de como podemos formatar a aparência dos controles DataList e Repeater, usando funções de formatação nos modelos ou manipulando o evento de vinculação de dados.
+> Neste tutorial, vamos percorrer exemplos de como formato a aparência dos controles DataList e Repeater, seja usando funções de formatação dentro de modelos ou manipulando o evento de vinculação de ligações.
 
 ## <a name="introduction"></a>Introdução
 
-Como vimos no tutorial anterior, DataList oferece uma série de propriedades relacionadas ao estilo que afetam sua aparência. Em particular, vimos como atribuir padrão classes CSS a s DataList `HeaderStyle`, `ItemStyle`, `AlternatingItemStyle`, e `SelectedItemStyle` propriedades. Além dessas quatro propriedades, DataList inclui um número de outras propriedades relacionadas a estilo, como `Font`, `ForeColor`, `BackColor`, e `BorderWidth`, para citar alguns. O controle Repeater não contém quaisquer propriedades relacionadas a estilo. Essas configurações de estilo devem ser feitas diretamente dentro da marcação nos modelos de s Repeater.
+Como vimos no tutorial anterior, o DataList oferece várias propriedades relacionadas ao estilo que afetam sua aparência. Em particular, vimos como atribuir classes CSS padrão às propriedades DataList s `HeaderStyle`, `ItemStyle`, `AlternatingItemStyle`e `SelectedItemStyle`. Além dessas quatro propriedades, o DataList inclui várias outras propriedades relacionadas a estilo, como `Font`, `ForeColor`, `BackColor`e `BorderWidth`, para citar alguns. O controle Repeater não contém nenhuma propriedade relacionada ao estilo. Essas configurações de estilo devem ser feitas diretamente dentro da marcação nos modelos do repetidor.
 
-Muitas vezes, no entanto, como os dados devem ser formatados dependam dos dados em si. Por exemplo, ao listar produtos queremos exibir as informações de produto em uma cor de fonte cinza claro, se ele foi descontinuado ou queremos destacar o `UnitsInStock` valor se for zero. Como vimos nos tutoriais anteriores, o GridView, DetailsView e FormView oferecem duas maneiras distintas para formatar a aparência com base em seus dados:
+No entanto, geralmente, como os dados devem ser formatados dependem dos dados em si. Por exemplo, ao listar produtos, podemos querer exibir as informações do produto em uma cor de fonte cinza-claro se ela for descontinuada ou talvez desejarmos realçar o valor de `UnitsInStock` se ele for zero. Como vimos nos tutoriais anteriores, o GridView, o DetailsView e o FormView oferecem duas maneiras distintas de Formatar sua aparência com base em seus dados:
 
-- **O `DataBound` evento** criar um manipulador de eventos apropriado `DataBound` evento, que é acionado depois que os dados foi associados a cada item (para o GridView era o `RowDataBound` evento; para DataList e Repeater é o `ItemDataBound`evento). Nesse evento manipulador, apenas os dados associados pode ser examinado e decisões de formatação feitas. Examinamos essa técnica na [formatação com base em dados personalizados](../custom-formatting/custom-formatting-based-upon-data-vb.md) tutorial.
-- **Funções em modelos de formatação** ao uso de TemplateFields em DetailsView ou GridView controles ou um modelo no controle FormView, podemos adicionar uma função de formatação para a classe de code-behind s de página ASP.NET, a camada de lógica de negócios ou qualquer outra biblioteca de classe é acessível do aplicativo web. Essa função de formatação pode aceitar um número arbitrário de parâmetros de entrada, mas deve retornar o HTML para renderizar no modelo. Funções de formatação foram examinadas pela primeira vez na [Usando TemplateFields no controle GridView](../custom-formatting/using-templatefields-in-the-gridview-control-vb.md) tutorial.
+- **O evento `DataBound`** cria um manipulador de eventos para o evento de `DataBound` apropriado, que é acionado depois que os dados são associados a cada item (para o GridView, ele era o evento de `RowDataBound`; para o DataList e o Repeater, ele é o evento de `ItemDataBound`). Nesse manipulador de eventos, os dados apenas associados podem ser examinados e as decisões de formatação tomadas. Examinamos essa técnica no tutorial [formatação personalizada com base no data](../custom-formatting/custom-formatting-based-upon-data-vb.md) .
+- **Funções de formatação em modelos** ao usar TemplateFields nos controles DetailsView ou GridView, ou um modelo no controle FormView, podemos adicionar uma função de formatação à classe code-behind da página ASP.net s, à camada de lógica de negócios ou a qualquer outra biblioteca de classes acessível a partir do aplicativo Web. Essa função de formatação pode aceitar um número arbitrário de parâmetros de entrada, mas deve retornar o HTML para renderizar no modelo. As funções de formatação foram examinadas primeiro no tutorial [Usando TemplateFields no controle GridView](../custom-formatting/using-templatefields-in-the-gridview-control-vb.md) .
 
-Ambas essas técnicas de formatação estão disponíveis com os controles DataList e Repeater. Neste tutorial vamos ver exemplos que usam ambas as técnicas para ambos os controles.
+Essas duas técnicas de formatação estão disponíveis com os controles DataList e Repeater. Neste tutorial, vamos percorrer exemplos usando as duas técnicas para ambos os controles.
 
-## <a name="using-theitemdataboundevent-handler"></a>Usando o`ItemDataBound`manipulador de eventos
+## <a name="using-theitemdataboundevent-handler"></a>Usando o manipulador de eventos`ItemDataBound`
 
-Quando os dados são associados a um DataList de um controle de fonte de dados ou por meio da atribuição programaticamente os dados para o controle s `DataSource` propriedade e chamar seu `DataBind()` método, DataList s `DataBinding` evento é acionado, a fonte de dados enumerada, e cada registro de dados está associado à DataList. Para cada registro na fonte de dados, DataList cria uma [ `DataListItem` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalistitem.aspx) objeto que é então associado ao registro atual. Durante esse processo, DataList gera dois eventos:
+Quando os dados são associados a um DataList, de um controle da fonte de dados ou por meio de programaticamente atribuir dados à propriedade s `DataSource` do controle e chamar seu método `DataBind()`, o evento DataList s `DataBinding` é disparado, a fonte de dados enumerada e cada registro de dados é associado ao DataList. Para cada registro na fonte de dados, o DataList cria um objeto [`DataListItem`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalistitem.aspx) que é então associado ao registro atual. Durante esse processo, o DataList gera dois eventos:
 
-- **`ItemCreated`** é acionado depois que o `DataListItem` foi criado
-- **`ItemDataBound`** é acionado depois que o registro atual foi associado para o `DataListItem`
+- **`ItemCreated`** acionado após a criação do `DataListItem`
+- **`ItemDataBound`** é acionado após o registro atual ter sido associado ao `DataListItem`
 
-As etapas a seguir descrevem o processo de associação de dados para o controle DataList.
+As etapas a seguir descrevem o processo de vinculação de dados para o controle DataList.
 
-1. S DataList [ `DataBinding` evento](https://msdn.microsoft.com/library/system.web.ui.control.databinding.aspx) é acionado
-2. Os dados serão associados à DataList  
+1. O evento DataList s [`DataBinding`](https://msdn.microsoft.com/library/system.web.ui.control.databinding.aspx) dispara
+2. Os dados estão associados ao DataList  
   
    Para cada registro na fonte de dados 
 
-    1. Criar um `DataListItem` objeto
-    2. Acionar o [ `ItemCreated` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalist.itemcreated.aspx)
-    3. Associar o registro para o `DataListItem`
-    4. Acionar o [ `ItemDataBound` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalist.itemdatabound.aspx)
-    5. Adicione a `DataListItem` para o `Items` coleção
+    1. Criar um objeto `DataListItem`
+    2. Acionar o [evento de`ItemCreated`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalist.itemcreated.aspx)
+    3. Associar o registro ao `DataListItem`
+    4. Acionar o [evento de`ItemDataBound`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalist.itemdatabound.aspx)
+    5. Adicionar o `DataListItem` à coleção de `Items`
 
-Ao associar dados ao controle Repeater, ele percorre a mesma sequência exata de etapas. A única diferença é que, em vez de `DataListItem` repetidor de instâncias que está sendo criadas, usa [ `RepeaterItem` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.repeateritem(VS.80).aspx)s.
+Ao vincular dados ao controle Repeater, ele percorre exatamente a mesma sequência de etapas. A única diferença é que, em vez de `DataListItem` instâncias que estão sendo criadas, o repetidor usa [`RepeaterItem`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.repeateritem(VS.80).aspx)s.
 
 > [!NOTE]
-> O leitor astuto deve ter notado uma anomalia de pequena entre a sequência de etapas que são realizadas quando DataList e Repeater são associados a dados em vez de quando o GridView está associado a dados. No final do processo de associação de dados, o GridView aciona o `DataBound` evento; no entanto, nem o DataList nem Repeater controle tem tal evento. Isso ocorre porque os controles DataList e Repeater foram criados no período de tempo do ASP.NET 1. x, antes que o padrão de manipulador de evento de pré e pós-nível se tornaram comuns.
+> O leitor do astuto pode ter notado uma ligeira anomalia entre a sequência de etapas que se transtentam quando o DataList e o Repeater estão associados a dados versus quando o GridView está associado a dados. Na extremidade final do processo de vinculação de dados, o GridView gera o evento `DataBound`; no entanto, nem o controle DataList nem Repeater tem tal evento. Isso ocorre porque os controles DataList e Repeater foram criados de volta no período de tempo ASP.NET 1. x, antes que o padrão de manipulador de eventos pré e pós-leve se tornar comum.
 
-Como com o controle GridView, uma opção para formatação com base nos dados é criar um manipulador de eventos para o `ItemDataBound` eventos. Esse manipulador de eventos seria inspecionar os dados que tinham apenas foi associados à `DataListItem` ou `RepeaterItem` e afetam a formatação do controle, conforme necessário.
+Assim como com o GridView, uma opção para formatação com base nos dados é criar um manipulador de eventos para o evento `ItemDataBound`. Esse manipulador de eventos inspecionaria os dados que tinham sido vinculados ao `DataListItem` ou `RepeaterItem` e afetaria a formatação do controle, conforme necessário.
 
-Para o controle DataList, alterações de formatação para o item inteiro pode ser implementado usando o `DataListItem` relacionadas a estilo propriedades, que incluem o padrão `Font`, `ForeColor`, `BackColor`, `CssClass`e assim por diante. Para afetar a formatação de controles da Web específicos dentro do modelo de s DataList, precisamos acessar e modificar o estilo desses controles Web programaticamente. Vimos como realizar essa back na *formatação com base em dados personalizados* tutorial. Como o controle Repeater, o `RepeaterItem` classe não tem nenhuma propriedade relacionadas ao estilo; portanto, todas as alterações relacionadas a estilo feitas uma `RepeaterItem` no `ItemDataBound` manipulador de eventos deve ser feito por meio de programação acessando e atualizando controles da Web dentro do o modelo.
+Para o controle DataList, as alterações de formatação para o item inteiro podem ser implementadas usando as propriedades relacionadas ao estilo `DataListItem` s, que incluem o `Font`padrão, `ForeColor`, `BackColor`, `CssClass`e assim por diante. Para afetar a formatação de determinados controles da Web dentro do modelo DataList s, precisamos acessar e modificar o estilo desses controles da Web programaticamente. Vimos como fazer isso de volta no tutorial *formatação personalizada com base no data* . Como o controle Repeater, a classe `RepeaterItem` não tem nenhuma propriedade relacionada ao estilo; Portanto, todas as alterações relacionadas a estilo feitas a um `RepeaterItem` no manipulador de eventos `ItemDataBound` devem ser feitas por meio de programação e atualização de controles da Web dentro do modelo.
 
-Uma vez que o `ItemDataBound` técnica de formatação para o DataList e Repeater são praticamente idênticos, nosso exemplo se concentrará no uso do DataList.
+Como a técnica de formatação de `ItemDataBound` para DataList e Repeater são praticamente idênticas, nosso exemplo se concentrará em usar o DataList.
 
-## <a name="step-1-displaying-product-information-in-the-datalist"></a>Etapa 1: Exibindo informações de produto no DataList
+## <a name="step-1-displaying-product-information-in-the-datalist"></a>Etapa 1: exibindo informações do produto no DataList
 
-Antes de nos preocupamos com a formatação, let s primeiro criar uma página que usa uma DataList para exibir informações sobre o produto. No [tutorial anterior](displaying-data-with-the-datalist-and-repeater-controls-vb.md) criamos uma DataList cujo `ItemTemplate` exibido cada nome de produto s, a categoria, o fornecedor, a quantidade por unidade e preço. Deixe o s repetir essa funcionalidade aqui neste tutorial. Para fazer isso, você pode recriar ou DataList e seu ObjectDataSource do zero ou você pode copiar sobre esses controles de página criada no tutorial anterior (`Basics.aspx`) e cole-os na página para este tutorial (`Formatting.aspx`).
+Antes de nos preocuparmos com a formatação, vamos criar primeiro uma página que usa um DataList para exibir informações sobre o produto. No [tutorial anterior](displaying-data-with-the-datalist-and-repeater-controls-vb.md) , criamos um DataList cujo `ItemTemplate` exibia cada nome, categoria, fornecedor, quantidade por unidade e preço do produto. Vamos repetir essa funcionalidade aqui neste tutorial. Para fazer isso, você pode recriar o DataList e seu ObjectDataSource a partir do zero, ou você pode copiar sobre esses controles da página criada no tutorial anterior (`Basics.aspx`) e colá-los na página deste tutorial (`Formatting.aspx`).
 
-Depois que você tiver replicado a funcionalidade do DataList e ObjectDataSource da `Basics.aspx` em `Formatting.aspx`, reserve um tempo para alterar o s DataList `ID` propriedade do `DataList1` para um mais descritivo `ItemDataBoundFormattingExample`. Em seguida, exiba DataList em um navegador. Como mostra a Figura 1, a única diferença formatação entre cada produto é que a cor do plano de fundo alternativos.
+Depois de replicar a funcionalidade DataList e ObjectDataSource de `Basics.aspx` para `Formatting.aspx`, Reserve um tempo para alterar a propriedade DataList s `ID` de `DataList1` para uma `ItemDataBoundFormattingExample`mais descritiva. Em seguida, exiba o DataList em um navegador. Como mostra a Figura 1, a única diferença de formatação entre cada produto é que a cor do plano de fundo alterna.
 
-[![Os produtos são listados no controle DataList](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image1.png)
+[![os produtos estão listados no controle DataList](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image2.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image1.png)
 
-**Figura 1**: Os produtos são listados no controle DataList ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image3.png))
+**Figura 1**: os produtos são listados no controle DataList ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image3.png))
 
-Para este tutorial, deixe s DataList de formato, de modo que quaisquer produtos com um preço menor que US $20,00 terá tanto seu nome e o preço de unidade realçado em amarelo.
+Para este tutorial, vamos formatar o DataList de modo que qualquer produto com um preço inferior a $20 terá o nome e o preço unitário realçado amarelo.
 
-## <a name="step-2-programmatically-determining-the-value-of-the-data-in-the-itemdatabound-event-handler"></a>Etapa 2: Determinar programaticamente o valor dos dados no manipulador de evento ItemDataBound
+## <a name="step-2-programmatically-determining-the-value-of-the-data-in-the-itemdatabound-event-handler"></a>Etapa 2: determinar programaticamente o valor dos dados no manipulador de eventos de Hiperligação
 
-Como apenas os produtos com um preço de US $20,00 irá tem a formatação personalizada aplicada, podemos deve ser capazes de determinar o preço de s cada produto. Ao associar dados a uma DataList, DataList enumera os registros na fonte de dados e, para cada registro, cria uma `DataListItem` instância, associando o registro de fonte de dados para o `DataListItem`. Depois que o registro específico s dados foi associados ao atual `DataListItem` objeto, DataList s `ItemDataBound` evento é disparado. Podemos criar um manipulador de eventos para esse evento inspecionar os valores de dados atual `DataListItem` e, com base nesses valores, faça as alterações de formatação necessário.
+Como somente os produtos com um preço abaixo de $20 terão a formatação personalizada aplicada, devemos ser capazes de determinar cada preço de produto. Ao vincular dados a um DataList, o DataList enumera os registros em sua fonte de dados e, para cada registro, cria uma instância de `DataListItem`, associando o registro da fonte de dados ao `DataListItem`. Depois que os dados de registro em particular tiverem sido associados ao objeto de `DataListItem` atual, o evento DataList s `ItemDataBound` será disparado. Podemos criar um manipulador de eventos para esse evento para inspecionar os valores de dados para o `DataListItem` atual e, com base nesses valores, fazer as alterações de formatação necessárias.
 
-Criar um `ItemDataBound` evento para o DataList e adicione o seguinte código:
+Crie um evento `ItemDataBound` para o DataList e adicione o seguinte código:
 
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample1.vb)]
 
-Embora o conceito e a semântica do DataList s `ItemDataBound` manipulador de eventos são as mesmas usadas pelo s GridView `RowDataBound` manipulador de eventos na *formatação com base em dados personalizados* difere do tutorial, a sintaxe um pouco. Quando o `ItemDataBound` evento é acionado, o `DataListItem` apenas associado a dados é passado para o manipulador de evento correspondente por meio `e.Item` (em vez de `e.Row`, assim como acontece com o GridView s `RowDataBound` manipulador de eventos). S DataList `ItemDataBound` manipulador de eventos é acionado para *cada* linha adicionada à DataList, incluindo linhas de cabeçalho, rodapé linhas e linhas de separador. No entanto, as informações do produto estão associadas apenas às linhas de dados. Portanto, ao usar o `ItemDataBound` eventos para inspecionar os dados associados à DataList, precisamos primeiro certifique-se de que estamos está trabalhando com um item de dados. Isso pode ser feito verificando o `DataListItem` s [ `ItemType` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalistitem.itemtype.aspx), que pode ter um dos [os seguintes valores de oito](https://msdn.microsoft.com/library/system.web.ui.webcontrols.listitemtype.aspx):
+Embora o conceito e a semântica por trás do manipulador de eventos DataList s `ItemDataBound` sejam os mesmos usados pelo manipulador de eventos GridView s `RowDataBound` no tutorial *formatação personalizada com base no data* , a sintaxe é ligeiramente diferente. Quando o evento `ItemDataBound` é acionado, o `DataListItem` apenas associado a dados é passado para o manipulador de eventos correspondente via `e.Item` (em vez de `e.Row`, como com o manipulador de eventos GridView s `RowDataBound`). O manipulador de eventos DataList s `ItemDataBound` é acionado para *cada* linha adicionada ao DataList, incluindo linhas de cabeçalho, linhas de rodapé e linhas separadoras. No entanto, as informações do produto só são associadas às linhas de dados. Portanto, ao usar o evento `ItemDataBound` para inspecionar os dados ligados ao DataList, precisamos primeiro garantir que vamos trabalhar com um item de dados. Isso pode ser feito verificando a propriedade `DataListItem` s [`ItemType`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.datalistitem.itemtype.aspx), que pode ter um dos [oito valores a seguir](https://msdn.microsoft.com/library/system.web.ui.webcontrols.listitemtype.aspx):
 
 - `AlternatingItem`
 - `EditItem`
@@ -96,92 +96,92 @@ Embora o conceito e a semântica do DataList s `ItemDataBound` manipulador de ev
 - `SelectedItem`
 - `Separator`
 
-Ambos `Item` e `AlternatingItem``DataListItem` itens de dados de composição a s DataList s. Supondo que estamos está trabalhando com um `Item` ou `AlternatingItem`, podemos acessar real `ProductsRow` instância que estava associada ao atual `DataListItem`. O `DataListItem` s [ `DataItem` propriedade](https://msdn.microsoft.com/system.web.ui.webcontrols.datalistitem.dataitem.aspx) contém uma referência para o `DataRowView` objeto cuja `Row` propriedade fornece uma referência para o real `ProductsRow` objeto.
+Tanto `Item` quanto `AlternatingItem``DataListItem` emitem os itens de dados DataLists. Supondo que vamos trabalhar com um `Item` ou `AlternatingItem`, Acessamos a instância real `ProductsRow` associada à `DataListItem`atual. A propriedade `DataListItem` s [`DataItem`](https://msdn.microsoft.com/system.web.ui.webcontrols.datalistitem.dataitem.aspx) contém uma referência ao objeto `DataRowView`, cuja propriedade `Row` fornece uma referência ao objeto de `ProductsRow` real.
 
-Em seguida, verificamos a `ProductsRow` instância s `UnitPrice` propriedade. Porque a tabela de produtos s `UnitPrice` campo permite `NULL` valores antes de tentar acessar o `UnitPrice` propriedade devem primeiro verificamos para ver se ele tem um `NULL` valor usando o `IsUnitPriceNull()` método. Se o `UnitPrice` valor não é `NULL`, podemos então verifique para ver se ele menor que US $ 20,00 por s. Se for, de fato, em US $20,00, em seguida, precisamos aplicar a formatação personalizada.
+Em seguida, verificamos a propriedade `ProductsRow` s `UnitPrice` da instância. Como o campo `UnitPrice` da tabela produtos permite `NULL` valores, antes de tentar acessar a propriedade `UnitPrice` primeiro, devemos verificar se ele tem um valor de `NULL` usando o método `IsUnitPriceNull()`. Se o valor de `UnitPrice` não for `NULL`, verificaremos se ele é menor que $20. Se estiver de fato abaixo de $20, precisaremos aplicar a formatação personalizada.
 
-## <a name="step-3-highlighting-the-product-s-name-and-price"></a>Etapa 3: Realce o nome do produto s e o preço
+## <a name="step-3-highlighting-the-product-s-name-and-price"></a>Etapa 3: realçando o nome e o preço do produto
 
-Uma vez que soubermos que o preço de um produto s é menor que US $20,00, tudo o que resta é destacar seu nome e o preço. Para fazer isso, deve primeiro programaticamente referenciamos os controles de rótulo no `ItemTemplate` que exibem o nome do produto s e o preço. Em seguida, precisamos que eles exibem um plano de fundo amarelo. Essas informações de formatação podem ser aplicadas ao modificar diretamente os rótulos `BackColor` propriedades (`LabelID.BackColor = Color.Yellow`); o ideal é que, no entanto, todos os assuntos relacionados a exibição devem ser expressa por meio de folhas de estilo em cascata. Na verdade, já temos uma folha de estilos que fornece a formatação desejados definidos no `Styles.css`  -  `AffordablePriceEmphasis`, que foi criado e discutido os *formatação com base em dados personalizados* tutorial.
+Quando sabemos que o preço de um produto é menor que $20, tudo o que resta é destacar seu nome e preço. Para fazer isso, primeiro devemos fazer referência programaticamente aos controles Label no `ItemTemplate` que exibem o nome e o preço do produto. Em seguida, precisamos que eles exibam um plano de fundo amarelo. Essas informações de formatação podem ser aplicadas pela modificação direta dos rótulos `BackColor` Propriedades (`LabelID.BackColor = Color.Yellow`); no entanto, o ideal é que todas as coisas relacionadas à exibição sejam expressas por meio de folhas de estilos em cascata. Na verdade, já temos uma folha de estilos que fornece a formatação desejada definida em `Styles.css` - `AffordablePriceEmphasis`, que foi criada e discutida no tutorial *formatação personalizada com base no data* .
 
-Para aplicar a formatação, basta definir os dois controles de Web Label `CssClass` propriedades a serem `AffordablePriceEmphasis`, conforme mostrado no código a seguir:
+Para aplicar a formatação, basta definir os dois controles da Web de rótulo `CssClass` propriedades como `AffordablePriceEmphasis`, conforme mostrado no código a seguir:
 
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample2.vb)]
 
-Com o `ItemDataBound` concluída do manipulador de eventos, examine o `Formatting.aspx` página em um navegador. Como ilustra a Figura 2, esses produtos com um preço de US $ 20,00 por tem seu nome e o preço realçado.
+Com o manipulador de eventos `ItemDataBound` concluído, visite novamente a página `Formatting.aspx` em um navegador. Como a Figura 2 ilustra, os produtos com preço inferior a $20 têm o nome e o preço realçados.
 
-[![Esses produtos inferiores a US $20,00 são realçadas](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image4.png)
+[![os produtos menores que $20 estão realçados](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image5.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image4.png)
 
-**Figura 2**: Esses produtos inferiores a US $20,00 são destacados ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image6.png))
+**Figura 2**: os produtos menores que $20 são realçados ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image6.png))
 
 > [!NOTE]
-> Uma vez que DataList é renderizado como uma marca HTML `<table>`, sua `DataListItem` instâncias têm propriedades relacionadas a estilo que podem ser definidas para aplicar um estilo específico para o item inteiro. Por exemplo, se desejamos destacar os *todo* item amarelo quando seu preço era menor que US $20,00, poderia ter substituímos o código que os rótulos de referenciado e defina seus `CssClass` propriedades com a seguinte linha de código: `e.Item.CssClass = "AffordablePriceEmphasis"` (consulte a Figura 3).
+> Como o DataList é renderizado como um `<table>`HTML, suas instâncias de `DataListItem` têm propriedades relacionadas a estilo que podem ser definidas para aplicar um estilo específico a todo o item. Por exemplo, se quiséssemos destacar o item *inteiro* amarelo quando seu preço fosse menor que $20, poderíamos ter substituído o código que referenciou os rótulos e definir suas propriedades `CssClass` com a seguinte linha de código: `e.Item.CssClass = "AffordablePriceEmphasis"` (consulte a Figura 3).
 
-O `RepeaterItem` s que compõem o controle Repeater, no entanto, don t oferecem tais propriedades de nível de estilo. Portanto, a aplicação da formatação personalizada para o Repeater requer a aplicação de propriedades de estilo para controles da Web nos modelos Repeater s, exatamente como fizemos na Figura 2.
+Os `RepeaterItem` s que compõem o controle Repeater, no entanto, Don t oferecem essas propriedades de nível de estilo. Portanto, a aplicação da formatação personalizada ao repetidor exige a aplicação de propriedades de estilo aos controles da Web dentro dos modelos repetidos, assim como fizemos na Figura 2.
 
-[![O Item de produto inteiro é realçado para produtos em US $20,00](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image7.png)
+[![o item de produto inteiro é realçado para produtos em $20](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image8.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image7.png)
 
-**Figura 3**: O Item de produto inteiro é realçado para produtos em US $20,00 ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image9.png))
+**Figura 3**: o item de produto inteiro é realçado para produtos em $20 ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image9.png))
 
 ## <a name="using-formatting-functions-from-within-the-template"></a>Usando funções de formatação de dentro do modelo
 
-No *Usando TemplateFields no controle GridView* tutorial vimos como usar uma função de formatação em um GridView TemplateField para aplicar a formatação personalizada com base nos dados associados às linhas s GridView. Uma função de formatação é um método que pode ser invocado a partir de um modelo e retorna o HTML a ser emitida em seu lugar. Funções de formatação podem residir na classe de code-behind s de página ASP.NET ou pode ser centralizadas em arquivos de classe no `App_Code` pasta ou em um projeto de biblioteca de classes separado. Mover a função de formatação fora da classe de code-behind da página s ASP.NET é ideal se você planeja usar a mesma função de formatação em várias páginas ASP.NET ou em outros aplicativos da web ASP.NET.
+No tutorial *Usando TemplateFields no controle GridView* , vimos como usar uma função de formatação em um modelo GridView para aplicar formatação personalizada com base nos dados associados às linhas GridView. Uma função de formatação é um método que pode ser invocado de um modelo e retorna o HTML a ser emitido em seu lugar. As funções de formatação podem residir na classe code-behind da página ASP.NET ou podem ser centralizadas em arquivos de classe na pasta `App_Code` ou em um projeto de biblioteca de classes separado. Mover a função de formatação para fora da classe code-behind da página ASP.NET é ideal se você planeja usar a mesma função de formatação em várias páginas do ASP.NET ou em outros aplicativos Web do ASP.NET.
 
-Para demonstrar as funções de formatação, let s tem as informações de produto incluem o texto [DISCONTINUED] ao lado do nome do produto s se ele s descontinuado. Além disso, let s ter if preço realçado amarelo-s menor que US $20,00 (como fizemos no `ItemDataBound` exemplo de manipulador de eventos); se o preço é US $20,00 ou s maior, let não exibir o preço real, mas em vez disso, o texto, tente chamar uma cotação de preço. Figura 4 mostra uma captura de tela dos produtos listando com essas regras de formatação aplicadas.
+Para demonstrar as funções de formatação, deixe que as informações do produto incluam o texto [descontinuado] ao lado do nome do produto, caso ele tenha sido descontinuado. Além disso, deixe o preço realçado amarelo se for menor que $20 (como fizemos no exemplo do manipulador de eventos `ItemDataBound`); Se o preço for $20 ou superior, não exibirá o preço real, mas, em vez disso, o texto, ligue para uma cotação de preços. A Figura 4 mostra uma captura de tela da listagem de produtos com essas regras de formatação aplicadas.
 
-[![Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image10.png)
+[![para produtos caros, o preço é substituído pelo texto, por favor, ligue para uma cotação de preços](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image11.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image10.png)
 
-**Figura 4**: Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image12.png))
+**Figura 4**: para produtos caros, o preço é substituído pelo texto, entre em contato com uma cotação de preços ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image12.png))
 
-## <a name="step-1-create-the-formatting-functions"></a>Etapa 1: Criar funções de formatação
+## <a name="step-1-create-the-formatting-functions"></a>Etapa 1: criar as funções de formatação
 
-Para este exemplo precisamos de duas funções de formatação, um que exibe o nome do produto, juntamente com o texto DISCONTINUED, se necessário e outro que exibe um preço de realçado se ele s menor que US $20,00 ou o texto,. chame uma cotação de preço caso contrário. Permitir que o s criar essas funções em que a classe de code-behind s de página ASP.NET e nomeá-los `DisplayProductNameAndDiscontinuedStatus` e `DisplayPrice`. Precisam de ambos os métodos retornam o HTML renderizar como uma cadeia de caracteres e ambos precisam ser marcado `Protected` (ou `Public`) para que sejam invocados da parte de sintaxe declarativa de s de página do ASP.NET. O código para esses dois métodos a seguir:
+Para este exemplo, precisamos de duas funções de formatação, uma que exiba o nome do produto junto com o texto [descontinuado], se necessário, e outro que exiba um preço realçado se for menor que $20 ou o texto, por favor, chame uma citação de preço de outra forma. Deixe que o s Crie essas funções na classe code-behind da página ASP.NET s e nomeie-as `DisplayProductNameAndDiscontinuedStatus` e `DisplayPrice`. Os dois métodos precisam retornar o HTML para renderização como uma cadeia de caracteres e ambos precisam ser marcados `Protected` (ou `Public`) para serem invocados na parte da sintaxe declarativa da página ASP.NET. O código para esses dois métodos segue:
 
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample3.vb)]
 
-Observe que o `DisplayProductNameAndDiscontinuedStatus` método aceita os valores da `productName` e `discontinued` campos de dados como valores escalares, enquanto o `DisplayPrice` método aceita um `ProductsRow` instância (em vez de uma `unitPrice` valor escalar). Qualquer uma das abordagens funcionará; No entanto, se a função de formatação está trabalhando com valores escalares que podem conter o banco de dados `NULL` valores (como `UnitPrice`; nem `ProductName` nem `Discontinued` permitir `NULL` valores), cuidado especial precisa ser tomado em tratá-los entradas de escalares.
+Observe que o método `DisplayProductNameAndDiscontinuedStatus` aceita os valores dos campos de dados `productName` e `discontinued` como valores escalares, enquanto o método `DisplayPrice` aceita uma instância `ProductsRow` (em vez de um valor escalar `unitPrice`). Qualquer abordagem funcionará; no entanto, se a função de formatação estiver funcionando com valores escalares que podem conter valores de `NULL` de banco de dados (como `UnitPrice`; nem `ProductName` nem `Discontinued` permitir `NULL` valores), deve-se tomar cuidado especial ao lidar com essas entradas escalares.
 
-Em particular, o parâmetro de entrada deve ser do tipo `Object` como o valor de entrada pode ser um `DBNull` instância em vez do tipo de dados esperado. Além disso, deve ser feita uma verificação para determinar se o valor de entrada é um banco de dados `NULL` valor. Ou seja, se quiséssemos os `DisplayPrice` método aceitem o preço como um valor escalar, podemos d precisa usar o código a seguir:
+Em particular, o parâmetro de entrada deve ser do tipo `Object`, pois o valor de entrada pode ser uma instância `DBNull` em vez do tipo de dados esperado. Além disso, deve-se fazer uma verificação para determinar se o valor de entrada é um valor de `NULL` de banco de dados. Ou seja, se quiséssemos que o método `DisplayPrice` aceite o preço como um valor escalar, nós d precisaremos usar o código a seguir:
 
 [!code-vb[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample4.vb)]
 
-Observe que o `unitPrice` parâmetro de entrada é do tipo `Object` e que a instrução condicional foi modificada para averiguar se `unitPrice` é `DBNull` ou não. Além disso, desde o `unitPrice` parâmetro de entrada é passado como um `Object`, ele deve ser convertido em um valor decimal.
+Observe que o parâmetro de entrada `unitPrice` é do tipo `Object` e que a instrução condicional foi modificada para verificar se `unitPrice` é `DBNull` ou não. Além disso, como o parâmetro de entrada `unitPrice` é passado como um `Object`, ele deve ser convertido em um valor decimal.
 
-## <a name="step-2-calling-the-formatting-function-from-the-datalist-s-itemtemplate"></a>Etapa 2: Chamar a função de formatação do DataList s ItemTemplate
+## <a name="step-2-calling-the-formatting-function-from-the-datalist-s-itemtemplate"></a>Etapa 2: chamando a função de formatação do ItemTemplate s de DataList
 
-Com as funções de formatação adicionadas à nossa classe de code-behind s de página ASP.NET, tudo o que resta é chamar essas funções a partir do DataList s de formatação `ItemTemplate`. Para chamar uma função de formatação de um modelo, coloque a chamada de função dentro da sintaxe de vinculação de dados:
+Com as funções de formatação adicionadas à nossa classe code-behind da página ASP.NET, tudo o que resta é invocar essas funções de formatação a partir do `ItemTemplate`s do DataList. Para chamar uma função de formatação de um modelo, coloque a chamada de função dentro da sintaxe de DataBinding:
 
 [!code-aspx[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample5.aspx)]
 
-No DataList s `ItemTemplate` as `ProductNameLabel` controle de rótulo Web atualmente exibe o nome do produto s atribuindo seu `Text` propriedade o resultado de `<%# Eval("ProductName") %>`. Para que ele exiba o nome, além do texto DISCONTINUED, se necessário, atualize a sintaxe declarativa para que, em vez disso, ele atribui a `Text` o valor da propriedade do `DisplayProductNameAndDiscontinuedStatus` método. Ao fazer isso, podemos deve passar o nome do produto s e descontinuados valores usando o `Eval("columnName")` sintaxe. `Eval` Retorna um valor do tipo `Object`, mas o `DisplayProductNameAndDiscontinuedStatus` método espera parâmetros de entrada do tipo `String` e `Boolean`; portanto, é necessário converter os valores retornados pelo `Eval` método para os tipos de parâmetro de entrada, da seguinte forma:
+No `ItemTemplate` de DataList, o controle de `ProductNameLabel` rótulo da Web exibe atualmente o nome do produto, atribuindo sua propriedade `Text` o resultado de `<%# Eval("ProductName") %>`. Para que ele exiba o nome mais o texto [descontinuado], se necessário, atualize a sintaxe declarativa para que ele atribua à propriedade `Text` o valor do método `DisplayProductNameAndDiscontinuedStatus`. Ao fazer isso, devemos passar o nome do produto e os valores descontinuados usando a sintaxe `Eval("columnName")`. `Eval` retorna um valor do tipo `Object`, mas o método `DisplayProductNameAndDiscontinuedStatus` espera parâmetros de entrada do tipo `String` e `Boolean`; Portanto, devemos converter os valores retornados pelo método `Eval` para os tipos de parâmetro de entrada esperados, desta forma:
 
 [!code-aspx[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample6.aspx)]
 
-Para exibir o preço, podemos simplesmente definir a `UnitPriceLabel` rótulo s `Text` o valor retornado pela propriedade o `DisplayPrice` método, assim como estamos fez para exibir o nome do produto s e [DESCONTINUADO] o texto. No entanto, em vez de passar o `UnitPrice` como um parâmetro de entrada escalar, em vez disso, passamos em todo o `ProductsRow` instância:
+Para exibir o preço, podemos simplesmente definir o `UnitPriceLabel` rótulo s `Text` Propriedade como o valor retornado pelo método `DisplayPrice`, exatamente como fizemos para exibir o texto do produto e [descontinuado]. No entanto, em vez de passar o `UnitPrice` como um parâmetro de entrada escalar, em vez disso, passamos toda a instância `ProductsRow`:
 
 [!code-aspx[Main](formatting-the-datalist-and-repeater-based-upon-data-vb/samples/sample7.aspx)]
 
-Com as chamadas para as funções de formatação em vigor, reserve um tempo para exibir nosso progresso em um navegador. Sua tela deve ser semelhante à Figura 5, com os produtos descontinuados, incluindo o texto [DISCONTINUED] e esses produtos que custam mais de US $ 20,00 por ter seu preço substituído pelo texto, a chamada para uma cotação de preço.
+Com as chamadas para as funções de formatação em vigor, Reserve um tempo para exibir nosso progresso em um navegador. Sua tela deve ser semelhante à figura 5, com os produtos descontinuados, incluindo o texto [descontinuado] e os produtos que custam mais de $20 com o preço substituído pelo texto, por favor, ligue para uma cotação de preços.
 
-[![Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image13.png)
+[![para produtos caros, o preço é substituído pelo texto, por favor, ligue para uma cotação de preços](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image14.png)](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image13.png)
 
-**Figura 5**: Para produtos cara, o preço é substituído pelo texto,. chame uma cotação de preço ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image15.png))
+**Figura 5**: para produtos caros, o preço é substituído pelo texto, entre em contato com uma cotação de preços ([clique para exibir a imagem em tamanho normal](formatting-the-datalist-and-repeater-based-upon-data-vb/_static/image15.png))
 
 ## <a name="summary"></a>Resumo
 
-O conteúdo de um controle DataList ou Repeater com base nos dados de formatação pode ser feito usando duas técnicas. A primeira técnica é criar um manipulador de eventos para o `ItemDataBound` evento, que é acionado como cada registro na fonte de dados está associado a um novo `DataListItem` ou `RepeaterItem`. No `ItemDataBound` manipulador de eventos, os dados atuais do item s podem ser examinados e, em seguida, a formatação pode ser aplicada ao conteúdo do modelo ou, para `DataListItem` s, para o item inteiro em si.
+A formatação do conteúdo de um controle DataList ou Repeater com base nos dados pode ser realizada usando duas técnicas. A primeira técnica é criar um manipulador de eventos para o evento `ItemDataBound`, que é acionado, pois cada registro na fonte de dados é associado a um novo `DataListItem` ou `RepeaterItem`. No manipulador de eventos `ItemDataBound`, os dados do item s atuais podem ser examinados e, em seguida, a formatação pode ser aplicada ao conteúdo do modelo ou, para `DataListItem` s, ao próprio item inteiro.
 
-Como alternativa, formatação personalizada pode ser alcançada por meio de funções de formatação. Uma função de formatação é um método que pode ser invocado a partir do DataList Repeater s modelos ou que retorna o HTML para emitir em seu lugar. Muitas vezes, o HTML retornado por uma função de formatação é determinado pelos valores que está sendo associados ao item atual. Esses valores podem ser passados para a função de formatação, como valores escalares ou passando o objeto inteiro que está sendo associado ao item (como o `ProductsRow` instância).
+Como alternativa, a formatação personalizada pode ser realizada por meio de funções de formatação. Uma função de formatação é um método que pode ser invocado dos modelos DataList ou Repeater s que retorna o HTML a ser emitido em seu lugar. Geralmente, o HTML retornado por uma função de formatação é determinado pelos valores que estão sendo associados ao item atual. Esses valores podem ser passados para a função de formatação, seja como valores escalares ou passando o objeto inteiro que está sendo associado ao item (como a instância de `ProductsRow`).
 
 Boa programação!
 
 ## <a name="about-the-author"></a>Sobre o autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP.NET e fundador da [4GuysFromRolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Microsoft Web desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 2.0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser contatado pelo [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP. net e fundador da [4guysfromrolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 2,0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser acessado em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 ## <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Revisores líder para este tutorial foram Yaakov Ellis, Randy Schmidt e Liz Shulok. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial foram Yaakov Ellis, Randy Schmidt e Liz Shulok. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](displaying-data-with-the-datalist-and-repeater-controls-vb.md)

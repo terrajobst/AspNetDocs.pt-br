@@ -1,228 +1,228 @@
 ---
 uid: web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
-title: 'Implantação da Web do ASP.NET usando o Visual Studio: Preparação para a implantação de banco de dados | Microsoft Docs'
+title: 'Implantação da Web do ASP.NET usando o Visual Studio: preparando para implantação de banco de dados | Microsoft Docs'
 author: tdykstra
-description: Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web de aplicativo para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usin...
+description: Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros, por usin...
 ms.author: riande
 ms.date: 02/15/2013
 ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
-ms.openlocfilehash: 72d69c0690c52c41f899e6cbe7cc656e537fe112
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: cdcb3578725c41e3c801afd54e6d34455bc4b281
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131112"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74618524"
 ---
-# <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: Preparação para implantação de banco de dados
+# <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: preparando para implantação de banco de dados
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-[Baixe o projeto inicial](http://go.microsoft.com/fwlink/p/?LinkId=282627)
+[Baixar o projeto inicial](https://go.microsoft.com/fwlink/p/?LinkId=282627)
 
-> Esta série de tutoriais mostra como implantar (publicar) um ASP.NET web application para aplicativos de Web do serviço de aplicativo do Azure ou para um provedor de hospedagem de terceiros, usando o Visual Studio 2012 ou Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial na série](introduction.md).
+> Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
-Este tutorial mostra como obter o projeto pronto para implantação de banco de dados. A estrutura de banco de dados e alguns (não todos) dos dados em dois do aplicativo bancos de dados devem ser implantados em ambientes de produção, preparo e teste.
+Este tutorial mostra como preparar o projeto para implantação de banco de dados. A estrutura do banco de dados e alguns (nem todos) dos os dois bancos de dado do aplicativo devem ser implantados em ambientes de teste, de preparo e de produção.
 
-Normalmente, à medida que você desenvolve um aplicativo, você insere dados de teste em um banco de dados que você não deseja implantar em um site ativo. No entanto, você também pode ter alguns dados de produção que você deseja implantar. Neste tutorial, você configurar o projeto do Contoso University e preparar scripts SQL para que os dados corretos serão incluídos quando você implanta.
+Normalmente, à medida que você desenvolve um aplicativo, você insere dados de teste em um banco de dado que você não deseja implantar em um site ativo. No entanto, você também pode ter alguns dados de produção que deseja implantar. Neste tutorial, você configurará o projeto da Contoso University e preparará os scripts SQL para que os dados corretos sejam incluídos quando você implantar o.
 
-Lembrete: Se você receber uma mensagem de erro ou se algo não funciona ao percorrer o tutorial, certifique-se de verificar a [página de solução de problemas](troubleshooting.md).
+Lembrete: se você receber uma mensagem de erro ou algo não funcionar enquanto percorre o tutorial, certifique-se de verificar a [página de solução de problemas](troubleshooting.md).
 
 ## <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-O aplicativo de exemplo usa o SQL Server Express LocalDB. SQL Server Express é a edição gratuita do SQL Server. Ele normalmente é usado durante o desenvolvimento, como ele se baseia no mesmo mecanismo de banco de dados a versões completas do SQL Server. Você pode testar com o SQL Server Express e ter certeza de que o aplicativo se comportará em produção, com algumas exceções para recursos que variam entre edições do SQL Server.
+O aplicativo de exemplo usa SQL Server Express LocalDB. SQL Server Express é a edição gratuita do SQL Server. Normalmente, ele é usado durante o desenvolvimento porque ele se baseia no mesmo mecanismo de banco de dados que as versões completas do SQL Server. Você pode testar com SQL Server Express e ter certeza de que o aplicativo se comportará da mesma forma em produção, com algumas exceções para recursos que variam entre as edições SQL Server.
 
-O LocalDB é um modo de execução especial do SQL Server Express que permite que você trabalhe com bancos de dados como *mdf* arquivos. Normalmente, os arquivos de banco de dados LocalDB são mantidos na *App\_dados* pasta de um projeto web. O recurso de instância de usuário do SQL Server Express também permite que você trabalhe com *mdf* arquivos, mas o recurso de instância de usuário é preterido; portanto, o LocalDB é recomendado para trabalhar com *mdf* arquivos.
+O LocalDB é um modo de execução especial de SQL Server Express que permite que você trabalhe com bancos de dados como arquivos *. MDF* . Normalmente, os arquivos de banco de dados LocalDB são mantidos na pasta *Data\_do aplicativo* de um projeto Web. O recurso de instância de usuário no SQL Server Express também permite que você trabalhe com arquivos *. MDF* , mas o recurso de instância de usuário foi preterido; Portanto, o LocalDB é recomendado para trabalhar com arquivos *. MDF* .
 
-Normalmente o SQL Server Express não é usado para aplicativos da web de produção. LocalDB em particular não é recomendado para uso em produção com um aplicativo web porque ela não foi projetada para trabalhar com o IIS.
+Normalmente SQL Server Express não é usado para aplicativos Web de produção. O LocalDB, em particular, não é recomendado para uso em produção com um aplicativo Web porque ele não foi projetado para funcionar com o IIS.
 
-No Visual Studio 2012, o LocalDB é instalado por padrão com o Visual Studio. No Visual Studio 2010 e versões anteriores, o SQL Server Express (sem o LocalDB) é instalado por padrão com o Visual Studio; Isto é por que você instalou-lo como um dos pré-requisitos em [o primeiro tutorial nesta série](introduction.md).
+No Visual Studio 2012, o LocalDB é instalado por padrão com o Visual Studio. No Visual Studio 2010 e versões anteriores, SQL Server Express (sem o LocalDB) é instalado por padrão com o Visual Studio; é por isso que você o instalou como um dos pré-requisitos no [primeiro tutorial desta série](introduction.md).
 
-Para obter mais informações sobre as edições do SQL Server, incluindo LocalDB, consulte os seguintes recursos [trabalhando com bancos de dados do SQL Server](../../../../whitepapers/aspnet-data-access-content-map.md#sqlserver).
+Para obter mais informações sobre as edições do SQL Server, incluindo o LocalDB, consulte os recursos a seguir [trabalhando com bancos de dados do SQL Server](../../../../whitepapers/aspnet-data-access-content-map.md#sqlserver).
 
-## <a name="entity-framework-and-universal-providers"></a>Entity Framework e os provedores universais
+## <a name="entity-framework-and-universal-providers"></a>Entity Framework e Provedores Universais
 
-Para acesso de banco de dados, o aplicativo Contoso University exige o seguinte software deve ser implantado com o aplicativo porque ele não está incluído no .NET Framework:
+Para acesso ao banco de dados, o aplicativo da Contoso University requer o seguinte software que deve ser implantado com o aplicativo porque não está incluído no .NET Framework:
 
-- [ASP.NET Universal Providers](http://www.hanselman.com/blog/IntroducingSystemWebProvidersASPNETUniversalProvidersForSessionMembershipRolesAndUserProfileOnSQLCompactAndSQLAzure.aspx) (permite que o sistema de associação do ASP.NET usar o banco de dados SQL)
+- [Provedores universais ASP.net](http://www.hanselman.com/blog/IntroducingSystemWebProvidersASPNETUniversalProvidersForSessionMembershipRolesAndUserProfileOnSQLCompactAndSQLAzure.aspx) (permite que o sistema de associação do ASP.net use o banco de dados SQL do Azure)
 - [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx)
 
-Como esse software está incluído nos pacotes NuGet, o projeto já estiver configurado para que os assemblies necessários são implantados com o projeto. (Os links apontam para as versões atuais desses pacotes, que pode ser mais recente do que o que é instalado no projeto de início que você baixou para este tutorial.)
+Como esse software está incluído nos pacotes NuGet, o projeto já está configurado para que os assemblies necessários sejam implantados com o projeto. (Os links apontam para as versões atuais desses pacotes, que podem ser mais recentes do que o que está instalado no projeto inicial que você baixou para este tutorial.)
 
-Se você estiver implantando em um provedor de hospedagem de terceiros em vez do Azure, certifique-se de que você usa o Entity Framework 5.0 ou posterior. Versões anteriores de migrações do Code First exigem confiança total e a maioria dos provedores de hospedagem executará seu aplicativo de confiança médio. Para obter mais informações sobre o nível de confiança média, consulte o [implantar no IIS como um ambiente de teste](deploying-to-iis.md) tutorial.
+Se você estiver implantando em um provedor de Hospedagem de terceiros em vez do Azure, certifique-se de usar o Entity Framework 5,0 ou posterior. As versões anteriores do Migrações do Code First exigem confiança total e a maioria dos provedores de hospedagem executará seu aplicativo em confiança média. Para obter mais informações sobre confiança média, consulte o tutorial [implantar no IIS como um ambiente de teste](deploying-to-iis.md) .
 
-## <a name="configure-code-first-migrations-for-application-database-deployment"></a>Configurar migrações do Code First para implantação de banco de dados de aplicativo
+## <a name="configure-code-first-migrations-for-application-database-deployment"></a>Configurar Migrações do Code First para implantação de banco de dados de aplicativo
 
-O banco de dados do aplicativo Contoso University é gerenciado pelo Code First e vai implantá-lo por meio de migrações do Code First. Para uma visão geral da implantação de banco de dados por meio de migrações do Code First, consulte [o primeiro tutorial nesta série](introduction.md).
+O banco de dados do aplicativo da Contoso University é gerenciado pelo Code First e você o implantará usando Migrações do Code First. Para obter uma visão geral da implantação de banco de dados usando Migrações do Code First, consulte [o primeiro tutorial desta série](introduction.md).
 
-Quando você implanta um banco de dados do aplicativo, normalmente você não simplesmente implanta seu banco de dados de desenvolvimento com todos os dados contidos nela para produção, porque muitos dos dados em que ele é provavelmente existe apenas para fins de teste. Por exemplo, os nomes de alunos em um banco de dados de teste são fictícios. Por outro lado, você geralmente não é possível implantar apenas a estrutura de banco de dados sem dados nele em todos os. Alguns dos dados no banco de dados de teste podem ser dados reais e devem estar lá quando os usuários começam a usar o aplicativo. Por exemplo, seu banco de dados pode ter uma tabela que contém os valores de classificação válidos ou nomes de departamento real.
+Quando você implanta um banco de dados de aplicativo, normalmente você não simplesmente implanta seu banco de dados de desenvolvimento com todos eles na produção, porque grande parte dos dados nele é provavelmente apenas para fins de teste. Por exemplo, os nomes de aluno em um banco de dados de teste são fictícios. Por outro lado, geralmente não é possível implantar apenas a estrutura do banco de dados sem nenhum dado. Alguns dos dados no banco de dado de teste podem ser dados reais e devem estar lá quando os usuários começam a usar o aplicativo. Por exemplo, seu banco de dados pode ter uma tabela que contém valores de nível válido ou nomes de departamento reais.
 
-Para simular esse cenário comum, você configurará um migrações do Code First `Seed` método que insere no banco de dados, somente os dados que você deseja estar lá em produção. Isso `Seed` método não deve inserir dados de teste porque ele será executado em produção depois que o Code First cria o banco de dados em produção.
+Para simular esse cenário comum, você configurará um Migrações do Code First método `Seed` que é inserido no banco de dados apenas os que você deseja que estejam na produção. Este método de `Seed` não deve inserir dados de teste porque ele será executado em produção depois que Code First criar o banco de dado em produção.
 
-Em versões anteriores do Code First antes que as migrações foi lançado, era comum `Seed` métodos para inserir dados de teste também, porque cada alteração de modelo durante o desenvolvimento de banco de dados tinha completamente ser excluído e recriado do zero. Com migrações do Code First, teste os dados são mantidos após as alterações do banco de dados, portanto, incluindo dados de teste no `Seed` método não é necessário. O projeto que você baixou usa o método de todos os dados, incluindo o `Seed` método de uma classe de inicializador. Neste tutorial, você desativar essa classe de inicializador e habilitar migrações. Em seguida, você atualizará o `Seed` método na configuração de migrações de classe para que ele insira apenas os dados que você deseja ser inserida em produção.
+Em versões anteriores do Code First antes da liberação de migrações, era comum `Seed` métodos para inserir dados de teste também, porque com cada alteração de modelo durante o desenvolvimento, o banco de dado tinha de ser completamente excluído e recriado do zero. Com o Migrações do Code First, os dados de teste são retidos após as alterações do banco de dados, de modo que não é necessário, inclusive, o teste do método `Seed`. O projeto que você baixou usa o método de incluir todos os dados no método `Seed` de uma classe de inicializador. Neste tutorial, você desabilitará essa classe de inicializador e habilitará as migrações. Em seguida, você atualizará o método `Seed` na classe de configuração migrações para que ele insira apenas os dados que você deseja inserir na produção.
 
 O diagrama a seguir ilustra o esquema do banco de dados do aplicativo:
 
 [![School_database_diagram](preparing-databases/_static/image2.png)](preparing-databases/_static/image1.png)
 
-Para esses tutoriais, você assumirá que o `Student` e `Enrollment` tabelas devem estar vazias quando o site é implantado pela primeira vez. As outras tabelas contêm dados que deve ser pré-carregado quando o aplicativo for lançado.
+Para esses tutoriais, você presumirá que as tabelas `Student` e `Enrollment` devem estar vazias quando o site for implantado pela primeira vez. As outras tabelas contêm dados que têm que ser pré-carregados quando o aplicativo é colocado em tempo real.
 
 ### <a name="disable-the-initializer"></a>Desabilitar o inicializador
 
-Uma vez que você usará migrações do Code First, você não precisa usar o `DropCreateDatabaseIfModelChanges` inicializador do Code First. O código para esse inicializador é na *SchoolInitializer.cs* arquivo no projeto ContosoUniversity.DAL. Uma configuração na `appSettings` elemento do *Web. config* arquivo faz com que esse inicializador ser executado sempre que o aplicativo tenta acessar o banco de dados pela primeira vez:
+Como você usará Migrações do Code First, não é necessário usar o inicializador de Code First de `DropCreateDatabaseIfModelChanges`. O código para esse inicializador está no arquivo *SchoolInitializer.cs* no projeto CONTOSOUNIVERSITY. Dal. Uma configuração no elemento `appSettings` do arquivo *Web. config* faz com que esse inicializador seja executado sempre que o aplicativo tentar acessar o banco de dados pela primeira vez:
 
 [!code-xml[Main](preparing-databases/samples/sample1.xml?highlight=3)]
 
-Abra o aplicativo *Web. config* do arquivo e remova ou comente o `add` elemento que especifica a classe de inicializador Code First. O `appSettings` elemento agora tem esta aparência:
+Abra o arquivo *Web. config* do aplicativo e remova ou comente o elemento `add` que especifica a classe do inicializador de Code First. O elemento `appSettings` agora tem esta aparência:
 
 [!code-xml[Main](preparing-databases/samples/sample2.xml)]
 
 > [!NOTE]
-> Outra maneira de especificar uma classe de inicializador é fazê-lo chamando `Database.SetInitializer` no `Application_Start` método na *global. asax* arquivo. Se você estiver habilitando as migrações em um projeto que usa esse método para especificar o inicializador, remova essa linha de código.
+> Outra maneira de especificar uma classe de inicializador é fazer isso chamando `Database.SetInitializer` no método `Application_Start` no arquivo *global. asax* . Se você estiver habilitando migrações em um projeto que usa esse método para especificar o inicializador, remova essa linha de código.
 
 > [!NOTE]
-> Se você estiver usando o Visual Studio 2013, adicione as etapas a seguir entre as etapas 2 e 3: (a) no PMC insira "update-package entityframework – versão 6.1.1" para obter a versão atual do EF. Em seguida, a compilação de (b) o projeto para obter uma lista de erros de compilação e corrigi-los. Excluir usando as instruções para namespaces que não existem, clique com botão direito e clique em resolver para adicionar instruções de uso onde eles são necessários e altere as ocorrências de System.Data.EntityState para entitystate.
+> Se você estiver usando Visual Studio 2013, adicione as seguintes etapas entre as etapas 2 e 3: (a) em PMC digite "Update-Package EntityFramework-Version 6.1.1" para obter a versão atual do EF. Em seguida, (b) compile o projeto para obter uma lista de erros de compilação e corrija-os. Exclua instruções using para namespaces que não existem mais, clique com o botão direito do mouse e clique em resolver para adicionar instruções using em que são necessárias e altere as ocorrências de System. Data. EntityState para System. Data. Entity. EntityState.
 
-### <a name="enable-code-first-migrations"></a>Habilitar migrações do Code First
+### <a name="enable-code-first-migrations"></a>Habilitar Migrações do Code First
 
-1. Certifique-se de que o projeto de ContosoUniversity (não ContosoUniversity.DAL) é definido como o projeto de inicialização. Na **Gerenciador de soluções**, clique com botão direito no projeto ContosoUniversity e selecione **definir como projeto de inicialização**. Migrações do Code First examinará o projeto de inicialização para localizar a cadeia de caracteres de conexão de banco de dados.
-2. Dos **ferramentas** menu, escolha **Gerenciador de pacotes NuGet** > **Package Manager Console**.
+1. Verifique se o projeto ContosoUniversity (não ContosoUniversity. DAL) está definido como o projeto de inicialização. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto ContosoUniversity e selecione **definir como projeto de inicialização**. Migrações do Code First examinará o projeto de inicialização para localizar a cadeia de conexão do banco de dados.
+2. No menu **ferramentas** , escolha **Gerenciador de pacotes NuGet** > **console do Gerenciador de pacotes**.
 
     ![Selecting_Package_Manager_Console](preparing-databases/_static/image3.png)
-3. Na parte superior a **Package Manager Console** janela Selecione ContosoUniversity.DAL como o projeto padrão e, em seguida, at a `PM>` prompt insira "enable-migrations".
+3. Na parte superior da janela do **console do Gerenciador de pacotes** , selecione CONTOSOUNIVERSITY. Dal como o projeto padrão e, em seguida, no prompt de `PM>`, insira "Enable-Migrations".
 
-    ![comando enable-migrations](preparing-databases/_static/image4.png)
+    ![comando Enable-Migrations](preparing-databases/_static/image4.png)
 
-    (Se você receber um erro dizendo que o *enable-migrations* comando não for reconhecido, digite o comando *update-package EntityFramework – reinstalar* e tente novamente.)
+    (Se você receber um erro informando que o comando *Enable-Migrations* não é reconhecido, insira o comando *Update-Package EntityFramework-REINSTALL* e tente novamente.)
 
-    Este comando cria uma *migrações* pasta no projeto ContosoUniversity.DAL e ele coloca nessa pasta dois arquivos: um *Configuration.cs* arquivo que você pode usar para configurar migrações e um *InitialCreate.cs* arquivo para a primeira migração que cria o banco de dados.
+    Esse comando cria uma pasta *Migrations* no projeto CONTOSOUNIVERSITY. Dal e coloca na pasta dois arquivos: um arquivo *Configuration.cs* que você pode usar para configurar as migrações e um arquivo *InitialCreate.cs* para a primeira migração que cria o banco de dados.
 
-    ![Pasta Migrations](preparing-databases/_static/image5.png)
+    ![Pasta de migrações](preparing-databases/_static/image5.png)
 
-    Você selecionou o projeto DAL na **projeto padrão** lista suspensa da **Package Manager Console** porque o `enable-migrations` comando deve ser executado no projeto que contém o Code First classe de contexto. Quando essa classe está em um projeto de biblioteca de classes, as migrações Code First procura a cadeia de caracteres de conexão de banco de dados no projeto de inicialização para a solução. Na solução ContosoUniversity, o projeto da web foi definido como o projeto de inicialização. Se você não quiser designar o projeto que tem a cadeia de caracteres de conexão como o projeto de inicialização no Visual Studio, você pode especificar o projeto de inicialização no comando do PowerShell. Para ver a sintaxe de comando, digite o comando `get-help enable-migrations`.
+    Você selecionou o projeto DAL na lista suspensa **projeto padrão** do **console do Gerenciador de pacotes** porque o comando `enable-migrations` deve ser executado no projeto que contém a classe de contexto Code First. Quando essa classe está em um projeto de biblioteca de classes, Migrações do Code First procura a cadeia de conexão do banco de dados no projeto de inicialização da solução. Na solução ContosoUniversity, o projeto Web foi definido como o projeto de inicialização. Se você não quiser designar o projeto que tem a cadeia de conexão como o projeto de inicialização no Visual Studio, poderá especificar o projeto de inicialização no comando do PowerShell. Para ver a sintaxe do comando, digite o comando `get-help enable-migrations`.
 
-    O `enable-migrations` comando criada automaticamente a primeira migração porque o banco de dados já existe. Uma alternativa é para migrações de criar o banco de dados. Para fazer isso, use **Gerenciador de servidores** ou **SQL Server Object Explorer** para excluir o banco de dados ContosoUniversity antes de habilitar as migrações. Depois de habilitar migrações, crie a primeira migração manualmente, digitando o comando "add-migration InitialCreate". Em seguida, você pode criar o banco de dados, inserindo o comando "update-database".
+    O comando `enable-migrations` criou automaticamente a primeira migração porque o banco de dados já existe. Uma alternativa é fazer com que as migrações criem o banco de dados. Para fazer isso, use **Gerenciador de servidores** ou **pesquisador de objetos do SQL Server** para excluir o banco de dados ContosoUniversity antes de habilitar as migrações. Depois de habilitar as migrações, crie a primeira migração manualmente digitando o comando "Add-Migration InitialCreate". Em seguida, você pode criar o banco de dados digitando o comando "Update-Database".
 
-### <a name="set-up-the-seed-method"></a>Configurar o método de semente
+### <a name="set-up-the-seed-method"></a>Configurar o método semente
 
-Para este tutorial você adicionará dados fixos, adicionando código para o `Seed` método das migrações do Code First `Configuration` classe. Código migrações primeiro chama o `Seed` método após cada migração.
+Para este tutorial, você adicionará dados fixos adicionando código ao método `Seed` da classe Migrações do Code First `Configuration`. Migrações do Code First chama o método `Seed` após cada migração.
 
-Uma vez que o `Seed` método é executado após cada migração, dados já existe nas tabelas após a primeira migração. Para lidar com essa situação, você usará o `AddOrUpdate` método para atualizar linhas que já foram inseridas ou inseri-los se eles ainda não existirem. O `AddOrUpdate` método não pode ser a melhor opção para seu cenário. Para obter mais informações, consulte [tome cuidado com o EF 4.3 AddOrUpdate método](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) no blog de Julie.
+Como o método `Seed` é executado após cada migração, há dados já existentes nas tabelas após a primeira migração. Para lidar com essa situação, você usará o método `AddOrUpdate` para atualizar as linhas que já foram inseridas ou inseri-las se elas ainda não existirem. O método `AddOrUpdate` pode não ser a melhor opção para seu cenário. Para obter mais informações, consulte [tomar cuidado com o método EF 4,3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) no blog de Julie Lerman.
 
-1. Abra o *Configuration.cs* do arquivo e substitua os comentários no `Seed` método com o código a seguir:
+1. Abra o arquivo *Configuration.cs* e substitua os comentários no método `Seed` pelo seguinte código:
 
     [!code-csharp[Main](preparing-databases/samples/sample3.cs)]
-2. As referências aos `List` tiver linhas curvadas vermelhas sob eles, porque você não tem um `using` instrução ainda para seu namespace. Clique em um das instâncias do `List` e clique em **resolver**e, em seguida, clique em **usando Collections**.
+2. As referências a `List` têm linhas onduladas vermelhas sob elas porque você ainda não tem uma instrução `using` para seu namespace. Clique com o botão direito do mouse em uma das instâncias de `List` e clique em **resolver**e, em seguida, clique em **usando System. Collections. Generic**.
 
     ![Resolver com a instrução using](preparing-databases/_static/image6.png)
 
-    Essa seleção de menu adiciona o código a seguir para o `using` instruções na parte superior do arquivo.
+    Essa seleção de menu adiciona o código a seguir às instruções `using` próximas à parte superior do arquivo.
 
     [!code-csharp[Main](preparing-databases/samples/sample4.cs)]
 3. Pressione CTRL-SHIFT-B para compilar o projeto.
 
-O projeto agora está pronto para implantar o *ContosoUniversity* banco de dados. Depois de implantar o aplicativo, na primeira vez que você executá-lo e navega até uma página que acessa o banco de dados Code First criará o banco de dados e executá-lo `Seed` método.
+Agora, o projeto está pronto para implantar o banco de dados *ContosoUniversity* . Depois de implantar o aplicativo, na primeira vez que você executá-lo e navegar até uma página que acessa o banco de dados, Code First criará o banco de dados e executará esse método de `Seed`.
 
 > [!NOTE]
-> Adicionando código para o `Seed` método é uma das muitas maneiras que você pode inserir dados fixa no banco de dados. Uma alternativa é adicionar código para o `Up` e `Down` métodos de cada classe de migração. O `Up` e `Down` métodos contêm código que implementa as alterações do banco de dados. Você verá exemplos na [Implantando uma atualização de banco de dados](deploying-a-database-update.md) tutorial.
+> Adicionar código ao método de `Seed` é uma das várias maneiras de inserir dados fixos no banco de dado. Uma alternativa é adicionar código ao `Up` e `Down` métodos de cada classe de migração. Os métodos `Up` e `Down` contêm código que implementa alterações no banco de dados. Você verá exemplos deles no tutorial [implantando uma atualização de banco de dados](deploying-a-database-update.md) .
 > 
-> Você também pode escrever código que executa instruções SQL usando o `Sql` método. Por exemplo, se você estivesse adicionando uma coluna de orçamento para a tabela de departamento e quiser inicializar todos os orçamentos de departamento para US $ 1.000,00 como parte de uma migração, você pode adicionar a seguinte linha de código para o `Up` método para que a migração:
+> Você também pode escrever um código que execute instruções SQL usando o método `Sql`. Por exemplo, se você estivesse adicionando uma coluna de orçamento à tabela Department e quisesse inicializar todos os orçamentos de departamento como $1000 como parte de uma migração, você poderia adicionar a seguinte linha de código ao método `Up` para essa migração:
 > 
 > `Sql("UPDATE Department SET Budget = 1000");`
 
-## <a name="create-scripts-for-membership-database-deployment"></a>Criar scripts para implantação de banco de dados de associação
+## <a name="create-scripts-for-membership-database-deployment"></a>Criar scripts para a implantação de banco de dados de associação
 
-O aplicativo Contoso University usa a autenticação de formulários e sistema de associação do ASP.NET para autenticar e autorizar usuários. O **atualização créditos** está acessível somente a usuários que estão na função de administrador.
+O aplicativo Contoso University usa o sistema de associação do ASP.NET e a autenticação de formulários para autenticar e autorizar usuários. A página **créditos de atualização** só é acessível para usuários que estão na função Administrador.
 
-Execute o aplicativo e clique em **cursos**e, em seguida, clique em **atualização créditos**.
+Execute o aplicativo e clique em **cursos**e, em seguida, clique em **Atualizar créditos**.
 
-![Clique em créditos de atualização](preparing-databases/_static/image7.png)
+![Clique em atualizar créditos](preparing-databases/_static/image7.png)
 
-O **faça logon no** página aparece porque o **atualização créditos** página requer privilégios administrativos.
+A página de **logon** é exibida porque a página de **créditos de atualização** requer privilégios administrativos.
 
-Insira *admin* como o nome de usuário e *devpwd* como a senha e clique em **fazer logon no**.
+Insira *administrador* como o nome de usuário e *devpwd* como a senha e clique em **fazer logon**.
 
 ![Página de logon](preparing-databases/_static/image8.png)
 
-O **atualização créditos** página será exibida.
+A página **créditos de atualização** é exibida.
 
-![Página de atualização de créditos](preparing-databases/_static/image9.png)
+![Página atualizar créditos](preparing-databases/_static/image9.png)
 
-Informações de usuário e a função estão no *ContosoUniversity aspnet* banco de dados que é especificado pelo **DefaultConnection** cadeia de caracteres de conexão no *Web. config* arquivo.
+As informações de usuário e função estão no banco de dados *ASPNET-ContosoUniversity* especificado pela cadeia de conexão **DefaultConnection** no arquivo *Web. config* .
 
-Este banco de dados não é gerenciado pelo Entity Framework Code First, portanto, você não pode usar as migrações para implantá-lo. Você usará o provedor dbDacFx para implantar o esquema de banco de dados, e você vai configurar o perfil de publicação para executar um script que irá inserir dados iniciais para tabelas de banco de dados.
-
-> [!NOTE]
-> Um novo sistema de associação do ASP.NET (agora chamado de identidade do ASP.NET) foi introduzido com o Visual Studio 2013. O novo sistema permite que você mantenha o aplicativo e tabelas de associação no mesmo banco de dados, e você pode usar as migrações Code First para implantar ambas. O aplicativo de exemplo usa o sistema de associação ASP.NET anterior, que não pode ser implantado por meio de migrações do Code First. Os procedimentos para implantar esse banco de dados de associação também se aplicam a qualquer outro cenário em que seu aplicativo precisa para implantar um banco de dados do SQL Server que não é criado pelo Entity Framework Code First.
-
-Aqui também, você normalmente não quer os mesmos dados em produção que você tem em desenvolvimento. Quando você implanta um site pela primeira vez, é comum para excluir a maioria ou todas as contas de usuário que criar para teste. Portanto, o projeto baixado tem dois bancos de dados de associação: *ContosoUniversity.mdf aspnet* com usuários de desenvolvimento e *aspnet-ContosoUniversity-Prod.mdf* com usuários de produção. Para este tutorial, os nomes de usuário são os mesmos em ambos os bancos de dados: *admin* e *nonadmin*. Os dois usuários possuírem a senha *devpwd* no banco de dados de desenvolvimento e *prodpwd* no banco de dados de produção.
-
-Você implantará os usuários de desenvolvimento para o ambiente de teste e os usuários de produção para preparação e produção. Para fazer isso você criará dois scripts SQL neste tutorial, um para desenvolvimento e outra para produção e, em tutoriais posteriores, você vai configurar o processo de publicação para executá-los.
+Esse banco de dados não é gerenciado pelo Entity Framework Code First, portanto, você não pode usar migrações para implantá-lo. Você usará o provedor dbDacFx para implantar o esquema de banco de dados e configurará o perfil de publicação para executar um script que irá inserir dados iniciais em tabelas de banco de dados.
 
 > [!NOTE]
-> O banco de dados de associação armazena um hash de senhas de conta. Para implantar contas de um computador para outro, você deve garantir que as rotinas de hash não geram hashes de diferentes no servidor de destino do que em um computador de origem. Eles irá gerar os hashes mesmos quando você usa o ASP.NET Universal Providers, desde que você não altere o algoritmo padrão. O algoritmo padrão é HMACSHA256 e é especificado na **validação** atributo da **[machineKey](https://msdn.microsoft.com/library/system.web.configuration.machinekeysection.aspx)** elemento no arquivo Web. config.
+> Um novo sistema de associação ASP.NET (agora chamado ASP.NET Identity) foi introduzido com Visual Studio 2013. O novo sistema permite manter as tabelas de aplicativo e associação no mesmo banco de dados, e você pode usar Migrações do Code First para implantar ambos. O aplicativo de exemplo usa o sistema de associação ASP.NET anterior, que não pode ser implantado usando Migrações do Code First. Os procedimentos para implantar esse banco de dados de associação também se aplicam a qualquer outro cenário no qual seu aplicativo precise implantar um banco de dados SQL Server que não é criado pelo Entity Framework Code First.
 
-Você pode criar scripts de implantação de dados manualmente, usando o SQL Server Management Studio (SSMS) ou usando uma ferramenta de terceiros. O restante deste tutorial mostrará como fazê-lo no SSMS, mas se você não quiser instalar e usar o SSMS, você pode obter os scripts da versão concluída do projeto e vá para a seção em que você armazená-los na pasta da solução.
+Aqui também, você normalmente não quer os mesmos dados na produção que você tem em desenvolvimento. Quando você implanta um site pela primeira vez, é comum excluir a maioria ou todas as contas de usuário que você cria para teste. Portanto, o projeto baixado tem dois bancos de dados de associação: *ASPNET-ContosoUniversity. MDF* com usuários de desenvolvimento e *ASPNET-ContosoUniversity-prod. MDF* com usuários de produção. Para este tutorial, os nomes de usuário são os mesmos em ambos os bancos de dados: *admin* e não *admin*. Ambos os usuários têm a senha *devpwd* no banco de dados de desenvolvimento e *prodpwd* no banco de dados de produção.
 
-Para instalar o SSMS, instalá-lo do [Centro de Download: Microsoft SQL Server 2012 Express](https://www.microsoft.com/download/details.aspx?id=29062) clicando [ENU\x64\SQLManagementStudio\_x64\_ENU.exe](https://download.microsoft.com/download/8/D/D/8DD7BDBA-CEF7-4D8E-8C16-D9F69527F909/ENU/x64/SQLManagementStudio_x64_ENU.exe) ou [ENU\x86\SQLManagementStudio\_x86\_ENU.exe](https://download.microsoft.com/download/8/D/D/8DD7BDBA-CEF7-4D8E-8C16-D9F69527F909/ENU/x86/SQLManagementStudio_x86_ENU.exe). Se você escolher o errado para seu sistema não conseguir instalar e você pode tentar outro.
+Você implantará os usuários de desenvolvimento no ambiente de teste e os usuários de produção para preparo e produção. Para fazer isso, você criará dois scripts SQL neste tutorial, um para desenvolvimento e outro para produção e, em Tutoriais posteriores, configurará o processo de publicação para executá-los.
 
-(Observe que se trata de um download de 600 megabytes. Pode levar muito tempo para instalar e exigirá uma reinicialização do computador.)
+> [!NOTE]
+> O banco de dados de associação armazena um hash de senhas de conta. Para implantar contas de um computador para outro, você deve certificar-se de que as rotinas de hash não gerem hashes diferentes no servidor de destino do que no computador de origem. Eles gerarão os mesmos hashes quando você usar o Provedores Universais ASP.NET, desde que você não altere o algoritmo padrão. O algoritmo padrão é HMACSHA256 e é especificado no atributo **Validation** do elemento **[machineKey](https://msdn.microsoft.com/library/system.web.configuration.machinekeysection.aspx)** no arquivo Web. config.
 
-Na primeira página da Central de instalação do SQL Server, clique em **instalação autônoma do novo SQL Server ou adicionar recursos a uma instalação existente**e siga as instruções, aceitando as opções padrão.
+Você pode criar scripts de implantação de dados manualmente, usando o SQL Server Management Studio (SSMS) ou usando uma ferramenta de terceiros. Este restante deste tutorial mostrará como fazer isso no SSMS, mas se você não quiser instalar e usar o SSMS, poderá obter os scripts da versão completa do projeto e pular para a seção onde armazená-los na pasta da solução.
 
-### <a name="create-the-development-database-script"></a>Criar o script de banco de dados de desenvolvimento
+Para instalar o SSMS, instale-o no [centro de download: Microsoft SQL Server 2012 Express](https://www.microsoft.com/download/details.aspx?id=29062) clicando em [ENU\x64\SQLManagementStudio\_x64\_PTB. exe](https://download.microsoft.com/download/8/D/D/8DD7BDBA-CEF7-4D8E-8C16-D9F69527F909/ENU/x64/SQLManagementStudio_x64_ENU.exe) ou [ENU\x86\SQLManagementStudio\_x86\_PTB. exe](https://download.microsoft.com/download/8/D/D/8DD7BDBA-CEF7-4D8E-8C16-D9F69527F909/ENU/x86/SQLManagementStudio_x86_ENU.exe). Se você escolher um incorreto para o sistema, ele não será instalado e você poderá tentar o outro.
+
+(Observe que esse é um download de 600 megabytes. Pode levar muito tempo para instalar e exigirá uma reinicialização do seu computador.)
+
+Na primeira página da central de instalação do SQL Server, clique em **novo SQL Server instalação autônoma ou adicionar recursos a uma instalação existente**e siga as instruções, aceitando as opções padrão.
+
+### <a name="create-the-development-database-script"></a>Criar o script de desenvolvimento de banco de dados
 
 1. Execute o SSMS.
-2. No **conectar ao servidor** caixa de diálogo, digite *(localdb) \v11.0* como o **nome do servidor**, deixe **autenticação** definido como **Autenticação do Windows**e, em seguida, clique em **Connect**.
+2. Na caixa de diálogo **conectar ao servidor** , digite *(LocalDB) \v11.0* como o **nome do servidor**, deixe a **autenticação** definida como **autenticação do Windows**e clique em **conectar**.
 
-    ![O SSMS se conectar ao servidor](preparing-databases/_static/image10.png)
-3. No **Pesquisador de objetos** janela, expanda **bancos de dados**, clique com botão direito **aspnet ContosoUniversity**, clique em **tarefas**e, em seguida, clique em **Gerar Scripts**.
+    ![Conectar o SSMS ao servidor](preparing-databases/_static/image10.png)
+3. Na janela pesquisador de **objetos** , expanda **bancos de dados**, clique com o botão direito do mouse em **ASPNET-ContosoUniversity**, clique em **tarefas**e em **gerar scripts**.
 
-    ![SSMS gerar Scripts](preparing-databases/_static/image11.png)
-4. No **gerar e publicar Scripts** caixa de diálogo, clique em **definir opções de script**.
+    ![Gerar scripts do SSMS](preparing-databases/_static/image11.png)
+4. Na caixa de diálogo **gerar e publicar scripts** , clique em **definir opções de script**.
 
-    Você pode ignorar a **escolher objetos** etapa porque o padrão é **banco de dados inteiro e todos os objetos de banco de dados de Script** e é o que você deseja.
+    Você pode ignorar a etapa **escolher objetos** porque o padrão é o **banco de dados inteiro do script e todos os objetos de banco de dados** e isso é o que você deseja.
 5. Clique em **Avançadas**.
 
-    ![Opções de script de SSMS](preparing-databases/_static/image12.png)
-6. No **opções de script avançadas** caixa de diálogo, role para baixo até **tipos de dados para script**e clique no **somente dados** opção na lista suspensa.
-7. Alteração **Gerar Script de USE DATABASE** à **falso**. Instruções de uso não são válidas para o banco de dados SQL e não são necessários para a implantação para o SQL Server Express no ambiente de teste.
+    ![Opções de script do SSMS](preparing-databases/_static/image12.png)
+6. Na caixa de diálogo **Opções de script avançadas** , role para baixo até **tipos de dados para script**e clique na opção **somente dados** na lista suspensa.
+7. Alterar **script use o banco de dados** para **false**. As instruções USE não são válidas para o banco de dados SQL do Azure e não são necessárias para a implantação SQL Server Express no ambiente de teste.
 
-    ![SSMS Script somente dados, nenhuma instrução USE](preparing-databases/_static/image13.png)
+    ![Somente dados de script do SSMS, nenhuma instrução USE](preparing-databases/_static/image13.png)
 8. Clique em **OK**.
-9. No **gerar e publicar Scripts** caixa de diálogo, o **nome do arquivo** caixa especifica onde o script será criado. Altere o caminho para a sua pasta de solução (a pasta que contém seu arquivo ContosoUniversity.sln) e o nome do arquivo para *aspnet-data-dev.sql*.
-10. Clique em **próxima** para ir para o **resumo** guia e, em seguida, clique em **próxima** novamente para criar o script.
+9. Na caixa de diálogo **gerar e publicar scripts** , a caixa **nome do arquivo** especifica onde o script será criado. Altere o caminho para a pasta da solução (a pasta que tem o arquivo ContosoUniversity. sln) e o nome do arquivo para *ASPNET-data-dev. SQL*.
+10. Clique em **Avançar** para ir para a guia **Resumo** e, em seguida, clique em **Avançar** novamente para criar o script.
 
-    ![Script SSMS criado](preparing-databases/_static/image14.png)
+    ![Script do SSMS criado](preparing-databases/_static/image14.png)
 11. Clique em **Finalizar**.
 
-### <a name="create-the-production-database-script"></a>Criar o script de banco de dados de produção
+### <a name="create-the-production-database-script"></a>Criar o script do banco de dados de produção
 
-Uma vez que você ainda não executou o projeto com o banco de dados de produção, ele não está anexado ainda para a instância de LocalDB. Portanto, você precisa anexar o banco de dados pela primeira vez.
+Como você não executou o projeto com o banco de dados de produção, ele ainda não está anexado à instância de LocalDB. Portanto, você precisa primeiro anexar o banco de dados.
 
-1. No SSMS **Pesquisador de objetos**, clique com botão direito **bancos de dados** e clique em **Attach**.
+1. No Pesquisador de **objetos**do SSMS, clique com o botão direito do mouse em **bancos de dados** e clique em **anexar**.
 
-    ![Anexar do SSMS](preparing-databases/_static/image15.png)
-2. No **anexar bancos de dados** caixa de diálogo, clique em **Add** e, em seguida, navegue até o *aspnet-ContosoUniversity-Prod.mdf* de arquivo no *aplicativo\_ Dados* pasta.
+    ![Anexo do SSMS](preparing-databases/_static/image15.png)
+2. Na caixa de diálogo **anexar bancos de dados** , clique **em Adicionar** e, em seguida, navegue até o arquivo *ASPNET-ContosoUniversity-prod. MDF* na pasta de *dados do aplicativo\_* .
 
-     ![SSMS Adicionar arquivo. mdf a ser anexado](preparing-databases/_static/image16.png)
+     ![Adicionar arquivo. MDF do SSMS para anexar](preparing-databases/_static/image16.png)
 3. Clique em **OK**.
-4. Siga o mesmo procedimento que você usou anteriormente para criar um script para o arquivo de produção. Nomeie o arquivo de script *aspnet-data-prod.sql*.
+4. Siga o mesmo procedimento usado anteriormente para criar um script para o arquivo de produção. Nomeie o arquivo de script *ASPNET-data-prod. SQL*.
 
 ## <a name="summary"></a>Resumo
 
-Ambos os bancos de dados agora estão prontos para ser implantado e você tem dois scripts de implantação de dados na pasta da solução.
+Os dois bancos de dados agora estão prontos para serem implantados e você tem dois scripts de implantação em sua pasta de solução.
 
 ![Scripts de implantação de dados](preparing-databases/_static/image17.png)
 
-O tutorial a seguir você define as configurações de projeto que afetam a implantação, e você configurar automatic *Web. config* arquivo transformações para as configurações que devem ser diferentes no aplicativo implantado.
+No tutorial a seguir, você define as configurações de projeto que afetam a implantação e configura as transformações de arquivo *Web. config* automáticas para as configurações que devem ser diferentes no aplicativo implantado.
 
-## <a name="more-information"></a>Mais informações
+## <a name="more-information"></a>Mais Informações
 
-Para obter mais informações sobre o NuGet, consulte [gerenciar bibliotecas de projeto com o NuGet](https://msdn.microsoft.com/magazine/hh547106.aspx) e [documentação do NuGet](http://docs.nuget.org/docs/start-here/overview). Se você não quiser usar o NuGet, você precisará aprender como analisar um pacote do NuGet para determinar o que ele faz quando ele está instalado. (Por exemplo, ele pode configurar *Web. config* transformações, configurar scripts do PowerShell para ser executado em tempo de compilação, etc.) Para saber mais sobre como o NuGet funciona, consulte [criar e publicar um pacote](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) e [arquivo de configuração e transformações de código fonte](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
+Para obter mais informações sobre o NuGet, consulte [gerenciar bibliotecas de projetos com a](https://msdn.microsoft.com/magazine/hh547106.aspx) documentação do NuGet e [NuGet](http://docs.nuget.org/docs/start-here/overview). Se você não quiser usar o NuGet, precisará aprender como analisar um pacote NuGet para determinar o que ele faz quando ele está instalado. (Por exemplo, ele pode configurar transformações de *Web. config* , configurar scripts do PowerShell para serem executados no momento da compilação, etc.) Para saber mais sobre como o NuGet funciona, consulte [criando e publicando um pacote](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) e as [transformações de código-fonte e o arquivo de configuração](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
 
 > [!div class="step-by-step"]
 > [Anterior](introduction.md)

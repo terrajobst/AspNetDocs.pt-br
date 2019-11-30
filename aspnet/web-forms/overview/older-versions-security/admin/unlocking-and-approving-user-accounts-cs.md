@@ -1,196 +1,196 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs
-title: Desbloqueio e aprovação de contas de usuário (c#) | Microsoft Docs
+title: Desbloqueando e aprovando contas deC#usuário () | Microsoft Docs
 author: rick-anderson
-description: Este tutorial mostra como criar uma página da web para os administradores gerenciarem bloqueada e aprovado o status dos usuários. Também veremos como aprovar o novo de usuários...
+description: Este tutorial mostra como criar uma página da Web para os administradores gerenciarem os status bloqueados e aprovados dos usuários. Também veremos como aprovar novos usuários o...
 ms.author: riande
 ms.date: 04/01/2008
 ms.assetid: 5346aab1-9974-489f-a065-ae3883b8a350
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/unlocking-and-approving-user-accounts-cs
 msc.type: authoredcontent
-ms.openlocfilehash: b27be9dff132989a37eca7d5ef3af7b0e1aaeb74
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: c19f7dfac0ddd12c2b4f3388a71a8ca0f71cbb18
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131298"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74580122"
 ---
 # <a name="unlocking-and-approving-user-accounts-c"></a>Desbloqueio e aprovação de contas de usuário (C#)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixar o código](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.14.zip) ou [baixar PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial14_UnlockAndApprove_cs.pdf)
+[Baixar código](https://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.14.zip) ou [baixar PDF](https://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial14_UnlockAndApprove_cs.pdf)
 
-> Este tutorial mostra como criar uma página da web para os administradores gerenciarem bloqueada e aprovado o status dos usuários. Também veremos como aprovar novos usuários somente depois que eles confirmaram seu endereço de email.
+> Este tutorial mostra como criar uma página da Web para os administradores gerenciarem os status bloqueados e aprovados dos usuários. Também veremos como aprovar novos usuários somente depois de verificarem seu endereço de email.
 
 ## <a name="introduction"></a>Introdução
 
-Junto com um nome de usuário, senha e email, cada conta de usuário tem dois campos de status que determinam se o usuário pode fazer logon no site: bloqueada e aprovada. Um usuário está bloqueado automaticamente se eles fornecem credenciais inválidas, um número especificado de vezes dentro de um número especificado de minutos (as configurações padrão bloquearem um usuário após 5 tentativas de logon inválidas dentro de 10 minutos). O status aprovado é útil em cenários em que alguma ação deve ocorrer antes que um novo usuário é capaz de fazer logon site. Por exemplo, um usuário talvez precise primeiro verificar seu endereço de email ou ser aprovada por um administrador antes de poder fazer logon.
+Junto com um nome de usuário, senha e email, cada conta de usuário tem dois campos de status que determinam se o usuário pode fazer logon no site: bloqueado e aprovado. Um usuário será bloqueado automaticamente se fornecer credenciais inválidas um número especificado de vezes dentro de um determinado número de minutos (as configurações padrão bloqueiam o usuário após 5 tentativas de logon inválidas em 10 minutos). O status aprovado é útil em cenários em que alguma ação deve ser transacionada antes que um novo usuário possa fazer logon no site. Por exemplo, um usuário pode precisar primeiro verificar seu endereço de email ou ser aprovado por um administrador antes de poder fazer logon.
 
-Porque um bloqueados fora ou não aprovado o usuário não pode fazer logon, é natural apenas para estar se perguntando como esses status podem ser redefinidas. ASP.NET não inclui nenhuma funcionalidade interna ou controles da Web para o gerenciamento de usuários bloqueados e aprovada status, em parte porque essas decisões que precisam ser manipulados em uma base de site a site. Alguns sites podem aprovar automaticamente todas as novas contas de usuário (o comportamento padrão). Outros têm um administrador aprove novas contas ou não aprovar os usuários até que eles visitam um link enviado para o endereço de email fornecido ao se inscrever. Da mesma forma, alguns sites podem bloquear os usuários até que um administrador redefine seu status, enquanto outros sites envie um email para o usuário bloqueado com uma URL que eles podem visitar para desbloquear sua conta.
+Como um usuário bloqueado ou não aprovado não pode fazer logon, é natural imaginar como esses status podem ser redefinidos. O ASP.NET não inclui nenhuma funcionalidade interna ou controles da Web para gerenciar status bloqueados e aprovados pelos usuários, em parte porque essas decisões precisam ser tratadas em uma base site a site. Alguns sites podem aprovar automaticamente todas as novas contas de usuário (o comportamento padrão). Outras pessoas têm um administrador aprovam novas contas ou não aprovam os usuários até visitarem um link enviado para o endereço de email fornecido quando eles se inscreveram. Da mesma forma, alguns sites podem bloquear usuários até que um administrador redefina seu status, enquanto outros sites enviam um email para o usuário bloqueado com uma URL que eles podem visitar para desbloquear sua conta.
 
-Este tutorial mostra como criar uma página da web para os administradores gerenciarem bloqueada e aprovado o status dos usuários. Também veremos como aprovar novos usuários somente depois que eles confirmaram seu endereço de email.
+Este tutorial mostra como criar uma página da Web para os administradores gerenciarem os status bloqueados e aprovados dos usuários. Também veremos como aprovar novos usuários somente depois de verificarem seu endereço de email.
 
-## <a name="step-1-managing-users-locked-out-and-approved-statuses"></a>Etapa 1: Gerenciar usuários bloqueada e status de aprovação
+## <a name="step-1-managing-users-locked-out-and-approved-statuses"></a>Etapa 1: Gerenciando status bloqueados e aprovados dos usuários
 
-No <a id="Tutorial12"> </a> [ *criação de uma Interface para selecionar uma conta de usuário de muitos* ](building-an-interface-to-select-one-user-account-from-many-cs.md) tutorial, nós criamos uma página que listada cada conta de usuário no paginada, filtrados GridView. A grade lista o nome de cada usuário e email, seus status aprovados e bloqueadas, se eles estão online no momento e quaisquer comentários sobre o usuário. Para gerenciar usuários aprovados e bloqueada status, poderíamos tornar essa grade editável. Para alterar o status de um usuário aprovado, o administrador teria primeiro localize a conta de usuário e, em seguida, edite a linha correspondente do GridView, marcando ou desmarcando a caixa de seleção aprovada. Como alternativa, podemos pode gerenciar os status aprovados e bloqueados por meio de uma página separada do ASP.NET.
+<a id="Tutorial12"> </a>Na página [*criando uma interface para selecionar uma conta de usuário a partir de muitos*](building-an-interface-to-select-one-user-account-from-many-cs.md) , criamos uma páginas que listou cada conta de usuário em um GridView filtrado, paginado. A grade lista o nome e o email de cada usuário, seus status aprovados e bloqueados, se eles estão online no momento e comentários sobre o usuário. Para gerenciar os status aprovados e bloqueados dos usuários, poderíamos tornar essa grade editável. Para alterar o status aprovado de um usuário, o administrador primeiro localiza a conta de usuário e, em seguida, editou a linha GridView correspondente, marcando ou desmarcando a caixa de seleção aprovada. Como alternativa, poderíamos gerenciar os status aprovado e bloqueado por meio de uma página ASP.NET separada.
 
-Para este tutorial vamos usar duas páginas do ASP.NET: `ManageUsers.aspx` e `UserInformation.aspx`. A ideia aqui é que `ManageUsers.aspx` lista as contas de usuário no sistema, enquanto `UserInformation.aspx` permite que o administrador gerencie os status aprovados e bloqueados para um usuário específico. Nossa tarefa prioritária é aumentar o GridView no `ManageUsers.aspx` para incluir um HyperLinkField, que é renderizado como uma coluna de links. Queremos que cada link para apontar para `UserInformation.aspx?user=UserName`, onde *nome de usuário* é o nome do usuário para editar.
+Para este tutorial, vamos usar duas páginas ASP.NET: `ManageUsers.aspx` e `UserInformation.aspx`. A ideia aqui é que `ManageUsers.aspx` lista as contas de usuário no sistema, enquanto `UserInformation.aspx` permite que o administrador gerencie os status aprovados e bloqueados para um usuário específico. Nossa primeira ordem de negócios é aumentar o GridView no `ManageUsers.aspx` para incluir um HyperLinkField, que é renderizado como uma coluna de links. Queremos que cada link aponte para `UserInformation.aspx?user=UserName`, em que *username* é o nome do usuário a ser editado.
 
 > [!NOTE]
-> Se você baixou o código para o <a id="Tutorial13"> </a> [ *Recovering e alterar as senhas* ](recovering-and-changing-passwords-cs.md) tutorial, você deve ter observado que o `ManageUsers.aspx` página já contém um conjunto de " Gerenciar"links e o `UserInformation.aspx` página fornece uma interface para alterar a senha do usuário selecionado. Decidi não replicar essa funcionalidade no código associado com este tutorial porque funcionou, evitando a API Membership e operar diretamente com o banco de dados do SQL Server para alterar a senha do usuário. Este tutorial começa do zero com o `UserInformation.aspx` página.
+> Se você baixou o código para <a id="Tutorial13"> </a>o tutorial de [*recuperação e alteração de senhas*](recovering-and-changing-passwords-cs.md) , talvez tenha notado que a página de `ManageUsers.aspx` já contém um conjunto de links de "gerenciar" e a página de `UserInformation.aspx` fornece uma interface para alterar a senha do usuário selecionado. Decidi não replicar essa funcionalidade no código associado a este tutorial porque ela funcionou ao burlar a API Membership e operar diretamente com o banco de dados SQL Server para alterar a senha de um usuário. Este tutorial começa do zero com a página `UserInformation.aspx`.
 
-### <a name="adding-manage-links-to-theuseraccountsgridview"></a>Adicionando "gerenciar" Links para o`UserAccounts`GridView
+### <a name="adding-manage-links-to-theuseraccountsgridview"></a>Adicionando links "gerenciar" para o`UserAccounts`GridView
 
-Abra o `ManageUsers.aspx` da página e adicionar um HyperLinkField para o `UserAccounts` GridView. Defina o HyperLinkField `Text` propriedade para "Gerenciar" e seu `DataNavigateUrlFields` e `DataNavigateUrlFormatString` propriedades a serem `UserName` e "UserInformation.aspx?user={0}", respectivamente. Essas configurações definem o HyperLinkField, de modo que todos os hiperlinks exibem o texto "Gerenciar", mas cada link passa no respectivo *nome de usuário* valor na cadeia de consulta.
+Abra a página `ManageUsers.aspx` e adicione um HyperLinkField ao `UserAccounts` GridView. Defina a propriedade `Text` do HyperLinkField como "gerenciar" e suas propriedades `DataNavigateUrlFields` e `DataNavigateUrlFormatString` como `UserName` e "UserInformation. aspx? User ={0}", respectivamente. Essas configurações configuram o HyperLinkField de modo que todos os hiperlinks exibam o texto "gerenciar", mas cada link passa o valor de *nome de usuário* apropriado para a QueryString.
 
-Depois de adicionar o HyperLinkField a GridView, reserve um tempo para exibir o `ManageUsers.aspx` página por meio de um navegador. Como mostra a Figura 1, cada linha de GridView agora inclui um link "Gerenciar". O link "Gerenciar" para Bruce aponta para `UserInformation.aspx?user=Bruce`, enquanto que o link "Gerenciar" de Dave aponta para `UserInformation.aspx?user=Dave`.
+Depois de adicionar o HyperLinkField ao GridView, Reserve um momento para exibir a página de `ManageUsers.aspx` por meio de um navegador. Como mostra a Figura 1, cada linha GridView agora inclui um link "Manage". O link "gerenciar" de Bruce aponta para `UserInformation.aspx?user=Bruce`, enquanto o link "gerenciar" para Dave aponta para `UserInformation.aspx?user=Dave`.
 
-[![Adiciona o HyperLinkField um](unlocking-and-approving-user-accounts-cs/_static/image2.png)](unlocking-and-approving-user-accounts-cs/_static/image1.png)
+[![o HyperLinkField adiciona um](unlocking-and-approving-user-accounts-cs/_static/image2.png)](unlocking-and-approving-user-accounts-cs/_static/image1.png)
 
-**Figura 1**: O HyperLinkField adiciona um Link "Gerenciar" para cada conta de usuário ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image3.png))
+**Figura 1**: o HyperLinkField adiciona um link "gerenciar" para cada conta de usuário ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image3.png))
 
-Criaremos a interface do usuário e de código para o `UserInformation.aspx` página em um momento, mas primeiro vamos falar sobre como alterar programaticamente um usuário do bloqueada e status de aprovação. O [ `MembershipUser` classe](https://msdn.microsoft.com/library/system.web.security.membershipuser.aspx) tem [ `IsLockedOut` ](https://msdn.microsoft.com/library/system.web.security.membershipuser.islockedout.aspx) e [ `IsApproved` propriedades](https://msdn.microsoft.com/library/system.web.security.membershipuser.isapproved.aspx). A propriedade `IsLockedOut` é somente leitura. Não há nenhum mecanismo para bloquear um usuário; por meio de programação para desbloquear um usuário, use o `MembershipUser` da classe [ `UnlockUser` método](https://msdn.microsoft.com/library/system.web.security.membershipuser.unlockuser.aspx). O `IsApproved` propriedade é legível e gravável. Para salvar as alterações a essa propriedade, precisamos chamar o `Membership` da classe [ `UpdateUser` método](https://msdn.microsoft.com/library/system.web.security.membership.updateuser.aspx), passando o modificado `MembershipUser` objeto.
+Vamos criar a interface do usuário e o código para a página de `UserInformation.aspx` daqui a pouco, mas primeiro vamos falar sobre como alterar programaticamente os status bloqueados e aprovados de um usuário. A [classe`MembershipUser`](https://msdn.microsoft.com/library/system.web.security.membershipuser.aspx) tem [`IsLockedOut`](https://msdn.microsoft.com/library/system.web.security.membershipuser.islockedout.aspx) e [`IsApproved` Propriedades](https://msdn.microsoft.com/library/system.web.security.membershipuser.isapproved.aspx). A propriedade `IsLockedOut` é somente leitura. Não há nenhum mecanismo para bloquear programaticamente um usuário; para desbloquear um usuário, use o [método`UnlockUser`](https://msdn.microsoft.com/library/system.web.security.membershipuser.unlockuser.aspx)da classe `MembershipUser`. A propriedade `IsApproved` é legível e gravável. Para salvar as alterações feitas nessa propriedade, precisamos chamar o [método`UpdateUser`](https://msdn.microsoft.com/library/system.web.security.membership.updateuser.aspx)da classe `Membership`, passando o objeto `MembershipUser` modificado.
 
-Porque o `IsApproved` é legível e gravável, um controle de caixa de seleção é provavelmente o melhor elemento de interface do usuário para configurar essa propriedade. No entanto, uma caixa de seleção não funcionará para o `IsLockedOut` propriedade porque um administrador não é possível bloquear um usuário, ela só poderá desbloquear um usuário. Uma interface de usuário adequados para o `IsLockedOut` propriedade é um botão que, quando clicado, desbloqueia a conta de usuário. Esse botão só deve ser habilitado se o usuário está bloqueado.
+Como a propriedade `IsApproved` é legível e gravável, um controle de caixa de seleção é provavelmente o melhor elemento de interface de usuário para configurar essa propriedade. No entanto, uma caixa de seleção não funcionará para a propriedade `IsLockedOut` porque um administrador não pode bloquear um usuário, ela pode apenas desbloquear um usuário. Uma interface de usuário adequada para a propriedade `IsLockedOut` é um botão que, quando clicado, desbloqueia a conta de usuário. Esse botão só deve ser habilitado se o usuário estiver bloqueado.
 
-### <a name="creating-theuserinformationaspxpage"></a>Criando o`UserInformation.aspx`página
+### <a name="creating-theuserinformationaspxpage"></a>Criando a página de`UserInformation.aspx`
 
-Agora estamos prontos para implementar a interface do usuário em `UserInformation.aspx`. Abrir essa página e adicione os seguintes controles da Web:
+Agora estamos prontos para implementar a interface do usuário no `UserInformation.aspx`. Abra esta página e adicione os seguintes controles da Web:
 
-- Controlar um hiperlink que, quando clicado, retorna ao administrador o `ManageUsers.aspx` página.
-- Um controle de Web de rótulo para exibir o nome do usuário selecionado. Definir este rótulo `ID` à `UserNameLabel` e limpe seu `Text` propriedade.
-- Um controle de caixa de seleção denominado `IsApproved`. Defina suas `AutoPostBack` propriedade para `true`.
-- Um controle de rótulo para exibir o usuário do bloqueado pela última data. Nomeie este rótulo `LastLockedOutDateLabel` e limpe seu `Text` propriedade.
-- Um botão para desbloquear o usuário. Nomeie esse botão `UnlockUserButton` e defina seu `Text` propriedade para "Desbloquear usuário".
-- Um controle de rótulo para exibir mensagens de status, como, "o status do usuário aprovado foi atualizado." Nomeie esse controle `StatusMessage`, desmarque out seus `Text` propriedade e defina seu `CssClass` propriedade para `Important`. (O `Important` classe CSS é definida no `Styles.css` arquivo de folha de estilos; ele exibe o texto correspondente em uma fonte grande, vermelha.)
+- Um controle de hiperlink que, quando clicado, retorna o administrador para a página `ManageUsers.aspx`.
+- Um controle de rótulo da Web para exibir o nome do usuário selecionado. Defina o `ID` deste rótulo como `UserNameLabel` e desmarque sua propriedade `Text`.
+- Um controle de caixa de seleção chamado `IsApproved`. Defina sua propriedade `AutoPostBack` como `true`.
+- Um controle rótulo para exibir a data do último bloqueio do usuário. Nomeie esse rótulo `LastLockedOutDateLabel` e desmarque sua propriedade `Text`.
+- Um botão para desbloquear o usuário. Nomeie esse botão `UnlockUserButton` e defina sua propriedade `Text` como "desbloquear usuário".
+- Um controle rótulo para exibir mensagens de status, como "o status aprovado do usuário foi atualizado". Nomeie esse controle `StatusMessage`, desmarque sua propriedade `Text` e defina sua propriedade `CssClass` como `Important`. (A classe CSS `Important` é definida no arquivo de folha de estilo `Styles.css`; ela exibe o texto correspondente em uma fonte grande e vermelha.)
 
-Depois de adicionar esses controles, o modo de exibição de Design no Visual Studio deve ser semelhante para a tela na Figura 2.
+Depois de adicionar esses controles, o modo de exibição de Design no Visual Studio deve ser semelhante à captura de tela na Figura 2.
 
-[![Criar a Interface do usuário para UserInformation.aspx](unlocking-and-approving-user-accounts-cs/_static/image5.png)](unlocking-and-approving-user-accounts-cs/_static/image4.png)
+[![criar a interface do usuário para UserInformation. aspx](unlocking-and-approving-user-accounts-cs/_static/image5.png)](unlocking-and-approving-user-accounts-cs/_static/image4.png)
 
-**Figura 2**: Criar a Interface do usuário para `UserInformation.aspx` ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image6.png))
+**Figura 2**: criar a interface do usuário para `UserInformation.aspx` ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image6.png))
 
-Com a interface de usuário completa, nossa próxima tarefa é definir o `IsApproved` caixa de seleção e outros controles com base nas informações do usuário selecionado. Criar um manipulador de eventos para a página `Load` eventos e adicione o seguinte código:
+Com a interface do usuário concluída, nossa próxima tarefa é definir a caixa de seleção `IsApproved` e outros controles com base nas informações do usuário selecionado. Crie um manipulador de eventos para o evento de `Load` da página e adicione o seguinte código:
 
 [!code-csharp[Main](unlocking-and-approving-user-accounts-cs/samples/sample1.cs)]
 
-O código acima inicia, garantindo que se trata de primeira visita a página e não um postback subsequente. Em seguida, lê o nome de usuário passado a `user` campo querystring e recupera informações sobre essa conta de usuário por meio de `Membership.GetUser(username)` método. Se nenhum nome de usuário foi fornecido por meio da cadeia de consulta, ou se o usuário especificado não pôde ser encontrado, o administrador é enviado de volta ao `ManageUsers.aspx` página.
+O código acima começa garantindo que esta é a primeira visita à página e não um postback subsequente. Em seguida, ele lê o nome de usuário passado pelo campo `user` QueryString e recupera informações sobre essa conta de usuário por meio do método `Membership.GetUser(username)`. Se nenhum nome de usuário foi fornecido por meio da QueryString ou se o usuário especificado não foi encontrado, o administrador é enviado de volta para a página de `ManageUsers.aspx`.
 
-O `MembershipUser` do objeto `UserName` valor, em seguida, é exibido na `UserNameLabel` e o `IsApproved` caixa de seleção é marcada com base no `IsApproved` valor da propriedade.
+O valor de `UserName` do objeto de `MembershipUser` é exibido no `UserNameLabel` e a caixa de seleção `IsApproved` é marcada com base no valor da propriedade `IsApproved`.
 
-O `MembershipUser` do objeto [ `LastLockoutDate` propriedade](https://msdn.microsoft.com/library/system.web.security.membershipuser.lastlockoutdate.aspx) retorna um `DateTime` valor que indica quando o usuário foi bloqueada. Se o usuário nunca foi bloqueado, o valor retornado depende do provedor de associação. Quando uma nova conta é criada, o `SqlMembershipProvider` define o `aspnet_Membership` da tabela `LastLockoutDate` campo `1754-01-01 12:00:00 AM`. O código acima exibe uma cadeia de caracteres vazia do `LastLockoutDateLabel` se o `LastLockoutDate` propriedade ocorre antes do ano 2000; caso contrário, a parte de data a `LastLockoutDate` propriedade é exibida no rótulo. O `UnlockUserButton'` s `Enabled` propriedade é definida para o usuário bloqueado status, que significa que esse botão só será habilitado se o usuário está bloqueado.
+A [propriedade`LastLockoutDate`](https://msdn.microsoft.com/library/system.web.security.membershipuser.lastlockoutdate.aspx) do objeto de `MembershipUser` retorna um valor `DateTime` indicando quando o usuário foi bloqueado pela última vez. Se o usuário nunca tiver sido bloqueado, o valor retornado dependerá do provedor de associação. Quando uma nova conta é criada, a `SqlMembershipProvider` define o campo de `LastLockoutDate` da tabela `aspnet_Membership` como `1754-01-01 12:00:00 AM`. O código acima exibe uma cadeia de caracteres vazia no `LastLockoutDateLabel` se a propriedade `LastLockoutDate` ocorrer antes do ano 2000; caso contrário, a parte de data da propriedade `LastLockoutDate` será exibida no rótulo. A propriedade `UnlockUserButton'` s `Enabled` é definida como o status bloqueado do usuário, o que significa que esse botão só será habilitado se o usuário estiver bloqueado.
 
-Reserve um tempo para testar o `UserInformation.aspx` página por meio de um navegador. Você, certamente, precisará iniciar em `ManageUsers.aspx` e selecione uma conta de usuário para gerenciar. Ao chegar `UserInformation.aspx`, observe que o `IsApproved` caixa de seleção é verificada apenas se o usuário for aprovado. Se o usuário já foi bloqueado, seu último bloqueado data é exibido. O botão Desbloquear usuário é habilitado apenas se o usuário está bloqueado no momento. Marcando ou desmarcando a `IsApproved` caixa de seleção ou clicando no botão Desbloquear usuário causa um postback, mas sem modificações são feitas para a conta de usuário porque ainda não encontramos criar manipuladores de eventos para esses eventos.
+Reserve um tempo para testar a página de `UserInformation.aspx` por meio de um navegador. Você certamente precisará iniciar em `ManageUsers.aspx` e selecionar uma conta de usuário para gerenciar. Ao chegar em `UserInformation.aspx`, observe que a caixa de seleção `IsApproved` só será marcada se o usuário for aprovado. Se o usuário já tiver sido bloqueado, sua última data de bloqueio será exibida. O botão desbloquear usuário será habilitado somente se o usuário estiver bloqueado no momento. Marcar ou desmarcar a caixa de seleção `IsApproved` ou clicar no botão desbloquear usuário causará um postback, mas nenhuma modificação será feita na conta de usuário, pois ainda criamos manipuladores de eventos para esses eventos.
 
-Retorne ao Visual Studio e criar manipuladores de eventos para o `IsApproved` da caixa de seleção `CheckedChanged` evento e o `UnlockUser` do botão `Click` eventos. No `CheckedChanged` manipulador de eventos, defina o usuário `IsApproved` propriedade para o `Checked` propriedade da caixa de seleção e, em seguida, salve as alterações por meio de uma chamada para `Membership.UpdateUser`. No `Click` manipulador de eventos, simplesmente a chamada a `MembershipUser` do objeto `UnlockUser` método. Em ambos os manipuladores de eventos, exiba uma mensagem adequada no `StatusMessage` rótulo.
+Retorne ao Visual Studio e crie manipuladores de eventos para o evento de `CheckedChanged` da caixa de seleção de `IsApproved` e o evento `Click` do botão de `UnlockUser`. No manipulador de eventos `CheckedChanged`, defina a propriedade `IsApproved` do usuário para a propriedade `Checked` da caixa de seleção e salve as alterações por meio de uma chamada para `Membership.UpdateUser`. No manipulador de eventos `Click`, basta chamar o método de `UnlockUser` do objeto `MembershipUser`. Em ambos os manipuladores de eventos, exiba uma mensagem adequada no rótulo `StatusMessage`.
 
 [!code-csharp[Main](unlocking-and-approving-user-accounts-cs/samples/sample2.cs)]
 
-### <a name="testing-theuserinformationaspxpage"></a>Testando o`UserInformation.aspx`página
+### <a name="testing-theuserinformationaspxpage"></a>Testando a página de`UserInformation.aspx`
 
-Com esses manipuladores de eventos em vigor, revisita a página aprovadas e um usuário. Como mostra a Figura 3, você deverá ver um resumo da mensagem na página indicando que o usuário `IsApproved` propriedade foi modificada com êxito.
+Com esses manipuladores de eventos em vigor, revisite a página e não aprovou um usuário. Como mostra a Figura 3, você verá uma breve mensagem na página indicando que a propriedade de `IsApproved` do usuário foi modificada com êxito.
 
-[![Chris foi reprovado](unlocking-and-approving-user-accounts-cs/_static/image8.png)](unlocking-and-approving-user-accounts-cs/_static/image7.png)
+[![Chris não foi aprovada](unlocking-and-approving-user-accounts-cs/_static/image8.png)](unlocking-and-approving-user-accounts-cs/_static/image7.png)
 
-**Figura 3**: Chris foi reprovado ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image9.png))
+**Figura 3**: Chris não foi aprovada ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image9.png))
 
-Em seguida, logout e tente fazer logon como o usuário cuja conta foi apenas não aprovados. Porque o usuário não for aprovado, eles não podem fazer logon. Por padrão, o controle de logon exibe a mesma mensagem se o usuário não pode fazer logon, independentemente do motivo. Mas no <a id="Tutorial6"> </a> [ *Validar usuário as credenciais contra a associação de usuário Store* ](../membership/validating-user-credentials-against-the-membership-user-store-cs.md) tutorial vimos aprimorando o controle de logon para exibir uma mensagem mais apropriada. Como mostra a Figura 4, Chris é mostrado uma mensagem explicando o que ele não pode fazer logon porque sua conta ainda não foi aprovada.
+Em seguida, faça logoff e tente fazer logon como o usuário cuja conta acabou de ser aprovada. Como o usuário não está aprovado, ele não pode fazer logon. Por padrão, o controle de logon exibe a mesma mensagem se o usuário não puder fazer logon, independentemente do motivo. Mas no <a id="Tutorial6"> </a>tutorial [*Validando credenciais de usuário no repositório de usuários da Associação*](../membership/validating-user-credentials-against-the-membership-user-store-cs.md) , examinamos aprimorar o controle de logon para exibir uma mensagem mais apropriada. Como mostra a Figura 4, Chris é mostrada uma mensagem explicando que ele não pode fazer logon porque sua conta ainda não foi aprovada.
 
-[![Chris não é possível porque o His conta de logon é reprovado](unlocking-and-approving-user-accounts-cs/_static/image11.png)](unlocking-and-approving-user-accounts-cs/_static/image10.png)
+[![Chris não pode fazer logon porque sua conta não está aprovada](unlocking-and-approving-user-accounts-cs/_static/image11.png)](unlocking-and-approving-user-accounts-cs/_static/image10.png)
 
-**Figura 4**: Chris não é possível porque o His conta de logon é reprovado ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image12.png))
+**Figura 4**: Chris não pode fazer logon porque sua conta não está aprovada ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image12.png))
 
-Para testar a funcionalidade bloqueada, tente fazer logon como um usuário aprovado, mas usar uma senha incorreta. Repita esse processo, o número necessário de vezes até que a conta do usuário foi bloqueada. O controle de logon também foi atualizado para mostrar um personalizado de mensagem se a tentativa de logon em uma conta bloqueada. Você sabe que uma conta foi bloqueada depois que você começar a ver a seguinte mensagem na página de logon: "Sua conta foi bloqueada devido a muitas tentativas de logon inválido. Entre em contato com o administrador para configurar o desbloqueio da conta."
+Para testar a funcionalidade bloqueada, tente fazer logon como um usuário aprovado, mas use uma senha incorreta. Repita esse processo o número necessário de vezes até que a conta do usuário tenha sido bloqueada. O controle de logon também foi atualizado para mostrar uma mensagem personalizada se estiver tentando fazer logon de uma conta bloqueada. Você sabe que uma conta foi bloqueada depois de começar a ver a seguinte mensagem na página de logon: "sua conta foi bloqueada devido a muitas tentativas de logon inválidas. Entre em contato com o administrador para que sua conta seja desbloqueada. "
 
-Volte para o `ManageUsers.aspx` da página e clique no link Gerenciar para o usuário bloqueado. Como mostra a Figura 5, você deverá ver um valor no `LastLockedOutDateLabel` botão Desbloquear o usuário deve ser habilitado. Clique no botão Desbloquear usuário para desbloquear a conta de usuário. Depois que você conquistou o usuário, eles poderão fazer logon novamente.
+Volte para a página `ManageUsers.aspx` e clique no link Gerenciar para o usuário bloqueado. Como mostra a Figura 5, você deve ver um valor no `LastLockedOutDateLabel` o botão desbloquear usuário deve ser habilitado. Clique no botão desbloquear usuário para desbloquear a conta de usuário. Depois de desbloquear o usuário, ele poderá fazer logon novamente.
 
-[![Dave foi bloqueado para o sistema](unlocking-and-approving-user-accounts-cs/_static/image14.png)](unlocking-and-approving-user-accounts-cs/_static/image13.png)
+[![Dave foi bloqueado do sistema](unlocking-and-approving-user-accounts-cs/_static/image14.png)](unlocking-and-approving-user-accounts-cs/_static/image13.png)
 
-**Figura 5**: Dave tem foram bloqueados fora do sistema ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image15.png))
+**Figura 5**: Dave foi bloqueado do sistema ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image15.png))
 
-## <a name="step-2-specifying-new-users-approved-status"></a>Etapa 2: Especificar novos usuários aprovados Status
+## <a name="step-2-specifying-new-users-approved-status"></a>Etapa 2: especificando o status aprovado de novos usuários
 
-O status aprovado é útil em cenários em que você deseja que alguma ação a ser executada antes de um novo usuário é capaz de fazer logon e acessar os recursos específicos do usuário do site. Por exemplo, você pode estar executando um site privado onde todas as páginas, exceto para as páginas de logon e inscrição, são acessíveis somente para usuários autenticados. Mas o que acontece se um estranho atingir seu site, localiza a página de inscrição e cria uma conta? Para evitar que isso aconteça, você pode mover a página de inscrição para uma `Administration` pasta e exigem que um administrador crie manualmente cada conta. Como alternativa, você pode permitir que qualquer pessoa para a inscrição, mas proibir o acesso de site até que o administrador aprova a conta de usuário.
+O status aprovado é útil em cenários em que você deseja que alguma ação seja executada antes que um novo usuário possa fazer logon e acessar os recursos específicos do usuário do site. Por exemplo, você pode estar executando um site privado em que todas as páginas, exceto as páginas de logon e de inscrição, são acessíveis somente para usuários autenticados. Mas o que acontece se um estranho atingir seu site, encontrar a página de inscrição e criar uma conta? Para evitar que isso aconteça, você pode mover a página de inscrição para uma `Administration` pasta e exigir que um administrador crie manualmente cada conta. Como alternativa, você pode permitir que qualquer pessoa se inscriçõesse, mas proíba o acesso ao site até que um administrador aprove a conta de usuário.
 
-Por padrão, o controle CreateUserWizard aprova novas contas. Você pode configurar esse comportamento usando o controle [ `DisableCreatedUser` propriedade](https://msdn.microsoft.com/en-gb/library/system.web.ui.webcontrols.createuserwizard.disablecreateduser.aspx). Defina essa propriedade como `true` por não aprovar as novas contas de usuário.
-
-> [!NOTE]
-> Por padrão o controle CreateUserWizard registra automaticamente na nova conta de usuário. Esse comportamento é determinado pelo controle [ `LoginCreatedUser` propriedade](https://msdn.microsoft.com/en-gb/library/system.web.ui.webcontrols.createuserwizard.logincreateduser.aspx). Porque não aprovados que os usuários não podem fazer logon no site, quando `DisableCreatedUser` é `true` nova conta de usuário não está conectada ao site, independentemente do valor de `LoginCreatedUser` propriedade.
-
-Se você estiver criando programaticamente novas contas de usuário por meio de `Membership.CreateUser` método para criar uma conta de usuário não aprovados usam uma das sobrecargas que aceitam o novo usuário `IsApproved` valor da propriedade como um parâmetro de entrada.
-
-## <a name="step-3-approving-users-by-verifying-their-email-address"></a>Etapa 3: Aprovação de usuários, verificando seu endereço de Email
-
-Muitos sites que dão suporte a contas de usuário não aprovem novos usuários até que eles Verifique se eles fornecidos ao registrar o endereço de email. Esse processo de verificação normalmente é usado para impedir que outros os vigaristas, os remetentes de spam e bots conforme ele requer um endereço de email exclusivo, verificado e adiciona uma etapa extra no processo de inscrição. Com esse modelo, quando um novo usuário se inscreve, elas são enviadas uma mensagem de email que inclui um link para uma página de verificação. Ao visitar o link o usuário tem comprovado que receberam o email e, portanto, o que o endereço de email fornecido é válido. A página de verificação é responsável pela aprovação do usuário. Isso pode ocorrer automaticamente, aprovação, portanto, qualquer usuário que atinge nessa página, ou somente depois que o usuário fornece informações adicionais, como uma [CAPTCHA](http://en.wikipedia.org/wiki/Captcha).
-
-Para acomodar esse fluxo de trabalho, é necessário primeiro atualizar a página de criação de conta para que os novos usuários não aprovados. Abra o `EnhancedCreateUserWizard.aspx` página o `Membership` pasta e defina o controle CreateUserWizard `DisableCreatedUser` propriedade para `true`.
-
-Em seguida, precisamos configurar o controle CreateUserWizard para enviar um email para o novo usuário com instruções sobre como verificar sua conta. Em particular, estamos incluirá um link no email para o `Verification.aspx` página (que ainda não encontramos criar), passando o novo usuário `UserId` por meio da cadeia de consulta. O `Verification.aspx` página irá pesquisar o usuário especificado e marcá-los aprovada.
-
-### <a name="sending-a-verification-email-to-new-users"></a>Enviar um Email de verificação para novos usuários
-
-Para enviar um email do controle CreateUserWizard, configure seu `MailDefinition` propriedade adequadamente. Conforme discutido na <a id="Tutorial13"> </a> [tutorial anterior](recovering-and-changing-passwords-cs.md), os controles ChangePassword e PasswordRecovery incluem uma [ `MailDefinition` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.createuserwizard.maildefinition.aspx) que funciona da mesma maneira como do controle CreateUserWizard.
+Por padrão, o controle CreateUserWizard aprova novas contas. Você pode configurar esse comportamento usando a propriedade de [`DisableCreatedUser`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.createuserwizard.disablecreateduser.aspx)do controle. Defina essa propriedade como `true` para não aprovar novas contas de usuário.
 
 > [!NOTE]
-> Para usar o `MailDefinition` opções de propriedade que você precisa para especificar a entrega de email no `Web.config`. Para obter mais informações, consulte [envio de Email no ASP.NET](http://aspnet.4guysfromrolla.com/articles/072606-1.aspx).
+> Por padrão, o controle CreateUserWizard faz logon automaticamente na nova conta de usuário. Esse comportamento é determinado pela [propriedade de`LoginCreatedUser`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.createuserwizard.logincreateduser.aspx)do controle. Como os usuários não aprovados não podem fazer logon no site, quando `DisableCreatedUser` está `true` a nova conta de usuário não está conectada ao site, independentemente do valor da propriedade `LoginCreatedUser`.
 
-Comece criando um novo modelo de email chamado `CreateUserWizard.txt` no `EmailTemplates` pasta. Use o seguinte texto para o modelo:
+Se você estiver criando programaticamente novas contas de usuário por meio do método `Membership.CreateUser`, para criar uma conta de usuário não aprovada, use uma das sobrecargas que aceitam o valor da propriedade `IsApproved` do novo usuário como um parâmetro de entrada.
+
+## <a name="step-3-approving-users-by-verifying-their-email-address"></a>Etapa 3: aprovar os usuários verificando seu endereço de email
+
+Muitos sites que dão suporte a contas de usuário não aprovam novos usuários até que eles verifiquem o endereço de email fornecido durante o registro. Esse processo de verificação é comumente usado para frustrar bots, spammers e outros ne'er-do-caixas, pois requer um endereço de email verificado exclusivo e adiciona uma etapa extra no processo de inscrição. Com esse modelo, quando um novo usuário se inscreve, ele recebe uma mensagem de email que inclui um link para uma página de verificação. Visitando o link que o usuário comprovou que recebeu o email e, portanto, que o endereço de email fornecido é válido. A página de verificação é responsável por aprovar o usuário. Isso pode acontecer automaticamente, aprovando, assim, qualquer usuário que chegue a essa página, ou somente depois que o usuário fornecer algumas informações adicionais, como um [captcha](http://en.wikipedia.org/wiki/Captcha).
+
+Para acomodar esse fluxo de trabalho, precisamos primeiro atualizar a página de criação da conta para que novos usuários não sejam aprovados. Abra a página `EnhancedCreateUserWizard.aspx` na pasta `Membership` e defina a propriedade `DisableCreatedUser` do controle CreateUserWizard como `true`.
+
+Em seguida, precisamos configurar o controle CreateUserWizard para enviar um email para o novo usuário com instruções sobre como verificar sua conta. Em particular, incluiremos um link no email para a página de `Verification.aspx` (que ainda criamos), passando o `UserId` do novo usuário por meio da QueryString. A página `Verification.aspx` pesquisará o usuário especificado e os marcará como aprovado.
+
+### <a name="sending-a-verification-email-to-new-users"></a>Enviando um email de verificação para novos usuários
+
+Para enviar um email do controle CreateUserWizard, configure sua propriedade `MailDefinition` adequadamente. Conforme discutido no <a id="Tutorial13"> </a> [tutorial anterior](recovering-and-changing-passwords-cs.md), os controles ChangePassword e PasswordRecovery incluem uma [Propriedade`MailDefinition`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.createuserwizard.maildefinition.aspx) que funciona da mesma maneira que o controle CreateUserWizard.
+
+> [!NOTE]
+> Para usar a propriedade `MailDefinition`, você precisa especificar opções de entrega de email no `Web.config`. Para obter mais informações, consulte [enviando email em ASP.net](http://aspnet.4guysfromrolla.com/articles/072606-1.aspx).
+
+Comece criando um novo modelo de email chamado `CreateUserWizard.txt` na pasta `EmailTemplates`. Use o seguinte texto para o modelo:
 
 [!code-aspx[Main](unlocking-and-approving-user-accounts-cs/samples/sample3.aspx)]
 
-Defina a `MailDefinition'` s `BodyFileName` propriedade como "~ / EmailTemplates/CreateUserWizard.txt" e seu `Subject` propriedade como "Bem-vindo ao meu site! Ative sua conta".
+Defina a propriedade `MailDefinition'` s `BodyFileName` como "~/EmailTemplates/CreateUserWizard.txt" e sua propriedade `Subject` como "bem-vindo ao meu site! Ative sua conta. "
 
-Observe que o `CreateUserWizard.txt` modelo de email inclui um `<%VerificationUrl%>` espaço reservado. É aí que a URL para o `Verification.aspx` página será colocada. O CreateUserWizard substitui automaticamente o `<%UserName%>` e `<%Password%>` espaços reservados pelo nome de usuário e a senha, a nova conta, mas não há nenhum interno `<%VerificationUrl%>` espaço reservado. Precisamos substitui-lo manualmente com a URL de verificação apropriadas.
+Observe que o modelo de email `CreateUserWizard.txt` inclui um espaço reservado `<%VerificationUrl%>`. É aqui que a URL para a página de `Verification.aspx` será colocada. O CreateUserWizard substitui automaticamente os espaços reservados `<%UserName%>` e `<%Password%>` com o nome de usuário e a senha da nova conta, mas não há espaço reservado `<%VerificationUrl%>` interno. Precisamos substituí-lo manualmente pela URL de verificação apropriada.
 
-Para fazer isso, crie um manipulador de eventos para o CreateUserWizard [ `SendingMail` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.createuserwizard.sendingmail.aspx) e adicione o seguinte código:
+Para fazer isso, crie um manipulador de eventos para o [evento de`SendingMail`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.createuserwizard.sendingmail.aspx) do CreateUserWizard e adicione o seguinte código:
 
 [!code-csharp[Main](unlocking-and-approving-user-accounts-cs/samples/sample4.cs)]
 
-O `SendingMail` evento é acionado depois que o `CreatedUser` evento, o que significa que no momento em que o manipulador de eventos acima executa o novo usuário de conta já foi criada. Podemos acessar o novo usuário `UserId` valor chamando o `Membership.GetUser` método, passando o `UserName` inseridos no controle CreateUserWizard. Em seguida, a URL de verificação é formada. A instrução `Request.Url.GetLeftPart(UriPartial.Authority)` retorna o `http://yourserver.com` parte da URL; `Request.ApplicationPath` caminho retorna em que o aplicativo está enraizado. A verificação de URL, em seguida, é definido como `Verification.aspx?ID=userId`. Essas duas cadeias de caracteres, em seguida, são concatenadas para formar a URL completa. Por fim, o corpo da mensagem de email (`e.Message.Body`) tem todas as ocorrências de `<%VerificationUrl%>` substituído com a URL completa.
+O evento `SendingMail` é acionado após o evento `CreatedUser`, o que significa que, na hora em que o manipulador de eventos acima é executado, a nova conta de usuário já foi criada. Podemos acessar o novo valor de `UserId` do usuário chamando o método `Membership.GetUser`, passando o `UserName` inserido no controle CreateUserWizard. Em seguida, a URL de verificação é formada. A instrução `Request.Url.GetLeftPart(UriPartial.Authority)` retorna a parte `http://yourserver.com` da URL; `Request.ApplicationPath` retorna o caminho em que o aplicativo tem raiz. A URL de verificação é definida como `Verification.aspx?ID=userId`. Essas duas cadeias de caracteres são concatenadas para formar a URL completa. Por fim, o corpo da mensagem de email (`e.Message.Body`) tem todas as ocorrências de `<%VerificationUrl%>` substituído pela URL completa.
 
-O efeito líquido é que novos usuários são não aprovados, o que significa que eles não podem fazer logon no site. Além disso, elas são enviadas automaticamente um email com um link para a URL de verificação (veja a Figura 6).
+O efeito líquido é que novos usuários não são aprovados, o que significa que eles não podem fazer logon no site. Além disso, eles receberão automaticamente um email com um link para a URL de verificação (veja a Figura 6).
 
-[![O novo usuário recebe um Email com um Link para a URL de verificação](unlocking-and-approving-user-accounts-cs/_static/image17.png)](unlocking-and-approving-user-accounts-cs/_static/image16.png)
+[![o novo usuário recebe um email com um link para a URL de verificação](unlocking-and-approving-user-accounts-cs/_static/image17.png)](unlocking-and-approving-user-accounts-cs/_static/image16.png)
 
-**Figura 6**: O novo usuário recebe um Email com um Link para a URL de verificação ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image18.png))
+**Figura 6**: o novo usuário recebe um email com um link para a URL de verificação ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image18.png))
 
 > [!NOTE]
-> Etapa de CreateUserWizard padrão do controle CreateUserWizard exibe uma mensagem informando ao usuário sua conta foi criada e exibe um botão continuar. Se você clicar nesta leva o usuário para a URL especificada pelo controle de `ContinueDestinationPageUrl` propriedade. O CreateUserWizard na `EnhancedCreateUserWizard.aspx` está configurado para enviar os novos usuários a `~/Membership/AdditionalUserInfo.aspx`, que solicita ao usuário sua cidade natal, a URL da home page e a assinatura. Como essas informações só podem ser adicionadas por usuários conectados, faz sentido para atualizar essa propriedade para enviar aos usuários para a home page do site (`~/Default.aspx`). Além disso, o `EnhancedCreateUserWizard.aspx` página ou a etapa CreateUserWizard deve ser aumentada para informar ao usuário que eles receberam um email de verificação e sua conta não será ativada até que eles sigam as instruções neste email. Vou deixar essas modificações como um exercício para o leitor.
+> A etapa CreateUserWizard padrão do controle CreateUserWizard exibe uma mensagem informando ao usuário que sua conta foi criada e exibe um botão continuar. Clicar em isso leva o usuário para a URL especificada pela propriedade de `ContinueDestinationPageUrl` do controle. O CreateUserWizard no `EnhancedCreateUserWizard.aspx` está configurado para enviar novos usuários para o `~/Membership/AdditionalUserInfo.aspx`, que solicita ao usuário sua cidade natal, URL da Home Page e assinatura. Como essas informações só podem ser adicionadas por usuários conectados, faz sentido atualizar essa propriedade para enviar usuários de volta para a home page do site (`~/Default.aspx`). Além disso, a página `EnhancedCreateUserWizard.aspx` ou a etapa CreateUserWizard deve ser aumentada para informar ao usuário que um email de verificação foi enviado e sua conta não será ativada até que siga as instruções neste email. Eu deixe essas modificações como um exercício para o leitor.
 
 ### <a name="creating-the-verification-page"></a>Criando a página de verificação
 
-Nossa tarefa final é criar o `Verification.aspx` página. Adicione esta página para a pasta raiz, associando-o `Site.master` página mestra. Assim como fizemos com a maioria das páginas de conteúdo anteriores adicionadas ao site, remova o controle de conteúdo que faz referência a `LoginContent` ContentPlaceHolder para que a página de conteúdo usa a página mestra padrão conteúdo.
+Nossa tarefa final é criar a página de `Verification.aspx`. Adicione essa página à pasta raiz, associando-a à página mestra de `Site.master`. Como fizemos com a maioria das páginas de conteúdo anteriores adicionadas ao site, remova o controle de conteúdo que faz referência ao `LoginContent` ContentPlaceHolder para que a página de conteúdo use o conteúdo padrão da página mestra.
 
-Adicionar um controle de Web de rótulo para o `Verification.aspx` , defina sua `ID` para `StatusMessage` e limpar sua propriedade text. Em seguida, crie o `Page_Load` manipulador de eventos e adicione o seguinte código:
+Adicione um controle rótulo da Web à página `Verification.aspx`, defina seu `ID` como `StatusMessage` e desmarque sua propriedade Text. Em seguida, crie o manipulador de eventos `Page_Load` e adicione o seguinte código:
 
 [!code-csharp[Main](unlocking-and-approving-user-accounts-cs/samples/sample5.cs)]
 
-A maior parte do código acima verifica se o `UserId` fornecido por meio de querystring existe, que é válido `Guid` valor e que ela faz referência a uma conta de usuário. Se todas essas verificações passarem, a conta de usuário for aprovada; Caso contrário, será exibida uma mensagem de status adequado.
+A massa do código acima verifica se o `UserId` fornecido por meio de QueryString existe, se é um valor de `Guid` válido e se faz referência a uma conta de usuário existente. Se todas essas verificações passarem, a conta de usuário será aprovada; caso contrário, uma mensagem de status adequada será exibida.
 
-A Figura 7 mostra o `Verification.aspx` página quando acessadas por meio de um navegador.
+A Figura 7 mostra a página `Verification.aspx` quando visitada por meio de um navegador.
 
-[![A nova conta de usuário é agora aprovadas](unlocking-and-approving-user-accounts-cs/_static/image20.png)](unlocking-and-approving-user-accounts-cs/_static/image19.png)
+[![a nova conta do usuário agora está aprovada](unlocking-and-approving-user-accounts-cs/_static/image20.png)](unlocking-and-approving-user-accounts-cs/_static/image19.png)
 
-**Figura 7**: A nova conta de usuário é agora aprovadas ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image21.png))
+**Figura 7**: a nova conta do usuário agora é aprovada ([clique para exibir a imagem em tamanho normal](unlocking-and-approving-user-accounts-cs/_static/image21.png))
 
 ## <a name="summary"></a>Resumo
 
-Todas as contas de usuário de associação tem dois status que determinam se o usuário pode fazer logon no site: `IsLockedOut` e `IsApproved`. Ambas as propriedades devem ser `true` para o usuário faça logon.
+Todas as contas de usuário de associação têm dois status que determinam se o usuário pode fazer logon no site: `IsLockedOut` e `IsApproved`. Ambas as propriedades devem ser `true` para que o usuário faça logon.
 
-O usuário do bloqueado status é usado como uma medida de segurança para reduzir a probabilidade de um hacker invadir um site por meio de métodos de força bruta. Especificamente, um usuário é bloqueado se houver um determinado número de tentativas inválidas de logon dentro de um determinado intervalo de tempo. Esses limites são configuráveis por meio das configurações de provedor de associação no `Web.config`.
+O status bloqueado do usuário é usado como medida de segurança para reduzir a probabilidade de um hacker invadir um site por meio de métodos de força bruta. Especificamente, um usuário será bloqueado se houver um determinado número de tentativas de logon inválidas dentro de uma determinada janela de tempo. Esses limites são configuráveis por meio das configurações do provedor de associação no `Web.config`.
 
-O status aprovado normalmente é usado como um meio para impedir que novos usuários de fazer logon até que alguma ação ocorreu. Talvez o site requer que novas contas primeiro sejam aprovadas pelo administrador ou, como vimos na etapa 3, verificando seu endereço de email.
+O status aprovado é comumente usado como um meio de proibir novos usuários de fazer logon até que alguma ação tenha sido transacionada. Talvez o site exija que novas contas sejam aprovadas pela primeira vez pelo administrador ou, como vimos na etapa 3, verificando seu endereço de email.
 
 Boa programação!
 
 ### <a name="about-the-author"></a>Sobre o autor
 
-Scott Mitchell, autor de vários livros sobre ASP/ASP.NET e fundador da 4GuysFromRolla.com, trabalha com tecnologias Web Microsoft desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é  *[Sams Teach por conta própria ASP.NET 2.0 em 24 horas](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)*. Scott pode ser contatado pelo [ mitchell@4guysfromrolla.com ](mailto:mitchell@4guysfromrolla.com) ou por meio de seu blog em [ http://ScottOnWriting.NET ](http://scottonwriting.net/).
+Scott Mitchell, autor de vários livros sobre ASP/ASP. NET e fundador da 4GuysFromRolla.com, tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a *[Sams ensina a ASP.NET 2,0 em 24 horas](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)* . Scott pode ser contatado em [mitchell@4guysfromrolla.com](mailto:mitchell@4guysfromrolla.com) ou por meio de seu blog em [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
 ### <a name="special-thanks-to"></a>Agradecimentos especiais a...
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, escreva-me em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](recovering-and-changing-passwords-cs.md)

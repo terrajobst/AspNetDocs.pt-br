@@ -1,169 +1,169 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs
-title: URLs em páginas mestras (c#) | Microsoft Docs
+title: URLs em páginas mestrasC#() | Microsoft Docs
 author: rick-anderson
-description: Aborda como URLs na página mestra podem ser dividido porque o arquivo página mestre em um diretório relativo diferente que a página de conteúdo. Examina a troca de base...
+description: Aborda como as URLs na página mestra podem ser interrompidas devido ao arquivo de página mestra estar em um diretório relativo diferente da página de conteúdo. Examina a troca de base...
 ms.author: riande
 ms.date: 06/10/2008
 ms.assetid: 48b58a18-5ea4-468c-b326-f35331b3e1e9
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 2679429a6c32e53705905cc234ec92314c7de124
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 2551a5361256234883bb37e46e794037284445a4
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132051"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74640946"
 ---
 # <a name="urls-in-master-pages-c"></a>URLs em páginas mestras (C#)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixar o código](http://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_04_CS.zip) ou [baixar PDF](http://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_04_CS.pdf)
+[Baixar código](https://download.microsoft.com/download/e/e/f/eef369f5-743a-4a52-908f-b6532c4ce0a4/ASPNET_MasterPages_Tutorial_04_CS.zip) ou [baixar PDF](https://download.microsoft.com/download/8/f/6/8f6349e4-6554-405a-bcd7-9b094ba5089a/ASPNET_MasterPages_Tutorial_04_CS.pdf)
 
-> Aborda como URLs na página mestra podem ser dividido porque o arquivo página mestre em um diretório relativo diferente que a página de conteúdo. Examina as URLs por meio da troca de base ~ na sintaxe declarativa e usando ResolveUrl e ResolveClientUrl programaticamente. (Consulte também
+> Aborda como as URLs na página mestra podem ser interrompidas devido ao arquivo de página mestra estar em um diretório relativo diferente da página de conteúdo. Examina as URLs de troca de URL via ~ na sintaxe declarativa e usando ResolveUrl e ResolveClientUrl programaticamente. (Consulte também
 
 ## <a name="introduction"></a>Introdução
 
-Em todos os exemplos que vimos até agora, que as páginas mestras e de conteúdo tiveram sido localizadas na pasta mesma (pasta de raiz do site). Mas não há nenhum motivo por que as páginas mestras e de conteúdo devem estar na mesma pasta. Certamente, você pode criar páginas de conteúdo em subpastas. Da mesma forma, você pode criar um `~/MasterPages/` pasta onde você coloca páginas mestras do site.
+Em todos os exemplos que vimos até agora, as páginas mestras e de conteúdo estão localizadas na mesma pasta (a pasta raiz do site). Mas não há motivo para o mestre e as páginas de conteúdo precisarem estar na mesma pasta. Certamente, você pode criar páginas de conteúdo em subpastas. Da mesma forma, você pode criar uma pasta `~/MasterPages/` onde você coloca as páginas mestras do site.
 
-Um possível problema com o posicionamento de páginas mestras e de conteúdo em pastas diferentes envolve URLs quebradas. Se a página mestra contém URLs relativas em hiperlinks, imagens ou outros elementos, o link serão inválido para páginas de conteúdo que residem em uma pasta diferente. Neste tutorial, vamos examinar a fonte desse problema, bem como soluções alternativas.
+Um possível problema com a colocação de páginas mestras e de conteúdo em pastas diferentes envolve URLs rompidas. Se a página mestra contiver URLs relativas em hiperlinks, imagens ou outros elementos, o link será inválido para páginas de conteúdo que residem em uma pasta diferente. Neste tutorial, examinaremos a origem desse problema, bem como soluções alternativas.
 
 ## <a name="the-problem-with-relative-urls"></a>O problema com URLs relativas
 
-Uma URL em uma página da web deve ser um *URL relativa* se o local do recurso que ele aponta é relativo ao local da página da web na estrutura de pastas do site. Qualquer URL que não comece com uma barra à esquerda (`/`) ou um protocolo (como `http://`) é relativo porque ele é resolvido pelo navegador baseado no local da página da web que contém a URL.
+Uma URL em uma página da Web é considerada uma *URL relativa* se o local do recurso a que ele aponta for relativo ao local da página da Web na estrutura de pastas do site. Qualquer URL que não inicia com uma barra (`/`) ou um protocolo (como `http://`) à esquerda é relativa porque é resolvida pelo navegador com base no local da página da Web que contém a URL.
 
-Por exemplo, nosso site tem um `~/Images/` pasta com um único arquivo de imagem, `PoweredByASPNET.gif`. O arquivo de página mestra `Site.master` tem um `<img>` elemento o `footerContent` região com a seguinte marcação:
+Por exemplo, nosso site tem uma pasta `~/Images/` com um único arquivo de imagem, `PoweredByASPNET.gif`. O arquivo da página mestra `Site.master` tem um elemento `<img>` na região `footerContent` com a seguinte marcação:
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample1.html)]
 
-O `src` valor no atributo o `<img>` elemento é uma URL relativa, porque não começa com `/` ou `http://`. Em resumo, o `src` valor de atributo informa ao navegador para examinar as `Images` subpasta para um arquivo chamado `PoweredByASPNET.gif`.
+O valor do atributo `src` no elemento `<img>` é uma URL relativa porque não começa com `/` ou `http://`. Em suma, o valor do atributo `src` informa ao navegador para procurar na subpasta `Images` por um arquivo chamado `PoweredByASPNET.gif`.
 
-Ao visitar uma página de conteúdo, a marcação acima é enviada diretamente para o navegador. Reserve um tempo para visitar `About.aspx` e exibir o código-fonte HTML enviado ao navegador. Você descobrirá que a mesma marcação exata na página mestra foi enviada para o navegador.
+Ao visitar uma página de conteúdo, a marcação acima é enviada diretamente para o navegador. Reserve um tempo para visitar `About.aspx` e exibir a fonte HTML enviada ao navegador. Você verá que exatamente a mesma marcação na página mestra foi enviada para o navegador.
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample2.html)]
 
-Se a página de conteúdo está na pasta raiz (como está `About.aspx`) tudo está funcionando conforme o esperado porque não há um `Images` subpasta relativa à pasta raiz. No entanto, as coisas dividir se a página de conteúdo estiver em uma pasta diferente que a página mestra. Para ilustrar isso, crie uma subpasta chamada `Admin`. Em seguida, adicione uma página de conteúdo denominada `Default.aspx` para o `Admin` pasta, certificando-se de associar a nova página para o `Site.master` página mestra.
+Se a página de conteúdo estiver na pasta raiz (como `About.aspx`), tudo funcionará conforme o esperado porque há uma subpasta `Images` relativa à pasta raiz. No entanto, as coisas se desdividirão se a página de conteúdo estiver em uma pasta diferente da página mestra. Para ilustrar isso, crie uma subpasta chamada `Admin`. Em seguida, adicione uma página de conteúdo chamada `Default.aspx` à pasta `Admin`, vinculando a nova página à página mestra `Site.master`.
 
 > [!NOTE]
-> No [ *especificando o título, marcas Meta e outros cabeçalhos de HTML na página mestra* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) tutorial, criamos uma classe de página de base personalizada chamada `BasePage` que definir o título da página de conteúdo automaticamente (se ele não foi explicitamente atribuído). Não se esqueça de ter a classe de code-behind da página recém-criada derivam `BasePage` para que ele possa utilizar essa funcionalidade.
+> No tutorial [*especificando o título, as marcas meta e outros cabeçalhos HTML na página mestra*](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) , criamos uma classe de página de base personalizada chamada `BasePage` que define automaticamente o título da página de conteúdo (se ela não tiver sido explicitamente atribuída). Não se esqueça de ter a classe code-behind da página recém-criada, derivada de `BasePage` para que possa utilizar essa funcionalidade.
 
-Depois que você criou esta página de conteúdo, seu Gerenciador de soluções deve ser semelhante a Figura 1.
+Depois de criar esta página de conteúdo, seu Gerenciador de Soluções deve ser semelhante à figura 1.
 
-![Uma nova pasta e a página do ASP.NET foram adicionados ao projeto](urls-in-master-pages-cs/_static/image1.png)
+![Uma nova pasta e a página ASP.NET foram adicionadas ao projeto](urls-in-master-pages-cs/_static/image1.png)
 
-**Figura 01**: Uma nova pasta e a página do ASP.NET foram adicionados ao projeto
+**Figura 01**: uma nova pasta e a página ASP.net foram adicionadas ao projeto
 
-Em seguida, atualize o `Web.sitemap` arquivo para incluir um novo `<siteMapNode>` entrada para esta lição. O XML a seguir mostra todo `Web.sitemap` marcação, que agora inclui a adição de um terceiro `<siteMapNode>` elemento.
+Em seguida, atualize o arquivo de `Web.sitemap` para incluir uma nova entrada de `<siteMapNode>` para esta lição. O XML a seguir mostra a marcação de `Web.sitemap` completa, que agora inclui a adição de um terceiro elemento `<siteMapNode>`.
 
 [!code-xml[Main](urls-in-master-pages-cs/samples/sample3.xml)]
 
-Recém-criado `Default.aspx` página deve ter quatro controles de conteúdo correspondente para os quatro ContentPlaceHolders em `Site.master`. Adicione algum texto para a referência de controle de conteúdo a `MainContent` ContentPlaceHolder e, em seguida, visite a página por meio de um navegador. Como mostra a Figura 2, o navegador não é possível localizar o `PoweredByASPNET.gif` arquivo de imagem. O que está acontecendo aqui?
+A página de `Default.aspx` recém-criada deve ter quatro controles de conteúdo correspondentes aos quatro ContentPlaceHolders em `Site.master`. Adicione texto ao controle de conteúdo referenciando o `MainContent` ContentPlaceHolder e visite a página por meio de um navegador. Como mostra a Figura 2, o navegador não consegue localizar o arquivo de imagem `PoweredByASPNET.gif`. O que está acontecendo aqui?
 
-O `~/Admin/Default.aspx` página de conteúdo é enviada o mesmo HTML para o `footerContent` região como era o `About.aspx` página:
+A página de conteúdo `~/Admin/Default.aspx` é enviada ao mesmo HTML para a região de `footerContent`, como foi a página `About.aspx`:
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample4.html)]
 
-Porque o `<img>` prvku `src` atributo é uma URL relativa, o navegador tenta procurar um `Images` pasta em relação ao local da pasta da página da web. Em outras palavras, o navegador está procurando o arquivo de imagem `Admin/Images/PoweredByASPNET.gif`.
+Como o atributo `src` do elemento `<img>` é uma URL relativa, o navegador tenta procurar uma pasta `Images` em relação ao local da pasta da página da Web. Em outras palavras, o navegador está procurando o arquivo de imagem `Admin/Images/PoweredByASPNET.gif`.
 
-[![Não é possível encontrar o arquivo de imagem PoweredByASPNET.gif](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
+[![o arquivo de imagem PoweredByASPNET. gif não foi encontrado](urls-in-master-pages-cs/_static/image3.png)](urls-in-master-pages-cs/_static/image2.png)
 
-**Figura 02**: O `PoweredByASPNET.gif` imagem do arquivo não pode ser encontrado ([clique para exibir a imagem em tamanho normal](urls-in-master-pages-cs/_static/image4.png))
+**Figura 02**: o arquivo de imagem de `PoweredByASPNET.gif` não pode ser encontrado ([clique para exibir a imagem em tamanho normal](urls-in-master-pages-cs/_static/image4.png))
 
-### <a name="replacing-relative-urls-with-absolute-urls"></a>Substituindo URLs relativas com URLs absolutas
+### <a name="replacing-relative-urls-with-absolute-urls"></a>Substituindo URLs relativas por URLs absolutas
 
-O oposto de uma URL relativa é um *URL absoluta*, que é aquele que começa com uma barra invertida (`/`) ou um protocolo como `http://`. Como uma URL absoluta Especifica o local de um recurso de um ponto fixo conhecido, a mesma URL absoluta é válida em qualquer página da web, independentemente do local da página da web na estrutura de pastas do site.
+O oposto de uma URL relativa é uma *URL absoluta*, que é uma que começa com uma barra "/" (`/`) ou um protocolo como `http://`. Como uma URL absoluta especifica o local de um recurso de um ponto fixo conhecido, a mesma URL absoluta é válida em qualquer página da Web, independentemente da localização da página da Web na estrutura de pastas do site.
 
-Para corrigir a imagem quebrada, mostrada na Figura 2, precisamos atualizar o `<img>` do elemento `src` para que ele use uma URL absoluta, em vez de uma relativa do atributo. Para determinar a URL absoluta correta, visite uma das páginas da web em seu site e examine a barra de endereços. Como mostra a barra de endereços na Figura 2, o caminho totalmente qualificado para o aplicativo web é `http://localhost:3908/ASPNET_MasterPages_Tutorial_04_CS/`. Portanto, é possível atualizar o `<img>` do elemento `src` de atributo para qualquer uma das duas URLs absolutas a seguir:
+Para corrigir a imagem quebrada mostrada na Figura 2, precisamos atualizar o atributo `src` do elemento de `<img>` para que ele use uma URL absoluta em vez de uma relativa. Para determinar a URL absoluta correta, visite uma das páginas da Web em seu site e examine a barra de endereços. Como mostra a barra de endereços na Figura 2, o caminho totalmente qualificado para o aplicativo Web é `http://localhost:3908/ASPNET_MasterPages_Tutorial_04_CS/`. Portanto, poderíamos atualizar o atributo `src` do elemento `<img>` para uma das duas URLs absolutas a seguir:
 
 - `/ASPNET_MasterPages_Tutorial_04_CS/Images/PoweredByASPNET.gif`
 - `http://localhost:3908/ASPNET_MasterPages_Tutorial_04_CS/Images/PoweredByASPNET.gif`
 
-Reserve um tempo para atualizar o `<img>` do elemento `src` atributo para uma URL absoluta usando uma das formas mostradas acima e, em seguida, visite o `~/Admin/Default.aspx` página por meio de um navegador. Neste momento, o navegador será corretamente localizar e exibir o `PoweredByASPNET.gif` arquivo de imagem (veja a Figura 3).
+Reserve um tempo para atualizar o atributo `src` do elemento de `<img>` para uma URL absoluta usando um dos formulários mostrados acima e, em seguida, visite a página `~/Admin/Default.aspx` por meio de um navegador. Desta vez, o navegador localizará e exibirá corretamente o arquivo de imagem `PoweredByASPNET.gif` (consulte a Figura 3).
 
-[![A imagem de PoweredByASPNET.gif é exibido agora](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
+[![a imagem PoweredByASPNET. gif agora é exibida](urls-in-master-pages-cs/_static/image6.png)](urls-in-master-pages-cs/_static/image5.png)
 
-**Figura 03**: O `PoweredByASPNET.gif` imagem é agora exibido ([clique para exibir a imagem em tamanho normal](urls-in-master-pages-cs/_static/image7.png))
+**Figura 03**: a imagem de `PoweredByASPNET.gif` agora é exibida ([clique para exibir a imagem em tamanho normal](urls-in-master-pages-cs/_static/image7.png))
 
-Enquanto o hard-coding na URL absoluto funciona, ele acople seu HTML para o servidor do site e local de pasta, que pode ser alterado. Usando uma URL absoluta do formulário `http://localhost:3908/...` é frágil porque o número da porta anterior `localhost` é selecionado automaticamente sempre que o servidor de Web de desenvolvimento de ASP.NET interno do Visual Studio é iniciado. Da mesma forma, o `http://localhost` parte só é válida durante o teste local. Depois que o código é implantado em um servidor de produção, a URL base será alterado para algo diferente, como `http://www.yourserver.com`. A URL absoluta no formulário `/ASPNET_MasterPages_Tutorial_04_CS/...` também é prejudicada fragilidade mesma porque muitas vezes, esse caminho de aplicativo é diferente entre os servidores de desenvolvimento e produção.
+Enquanto a codificação rígida na URL absoluta funciona, ela acopla rigidamente o HTML ao local do servidor e da pasta do site, o que pode ser alterado. Usar uma URL absoluta do formulário `http://localhost:3908/...` é frágil porque o número da porta anterior `localhost` é selecionado automaticamente toda vez que o servidor Web de desenvolvimento ASP.NET interno do Visual Studio é iniciado. Da mesma forma, a parte `http://localhost` só é válida durante o teste local. Depois que o código for implantado em um servidor de produção, a URL base será alterada para outra coisa, como `http://www.yourserver.com`. A URL absoluta na forma `/ASPNET_MasterPages_Tutorial_04_CS/...` também sofre da mesma fragilidade, pois muitas vezes esse caminho de aplicativo difere entre os servidores de desenvolvimento e de produção.
 
-A boa notícia é que o ASP.NET oferece um método para gerar uma URL relativa válida no tempo de execução.
+A boa notícia é que o ASP.NET oferece um método para gerar uma URL relativa válida em tempo de execução.
 
 ## <a name="usingandresolveclienturl"></a>Usando`~`e`ResolveClientUrl`
 
-Em vez de codificar uma URL absoluta, ASP.NET permite que os desenvolvedores de páginas usar o til (`~`) para indicar a raiz do aplicativo web. Por exemplo, neste tutorial, usei a notação `~/Admin/Default.aspx` no texto para fazer referência a `Default.aspx` página no `Admin` pasta. O `~` indica que o `Admin` pasta é uma subpasta da raiz do aplicativo da web.
+Em vez de embutir em código uma URL absoluta, o ASP.NET permite que os desenvolvedores de página usem o til (`~`) para indicar a raiz do aplicativo Web. Por exemplo, anteriormente neste tutorial, usei a notação `~/Admin/Default.aspx` no texto para fazer referência à página `Default.aspx` na pasta `Admin`. O `~` indica que a pasta `Admin` é uma subpasta da raiz do aplicativo Web.
 
-O `Control` da classe [ `ResolveClientUrl` método](https://msdn.microsoft.com/library/system.web.ui.control.resolveclienturl.aspx) usa uma URL e modifica-a uma URL relativa apropriada para a página da web no qual reside o controle. Por exemplo, chamar `ResolveClientUrl("~/Images/PoweredByASPNET.gif")` partir `About.aspx` retorna `Images/PoweredByASPNET.gif`. Chamá-lo partir `~/Admin/Default.aspx`, no entanto, retorna `../Images/PoweredByASPNET.gif`.
+O [método`ResolveClientUrl`](https://msdn.microsoft.com/library/system.web.ui.control.resolveclienturl.aspx) da classe `Control` usa uma URL e a modifica para uma URL relativa apropriada para a página da Web na qual o controle reside. Por exemplo, chamar `ResolveClientUrl("~/Images/PoweredByASPNET.gif")` de `About.aspx` retorna `Images/PoweredByASPNET.gif`. No entanto, chamá-lo de `~/Admin/Default.aspx`retorna `../Images/PoweredByASPNET.gif`.
 
 > [!NOTE]
-> Como todos os controles de servidor ASP.NET derivam a `Control` classe, todos os controles de servidor tenham acesso ao `ResolveClientUrl` método. Até mesmo a `Page` classe deriva de `Control` classe, que significa que você pode usar este método diretamente de classes code-behind de suas páginas ASP.NET.
+> Como todos os controles de servidor ASP.NET derivam da classe `Control`, todos os controles de servidor têm acesso ao método `ResolveClientUrl`. Até mesmo a classe `Page` deriva da classe `Control`, o que significa que você pode usar esse método diretamente das classes code-behind de suas páginas ASP.NET.
 
 ### <a name="usingin-the-declarative-markup"></a>Usando`~`na marcação declarativa
 
-Vários controles da Web do ASP.NET incluem propriedades relacionadas à URL: o controle de hiperlink tem um `NavigateUrl` propriedade; a imagem de controle tem um `ImageUrl` propriedade; e assim por diante. Quando renderizada, esses controles passam seus valores de propriedade relacionadas à URL para `ResolveClientUrl`. Consequentemente, se essas propriedades contêm uma `~` para indicar a raiz do aplicativo web, a URL será modificada para uma URL relativa válida.
+Vários controles da Web ASP.NET incluem propriedades relacionadas à URL: o controle HyperLink tem uma propriedade `NavigateUrl`; o controle de imagem tem uma propriedade `ImageUrl`; e assim por diante. Quando renderizado, esses controles passam seus valores de propriedade relacionados à URL para `ResolveClientUrl`. Consequentemente, se essas propriedades contiverem um `~` para indicar a raiz do aplicativo Web, a URL será modificada para uma URL relativa válida.
 
-Tenha em mente que somente os controles de servidor ASP.NET transform o `~` em suas propriedades relacionadas à URL. Se um `~` aparece na marcação HTML estática, como `<img src="~/Images/PoweredByASPNET.gif" />`, o mecanismo do ASP.NET envia a `~` no navegador junto com o restante do conteúdo HTML. O navegador supõe que o `~` faz parte da URL. Por exemplo, se o navegador recebe a marcação `<img src="~/Images/PoweredByASPNET.gif" />` pressupõe que há uma subpasta nomeada `~` com uma subpasta `Images` que contém o arquivo de imagem `PoweredByASPNET.gif`.
+Tenha em mente que somente os controles de servidor ASP.NET transformam a `~` em suas propriedades relacionadas à URL. Se um `~` aparecer na marcação HTML estática, como `<img src="~/Images/PoweredByASPNET.gif" />`, o mecanismo ASP.NET enviará o `~` ao navegador junto com o restante do conteúdo HTML. O navegador pressupõe que o `~` é parte da URL. Por exemplo, se o navegador receber a marcação `<img src="~/Images/PoweredByASPNET.gif" />` ele assumirá que há uma subpasta chamada `~` com uma subpasta `Images` que contém o arquivo de imagem `PoweredByASPNET.gif`.
 
-Para corrigir a marcação de imagem na `Site.master`, substitua a `<img>` elemento com um controle de Web de imagem do ASP.NET. Defina o controle de Web de imagem `ID` para `PoweredByImage`, sua `ImageUrl` propriedade `~/Images/PoweredByASPNET.gif`e seu `AlternateText` propriedade como "Funciona com o ASP.NET!"
+Para corrigir a marcação da imagem em `Site.master`, substitua o elemento `<img>` existente por um controle da Web de imagem ASP.NET. Defina o `ID` do controle da Web de imagem como `PoweredByImage`, sua propriedade `ImageUrl` como `~/Images/PoweredByASPNET.gif`e sua propriedade `AlternateText` como "alimentado por ASP.NET!"
 
 [!code-aspx[Main](urls-in-master-pages-cs/samples/sample5.aspx)]
 
-Depois de fazer essa alteração para a página mestra, revisitar o `~/Admin/Default.aspx` página novamente. Desta vez o `PoweredByASPNET.gif` arquivo de imagem aparece na página (consulte a Figura 3). Quando a Web de imagem de controle é renderizado ele usa o `ResolveClientUrl` método para resolver seu `ImageUrl` valor da propriedade. Na `~/Admin/Default.aspx` o `ImageUrl` é convertida em uma URL relativa apropriado, como o seguinte trecho de HTML fonte mostra:
+Depois de fazer essa alteração na página mestra, visite novamente a página `~/Admin/Default.aspx`. Desta vez, o arquivo de imagem `PoweredByASPNET.gif` aparece na página (veja a Figura 3). Quando o controle da Web de imagem é renderizado, ele usa o método `ResolveClientUrl` para resolver seu valor de propriedade `ImageUrl`. Em `~/Admin/Default.aspx` a `ImageUrl` é convertida em uma URL relativa apropriada, como mostra o seguinte trecho de código-fonte HTML:
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample6.html)]
 
 > [!NOTE]
-> Além de ser usado nas propriedades de controle de Web baseado em URL, o `~` também pode ser usado ao chamar o `Response.Redirect` e `Server.MapPath` métodos, entre outros. Além disso, o `ResolveClientUrl` método pode ser chamado diretamente de um ASP.NET ou marcação declarativa da página mestra, se necessário, consulte [Fritz Onion](https://www.pluralsight.com/blogs/fritz/)da entrada de blog [Using `ResolveClientUrl` na marcação](https://www.pluralsight.com/blogs/fritz/archive/2006/02/06/18596.aspx).
+> Além de serem usados em Propriedades de controle da Web baseadas em URL, o `~` também pode ser usado ao chamar os métodos `Response.Redirect` e `Server.MapPath`, entre outros. Além disso, o método `ResolveClientUrl` pode ser invocado diretamente de uma marcação declarativa de ASP.NET ou página mestra, se necessário; consulte a entrada de blog de [Fritz cebola](https://www.pluralsight.com/blogs/fritz/) [usando `ResolveClientUrl` na marcação](https://www.pluralsight.com/blogs/fritz/archive/2006/02/06/18596.aspx).
 
-## <a name="fixing-the-master-pages-remaining-relative-urls"></a>Correção da página mestra restantes URLs relativas
+## <a name="fixing-the-master-pages-remaining-relative-urls"></a>Corrigindo as URLs relativas restantes da página mestra
 
-Além de `<img>` elemento no `footerContent` que acabei de corrigir, a página mestra contém uma URL relativa mais que exige a nossa atenção. O `topContent` região inclui o link "Mestre páginas de tutoriais," que aponta para `Default.aspx`.
+Além do elemento `<img>` no `footerContent` que acabamos de corrigir, a página mestra contém uma URL mais relativa que requer nossa atenção. A região de `topContent` inclui o link "tutoriais de páginas mestras", que aponta para `Default.aspx`.
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample7.html)]
 
-Porque essa URL for relativa, ele enviará ao usuário o `Default.aspx` página na pasta da página de conteúdo que estão sendo visitado. Para ter esse link sempre aponte para `Default.aspx` na pasta raiz, precisamos substituir o `<a>` elemento com um hiperlink Web controlam para que podemos usar o `~` notação.
+Como essa URL é relativa, ela enviará o usuário para a página de `Default.aspx` na pasta da página de conteúdo que está visitando. Para que esse link aponte sempre para `Default.aspx` na pasta raiz, precisamos substituir o elemento `<a>` por um controle Web de hiperlink para que possamos usar a notação de `~`.
 
-Remover o `<a>` marcação de elemento e adicione um controle de hiperlink em seu lugar. Definir o HyperLink `ID` para `lnkHome`, sua `NavigateUrl` propriedade `~/Default.aspx`e seu `Text` propriedade como "Tutoriais de páginas mestras".
+Remova a marcação do elemento `<a>` e adicione um controle HyperLink em seu lugar. Defina o `ID` do hiperlink como `lnkHome`, sua propriedade `NavigateUrl` como `~/Default.aspx`e sua propriedade `Text` como "tutoriais de páginas mestras".
 
 [!code-aspx[Main](urls-in-master-pages-cs/samples/sample8.aspx)]
 
-É só isso! Neste ponto, todas as URLs em nossa página mestre corretamente baseiam-se durante a renderização por uma página de conteúdo, independentemente de quais pastas, a página mestra e a página de conteúdo estão localizadas em.
+É só isso! Neste ponto, todas as URLs em nossa página mestra são corretamente baseadas quando renderizadas por uma página de conteúdo, independentemente de quais pastas a página mestra e a página de conteúdo estão localizadas.
 
-### <a name="automatic-url-resolution-in-theheadsection"></a>Resolução automática de URL no`<head>`seção
+### <a name="automatic-url-resolution-in-theheadsection"></a>Resolução automática de URL na seção`<head>`
 
-No [ *criando um Layout de todo o Site usando páginas mestras* ](creating-a-site-wide-layout-using-master-pages-cs.md) tutorial adicionamos um `<link>` para o `Styles.css` arquivo no `<head>` região:
+No tutorial [*criando um layout de todo o site usando páginas mestras*](creating-a-site-wide-layout-using-master-pages-cs.md) , adicionamos um `<link>` ao arquivo `Styles.css` na região `<head>`:
 
 [!code-aspx[Main](urls-in-master-pages-cs/samples/sample9.aspx)]
 
-Enquanto o `<link>` do elemento `href` atributo for relativo, ele é automaticamente convertido em um caminho apropriado em tempo de execução. Como discutimos na [ *especificando o título, marcas Meta e outros cabeçalhos de HTML na página mestra* ](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) tutorial, o `<head>` região é, na verdade, um controle do lado do servidor, que permite modificar a conteúdo de seus controles internos quando ele é renderizado.
+Embora o atributo `href` do elemento de `<link>` seja relativo, ele é automaticamente convertido em um caminho apropriado em tempo de execução. Como discutimos no tutorial [*especificando o título, as marcas meta e outros cabeçalhos HTML no tópico da página mestra*](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md) , a região de `<head>` é, na verdade, um controle do servidor, o que permite modificar o conteúdo de seus controles internos quando ele é renderizado.
 
-Para verificar isso, examine o `~/Admin/Default.aspx` página e exibir o código-fonte HTML enviado ao navegador. Como o trecho a seguir ilustra, o `<link>` prvku `href` atributo tiver sido modificado automaticamente para uma URL relativa apropriada, `../Styles.css`.
+Para verificar isso, visite novamente a página `~/Admin/Default.aspx` e exiba a fonte HTML enviada para o navegador. Como o trecho de código a seguir ilustra, o atributo `href` do elemento de `<link>` foi modificado automaticamente para uma URL relativa apropriada, `../Styles.css`.
 
 [!code-html[Main](urls-in-master-pages-cs/samples/sample10.html)]
 
 ## <a name="summary"></a>Resumo
 
-Páginas mestras com muita frequência incluem links, imagens e outros recursos externos que devem ser especificados através de uma URL. Porque a página mestra e páginas de conteúdo podem não existir na mesma pasta, é importante abstain do uso de URLs relativas. Embora seja possível usar URLs absolutas embutidas, fazendo tão firmemente associa a URL absoluta para o aplicativo web. Se a URL absoluta for alterado – como geralmente faz ao mover ou implantar um aplicativo web – você terá que não se esqueça de voltar e atualizar as URLs absolutas.
+As páginas mestras muitas vezes incluem links, imagens e outros recursos externos que devem ser especificados por meio de uma URL. Como a página mestra e as páginas de conteúdo podem não existir na mesma pasta, é importante abstain o uso de URLs relativas. Embora seja possível usar URLs absolutas embutidas em código, fazer isso rigidamente a URL absoluta para o aplicativo Web. Se a URL absoluta for alterada, como geralmente faz ao mover ou implantar um aplicativo Web, você precisará se lembrar de voltar e atualizar as URLs absolutas.
 
-A abordagem ideal é usar o til (`~`) para indicar a raiz do aplicativo. Mapeiam de controles da Web ASP.NET que contêm propriedades relacionadas à URL a `~` para a raiz do aplicativo em tempo de execução. Internamente, os controles da Web usam o `Control` da classe `ResolveClientUrl` método para gerar uma URL relativa válida. Esse método é público e está disponível de cada controle de servidor (incluindo o `Page` classe), portanto, você pode usá-lo por meio de programação de suas classes code-behind, se necessário.
+A abordagem ideal é usar o til (`~`) para indicar a raiz do aplicativo. Os controles da Web ASP.NET que contêm propriedades relacionadas à URL mapeiam o `~` para a raiz do aplicativo em tempo de execução. Internamente, os controles da Web usam o método `ResolveClientUrl` da classe `Control` para gerar uma URL relativa válida. Esse método é público e está disponível em cada controle de servidor (incluindo a classe `Page`), para que você possa usá-lo programaticamente de suas classes code-behind, se necessário.
 
 Boa programação!
 
 ### <a name="further-reading"></a>Leitura adicional
 
-Para obter mais informações sobre os tópicos abordados neste tutorial, consulte os seguintes recursos:
+Para obter mais informações sobre os tópicos discutidos neste tutorial, consulte os seguintes recursos:
 
-- [Páginas mestras no ASP.NET](http://www.odetocode.com/Articles/419.aspx)
-- [Troca de base de URL em uma página mestra](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/masterpages/default.aspx#urls)
+- [Páginas mestras em ASP.NET](http://www.odetocode.com/Articles/419.aspx)
+- [Rebase de URL em uma página mestra](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/masterpages/default.aspx#urls)
 - [Usando `ResolveClientUrl` na marcação](https://www.pluralsight.com/blogs/fritz/archive/2006/02/06/18596.aspx)
 
 ### <a name="about-the-author"></a>Sobre o autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de vários livros sobre ASP/ASP.NET e fundador da 4GuysFromRolla.com, trabalha com tecnologias Web Microsoft desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 3.5 in 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Scott pode ser contatado pelo [ mitchell@4GuysFromRolla.com ](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog em [ http://ScottOnWriting.NET ](http://scottonwriting.net/).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de vários livros sobre ASP/ASP. net e fundador da 4GuysFromRolla.com, tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 3,5 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Scott pode ser contatado em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog em [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
 ### <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com ](mailto:mitchell@4GuysFromRolla.com).
+Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com).
 
 > [!div class="step-by-step"]
 > [Anterior](specifying-the-title-meta-tags-and-other-html-headers-in-the-master-page-cs.md)

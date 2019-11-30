@@ -8,12 +8,12 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: 6fcfcda5b95e5844f7d357ac0cbb6d1fd2e215ac
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.openlocfilehash: fb7e76101cbe6a874ddf5b3429ca2dc6d474334b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445775"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74595760"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenção de XSRF/CSRF no ASP.NET MVC e em páginas da Web
 
@@ -128,7 +128,7 @@ A autenticação baseada em declarações, por outro lado, não requer necessari
 
 Muitas implantações que usam a autenticação baseada em declarações estão usando o ACS ( [serviço de controle de acesso) do Azure](https://msdn.microsoft.com/library/windowsazure/gg429786.aspx) em particular. O ACS permite que o desenvolvedor configure *provedores de identidade* individuais (como o ADFS, o provedor de contas da Microsoft, provedores de OpenID como Yahoo!, etc.) e os provedores de identidade retornem *identificadores de nome*. Esses identificadores de nome podem conter informações de identificação pessoal (PII), como um endereço de email, ou podem ser anônimos como um PPID (identificador pessoal privado). Independentemente da tupla (provedor de identidade, identificador de nome), o suficiente serve como um token de rastreamento apropriado para um usuário específico enquanto está navegando no site, para que o tempo de execução da pilha da Web ASP.NET possa usar a tupla no lugar do nome de usuário ao gerar e Validando tokens de campo XSRF. Os URIs específicos para o provedor de identidade e o identificador de nome são:
 
-- `http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider`
+- `https://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider`
 - `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier`
 
 (consulte esta [página de documento do ACS](https://msdn.microsoft.com/library/windowsazure/gg185971.aspx) para obter mais informações.)

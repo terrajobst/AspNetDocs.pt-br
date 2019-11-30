@@ -1,35 +1,35 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
-title: Preenchendo uma lista usando o CascadingDropDown (c#) | Microsoft Docs
+title: Preenchendo uma lista usandoC#CascadingDropDown () | Microsoft Docs
 author: wenz
-description: O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associado valores em anoth...
+description: O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em anoth...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 31319e0ad15825acead2b7e8b619985272fb8eaa
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b5e9874fb5b6d3e55c8af5b85d12bf1ffacc116b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131451"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74574831"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-c"></a>Preencher uma lista usando o CascadingDropDown (C#)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown0.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown0CS.pdf)
+[Baixar código](https://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown0.cs.zip) ou [baixar PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/cascadingdropdown0CS.pdf)
 
-> O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associadas a valores em outra DropDownList. (Por exemplo, uma lista fornece uma lista de estados dos EUA e a lista seguinte, em seguida, é preenchida com principais cidades nesse estado.) O primeiro desafio para resolver é, na verdade, preencher uma lista suspensa usando esse controle.
+> O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. (Por exemplo, uma lista fornece uma lista de Estados dos EUA e a próxima lista é então preenchida com cidades principais nesse estado.) O primeiro desafio a ser resolvido é realmente preencher uma lista suspensa usando esse controle.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
-O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associadas a valores em outra DropDownList. (Por exemplo, uma lista fornece uma lista de estados dos EUA e a lista seguinte, em seguida, é preenchida com principais cidades nesse estado.) O primeiro desafio para resolver é, na verdade, preencher uma lista suspensa usando esse controle.
+O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. (Por exemplo, uma lista fornece uma lista de Estados dos EUA e a próxima lista é então preenchida com cidades principais nesse estado.) O primeiro desafio a ser resolvido é realmente preencher uma lista suspensa usando esse controle.
 
 ## <a name="steps"></a>Etapas
 
-Para ativar a funcionalidade do AJAX ASP.NET e o Kit de ferramentas de controle, o `ScriptManager` controle deve ser colocada em qualquer lugar na página (mas dentro de `<form>` elemento):
+Para ativar a funcionalidade do ASP.NET AJAX e do kit de ferramentas de controle, o controle de `ScriptManager` deve ser colocado em qualquer lugar na página (mas dentro do elemento `<form>`):
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample1.aspx)]
 
@@ -37,29 +37,29 @@ Em seguida, um controle DropDownList é necessário:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample2.aspx)]
 
-Para obter essa lista, um extensor de CascadingDropDown é adicionado. Ele envia uma solicitação assíncrona para um serviço web que, em seguida, retornará uma lista de entradas a ser exibido na lista. Para que isso funcione, os seguintes atributos de CascadingDropDown precisam ser definidas:
+Para essa lista, um extensor CascadingDropDown é adicionado. Ele enviará uma solicitação assíncrona para um serviço Web que retornará uma lista de entradas a serem exibidas na lista. Para que isso funcione, os seguintes atributos CascadingDropDown precisam ser definidos:
 
-- `ServicePath`: URL de um serviço web fornecendo as entradas da lista
-- `ServiceMethod`: Método Web fornecendo as entradas da lista
+- `ServicePath`: URL de um serviço Web que fornece as entradas da lista
+- `ServiceMethod`: método Web fornecendo as entradas da lista
 - `TargetControlID`: ID da lista suspensa
-- `Category`: Informações de categoria que são enviadas para o método da web quando chamado
-- `PromptText`: Texto exibido quando assincronamente Carregando dados da lista do servidor
+- `Category`: informações de categoria que são enviadas para o método Web quando chamado
+- `PromptText`: texto exibido ao carregar dados da lista de forma assíncrona do servidor
 
-Aqui está a marcação para o `CascadingDropDown` elemento. A única diferença entre c# e VB é o nome do serviço web associado:
+Aqui está a marcação para o elemento `CascadingDropDown`. A única diferença entre C# o e o VB é o nome do serviço Web associado:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample3.aspx)]
 
-O código JavaScript provenientes de `CascadingDropDown` extensor chama um método de serviço web com a seguinte assinatura:
+O código JavaScript proveniente do `CascadingDropDown` Extender chama um método de serviço Web com a seguinte assinatura:
 
 [!code-csharp[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample4.cs)]
 
-Portanto, o aspecto importante é que o método deve retornar uma matriz do tipo `CascadingDropDownNameValue` (definido pelo ASP.NET AJAX Control Toolkit). No `CascadingDropDownNameValue` construtor, primeiro texto da entrada de lista e, em seguida, seu valor devem ser fornecidas, assim como `<option value="VALUE">NAME</option>` faria em HTML. Aqui estão alguns dados de exemplo:
+Portanto, o aspecto importante é que o método precisa retornar uma matriz do tipo `CascadingDropDownNameValue` (definida pelo ASP.NET AJAX Control Toolkit). No Construtor `CascadingDropDownNameValue`, primeiro o texto da entrada da lista e, em seguida, seu valor deve ser fornecido, assim como `<option value="VALUE">NAME</option>` faria no HTML. Aqui estão alguns dados de exemplo:
 
 [!code-aspx[Main](filling-a-list-using-cascadingdropdown-cs/samples/sample5.aspx)]
 
-Carregamento da página no navegador disparará a lista a ser preenchido com três fornecedores.
+Carregar a página no navegador irá disparar a lista a ser preenchida com três fornecedores.
 
-[![A lista é preenchida automaticamente](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
+[![a lista é preenchida automaticamente](filling-a-list-using-cascadingdropdown-cs/_static/image2.png)](filling-a-list-using-cascadingdropdown-cs/_static/image1.png)
 
 A lista é preenchida automaticamente ([clique para exibir a imagem em tamanho normal](filling-a-list-using-cascadingdropdown-cs/_static/image3.png))
 

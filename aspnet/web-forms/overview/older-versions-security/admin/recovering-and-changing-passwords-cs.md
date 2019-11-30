@@ -1,282 +1,282 @@
 ---
 uid: web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-cs
-title: Recuperação e alteração de senhas (c#) | Microsoft Docs
+title: Recuperando e alterando senhas (C#) | Microsoft Docs
 author: rick-anderson
-description: O ASP.NET inclui dois controles de Web para ajudar com a recuperação e alteração de senhas. O controle PasswordRecovery permite que um visitante recuperar seu perdido pa...
+description: O ASP.NET inclui dois controles da Web para auxiliar na recuperação e na alteração de senhas. O controle PasswordRecovery permite que um visitante recupere seu PA perdido...
 ms.author: riande
 ms.date: 04/01/2008
 ms.assetid: 19c4d042-4e34-4b44-9f1d-6bf2253ba366
 msc.legacyurl: /web-forms/overview/older-versions-security/admin/recovering-and-changing-passwords-cs
 msc.type: authoredcontent
-ms.openlocfilehash: f5eab787d9eadbb2e19389c73db8319ba33c24af
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8c07b8a3c36e4863c6d2d356b8483544ac4cafeb
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130578"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74576553"
 ---
 # <a name="recovering-and-changing-passwords-c"></a>Recuperação e alteração de senhas (C#)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixar o código](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.13.zip) ou [baixar PDF](http://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial13_ChangingPasswords_cs.pdf)
+[Baixar código](https://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/CS.13.zip) ou [baixar PDF](https://download.microsoft.com/download/6/0/e/60e1bd94-e5f9-4d5a-a079-f23c98f4f67d/aspnet_tutorial13_ChangingPasswords_cs.pdf)
 
-> O ASP.NET inclui dois controles de Web para ajudar com a recuperação e alteração de senhas. O controle PasswordRecovery permite que um visitante recuperar sua senha perdida. O controle ChangePassword permite ao usuário atualizar sua senha. Como os outros controles de Web relacionadas ao logon que vimos em toda esta série de tutoriais, o PasswordRecovery e ChangePassword controles funcionam com a estrutura de associação em segundo plano para redefinir ou modificar as senhas dos usuários.
+> O ASP.NET inclui dois controles da Web para auxiliar na recuperação e na alteração de senhas. O controle PasswordRecovery permite que um visitante recupere sua senha perdida. O controle ChangePassword permite que o usuário Atualize sua senha. Assim como os outros controles da Web relacionados ao logon que vimos em toda esta série de tutoriais, os controles PasswordRecovery e ChangePassword funcionam com a estrutura de associação nos bastidores para redefinir ou modificar as senhas dos usuários.
 
 ## <a name="introduction"></a>Introdução
 
-Entre os sites da Web para meu bancárias da empresa do utilitário, companhia telefônica, contas de email e portais da web personalizado, como a maioria das pessoas, tenho dezenas de senhas diferentes para se lembrar. Com tantas credenciais memorizar hoje em dia, não é incomum para as pessoas se esquecer sua senha. Para justificar isso, os sites que oferecem as contas de usuário precisam incluir uma maneira para um usuário a recuperar sua senha. Esse processo normalmente envolve a geração de uma nova senha aleatória e enviando um email ao endereço de email do usuário no arquivo. Depois de receber a nova senha a maioria dos usuários retorne ao site e altere sua senha daquele gerado aleatoriamente para uma mais fácil de lembrar.
+Entre os sites do meu banco, a empresa do utilitário, a empresa de telefones, as contas de email e os portais da Web personalizados, eu, como a maioria das pessoas, têm dezenas de senhas diferentes a serem lembradas. Com tantas credenciais para memorizar esses dias, não é incomum que as pessoas esquecem sua senha. Para considerar isso, os sites que oferecem contas de usuário precisam incluir uma maneira para um usuário recuperar sua senha. Esse processo geralmente envolve a geração de uma senha nova e aleatória e o envio por email para o endereço de email do usuário no arquivo. Depois de receber sua nova senha, a maioria dos usuários retorna para o site e altera a senha do gerada aleatoriamente para um mais fácil de memorizar.
 
-O ASP.NET inclui dois controles de Web para ajudar com a recuperação e alteração de senhas. O controle PasswordRecovery permite que um visitante recuperar sua senha perdida. O controle ChangePassword permite ao usuário atualizar sua senha. Como os outros controles de Web relacionadas ao logon que vimos em toda esta série de tutoriais, o PasswordRecovery e ChangePassword controles funcionam com a estrutura de associação em segundo plano para redefinir ou modificar as senhas dos usuários.
+O ASP.NET inclui dois controles da Web para auxiliar na recuperação e na alteração de senhas. O controle PasswordRecovery permite que um visitante recupere sua senha perdida. O controle ChangePassword permite que o usuário Atualize sua senha. Assim como os outros controles da Web relacionados ao logon que vimos em toda esta série de tutoriais, os controles PasswordRecovery e ChangePassword funcionam com a estrutura de associação nos bastidores para redefinir ou modificar as senhas dos usuários.
 
-Neste tutorial, examinaremos usando esses dois controles. Também veremos como programaticamente, alterar e redefinir a senha do usuário por meio de `MembershipUser` da classe `ChangePassword` e `ResetPassword` métodos.
+Neste tutorial, examinaremos o uso desses dois controles. Também veremos como alterar e redefinir de forma programática a senha de um usuário por meio dos métodos `ChangePassword` e `ResetPassword` da classe `MembershipUser`.
 
-## <a name="step-1-helping-users-recover-lost-passwords"></a>Etapa 1: Ajudando os usuários Recover perdido senhas
+## <a name="step-1-helping-users-recover-lost-passwords"></a>Etapa 1: ajudando os usuários a recuperar senhas perdidas
 
-Todos os sites que dão suporte a contas de usuário precisam fornecer aos usuários com algum mecanismo para recuperar senhas esquecidas. A boa notícia é que implementar essa funcionalidade no ASP.NET é muito fácil graças ao controle PasswordRecovery Web. O controle PasswordRecovery renderiza uma interface que solicita ao usuário seu nome de usuário e, se necessário, a resposta à sua pergunta de segurança. Ele envia o usuário a senha.
+Todos os sites que dão suporte às contas de usuário precisam fornecer aos usuários algum mecanismo para recuperar suas senhas esquecidas. A boa notícia é que a implementação dessa funcionalidade em ASP.NET é uma Breeze graças ao controle da Web PasswordRecovery. O controle PasswordRecovery renderiza uma interface que solicita ao usuário o nome de seus nomes e, se necessário, a resposta para sua pergunta de segurança. Em seguida, ele envia por email a senha do usuário.
 
 > [!NOTE]
-> Como as mensagens de email são transmitidas eletronicamente em texto sem formatação há riscos de segurança envolvidas com o envio de uma senha de usuário por email.
+> Como as mensagens de email são transmitidas pela transmissão em texto sem formatação, há riscos de segurança envolvidos no envio da senha de um usuário por email.
 
 O controle PasswordRecovery consiste em três modos de exibição:
 
-- **Nome de usuário** -solicita que o visitante para o nome de usuário. Esta é a exibição inicial.
-- **Pergunta**-exibe a pergunta de segurança e o nome de usuário do usuário como texto, juntamente com uma caixa de texto para o usuário insira a resposta à sua pergunta de segurança.
-- **Sucesso**-exibe uma mensagem informando ao usuário que sua senha foi enviado por email.
+- **Nome de usuário** -solicita ao visitante seu nome de usuário. Esta é a exibição inicial.
+- **Pergunta**– exibe o nome de usuário e a pergunta de segurança como texto, juntamente com uma caixa de texto para que o usuário insira a resposta para sua pergunta de segurança.
+- **Êxito**– exibe uma mensagem informando ao usuário que sua senha foi enviada por email.
 
-Os modos de exibição é exibida e as ações executadas pelo controle PasswordRecovery dependem as seguintes definições de configuração de associação:
+As exibições exibidas e ações executadas pelo controle PasswordRecovery dependem das seguintes definições de configuração de associação:
 
 - `RequiresQuestionAndAnswer`
 - `EnablePasswordRetrieval`
 - `EnablePasswordReset`
 
-A estrutura de associação `RequiresQuestionAndAnswer` configuração indica se os usuários devem especificar uma pergunta de segurança e uma resposta ao se registrar para uma conta. Como discutimos na <a id="_msoanchor_1"> </a> [ *criando contas de usuário* ](../membership/creating-user-accounts-cs.md) tutorial, se `RequiresQuestionAndAnswer` for True (o padrão), a interface do CreateUserWizard inclui a caixa de texto controles para o novo usuário pergunta de segurança e resposta; Se `RequiresQuestionAndAnswer` for False, nenhuma dessas informações é coletada. Da mesma forma, se `RequiresQuestionAndAnswer` for verdadeiro, as exibições de controle PasswordRecovery a pergunta exibir depois que o usuário inseriu o nome de usuário; a senha é recuperada somente se o usuário insere a resposta de segurança correto. Se `RequiresQuestionAndAnswer` for falso, no entanto, o controle PasswordRecovery move diretamente da exibição do nome de usuário para o modo de exibição de êxito.
+A configuração de `RequiresQuestionAndAnswer` da estrutura de associação indica se os usuários devem especificar uma pergunta e resposta de segurança ao se registrarem para uma conta. Como discutimos no <a id="_msoanchor_1"> </a>tutorial [*criando contas de usuário*](../membership/creating-user-accounts-cs.md) , se `RequiresQuestionAndAnswer` for true (o padrão), a interface do CreateUserWizard incluirá controles TextBox para a pergunta e a resposta de segurança do novo usuário; se `RequiresQuestionAndAnswer` for false, nenhuma informação será coletada. Da mesma forma, se `RequiresQuestionAndAnswer` for true, o controle PasswordRecovery exibirá a exibição de pergunta depois que o usuário inserir seu nome de usuário; a senha será recuperada somente se o usuário inserir a resposta de segurança correta. Se `RequiresQuestionAndAnswer` for false, no entanto, o controle PasswordRecovery se moverá diretamente da exibição de nome de usuário para a exibição êxito.
 
-Depois que o usuário forneceu a resposta de segurança e o nome de usuário, ou de seu nome de usuário - se `RequiresQuestionAndAnswer` é True - o PasswordRecovery emails sua senha de usuário. Se o `EnablePasswordRetrieval` opção for definida como True e, em seguida, o usuário é enviado por email a senha atual. Se ele for definido como False e `EnablePasswordReset` é definida como True, em seguida, o controle PasswordRecovery gera uma nova senha aleatória para o usuário e envia essa nova senha para eles por email. Se os dois `EnablePasswordRetrieval` e `EnablePasswordReset` são False, o controle PasswordRecovery gerará uma exceção.
-
-> [!NOTE]
-> Lembre-se de que o `SqlMembershipProvider` armazena as senhas dos usuários em um dos três formatos: Clear, Hashed (o padrão) ou criptografado. O mecanismo de armazenamento usado depende das definições de configuração de associação; o aplicativo de demonstração usa o formato da senha Hashed. Ao usar o formato da senha Hashed o `EnablePasswordRetrieval` opção deve ser definida como False, porque o sistema não pode determinar a senha do usuário real da versão de hash armazenada no banco de dados.
-
-Figura 1 ilustra como a interface e o comportamento do PasswordRecovery é influenciada pela configuração de associação.
-
-[![O RequiresQuestionAndAnswer, EnablePasswordRetrieval e EnablePasswordReset influenciam a aparência e o comportamento do controle PasswordRecovery](recovering-and-changing-passwords-cs/_static/image2.png)](recovering-and-changing-passwords-cs/_static/image1.png)
-
-**Figura 1**: O `RequiresQuestionAndAnswer`, `EnablePasswordRetrieval`, e `EnablePasswordReset` influenciar a aparência e o comportamento do controle PasswordRecovery ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image3.png))
+Depois que o usuário tiver fornecido seu nome de usuário, ou seu nome de usuário e resposta de segurança, se `RequiresQuestionAndAnswer` for true, o PasswordRecovery enviará uma senha para o usuário. Se a opção `EnablePasswordRetrieval` for definida como true, o usuário receberá uma mensagem de senha atual. Se ele for definido como false e `EnablePasswordReset` for definido como true, o controle PasswordRecovery gerará uma nova senha aleatória para o usuário e enviará por email essa nova senha para eles. Se `EnablePasswordRetrieval` e `EnablePasswordReset` forem false, o controle PasswordRecovery lançará uma exceção.
 
 > [!NOTE]
-> No <a id="_msoanchor_2"> </a> [ *criando o esquema de associação no SQL Server* ](../membership/creating-the-membership-schema-in-sql-server-cs.md) tutorial configuramos o provedor de associação, definindo `RequiresQuestionAndAnswer` como True, `EnablePasswordRetrieval` para False, e `EnablePasswordReset` como True.
+> Lembre-se de que o `SqlMembershipProvider` armazena as senhas dos usuários em um dos três formatos: Clear, com hash (o padrão) ou Encrypted. O mecanismo de armazenamento usado depende das definições de configuração de associação; o aplicativo de demonstração usa o formato de senha com hash. Ao usar o formato de senha com hash, a opção `EnablePasswordRetrieval` deve ser definida como false porque o sistema não pode determinar a senha real do usuário a partir da versão com hash armazenada no banco de dados.
+
+A Figura 1 ilustra como a interface e o comportamento do PasswordRecovery são influenciados pela configuração da associação.
+
+[![RequiresQuestionAndAnswer, EnablePasswordRetrieval e EnablePasswordReset influenciam a aparência e o comportamento do controle PasswordRecovery](recovering-and-changing-passwords-cs/_static/image2.png)](recovering-and-changing-passwords-cs/_static/image1.png)
+
+**Figura 1**: o `RequiresQuestionAndAnswer`, `EnablePasswordRetrieval`e `EnablePasswordReset` influenciam a aparência e o comportamento do controle PasswordRecovery ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image3.png))
+
+> [!NOTE]
+> <a id="_msoanchor_2"> </a>No tutorial [*criando o esquema de associação no SQL Server*](../membership/creating-the-membership-schema-in-sql-server-cs.md) , configuramos o provedor de associação definindo `RequiresQuestionAndAnswer` como true, `EnablePasswordRetrieval` como false e `EnablePasswordReset` como true.
 
 ### <a name="using-the-passwordrecovery-control"></a>Usando o controle PasswordRecovery
 
-Vejamos como usar o controle PasswordRecovery em uma página ASP.NET. Abra `RecoverPassword.aspx` e arraste e solte um controle PasswordRecovery da caixa de ferramentas para o Designer; definir seus `ID` para `RecoverPwd`. Como os controles de logon e CreateUserWizard Web, modos de exibição do controle PasswordRecovery renderizam uma rica interface de composição que inclui os rótulos, caixas de texto, botões e controles de validação. Você pode personalizar a aparência dos modos de exibição por meio das propriedades de estilo do controle ou convertendo os modos de exibição em modelos. Vou deixar isso como um exercício para os leitores interessados.
+Vejamos o uso do controle PasswordRecovery em uma página ASP.NET. Abra `RecoverPassword.aspx` e arraste e solte um controle PasswordRecovery da caixa de ferramentas para o designer; Defina seu `ID` como `RecoverPwd`. Como os controles de logon e CreateUserWizard da Web, as exibições do controle PasswordRecovery renderizam uma interface composta rica que inclui rótulos, caixas de Text, botões e controles de validação. Você pode personalizar a aparência das exibições por meio das propriedades de estilo do controle ou convertendo as exibições em modelos. Deixe isso como um exercício para o leitor interessado.
 
-Quando um usuário visita esta página, ela será inserir seu nome de usuário e clique no botão Enviar. Porque nós definimos o `RequiresQuestionAndAnswer` propriedade como True nas nossas definições de configuração de associação, o PasswordRecovery controlar será, em seguida, exibe o modo de exibição de pergunta. Depois que o usuário insere sua resposta de segurança correto e clica em Submit, o controle PasswordRecovery atualizar a senha do usuário para um outro gerado aleatoriamente e essa senha para o endereço de email no arquivo de email. Tudo isso era possível sem nós ter que escrever uma única linha de código!
+Quando um usuário visitar esta página, ela inserirá seu nome de usuário e clicará no botão enviar. Como definimos a propriedade `RequiresQuestionAndAnswer` como true em nossas definições de configuração de associação, o controle PasswordRecovery exibirá a exibição de pergunta. Depois que o usuário inserir sua resposta de segurança correta e clicar em enviar, o controle PasswordRecovery atualizará a senha do usuário para uma gerada aleatoriamente e enviará por email essa senha para o endereço de email no arquivo. Tudo isso era possível sem a necessidade de escrever uma única linha de código!
 
-Antes de testar essa página, há uma parte final da configuração para atender aos: é necessário especificar as configurações de entrega de email no `Web.config`. O controle PasswordRecovery depende dessas configurações para enviar o email.
+Antes de testar esta página, há uma parte final da configuração para a qual tendem a: precisamos especificar as configurações de entrega de email em `Web.config`. O controle PasswordRecovery depende dessas configurações para enviar o email.
 
-A configuração de entrega de email é especificada por meio de [ `<system.net>` elemento](https://msdn.microsoft.com/library/6484zdc1.aspx)do [ `<mailSettings>` elemento](https://msdn.microsoft.com/library/w355a94k.aspx). Use o [ `<smtp>` elemento](https://msdn.microsoft.com/library/ms164240.aspx) para indicar o método de entrega e o padrão de endereço. A marcação a seguir define as configurações de email para usar um servidor SMTP de rede chamado `smtp.example.com` na porta 25 e com as credenciais de nome de usuário e senha de usuário e senha.
+A configuração de entrega de email é especificada por meio do [elemento`<mailSettings>`](https://msdn.microsoft.com/library/w355a94k.aspx)do [elemento de`<system.net>`](https://msdn.microsoft.com/library/6484zdc1.aspx). Use o [elemento`<smtp>`](https://msdn.microsoft.com/library/ms164240.aspx) para indicar o método de entrega e o endereço padrão de. A marcação a seguir define as configurações de email para usar um servidor SMTP de rede chamado `smtp.example.com` na porta 25 e com credenciais de nome de usuário/senha de nome de usuário e senha.
 
 > [!NOTE]
-> `<system.net>` é um elemento filho da raiz `<configuration>` elemento e um irmão de `<system.web>`. Portanto, não coloque a `<system.net>` elemento dentro do `<system.web>` elemento; em vez disso, colocá-lo no mesmo nível.
+> `<system.net>` é um elemento filho do elemento de `<configuration>` raiz e um irmão de `<system.web>`. Portanto, não coloque o elemento `<system.net>` dentro do elemento `<system.web>`; em vez disso, coloque-o no mesmo nível.
 
 [!code-xml[Main](recovering-and-changing-passwords-cs/samples/sample1.xml)]
 
-Além de usar um servidor SMTP na rede, você poderá especificar um diretório de retirada em que mensagens de email a ser enviado devem ser depositadas.
+Além de usar um servidor SMTP na rede, você pode especificar como alternativa um diretório de retirada onde as mensagens de email a serem enviadas devem ser depositadas.
 
-Depois de definir as configurações de SMTP, visite o `RecoverPassword.aspx` página por meio de um navegador. Primeiro, tente inserir um nome de usuário que não existe no repositório do usuário. Como mostra a Figura 2, o controle PasswordRecovery exibe uma mensagem indicando que não foi possível acessar as informações do usuário. O texto da mensagem pode ser personalizado por meio do controle [ `UserNameFailureText` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.usernamefailuretext.aspx).
+Depois de definir as configurações de SMTP, visite a página `RecoverPassword.aspx` por meio de um navegador. Primeiro, tente inserir um nome de usuário que não exista no repositório de usuários. Como mostra a Figura 2, o controle PasswordRecovery exibe uma mensagem indicando que as informações do usuário não puderam ser acessadas. O texto da mensagem pode ser personalizado por meio da [propriedade`UserNameFailureText`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.usernamefailuretext.aspx)do controle.
 
-[![Uma mensagem de erro será exibida se um nome de usuário inválido é inserido](recovering-and-changing-passwords-cs/_static/image5.png)](recovering-and-changing-passwords-cs/_static/image4.png)
+[![uma mensagem de erro será exibida se um nome de usuário inválido for inserido](recovering-and-changing-passwords-cs/_static/image5.png)](recovering-and-changing-passwords-cs/_static/image4.png)
 
-**Figura 2**: Uma mensagem de erro será exibida se um nome de usuário inválido é inserido ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image6.png))
+**Figura 2**: uma mensagem de erro será exibida se um nome de usuário inválido for inserido ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image6.png))
 
-Agora, insira um nome de usuário. Use o nome de usuário de uma conta no sistema com um endereço de email que você pode acessar e cuja segurança responder você sabe. Depois de inserir o nome de usuário e clicar em enviar, o controle PasswordRecovery exibe sua view de pergunta. Como com o modo de exibição do nome de usuário, se você inserir um incorreto responder as exibições de controle PasswordRecovery uma mensagem de erro (consulte a Figura 3). Use o [ `QuestionFailureText` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.questionfailuretext.aspx) para personalizar essa mensagem de erro.
+Agora, insira um nome de usuário. Use o nome de usuário de uma conta no sistema com um endereço de email que você pode acessar e cuja resposta de segurança você sabe. Depois de inserir o nome de usuário e clicar em enviar, o controle PasswordRecovery exibe sua exibição de pergunta. Assim como acontece com a exibição de nome de usuário, se você inserir uma resposta incorreta, o controle PasswordRecovery exibirá uma mensagem de erro (consulte a Figura 3). Use a [propriedade`QuestionFailureText`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.questionfailuretext.aspx) para personalizar essa mensagem de erro.
 
-[![Uma mensagem de erro será exibida se o usuário insere uma resposta de segurança inválido](recovering-and-changing-passwords-cs/_static/image8.png)](recovering-and-changing-passwords-cs/_static/image7.png)
+[![uma mensagem de erro será exibida se o usuário inserir uma resposta de segurança inválida](recovering-and-changing-passwords-cs/_static/image8.png)](recovering-and-changing-passwords-cs/_static/image7.png)
 
-**Figura 3**: Uma mensagem de erro será exibida se o usuário insere uma resposta de segurança inválido ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image9.png))
+**Figura 3**: uma mensagem de erro será exibida se o usuário inserir uma resposta de segurança inválida ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image9.png))
 
-Por fim, insira a resposta de segurança correto e clique em enviar. Nos bastidores, o controle PasswordRecovery gera uma senha aleatória, atribui a conta de usuário, envia um email informando ao usuário de sua nova senha (veja a Figura 4) e, em seguida, exibe o modo de exibição de êxito.
+Por fim, insira a resposta de segurança correta e clique em enviar. Nos bastidores, o controle PasswordRecovery gera uma senha aleatória, a atribui à conta de usuário, envia um email informando ao usuário de sua nova senha (consulte a Figura 4) e, em seguida, exibe a exibição êxito.
 
-[![O usuário é enviado um Email com a nova senha His](recovering-and-changing-passwords-cs/_static/image11.png)](recovering-and-changing-passwords-cs/_static/image10.png)
+[![o usuário recebe um email com sua nova senha](recovering-and-changing-passwords-cs/_static/image11.png)](recovering-and-changing-passwords-cs/_static/image10.png)
 
-**Figura 4**: O usuário é enviado um Email com a nova senha His ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image12.png))
+**Figura 4**: o usuário recebe um email com sua nova senha ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image12.png))
 
-### <a name="customizing-the-email"></a>Personalizando o Email
+### <a name="customizing-the-email"></a>Personalizando o email
 
-O email padrão enviado pelo controle PasswordRecovery é cansativo; em vez disso (veja a Figura 4). A mensagem é enviada da conta especificada na `<smtp>` do elemento `from` atributo com a senha da entidade e o corpo de texto sem formatação:
+O email padrão enviado pelo controle PasswordRecovery é bem opaco (consulte a Figura 4). A mensagem é enviada da conta especificada no atributo `from` do elemento `<smtp>` com a senha da entidade e o corpo de texto sem formatação:
 
-Volte para o site e faça logon usando as informações a seguir.
+Retorne ao site e faça logon usando as informações a seguir.
 
-Nome de usuário: *nome de usuário*
+Nome de usuário: *username*
 
-senha: *senha*
+Senha: *senha*
 
-Essa mensagem pode ser personalizada por meio de programação por meio de um manipulador de eventos para o controle de PasswordRecovery [ `SendingMail` evento](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.sendingmail.aspx), ou declarativamente por meio de [ `MailDefinition` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.maildefinition.aspx). Vamos explorar essas duas opções.
+Essa mensagem pode ser personalizada programaticamente por meio de um manipulador de eventos para o [evento de`SendingMail`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.sendingmail.aspx)do controle PasswordRecovery ou declarativamente por meio da [Propriedade`MailDefinition`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.passwordrecovery.maildefinition.aspx). Vamos explorar essas duas opções.
 
-O `SendingMail` evento é disparado, logo antes da mensagem de email é enviada e é nossa última chance de ajustar a mensagem de email de maneira programática. Quando esse evento é gerado, o manipulador de eventos recebe um objeto do tipo [ `MailMessageEventArgs` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.mailmessageeventargs.aspx), cuja `Message` propriedade contém uma referência para o email prestes a ser enviada.
+O evento de `SendingMail` é disparado imediatamente antes de a mensagem de email ser enviada e é nossa última chance de ajustar programaticamente a mensagem de email. Quando esse evento é gerado, o manipulador de eventos recebe um objeto do tipo [`MailMessageEventArgs`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.mailmessageeventargs.aspx), cuja propriedade `Message` contém uma referência ao email prestes a ser enviado.
 
-Crie um manipulador de eventos para o `SendingMail` evento e adicione o seguinte código adiciona programaticamente `webmaster@example.com` à lista CC.
+Crie um manipulador de eventos para o evento `SendingMail` e adicione o código a seguir, que adiciona programaticamente `webmaster@example.com` à lista CC.
 
 [!code-csharp[Main](recovering-and-changing-passwords-cs/samples/sample2.cs)]
 
-A mensagem de email também pode ser configurada por meios declarativos. O PasswordRecovery `MailDefinition` propriedade é um objeto do tipo [ `MailDefinition` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.aspx). O `MailDefinition` classe oferece um conjunto de propriedades relacionadas ao email, incluindo `From`, `CC`, `Priority`, `Subject`, `IsBodyHtml`, `BodyFileName`e outros. Para os iniciantes, defina as [ `Subject` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.subject.aspx) para algo mais descritivo do que aquele usado por padrão (senha), como sua senha foi redefinida...
+A mensagem de email também pode ser configurada por meio de meios declarativos. A propriedade `MailDefinition` do PasswordRecovery é um objeto do tipo [`MailDefinition`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.aspx). A classe `MailDefinition` oferece um host de propriedades relacionadas a email, incluindo `From`, `CC`, `Priority`, `Subject`, `IsBodyHtml`, `BodyFileName`e outras. Para os iniciantes, defina a [propriedade`Subject`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.subject.aspx) como algo mais descritivo do que aquele usado por padrão (senha), como sua senha foi redefinida...
 
-Para personalizar o corpo da mensagem de email, que precisamos criar um arquivo de modelo de email separado que contém o conteúdo do corpo. Comece criando uma nova pasta no site de chamada `EmailTemplates`. Em seguida, adicione um novo arquivo de texto para essa pasta chamada `PasswordRecovery.txt` e adicione o seguinte conteúdo:
+Para personalizar o corpo da mensagem de email, precisamos criar um arquivo de modelo de email separado que contenha o conteúdo do corpo. Comece criando uma nova pasta no site denominada `EmailTemplates`. Em seguida, adicione um novo arquivo de texto a essa pasta chamado `PasswordRecovery.txt` e adicione o seguinte conteúdo:
 
 [!code-aspx[Main](recovering-and-changing-passwords-cs/samples/sample3.aspx)]
 
-Observe o uso dos espaços reservados `<%UserName%>` e `<%Password%>`. O controle PasswordRecovery substitui automaticamente esses dois espaços reservados com nome de usuário e a senha recuperada antes de enviar o email do usuário.
+Observe o uso dos espaços reservados `<%UserName%>` e `<%Password%>`. O controle PasswordRecovery substitui automaticamente esses dois espaços reservados pelo nome do usuário e a senha recuperada antes de enviar o email.
 
-Por fim, aponte o `MailDefinition`do [ `BodyFileName` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.bodyfilename.aspx) que acabamos de criar o modelo de email (`~/EmailTemplates/PasswordRecovery.txt`).
+Por fim, aponte a [propriedade`BodyFileName`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.bodyfilename.aspx) do `MailDefinition`para o modelo de email que acabamos de criar (`~/EmailTemplates/PasswordRecovery.txt`).
 
-Depois de fazer essas alterações revisitar o `RecoverPassword.aspx` página e insira sua resposta de nome de usuário e segurança. Você recebe deve um email que será semelhante à mostrada na Figura 5. Observe que `webmaster@example.com` foi CC seria e que o assunto e corpo foram atualizados.
+Depois de fazer essas alterações, revisite a página `RecoverPassword.aspx` e insira seu nome de usuário e resposta de segurança. Você receberá um email parecido com o da Figura 5. Observe que `webmaster@example.com` foi CC e que o assunto e o corpo foram atualizados.
 
-[![O assunto, corpo e lista CC foram atualizadas](recovering-and-changing-passwords-cs/_static/image14.png)](recovering-and-changing-passwords-cs/_static/image13.png)
+[![o assunto, o corpo e a lista de CC foram atualizados](recovering-and-changing-passwords-cs/_static/image14.png)](recovering-and-changing-passwords-cs/_static/image13.png)
 
-**Figura 5**: O assunto, corpo e CC lista foram atualizados ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image15.png))
+**Figura 5**: o assunto, o corpo e a lista de CC foram atualizados ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image15.png))
 
-Para enviar um email formatado em HTML, defina [ `IsBodyHtml` ](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.isbodyhtml.aspx) como True (o padrão é False) e atualizar o modelo de email para incluir HTML.
+Para enviar um conjunto de emails formatado em HTML [`IsBodyHtml`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.maildefinition.isbodyhtml.aspx) como true (o padrão é false) e atualizar o modelo de email para incluir HTML.
 
-O `MailDefinition` propriedade não é exclusiva para a classe PasswordRecovery. Como veremos na etapa 2, o controle ChangePassword também oferece um `MailDefinition` propriedade. Além disso, o controle CreateUserWizard inclui essa propriedade que você pode configurar para enviar automaticamente uma mensagem de email de boas-vindas aos novos usuários.
+A propriedade `MailDefinition` não é exclusiva para a classe PasswordRecovery. Como veremos na etapa 2, o controle ChangePassword também oferece uma propriedade `MailDefinition`. Além disso, o controle CreateUserWizard inclui tal propriedade que você pode configurar para enviar automaticamente uma mensagem de email de boas-vindas para novos usuários.
 
 > [!NOTE]
-> Atualmente, não existem links no painel de navegação à esquerda para atingir a `RecoverPassword.aspx` página. Um usuário só estaria interessado em ao visitar essa página se ela não foi possível para fazer logon com êxito o site. Portanto, atualizar o `Login.aspx` página para incluir um link para o `RecoverPassword.aspx` página.
+> No momento, não há links no painel de navegação à esquerda para acessar a página `RecoverPassword.aspx`. Um usuário só estaria interessado em visitar esta página se não conseguir fazer logon com êxito no site. Portanto, atualize a página de `Login.aspx` para incluir um link para a página de `RecoverPassword.aspx`.
 
-### <a name="programmatically-resetting-a-users-password"></a>Por meio de programação redefinindo a senha do usuário
+### <a name="programmatically-resetting-a-users-password"></a>Redefinindo de forma programática a senha de um usuário
 
-Quando o controle redefinindo a senha do usuário a PasswordRecovery chamadas a `MembershipUser` do objeto [ `ResetPassword` método](https://msdn.microsoft.com/library/system.web.security.membershipuser.resetpassword.aspx). Esse método tem duas sobrecargas:
+Ao redefinir a senha de um usuário, o controle PasswordRecovery chama o [método`ResetPassword`](https://msdn.microsoft.com/library/system.web.security.membershipuser.resetpassword.aspx)do objeto `MembershipUser`. Esse método tem duas sobrecargas:
 
-- **[`ResetPassword`](https://msdn.microsoft.com/library/d94bdzz2.aspx)** -Redefine a senha do usuário. Use essa sobrecarga se `RequiresQuestionAndAnswer` é False.
-- **[`ResetPassword(securityAnswer)`](https://msdn.microsoft.com/library/d90zte4w.aspx)** -Redefine somente se de senha de um usuário fornecido *securityAnswer* está correto. Use essa sobrecarga se `RequiresQuestionAndAnswer` for True.
+- **[`ResetPassword`](https://msdn.microsoft.com/library/d94bdzz2.aspx)** -redefine a senha de um usuário. Use essa sobrecarga se `RequiresQuestionAndAnswer` for false.
+- **[`ResetPassword(securityAnswer)`](https://msdn.microsoft.com/library/d90zte4w.aspx)** -redefine a senha de um usuário somente se o *securityAnswer* fornecido estiver correto. Use essa sobrecarga se `RequiresQuestionAndAnswer` for true.
 
 Ambas as sobrecargas retornam a nova senha gerada aleatoriamente.
 
-Como ocorre com os outros métodos na estrutura de associação, o `ResetPassword` delegados de método de provedor configurado. O `SqlMembershipProvider` invoca o `aspnet_Membership_ResetPassword` procedimento armazenado, passando no nome de usuário do usuário, a nova senha e a resposta de senha fornecida, entre outros campos. O procedimento armazenado garante que a resposta de senha corresponde e, em seguida, atualiza a senha do usuário.
+Assim como com os outros métodos na estrutura de associação, o método `ResetPassword` delega para o provedor configurado. O `SqlMembershipProvider` invoca o procedimento armazenado `aspnet_Membership_ResetPassword`, passando o nome de usuário, a nova senha e a resposta de senha fornecida, entre outros campos. O procedimento armazenado garante que a resposta de senha corresponda e, em seguida, atualiza a senha do usuário.
 
-Algumas das notas de implementação de nível inferior:
+Algumas notas de implementação de nível baixo:
 
-- Um usuário bloqueado não pode redefinir sua senha. No entanto, talvez um usuário não aprovado. Podemos discutir o bloqueados fora e aprovado estados em mais detalhes os <a id="_msoanchor_3"> </a> [ *Unlocking e aprovação de usuário* ](unlocking-and-approving-user-accounts-cs.md) tutorial de contas.
-- Se a resposta de senha está incorreta, a contagem de tentativas de resposta de senha do usuário é incrementada. Se um número de tentativas de resposta de segurança inválido especificado ocorrer dentro de uma janela de tempo especificado, o usuário está bloqueado.
+- Um usuário bloqueado não pode redefinir sua senha. No entanto, um usuário não aprovado pode. Discutiremos os Estados bloqueados e aprovados mais detalhadamente no tutorial <a id="_msoanchor_3"> </a> [*desbloqueando e aprovando*](unlocking-and-approving-user-accounts-cs.md) contas de usuário.
+- Se a resposta de senha estiver incorreta, a contagem de tentativas de resposta de senha com falha do usuário será incrementada. Se um número especificado de tentativas de resposta de segurança inválidas ocorrer em uma janela de tempo especificada, o usuário será bloqueado.
 
-### <a name="a-word-on-how-the-random-passwords-are-generated"></a>Uma palavra em como as senhas aleatórias são gerados
+### <a name="a-word-on-how-the-random-passwords-are-generated"></a>Uma palavra sobre como as senhas aleatórias são geradas
 
-As senhas geradas aleatoriamente mostradas nas mensagens de email nas figuras 4 e 5 são criadas pela classe de associação [ `GeneratePassword` método](https://msdn.microsoft.com/library/system.web.security.membership.generatepassword.aspx). Esse método aceita dois parâmetros de entrada de inteiro - *comprimento* e *numberOfNonAlphanumericCharacters* - e retorna uma cadeia de caracteres de pelo menos *comprimento* caracteres longa com cada menos *numberOfNonAlphanumericCharacters* número de caracteres não alfanuméricos. Quando este método é chamado de dentro de classes de associação ou controles Web relacionadas ao logon, os valores para esses dois parâmetros são determinados pela configuração de associação `MinRequiredPasswordLength` e `MinRequiredNonalphanumericCharacters` propriedades, que são definidos como 7 e 1, respectivamente.
+As senhas geradas aleatoriamente mostradas nas mensagens de email nas figuras 4 e 5 são criadas pelo [método`GeneratePassword`](https://msdn.microsoft.com/library/system.web.security.membership.generatepassword.aspx)da classe Membership. Esse método aceita duas *entradas de número* inteiro parâmetros e *numberOfNonAlphanumericCharacters* -e retorna uma cadeia de caracteres com pelo menos um *comprimento* de caractere com pelo menos *numberOfNonAlphanumericCharacters* número de caracteres não alfanuméricos. Quando esse método é chamado de dentro das classes Membership ou controles da Web relacionados ao logon, os valores desses dois parâmetros são determinados pelas propriedades `MinRequiredPasswordLength` e `MinRequiredNonalphanumericCharacters` da configuração de associação, que definimos como 7 e 1, respectivamente.
 
-O `GeneratePassword` método usa um gerador de números aleatórios criptograficamente forte para garantir que não há nenhuma diferença em quais caracteres aleatórios são selecionados. Além disso, `GeneratePassword` é `public`, que significa que você pode usá-lo diretamente do seu aplicativo ASP.NET se você precisar gerar cadeias de caracteres aleatórias ou senhas.
-
-> [!NOTE]
-> O `SqlMembershipProvider` classe sempre gera uma senha aleatória no mínimo 14 caracteres, portanto, se `MinRequiredPasswordLength` é menos de 14 e em seguida, seu valor é ignorado.
-
-## <a name="step-2-changing-passwords"></a>Etapa 2: Alteração de senhas
-
-As senhas geradas aleatoriamente são difíceis de lembrar. Considere a senha mostrada na Figura 4: `WWGUZv(f2yM:Bd`. Tente confirmar que a memória! Obviamente, depois que um usuário receber a senha gerada aleatoriamente desse tipo, ela vai querer alterar a senha para algo mais fácil de lembrar.
-
-Use o controle ChangePassword para criar uma interface para um usuário altere sua senha. Muito como o controle PasswordRecovery, o controle ChangePassword consiste em dois modos de exibição: Alterar a senha e o sucesso. O modo de exibição alterar senha solicita ao usuário para suas senhas antigas e novas. Após fornecer a senha antiga correta e uma nova senha que atenda os requisitos de caractere não alfanumérico e um comprimento mínimo, o controle ChangePassword atualiza a senha do usuário e exibe o modo de exibição de êxito.
+O método `GeneratePassword` usa um gerador de números aleatórios criptograficamente forte para garantir que não haja nenhuma tendência em quais caracteres aleatórios são selecionados. Além disso, `GeneratePassword` é `public`, o que significa que você pode usá-lo diretamente do seu aplicativo ASP.NET se precisar gerar cadeias de caracteres ou senhas aleatórias.
 
 > [!NOTE]
-> O controle ChangePassword modifica a senha do usuário, invocando o `MembershipUser` do objeto [ `ChangePassword` método](https://msdn.microsoft.com/library/system.web.security.membershipuser.changepassword.aspx). O método ChangePassword aceita dois `string` entrada de parâmetros - *oldPassword* e *newPassword*- e atualiza a conta do usuário com o *newPassword*, Supondo que o fornecido *oldPassword* está correto.
+> A classe `SqlMembershipProvider` sempre gera uma senha aleatória com pelo menos 14 caracteres de comprimento, portanto, se `MinRequiredPasswordLength` for menor que 14, seu valor será ignorado.
 
-Abra o `ChangePassword.aspx` da página e adicionar um controle de alteração de senha para a página, nomeando- `ChangePwd`. Neste ponto, a exibição de Design deve mostrar a alterar a senha (consulte a Figura 6). Como com o controle PasswordRecovery, você pode alternar entre os modos de exibição por meio de Smart Tag do controle. Além disso, aparências dessas exibições são personalizáveis por meio das propriedades de estilo variados ou convertendo-os em um modelo.
+## <a name="step-2-changing-passwords"></a>Etapa 2: alterando senhas
 
-[![Adicionar um controle de alteração de senha para a página](recovering-and-changing-passwords-cs/_static/image17.png)](recovering-and-changing-passwords-cs/_static/image16.png)
+As senhas geradas aleatoriamente são difíceis de se lembrar. Considere a senha mostrada na Figura 4: `WWGUZv(f2yM:Bd`. Tente confirmar isso para a memória! Não é preciso dizer que, depois que um usuário recebe uma senha gerada aleatoriamente desse tipo, ela desejará alterar a senha para algo mais fácil de memorizar.
 
-**Figura 6**: Adicionar um controle de alteração de senha para a página ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image18.png))
-
-O controle ChangePassword pode atualizar a senha do usuário conectado no momento *ou* a senha de outro usuário especificado. Como mostra a Figura 6, a exibição de alterar a senha padrão renderiza apenas três controles de caixa de texto: uma para a senha antiga e dois para a nova senha. Essa interface padrão é usado para atualizar a senha do usuário conectado no momento.
-
-Para usar o controle ChangePassword para atualizar a senha de outro usuário, defina o controle [ `DisplayUserName` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.changepassword.displayusername.aspx) como True. Isso adiciona uma quarta caixa de texto para a página, solicitar o nome de usuário do usuário cuja senha para alterar.
-
-Definindo `DisplayUserName` para True será útil se você quiser permitir que um usuário conectado out alterar sua senha sem a necessidade de fazer logon. Pessoalmente, acho que não há nada errado com a necessidade de um usuário para logon antes de permitir dela alterar sua senha. Portanto, deixe `DisplayUserName` definido como False (padrão). Tomar essa decisão, no entanto, podemos essencialmente estão bloqueando a usuários anônimos acessem esta página. Atualizar regras de autorização de URL do site para negar a usuários anônimos de visitar `ChangePassword.aspx`. Se você precisar atualizar sua memória sobre a sintaxe de regra de autorização de URL, consulte novamente o <a id="_msoanchor_4"> </a> [ *autorização baseada em usuário* ](../membership/user-based-authorization-cs.md) tutorial.
+Use o controle ChangePassword para criar uma interface para um usuário alterar sua senha. Assim como o controle PasswordRecovery, o controle ChangePassword consiste em dois modos de exibição: alterar senha e êxito. A exibição Alterar senha solicita ao usuário suas senhas novas e antigas. Ao fornecer a senha antiga correta e uma nova senha que atenda aos requisitos mínimos de caracteres não alfanuméricos, o controle ChangePassword atualiza a senha do usuário e exibe a exibição êxito.
 
 > [!NOTE]
-> Pode parecer que o `DisplayUserName` propriedade é útil para permitir que os administradores alterar as senhas de outros usuários. No entanto, mesmo quando `DisplayUserName` está definido como True, a senha antiga correta deve ser conhecida e inserida. Falaremos sobre técnicas para permitir que os administradores alterar as senhas dos usuários na etapa 3.
+> O controle ChangePassword modifica a senha do usuário invocando o [método`ChangePassword`](https://msdn.microsoft.com/library/system.web.security.membershipuser.changepassword.aspx)do objeto de `MembershipUser`. O método ChangePassword aceita dois parâmetros de entrada `string`- *oldPassword* e *newPassword*-e atualiza a conta do usuário com *newPassword*, supondo que o *oldPassword* fornecido esteja correto.
 
-Visite o `ChangePassword.aspx` página por meio de um navegador e altere sua senha. Observe que uma mensagem de erro é exibida se você inserir uma nova senha que não atender os requisitos de caractere não alfanumérico especificados na configuração de associação e o comprimento da senha (veja a Figura 7).
+Abra a página `ChangePassword.aspx` e adicione um controle ChangePassword à página, nomeando-a `ChangePwd`. Neste ponto, o modo de exibição de Design deve mostrar a exibição Alterar senha (consulte a Figura 6). Assim como com o controle PasswordRecovery, você pode alternar entre as exibições por meio da marca inteligente do controle. Além disso, as aparências dessas exibições são personalizáveis por meio das propriedades de estilo asclassificadas ou convertendo-as em um modelo.
 
-[![Adicionar um controle de alteração de senha para a página](recovering-and-changing-passwords-cs/_static/image20.png)](recovering-and-changing-passwords-cs/_static/image19.png)
+[![adicionar um controle ChangePassword à página](recovering-and-changing-passwords-cs/_static/image17.png)](recovering-and-changing-passwords-cs/_static/image16.png)
 
-**Figura 7**: Adicionar um controle de alteração de senha para a página ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image21.png))
+**Figura 6**: adicionar um controle ChangePassword à página ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image18.png))
 
-Ao inserir a senha antiga correta e uma senha nova válida, o conectado do usuário senha for alterada e o modo de exibição de êxito é exibida.
+O controle ChangePassword pode atualizar a senha do usuário conectado no momento *ou* a senha de outro usuário especificado. Como mostra a Figura 6, a exibição padrão alterar senha processa apenas três controles TextBox: um para a senha antiga e dois para a nova senha. Essa interface padrão é usada para atualizar a senha do usuário conectado no momento.
 
-### <a name="sending-a-confirmation-email"></a>Enviar um Email de confirmação
+Para usar o controle ChangePassword para atualizar a senha de outro usuário, defina a [propriedade`DisplayUserName`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.changepassword.displayusername.aspx) do controle como true. Isso adiciona uma quarta caixa de texto à página, solicitando o nome do usuário cuja senha será alterada.
 
-Por padrão, o controle ChangePassword não envia uma mensagem de email para o usuário cuja senha foi atualizada apenas. Se você quiser enviar um email, basta configurar o controle `MailDefinition` propriedade. Vamos configurar o controle ChangePassword para que o usuário é enviado um email formatado em HTML que contém a nova senha.
+Definir `DisplayUserName` como true será útil se você quiser permitir que um usuário desconectado altere sua senha sem precisar fazer logon. Pessoalmente, acho que não há nada de errado ao exigir que um usuário faça logon antes de permitir que ele altere sua senha. Portanto, deixe `DisplayUserName` definido como false (seu padrão). No entanto, ao tomar essa decisão, estamos essencialmente impedindo que usuários anônimos cheguem a essa página. Atualize as regras de autorização de URL do site para negar que usuários anônimos visitem `ChangePassword.aspx`. Se você precisar atualizar sua memória na sintaxe da regra de autorização de URL, consulte o tutorial <a id="_msoanchor_4"> </a>de [*autorização baseada no usuário*](../membership/user-based-authorization-cs.md) .
 
-Comece criando um novo arquivo na `EmailTemplates` pasta chamada `ChangePassword.htm`. Adicione a seguinte marcação:
+> [!NOTE]
+> Pode parecer que a propriedade `DisplayUserName` é útil para permitir que os administradores alterem as senhas de outros usuários. No entanto, mesmo quando `DisplayUserName` é definido como true, a senha antiga correta deve ser conhecida e inserida. Falaremos sobre técnicas para permitir que os administradores alterem as senhas dos usuários na etapa 3.
+
+Visite a página `ChangePassword.aspx` por meio de um navegador e altere sua senha. Observe que uma mensagem de erro será exibida se você inserir uma nova senha que não atenda ao comprimento da senha e aos requisitos de caracteres não alfanuméricos especificados na configuração da Associação (consulte a Figura 7).
+
+[![adicionar um controle ChangePassword à página](recovering-and-changing-passwords-cs/_static/image20.png)](recovering-and-changing-passwords-cs/_static/image19.png)
+
+**Figura 7**: adicionar um controle ChangePassword à página ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image21.png))
+
+Ao inserir a senha antiga correta e uma nova senha válida, a senha do usuário conectado é alterada e a exibição de êxito exibida.
+
+### <a name="sending-a-confirmation-email"></a>Enviando um email de confirmação
+
+Por padrão, o controle ChangePassword não envia uma mensagem de email para o usuário cuja senha acabou de ser atualizada. Se você quiser enviar um email, basta configurar a propriedade de `MailDefinition` do controle. Vamos configurar o controle ChangePassword para que o usuário tenha enviado um email formatado em HTML que contenha sua nova senha.
+
+Comece criando um novo arquivo na pasta `EmailTemplates` chamada `ChangePassword.htm`. Adicione a seguinte marcação:
 
 [!code-html[Main](recovering-and-changing-passwords-cs/samples/sample4.html)]
 
-Em seguida, defina o controle de ChangePassword `MailDefinition` da propriedade `BodyFileName`, `IsBodyHtml`, e `Subject` propriedades para ~ / EmailTemplates/ChangePassword.htm, True e sua senha foi alterada!, respectivamente.
+Em seguida, defina as propriedades `BodyFileName`, `IsBodyHtml`e `Subject` da propriedade de `MailDefinition` do controle ChangePassword como ~/EmailTemplates/ChangePassword.htm, true, e sua senha foi alterada!, respectivamente.
 
-Depois de fazer essas alterações, examine a página e altere sua senha novamente. Neste momento, o controle ChangePassword envia um email personalizado, formatado em HTML ao endereço de email do usuário no arquivo (consulte a Figura 8).
+Depois de fazer essas alterações, reveja a página e altere sua senha novamente. Desta vez, o controle ChangePassword envia um email personalizado e formatado em HTML para o endereço de email do usuário no arquivo (veja a Figura 8).
 
-[![Uma mensagem de Email que informa a que o senha do usuário foi alterado](recovering-and-changing-passwords-cs/_static/image23.png)](recovering-and-changing-passwords-cs/_static/image22.png)
+[![uma mensagem de email informa ao usuário que sua senha foi alterada](recovering-and-changing-passwords-cs/_static/image23.png)](recovering-and-changing-passwords-cs/_static/image22.png)
 
-**Figura 8**: Uma mensagem de Email que informa o usuário que seus senha tenha sido alterada ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image24.png))
+**Figura 8**: uma mensagem de email informa ao usuário que sua senha foi alterada ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image24.png))
 
-## <a name="step-3-allowing-administrators-to-change-users-passwords"></a>Etapa 3: Permitindo que os administradores alterar as senhas dos usuários
+## <a name="step-3-allowing-administrators-to-change-users-passwords"></a>Etapa 3: permitir que os administradores alterem as senhas dos usuários
 
-Um recurso comum em aplicativos que dão suporte a contas de usuário é a capacidade para um usuário administrativo alterar as senhas de outros usuários. Às vezes, essa funcionalidade é necessária porque o sistema não tem a capacidade dos usuários alterar suas próprias senhas. Nesse caso, a única maneira de um usuário recuperar as senhas esquecidas seria ao administrador para atribuí-los em uma nova senha. Com os controles PasswordRecovery e ChangePassword, no entanto, os usuários administrativos precisam ocupado em si com a alteração de senhas de usuários, como os usuários são capazes de fazer isso.
+Um recurso comum em aplicativos que dão suporte a contas de usuário é a capacidade de um usuário administrativo alterar as senhas de outros usuários. Às vezes, essa funcionalidade é necessária porque o sistema não tem a capacidade de os usuários alterarem suas próprias senhas. Nesse caso, a única maneira de um usuário recuperar sua senha esquecida seria para o administrador atribuir uma nova senha. No entanto, com os controles PasswordRecovery e ChangePassword, os usuários administrativos não precisam ficar ocupados com a alteração das senhas dos usuários, pois os usuários são capazes de fazer isso por conta própria.
 
-Mas e se o seu cliente insiste que os usuários administrativos devem ser capazes de alterar as senhas de outros usuários? Infelizmente, a adição dessa funcionalidade pode ser um pouco de trabalho. Para alterar a senha do usuário, a senha antiga e nova deve ser fornecida para o `MembershipUser` do objeto `ChangePassword` método, mas um administrador não precisa saber a senha do usuário para modificá-lo.
+Mas e se o cliente insistir que os usuários administrativos devem ser capazes de alterar as senhas de outros usuários? Infelizmente, a adição dessa funcionalidade pode ser um pouco de trabalho. Para alterar a senha de um usuário, a senha antiga e a nova devem ser fornecidas para o método `ChangePassword` do objeto de `MembershipUser`, mas um administrador não precisa saber a senha de um usuário para modificá-la.
 
-Uma solução alternativa é primeiro redefinir a senha do usuário e, em seguida, altere-o para a nova senha usando código semelhante ao seguinte:
+Uma solução alternativa é primeiro redefinir a senha do usuário e, em seguida, alterá-la para a nova senha usando um código semelhante ao seguinte:
 
 [!code-aspx[Main](recovering-and-changing-passwords-cs/samples/sample5.aspx)]
 
-Esse código começa Recuperando informações sobre *nome de usuário*, que é o usuário cuja senha que o administrador deseja alterar. Em seguida, o `ResetPassword` método é invocado, que atribui e o usuário uma nova senha aleatória. Essa senha gerada aleatoriamente é retornada pelo método e armazenada na variável `resetPwd`. Agora que sabemos que a senha do usuário, podemos pode alterá-lo por meio de uma chamada para `ChangePassword`.
+Esse código começa recuperando informações sobre *username*, que é o usuário cuja senha o administrador deseja alterar. Em seguida, o método `ResetPassword` é invocado, que atribui e ao usuário uma senha nova e aleatória. Essa senha gerada aleatoriamente é retornada pelo método e armazenada na variável `resetPwd`. Agora que sabemos a senha do usuário, podemos alterá-la por meio de uma chamada para `ChangePassword`.
 
-O problema é que esse código só funcionará se a configuração do sistema de associação é definida, de modo que `RequiresQuestionAndAnswer` é False. Se `RequiresQuestionAndAnswer` for True, assim como em nosso aplicativo, em seguida, a `ResetPassword` método precisa ser passada a resposta de segurança, caso contrário, ele lançará uma exceção.
+O problema é que esse código só funcionará se a configuração do sistema de associação for definida de modo que `RequiresQuestionAndAnswer` seja false. Se `RequiresQuestionAndAnswer` for true, como em nosso aplicativo, o método `ResetPassword` precisará passar a resposta de segurança, caso contrário, ele gerará uma exceção.
 
-Se a estrutura de associação está configurada para exigir uma pergunta de segurança e uma resposta, e ainda o seu cliente insiste que os administradores poderão alterar as senhas dos usuários, você tem três opções:
+Se a estrutura de associação estiver configurada para exigir uma pergunta e resposta de segurança e, ainda assim, o cliente insistir que os administradores possam alterar as senhas dos usuários, você terá três opções:
 
-- Lance suas mãos no ar e informar ao seu cliente que se trata de apenas uma coisa que não pode ser feita.
-- Definir `RequiresQuestionAndAnswer` como False. Isso resulta em um aplicativo menos seguro. Imagine que um usuário perigoso obteve acesso à caixa de entrada de email do outro usuário. Talvez o usuário comprometido sair para almoçar suas mesas e não bloquear sua estação de trabalho, ou talvez eles acessados seus emails em um terminal público e não saia do serviço. Em ambos os casos, o usuário mal-intencionado pode visitar o `RecoverPassword.aspx` página e insira o nome do usuário. O sistema será, em seguida, envie um email a senha recuperada sem solicitar a resposta de segurança.
-- Ignore a camada de abstração criada pela estrutura de associação e trabalhar diretamente com o banco de dados do SQL Server. O esquema de associação inclui um procedimento armazenado denominado `aspnet_Membership_SetPassword` que define a senha do usuário e não requer a resposta de segurança ou a senha antiga para realizar sua tarefa.
+- Jogue suas mãos no ar e diga ao seu cliente que isso é apenas uma coisa que não pode ser feita.
+- Defina `RequiresQuestionAndAnswer` como false. Isso resulta em um aplicativo menos seguro. Imagine que um usuário perigoso tenha obtido acesso à caixa de entrada de email de outro usuário. Talvez o usuário comprometido tenha deixado sua mesa para ir para almoçar e não bloquear sua estação de trabalho, ou talvez tenha acessado seu email de um terminal público e não tenha se desconectado. Em ambos os casos, o usuário perigoso pode visitar a página `RecoverPassword.aspx` e inserir o nome do usuário. O sistema enviará por email a senha recuperada sem solicitar a resposta de segurança.
+- Ignore a camada de abstração criada pela estrutura de associação e trabalhe diretamente com o banco de dados SQL Server. O esquema de associação inclui um procedimento armazenado chamado `aspnet_Membership_SetPassword` que define a senha de um usuário e não requer a resposta de segurança ou a senha antiga para realizar sua tarefa.
 
-Nenhuma dessas opções são especialmente atraente, mas isso é como a vida útil de um desenvolvedor vai às vezes.
+Nenhuma dessas opções é especialmente atraente, mas é assim que a vida de um desenvolvedor vai às vezes.
 
-Eu fui em frente e implementado a terceira abordagem, escrever um código que ignora a `Membership` e `MembershipUser` classes e opera diretamente o `SecurityTutorials` banco de dados.
-
-> [!NOTE]
-> Trabalhando diretamente com o banco de dados, o encapsulamento fornecido pela estrutura de associação é quebrado. Essa decisão é vinculado ao `SqlMembershipProvider`, tornando o nosso código menos portátil. Além disso, esse código pode não funcionar conforme o esperado em futuras versões do ASP.NET se o esquema de associação é alterado. Essa abordagem é uma solução alternativa e, assim como a maioria das soluções alternativas, não é um exemplo de práticas recomendadas.
-
-O código tem alguns bits pouco atraente e está muito longo. Portanto, não quero obstruir neste tutorial com um exame aprofundado dele. Se você estiver interessado em saber mais, baixe o código para este tutorial e visita a `~/Administration/ManageUsers.aspx` página. Nessa página, o que criamos na <a id="_msoanchor_5"> </a> [tutorial anterior](building-an-interface-to-select-one-user-account-from-many-cs.md), lista cada usuário. Atualizei o GridView para incluir um link para o `UserInformation.aspx` página, passando o nome de usuário do usuário selecionado por meio da cadeia de consulta. O `UserInformation.aspx` página exibe informações sobre o usuário selecionado e as caixas de texto para alterar sua senha (veja a Figura 9).
-
-Depois de inserir a nova senha, confirmá-la na segunda caixa de texto e clicar no botão de usuário de atualização, um postback massacre e o `aspnet_Membership_SetPassword` procedimento armazenado será invocado, atualizando a senha do usuário. Eu recomendo que os leitores interessados nessa funcionalidade para se familiarizar com o código e tente a estender a funcionalidade para incluir enviando um email para o usuário cuja senha foi alterada.
-
-[![Um administrador pode alterar a senha do usuário](recovering-and-changing-passwords-cs/_static/image26.png)](recovering-and-changing-passwords-cs/_static/image25.png)
-
-**Figura 9**: Um administrador pode alterar a senha do usuário ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image27.png))
+Eu fiz e implementei a terceira abordagem, escrevendo código que ignora as classes `Membership` e `MembershipUser` e opera diretamente com o banco de dados `SecurityTutorials`.
 
 > [!NOTE]
-> O `UserInformation.aspx` página atualmente só funciona se a estrutura de associação está configurada para armazenar senhas em formato criptografado ou Hashed. Ele não tem o código para criptografar a nova senha, embora você está convidado a adicionar essa funcionalidade. A maneira como eu recomende adicionar o código necessário é usar um descompilador, como [Reflector](http://www.aisto.com/roeder/dotnet/) para examinar o código-fonte para métodos no .NET Framework; começar examinando o `SqlMembershipProvider` da classe `ChangePassword` método. Essa é a técnica que usei para escrever o código para criar um hash da senha.
+> Trabalhando diretamente com o banco de dados, o encapsulamento fornecido pela estrutura de associação é eliminado. Essa decisão nos amarra à `SqlMembershipProvider`, tornando nosso código menos portátil. Além disso, esse código pode não funcionar como esperado em versões futuras do ASP.NET se o esquema de associação for alterado. Essa abordagem é uma solução alternativa e, como a maioria das soluções alternativas, não é um exemplo de práticas recomendadas.
+
+O código tem alguns bits inatraentes e é bastante longo. Portanto, não quero obstruir este tutorial com um exame detalhado dele. Se você estiver interessado em saber mais, baixe o código deste tutorial e visite a página `~/Administration/ManageUsers.aspx`. Esta página, que criamos no <a id="_msoanchor_5"> </a> [tutorial anterior](building-an-interface-to-select-one-user-account-from-many-cs.md), lista cada usuário. Atualizei o GridView para incluir um link para a página `UserInformation.aspx`, passando o nome de usuário selecionado por meio de QueryString. A página `UserInformation.aspx` exibe informações sobre o usuário selecionado e caixas de Textpara alterar sua senha (consulte a Figura 9).
+
+Depois de inserir a nova senha, confirmando-a na segunda caixa de texto e clicando no botão atualizar usuário, um postback massacre e o procedimento armazenado `aspnet_Membership_SetPassword` é invocado, atualizando a senha do usuário. Recomendo que os leitores interessados nessa funcionalidade se tornem mais familiarizados com o código e tentem estender a funcionalidade para incluir o envio de um email ao usuário cuja senha tenha sido alterada.
+
+[![um administrador pode alterar a senha de um usuário](recovering-and-changing-passwords-cs/_static/image26.png)](recovering-and-changing-passwords-cs/_static/image25.png)
+
+**Figura 9**: um administrador pode alterar a senha de um usuário ([clique para exibir a imagem em tamanho normal](recovering-and-changing-passwords-cs/_static/image27.png))
+
+> [!NOTE]
+> No momento, a página `UserInformation.aspx` só funciona se a estrutura de associação estiver configurada para armazenar senhas em formato limpo ou com hash. Ele não tem o código para criptografar a nova senha, embora você esteja convidado a adicionar essa funcionalidade. A maneira como recomendo adicionar o código necessário é usar um descompilador como o [reflector](http://www.aisto.com/roeder/dotnet/) para examinar o código-fonte em busca de métodos na .NET Framework; Comece examinando o método `ChangePassword` da classe `SqlMembershipProvider`. Essa é a técnica que usei para escrever o código para criar um hash da senha.
 
 ## <a name="summary"></a>Resumo
 
-O ASP.NET oferece dois controles para ajudar os usuários a gerenciar sua senha. O controle PasswordRecovery é útil para aqueles que esqueceram suas senhas. Dependendo da configuração da estrutura de associação, o usuário é seja enviado por email sua senha existente ou uma nova senha gerada aleatoriamente. O controle ChangePassword permite que um usuário atualizar sua senha.
+O ASP.NET oferece dois controles para ajudar os usuários a gerenciar sua senha. O controle PasswordRecovery é útil para aqueles que esqueceram suas senhas. Dependendo da configuração da estrutura de associação, o usuário receberá por email sua senha existente ou uma nova senha gerada aleatoriamente. O controle ChangePassword permite que um usuário Atualize sua senha.
 
-Como os controles de logon e CreateUserWizard, os controles PasswordRecovery e ChangePassword renderizam uma interface de usuário avançadas sem escrever uma linha de marcação declarativa ou a linha de código. Se a interface do usuário padrão não atender às suas necessidades, você pode personalizá-lo por meio de uma variedade de propriedades de estilo. Como alternativa, as interfaces dos controles podem ser convertidos em modelos para um nível ainda maior de controle. Nos bastidores, esses controles usam a API Membership, invocando o `MembershipUser` do objeto `ResetPassword` e `ChangePassword` métodos.
+Assim como os controles de logon e CreateUserWizard, os controles PasswordRecovery e ChangePassword renderizam uma rica interface do usuário sem precisar escrever uma marcação declarativa ou linha de código. Se a interface do usuário padrão não atender às suas necessidades, você poderá personalizá-la por meio de uma variedade de propriedades de estilo. Como alternativa, as interfaces dos controles podem ser convertidas em modelos, para um grau de controle ainda mais definado. Nos bastidores, esses controles usam a API Membership, invocando os métodos `ResetPassword` e `ChangePassword` do objeto de `MembershipUser`.
 
 Boa programação!
 
 ### <a name="further-reading"></a>Leitura adicional
 
-Para obter mais informações sobre os tópicos abordados neste tutorial, consulte os seguintes recursos:
+Para obter mais informações sobre os tópicos discutidos neste tutorial, consulte os seguintes recursos:
 
-- [Guias de início rápido controle ChangePassword](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/changepassword.aspx)
-- [Guias de início rápido controle PasswordRecovery](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/passwordrecovery.aspx)
-- [Envio de Email no ASP.NET](http://aspnet.4guysfromrolla.com/articles/072606-1.aspx)
-- [`System.Net.Mail` FAQs](http://www.systemnetmail.com/)
+- [Guias de início rápido do controle ChangePassword](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/changepassword.aspx)
+- [Guias de início rápido do controle PasswordRecovery](https://quickstarts.asp.net/QuickStartv20/aspnet/doc/ctrlref/login/passwordrecovery.aspx)
+- [Enviando email no ASP.NET](http://aspnet.4guysfromrolla.com/articles/072606-1.aspx)
+- [Perguntas frequentes `System.Net.Mail`](http://www.systemnetmail.com/)
 
 ### <a name="about-the-author"></a>Sobre o autor
 
-Scott Mitchell, autor de vários livros sobre ASP/ASP.NET e fundador da 4GuysFromRolla.com, trabalha com tecnologias Web Microsoft desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é  *[Sams Teach por conta própria ASP.NET 2.0 em 24 horas](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)*. Scott pode ser contatado pelo [ mitchell@4guysfromrolla.com ](mailto:mitchell@4guysfromrolla.com) ou por meio de seu blog em [ http://ScottOnWriting.NET ](http://scottonwriting.net/).
+Scott Mitchell, autor de vários livros sobre ASP/ASP. NET e fundador da 4GuysFromRolla.com, tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a *[Sams ensina a ASP.NET 2,0 em 24 horas](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco)* . Scott pode ser contatado em [mitchell@4guysfromrolla.com](mailto:mitchell@4guysfromrolla.com) ou por meio de seu blog em [http://ScottOnWriting.NET](http://scottonwriting.net/).
 
 ### <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores de avanço para este tutorial incluem Michael Emmings e Suchi Banerjee. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, escreva-me em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial incluem Michael Emmings e Banerjee. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](building-an-interface-to-select-one-user-account-from-many-cs.md)

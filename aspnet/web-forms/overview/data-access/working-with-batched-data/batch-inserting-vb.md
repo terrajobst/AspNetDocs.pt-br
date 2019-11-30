@@ -1,239 +1,239 @@
 ---
 uid: web-forms/overview/data-access/working-with-batched-data/batch-inserting-vb
-title: Lote de inserção (VB) | Microsoft Docs
+title: Inserção em lote (VB) | Microsoft Docs
 author: rick-anderson
-description: Saiba como inserir vários registros de banco de dados em uma única operação. Na camada de Interface do usuário, estendemos o GridView para permitir que o usuário insira várias n...
+description: Saiba como inserir vários registros de banco de dados em uma única operação. Na camada de interface do usuário, estendemos o GridView para permitir que o usuário insira vários n...
 ms.author: riande
 ms.date: 06/26/2007
 ms.assetid: 48e2a4ae-77ca-4208-a204-c38c690ffb59
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-inserting-vb
 msc.type: authoredcontent
-ms.openlocfilehash: bf31859d9a7184e7db84a67a8deaffa84b1b42a7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 413a0e209b1899414eaab70aff07ee0d3223f28f
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108992"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74643119"
 ---
 # <a name="batch-inserting-vb"></a>Inserção em lote (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixar o código](http://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_66_VB.zip) ou [baixar PDF](batch-inserting-vb/_static/datatutorial66vb1.pdf)
+[Baixar código](https://download.microsoft.com/download/3/9/f/39f92b37-e92e-4ab3-909e-b4ef23d01aa3/ASPNET_Data_Tutorial_66_VB.zip) ou [baixar PDF](batch-inserting-vb/_static/datatutorial66vb1.pdf)
 
-> Saiba como inserir vários registros de banco de dados em uma única operação. Na camada de Interface do usuário, estendemos o GridView para permitir que o usuário insira vários novos registros. Na camada de acesso a dados, podemos encapsular as várias operações de inserção em uma transação para garantir que todas as inserções de êxito ou todas as inserções são revertidas.
+> Saiba como inserir vários registros de banco de dados em uma única operação. Na camada de interface do usuário, estendemos o GridView para permitir que o usuário insira vários novos registros. Na camada de acesso a dados, Encapsulamos as várias operações de inserção em uma transação para garantir que todas as inserções tenham sucesso ou que todas as inserções sejam revertidas.
 
 ## <a name="introduction"></a>Introdução
 
-No [atualização em lotes](batch-updating-vb.md) tutorial vimos como personalizar o controle GridView para apresentar uma interface em que vários registros foram editáveis. O usuário visitar a página poderia fazer uma série de alterações e, com um único clique de botão, executar uma atualização em lotes. Para situações em que os usuários normalmente atualizar muitos registros de uma só vez, uma interface desse tipo pode economizar incontáveis cliques e alternâncias de contexto de teclado ao mouse, em comparação com o padrão de recursos de edição que foram exploradas pela primeira vez por linha o [um Visão geral do inserindo, atualizando e excluindo dados](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb.md) tutorial.
+No tutorial de [atualização do lote](batch-updating-vb.md) , examinamos a personalização do controle GridView para apresentar uma interface em que vários registros eram editáveis. O usuário que está visitando a página pode fazer uma série de alterações e, em seguida, com um único clique de botão, executar uma atualização em lotes. Para situações em que os usuários normalmente atualizam muitos registros em uma só vez, essa interface pode economizar inúmeros cliques e opções de contexto de teclado para mouse quando comparadas aos recursos de edição por linha padrão que foram explorados primeiro na [visão geral do tutorial inserir, atualizar e excluir dados](../editing-inserting-and-deleting-data/an-overview-of-inserting-updating-and-deleting-data-vb.md) .
 
-Esse conceito também pode ser aplicado ao adicionar os registros. Imagine que aqui na Northwind Traders é comumente receber remessas de fornecedores que contêm um número de produtos para uma determinada categoria. Por exemplo, podemos pode receber uma remessa de seis diferente chá e produtos de café do Traders Tóquio. Se um usuário digita os seis produtos um por vez por meio de um controle DetailsView, será necessário escolher muitos dos mesmos valores repetidamente: será necessário escolher a mesma categoria (Bebidas), o mesmo fornecedor (Tóquio Traders), o mesmo descontinuados (valor False) e as mesmas unidades no valor de ordem (0). Essa entrada de dados repetitivos não só é demorada, mas é propensa a erros.
+Esse conceito também pode ser aplicado ao adicionar registros. Imagine que, na Northwind Traders, geralmente recebemos remessas de fornecedores que contêm vários produtos para uma determinada categoria. Por exemplo, podemos receber uma remessa de seis produtos de chá e café diferentes de Tokyo Traders. Se um usuário inserir os seis produtos um por vez por meio de um controle DetailsView, ele terá que escolher muitos dos mesmos valores repetidamente: eles precisarão escolher a mesma categoria (bebidas), o mesmo fornecedor (Tokyo Traders), o mesmo valor descontinuado ( False) e as mesmas unidades no valor de ordem (0). Essa entrada repetida de dados não é apenas demorada, mas está sujeita a erros.
 
-Com um pouco de trabalho, podemos criar um lote de inserção de interface que permite ao usuário escolher o fornecedor e a categoria de uma vez, insira uma série de nomes de produtos e preços unitários e, em seguida, clique em um botão para adicionar os novos produtos no banco de dados (veja a Figura 1). Como cada produto é adicionado, seus `ProductName` e `UnitPrice` campos de dados são atribuídos os valores inseridos nas caixas de texto, enquanto seus `CategoryID` e `SupplierID` valores são atribuídos os valores no DropDownLists no fo superior do formulário. O `Discontinued` e `UnitsOnOrder` valores são definidos como os valores embutidos de `False` e 0, respectivamente.
+Com um pouco de trabalho, podemos criar uma interface de inserção em lote que permite ao usuário escolher o fornecedor e a categoria uma vez, inserir uma série de nomes de produtos e preços unitários e, em seguida, clicar em um botão para adicionar os novos produtos ao banco de dados (consulte a Figura 1). À medida que cada produto é adicionado, seus campos de dados `ProductName` e `UnitPrice` são atribuídos aos valores inseridos nas caixas de caixa de entrada, enquanto seus valores `CategoryID` e `SupplierID` são atribuídos aos valores de DropDownLists na parte superior do formulário. Os valores `Discontinued` e `UnitsOnOrder` são definidos como valores embutidos em código de `False` e 0, respectivamente.
 
-[![A Interface de inserção em lotes](batch-inserting-vb/_static/image2.png)](batch-inserting-vb/_static/image1.png)
+[![a interface de inserção em lote](batch-inserting-vb/_static/image2.png)](batch-inserting-vb/_static/image1.png)
 
-**Figura 1**: A Interface de inserção em lotes ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image3.png))
+**Figura 1**: a interface de inserção em lote ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image3.png))
 
-Neste tutorial, criaremos uma página que implementa o lote de inserção de interface mostrada na Figura 1. Como com os dois tutoriais anteriores, podemos irá encapsular as inserções dentro do escopo de uma transação para garantir a atomicidade. Permitir que o s começar!
+Neste tutorial, criaremos uma página que implementa a interface de inserção em lote mostrada na Figura 1. Assim como nos dois tutoriais anteriores, encapsularemos as inserções dentro do escopo de uma transação para garantir a atomicidade. Vamos começar!
 
-## <a name="step-1-creating-the-display-interface"></a>Etapa 1: Criando a Interface de exibição
+## <a name="step-1-creating-the-display-interface"></a>Etapa 1: criando a interface de vídeo
 
-Este tutorial consistirá em uma única página que é dividida em duas regiões: uma região de exibição e uma região de inserção. A interface de exibição, o que vamos criar nesta etapa, mostra os produtos em um GridView e inclui um botão chamado remessa do produto de processo. Quando este botão é clicado, a interface de exibição é substituída com a interface de inserção, que é mostrada na Figura 1. A interface de exibição retorna depois de adicionar produtos de remessa ou botões Cancel são clicados. Vamos criar a interface de inserção na etapa 2.
+Este tutorial consistirá em uma única página dividida em duas regiões: uma região de exibição e uma região de inserção. A interface de vídeo, que criaremos nesta etapa, mostra os produtos em um GridView e inclui um botão intitulado processo de remessa de produto. Quando esse botão é clicado, a interface de vídeo é substituída pela interface de inserção, que é mostrada na Figura 1. A interface de exibição retorna depois que os botões Adicionar produtos de remessa ou cancelar são clicados. Vamos criar a interface de inserção na etapa 2.
 
-Quando a criação de uma página que tem duas interfaces, somente um deles é visível por vez, cada interface normalmente é colocado dentro de um [controle Panel Web](http://www.w3schools.com/aspnet/control_panel.asp), que serve como um contêiner para outros controles. Portanto, nossa página terá dois controles de painel um para cada interface.
+Ao criar uma página que tem duas interfaces, apenas uma delas é visível de cada vez, cada interface normalmente é colocada dentro de um [controle Web Panel](http://www.w3schools.com/aspnet/control_panel.asp), que serve como um contêiner para outros controles. Portanto, nossa página terá dois controles de painel um para cada interface.
 
-Comece abrindo o `BatchInsert.aspx` página o `BatchData` pasta e arrastar um painel da caixa de ferramentas para o Designer (consulte a Figura 2). Definir o painel de s `ID` propriedade para `DisplayInterface`. Ao adicionar o painel para o Designer, sua `Height` e `Width` propriedades são definidas como 50px e 125px, respectivamente. Desmarque out esses valores de propriedade na janela Propriedades.
+Comece abrindo a página `BatchInsert.aspx` na pasta `BatchData` e arraste um painel da caixa de ferramentas para o designer (consulte a Figura 2). Defina a propriedade `ID` do painel como `DisplayInterface`. Ao adicionar o painel ao designer, suas propriedades `Height` e `Width` são definidas como 50px e 125px, respectivamente. Desmarque esses valores de propriedade da janela Propriedades.
 
-[![Arraste um painel da caixa de ferramentas para o Designer](batch-inserting-vb/_static/image5.png)](batch-inserting-vb/_static/image4.png)
+[![arrastar um painel da caixa de ferramentas para o designer](batch-inserting-vb/_static/image5.png)](batch-inserting-vb/_static/image4.png)
 
-**Figura 2**: Arraste um painel da caixa de ferramentas para o Designer ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image6.png))
+**Figura 2**: arraste um painel da caixa de ferramentas para o designer ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image6.png))
 
-Em seguida, arraste um controle de botão e GridView para o painel. Definir o botão s `ID` propriedade para `ProcessShipment` e seu `Text` propriedade a remessa de produtos do processo. Definir o s GridView `ID` propriedade para `ProductsGrid` e, na marca inteligente, de associá-lo a um novo ObjectDataSource chamado `ProductsDataSource`. Configurar o ObjectDataSource para efetuar pull de seus dados a partir de `ProductsBLL` classe s `GetProducts` método. Como esse GridView é usado apenas para exibir dados, defina as listas suspensas na atualização, inserção e excluir guias como (nenhum). Clique em Concluir para concluir o Assistente Configurar fonte de dados.
+Em seguida, arraste um botão e controle GridView para o painel. Defina o botão s `ID` Propriedade como `ProcessShipment` e sua propriedade `Text` para processar a remessa do produto. Defina a Propriedade GridView s `ID` como `ProductsGrid` e, em sua marca inteligente, associe-a a um novo ObjectDataSource chamado `ProductsDataSource`. Configure o ObjectDataSource para efetuar pull de seus dados do método de `GetProducts` da classe `ProductsBLL`. Como esse GridView é usado somente para exibir dados, defina as listas suspensas nas guias UPDATE, INSERT e DELETE como (None). Clique em concluir para concluir o assistente para configurar fonte de dados.
 
-[![Exibir os dados retornados do método GetProducts ProductsBLL classe s](batch-inserting-vb/_static/image8.png)](batch-inserting-vb/_static/image7.png)
+[![exibir os dados retornados do método GetProducts da classe ProductsBLL](batch-inserting-vb/_static/image8.png)](batch-inserting-vb/_static/image7.png)
 
-**Figura 3**: Exibir os dados retornados do `ProductsBLL` classe s `GetProducts` método ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image9.png))
+**Figura 3**: exibir os dados retornados do método de `GetProducts` da classe `ProductsBLL` ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image9.png))
 
-[![Definir as listas suspensas na atualização, inserção e excluir guias como (nenhum)](batch-inserting-vb/_static/image11.png)](batch-inserting-vb/_static/image10.png)
+[![definir as listas suspensas nas guias atualizar, inserir e excluir para (nenhum)](batch-inserting-vb/_static/image11.png)](batch-inserting-vb/_static/image10.png)
 
-**Figura 4**: Defina a lista suspensa no UPDATE, INSERT e excluir guias como (nenhum) ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image12.png))
+**Figura 4**: definir as listas suspensas nas guias atualizar, inserir e excluir para (nenhum) ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image12.png))
 
-Depois de concluir o assistente ObjectDataSource, o Visual Studio adicionará BoundFields e um CheckBoxField para os campos de dados do produto. Remover tudo, exceto os `ProductName`, `CategoryName`, `SupplierName`, `UnitPrice`, e `Discontinued` campos. Fique à vontade fazer qualquer personalização estética. Eu decidi formatar a `UnitPrice` campo como um valor de moeda, reordenadas os campos e renomeado vários campos `HeaderText` valores. Também configure o GridView para incluir a paginação e classificação de suporte, marcando as caixas de seleção Habilitar paginação e habilitar a classificação na marca inteligente s GridView.
+Depois de concluir o assistente ObjectDataSource, o Visual Studio adicionará BoundFields e um CheckBoxField para os campos de dados do produto. Remova todos os campos `ProductName`, `CategoryName`, `SupplierName`, `UnitPrice`e `Discontinued`. Sinta-se à vontade para fazer personalizações estética. Decidi formatar o campo `UnitPrice` como um valor de moeda, reordenar os campos e renomear vários dos campos `HeaderText` valores. Também configure o GridView para incluir o suporte de paginação e classificação marcando as caixas de seleção habilitar paginação e Habilitar classificação na marca inteligente s do GridView.
 
-Depois de adicionar os controles de painel, botão, GridView e ObjectDataSource e personalizar os campos de s GridView, sua marcação declarativa de página s deve ser semelhante ao seguinte:
+Depois de adicionar os controles Panel, Button, GridView e ObjectDataSource e personalizar os campos de GridView, a marcação declarativa de s de página deve ser semelhante ao seguinte:
 
 [!code-aspx[Main](batch-inserting-vb/samples/sample1.aspx)]
 
-Observe que a marcação para o botão e GridView aparecer dentro de abertura e fechamento `<asp:Panel>` marcas. Desde que esses controles estão dentro de `DisplayInterface` painel, podemos pode ocultá-los, simplesmente definindo o painel s `Visible` propriedade para `False`. Etapa 3 examina alterar programaticamente o painel s `Visible` propriedade em resposta a um botão Clique para mostrar uma interface enquanto oculta o outro.
+Observe que a marcação do botão e do GridView aparece dentro das marcas de `<asp:Panel>` de abertura e fechamento. Como esses controles estão dentro do painel de `DisplayInterface`, podemos ocultá-los simplesmente definindo a propriedade s `Visible` do painel como `False`. A etapa 3 examina a alteração programática da propriedade `Visible` do painel em resposta a um clique de botão para mostrar uma interface enquanto oculta a outra.
 
-Reserve um tempo para exibir nosso progresso através de um navegador. Como mostra a Figura 5, você verá um botão de remessa de produtos do processo acima um GridView que lista os dez produtos por vez.
+Reserve um tempo para exibir nosso progresso por meio de um navegador. Como mostra a Figura 5, você verá um botão processar remessa de produto acima de um GridView que lista os produtos dez de cada vez.
 
-[![Lista os produtos de GridView e oferece classificação e paginação de recursos](batch-inserting-vb/_static/image14.png)](batch-inserting-vb/_static/image13.png)
+[![o GridView lista os produtos e oferece recursos de classificação e paginação](batch-inserting-vb/_static/image14.png)](batch-inserting-vb/_static/image13.png)
 
-**Figura 5**: O GridView lista os produtos e oferece classificação e paginação de recursos ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image15.png))
+**Figura 5**: o GridView lista os produtos e oferece recursos de classificação e paginação ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image15.png))
 
-## <a name="step-2-creating-the-inserting-interface"></a>Etapa 2: Criando a Interface de inserção
+## <a name="step-2-creating-the-inserting-interface"></a>Etapa 2: criando a interface de inserção
 
-Com a interface de exibição completo, podemos está pronto para criar a interface de inserção. Para este tutorial, deixe a criar uma interface de inserção que solicita um único valor de categoria e fornecedor e, em seguida, permite que o usuário insira até cinco nomes de produtos e os valores de unidade de preço do s. Com essa interface, o usuário pode adicionar um a cinco novos produtos que compartilham a mesma categoria e fornecedor, mas têm nomes de produto exclusiva e preços.
+Com a interface de exibição concluída, estamos prontos para criar a interface de inserção. Para este tutorial, vamos criar uma interface de inserção que solicita um único fornecedor e valor de categoria e, em seguida, permite que o usuário insira até cinco nomes de produtos e valores de preço unitários. Com essa interface, o usuário pode adicionar um a cinco novos produtos que compartilham a mesma categoria e o mesmo fornecedor, mas têm preços e nomes de produtos exclusivos.
 
-Comece arrastando um painel da caixa de ferramentas para o Designer, colocando-o abaixo existente `DisplayInterface` painel. Defina a `ID` propriedade deste recém-adicionados painel para `InsertingInterface` e defina seu `Visible` propriedade para `False`. Vamos adicionar o código que define o `InsertingInterface` painel s `Visible` propriedade `True` na etapa 3. Limpar o painel s também `Height` e `Width` valores de propriedade.
+Comece arrastando um painel da caixa de ferramentas para o designer, colocando-o abaixo do painel de `DisplayInterface` existente. Defina a propriedade `ID` desse painel recém-adicionado para `InsertingInterface` e defina sua propriedade `Visible` como `False`. Vamos adicionar o código que define a propriedade `Visible` do painel de `InsertingInterface` como `True` na etapa 3. Além disso, desmarque as `Height` s de painel e `Width` valores de propriedade.
 
-Em seguida, precisamos criar a interface de inserção que foi mostrada na Figura 1. Essa interface pode ser criada por meio de uma variedade de técnicas HTML, mas usaremos um bastante simples: uma tabela de quatro colunas, linhas de sete.
+Em seguida, precisamos criar a interface de inserção que foi mostrada de volta na Figura 1. Essa interface pode ser criada por meio de uma variedade de técnicas HTML, mas usaremos uma tabela razoavelmente simples: quatro colunas de sete linhas.
 
 > [!NOTE]
-> Ao inserir uma marcação HTML `<table>` elementos, prefiro usar a exibição da fonte. Enquanto o Visual Studio tem ferramentas para inclusão `<table>` elementos por meio do Designer, o Designer parece tudo muito disposto a injetar não solicitado para `style` configurações na marcação. Depois de ter criado o `<table>` marcação, normalmente retornam para o Designer para adicionar os controles da Web e defina suas propriedades. Ao criar tabelas com linhas e colunas predeterminadas eu prefiro usar HTML estático em vez de [controle de tabela da Web](https://msdn.microsoft.com/library/system.web.ui.webcontrols.table.aspx) porque todos os controles da Web colocados dentro de um controle de tabela da Web só podem ser acessados usando o `FindControl("controlID")` padrão. No entanto, fazer, uso controles da Web de tabela para tabelas dimensionados dinamicamente (aqueles cujo linhas ou colunas são baseadas em algum banco de dados ou a critérios especificados pelo usuário), desde a Web da tabela de controle pode ser construído de forma programática.
+> Ao inserir a marcação para elementos de `<table>` HTML, prefiro usar a exibição de código-fonte. Embora o Visual Studio tenha ferramentas para adicionar elementos de `<table>` por meio do designer, o designer parece estar muito disposto a injetar as configurações de `style` não solicitadas na marcação. Depois de criar a marcação de `<table>`, eu geralmente retorno ao designer para adicionar os controles da Web e definir suas propriedades. Ao criar tabelas com colunas predeterminadas e linhas, prefiro usar HTML estático em vez do [controle da Web de tabela](https://msdn.microsoft.com/library/system.web.ui.webcontrols.table.aspx) , pois os controles da Web colocados em um controle da Web de tabela só podem ser acessados usando o padrão de `FindControl("controlID")`. No entanto, eu uso controles de tabela da Web para tabelas de tamanho dinâmico (aquelas cujas linhas ou colunas se baseiam em algum banco de dados ou em critérios especificados pelo usuário), já que o controle da Web da tabela pode ser construído programaticamente.
 
-Insira a seguinte marcação dentro de `<asp:Panel>` marcas do `InsertingInterface` painel:
+Insira a seguinte marcação dentro das marcas de `<asp:Panel>` do painel de `InsertingInterface`:
 
 [!code-html[Main](batch-inserting-vb/samples/sample2.html)]
 
-Isso `<table>` marcação não inclui todos os controles da Web ao mesmo tempo, vamos adicionar aqueles momentaneamente. Observe que cada `<tr>` elemento contém uma configuração específica da classe CSS: `BatchInsertHeaderRow` para a linha de cabeçalho em que o fornecedor e a categoria DropDownLists irá; `BatchInsertFooterRow` para a linha de rodapé onde adicionar produtos de remessa e os botões Cancelar irão; e alternando `BatchInsertRow` e `BatchInsertAlternatingRow` valores para as linhas que contém o produto e a unidade de preço controles de caixa de texto. Eu ve criado as classes CSS correspondentes no `Styles.css` arquivo para dar a interface inserindo uma aparência semelhante à GridView e DetailsView controla podemos ve usada em toda esses tutoriais. Essas classes CSS são mostrados abaixo.
+Essa marcação de `<table>` não inclui nenhum controle da Web ainda; vamos adicioná-las momentaneamente. Observe que cada elemento de `<tr>` contém uma configuração de classe CSS específica: `BatchInsertHeaderRow` para a linha de cabeçalho onde o fornecedor e a categoria DropDownLists vão; `BatchInsertFooterRow` para a linha de rodapé onde os botões Adicionar produtos de remessa e cancelamento vão; e alternar `BatchInsertRow` e `BatchInsertAlternatingRow` valores para as linhas que conterão os controles de caixa de texto produto e preço unitário. Eu criei classes CSS correspondentes no arquivo `Styles.css` para dar à interface de inserção uma aparência semelhante aos controles GridView e DetailsView que usamos em todos esses tutoriais. Essas classes CSS são mostradas abaixo.
 
 [!code-css[Main](batch-inserting-vb/samples/sample3.css)]
 
-Com essa marcação inserida, retorne para o modo de exibição de Design. Isso `<table>` deve aparecer como uma tabela de quatro colunas e sete linha no Designer, conforme ilustra a Figura 6.
+Com essa marcação inserida, retorne ao modo de exibição de Design. Essa `<table>` deve ser mostrada como uma tabela de quatro colunas de sete linhas no designer, como ilustra a Figura 6.
 
-[![A Interface de inserção é composta de uma coluna de quatro, sete linhas de tabela](batch-inserting-vb/_static/image17.png)](batch-inserting-vb/_static/image16.png)
+[![a interface de inserção é composta de uma tabela de quatro colunas, de sete linhas](batch-inserting-vb/_static/image17.png)](batch-inserting-vb/_static/image16.png)
 
-**Figura 6**: A Interface de inserção é composta de uma coluna de quatro, tabela com sete linhas ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image18.png))
+**Figura 6**: a interface de inserção é composta de uma tabela de quatro colunas de sete linhas ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image18.png))
 
-Podemos re agora está pronto para adicionar os controles da Web para a interface de inserção. Arraste duas DropDownLists da caixa de ferramentas nas células de tabela para o fornecedor e outro para a categoria apropriadas.
+Agora, estamos prontos para adicionar os controles da Web à interface de inserção. Arraste dois DropDownLists da caixa de ferramentas para as células apropriadas na tabela um para o fornecedor e outro para a categoria.
 
-Defina o fornecedor s DropDownList `ID` propriedade para `Suppliers` e associá-lo para um novo ObjectDataSource chamado `SuppliersDataSource`. Configurar o novo ObjectDataSource para recuperar seus dados a partir de `SuppliersBLL` classe s `GetSuppliers` método e a atualização do conjunto guia lista suspensa de s como (nenhum). Clique em Concluir para concluir o assistente.
+Defina a propriedade do fornecedor DropDownList s `ID` como `Suppliers` e a associe a uma nova ObjectDataSource denominada `SuppliersDataSource`. Configure o novo ObjectDataSource para recuperar seus dados do método `SuppliersBLL` `GetSuppliers` classe e defina a lista suspensa da guia atualizar como (nenhum). Clique em Concluir para concluir o assistente.
 
-[![Configurar o ObjectDataSource para usar o método de GetSuppliers SuppliersBLL classe s](batch-inserting-vb/_static/image20.png)](batch-inserting-vb/_static/image19.png)
+[![configurar o ObjectDataSource para usar o método SuppliersBLL da classe s getsuppliers](batch-inserting-vb/_static/image20.png)](batch-inserting-vb/_static/image19.png)
 
-**Figura 7**: Configurar o ObjectDataSource para usar o `SuppliersBLL` classe s `GetSuppliers` método ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image21.png))
+**Figura 7**: configurar o ObjectDataSource para usar o método de `GetSuppliers` da classe `SuppliersBLL` ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image21.png))
 
-Ter o `Suppliers` exibição DropDownList a `CompanyName` campo de dados e use o `SupplierID` do campo de dados como seu `ListItem` valores s.
+Faça com que o `Suppliers` DropDownList exiba o `CompanyName` campo de dados e use o campo de dados `SupplierID` como seus valores de `ListItem` s.
 
-[![Exibir o campo de dados CompanyName e usar SupplierID como o valor](batch-inserting-vb/_static/image23.png)](batch-inserting-vb/_static/image22.png)
+[![exibir o campo de dados CompanyName e usar CódigoDoFornecedor como o valor](batch-inserting-vb/_static/image23.png)](batch-inserting-vb/_static/image22.png)
 
-**Figura 8**: Exibição de `CompanyName` campo de dados e uso `SupplierID` como o valor ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image24.png))
+**Figura 8**: exibir o campo de dados `CompanyName` e usar `SupplierID` como o valor ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image24.png))
 
-Nomeie o segundo DropDownList `Categories` e associá-lo para um novo ObjectDataSource chamado `CategoriesDataSource`. Configurar o `CategoriesDataSource` ObjectDataSource para usar o `CategoriesBLL` classe s `GetCategories` método; defina na lista suspensa lista a atualizar e excluir guias como (nenhum) e clique em Concluir para concluir o assistente. Por fim, ter a exibição DropDownList a `CategoryName` campo de dados e use o `CategoryID` como o valor.
+Nomeie a segunda `Categories` DropDownList e associe-a a uma nova ObjectDataSource chamada `CategoriesDataSource`. Configurar o `CategoriesDataSource` ObjectDataSource para usar o método de `GetCategories` da classe `CategoriesBLL`; Defina as listas suspensas nas guias atualizar e excluir como (nenhum) e clique em concluir para concluir o assistente. Por fim, faça com que a DropDownList exiba o campo de dados `CategoryName` e use o `CategoryID` como o valor.
 
-Depois que essas duas DropDownLists foram adicionados e associados ao ObjectDataSources adequadamente configurado, sua tela deve ser semelhante à Figura 9.
+Depois que essas duas DropDownLists tiverem sido adicionadas e vinculadas às ObjectDataSource configuradas adequadamente, sua tela deverá ser semelhante à figura 9.
 
-[![A linha de cabeçalho contém agora os fornecedores e categorias DropDownLists](batch-inserting-vb/_static/image26.png)](batch-inserting-vb/_static/image25.png)
+[![a linha de cabeçalho agora contém os DropDownLists de fornecedores e categorias](batch-inserting-vb/_static/image26.png)](batch-inserting-vb/_static/image25.png)
 
-**Figura 9**: O cabeçalho de linha agora contém o `Suppliers` e `Categories` DropDownLists ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image27.png))
+**Figura 9**: a linha de cabeçalho agora contém as `Suppliers` e `Categories` DropDownLists ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image27.png))
 
-Agora, precisamos criar caixas de texto para coletar o nome e o preço para cada novo produto. Arraste um controle de caixa de texto da caixa de ferramentas para o Designer para cada uma das linhas de nome e o preço do cinco produto. Defina as `ID` propriedades das caixas de texto para `ProductName1`, `UnitPrice1`, `ProductName2`, `UnitPrice2`, `ProductName3`, `UnitPrice3`e assim por diante.
+Agora, precisamos criar as caixas de entrada para coletar o nome e o preço de cada novo produto. Arraste um controle TextBox da caixa de ferramentas para o designer para cada um dos cinco linhas de preço e nome do produto. Defina as propriedades `ID` das caixas de Textpara `ProductName1`, `UnitPrice1`, `ProductName2`, `UnitPrice2`, `ProductName3`, `UnitPrice3`e assim por diante.
 
-Adicione um CompareValidator após cada uma das caixas de texto, definir o preço da unidade a `ControlToValidate` propriedade para apropriado `ID`. Também defina as `Operator` propriedade para `GreaterThanEqual`, `ValueToCompare` como 0, e `Type` para `Currency`. Essas configurações instruem o CompareValidator para garantir que o preço, se inserido, é um valor de moeda válidos que é maior que ou igual a zero. Defina as `Text` propriedade para \*, e `ErrorMessage` ao preço deve ser maior que ou igual a zero. Além disso, omita quaisquer símbolos de moeda.
+Adicione um CompareValidator depois de cada uma das caixas de Textde preço unitário, definindo a propriedade `ControlToValidate` como o `ID`apropriado. Além disso, defina a propriedade `Operator` como `GreaterThanEqual`, `ValueToCompare` como 0 e `Type` para `Currency`. Essas configurações instruem o CompareValidator a garantir que o preço, se inserido, seja um valor de moeda válido maior ou igual a zero. Defina a propriedade `Text` como \*e `ErrorMessage` como o preço deve ser maior ou igual a zero. Além disso, omita os símbolos de moeda.
 
 > [!NOTE]
-> A interface de inserção não inclui todos os controles RequiredFieldValidator, mesmo que o `ProductName` campo o `Products` tabela de banco de dados não permite `NULL` valores. Isso ocorre porque queremos permitir que o usuário insira até cinco produtos. Por exemplo, se o usuário fornecer o preço de unidade e o nome do produto para as três primeiras linhas, deixando as duas últimas linhas em branco, d agregamos três novos produtos no sistema. Uma vez que `ProductName` é necessário, no entanto, precisamos verificar programaticamente garantir que, se um preço unitário é inserido que um valor de nome de produto correspondente é fornecido. Que abordaremos essa verificação na etapa 4.
+> A interface de inserção não inclui nenhum controle de RequiredFieldValidator, mesmo que o campo `ProductName` na tabela de banco de dados `Products` não permita valores de `NULL`. Isso ocorre porque queremos permitir que o usuário insira até cinco produtos. Por exemplo, se o usuário fosse fornecer o nome do produto e o preço unitário das três primeiras linhas, deixando as duas últimas linhas em branco, nós d apenas adicionaremos três novos produtos ao sistema. Como `ProductName` é necessário, no entanto, precisaremos verificar programaticamente para garantir que, se um preço unitário for inserido, um valor de nome de produto correspondente será fornecido. Resolveremos essa verificação na etapa 4.
 
-Ao validar a entrada do usuário s, CompareValidator relata dados inválidos, se o valor contiver um símbolo de moeda. Adicione um $ na frente de cada uma das caixas de texto para servir como uma indicação visual que instrui o usuário omita o símbolo de moeda, ao inserir o preço de preço unitário.
+Ao validar a entrada de s do usuário, o CompareValidator relatará dados inválidos se o valor contiver um símbolo de moeda. Adicione um $ na frente de cada uma das caixas de pagamento de preço unitário para servir como uma indicação visual que instrui o usuário a omitir o símbolo de moeda ao inserir o preço.
 
-Por fim, adicione um controle ValidationSummary dentro a `InsertingInterface` painel, as configurações de seu `ShowMessageBox` propriedade a ser `True` e sua `ShowSummary` propriedade para `False`. Com essas configurações, se o usuário insere um valor de preço de unidade inválida, um asterisco será exibido ao lado os controles de caixa de texto incorretos e o ValidationSummary exibirá uma caixa de mensagem do lado do cliente que mostra a mensagem de erro que especificamos anteriormente.
+Por fim, adicione um controle ValidationSummary dentro do painel de `InsertingInterface`, configurações sua propriedade `ShowMessageBox` como `True` e sua propriedade `ShowSummary` como `False`. Com essas configurações, se o usuário inserir um valor de preço unitário inválido, um asterisco será exibido ao lado dos controles de caixa de texto incorretos e o ValidationSummary exibirá uma MessageBox do lado do cliente que mostra a mensagem de erro especificada anteriormente.
 
-Neste ponto, sua tela deve ser semelhante à Figura 10.
+Neste ponto, a tela deve ser semelhante à figura 10.
 
-[![A Interface inserindo agora inclui caixas de texto para os produtos de nomes e preços](batch-inserting-vb/_static/image29.png)](batch-inserting-vb/_static/image28.png)
+[![a interface de inserção agora inclui caixas de Textpara os nomes de produtos e preços](batch-inserting-vb/_static/image29.png)](batch-inserting-vb/_static/image28.png)
 
-**Figura 10**: A inserção de Interface agora inclui caixas de texto para os nomes de produtos e os preços ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image30.png))
+**Figura 10**: a interface de inserção agora inclui caixas de Textpara os nomes dos produtos e preços ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image30.png))
 
-Em seguida, precisamos adicionar adicionar produtos da remessa e Cancelar botões à linha de rodapé. Arraste dois controles de botão da caixa de ferramentas no rodapé da interface inserindo, definindo os botões `ID` propriedades a serem `AddProducts` e `CancelButton` e `Text` propriedades adicionar produtos da remessa e Cancelar, respectivamente. Além disso, defina as `CancelButton` controle s `CausesValidation` propriedade `false`.
+Em seguida, precisamos adicionar os botões Adicionar produtos da remessa e cancelar à linha do rodapé. Arraste dois controles de botão da caixa de ferramentas para o rodapé da interface de inserção, definindo os botões `ID` Propriedades para `AddProducts` e `CancelButton` e `Text` Propriedades para adicionar produtos da remessa e cancelar, respectivamente. Além disso, defina o controle de `CancelButton` s `CausesValidation` Propriedade como `false`.
 
-Por fim, precisamos adicionar um controle de Web de rótulo que exibirá mensagens de status para as duas interfaces. Por exemplo, quando um usuário com êxito adiciona uma nova remessa de produtos, queremos retornar para a interface de exibição e exibir uma mensagem de confirmação. Se, no entanto, o usuário fornece um preço para um novo produto, mas parou o nome do produto, é necessário exibir uma mensagem de aviso desde o `ProductName` campo é obrigatório. Já que precisamos essa mensagem a ser exibida para ambas as interfaces, coloque-o na parte superior da página fora os painéis.
+Por fim, precisamos adicionar um controle rótulo da Web que exibirá mensagens de status para as duas interfaces. Por exemplo, quando um usuário adiciona com êxito uma nova remessa de produtos, desejamos retornar à interface de vídeo e exibir uma mensagem de confirmação. No entanto, se o usuário fornecer um preço para um novo produto, mas sair do nome do produto, precisaremos exibir uma mensagem de aviso, uma vez que o campo `ProductName` é necessário. Como precisamos que essa mensagem seja exibida para ambas as interfaces, coloque-a na parte superior da página fora dos painéis.
 
-Arraste um controle da Web do rótulo da caixa de ferramentas na parte superior da página no Designer. Definir a `ID` propriedade para `StatusLabel`, desmarque out a `Text` propriedade e o conjunto a `Visible` e `EnableViewState` propriedades a serem `False`. Como vimos nos tutoriais anteriores, definindo o `EnableViewState` propriedade para `False` nos permite alterar os valores de propriedade do rótulo s programaticamente e peça para reverter automaticamente para seus padrões no postback subsequente. Isso simplifica o código para mostrar uma mensagem de status em resposta a uma ação de usuário desaparece no postback subsequente. Por fim, defina as `StatusLabel` controle s `CssClass` propriedade para aviso, que é o nome de uma classe CSS definida no arquivo `Styles.css` que exibe texto em uma fonte grande, itálico, negrito, vermelha.
+Arraste um controle de rótulo da Web da caixa de ferramentas para a parte superior da página no designer. Defina a propriedade `ID` como `StatusLabel`, desmarque a propriedade `Text` e defina as propriedades `Visible` e `EnableViewState` como `False`. Como vimos nos tutoriais anteriores, definir a propriedade `EnableViewState` como `False` nos permite alterar programaticamente os valores de Propriedade do rótulo e fazer com que eles revertam automaticamente para seus padrões no postback subsequente. Isso simplifica o código para mostrar uma mensagem de status em resposta a alguma ação do usuário que desaparece no postback subsequente. Por fim, defina o controle de `StatusLabel` s `CssClass` Propriedade como aviso, que é o nome de uma classe CSS definida em `Styles.css` que exibe o texto em uma fonte grande, em itálico, negrito e vermelho.
 
-Figura 11 mostra o Designer do Visual Studio depois que o rótulo foi adicionado e configurado.
+A Figura 11 mostra o designer do Visual Studio após o rótulo ter sido adicionado e configurado.
 
-[![Posicione o controle StatusLabel acima os dois controles de painel](batch-inserting-vb/_static/image32.png)](batch-inserting-vb/_static/image31.png)
+[![Coloque o controle StatusLabel acima dos dois controles de painel](batch-inserting-vb/_static/image32.png)](batch-inserting-vb/_static/image31.png)
 
-**Figura 11**: Coloque o `StatusLabel` controle acima a dois controles de painel ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image33.png))
+**Figura 11**: Coloque o controle de `StatusLabel` acima dos dois controles de painel ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image33.png))
 
-## <a name="step-3-switching-between-the-display-and-inserting-interfaces"></a>Etapa 3: Alternar entre a exibição e inserção de Interfaces
+## <a name="step-3-switching-between-the-display-and-inserting-interfaces"></a>Etapa 3: alternando entre as interfaces de exibição e de inserção
 
-Neste ponto, concluímos a marcação para nossa exibição e inserção de interfaces, mas podemos re ainda faltavam duas tarefas:
+Neste ponto, concluímos a marcação para nossas interfaces de exibição e inserção, mas continuamos com duas tarefas:
 
-- Alternar entre a exibição e inserção de interfaces
-- Adicionar os produtos na entrega ao banco de dados
+- Alternando entre as interfaces de exibição e de inserção
+- Adicionando os produtos na remessa ao banco de dados
 
-Atualmente, a interface de exibição está visível, mas a interface de inserção está oculta. Isso ocorre porque o `DisplayInterface` painel s `Visible` estiver definida como `True` (o valor padrão), enquanto o `InsertingInterface` painel s `Visible` estiver definida como `False`. Para alternar entre as duas interfaces, basta alternar cada controle s `Visible` valor da propriedade.
+Atualmente, a interface de exibição está visível, mas a interface de inserção está oculta. Isso ocorre porque a propriedade `Visible` do painel de `DisplayInterface` é definida como `True` (o valor padrão), enquanto a propriedade `Visible` do painel `InsertingInterface` é definida como `False`. Para alternar entre as duas interfaces, precisamos apenas alternar cada controle `Visible` valor da propriedade.
 
-Queremos mover da interface de exibição para a interface de inserção quando se clica no botão de remessa do produto de processo. Portanto, criar um manipulador de eventos para que esse botão s `Click` evento que contém o código a seguir:
+Queremos mover da interface de exibição para a interface de inserção quando o botão processar remessa do produto for clicado. Portanto, crie um manipulador de eventos para esse botão `Click` evento que contenha o seguinte código:
 
 [!code-vb[Main](batch-inserting-vb/samples/sample4.vb)]
 
-Esse código simplesmente a oculta a `DisplayInterface` painel e mostra o `InsertingInterface` painel.
+Esse código simplesmente oculta o painel de `DisplayInterface` e mostra o painel de `InsertingInterface`.
 
-Em seguida, crie manipuladores de eventos para adicionar produtos de remessa e o botão Cancelar controles na interface de inserção. Quando um desses botões é clicado, é necessário reverter para a interface de exibição. Crie `Click` manipuladores de eventos para ambos os controles de botão para que eles chamam `ReturnToDisplayInterface`, um método, adicionaremos momentaneamente. Além de ocultação a `InsertingInterface` painel e mostrando o `DisplayInterface` painel, o `ReturnToDisplayInterface` método deve retornar os controles da Web para seu estado de edição previamente. Isso envolve a definição de DropDownLists `SelectedIndex` propriedades como 0 e apagando o `Text` propriedades dos controles de caixa de texto.
+Em seguida, crie manipuladores de eventos para os controles Adicionar produtos de remessa e cancelar botão na interface de inserção. Quando um desses botões é clicado, precisamos voltar para a interface de vídeo. Crie `Click` manipuladores de eventos para ambos os controles de botão para que eles chamem `ReturnToDisplayInterface`, um método que adicionaremos momentaneamente. Além de ocultar o painel de `InsertingInterface` e mostrar o painel de `DisplayInterface`, o método `ReturnToDisplayInterface` precisa retornar os controles da Web para o estado anterior à edição. Isso envolve definir as propriedades de `SelectedIndex` de DropDownLists como 0 e limpar as propriedades `Text` dos controles TextBox.
 
 > [!NOTE]
-> Considere o que poderia acontecer se os controles não foram retornados para seu estado de edição previamente antes de retornar para a interface de exibição. Um usuário pode clicar no botão de remessa do produto de processo, insira os produtos da remessa e, em seguida, clique em Adicionar produtos de remessa. Isso seria adicionar os produtos e o usuário retornará para a interface de exibição. Neste ponto, o usuário pode querer adicionar outra remessa. Ao clicar no botão de remessa do produto de processo retornarem para a inserção interface, mas a DropDownList seleções e valores de caixa de texto ainda seriam ser populados com os valores anteriores.
+> Considere o que pode acontecer se não retornarmos os controles para seu estado de pré-edição antes de retornar à interface de vídeo. Um usuário pode clicar no botão processar remessa de produto, inserir os produtos da remessa e, em seguida, clicar em Adicionar produtos da remessa. Isso adicionaria os produtos e retornará o usuário para a interface de exibição. Neste ponto, o usuário pode querer adicionar outra remessa. Ao clicar no botão processar remessa de produto, eles retornariam para a interface de inserção, mas as seleções de DropDownList e os valores de TextBox ainda seriam populados com seus valores anteriores.
 
 [!code-vb[Main](batch-inserting-vb/samples/sample5.vb)]
 
-Ambos `Click` manipuladores de eventos simplesmente chamam o `ReturnToDisplayInterface` método, embora retornaremos ao adicionar produtos de remessa `Click` manipulador de eventos na etapa 4 e adicione código para salvar os produtos. `ReturnToDisplayInterface` inicia, retornando o `Suppliers` e `Categories` DropDownLists para suas primeiras opções. As duas constantes `firstControlID` e `lastControlID` marcar o início e final de valores de índice do controle usados na nomeação de produto nome e o preço unitário caixas de texto na inserção de interface e são usadas nos limites do `For` loop que define os `Text`propriedades de controles de caixa de texto de volta para uma cadeia de caracteres vazia. Por fim, os painéis `Visible` as propriedades são redefinidas para que a interface de inserção está oculta e a interface de exibição mostrado.
+Ambos os manipuladores de eventos `Click` simplesmente chamam o método `ReturnToDisplayInterface`, embora Vamos retornar ao manipulador de eventos Add Products from `Click` de remessa na etapa 4 e adicionar código para salvar os produtos. `ReturnToDisplayInterface` começa retornando o `Suppliers` e `Categories` DropDownLists para suas primeiras opções. As duas constantes `firstControlID` e `lastControlID` marcam os valores de índice de controle inicial e final usados na nomeação das caixas de texto nome do produto e preço unitário na interface de inserção e são usados nos limites do loop `For` que define as propriedades `Text` dos controles TextBox de volta para uma cadeia de caracteres vazia. Por fim, os painéis `Visible` propriedades são redefinidos para que a interface de inserção esteja oculta e a interface de exibição mostrada.
 
-Reserve um tempo para testar esta página em um navegador. Quando o primeiro visitando a página, você deve ver a interface de exibição conforme mostrado na Figura 5. Clique no botão de remessa do produto de processo. A página fará o postback e agora você deve ver a interface de inserção, conforme mostrado na Figura 12. Clicando em ambos os produtos adicionar nos botões remessa ou Cancelar retorna você para a interface de exibição.
+Reserve um tempo para testar esta página em um navegador. Ao visitar a página pela primeira vez, você deverá ver a interface de exibição como foi mostrada na Figura 5. Clique no botão processar remessa de produto. A página será postback e você verá agora a interface de inserção, conforme mostrado na Figura 12. Clicar nos botões Adicionar produtos da remessa ou cancelar retornará à interface de vídeo.
 
 > [!NOTE]
-> Ao exibir a interface de inserção, reserve um tempo para testar o CompareValidators sobre o preço unitário de caixas de texto. Você deve ver uma caixa de mensagem do lado do cliente de aviso quando você clicar em Adicionar produtos do botão de remessa com valores de moeda inválido preços ou com um valor menor que zero.
+> Ao exibir a interface de inserção, Reserve um tempo para testar o CompareValidators nas caixas de caixa de entrada de preço unitário. Você deverá ver um aviso MessageBox do lado do cliente ao clicar no botão Adicionar produtos da remessa com valores de moeda ou preços inválidos com um valor menor que zero.
 
-[![A Interface de inserção é exibida depois de clicar no botão de remessa do produto de processo](batch-inserting-vb/_static/image35.png)](batch-inserting-vb/_static/image34.png)
+[![a interface de inserção é exibida depois de clicar no botão processar remessa de produto](batch-inserting-vb/_static/image35.png)](batch-inserting-vb/_static/image34.png)
 
-**Figura 12**: A Interface de inserção é exibida depois de clicar no botão de remessa do produto de processo ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image36.png))
+**Figura 12**: a interface de inserção é exibida depois de clicar no botão processar remessa de produto ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image36.png))
 
-## <a name="step-4-adding-the-products"></a>Etapa 4: Adicionar os produtos
+## <a name="step-4-adding-the-products"></a>Etapa 4: adicionando os produtos
 
-Tudo que resta para este tutorial é para salvar os produtos no banco de dados em Adicionar produtos do botão de remessa s `Click` manipulador de eventos. Isso pode ser feito com a criação de um `ProductsDataTable` e adicionando um `ProductsRow` instância para cada um dos nomes de produto fornecidos. Uma vez que eles `ProductsRow` s foram adicionados, faremos uma chamada para o `ProductsBLL` classe s `UpdateWithTransaction` método passando o `ProductsDataTable`. Lembre-se de que o `UpdateWithTransaction` método, que foi criado na [encapsulamento de modificações de banco de dados em uma transação](wrapping-database-modifications-within-a-transaction-vb.md) passa do tutorial, o `ProductsDataTable` para o `ProductsTableAdapter`do `UpdateWithTransaction` método. A partir daí, uma transação ADO.NET é iniciada e os problemas de TableAdapter uma `INSERT` instrução no banco de dados para cada adicionado `ProductsRow` na DataTable. Supondo que todos os produtos são adicionados sem erro, que a transação é confirmada, caso contrário, ela será revertida.
+Tudo o que resta para este tutorial é salvar os produtos no banco de dados no botão Adicionar produtos da remessa s `Click` manipulador de eventos. Isso pode ser feito criando um `ProductsDataTable` e adicionando uma instância de `ProductsRow` para cada um dos nomes de produtos fornecidos. Depois que essas `ProductsRow` s foram adicionadas, faremos uma chamada para o método `ProductsBLL` classe s `UpdateWithTransaction` passando no `ProductsDataTable`. Lembre-se de que o método `UpdateWithTransaction`, que foi criado de volta nas [modificações do banco de dados de disposição em um](wrapping-database-modifications-within-a-transaction-vb.md) tutorial de transação, passa o `ProductsDataTable` para o método `UpdateWithTransaction` do `ProductsTableAdapter`. A partir daí, uma transação ADO.NET é iniciada e o TableAdapter emite uma instrução `INSERT` ao banco de dados para cada `ProductsRow` adicionado na DataTable. Supondo que todos os produtos sejam adicionados sem erros, a transação é confirmada, caso contrário, ela é revertida.
 
-O código para adicionar produtos do botão de remessa s `Click` manipulador de eventos também deve executar um pouco de verificação de erro. Como não há nenhum RequiredFieldValidators usado na interface de inserção, um usuário pode inserir um preço de um produto, omitindo o seu nome. Como o nome do produto s é necessário, se uma condição desse tipo é revelado precisamos alertar o usuário e não continue com as inserções. Completo `Click` código do manipulador de eventos segue:
+O código do botão Adicionar produtos da remessa s `Click` manipulador de eventos também precisa executar um pouco de verificação de erro. Como não há nenhum RequiredFieldValidator usado na interface de inserção, um usuário poderia inserir um preço para um produto ao omitir seu nome. Como o nome do produto é necessário, se essa condição for desdobrada, precisaremos alertar o usuário e não prosseguir com as inserções. O código completo do manipulador de eventos `Click` segue:
 
 [!code-vb[Main](batch-inserting-vb/samples/sample6.vb)]
 
-O manipulador de eventos é iniciado, garantindo que o `Page.IsValid` propriedade retorna um valor de `True`. Se ele retornar `False`, em seguida, que significa que um ou mais o CompareValidators dados inválidos estão se comunicando; nesse caso, não queremos a tentativa de inserir os produtos inseridos ou podemos acabará com uma exceção ao tentar atribuir o preço unitário inserido pelo usuário valor para o `ProductsRow` s `UnitPrice` propriedade.
+O manipulador de eventos começa garantindo que a propriedade `Page.IsValid` retorna um valor de `True`. Se ele retornar `False`, isso significa que um ou mais dos CompareValidators estão relatando dados inválidos; Nesse caso, não queremos tentar inserir os produtos inseridos, ou terminaremos com uma exceção ao tentar atribuir o valor de preço unitário inserido pelo usuário à propriedade `ProductsRow` s `UnitPrice`.
 
-Em seguida, uma nova `ProductsDataTable` instância é criada (`products`). Um `For` loop é usado para iterar por meio do nome e a unidade de preço do produto caixas de texto e o `Text` propriedades são lidas nas variáveis locais `productName` e `unitPrice`. Se o usuário inseriu um valor para o preço unitário, mas não para o nome do produto correspondente, o `StatusLabel` exibe a mensagem se você fornecer uma unidade de preço, você também deve incluir o nome do produto e o manipulador de eventos é encerrado.
+Em seguida, uma nova instância de `ProductsDataTable` é criada (`products`). Um loop de `For` é usado para iterar pelas caixas de textnome do produto e preço unitário e as propriedades de `Text` são lidas nas variáveis locais `productName` e `unitPrice`. Se o usuário tiver inserido um valor para o preço unitário, mas não para o nome do produto correspondente, o `StatusLabel` exibirá a mensagem se você fornecer um preço unitário, também deverá incluir o nome do produto e o manipulador de eventos será encerrado.
 
-Se um nome de produto foi fornecido, uma nova `ProductsRow` instância for criada usando o `ProductsDataTable` s `NewProductsRow` método. Essa nova `ProductsRow` instância s `ProductName` estiver definida como o produto atual nomeie a caixa de texto enquanto o `SupplierID` e `CategoryID` propriedades são atribuídas ao `SelectedValue` propriedades do DropDownLists no cabeçalho da interface s inserindo. Se o usuário inseriu um valor para o preço do produto s, ele será atribuído para o `ProductsRow` instância s `UnitPrice` propriedade; caso contrário, a propriedade é esquerda não atribuída, o que resultará em um `NULL` de valor para `UnitPrice` no banco de dados. Por fim, o `Discontinued` e `UnitsOnOrder` propriedades são atribuídas aos valores embutidos `False` e 0, respectivamente.
+Se um nome de produto tiver sido fornecido, uma nova instância de `ProductsRow` será criada usando o método `ProductsDataTable` s `NewProductsRow`. Essa nova propriedade `ProductsRow` `ProductName` da instância é definida como a caixa de texto nome do produto atual, enquanto as propriedades `SupplierID` e `CategoryID` são atribuídas às propriedades `SelectedValue` de DropDownLists no cabeçalho inserindo interface s. Se o usuário inserir um valor para o preço do produto, ele será atribuído à propriedade `ProductsRow` s `UnitPrice` da instância; caso contrário, a propriedade será deixada sem atribuição, o que resultará em um valor `NULL` para `UnitPrice` no banco de dados. Por fim, as propriedades `Discontinued` e `UnitsOnOrder` são atribuídas aos valores embutidos `False` e 0, respectivamente.
 
-Depois que as propriedades foram atribuídas à `ProductsRow` instância, ele é adicionado para o `ProductsDataTable`.
+Depois que as propriedades tiverem sido atribuídas à instância de `ProductsRow`, elas serão adicionadas à `ProductsDataTable`.
 
-Ao concluir o `For` loop, verificamos se todos os produtos foram adicionados. O usuário pode, afinal de contas, ter clicado em Adicionar produtos de remessa antes de inserir quaisquer nomes de produto ou de preços. Se houver pelo menos um produto na `ProductsDataTable`, o `ProductsBLL` classe s `UpdateWithTransaction` método é chamado. Em seguida, os dados é ligado novamente para o `ProductsGrid` GridView para que os produtos adicionados recentemente aparecerá na interface de exibição. O `StatusLabel` é atualizada para exibir uma mensagem de confirmação e o `ReturnToDisplayInterface` é invocado, ocultando a inserção de interface e mostrando a interface de exibição.
+Na conclusão do loop de `For`, verificamos se algum produto foi adicionado. O usuário pode, afinal, ter clicado em Adicionar produtos da remessa antes de inserir os nomes de produtos ou preços. Se houver pelo menos um produto na `ProductsDataTable`, o método de `UpdateWithTransaction` da classe `ProductsBLL` será chamado. Em seguida, os dados são reassociados ao `ProductsGrid` GridView para que os produtos recém-adicionados apareçam na interface de vídeo. O `StatusLabel` é atualizado para exibir uma mensagem de confirmação e o `ReturnToDisplayInterface` é invocado, ocultando a interface de inserção e mostrando a interface de vídeo.
 
-Se nenhum produto foram inserido, a interface de inserção permanece exibida, mas a mensagem que sem produtos foram adicionada. Digite os nomes de produto e os preços da unidade nas caixas de texto é exibido.
+Se nenhum produto tiver sido inserido, a interface de inserção permanecerá exibida, mas a mensagem nenhum produto foi adicionado. Insira os nomes de produtos e os preços unitários nas caixas de caixa de exibição.
 
-S Figura 13, 14 e 15 mostram a inserção e exibam interfaces em ação. Na Figura 13, o usuário inseriu um valor de preço de unidade sem um nome de produto correspondente. Figura 14 mostra a interface de exibição após três novos produtos foram adicionados com êxito, embora a Figura 15 mostra dois dos produtos adicionados recentemente no GridView (o terceiro é na página anterior).
+A Figura 13, 14 e 15 mostra as interfaces de inserção e exibição em ação. Na Figura 13, o usuário inseriu um valor de preço unitário sem um nome de produto correspondente. A Figura 14 mostra a interface de vídeo depois que três novos produtos foram adicionados com êxito, enquanto a Figura 15 mostra dois dos produtos recém-adicionados no GridView (o terceiro está na página anterior).
 
-[![Um nome de produto é necessária ao inserir um preço de unidade](batch-inserting-vb/_static/image38.png)](batch-inserting-vb/_static/image37.png)
+[![um nome de produto é necessário ao inserir um preço unitário](batch-inserting-vb/_static/image38.png)](batch-inserting-vb/_static/image37.png)
 
-**Figura 13**: Um nome de produto é necessária ao inserir um preço de unidade ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image39.png))
+**Figura 13**: é necessário um nome de produto ao inserir um preço unitário ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image39.png))
 
-[![Três legumes novos foram adicionados para o fornecedor Mayumi s](batch-inserting-vb/_static/image41.png)](batch-inserting-vb/_static/image40.png)
+[![três novas veggies foram adicionadas para o fornecedor Mayumi s](batch-inserting-vb/_static/image41.png)](batch-inserting-vb/_static/image40.png)
 
-**Figura 14**: Três novos legumes foram adicionados para o fornecedor Mayumi s ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image42.png))
+**Figura 14**: três novas veggies foram adicionadas para o fornecedor Mayumi s ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image42.png))
 
-[![Os novos produtos podem ser encontrados na última página do GridView](batch-inserting-vb/_static/image44.png)](batch-inserting-vb/_static/image43.png)
+[![os novos produtos podem ser encontrados na última página do GridView](batch-inserting-vb/_static/image44.png)](batch-inserting-vb/_static/image43.png)
 
-**Figura 15**: Os novos produtos podem ser encontradas na última página do GridView ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image45.png))
+**Figura 15**: os novos produtos podem ser encontrados na última página do GridView ([clique para exibir a imagem em tamanho normal](batch-inserting-vb/_static/image45.png))
 
 > [!NOTE]
-> O lote de inserção de lógica usada neste tutorial envolve as inserções dentro do escopo da transação. Para verificar isso, propositadamente apresente um erro no nível de banco de dados. Por exemplo, em vez de atribuir o novo `ProductsRow` instância s `CategoryID` propriedade para o valor selecionado na `Categories` DropDownList, atribua-o para um valor, como `i * 5`. Aqui `i` é o indexador de loop e tem valores que variam de 1 a 5. Dessa forma, quando a adição de dois ou mais produtos em lote inserir o primeiro produto terá válida `CategoryID` terão o valor (5), mas produtos subsequentes `CategoryID` valores que não correspondem aos `CategoryID` os valores no `Categories` tabela. O efeito líquido é que, enquanto o primeiro `INSERT` terá êxito, os demais falhará com uma violação de restrição de chave estrangeira. Uma vez que a inserção de lote é atômica, a primeira `INSERT` será revertida, retornando o banco de dados para seu estado antes que o lote de inserção processo começou.
+> A lógica de inserção de lote usada neste tutorial encapsula as inserções dentro do escopo da transação. Para verificar isso, introduza propositadamente um erro no nível do banco de dados. Por exemplo, em vez de atribuir a nova propriedade de `CategoryID` da instância `ProductsRow` s ao valor selecionado no `Categories` DropDownList, atribua-a a um valor como `i * 5`. Aqui `i` é o indexador de loop e tem valores variando de 1 a 5. Portanto, ao adicionar dois ou mais produtos no lote, o primeiro produto terá um valor de `CategoryID` válido (5), mas os produtos subsequentes terão `CategoryID` valores que não correspondem aos valores `CategoryID` na tabela `Categories`. O efeito líquido é que, enquanto o primeiro `INSERT` terá êxito, os próximos falharão com uma violação de restrição de chave estrangeira. Como a inserção do lote é atômica, a primeira `INSERT` será revertida, retornando o banco de dados para seu estado antes do início do processo de inserção em lote.
 
 ## <a name="summary"></a>Resumo
 
-Sobre isso e os dois tutoriais anteriores, criamos a interfaces que permitem a atualização, exclusão, e inserção de lotes de dados, que usados o suporte a transações que adicionamos à camada de acesso a dados no [quebra automática de modificações de banco de dados dentro de uma transação](wrapping-database-modifications-within-a-transaction-vb.md) tutorial. Para determinados cenários, tais interfaces de usuário de processamento de lote melhoram muito a eficiência do usuário final ao diminuir o número de cliques, postbacks e alternâncias de contexto do teclado ao mouse, além de manter a integridade dos dados subjacentes.
+Além dos dois tutoriais anteriores, criamos interfaces que permitem a atualização, a exclusão e a inserção de lotes de dados, todos os quais usaram o suporte de transação que adicionamos à camada de acesso a dados nas [modificações de quebra de banco de base em um tutorial de transação](wrapping-database-modifications-within-a-transaction-vb.md) . Para determinados cenários, essas interfaces do usuário de processamento em lotes melhoram muito a eficiência do usuário final, reduzindo o número de cliques, postbacks e opções de contexto de teclado para mouse, mantendo também a integridade dos dados subjacentes.
 
-Esse tutorial conclui nossa como trabalhar com dados em lote. O próximo conjunto de tutoriais explora uma variedade de cenários avançados de camada de acesso a dados, incluindo o uso de procedimentos armazenados nos métodos TableAdapter s, configurando as configurações de nível de conexão e comando da DAL, criptografando cadeias de caracteres de conexão e muito mais!
+Este tutorial conclui nossa visão do trabalho com dados em lote. O próximo conjunto de tutoriais explora uma variedade de cenários de camada de acesso a dados avançados, incluindo o uso de procedimentos armazenados nos métodos TableAdapter s, a definição de configurações de nível de comando e conexão na DAL, criptografia de cadeias de conexão e muito mais!
 
 Boa programação!
 
 ## <a name="about-the-author"></a>Sobre o autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP.NET e fundador da [4GuysFromRolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Microsoft Web desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 2.0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser contatado pelo [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP. net e fundador da [4guysfromrolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 2,0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser acessado em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 ## <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Líder de revisores para este tutorial foram Hilton Giesenow e S ren Jacob Lauritsen. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial foram Hilton Giesenow e S Ren Jacob Lauritsen. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](batch-deleting-vb.md)

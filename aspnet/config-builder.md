@@ -1,160 +1,160 @@
 ---
 uid: config-builder
-title: Construtores de configuração para o ASP.NET
+title: Construtores de configuração para ASP.NET
 author: rick-anderson
-description: Saiba como obter dados de configuração de fontes diferentes valores de Web. config de fontes externas.
+description: Saiba como obter dados de configuração de fontes diferentes de valores Web. config de fontes externas.
 ms.author: riande
 ms.date: 10/29/2018
 msc.type: content
-ms.openlocfilehash: 2bec828aa01d2c17f5374c3b1804b7444ec03dda
-ms.sourcegitcommit: 2d53ed9e4c8b19d3526cbc689bfa8394c9449cec
+ms.openlocfilehash: 5299d9ab057c3096773955a7461e77a80673ebfe
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59905690"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74586760"
 ---
-# <a name="configuration-builders-for-aspnet"></a>Construtores de configuração para o ASP.NET
+# <a name="configuration-builders-for-aspnet"></a>Construtores de configuração para ASP.NET
 
 Por [Stephen Molloy](https://github.com/StephenMolloy) e [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-Construtores de configuração fornecem um mecanismo ágil e modernos para aplicativos ASP.NET obtenham os valores de configuração de fontes externas.
+Os construtores de configuração fornecem um mecanismo moderno e ágil para aplicativos ASP.NET obterem valores de configuração de fontes externas.
 
 Construtores de configuração:
 
-* Estão disponíveis no .NET Framework 4.7.1 e posterior.
-* Fornece um mecanismo flexível para ler valores de configuração.
-* Aborda algumas das necessidades básicas de aplicativos, como eles se movam em um contêiner e com foco do ambiente de nuvem.
-* Pode ser usado para melhorar a proteção de dados de configuração pelo desenho de fontes não está disponíveis anteriormente (por exemplo, variáveis de ambiente e o Azure Key Vault) no sistema de configuração do .NET.
+* Estão disponíveis no .NET Framework 4.7.1 e versões posteriores.
+* Forneça um mecanismo flexível para ler valores de configuração.
+* Resolva algumas das necessidades básicas dos aplicativos à medida que eles se movem para um ambiente voltado para a nuvem e um contêiner.
+* Pode ser usado para melhorar a proteção de dados de configuração por meio do desenho de fontes anteriormente indisponíveis (por exemplo, Azure Key Vault e variáveis de ambiente) no sistema de configuração do .NET.
 
 ## <a name="keyvalue-configuration-builders"></a>Construtores de configuração de chave/valor
 
-Um cenário comum que pode ser tratado por construtores de configuração é fornecer um mecanismo de substituição de chave/valor básico para seções de configuração que seguem um padrão de chave/valor. O conceito do .NET Framework de ConfigurationBuilders não está limitado a seções de configuração específico ou padrões. No entanto, muitos dos construtores de configuração no `Microsoft.Configuration.ConfigurationBuilders` ([github](https://github.com/aspnet/MicrosoftConfigurationBuilders), [NuGet](https://www.nuget.org/packages?q=Microsoft.Configuration.ConfigurationBuilders)) funcionam dentro do padrão de chave/valor.
+Um cenário comum que pode ser tratado por construtores de configuração é fornecer um mecanismo básico de substituição de chave/valor para seções de configuração que seguem um padrão de chave/valor. O conceito de .NET Framework de ConfigurationBuilders não é limitado a seções ou padrões de configuração específicos. No entanto, muitos dos construtores de configuração no `Microsoft.Configuration.ConfigurationBuilders` ([GitHub](https://github.com/aspnet/MicrosoftConfigurationBuilders), [NuGet](https://www.nuget.org/packages?q=Microsoft.Configuration.ConfigurationBuilders)) funcionam dentro do padrão de chave/valor.
 
-## <a name="keyvalue-configuration-builders-settings"></a>Definições de construtores de configuração de chave/valor
+## <a name="keyvalue-configuration-builders-settings"></a>Configurações de construtores de configuração de chave/valor
 
 As configurações a seguir se aplicam a todos os construtores de configuração de chave/valor no `Microsoft.Configuration.ConfigurationBuilders`.
 
-### <a name="mode"></a>Modo
+### <a name="mode"></a>Mode.
 
-Os construtores de configuração usam uma fonte externa de informações de chave/valor para preencher os elementos de chave/valor selecionado de sistema de configuração. Especificamente, o `<appSettings/>` e `<connectionStrings/>` seções recebem tratamento especial de construtores de configuração. Os construtores de trabalho em três modos:
+Os construtores de configuração usam uma fonte externa de informações de chave/valor para preencher os elementos de chave/valor selecionados do sistema de configuração. Especificamente, as seções `<appSettings/>` e `<connectionStrings/>` recebem tratamento especial dos criadores de configuração. Os criadores funcionam em três modos:
 
-* `Strict` -O modo padrão. Nesse modo, o construtor de configuração só funciona em seções de configuração de chave/valor-centrado em bem conhecidos. `Strict` modo enumera cada chave na seção. Se uma chave correspondente for encontrada na origem externa:
+* `Strict`-o modo padrão. Nesse modo, o construtor de configuração opera apenas em seções de configuração bem conhecidas de chave/valor centrado. o modo de `Strict` enumera cada chave na seção. Se uma chave correspondente for encontrada na fonte externa:
 
-   * Os construtores de configuração substitua o valor na seção de configuração resultante com o valor da fonte externa.
-* `Greedy` -Esse modo está intimamente relacionado ao `Strict` modo. Em vez de ficar limitado às chaves que já existem na configuração original:
+   * Os construtores de configuração substituem o valor na seção de configuração resultante pelo valor da fonte externa.
+* `Greedy`-esse modo está bem relacionado ao modo de `Strict`. Em vez de ser limitado a chaves que já existem na configuração original:
 
-  * Os construtores de configuração adiciona todos os pares de chave/valor da fonte externa para a seção de configuração resultante.
+  * Os construtores de configuração adicionam todos os pares de chave/valor da fonte externa na seção de configuração resultante.
 
-* `Expand` -Opera em XML brutos antes que ele é analisado em um objeto da seção de configuração. Ele pode ser pensado como uma expansão de tokens em uma cadeia de caracteres. Qualquer parte da cadeia de caracteres XML brutos que corresponde ao padrão de `${token}` é um candidato para expansão de token. Se nenhum valor correspondente for encontrado na fonte externa, o token não é alterado. Os construtores nesse modo não estão limitados à `<appSettings/>` e `<connectionStrings/>` seções.
+* `Expand`-opera no XML bruto antes que ele seja analisado em um objeto da seção de configuração. Pode ser pensado como uma expansão de tokens em uma cadeia de caracteres. Qualquer parte da cadeia de caracteres XML bruta que corresponda ao padrão `${token}` é um candidato para a expansão do token. Se nenhum valor correspondente for encontrado na origem externa, o token não será alterado. Os construtores neste modo não estão limitados às seções `<appSettings/>` e `<connectionStrings/>`.
 
-A seguinte marcação de *Web. config* permite que o [EnvironmentConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Environment/) em `Strict` modo:
+A marcação a seguir de *Web. config* habilita o [EnvironmentConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Environment/) no modo de `Strict`:
 
 [!code-xml[Main](config-builder/MyConfigBuilders/WebDefault.config?name=snippet)]
 
-O código a seguir lê o `<appSettings/>` e `<connectionStrings/>` mostrada anteriormente *Web. config* arquivo:
+O código a seguir lê o `<appSettings/>` e `<connectionStrings/>` mostrados no arquivo *Web. config* anterior:
 
 [!code-csharp[Main](config-builder/MyConfigBuilders/About.aspx.cs)]
 
-O código anterior definirá os valores de propriedade:
+O código anterior definirá os valores de propriedade como:
 
-* Os valores de *Web. config* arquivo se as chaves não forem definidas nas variáveis de ambiente.
-* Os valores do ambiente variável, se definido.
+* Os valores no arquivo *Web. config* se as chaves não estiverem definidas em variáveis de ambiente.
+* Os valores da variável de ambiente, se definido.
 
 Por exemplo, `ServiceID` conterá:
 
-* "Valor ServiceID do Web. config", se a variável de ambiente `ServiceID` não está definido.
-* O valor da `ServiceID` se variável de ambiente definida.
+* "ServiceId valor de Web. config", se a variável de ambiente `ServiceID` não estiver definida.
+* O valor da variável de ambiente `ServiceID`, se definido.
 
-A imagem a seguir mostra a `<appSettings/>` chaves/valores de anterior *Web. config* conjunto de arquivos no editor de ambiente:
+A imagem a seguir mostra as `<appSettings/>` chaves/valores do arquivo *Web. config* anterior definido no editor de ambiente:
 
-![editor de ambiente](config-builder/static/env.png)
+![Editor de ambiente](config-builder/static/env.png)
 
-Observação: Talvez você precise sair e reiniciar o Visual Studio para ver as alterações nas variáveis de ambiente.
+Observação: Talvez seja necessário sair e reiniciar o Visual Studio para ver as alterações nas variáveis de ambiente.
 
-### <a name="prefix-handling"></a>Tratamento de prefixo
+### <a name="prefix-handling"></a>Manipulação de prefixo
 
-Prefixos de chave podem simplificar as chaves de configuração porque:
+Os prefixos de chave podem simplificar a configuração de chaves porque:
 
-* Configuração do .NET Framework é complexo e aninhada.
-* Fontes externas de chave/valor são comumente básica e simples por natureza. Por exemplo, as variáveis de ambiente não estão aninhadas.
+* A configuração de .NET Framework é complexa e aninhada.
+* As origens de chave/valor externas são normalmente básicas e planas por natureza. Por exemplo, variáveis de ambiente não são aninhadas.
 
-Use qualquer uma das abordagens a seguir para inserir tanto `<appSettings/>` e `<connectionStrings/>` para a configuração por meio de variáveis de ambiente:
+Use qualquer uma das abordagens a seguir para injetar `<appSettings/>` e `<connectionStrings/>` na configuração por meio de variáveis de ambiente:
 
-* Com o `EnvironmentConfigBuilder` no padrão `Strict` modo e os nomes de chave apropriados no arquivo de configuração. O código e a marcação anterior usa essa abordagem. Usando essa abordagem, você pode **não** têm nomes idênticos chaves em ambos `<appSettings/>` e `<connectionStrings/>`.
-* Use dois `EnvironmentConfigBuilder`s no `Greedy` modo com prefixos distintos e `stripPrefix`. Com essa abordagem, o aplicativo pode ler `<appSettings/>` e `<connectionStrings/>` sem a necessidade de atualizar o arquivo de configuração. A próxima seção, [stripPrefix](#stripprefix), mostra como fazer isso.
-* Use dois `EnvironmentConfigBuilder`s em `Greedy` modo com prefixos distintos. Com essa abordagem, você não pode ter nomes duplicados de chave como nomes de chave devem ser diferentes por prefixo.  Por exemplo:
+* Com a `EnvironmentConfigBuilder` no modo de `Strict` padrão e os nomes de chave apropriados no arquivo de configuração. O código e a marcação anteriores assumem essa abordagem. Usando essa abordagem, você **não** pode ter chaves nomeadas de forma idêntica nas `<appSettings/>` e `<connectionStrings/>`.
+* Use dois `EnvironmentConfigBuilder`s no modo `Greedy` com prefixos e `stripPrefix`distintos. Com essa abordagem, o aplicativo pode ler `<appSettings/>` e `<connectionStrings/>` sem a necessidade de atualizar o arquivo de configuração. A próxima seção, [stripPrefix](#stripprefix), mostra como fazer isso.
+* Use dois `EnvironmentConfigBuilder`s no modo `Greedy` com prefixos distintos. Com essa abordagem, você não pode ter nomes de chave duplicados, pois nomes de chave devem ser diferentes por prefixo.  Por exemplo:
 
 [!code-xml[Main](config-builder/MyConfigBuilders/WebPrefix.config?name=snippet&highlight=11-99)]
 
-Com a marcação anterior, a mesma fonte de chave/valor simples pode ser usada para preencher a configuração para duas seções diferentes.
+Com a marcação anterior, a mesma fonte de chave/valor simples pode ser usada para preencher a configuração de duas seções diferentes.
 
-A imagem a seguir mostra a `<appSettings/>` e `<connectionStrings/>` chaves/valores de anterior *Web. config* conjunto de arquivos no editor de ambiente:
+A imagem a seguir mostra as `<appSettings/>` e `<connectionStrings/>` chaves/valores do arquivo *Web. config* anterior definido no editor de ambiente:
 
-![editor de ambiente](config-builder/static/prefix.png)
+![Editor de ambiente](config-builder/static/prefix.png)
 
-O código a seguir lê o `<appSettings/>` e `<connectionStrings/>` chaves/valores contidos no anterior *Web. config* arquivo:
+O código a seguir lê as `<appSettings/>` e `<connectionStrings/>` chaves/valores contidos no arquivo *Web. config* anterior:
 
 [!code-csharp[Main](config-builder/MyConfigBuilders/Contact.aspx.cs?name=snippet)]
 
-O código anterior definirá os valores de propriedade:
+O código anterior definirá os valores de propriedade como:
 
-* Os valores de *Web. config* arquivo se as chaves não forem definidas nas variáveis de ambiente.
-* Os valores do ambiente variável, se definido.
+* Os valores no arquivo *Web. config* se as chaves não estiverem definidas em variáveis de ambiente.
+* Os valores da variável de ambiente, se definido.
 
-Por exemplo, o uso anterior *Web. config* arquivos, chaves/valores na imagem anterior do editor de ambiente e o código anterior, os seguintes valores são definidos:
+Por exemplo, usando o arquivo *Web. config* anterior, as chaves/valores na imagem do editor de ambiente anterior e o código anterior, os seguintes valores são definidos:
 
-|  Chave              | Valor |
+|  Chave              | Value |
 | ----------------- | ------------ |
-|     AppSetting_ServiceID           | AppSetting_ServiceID de variáveis de env|
+|     AppSetting_ServiceID           | AppSetting_ServiceID de variáveis ENV|
 |    AppSetting_default            | AppSetting_default valor de env |
-|       ConnStr_default         | Val ConnStr_default de env|
+|       ConnStr_default         | ConnStr_default Val de env|
 
 ### <a name="stripprefix"></a>stripPrefix
 
 `stripPrefix`: booliano, o padrão é `false`. 
 
-A marcação XML anterior separa as configurações do aplicativo de cadeias de caracteres de conexão, mas exige que todas as chaves na *Web. config* arquivo para usar o prefixo especificado. Por exemplo, o prefixo `AppSetting` deve ser adicionado para o `ServiceID` chave ("AppSetting_ServiceID"). Com o `stripPrefix`, o prefixo não é usado o *Web. config* arquivo. O prefixo é necessária na fonte do construtor de configuração (por exemplo, no ambiente). Prevemos que a maioria dos desenvolvedores usará `stripPrefix`.
+A marcação XML anterior separa as configurações do aplicativo das cadeias de conexão, mas requer que todas as chaves no arquivo *Web. config* usem o prefixo especificado. Por exemplo, o prefixo `AppSetting` deve ser adicionado à chave de `ServiceID` ("AppSetting_ServiceID"). Com `stripPrefix`, o prefixo não é usado no arquivo *Web. config* . O prefixo é necessário na origem do Configuration Builder (por exemplo, no ambiente). Prevemos que a maioria dos desenvolvedores usará `stripPrefix`.
 
-Aplicativos normalmente removem o prefixo. O seguinte *Web. config* retira o prefixo:
+Normalmente, os aplicativos tiram o prefixo. O *Web. config* a seguir remove o prefixo:
 
 [!code-xml[Main](config-builder/MyConfigBuilders/WebPrefixStrip.config?name=snippet&highlight=14,19)]
 
-Na anterior *Web. config* arquivo, o `default` chave está em ambos os `<appSettings/>` e `<connectionStrings/>`.
+No arquivo *Web. config* anterior, a chave de `default` está tanto no `<appSettings/>` quanto no `<connectionStrings/>`.
 
-A imagem a seguir mostra a `<appSettings/>` e `<connectionStrings/>` chaves/valores de anterior *Web. config* conjunto de arquivos no editor de ambiente:
+A imagem a seguir mostra as `<appSettings/>` e `<connectionStrings/>` chaves/valores do arquivo *Web. config* anterior definido no editor de ambiente:
 
-![editor de ambiente](config-builder/static/prefix.png)
+![Editor de ambiente](config-builder/static/prefix.png)
 
-O código a seguir lê o `<appSettings/>` e `<connectionStrings/>` chaves/valores contidos no anterior *Web. config* arquivo:
+O código a seguir lê as `<appSettings/>` e `<connectionStrings/>` chaves/valores contidos no arquivo *Web. config* anterior:
 
 [!code-csharp[Main](config-builder/MyConfigBuilders/About2.aspx.cs?name=snippet)]
 
-O código anterior definirá os valores de propriedade:
+O código anterior definirá os valores de propriedade como:
 
-* Os valores de *Web. config* arquivo se as chaves não forem definidas nas variáveis de ambiente.
-* Os valores do ambiente variável, se definido.
+* Os valores no arquivo *Web. config* se as chaves não estiverem definidas em variáveis de ambiente.
+* Os valores da variável de ambiente, se definido.
 
-Por exemplo, o uso anterior *Web. config* arquivos, chaves/valores na imagem anterior do editor de ambiente e o código anterior, os seguintes valores são definidos:
+Por exemplo, usando o arquivo *Web. config* anterior, as chaves/valores na imagem do editor de ambiente anterior e o código anterior, os seguintes valores são definidos:
 
-|  Chave              | Valor |
+|  Chave              | Value |
 | ----------------- | ------------ |
-|     ServiceID           | AppSetting_ServiceID de variáveis de env|
-|    default            | AppSetting_default valor de env |
-|    default         | Val ConnStr_default de env|
+|     ServiceID           | AppSetting_ServiceID de variáveis ENV|
+|    {1&gt;default&lt;1}            | AppSetting_default valor de env |
+|    {1&gt;default&lt;1}         | ConnStr_default Val de env|
 
 ### <a name="tokenpattern"></a>tokenPattern
 
-`tokenPattern`: Cadeia de caracteres, o padrão é `@"\$\{(\w+)\}"`
+`tokenPattern`: cadeia de caracteres, o padrão é `@"\$\{(\w+)\}"`
 
-O `Expand` comportamento dos construtores de procura o XML bruto para tokens que se parecem com `${token}`. Pesquisando é feito com a expressão regular do padrão `@"\$\{(\w+)\}"`. O conjunto de caracteres que corresponde ao `\w` é mais estrita que permitem que XML e muitas fontes de configuração. Use `tokenPattern` quando mais caracteres que `@"\$\{(\w+)\}"` são necessárias no nome do token.
+O comportamento `Expand` dos construtores pesquisa o XML bruto em busca de tokens semelhantes a `${token}`. A pesquisa é feita com a expressão regular padrão `@"\$\{(\w+)\}"`. O conjunto de caracteres que corresponde a `\w` é mais estrito do que o XML e muitas fontes de configuração permitem. Use `tokenPattern` quando mais caracteres do que `@"\$\{(\w+)\}"` forem necessários no nome do token.
 
-`tokenPattern`: Cadeia de caracteres:
+`tokenPattern`: cadeia de caracteres:
 
-* Permite aos desenvolvedores alterar a expressão regular que é usada para correspondência de token.
-* Nenhuma validação é feita para verificar se que ele é um regex bem formado, não pode ser perigoso.
-* Ele deve conter um grupo de captura. O regex inteira deve corresponder o token inteiro. A primeira captura deve ser o nome do token para pesquisar na fonte de configuração.
+* Permite que os desenvolvedores alterem o Regex que é usado para correspondência de token.
+* Nenhuma validação é feita para garantir que se trata de um Regex bem formado e não perigoso.
+* Ele deve conter um grupo de captura. O Regex inteiro deve corresponder ao token inteiro. A primeira captura deve ser o nome do token a ser pesquisado na fonte de configuração.
 
-## <a name="configuration-builders-in-microsoftconfigurationconfigurationbuilders"></a>Construtores de configuração em Microsoft.Configuration.ConfigurationBuilders
+## <a name="configuration-builders-in-microsoftconfigurationconfigurationbuilders"></a>Construtores de configuração em Microsoft. Configuration. ConfigurationBuilders
 
 ### <a name="environmentconfigbuilder"></a>EnvironmentConfigBuilder
 
@@ -167,17 +167,17 @@ O `Expand` comportamento dos construtores de procura o XML bruto para tokens que
 
 O [EnvironmentConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Environment/):
 
-* É o mais simples dos construtores de configuração.
+* É a mais simples dos construtores de configuração.
 * Lê os valores do ambiente.
 * Não tem nenhuma opção de configuração adicional.
-* O `name` valor do atributo é arbitrário.
+* O valor do atributo `name` é arbitrário.
 
-**Observação:** Em um ambiente de contêiner do Windows, as variáveis definidas em tempo de execução só são injetadas no ambiente do processo de ponto de entrada. Aplicativos que são executados como um serviço ou um processo não EntryPoint não detectam essas variáveis, a menos que caso contrário, eles são injetados por meio de um mecanismo no contêiner. Para [IIS](https://github.com/Microsoft/iis-docker/pull/41)/[ASP.NET](https://github.com/Microsoft/aspnet-docker)-baseados em contêineres, a versão atual do [ServiceMonitor.exe](https://github.com/Microsoft/iis-docker/pull/41) lida com isso no *DefaultAppPool* somente. Talvez seja necessário desenvolver seu próprio mecanismo de injeção para processos de ponto de entrada não outras variantes do contêiner com base em Windows.
+**Observação:** Em um ambiente de contêiner do Windows, as variáveis definidas em tempo de execução são injetadas apenas no ambiente de processo EntryPoint. Os aplicativos executados como um serviço ou um processo não-EntryPoint não pegam essas variáveis, a menos que eles sejam injetados por um mecanismo no contêiner. Para o [IIS](https://github.com/Microsoft/iis-docker/pull/41)/contêineres baseados em [ASP.net](https://github.com/Microsoft/aspnet-docker), a versão atual do [Monitor. exe](https://github.com/Microsoft/iis-docker/pull/41) trata isso somente no *DefaultAppPool* . Outras variantes de contêiner com base no Windows talvez precisem desenvolver seu próprio mecanismo de injeção para processos não EntryPoint.
 
 ### <a name="usersecretsconfigbuilder"></a>UserSecretsConfigBuilder
 
 > [!WARNING]
-> Nunca armazenar senhas, cadeias de caracteres de conexão confidenciais ou outros dados confidenciais no código-fonte. Segredos de produção não devem ser usados para desenvolvimento ou teste.
+> Nunca armazene senhas, cadeias de conexão confidenciais ou outros dados confidenciais no código-fonte. Os segredos de produção não devem ser usados para desenvolvimento ou teste.
 
 ```xml
 <add name="UserSecrets"
@@ -188,16 +188,16 @@ O [EnvironmentConfigBuilder](https://www.nuget.org/packages/Microsoft.Configurat
     Microsoft.Configuration.ConfigurationBuilders.UserSecrets" />
 ```
 
-Esse construtor de configuração fornece um recurso semelhante ao [Secret Manager do ASP.NET Core](/aspnet/core/security/app-secrets).
+Este construtor de configuração fornece um recurso semelhante a [ASP.NET Core o Gerenciador de segredo](/aspnet/core/security/app-secrets).
 
-O [UserSecretsConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.UserSecrets/) pode ser usado em projetos do .NET Framework, mas deve ser especificado um arquivo de segredos. Como alternativa, você pode definir o `UserSecretsId` propriedade no projeto do arquivo e cria o arquivo bruto segredos no local correto para leitura. Para manter as dependências externas fora do seu projeto, o arquivo de segredo é XML formatado. A formatação XML é um detalhe de implementação e o formato não deve ser usado. Se você precisa compartilhar um *Secrets* do arquivo com projetos do .NET Core, considere usar o [SimpleJsonConfigBuilder](#simplejsonconfigbuilder). O `SimpleJsonConfigBuilder` para .NET Core também deve ser considerado um detalhe de implementação, sujeito a alterações de formato.
+O [UserSecretsConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.UserSecrets/) pode ser usado em projetos .NET Framework, mas um arquivo de segredos deve ser especificado. Como alternativa, você pode definir a propriedade `UserSecretsId` no arquivo de projeto e criar o arquivo de segredos brutos no local correto para leitura. Para manter as dependências externas do seu projeto, o arquivo secreto é XML formatado. A formatação XML é um detalhe de implementação e o formato não deve ser confiado. Se você precisar compartilhar um arquivo *segredos. JSON* com projetos do .NET Core, considere o uso de [SimpleJsonConfigBuilder](#simplejsonconfigbuilder). O formato de `SimpleJsonConfigBuilder` para o .NET Core também deve ser considerado um detalhe de implementação sujeito a alterações.
 
-Configuração de atributos para `UserSecretsConfigBuilder`:
+Atributos de configuração para `UserSecretsConfigBuilder`:
 
-* `userSecretsId` -Este é o método preferencial para identificar um arquivo de segredos XML. Ele funciona de forma semelhante ao .NET Core, que usa um `UserSecretsId` propriedade para armazenar esse identificador do projeto. A cadeia de caracteres deve ser exclusiva, ele não precisa ser um GUID. Com esse atributo, o `UserSecretsConfigBuilder` examinar uma localização local conhecida (`%APPDATA%\Microsoft\UserSecrets\<UserSecrets Id>\secrets.xml`) para um arquivo de segredos que pertencem a esse identificador.
-* `userSecretsFile` -Um atributo opcional especificando o arquivo que contém os segredos. O `~` caractere pode ser usado no início para fazer referência a raiz do aplicativo. Qualquer um desse atributo ou o `userSecretsId` atributo é necessário. Se ambos forem especificados, `userSecretsFile` terá precedência.
-* `optional`: boolean, valor de padrão `true` -impede que uma exceção se o arquivo de segredos não pode ser encontrado. 
-* O `name` valor do atributo é arbitrário.
+* `userSecretsId`-esse é o método preferencial para identificar um arquivo de segredos XML. Ele funciona semelhante ao .NET Core, que usa uma propriedade de projeto `UserSecretsId` para armazenar esse identificador. A cadeia de caracteres deve ser exclusiva, não precisa ser uma GUID. Com esse atributo, a `UserSecretsConfigBuilder` examinar um local local conhecido (`%APPDATA%\Microsoft\UserSecrets\<UserSecrets Id>\secrets.xml`) para um arquivo de segredos que pertence a esse identificador.
+* `userSecretsFile`-um atributo opcional especificando o arquivo que contém os segredos. O caractere `~` pode ser usado no início para fazer referência à raiz do aplicativo. Esse atributo ou o atributo `userSecretsId` é necessário. Se ambos forem especificados, `userSecretsFile` terá precedência.
+* `optional`: booliano, valor padrão `true`-impede uma exceção se o arquivo de segredos não puder ser encontrado. 
+* O valor do atributo `name` é arbitrário.
 
 O arquivo de segredos tem o seguinte formato:
 
@@ -224,15 +224,15 @@ O arquivo de segredos tem o seguinte formato:
     Microsoft.Configuration.ConfigurationBuilders.Azure" />
 ```
 
-O [AzureKeyVaultConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Azure/) lê os valores armazenados na [Azure Key Vault](/azure/key-vault/key-vault-whatis).
+O [AzureKeyVaultConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Azure/) lê os valores armazenados no [Azure Key Vault](/azure/key-vault/key-vault-whatis).
 
-`vaultName` é necessário (o nome do cofre) ou um URI para o cofre. Os outros atributos permitem o controle sobre qual cofre para se conectar ao, mas serão necessárias apenas se o aplicativo não está em execução em um ambiente que funciona com `Microsoft.Azure.Services.AppAuthentication`. A biblioteca de autenticação de serviços do Azure é usada para selecionar automaticamente as informações de conexão do ambiente de execução se possível. Você pode substituir automaticamente pegar as informações de conexão, fornecendo uma cadeia de caracteres de conexão.
+`vaultName` é necessário (o nome do cofre ou um URI para o cofre). Os outros atributos permitem o controle sobre a qual cofre se conectar, mas são necessários apenas se o aplicativo não estiver em execução em um ambiente que funcione com `Microsoft.Azure.Services.AppAuthentication`. A biblioteca de autenticação dos serviços do Azure é usada para escolher automaticamente as informações de conexão do ambiente de execução, se possível. Você pode substituir a seleção automática de informações de conexão fornecendo uma cadeia de conexão.
 
-* `vaultName` -Necessário se `uri` no não fornecido. Especifica o nome do cofre em sua assinatura do Azure do qual ler os pares chave/valor.
-* `connectionString` -Uma cadeia de caracteres de conexão utilizável por [o AzureServiceTokenProvider](https://docs.microsoft.com/en-us/azure/key-vault/service-to-service-authentication#connection-string-support)
-* `uri` -Conecta-se para outros provedores de Cofre de chaves especificado `uri` valor. Se não for especificado, do Azure (`vaultName`) é o provedor do cofre.
-* `version` -O azure Key Vault fornece um recurso de controle de versão para segredos. Se `version` for especificado, o construtor apenas recupera segredos compatível com esta versão.
-* `preloadSecretNames` -Por padrão, esse construtor querys **todos os** chave nomes no cofre de chaves quando ele é inicializado. Para evitar a leitura de todos os valores de chave, defina esse atributo como `false`. Definir isso como `false` lê segredos um por vez. Lendo um de cada vez pode útil se o cofre permite o acesso de "Get", mas não a "lista" acessar os segredos. **Observação:** Ao usar `Greedy` modo `preloadSecretNames` deve ser `true` (o padrão).
+* `vaultName`-necessário se `uri` não for fornecido. Especifica o nome do cofre em sua assinatura do Azure a partir da qual os pares de chave/valor são lidos.
+* `connectionString`-uma cadeia de conexão utilizável por [o azureservicetokenprovider](https://docs.microsoft.com/azure/key-vault/service-to-service-authentication#connection-string-support)
+* `uri`-conecta-se a outros provedores de Key Vault com o valor de `uri` especificado. Se não for especificado, o Azure (`vaultName`) será o provedor de cofre.
+* `version`-Azure Key Vault fornece um recurso de controle de versão para segredos. Se `version` for especificado, o Construtor recuperará somente os segredos correspondentes a esta versão.
+* `preloadSecretNames`-por padrão, esse construtor consulta **todos os** nomes de chave no cofre de chaves quando ele é inicializado. Para evitar a leitura de todos os valores de chave, defina esse atributo como `false`. Definir isso como `false` lê segredos um de cada vez. A leitura de segredos um de cada vez pode ser útil se o cofre permitir acesso "Get", mas não "lista". **Observação:** Ao usar o modo de `Greedy`, `preloadSecretNames` deve ser `true` (o padrão.)
 
 ### <a name="keyperfileconfigbuilder"></a>KeyPerFileConfigBuilder
 
@@ -247,19 +247,19 @@ O [AzureKeyVaultConfigBuilder](https://www.nuget.org/packages/Microsoft.Configur
     Microsoft.Configuration.ConfigurationBuilders.KeyPerFile" />
 ```
 
-[KeyPerFileConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.KeyPerFile/) é um construtor de configuração básica que usa arquivos de um diretório como uma fonte de valores. Nome de um arquivo é a chave e o conteúdo é o valor. Esse construtor de configuração pode ser útil ao executar em um ambiente de contêiner orquestrada. Sistemas, como Docker Swarm e Kubernetes fornecem `secrets` para seus contêineres do windows orquestrada dessa maneira chave por arquivo.
+[KeyPerFileConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.KeyPerFile/) é um construtor de configuração básico que usa os arquivos de um diretório como uma fonte de valores. O nome de um arquivo é a chave e o conteúdo é o valor. Esse construtor de configuração pode ser útil ao ser executado em um ambiente de contêiner orquestrado. Sistemas como Docker Swarm e kubernetes fornecem `secrets` aos contêineres do Windows orquestrados nessa maneira de chave por arquivo.
 
 Detalhes do atributo:
 
-* `directoryPath` -Required. Especifica um caminho para procurar valores. Docker para Windows segredos são armazenados na *C:\ProgramData\Docker\secrets* diretório por padrão.
-* `ignorePrefix` -Arquivos que começam com esse prefixo serão excluídas. O padrão é "ignore".
-* `keyDelimiter` -O valor padrão é `null`. Se for especificado, o construtor de configuração atravessa vários níveis de diretório, a criação de nomes de chave com este delimitador. Se esse valor for `null`, o construtor de configuração olha apenas para o nível superior do diretório.
-* `optional` -O valor padrão é `false`. Especifica se o construtor de configuração deve causar erros se o diretório de origem não existe.
+* `directoryPath`-obrigatório. Especifica um caminho para procurar valores. Os segredos de Docker for Windows são armazenados no diretório *C:\ProgramData\Docker\secrets* por padrão.
+* `ignorePrefix`-os arquivos que começam com esse prefixo são excluídos. O padrão é "ignorar".
+* `keyDelimiter`-o valor padrão é `null`. Se especificado, o construtor de configuração atravessa vários níveis do diretório, criando nomes de chave com esse delimitador. Se esse valor for `null`, o construtor de configuração apenas examinará o nível superior do diretório.
+* `optional`-o valor padrão é `false`. Especifica se o construtor de configuração deve causar erros se o diretório de origem não existir.
 
 ### <a name="simplejsonconfigbuilder"></a>SimpleJsonConfigBuilder
 
 > [!WARNING]
-> Nunca armazenar senhas, cadeias de caracteres de conexão confidenciais ou outros dados confidenciais no código-fonte. Segredos de produção não devem ser usados para desenvolvimento ou teste.
+> Nunca armazene senhas, cadeias de conexão confidenciais ou outros dados confidenciais no código-fonte. Os segredos de produção não devem ser usados para desenvolvimento ou teste.
 
 ```xml
 <add name="SimpleJson"
@@ -271,16 +271,16 @@ Detalhes do atributo:
     Microsoft.Configuration.ConfigurationBuilders.Json" />
 ```
 
-Projetos do .NET core frequentemente usam arquivos JSON para a configuração. O [SimpleJsonConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Json/) construtor permite que os arquivos de JSON do .NET Core a ser usado no .NET Framework. Esse construtor de configuração é fornece um mapeamento básico de uma fonte de chave/valor simples em áreas específicas de chave/valor de configuração do .NET Framework. Esse construtor de configuração faz **não** fornecem configurações hierárquica. O arquivo de backup do JSON é semelhante a um dicionário, não um objeto hierárquico complexo. Um arquivo hierárquico multinível pode ser usado. Esse provedor `flatten`s a profundidade, acrescentando o nome da propriedade em cada nível usando `:` como um delimitador.
+Os projetos do .NET Core frequentemente usam arquivos JSON para configuração. O [SimpleJsonConfigBuilder](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Json/) Builder permite que os arquivos JSON do .NET Core sejam usados no .NET Framework. Esse construtor de configuração fornece um mapeamento básico de uma fonte de chave/valor simples em áreas de chave/valor específicas da configuração de .NET Framework. Este construtor de configuração **não fornece configurações** hierárquicas. O arquivo de backup JSON é semelhante a um dicionário, e não a um objeto hierárquico complexo. Um arquivo hierárquico de vários níveis pode ser usado. Esse provedor `flatten`a profundidade acrescentando o nome da propriedade em cada nível usando `:` como um delimitador.
 
 Detalhes do atributo:
 
-* `jsonFile` -Required. Especifica o arquivo JSON para ler. O `~` caractere pode ser usado no início para fazer referência a raiz do aplicativo.
-* `optional` -Booliano, o valor padrão é `true`. Impede a gerar exceções se o arquivo JSON não pode ser encontrado.
-* `jsonMode` - `[Flat|Sectional]`. `Flat` é o padrão. Quando `jsonMode` é `Flat`, o arquivo JSON é uma fonte de chave/valor único simples. O `EnvironmentConfigBuilder` e `AzureKeyVaultConfigBuilder` também são fontes de chave/valor único simples. Quando o `SimpleJsonConfigBuilder` está configurado no `Sectional` modo:
+* `jsonFile`-obrigatório. Especifica o arquivo JSON do qual ler. O caractere de `~` pode ser usado no início para fazer referência à raiz do aplicativo.
+* `optional`-booliano, o valor padrão é `true`. Impede o lançamento de exceções se o arquivo JSON não puder ser encontrado.
+* `jsonMode` - `[Flat|Sectional]`. `Flat` é o padrão. Quando `jsonMode` é `Flat`, o arquivo JSON é uma única origem de chave/valor simples. As `EnvironmentConfigBuilder` e `AzureKeyVaultConfigBuilder` também são fontes simples de chave/valor. Quando a `SimpleJsonConfigBuilder` é configurada no modo de `Sectional`:
 
   * O arquivo JSON é dividido conceitualmente apenas no nível superior em vários dicionários.
-  * Cada um dos dicionários só será aplicada à seção de configuração que corresponde ao nome de propriedade de nível superior anexado a eles. Por exemplo:
+  * Cada um dos dicionários só é aplicado à seção de configuração que corresponde ao nome de propriedade de nível superior anexado a eles. Por exemplo:
 
 ```json
     {
@@ -295,18 +295,18 @@ Detalhes do atributo:
     }
 ```
 
-## <a name="implementing-a-custom-keyvalue-configuration-builder"></a>Implementando um construtor de configuração de chave/valor personalizados
+## <a name="implementing-a-custom-keyvalue-configuration-builder"></a>Implementando um construtor de configuração de chave/valor personalizado
 
-Se os construtores de configuração não atenderem às suas necessidades, você pode escrever um personalizado. O `KeyValueConfigBuilder` classe base manipula a maioria das preocupações de prefixo e modos de substituição. Um projeto de implementação só são necessárias:
+Se os construtores de configuração não atenderem às suas necessidades, você poderá escrever um personalizado. A classe base `KeyValueConfigBuilder` lida com os modos de substituição e a maioria das preocupações com o prefixo. Um projeto de implementação precisa apenas de:
 
-* Herdar da classe base e implementar uma fonte básica de pares chave/valor por meio de `GetValue` e `GetAllValues`:
-* Adicione a [Microsoft.Configuration.ConfigurationBuilders.Base](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Base/) ao projeto.
+* Herdar da classe base e implementar uma fonte básica de pares de chave/valor por meio do `GetValue` e `GetAllValues`:
+* Adicione o [Microsoft. Configuration. ConfigurationBuilders. base](https://www.nuget.org/packages/Microsoft.Configuration.ConfigurationBuilders.Base/) ao projeto.
 
 [!code-csharp[Main](config-builder/MyConfigBuilders/MyCustomConfigBuilder.cs)]
 
-O `KeyValueConfigBuilder` classe base fornece grande parte do comportamento do trabalho e consistente entre chave/valor construtores de configuração.
+A classe base `KeyValueConfigBuilder` fornece grande parte do comportamento de trabalho e consistente entre os construtores de configuração de chave/valor.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 * [Repositório GitHub de construtores de configuração](https://github.com/aspnet/MicrosoftConfigurationBuilders)
-* [Autenticação serviço a serviço para o Azure Key Vault usando o .NET](/azure/key-vault/service-to-service-authentication#connection-string-support)
+* [Autenticação serviço a serviço para Azure Key Vault usando o .NET](/azure/key-vault/service-to-service-authentication#connection-string-support)

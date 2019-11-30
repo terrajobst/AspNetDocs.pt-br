@@ -1,164 +1,164 @@
 ---
 uid: web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
-title: Classificação personalizados paginados dados (VB) | Microsoft Docs
+title: Classificando dados personalizados paginados (VB) | Microsoft Docs
 author: rick-anderson
-description: No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da web. Neste tutorial, podemos ver como estender o anterior...
+description: No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da Web. Neste tutorial, vemos como estender o anterior...
 ms.author: riande
 ms.date: 08/15/2006
 ms.assetid: 4823a186-caaf-4116-a318-c7ff4d955ddc
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/sorting-custom-paged-data-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 4c0d015c7d0a294464a3c22dd14a1ad98fbf3235
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 934c7558d907611732ae6f04c553bc9e295c569b
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131365"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74618459"
 ---
 # <a name="sorting-custom-paged-data-vb"></a>Classificação de dados personalizados paginados (VB)
 
 por [Scott Mitchell](https://twitter.com/ScottOnWriting)
 
-[Baixe o aplicativo de exemplo](http://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_VB.exe) ou [baixar PDF](sorting-custom-paged-data-vb/_static/datatutorial26vb1.pdf)
+[Baixar o aplicativo de exemplo](https://download.microsoft.com/download/9/c/1/9c1d03ee-29ba-4d58-aa1a-f201dcc822ea/ASPNET_Data_Tutorial_26_VB.exe) ou [baixar PDF](sorting-custom-paged-data-vb/_static/datatutorial26vb1.pdf)
 
-> No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da web. Neste tutorial, podemos ver como estender o exemplo anterior para incluir suporte para paginação personalizada de classificação.
+> No tutorial anterior, aprendemos como implementar a paginação personalizada ao apresentar dados em uma página da Web. Neste tutorial, vemos como estender o exemplo anterior para incluir suporte à classificação de paginação personalizada.
 
 ## <a name="introduction"></a>Introdução
 
-Em comparação com paginação padrão, paginação personalizada pode melhorar o desempenho da paginação por meio de dados em várias ordens de magnitude, tornando personalizado paginação a opção de implementação de paginação de fato quando a paginação de grandes quantidades de dados. Implementando a paginação personalizada é mais envolvida que a implementação padrão de paginação, no entanto, especialmente quando adicionando classificação à combinação. Neste tutorial, ampliaremos o exemplo daquele anterior para incluir suporte para classificação *e* paginação personalizada.
+Em comparação com a paginação padrão, a paginação personalizada pode melhorar o desempenho da paginação por meio de dados por várias ordens de magnitude, tornando a paginação personalizada a opção de implementação da paginação de fato ao paginar por A implementação de paginação personalizada é mais envolvida do que a implementação de paginação padrão, no entanto, especialmente ao adicionar classificação à combinação. Neste tutorial, estenderemos o exemplo do anterior para incluir suporte para classificação *e* paginação personalizada.
 
 > [!NOTE]
-> Uma vez que esse tutorial complementa aquele anterior, antes de início dedique uns momentos para copiar a sintaxe declarativa dentro a `<asp:Content>` elemento da página da web anterior do tutorial s (`EfficientPaging.aspx`) e cole-o entre o `<asp:Content>` elemento em que o `SortParameter.aspx` página. Voltar à etapa 1 dos [adicionando controles de validação para a edição e inserção de Interfaces](../editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-vb.md) tutorial para uma discussão mais detalhada sobre como replicar a funcionalidade de uma página ASP.NET para outro.
+> Como este tutorial se baseia no anterior, antes de começar, Reserve um tempo para copiar a sintaxe declarativa dentro do elemento `<asp:Content>` da página da Web do tutorial anterior (`EfficientPaging.aspx`) e cole-a entre o elemento `<asp:Content>` na página `SortParameter.aspx`. Consulte novamente a etapa 1 do tutorial [adicionando controles de validação para as interfaces de edição e inserção](../editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-vb.md) para obter uma discussão mais detalhada sobre como replicar a funcionalidade de uma página ASP.net para outra.
 
-## <a name="step-1-reexamining-the-custom-paging-technique"></a>Etapa 1: Reavaliando a técnica de paginação personalizada
+## <a name="step-1-reexamining-the-custom-paging-technique"></a>Etapa 1: reexaminando a técnica de paginação personalizada
 
-A paginação personalizada funcione corretamente, devemos implementar alguma técnica que com eficiência pode pegar um subconjunto específico de registros fornecido aos parâmetros de índice de linha inicial e o número máximo de linhas. Há uma série de técnicas que podem ser usadas para atingir esse objetivo. No tutorial anterior analisamos realizar isso usando o Microsoft SQL Server 2005 s novo `ROW_NUMBER()` função de classificação. Em resumo, o `ROW_NUMBER()` função de classificação atribui um número de linha para cada linha retornada por uma consulta que é classificada por uma ordem de classificação especificada. O subconjunto apropriado de registros é obtido, em seguida, retornando uma seção específica dos resultados numerados. A consulta a seguir ilustra como usar essa técnica para retornar esses produtos numerados 11 a 20 quando os resultados de classificação ordenada em ordem alfabética pelo `ProductName`:
+Para que a paginação personalizada funcione corretamente, devemos implementar alguma técnica que possa pegar com eficiência um subconjunto específico de registros, de acordo com o índice de linha inicial e os parâmetros de linhas máximas. Há algumas técnicas que podem ser usadas para atingir esse objetivo. No tutorial anterior, vimos fazer isso usando Microsoft SQL Server nova função de classificação de `ROW_NUMBER()` de 2005. Em suma, a função de classificação `ROW_NUMBER()` atribui um número de linha a cada linha retornada por uma consulta que é classificada por uma ordem de classificação especificada. O subconjunto apropriado de registros é obtido retornando uma seção específica dos resultados numerados. A consulta a seguir ilustra como usar essa técnica para retornar os produtos numerados de 11 a 20 ao classificar os resultados ordenados alfabeticamente pelo `ProductName`:
 
 [!code-sql[Main](sorting-custom-paged-data-vb/samples/sample1.sql)]
 
-Essa técnica funciona bem para paginação usando uma ordem de classificação específicas (`ProductName` classificados em ordem alfabética, neste caso), mas a consulta precisa ser modificado para mostrar os resultados classificados por uma expressão de classificação diferentes. O ideal é que a consulta anterior poderia ser reescrita para usar um parâmetro no `OVER` cláusula, da seguinte forma:
+Essa técnica funciona bem para paginação usando uma ordem de classificação específica (`ProductName` classificada alfabeticamente, nesse caso), mas a consulta precisa ser modificada para mostrar os resultados classificados por uma expressão de classificação diferente. O ideal é que a consulta acima pudesse ser reescrita para usar um parâmetro na cláusula `OVER`, desta forma:
 
 [!code-sql[Main](sorting-custom-paged-data-vb/samples/sample2.sql)]
 
-Infelizmente, com parâmetros `ORDER BY` cláusulas não são permitidas. Em vez disso, devemos criar um procedimento armazenado que aceita um `@sortExpression` parâmetro de entrada, mas usa uma das seguintes alternativas:
+Infelizmente, não são permitidas cláusulas de `ORDER BY` parametrizadas. Em vez disso, devemos criar um procedimento armazenado que aceita um parâmetro de entrada `@sortExpression`, mas usa uma das seguintes soluções alternativas:
 
-- Escrever consultas embutido em código para cada uma das expressões de classificação que podem ser usadas; em seguida, use `IF/ELSE` instruções T-SQL para determinar qual consulta a ser executada.
-- Use uma `CASE` instrução para fornecer dinâmico `ORDER BY` expressões com base no `@sortExpressio` n parâmetro de entrada; consulte o usado para a seção classificação dinamicamente resultados da consulta em [Power do SQL `CASE` instruções](http://www.4guysfromrolla.com/webtech/102704-1.shtml) Para obter mais informações.
-- Criar a consulta apropriada como uma cadeia de caracteres no procedimento armazenado e, em seguida, use [as `sp_executesql` procedimento armazenado do sistema](https://msdn.microsoft.com/library/ms188001.aspx) para executar a consulta dinâmica.
+- Escreva consultas embutidas em código para cada uma das expressões de classificação que podem ser usadas; em seguida, use `IF/ELSE` instruções T-SQL para determinar qual consulta deve ser executada.
+- Use uma instrução `CASE` para fornecer expressões `ORDER BY` dinâmicas com base no parâmetro de entrada `@sortExpressio` n; consulte a seção usado para classificar dinamicamente os resultados da consulta no [Power of SQL `CASE` Statements](http://www.4guysfromrolla.com/webtech/102704-1.shtml) para obter mais informações.
+- Crie a consulta apropriada como uma cadeia de caracteres no procedimento armazenado e, em seguida, use [o procedimento armazenado do sistema `sp_executesql`](https://msdn.microsoft.com/library/ms188001.aspx) para executar a consulta dinâmica.
 
-Cada uma dessas soluções tem algumas desvantagens. A primeira opção não é tão fácil de manter como os outros dois pois ele requer que você crie uma consulta para cada expressão de classificação possíveis. Portanto, se você decidir posteriormente adicionar campos novos e classificáveis GridView. Você também precisará voltar e atualize o procedimento armazenado. A segunda abordagem tem algumas sutilezas que apresentam as preocupações de desempenho ao classificar por colunas de banco de dados de não cadeia de caracteres e também é prejudicada os mesmos problemas de facilidade de manutenção, como o primeiro. E a terceira opção, que usa SQL dinâmico, introduz o risco de um ataque de injeção de SQL, se um invasor é capaz de executar o procedimento armazenado, passando os valores de parâmetro de entrada de sua escolha.
+Cada uma dessas soluções alternativas tem algumas desvantagens. A primeira opção não é tão passível de manutenção quanto as outras duas, pois requer que você crie uma consulta para cada expressão de classificação possível. Portanto, se você decidir posteriormente adicionar novos campos classificável ao GridView, também precisará voltar e atualizar o procedimento armazenado. A segunda abordagem tem algumas sutilezas que apresentam preocupações de desempenho ao classificar por colunas de banco de dados que não são de cadeia de caracteres e também sofrem com os mesmos problemas de manutenção que o primeiro. E a terceira opção, que usa o SQL dinâmico, apresenta o risco para um ataque de injeção de SQL se um invasor for capaz de executar o procedimento armazenado passando os valores de parâmetro de entrada de sua escolha.
 
-Embora nenhuma dessas abordagens é perfeita, acho que a terceira opção é o melhor dos três. Com o uso de SQL dinâmico, ele oferece um nível de flexibilidade que não os outros dois. Além disso, um ataque de injeção de SQL pode ser explorado somente se um invasor é capaz de executar o procedimento armazenado, passando os parâmetros de entrada de sua escolha. Uma vez que a DAL usa consultas parametrizadas, o ADO.NET protegerá esses parâmetros que são enviados para o banco de dados por meio da arquitetura, que significa que a vulnerabilidade de ataque de injeção de SQL existe somente se o invasor pode executar diretamente o procedimento armazenado.
+Embora nenhuma dessas abordagens seja perfeita, acho que a terceira opção é a melhor das três. Com o uso do SQL dinâmico, ele oferece um nível de flexibilidade que os outros dois não têm. Além disso, um ataque de injeção de SQL só poderá ser explorado se um invasor puder executar o procedimento armazenado passando os parâmetros de entrada de sua escolha. Como a DAL usa consultas parametrizadas, o ADO.NET protegerá esses parâmetros que são enviados ao banco de dados por meio da arquitetura, o que significa que a vulnerabilidade de ataque de injeção de SQL só existe se o invasor puder executar o procedimento armazenado diretamente.
 
-Para implementar essa funcionalidade, crie um novo procedimento armazenado no banco de dados Northwind chamado `GetProductsPagedAndSorted`. Esse procedimento armazenado deve aceitar parâmetros de entrada: `@sortExpression`, um parâmetro de entrada do tipo `nvarchar(100`) que especifica como os resultados devem ser classificados e é injetado diretamente após o `ORDER BY` texto no `OVER` cláusula; e `@startRowIndex` e `@maximumRows`, os mesmos parâmetros de entrada do inteiro de dois a `GetProductsPaged` examinado no tutorial anterior de procedimento armazenado. Criar o `GetProductsPagedAndSorted` procedimento armazenado usando o script a seguir:
+Para implementar essa funcionalidade, crie um novo procedimento armazenado no banco de dados Northwind chamado `GetProductsPagedAndSorted`. Esse procedimento armazenado deve aceitar três parâmetros de entrada: `@sortExpression`, um parâmetro de entrada do tipo `nvarchar(100`) que especifica como os resultados devem ser classificados e inseridos diretamente após o texto de `ORDER BY` na cláusula `OVER`; e `@startRowIndex` e `@maximumRows`, os mesmos dois parâmetros de entrada de inteiro do procedimento armazenado `GetProductsPaged` examinado no tutorial anterior. Crie o procedimento armazenado `GetProductsPagedAndSorted` usando o seguinte script:
 
 [!code-sql[Main](sorting-custom-paged-data-vb/samples/sample3.sql)]
 
-O procedimento armazenado é iniciado, garantindo que um valor para o `@sortExpression` parâmetro foi especificado. Se ele estiver ausente, os resultados são classificados por `ProductID`. Em seguida, a consulta SQL dinâmica é construída. Observe que a consulta SQL dinâmica aqui um pouco diferente de nossas consultas anteriores usadas para recuperar todas as linhas da tabela produtos. Nos exemplos anteriores, obtivemos cada categoria de produto s associada nomes s s e o fornecedor, usando uma subconsulta. Essa decisão foi tomada volta a [criando uma camada de acesso de dados](../introduction/creating-a-data-access-layer-vb.md) tutorial e foi feito em vez de usar `JOIN` s porque o TableAdapter não pode criar automaticamente a inserção associada, atualizar e excluir os métodos de tal consultas. O `GetProductsPagedAndSorted` procedimento armazenado, no entanto, deve usar `JOIN` s para os resultados para serem ordenados pelos nomes de categoria ou fornecedor.
+O procedimento armazenado começa garantindo que um valor para o parâmetro `@sortExpression` foi especificado. Se estiver ausente, os resultados serão classificados por `ProductID`. Em seguida, a consulta SQL dinâmica é construída. Observe que a consulta SQL dinâmica aqui difere ligeiramente das consultas anteriores usadas para recuperar todas as linhas da tabela Products. Nos exemplos anteriores, obtivemos cada um dos produtos associados à categoria s e nomes de fornecedores usando uma subconsulta. Essa decisão foi tomada de volta no tutorial [criando uma camada de acesso a dados](../introduction/creating-a-data-access-layer-vb.md) e foi feita em vez de usar `JOIN` s porque o TableAdapter não pode criar automaticamente os métodos INSERT, Update e Delete associados para essas consultas. O procedimento armazenado `GetProductsPagedAndSorted`, no entanto, deve usar `JOIN` s para que os resultados sejam ordenados pelos nomes de fornecedor ou categoria.
 
-Essa consulta dinâmica é criada concatenando as partes de consulta estática e o `@sortExpression`, `@startRowIndex`, e `@maximumRows` parâmetros. Uma vez que `@startRowIndex` e `@maximumRows` são parâmetros de inteiro, eles devem ser convertidos em nvarchars para ser concatenado corretamente. Depois que esta consulta SQL dinâmica foi construída, ele é executado por meio de `sp_executesql`.
+Essa consulta dinâmica é criada concatenando-se as partes de consulta estática e os parâmetros `@sortExpression`, `@startRowIndex`e `@maximumRows`. Como `@startRowIndex` e `@maximumRows` são parâmetros inteiros, eles devem ser convertidos em nvarchars para serem concatenados corretamente. Depois que essa consulta SQL dinâmica tiver sido construída, ela será executada por meio de `sp_executesql`.
 
-Reserve um tempo para testar esse procedimento armazenado com valores diferentes para o `@sortExpression`, `@startRowIndex`, e `@maximumRows` parâmetros. Do Gerenciador de servidores, clique com botão direito no nome do procedimento armazenado e escolha Executar. Isso abrirá a caixa de diálogo Run Stored Procedure no qual você pode inserir os parâmetros de entrada (consulte a Figura 1). Para classificar os resultados pelo nome da categoria, use CategoryName para o `@sortExpression` valor de parâmetro; para classificar pelo nome da empresa supplier s, use o CompanyName. Depois de fornecer os valores de parâmetros, clique em Okey. Os resultados são exibidos na janela de saída. Figura 2 mostra os resultados quando retornar produtos classificados 11 a 20 ao classificar pela `UnitPrice` em ordem decrescente.
+Reserve um tempo para testar esse procedimento armazenado com valores diferentes para os parâmetros `@sortExpression`, `@startRowIndex`e `@maximumRows`. No Gerenciador de Servidores, clique com o botão direito do mouse no nome do procedimento armazenado e escolha Executar. Isso abrirá a caixa de diálogo Executar procedimento armazenado na qual você pode inserir os parâmetros de entrada (consulte a Figura 1). Para classificar os resultados pelo nome da categoria, use CategoryName para o valor do parâmetro `@sortExpression`; para classificar pelo nome da empresa do fornecedor, use CompanyName. Depois de fornecer os valores dos parâmetros, clique em OK. Os resultados são exibidos na janela saída. A Figura 2 mostra os resultados ao retornar produtos classificados de 11 a 20 ao ordenar pelo `UnitPrice` em ordem decrescente.
 
-![Testar valores diferentes para os procedimento armazenado s três parâmetros de entrada](sorting-custom-paged-data-vb/_static/image1.png)
+![Experimente valores diferentes para os três parâmetros de entrada do procedimento armazenado](sorting-custom-paged-data-vb/_static/image1.png)
 
-**Figura 1**: Testar valores diferentes para os procedimento armazenado s três parâmetros de entrada
+**Figura 1**: Experimente valores diferentes para os três parâmetros de entrada do procedimento armazenado
 
-[![O procedimento armazenado s resultados são mostrados na janela de saída](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
+[![os resultados dos procedimentos armazenados são mostrados no Janela de Saída](sorting-custom-paged-data-vb/_static/image3.png)](sorting-custom-paged-data-vb/_static/image2.png)
 
-**Figura 2**: O procedimento armazenado s resultados são mostrados na janela de saída ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image4.png))
+**Figura 2**: os resultados de s do procedimento armazenado são mostrados na janela de saída ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image4.png))
 
 > [!NOTE]
-> Quando os resultados de classificação por especificado `ORDER BY` coluna o `OVER` cláusula, SQL Server deve classificar os resultados. Isso é uma operação rápida se houver um índice clusterizado pela coluna (s) os resultados estão sendo ordenados por ou se há uma cobertura de índice, mas pode ser mais caro caso contrário. Para melhorar o desempenho de consultas suficientemente grandes, considere a adição de um índice não clusterizado para a coluna pela qual os resultados são ordenados por. Consulte a [funções de classificação e o desempenho no SQL Server 2005](http://www.sql-server-performance.com/ak_ranking_functions.asp) para obter mais detalhes.
+> Ao ordenar os resultados pela coluna `ORDER BY` especificada na cláusula `OVER`, SQL Server deve classificar os resultados. Essa é uma operação rápida se houver um índice clusterizado sobre as colunas que os resultados estão sendo ordenados por ou se houver um índice de cobertura, mas pode ser mais dispendioso do contrário. Para melhorar o desempenho de consultas grandes o suficiente, considere adicionar um índice não clusterizado à coluna pela qual os resultados são ordenados. Consulte [classificando funções e desempenho no SQL Server 2005](http://www.sql-server-performance.com/ak_ranking_functions.asp) para obter mais detalhes.
 
-## <a name="step-2-augmenting-the-data-access-and-business-logic-layers"></a>Etapa 2: Aumentando o acesso a dados e camadas de lógica comercial
+## <a name="step-2-augmenting-the-data-access-and-business-logic-layers"></a>Etapa 2: aumentando as camadas de acesso a dados e da lógica de negócios
 
-Com o `GetProductsPagedAndSorted` procedimento armazenado criado, nossa próxima etapa é fornecer um meio para executar esse procedimento armazenado por meio de nossa arquitetura de aplicativo. Isso envolve a adição de um método apropriado para a BLL e DAL. Permitir que o s comece adicionando um método para o DAL. Abra o `Northwind.xsd` tipada DataSet, o botão direito do mouse no `ProductsTableAdapter`e escolha a opção de adicionar consulta no menu de contexto. Como fizemos no tutorial anterior, que queremos configurar esse novo método DAL para usar um procedimento armazenado existente - `GetProductsPagedAndSorted`, nesse caso. Iniciar, indicando que você deseja que o novo método do TableAdapter para usar um procedimento armazenado existente.
+Com o procedimento armazenado `GetProductsPagedAndSorted` criado, nossa próxima etapa é fornecer um meio de executar esse procedimento armazenado por meio de nossa arquitetura de aplicativo. Isso envolve a adição de um método apropriado para a DAL e a BLL. Deixe que os s comecem adicionando um método à DAL. Abra o `Northwind.xsd` DataSet tipado, clique com o botão direito do mouse na `ProductsTableAdapter`e escolha a opção Adicionar consulta no menu de contexto. Como fizemos no tutorial anterior, queremos configurar esse novo método DAL para usar um procedimento armazenado existente – `GetProductsPagedAndSorted`, nesse caso. Comece indicando que você deseja que o novo método TableAdapter use um procedimento armazenado existente.
 
-![Optar por usar um procedimento armazenado existente](sorting-custom-paged-data-vb/_static/image5.png)
+![Escolha usar um procedimento armazenado existente](sorting-custom-paged-data-vb/_static/image5.png)
 
-**Figura 3**: Optar por usar um procedimento armazenado existente
+**Figura 3**: escolher usar um procedimento armazenado existente
 
-Para especificar o procedimento armazenado para usar, selecione o `GetProductsPagedAndSorted` procedimento na lista suspensa é armazenado na próxima tela.
+Para especificar o procedimento armazenado a ser usado, selecione o `GetProductsPagedAndSorted` procedimento armazenado na lista suspensa na próxima tela.
 
-![Use o GetProductsPagedAndSorted procedimento armazenado](sorting-custom-paged-data-vb/_static/image6.png)
+![Usar o procedimento armazenado GetProductsPagedAndSorted](sorting-custom-paged-data-vb/_static/image6.png)
 
-**Figura 4**: Use o GetProductsPagedAndSorted procedimento armazenado
+**Figura 4**: usar o procedimento armazenado GetProductsPagedAndSorted
 
-Esse procedimento armazenado retorna um conjunto de registros, pois seus resultados dessa forma, na próxima tela, indicam que ele retorna dados tabulares.
+Esse procedimento armazenado retorna um conjunto de registros como seus resultados, portanto, na próxima tela, indique que ele retorna dados tabulares.
 
 ![Indicar que o procedimento armazenado retorna dados tabulares](sorting-custom-paged-data-vb/_static/image7.png)
 
-**Figura 5**: Indicar que o procedimento armazenado retorna dados tabulares
+**Figura 5**: indicar que o procedimento armazenado retorna dados tabulares
 
-Finalmente, crie métodos DAL que usam os dois o preenchimento uma DataTable e retornar um padrões de DataTable, os métodos de nomenclatura `FillPagedAndSorted` e `GetProductsPagedAndSorted`, respectivamente.
+Por fim, crie métodos DAL que usam o Fill a DataTable e retornem os padrões de DataTable, nomeando os métodos `FillPagedAndSorted` e `GetProductsPagedAndSorted`, respectivamente.
 
-![Escolha os nomes de métodos](sorting-custom-paged-data-vb/_static/image8.png)
+![Escolha os nomes dos métodos](sorting-custom-paged-data-vb/_static/image8.png)
 
-**Figura 6**: Escolha os nomes de métodos
+**Figura 6**: escolher os nomes dos métodos
 
-Agora que estamos ve estendido a DAL, podemos está pronto para ativar a BLL. Abra o `ProductsBLL` arquivo de classe e adicione um novo método, `GetProductsPagedAndSorted`. Esse método precisa aceitar parâmetros de entrada `sortExpression`, `startRowIndex`, e `maximumRows` e deve simplesmente chamar para baixo em s DAL `GetProductsPagedAndSorted` método, da seguinte forma:
+Agora que estendemos a DAL, estamos prontos para voltar para a BLL. Abra o arquivo de classe `ProductsBLL` e adicione um novo método `GetProductsPagedAndSorted`. Esse método precisa aceitar três parâmetros de entrada `sortExpression`, `startRowIndex`e `maximumRows` e deve simplesmente chamar para baixo o método `GetProductsPagedAndSorted` s da DAL, desta forma:
 
 [!code-vb[Main](sorting-custom-paged-data-vb/samples/sample4.vb)]
 
-## <a name="step-3-configuring-the-objectdatasource-to-pass-in-the-sortexpression-parameter"></a>Etapa 3: Configurando o ObjectDataSource para passar no parâmetro SortExpression
+## <a name="step-3-configuring-the-objectdatasource-to-pass-in-the-sortexpression-parameter"></a>Etapa 3: Configurando o ObjectDataSource para passar o parâmetro SortExpression
 
-Ter aumentado a DAL e BLL para incluir métodos que utilizam o `GetProductsPagedAndSorted` procedimento armazenado, tudo o que permanece é configurar o ObjectDataSource na `SortParameter.aspx` página para usar o novo método BLL e passar o `SortExpression` parâmetro baseado no coluna em que o usuário solicitou para classificar os resultados.
+Com o aumento da DAL e da BLL para incluir métodos que utilizam o procedimento armazenado `GetProductsPagedAndSorted`, tudo o que resta é configurar o ObjectDataSource na página `SortParameter.aspx` para usar o novo método BLL e passar o parâmetro `SortExpression` com base na coluna que o usuário solicitou a classificação dos resultados.
 
-Comece alterando o s ObjectDataSource `SelectMethod` partir `GetProductsPaged` para `GetProductsPagedAndSorted`. Isso pode ser feito por meio do Assistente Configurar fonte de dados, na janela Propriedades, ou diretamente a sintaxe declarativa. Em seguida, precisamos fornecer um valor para o s ObjectDataSource [ `SortParameterName` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.sortparametername.aspx). Se essa propriedade for definida, o ObjectDataSource tenta passar em s GridView `SortExpression` propriedade para o `SelectMethod`. Em particular, o ObjectDataSource procura um parâmetro de entrada cujo nome é igual ao valor da `SortParameterName` propriedade. Desde o s BLL `GetProductsPagedAndSorted` método tem o parâmetro de entrada expressão classificação denominado `sortExpression`, defina o s ObjectDataSource `SortExpression` propriedade sortExpression.
+Comece alterando o `SelectMethod` ObjectDataSource s de `GetProductsPaged` para `GetProductsPagedAndSorted`. Isso pode ser feito por meio do assistente para configurar fonte de dados, da janela Propriedades ou diretamente por meio da sintaxe declarativa. Em seguida, precisamos fornecer um valor para a Propriedade ObjectDataSource s [`SortParameterName`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.sortparametername.aspx). Se essa propriedade for definida, o ObjectDataSource tentará passar a Propriedade GridView s `SortExpression` para a `SelectMethod`. Em particular, o ObjectDataSource procura um parâmetro de entrada cujo nome é igual ao valor da propriedade `SortParameterName`. Como o método de `GetProductsPagedAndSorted` de BLL s tem o parâmetro de entrada da expressão de classificação chamado `sortExpression`, defina a Propriedade ObjectDataSource s `SortExpression` como sortExpression.
 
-Depois de fazer essas duas alterações, a sintaxe declarativa do ObjectDataSource s deve ser semelhante ao seguinte:
+Depois de fazer essas duas alterações, a sintaxe declarada de ObjectDataSource s deve ser semelhante ao seguinte:
 
 [!code-aspx[Main](sorting-custom-paged-data-vb/samples/sample5.aspx)]
 
 > [!NOTE]
-> Como com o tutorial anterior, certifique-se de que não faz o ObjectDataSource *não* incluem os parâmetros de entrada sortExpression, startRowIndex ou maximumRows em sua coleção SelectParameters.
+> Assim como no tutorial anterior, verifique se ObjectDataSource *não inclui os* parâmetros de entrada SortExpression, StartRowIndex ou MaximumRows em sua coleção SelectParameters.
 
-Para habilitar a classificação em GridView, basta marcar a caixa de seleção Habilitar classificação da GridView s marca inteligente, que define o s GridView `AllowSorting` propriedade para `true` e fazendo com que o texto do cabeçalho para cada coluna a ser renderizado como um LinkButton. Quando o usuário final clica em um dos botões de link do cabeçalho, um postback massacre e as etapas a seguir ocorrer:
+Para habilitar a classificação no GridView, basta marcar a caixa de seleção Habilitar classificação na marca inteligente de GridView, que define a Propriedade GridView s `AllowSorting` como `true` e fazendo com que o texto do cabeçalho de cada coluna seja renderizado como um LinkButton. Quando o usuário final clica em um dos LinkButton do cabeçalho, um postback massacre e as seguintes etapas se transseguirão:
 
-1. As atualizações de GridView seus [ `SortExpression` propriedade](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sortexpression.aspx) para o valor da `SortExpression` do campo cujo cabeçalho link foi clicado
-2. O ObjectDataSource invoca o s BLL `GetProductsPagedAndSorted` método, passando o s GridView `SortExpression` propriedade como o valor para o método s `sortExpression` parâmetro de entrada (juntamente com apropriado `startRowIndex` e `maximumRows` valores de parâmetro de entrada)
-3. A BLL invoca o DAL s `GetProductsPagedAndSorted` método
-4. A DAL executa o `GetProductsPagedAndSorted` procedimento armazenado, passando na `@sortExpression` parâmetro (juntamente com o `@startRowIndex` e `@maximumRows` valores de parâmetro de entrada)
-5. O procedimento armazenado retornará o subconjunto apropriado de dados para a BLL, que retorna para o ObjectDataSource; Esses dados, em seguida, são associados a GridView, renderizados em HTML e enviados para o usuário final
+1. O GridView atualiza sua [propriedade`SortExpression`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview.sortexpression.aspx) para o valor da `SortExpression` do campo cujo link de cabeçalho foi clicado
+2. O ObjectDataSource invoca o método `GetProductsPagedAndSorted` de BLL, passando a Propriedade GridView s `SortExpression` como o valor para o método s `sortExpression` parâmetro de entrada (juntamente com os valores apropriados `startRowIndex` e `maximumRows` de parâmetro de entrada)
+3. A BLL invoca o método da DAL s `GetProductsPagedAndSorted`
+4. A DAL executa o procedimento armazenado `GetProductsPagedAndSorted`, passando o parâmetro `@sortExpression` (juntamente com os valores de parâmetro de entrada `@startRowIndex` e `@maximumRows`)
+5. O procedimento armazenado retorna o subconjunto apropriado de dados para a BLL, que o retorna para o ObjectDataSource; esses dados são então ligados ao GridView, renderizados em HTML e enviados para o usuário final
 
-Figura 7 mostra a primeira página de resultados quando classificadas pelo `UnitPrice` em ordem crescente.
+A Figura 7 mostra a primeira página de resultados quando classificada pelo `UnitPrice` em ordem crescente.
 
-[![Os resultados são classificados por UnitPrice](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
+[![os resultados são classificados pelo PreçoUnitário](sorting-custom-paged-data-vb/_static/image10.png)](sorting-custom-paged-data-vb/_static/image9.png)
 
-**Figura 7**: Os resultados são classificados por UnitPrice ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image11.png))
+**Figura 7**: os resultados são classificados pelo PreçoUnitário ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image11.png))
 
-Embora a implementação atual corretamente pode classificar os resultados por nome do produto, nome da categoria, quantidade por unidade e o preço unitário, tentando ordenar os resultados pelo fornecedor resultados de nome em uma exceção de tempo de execução (consulte a Figura 8).
+Embora a implementação atual possa classificar corretamente os resultados por nome do produto, nome da categoria, quantidade por unidade e preço unitário, a tentativa de ordenar os resultados pelo nome do fornecedor resultará em uma exceção de tempo de execução (consulte a Figura 8).
 
-![A tentativa de classificar os resultados pelos resultados de fornecedor na seguinte exceção de tempo de execução](sorting-custom-paged-data-vb/_static/image12.png)
+![A tentativa de classificar os resultados pelo fornecedor resulta na seguinte exceção de tempo de execução](sorting-custom-paged-data-vb/_static/image12.png)
 
-**Figura 8**: A tentativa de classificar os resultados pelos resultados de fornecedor na seguinte exceção de tempo de execução
+**Figura 8**: tentando classificar os resultados pelo fornecedor resulta na seguinte exceção de tempo de execução
 
-Essa exceção ocorre porque o `SortExpression` os s GridView `SupplierName` BoundField é definido como `SupplierName`. No entanto, o fornecedor s nome na `Suppliers` tabela, na verdade, é chamada `CompanyName` foram um alias esse nome de coluna como `SupplierName`. No entanto, o `OVER` cláusula usada pelo `ROW_NUMBER()` não é possível usar o alias de função e deve usar o nome de coluna real. Portanto, alterar o `SupplierName` BoundField s `SortExpression` de NomeDoFornecedor para CompanyName (veja a Figura 9). Como mostra a Figura 10, após essa alteração, que os resultados podem ser classificados pelo fornecedor.
+Essa exceção ocorre porque o `SortExpression` de GridView s `SupplierName` BoundField está definido como `SupplierName`. No entanto, o nome do fornecedor na tabela `Suppliers` é, na verdade, chamado `CompanyName` temos um alias desse nome de coluna como `SupplierName`. No entanto, a cláusula `OVER` usada pela função `ROW_NUMBER()` não pode usar o alias e deve usar o nome real da coluna. Portanto, altere o `SupplierName` BoundField s `SortExpression` de Supplier para CompanyName (consulte a Figura 9). Como mostra a Figura 10, após essa alteração, os resultados podem ser classificados pelo fornecedor.
 
-![Altere o NomeDoFornecedor BoundField s SortExpression para CompanyName](sorting-custom-paged-data-vb/_static/image13.png)
+![Alterar o Supplier BoundField s SortExpression para CompanyName](sorting-custom-paged-data-vb/_static/image13.png)
 
-**Figura 9**: Altere o NomeDoFornecedor BoundField s SortExpression para CompanyName
+**Figura 9**: alterar o Supplier BoundField s SortExpression para CompanyName
 
-[![Os resultados agora podem ser classificados por fornecedor](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
+[![os resultados agora podem ser classificados por fornecedor](sorting-custom-paged-data-vb/_static/image15.png)](sorting-custom-paged-data-vb/_static/image14.png)
 
-**Figura 10**: Os resultados agora podem ser classificadas por fornecedor ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image16.png))
+**Figura 10**: os resultados agora podem ser classificados por fornecedor ([clique para exibir a imagem em tamanho normal](sorting-custom-paged-data-vb/_static/image16.png))
 
 ## <a name="summary"></a>Resumo
 
-A implementação de paginação personalizada, examinamos no tutorial anterior necessário que a ordem pela qual os resultados foram seja classificada ser especificado em tempo de design. Em resumo, isso significava que a implementação de paginação personalizada que são implementadas não pôde, ao mesmo tempo, fornecer recursos de classificação. Neste tutorial, estamos superou essa limitação, estendendo o procedimento armazenado do primeiro para incluir um `@sortExpression` parâmetro de entrada pela qual os resultados poderiam ser classificados.
+A implementação de paginação personalizada que examinamos no tutorial anterior exigia que a ordem pela qual os resultados fossem classificados fosse especificada em tempo de design. Em suma, isso significava que a implementação de paginação personalizada que implementamos não pôde, ao mesmo tempo, fornecer recursos de classificação. Neste tutorial, superou essa limitação estendendo o procedimento armazenado do primeiro para incluir um `@sortExpression` parâmetro de entrada pelo qual os resultados podem ser classificados.
 
-Após a criação deste procedimento armazenado e criação de novos métodos na BLL e DAL, fomos capazes de implementar um GridView que oferecidos ambos os recursos de classificação e personalizados de paginação, configurando o ObjectDataSource para transmitir o GridView s atual `SortExpression` propriedade para a BLL `SelectMethod`.
+Depois de criar esse procedimento armazenado e criar novos métodos na DAL e na BLL, pudemos implementar um GridView que oferecia a classificação e a paginação personalizada, configurando o ObjectDataSource para passar a propriedade de `SortExpression` do GridView s para o `SelectMethod`de BLL.
 
 Boa programação!
 
 ## <a name="about-the-author"></a>Sobre o autor
 
-[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP.NET e fundador da [4GuysFromRolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Microsoft Web desde 1998. Scott funciona como um consultor independente, instrutor e escritor. Seu livro mais recente é [ *Sams Teach por conta própria ASP.NET 2.0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser contatado pelo [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [ http://ScottOnWriting.NET ](http://ScottOnWriting.NET).
+[Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP. net e fundador da [4guysfromrolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 2,0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser acessado em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 ## <a name="special-thanks-to"></a>Agradecimentos especiais a
 
-Esta série de tutoriais foi revisada por muitos revisores úteis. Revisor de avanço para este tutorial foi Santos Carlos. Você está interessado na revisão Meus próximos artigos do MSDN? Nesse caso, me descartar uma linha na [ mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
+Esta série de tutoriais foi revisada por muitos revisores úteis. O revisor de cliente potencial para este tutorial foi Carlos Santos. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
 > [Anterior](efficiently-paging-through-large-amounts-of-data-vb.md)

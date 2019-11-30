@@ -1,110 +1,110 @@
 ---
 uid: aspnet/mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs
-title: Criando auxiliares de HTML personalizados (c#) | Microsoft Docs
+title: Criando auxiliares HTML personalizados (C#) | Microsoft Docs
 author: microsoft
-description: O objetivo deste tutorial é demonstrar como você pode criar auxiliares de HTML personalizado que você pode usar em suas exibições MVC. Ao aproveitar o auxiliar HTML...
+description: O objetivo deste tutorial é demonstrar como você pode criar auxiliares HTML personalizados que podem ser usados em suas exibições do MVC. Aproveitando o auxiliar HTML...
 ms.author: riande
 ms.date: 10/07/2008
 ms.assetid: e454c67d-a86e-4119-a858-eb04bbec2dff
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 41306a7f09b830e0ee88135326a48beaadcfb28c
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 264ff9850bad397826b45649d52fbfefafc53a01
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65126645"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74594497"
 ---
 # <a name="creating-custom-html-helpers-c"></a>Criação de auxiliares de HTML personalizados (C#)
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
-[Baixar PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_9_CS.pdf)
+[Baixar PDF](https://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_9_CS.pdf)
 
-> O objetivo deste tutorial é demonstrar como você pode criar auxiliares de HTML personalizado que você pode usar em suas exibições MVC. Ao tirar proveito dos auxiliares HTML, você pode reduzir a quantidade de digitação entediante de marcas HTML que você deve executar para criar uma página HTML padrão.
+> O objetivo deste tutorial é demonstrar como você pode criar auxiliares HTML personalizados que podem ser usados em suas exibições do MVC. Aproveitando os auxiliares HTML, você pode reduzir a quantidade de digitação entediante de marcas HTML que você deve executar para criar uma página HTML padrão.
 
-O objetivo deste tutorial é demonstrar como você pode criar auxiliares de HTML personalizado que você pode usar em suas exibições MVC. Ao tirar proveito dos auxiliares HTML, você pode reduzir a quantidade de digitação entediante de marcas HTML que você deve executar para criar uma página HTML padrão.
+O objetivo deste tutorial é demonstrar como você pode criar auxiliares HTML personalizados que podem ser usados em suas exibições do MVC. Aproveitando os auxiliares HTML, você pode reduzir a quantidade de digitação entediante de marcas HTML que você deve executar para criar uma página HTML padrão.
 
-Na primeira parte deste tutorial, eu descrevem alguns dos auxiliares HTML existente incluído com o ASP.NET MVC framework. Em seguida, descrevo dois métodos de criação de auxiliares de HTML personalizados: Explicarei como criar auxiliares de HTML personalizados com a criação de um método estático e criando um método de extensão.
+Na primeira parte deste tutorial, descrevo alguns dos auxiliares HTML existentes incluídos na estrutura MVC do ASP.NET. Em seguida, descrevo dois métodos de criação de auxiliares HTML personalizados: Eu explico como criar auxiliares HTML personalizados criando um método estático e criando um método de extensão.
 
-## <a name="understanding-html-helpers"></a>Noções básicas sobre os auxiliares HTML
+## <a name="understanding-html-helpers"></a>Noções básicas sobre auxiliares HTML
 
-Um auxiliar HTML é apenas um método que retorna uma cadeia de caracteres. A cadeia de caracteres pode representar qualquer tipo de conteúdo que você deseja. Por exemplo, você pode usar os auxiliares HTML para processar marcas HTML padrão, como HTML `<input>` e `<img>` marcas. Você também pode usar os auxiliares HTML para renderizar o conteúdo mais complexo, como uma faixa da guia ou uma tabela HTML de dados do banco de dados.
+Um auxiliar HTML é apenas um método que retorna uma cadeia de caracteres. A cadeia de caracteres pode representar qualquer tipo de conteúdo desejado. Por exemplo, você pode usar os auxiliares HTML para renderizar marcas HTML padrão, como HTML `<input>` e marcas de `<img>`. Você também pode usar os auxiliares HTML para renderizar um conteúdo mais complexo, como uma faixa de guias ou uma tabela HTML de dados de Database.
 
-A estrutura ASP.NET MVC inclui o seguinte conjunto de auxiliares de HTML padrão (não é uma lista completa):
+O ASP.NET MVC Framework inclui o seguinte conjunto de auxiliares HTML padrão (esta não é uma lista completa):
 
-- Html.ActionLink()
-- Html.BeginForm()
-- Html.CheckBox()
-- Html.DropDownList()
-- Html.EndForm()
-- Html.Hidden()
-- Html.ListBox()
-- Html.Password()
-- Html.RadioButton()
-- Html.TextArea()
-- Html.TextBox()
+- HTML. ActionLink ()
+- HTML. BeginForm ()
+- HTML. CheckBox ()
+- HTML. DropDownList ()
+- HTML. EndForm ()
+- HTML. Hidden ()
+- HTML. ListBox ()
+- HTML. Password ()
+- HTML. RadioButton ()
+- HTML. TextArea ()
+- HTML. TextBox ()
 
-Por exemplo, considere o formulário na listagem 1. Esse formulário é renderizado com a Ajuda de dois dos auxiliares HTML padrão (veja a Figura 1). O formulário usa o `Html.BeginForm()` e `Html.TextBox()` métodos auxiliares para processar um formulário HTML simples.
+Por exemplo, considere o formulário na Listagem 1. Esse formulário é renderizado com a ajuda de dois dos auxiliares HTML padrão (consulte a Figura 1). Esse formulário usa os métodos auxiliares `Html.BeginForm()` e `Html.TextBox()` para renderizar um formulário HTML simples.
 
-[![Página renderizada com auxiliares de HTML](creating-custom-html-helpers-cs/_static/image2.png)](creating-custom-html-helpers-cs/_static/image1.png)
+[![página renderizada com auxiliares HTML](creating-custom-html-helpers-cs/_static/image2.png)](creating-custom-html-helpers-cs/_static/image1.png)
 
-**Figura 01**: Página renderizada com auxiliares HTML ([clique para exibir a imagem em tamanho normal](creating-custom-html-helpers-cs/_static/image3.png))
+**Figura 01**: página renderizada com auxiliares HTML ([clique para exibir a imagem em tamanho normal](creating-custom-html-helpers-cs/_static/image3.png))
 
 **Listagem 1 – `Views\Home\Index.aspx`**
 
 [!code-aspx[Main](creating-custom-html-helpers-cs/samples/sample1.aspx)]
 
-O método auxiliar Html.BeginForm() é usado para criar o HTML de abertura e fechamento `<form>` marcas. Observe que o `Html.BeginForm()` método é chamado dentro do uso de uma instrução. O uso da instrução garante que o `<form>` marca é fechada ao final da usando bloco.
+O método auxiliar HTML. BeginForm () é usado para criar as marcas HTML de `<form>` de abertura e fechamento. Observe que o método `Html.BeginForm()` é chamado dentro de uma instrução using. A instrução using garante que a marca de `<form>` seja fechada no final do bloco Using.
 
-Se você preferir, em vez de criar um usando o bloco, você pode chamar o método auxiliar Html.EndForm() para fechar o `<form>` marca. Use a abordagem à criação de abertura e fechamento `<form>` marca parece mais intuitiva para você.
+Se preferir, em vez de criar um bloco Using, você pode chamar o método auxiliar HTML. EndForm () para fechar a marca de `<form>`. Use qualquer abordagem para criar uma marca de `<form>` de abertura e fechamento que pareça mais intuitiva para você.
 
-O `Html.TextBox()` métodos auxiliares são utilizados na listagem 1 para renderizar HTML `<input>` marcas. Se você selecionar Exibir código-fonte no seu navegador, em seguida, você verá o código-fonte HTML na listagem 2. Observe que a fonte contém marcas HTML padrão.
+Os métodos auxiliares `Html.TextBox()` são usados na Listagem 1 para processar marcas HTML `<input>`. Se você selecionar Exibir origem em seu navegador, verá a fonte HTML na Listagem 2. Observe que a origem contém marcas HTML padrão.
 
 > [!IMPORTANT]
-> Observe que o `Html.TextBox()`-HTML auxiliar é renderizado com `<%= %>` marcas em vez de `<% %>` marcas. Se você não incluir o sinal de igual, nada é renderizado no navegador.
+> Observe que o auxiliar `Html.TextBox()`-HTML é renderizado com `<%= %>` marcas em vez de `<% %>` marcas. Se você não incluir o sinal de igual, nada será renderizado para o navegador.
 
-O ASP.NET MVC framework contém um conjunto pequeno de auxiliares. Provavelmente, você precisará estender a estrutura do MVC com auxiliares de HTML personalizados. O restante deste tutorial, você aprenderá dois métodos de criação de auxiliares de HTML personalizados.
+O ASP.NET MVC Framework contém um pequeno conjunto de auxiliares. Provavelmente, será necessário estender a estrutura MVC com auxiliares HTML personalizados. No restante deste tutorial, você aprenderá dois métodos de criação de auxiliares HTML personalizados.
 
 **Listagem 2 – `Index.aspx Source`**
 
 [!code-aspx[Main](creating-custom-html-helpers-cs/samples/sample2.aspx)]
 
-### <a name="creating-html-helpers-with-static-methods"></a>Criação de auxiliares de HTML com métodos estáticos
+### <a name="creating-html-helpers-with-static-methods"></a>Criando auxiliares HTML com métodos estáticos
 
-A maneira mais fácil de criar um novo auxiliar de HTML é criar um método estático que retorna uma cadeia de caracteres. Por exemplo, imagine que você optar por criar um novo auxiliar de HTML que renderiza uma marca HTML `<label>` marca. Você pode usar a classe na listagem 2 para renderizar um `<label>` .
+A maneira mais fácil de criar um novo auxiliar HTML é criar um método estático que retorne uma cadeia de caracteres. Imagine, por exemplo, que você decida criar um novo auxiliar HTML que renderiza uma marcação HTML `<label>`. Você pode usar a classe na Listagem 2 para renderizar um `<label>`.
 
 **Listagem 2 – `Helpers\LabelHelper.cs`**
 
 [!code-csharp[Main](creating-custom-html-helpers-cs/samples/sample3.cs)]
 
-Não há nada de especial sobre a classe na listagem 2. O `Label()` método simplesmente retorna uma cadeia de caracteres.
+Não há nada de especial sobre a classe na Listagem 2. O método `Label()` simplesmente retorna uma cadeia de caracteres.
 
-O modo de exibição do índice modificado na listagem 3 usa o `LabelHelper` para renderizar HTML `<label>` marcas. Observe que o modo de exibição inclui um `<%@ imports %>` diretiva importa o `Application1.Helpers` namespace.
+A exibição de índice modificada na Listagem 3 usa o `LabelHelper` para processar marcas HTML `<label>`. Observe que a exibição inclui uma diretiva `<%@ imports %>` que importa o namespace `Application1.Helpers`.
 
 **Listagem 2 – `Views\Home\Index2.aspx`**
 
 [!code-aspx[Main](creating-custom-html-helpers-cs/samples/sample4.aspx)]
 
-### <a name="creating-html-helpers-with-extension-methods"></a>Criando auxiliares de HTML com os métodos de extensão
+### <a name="creating-html-helpers-with-extension-methods"></a>Criando auxiliares HTML com métodos de extensão
 
-Se você quiser criar auxiliares HTML que funcionam assim como os auxiliares HTML padrão incluído na estrutura do ASP.NET MVC e em seguida, você precisará criar métodos de extensão. Métodos de extensão permitem adicionar novos métodos a uma classe existente. Ao criar um método auxiliar HTML, você adicionar novos métodos à classe HtmlHelper representada pela propriedade de Html do modo de exibição.
+Se você quiser criar auxiliares HTML que funcionam exatamente como os auxiliares HTML padrão incluídos no ASP.NET MVC Framework, você precisará criar métodos de extensão. Os métodos de extensão permitem adicionar novos métodos a uma classe existente. Ao criar um método auxiliar HTML, você adiciona novos métodos à classe HtmlHelper representada pela propriedade HTML de uma exibição.
 
-A classe na listagem 3 adiciona um método de extensão para o `HtmlHelper` classe denominada `Label()`. Há algumas coisas que você deve observar sobre essa classe. Primeiro, observe que a classe é uma classe estática. Você deve definir um método de extensão com uma classe estática.
+A classe na Listagem 3 adiciona um método de extensão à classe `HtmlHelper` chamada `Label()`. Há algumas coisas que você deve observar sobre essa classe. Primeiro, observe que a classe é uma classe estática. Você deve definir um método de extensão com uma classe estática.
 
-Em segundo lugar, observe que o primeiro parâmetro do `Label()` método é precedido pela palavra-chave `this`. O primeiro parâmetro de um método de extensão indica a classe que estende o método de extensão.
+Em segundo lugar, observe que o primeiro parâmetro do método `Label()` é precedido pela palavra-chave `this`. O primeiro parâmetro de um método de extensão indica a classe que o método de extensão estende.
 
 **Listagem 3 – `Helpers\LabelExtensions.cs`**
 
 [!code-csharp[Main](creating-custom-html-helpers-cs/samples/sample5.cs)]
 
-Depois de criar um método de extensão e crie seu aplicativo com êxito, o método de extensão é exibida no Visual Studio Intellisense, como todos os outros métodos de uma classe (consulte a Figura 2). A única diferença é que essa extensão métodos aparecem com um símbolo especial ao lado deles (um ícone de uma seta para baixo).
+Depois de criar um método de extensão e criar seu aplicativo com êxito, o método de extensão aparecerá no Visual Studio IntelliSense como todos os outros métodos de uma classe (consulte a Figura 2). A única diferença é que os métodos de extensão aparecem com um símbolo especial ao lado deles (um ícone de seta para baixo).
 
-[![Usando o método de extensão Html.Label()](creating-custom-html-helpers-cs/_static/image5.png)](creating-custom-html-helpers-cs/_static/image4.png)
+[![usando o método de extensão HTML. Label ()](creating-custom-html-helpers-cs/_static/image5.png)](creating-custom-html-helpers-cs/_static/image4.png)
 
-**Figura 02**: Usando o método de extensão Html.Label() ([clique para exibir a imagem em tamanho normal](creating-custom-html-helpers-cs/_static/image6.png))
+**Figura 02**: usando o método de extensão HTML. Label () ([clique para exibir a imagem em tamanho normal](creating-custom-html-helpers-cs/_static/image6.png))
 
-O modo de exibição do índice modificado na listagem 4 usa o método de extensão Html.Label() para processar todos os seus `<label>` marcas.
+A exibição de índice modificada na Listagem 4 usa o método de extensão HTML. Label () para renderizar todas as suas marcas de `<label>`.
 
 **Listagem 4 – `Views\Home\Index3.aspx`**
 
@@ -112,9 +112,9 @@ O modo de exibição do índice modificado na listagem 4 usa o método de extens
 
 ## <a name="summary"></a>Resumo
 
-Neste tutorial, você aprendeu a dois métodos de criação de auxiliares de HTML personalizados. Primeiro, você aprendeu a criar um personalizado `Label()` auxiliar HTML com a criação de um método estático que retorna uma cadeia de caracteres. Em seguida, você aprendeu a criar um personalizado `Label()` método auxiliar HTML, criando um método de extensão no `HtmlHelper` classe.
+Neste tutorial, você aprendeu dois métodos de criação de auxiliares HTML personalizados. Primeiro, você aprendeu a criar um auxiliar HTML personalizado `Label()` criando um método estático que retorna uma cadeia de caracteres. Em seguida, você aprendeu a criar um método auxiliar HTML `Label()` personalizado criando um método de extensão na classe `HtmlHelper`.
 
-Neste tutorial, concentrei-me sobre a criação de um método auxiliar HTML extremamente simple. Observe que um auxiliar de HTML podem ser tão complicado como você deseja. Você pode criar auxiliares de HTML que processam conteúdo avançado, como modos de exibição de árvore, menus ou tabelas de banco de dados.
+Neste tutorial, eu me deparava com a criação de um método auxiliar HTML extremamente simples. Perceba que um auxiliar HTML pode ser tão complicado quanto você desejar. Você pode criar auxiliares HTML que processam conteúdo rico, como modos de exibição de árvore, menus ou tabelas de dados de banco.
 
 > [!div class="step-by-step"]
 > [Anterior](asp-net-mvc-views-overview-cs.md)

@@ -1,66 +1,66 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs
-title: Ajuste do índice Z de um DropShadow (c#) | Microsoft Docs
+title: Ajustando o índice Z de um DropShadow (C#) | Microsoft Docs
 author: wenz
-description: O controle de DropShadow no AJAX Control Toolkit, um painel com uma sombra. No entanto esse sombra às vezes, está em conflito com outros controles, para insta...
+description: O controle DropShadow no AJAX Control Toolkit estende um painel com uma sombra. No entanto, essa sombra às vezes entra em conflito com outros controles, para insta...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 14133833-e518-4347-87b9-6b6f71f14a77
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 21ad1ec314be68f7285c044d5e90c21c201a90ef
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 12bc7f0430f1f30ff964cd9547ee1e9b0aa7423c
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132125"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74574290"
 ---
 # <a name="adjusting-the-z-index-of-a-dropshadow-c"></a>Ajuste do índice Z de um DropShadow (C#)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Baixar o código](http://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow1.cs.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow1CS.pdf)
+[Baixar código](https://download.microsoft.com/download/5/1/6/51652a81-500b-4f6b-88d3-617103e7941e/DropShadow1.cs.zip) ou [baixar PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/dropshadow1CS.pdf)
 
-> O controle de DropShadow no AJAX Control Toolkit, um painel com uma sombra. No entanto esse sombra às vezes, está em conflito com outros controles, por exemplo, o controle de Menu do ASP.NET. Quando uma entrada de menu é exibido, ele aparece por trás da sombra.
+> O controle DropShadow no AJAX Control Toolkit estende um painel com uma sombra. No entanto, essa sombra às vezes entra em conflito com outros controles, por exemplo, o controle de menu ASP.NET. Quando uma entrada de menu é exibida, ela aparece atrás da sombra.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
-O controle de DropShadow no AJAX Control Toolkit, um painel com uma sombra. No entanto esse sombra às vezes, está em conflito com outros controles, por exemplo, o controle de Menu do ASP.NET. Quando uma entrada de menu é exibido, ele aparece por trás da sombra.
+O controle DropShadow no AJAX Control Toolkit estende um painel com uma sombra. No entanto, essa sombra às vezes entra em conflito com outros controles, por exemplo, o controle de menu ASP.NET. Quando uma entrada de menu é exibida, ela aparece atrás da sombra.
 
 ## <a name="steps"></a>Etapas
 
-O código começa com o próprio painel, que contém o texto suficiente para que o painel contém texto suficiente para o efeito para ser visível:
+O código começa com o próprio painel, contendo texto suficiente para que o painel contenha texto suficiente para que o efeito fique visível:
 
 [!code-aspx[Main](adjusting-the-z-index-of-a-dropshadow-cs/samples/sample1.aspx)]
 
-Outro painel é colocado diretamente antes do `panelShadow` painel. Ele contém um menu com a orientação horizontal para que as entradas de menu aparecem ao longo (ou melhor: sob) o `dropShadow` painel):
+Outro painel é colocado diretamente antes do painel de `panelShadow`. Ele contém um menu com orientação horizontal para que as entradas de menu apareçam sobre (ou em vez disso: abaixo) do painel de `dropShadow`):
 
 [!code-aspx[Main](adjusting-the-z-index-of-a-dropshadow-cs/samples/sample2.aspx)]
 
-Em seguida, o `DropShadowExtender` é adicionado ao estender o `panelShadow` painel com um efeito de sombra:
+Em seguida, a `DropShadowExtender` é adicionada para estender o painel de `panelShadow` com um efeito de sombra.
 
 [!code-aspx[Main](adjusting-the-z-index-of-a-dropshadow-cs/samples/sample3.aspx)]
 
-Por fim, o ASP.NET AJAX `ScriptManager` controle permite que o Kit de ferramentas trabalhar:
+Por fim, o controle de `ScriptManager` AJAX ASP.NET permite que o kit de ferramentas de controle funcione:
 
 [!code-aspx[Main](adjusting-the-z-index-of-a-dropshadow-cs/samples/sample4.aspx)]
 
-Quando você executa esse script, as entradas de menu aparecem sob o painel. No entanto, o menu usa a classe CSS `panel` em que você só precisa definir duas coisas para fazer com que elementos são exibidos na frente de outro painel:
+Quando você executa esse script, as entradas de menu aparecem embaixo do painel. No entanto, o menu usa a classe CSS `panel` onde você só precisa definir duas coisas para fazer os elementos aparecerem na frente do outro painel:
 
 - Posicionamento relativo
 - Um índice z positivo
 
 [!code-css[Main](adjusting-the-z-index-of-a-dropshadow-cs/samples/sample5.css)]
 
-Em seguida, o `DropShadowExtender` controle não está em conflito mais com o controle de Menu.
+Em seguida, o controle de `DropShadowExtender` não é mais um conflito com o controle de menu.
 
-[![Antes: A entrada de menu não é visível](adjusting-the-z-index-of-a-dropshadow-cs/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image1.png)
+[![antes: a entrada do menu não está visível](adjusting-the-z-index-of-a-dropshadow-cs/_static/image2.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image1.png)
 
-Antes: A entrada de menu não é visível ([clique para exibir a imagem em tamanho normal](adjusting-the-z-index-of-a-dropshadow-cs/_static/image3.png))
+Antes: a entrada do menu não está visível ([clique para exibir a imagem em tamanho normal](adjusting-the-z-index-of-a-dropshadow-cs/_static/image3.png))
 
-[![Depois de: A entrada de menu é exibido](adjusting-the-z-index-of-a-dropshadow-cs/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image4.png)
+[![após: a entrada de menu é exibida](adjusting-the-z-index-of-a-dropshadow-cs/_static/image5.png)](adjusting-the-z-index-of-a-dropshadow-cs/_static/image4.png)
 
-Depois: A entrada de menu é exibido ([clique para exibir a imagem em tamanho normal](adjusting-the-z-index-of-a-dropshadow-cs/_static/image6.png))
+Após: a entrada de menu é exibida ([clique para exibir a imagem em tamanho normal](adjusting-the-z-index-of-a-dropshadow-cs/_static/image6.png))
 
 > [!div class="step-by-step"]
 > [Avançar](manipulating-dropshadow-properties-from-client-code-cs.md)

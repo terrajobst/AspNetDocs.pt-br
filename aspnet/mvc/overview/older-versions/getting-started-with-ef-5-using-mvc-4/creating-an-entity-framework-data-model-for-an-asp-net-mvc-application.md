@@ -1,64 +1,64 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
-title: Criando um modelo de dados do Entity Framework para um aplicativo ASP.NET MVC (1 a 10) | Microsoft Docs
+title: Criando um modelo de dados de Entity Framework para um aplicativo MVC ASP.NET (1 de 10) | Microsoft Docs
 author: tdykstra
-description: Uma versão mais recente desta série de tutorial está disponível, para o Visual Studio 2013, o Entity Framework 6 e o MVC 5. A definição de aplicativo de web de exemplo Contoso University...
+description: Uma versão mais recente desta série de tutoriais está disponível, por Visual Studio 2013, Entity Framework 6 e MVC 5. O aplicativo Web de exemplo da Contoso University de...
 ms.author: riande
 ms.date: 07/30/2013
 ms.assetid: 4ba029b6-ee7c-4e45-a0e7-b703c37e5d9a
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: abb59f16759a7d32c6900baf96fe3a1299170922
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 8ee5aa22b6b2329b01d41437f30508e28a2288b2
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129795"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74595964"
 ---
-# <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Criando um modelo de dados do Entity Framework para um aplicativo ASP.NET MVC (1 a 10)
+# <a name="creating-an-entity-framework-data-model-for-an-aspnet-mvc-application-1-of-10"></a>Criando um modelo de dados de Entity Framework para um aplicativo MVC ASP.NET (1 de 10)
 
 por [Tom Dykstra](https://github.com/tdykstra)
 
-[Baixe o projeto concluído](http://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
+[Baixar projeto concluído](https://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8)
 
 > > [!NOTE] 
 > > 
-> > Um [a versão mais recente desta série de tutoriais](../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) está disponível para o Visual Studio 2013, o Entity Framework 6 e o MVC 5.
+> > Uma [versão mais recente desta série de tutoriais](../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) está disponível, por Visual Studio 2013, Entity Framework 6 e MVC 5.
 > 
 > 
-> Aplicativo web de exemplo Contoso University demonstra como criar aplicativos ASP.NET MVC 4 usando o Entity Framework 5 e o Visual Studio 2012. O aplicativo de exemplo é um site de uma Contoso University fictícia. Ele inclui funcionalidades como admissão de alunos, criação de cursos e atribuições de instrutor. Esta série de tutoriais explica como compilar o aplicativo de exemplo Contoso University. Você pode [Baixe o aplicativo concluído](https://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8).
+> O aplicativo Web de exemplo Contoso University demonstra como criar aplicativos ASP.NET MVC 4 usando o Entity Framework 5 e o Visual Studio 2012. O aplicativo de exemplo é um site de uma Contoso University fictícia. Ele inclui funcionalidades como admissão de alunos, criação de cursos e atribuições de instrutor. Esta série de tutoriais explica como criar o aplicativo de exemplo Contoso University. Você pode [baixar o aplicativo concluído](https://code.msdn.microsoft.com/Getting-Started-with-dd0e2ed8).
 > 
 > ## <a name="code-first"></a>Code First
 > 
-> Há três maneiras de que trabalhar com dados no Entity Framework: *Database First*, *Model First*, e *Code First*. Este tutorial é para o Code First. Para obter informações sobre as diferenças entre esses fluxos de trabalho e diretrizes sobre como escolher o melhor para seu cenário, consulte [fluxos de trabalho de desenvolvimento do Entity Framework](https://msdn.microsoft.com/library/ms178359.aspx#dbfmfcf).
+> Há três maneiras de trabalhar com dados no Entity Framework: *Database First*, *Model First*e *Code First*. Este tutorial é para Code First. Para obter informações sobre as diferenças entre esses fluxos de trabalho e diretrizes sobre como escolher o melhor para seu cenário, consulte [Entity Framework fluxos de trabalho de desenvolvimento](https://msdn.microsoft.com/library/ms178359.aspx#dbfmfcf).
 > 
 > ## <a name="mvc"></a>MVC
 > 
-> O aplicativo de exemplo se baseia [ASP.NET MVC](../../../index.md). Se você preferir trabalhar com o modelo de Web Forms do ASP.NET, consulte o [associação de modelos e formulários da Web](../../../../web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data.md) série de tutoriais e [mapa de conteúdo de acesso do ASP.NET dados](../../../../whitepapers/aspnet-data-access-content-map.md).
+> O aplicativo de exemplo se baseia no [ASP.NET MVC](../../../index.md). Se você preferir trabalhar com o modelo de Web Forms ASP.NET, consulte a [Associação de modelo e Web Forms](../../../../web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data.md) a série de tutoriais e o [mapa de conteúdo de acesso a dados do ASP.net](../../../../whitepapers/aspnet-data-access-content-map.md).
 > 
 > ## <a name="software-versions"></a>Versões de software
 > 
 > | **Mostrado no tutorial** | **Também funciona com** |
 > | --- | --- |
 > | Windows 8 | Windows 7 |
-> | Visual Studio 2012 | Visual Studio 2012 Express para Web. Isso é instalado automaticamente pelo SDK do Windows Azure se você ainda não tiver o VS 2012 ou VS 2012 Express para Web. Visual Studio 2013 deve funcionar, mas o tutorial não foi testado com ele, e algumas seleções de menu e caixas de diálogo são diferentes. O [VS 2013 versão do SDK do Windows Azure](https://go.microsoft.com/fwlink/p/?linkid=323510) é necessário para a implantação do Windows Azure. |
-> | .NET 4.5 | A maioria dos recursos mostrados funcionará no .NET 4, mas alguns não. Por exemplo, o suporte a enum no EF requer .NET 4.5. |
-> | O Entity Framework 5 |  |
-> | [Windows Azure SDK 2.1](https://go.microsoft.com/fwlink/p/?linkid=323511) | Se você ignorar as etapas de implantação do Windows Azure, você não precisa do SDK. Quando uma nova versão do SDK for lançada, o link instalará a versão mais recente. Nesse caso, você talvez precise adaptar algumas das instruções para a nova interface do usuário e recursos. |
+> | Visual Studio 2012 | Visual Studio 2012 Express para Web. Isso será instalado automaticamente pelo SDK do Windows Azure se você ainda não tiver o VS 2012 ou o VS 2012 Express para Web. Visual Studio 2013 deve funcionar, mas o tutorial não foi testado com ele, e algumas seleções de menu e caixas de diálogo são diferentes. A [versão VS 2013 do SDK do Windows Azure](https://go.microsoft.com/fwlink/p/?linkid=323510) é necessária para a implantação do Windows Azure. |
+> | .NET 4.5 | A maioria dos recursos mostrados funcionará no .NET 4, mas alguns não terão. Por exemplo, o suporte a enum no EF requer o .NET 4,5. |
+> | Entity Framework 5 |  |
+> | [SDK do Windows Azure 2,1](https://go.microsoft.com/fwlink/p/?linkid=323511) | Se você ignorar as etapas de implantação do Windows Azure, não precisará do SDK. Quando uma nova versão do SDK for lançada, o link instalará a versão mais recente. Nesse caso, talvez seja necessário adaptar algumas das instruções para a nova interface do usuário e recursos. |
 > 
 > ## <a name="questions"></a>Perguntas
 > 
-> Se você tiver perguntas que não estão diretamente relacionadas para o tutorial, você pode postá-los para o [Fórum do Entity Framework do ASP.NET](https://forums.asp.net/1227.aspx), o [Entity Framework e LINQ para o fórum de entidades](https://social.msdn.microsoft.com/forums/adodotnetentityframework/threads/), ou [ StackOverflow.com](http://stackoverflow.com/).
+> Se você tiver dúvidas que não estão diretamente relacionadas ao tutorial, poderá lançá-las no fórum de [Entity Framework ASP.net](https://forums.asp.net/1227.aspx), no [Entity Framework e no LINQ to Entities forum](https://social.msdn.microsoft.com/forums/adodotnetentityframework/threads/)ou [stackoverflow.com](http://stackoverflow.com/).
 > 
 > ## <a name="acknowledgments"></a>Agradecimentos
 > 
-> Consulte o último tutorial da série para [confirmações e uma observação sobre VB](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#acknowledgments).
+> Consulte o último tutorial da série para [confirmações e uma observação sobre o VB](advanced-entity-framework-scenarios-for-an-mvc-web-application.md#acknowledgments).
 > 
 > ## <a name="original-version-of-the-tutorial"></a>Versão original do tutorial
 > 
-> A versão original do tutorial está disponível na [EF 4.1 / livro eletrônico do MVC 3](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#GettingStartedwiththeEntityFramework4.1usingASP.NETMVC).
+> A versão original do tutorial está disponível no [livro eletrônico do EF 4,1/MVC 3](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#GettingStartedwiththeEntityFramework4.1usingASP.NETMVC).
 
-## <a name="the-contoso-university-web-application"></a>O aplicativo Web Contoso University
+## <a name="the-contoso-university-web-application"></a>O aplicativo Web da Contoso University
 
 O aplicativo que você criará nestes tutoriais é um site simples de uma universidade.
 
@@ -70,50 +70,50 @@ Os usuários podem exibir e atualizar informações de alunos, cursos e instruto
 
 O estilo de interface do usuário desse site foi mantido perto do que é gerado pelos modelos internos, de modo que o tutorial possa se concentrar principalmente em como usar o Entity Framework.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-As instruções e capturas de tela neste tutorial supõem que você esteja usando [Visual Studio 2012](https://www.microsoft.com/visualstudio/eng/downloads) ou [Visual Studio 2012 Express para Web](https://go.microsoft.com/fwlink/?LinkID=275131), com a atualização e o SDK do Azure para .NET instalado a partir de julho, mais recente 2013. Você pode obter tudo isso com o seguinte link:
+As orientações e capturas de tela neste tutorial pressupõem que você esteja usando o [visual studio 2012](https://www.microsoft.com/visualstudio/eng/downloads) ou o [Visual Studio 2012 Express para Web](https://go.microsoft.com/fwlink/?LinkID=275131), com a atualização mais recente e o SDK do Azure para .net instalados a partir de julho de 2013. Você pode obter tudo isso com o seguinte link:
 
 [SDK do Azure para .NET (Visual Studio 2012)](https://go.microsoft.com/fwlink/?LinkId=254364)
 
-Se você tiver instalado o Visual Studio, o link acima serão instale quaisquer componentes ausentes. Se você não tiver o Visual Studio, o link instalará o Visual Studio 2012 Express para Web. Você pode usar o Visual Studio 2013, mas algumas das telas e procedimentos necessários serão diferentes.
+Se você tiver o Visual Studio instalado, o link acima instalará os componentes ausentes. Se você não tiver o Visual Studio, o link instalará o Visual Studio 2012 Express para Web. Você pode usar Visual Studio 2013, mas alguns dos procedimentos e telas necessários serão diferentes.
 
 ## <a name="create-an-mvc-web-application"></a>Criar um aplicativo Web MVC
 
-Abra o Visual Studio e crie um novo projeto c# chamado "ContosoUniversity" usando o **aplicativo Web do ASP.NET MVC 4** modelo. Verifique se você direcionar **.NET Framework 4.5** (você usará [ `enum` propriedades](https://msdn.microsoft.com/data/hh859576.aspx), e que requer o .NET 4.5).
+Abra o Visual Studio e crie um C# novo projeto chamado "ContosoUniversity" usando o modelo de **aplicativo Web ASP.NET MVC 4** . Certifique-se de direcionar **.NET Framework 4,5** (você usará [`enum` Propriedades](https://msdn.microsoft.com/data/hh859576.aspx), e isso requer o .NET 4,5).
 
 ![New_project_dialog_box](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image3.png)
 
-No **novo projeto ASP.NET MVC 4** caixa de diálogo, selecione o **aplicativo de Internet** modelo.
+Na caixa de diálogo **novo projeto do ASP.NET MVC 4** , selecione o modelo de **aplicativo da Internet** .
 
-Deixe o **Razor** selecionado do mecanismo de exibição e deixe o **criar um projeto de teste de unidade** caixa de seleção desmarcada.
+Deixe o mecanismo de exibição do **Razor** selecionado e deixe a caixa de seleção **criar um projeto de teste de unidade** desmarcada.
 
 Clique em **OK**.
 
 ![Project_template_options](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image4.png)
 
-## <a name="set-up-the-site-style"></a>Configurar o estilo do Site
+## <a name="set-up-the-site-style"></a>Configurar o estilo do site
 
 Algumas alterações simples configurarão o menu do site, o layout e a home page.
 
-Abra *Views\Shared\\layout. cshtml*e substitua o conteúdo do arquivo pelo código a seguir. As alterações são realçadas.
+Abra *Views\Shared\\_Layout. cshtml*e substitua o conteúdo do arquivo pelo código a seguir. As alterações são realçadas.
 
 [!code-cshtml[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample1.cshtml?highlight=5,15,25-28,43)]
 
 Este código faz as seguintes alterações:
 
-- Substitui as instâncias de modelo de "Meu aplicativo ASP.NET MVC" e "seu logotipo aqui" com "Contoso University".
+- Substitui as instâncias de modelo de "meu aplicativo MVC ASP.NET" e "seu logotipo aqui" por "Contoso University".
 - Adiciona vários links de ação que serão usados posteriormente no tutorial.
 
-Na *Views\Home\Index.cshtml*, substitua o conteúdo do arquivo pelo código a seguir para eliminar os parágrafos do modelo sobre o ASP.NET e MVC:
+No *Views\Home\Index.cshtml*, substitua o conteúdo do arquivo pelo código a seguir para eliminar os parágrafos de modelo sobre ASP.net e MVC:
 
 [!code-cshtml[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample2.cshtml)]
 
-Na *Controllers\HomeController.cs*, altere o valor de `ViewBag.Message` no `Index` método de ação para "Bem-vindo à Contoso University!", conforme mostrado no exemplo a seguir:
+No *Controllers\HomeController.cs*, altere o valor de `ViewBag.Message` no método de ação `Index` para "bem-vindo à Contoso University!", conforme mostrado no exemplo a seguir:
 
 [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample3.cs?highlight=3)]
 
-Pressione CTRL + F5 para executar o site. Você ver a home page com o menu principal.
+Pressione CTRL + F5 para executar o site. Você verá a home page com o menu principal.
 
 ![Contoso_University_home_page](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image5.png)
 
@@ -128,25 +128,25 @@ Há uma relação um-para-muitos entre as entidades `Student` e `Enrollment`, e 
 Nas seções a seguir, você criará uma classe para cada uma dessas entidades.
 
 > [!NOTE]
-> Se você tentar compilar o projeto antes de concluir a criação de todas essas classes de entidade, você receberá erros de compilador.
+> Se você tentar compilar o projeto antes de concluir a criação de todas essas classes de entidade, obterá erros do compilador.
 
 ### <a name="the-student-entity"></a>A entidade Student
 
 ![Student_entity](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image7.png)
 
-No *modelos* pasta, crie *Student.cs* e substitua o código existente pelo código a seguir:
+Na pasta *modelos* , crie *Student.cs* e substitua o código existente pelo código a seguir:
 
 [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample4.cs)]
 
 A propriedade `StudentID` se tornará a coluna de chave primária da tabela de banco de dados que corresponde a essa classe. Por padrão, o Entity Framework interpreta uma propriedade chamada `ID` ou *classname* `ID` como a chave primária.
 
-A propriedade `Enrollments` é uma *propriedade de navegação*. As propriedades de navegação armazenam outras entidades que estão relacionadas a essa entidade. Nesse caso, o `Enrollments` propriedade de um `Student` entidade armazenará todas as `Enrollment` entidades relacionadas a essa `Student` entidade. Em outras palavras, se um determinado `Student` linha no banco de dados tem dois relacionadas `Enrollment` linhas (valor de linhas que contêm a chave primária do aluno em seus `StudentID` coluna de chave estrangeira), que `Student` da entidade `Enrollments` propriedade de navegação conterá as duas `Enrollment` entidades.
+A propriedade `Enrollments` é uma *propriedade de navegação*. As propriedades de navegação armazenam outras entidades que estão relacionadas a essa entidade. Nesse caso, a propriedade `Enrollments` de uma entidade `Student` manterá todas as entidades `Enrollment` relacionadas a essa entidade `Student`. Em outras palavras, se uma determinada linha de `Student` no banco de dados tiver duas linhas de `Enrollment` relacionadas (linhas que contêm o valor de chave primária do aluno em sua `StudentID` coluna de chave estrangeira), essa `Student` propriedade de navegação `Enrollments` da entidade conterá essas duas entidades de `Enrollment`.
 
-Propriedades de navegação geralmente são definidas como `virtual` para que eles podem tirar proveito de determinada funcionalidade do Entity Framework, como *carregamento lento*. (Carregamento lento será explicado mais adiante, o [lendo dados relacionados](reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md) tutorial posteriormente nessa série.
+As propriedades de navegação são normalmente definidas como `virtual` para que possam aproveitar determinadas funcionalidades de Entity Framework, como o *carregamento lento*. (O carregamento lento será explicado posteriormente, no tutorial [lendo dados relacionados](reading-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md) mais adiante nesta série.
 
 Se uma propriedade de navegação pode armazenar várias entidades (como em relações muitos para muitos ou um-para-muitos), o tipo precisa ser uma lista na qual entradas podem ser adicionadas, excluídas e atualizadas, como `ICollection`.
 
-### <a name="the-enrollment-entity"></a>A entidade Enrollment
+### <a name="the-enrollment-entity"></a>A entidade de registro
 
 ![Enrollment_entity](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image8.png)
 
@@ -154,197 +154,197 @@ Na pasta *Models*, crie *Enrollment.cs* e substitua o código existente pelo seg
 
 [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample5.cs)]
 
-A propriedade de nível empresarial é um [enum](https://msdn.microsoft.com/data/hh859576.aspx). O ponto de interrogação após a `Grade` declaração de tipo indica que o `Grade` é de propriedade [anuláveis](https://msdn.microsoft.com/library/2cf62fcy.aspx). Uma nota nula é diferente de uma nota zero – nulo significa que uma nota não é conhecida ou não tenha sido atribuída ainda.
+A propriedade grau é uma [Enumeração](https://msdn.microsoft.com/data/hh859576.aspx). O ponto de interrogação após a declaração de tipo `Grade` indica que a propriedade `Grade` permite valor [anulável](https://msdn.microsoft.com/library/2cf62fcy.aspx). Uma classificação que é nula é diferente de uma taxa zero: null significa que uma classificação não é conhecida ou ainda não foi atribuída.
 
 A propriedade `StudentID` é uma chave estrangeira e a propriedade de navegação correspondente é `Student`. Uma entidade `Enrollment` é associada a uma entidade `Student`, de modo que a propriedade possa armazenar apenas uma única entidade `Student` (ao contrário da propriedade de navegação `Student.Enrollments` que você viu anteriormente, que pode armazenar várias entidades `Enrollment`).
 
 A propriedade `CourseID` é uma chave estrangeira e a propriedade de navegação correspondente é `Course`. Uma entidade `Enrollment` está associada a uma entidade `Course`.
 
-### <a name="the-course-entity"></a>A entidade de curso
+### <a name="the-course-entity"></a>A entidade Course
 
 ![Course_entity](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image9.png)
 
-No *modelos* pasta, crie *Course.cs*, substituindo o código existente pelo código a seguir:
+Na pasta *modelos* , crie *Course.cs*, substituindo o código existente pelo código a seguir:
 
 [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample6.cs)]
 
 A propriedade `Enrollments` é uma propriedade de navegação. Uma entidade `Course` pode estar relacionada a qualquer quantidade de entidades `Enrollment`.
 
-Falaremos mais sobre o [[DatabaseGenerated](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.schema.databasegeneratedattribute(v=vs.110).aspx)([DatabaseGeneratedOption](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.schema.databasegeneratedoption(v=vs.95).aspx). O atributo none)] no próximo tutorial. Basicamente, esse atributo permite que você insira a chave primária do curso, em vez de fazer com que ela seja gerada pelo banco de dados.
+Vamos falar mais sobre o [[DatabaseGenerated](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.schema.databasegeneratedattribute(v=vs.110).aspx)([DatabaseGeneratedOption](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.schema.databasegeneratedoption(v=vs.95).aspx). Nenhum)] no próximo tutorial. Basicamente, esse atributo permite que você insira a chave primária do curso, em vez de fazer com que ela seja gerada pelo banco de dados.
 
 ## <a name="create-the-database-context"></a>Criar o contexto de banco de dados
 
-A classe principal que coordena a funcionalidade do Entity Framework para determinado modelo de dados é o *contexto de banco de dados* classe. Você cria essa classe derivando de [System.Data.Entity.DbContext](https://msdn.microsoft.com/library/system.data.entity.dbcontext(v=VS.103).aspx) classe. No código, especifique quais entidades são incluídas no modelo de dados. Também personalize o comportamento específico do Entity Framework. Neste projeto, a classe é chamada `SchoolContext`.
+A classe principal que coordena Entity Framework funcionalidade para um determinado modelo de dados é a classe de *contexto do banco* de dado. Você cria essa classe derivando da classe [System. Data. Entity. DbContext](https://msdn.microsoft.com/library/system.data.entity.dbcontext(v=VS.103).aspx) . No código, especifique quais entidades são incluídas no modelo de dados. Também personalize o comportamento específico do Entity Framework. Neste projeto, a classe é chamada `SchoolContext`.
 
-Crie uma pasta chamada *DAL* (para a camada de acesso a dados). Nessa pasta, crie um novo arquivo de classe chamado *SchoolContext.cs*e substitua o código existente pelo código a seguir:
+Crie uma pasta chamada *Dal* (para camada de acesso a dados). Nessa pasta, crie um novo arquivo de classe chamado *SchoolContext.cs*e substitua o código existente pelo código a seguir:
 
 [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample7.cs)]
 
-Esse código cria uma [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=VS.103).aspx) propriedade para cada conjunto de entidades. Na terminologia do Entity Framework, um *conjunto de entidades* normalmente corresponde a uma tabela de banco de dados e um *entidade* corresponde a uma linha na tabela.
+Esse código cria uma propriedade [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=VS.103).aspx) para cada conjunto de entidades. Na terminologia Entity Framework, um *conjunto de entidades* geralmente corresponde a uma tabela de banco de dados e uma *entidade* corresponde a uma linha na tabela.
 
-O `modelBuilder.Conventions.Remove` instrução em de [OnModelCreating](https://msdn.microsoft.com/library/system.data.entity.dbcontext.onmodelcreating(v=vs.103).aspx) método impede que os nomes de tabela que está sendo pluralizados. Se você não fizer isso, as tabelas geradas seriam nomeadas `Students`, `Courses`, e `Enrollments`. Em vez disso, os nomes de tabela serão `Student`, `Course`, e `Enrollment`. Os desenvolvedores não concordam sobre se os nomes de tabela devem ser pluralizados ou não. Este tutorial usa a forma singular, mas o ponto importante é que você pode selecionar qualquer que seja o formulário que você preferir ao incluir ou omitir esta linha de código.
+A instrução `modelBuilder.Conventions.Remove` no método [OnModelCreating](https://msdn.microsoft.com/library/system.data.entity.dbcontext.onmodelcreating(v=vs.103).aspx) impede que nomes de tabela sejam pluraled. Se você não fez isso, as tabelas geradas seriam nomeadas `Students`, `Courses`e `Enrollments`. Em vez disso, os nomes de tabela serão `Student`, `Course`e `Enrollment`. Os desenvolvedores não concordam sobre se os nomes de tabela devem ser pluralizados ou não. Este tutorial usa o formulário singular, mas o ponto importante é que você pode selecionar qualquer formulário que preferir, incluindo ou omitindo esta linha de código.
 
 ## <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[LocalDB](https://blogs.msdn.com/b/sqlexpress/archive/2011/07/12/introducing-localdb-a-better-sql-express.aspx) é uma versão leve do SQL Server Express Database Engine que é iniciado sob demanda e executado no modo de usuário. LocalDB é executado em um modo de execução especial do SQL Server Express que permite que você trabalhe com bancos de dados como *mdf* arquivos. Normalmente, os arquivos de banco de dados LocalDB são mantidos na *App\_dados* pasta de um projeto web. O recurso de instância de usuário do SQL Server Express também permite que você trabalhe com *mdf* arquivos, mas o recurso de instância de usuário é preterido; portanto, o LocalDB é recomendado para trabalhar com *mdf* arquivos.
+O [LocalDB](https://blogs.msdn.com/b/sqlexpress/archive/2011/07/12/introducing-localdb-a-better-sql-express.aspx) é uma versão leve do Mecanismo de Banco de Dados de SQL Server Express que inicia sob demanda e é executado no modo de usuário. O LocalDB é executado em um modo de execução especial de SQL Server Express que permite que você trabalhe com bancos de dados como arquivos *. MDF* . Normalmente, os arquivos de banco de dados LocalDB são mantidos na pasta *Data\_do aplicativo* de um projeto Web. O recurso de instância de usuário no SQL Server Express também permite que você trabalhe com arquivos *. MDF* , mas o recurso de instância de usuário foi preterido; Portanto, o LocalDB é recomendado para trabalhar com arquivos *. MDF* .
 
-Normalmente o SQL Server Express não é usado para aplicativos da web de produção. LocalDB em particular não é recomendado para uso em produção com um aplicativo web porque ela não foi projetada para trabalhar com o IIS.
+Normalmente SQL Server Express não é usado para aplicativos Web de produção. O LocalDB, em particular, não é recomendado para uso em produção com um aplicativo Web porque ele não foi projetado para funcionar com o IIS.
 
-No Visual Studio 2012 e versões posteriores, o LocalDB é instalado por padrão com o Visual Studio. No Visual Studio 2010 e versões anteriores, o SQL Server Express (sem o LocalDB) é instalado por padrão com o Visual Studio; Você precisa instalá-lo manualmente se você estiver usando o Visual Studio 2010.
+No Visual Studio 2012 e versões posteriores, o LocalDB é instalado por padrão com o Visual Studio. No Visual Studio 2010 e versões anteriores, SQL Server Express (sem o LocalDB) é instalado por padrão com o Visual Studio; Você precisará instalá-lo manualmente se estiver usando o Visual Studio 2010.
 
-Neste tutorial você trabalhará com o LocalDB para que o banco de dados pode ser armazenado na *App\_dados* pasta como um *arquivos. mdf* arquivo. Abra a raiz *Web. config* arquivo e adicione uma nova cadeia de caracteres de conexão para o `connectionStrings` coleção, conforme mostrado no exemplo a seguir. (Certifique-se de atualizar o *Web. config* arquivo na pasta raiz do projeto. Há também uma *Web. config* arquivo está sendo a *modos de exibição* subpasta que você não precisa atualizar.)
+Neste tutorial, você trabalhará com o LocalDB para que o banco de dados possa ser armazenado na pasta *Data\_app* como um arquivo *. MDF* . Abra o arquivo *Web. config* raiz e adicione uma nova cadeia de conexão à coleção de `connectionStrings`, conforme mostrado no exemplo a seguir. (Certifique-se de atualizar o arquivo *Web. config* na pasta do projeto raiz. Há também um arquivo *Web. config* na subpasta *views* que você não precisa atualizar.)
 
 [!code-xml[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample8.xml)]
 
-Por padrão, o Entity Framework procura uma cadeia de caracteres de conexão que o mesmo nomeada que o `DbContext` classe (`SchoolContext` para este projeto). A cadeia de caracteres de conexão que você adicionou Especifica um banco de dados LocalDB denominado *ContosoUniversity.mdf* localizado na *App\_dados* pasta. Para obter mais informações, consulte [cadeias de Conexão do SQL Server para aplicativos Web ASP.NET](https://msdn.microsoft.com/library/jj653752.aspx).
+Por padrão, a Entity Framework procura uma cadeia de conexão denominada igual à classe `DbContext` (`SchoolContext` para este projeto). A cadeia de conexão que você adicionou especifica um banco de dados LocalDB chamado *ContosoUniversity. MDF* localizado na pasta de *dados do aplicativo\_* . Para obter mais informações, consulte [SQL Server cadeias de conexão para aplicativos Web ASP.net](https://msdn.microsoft.com/library/jj653752.aspx).
 
-Na verdade, você não precisa especificar a cadeia de caracteres de conexão. Se você não fornecer uma cadeia de caracteres de conexão, o Entity Framework criará um para você. No entanto, o banco de dados pode não estar na *App\_dados* pasta do seu aplicativo. Para obter informações sobre onde o banco de dados será criado, consulte [Code First para um novo banco de dados](https://msdn.microsoft.com/data/jj193542).
+Na verdade, você não precisa especificar a cadeia de conexão. Se você não fornecer uma cadeia de conexão, Entity Framework criará uma para você; no entanto, o banco de dados pode não estar na pasta *data\_de aplicativo* do seu aplicativo. Para obter informações sobre onde o banco de dados será criado, consulte [Code First para um novo banco de dados](https://msdn.microsoft.com/data/jj193542).
 
-O `connectionStrings` coleção também tem uma cadeia de conexão chamada `DefaultConnection` que é usado para o banco de dados de associação. Você não usará o banco de dados de associação neste tutorial. A única diferença entre as cadeias de caracteres de dois conexão é o nome do banco de dados e o valor do atributo de nome.
+A coleção de `connectionStrings` também tem uma cadeia de conexão chamada `DefaultConnection` que é usada para o banco de dados de associação. Você não usará o banco de dados de associação neste tutorial. A única diferença entre as duas cadeias de conexão é o nome do banco de dados e o valor do atributo Name.
 
-## <a name="set-up-and-execute-a-code-first-migration"></a>Configurar e executar uma migração de código primeiro
+## <a name="set-up-and-execute-a-code-first-migration"></a>Configurar e executar uma migração de Code First
 
-Quando você começa a desenvolver um aplicativo, seus dados de modelo é alterado com frequência e cada vez que o modelo é alterado, que ele obtém fora de sincronia com o banco de dados. Você pode configurar o Entity Framework para descartar e recriar o banco de dados sempre que você alterar o modelo de dados automaticamente. Isso não é um problema no início do desenvolvimento, porque os dados de teste são facilmente recriados, mas depois de ter implantado para produção você geralmente deseja atualizar o esquema de banco de dados sem descartar o banco de dados. O recurso de migrações permite que o Code First atualizar o banco de dados sem descartar e recriá-lo. No início do ciclo de desenvolvimento de um novo projeto, você talvez queira usar [DropCreateDatabaseIfModelChanges](https://msdn.microsoft.com/library/gg679604(v=vs.103).aspx) para descarte, recriar e propagar novamente o banco de dados cada vez que as alterações do modelo. Um você se prepara para implantar seu aplicativo, você pode converter para a abordagem de migrações. Para este tutorial usará apenas migrações. Para obter mais informações, consulte [migrações do Code First](https://msdn.microsoft.com/data/jj591621) e [migrações a série Screencast](https://blogs.msdn.com/b/adonet/archive/2014/03/12/migrations-screencast-series.aspx).
+Quando você começa a desenvolver um aplicativo pela primeira vez, o modelo de dados é alterado com frequência e, sempre que o modelo é alterado, ele fica fora de sincronia com o banco de dado. Você pode configurar o Entity Framework para descartar e recriar o banco de dados automaticamente sempre que alterar o modelo. Isso não é um problema no início do desenvolvimento porque os dados de teste são facilmente recriados, mas depois de você ter implantado na produção, geralmente você deseja atualizar o esquema do banco de dados sem descartar o banco de dados. O recurso de migrações permite que Code First atualize o banco de dados sem descartar e recriá-lo. No início do ciclo de desenvolvimento de um novo projeto, talvez você queira usar o [DropCreateDatabaseIfModelChanges](https://msdn.microsoft.com/library/gg679604(v=vs.103).aspx) para descartar, recriar e refazer a propagação do banco de dados sempre que o modelo for alterado. Um que você está pronto para implantar seu aplicativo, você pode converter para a abordagem de migrações. Para este tutorial, você usará apenas as migrações. Para obter mais informações, consulte série Screencast de [migrações do Code First](https://msdn.microsoft.com/data/jj591621) e [migrações](https://blogs.msdn.com/b/adonet/archive/2014/03/12/migrations-screencast-series.aspx).
 
-### <a name="enable-code-first-migrations"></a>Habilitar migrações do Code First
+### <a name="enable-code-first-migrations"></a>Habilitar Migrações do Code First
 
-1. Dos **ferramentas** menu, clique em **Gerenciador de pacotes NuGet** e, em seguida, **Package Manager Console**.
+1. No menu **ferramentas** , clique em **Gerenciador de pacotes NuGet** e em **console do Gerenciador de pacotes**.
 
     ![Selecting_Package_Manager_Console](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image10.png)
-2. No `PM>` prompt digite o seguinte comando:
+2. No prompt de `PM>`, insira o seguinte comando:
 
     [!code-powershell[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample9.ps1)]
 
-    ![comando enable-migrations](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image11.png)
+    ![comando Enable-Migrations](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image11.png)
 
-    Este comando cria uma *migrações* pasta no projeto ContosoUniversity e ele coloca nessa pasta um *Configuration.cs* arquivo que você pode editar para configurar migrações.
+    Esse comando cria uma pasta *Migrations* no projeto ContosoUniversity e coloca essa pasta em um arquivo *Configuration.cs* que você pode editar para configurar as migrações.
 
-    ![Pasta Migrations](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image12.png)
+    ![Pasta de migrações](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image12.png)
 
-    O `Configuration` classe inclui um `Seed` método que é chamado quando o banco de dados é criado e sempre que ele é atualizado após uma data do modelo forem alterados.
+    A classe `Configuration` inclui um método `Seed` que é chamado quando o banco de dados é criado e toda vez que ele é atualizado após uma alteração no modelo.
 
     [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample10.cs)]
 
-    A finalidade deste `Seed` método é para que você possa inserir dados de teste de banco de dados depois que o Code First cria-lo ou atualizá-la.
+    A finalidade desse método de `Seed` é permitir que você insira dados de teste no banco de dado depois que Code First o criar ou atualizar.
 
-### <a name="set-up-the-seed-method"></a>Configurar o método de semente
+### <a name="set-up-the-seed-method"></a>Configurar o método semente
 
-O [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) método é executado quando as migrações Code First cria o banco de dados e toda vez que ele atualiza o banco de dados para a migração mais recente. A finalidade do método semente é para que você possa inserir dados em suas tabelas antes que o aplicativo acessa o banco de dados pela primeira vez.
+O método [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) é executado quando migrações do Code First cria o banco de dados e toda vez que ele atualiza o banco de dados para a migração mais recente. A finalidade do método de semente é permitir que você insira dados em suas tabelas antes que o aplicativo acesse o Database pela primeira vez.
 
-Em versões anteriores do Code First, antes que as migrações foi lançado, era comum `Seed` métodos para inserir dados de teste, porque cada alteração de modelo durante o desenvolvimento de banco de dados tinha completamente ser excluído e recriado do zero. Com migrações do Code First, teste os dados são mantidos após as alterações do banco de dados, portanto, incluindo dados de teste na [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) método normalmente não é necessário. Na verdade, você não deseja que o `Seed` método para inserir dados de teste se você usará as migrações para implantar o banco de dados em produção, pois o `Seed` método será executado na produção. Nesse caso, você deseja que o `Seed` método a ser inserido no banco de dados somente os dados que você deseja ser inserida em produção. Por exemplo, você pode querer o banco de dados para incluir nomes de departamento real no `Department` tabela quando o aplicativo está disponível em produção.
+Em versões anteriores do Code First, antes da liberação de migrações, era comum para `Seed` métodos inserir dados de teste, porque com cada alteração de modelo durante o desenvolvimento, o banco de dado tinha de ser completamente excluído e recriado do zero. Com o Migrações do Code First, os dados de teste são retidos após as alterações do banco de dados, de modo que, inclusive, o método de [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) não é necessário normalmente. Na verdade, você não quer que o método `Seed` insira dados de teste se você estiver usando migrações para implantar o Database para produção, pois o método `Seed` será executado na produção. Nesse caso, você deseja que o método `Seed` para inserir no banco de dados somente os dados que você deseja que sejam inseridos na produção. Por exemplo, talvez você queira que o banco de dados inclua nomes de departamentos reais na tabela de `Department` quando o aplicativo se tornar disponível em produção.
 
-Para este tutorial, você usará as migrações para a implantação, mas seu `Seed` método vai inserir dados de teste de qualquer forma para torná-lo mais fácil de ver como a funcionalidade do aplicativo funciona sem precisar inserir manualmente o muitos dados.
+Para este tutorial, você usará migrações para implantação, mas seu método de `Seed` inserirá dados de teste de qualquer forma para facilitar a visualização de como a funcionalidade do aplicativo funciona sem a necessidade de inserir manualmente muitos dados.
 
-1. Substitua o conteúdo do *Configuration.cs* arquivo pelo código a seguir, que irá carregar dados de teste no novo banco de dados. 
+1. Substitua o conteúdo do arquivo *Configuration.cs* pelo código a seguir, que carregará os dados de teste no novo banco de dado. 
 
     [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample11.cs)]
 
-    O [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) método usa o objeto de contexto do banco de dados como um parâmetro de entrada e o código no método utiliza o objeto para adicionar novas entidades no banco de dados. Para cada tipo de entidade, o código cria uma coleção de novas entidades e os adiciona ao apropriado [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=vs.103).aspx) propriedade e, em seguida, salva as alterações no banco de dados. Não é necessário chamar o [SaveChanges](https://msdn.microsoft.com/library/system.data.entity.dbcontext.savechanges(v=VS.103).aspx) método depois de cada grupo de entidades, assim como é feito aqui, mas fazer isso ajuda a localizar a origem de um problema se ocorrer uma exceção enquanto o código é escrito para o banco de dados.
+    O método [semente](https://msdn.microsoft.com/library/hh829453(v=vs.103).aspx) usa o objeto de contexto de banco de dados como um parâmetro de entrada, e o código no método usa esse objeto para adicionar novas entidades ao banco de dados. Para cada tipo de entidade, o código cria uma coleção de novas entidades, adiciona-as à propriedade [DbSet](https://msdn.microsoft.com/library/system.data.entity.dbset(v=vs.103).aspx) apropriada e salva as alterações no banco de dados. Não é necessário chamar o método [SaveChanges](https://msdn.microsoft.com/library/system.data.entity.dbcontext.savechanges(v=VS.103).aspx) depois de cada grupo de entidades, como é feito aqui, mas fazer isso ajuda a localizar a origem de um problema se ocorrer uma exceção enquanto o código estiver gravando no banco de dados.
 
-    Algumas das instruções que inserem dados usam o [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método para executar uma operação "upsert". Porque o `Seed` método é executado com cada migração, você simplesmente não é possível inserir dados, porque as linhas que você está tentando adicionar já estará lá após a primeira migração que cria o banco de dados. A operação "upsert" impede que os erros que acontecem se você tentar inserir uma linha que já existe, mas ***substituições*** as alterações nos dados feitas durante o teste o aplicativo. Com os dados de teste em algumas tabelas você talvez não queira que aconteça: em alguns casos quando você altera os dados durante o teste você deseja as suas alterações para permanecer após as atualizações do banco de dados. Nesse caso, você deseja fazer uma operação de inserção condicional: inserir uma linha apenas se ele ainda não existir. O método de propagação usa as duas abordagens.
+    Algumas das instruções que inserem dados usam o método [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) para executar uma operação "Upsert". Como o método `Seed` é executado com cada migração, você não pode apenas inserir dados, pois as linhas que você está tentando adicionar já estarão lá após a primeira migração que cria o banco de dados. A operação "Upsert" impede erros que ocorrerão se você tentar inserir uma linha que já existe, mas ela ***substitui*** quaisquer alterações nos dados que você tenha feito durante o teste do aplicativo. Com os dados de teste em algumas tabelas, talvez você não queira que isso aconteça: em alguns casos, ao alterar os dados durante o teste, você deseja que as alterações permaneçam após as atualizações do banco. Nesse caso, você deseja fazer uma operação de inserção condicional: Insira uma linha somente se ela ainda não existir. O método semente usa ambas as abordagens.
 
-    O primeiro parâmetro passado para o [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) método Especifica a propriedade a ser usada para verificar se já existe uma linha. Para os dados de aluno de teste que você fornecer, o `LastName` propriedade pode ser usada para essa finalidade, pois cada sobrenome na lista é exclusivo:
+    O primeiro parâmetro passado para o método [AddOrUpdate](https://msdn.microsoft.com/library/system.data.entity.migrations.idbsetextensions.addorupdate(v=vs.103).aspx) especifica a propriedade a ser usada para verificar se já existe uma linha. Para os dados de aluno de teste que você está fornecendo, a propriedade `LastName` pode ser usada para essa finalidade, pois cada sobrenome na lista é exclusivo:
 
     [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample12.cs)]
 
-    Esse código supõe que o último nomes sejam exclusivos. Se você adicionar manualmente um aluno com um sobrenome duplicado, você obterá a seguinte exceção na próxima vez que você executar uma migração.
+    Esse código pressupõe que os últimos nomes são exclusivos. Se você adicionar manualmente um aluno com um sobrenome duplicado, obterá a seguinte exceção na próxima vez que executar uma migração.
 
-    Sequência contém mais de um elemento
+    A sequência contém mais de um elemento
 
-    Para obter mais informações sobre o `AddOrUpdate` método, consulte [tome cuidado com o EF 4.3 AddOrUpdate método](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) no blog de Julie.
+    Para obter mais informações sobre o método `AddOrUpdate`, consulte [tomar cuidado com o método EF 4,3 AddOrUpdate](http://thedatafarm.com/blog/data-access/take-care-with-ef-4-3-addorupdate-method/) no blog de Julie Lerman.
 
-    O código que adiciona `Enrollment` entidades não usa o `AddOrUpdate` método. Ele verifica se uma entidade já existe e insere a entidade se ela não existir. Essa abordagem preserva as alterações feitas para um nível de registro quando as migrações executadas. O código executa um loop em cada membro do `Enrollment` [lista](https://msdn.microsoft.com/library/6sh2ey19.aspx) e se o registro não for encontrado no banco de dados, ele adiciona o registro no banco de dados. Na primeira vez que você atualizar o banco de dados, o banco de dados estará vazio, portanto, ele adicionará cada registro.
+    O código que adiciona `Enrollment` entidades não usa o método `AddOrUpdate`. Ele verifica se uma entidade já existe e insere a entidade, caso ela não exista. Essa abordagem preservará as alterações feitas em uma classificação de registro quando as migrações são executadas. O código percorre cada membro da [lista](https://msdn.microsoft.com/library/6sh2ey19.aspx) de `Enrollment`e, se o registro não for encontrado no banco de dados, ele adicionará o registro ao banco de dados. Na primeira vez que você atualizar o banco de dados, o banco de dados estará vazio, portanto, ele adicionará cada registro.
 
     [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample13.cs)]
 
-    Para obter informações sobre como depurar o `Seed` método e como lidar com dados redundantes, como dois alunos denominados "Alexander Carson", consulte [Seeding e bancos de dados de depuração Entity Framework (EF)](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) no blog de Rick Anderson.
-2. Compile o projeto.
+    Para obter informações sobre como depurar o método de `Seed` e como lidar com dados redundantes, como dois alunos nomeados como "Alexander Carson", consulte datacenters de [propagação e depuração Entity Framework (EF)](https://blogs.msdn.com/b/rickandy/archive/2013/02/12/seeding-and-debugging-entity-framework-ef-dbs.aspx) no blog de Rick Anderson.
+2. Crie o projeto.
 
 ### <a name="create-and-execute-the-first-migration"></a>Criar e executar a primeira migração
 
-1. Na janela do Console do Gerenciador de pacotes, digite os seguintes comandos: 
+1. Na janela do console do Gerenciador de pacotes, digite os seguintes comandos: 
 
     [!code-powershell[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample14.ps1)]
 
     ![](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image13.png)
 
-    O `add-migration` comando adiciona à pasta Migrations uma *[carimbo de data]\_InitialCreate.cs* arquivo que contém o código que cria o banco de dados. O primeiro parâmetro (`InitialCreate)` é usado para o arquivo de nome e pode ser que você quiser; normalmente deve escolher uma palavra ou frase que resume o que está sendo feito na migração. Por exemplo, você pode nomear uma migração posterior &quot;AddDepartmentTable&quot;.
+    O comando `add-migration` adiciona à pasta Migrations um arquivo *[dateStamp]\_InitialCreate.cs* que contém o código que cria o banco de dados. O primeiro parâmetro (`InitialCreate)` é usado para o nome do arquivo e pode ser o que você desejar. normalmente, você escolhe uma palavra ou frase que resume o que está sendo feito na migração. Por exemplo, você pode nomear uma migração posterior &quot;&quot;de adddepartamentaltable.
 
-    ![Pasta migrações com a migração inicial](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image14.png)
+    ![Pasta de migrações com migração inicial](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image14.png)
 
-    O `Up` método da `InitialCreate` classe cria as tabelas de banco de dados que correspondem aos conjuntos de entidade do modelo de dados, e o `Down` método exclui-los. As migrações chamam o método `Up` para implementar as alterações do modelo de dados para uma migração. Quando você insere um comando para reverter a atualização, as Migrações chamam o método `Down`. O código a seguir mostra o conteúdo do `InitialCreate` arquivo:
+    O método de `Up` da classe `InitialCreate` cria as tabelas de banco de dados que correspondem aos conjuntos de entidades de modelo, e o método `Down` os exclui. As migrações chamam o método `Up` para implementar as alterações do modelo de dados para uma migração. Quando você insere um comando para reverter a atualização, as Migrações chamam o método `Down`. O código a seguir mostra o conteúdo do arquivo de `InitialCreate`:
 
     [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample15.cs)]
 
-    O `update-database` comando executa o `Up` método para criar o banco de dados e, em seguida, ele é executado o `Seed` para popular o banco de dados.
+    O comando `update-database` executa o método `Up` para criar o banco de dados e, em seguida, executa o método `Seed` para popular o banco de dados.
 
-Um banco de dados do SQL Server agora foi criado para seu modelo de dados. O nome do banco de dados é *ContosoUniversity*e o *. mdf* arquivo está no seu projeto *aplicativo\_dados* pasta porque esse é o que você especificou no seu cadeia de caracteres de conexão.
+Um banco de dados SQL Server foi criado para seu modelo de dado. O nome do banco de dados é *ContosoUniversity*, e o arquivo *. MDF* está na pasta de *dados do aplicativo\_* do seu projeto porque é isso que você especificou na cadeia de conexão.
 
-Você pode usar tanto **Gerenciador de servidores** ou **SQL Server Object Explorer** (SSOX) para exibir o banco de dados no Visual Studio. Para este tutorial você usará **Gerenciador de servidores**. No Visual Studio Express 2012 para Web, **Gerenciador de servidores** é chamado **Database Explorer**.
+Você pode usar o **Gerenciador de servidores** ou o **pesquisador de objetos do SQL Server** (SSOX) para exibir o banco de dados no Visual Studio. Para este tutorial, você usará **Gerenciador de servidores**. No Visual Studio Express 2012 para Web, **Gerenciador de servidores** é chamado de **Gerenciador de banco de dados**.
 
-1. Dos **modo de exibição** menu, clique em **Gerenciador de servidores**.
-2. Clique o **Adicionar Conexão** ícone.
+1. No menu **Exibir** , clique em **Gerenciador de servidores**.
+2. Clique no ícone **Adicionar conexão** .
 
     ![](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image15.png)
-3. Se você for solicitado com o **Choose Data Source** caixa de diálogo, clique em **Microsoft SQL Server**e, em seguida, clique em **continuar**.  
+3. Se você receber a caixa de diálogo **escolher fonte de dados** , clique em **Microsoft SQL Server**e em **continuar**.  
   
     ![](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image16.png)
-4. No **Adicionar Conexão** caixa de diálogo, digite **(localdb) \v11.0** para o **nome do servidor**. Sob **selecione ou insira um nome de banco de dados**, selecione **ContosoUniversity.**  
+4. Na caixa de diálogo **Adicionar conexão** , digite **(LocalDB) \V11.0** para o **nome do servidor**. Em **selecionar ou inserir um nome de banco de dados**, selecione **ContosoUniversity.**  
   
     ![](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image17.png)
 5. Clique em **OK**
-6. Expandir **SchoolContext** e, em seguida, expanda **tabelas**.  
+6. Expanda **SchoolContext** e expanda **tabelas**.  
   
     ![](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image18.png)
-7. Clique com botão direito do **aluno** tabela e clique em **Mostrar dados da tabela** para ver as colunas que foram criadas e as linhas que foram inseridas na tabela.
+7. Clique com o botão direito do mouse na tabela **Student** e clique em **Mostrar dados da tabela** para ver as colunas que foram criadas e as linhas que foram inseridas na tabela.
 
-    ![Tabela aluno](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image19.png)
+    ![Tabela de aluno](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image19.png)
 
 ## <a name="creating-a-student-controller-and-views"></a>Criando um controlador de aluno e exibições
 
-A próxima etapa é criar um ASP.NET MVC, controlador e exibições em seu aplicativo que possa trabalhar com uma dessas tabelas.
+A próxima etapa é criar um controlador MVC ASP.NET e exibições em seu aplicativo que podem funcionar com uma dessas tabelas.
 
-1. Para criar uma `Student` controlador, clique com botão direito do **controladores** pasta no **Gerenciador de soluções**, selecione **adicionar**e, em seguida, clique em **controlador** . No **Adicionar controlador** diálogo caixa, faça as seguintes seleções e, em seguida, clique em **Add**: 
+1. Para criar um controlador de `Student`, clique com o botão direito do mouse na pasta **controladores** em **Gerenciador de soluções**, selecione **Adicionar**e, em seguida, clique em **controlador**. Na caixa de diálogo **Adicionar controlador** , faça as seguintes seleções e clique em **Adicionar**: 
 
    - Nome do controlador: **StudentController**.
-   - Modelo: **Controlador MVC com ações de leitura/gravação e modos de exibição, usando o Entity Framework**.
-   - Classe de modelo: **Aluno (ContosoUniversity.Models)**. (Se você não vir essa opção na lista suspensa, compile o projeto e tente novamente.)
-   - Classe de contexto de dados: **SchoolContext (ContosoUniversity.Models)**.
-   - Modos de exibição: **O Razor (CSHTML)**. (O padrão).
+   - Modelo: **controlador MVC com ações de leitura/gravação e exibições, usando Entity Framework**.
+   - Classe de modelo: **aluno (ContosoUniversity. Models)** . (Se você não vir essa opção na lista suspensa, compile o projeto e tente novamente.)
+   - Classe de contexto de dados: **SchoolContext (ContosoUniversity. Models)** .
+   - Exibições: **Razor (cshtml)** . (O padrão.)
 
      ![Add_Controller_dialog_box_for_Student_controller](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image20.png)
-2. O Visual Studio abre o *Controllers\StudentController.cs* arquivo. Você verá que foi criada uma variável de classe que instancia um objeto de contexto do banco de dados:
+2. O Visual Studio abre o arquivo *Controllers\StudentController.cs* . Você vê uma variável de classe criada que instancia um objeto de contexto de banco de dados:
 
      [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample16.cs)]
 
-     O `Index` método de ação obtém uma lista de alunos do *alunos* entidade definida lendo o `Students` propriedade da instância de contexto do banco de dados:
+     O método de ação `Index` Obtém uma lista de alunos do conjunto de entidades *estudantes* lendo a propriedade `Students` da instância de contexto do banco de dados:
 
      [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample17.cs)]
 
-     O *Student\Index.cshtml* exibição exibe esta lista em uma tabela:
+     A exibição *Student\Index.cshtml* exibe essa lista em uma tabela:
 
      [!code-cshtml[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample18.cshtml)]
 3. Pressione CTRL+F5 para executar o projeto.
 
-     Clique o **alunos** guia para ver os dados de teste que o `Seed` método inserido.
+     Clique na guia **alunos** para ver os dados de teste inseridos pelo método de `Seed`.
 
-     ![Página de índice de alunos](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image21.png)
+     ![Página de índice de estudante](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/_static/image21.png)
 
 ## <a name="conventions"></a>Convenções
 
-A quantidade de código, você precisava escrever para que o Entity Framework poder criar um banco de dados completo para você é mínima, devido ao uso de *convenções*, ou suposições que faz com que o Entity Framework. Alguns deles já tem sido observados:
+A quantidade de código que você tinha de escrever para que o Entity Framework seja capaz de criar um banco de dados completo para você é o mínimo devido ao uso de *convenções*ou suposições que o Entity Framework faz. Alguns deles já foram observados:
 
-- Os formulários pluralizados dos nomes de classe de entidade são usados como nomes de tabela.
+- As formas pluraled de nomes de classe de entidade são usadas como nomes de tabela.
 - Os nomes de propriedade de entidade são usados para nomes de coluna.
-- Propriedades da entidade que são nomeadas `ID` ou *classname* `ID` são reconhecidas como propriedades de chave primária.
+- As propriedades de entidade nomeadas `ID` ou *classname* `ID` são reconhecidas como propriedades de chave primária.
 
-Você viu que as convenções podem ser substituídas (por exemplo, você especificou que que os nomes de tabela não devem ser pluralizados), e você aprenderá mais sobre as convenções e como substituí-las na [criando um modelo de dados mais complexo](creating-a-more-complex-data-model-for-an-asp-net-mvc-application.md) tutorial mais tarde nessa série. Para obter mais informações, consulte [convenções de Code First](https://msdn.microsoft.com/data/jj679962).
+Você viu que as convenções podem ser substituídas (por exemplo, se você especificou que os nomes de tabela não devem estar em plural), e você aprenderá mais sobre convenções e como substituí-las no tutorial [criando um modelo de dados mais complexo](creating-a-more-complex-data-model-for-an-asp-net-mvc-application.md) mais adiante nesta série. Para obter mais informações, consulte [convenções de Code First](https://msdn.microsoft.com/data/jj679962).
 
 ## <a name="summary"></a>Resumo
 
-Agora você criou um aplicativo simples que usa o Entity Framework e o SQL Server Express para armazenar e exibir dados. O tutorial a seguir, você aprenderá como executar básica CRUD (criar, ler, atualizar e excluir) as operações. Você pode deixar comentários na parte inferior desta página. Informe-nos como você gostou esta parte do tutorial e como poderíamos melhorá-lo.
+Agora você criou um aplicativo simples que usa o Entity Framework e SQL Server Express para armazenar e exibir dados. No tutorial a seguir, você aprenderá a executar operações CRUD (criar, ler, atualizar, excluir) básicas. Você pode deixar comentários na parte inferior desta página. Informe-nos como você gostou desta parte do tutorial e como poderíamos aprimorá-la.
 
-Links para outros recursos do Entity Framework podem ser encontradas na [mapa de conteúdo de acesso do ASP.NET dados](../../../../whitepapers/aspnet-data-access-content-map.md).
+Links para outros recursos de Entity Framework podem ser encontrados no [mapa de conteúdo de acesso a dados do ASP.net](../../../../whitepapers/aspnet-data-access-content-map.md).
 
 > [!div class="step-by-step"]
 > [Avançar](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)

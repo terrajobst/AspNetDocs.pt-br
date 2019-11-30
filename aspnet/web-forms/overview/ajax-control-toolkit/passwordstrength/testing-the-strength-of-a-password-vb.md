@@ -1,50 +1,50 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb
-title: Teste da força de uma senha (VB) | Microsoft Docs
+title: Testando a força de uma senha (VB) | Microsoft Docs
 author: wenz
-description: As senhas são necessárias em praticamente qualquer lugar, para que os usuários lentos tendem a escolher senhas simples, que são fáceis de interromper. O controle PasswordStrength do ASP. N...
+description: As senhas são necessárias em qualquer lugar, de modo que os usuários lentos tendem a escolher senhas simples que sejam fáceis de quebrar. O controle PasswordStrength no ASP. N...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 9215a37f-3133-4887-8ed2-3689f3a53551
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/passwordstrength/testing-the-strength-of-a-password-vb
 msc.type: authoredcontent
-ms.openlocfilehash: e64b79b1ce477fca439dd0db519371ed11446c52
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b614e1788eeafc175dd792ec6d3e4619f9ea2b7a
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115259"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74606243"
 ---
 # <a name="testing-the-strength-of-a-password-vb"></a>Teste da força de uma senha (VB)
 
 por [Christian Wenz](https://github.com/wenz)
 
-[Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PasswordStrength0.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/passwordstrength0VB.pdf)
+[Baixar código](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/PasswordStrength0.vb.zip) ou [baixar PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/passwordstrength0VB.pdf)
 
-> As senhas são necessárias em praticamente qualquer lugar, para que os usuários lentos tendem a escolher senhas simples, que são fáceis de interromper. O controle PasswordStrength no ASP.NET AJAX Control Toolkit pode verificar o quão bom é de uma senha.
+> As senhas são necessárias em qualquer lugar, de modo que os usuários lentos tendem a escolher senhas simples que sejam fáceis de quebrar. O controle PasswordStrength no ASP.NET AJAX Control Toolkit pode verificar a boa senha.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
-As senhas são necessárias em praticamente qualquer lugar, para que os usuários lentos tendem a escolher senhas simples, que são fáceis de interromper. O `PasswordStrength` controle no ASP.NET AJAX Control Toolkit pode verificar o quão bom é de uma senha.
+As senhas são necessárias em qualquer lugar, de modo que os usuários lentos tendem a escolher senhas simples que sejam fáceis de quebrar. O controle de `PasswordStrength` no ASP.NET AJAX Control Toolkit pode verificar a qualidade de uma senha.
 
 ## <a name="steps"></a>Etapas
 
-O `PasswordStrength` controle estende uma caixa de texto e verifica se a senha nele é bom o suficiente. Ele oferece uma infinidade de opções por meio de atributos. Aqui estão apenas alguns deles:
+O controle de `PasswordStrength` estende uma caixa de texto e verifica se a senha nela é boa o suficiente. Ele oferece uma infinidade de opções por meio de atributos; Aqui estão apenas algumas delas:
 
-- `MinimumNumericCharacters` número mínimo de caracteres necessários na senha
-- `MinimumSymbolCharacters` número mínimo de caracteres de símbolo (não letras e dígitos) necessário na senha
-- `PreferredPasswordLength` comprimento mínimo da senha
-- `RequiresUpperAndLowerCaseCharacters` Se a senha precisa usar caracteres maiusculos e minúsculos
+- `MinimumNumericCharacters` número mínimo de caracteres numéricos necessários na senha
+- `MinimumSymbolCharacters` número mínimo de caracteres de símbolo (não letras e dígitos) necessários na senha
+- `PreferredPasswordLength` o comprimento mínimo da senha
+- `RequiresUpperAndLowerCaseCharacters` se a senha precisa usar caracteres maiúsculos e minúsculos
 
-O `StrengthIndicatorType` fornece as informações de como apresentar a força da senha, como texto (valor `"Text"`) ou como um tipo de barra de progresso (valor `"BarIndicator"`). No `DisplayPosition` atributo, configure onde as informações são exibidas. Aqui está um exemplo completo, incluindo o ASP.NET AJAX `ScriptManager` controle, o `PasswordStrength` controle e certamente uma caixa de texto em que o usuário pode inserir uma senha. Para fins de demonstração, o campo de segunda forma é um campo de texto normal e não é um campo de senha para que você pode ver durante o desenvolvimento, o que está digitando.
+O `StrengthIndicatorType` fornece as informações sobre como apresentar a força da senha, como texto (valor `"Text"`) ou como um tipo de barra de progresso (valor `"BarIndicator"`). No atributo `DisplayPosition`, você configura onde as informações são exibidas. Aqui está um exemplo completo, incluindo o controle de `ScriptManager` AJAX ASP.NET, o controle de `PasswordStrength` e, obviamente, uma caixa de texto na qual o usuário pode inserir uma senha. Para fins de demonstração, o último campo de formulário é um campo de texto normal e não um campo de senha para que você possa ver durante o desenvolvimento o que está digitando.
 
 [!code-aspx[Main](testing-the-strength-of-a-password-vb/samples/sample1.aspx)]
 
-Execute a página e digite imediatamente: Somente depois que você inseriu letras minúsculas, letras maiusculas, dígitos e símbolos, a senha é considerada como inviolável.
+Execute a página e digite: somente depois de inserir letras minúsculas, letras maiúsculas, dígitos e símbolos, a senha será considerada inquebrável.
 
-[![Agora, a senha é bom (muito)](testing-the-strength-of-a-password-vb/_static/image2.png)](testing-the-strength-of-a-password-vb/_static/image1.png)
+[![agora a senha é (bem) boa](testing-the-strength-of-a-password-vb/_static/image2.png)](testing-the-strength-of-a-password-vb/_static/image1.png)
 
-Agora, a senha é bom (muito) ([clique para exibir a imagem em tamanho normal](testing-the-strength-of-a-password-vb/_static/image3.png))
+Agora, a senha é (bem) boa ([clique para exibir a imagem em tamanho normal](testing-the-strength-of-a-password-vb/_static/image3.png))
 
 > [!div class="step-by-step"]
 > [Anterior](testing-the-strength-of-a-password-cs.md)

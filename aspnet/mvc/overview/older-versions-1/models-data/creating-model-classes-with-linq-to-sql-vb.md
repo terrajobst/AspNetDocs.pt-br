@@ -1,187 +1,187 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-vb
-title: Criação de Classes de modelo com o LINQ to SQL (VB) | Microsoft Docs
+title: Criando classes de modelo com LINQ to SQL (VB) | Microsoft Docs
 author: microsoft
-description: O objetivo deste tutorial é explicar um método de criação de classes de modelo para um aplicativo ASP.NET MVC. Neste tutorial, você aprenderá a compilar modelo c...
+description: O objetivo deste tutorial é explicar um método de criação de classes de modelo para um aplicativo MVC ASP.NET. Neste tutorial, você aprenderá a criar o modelo c...
 ms.author: riande
 ms.date: 10/07/2008
 ms.assetid: a4a25a75-d71f-4509-98b4-df72e748985a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5e2f6af6ef425625cfc11570a73d2eea3516c996
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 88a5f1037d93ef3bdc95bf60b6005ebb254ab440
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122522"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74588537"
 ---
 # <a name="creating-model-classes-with-linq-to-sql-vb"></a>Criação de classes de modelo com o LINQ to SQL (VB)
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
-[Baixar PDF](http://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_10_VB.pdf)
+[Baixar PDF](https://download.microsoft.com/download/1/1/f/11f721aa-d749-4ed7-bb89-a681b68894e6/ASPNET_MVC_Tutorial_10_VB.pdf)
 
-> O objetivo deste tutorial é explicar um método de criação de classes de modelo para um aplicativo ASP.NET MVC. Neste tutorial, você aprenderá como criar classes de modelo e executar o acesso de banco de dados, tirando proveito do Microsoft LINQ to SQL.
+> O objetivo deste tutorial é explicar um método de criação de classes de modelo para um aplicativo MVC ASP.NET. Neste tutorial, você aprenderá a criar classes de modelo e a executar o acesso ao banco de dados aproveitando o LINQ to SQL da Microsoft.
 
-O objetivo deste tutorial é explicar um método de criação de classes de modelo para um aplicativo ASP.NET MVC. Neste tutorial, você aprenderá como criar classes de modelo e executar o acesso de banco de dados, tirando proveito do Microsoft LINQ to SQL.
+O objetivo deste tutorial é explicar um método de criação de classes de modelo para um aplicativo MVC ASP.NET. Neste tutorial, você aprenderá a criar classes de modelo e a executar o acesso ao banco de dados aproveitando o LINQ to SQL da Microsoft.
 
-Neste tutorial, vamos criar um aplicativo básico do banco de dados do filme. Vamos começar criando o aplicativo de banco de dados do filme da maneira mais rápida e fácil possível. Podemos executar todos de nosso acesso a dados diretamente do nosso ações do controlador.
+Neste tutorial, criamos um aplicativo de banco de dados de filme básico. Começamos criando o aplicativo de banco de dados de filmes da maneira mais rápida e fácil possível. Executamos todo o nosso acesso a dados diretamente de nossas ações do controlador.
 
-Em seguida, você aprenderá como usar o padrão de repositório. Usando o padrão de repositório requer um pouco mais trabalho. No entanto, a vantagem de adotar esse padrão é que ele permite que você crie aplicativos que são adaptáveis para alterar e pode ser facilmente testados.
+Em seguida, você aprenderá a usar o padrão de repositório. Usar o padrão de repositório requer um pouco mais de trabalho. No entanto, a vantagem de adotar esse padrão é que ele permite que você crie aplicativos que sejam adaptáveis a serem alterados e possam ser facilmente testados.
 
 ## <a name="what-is-a-model-class"></a>O que é uma classe de modelo?
 
-Um modelo MVC contém toda a lógica de aplicativo que não está contida em uma exibição do MVC ou controlador MVC. Em particular, um modelo MVC contém todos os seus negócios de aplicativos e a lógica de acesso a dados.
+Um modelo MVC contém toda a lógica do aplicativo que não está contida em uma exibição MVC ou controlador MVC. Em particular, um modelo MVC contém toda a lógica de acesso de dados e de negócios do seu aplicativo.
 
-Você pode usar uma variedade de tecnologias diferentes para implementar a lógica de acesso de dados. Por exemplo, você pode criar suas classes de acesso de dados usando as classes do Microsoft Entity Framework, NHibernate, o Subsonic ou ADO.NET.
+Você pode usar uma variedade de tecnologias diferentes para implementar a lógica de acesso a dados. Por exemplo, você pode criar suas classes de acesso a dados usando as classes Microsoft Entity Framework, NHibernate, Subsonic ou ADO.NET.
 
-Neste tutorial, uso o LINQ to SQL para consultar e atualizar o banco de dados. LINQ to SQL oferece um método muito fácil de interagir com um banco de dados do Microsoft SQL Server. No entanto, é importante entender que o ASP.NET MVC framework não está vinculado ao LINQ to SQL de qualquer forma. ASP.NET MVC é compatível com qualquer tecnologia de acesso a dados.
+Neste tutorial, uso LINQ to SQL para consultar e atualizar o banco de dados. LINQ to SQL fornece um método muito fácil de interagir com um banco de dados Microsoft SQL Server. No entanto, é importante entender que o ASP.NET MVC Framework não está vinculado a LINQ to SQL de nenhuma forma. O ASP.NET MVC é compatível com qualquer tecnologia de acesso a dados.
 
-## <a name="create-a-movie-database"></a>Criar um banco de dados do filme
+## <a name="create-a-movie-database"></a>Criar um banco de dados de filmes
 
-Neste tutorial, para ilustrar como você pode criar classes de modelo – vamos criar um aplicativo de banco de dados de filme simples. A primeira etapa é criar um novo banco de dados. O aplicativo com o botão direito\_pasta de dados na janela do Gerenciador de soluções e selecione a opção de menu **adicionar, Item novo**. Selecione o modelo de banco de dados do SQL Server, atribua o nome MoviesDB.mdf e clique no **adicionar** botão (consulte a Figura 1).
+Neste tutorial, para ilustrar como você pode criar classes de modelo, criamos um aplicativo de banco de dados de filme simples. A primeira etapa é criar um novo banco de dados. Clique com o botão direito do mouse na pasta\_dados do aplicativo na janela Gerenciador de Soluções e selecione a opção de menu **Adicionar, novo item**. Selecione o modelo de banco de dados SQL Server, dê a ele o nome MoviesDB. MDF e clique no botão **Adicionar** (veja a Figura 1).
 
-[![Adicionando um novo banco de dados do SQL Server](creating-model-classes-with-linq-to-sql-vb/_static/image2.png)](creating-model-classes-with-linq-to-sql-vb/_static/image1.png)
+[![adicionar um novo banco de dados SQL Server](creating-model-classes-with-linq-to-sql-vb/_static/image2.png)](creating-model-classes-with-linq-to-sql-vb/_static/image1.png)
 
-**Figura 01**: Adicionando um novo banco de dados do SQL Server ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image3.png))
+**Figura 01**: adicionando um novo banco de dados SQL Server ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image3.png))
 
-Depois de criar o novo banco de dados, é possível abrir o banco de dados, duas vezes no arquivo MoviesDB.mdf no aplicativo\_pasta de dados. Duas vezes no arquivo MoviesDB.mdf abre a janela do Gerenciador de servidores (consulte a Figura 2).
+Após criar o novo banco de dados, você pode abrir o banco de dados clicando duas vezes no arquivo MoviesDB. MDF na pasta de dados do aplicativo\_. Clicar duas vezes no arquivo MoviesDB. MDF abre a janela Gerenciador de Servidores (consulte a Figura 2).
 
-|   | A janela do Gerenciador de servidores é chamada a janela Gerenciador de banco de dados ao usar o Visual Web Developer. |
+|   | A janela de Gerenciador de Servidores é chamada de janela de Gerenciador de Banco de Dados ao usar o Visual Web Developer. |
 |---|----------------------------------------------------------------------------------------------------|
 |   |                                                                                                    |
 
-[![Usando a janela do Gerenciador de servidores](creating-model-classes-with-linq-to-sql-vb/_static/image5.png)](creating-model-classes-with-linq-to-sql-vb/_static/image4.png)
+[![usando a janela Gerenciador de Servidores](creating-model-classes-with-linq-to-sql-vb/_static/image5.png)](creating-model-classes-with-linq-to-sql-vb/_static/image4.png)
 
-**Figura 02**: Usando a janela do Gerenciador de servidores ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image6.png))
+**Figura 02**: usando a janela de Gerenciador de servidores ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image6.png))
 
-Precisamos adicionar uma tabela ao nosso banco de dados que representa nosso filmes. Clique com botão direito na pasta tabelas e selecione a opção de menu **adicionar nova tabela**. Selecionar essa opção de menu abre o Designer de tabela (veja a Figura 3).
+Precisamos adicionar uma tabela ao nosso banco de dados que representa nossos filmes. Clique com o botão direito do mouse na pasta tabelas e selecione a opção de menu **Adicionar nova tabela**. A seleção dessa opção de menu abre a Designer de Tabela (consulte a Figura 3).
 
-[![Usando a janela do Gerenciador de servidores](creating-model-classes-with-linq-to-sql-vb/_static/image8.png)](creating-model-classes-with-linq-to-sql-vb/_static/image7.png)
+[![usando a janela Gerenciador de Servidores](creating-model-classes-with-linq-to-sql-vb/_static/image8.png)](creating-model-classes-with-linq-to-sql-vb/_static/image7.png)
 
-**Figura 03**: O Designer de tabela ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image9.png))
+**Figura 03**: a designer de tabela ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image9.png))
 
-É preciso adicionar as colunas a seguir para nossa tabela de banco de dados:
+Precisamos adicionar as seguintes colunas à nossa tabela de banco de dados:
 
 | **Nome da coluna** | **Tipo de dados** | **Permitir nulos** |
 | --- | --- | --- |
-| Id | int | False |
-| Título | Nvarchar(200) | False |
-| Diretor | Nvarchar(50) | False |
+| Id | Int | False |
+| Cargo | Nvarchar (200) | False |
+| Pasta | Nvarchar (50) | False |
 
-Você precisa fazer duas coisas especiais para a coluna de Id. Primeiro, você precisa marcar a coluna de Id como uma coluna de chave primária, selecionando a coluna no Designer de tabela e clicando no ícone de uma chave. LINQ to SQL requer que você especifique suas colunas de chave primária quando executar inserções ou atualizações no banco de dados.
+Você precisa fazer duas coisas especiais para a coluna ID. Primeiro, você precisa marcar a coluna ID como uma coluna de chave primária selecionando a coluna na Designer de Tabela e clicando no ícone de uma chave. LINQ to SQL exige que você especifique as colunas de chave primária ao executar inserções ou atualizações no banco de dados.
 
-Em seguida, você precisará marcar a coluna Id como uma coluna de identidade, atribuindo o valor Sim para o **é identidade** propriedade (veja a Figura 3). Uma coluna de identidade é uma coluna que é atribuída um novo número automaticamente sempre que você adicionar uma nova linha de dados a uma tabela.
+Em seguida, você precisa marcar a coluna ID como uma coluna de identidade atribuindo o valor Sim à propriedade **is Identity** (consulte a Figura 3). Uma coluna de identidade é uma coluna que recebe um novo número automaticamente sempre que você adiciona uma nova linha de dados a uma tabela.
 
-Depois de fazer essas alterações, salve a tabela com o nome tblMovie. Você pode salvar a tabela clicando no botão Salvar.
+Depois de fazer essas alterações, salve a tabela com o nome tblMovie. Você pode salvar a tabela clicando no botão salvar.
 
-## <a name="create-linq-to-sql-classes"></a>Criar Classes LINQ to SQL
+## <a name="create-linq-to-sql-classes"></a>Criar classes de LINQ to SQL
 
-Nosso modelo MVC conterá o LINQ para SQL classes que representam a tabela de banco de dados tblMovie. A maneira mais fácil de criar essas classes LINQ to SQL é com o botão direito na pasta modelos, selecione **Add, o novo Item**, selecione o LINQ para o modelo de Classes do SQL, nomeie as classes de Movie.dbml e clique no **Add**botão (consulte a Figura 4).
+Nosso modelo MVC conterá LINQ to SQL classes que representam a tabela de banco de dados tblMovie. A maneira mais fácil de criar essas classes de LINQ to SQL é clicar com o botão direito do mouse na pasta modelos, selecionar **Adicionar, novo item**, selecionar o modelo classes de LINQ to SQL, atribuir o nome Movie. dbml e clicar no botão **Adicionar** (consulte a Figura 4).
 
-[![Criando o LINQ para classes SQL](creating-model-classes-with-linq-to-sql-vb/_static/image11.png)](creating-model-classes-with-linq-to-sql-vb/_static/image10.png)
+[![criar classes de LINQ to SQL](creating-model-classes-with-linq-to-sql-vb/_static/image11.png)](creating-model-classes-with-linq-to-sql-vb/_static/image10.png)
 
-**Figura 04**: Criando o LINQ para SQL classes ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image12.png))
+**Figura 04**: Criando classes de LINQ to SQL ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image12.png))
 
-Imediatamente depois de criar o filme Classes LINQ to SQL, o Object Relational Designer é exibido. Você pode arrastar tabelas de banco de dados da janela Gerenciador de servidores para o Object Relational Designer para criar Classes LINQ to SQL que representam as tabelas de banco de dados específico. Precisamos adicionar a tabela de banco de dados de tblMovie em Object Relational Designer (consulte a Figura 4).
+Imediatamente depois de criar o filme LINQ to SQL classes, o Object Relational Designer é exibido. Você pode arrastar tabelas de banco de dados da janela Gerenciador de Servidores para a Object Relational Designer para criar LINQ to SQL classes que representam tabelas de banco de dados específicas. Precisamos adicionar a tabela de banco de dados tblMovie à Object Relational Designer (consulte a Figura 4).
 
-[![Usando o Object Relational Designer](creating-model-classes-with-linq-to-sql-vb/_static/image14.png)](creating-model-classes-with-linq-to-sql-vb/_static/image13.png)
+[![usando o Object Relational Designer](creating-model-classes-with-linq-to-sql-vb/_static/image14.png)](creating-model-classes-with-linq-to-sql-vb/_static/image13.png)
 
-**Figura 05**: Usando o Object Relational Designer ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image15.png))
+**Figura 05**: usando o Object Relational Designer ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image15.png))
 
-Por padrão, o Object Relational Designer cria uma classe com o mesmo nome como a tabela de banco de dados que você arrasta para o Designer. No entanto, não queremos chamar tblMovie nossa classe. Portanto, clique no nome da classe no Designer e altere o nome da classe para filme.
+Por padrão, o Object Relational Designer cria uma classe com o mesmo nome da tabela de banco de dados que você arrasta para o designer. No entanto, não queremos chamar nossa classe tblMovie. Portanto, clique no nome da classe no designer e altere o nome da classe para filme.
 
-Por fim, lembre-se de clicar o **salvar** botão (a imagem de disquete) para salvar o LINQ to SQL Classes. Caso contrário, a Classes LINQ to SQL não gerado pelo Designer relacional de objeto.
+Por fim, lembre-se de clicar no botão **salvar** (a imagem do disquete) para salvar as Classes de LINQ to SQL. Caso contrário, as classes de LINQ to SQL não serão geradas pelo Object Relational Designer.
 
 ## <a name="using-linq-to-sql-in-a-controller-action"></a>Usando LINQ to SQL em uma ação do controlador
 
-Agora que temos nosso classes LINQ to SQL, podemos usar essas classes para recuperar dados do banco de dados. Nesta seção, você aprenderá a usar LINQ to SQL classes diretamente dentro de uma ação do controlador. Podemos vai exibir a lista de filmes da tabela de banco de dados tblMovies em uma exibição do MVC.
+Agora que temos nossas classes de LINQ to SQL, podemos usar essas classes para recuperar dados do banco de dado. Nesta seção, você aprenderá a usar LINQ to SQL classes diretamente dentro de uma ação do controlador. Vamos exibir a lista de filmes da tabela de banco de dados tblMovies em uma exibição MVC.
 
-Primeiro, precisamos modificar a classe HomeController. Essa classe pode ser encontrada na pasta controladores do seu aplicativo. Modifique a classe para que ele se parece com a classe na listagem 1.
+Primeiro, precisamos modificar a classe HomeController. Essa classe pode ser encontrada na pasta controladores do seu aplicativo. Modifique a classe para que ela se pareça com a classe na Listagem 1.
 
 **Listagem 1 – `Controllers\HomeController.vb`**
 
 [!code-vb[Main](creating-model-classes-with-linq-to-sql-vb/samples/sample1.vb)]
 
-A ação Index () na listagem 1 usa uma classe LINQ to SQL DataContext (o MovieDataContext) para representar o banco de dados MoviesDB. A classe MoveDataContext foi gerada pelo Visual Studio o Object Relational Designer.
+A ação index () na Listagem 1 usa um LINQ to SQL classe DataContext (o MovieDataContext) para representar o banco de dados MoviesDB. A classe MoveDataContext foi gerada pelo Object Relational Designer do Visual Studio.
 
-Uma consulta LINQ é executada em relação a DataContext para recuperar todos os filmes da tabela de banco de dados tblMovies. A lista de filmes é atribuída a uma variável local denominada filmes. Por fim, a lista de filmes é passada para o modo de exibição por meio de exibir dados.
+Uma consulta LINQ é executada em relação ao DataContext para recuperar todos os filmes da tabela de banco de dados tblMovies. A lista de filmes é atribuída a uma variável local chamada filmes. Por fim, a lista de filmes é passada para a exibição por meio de dados de exibição.
 
-Para mostrar os filmes, em seguida, precisamos modificar a exibição de índice. Você pode encontrar a exibição de índice na pasta Views\Home\. Atualize a exibição de índice para que ele se parece com o modo de exibição na listagem 2.
+Para mostrar os filmes, precisamos modificar a exibição do índice. Você pode encontrar a exibição de índice na pasta Views\Home\ Atualize a exibição de índice para que ela se pareça com a exibição na Listagem 2.
 
 **Listagem 2 – `Views\Home\Index.aspx`**
 
 [!code-aspx[Main](creating-model-classes-with-linq-to-sql-vb/samples/sample2.aspx)]
 
-Observe que o modo de exibição do índice modificado inclui um &lt;% @ import namespace %&gt; diretiva na parte superior do modo de exibição. Essa diretiva importa o namespace MvcApplication1. Precisamos esse namespace para trabalhar com as classes de modelo – em particular, a classe Movie – no modo de exibição.
+Observe que a exibição de índice modificada inclui uma diretiva &lt;% @ Import namespace%&gt; na parte superior da exibição. Essa diretiva importa o namespace MvcApplication1. Precisamos desse namespace para trabalhar com as classes de modelo – em particular, a classe Movie – na exibição.
 
-A exibição na listagem 2 contém uma para cada loop que itera em todos os itens, representados pela propriedade ViewData.Model. O valor da propriedade de título é exibido para cada filme.
+A exibição na Listagem 2 contém um loop for each que itera em todos os itens representados pela propriedade ViewData. Model. O valor da propriedade Title é exibido para cada filme.
 
-Observe que o valor da propriedade ViewData.Model é convertido em um IEnumerable. Isso é necessário para executar um loop pelo conteúdo da ViewData.Model. Outra opção aqui é criar uma exibição fortemente tipada. Quando você cria uma exibição fortemente tipado, você converter a propriedade de ViewData.Model para um tipo específico na classe code-behind de uma exibição.
+Observe que o valor da propriedade ViewData. Model é convertido em um IEnumerable. Isso é necessário para executar um loop pelo conteúdo de ViewData. Model. Outra opção aqui é criar uma exibição fortemente tipada. Quando você cria uma exibição fortemente tipada, você converte a propriedade ViewData. Model em um tipo específico na classe code-behind de uma exibição.
 
-Se você executar o aplicativo depois de modificar a classe HomeController e a exibição de índice, você obterá uma página em branco. Você obterá uma página em branco porque não há nenhum registro de filme na tabela de banco de dados tblMovies.
+Se você executar o aplicativo depois de modificar a classe HomeController e a exibição de índice, obterá uma página em branco. Você obterá uma página em branco porque não há nenhum registro de filme na tabela de banco de dados tblMovies.
 
-Para adicionar registros à tabela de banco de dados tblMovies, a tabela de banco de dados tblMovies na janela Gerenciador de servidores (janela do Gerenciador de banco de dados no Visual Web Developer) com o botão direito e selecione a opção de menu **Mostrar dados da tabela**. Você pode inserir registros de filme usando a grade que aparece (veja a Figura 5).
+Para adicionar registros à tabela de banco de dados tblMovies, clique com o botão direito do mouse na tabela de banco de dados tblMovies na janela Gerenciador de Servidores (Gerenciador de Banco de Dados janela no Visual Web Developer) e selecione a opção de menu **Mostrar dados da tabela**. Você pode inserir registros de filme usando a grade exibida (consulte a Figura 5).
 
-[![Inserção de filmes](creating-model-classes-with-linq-to-sql-vb/_static/image17.png)](creating-model-classes-with-linq-to-sql-vb/_static/image16.png)
+[![inserindo filmes](creating-model-classes-with-linq-to-sql-vb/_static/image17.png)](creating-model-classes-with-linq-to-sql-vb/_static/image16.png)
 
-**Figura 06**: Inserção de filmes ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image18.png))
+**Figura 06**: inserindo filmes ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image18.png))
 
-Depois de adicionar alguns registros de banco de dados à tabela tblMovies e executar o aplicativo, você verá a página na Figura 7. Todos os registros de banco de dados do filme são exibidos em uma lista com marcadores.
+Depois de adicionar alguns registros de banco de dados à tabela tblMovies e executar o aplicativo, você verá a página na Figura 7. Todos os registros do banco de dados de filmes são exibidos em uma lista com marcadores.
 
-[![Exibição de filmes com o modo de exibição de índice](creating-model-classes-with-linq-to-sql-vb/_static/image20.png)](creating-model-classes-with-linq-to-sql-vb/_static/image19.png)
+[![exibir filmes com a exibição de índice](creating-model-classes-with-linq-to-sql-vb/_static/image20.png)](creating-model-classes-with-linq-to-sql-vb/_static/image19.png)
 
-**Figura 07**: Exibição de filmes com o modo de exibição de índice ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image21.png))
+**Figura 07**: exibindo filmes com a exibição de índice ([clique para exibir a imagem em tamanho normal](creating-model-classes-with-linq-to-sql-vb/_static/image21.png))
 
 ## <a name="using-the-repository-pattern"></a>Usando o padrão de repositório
 
-Na seção anterior, usamos o LINQ para SQL classes diretamente dentro de uma ação do controlador. Nós usamos a classe MovieDataContext diretamente da ação de controlador de Index (). Não há nada de errado com isso no caso de um aplicativo simples. No entanto, trabalhar diretamente com o LINQ to SQL em uma classe de controlador cria problemas quando você precisa para criar um aplicativo mais complexo.
+Na seção anterior, usamos LINQ to SQL classes diretamente dentro de uma ação do controlador. Usamos a classe MovieDataContext diretamente da ação do controlador de índice (). Não há nada de errado com isso no caso de um aplicativo simples. No entanto, trabalhar diretamente com LINQ to SQL em uma classe de controlador cria problemas quando você precisa criar um aplicativo mais complexo.
 
-Usando LINQ to SQL dentro de uma classe de controlador torna difícil alternar as tecnologias de acesso no futuro. Por exemplo, você pode decidir alternar entre usar o Microsoft LINQ to SQL usando o Entity Framework da Microsoft como sua tecnologia de acesso a dados. Nesse caso, você precisaria reescrever cada controlador que acessa o banco de dados dentro de seu aplicativo.
+O uso de LINQ to SQL dentro de uma classe de controlador dificulta a troca de tecnologias de acesso a dados no futuro. Por exemplo, você pode optar por mudar do uso do Microsoft LINQ to SQL para usar o Entity Framework da Microsoft como sua tecnologia de acesso a dados. Nesse caso, você precisaria reescrever todos os controladores que acessam o banco de dados em seu aplicativo.
 
-Usando LINQ to SQL dentro de uma classe de controlador também torna difíceis de criar testes de unidade para seu aplicativo. Normalmente, você não deseja interagir com um banco de dados ao executar testes de unidade. Você deseja usar os testes de unidade para testar a lógica do aplicativo e não o servidor de banco de dados.
+O uso de LINQ to SQL dentro de uma classe de controlador também dificulta a criação de testes de unidade para seu aplicativo. Normalmente, você não deseja interagir com um banco de dados ao executar testes de unidade. Você deseja usar os testes de unidade para testar a lógica do aplicativo e não o servidor de banco de dados.
 
-A fim de criar um aplicativo MVC, que é mais adaptável para futuras alterações e que podem ser testados com mais facilidade, você deve considerar usar o padrão de repositório. Quando você usa o padrão de repositório, você pode criar uma classe de repositório separado que contém todos os de sua lógica de acesso do banco de dados.
+Para criar um aplicativo MVC que seja mais adaptável para futuras alterações e que possa ser testado com mais facilidade, você deve considerar o uso do padrão Repository. Ao usar o padrão de repositório, você cria uma classe de repositório separada que contém toda a lógica de acesso ao banco de dados.
 
-Quando você cria a classe de repositório, você pode criar uma interface que representa todos os métodos usados pela classe de repositório. Dentro dos controladores, você escreve seu código com base na interface em vez de no repositório. Dessa forma, você pode implementar o repositório usando tecnologias de acesso a dados diferentes no futuro.
+Ao criar a classe Repository, você cria uma interface que representa todos os métodos usados pela classe Repository. Em seus controladores, você escreve seu código na interface em vez do repositório. Dessa forma, você pode implementar o repositório usando tecnologias de acesso a dados diferentes no futuro.
 
-A interface na listagem 3 é denominada IMovieRepository e representa um único método chamado ListAll().
+A interface na Listagem 3 é denominada IMovieRepository e representa um único método chamado ListAll ().
 
 **Listagem 3 – `Models\IMovieRepository.vb`**
 
 [!code-vb[Main](creating-model-classes-with-linq-to-sql-vb/samples/sample3.vb)]
 
-A classe de repositório na listagem 4 implementa a interface IMovieRepository. Observe que ele contém um método chamado ListAll() que corresponde ao método exigido pela interface IMovieRepository.
+A classe Repository na Listagem 4 implementa a interface IMovieRepository. Observe que ele contém um método chamado ListAll () que corresponde ao método exigido pela interface IMovieRepository.
 
 **Listagem 4 – `Models\MovieRepository.vb`**
 
 [!code-vb[Main](creating-model-classes-with-linq-to-sql-vb/samples/sample4.vb)]
 
-Por fim, a classe MoviesController na listagem 5 usa o padrão de repositório. Ele não usa mais LINQ para classes SQL diretamente.
+Por fim, a classe MoviesController na listagem 5 usa o padrão Repository. Ele não usa mais classes LINQ to SQL diretamente.
 
 **Listagem 5 – `Controllers\MoviesController.vb`**
 
 [!code-vb[Main](creating-model-classes-with-linq-to-sql-vb/samples/sample5.vb)]
 
-Observe que a classe MoviesController na listagem 5 tem dois construtores. O primeiro construtor, o construtor sem parâmetros, é chamado quando o aplicativo é executado. Este construtor cria uma instância da classe MovieRepository e passa-o para o segundo construtor.
+Observe que a classe MoviesController na listagem 5 tem dois construtores. O primeiro construtor, o construtor sem parâmetros, é chamado quando seu aplicativo está em execução. Esse construtor cria uma instância da classe MovieRepository e a passa para o segundo construtor.
 
-O segundo construtor tem um único parâmetro: um parâmetro IMovieRepository. Esse construtor simplesmente atribui o valor do parâmetro a um campo de nível de classe chamado \_repositório.
+O segundo construtor tem um único parâmetro: um parâmetro IMovieRepository. Esse construtor simplesmente atribui o valor do parâmetro a um campo de nível de classe chamado \_Repository.
 
-A classe MoviesController está aproveitando um padrão de design de software chamado o padrão de injeção de dependência. Em particular, ele está usando algo chamado injeção de dependência de construtor. Você pode ler mais sobre esse padrão, lendo o artigo a seguir por Martin Fowler:
+A classe MoviesController está tirando proveito de um padrão de design de software chamado padrão de injeção de dependência. Em particular, ele está usando algo chamado injeção de dependência de construtor. Você pode ler mais sobre esse padrão lendo o seguinte artigo de Martin Fowler:
 
 [http://martinfowler.com/articles/injection.html](http://martinfowler.com/articles/injection.html)
 
-Observe que todo o código na classe MoviesController (exceto o primeiro construtor) interage com a interface IMovieRepository em vez da classe MovieRepository real. O código interage com uma interface abstrata, em vez de uma implementação concreta da interface.
+Observe que todo o código na classe MoviesController (com a exceção do primeiro construtor) interage com a interface IMovieRepository em vez da classe MovieRepository real. O código interage com uma interface abstrata em vez de uma implementação concreta da interface.
 
-Se você quiser modificar a tecnologia de acesso de dados usada pelo aplicativo, em seguida, você pode simplesmente implementar a interface de IMovieRepository com uma classe que usa a tecnologia de acesso alternativo do banco de dados. Por exemplo, você poderia criar uma classe de EntityFrameworkMovieRepository ou uma classe SubSonicMovieRepository. Como a classe de controlador é programada com base na interface, você pode passar uma nova implementação de IMovieRepository à classe do controlador e a classe continuará a funcionar.
+Se você quiser modificar a tecnologia de acesso a dados usada pelo aplicativo, poderá simplesmente implementar a interface IMovieRepository com uma classe que usa a tecnologia de acesso ao banco de dado alternativa. Por exemplo, você pode criar uma classe EntityFrameworkMovieRepository ou uma classe SubSonicMovieRepository. Como a classe Controller é programada na interface, você pode passar uma nova implementação de IMovieRepository para a classe Controller e a classe continuaria funcionando.
 
-Além disso, se você quiser testar a classe MoviesController, você pode passar uma classe de repositório de filme falso para o MoviesController. Você pode implementar a classe IMovieRepository com uma classe que não acessa o banco de dados, na verdade, mas contém todos os métodos da interface IMovieRepository necessários. Dessa forma, você pode testar a unidade a classe MoviesController sem, na verdade, acessar um banco de dados real.
+Além disso, se você quiser testar a classe MoviesController, poderá passar uma classe de repositório de filmes falsa para o MoviesController. Você pode implementar a classe IMovieRepository com uma classe que não acesse o banco de dados, mas que contém todos os métodos necessários da interface IMovieRepository. Dessa forma, você pode testar a classe MoviesController sem realmente acessar um banco de dados real.
 
 ## <a name="summary"></a>Resumo
 
-O objetivo deste tutorial era demonstrar como você pode criar classes de modelo do MVC, tirando proveito do Microsoft LINQ to SQL. Examinamos duas estratégias para exibir dados do banco de dados em um aplicativo ASP.NET MVC. Primeiro, criamos LINQ para classes SQL e usamos as classes diretamente dentro de uma ação do controlador. Usando o LINQ para classes SQL dentro de um controlador permite que você rapidamente e facilmente exibir dados de banco de dados em um aplicativo MVC.
+O objetivo deste tutorial foi demonstrar como você pode criar classes de modelo MVC aproveitando o Microsoft LINQ to SQL. Examinamos duas estratégias para a exibição de dados de um aplicativo do ASP.NET MVC. Primeiro, criamos LINQ to SQL classes e usamos as classes diretamente dentro de uma ação do controlador. O uso de classes LINQ to SQL dentro de um controlador permite que você exiba dados de um aplicativo de forma rápida e fácil em aplicativos MVC.
 
-Em seguida, exploramos um caminho um pouco mais difícil, mas definitivamente mais virtuoso, para exibir os dados do banco de dados. Podemos aproveitou o padrão de repositório e colocado todos nossa lógica de acesso do banco de dados em uma classe de repositório separado. Em nosso controller, escrevemos todo o nosso código em relação a uma interface em vez de uma classe concreta. A vantagem do padrão de repositório é que ele nos permite alterar facilmente as tecnologias de acesso de banco de dados no futuro, e ele nos permite testar facilmente a nossas classes de controlador.
+Em seguida, exploramos um caminho um pouco mais difícil, mas, definitivamente, mais virtuoso para exibir dados do banco de dados. Tiramos proveito do padrão de repositório e colocamos toda a lógica de acesso ao banco de dados em uma classe de repositório separada. Em nosso controlador, escrevemos todo o nosso código em uma interface em vez de uma classe concreta. A vantagem do padrão Repository é que ele nos permite alterar facilmente as tecnologias de acesso ao banco de dados no futuro, e ele nos permite testar facilmente nossas classes Controller.
 
 > [!div class="step-by-step"]
 > [Anterior](creating-model-classes-with-the-entity-framework-vb.md)
