@@ -1,63 +1,63 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb
-title: Modificando animações pelo lado do servidor (VB) | Microsoft Docs
+title: Modificando animações do lado do servidor (VB) | Microsoft Docs
 author: wenz
-description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. As animações podem também...
+description: O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. As animações também podem...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: addcf4aa-340a-460b-9c64-506424a1f725
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/modifying-animations-from-the-server-side-vb
 msc.type: authoredcontent
-ms.openlocfilehash: 5ba5a32b53fc304ec3a3f1af5c6533a6a0622ac0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: ebc311d1a931ad611d9556799c94440d41a9cf49
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127346"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74575228"
 ---
-# <a name="modifying-animations-from-the-server-side-vb"></a><span data-ttu-id="c6de2-104">Modificando animações pelo lado do servidor (VB)</span><span class="sxs-lookup"><span data-stu-id="c6de2-104">Modifying Animations From The Server Side (VB)</span></span>
+# <a name="modifying-animations-from-the-server-side-vb"></a><span data-ttu-id="a1525-104">Modificando animações do lado do servidor (VB)</span><span class="sxs-lookup"><span data-stu-id="a1525-104">Modifying Animations From The Server Side (VB)</span></span>
 
-<span data-ttu-id="c6de2-105">por [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="c6de2-105">by [Christian Wenz](https://github.com/wenz)</span></span>
+<span data-ttu-id="a1525-105">por [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="a1525-105">by [Christian Wenz](https://github.com/wenz)</span></span>
 
-<span data-ttu-id="c6de2-106">[Baixar o código](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)</span><span class="sxs-lookup"><span data-stu-id="c6de2-106">[Download Code](http://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) or [Download PDF](http://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)</span></span>
+<span data-ttu-id="a1525-106">[Baixar código](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) ou [baixar PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)</span><span class="sxs-lookup"><span data-stu-id="a1525-106">[Download Code](https://download.microsoft.com/download/f/9/a/f9a26acd-8df4-4484-8a18-199e4598f411/Animation9.vb.zip) or [Download PDF](https://download.microsoft.com/download/6/7/1/6718d452-ff89-4d3f-a90e-c74ec2d636a3/animation9VB.pdf)</span></span>
 
-> <span data-ttu-id="c6de2-107">O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle.</span><span class="sxs-lookup"><span data-stu-id="c6de2-107">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="c6de2-108">As animações também podem ser alteradas no lado do servidor</span><span class="sxs-lookup"><span data-stu-id="c6de2-108">The animations may also be changed on the server-side</span></span>
+> <span data-ttu-id="a1525-107">O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle.</span><span class="sxs-lookup"><span data-stu-id="a1525-107">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="a1525-108">As animações também podem ser alteradas no lado do servidor</span><span class="sxs-lookup"><span data-stu-id="a1525-108">The animations may also be changed on the server-side</span></span>
 
-## <a name="overview"></a><span data-ttu-id="c6de2-109">Visão geral</span><span class="sxs-lookup"><span data-stu-id="c6de2-109">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="a1525-109">{1&gt;Visão Geral&lt;1}</span><span class="sxs-lookup"><span data-stu-id="a1525-109">Overview</span></span>
 
-<span data-ttu-id="c6de2-110">O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle.</span><span class="sxs-lookup"><span data-stu-id="c6de2-110">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="c6de2-111">As animações também podem ser alteradas no lado do servidor</span><span class="sxs-lookup"><span data-stu-id="c6de2-111">The animations may also be changed on the server-side</span></span>
+<span data-ttu-id="a1525-110">O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle.</span><span class="sxs-lookup"><span data-stu-id="a1525-110">The Animation control in the ASP.NET AJAX Control Toolkit is not just a control but a whole framework to add animations to a control.</span></span> <span data-ttu-id="a1525-111">As animações também podem ser alteradas no lado do servidor</span><span class="sxs-lookup"><span data-stu-id="a1525-111">The animations may also be changed on the server-side</span></span>
 
-## <a name="steps"></a><span data-ttu-id="c6de2-112">Etapas</span><span class="sxs-lookup"><span data-stu-id="c6de2-112">Steps</span></span>
+## <a name="steps"></a><span data-ttu-id="a1525-112">Etapas</span><span class="sxs-lookup"><span data-stu-id="a1525-112">Steps</span></span>
 
-<span data-ttu-id="c6de2-113">Em primeiro lugar, inclua o `ScriptManager` na página; em seguida, a biblioteca do AJAX ASP.NET é carregada, tornando possível usar o Kit de ferramentas de controle:</span><span class="sxs-lookup"><span data-stu-id="c6de2-113">First of all, include the `ScriptManager` in the page; then, the ASP.NET AJAX library is loaded, making it possible to use the Control Toolkit:</span></span>
+<span data-ttu-id="a1525-113">Em primeiro lugar, inclua o `ScriptManager` na página; em seguida, a biblioteca do ASP.NET AJAX é carregada, possibilitando o uso do kit de ferramentas de controle:</span><span class="sxs-lookup"><span data-stu-id="a1525-113">First of all, include the `ScriptManager` in the page; then, the ASP.NET AJAX library is loaded, making it possible to use the Control Toolkit:</span></span>
 
 [!code-aspx[Main](modifying-animations-from-the-server-side-vb/samples/sample1.aspx)]
 
-<span data-ttu-id="c6de2-114">A animação será aplicada a um painel de texto que tem esta aparência:</span><span class="sxs-lookup"><span data-stu-id="c6de2-114">The animation will be applied to a panel of text which looks like this:</span></span>
+<span data-ttu-id="a1525-114">A animação será aplicada a um painel de texto semelhante a este:</span><span class="sxs-lookup"><span data-stu-id="a1525-114">The animation will be applied to a panel of text which looks like this:</span></span>
 
 [!code-aspx[Main](modifying-animations-from-the-server-side-vb/samples/sample2.aspx)]
 
-<span data-ttu-id="c6de2-115">Na classe CSS associado para o painel, definir uma cor de fundo interessante e também definir uma largura fixa para o painel:</span><span class="sxs-lookup"><span data-stu-id="c6de2-115">In the associated CSS class for the panel, define a nice background color and also set a fixed width for the panel:</span></span>
+<span data-ttu-id="a1525-115">Na classe CSS associada para o painel, defina uma cor de plano de fundo boa e também defina uma largura fixa para o painel:</span><span class="sxs-lookup"><span data-stu-id="a1525-115">In the associated CSS class for the panel, define a nice background color and also set a fixed width for the panel:</span></span>
 
 [!code-css[Main](modifying-animations-from-the-server-side-vb/samples/sample3.css)]
 
-<span data-ttu-id="c6de2-116">O restante do código é executado no lado do servidor e não usa marcação; em vez disso, ele usa o código para criar o `AnimationExtender` controle:</span><span class="sxs-lookup"><span data-stu-id="c6de2-116">The rest of the code runs on the server-side and does not use markup; instead, it uses code to create the `AnimationExtender` control:</span></span>
+<span data-ttu-id="a1525-116">O restante do código é executado no lado do servidor e não usa marcação; em vez disso, ele usa código para criar o controle de `AnimationExtender`:</span><span class="sxs-lookup"><span data-stu-id="a1525-116">The rest of the code runs on the server-side and does not use markup; instead, it uses code to create the `AnimationExtender` control:</span></span>
 
 [!code-aspx[Main](modifying-animations-from-the-server-side-vb/samples/sample4.aspx)]
 
-<span data-ttu-id="c6de2-117">No entanto, o Kit de ferramentas de controle atualmente não fornece um acesso de API para criar as animações individuais.</span><span class="sxs-lookup"><span data-stu-id="c6de2-117">However, the Control Toolkit currently does not provide an API access to create the individual animations.</span></span> <span data-ttu-id="c6de2-118">No entanto, é possível definir o `AnimationExtender`propriedade Animations para uma cadeia de caracteres que contém a marcação XML usada ao atribuir as animações de forma declarativa.</span><span class="sxs-lookup"><span data-stu-id="c6de2-118">It is however possible to set the `AnimationExtender`'s Animations property to a string containing the XML markup used when assigning the animations declaratively.</span></span> <span data-ttu-id="c6de2-119">Para criar o XML que não deve conter o `<Animations>` elemento, você pode usar o XML do .NET Framework dão suporte ou, como no código a seguir, basta fornecer a cadeia de caracteres:</span><span class="sxs-lookup"><span data-stu-id="c6de2-119">In order to create the XML which must not contain the `<Animations>` element you could use the .NET Framework's XML support or, as in the following code, just provide the string:</span></span>
+<span data-ttu-id="a1525-117">No entanto, o kit de ferramentas de controle atualmente não fornece um acesso de API para criar as animações individuais.</span><span class="sxs-lookup"><span data-stu-id="a1525-117">However, the Control Toolkit currently does not provide an API access to create the individual animations.</span></span> <span data-ttu-id="a1525-118">No entanto, é possível definir a propriedade animações do `AnimationExtender`como uma cadeia de caracteres que contém a marcação XML usada ao atribuir as animações de forma declarativa.</span><span class="sxs-lookup"><span data-stu-id="a1525-118">It is however possible to set the `AnimationExtender`'s Animations property to a string containing the XML markup used when assigning the animations declaratively.</span></span> <span data-ttu-id="a1525-119">Para criar o XML que não deve conter o elemento `<Animations>`, você pode usar o suporte a XML do .NET Framework ou, como no código a seguir, basta fornecer a cadeia de caracteres:</span><span class="sxs-lookup"><span data-stu-id="a1525-119">In order to create the XML which must not contain the `<Animations>` element you could use the .NET Framework's XML support or, as in the following code, just provide the string:</span></span>
 
 [!code-vb[Main](modifying-animations-from-the-server-side-vb/samples/sample5.vb)]
 
-<span data-ttu-id="c6de2-120">Por fim, adicione a `AnimationExtender` dentro de controle para a página atual, o `<form runat="server">` elemento, certificando-se de que a animação está incluída e é executado:</span><span class="sxs-lookup"><span data-stu-id="c6de2-120">Finally, add the `AnimationExtender` control to the current page, within the `<form runat="server">` element, making sure that the animation is included and runs:</span></span>
+<span data-ttu-id="a1525-120">Por fim, adicione o controle de `AnimationExtender` à página atual, dentro do elemento `<form runat="server">`, certificando-se de que a animação está incluída e é executada:</span><span class="sxs-lookup"><span data-stu-id="a1525-120">Finally, add the `AnimationExtender` control to the current page, within the `<form runat="server">` element, making sure that the animation is included and runs:</span></span>
 
 [!code-vb[Main](modifying-animations-from-the-server-side-vb/samples/sample6.vb)]
 
-<span data-ttu-id="c6de2-121">[![A animação é criada usando o código do lado do servidor C# /VB](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="c6de2-121">[![The animation is created using server-side C#/VB code](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)</span></span>
+<span data-ttu-id="a1525-121">[![a animação é criada usando o código de C#/vb do lado do servidor](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="a1525-121">[![The animation is created using server-side C#/VB code](modifying-animations-from-the-server-side-vb/_static/image2.png)](modifying-animations-from-the-server-side-vb/_static/image1.png)</span></span>
 
-<span data-ttu-id="c6de2-122">A animação é criada usando o código do lado do servidor C# /VB ([clique para exibir a imagem em tamanho normal](modifying-animations-from-the-server-side-vb/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="c6de2-122">The animation is created using server-side C#/VB code ([Click to view full-size image](modifying-animations-from-the-server-side-vb/_static/image3.png))</span></span>
+<span data-ttu-id="a1525-122">A animação é criada usando o código de C#/vb do lado do servidor ([clique para exibir a imagem em tamanho normal](modifying-animations-from-the-server-side-vb/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="a1525-122">The animation is created using server-side C#/VB code ([Click to view full-size image](modifying-animations-from-the-server-side-vb/_static/image3.png))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="c6de2-123">[Anterior](triggering-an-animation-in-another-control-vb.md)
-> [Próximo](executing-animations-using-client-side-code-vb.md)</span><span class="sxs-lookup"><span data-stu-id="c6de2-123">[Previous](triggering-an-animation-in-another-control-vb.md)
+> <span data-ttu-id="a1525-123">[Anterior](triggering-an-animation-in-another-control-vb.md)
+> [Próximo](executing-animations-using-client-side-code-vb.md)</span><span class="sxs-lookup"><span data-stu-id="a1525-123">[Previous](triggering-an-animation-in-another-control-vb.md)
 [Next](executing-animations-using-client-side-code-vb.md)</span></span>

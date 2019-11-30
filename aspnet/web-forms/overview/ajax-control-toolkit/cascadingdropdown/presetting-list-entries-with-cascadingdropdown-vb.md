@@ -1,61 +1,61 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-vb
-title: Predefinição de entradas de lista com CascadingDropDown (VB) | Microsoft Docs
+title: Predefinindo entradas da lista com CascadingDropDown (VB) | Microsoft Docs
 author: wenz
-description: O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associado valores em anoth...
+description: O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em anoth...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: ec61ced7-bbca-4bdd-aa3b-80878f295181
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-vb
 msc.type: authoredcontent
-ms.openlocfilehash: b943569f0f10d7f680954e100297973255aab51e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 58d675993777f9dcbe0ce1890a60046c91ee8907
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128758"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74599528"
 ---
-# <a name="presetting-list-entries-with-cascadingdropdown-vb"></a><span data-ttu-id="c98ee-103">Predefinição de entradas de lista com CascadingDropDown (VB)</span><span class="sxs-lookup"><span data-stu-id="c98ee-103">Presetting List Entries with CascadingDropDown (VB)</span></span>
+# <a name="presetting-list-entries-with-cascadingdropdown-vb"></a><span data-ttu-id="45588-103">Predefinição de entradas de lista com CascadingDropDown (VB)</span><span class="sxs-lookup"><span data-stu-id="45588-103">Presetting List Entries with CascadingDropDown (VB)</span></span>
 
-<span data-ttu-id="c98ee-104">por [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="c98ee-104">by [Christian Wenz](https://github.com/wenz)</span></span>
+<span data-ttu-id="45588-104">por [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="45588-104">by [Christian Wenz](https://github.com/wenz)</span></span>
 
-<span data-ttu-id="c98ee-105">[Baixar o código](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown2.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/CascadingDropDown2VB.pdf)</span><span class="sxs-lookup"><span data-stu-id="c98ee-105">[Download Code](http://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown2.vb.zip) or [Download PDF](http://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/CascadingDropDown2VB.pdf)</span></span>
+<span data-ttu-id="45588-105">[Baixar código](https://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown2.vb.zip) ou [baixar PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/CascadingDropDown2VB.pdf)</span><span class="sxs-lookup"><span data-stu-id="45588-105">[Download Code](https://download.microsoft.com/download/9/0/7/907760b1-2c60-4f81-aeb6-ca416a573b0d/cascadingdropdown2.vb.zip) or [Download PDF](https://download.microsoft.com/download/2/d/c/2dc10e34-6983-41d4-9c08-f78f5387d32b/CascadingDropDown2VB.pdf)</span></span>
 
-> <span data-ttu-id="c98ee-106">O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associadas a valores em outra DropDownList.</span><span class="sxs-lookup"><span data-stu-id="c98ee-106">The CascadingDropDown control in the AJAX Control Toolkit extends a DropDownList control so that changes in one DropDownList loads associated values in another DropDownList.</span></span> <span data-ttu-id="c98ee-107">Com um pouco de código, é possível que um elemento de lista é pré-selecionado após os dados serem carregados dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="c98ee-107">With a little bit of code it is possible that a list element is preselected once the data has been dynamically loaded.</span></span>
+> <span data-ttu-id="45588-106">O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList.</span><span class="sxs-lookup"><span data-stu-id="45588-106">The CascadingDropDown control in the AJAX Control Toolkit extends a DropDownList control so that changes in one DropDownList loads associated values in another DropDownList.</span></span> <span data-ttu-id="45588-107">Com um pouco de código, é possível que um elemento de lista seja preselecionado quando os dados tiverem sido carregados dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="45588-107">With a little bit of code it is possible that a list element is preselected once the data has been dynamically loaded.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="c98ee-108">Visão geral</span><span class="sxs-lookup"><span data-stu-id="c98ee-108">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="45588-108">{1&gt;Visão Geral&lt;1}</span><span class="sxs-lookup"><span data-stu-id="45588-108">Overview</span></span>
 
-<span data-ttu-id="c98ee-109">O controle CascadingDropDown do AJAX Control Toolkit estende um controle DropDownList, de modo que as alterações em uma carga de DropDownList associadas a valores em outra DropDownList.</span><span class="sxs-lookup"><span data-stu-id="c98ee-109">The CascadingDropDown control in the AJAX Control Toolkit extends a DropDownList control so that changes in one DropDownList loads associated values in another DropDownList.</span></span> <span data-ttu-id="c98ee-110">(Por exemplo, uma lista fornece uma lista de estados dos EUA e a lista seguinte, em seguida, é preenchida com principais cidades nesse estado.) Com um pouco de código, é possível que um elemento de lista é pré-selecionado após os dados serem carregados dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="c98ee-110">(For instance, one list provides a list of US states, and the next list is then filled with major cities in that state.) With a little bit of code it is possible that a list element is preselected once the data has been dynamically loaded.</span></span>
+<span data-ttu-id="45588-109">O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList.</span><span class="sxs-lookup"><span data-stu-id="45588-109">The CascadingDropDown control in the AJAX Control Toolkit extends a DropDownList control so that changes in one DropDownList loads associated values in another DropDownList.</span></span> <span data-ttu-id="45588-110">(Por exemplo, uma lista fornece uma lista de Estados dos EUA e a próxima lista é então preenchida com cidades principais nesse estado.) Com um pouco de código, é possível que um elemento de lista seja preselecionado quando os dados tiverem sido carregados dinamicamente.</span><span class="sxs-lookup"><span data-stu-id="45588-110">(For instance, one list provides a list of US states, and the next list is then filled with major cities in that state.) With a little bit of code it is possible that a list element is preselected once the data has been dynamically loaded.</span></span>
 
-## <a name="steps"></a><span data-ttu-id="c98ee-111">Etapas</span><span class="sxs-lookup"><span data-stu-id="c98ee-111">Steps</span></span>
+## <a name="steps"></a><span data-ttu-id="45588-111">Etapas</span><span class="sxs-lookup"><span data-stu-id="45588-111">Steps</span></span>
 
-<span data-ttu-id="c98ee-112">Para ativar a funcionalidade do AJAX ASP.NET e o Kit de ferramentas de controle, o `ScriptManager` controle deve ser colocada em qualquer lugar na página (mas dentro de `<form>` elemento):</span><span class="sxs-lookup"><span data-stu-id="c98ee-112">In order to activate the functionality of ASP.NET AJAX and the Control Toolkit, the `ScriptManager` control must be put anywhere on the page (but within the `<form>` element):</span></span>
+<span data-ttu-id="45588-112">Para ativar a funcionalidade do ASP.NET AJAX e do kit de ferramentas de controle, o controle de `ScriptManager` deve ser colocado em qualquer lugar na página (mas dentro do elemento `<form>`):</span><span class="sxs-lookup"><span data-stu-id="45588-112">In order to activate the functionality of ASP.NET AJAX and the Control Toolkit, the `ScriptManager` control must be put anywhere on the page (but within the `<form>` element):</span></span>
 
 [!code-aspx[Main](presetting-list-entries-with-cascadingdropdown-vb/samples/sample1.aspx)]
 
-<span data-ttu-id="c98ee-113">Em seguida, um controle DropDownList é necessário:</span><span class="sxs-lookup"><span data-stu-id="c98ee-113">Then, a DropDownList control is required:</span></span>
+<span data-ttu-id="45588-113">Em seguida, um controle DropDownList é necessário:</span><span class="sxs-lookup"><span data-stu-id="45588-113">Then, a DropDownList control is required:</span></span>
 
 [!code-aspx[Main](presetting-list-entries-with-cascadingdropdown-vb/samples/sample2.aspx)]
 
-<span data-ttu-id="c98ee-114">Para obter essa lista, um extensor de CascadingDropDown é adicionado, fornecendo as informações de URL e o método de serviço web:</span><span class="sxs-lookup"><span data-stu-id="c98ee-114">For this list, a CascadingDropDown extender is added, providing web service URL and method information:</span></span>
+<span data-ttu-id="45588-114">Para essa lista, um extensor CascadingDropDown é adicionado, fornecendo a URL do serviço Web e informações do método:</span><span class="sxs-lookup"><span data-stu-id="45588-114">For this list, a CascadingDropDown extender is added, providing web service URL and method information:</span></span>
 
 [!code-aspx[Main](presetting-list-entries-with-cascadingdropdown-vb/samples/sample3.aspx)]
 
-<span data-ttu-id="c98ee-115">O extensor CascadingDropDown chama assincronamente um serviço web com a assinatura de método a seguir:</span><span class="sxs-lookup"><span data-stu-id="c98ee-115">The CascadingDropDown extender then asynchronously calls a web service with the following method signature:</span></span>
+<span data-ttu-id="45588-115">Em seguida, o extensor CascadingDropDown chama assincronamente um serviço Web com a seguinte assinatura de método:</span><span class="sxs-lookup"><span data-stu-id="45588-115">The CascadingDropDown extender then asynchronously calls a web service with the following method signature:</span></span>
 
 [!code-vb[Main](presetting-list-entries-with-cascadingdropdown-vb/samples/sample4.vb)]
 
-<span data-ttu-id="c98ee-116">O método retorna uma matriz do tipo valor CascadingDropDown.</span><span class="sxs-lookup"><span data-stu-id="c98ee-116">The method returns an array of type CascadingDropDown value.</span></span> <span data-ttu-id="c98ee-117">O construtor do tipo primeiro espera legenda da entrada de lista e, em seguida, o valor (HTML `value` atributo).</span><span class="sxs-lookup"><span data-stu-id="c98ee-117">The type's constructor expects first the list entry's caption and then the value (HTML `value` attribute).</span></span> <span data-ttu-id="c98ee-118">Se o terceiro argumento é definido como true, a lista de elemento é selecionado automaticamente no navegador.</span><span class="sxs-lookup"><span data-stu-id="c98ee-118">If the third argument is set to true, the list element is automatically selected in the browser.</span></span>
+<span data-ttu-id="45588-116">O método retorna uma matriz do tipo valor CascadingDropDown.</span><span class="sxs-lookup"><span data-stu-id="45588-116">The method returns an array of type CascadingDropDown value.</span></span> <span data-ttu-id="45588-117">O construtor do tipo espera primeiro a legenda da entrada da lista e, em seguida, o valor (HTML `value` atributo).</span><span class="sxs-lookup"><span data-stu-id="45588-117">The type's constructor expects first the list entry's caption and then the value (HTML `value` attribute).</span></span> <span data-ttu-id="45588-118">Se o terceiro argumento for definido como true, o elemento List será selecionado automaticamente no navegador.</span><span class="sxs-lookup"><span data-stu-id="45588-118">If the third argument is set to true, the list element is automatically selected in the browser.</span></span>
 
 [!code-aspx[Main](presetting-list-entries-with-cascadingdropdown-vb/samples/sample5.aspx)]
 
-<span data-ttu-id="c98ee-119">Carregamento da página no navegador preencherá a lista suspensa com três fornecedores, o segundo é que está sendo pré-selecionado.</span><span class="sxs-lookup"><span data-stu-id="c98ee-119">Loading the page in the browser will fill the dropdown list with three vendors, the second one being preselected.</span></span>
+<span data-ttu-id="45588-119">Carregar a página no navegador preencherá a lista suspensa com três fornecedores, a segunda sendo selecionada.</span><span class="sxs-lookup"><span data-stu-id="45588-119">Loading the page in the browser will fill the dropdown list with three vendors, the second one being preselected.</span></span>
 
-<span data-ttu-id="c98ee-120">[![A lista é preenchida e pré-selecionado automaticamente](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="c98ee-120">[![The list is filled and preselected automatically](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)</span></span>
+<span data-ttu-id="45588-120">[![a lista é preenchida e preselecionada automaticamente](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="45588-120">[![The list is filled and preselected automatically](presetting-list-entries-with-cascadingdropdown-vb/_static/image2.png)](presetting-list-entries-with-cascadingdropdown-vb/_static/image1.png)</span></span>
 
-<span data-ttu-id="c98ee-121">A lista é preenchida e pré-selecionado automaticamente ([clique para exibir a imagem em tamanho normal](presetting-list-entries-with-cascadingdropdown-vb/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="c98ee-121">The list is filled and preselected automatically ([Click to view full-size image](presetting-list-entries-with-cascadingdropdown-vb/_static/image3.png))</span></span>
+<span data-ttu-id="45588-121">A lista é preenchida e preselecionada automaticamente ([clique para exibir a imagem em tamanho normal](presetting-list-entries-with-cascadingdropdown-vb/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="45588-121">The list is filled and preselected automatically ([Click to view full-size image](presetting-list-entries-with-cascadingdropdown-vb/_static/image3.png))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="c98ee-122">[Anterior](using-cascadingdropdown-with-a-database-vb.md)
-> [Próximo](using-auto-postback-with-cascadingdropdown-vb.md)</span><span class="sxs-lookup"><span data-stu-id="c98ee-122">[Previous](using-cascadingdropdown-with-a-database-vb.md)
+> <span data-ttu-id="45588-122">[Anterior](using-cascadingdropdown-with-a-database-vb.md)
+> [Próximo](using-auto-postback-with-cascadingdropdown-vb.md)</span><span class="sxs-lookup"><span data-stu-id="45588-122">[Previous](using-cascadingdropdown-with-a-database-vb.md)
 [Next](using-auto-postback-with-cascadingdropdown-vb.md)</span></span>

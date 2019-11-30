@@ -1,63 +1,63 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-vb
-title: Usando o controle deslizante com Postback automático (VB) | Microsoft Docs
+title: Usando o controle deslizante com postback automático (VB) | Microsoft Docs
 author: wenz
-description: O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse. É possível fazer a lançar automaticamente slider...
+description: O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse. É possível fazer com que o controle deslizante autolance...
 ms.author: riande
 ms.date: 06/02/2008
 ms.assetid: 41d1abba-97a5-4a45-9b44-d05624c19777
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/using-the-slider-control-with-auto-postback-vb
 msc.type: authoredcontent
-ms.openlocfilehash: c4ee6642726b4209d09907f615ee3286ca00caa3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: e7a3286bcf7ca844f5dcfa4848c15e0bd4767c0f
+ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124614"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74598525"
 ---
-# <a name="using-the-slider-control-with-auto-postback-vb"></a><span data-ttu-id="9e91b-104">Usando o controle deslizante com Postback automático (VB)</span><span class="sxs-lookup"><span data-stu-id="9e91b-104">Using the Slider Control With Auto-Postback (VB)</span></span>
+# <a name="using-the-slider-control-with-auto-postback-vb"></a><span data-ttu-id="fe0c7-104">Usando o controle deslizante com postback automático (VB)</span><span class="sxs-lookup"><span data-stu-id="fe0c7-104">Using the Slider Control With Auto-Postback (VB)</span></span>
 
-<span data-ttu-id="9e91b-105">por [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="9e91b-105">by [Christian Wenz](https://github.com/wenz)</span></span>
+<span data-ttu-id="fe0c7-105">por [Christian Wenz](https://github.com/wenz)</span><span class="sxs-lookup"><span data-stu-id="fe0c7-105">by [Christian Wenz](https://github.com/wenz)</span></span>
 
-<span data-ttu-id="9e91b-106">[Baixar o código](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/Slider1.vb.zip) ou [baixar PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/slider1VB.pdf)</span><span class="sxs-lookup"><span data-stu-id="9e91b-106">[Download Code](http://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/Slider1.vb.zip) or [Download PDF](http://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/slider1VB.pdf)</span></span>
+<span data-ttu-id="fe0c7-106">[Baixar código](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/Slider1.vb.zip) ou [baixar PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/slider1VB.pdf)</span><span class="sxs-lookup"><span data-stu-id="fe0c7-106">[Download Code](https://download.microsoft.com/download/9/3/f/93f8daea-bebd-4821-833b-95205389c7d0/Slider1.vb.zip) or [Download PDF](https://download.microsoft.com/download/b/6/a/b6ae89ee-df69-4c87-9bfb-ad1eb2b23373/slider1VB.pdf)</span></span>
 
-> <span data-ttu-id="9e91b-107">O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse.</span><span class="sxs-lookup"><span data-stu-id="9e91b-107">The Slider control in the AJAX Control Toolkit provides a graphical slider that can be controlled using the mouse.</span></span> <span data-ttu-id="9e91b-108">É possível fazer o controle deslizante autopostback uma vez, seu valor for alterado.</span><span class="sxs-lookup"><span data-stu-id="9e91b-108">It is possible to make the slider autopostback once its value changes.</span></span>
+> <span data-ttu-id="fe0c7-107">O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse.</span><span class="sxs-lookup"><span data-stu-id="fe0c7-107">The Slider control in the AJAX Control Toolkit provides a graphical slider that can be controlled using the mouse.</span></span> <span data-ttu-id="fe0c7-108">É possível fazer o controle deslizante AutoPostBack quando seu valor é alterado.</span><span class="sxs-lookup"><span data-stu-id="fe0c7-108">It is possible to make the slider autopostback once its value changes.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="9e91b-109">Visão geral</span><span class="sxs-lookup"><span data-stu-id="9e91b-109">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="fe0c7-109">{1&gt;Visão Geral&lt;1}</span><span class="sxs-lookup"><span data-stu-id="fe0c7-109">Overview</span></span>
 
-<span data-ttu-id="9e91b-110">O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse.</span><span class="sxs-lookup"><span data-stu-id="9e91b-110">The Slider control in the AJAX Control Toolkit provides a graphical slider that can be controlled using the mouse.</span></span> <span data-ttu-id="9e91b-111">É possível fazer o controle deslizante autopostback uma vez, seu valor for alterado.</span><span class="sxs-lookup"><span data-stu-id="9e91b-111">It is possible to make the slider autopostback once its value changes.</span></span>
+<span data-ttu-id="fe0c7-110">O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse.</span><span class="sxs-lookup"><span data-stu-id="fe0c7-110">The Slider control in the AJAX Control Toolkit provides a graphical slider that can be controlled using the mouse.</span></span> <span data-ttu-id="fe0c7-111">É possível fazer o controle deslizante AutoPostBack quando seu valor é alterado.</span><span class="sxs-lookup"><span data-stu-id="fe0c7-111">It is possible to make the slider autopostback once its value changes.</span></span>
 
-## <a name="steps"></a><span data-ttu-id="9e91b-112">Etapas</span><span class="sxs-lookup"><span data-stu-id="9e91b-112">Steps</span></span>
+## <a name="steps"></a><span data-ttu-id="fe0c7-112">Etapas</span><span class="sxs-lookup"><span data-stu-id="fe0c7-112">Steps</span></span>
 
-<span data-ttu-id="9e91b-113">Para fazer o controle deslizante com postback automaticamente após uma alteração, ambas as caixas de texto precisam do atributo `AutoPostBack="true"`: Caixa de texto que se tornará o controle deslizante em si e a caixa de texto que contém a posição do controle deslizante.</span><span class="sxs-lookup"><span data-stu-id="9e91b-113">In order to make the slider automatically postback upon a change, both text boxes need the attribute `AutoPostBack="true"`: The text box that will become the slider itself, and the text box that holds the slider's position.</span></span> <span data-ttu-id="9e91b-114">Aqui está a marcação necessária para fazer isso:</span><span class="sxs-lookup"><span data-stu-id="9e91b-114">Here is the required markup for that:</span></span>
+<span data-ttu-id="fe0c7-113">Para fazer com que o controle deslizante seja automaticamente postback após uma alteração, ambas as caixas de texto precisam do atributo `AutoPostBack="true"`: a caixa de texto que se tornará o controle deslizante e a caixa de texto que contém a posição do controle deslizante.</span><span class="sxs-lookup"><span data-stu-id="fe0c7-113">In order to make the slider automatically postback upon a change, both text boxes need the attribute `AutoPostBack="true"`: The text box that will become the slider itself, and the text box that holds the slider's position.</span></span> <span data-ttu-id="fe0c7-114">Aqui está a marcação necessária para isso:</span><span class="sxs-lookup"><span data-stu-id="fe0c7-114">Here is the required markup for that:</span></span>
 
 [!code-aspx[Main](using-the-slider-control-with-auto-postback-vb/samples/sample1.aspx)]
 
-<span data-ttu-id="9e91b-115">O `SliderExtender` controle do ASP.NET AJAX Control Toolkit atribui a funcionalidade de controle deslizante para duas caixas de texto:</span><span class="sxs-lookup"><span data-stu-id="9e91b-115">The `SliderExtender` control from the ASP.NET AJAX Control Toolkit assigns the slider functionality to the two text boxes:</span></span>
+<span data-ttu-id="fe0c7-115">O controle de `SliderExtender` do kit de ferramentas de controle AJAX ASP.NET atribui a funcionalidade Slider às duas caixas de texto:</span><span class="sxs-lookup"><span data-stu-id="fe0c7-115">The `SliderExtender` control from the ASP.NET AJAX Control Toolkit assigns the slider functionality to the two text boxes:</span></span>
 
 [!code-aspx[Main](using-the-slider-control-with-auto-postback-vb/samples/sample2.aspx)]
 
-<span data-ttu-id="9e91b-116">Um elemento de rótulo adicional será usado mais tarde para informar o usuário de um postback:</span><span class="sxs-lookup"><span data-stu-id="9e91b-116">An additional label element will later be used to inform the user of a postback:</span></span>
+<span data-ttu-id="fe0c7-116">Um elemento rótulo adicional posteriormente será usado para informar o usuário de um postback:</span><span class="sxs-lookup"><span data-stu-id="fe0c7-116">An additional label element will later be used to inform the user of a postback:</span></span>
 
 [!code-aspx[Main](using-the-slider-control-with-auto-postback-vb/samples/sample3.aspx)]
 
-<span data-ttu-id="9e91b-117">Por fim, o `ScriptManager` controle do ASP.NET AJAX carrega o JavaScript necessário para o Kit de ferramentas trabalhar:</span><span class="sxs-lookup"><span data-stu-id="9e91b-117">Finally, the `ScriptManager` control of ASP.NET AJAX loads the required JavaScript for the Control Toolkit to work:</span></span>
+<span data-ttu-id="fe0c7-117">Por fim, o `ScriptManager` controle do ASP.NET AJAX carrega o JavaScript necessário para que o kit de ferramentas de controle funcione:</span><span class="sxs-lookup"><span data-stu-id="fe0c7-117">Finally, the `ScriptManager` control of ASP.NET AJAX loads the required JavaScript for the Control Toolkit to work:</span></span>
 
 [!code-aspx[Main](using-the-slider-control-with-auto-postback-vb/samples/sample4.aspx)]
 
-<span data-ttu-id="9e91b-118">Agora o controle deslizante está postando novamente; no lado do servidor, esse evento pode ser detectado e tratado:</span><span class="sxs-lookup"><span data-stu-id="9e91b-118">Now the slider is posting back; on the server-side, this event may be caught and acted upon:</span></span>
+<span data-ttu-id="fe0c7-118">Agora o controle deslizante está fazendo o lançamento; no lado do servidor, esse evento pode ser capturado e Tratado:</span><span class="sxs-lookup"><span data-stu-id="fe0c7-118">Now the slider is posting back; on the server-side, this event may be caught and acted upon:</span></span>
 
 [!code-aspx[Main](using-the-slider-control-with-auto-postback-vb/samples/sample5.aspx)]
 
-<span data-ttu-id="9e91b-119">[![Movendo o controle deslizante dispara um postback](using-the-slider-control-with-auto-postback-vb/_static/image2.png)](using-the-slider-control-with-auto-postback-vb/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="9e91b-119">[![Moving the slider triggers a postback](using-the-slider-control-with-auto-postback-vb/_static/image2.png)](using-the-slider-control-with-auto-postback-vb/_static/image1.png)</span></span>
+<span data-ttu-id="fe0c7-119">[![mover o controle deslizante dispara um postback](using-the-slider-control-with-auto-postback-vb/_static/image2.png)](using-the-slider-control-with-auto-postback-vb/_static/image1.png)</span><span class="sxs-lookup"><span data-stu-id="fe0c7-119">[![Moving the slider triggers a postback](using-the-slider-control-with-auto-postback-vb/_static/image2.png)](using-the-slider-control-with-auto-postback-vb/_static/image1.png)</span></span>
 
-<span data-ttu-id="9e91b-120">Movendo o controle deslizante dispara um postback ([clique para exibir a imagem em tamanho normal](using-the-slider-control-with-auto-postback-vb/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="9e91b-120">Moving the slider triggers a postback ([Click to view full-size image](using-the-slider-control-with-auto-postback-vb/_static/image3.png))</span></span>
+<span data-ttu-id="fe0c7-120">Mover o controle deslizante dispara um postback ([clique para exibir a imagem em tamanho normal](using-the-slider-control-with-auto-postback-vb/_static/image3.png))</span><span class="sxs-lookup"><span data-stu-id="fe0c7-120">Moving the slider triggers a postback ([Click to view full-size image](using-the-slider-control-with-auto-postback-vb/_static/image3.png))</span></span>
 
-<span data-ttu-id="9e91b-121">[![Depois disso, a data desta alteração é gravada no rótulo](using-the-slider-control-with-auto-postback-vb/_static/image5.png)](using-the-slider-control-with-auto-postback-vb/_static/image4.png)</span><span class="sxs-lookup"><span data-stu-id="9e91b-121">[![Afterwards, the date of this change is written in the label](using-the-slider-control-with-auto-postback-vb/_static/image5.png)](using-the-slider-control-with-auto-postback-vb/_static/image4.png)</span></span>
+<span data-ttu-id="fe0c7-121">[![depois, a data dessa alteração será gravada no rótulo](using-the-slider-control-with-auto-postback-vb/_static/image5.png)](using-the-slider-control-with-auto-postback-vb/_static/image4.png)</span><span class="sxs-lookup"><span data-stu-id="fe0c7-121">[![Afterwards, the date of this change is written in the label](using-the-slider-control-with-auto-postback-vb/_static/image5.png)](using-the-slider-control-with-auto-postback-vb/_static/image4.png)</span></span>
 
-<span data-ttu-id="9e91b-122">Depois disso, a data desta alteração é gravada no rótulo ([clique para exibir a imagem em tamanho normal](using-the-slider-control-with-auto-postback-vb/_static/image6.png))</span><span class="sxs-lookup"><span data-stu-id="9e91b-122">Afterwards, the date of this change is written in the label ([Click to view full-size image](using-the-slider-control-with-auto-postback-vb/_static/image6.png))</span></span>
+<span data-ttu-id="fe0c7-122">Posteriormente, a data dessa alteração será gravada no rótulo ([clique para exibir a imagem em tamanho normal](using-the-slider-control-with-auto-postback-vb/_static/image6.png))</span><span class="sxs-lookup"><span data-stu-id="fe0c7-122">Afterwards, the date of this change is written in the label ([Click to view full-size image](using-the-slider-control-with-auto-postback-vb/_static/image6.png))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="9e91b-123">[Anterior](databinding-the-slider-control-cs.md)
-> [Próximo](databinding-the-slider-control-vb.md)</span><span class="sxs-lookup"><span data-stu-id="9e91b-123">[Previous](databinding-the-slider-control-cs.md)
+> <span data-ttu-id="fe0c7-123">[Anterior](databinding-the-slider-control-cs.md)
+> [Próximo](databinding-the-slider-control-vb.md)</span><span class="sxs-lookup"><span data-stu-id="fe0c7-123">[Previous](databinding-the-slider-control-cs.md)
 [Next](databinding-the-slider-control-vb.md)</span></span>
