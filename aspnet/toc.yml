@@ -4,13 +4,13 @@
   href: overview.md
 - name: Tutoriais
   href: tutorials.md
-- name: Formulários da Web
+- name: Web Forms
   href: web-forms/index.md
   items:
     - name: Diretrizes
       href: web-forms/overview/index.md
       items:
-        - name: Introdução
+        - name: Guia de Introdução
           href: web-forms/overview/getting-started/index.md
           items:
             - name: Introdução ao Web Forms do ASP.NET 4.5 e ao Visual Studio 2013
@@ -93,7 +93,7 @@
                   href: web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases.md
                 - name: Transformações de arquivo Web.config
                   href: web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations.md
-                - name: Propriedades do Projeto
+                - name: Propriedades do projeto
                   href: web-forms/overview/deployment/visual-studio-web-deployment/project-properties.md
                 - name: Implantação para teste
                   href: web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis.md
@@ -109,7 +109,7 @@
                   href: web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment.md
                 - name: Implantação de arquivos extras
                   href: web-forms/overview/deployment/visual-studio-web-deployment/deploying-extra-files.md
-                - name: solução de problemas
+                - name: Solução de problemas
                   href: web-forms/overview/deployment/visual-studio-web-deployment/troubleshooting.md
             - name: ASP.NET 4 – Introdução à implantação corporativa
               href: web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/index.md
@@ -257,7 +257,7 @@
             - name: ASP.NET 4 – Continuação com o Entity Framework 4 e o Web Forms
               href: web-forms/overview/older-versions-getting-started/continuing-with-ef/index.md
               items:
-                - name: 'Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Introdução'
+                - name: 'Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Guia de Introdução'
                   href: web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md
                 - name: 'Entity Framework 4.0 e o controle ObjectDataSource, parte 2: Adição de uma Camada de lógica de negócios (VB) e Testes de unidade'
                   href: web-forms/overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md
@@ -424,7 +424,7 @@
         - name: Versões mais antigas – Ajax Control Toolkit
           href: web-forms/overview/ajax-control-toolkit/index.md
           items:
-            - name: Introdução
+            - name: Guia de Introdução
               href: web-forms/overview/ajax-control-toolkit/getting-started/index.md
               items:
                 - name: 'Introdução ao AJAX Control Toolkit (C#)'
@@ -1143,7 +1143,7 @@
               href: web-forms/overview/moving-to-aspnet-20/configuration-and-instrumentation.md
             - name: 'Perfis, temas e Web Parts'
               href: web-forms/overview/moving-to-aspnet-20/profiles-themes-and-web-parts.md
-    - name: vídeos
+    - name: Vídeos
       href: web-forms/videos/index.md
       items:
         - name: 'Como faço para:'
@@ -1391,7 +1391,7 @@
               href: web-forms/videos/building-35-applications/application-level-objects.md
             - name: Objetos de nível de sessão
               href: web-forms/videos/building-35-applications/session-level-objects.md
-            - name: Depurando
+            - name: Depuração
               href: web-forms/videos/building-35-applications/debugging.md
             - name: CSS
               href: web-forms/videos/building-35-applications/css.md
@@ -1405,7 +1405,7 @@
               href: web-forms/videos/building-35-applications/validation.md
             - name: Controles de logon
               href: web-forms/videos/building-35-applications/login-controls.md
-        - name: Authentication
+        - name: Autenticação
           href: web-forms/videos/authentication/index.md
           items:
             - name: Uso da autenticação de formulários básica no ASP.NET
@@ -2064,13 +2064,13 @@
     - name: Diretrizes
       href: mvc/overview/index.md
       items:
-        - name: Introdução
+        - name: Guia de Introdução
           href: mvc/overview/getting-started/index.md
           items:
             - name: Introdução ao ASP.NET MVC 5
               href: mvc/overview/getting-started/introduction/index.md
               items:
-                - name: Introdução
+                - name: Guia de Introdução
                   href: mvc/overview/getting-started/introduction/getting-started.md
                 - name: Adicionando um controlador
                   href: mvc/overview/getting-started/introduction/adding-a-controller.md
@@ -2179,7 +2179,7 @@
           items:
             - name: Modelo MVC personalizado
               href: mvc/overview/advanced/custom-mvc-templates.md
-        - name: Lançamentos
+        - name: Versões
           href: mvc/overview/releases/index.md
           items:
             - name: Novidades no ASP.NET MVC 5.2
@@ -2574,7 +2574,7 @@
                   href: mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-cs.md
                 - name: Criar um aplicativo de banco de dados de filme em 15 minutos com o ASP.NET MVC (VB)
                   href: mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb.md
-    - name: vídeos
+    - name: Vídeos
       href: mvc/videos/index.md
       items:
         - name: ASP.NET MVC 4
@@ -2721,7 +2721,7 @@
                   href: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-19-processing-orders-with-windows-workflow.md
                 - name: 'Vitrine do ASP.NET MVC, parte 19a: Windows Workflow Followup'
                   href: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-19a-windows-workflow-followup.md
-                - name: 'Vitrine do ASP.NET MVC, parte 20: Registro em log'
+                - name: 'Vitrine do ASP.NET MVC, parte 20: Registrando em log'
                   href: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-20-logging.md
                 - name: 'Vitrine do ASP.NET MVC, parte 21: Gerenciador de pedidos e personalização'
                   href: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-21-order-manager-and-personalization.md
@@ -2754,7 +2754,7 @@
     - name: Diretrizes
       href: web-api/overview/index.md
       items:
-        - name: Introdução
+        - name: Guia de Introdução
           href: web-api/overview/getting-started-with-aspnet-web-api/index.md
           items:
             - name: 'Introdução à API Web 2 (C#)'
@@ -2934,7 +2934,7 @@
               href: web-api/overview/advanced/sending-html-form-data-part-2.md
             - name: Cookies HTTP no ASP.NET Web API
               href: web-api/overview/advanced/http-cookies.md
-        - name: Lançamentos
+        - name: Versões
           href: web-api/overview/releases/index.md
           items:
             - name: Novidades no OData da API Web 5.3
@@ -2969,7 +2969,7 @@
               href: web-api/overview/older-versions/self-host-a-web-api.md
             - name: Criar APIs RESTful com o ASP.NET Web API
               href: web-api/overview/older-versions/build-restful-apis-with-aspnet-web-api.md
-    - name: vídeos
+    - name: Vídeos
       href: web-api/videos/index.md
       items:
         - name: Visão geral e Introdução
@@ -2997,7 +2997,7 @@
     - name: Diretrizes
       href: web-pages/overview/index.md
       items:
-        - name: Introdução
+        - name: Guia de Introdução
           href: web-pages/overview/getting-started/index.md
           items:
             - name: Programar Páginas da Web do ASP.NET no Visual Studio
@@ -3015,7 +3015,7 @@
             - name: Introdução a Páginas da Web do ASP.NET
               href: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/index.md
               items:
-                - name: Introdução
+                - name: Guia de Introdução
                   href: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/getting-started.md
                 - name: Noções básicas sobre programação
                   href: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/intro-to-web-pages-programming.md
@@ -3061,7 +3061,7 @@
               href: web-pages/overview/ui-layouts-and-themes/twitter-helper.md
             - name: Exibição de mapas em um site de Páginas da Web do ASP.NET
               href: web-pages/overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md
-        - name: Móvel
+        - name: Celular
           href: web-pages/overview/mobile/index.md
           items:
             - name: Renderização de sites de Páginas da Web do ASP.NET para dispositivos móveis
@@ -3100,12 +3100,12 @@
               href: web-pages/overview/performance-and-traffic/14-analyzing-traffic.md
             - name: Agrupamento e minificação de ativos em um site de Páginas da Web do ASP.NET (Razor)
               href: web-pages/overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md
-        - name: Referência de API
+        - name: Referência API
           href: web-pages/overview/api-reference/index.md
           items:
             - name: Guia de Referência Rápida da API do ASP.NET
               href: web-pages/overview/api-reference/asp-net-web-pages-api-reference.md
-        - name: Lançamentos
+        - name: Versões
           href: web-pages/overview/releases/index.md
           items:
             - name: Novidades nas Páginas da Web do ASP.NET 3.2
@@ -3118,7 +3118,7 @@
               href: web-pages/overview/releases/aspnet-web-pages-2-developer-preview-readme.md
             - name: Executar versões diferentes de Páginas da Web do ASP.NET lado a lado
               href: web-pages/overview/releases/running-v1-and-v2-sites-side-by-side.md
-    - name: vídeos
+    - name: Vídeos
       href: web-pages/videos/index.md
       items:
         - name: Introdução
@@ -3200,12 +3200,12 @@
     - name: Diretrizes
       href: signalr/overview/index.md
       items:
-        - name: Introdução
+        - name: Guia de Introdução
           href: signalr/overview/getting-started/index.md
           items:
             - name: Introdução ao SignalR
               href: signalr/overview/getting-started/introduction-to-signalr.md
-            - name: Plataformas com suporte
+            - name: Plataformas compatíveis
               href: signalr/overview/getting-started/supported-platforms.md
             - name: Bate-papo em tempo real com SignalR 2
               href: signalr/overview/getting-started/tutorial-getting-started-with-signalr.md
@@ -3281,7 +3281,7 @@
           items:
             - name: Injeção de dependência no SignalR
               href: signalr/overview/advanced/dependency-injection.md
-        - name: Lançamentos
+        - name: Versões
           href: signalr/overview/releases/index.md
           items:
             - name: Atualização de projetos do SignalR 1.x para a versão 2
@@ -3329,7 +3329,7 @@
               href: signalr/overview/older-versions/troubleshooting.md
             - name: Injeção de dependência no SignalR 1.x
               href: signalr/overview/older-versions/dependency-injection.md
-    - name: vídeos
+    - name: Vídeos
       href: signalr/videos/index.md
       items:
         - name: Vídeos do SignalR do ASP.NET
@@ -3337,10 +3337,10 @@
           items:
             - name: SignalR e Soquetes Web
               href: signalr/videos/getting-started/signalr-and-web-sockets.md
-- name: Móvel
+- name: Celular
   href: mobile/index.md
   items:
-    - name: Móvel
+    - name: Celular
       href: mobile/overview.md
     - name: Dispositivos testados de controles móveis do ASP.NET
       href: mobile/tested-devices.md
@@ -3382,18 +3382,18 @@
       items:
         - name: Recebimento
           href: webhooks/receiving/receivers.md
-        - name: Processando
+        - name: Processamento
           href: webhooks/receiving/handlers.md
         - name: Dependências de receptor
           href: webhooks/receiving/dependencies.md
     - name: Envio
       href: webhooks/sending/senders.md
-    - name: Diagnósticos
+    - name: Diagnóstico
       href: webhooks/diagnostics/index.md
       items:
-        - name: Registro em log
+        - name: Registrando em log
           href: webhooks/diagnostics/logging.md
-        - name: Depurando
+        - name: Depuração
           href: webhooks/diagnostics/debugging.md
 - name: Visual Studio 2017
   href: visual-studio/overview/2017/index.md
@@ -3763,11 +3763,13 @@
       href: aspnet/overview/owin-and-katana/owin-middleware-in-the-iis-integrated-pipeline.md
     - name: Hospedar OWIN em uma função de trabalho do Azure
       href: aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role.md
-- name: White papers
+- name: Whitepapers
   href: whitepapers/index.md
   items:
-    - name: White papers
+    - name: Whitepapers
       href: whitepapers/overview.md
+    - name: ASP.NET SameSite
+      href: SameSite/system-web-samesite.md
     - name: Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
       href: whitepapers/aspnet4/index.md
       items:
@@ -3805,5 +3807,5 @@
       href: whitepapers/aspnet-and-web-tools-20122-release-notes.md
     - name: Novidades no ASP.NET 4.5 e no Visual Studio 2012
       href: whitepapers/whats-new-in-aspnet-45-and-visual-studio-2012.md
-- name: Referência de API
+- name: Reference API
   href: api-ref.md
