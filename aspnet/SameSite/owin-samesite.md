@@ -5,12 +5,12 @@ description: Trabalhar com cookies SameSite e com a interface Web aberta para .N
 ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
-ms.openlocfilehash: fc64315e8c3614e460c9a8d551bcb0848b3fe8f9
-ms.sourcegitcommit: 516a168548252ff0eaae2c02ec4bd9ffcfa8375e
+ms.openlocfilehash: ac5ae24eeb9e8e1cc6296667a4bebef72c3eb62c
+ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74951892"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74993084"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>SameSite cookies e a Open Web interface for .NET (OWIN)
 
@@ -39,7 +39,7 @@ Para a versão do ASP.NET 4. x deste artigo, consulte <xref:samesite/system-web-
 
 `SystemWebCookieManager` depende das APIs do .NET 4.7.2 `System.Web` para habilitar o suporte a `SameSite` e os patches para alterar o comportamento.
 
-Os motivos para usar `SystemWebCookieManager` são descritos em problemas de [integração de cookies de resposta de OWIN e System. Web](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues). `SystemWebCookieManager` é recomendado ao executar em `System.Web`. 
+Os motivos para usar `SystemWebCookieManager` são descritos em problemas de [integração de cookies de resposta de OWIN e System. Web](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues). `SystemWebCookieManager` é recomendado ao executar em `System.Web`.
 
 O código a seguir define `SameSite` para `Lax`:
 
@@ -74,9 +74,7 @@ O rascunho 2019 da especificação de `SameSite`:
 * Especifica que os cookies são tratados como `SameSite=Lax` por padrão.
 * Especifica cookies que declaram explicitamente `SameSite=None` para habilitar a entrega entre sites devem ser marcados como `Secure`. `None` é uma nova entrada a ser recusada.
 * Está agendado para ser habilitado pelo [Chrome](https://chromestatus.com/feature/5088147346030592) por padrão em [fevereiro de 2020](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Os navegadores começaram a passar para esse padrão em 2019.
-* O é suportado por patches emitidos conforme descrito nas seguintes KB:
-  * [Artigo 4531182 da base de conhecimento](https://support.microsoft.com/help/4531182/kb4531182)
-  * [Artigo 4524421 da base de conhecimento](https://support.microsoft.com/help/4524421/kb4524421)
+* O é suportado por patches emitidos conforme descrito em artigos da base de conhecimento. Para obter mais informações, consulte <xref:samesite/kbs-samesite>.
 
 <a name="sob"></a>
 
