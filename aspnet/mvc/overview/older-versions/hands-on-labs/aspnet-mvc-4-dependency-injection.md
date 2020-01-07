@@ -41,7 +41,7 @@ O padrão de injeção de dependência é uma implementação específica de inv
 <a id="The_Dependency_Injection_DI_Design_Pattern"></a>
 ### <a name="the-dependency-injection-di-design-pattern"></a>O padrão de Design de DI (injeção) de dependência
 
-Em um alto nível, o objetivo da injeção de dependência é que uma classe de cliente (por exemplo, *o jogador*) precisa de algo que satisfaz uma interface (por exemplo, *IClub*). Não importa o que é o tipo concreto (por exemplo, *WedgeClub WoodClub, IronClub,* ou *PutterClub*), ele quer alguém para lidar com isso (por exemplo, uma boa *caddy*). O resolvedor de dependência no ASP.NET MVC pode permitir que você registre sua lógica de dependência em outro lugar (por exemplo, um contêiner ou um *recipiente de paus*).
+Em um alto nível, o objetivo da injeção de dependência é que uma classe de cliente (por exemplo, *o jogador*) precisa de algo que satisfaz uma interface (por exemplo, *IClub*). Não importa o que é o tipo concreto (por exemplo, *WedgeClub WoodClub, IronClub,* ou *PutterClub*), ele quer alguém para lidar com isso (por exemplo, uma boa *caddy*). O resolvedor de dependência no ASP.NET MVC pode permitir que você registre sua lógica de dependência em outro lugar (por exemplo, um contêiner ou um *recipiente de tacos*).
 
 ![Diagrama de injeção de dependência](aspnet-mvc-4-dependency-injection/_static/image2.png "ilustração de injeção de dependência")
 
@@ -196,7 +196,7 @@ Nesta tarefa, você incluirá **Unity.Mvc3** pacote do NuGet para a solução.
 <a id="Ex1Task3"></a>
 
 <a id="Task_3_-_Registering_Unity_in_Globalasaxcs_Application_Start"></a>
-#### <a name="task-3---registering-unity-in-globalasaxcs-applicationstart"></a>Tarefa 3 - registrando Unity em Global.asax.cs aplicativo\_iniciar
+#### <a name="task-3---registering-unity-in-globalasaxcs-application_start"></a>Tarefa 3 - registrando Unity em Global.asax.cs aplicativo\_iniciar
 
 Nesta tarefa, você atualizará o **aplicativo\_começar** método localizado na **Global.asax.cs** para chamar o inicializador de Bootstrapper do Unity e em seguida, atualize o arquivo Bootstrapper o registro o serviço e o controlador usará para injeção de dependência.
 
@@ -499,7 +499,7 @@ Os conceitos a seguir foram abordados:
 <a id="Appendix_A_Installing_Visual_Studio_Express_2012_for_Web"></a>
 ## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Apêndice a: Instalar o Visual Studio Express 2012 para Web
 
-Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
+Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)** . As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
 
 1. Acesse [https://go.microsoft.com/?linkid=9810169](https://go.microsoft.com/?linkid=9810169). Como alternativa, se você já tiver instalado o Web Platform Installer, você pode abri-lo e pesquisar o produto &quot; <em>Visual Studio Express 2012 para Web com o SDK do Windows Azure</em>&quot;.
 2. Clique em **instalar agora**. Se você não tiver **Web Platform Installer** você será redirecionado para baixar e instalá-lo primeiro.
