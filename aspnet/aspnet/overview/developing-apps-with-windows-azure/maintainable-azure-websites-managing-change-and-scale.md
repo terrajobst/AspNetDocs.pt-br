@@ -131,7 +131,7 @@ Nesta tarefa, você passará pelas etapas de habilitação **Entity Framework Co
 
     > [!NOTE]
     > Este comando adiciona uma **migrações** pasta ao projeto de Geek Quiz que contém um arquivo chamado **Configuration.cs**. O **configuração** classe permite que você configurar o comportamento de migrações para o seu contexto.
-5. Com as migrações habilitadas, você precisará atualizar o **Configuration** classe para popular o banco de dados com os dados iniciais que **Pau teste** requer. Sob **migrações**, substitua o **Configuration.cs** arquivo com aquele localizado na **Source\Assets** pasta deste laboratório.
+5. Com as migrações habilitadas, você precisará atualizar o **Configuration** classe para popular o banco de dados com os dados iniciais que o **Geek Quiz** requer. Sob **migrações**, substitua o **Configuration.cs** arquivo com aquele localizado na **Source\Assets** pasta deste laboratório.
 
     > [!NOTE]
     > Uma vez que **migrações** chamará o **semente** método com cada atualização do banco de dados, você precisa ter certeza de que os registros não são duplicados no banco de dados. O **AddOrUpdate** método ajudará a evitar dados duplicados.
@@ -230,7 +230,7 @@ Nesta tarefa, você usará **Entity Framework Code First Migrations** para detec
     ![Alterar instrução de SQL da coluna gerada](maintainable-azure-websites-managing-change-and-scale/_static/image11.png "alterar instrução de SQL da coluna gerada")
 
     *Alterar instrução de SQL da coluna gerada*
-11. Na **Pesquisador de objetos do SQL Server**, atualize o **dbo. TriviaQuestions** de tabela e verifique se o **dica** é do tipo de coluna **nvarchar(150)**.
+11. Na **Pesquisador de objetos do SQL Server**, atualize o **dbo. TriviaQuestions** de tabela e verifique se o **dica** é do tipo de coluna **nvarchar(150)** .
 
     ![Mostrando a nova restrição](maintainable-azure-websites-managing-change-and-scale/_static/image12.png "mostrando a nova restrição")
 
@@ -421,7 +421,7 @@ Nesta tarefa, você habilitará a publicação em etapas em seu aplicativo web. 
     > Quando você implanta o conteúdo para o host do FTP ou repositório GIT de um aplicativo web, você deve autenticar usando o **credenciais de implantação** criado a partir do aplicativo web **início rápido** ou **painel**  páginas de gerenciamento. Se você não souber suas credenciais de implantação você poderá redefini-los usando o portal de gerenciamento com facilidade. Abra o aplicativo web **Dashboard** da página e clique no **redefinir suas credenciais de implantação** link. Forneça uma nova senha e clique em **Okey**. Credenciais de implantação são válidas para uso com todos os aplicativos web associados com sua assinatura.
 10. Para verificar se o aplicativo web foi enviado com êxito ao Azure, volte para o portal de gerenciamento e clique em **sites**.
 11. Localize seu aplicativo web e expanda a entrada para exibir o slot de sites de preparo. Clique em seu **nome** para ir para a página de gerenciamento.
-12. Clique em **implantações** para ver as **histórico de implantação**. Verifique se há um **implantação ativa** com seu  *&quot;confirmação inicial&quot;*.
+12. Clique em **implantações** para ver as **histórico de implantação**. Verifique se há um **implantação ativa** com seu  *&quot;confirmação inicial&quot;* .
 
     ![Implantação ativa](maintainable-azure-websites-managing-change-and-scale/_static/image40.png)
 
@@ -682,7 +682,7 @@ Nesta tarefa, você irá configurar o **GeekQuiz** solução para consumir a ima
 1. No Visual Studio, abra o **Web. config** dentro do arquivo a **GeekQuiz** do projeto e localize o **&lt;System. webServer&gt;** elemento.
 2. Adicione o código a seguir para adicionar uma reescrita de URL para a regra, atualizando o espaço reservado com o nome da sua conta de armazenamento.
 
-    (Código de trecho de código – *UrlRewriteRule WebSitesInProduction - Ex4 -*)
+    (Código de trecho de código – *UrlRewriteRule WebSitesInProduction - Ex4 -* )
 
     [!code-xml[Main](maintainable-azure-websites-managing-change-and-scale/samples/sample17.xml)]
 
@@ -776,7 +776,7 @@ Agora que **AutoEscala** tiver sido configurado, você aprenderá a criar um **p
     ![Adição de uma solicitação para WebTest1](maintainable-azure-websites-managing-change-and-scale/_static/image81.png "adicionando uma solicitação ao WebTest1")
 
     *Adição de uma solicitação para WebTest1*
-4. No **propriedades** janela do novo nó de solicitação, atualize o **Url** propriedade para apontar para a URL do aplicativo web (por exemplo, *[ http://geek-quiz.azurewebsites.net/ ](http://geek-quiz.azurewebsites.net/)*).
+4. No **propriedades** janela do novo nó de solicitação, atualize o **Url** propriedade para apontar para a URL do aplicativo web (por exemplo, *[ http://geek-quiz.azurewebsites.net/ ](http://geek-quiz.azurewebsites.net/)* ).
 
     ![Alterar a propriedade de Url](maintainable-azure-websites-managing-change-and-scale/_static/image82.png "alterando a propriedade de Url")
 
