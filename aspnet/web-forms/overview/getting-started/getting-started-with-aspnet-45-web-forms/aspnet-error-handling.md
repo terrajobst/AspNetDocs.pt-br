@@ -332,7 +332,7 @@ Saiba mais sobre como implantar seu aplicativo Web para Microsoft Azure, consult
 Gostaria de agradecer às seguintes pessoas que fizeram contribuições significativas para o conteúdo desta série de tutoriais:
 
 - [Alberto Poblacion, MVP &amp; MCT, Espanha](https://mvp.microsoft.com/mvp/Alberto%20Poblacion%20Bolano-36772)
-- [Alex Thissen, Holanda](http://blog.alexthissen.nl/) (twitter: [@alexthissen](http://twitter.com/alexthissen))
+- [Alex Thissen, Países Baixos](http://blog.alexthissen.nl/) (twitter: [@alexthissen](http://twitter.com/alexthissen))
 - [Andre Tournier, EUA](http://andret503.wordpress.com/)
 - Apurva Joshi, Microsoft
 - [Bojan Vrhovnik, Eslovênia](http://twitter.com/bvrhovnik)
