@@ -1,167 +1,167 @@
 ---
 uid: web-api/overview/security/authentication-filters
-title: Filtros de autenticação na API Web ASP.NET 2 | Microsoft Docs
+title: Filtros de autenticação no ASP.NET Web API 2 | Microsoft Docs
 author: MikeWasson
-description: Um filtro de autenticação é um componente que autentica uma solicitação HTTP. API Web 2 e MVC 5 oferecem suporte a filtros de autenticação, mas diferem um pouco...
+description: Um filtro de autenticação é um componente que autentica uma solicitação HTTP. A API Web 2 e MVC 5 oferecem suporte a filtros de autenticação, mas diferem ligeiramente...
 ms.author: riande
 ms.date: 09/25/2014
 ms.assetid: b9882e53-b3ca-4def-89b0-322846973ccb
 msc.legacyurl: /web-api/overview/security/authentication-filters
 msc.type: authoredcontent
-ms.openlocfilehash: 15a343a061c61313141dcb69bd329e08aa902d98
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b6815baf05303d5f47a14ee5fe0fdfc2836c1868
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65126022"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519369"
 ---
-# <a name="authentication-filters-in-aspnet-web-api-2"></a>Filtros de autenticação na API Web ASP.NET 2
+# <a name="authentication-filters-in-aspnet-web-api-2"></a>Filtros de autenticação no ASP.NET Web API 2
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-> Um filtro de autenticação é um componente que autentica uma solicitação HTTP. API Web 2 e MVC 5 oferecem suporte a filtros de autenticação, mas elas podem diferir ligeiramente, principalmente em convenções de nomenclatura para a interface de filtro. Este tópico descreve os filtros de autenticação de API da Web.
+> Um filtro de autenticação é um componente que autentica uma solicitação HTTP. A API Web 2 e MVC 5 dão suporte a filtros de autenticação, mas diferem ligeiramente, principalmente nas convenções de nomenclatura da interface de filtro. Este tópico descreve os filtros de autenticação da API Web.
 
-Filtros de autenticação permitem que você definir um esquema de autenticação para controladores ou ações individuais. Dessa forma, seu aplicativo pode dar suporte a diferentes mecanismos de autenticação para recursos diferentes do HTTP.
+Os filtros de autenticação permitem definir um esquema de autenticação para controladores ou ações individuais. Dessa forma, seu aplicativo pode dar suporte a mecanismos de autenticação diferentes para diferentes recursos HTTP.
 
-Neste artigo, mostrarei o código do [autenticação básica](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/BasicAuthentication/ReadMe.txt) exemplo no [ http://aspnet.codeplex.com ](http://aspnet.codeplex.com). O exemplo mostra um filtro de autenticação que implementa o esquema de autenticação básica de acesso HTTP (RFC 2617). O filtro é implementado em uma classe chamada `IdentityBasicAuthenticationAttribute`. Eu não mostraremos todo o código de exemplo, apenas as partes que ilustram como gravar um filtro de autenticação.
+Neste artigo, mostrarei o código do exemplo de [autenticação básica](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/BasicAuthentication) em [https://github.com/aspnet/samples](https://github.com/aspnet/samples). O exemplo mostra um filtro de autenticação que implementa o esquema de autenticação de acesso básico HTTP (RFC 2617). O filtro é implementado em uma classe chamada `IdentityBasicAuthenticationAttribute`. Não mostrarei todo o código do exemplo, apenas as partes que ilustram como escrever um filtro de autenticação.
 
-## <a name="setting-an-authentication-filter"></a>Definindo um filtro de autenticação
+## <a name="setting-an-authentication-filter"></a>Configurando um filtro de autenticação
 
-Como outros filtros, os filtros de autenticação podem ser aplicadas por controlador, por ação ou globalmente a todos os controladores de API da Web.
+Assim como outros filtros, os filtros de autenticação podem ser aplicados por controlador, por ação ou globalmente a todos os controladores de API da Web.
 
-Para aplicar um filtro de autenticação para um controlador, decore a classe de controlador com o atributo de filtro. O código a seguir define o `[IdentityBasicAuthentication]` filtro em uma classe de controlador, que permite a autenticação básica para todas as ações do controlador.
+Para aplicar um filtro de autenticação a um controlador, decore a classe Controller com o atributo Filter. O código a seguir define o filtro de `[IdentityBasicAuthentication]` em uma classe de controlador, que habilita a autenticação básica para todas as ações do controlador.
 
 [!code-csharp[Main](authentication-filters/samples/sample1.cs)]
 
-Para aplicar o filtro a uma ação, decore a ação com o filtro. O seguinte código define a `[IdentityBasicAuthentication]` filtro do controlador `Post` método.
+Para aplicar o filtro a uma ação, decore a ação com o filtro. O código a seguir define o filtro de `[IdentityBasicAuthentication]` no método `Post` do controlador.
 
 [!code-csharp[Main](authentication-filters/samples/sample2.cs)]
 
-Para aplicar o filtro para todos os controladores de API da Web, adicione-o para **GlobalConfiguration.Filters**.
+Para aplicar o filtro a todos os controladores de API da Web, adicione-o a **GlobalConfiguration. Filters**.
 
 [!code-csharp[Main](authentication-filters/samples/sample3.cs)]
 
-## <a name="implementing-a-web-api-authentication-filter"></a>Implementar um filtro de autenticação de API da Web
+## <a name="implementing-a-web-api-authentication-filter"></a>Implementando um filtro de autenticação de API Web
 
-Na API da Web, implementam filtros de autenticação do [System.Web.Http.Filters.IAuthenticationFilter](https://msdn.microsoft.com/library/system.web.http.filters.iauthenticationfilter.aspx) interface. Eles também devem herdar de **System. Attribute**, de modo a ser aplicado como atributos.
+Na API Web, os filtros de autenticação implementam a interface [System. Web. http. Filters. IAuthenticationFilter](https://msdn.microsoft.com/library/system.web.http.filters.iauthenticationfilter.aspx) . Eles também devem herdar de **System. Attribute**, a fim de serem aplicados como atributos.
 
-O **IAuthenticationFilter** interface tem dois métodos:
+A interface **IAuthenticationFilter** tem dois métodos:
 
-- **AuthenticateAsync** autentica a solicitação, validando as credenciais na solicitação, se estiver presente.
-- **ChallengeAsync** adiciona um desafio de autenticação para a resposta HTTP, se necessário.
+- O **AuthenticateAsync** autentica a solicitação validando as credenciais na solicitação, se presente.
+- O **ChallengeAsync** adiciona um desafio de autenticação à resposta http, se necessário.
 
-Esses métodos correspondem ao fluxo de autenticação definido em [RFC 2612](http://tools.ietf.org/html/rfc2616) e [RFC 2617](http://tools.ietf.org/html/rfc2617):
+Esses métodos correspondem ao fluxo de autenticação definido em [rfc 2612](http://tools.ietf.org/html/rfc2616) e [RFC 2617](http://tools.ietf.org/html/rfc2617):
 
-1. O cliente envia as credenciais no cabeçalho de autorização. Isso geralmente acontece depois que o cliente recebe uma resposta de 401 (não autorizado) do servidor. No entanto, um cliente pode enviar credenciais com qualquer solicitação, não apenas depois de obter um 401.
-2. Se o servidor não aceitará as credenciais, ela retornará uma resposta de 401 (não autorizado). A resposta inclui um cabeçalho Www-Authenticate que contém um ou mais desafios. Cada desafio Especifica um esquema de autenticação reconhecido pelo servidor.
+1. O cliente envia credenciais no cabeçalho de autorização. Isso normalmente acontece depois que o cliente recebe uma resposta 401 (não autorizada) do servidor. No entanto, um cliente pode enviar credenciais com qualquer solicitação, não apenas depois de obter um 401.
+2. Se o servidor não aceitar as credenciais, ele retornará uma resposta 401 (não autorizada). A resposta inclui um cabeçalho WWW-Authenticate que contém um ou mais desafios. Cada desafio especifica um esquema de autenticação reconhecido pelo servidor.
 
-O servidor também pode retornar 401 de uma solicitação anônima. Na verdade, que normalmente é como o processo de autenticação é iniciado:
+O servidor também pode retornar 401 de uma solicitação anônima. Na verdade, é normalmente assim que o processo de autenticação é iniciado:
 
 1. O cliente envia uma solicitação anônima.
-2. O servidor retorna um 401.
-3. Os clientes reenvia a solicitação de credenciais.
+2. O servidor retorna 401.
+3. Os clientes reenviam a solicitação com credenciais.
 
-Esse fluxo inclui tanto *autenticação* e *autorização* etapas.
+Esse fluxo inclui as etapas de *autenticação* e *autorização* .
 
-- Autenticação comprova a identidade do cliente.
-- Autorização determina se o cliente pode acessar um recurso específico.
+- A autenticação comprova a identidade do cliente.
+- A autorização determina se o cliente pode acessar um recurso específico.
 
-Na API da Web, filtros de autenticação, lidar com a autenticação, mas não a autorização. Autorização deve ser feita por um filtro de autorização ou dentro da ação de controlador.
+Na API Web, os filtros de autenticação manipulam a autenticação, mas não a autorização. A autorização deve ser feita por um filtro de autorização ou dentro da ação do controlador.
 
-Aqui está o fluxo no pipeline da API Web 2:
+Este é o fluxo no pipeline da API Web 2:
 
-1. Antes de invocar uma ação, a API da Web cria uma lista dos filtros de autenticação para essa ação. Isso inclui filtros com escopo da ação, o escopo do controlador e o escopo global.
-2. Chamadas à API de Web **AuthenticateAsync** em cada filtro na lista. Cada filtro pode validar as credenciais na solicitação. Se qualquer filtro validado com êxito as credenciais, o filtro cria uma **IPrincipal** e a anexa à solicitação. Um filtro também pode disparar um erro neste momento. Nesse caso, o restante do pipeline não é executado.
-3. Supondo que nenhum erro, a solicitação flui pelo resto do pipeline.
-4. Por fim, a API da Web chama cada filtro de autenticação **ChallengeAsync** método. Filtros de usam esse método para adicionar um desafio para a resposta, se necessário. Normalmente (mas nem sempre) que deve acontecer em resposta a um erro 401.
+1. Antes de invocar uma ação, a API da Web cria uma lista dos filtros de autenticação para essa ação. Isso inclui filtros com escopo de ação, escopo do controlador e escopo global.
+2. A API Web chama **AuthenticateAsync** em cada filtro na lista. Cada filtro pode validar credenciais na solicitação. Se qualquer filtro validar as credenciais com êxito, o filtro criará uma **IPrincipal** e a anexará à solicitação. Um filtro também pode disparar um erro neste momento. Nesse caso, o restante do pipeline não é executado.
+3. Supondo que não haja erro, a solicitação flui pelo resto do pipeline.
+4. Por fim, a API Web chama o método **ChallengeAsync** de cada filtro de autenticação. Os filtros usam esse método para adicionar um desafio à resposta, se necessário. Normalmente (mas nem sempre) que aconteceria em resposta a um erro 401.
 
-Os diagramas a seguir mostram dois casos possíveis. No primeiro, o filtro de autenticação com êxito autentica a solicitação, um filtro de autorização autoriza a solicitação e a ação do controlador retorna 200 (Okey).
+Os diagramas a seguir mostram dois casos possíveis. Na primeira, o filtro de autenticação autentica a solicitação com êxito, um filtro de autorização autoriza a solicitação e a ação do controlador retorna 200 (OK).
 
 ![](authentication-filters/_static/image1.png)
 
-No segundo exemplo, o filtro de autenticação autentica a solicitação, mas o filtro de autorização retorna 401 (não autorizado). Nesse caso, a ação do controlador não é invocada. O filtro de autenticação adiciona um cabeçalho Www-Authenticate à resposta.
+No segundo exemplo, o filtro de autenticação autentica a solicitação, mas o filtro de autorização retorna 401 (não autorizado). Nesse caso, a ação do controlador não é invocada. O filtro de autenticação adiciona um cabeçalho WWW-Authenticate à resposta.
 
 ![](authentication-filters/_static/image2.png)
 
-Outras combinações são possíveis&mdash;, por exemplo, se a ação do controlador permitir solicitações anônimas, você pode ter um filtro de autenticação, mas sem autorização.
+Outras combinações são possíveis&mdash;por exemplo, se a ação do controlador permitir solicitações anônimas, você poderá ter um filtro de autenticação, mas nenhuma autorização.
 
 ## <a name="implementing-the-authenticateasync-method"></a>Implementando o método AuthenticateAsync
 
-O **AuthenticateAsync** método tenta autenticar a solicitação. Aqui está a assinatura do método:
+O método **AuthenticateAsync** tenta autenticar a solicitação. Veja a assinatura do método:
 
 [!code-csharp[Main](authentication-filters/samples/sample4.cs)]
 
-O **AuthenticateAsync** método deve fazer o seguinte:
+O método **AuthenticateAsync** deve seguir um destes procedimentos:
 
-1. Nada (não operacional).
-2. Criar uma **IPrincipal** e defini-lo na solicitação.
+1. Nada (no-op).
+2. Crie um **IPrincipal** e defina-o na solicitação.
 3. Defina um resultado de erro.
 
-Opção (1) significa que a solicitação não tinha nenhuma credencial que compreende o filtro. Opção (2) significa que o filtro de autenticado com êxito a solicitação. Opção (3) significa que a solicitação tinha credenciais inválidas (como a senha incorreta), que dispara uma resposta de erro.
+Opção (1) significa que a solicitação não tinha nenhuma credencial que o filtro entenda. Opção (2) significa que o filtro autenticou a solicitação com êxito. Opção (3) significa que a solicitação tinha credenciais inválidas (como a senha incorreta), que dispara uma resposta de erro.
 
-Aqui está uma visão geral para implementar **AuthenticateAsync**.
+Aqui está uma estrutura geral para implementar **AuthenticateAsync**.
 
 1. Procure as credenciais na solicitação.
-2. Se não houver nenhuma credencial, não faça nada e retornar (não operacional).
-3. Se houver credenciais, mas o filtro não reconhece o esquema de autenticação, não faça nada e retornar (não operacional). Outro filtro no pipeline pode compreender o esquema.
-4. Se não houver credenciais que compreende o filtro, tente autenticá-los.
-5. Se as credenciais sejam ruins, retornar 401, definindo `context.ErrorResult`.
-6. Se as credenciais forem válidas, crie uma **IPrincipal** e defina `context.Principal`.
+2. Se não houver nenhuma credencial, não faça nada e retorne (no-op).
+3. Se houver credenciais, mas o filtro não reconhecer o esquema de autenticação, não faça nada e retorne (no-op). Outro filtro no pipeline pode entender o esquema.
+4. Se houver credenciais que o filtro entenda, tente autenticá-las.
+5. Se as credenciais forem ruins, retorne 401 definindo `context.ErrorResult`.
+6. Se as credenciais forem válidas, crie um **IPrincipal** e defina `context.Principal`.
 
-Mostra o código a seguir a **AuthenticateAsync** método a partir de [autenticação básica](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/BasicAuthentication/ReadMe.txt) exemplo. Os comentários indicam cada etapa. O código mostra vários tipos de erro: Um cabeçalho de autorização sem credenciais, credenciais malformadas, e o nome de usuário/senha inválidos.
+O código a seguir mostra o método **AuthenticateAsync** do exemplo de [autenticação básica](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/BasicAuthentication) . Os comentários indicam cada etapa. O código mostra vários tipos de erro: um cabeçalho de autorização sem credenciais, credenciais malformadas e nome de usuário/senha incorretos.
 
 [!code-csharp[Main](authentication-filters/samples/sample5.cs)]
 
-## <a name="setting-an-error-result"></a>Definindo um resultado de erro
+## <a name="setting-an-error-result"></a>Configurando um resultado de erro
 
-Se as credenciais forem inválidas, o filtro deve ser definido `context.ErrorResult` para um **IHttpActionResult** que cria uma resposta de erro. Para obter mais informações sobre **IHttpActionResult**, consulte [resultados de ação na API Web 2](../getting-started-with-aspnet-web-api/action-results.md).
+Se as credenciais forem inválidas, o filtro deverá definir `context.ErrorResult` como um **IHttpActionResult** que cria uma resposta de erro. Para obter mais informações sobre **IHttpActionResult**, consulte [resultados da ação na API da Web 2](../getting-started-with-aspnet-web-api/action-results.md).
 
-O exemplo de autenticação básica inclui um `AuthenticationFailureResult` classe adequada para essa finalidade.
+O exemplo de autenticação básica inclui uma classe `AuthenticationFailureResult` que é adequada para essa finalidade.
 
 [!code-csharp[Main](authentication-filters/samples/sample6.cs)]
 
 ## <a name="implementing-challengeasync"></a>Implementando ChallengeAsync
 
-A finalidade de **ChallengeAsync** método é adicionar os desafios de autenticação para a resposta, se necessário. Aqui está a assinatura do método:
+A finalidade do método **ChallengeAsync** é adicionar desafios de autenticação à resposta, se necessário. Veja a assinatura do método:
 
 [!code-csharp[Main](authentication-filters/samples/sample7.cs)]
 
 O método é chamado em cada filtro de autenticação no pipeline de solicitação.
 
-É importante entender que **ChallengeAsync** é chamado *antes de* a resposta HTTP é criado e, possivelmente, até mesmo antes da execução da ação de controlador. Quando **ChallengeAsync** é chamado, `context.Result` contém um **IHttpActionResult**, que é usado posteriormente para criar a resposta HTTP. Portanto, quando **ChallengeAsync** é chamado, você não sabe nada sobre a resposta HTTP ainda. O **ChallengeAsync** método deve substituir o valor original da `context.Result` com uma nova **IHttpActionResult**. Isso **IHttpActionResult** deve encapsular original `context.Result`.
+É importante entender que **ChallengeAsync** é chamado *antes* da criação da resposta http e, possivelmente, antes da execução da ação do controlador. Quando **ChallengeAsync** é chamado, `context.Result` contém um **IHttpActionResult**, que é usado posteriormente para criar a resposta http. Assim, quando **ChallengeAsync** for chamado, você ainda não saberá nada sobre a resposta http. O método **ChallengeAsync** deve substituir o valor original de `context.Result` por um novo **IHttpActionResult**. Esse **IHttpActionResult** deve encapsular o `context.Result`original.
 
 ![](authentication-filters/_static/image3.png)
 
-Chamarei o original **IHttpActionResult** as *resultados interno*e o novo **IHttpActionResult** o *resultado externo*. O resultado externo deve fazer o seguinte:
+Chamarei o **IHttpActionResult** original do *resultado interno*e o novo **IHttpActionResult** o *resultado externo*. O resultado externo deve fazer o seguinte:
 
 1. Invoque o resultado interno para criar a resposta HTTP.
 2. Examine a resposta.
-3. Adicione um desafio de autenticação para a resposta, se necessário.
+3. Adicione um desafio de autenticação à resposta, se necessário.
 
-O exemplo a seguir é obtido do exemplo de autenticação básica. Ele define uma **IHttpActionResult** para o resultado da externo.
+O exemplo a seguir é obtido do exemplo de autenticação básica. Ele define um **IHttpActionResult** para o resultado externo.
 
 [!code-csharp[Main](authentication-filters/samples/sample8.cs)]
 
-O `InnerResult` propriedade mantém interna **IHttpActionResult**. O `Challenge` propriedade representa um cabeçalho de autenticação de Www. Observe que **ExecuteAsync** primeiro chama `InnerResult.ExecuteAsync` para criar a resposta HTTP e, em seguida, adiciona o desafio, se necessário.
+A propriedade `InnerResult` mantém o **IHttpActionResult**interno. A propriedade `Challenge` representa um cabeçalho www-Authentication. Observe que o **ExecuteAsync** primeiro chama `InnerResult.ExecuteAsync` para criar a resposta http e, em seguida, adiciona o desafio, se necessário.
 
-Verifique o código de resposta antes de adicionar o desafio. A maioria dos esquemas de autenticação apenas adicionar um desafio se a resposta 401, conforme mostrado aqui. No entanto, alguns esquemas de autenticação de adicionar um desafio para uma resposta de êxito. Por exemplo, consulte [Negotiate](http://tools.ietf.org/html/rfc4559#section-5) (RFC 4559).
+Verifique o código de resposta antes de adicionar o desafio. A maioria dos esquemas de autenticação só adicionará um desafio se a resposta for 401, como mostrado aqui. No entanto, alguns esquemas de autenticação adicionam um desafio a uma resposta de êxito. Por exemplo, consulte [Negotiate](http://tools.ietf.org/html/rfc4559#section-5) (RFC 4559).
 
-Dada a `AddChallengeOnUnauthorizedResult` classe, o código real no **ChallengeAsync** é simples. Você acabou de criar o resultado e anexá-lo para `context.Result`.
+Considerando a classe `AddChallengeOnUnauthorizedResult`, o código real em **ChallengeAsync** é simples. Basta criar o resultado e anexá-lo a `context.Result`.
 
 [!code-csharp[Main](authentication-filters/samples/sample9.cs)]
 
-Observação: O exemplo de autenticação básica abstrai essa lógica de um pouco, colocando-o em um método de extensão.
+Observação: o exemplo de autenticação básica abstrai essa lógica um pouco, colocando-a em um método de extensão.
 
-## <a name="combining-authentication-filters-with-host-level-authentication"></a>A combinação de filtros de autenticação com autenticação no nível do Host
+## <a name="combining-authentication-filters-with-host-level-authentication"></a>Combinando filtros de autenticação com autenticação no nível do host
 
-"Autenticação de nível de host" é executada pelo host (como o IIS), a autenticação antes da estrutura de atingir a API da Web de solicitação.
+"Autenticação no nível do host" é a autenticação executada pelo host (como o IIS), antes que a solicitação atinja a estrutura da API da Web.
 
-Muitas vezes, você talvez queira habilitar a autenticação de nível de host para o restante do seu aplicativo, mas desabilitá-lo para seus controladores de API da Web. Por exemplo, um cenário típico é habilitar a autenticação de formulários no nível do host, mas usar a autenticação baseada em token para API da Web.
+Geralmente, talvez você queira habilitar a autenticação em nível de host para o restante do seu aplicativo, mas desabilitá-lo para seus controladores de API Web. Por exemplo, um cenário típico é habilitar a autenticação de formulários no nível do host, mas usar a autenticação baseada em token para a API da Web.
 
-Para desabilitar a autenticação em nível de host dentro do pipeline da API da Web, chame `config.SuppressHostPrincipal()` em sua configuração. Isso faz com que a API da Web remover o **IPrincipal** de qualquer solicitação que entra o pipeline da API Web. Na verdade, ele &quot;un-autentica&quot; a solicitação.
+Para desabilitar a autenticação em nível de host dentro do pipeline da API Web, chame `config.SuppressHostPrincipal()` em sua configuração. Isso faz com que a API da Web remova a **IPrincipal** de qualquer solicitação que entra no pipeline da API Web. Efetivamente, ele &quot;cancelar a autenticação&quot; solicitação.
 
 [!code-csharp[Main](authentication-filters/samples/sample10.cs)]
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-[Filtros de segurança de API da Web do ASP.NET](https://msdn.microsoft.com/magazine/dn781361.aspx) (MSDN Magazine)
+[Filtros de segurança ASP.NET Web API](https://msdn.microsoft.com/magazine/dn781361.aspx) (MSDN Magazine)

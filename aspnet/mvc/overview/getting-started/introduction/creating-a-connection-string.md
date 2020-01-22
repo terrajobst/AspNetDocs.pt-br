@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/getting-started/introduction/creating-a-connection-string
-title: Criando uma cadeia de Conexão e trabalhando com LocalDB do SQL Server | Microsoft Docs
+title: Criando uma cadeia de conexão e trabalhando com SQL Server LocalDB | Microsoft Docs
 author: Rick-Anderson
 description: ''
 ms.author: riande
@@ -8,58 +8,58 @@ ms.date: 10/17/2013
 ms.assetid: 6127804d-c1a9-414d-8429-7f3dd0f56e97
 msc.legacyurl: /mvc/overview/getting-started/introduction/creating-a-connection-string
 msc.type: authoredcontent
-ms.openlocfilehash: e29fe14d2c7fafe2edb9c02029b678090ea83cc5
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.openlocfilehash: d3c6e736c5dcf4a3615e3c72cfc033effc7cc8e6
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59403812"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519304"
 ---
 # <a name="creating-a-connection-string-and-working-with-sql-server-localdb"></a>Criar uma cadeia de conexão e trabalhando com LocalDB do SQL Server
 
 por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
-[!INCLUDE [Tutorial Note](sample/code-location.md)]
+[!INCLUDE [Tutorial Note](index.md)]
 
 ## <a name="creating-a-connection-string-and-working-with-sql-server-localdb"></a>Criar uma cadeia de conexão e trabalhando com LocalDB do SQL Server
 
-O `MovieDBContext` classe criada por você lida com a tarefa de conectar-se ao banco de dados e mapeamento `Movie` objetos para os registros de banco de dados. Uma pergunta que você pode fazer, no entanto, é como especificar qual banco de dados que ele se conectará. Você realmente não precisa especificar qual banco de dados usar, Entity Framework usará como padrão [LocalDB](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-2016-express-localdb). Nesta seção vamos explicitamente adicionar uma cadeia de caracteres de conexão na *Web. config* arquivo do aplicativo.
+A classe `MovieDBContext` que você criou manipula a tarefa de conexão com o banco de dados e o mapeamento de objetos `Movie` para registros de banco de dados. No entanto, uma pergunta que você pode fazer é como especificar a qual banco de dados ele será conectado. Na verdade, você não precisa especificar qual banco de dados usar, Entity Framework usará o [LocalDB](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-2016-express-localdb)como padrão. Nesta seção, adicionaremos explicitamente uma cadeia de conexão no arquivo *Web. config* do aplicativo.
 
 ## <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[LocalDB](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-2016-express-localdb) é uma versão leve do SQL Server Express Database Engine que é iniciado sob demanda e executado no modo de usuário. LocalDB é executado em um modo de execução especial do SQL Server Express que permite que você trabalhe com bancos de dados como *mdf* arquivos. Normalmente, os arquivos de banco de dados LocalDB são mantidos na *App\_dados* pasta de um projeto web.
+O [LocalDB](https://docs.microsoft.com/sql/database-engine/configure-windows/sql-server-2016-express-localdb) é uma versão leve do Mecanismo de Banco de Dados de SQL Server Express que inicia sob demanda e é executado no modo de usuário. O LocalDB é executado em um modo de execução especial de SQL Server Express que permite que você trabalhe com bancos de dados como arquivos *. MDF* . Normalmente, os arquivos de banco de dados LocalDB são mantidos na pasta *Data\_do aplicativo* de um projeto Web.
 
-SQL Server Express não é recomendado para uso em aplicativos da web de produção. LocalDB em particular não deve ser usado para produção com um aplicativo web porque ela não foi projetada para trabalhar com o IIS. No entanto, um banco de dados LocalDB pode ser migrado facilmente para SQL Server ou SQL Azure.
+O SQL Server Express não é recomendado para uso em aplicativos Web de produção. O LocalDB, em particular, não deve ser usado para produção com um aplicativo Web porque ele não foi projetado para funcionar com o IIS. No entanto, um banco de dados LocalDB pode ser facilmente migrado para SQL Server ou SQL Azure.
 
 No Visual Studio 2017, o LocalDB é instalado por padrão com o Visual Studio.
 
-Por padrão, o Entity Framework procura uma cadeia de caracteres de conexão que o mesmo nomeada que a classe de contexto de objeto (`MovieDBContext` para este projeto). Para obter mais informações, consulte [cadeias de Conexão do SQL Server para aplicativos Web ASP.NET](https://msdn.microsoft.com/library/jj653752.aspx).
+Por padrão, a Entity Framework procura uma cadeia de conexão denominada igual à classe de contexto de objeto (`MovieDBContext` para este projeto). Para obter mais informações, consulte [SQL Server cadeias de conexão para aplicativos Web ASP.net](https://msdn.microsoft.com/library/jj653752.aspx).
 
-Abra a raiz do aplicativo *Web. config* arquivo mostrado abaixo. (Não o *Web. config* arquivo na *modos de exibição* pasta.)
+Abra o arquivo *Web. config da* raiz do aplicativo mostrado abaixo. (Não o arquivo *Web. config* na pasta *views* .)
 
 ![](creating-a-connection-string/_static/image1.png)
 
-Encontre o `<connectionStrings>` elemento:
+Localize o elemento `<connectionStrings>`:
 
 ![](creating-a-connection-string/_static/image2.png)
 
-Adicione a seguinte cadeia de conexão para o `<connectionStrings>` elemento na *Web. config* arquivo.
+Adicione a seguinte cadeia de conexão ao elemento `<connectionStrings>` no arquivo *Web. config* .
 
 [!code-xml[Main](creating-a-connection-string/samples/sample1.xml)]
 
-O exemplo a seguir mostra uma parte do *Web. config* arquivo com a cadeia de caracteres de conexão nova adicionada:
+O exemplo a seguir mostra uma parte do arquivo *Web. config* com a nova cadeia de conexão adicionada:
 
 [!code-xml[Main](creating-a-connection-string/samples/sample2.xml)]
 
-As cadeias de caracteres de duas conexão são muito semelhantes. A primeira cadeia de caracteres de conexão é denominada `DefaultConnection` e é usado para o banco de dados de associação para controlar quem pode acessar o aplicativo. A cadeia de caracteres de conexão que você adicionou Especifica um banco de dados LocalDB denominado *Movie.mdf* localizado na *App\_dados* pasta. Usamos não o banco de dados de associação neste tutorial, para obter mais informações sobre associação, autenticação e segurança, consulte o tutorial [criar um aplicativo ASP.NET MVC com autenticação e o banco de dados SQL e implantar no serviço de aplicativo do Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data).
+As duas cadeias de conexão são muito semelhantes. A primeira cadeia de conexão é denominada `DefaultConnection` e é usada para que o banco de dados de associação controle quem pode acessar o aplicativo. A cadeia de conexão adicionada especifica um banco de dados LocalDB chamado *Movie. MDF* localizado na pasta de *dados do aplicativo\_* . Não usaremos o banco de dados Membership neste tutorial, para obter mais informações sobre associação, autenticação e segurança, consulte meu tutorial [criar um aplicativo MVC ASP.NET com autenticação e banco de dados SQL e implantar no serviço Azure app](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data).
 
-O nome da cadeia de caracteres de conexão deve corresponder ao nome da [DbContext](https://msdn.microsoft.com/library/system.data.entity.dbcontext(v=vs.103).aspx) classe.
+O nome da cadeia de conexão deve corresponder ao nome da classe [DbContext](https://msdn.microsoft.com/library/system.data.entity.dbcontext(v=vs.103).aspx) .
 
 [!code-csharp[Main](creating-a-connection-string/samples/sample3.cs?highlight=15)]
 
-Na verdade, não precisa adicionar o `MovieDBContext` cadeia de caracteres de conexão. Se você não especificar uma cadeia de caracteres de conexão, o Entity Framework criará um banco de dados LocalDB no diretório de usuários com o nome totalmente qualificado do [DbContext](https://msdn.microsoft.com/library/system.data.entity.dbcontext(v=vs.103).aspx) classe (nesse caso, `MvcMovie.Models.MovieDBContext`). Você pode nomear o banco de dados que desejar, desde que ela tenha o *. Arquivos MDF* sufixo. Por exemplo, podemos pode nomear o banco de dados *MyFilms.mdf*.
+Na verdade, você não precisa adicionar a cadeia de conexão `MovieDBContext`. Se você não especificar uma cadeia de conexão, Entity Framework criará um banco de dados LocalDB no diretório Users com o nome totalmente qualificado da classe [DbContext](https://msdn.microsoft.com/library/system.data.entity.dbcontext(v=vs.103).aspx) (nesse caso, `MvcMovie.Models.MovieDBContext`). Você pode nomear o banco de dados como desejar, desde que ele tenha o *.* Sufixo de MDF. Por exemplo, poderíamos nomear o banco de dados *Myfilmes. MDF*.
 
-Em seguida, você criará um novo `MoviesController` classe que você pode usar para exibir os dados de filme e permitir que usuários criem novas listagens de filme.
+Em seguida, você criará uma nova classe `MoviesController` que pode ser usada para exibir os dados do filme e permitir que os usuários criem novas listagens de filmes.
 
 > [!div class="step-by-step"]
 > [Anterior](adding-a-model.md)

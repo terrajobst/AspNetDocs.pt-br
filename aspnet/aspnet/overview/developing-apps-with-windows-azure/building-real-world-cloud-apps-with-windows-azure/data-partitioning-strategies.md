@@ -8,12 +8,12 @@ ms.date: 06/12/2014
 ms.assetid: 513837a7-cfea-4568-a4e9-1f5901245d24
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-partitioning-strategies
 msc.type: authoredcontent
-ms.openlocfilehash: 2f79b1f459aff3e81dab7ea7eb4ebf3f71084463
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: b8c901ec30b6d37237f80100a2978350ac389b7a
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585813"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519161"
 ---
 # <a name="data-partitioning-strategies-building-real-world-cloud-apps-with-azure"></a>Estratégias de particionamento de dados (criando aplicativos de nuvem do mundo real com o Azure)
 
@@ -51,7 +51,7 @@ Por exemplo, suponha que meu aplicativo armazene dados sobre pessoas, incluindo 
 
 ![Tabela de dados](data-partitioning-strategies/_static/image1.png)
 
-Quando você representa esses dados como uma tabela e examina as diferentes variedades de dados, você pode ver que as três colunas à esquerda têm dados de cadeia de caracteres que podem ser armazenados de forma eficiente por um banco de dado relacional, enquanto as duas colunas à direita são basicamente matrizes de bytes que c ome de arquivos de imagem. É possível armazenar dados de arquivos de imagem em um banco de dado relacional, e muitas pessoas fazem isso porque não querem salvar os dados no sistema de arquivos. Eles podem não ter um sistema de arquivos capaz de armazenar os volumes de dados necessários ou talvez não queiram gerenciar um sistema de backup e restauração separado. Essa abordagem funciona bem para bancos de dados locais e para pequenas quantidades de data em bancos de dado na nuvem. No ambiente local, pode ser mais fácil deixar o DBA cuidar de tudo.
+Quando você representa esses dados como uma tabela e examina as diferentes variedades de dados, você pode ver que as três colunas à esquerda têm dados de cadeia de caracteres que podem ser armazenados de forma eficiente por um banco de dado relacional, enquanto as duas colunas à direita são basicamente matrizes de bytes que c ome de arquivos de imagem. É possível armazenar dados de arquivo de imagem em um banco de dado relacional, e muitas pessoas fazem isso porque não querem salvar os dados no sistema de arquivos. Eles podem não ter um sistema de arquivos capaz de armazenar os volumes de dados necessários ou talvez não queiram gerenciar um sistema de backup e restauração separado. Essa abordagem funciona bem para bancos de dados locais e para pequenas quantidades de data em bancos de dado na nuvem. No ambiente local, pode ser mais fácil deixar o DBA cuidar de tudo.
 
 Mas, em um banco de dados de nuvem, o armazenamento é relativamente caro e um alto volume de imagens pode aumentar o tamanho do banco de dados além dos limites em que ele pode operar com eficiência. Você pode resolver esses problemas Particionando os dados verticalmente, o que significa que você escolhe o armazenamento de dados mais apropriado para cada coluna na tabela de dados. O que pode funcionar melhor para este exemplo é colocar os dados de cadeia de caracteres em um banco de dado relacional e as imagens no armazenamento de BLOBs.
 
@@ -87,7 +87,7 @@ As complicações podem ser gerenciadas desde que você esteja planejando para e
 
 ## <a name="summary"></a>Resumo
 
-Um esquema de particionamento eficaz pode permitir que seu aplicativo de nuvem seja dimensionado para petabytes de dados na nuvem sem afunilamentos. E você não precisa pagar antecipadamente por máquinas maciças ou ampla infraestrutura como você pode se estivesse executando o aplicativo em um data center local. Na nuvem, você pode adicionar a capacidade incrementalmente conforme necessário, e você está pagando apenas pelo que usar ao usá-la.
+Um esquema de particionamento eficaz pode permitir que seu aplicativo de nuvem seja dimensionado para petabytes de dados na nuvem sem afunilamentos. E você não precisa pagar antecipadamente por máquinas maciças ou ampla infraestrutura como você pode se estivesse executando o aplicativo em um data center local. Na nuvem, é possível adicionar a capacidade incrementalmente conforme necessário, e você está pagando apenas pelo que usar ao usá-la.
 
 No [próximo capítulo](unstructured-blob-storage.md) , veremos como o aplicativo corrigir ti implementa o particionamento vertical armazenando imagens no armazenamento de BLOBs.
 

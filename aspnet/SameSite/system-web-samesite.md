@@ -3,14 +3,14 @@ title: Trabalhar com cookies SameSite no ASP.NET
 author: rick-anderson
 description: Saiba como usar o para SameSite cookies no ASP.NET
 ms.author: riande
-ms.date: 12/03/2019
+ms.date: 1/22/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: 47a3d7576edb0e818c39b32fbbcb98475248e18e
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.openlocfilehash: d2160bd9aeb93398b49b3a0e5e7a8a4404a5bc63
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74993067"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519187"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabalhar com cookies SameSite no ASP.NET
 
@@ -25,7 +25,7 @@ SameSite é um rascunho de [IETF](https://ietf.org/about/) projetado para fornec
 
 O parâmetro `None` causa problemas de compatibilidade com clientes que implementaram o padrão anterior de [rascunho 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07) (por exemplo, IOS 12). Consulte [suporte a navegadores mais antigos](#sob) neste documento.
 
-Cada componente ASP.NET Core que emite cookies precisa decidir se SameSite é apropriado.
+Cada componente ASP.NET que emite cookies precisa decidir se SameSite é apropriado.
 
 ## <a name="api-usage-with-samesite"></a>Uso da API com SameSite
 
@@ -44,6 +44,10 @@ As atualizações de 19 de novembro de 2019 para o Windows atualizaram o .NET 4.
 * Especifica cookies que declaram explicitamente `SameSite=None` para habilitar a entrega entre sites devem ser marcados como `Secure`. `None` é uma nova entrada a ser recusada.
 * O é suportado por patches emitidos conforme descrito em KB listados acima.
 * Está agendado para ser habilitado pelo [Chrome](https://chromestatus.com/feature/5088147346030592) por padrão em [fevereiro de 2020](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html). Os navegadores começaram a passar para esse padrão em 2019.
+
+### <a name="azure-app-servicesamesite-cookie-handling"></a>Serviço de Azure App — tratamento de cookies SameSite
+
+Consulte [Azure app Service – tratamento de cookies SameSite e .NET Framework patch do 4.7.2](https://azure.microsoft.com/updates/app-service-samesite-cookie-update/) para obter mais informações.
 
 <a name="sob"></a>
 
@@ -88,9 +92,9 @@ O Safari 12 implementou estritamente o rascunho anterior e falha quando o novo v
 
 O suporte do Firefox para o novo padrão pode ser testado na versão 68 +, optando na página de `about:config` com o sinalizador de recurso `network.cookie.sameSite.laxByDefault`. Não há relatórios de problemas de compatibilidade com versões mais antigas do Firefox.
 
-### <a name="test-with-edge-browser"></a>Testar com o navegador Microsoft Edge
+### <a name="test-with-edge-browser"></a>Testar com o navegador Edge
 
-O Microsoft Edge dá suporte ao antigo SameSite padrão. A versão 44 do Microsoft Edge não tem nenhum problema de compatibilidade conhecido com o novo padrão.
+O Edge dá suporte ao antigo SameSite padrão. A versão 44 do Edge não tem nenhum problema de compatibilidade conhecido com o novo padrão.
 
 ### <a name="test-with-edge-chromium"></a>Testar com borda (Chromium)
 

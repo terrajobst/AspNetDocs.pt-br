@@ -8,20 +8,20 @@ ms.date: 03/26/2015
 ms.assetid: d4911cb3-1afb-4805-b860-10818c4b1280
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset
 msc.type: authoredcontent
-ms.openlocfilehash: 07f5b290b73f75000e6f29fe09e4dc25e144452f
-ms.sourcegitcommit: 969e7db924ebad3cc0f0cb0d65d148e8b9221b9a
+ms.openlocfilehash: 6169c972ad0f4ee2079d3638c54a5accc4b8b3de
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899703"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519343"
 ---
 # <a name="create-a-secure-aspnet-mvc-5-web-app-with-log-in-email-confirmation-and-password-reset-c"></a>Criar um aplicativo Web seguro do ASP.NET MVC 5 com logon, confirmação por email e redefinição de senha (C#)
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 Este tutorial mostra como criar um aplicativo Web ASP.NET MVC 5 com confirmação de email e redefinição de senha usando o sistema de associação ASP.NET Identity.
 
-Para obter uma versão atualizada deste tutorial que usa o .NET Core, consulte [confirmação da conta e recuperação de senha no ASP.NET Core [/ASPNET/Core/Security/Authentication/accconfirm).
+Para obter uma versão atualizada deste tutorial que usa o .NET Core, consulte [confirmação da conta e recuperação de senha em ASP.NET Core](/aspnet/core/security/authentication/accconfirm).
 
 <a id="createMvc"></a>
 ## <a name="create-an-aspnet-mvc-app"></a>Criar um aplicativo MVC do ASP.NET

@@ -8,12 +8,12 @@ ms.date: 09/08/2014
 ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
-ms.openlocfilehash: 46264a0ab2244cff24761ce94b41722e61e3f426
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: d3b619ebd9448d30857ffbaf17fd245b1d54a662
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614923"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519291"
 ---
 # <a name="shopping-cart"></a>Carrinho de compras
 
@@ -229,7 +229,7 @@ Quando a página *ShoppingCart. aspx* é carregada, ela carrega o objeto de carr
 Execute o aplicativo agora para ver como você não pode adicionar um produto ao carrinho de compras, mas você pode ver o total do carrinho de compras.
 
 1. Pressione **F5** para executar o aplicativo.  
- O navegador será aberto e mostrará a página *Default. aspx* .
+ O navegador será aberto e mostrará a página *Default.aspx* .
 2. Selecione **carros** no menu de navegação categoria.
 3. Clique no link **Adicionar ao carrinho** ao lado do primeiro produto.   
  A página *ShoppingCart. aspx* é exibida com o total do pedido. 
@@ -311,6 +311,8 @@ Você pode executar o aplicativo agora para ver como você pode adicionar, exclu
 Neste tutorial, você criou um carrinho de compras para o aplicativo de exemplo Web Forms Wingtip Toys. Durante este tutorial, você usou Entity Framework Code First, anotações de dados, controles de dados com rigidez de tipos e Associação de modelo.
 
 O carrinho de compras dá suporte à adição, exclusão e atualização de itens que o usuário selecionou para compra. Além de implementar a funcionalidade de carrinho de compras, você aprendeu como exibir itens de carrinho de compras em um controle **GridView** e calcular o total do pedido.
+
+Para entender como a funcionalidade descrita funciona em um aplicativo de negócios real, você pode exibir o exemplo de carrinho de compras de software livre baseado em [Nopcommerce](https://github.com/nopSolutions/nopCommerce) -ASP.net. Originalmente, ele foi criado em Web Forms e ao longo dos anos movidos para o MVC e agora para ASP.NET Core.
 
 ## <a name="addition-information"></a>Informações de adição
 

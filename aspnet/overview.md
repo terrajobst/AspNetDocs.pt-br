@@ -8,12 +8,12 @@ ms.author: riande
 ms.date: 08/10/2019
 msc.legacyurl: ''
 msc.type: content
-ms.openlocfilehash: 9a6d08849f09c9d7a779df64f70e8770d2af3c87
-ms.sourcegitcommit: b67ffd5b2c5cff01ec4c8eb12a21f693f2e11887
+ms.openlocfilehash: aa4f627bca99f0a7ffbbb53ea45ebdcf0850fd89
+ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69995281"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519356"
 ---
 # <a name="aspnet-overview"></a>Visão geral do ASP.NET
 
@@ -23,7 +23,7 @@ O ASP.NET é uma estrutura da Web gratuita para a criação de sites e aplicativ
 
 ## <a name="get-started"></a>Introdução
 
-Instale o [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community Edition, um IDE gratuito para ASP.net no Windows.
+Instale o [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019) Community Edition, um IDE gratuito para ASP.net no Windows.
 
 ## <a name="websites-and-web-applications"></a>Sites e aplicativos Web
 
@@ -33,7 +33,7 @@ Cada estrutura tem como alvo um estilo de desenvolvimento diferente. O que você
 
 Veja abaixo uma visão geral de cada uma das estruturas e algumas ideias sobre como escolher entre elas. Se você preferir uma introdução ao vídeo, consulte [fazendo sites com ASP.net](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/Making-Websites-with-ASPNET) e [o que são as ferramentas da Web?](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-web-tools)
 
-|   | Se você tiver experiência em | Estilo de desenvolvimento | Conhecimentos |
+|   | Se você tiver experiência em | Estilo de desenvolvimento | Competências |
 |-----------|----------------------|-----------------------------------------------------|----------------|
 | Web Forms | Win Forms, WPF, .NET | Desenvolvimento rápido usando uma biblioteca rica de controles que encapsulam marcação HTML | RAD avançado e de nível intermediário |
 | MVC       | Ruby on Rails, .NET  | Controle total sobre a marcação HTML, o código e a marcação separados e os testes fáceis de escrever. A melhor opção para aplicativos móveis e de página única (SPA). | Nível intermediário, avançado |
@@ -41,13 +41,13 @@ Veja abaixo uma visão geral de cada uma das estruturas e algumas ideias sobre c
 
 ### <a name="web-forms"></a>Web Forms
 
-Com o ASP.NET Web Forms, você pode criar sites dinâmicos usando um modelo familiar de arrastar e soltar orientado por evento. Uma superfície de design e centenas de controles e componentes permitem que você crie rapidamente sites sofisticados e avançados orientados por interface do usuário com acesso a dados.
+Com o ASP.NET Web Forms, você pode criar sites dinâmicos usando um modelo familiar de arrastar e soltar orientado por evento. Uma superfície de design e muitos controles e componentes lhe permitem compilar rapidamente sites sofisticados, poderosos baseados em UI com acesso de dados.
 
 [Saiba mais sobre o Web Forms](web-forms/index.md)
 
 ### <a name="mvc"></a>MVC
 
-O ASP.NET MVC oferece uma maneira poderosa e baseada em padrões para a criação de sites dinâmicos que permitem uma separação clara de preocupações e que oferece controle total sobre a marcação de desenvolvimento agradável e ágil. O ASP.NET MVC inclui muitos recursos que permitem um desenvolvimento rápido e fácil de TDD para a criação de aplicativos sofisticados que usam os mais recentes padrões da Web.
+O ASP.NET MVC fornece uma maneira eficiente e com base em padrões de compilar sites da Web dinâmicos que habilitam uma separação limpa de preocupações e que fornece a você total controle sobre a marcação de desenvolvimento ágil e divertido. O ASP.NET MVC inclui muitos recursos que habilitam rapidamente o desenvolvimento amigável a TDD para criar aplicativos sofisticados que usam os últimos padrões da Web.
 
 [Saiba mais sobre o MVC](mvc/index.md)
 
@@ -65,9 +65,9 @@ Além disso, as três estruturas não são totalmente independentes e a escolha 
 
 ## <a name="web-apis"></a>APIs da Web
 
-ASP.NET Web API é uma estrutura que facilita a criação de serviços HTTP que atingem uma ampla variedade de clientes, incluindo navegadores e dispositivos móveis. O ASP.NET Web API é uma plataforma ideal para o desenvolvimento de aplicativos RESTful no .NET Framework.
+O ASP.NET Web API é uma estrutura que facilita o desenvolvimento de serviços HTTP que alcançam uma ampla variedade de clientes, incluindo navegadores e dispositivos móveis. O ASP.NET Web API é uma plataforma ideal para o desenvolvimento de aplicativos RESTful no .NET Framework.
 
-[Saiba mais sobre a API Web](web-api/index.md)
+[Saiba mais sobre API Web](web-api/index.md)
 
 <!-- Put first under Web API TOC:  Watch video (9 minutes) https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/services-and-aspnet -->
 
@@ -83,7 +83,7 @@ O Signalr ASP.NET é uma nova biblioteca para desenvolvedores de ASP.NET que fac
 
 O ASP.NET pode alimentar aplicativos móveis nativos com um back-end de API da Web, bem como sites móveis usando estruturas de design responsivas, como o bootstrap do Twitter. Se você estiver criando um aplicativo móvel nativo, será fácil criar uma API Web baseada em JSON para lidar com acesso a dados, autenticação e notificações por push para seu aplicativo. Se você estiver criando um site móvel responsivo, poderá usar qualquer estrutura CSS ou sistema de grade aberto que preferir, ou selecionar um sistema móvel poderoso como jQuery Mobile ou sencha e excelentes aplicativos móveis com PhoneGap.
 
-[Saiba mais sobre o desenvolvimento de sites e aplicativos móveis](mobile/index.md)
+[Saiba mais sobre o desenvolvimento de sites e aplicativos móveis](mobile/overview.md)
 
 <!-- Put first under mobile TOC:  Watch video (11 minutes) https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-and-mobile -->
 
