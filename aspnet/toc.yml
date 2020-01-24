@@ -2879,7 +2879,7 @@
               href: web-api/overview/testing-and-debugging/tracing-in-aspnet-web-api.md
             - name: Teste de unidade da API Web 2
               href: web-api/overview/testing-and-debugging/unit-testing-with-aspnet-web-api.md
-            - name: Controladores de teste de unidade no ASP.NET API Web 2
+            - name: Controladores de teste de unidade no ASP.NET Web API 2
               href: web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api.md
             - name: Simulação do Entity Framework ao realizar teste de unidade da API Web 2
               href: web-api/overview/testing-and-debugging/mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md
@@ -2948,7 +2948,7 @@
           items:
             - name: Habilitar operações CRUD na API Web 1
               href: web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations.md
-            - name: Uso do ASP.NET API Web 1 com o Entity Framework 5
+            - name: Uso do ASP.NET Web API 1 com o Entity Framework 5
               href: web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/index.md
               items:
                 - name: Visão geral e criação do projeto
@@ -3338,11 +3338,10 @@
             - name: SignalR e Soquetes Web
               href: signalr/videos/getting-started/signalr-and-web-sockets.md
 - name: Celular
-  href: mobile/index.md
   items:
-    - name: Celular
+    - name: Visão geral
       href: mobile/overview.md
-    - name: Dispositivos testados de controles móveis do ASP.NET
+    - name: Controles – Dispositivos testados
       href: mobile/tested-devices.md
     - name: Simular dispositivos móveis populares para teste
       href: mobile/device-simulators.md
