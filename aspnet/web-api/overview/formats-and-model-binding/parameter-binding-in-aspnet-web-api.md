@@ -9,12 +9,12 @@ ms.custom: seoapril2019
 ms.assetid: e42c8388-04ed-4341-9fdb-41b1b4c06320
 msc.legacyurl: /web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 032368f94ce32cf6231458649e8fdd42bee685e9
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 464cb9b45dc0b62c4da38b7cf612934808854d32
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519252"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074898"
 ---
 # <a name="parameter-binding-in-aspnet-web-api"></a>Associação de parâmetro no ASP.NET Web API
 
@@ -102,7 +102,7 @@ Um associador de modelo obtém valores de entrada brutos de um *provedor de valo
 
 O provedor de valor padrão na API Web obtém valores dos dados de rota e da cadeia de caracteres de consulta. Por exemplo, se o URI for `http://localhost/api/values/1?location=48,-122`, o provedor de valor criará os seguintes pares de chave-valor:
 
-- id = &quot;1&quot;
+- ID = &quot;1&quot;
 - local = &quot;48.122&quot;
 
 (Estou supondo que o modelo de rota padrão, que é &quot;API/{Controller}/{ID}&quot;.)
@@ -205,7 +205,7 @@ Se desejar, você poderia substituir todo o serviço **IActionValueBinder** por 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-[Exemplo de associação de parâmetro personalizado](http://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
+[Exemplo de associação de parâmetro personalizado](https://github.com/aspnet/samples/tree/master/samples/aspnet/WebApi/CustomParameterBinding)
 
 Mike Stall escreveu uma boa série de postagens no blog sobre associação de parâmetro da API Web:
 

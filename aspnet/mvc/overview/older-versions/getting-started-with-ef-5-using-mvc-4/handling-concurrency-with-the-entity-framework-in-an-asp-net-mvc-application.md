@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: b83f47c4-8521-4d0a-8644-e8f77e39733e
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
-ms.openlocfilehash: 0383974baa16bb0d5fc588f9303290bdb0fd979c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9800a313879477f36a730e6a70c79bc06d403ae3
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595342"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074938"
 ---
 # <a name="handling-concurrency-with-the-entity-framework-in-an-aspnet-mvc-application-7-of-10"></a>Manipulando a simultaneidade com o Entity Framework em um aplicativo MVC ASP.NET (7 de 10)
 
@@ -85,6 +85,8 @@ Em *Models\Department.cs*, adicione uma propriedade de rastreamento chamada `Row
 O atributo [timestamp](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.timestampattribute.aspx) especifica que essa coluna será incluída na cláusula `Where` dos comandos `Update` e `Delete` enviados ao banco de dados. O atributo é chamado [timestamp](https://msdn.microsoft.com/library/system.componentmodel.dataannotations.timestampattribute.aspx) porque as versões anteriores do SQL Server usavam um tipo de dados [timestamp](https://msdn.microsoft.com/library/ms182776(v=SQL.90).aspx) SQL antes que a [versão](https://msdn.microsoft.com/library/ms182776(v=sql.110).aspx) do SQL seja substituída. O tipo .net para `rowversion` é uma matriz de bytes. Se preferir usar a API fluente, você poderá usar o método [IsConcurrencyToken](https://msdn.microsoft.com/library/gg679501(v=VS.103).aspx) para especificar a propriedade de rastreamento, conforme mostrado no exemplo a seguir:
 
 [!code-csharp[Main](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample2.cs)]
+
+Consulte o problema do GitHub [substituir IsConcurrencyToken por IsRowVersion](https://github.com/aspnet/AspNetDocs/issues/302).
 
 Adicionando uma propriedade, você alterou o modelo de banco de dados e, portanto, precisa fazer outra migração. No PMC (Console do Gerenciador de Pacotes), Insira os seguintes comandos:
 

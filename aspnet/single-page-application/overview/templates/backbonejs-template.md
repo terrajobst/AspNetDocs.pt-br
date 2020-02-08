@@ -1,134 +1,134 @@
 ---
 uid: single-page-application/overview/templates/backbonejs-template
-title: Modelo backbone | Microsoft Docs
+title: Modelo de backbone | Microsoft Docs
 author: madskristensen
-description: Modelo SPA backbone. js
+description: Modelo SPA do backbone. js
 ms.author: riande
 ms.date: 04/04/2013
 ms.assetid: 00aca413-f067-4108-9bd1-cf21e64a2646
 msc.legacyurl: /single-page-application/overview/templates/backbonejs-template
 msc.type: authoredcontent
-ms.openlocfilehash: e5c98b7a9678f8251eccce05344c2014a769fc3b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 7297db7d5b35a53b40f9d9162960e529a167bd12
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113344"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074885"
 ---
 # <a name="backbone-template"></a>Modelo Backbone
 
 por [Mads Kristensen](https://github.com/madskristensen)
 
-> O modelo do SPA Backbone foi escrito por Kazi Manzur Rashid
+> O modelo de SPA de backbone foi escrito por Kazi Manzur Rashid
 > 
-> [Baixe o modelo SPA backbone. js](https://go.microsoft.com/fwlink/?LinkId=293631)
+> [Baixar o modelo SPA do backbone. js](https://go.microsoft.com/fwlink/?LinkId=293631)
 
-O modelo backbone. js SPA é projetado para ajudá-lo a começar a criar rapidamente aplicativos web interativos do lado do cliente usando [backbone. js.](http://backbonejs.org/)
+O modelo SPA do backbone. js foi projetado para começar a criar rapidamente aplicativos Web do lado do cliente interativos usando o [backbone. js.](http://backbonejs.org/)
 
-O modelo fornece um esqueleto inicial para o desenvolvimento de um aplicativo de backbone. js no ASP.NET MVC. Fora da caixa, ele fornece funcionalidade de logon de usuário básicos, incluindo redefinição de senha de inscrição, entrar, usuário e a confirmação do usuário com modelos de email básico.
+O modelo fornece um esqueleto inicial para o desenvolvimento de um aplicativo backbone. js no ASP.NET MVC. Ele fornece a funcionalidade básica de logon de usuário, incluindo a inscrição, a entrada, a redefinição de senha e a confirmação do usuário com modelos de email básicos.
 
 Requisitos:
 
-- [Atualização do ASP.NET e Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650)
+- [Atualização do ASP.NET and Web Tools 2012,2](https://go.microsoft.com/fwlink/?LinkId=282650)
 
-## <a name="create-a-backbone-template-project"></a>Criar um projeto de modelo Backbone
+## <a name="create-a-backbone-template-project"></a>Criar um projeto de modelo de backbone
 
-Baixe e instale o modelo clicando no botão de Download acima. O modelo é empacotado como um arquivo de extensão VSIX (Visual Studio). Talvez você precise reiniciar o Visual Studio.
+Baixe e instale o modelo clicando no botão baixar acima. O modelo é empacotado como um arquivo de VSIX (extensão do Visual Studio). Talvez seja necessário reiniciar o Visual Studio.
 
-No painel **Modelos**, selecione **Modelos Instalados** e expanda o nó **Visual C#**. Em **Visual C#**, selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto e clique em **Okey**.
+No painel **modelos** , selecione **modelos instalados** e expanda o **nó C# Visual** . Em **Visual C#** , selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web ASP.NET MVC 4**. Nomeie o projeto e clique em **OK**.
 
 ![](backbonejs-template/_static/image1.png)
 
-No **novo projeto** assistente, selecione projeto do SPA backbone. js.
+No assistente de **novo projeto** , selecione projeto Spa do backbone. js.
 
 ![](backbonejs-template/_static/image2.png)
 
-Pressione Ctrl-F5 para compilar e executar o aplicativo sem depuração ou pressione F5 para executar com depuração.
+Pressione CTRL-F5 para compilar e executar o aplicativo sem depuração ou pressione F5 para executar com a depuração.
 
 ![](backbonejs-template/_static/image3.png)
 
-Clicar em "Minha conta" abre a página de logon:
+Clicar em "minha conta" abre a página de logon:
 
 ![](backbonejs-template/_static/image4.png)
 
-## <a name="walkthrough-client-code"></a>Passo a passo: Código do cliente
+## <a name="walkthrough-client-code"></a>Walkthrough: código do cliente
 
-Vamos começa com o lado do cliente. Os scripts de aplicativo do cliente estão localizados na pasta ~/Scripts/application. O aplicativo é escrito em [TypeScript](http://www.typescriptlang.org/) (arquivos. TS) que é compilado em JavaScript (arquivos. js).
+Vamos começar com o lado do cliente. Os scripts de aplicativo cliente estão localizados na pasta ~/scripts/Application. O aplicativo é gravado em [TypeScript](http://www.typescriptlang.org/) (arquivos. TS) que são compilados em JavaScript (arquivos. js).
 
 **Aplicativo**
 
-`Application` é definido em application.ts. Esse objeto inicializa o aplicativo e atua como o namespace raiz. Ele mantém informações de configuração e o estado são compartilhadas entre o aplicativo, como se o usuário está conectado.
+`Application` é definido em Application. TS. Esse objeto inicializa o aplicativo e atua como o namespace raiz. Ele mantém informações de configuração e estado que são compartilhadas pelo aplicativo, como se o usuário está conectado.
 
-O `application.start` método cria os modos de exibição modais e anexa os manipuladores de eventos para eventos de nível de aplicativo, como a entrada do usuário. Em seguida, ele cria o roteador padrão e verifica se qualquer URL do lado do cliente é especificado. Se não, ele redireciona para a url padrão (#! /).
+O método `application.start` cria as exibições modais e anexa manipuladores de eventos para eventos no nível do aplicativo, como entrada do usuário. Em seguida, ele cria o roteador padrão e verifica se qualquer URL do lado do cliente é especificada. Caso contrário, ele redireciona para a URL padrão (#!/).
 
 **Eventos**
 
-Eventos sempre são importantes ao desenvolver fracamente acoplados componentes. Aplicativos geralmente executam várias operações em resposta a uma ação do usuário. Backbone fornece eventos internos com componentes, como modelo, coleta e exibição. Em vez de criar interdependências entre esses componentes, o modelo usa um modelo de "pub/sub": O `events` objeto, definido em events.ts, atua como um hub de eventos para publicar e assinar eventos de aplicativo. O `events` objeto é um singleton. O código a seguir mostra como assinar um evento e, em seguida, disparar o evento:
+Os eventos são sempre importantes ao desenvolver componentes menos rígidos. Os aplicativos geralmente executam várias operações em resposta a uma ação do usuário. O backbone fornece eventos internos com componentes como modelo, coleção e exibição. Em vez de criar entre dependências entre esses componentes, o modelo usa um modelo "pub/sub": o objeto `events`, definido em Events. TS, atua como um hub de eventos para publicação e assinatura de eventos de aplicativo. O objeto `events` é um singleton. O código a seguir mostra como assinar um evento e, em seguida, disparar o evento:
 
 [!code-csharp[Main](backbonejs-template/samples/sample1.cs)]
 
-**Roteador**
+**Rota**
 
-No backbone. js, um roteador fornece métodos de roteamento de páginas do lado do cliente e conectá-las para ações e eventos. O modelo define um único roteador, em router.ts. O roteador cria os modos de exibição activable e mantém o estado ao alternar os modos de exibição. (Activable exibições são descritas na próxima seção). Inicialmente, o projeto tem dois modos de exibição fictícios, sobre e domésticos. Ele também tem um modo de exibição não encontrado, que será exibido se a rota não é conhecida.
+No backbone. js, um roteador fornece métodos para rotear páginas do lado do cliente e conectá-las a ações e eventos. O modelo define um único roteador, em roteador. TS. O roteador cria os modos de exibição activable e mantém o estado ao alternar entre exibições. (As exibições do Activable são descritas na próxima seção.) Inicialmente, o projeto tem duas exibições fictícias, página inicial e sobre. Ele também tem uma exibição não encontrada, que será exibida se a rota não for conhecida.
 
 **Exibições**
 
-As exibições são definidas em ~/Scripts/application/exibições. Há dois tipos de modos de exibição, modos de exibição activable e modos de exibição da caixa de diálogo modal. Modos de exibição activable são invocados pelo roteador. Quando uma exibição activable é mostrada, todos os outros modos de exibição activable se tornar inativos. Para criar uma exibição activable, estender a exibição com o `Activable` objeto:
+Os modos de exibição são definidos em ~/scripts/Application/views. Há dois tipos de exibições, exibições activable e exibições de caixas restritas. As exibições do Activable são invocadas pelo roteador. Quando uma exibição activable é mostrada, todas as outras exibições de activable se tornam inativas. Para criar uma exibição activable, estenda a exibição com o objeto `Activable`:
 
 [!code-javascript[Main](backbonejs-template/samples/sample2.js)]
 
-Estendendo com `Activable` adiciona dois novos métodos para o modo de exibição `activate` e `deactivate`. O roteador chama esses métodos para ativar e desativar o modo de exibição.
+A extensão com o `Activable` adiciona dois novos métodos à exibição, `activate` e `deactivate`. O roteador chama esses métodos para ativar e desativar o modo de exibição.
 
-Modos de exibição modais são implementados como [Twitter Bootstrap](http://twitter.github.com/bootstrap/) caixas de diálogo modais. O `Membership` e `Profile` modos de exibição são modais. Modos de exibição de modelo podem ser invocados por quaisquer eventos de aplicativo. Por exemplo, no `Navigation` exibição, clicando no link "Minha conta" mostra ao `Membership` modo de exibição ou o `Profile` exibição, dependendo se o usuário estiver conectado. O `Navigation` anexa clique manipuladores de eventos para elementos filho que têm o `data-command` atributo. Aqui está a marcação HTML:
+As exibições modais são implementadas como caixas de diálogo modais de [inicialização do Twitter](https://twitter.github.com/bootstrap/) . As exibições `Membership` e `Profile` são exibições modais. Os modos de exibição de modelo podem ser invocados por qualquer evento de aplicativo. Por exemplo, na exibição `Navigation`, clicar no link "minha conta" mostra a exibição `Membership` ou a `Profile` exibição, dependendo se o usuário está conectado. O `Navigation` anexa manipuladores de eventos de clique a qualquer elemento filho que tenha o atributo `data-command`. Aqui está a marcação HTML:
 
 [!code-html[Main](backbonejs-template/samples/sample3.html)]
 
-Aqui está o código em navigation.ts para ligar os eventos:
+Aqui está o código em Navigation. TS para conectar os eventos:
 
 [!code-csharp[Main](backbonejs-template/samples/sample4.cs)]
 
 **Modelos**
 
-Os modelos são definidos em ~/Scripts/application ou os modelos. Todos os modelos têm três coisas básicas: atributos, as regras de validação e um ponto de extremidade do lado do servidor padrão. Aqui está um exemplo típico:
+Os modelos são definidos em ~/scripts/Application/Models. Todos os modelos têm três coisas básicas: atributos padrão, regras de validação e um ponto de extremidade do servidor. Veja um exemplo típico:
 
 [!code-javascript[Main](backbonejs-template/samples/sample5.js)]
 
 **Plug-ins**
 
-A pasta ~/Scripts/application/lib contém alguns plug-ins de jQuery útil. O arquivo de form.ts define um plug-in para trabalhar com dados de formulário. Muitas vezes você precisa serializar ou desserializar dados de formulário e mostrar erros de validação do modelo. O plug-in de form.ts tem métodos como `serializeFields`, `deserializeFields`, e `showFieldErrors`. O exemplo a seguir mostra como serializar um formulário para um modelo.
+A pasta ~/scripts/Application/lib contém alguns plug-ins do jQuery úteis. O arquivo Form. TS define um plug-in para trabalhar com dados de formulário. Geralmente, você precisa serializar ou desserializar dados de formulário e mostrar quaisquer erros de validação de modelo. O plug-in do formulário. TS tem métodos como `serializeFields`, `deserializeFields`e `showFieldErrors`. O exemplo a seguir mostra como serializar um formulário em um modelo.
 
 [!code-javascript[Main](backbonejs-template/samples/sample6.js)]
 
-O plug-in de flashbar.ts oferece vários tipos de mensagens de comentários ao usuário. Os métodos são `$.showSuccessbar`, `$.showErrorbar` e `$.showInfobar`. Nos bastidores, ele usa alertas Twitter Bootstrap para mostrar mensagens bem animadas.
+O plug-in Flashbar. TS fornece vários tipos de mensagens de comentários para o usuário. Os métodos são `$.showSuccessbar`, `$.showErrorbar` e `$.showInfobar`. Nos bastidores, ele usa alertas de inicialização do Twitter para mostrar mensagens bem animadas.
 
-O plug-in de confirm.ts substitui o navegador confirme se a caixa de diálogo, embora a API é um pouco diferente:
+O plug-in Confirm. TS substitui a caixa de diálogo confirmar do navegador, embora a API seja um pouco diferente:
 
 [!code-javascript[Main](backbonejs-template/samples/sample7.js)]
 
-## <a name="walkthrough-server-code"></a>Passo a passo: Código do servidor
+## <a name="walkthrough-server-code"></a>Walkthrough: código do servidor
 
-Agora vamos dar uma olhada no lado do servidor.
+Agora, vamos examinar o lado do servidor.
 
 **Controladores**
 
-Em um aplicativo de página única, o servidor é reproduzido apenas uma pequena função na interface do usuário. Normalmente, o servidor processa a página inicial e, em seguida, envia e recebe dados JSON.
+Em um aplicativo de página única, o servidor desempenha apenas uma pequena função na interface do usuário. Normalmente, o servidor renderiza a página inicial e, em seguida, envia e recebe dados JSON.
 
-O modelo tem dois controladores MVC: `HomeController` renderiza a página inicial, e `SupportsController` é usado para confirmar as novas contas de usuário e redefinir senhas. Todos os outros controladores no modelo são controladores de API Web ASP.NET, que enviam e recebem dados JSON. Por padrão, os controladores usam o novo `WebSecurity` classe para executar tarefas relacionadas ao usuário. No entanto, eles também têm construtores opcionais que permitem que você passe em delegados para essas tarefas. Isso facilita os testes e permite que você substitua `WebSecurity` com algo, por meio de um contêiner de IoC. Veja um exemplo:
+O modelo tem dois controladores MVC: `HomeController` renderiza a página inicial e `SupportsController` é usado para confirmar novas contas de usuário e redefinir senhas. Todos os outros controladores no modelo são ASP.NET Web API controladores, que enviam e recebem dados JSON. Por padrão, os controladores usam a nova classe `WebSecurity` para executar tarefas relacionadas ao usuário. No entanto, eles também têm construtores opcionais que permitem que você passe os delegados para essas tarefas. Isso facilita o teste e permite que você substitua `WebSecurity` com algo mais, usando um contêiner IoC. Veja um exemplo:
 
 [!code-csharp[Main](backbonejs-template/samples/sample8.cs)]
 
 ## <a name="views"></a>Exibições
 
-As exibições são projetadas para serem modular: Cada seção de uma página tem sua própria exibição dedicada. Em um aplicativo de página única, é comum incluir modos de exibição que não têm qualquer controlador correspondente. Você pode incluir uma exibição chamando `@Html.Partial('myView')`, mas isso é entediante. Para facilitar essa tarefa, o modelo define um método auxiliar, `IncludeClientViews`, que processa todas as exibições em uma pasta especificada:
+As exibições foram projetadas para serem modulares: cada seção de uma página tem sua própria exibição dedicada. Em um aplicativo de página única, é comum incluir exibições que não têm nenhum controlador correspondente. Você pode incluir uma exibição chamando `@Html.Partial('myView')`, mas isso é entediante. Para tornar isso mais fácil, o modelo define um método auxiliar, `IncludeClientViews`, que renderiza todas as exibições em uma pasta especificada:
 
 [!code-cshtml[Main](backbonejs-template/samples/sample9.cshtml)]
 
-Se o nome da pasta não for especificado, o nome da pasta padrão é "ClientViews". Se o modo de exibição do cliente também usa as exibições parciais, nomeie a exibição parcial com um caractere de sublinhado (por exemplo, `_SignUp`). O `IncludeClientViews` método exclui todas as exibições cujo nome começa com um sublinhado. Para incluir uma exibição parcial na exibição do cliente, chame `Html.ClientView('SignUp')` em vez de `Html.Partial('_SignUp')`.
+Se o nome da pasta não for especificado, o nome da pasta padrão será "ClientViews". Se a exibição de cliente também usar exibições parciais, nomeie a exibição parcial com um caractere de sublinhado (por exemplo, `_SignUp`). O método `IncludeClientViews` exclui todas as exibições cujo nome começa com um sublinhado. Para incluir uma exibição parcial na exibição do cliente, chame `Html.ClientView('SignUp')` em vez de `Html.Partial('_SignUp')`.
 
-**Enviar Email**
+**Enviando email**
 
-Para enviar email, o modelo usa [Postal](http://aboutcode.net/postal). No entanto, a caixa Postal é abstraído do restante do código com o `IMailer` da interface, portanto, você pode facilmente substituí-lo em outra implementação. Os modelos de email estão localizados na pasta exibições/Emails. Endereço de email do remetente é especificado no arquivo Web. config, nos `sender.email` chave do **appSettings** seção. Além disso, quando `debug="true"` no Web. config, o aplicativo não requer confirmação de email do usuário, para acelerar o desenvolvimento.
+Para enviar email, o modelo usa o [CEP](http://aboutcode.net/postal). No entanto, o CEP é abstrato do restante do código com a interface `IMailer`, para que você possa substituí-lo facilmente por outra implementação. Os modelos de email estão localizados na pasta views/emails. O endereço de email do remetente é especificado no arquivo Web. config, na chave `sender.email` da seção **appSettings** . Além disso, quando `debug="true"` no Web. config, o aplicativo não exige confirmação de email do usuário para acelerar o desenvolvimento.
 
 ## <a name="github"></a>GitHub
 
-Você também pode encontrar o modelo backbone. js SPA no [GitHub](https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa).
+Você também pode encontrar o modelo de SPA do backbone. js no [GitHub](https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa).

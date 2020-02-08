@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 51cb8d672139aaebd77bcdbe80bb579d4b3776aa
-ms.sourcegitcommit: 969e7db924ebad3cc0f0cb0d65d148e8b9221b9a
+ms.openlocfilehash: 228194a7b35e116cabae6d819e7a3a8060a3ef6a
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899566"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074911"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rede de Distribuição de Conteúdo do Microsoft Ajax
 
@@ -22,7 +22,7 @@ ms.locfileid: "74899566"
 >
 > A CDN do Microsoft Ajax não tem nenhum SLA acima e além de usar uma CDN do Azure.
 >
-> Use [esse problema de GitHub](https://github.com/aspnet/AspNetDocs/issues/116) para relatar problemas com a CDN do Microsoft Ajax.
+> Use [este problema do GitHub](https://github.com/aspnet/AspNetDocs/issues/116) para relatar problemas com a CDN do Microsoft Ajax.
 
 ## <a name="table-of-contents"></a>Sumário
 
@@ -64,7 +64,7 @@ A CDN hospeda as seguintes bibliotecas de scripts de terceiros que foram carrega
 - jQuery (www.jquery.com)
 - jQuery UI (www.jqueryui.com)
 - jQuery Mobile (www.jquerymobile.com)
-- Validação do jQuery (www.jquery.com)
+- Validação do jQuery (https://jqueryvalidation.org/)
 - Ciclo do jQuery (www.malsup.com/jquery/cycle/)
 - http://datatables.net/) de tabelas jQuery (
 
@@ -148,7 +148,7 @@ Observe que você deve incluir três arquivos da CDN no código acima:
 - A biblioteca da interface do usuário do jQuery &mdash; a biblioteca da interface do usuário do jQuery contém todos os efeitos e widgets da interface do usuário do jQuery, como o widget DatePicker usado na página acima.
 - Um tema da interface do usuário do jQuery &mdash; a interface do usuário do jQuery dá suporte a diferentes temas A página acima inclui um link para um arquivo CSS para importar o tema Redmond.
 
-Todos os temas padrão da interface do usuário do jQuery são hospedados na CDN. [Visite esta página](jquery-ui/cdnjqueryui1910.md "jConsultar a interface do usuário 1.8.10 na CDN do Microsoft Ajax ") para exibir miniaturas de cada tema.
+Todos os temas padrão da interface do usuário do jQuery são hospedados na CDN. [Visite esta página](jquery-ui/cdnjqueryui1910.md "jQuery UI 1.8.10 na CDN do Microsoft Ajax") para exibir miniaturas de cada tema.
 
 Para saber mais sobre a biblioteca de interface do usuário do jQuery, visite o [site oficial da interface do usuário do jQuery](http://jQueryUI.com "site da interface do usuário do jQuery").
 
@@ -617,7 +617,7 @@ As seguintes versões da biblioteca da interface do usuário do jQuery são hosp
 
 ### <a name="jquery-validation-releases-on-the-cdn"></a>Versões de validação do jQuery na CDN
 
-As seguintes versões da biblioteca de validação jQuery são hospedadas nessa CDN. Clique em cada link para ver a lista real de arquivos.
+As seguintes versões do plug-in de [validação jQuery](https://jqueryvalidation.org/ "Plug-in de validação jQuery") são hospedadas nessa CDN. Clique em cada link para ver a lista real de arquivos.
 
 - [1.19.1 de validação jQuery](jquery-validate/cdnjqueryvalidate1191.md "1\.19.1 de validação jQuery")
 - [1.19.0 de validação jQuery](jquery-validate/cdnjqueryvalidate1190.md "1\.19.0 de validação jQuery")
@@ -1180,7 +1180,7 @@ As seguintes versões do [http://hammerjs.github.io/](http://hammerjs.github.io/
 As seguintes versões da biblioteca do ASP.NET AJAX são hospedadas na CDN. Clique em cada link para ver a lista real de arquivos.
 
 - [ASP.NET Web Forms e Ajax versão 4.5.2](cdnajax452.md "Web Forms do ASP.NET e Ajax 4.5.2")
-- [ASP.NET Web Forms e Ajax versão 4](cdnajax4.md "Web Forms do ASP.NET e Ajax 4")
+- [ASP.NET Web Forms e Ajax versão 4](cdnajax4.md "ASP.NET Web Forms e Ajax 4")
 - [ASP.NET AJAX versão 3,5](cdnajax35.md "ASP.NET Ajax 3.5")
 
 <a id="ASPNET_MVC_Releases_on_the_CDN_16"></a>

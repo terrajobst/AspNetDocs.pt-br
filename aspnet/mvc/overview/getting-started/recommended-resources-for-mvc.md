@@ -8,12 +8,12 @@ ms.date: 04/10/2014
 ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: 98089df48550216b50330d9b354168f570d857cd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: daccaedae0b0e60f5086f270f214f87da564a85d
+ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583184"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074924"
 ---
 # <a name="mvc-recommended-resources"></a>Recursos de MVC recomendados
 
@@ -49,7 +49,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="azure"></a>
 
-## <a name="microsoft-azure"></a>{1&gt;Microsoft Azure&lt;1}
+## <a name="microsoft-azure"></a>Microsoft Azure
 
 - [A melhor demonstração do Azure do mundo](http://www.troyhunt.com/2014/03/the-worlds-greatest-azure-demo.html)
 - [Vídeos do conferência//build/2014](https://channel9.msdn.com/Events/Build/2014?sort=sequential&amp;direction=desc&amp;page=2&amp;tag%5B0%5D=asp.net&amp;tag%5B1%5D=azure&amp;tag%5B2%5D=visual-studio&amp;tag%5B3%5D=web#theSessions): (Azure e Visual Studio)
@@ -99,7 +99,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Segurança no ASP.NET MVC](http://www.codeproject.com/Articles/654846/Security-In-ASP-NET-MVC)
 - [Protegendo seu aplicativo ASP.NET MVC 4](https://blogs.msdn.com/b/rickandy/archive/2012/03/23/securing-your-asp-net-mvc-4-app-and-the-new-allowanonymous-attribute.aspx)
 - [Visão geral do vídeo Pluralsight de práticas de segurança](http://www.pluralsight-training.net/microsoft/players/PSODPlayer?author=scott-allen&amp;name=mvc3-building-security&amp;mode=live&amp;clip=0&amp;course=aspdotnet-mvc3-intro)
-- [Prevenção de XSRF/CSRF no ASP.NET MVC e em páginas da Web](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
+- [Prevenção de XSRF/CSRF no ASP.NET MVC e páginas Web](../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
 - [10 principais OWASP para desenvolvedores .NET](http://www.troyhunt.com/2010/05/owasp-top-10-for-net-developers-part-1.html)
 - [Uso de provedores OAuth com o MVC 4](../older-versions/using-oauth-providers-with-mvc.md)
 - [Prova de hackers de seus aplicativos ASP.net](https://msdn.microsoft.com/magazine/hh580736.aspx) Artigo da MSDN Magazine de dezembro de 2011 pelo tulipa do Adam
@@ -123,7 +123,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [A associação não é a mesma que a autenticação de formulários](http://brockallen.com/2012/06/04/membership-is-not-the-same-as-forms-authentication/)
 - [Pense duas vezes sobre o uso de MembershipProvider (e SimpleMembership)](http://brockallen.com/2012/09/02/think-twice-about-using-membershipprovider-and-simplemembership/)
 - [Implementando a autenticação de dois fatores MVC com o Google Authenticator](http://www.codeproject.com/Articles/403355/Implementing-MVC-Two-Factor-Authentication-with-Go)
-- new
+- novo
 - [ASP.NET Identity e armazenamento de tabelas do Azure](https://blogs.msdn.com/b/stuartleeks/archive/2014/01/15/asp-net-identity-and-windows-azure-table-storage.aspx)
 
 <a id="OWIN"></a>
@@ -274,7 +274,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="mobile"></a>
 
-## <a name="mobile"></a>Mobilidade
+## <a name="mobile"></a>Móvel
 
 - [Tutorial do ASP.NET MVC 4 para dispositivos móveis](../older-versions/aspnet-mvc-4-mobile-features.md)
 - [Monitor Criando sites amigáveis para dispositivos móveis com o MVC 4](https://www.bitcast.io/v/building-mobile-friendly-websites-with-mvc-4)
@@ -291,7 +291,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="spa"></a>
 
-## <a name="single-page-application-spa"></a>Aplicativo de página única (SPA)
+## <a name="single-page-application-spa"></a>SPA (Aplicativo de Página Única)
 
 - [Uma linha de desenvolvedor do .net para aplicativos de página única](https://msdn.microsoft.com/magazine/dn605877.aspx) MSDN Magazine
 - [Aplicativo de página única com AngularJS e ASP.NET MVC 4](http://tarkus.me/post/32121691785/angularjs-with-asp-net-mvc-4)
@@ -315,7 +315,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 - [Criando aplicativos de teste de unidade no ASP.NET MVC – um tutorial para iniciantes](http://www.codeproject.com/Articles/579035/Creating-Unit-Testable-Applications-in-ASP-NET-MVC)
 - [Injeção de dependência do controlador MVC ASP.NET para iniciantes](http://www.codeproject.com/Articles/560798/ASP-NET-MVC-controller-dependency-injection-for-be)
 - [Escrevendo testes de unidade para um método de ação ASP.NET MVC que manipula solicitações Ajax e solicitações normais](https://weblogs.asp.net/shijuvarghese/archive/2012/12/09/writing-unit-tests-for-an-asp-net-mvc-action-method-that-handles-ajax-request-and-normal-request.aspx)
-- [Carvalho: traga a excelência dinâmica e o desenvolvimento ininterrupto para o ASP.NET MVC](http://amirrajan.github.com/Oak/)
+- [Carvalho: traga a excelência dinâmica e o desenvolvimento ininterrupto para o ASP.NET MVC](https://amirrajan.github.com/Oak/)
 - [Desenvolvendo um aplicativo ASP.NET MVC 4 para TDD usando xUnit e MOQ](http://www.dotnetcurry.com/ShowArticle.aspx?ID=836)
 - [Testando exibições do ASP.NET MVC, de novo projeto para o servidor de compilação](https://channel9.msdn.com/Events/aspConf/aspConf/Testing-ASP-NET-MVC-Views-from-New-Project-to-the-Build-Server) (vídeo)
 - [Início rápido: desenvolvimento controlado por teste](https://channel9.msdn.com/Events/aspConf/aspConf/Quick-Start-Test-Driven-Development)(vídeo)
@@ -327,7 +327,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Práticas recomendadas
+## <a name="best-practices"></a>Práticas Recomendadas
 
 - [O que fazer e o que não fazer em ASP.NET](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Lista de verificação do desenvolvedor da Web](http://webdevchecklist.com/aspnet)
