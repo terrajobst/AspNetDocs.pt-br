@@ -5,12 +5,12 @@ description: Saiba como usar o para SameSite cookies no ASP.NET
 ms.author: riande
 ms.date: 1/22/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: c81ca38648609aa5347d2a8cc11889fc85d81711
-ms.sourcegitcommit: 4d439e01c82c7c95b19216fedaf5b1a11a1deb06
+ms.openlocfilehash: c262e300361f33621e8bd126a34b251c23f56e1a
+ms.sourcegitcommit: 6bd0d7581ec36dc32cb85d0d5fc0e51068dd4423
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76826608"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77234756"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabalhar com cookies SameSite no ASP.NET
 
@@ -55,7 +55,7 @@ O ASP.Net também emite quatro cookies específicos para estes recursos: autenti
    <forms cookieSameSite="Lax" requireSSL="false" />
   </authentication>
   <sessionState cookieSameSite="Lax" /> <!-- No config attribute for Secure -->
-  <roleManager cookieRequiresSSL="false" /> <!-- No config attribute for SameSite -->
+  <roleManager cookieRequireSSL="false" /> <!-- No config attribute for SameSite -->
  <system.web>
 <configuration>
 ```  
@@ -78,7 +78,7 @@ As atualizações de 19 de novembro de 2019 para o Windows atualizaram o .NET 4.
 
 <a name="known"><a/>
 
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 Como as especificações de rascunho 2016 e 2019 não são compatíveis, a atualização de novembro de 2019 do .NET Framework introduz algumas alterações que podem estar sendo interrompidas.
 
