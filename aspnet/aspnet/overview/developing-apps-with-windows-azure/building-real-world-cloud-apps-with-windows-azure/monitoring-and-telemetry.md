@@ -8,16 +8,16 @@ ms.date: 07/09/2015
 ms.assetid: 7e986ab5-6615-4638-add7-4614ce7b51db
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/monitoring-and-telemetry
 msc.type: authoredcontent
-ms.openlocfilehash: 44941c9fd0dcd3223604fc4a4f2836f587578acb
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: f61810ea7b486b2fa0bbb234edea7541eedde835
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585602"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457057"
 ---
 # <a name="monitoring-and-telemetry-building-real-world-cloud-apps-with-azure"></a>Monitoramento e telemetria (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -32,7 +32,7 @@ Muitas pessoas contam com os clientes para informá-los quando seu aplicativo es
 
 Uma das coisas que é excelente no ambiente de nuvem é que é realmente fácil comprar ou alugar sua forma de vitória. Telemetria é um exemplo. Sem muita esforço, você pode obter um sistema de telemetria realmente bom em funcionamento, de forma muito econômica. Há um monte de grandes parceiros que se integram ao Azure e alguns deles têm camadas gratuitas, para que você possa obter a telemetria básica para nada. Aqui estão apenas alguns dos disponíveis no Azure:
 
-- [Novo Relic](http://newrelic.com/)
+- [New Relic](http://newrelic.com/)
 - [AppDynamics](http://www.appdynamics.com/)
 - [DynaTrace](https://datamarket.azure.com/application/b4011de2-1212-4375-9211-e882766121ff)
 
@@ -58,7 +58,7 @@ Clique em **informações de conexão**e copie a chave de licença.
 
 ![Informações de conexão](monitoring-and-telemetry/_static/image5.png)
 
-Vá para a guia **Configurar** para seu aplicativo Web no portal, defina **monitoramento de desempenho** como **complemento**e defina a lista suspensa **escolher complemento** para **novo Relic**. Em seguida, clique em **salvar**.
+Vá para a guia **Configurar** para seu aplicativo Web no portal, defina **monitoramento de desempenho** como **complemento**e defina a lista suspensa **escolher complemento** para **novo Relic**. Em seguida, clique em **Salvar**.
 
 ![Nova Relic na guia Configurar](monitoring-and-telemetry/_static/image6.png)
 
@@ -79,7 +79,7 @@ Aqui estão apenas algumas das estatísticas que você pode ver:
     ![Tempo de resposta](monitoring-and-telemetry/_static/image10.png)
 - Taxas de taxa de transferência (em solicitações por minuto) em diferentes momentos do dia.
 
-    ![Taxa de transferência](monitoring-and-telemetry/_static/image11.png)
+    ![Produtividade](monitoring-and-telemetry/_static/image11.png)
 - Tempo de CPU do servidor gasto lidando com solicitações HTTP diferentes.
 
     ![Tempos de transação da Web](monitoring-and-telemetry/_static/image12.png)
@@ -98,7 +98,7 @@ Aqui estão apenas algumas das estatísticas que você pode ver:
     ![Serviço externo](monitoring-and-telemetry/_static/image17.png)
 - As informações sobre o local no mundo ou onde vieram o tráfego do aplicativo Web dos EUA.
 
-    ![Geografia](monitoring-and-telemetry/_static/image18.png)
+    ![painel Geografia do app&#39;s selecionado](monitoring-and-telemetry/_static/image18.png)
 
 Você também pode configurar relatórios e eventos. Por exemplo, você pode dizer sempre que você começar a ver erros, enviar um email para alertar a equipe de suporte para o problema.
 
@@ -129,7 +129,7 @@ Os logs devem informar (desejo que você saiba algo) ou agir (quero fazer algo).
 
 No rastreamento do .NET System. Diagnostics, os logs podem receber erros, avisos, informações e nível de depuração/detalhe. Você pode diferenciar o ACT de logs de informação, reservando o nível de erro para logs do ACT e usando os níveis inferiores para logs de informação.
 
-![Níveis de registro em log](monitoring-and-telemetry/_static/image20.png)
+![Níveis de log](monitoring-and-telemetry/_static/image20.png)
 
 ### <a name="configure-logging-levels-at-run-time"></a>Configurar níveis de log em tempo de execução
 
@@ -255,7 +255,7 @@ No [próximo capítulo](transient-fault-handling.md) , veremos como lidar com er
 
 ## <a name="resources"></a>Recursos
 
-Para obter mais informações, consulte os seguintes recursos.
+Para obter mais informações, consulte os recursos a seguir.
 
 Documentação principalmente sobre telemetria:
 

@@ -3,14 +3,14 @@ title: Trabalhar com cookies SameSite no ASP.NET
 author: rick-anderson
 description: Saiba como usar o para SameSite cookies no ASP.NET
 ms.author: riande
-ms.date: 1/22/2019
+ms.date: 2/15/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: c262e300361f33621e8bd126a34b251c23f56e1a
-ms.sourcegitcommit: 6bd0d7581ec36dc32cb85d0d5fc0e51068dd4423
+ms.openlocfilehash: edb368910b24be2d042afe3c19ffa1fb23245443
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77234756"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455693"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabalhar com cookies SameSite no ASP.NET
 
@@ -21,11 +21,10 @@ SameSite é um padrão de rascunho de [IETF](https://ietf.org/about/) projetado 
 * Cookies sem cabeçalho SameSite são tratados como `SameSite=Lax` por padrão.
 * `SameSite=None` deve ser usado para permitir o uso de cookies entre sites.
 * Os cookies que afirmam `SameSite=None` também devem ser marcados como `Secure`.
-* O valor SameSite = None não é permitido pelo [padrão 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07) e faz com que algumas implementações tratem cookies como SameSite = Strict. Consulte [suporte a navegadores mais antigos](#sob) neste documento.
+* Os aplicativos que usam [`<iframe>`](https://developer.mozilla.org/docs/Web/HTML/Element/iframe) podem ter problemas com `sameSite=Lax` ou `sameSite=Strict` cookies porque `<iframe>` é tratado como cenários entre sites.
+* O valor `SameSite=None` não é permitido pelo [padrão 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07) e faz com que algumas implementações tratem cookies como `SameSite=Strict`. Consulte [suporte a navegadores mais antigos](#sob) neste documento.
 
 A configuração `SameSite=Lax` funciona para a maioria dos cookies de aplicativo. Algumas formas de autenticação, como o [OpenID Connect](https://openid.net/connect/) (OIDC) e o [WS-Federation,](https://auth0.com/docs/protocols/ws-fed) assumem o padrão de redirecionamentos baseados em post. Os redirecionamentos baseados em POST disparam as proteções do navegador SameSite, portanto, o SameSite está desabilitado para esses componentes. A maioria dos logons [OAuth](https://oauth.net/) não são afetados devido a diferenças na forma como os fluxos de solicitação.
-
-Os aplicativos que usam `iframe` podem ter problemas com `SameSite=Lax` ou `SameSite=Strict` cookies, pois os iframes são tratados como cenários entre sites.
 
 Cada componente ASP.NET que emite cookies precisa decidir se SameSite é apropriado.
 
@@ -62,6 +61,74 @@ O ASP.Net também emite quatro cookies específicos para estes recursos: autenti
 
 **Observação**: "não especificado" está disponível somente para `system.web/httpCookies@sameSite` no momento. Esperamos adicionar sintaxe semelhante aos atributos cookieSameSite mostrados anteriormente em atualizações futuras. A configuração `(SameSiteMode)(-1)` no código ainda funciona em instâncias desses cookies. *
 
+[!INCLUDE[](~/includes/MTcomments.md)]
+
+<a name="retargeting"></a>
+
+### <a name="retarget-net-apps"></a>Redirecionar aplicativos .NET
+
+Para direcionar o .NET 4.7.2 ou posterior:
+
+* Verifique se o *Web. config* contém o seguinte:  <!-- review, I removed `debug="true"` -->
+
+  ```xml
+  <system.web>
+    <compilation targetFramework="4.7.2"/>
+    <httpRuntime targetFramework="4.7.2"/>
+  </system.web>
+
+* Verify the project file contains the correct [TargetFrameworkVersion](/visualstudio/msbuild/msbuild-target-framework-and-target-platform?view=vs-2019):
+
+  ```xml
+  <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  ```
+
+  O [Guia de migração do .net](/dotnet/framework/migration-guide/) tem mais detalhes.
+
+* Verifique se os pacotes NuGet no projeto são direcionados para a versão correta da estrutura. Você pode verificar a versão correta da estrutura examinando o arquivo *Packages. config* , por exemplo:
+
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <packages>
+    <package id="Microsoft.AspNet.Mvc" version="5.2.7" targetFramework="net472" />
+    <package id="Microsoft.ApplicationInsights" version="2.4.0" targetFramework="net451" />
+  </packages>
+  ```
+
+  No arquivo *Packages. config* anterior, o pacote `Microsoft.ApplicationInsights`:
+    * É destinado ao .NET 4.5.1.
+    * Deve ter seu atributo `targetFramework` atualizado para `net472` se um pacote atualizado direcionado para o destino da estrutura existir.
+
+<a name="nope"></a>
+
+### <a name="net-versions-earlier-than-472"></a>Versões do .NET anteriores a 4.7.2
+
+A Microsoft não dá suporte a versões do .NET inferiores a 4.7.2 para gravar o atributo de cookie de mesmo site. Não encontramos uma maneira confiável de:
+
+* Verifique se o atributo foi gravado corretamente com base na versão do navegador.
+* Interceptar e ajustar os cookies de autenticação e sessão em versões mais antigas do Framework.
+
+### <a name="december-patch-behavior-changes"></a>Alterações de comportamento de patch de dezembro
+
+A alteração de comportamento específica para .NET Framework é como a propriedade `SameSite` interpreta o valor de `None`:
+
+* Antes do patch, um valor de `None` significava:
+  * Não emita o atributo de nenhuma vez.
+* Após o patch:
+  * Um valor de `None`significa "emitir o atributo com um valor de `None`".
+  * Um valor `SameSite` de `(SameSiteMode)(-1)` faz com que o atributo não seja emitido.
+
+O valor padrão de SameSite para autenticação de formulários e cookies de estado de sessão foi alterado de `None` para `Lax`.
+
+### <a name="summary-of-change-impact-on-browsers"></a>Resumo do impacto de alterações nos navegadores
+
+Se você instalar o patch e emitir um cookie com `SameSite.None`, uma das duas coisas ocorrerá:
+* O Chrome V80 tratará esse cookie de acordo com a nova implementação e não imporá as mesmas restrições de site no cookie.
+* Qualquer navegador que não tenha sido atualizado para dar suporte à nova implementação seguirá a implementação antiga. A implementação antiga diz:
+  * Se você vir um valor que não entende, ignore-o e alterne para as mesmas restrições de site estritas.
+
+Então, o aplicativo é interrompido no Chrome ou você quebra vários outros lugares.
+
 ## <a name="history-and-changes"></a>Histórico e alterações
 
 O suporte a SameSite foi implementado pela primeira vez no .NET 4.7.2 usando o [padrão de rascunho 2016](https://tools.ietf.org/html/draft-west-first-party-cookies-07#section-4.1).
@@ -96,20 +163,73 @@ Consulte [serviço de Azure app – tratamento de cookies SameSite e .NET Framew
 
 ## <a name="supporting-older-browsers"></a>Suporte a navegadores mais antigos
 
-O padrão de 2016 SameSite exigiu que valores desconhecidos devem ser tratados como valores `SameSite=Strict`. Os aplicativos acessados de navegadores mais antigos que dão suporte ao padrão de 2016 SameSite podem falhar quando obtêm uma propriedade SameSite com um valor de `None`. Os aplicativos Web devem implementar a detecção do navegador se pretenderem oferecer suporte a navegadores mais antigos. O ASP.NET não implementa a detecção de navegador, pois os valores dos agentes de usuário são altamente voláteis e mudam com frequência. O código a seguir pode ser chamado no site de chamada <xref:HTTP.HttpCookie>:
+O padrão de 2016 SameSite exigiu que valores desconhecidos devem ser tratados como valores `SameSite=Strict`. Os aplicativos acessados de navegadores mais antigos que dão suporte ao padrão de 2016 SameSite podem falhar quando obtêm uma propriedade SameSite com um valor de `None`. Os aplicativos Web devem implementar a detecção do navegador se pretenderem oferecer suporte a navegadores mais antigos. O ASP.NET não implementa a detecção de navegador, pois os valores dos agentes de usuário são altamente voláteis e mudam com frequência.
+
+A abordagem da Microsoft para corrigir o problema é ajudá-lo a implementar componentes de detecção de navegador para remover o atributo `sameSite=None` de cookies se um navegador for conhecido por não oferecer suporte a ele. O Conselho do Google foi emitir cookies duplos, um com o novo atributo e um sem o atributo. No entanto, consideramos o aviso do Google limitado. Alguns navegadores, especialmente os navegadores móveis têm limites muito pequenos no número de cookies de um site ou um nome de domínio pode enviar. O envio de vários cookies, especialmente cookies grandes, como cookies de autenticação, pode alcançar o limite do navegador móvel muito rapidamente, causando falhas de aplicativo difíceis de diagnosticar e corrigir. Além de uma estrutura, há um grande ecossistema de código e componentes de terceiros que podem não ser atualizados para usar uma abordagem de cookie duplo.
+
+O código de detecção do navegador usado nos projetos de exemplo neste [repositório GitHub]() está contido em dois arquivos
+
+* [C#SameSiteSupport.cs](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/SameSiteSupport.cs)
+* [VB SameSiteSupport. vb](https://github.com/blowdart/AspNetSameSiteSamples/blob/master/SameSiteSupport.vb)
+
+Essas detecções são os agentes de navegador mais comuns que vimos que dão suporte ao padrão 2016 e para os quais o atributo precisa ser completamente removido. Isso não significa uma implementação completa:
+
+* Seu aplicativo pode ver os navegadores que nossos sites de teste não têm.
+* Você deve estar preparado para adicionar detecções conforme necessário para seu ambiente.
+
+A forma de conexão da detecção varia de acordo com a versão do .NET e a estrutura da Web que você está usando. O código a seguir pode ser chamado no site de chamada <xref:HTTP.HttpCookie>:
 
 [!code-csharp[](sample/SameSiteCheck.cs?name=snippet)]
 
-No exemplo anterior, `MyUserAgentDetectionLib.DisallowsSameSiteNone` é uma biblioteca fornecida pelo usuário que detecta se o agente do usuário não dá suporte a `None`SameSite. O código a seguir mostra um exemplo de método de `DisallowsSameSiteNone`:
+Consulte os seguintes tópicos de cookies do ASP.NET 4.7.2 SameSite:
 
-> [!WARNING]
-> O código a seguir é apenas para demonstração:
-> * Ele não deve ser considerado concluído.
-> * Ele não é mantido ou tem suporte.
+* [C#MVC](xref:samesite/csMVC)
+* [C#WebForms](xref:samesite/CSharpWebForms)
+* [WebForms do VB](xref:samesite/vbWF)
+* [MVC DO VB](xref:samesite/vbMVC)
+<!--
+* <xref:samesite/csMVC>
+* <xref:samesite/CSharpWebForms>
+* <xref:samesite/vbWF>
+* <xref:samesite/vbMVC>
+-->
 
-[!code-csharp[](sample/SameSiteCheck.cs?name=snippet2)]
+### <a name="ensuring-your-site-redirects-to-https"></a>Garantindo que seu site Redirecione para HTTPS
+
+Para ASP.NET 4. x, WebForms e MVC, o recurso [de reescrita de URL do IIS](/iis/extensions/url-rewrite-module/creating-rewrite-rules-for-the-url-rewrite-module) pode ser usado para redirecionar todas as solicitações para https. O XML a seguir mostra uma regra de exemplo:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="Redirect to https" stopProcessing="true">
+          <match url="(.*)"/>
+          <conditions>
+            <add input="{HTTPS}" pattern="Off"/>
+            <add input="{REQUEST_METHOD}" pattern="^get$|^head$" />
+          </conditions>
+          <action type="Redirect" url="https://{HTTP_HOST}/{R:1}" redirectType="Permanent"/>
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>
+```
+
+Em instalações locais da [regravação de URL do IIS](https://www.iis.net/downloads/microsoft/url-rewrite) , há um recurso opcional que pode precisar de instalação.
 
 ## <a name="test-apps-for-samesite-problems"></a>Testar aplicativos para problemas de SameSite
+
+Você deve testar seu aplicativo com os navegadores aos quais dá suporte e percorrer os cenários que envolvem cookies. Cenários de cookie normalmente envolvem
+
+* Formulários de logon
+* Mecanismos de logon externos, como Facebook, Azure AD, OAuth e OIDC
+* Páginas que aceitam solicitações de outros sites
+* Páginas em seu aplicativo projetadas para serem inseridas em IFrames
+
+Você deve verificar se os cookies são criados, persistidos e excluídos corretamente em seu aplicativo.
 
 Aplicativos que interagem com sites remotos, como por meio de logon de terceiros, precisam:
 
@@ -126,6 +246,15 @@ O Google não disponibiliza versões mais antigas do Chrome. Siga as instruçõe
 
 * [Chromium 76 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/664998/)
 * [Chromium 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
+* Se você não estiver usando uma versão de 64 bits do Windows, poderá usar o [Visualizador do OmahaProxy](https://omahaproxy.appspot.com/) para procurar qual ramificação do Chromium corresponde ao Chrome 74 (v 74.0.3729.108) usando as [instruções fornecidas pelo Chromium](https://www.chromium.org/getting-involved/download-chromium).
+
+#### <a name="test-with-chrome-80"></a>Teste com o Chrome 80 +
+
+[Baixe](https://www.google.com/chrome/) uma versão do Chrome que dê suporte a seu novo atributo. No momento da gravação, a versão atual é o Chrome 80. O Chrome 80 precisa do sinalizador `chrome://flags/#same-site-by-default-cookies` habilitado para usar o novo comportamento. Você também deve habilitar (`chrome://flags/#cookies-without-same-site-must-be-secure`) para testar o comportamento futuro de cookies que não têm o atributo sameSite habilitado. O Chrome 80 está no destino para fazer com que a opção trate cookies sem o atributo como `SameSite=Lax`, embora com um período de carência cronometrado para determinadas solicitações. Para desabilitar o período de carência cronometrado, o Chrome 80 pode ser iniciado com o seguinte argumento de linha de comando:
+
+`--enable-features=SameSiteDefaultChecksMethodRigorously`
+
+O Chrome 80 tem mensagens de aviso no console do navegador sobre atributos sameSite ausentes. Use F12 para abrir o console do navegador.
 
 ### <a name="test-with-safari"></a>Teste com o Safari
 
@@ -135,9 +264,9 @@ O Safari 12 implementou estritamente o rascunho anterior e falha quando o novo v
 
 O suporte do Firefox para o novo padrão pode ser testado na versão 68 +, optando na página de `about:config` com o sinalizador de recurso `network.cookie.sameSite.laxByDefault`. Não há relatórios de problemas de compatibilidade com versões mais antigas do Firefox.
 
-### <a name="test-with-edge-browser"></a>Testar com o navegador Edge
+### <a name="test-with-edge-legacy-browser"></a>Testar com o navegador de borda (Herdado)
 
-O Edge dá suporte ao antigo SameSite padrão. A versão 44 do Edge não tem nenhum problema de compatibilidade conhecido com o novo padrão.
+O Edge dá suporte ao antigo SameSite padrão. A versão do Edge 44 + não tem nenhum problema de compatibilidade conhecido com o novo padrão.
 
 ### <a name="test-with-edge-chromium"></a>Testar com borda (Chromium)
 
@@ -145,10 +274,37 @@ Os sinalizadores SameSite são definidos na página `edge://flags/#same-site-by-
 
 ### <a name="test-with-electron"></a>Testar com o
 
-As versões do at-SS são versões mais antigas do Chromium. Por exemplo, a versão do at-SS usada pelas equipes é Chromium 66, que exibe o comportamento mais antigo. Você deve executar seu próprio teste de compatibilidade com a versão do uso de digital que seu produto usa. Consulte [suporte a navegadores mais antigos](#sob) na seção a seguir.
+As versões do at-SS são versões mais antigas do Chromium. Por exemplo, a versão do at-SS usada pelas equipes é Chromium 66, que exibe o comportamento mais antigo. Você deve executar seu próprio teste de compatibilidade com a versão do uso de digital que seu produto usa. Consulte [suporte a navegadores mais antigos](#sob).
+
+## <a name="reverting-samesite-patches"></a>Revertendo patches do SameSite
+
+Você pode reverter o comportamento de sameSite atualizado em aplicativos .NET Framework para o comportamento anterior em que o atributo sameSite não é emitido para um valor de `None`e reverter a autenticação e os cookies de sessão para não emitir o valor. Isso deve ser exibido como uma *correção extremamente temporária*, pois as alterações do Chrome interromperão quaisquer solicitações post externas ou autenticação para usuários que usam navegadores que dão suporte às alterações no padrão.
+
+### <a name="reverting-net-472-behavior"></a>Revertendo o comportamento do .NET 4.7.2
+
+Atualize o *Web. config* para incluir as seguintes definições de configuração:
+
+```xml
+<configuration> 
+  <appSettings>
+    <add key="aspnet:SuppressSameSiteNone" value="true" />
+  </appSettings>
+ 
+  <system.web> 
+    <authentication> 
+      <forms cookieSameSite="None" /> 
+    </authentication> 
+    <sessionState cookieSameSite="None" /> 
+  </system.web> 
+</configuration>
+```
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
 * [Próximas alterações de cookie SameSite em ASP.NET e ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
 * [Blog do Chromium: desenvolvedores: Prepare-se para o New SameSite = None; Configurações de cookie seguro](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [SameSite cookies explicados](https://web.dev/samesite-cookies-explained/)
+* [Atualizações do Chrome](https://www.chromium.org/updates/same-site)
+* [Patches do .NET SameSite](/aspnet/samesite/kbs-samesite)
+* [Informações do mesmo site de aplicativos Web do Azure](https://azure.microsoft.com/updates/app-service-samesite-cookie-update/)
+* [Informações do mesmo site do Azure ActiveDirectory](/azure/active-directory/develop/howto-handle-samesite-cookie-changes-chrome-browser)

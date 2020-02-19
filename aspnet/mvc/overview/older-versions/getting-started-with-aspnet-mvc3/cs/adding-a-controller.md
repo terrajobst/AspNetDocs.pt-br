@@ -1,85 +1,85 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller
-title: Adicionando um controlador (c#) | Microsoft Docs
+title: Adicionando um controlador (C#) | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que i...
+description: Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que i...
 ms.author: riande
 ms.date: 01/12/2011
 ms.assetid: 0b8c56b5-fdf3-42dd-a866-98fbe0ab78a0
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/cs/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 635fae26ade5c99fb3a010b25e1d74d214e3c32e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 959116ff773f4ef466cda6b172e8321590b50e5b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130255"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457813"
 ---
 # <a name="adding-a-controller-c"></a>Adicionar um controlador (C#)
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > > [!NOTE]
-> > Uma versão atualizada deste tutorial está disponível [aqui](../../../getting-started/introduction/getting-started.md) que usa o ASP.NET MVC 5 e Visual Studio 2013. É mais seguro e muito mais simples a seguir e apresenta mais recursos.
+> > Uma versão atualizada deste tutorial está disponível [aqui](../../../getting-started/introduction/getting-started.md) que usa o ASP.NET MVC 5 e o Visual Studio 2013. É mais seguro, muito mais simples de seguir e demonstra mais recursos.
 > 
 > 
-> Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se que você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no link a seguir: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar individualmente os pré-requisitos usando os links a seguir:
+> Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no seguinte link: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar os pré-requisitos individualmente usando os seguintes links:
 > 
-> - [Pré-requisitos de Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
+> - [Pré-requisitos do Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
 > - [Atualização de ferramentas do ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-> - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(tempo de execução de ferramentas de suporte +)
+> - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(suporte + ferramentas de tempo de execução)
 > 
-> Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+> Se você estiver usando o Visual Studio 2010 em vez do Visual Web Developer 2010, instale os pré-requisitos clicando no seguinte link: [pré-requisitos do Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte c# está disponível para acompanhar este tópico. [Baixe a versão c#](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o Visual Basic, alterne para o [versão do Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
+> Um projeto do Visual Web Developer com C# código-fonte está disponível para acompanhar este tópico. [Baixe a C# versão](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se preferir Visual Basic, alterne para a [versão Visual Basic](../vb/intro-to-aspnet-mvc-3.md) deste tutorial.
 
-Representa o MVC *model-view-controller*. O MVC é um padrão para o desenvolvimento de aplicativos que são fáceis de manter e bem arquitetada. Aplicativos baseados no MVC contêm:
+O MVC significa *Model-View-Controller*. O MVC é um padrão para o desenvolvimento de aplicativos que são bem arquitetados e fáceis de manter. Os aplicativos baseados em MVC contêm:
 
-- Controladores: Classes que lidam com solicitações de entrada para o aplicativo recuperar dados de modelo e, em seguida, especificar modelos de exibição que retornam uma resposta ao cliente.
-- Modelos: Classes que representam os dados do aplicativo e que usam a lógica de validação para impor regras de negócios para que os dados.
-- Modos de exibição: Arquivos de modelo que seu aplicativo usa para gerar dinamicamente respostas HTML.
+- Controladores: classes que tratam solicitações de entrada para o aplicativo, recuperam dados de modelo e, em seguida, especificam modelos de exibição que retornam uma resposta ao cliente.
+- Modelos: classes que representam os dados do aplicativo e que usam a lógica de validação para impor regras de negócio para esses dados.
+- Exibições: Arquivos de modelo que seu aplicativo usa para gerar dinamicamente respostas HTML.
 
-Vamos abordar todos esses conceitos nesta série de tutoriais e mostraremos como usá-los para criar um aplicativo.
+Abordaremos todos esses conceitos nesta série de tutoriais e mostraremos como usá-los para criar um aplicativo.
 
-Vamos começar criando uma classe de controlador. Na **Gerenciador de soluções**, clique com botão direito do *controladores* pasta e, em seguida, selecione **Adicionar controlador**.
+Vamos começar criando uma classe de controlador. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta *controladores* e selecione **Adicionar controlador**.
 
 [![](adding-a-controller/_static/image2.png)](adding-a-controller/_static/image1.png)
 
-Nomeie o novo controlador "HelloWorldController". Deixe o modelo padrão como **controlador vazio** e clique em **Add**.
+Nomeie o novo controlador "HelloWorldController". Deixe o modelo padrão como **controlador vazio** e clique em **Adicionar**.
 
 [![AddHelloWorldController](adding-a-controller/_static/image4.png)](adding-a-controller/_static/image3.png)
 
-Observe na **Gerenciador de soluções** que um novo arquivo tiver sido criado com o nome *HelloWorldController.cs*. O arquivo está aberto no IDE.
+Observe no **Gerenciador de soluções** que um novo arquivo foi criado chamado *HelloWorldController.cs*. O arquivo está aberto no IDE.
 
 ![](adding-a-controller/_static/image5.png)
 
-Dentro de `public class HelloWorldController` bloquear, crie dois métodos que se parecem com o código a seguir. O controlador retorna uma cadeia de caracteres de HTML como um exemplo.
+Dentro do bloco de `public class HelloWorldController`, crie dois métodos que se parecem com o código a seguir. O controlador retornará uma cadeia de caracteres de HTML como um exemplo.
 
 [!code-csharp[Main](adding-a-controller/samples/sample1.cs)]
 
-O controlador é denominado `HelloWorldController` e o primeiro método acima é denominado `Index`. Vamos chamá-la em um navegador. Execute o aplicativo (pressione F5 ou Ctrl + F5). No navegador, acrescente "HelloWorld" ao caminho na barra de endereços. (Por exemplo, na ilustração abaixo, é `http://localhost:43246/HelloWorld.`) a página no navegador se parecerá com a seguinte captura de tela. No método acima, o código retornado diretamente uma cadeia de caracteres. Você disse que o sistema para retornar apenas um HTML e fez isso!
+Seu controlador é nomeado `HelloWorldController` e o primeiro método acima é nomeado `Index`. Vamos chamá-lo de um navegador. Execute o aplicativo (pressione F5 ou CTRL + F5). No navegador, acrescente "HelloWorld" ao caminho na barra de endereços. (Por exemplo, na ilustração abaixo, é `http://localhost:43246/HelloWorld.`) A página no navegador se parecerá com a captura de tela a seguir. No método acima, o código retornou uma cadeia de caracteres diretamente. Você disse ao sistema para retornar apenas um HTML e ele fazia!
 
 ![](adding-a-controller/_static/image6.png)
 
-ASP.NET MVC invoca as classes de controlador diferente (e diferentes métodos de ação dentro delas), dependendo da URL de entrada. A lógica de mapeamento padrão usada pelo ASP.NET MVC usa um formato como este para determinar qual código para invocar:
+O ASP.NET MVC invoca classes de controlador diferentes (e métodos de ação diferentes dentro delas) dependendo da URL de entrada. A lógica de mapeamento padrão usada pelo ASP.NET MVC usa um formato como este para determinar qual código invocar:
 
 `/[Controller]/[ActionName]/[Parameters]`
 
-A primeira parte da URL determina a classe de controlador para executar. Portanto, */HelloWorld* mapeia para o `HelloWorldController` classe. A segunda parte da URL determina o método de ação na classe para executar. Portanto, */HelloWorld/Index* faria com que o `Index` método da `HelloWorldController` classe para executar. Observe que precisamos navegar até */HelloWorld* e o `Index` método foi usado por padrão. Isso ocorre porque um método chamado `Index` é o método padrão que será chamado em um controlador se um não for especificado explicitamente.
+A primeira parte da URL determina a classe do controlador a ser executada. Portanto, */HelloWorld* é mapeado para a classe `HelloWorldController`. A segunda parte da URL determina o método de ação na classe a ser executada. Portanto, */HelloWorld/index* faria com que o método de `Index` da classe `HelloWorldController` fosse executado. Observe que precisamos apenas navegar até */HelloWorld* e o método `Index` foi usado por padrão. Isso ocorre porque um método chamado `Index` é o método padrão que será chamado em um controlador se um não for especificado explicitamente.
 
-Navegue para `http://localhost:xxxx/HelloWorld/Welcome`. O método `Welcome` é executado e retorna a cadeia de caracteres “Este é o método de ação Boas-vindas...”. O mapeamento do padrão MVC é `/[Controller]/[ActionName]/[Parameters]`. Para essa URL, o controlador é `HelloWorld` e `Welcome` é o método de ação. Você ainda não usou a parte `[Parameters]` da URL.
+Navegue até `http://localhost:xxxx/HelloWorld/Welcome`. O método `Welcome` é executado e retorna a cadeia de caracteres “Este é o método de ação Boas-vindas...”. O mapeamento do MVC padrão é `/[Controller]/[ActionName]/[Parameters]`. Para essa URL, o controlador é `HelloWorld` e `Welcome` é o método de ação. Você ainda não usou a parte `[Parameters]` da URL.
 
 ![](adding-a-controller/_static/image7.png)
 
-Vamos modificar o exemplo um pouco para que você possa passar algumas informações de parâmetro da URL para o controlador (por exemplo, */HelloWorld/Welcome? nome = Scott&amp;numtimes = 4*). Alterar sua `Welcome` método para incluir dois parâmetros, conforme mostrado abaixo. Observe que o código usa o recurso de parâmetro opcional do c# para indicar que o `numTimes` parâmetro como padrão 1 se nenhum valor é passado para esse parâmetro.
+Vamos modificar o exemplo ligeiramente para que você possa passar algumas informações de parâmetro da URL para o controlador (por exemplo, */HelloWorld/Welcome? Name = Scott&amp;numtimes = 4*). Altere o método `Welcome` para incluir dois parâmetros, conforme mostrado abaixo. Observe que o código usa o C# recurso opcional-Parameter para indicar que o parâmetro `numTimes` deve usar como padrão 1 se nenhum valor for passado para esse parâmetro.
 
 [!code-csharp[Main](adding-a-controller/samples/sample2.cs)]
 
-Executar o aplicativo e navegue até a URL de exemplo (`http://localhost:xxxx/HelloWorld/Welcome?name=Scott&numtimes=4)`. Você pode tentar valores diferentes para `name` e `numtimes` na URL. O sistema mapeia automaticamente os parâmetros nomeados da cadeia de consulta na barra de endereços para os parâmetros no método.
+Execute o aplicativo e navegue até a URL de exemplo (`http://localhost:xxxx/HelloWorld/Welcome?name=Scott&numtimes=4)`. Você pode tentar valores diferentes para `name` e `numtimes` na URL. O sistema mapeia automaticamente os parâmetros nomeados da cadeia de caracteres de consulta na barra de endereços para parâmetros em seu método.
 
 ![](adding-a-controller/_static/image8.png)
 
-Nos dois exemplos do controlador faz a parte "VC" do MVC — ou seja, o trabalho de exibição e controlador. O controlador retorna o HTML diretamente. Normalmente, você não quer controladores retornem HTML diretamente, já que isso é muito difícil para o código. Em vez disso, vamos normalmente usar um arquivo de modelo de exibição separada para ajudar a gerar a resposta HTML. Vamos dar uma olhada próxima em como é possível fazer isso.
+Em ambos os exemplos, o controlador está fazendo a parte "VC" do MVC, ou seja, o modo de exibição e o controlador funcionam. O controlador retorna o HTML diretamente. Normalmente, você não quer que os controladores retornem HTML diretamente, já que isso se torna muito complicado para o código. Em vez disso, normalmente usaremos um arquivo de modelo de exibição separado para ajudar a gerar a resposta HTML. Vejamos em seguida como podemos fazer isso.
 
 > [!div class="step-by-step"]
 > [Anterior](intro-to-aspnet-mvc-3.md)

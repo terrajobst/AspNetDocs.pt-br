@@ -8,16 +8,16 @@ ms.date: 08/23/2012
 ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
-ms.openlocfilehash: 239980d747c6e0d6be1e9b4fe0371e276e37cf21
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 61bfe5dbac04b57e1461183b66ead2f01fe0734c
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519278"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457759"
 ---
 # <a name="bundling-and-minification"></a>Empacotamento e minimização
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > O agrupamento e o minificação são duas técnicas que podem ser usadas no ASP.NET 4,5 para melhorar o tempo de carregamento da solicitação. O agrupamento e a minificação melhora o tempo de carregamento, reduzindo o número de solicitações para o servidor e reduzindo o tamanho dos ativos solicitados (como CSS e JavaScript).
 
@@ -53,7 +53,7 @@ Além de remover os comentários e o espaço em branco desnecessário, os seguin
 
 | **Original** | **Renomeado** |
 | --- | --- |
-| imageTagAndImageID | {1&gt;n&lt;1} |
+| imageTagAndImageID | {1&gt;{2&gt;n&lt;2}&lt;1} |
 | imageContext | t |
 | imageElement | {1&gt;i&lt;1} |
 
@@ -154,10 +154,10 @@ O caminho virtual especificado no método `Include` e o padrão de pesquisa no m
 
 Considere um projeto com os seguintes arquivos JavaScript:
 
-- *Scripts\\Common\\AddAltToImg.js*
+- *Scripts\\Common\\AddAltToImg. js*
 - *Scripts\\Common\\ToggleDiv. js*
-- *Scripts\\Common\\ToggleImg.js*
-- *Scripts\\Common\\Sub1\\ToggleLinks.js*
+- *Scripts\\Common\\ToggleImg. js*
+- *Scripts\\Common\\Sub1\\ToggleLinks. js*
 
 ![Dir imagem](bundling-and-minification/_static/image7.png)
 
@@ -165,13 +165,13 @@ A tabela a seguir mostra os arquivos adicionados a um pacote usando o caractere 
 
 | **Call** | **Arquivos adicionados ou gerados pela exceção** |
 | --- | --- |
-| Include("~/Scripts/Common/\*.js") | *AddAltToImg.js*, *ToggleDiv.js*, *ToggleImg.js* |
-| Include("~/Scripts/Common/T\*.js") | Exceção de padrão inválida. O caractere curinga só é permitido no prefixo ou sufixo. |
-| Include("~/Scripts/Common/\*og.\*") | Exceção de padrão inválida. Somente um caractere curinga é permitido. |
+| Include ("~/Scripts/Common/\*. js") | *AddAltToImg. js*, *ToggleDiv. js*, *ToggleImg. js* |
+| Include ("~/Scripts/Common/T\*. js") | Exceção de padrão inválida. O caractere curinga só é permitido no prefixo ou sufixo. |
+| Include ("~/Scripts/Common/\*ogon.\*") | Exceção de padrão inválida. Somente um caractere curinga é permitido. |
 | Include ("~/Scripts/Common/T\*") | *ToggleDiv. js*, *ToggleImg. js* |
 | Include ("~/Scripts/Common/\*") | Exceção de padrão inválida. Um segmento curinga puro não é válido. |
-| IncludeDirectory("~/Scripts/Common", "T\*") | *ToggleDiv. js*, *ToggleImg. js* |
-| IncludeDirectory("~/Scripts/Common", "T\*", true) | *ToggleDiv.js*, *ToggleImg.js*, *ToggleLinks.js* |
+| IncludeDirectory ("~/Scripts/Common", "T\*") | *ToggleDiv. js*, *ToggleImg. js* |
+| IncludeDirectory ("~/Scripts/Common", "T\*", true) | *ToggleDiv. js*, *ToggleImg. js*, *ToggleLinks. js* |
 
 Adicionar explicitamente cada arquivo a um pacote é geralmente o carregamento preferível de arquivos por curinga pelos seguintes motivos:
 

@@ -1,125 +1,125 @@
 ---
 uid: mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
-title: Analisar e depurar seu aplicativo ASP.NET MVC com Glimpse | Microsoft Docs
+title: Criar um perfil e depurar seu aplicativo MVC do ASP.NET com a visão | Microsoft Docs
 author: Rick-Anderson
-description: Visão rápida é prosperando e aumentando a família de pacotes do NuGet de software livre que fornece desempenho detalhados, depuração e informações de diagnóstico para o ASP.NET um...
+description: A idéia é uma família de sucesso e crescente de pacotes NuGet de software livre que fornece informações detalhadas de desempenho, depuração e diagnóstico para ASP.NET a...
 ms.author: riande
 ms.date: 03/26/2015
 ms.assetid: c205805f-efdd-4fa7-9616-f26eab180611
 msc.legacyurl: /mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse
 msc.type: authoredcontent
-ms.openlocfilehash: 051253d1e7a09f6285ebe0a83f87155de8467536
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: d3689147a3bc3aa1f4180c377d2483a94bdd95a9
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129422"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457655"
 ---
 # <a name="profile-and-debug-your-aspnet-mvc-app-with-glimpse"></a>Analisar e depurar seu aplicativo do ASP.NET MVC com Glimpse
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Visão rápida é prosperando e aumentando a família de pacotes do NuGet de software livre que fornece desempenho detalhados, depuração e informações de diagnóstico para aplicativos ASP.NET. Ele é trivial para instalar, leve, com rapidez e exibe as principais métricas de desempenho na parte inferior de cada página. Ele permite fazer uma busca detalhada em seu aplicativo quando você precisa descobrir o que está acontecendo no servidor. Visão rápida fornece informações muito valiosas que é recomendável que usá-lo em todo seu ciclo de desenvolvimento, incluindo o seu ambiente de teste do Azure. Enquanto [Fiddler](http://www.telerik.com/fiddler) e o [ferramentas de desenvolvimento F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) fornecem um cliente modo de exibição, a visão rápida fornece uma exibição detalhada do servidor. Este tutorial se concentrará em usando o ASP.NET MVC de amostra e pacotes do EF, mas muitos outros pacotes estão disponíveis. Sempre que possível, eu vinculará a apropriado [dê uma olhada docs](http://getglimpse.com/Docs/) que ajudam a manter. Visão rápida é um projeto de código-fonte aberto, você também pode contribuir com o código-fonte e os documentos.
+> A visão é uma família de sucesso e crescente de pacotes NuGet de software livre que fornece informações detalhadas de desempenho, depuração e diagnóstico para aplicativos ASP.NET. É trivial instalar, leve, extremamente rápido e exibir as principais métricas de desempenho na parte inferior de cada página. Ele permite que você faça uma busca detalhada em seu aplicativo quando precisar descobrir o que está acontecendo no servidor. A idéia fornece informações valiosas que recomendamos que você o use em todo o ciclo de desenvolvimento, incluindo o ambiente de teste do Azure. Embora o [Fiddler](http://www.telerik.com/fiddler) e as [ferramentas de desenvolvimento F-12](https://msdn.microsoft.com/library/ie/gg589512(v=vs.85).aspx) forneçam uma exibição do lado do cliente, a idéia fornece uma exibição detalhada do servidor. Este tutorial se concentrará no uso dos pacotes ASP.NET MVC e EF da visão, mas muitos outros pacotes estarão disponíveis. Quando possível, vou vincular aos documentos de [amostra](http://getglimpse.com/Docs/) apropriados que eu ajude a manter. A idéia é um projeto de software livre, você também pode contribuir para o código-fonte e os documentos.
 
-- [Instalando a amostra](#ig)
-- [Habilitar Glimpse para localhost](#eg)
-- [Na guia da linha do tempo](#Time)
+- [Instalando a visão](#ig)
+- [Habilitar a visão do localhost](#eg)
+- [A guia linha do tempo](#Time)
 - [Model binding](#mb)
 - [Rotas](#route)
-- [Usando a amostra no Azure](#da)
+- [Usando a visão no Azure](#da)
 - [Recursos adicionais](#addRes)
 
 <a id="ig"></a>
-## <a name="installing-glimpse"></a>Instalando a amostra
+## <a name="installing-glimpse"></a>Instalando a visão
 
-Você pode instalar Glimpse partir do console do Gerenciador de pacotes NuGet ou o **gerenciar pacotes NuGet** console. Para esta demonstração, vou instalar os pacotes Mvc5 e EF6:
+Você pode instalar a visão do console do Gerenciador de pacotes NuGet ou do console **gerenciar pacotes NuGet** . Para esta demonstração, instalarei os pacotes Mvc5 e EF6:
 
-![instalar a prévia do NuGet Dlg](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image1.png)
+![instalar a visão do NuGet Dlg](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image1.png)
 
-Pesquise *Glimpse.EF*
+Pesquisar por *idéia. EF*
 
-![Glimpse.EF do NuGet install dlg](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image2.png)
+![. EF da instalação do NuGet Dlg](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image2.png)
 
-Selecionando **pacotes instalados**, você pode ver os módulos dependentes do Glimpse instalados:
+Selecionando **pacotes instalados**, você pode ver os módulos dependentes da visão instalados:
 
-![Os pacotes de prévia instalados de DLg](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image3.png)
+![Pacotes de amostra instalados de DLg](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image3.png)
 
-Os seguintes comandos instalam os módulos de visão rápida MVC5 e o EF6 no console do Gerenciador de pacote:
+Os comandos a seguir instalam os módulos MVC5 e EF6 do console do Gerenciador de pacotes:
 
 [!code-console[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample1.cmd)]
 
 <a id="eg"></a>
-## <a name="enable-glimpse-for-localhost"></a>Habilitar Glimpse para localhost
+## <a name="enable-glimpse-for-localhost"></a>Habilitar a visão do localhost
 
-Navegue até http://localhost:&lt; a porta n º&gt;/glimpse.axd e clique no <strong>ativar Glimpse</strong> botão.
+Navegue até http://localhost:&lt;p classificar #&gt;/glimpse.axd e clique no botão <strong>Ativar visão</strong> .
 
-![Página de axd visão rápida](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image4.png)
+![Página de visualização do axd](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image4.png)
 
-Se você tiver sua barra de favoritos exibida, você pode arrastar e soltar os botões de amostra e adicioná-los como bookmarklets:
+Se sua barra de favoritos for exibida, você poderá arrastar e soltar os botões de visão e adicioná-los como bookmarklets:
 
-![IE com Glimpse bookmarklets](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
+![IE com bookmarklets de visão](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image5.png)
 
-Agora, você pode navegar seu aplicativo e o **cabeças backup exibição** (HUD) é mostrada na parte inferior da página.
+Agora você pode navegar no seu aplicativo e a **exibição de cabeçotes** (HUD) é mostrada na parte inferior da página.
 
 ![Página do Gerenciador de contatos com HUD](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image6.png)
 
-O [página de visão rápida HUD](http://getglimpse.com/Docs/Heads-up-Display) fornece detalhes sobre as informações de medição de tempo mostradas acima. As exibições de dados o HUD desempenho discreto podem notificá-lo de um problema imediatamente - antes de chegar ao ciclo de teste. Clicar na &quot;g&quot; no canto inferior direito abre o painel de visão rápida:
+A [página de visão de HUD](http://getglimpse.com/Docs/Heads-up-Display) detalha as informações de tempo mostradas acima. Os dados de desempenho discretos exibidos pelo HUD podem notificá-lo de um problema imediatamente-antes de chegar ao ciclo de teste. Clicar no &quot;g&quot; no canto inferior direito abre o painel de visão:
 
-![Painel de visão rápida](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image7.png)
+![Painel de visão](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image7.png)
 
-Na imagem acima, o [guia de execução](http://getglimpse.com/Docs/Execution-Tab) for selecionado, que mostra detalhes de medição de tempo das ações e os filtros no pipeline. Você pode ver minha [temporizador de filtro de inspeção parar](http://www.nuget.org/packages/StopWatch/) começam em 6 de estágio do pipeline. Embora minha temporizador leve possa fornecer útil perfil/dados de tempo, ele perde todo o tempo gasto na autorização e o modo de exibição de renderização. Você pode ler sobre meu timer em [criar o perfil e a hora de seu aplicativo ASP.NET MVC todo o caminho para o Azure](https://blogs.msdn.com/b/webdev/archive/2014/07/29/profile-and-time-your-asp-net-mvc-app-all-the-way-to-azure.aspx). O [guias](http://getglimpse.com/Docs/Tabs) página fornece links para informações detalhadas sobre cada guia.
+Na imagem acima, a [guia execução](http://getglimpse.com/Docs/Execution-Tab) é selecionada, que mostra os detalhes de tempo das ações e dos filtros no pipeline. Você pode ver meu [temporizador parar filtro de monitoramento](http://www.nuget.org/packages/StopWatch/) iniciar no estágio 6 do pipeline. Embora meu temporizador leve possa fornecer dados úteis de perfil/tempo, ele perde o tempo gasto na autorização e renderizando a exibição. Você pode ler sobre meu temporizador no [perfil e cronometrar seu aplicativo ASP.NET MVC até o Azure](https://blogs.msdn.com/b/webdev/archive/2014/07/29/profile-and-time-your-asp-net-mvc-app-all-the-way-to-azure.aspx). A página [guias](http://getglimpse.com/Docs/Tabs) fornece links para informações detalhadas sobre cada guia.
 
 <a id="Time"></a>
-## <a name="the-timeline-tab"></a>Na guia da linha do tempo
+## <a name="the-timeline-tab"></a>A guia linha do tempo
 
-Eu modifiquei de Tom Dykstra pendentes [tutorial do EF 6/MVC 5](../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) com o código a seguir, altere para o controlador instrutores:
+Modifiquei o [tutorial do EF 6/MVC 5](../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) pendente de Tom Dykstra com a seguinte alteração de código para o controlador de instrutores:
 
 [!code-csharp[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample2.cs?highlight=1,20-31)]
 
-O código acima permite que eu passe na cadeia de caracteres de consulta (`eager`) para controlar adiantado ou explícito, carregamento de dados. Na imagem abaixo, o carregamento explícito é usado e a página de medição de tempo mostra cada registro carregado no `Index` método de ação:
+O código acima permite que eu transmita uma cadeia de caracteres de consulta (`eager`) para controlar o carregamento rápido ou explícito dos dados. Na imagem abaixo, o carregamento explícito é usado e a página de tempo mostra cada registro carregado no método de ação `Index`:
 
 ![carregamento explícito](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image8.png)
 
-No código a seguir, adiantado é especificado, e cada registro é buscado após o `Index` é chamado de modo de exibição:
+No código a seguir, o adiantamento é especificado e cada registro é obtido depois que a exibição de `Index` é chamada:
 
 ![adiantado é especificado](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image9.png)
 
-Você pode passar o mouse sobre um segmento de tempo para obter informações detalhadas de tempo:
+Você pode focalizar um segmento de tempo para obter informações detalhadas de tempo:
 
-![Passe o mouse para ver o tempo detalhados](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image10.png)
+![focalizar para ver o tempo detalhado](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image10.png)
 
 <a id="mb"></a>
 ## <a name="model-binding"></a>Model binding
 
-O [guia de associação de modelo](http://getglimpse.com/Docs/Model-Binding-Tab) fornece uma grande quantidade de informações para ajudá-lo a entender como as variáveis de formulário são associadas e por que alguns não são associados conforme o esperado. A imagem abaixo mostra o **?** ícone, você poderá clicar para abrir a página de ajuda de amostra para esse recurso.
+A [guia Associação de modelo](http://getglimpse.com/Docs/Model-Binding-Tab) fornece uma grande quantidade de informações para ajudá-lo a entender como as variáveis de formulário são ligadas e por que algumas delas não estão associadas como esperado. A imagem abaixo mostra o **?** , no qual você pode clicar para exibir a página de ajuda de visão desse recurso.
 
-![Dê uma olhada a exibição do modelo de associação](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image11.png)
+![exibição de associação de modelo de visão](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image11.png)
 
 <a id="route"></a>
 ## <a name="routes"></a>Rotas
 
- Guia de visão rápida de rotas pode ajudará você depurar e entender o roteamento. Na imagem abaixo, a rota de produto é selecionada (e aparece em verde, uma convenção de visão rápida). ![nome do produto selecionado](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image12.png) tokens de dados, áreas e restrições de rota também são exibidos. Ver [rotas Glimpse](http://getglimpse.com/Docs/Routes-Tab) e [roteamento de atributo no ASP.NET MVC 5](https://blogs.msdn.com/b/webdev/archive/2013/10/17/attribute-routing-in-asp-net-mvc-5.aspx) para obter mais informações. 
+ A guia mostrar rotas pode ajudá-lo a depurar e entender o roteamento. Na imagem abaixo, a rota do produto é selecionada (e mostra em verde, uma Convenção de visão). ![nome do produto selecionado](profile-and-debug-your-aspnet-mvc-app-with-glimpse/_static/image12.png) restrições de rota, as áreas e os tokens de dados também são exibidos. Consulte [visão de rotas](http://getglimpse.com/Docs/Routes-Tab) e [Roteamento de atributos no ASP.NET MVC 5](https://blogs.msdn.com/b/webdev/archive/2013/10/17/attribute-routing-in-asp-net-mvc-5.aspx) para obter mais informações. 
 
 <a id="da"></a>
-## <a name="using-glimpse-on-azure"></a>Usando a amostra no Azure
+## <a name="using-glimpse-on-azure"></a>Usando a visão no Azure
 
-A política de segurança padrão Glimpse permite apenas dados de amostra a serem exibidos no host local. Você pode alterar essa política de segurança para que você possa exibir esses dados em um servidor remoto (por exemplo, um aplicativo web no Azure). Para ambientes de teste no Azure, adicione a marca realçada até a parte inferior da *Web. config* arquivo para habilitar a visão rápida:
+A política de segurança padrão de exibição só permite que os dados da amostra sejam exibidos do host local. Você pode alterar essa política de segurança para que possa exibir esses dados em um servidor remoto (como um aplicativo Web no Azure). Para ambientes de teste no Azure, adicione a marca realçada à parte inferior do arquivo *Web. config* para habilitar a visão:
 
 [!code-xml[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample3.xml?highlight=2-6)]
 
-Com essa alteração sozinha, qualquer usuário pode ver os dados de amostra em um site remoto. Considere adicionar a marcação acima a um perfil de publicação para que ele tem apenas implantado um aplicada quando você usa esse perfil de publicação (por exemplo, o perfil de teste do Azure.) Para restringir os dados de amostra, adicionaremos o `canViewGlimpseData` função e só permitir que os usuários nessa função para exibir dados de amostra.
+Com essa alteração sozinha, qualquer usuário pode ver seus dados de sua amostra em um site remoto. Considere adicionar a marcação acima a um perfil de publicação para que ele seja implantado apenas quando você usar esse perfil de publicação (por exemplo, seu perfil de teste do Azure). Para restringir os dados da visão, adicionaremos a função `canViewGlimpseData` e apenas permitirá que os usuários nessa função exibam dados de visão.
 
-Remova os comentários do *GlimpseSecurityPolicy.cs* do arquivo e altere o [IsInRole](https://msdn.microsoft.com/library/system.security.principal.iprincipal.isinrole(v=vs.110).aspx) chamar de `Administrator` para o `canViewGlimpseData` função:
+Remova os comentários do arquivo *GlimpseSecurityPolicy.cs* e altere a chamada [IsInRole](https://msdn.microsoft.com/library/system.security.principal.iprincipal.isinrole(v=vs.110).aspx) de `Administrator` para a função `canViewGlimpseData`:
 
 [!code-csharp[Main](profile-and-debug-your-aspnet-mvc-app-with-glimpse/samples/sample4.cs?highlight=6)]
 
 > [!WARNING]
-> Security - dados avançados fornecidos pelo ideia poderia expor a segurança do seu aplicativo. Microsoft não realizou uma auditoria de segurança do Glimpse para uso em aplicativos de produções.
+> Segurança-os dados avançados fornecidos pela visão podem expor a segurança do seu aplicativo. A Microsoft não realizou uma auditoria de segurança de idéia para uso em aplicativos de produções.
 
-Para obter informações sobre como adicionar funções, consulte minha [implantar um aplicativo da web ASP.NET MVC 5 seguro com associação, OAuth e banco de dados SQL no Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/) tutorial.
+Para obter informações sobre como adicionar funções, consulte o tutorial [implantar um aplicativo Web do ASP.NET MVC 5 com associação, OAuth e banco de dados SQL no Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/) .
 
 <a id="addRes"></a>
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Implantar um aplicativo ASP.NET MVC 5 seguro com associação, OAuth e banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/)
-- [Dê uma olhada configuração](http://getglimpse.com/Docs/Configuration) -página de documentação sobre como configurar as guias, política de tempo de execução, registro em log e muito mais.
+- [Implantar um aplicativo Secure ASP.NET MVC 5 com associação, OAuth e banco de dados SQL no Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/)
+- [Visão](http://getglimpse.com/Docs/Configuration) da página configuração – documento na configuração de guias, política de tempo de execução, registro em log e muito mais.

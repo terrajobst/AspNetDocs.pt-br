@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 52d6c941-2cd9-442f-9872-2c798d6d90cd
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/web-development-best-practices
 msc.type: authoredcontent
-ms.openlocfilehash: 0956aaaf1f6a1a0d2f5d93f98cb6959cec98dbaf
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: dfd8a3ac2328d3f17dfbe36e68b37d181177b0f4
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582701"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457083"
 ---
 # <a name="web-development-best-practices-building-real-world-cloud-apps-with-azure"></a>Práticas recomendadas de desenvolvimento para a Web (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -45,7 +45,7 @@ A maioria dos aplicativos do mundo real precisa armazenar o estado de uma sessã
 
 Como exemplo de como é fácil dimensionar um aplicativo nos sites do Windows Azure se sua camada da Web estiver sem estado, consulte a guia **escala** para um site do Windows Azure no portal de gerenciamento:
 
-![Guia escala](web-development-best-practices/_static/image1.png)
+![Guia Escala](web-development-best-practices/_static/image1.png)
 
 Se você quiser adicionar servidores Web, basta arrastar o controle deslizante contagem de instâncias para a direita. Defina-o como 5 e clique em **salvar**e, em segundos, você terá cinco servidores Web no Windows Azure manipulando o tráfego do seu site.
 
@@ -76,7 +76,7 @@ A capacidade de expansão do seu aplicativo é quase ilimitada no Windows Azure,
 <a id="sessionstate"></a>
 ## <a name="avoid-session-state"></a>Evitar estado da sessão
 
-Geralmente não é prático em um aplicativo de nuvem do mundo real evitar o armazenamento de alguma forma de estado para uma sessão de usuário, mas algumas abordagens afetam o desempenho e a escalabilidade mais do que outras. Se você precisar armazenar o estado, a melhor solução é manter a quantidade de estado pequeno e armazená-lo em cookies. Se isso não for viável, a próxima melhor solução é usar o estado de sessão ASP.NET com um provedor de [cache na memória distribuído](distributed-caching.md#sessionstate). A pior solução de um ponto de vista de desempenho e escalabilidade é usar um provedor de estado de sessão com suporte de banco de dados.
+Geralmente, não é prático em uma aplicativo em nuvem real evitar o armazenamento de alguma forma de estado para uma sessão de usuário, mas algumas abordagens afetam o desempenho e a escalabilidade mais do que outras. Se você precisar armazenar o estado, a melhor solução será manter o estado em uma quantidade pequena e armazená-lo em cookies. Se isso não for viável, a próxima melhor solução é usar o estado de sessão ASP.NET com um provedor de [cache na memória distribuído](distributed-caching.md#sessionstate). A pior solução de um ponto de vista de escalabilidade e desempenho é usar um provedor de estado de sessão com backup em um banco de dados.
 
 <a id="cdn"></a>
 ## <a name="use-a-cdn-to-cache-static-file-assets"></a>Usar uma CDN para armazenar em cache ativos de arquivo estáticos
@@ -141,7 +141,7 @@ Servidores Web sem estado:
 - [Práticas e padrões da Microsoft – diretrizes de dimensionamento](https://msdn.microsoft.com/library/dn589774.aspx)automático.
 - [Desabilitando a afinidade de instância do arr nos sites do Windows Azure](https://azure.microsoft.com/blog/2013/11/18/disabling-arrs-instance-affinity-in-windows-azure-web-sites/). Postagem de blog de Erez Benari, explica a afinidade de sessão nos sites do Windows Azure.
 
-CDN
+CDN:
 
 - [FailSafe: criando serviços de nuvem escalonáveis e resilientes](https://channel9.msdn.com/Series/FailSafe). Série de vídeos de nove partes por Ulrich Homann, Marc Mercuri e marcas Simms. Consulte a discussão sobre CDN no episódio 3 a partir de 1:34:00.
 - [Padrão de Hospedagem de conteúdo estático de práticas e padrões da Microsoft](https://msdn.microsoft.com/library/dn589776.aspx)

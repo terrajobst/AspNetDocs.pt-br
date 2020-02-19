@@ -8,16 +8,16 @@ ms.date: 06/23/2015
 ms.assetid: 2a0370d3-c2fb-4bf3-88b8-aad5a736c793
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control
 msc.type: authoredcontent
-ms.openlocfilehash: a6f445e46d41b646cf6c25af2e65bc73e831d5ed
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 5a1e0d7cd3c396d4be79c8958422602055eb3db1
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583706"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457096"
 ---
 # <a name="source-control-building-real-world-cloud-apps-with-azure"></a>Controle do código-fonte (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -147,7 +147,7 @@ O Visual Studio pergunta se você deseja usar TFVC (controle de versão centrali
 
 Quando você seleciona git e clica em **OK**, o Visual Studio cria um novo repositório git local na pasta da solução. O novo repositório ainda não tem arquivos; Você precisa adicioná-los ao repositório fazendo uma confirmação do git. Clique com o botão direito do mouse na solução em **Gerenciador de soluções**e clique em **confirmar**.
 
-![Compromisso](source-control/_static/image11.png)
+![Commit](source-control/_static/image11.png)
 
 O Visual Studio automaticamente prepara todos os arquivos de projeto para a confirmação e os lista em **Team Explorer** no painel **alterações incluídas** . (Se houver alguns que não desejamos incluir na confirmação, você poderá selecioná-los, clicar com o botão direito do mouse e clicar em **excluir**.)
 

@@ -8,16 +8,16 @@ ms.date: 03/30/2015
 ms.assetid: 9f05ccb1-2004-4661-ad8b-c370e6c09c8e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/unstructured-blob-storage
 msc.type: authoredcontent
-ms.openlocfilehash: 2afd4b5cf640eb97080de7e5280409f5e5347731
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: f48b2be755b84dff9b2672bd348c73107602c6dd
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583634"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456785"
 ---
 # <a name="unstructured-blob-storage-building-real-world-cloud-apps-with-azure"></a>Armazenamento de BLOBs não estruturado (compilando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -25,7 +25,7 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitt
 
 No capítulo anterior, examinamos os esquemas de particionamento e explicamos como o aplicativo Fix it armazena as imagens no serviço de Azure Storage Blob e outros dados de tarefa no Azure SQL Database. Neste capítulo, vamos detalhar o serviço BLOB e mostrar como ele é implementado em corrigir o código do projeto.
 
-## <a name="what-is-blob-storage"></a>O que é o armazenamento de BLOBs?
+## <a name="what-is-blob-storage"></a>O que é Armazenamento de Blobs?
 
 O serviço de Azure Storage Blob fornece uma maneira de armazenar arquivos na nuvem. O serviço blob tem várias vantagens em relação ao armazenamento de arquivos em um sistema de arquivos de rede local:
 

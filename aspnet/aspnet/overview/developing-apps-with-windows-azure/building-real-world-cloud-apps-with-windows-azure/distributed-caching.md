@@ -8,16 +8,16 @@ ms.date: 07/20/2015
 ms.assetid: 406518e9-3817-49ce-8b90-e82bc461e2c0
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/distributed-caching
 msc.type: authoredcontent
-ms.openlocfilehash: c66187b990a828c53bd2f8115e3c9660fc6022ed
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 87a7516415895e761d1589fd459b93e5c15c0f85
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582804"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456992"
 ---
 # <a name="distributed-caching-building-real-world-cloud-apps-with-azure"></a>Caching distribuído (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -95,10 +95,10 @@ Documentação
 - [Cache do Azure](https://msdn.microsoft.com/library/gg278356.aspx). Documentação oficial do MSDN sobre caching no Azure.
 - [Práticas e padrões da Microsoft – diretrizes do Azure](https://msdn.microsoft.com/library/dn568099.aspx). Consulte Diretrizes de cache e padrão de reserva de cache.
 - [FailSafe: Diretrizes para arquiteturas de nuvem resilientes](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). White Paper por Marc Mercuri, Ulrich Homann e Andrew TOWNHILL. Consulte a seção sobre Caching.
-- [Práticas recomendadas para o design de serviços em grande escala nos serviços de nuvem do Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). Mostrar. White Paper por Mark Simms e Michael Thomassy. Consulte a seção sobre Caching distribuído.
+- [Práticas recomendadas para o design de serviços em grande escala nos serviços de nuvem do Azure](https://msdn.microsoft.com/library/windowsazure/jj717232.aspx). W. White Paper por Mark Simms e Michael Thomassy. Consulte a seção sobre Caching distribuído.
 - [Caching distribuído no caminho para a escalabilidade](https://msdn.microsoft.com/magazine/dd942840.aspx). Um artigo mais antigo (2009) da MSDN Magazine, mas uma introdução claramente escrita ao Caching distribuído em geral; apresenta mais profundidade do que as seções de cache dos White papers de FailSafe e práticas recomendadas.
 
-Vídeos
+vídeos
 
 - [FailSafe: criando serviços de nuvem escalonáveis e resilientes](https://channel9.msdn.com/Series/FailSafe). Série de nove partes de Ulrich Homann, Marc Mercuri e de Mark Simms. Apresenta uma exibição de nível 400 de como arquitetar aplicativos de nuvem. Esta série se concentra na teoria e nos motivos pelos quais; para obter mais detalhes, consulte a criação de séries grandes por marca Simms. Consulte a discussão em cache no episódio 3 a partir de 1:24:14.
 - [Criando Big: lições aprendidas de clientes do Azure-parte I](https://channel9.msdn.com/Events/Build/2012/3-029). Simon Davies discute o cache distribuído a partir de 46:00. Semelhante à série FailSafe, mas apresenta detalhes mais detalhados. A apresentação foi fornecida em 31 de outubro de 2012 e, portanto, não abrange o serviço de cache de aplicativos Web no serviço Azure App que foi introduzido no 2013.

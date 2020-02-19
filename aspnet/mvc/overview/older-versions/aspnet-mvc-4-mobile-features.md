@@ -8,16 +8,16 @@ ms.date: 08/15/2012
 ms.assetid: 27dc4fc8-1b51-43b0-933f-fc1b52476523
 msc.legacyurl: /mvc/overview/older-versions/aspnet-mvc-4-mobile-features
 msc.type: authoredcontent
-ms.openlocfilehash: 907a16946c93761cd543135b0b226c8696b041f0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9716def069ca9f7115af32e16381f41bd4d13342
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594641"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457642"
 ---
 # <a name="aspnet-mvc-4-mobile-features"></a>Recursos de celular do ASP.NET MVC 4
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > Agora há uma versão MVC 5 deste tutorial com exemplos de código em [implantar um aplicativo Web móvel ASP.NET MVC 5 nos sites do Azure](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-mobile-app/).
 
@@ -27,19 +27,19 @@ Antes de começar, verifique se você instalou os pré-requisitos listados abaix
 
 - [Visual Studio Express 2012](https://www.microsoft.com/visualstudio/11/products/express) (recomendado) ou Visual Studio Web Developer Express SP1. O Visual Studio 2012 contém o ASP.NET MVC 4. Se você estiver usando o Visual Web Developer 2010, deverá instalar o [ASP.NET MVC 4](https://go.microsoft.com/fwlink/?LinkId=243392).
 
-Você também precisará de um emulador de navegador móvel. Qualquer um dos seguintes funcionará:
+Também será necessário um emulador do navegador móvel. Qualquer uma das opções a seguir funcionará:
 
 - [Emulador de telefone do Windows 7](https://msdn.microsoft.com/library/ff402563(VS.92).aspx). (Esse é o emulador que é usado na maioria das capturas de tela neste tutorial.)
 - Altere a cadeia de caracteres do agente do usuário para emular um iPhone. Consulte [esta](http://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/) entrada de blog.
 - [Emulador móvel Opera](http://www.opera.com/developer/tools/mobile/)
 - [Apple Safari](http://www.apple.com/safari/download/) com o agente do usuário definido como iPhone. Para obter instruções sobre como definir o agente do usuário no Safari como "iPhone", consulte [como permitir que o Safari finja que ele é o IE](http://www.davidalison.com/2008/05/how-to-let-safari-pretend-its-ie.html) no blog de David Alison.
 
-Os projetos do Visual C# Studio com código-fonte estão disponíveis para acompanhar este tópico:
+Os projetos do Visual Studio com o código-fonte em C# estão disponíveis para acompanhar este tópico:
 
 - [Download do projeto inicial](https://go.microsoft.com/fwlink/?linkid=228307&amp;clcid=0x409)
 - [Download do projeto concluído](https://go.microsoft.com/fwlink/?linkid=228306&amp;clcid=0x409)
 
-### <a name="what-youll-build"></a>O que você criará
+### <a name="what-youll-build"></a>O que você vai construir
 
 Para este tutorial, você adicionará recursos móveis ao aplicativo de listagem de conferência simples que é fornecido no [projeto inicial](https://go.microsoft.com/fwlink/?LinkId=228307). A captura de tela a seguir mostra a página marcas do aplicativo concluído, como visto no [Windows 7 Phone Emulator](https://msdn.microsoft.com/library/ff402563(VS.92).aspx). Consulte [mapeamento de teclado para o emulador de Windows Phone](https://msdn.microsoft.com/library/ff754352(v=vs.92).aspx) para simplificar a entrada do teclado.
 
@@ -49,17 +49,17 @@ Você pode usar o Internet Explorer versão 9 ou 10, FireFox ou Chrome para dese
 
 ![](aspnet-mvc-4-mobile-features/_static/image3.png)
 
-### <a name="skills-youll-learn"></a>Habilidades que você aprenderá
+### <a name="skills-youll-learn"></a>Qualificações que você aprenderá
 
-Veja o que você aprenderá:
+Eis o que você vai aprender:
 
 - Como os modelos do ASP.NET MVC 4 usam o atributo `viewport` do HTML5 e a renderização adaptável para melhorar a exibição em dispositivos móveis.
 - Como criar exibições específicas para dispositivos móveis.
 - Como criar um seletor de exibição que permite aos usuários alternar entre uma exibição móvel e uma exibição de área de trabalho do aplicativo.
 
-### <a name="getting-started"></a>Guia de Introdução
+### <a name="getting-started"></a>Introdução
 
-Baixe o aplicativo de listagem de conferência para o projeto inicial usando o seguinte link: [Download](https://go.microsoft.com/fwlink/?LinkId=228307). Em seguida, no Windows Explorer, clique com o botão direito do mouse no arquivo *MvcMobile. zip* e escolha **Propriedades**. Na caixa de diálogo **Propriedades de MvcMobile. zip** , escolha o botão **desbloquear** . (Desbloquear impede um aviso de segurança que ocorre quando você tenta usar um arquivo *. zip* que você baixou da Web.)
+Baixe o aplicativo de listagem de conferência para o projeto inicial usando o seguinte link: [Download](https://go.microsoft.com/fwlink/?LinkId=228307). Em seguida, no Windows Explorer, clique com o botão direito do mouse no arquivo *MvcMobile. zip* e escolha **Propriedades**. Na caixa de diálogo **Propriedades de MvcMobile. zip** , escolha o botão **desbloquear** . (Desbloquear impede um aviso de segurança que ocorre quando você tenta usar um arquivo *.zip* que você baixou da Web).
 
 ![p1_unBlock](aspnet-mvc-4-mobile-features/_static/image4.png)
 
@@ -113,13 +113,13 @@ A marca de `<meta>` do visor e a consulta de mídia do CSS não são específica
 
 Para obter mais informações sobre a marca de `<meta>` do visor, consulte [uma história de dois viewports — parte dois](http://www.quirksmode.org/mobile/viewports2.html).
 
-Na próxima seção, você verá como fornecer exibições específicas do navegador móvel.
+Na próxima seção, você verá como fornecer modos de exibição específicos para navegadores móveis.
 
 ## <a name="overriding-views-layouts-and-partial-views"></a>Substituindo exibições, layouts e exibições parciais
 
-Um novo recurso significativo no ASP.NET MVC 4 é um mecanismo simples que permite substituir qualquer modo de exibição (incluindo layouts e exibições parciais) para navegadores móveis em geral, para um navegador móvel individual ou para qualquer navegador específico. Para fornecer uma exibição específica ao celular, você pode copiar um arquivo de exibição e adicionar *. Móvel* para o nome do arquivo. Por exemplo, para criar uma exibição de *índice* móvel, copie *Views\Home\Index.cshtml* para *Views\Home\Index.Mobile.cshtml*.
+Um novo recurso significativo no ASP.NET MVC 4 é um mecanismo simples que permite substituir qualquer modo de exibição (incluindo layouts e exibições parciais) para navegadores móveis em geral, para um navegador móvel individual ou para qualquer navegador específico. Para fornecer uma exibição específica para dispositivos móveis, você pode copiar um arquivo de modo de exibição e adicionar *.Mobile* ao nome do arquivo. Por exemplo, para criar uma exibição de *índice* móvel, copie *Views\Home\Index.cshtml* para *Views\Home\Index.Mobile.cshtml*.
 
-Nesta seção, você criará um arquivo de layout específico do Mobile.
+Nesta seção, você criará um arquivo de layout específico para dispositivos móveis.
 
 Para iniciar, copie *Views\Shared\\_Layout. cshtml* para *Views\Shared\\_Layout. Mobile. cshtml*. Abra *\_layout. Mobile. cshtml* e altere o título de **MVC4 Conference** para **Conference (Mobile)** .
 
@@ -127,11 +127,11 @@ Em cada chamada de `Html.ActionLink`, remova "procurar por" em cada link *Action
 
 [!code-cshtml[Main](aspnet-mvc-4-mobile-features/samples/sample5.cshtml)]
 
-Copie o arquivo *Views\Home\AllTags.cshtml* para *Views\Home\AllTags.Mobile.cshtml*. Abra o novo arquivo e altere o elemento `<h2>` de "tags" para "Tags (M)":
+Copie o arquivo *Views\Home\AllTags.cshtml* para *Views\Home\AllTags.Mobile.cshtml*. Abra o novo arquivo e altere o elemento `<h2>` das "Marcas" para "marcas (M)":
 
 [!code-html[Main](aspnet-mvc-4-mobile-features/samples/sample6.html)]
 
-Navegue até a página marcas usando um navegador da área de trabalho e usando o emulador do navegador móvel. O emulador do navegador móvel mostra as duas alterações feitas.
+Navegue até a página de marcas utilizando um navegador de desktop e o emulador do navegador móvel. O emulador do navegador móvel mostra as duas alterações feitas.
 
 [![p2m_layoutTags. Mobile](aspnet-mvc-4-mobile-features/_static/image12.png)](aspnet-mvc-4-mobile-features/_static/image11.png)
 
@@ -141,19 +141,19 @@ Por outro lado, a exibição da área de trabalho não foi alterada.
 
 ## <a name="browser-specific-views"></a>Exibições específicas do navegador
 
-Além de exibições específicas para dispositivos móveis e de desktop, você pode criar modos de exibição para um navegador individual. Por exemplo, você pode criar exibições que são especificamente para o navegador iPhone. Nesta seção, você criará um layout para o navegador do iPhone e uma versão do iPhone do modo de exibição de *marcas* .
+Além dos modos de exibição específicos para navegadores móveis e de desktop, você pode criar modos de exibição para um único navegador. Por exemplo, você pode criar exibições que são especificamente para o navegador iPhone. Nesta seção, você criará um layout para o navegador do iPhone e uma versão para iPhone do modo de exibição *AllTags* .
 
 Abra o arquivo *global. asax* e adicione o código a seguir ao método `Application_Start`.
 
 [!code-csharp[Main](aspnet-mvc-4-mobile-features/samples/sample7.cs)]
 
-Esse código define um novo modo de exibição chamado "iPhone" que será correspondido em cada solicitação de entrada. Se a solicitação de entrada corresponder à condição que você definiu (ou seja, se o agente do usuário contiver a cadeia de caracteres "iPhone"), o ASP.NET MVC procurará exibições cujo nome contenha o sufixo "iPhone".
+Este código define um novo modo de exibição denominado “iPhone”, que será comparado a todas as solicitações de entrada. Se a solicitação de entrada corresponder à condição que você definiu (isto é, se o agente do usuário contiver a cadeia de caracteres “iPhone”), o ASP.NET MVC vai procurar por modos de exibição cujo nome contenha o sufixo “iPhone”.
 
-No código, clique com o botão direito do mouse em `DefaultDisplayMode`, escolha **resolver**e, em seguida, escolha `using System.Web.WebPages;`. Isso adiciona uma referência ao namespace `System.Web.WebPages`, que é onde os tipos de `DisplayModes` e `DefaultDisplayMode` são definidos.
+No código, clique com botão direito em `DefaultDisplayMode`, escolha **Resolver** e, em seguida, escolha `using System.Web.WebPages;`. Isso inclui uma referência ao namespace `System.Web.WebPages`, que é onde os tipos de `DisplayModes` e `DefaultDisplayMode` são definidos.
 
 [![p2_resolve](aspnet-mvc-4-mobile-features/_static/image16.png)](aspnet-mvc-4-mobile-features/_static/image15.png)
 
-Como alternativa, você pode apenas adicionar manualmente a seguinte linha à seção `using` do arquivo.
+Como alternativa, basta adicionar manualmente a seguinte linha na seção `using` do arquivo.
 
 [!code-csharp[Main](aspnet-mvc-4-mobile-features/samples/sample8.cs)]
 
@@ -163,13 +163,13 @@ O conteúdo completo do arquivo *global. asax* é mostrado abaixo.
 
 Salve as alterações. Copie o arquivo *MvcMobile\Views\Shared\\_Layout. Mobile. cshtml* para *MvcMobile\Views\Shared\\_Layout. iPhone. cshtml*. Abra o novo arquivo e altere o cabeçalho `h1` de `Conference (Mobile)` para `Conference (iPhone)`.
 
-Copie o arquivo *MvcMobile\Views\Home\AllTags.Mobile.cshtml* para *MvcMobile\Views\Home\AllTags.iPhone.cshtml*. No novo arquivo, altere o elemento `<h2>` de "Tags (M)" para "Tags (iPhone)".
+Copie o arquivo *MvcMobile\Views\Home\AllTags.Mobile.cshtml* para *MvcMobile\Views\Home\AllTags.iPhone.cshtml*. Abra o novo arquivo, altere o elemento `<h2>` de "Tags (M)" para "Tags (iPhone)".
 
-Execute o aplicativo. Execute um emulador de navegador móvel, verifique se o agente do usuário está definido como "iPhone" e navegue até o modo de exibição de *marcas* . A captura de tela a seguir mostra o modo de exibição de todas as *marcas* renderizado no navegador [Safari](http://www.apple.com/safari/download/) . Você pode baixar o Safari para Windows [aqui](https://support.apple.com/kb/DL1531).
+Execute o aplicativo. Execute o emulador de navegador móvel com o agente do usuário definido como “iPhone” e navegue até o modo de exibição *AllTags* . A captura de tela a seguir mostra o modo de exibição de todas as *marcas* renderizado no navegador [Safari](http://www.apple.com/safari/download/) . Você pode baixar o Safari para Windows [aqui](https://support.apple.com/kb/DL1531).
 
 [![p2_iphoneView](aspnet-mvc-4-mobile-features/_static/image18.png)](aspnet-mvc-4-mobile-features/_static/image17.png)
 
-Nesta seção, vimos como criar layouts e exibições móveis e como criar layouts e exibições para dispositivos específicos, como o iPhone. Na próxima seção, você verá como aproveitar o jQuery Mobile para exibições móveis mais atraentes.
+Nesta seção, você viu como criar layouts e exibições móveis e como criar layouts e exibições para dispositivos específicos, como o iPhone. Na próxima seção, você verá como aproveitar o jQuery Mobile para exibições móveis mais atraentes.
 
 ## <a name="using-jquery-mobile"></a>Usando o jQuery Mobile
 
@@ -255,7 +255,7 @@ Navegue até a página do @ *Tags* em um navegador da área de trabalho. O widge
 
 ## <a name="improving-the-speakers-list"></a>Aprimorando a lista de alto-falantes
 
-No navegador móvel, selecione o link **alto-falantes** . Como não há nenhum modo de exibição móvel (todos os*palestrantes. Mobile. cshtml* *),* a exibição de alto-falantes padrão é renderizada usando o modo de exibição de layout móvel ( *\_layout. Mobile. cshtml*).
+No navegador móvel, selecione o link **Alto-falantes** . Como não há nenhum modo de exibição móvel (todos os*palestrantes. Mobile. cshtml* *),* a exibição de alto-falantes padrão é renderizada usando o modo de exibição de layout móvel ( *\_layout. Mobile. cshtml*).
 
 [![p3_speakersDeskTop](aspnet-mvc-4-mobile-features/_static/image31.png)](aspnet-mvc-4-mobile-features/_static/image30.png)
 
@@ -273,7 +273,7 @@ Você pode desabilitar o modo de exibição consistente em uma exibição defini
 
 ## <a name="creating-a-mobile-speakers-view"></a>Criando uma exibição de alto-falantes móveis
 
-Como você acabou de ver, a exibição dos *alto-falantes* é legível, mas os links são pequenos e são difíceis de tocar em um dispositivo móvel. Nesta seção, você criará um modo de exibição de *alto-falantes* específicos para dispositivos móveis que se parece com um aplicativo móvel moderno – ele exibe links grandes e fáceis de tocar e contém uma caixa de pesquisa para encontrar rapidamente os alto-falantes.
+Como você acabou de ver, o modo de exibição *Alto-falantes* é legível, mas os links são pequenos e difíceis de tocar em um dispositivo móvel. Nesta seção, você criará um modo de exibição de *alto-falantes* específicos para dispositivos móveis que se parece com um aplicativo móvel moderno – ele exibe links grandes e fáceis de tocar e contém uma caixa de pesquisa para encontrar rapidamente os alto-falantes.
 
 Copie os seus *Enspeakrs. cshtml* para os seus *enspeakrs. Mobile. cshtml*. Abra o arquivo de todos os *Enfalers. Mobile. cshtml* e remova o elemento de cabeçalho `<h2>`.
 
@@ -281,7 +281,7 @@ Na marca `<ul>`, adicione o atributo `data-role` e defina seu valor como `listvi
 
 [!code-cshtml[Main](aspnet-mvc-4-mobile-features/samples/sample19.cshtml)]
 
-Atualize o navegador móvel. A exibição atualizada é parecida com esta:
+Atualize o navegador móvel. O modo de exibição atualizado tem esta aparência:
 
 [![p3_updatedSpeakerView1](aspnet-mvc-4-mobile-features/_static/image35.png)](aspnet-mvc-4-mobile-features/_static/image34.png)
 
@@ -373,7 +373,7 @@ Copie o *Views\Home\SessionByCode.cshtml* para *Views\Home\SessionByCode.Mobile.
 
 A nova marcação usa o atributo `data-role` para melhorar o layout da exibição.
 
-Atualize o navegador móvel. A imagem a seguir reflete as alterações de código que você acabou de fazer:
+Atualize o navegador móvel. A imagem a seguir reflete as alterações de código que você acabou de criar:
 
 [![p3_love2](aspnet-mvc-4-mobile-features/_static/image59.png)](aspnet-mvc-4-mobile-features/_static/image58.png)
 
@@ -386,9 +386,9 @@ Este tutorial introduziu os novos recursos móveis do ASP.NET MVC 4 Developer Pr
 - Um widget de seletor de exibição para exibições móveis do que também pode ser exibido em exibições de área de trabalho.
 - Suporte para navegadores específicos de suporte, como o navegador do iPhone.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 - site do [jQuery Mobile](http://jquerymobile.com) .
 - [Visão geral do jQuery Mobile](http://jquerymobile.com/demos/1.0b3/docs/about/intro.html)
-- [Práticas recomendadas do aplicativo Web móvel de recomendação do W3C](http://www.w3.org/TR/mwabp/)
-- [Recomendação do W3C candidata para consultas de mídia](http://www.w3.org/TR/css3-mediaqueries/)
+- [Práticas recomendadas pela W3C para aplicativos móveis para a Web](http://www.w3.org/TR/mwabp/)
+- [Recomendação Candidata do W3C para consultas de mídia](http://www.w3.org/TR/css3-mediaqueries/)

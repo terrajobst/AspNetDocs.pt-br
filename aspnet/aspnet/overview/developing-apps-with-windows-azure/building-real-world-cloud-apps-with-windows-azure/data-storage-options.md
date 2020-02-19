@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: e51fcecb-cb33-4f9e-8428-6d2b3d0fe1bf
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/data-storage-options
 msc.type: authoredcontent
-ms.openlocfilehash: f97d973d87db895441f813376d757a8a2e94b255
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 9357ed5aef39bed501cdac9ac26d46c884d4fae0
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585923"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457174"
 ---
 # <a name="data-storage-options-building-real-world-cloud-apps-with-azure"></a>Opções de armazenamento de dados (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -37,14 +37,14 @@ A nuvem torna relativamente fácil usar uma variedade de armazenamentos de dados
 
 A tabela mostra quatro tipos de bancos de dados NoSQL:
 
-- [Os bancos de dados de chave/valor](https://msdn.microsoft.com/library/dn313285.aspx#sec7) armazenam um único objeto serializado para cada valor de chave. Eles são bons para armazenar grandes volumes de dados em que você deseja obter um item para um determinado valor de chave e não precisa consultar com base em outras propriedades do item.
+- [Os bancos de dados de chave/valor](https://msdn.microsoft.com/library/dn313285.aspx#sec7) armazenam um único objeto serializado para cada valor de chave. Eles são bons para armazenar grandes volumes de dados, quando você deseja obter um item para determinado valor de chave e não precisa consultar com base em outras propriedades do item.
 
     O [armazenamento de BLOBs do Azure](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-blobs/) é um banco de dados de chave/valor que funciona como o armazenamento de arquivos na nuvem, com valores de chave que correspondem aos nomes de pastas e arquivos. Você recupera um arquivo por sua pasta e nome de arquivo, não pesquisando valores no conteúdo do arquivo.
 
     O [armazenamento de tabelas do Azure](https://azure.microsoft.com/documentation/articles/storage-dotnet-how-to-use-tables/) também é um banco de dados de chave/valor. Cada valor é chamado de *entidade* (semelhante a uma linha, identificada por uma chave de partição e chave de linha) e contém várias *Propriedades* (semelhantes a colunas, mas nem todas as entidades em uma tabela precisam compartilhar as mesmas colunas). Consultar colunas que não sejam a chave é extremamente ineficiente e deve ser evitado. Por exemplo, você pode armazenar dados de perfil do usuário, com uma partição armazenando informações sobre um único usuário. Você pode armazenar dados como nome de usuário, hash de senha, data de nascimento e assim por diante, em propriedades separadas de uma entidade ou em entidades separadas na mesma partição. Mas você não iria querer consultar todos os usuários com um determinado intervalo de datas de nascimento e não pode executar uma consulta de junção entre sua tabela de perfil e outra tabela. O armazenamento de tabela é mais escalonável e mais barato do que um banco de dados relacional, mas não permite consultas ou junções complexas.
 - [Documentdatabases](https://msdn.microsoft.com/library/dn313285.aspx#sec8) são bancos de dados de chave/valor nos quais os valores são *documentos*. "Documento" aqui não é usado no sentido de um documento do Word ou do Excel, mas significa uma coleção de campos e valores nomeados, qualquer um dos quais pode ser um documento filho. Por exemplo, em uma tabela de histórico de pedidos, um documento de pedido pode ter os campos número do pedido, data do pedido e cliente; e o campo cliente pode ter campos de nome e endereço. O Database codifica os dados de campo em um formato como XML, YAML, JSON ou BSON; ou pode usar texto sem formatação. Um recurso que define bancos de dados de documentos além dos bancos de dados de chave/valor é a capacidade de consultar em campos não-chave e definir índices secundários para tornar a consulta mais eficiente. Essa capacidade torna um banco de dados de documentos mais adequado para os aplicativos que precisam recuperar informações com base em critérios mais complexos do que o valor da chave do documento. Por exemplo, em um banco de dados de documentos de histórico de pedidos de vendas, você pode consultar vários campos, como ID do produto, ID do cliente, nome do cliente e assim por diante. O [MongoDB](http://www.mongodb.org/) é um banco de dados de documentos popular.
 - [Os bancos de dados de família de coluna](https://msdn.microsoft.com/library/dn313285.aspx#sec9) são armazenamentos de data de chave/valor que permitem estruturar o armazenamento de dados em coleções de colunas relacionadas chamadas de famílias de colunas. Por exemplo, um banco de dados censo pode ter um grupo de colunas para o nome de uma pessoa (primeiro, meio, último), um grupo para o endereço da pessoa e um grupo para as informações de perfil da pessoa (DOB, gênero, etc.). O banco de dados pode armazenar cada família de colunas em uma partição separada, mantendo todos os dados de uma pessoa relacionada à mesma chave. Você pode ler todas as informações de perfil sem precisar ler todas as informações de nome e endereço também. [Cassandra](http://cassandra.apache.org/) é um banco de dados popular da família de colunas.
-- [Bancos](https://msdn.microsoft.com/library/dn313285.aspx#sec10) de dados de grafo armazenam informações como uma coleção de objetos e relações. A finalidade de um banco de dados de grafo é permitir que um aplicativo execute com eficiência consultas que atravessam a rede de objetos e as relações entre eles. Por exemplo, os objetos podem ser funcionários em um banco de dados de recursos humanos e talvez você queira facilitar consultas como "localizar todos os funcionários que trabalham direta ou indiretamente para Scott". [Neo4j](http://www.neo4j.org/) é um banco de dados de grafo popular.
+- [Bancos](https://msdn.microsoft.com/library/dn313285.aspx#sec10) de dados de grafo armazenam informações como uma coleção de objetos e relações. A finalidade de um banco de dados de grafo é permitir que um aplicativo execute com eficiência consultas que atravessam a rede de objetos e as relações entre eles. Por exemplo, os objetos podem ser funcionários em um banco de dados de recursos humanos e talvez você deseje facilitar consultas como "encontrar todos os funcionários que trabalham direta ou indiretamente para Scott". [Neo4j](http://www.neo4j.org/) é um banco de dados de grafo popular.
 
 Em comparação com bancos de dados relacionais, as opções de NoSQL oferecem escalabilidade muito maior e economia de custo para armazenamento e análise de dados não estruturados. A desvantagem é que eles não fornecem a capacidade de consulta avançada e recursos de integridade de dados robustos de bancos de dados relacionais. O NoSQL funcionaria bem para dados de log do IIS, o que envolve alto volume, sem necessidade de consultas de junção. O NoSQL não funcionaria tão bem para transações bancárias, o que requer integridade de dados absoluta e envolve muitas relações com outros dados relacionados à conta.
 
@@ -66,7 +66,7 @@ No Azure, o [HDInsight](https://azure.microsoft.com/services/hdinsight/) permite
     ![Logs no armazenamento de BLOBs](data-storage-options/_static/image2.png)
 - À medida que o aplicativo obtém o tráfego, os logs do IIS do servidor Web são gravados no armazenamento de BLOBs.
 
-    ![Logs do servidor Web](data-storage-options/_static/image3.png)
+    ![Logs do Web Server](data-storage-options/_static/image3.png)
 - No portal, clique em **novo** - **serviços de dados** - **HDInsight** - **criação rápida**e especifique um nome de cluster hdinsight, o tamanho do cluster (número de nós de dados do cluster hdinsight) e um nome de usuário e senha para o cluster HDInsight.
 
     ![HDInsight](data-storage-options/_static/image4.png)
@@ -86,7 +86,7 @@ Conforme explicado no [capítulo automatizar tudo](automate-everything.md), a ma
 - Carregue os executáveis de trabalho MapReduce (arquivos. jar ou. exe) no cluster HDInsight.
 - Envie um MapReduce que armazene os dados de saída no armazenamento de BLOBs.
 - Aguarde a conclusão do trabalho.
-- Exclua o cluster HDInsight.
+- Excluir o cluster do HDInsight.
 - Acesse a saída do armazenamento de BLOBs.
 
 Ao executar um script que faz tudo isso, você minimiza a quantidade de tempo que o cluster HDInsight é provisionado, o que minimiza os custos.
@@ -99,8 +99,8 @@ As opções de armazenamento de dados listadas anteriormente incluem PaaS (plata
 As soluções de dados de PaaS que o Azure oferece incluem:
 
 - Banco de dados SQL do Azure (anteriormente conhecido como SQL Azure). Um banco de dados relacional de nuvem baseado em SQL Server.
-- Armazenamento de tabelas do Azure. Um banco de dados NoSQL de chave/valor.
-- Armazenamento de BLOBs do Azure. Armazenamento de arquivos na nuvem.
+- Armazenamento de Tabelas do Azure. Um banco de dados NoSQL de chave/valor.
+- Armazenamento de Blobs do Azure. Armazenamento de arquivos na nuvem.
 
 Para IaaS, você pode executar qualquer coisa que possa carregar em uma VM, por exemplo:
 
@@ -146,7 +146,7 @@ Aqui estão algumas perguntas a considerar quando você está escolhendo uma abo
 | Operações | -Quão fácil é a plataforma para implantar e executar no Azure? PaaS? IaaS? Linux? O armazenamento de tabela e o banco de dados SQL são fáceis de configurar no Azure. As plataformas que não são soluções de PaaS do Azure internas exigem mais esforço. |
 | Suporte a API | -É uma API disponível que torna mais fácil trabalhar com a plataforma? Para o serviço tabela do Azure, há um SDK com uma API .NET que dá suporte ao modelo de programação assíncrona do .NET 4,5. Se você estiver escrevendo um aplicativo .NET, será muito mais fácil escrever e testar o código para o serviço tabela do Azure em comparação com outra plataforma de armazenamento de dados de coluna de chave/valor que não tem nenhuma API ou uma menos abrangente. |
 | Integridade transacional e consistência de dados | -É essencial que a plataforma suporte as transações para garantir a consistência dos dados? Para acompanhar os emails em massa enviados, o desempenho e o custo de armazenamento de dados baixo podem ser mais importantes do que o suporte automático para transações ou integridade referencial na plataforma de dados, tornando o serviço tabela do Azure uma boa escolha. Para rastrear saldos de conta bancária ou ordens de compra, uma plataforma de banco de dados relacional que fornece garantias transacionais fortes seria uma opção melhor. |
-| Continuidade dos negócios | -Quão fácil é o backup, a restauração e a recuperação de desastre? Os dados de produção mais cedo ou posteriores serão corrompidos e você precisará de uma função Undo. Os bancos de dados relacionais geralmente têm recursos de restauração mais refinados, como a capacidade de restaurar para um ponto no tempo. Entender quais recursos de restauração estão disponíveis em cada plataforma que você está considerando é um fator importante a ser considerado. |
+| Continuidade de negócios | -Quão fácil é o backup, a restauração e a recuperação de desastre? Os dados de produção mais cedo ou posteriores serão corrompidos e você precisará de uma função Undo. Os bancos de dados relacionais geralmente têm recursos de restauração mais refinados, como a capacidade de restaurar para um ponto no tempo. Entender quais recursos de restauração estão disponíveis em cada plataforma que você está considerando é um fator importante a ser considerado. |
 | Custo | -Se mais de uma plataforma puder dar suporte à carga de trabalho de dados, como elas serão comparadas com custo? Por exemplo, se você usar ASP.NET Identity, poderá armazenar os dados de perfil do usuário no serviço tabela do Azure ou no banco de dados SQL do Azure. Se você não precisar das facilidades de consulta avançada do banco de dados SQL, poderá escolher as tabelas do Azure em parte porque ele custa muito menos para uma determinada quantidade de armazenamento. |
 
 O que geralmente recomendamos é saber a resposta às perguntas em cada uma dessas categorias antes de escolher suas soluções de armazenamento de dados.
@@ -168,7 +168,7 @@ Também é fácil criar bancos de dados usando o Portal.
 
 Clique em **New--Data Services** -- **SQL Database** -- **criação rápida**, insira um nome de banco de dados, escolha um servidor que você já tem em sua conta ou crie um novo e clique em **criar banco de dados SQL**.
 
-![Novo Banco de Dados SQL](data-storage-options/_static/image9.png)
+![Novo banco de dados SQL](data-storage-options/_static/image9.png)
 
 Aguarde alguns segundos e você tem um banco de dados no Azure pronto para uso.
 
@@ -243,7 +243,7 @@ Como alternativa, você pode executar o mesmo SQL Server na nuvem que você exec
 
 Aqui estão algumas diretrizes sobre como escolher entre os dois modelos.
 
-| Banco de dados SQL do Azure (PaaS) | SQL Server em uma IaaS (máquina virtual) |
+| Banco de Dados SQL do Azure (PaaS) | SQL Server em uma IaaS (máquina virtual) |
 | --- | --- |
 | **Prós** – você não precisa criar ou gerenciar VMS, atualizar ou aplicar patch para o sistema operacional ou SQL; O Azure faz isso para você. -Alta disponibilidade interna, com um SLA de nível de banco de dados. -TCO (custo total de propriedade) baixo porque você paga apenas pelo que usar (nenhuma licença é necessária). -Bom para lidar com grandes números de bancos de dados menores (&lt;= 500 GB cada). -Fácil criar novos bancos de dados dinamicamente para habilitar a expansão. | ***Prós*** – recursos compatíveis com SQL Server locais. -Pode implementar SQL Server [alta disponibilidade por meio do AlwaysOn](https://www.microsoft.com/sqlserver/solutions-technologies/mission-critical-operations/high-availability.aspx) em duas VMS, com SLA de nível de VM. -Você tem controle total sobre como o SQL é gerenciado. -Pode reutilizar as licenças do SQL que você já possui ou pagar por hora para uma. -Bom para lidar com menos de (1 TB +) bancos de dados maiores. |
 | **Contras** -algumas lacunas de recursos em comparação com SQL Server locais (falta de [integração CLR](https://technet.microsoft.com/library/ms131102.aspx), [TDE](https://technet.microsoft.com/library/bb934049.aspx), [suporte à compactação](https://technet.microsoft.com/library/cc280449.aspx), [SQL Server Reporting Services](https://technet.microsoft.com/library/ms159106.aspx), etc.)-limite de tamanho do banco de dados de 500GB. | ***Contras*** -atualizações/patches (so e SQL) são sua criação de responsabilidade e o gerenciamento de bancos de dados são a sua responsabilidade-IOPS de disco (operações de entrada/saída por segundo) limitadas a cerca de 8000 (por meio de 16 unidades de dados). |
@@ -262,7 +262,7 @@ A computação em nuvem torna prática a combinação e a correspondência das a
 
 ## <a name="resources"></a>Recursos
 
-Para obter mais informações, consulte os seguintes recursos.
+Para obter mais informações, consulte os recursos a seguir.
 
 Escolhendo uma plataforma de banco de dados:
 

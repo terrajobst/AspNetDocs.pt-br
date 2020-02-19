@@ -8,16 +8,16 @@ ms.date: 10/17/2013
 ms.assetid: cc764f3b-6921-486a-8f44-c6ccd1249acd
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: 80000b366203eff4b9524b7a5995832753b9eed3
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: 194a8a7398e163f0c37164a8724f98b16444984b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519044"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457213"
 ---
 # <a name="adding-a-controller"></a>Adicionando um controlador
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 [!INCLUDE [Tutorial Note](index.md)]
 
@@ -65,7 +65,7 @@ Quando você executa o aplicativo e não fornece nenhum segmento de URL, ele usa
 
 A primeira parte da URL determina a classe do controlador a ser executada. Portanto, */HelloWorld* é mapeado para a classe `HelloWorldController`. A segunda parte da URL determina o método de ação na classe a ser executada. Portanto, */HelloWorld/index* faria com que o método de `Index` da classe `HelloWorldController` fosse executado. Observe que precisamos apenas navegar até */HelloWorld* e o método `Index` foi usado por padrão. Isso ocorre porque um método chamado `Index` é o método padrão que será chamado em um controlador se um não for especificado explicitamente. A terceira parte do segmento de URL (`Parameters`) refere-se aos dados de rota. Veremos os dados de rota mais adiante neste tutorial.
 
-Navegue para `http://localhost:xxxx/HelloWorld/Welcome`. O método `Welcome` é executado e retorna a cadeia de caracteres &quot;este é o método de ação de boas-vindas...&quot;. O mapeamento do MVC padrão é `/[Controller]/[ActionName]/[Parameters]`. Para essa URL, o controlador é `HelloWorld` e `Welcome` é o método de ação. Você ainda não usou a parte `[Parameters]` da URL.
+Navegue até `http://localhost:xxxx/HelloWorld/Welcome`. O método `Welcome` é executado e retorna a cadeia de caracteres &quot;este é o método de ação de boas-vindas...&quot;. O mapeamento do MVC padrão é `/[Controller]/[ActionName]/[Parameters]`. Para essa URL, o controlador é `HelloWorld` e `Welcome` é o método de ação. Você ainda não usou a parte `[Parameters]` da URL.
 
 ![](adding-a-controller/_static/image6.png)
 
@@ -80,7 +80,7 @@ Vamos modificar o exemplo ligeiramente para que você possa passar algumas infor
 
 ![](adding-a-controller/_static/image7.png)
 
-No exemplo acima, o segmento de URL (`Parameters`) não é usado, os parâmetros `name` e `numTimes` são passados como [cadeias de caracteres de consulta](http://en.wikipedia.org/wiki/Query_string). O caractere curinga ? (ponto de interrogação) na URL acima é um separador e as cadeias de consulta seguem. O caractere &amp; separa as cadeias de consulta.
+No exemplo acima, o segmento de URL (`Parameters`) não é usado, os parâmetros `name` e `numTimes` são passados como [cadeias de caracteres de consulta](http://en.wikipedia.org/wiki/Query_string). O ? (ponto de interrogação) na URL acima é um separador e as cadeias de consulta seguem. O caractere &amp; separa as cadeias de consulta.
 
 Substitua o método Welcome pelo seguinte código:
 

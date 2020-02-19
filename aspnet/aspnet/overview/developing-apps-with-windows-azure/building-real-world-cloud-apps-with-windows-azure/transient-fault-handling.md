@@ -8,16 +8,16 @@ ms.date: 11/03/2015
 ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
-ms.openlocfilehash: fc281e3d8f7c9edd4d98b029a67e58113132a8b3
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: e798cb83cfb97db63fef6dc38c8f62804461d01b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583651"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456849"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Tratamento de falhas transitórias (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -91,14 +91,14 @@ Documentação
 - [Entity Framework-resiliência de conexão/lógica de repetição](https://msdn.microsoft.com/data/dn456835). Como usar e personalizar o recurso de tratamento de falhas transitórias do Entity Framework 6.
 - [Resiliência de conexão e interceptação de comando com o Entity Framework em um aplicativo MVC ASP.net](../../../../mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md). O quarto de uma série de tutoriais de nove partes, mostra como configurar o recurso de resiliência de conexão do EF 6 para o banco de dados SQL.
 
-Vídeos
+vídeos
 
 - [FailSafe: criando serviços de nuvem escalonáveis e resilientes](https://channel9.msdn.com/Series/FailSafe). Série de nove partes de Ulrich Homann, Marc Mercuri e de Mark Simms. Apresenta conceitos de alto nível e princípios arquitetônicos de uma maneira muito acessível e interessante, com histórias extraídas da experiência CAT (equipe de consultoria para clientes) da Microsoft com os clientes reais. Consulte a discussão de disjuntores de circuito no episódio 3 a partir de 40:55.
 - [Criando Big: lições aprendidas de clientes do Azure-parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms fala sobre o design de falhas, tratamento de falhas transitórias e instrumentação de tudo.
 
 Exemplos de código
 
-- [Conceitos básicos do serviço de nuvem no Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicativo de exemplo criado pelo Microsoft Azure equipe de consultoria ao cliente que demonstra como usar o TFH ( [bloco de tratamento de falhas transitórias) da Enterprise Library](http://nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) . Para obter mais informações, consulte [camada de acesso a dados dos conceitos básicos do serviço de nuvem – tratamento de falhas transitórias](https://social.technet.microsoft.com/wiki/contents/articles/18665.cloud-service-fundamentals-data-access-layer-transient-fault-handling.aspx). TFH é recomendado para acesso ao banco de dados usando o ADO.NET diretamente (sem usar Entity Framework).
+- [Conceitos básicos do serviço de nuvem no Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicativo de exemplo criado pelo Microsoft Azure equipe de consultoria ao cliente que demonstra como usar o TFH ( [bloco de tratamento de falhas transitórias) da Enterprise Library](http://nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) . Para saber mais, consulte [Camada de acesso a dados dos conceitos básicos do serviço de nuvem — tratamento de falhas transitórias](https://social.technet.microsoft.com/wiki/contents/articles/18665.cloud-service-fundamentals-data-access-layer-transient-fault-handling.aspx). TFH é recomendado para acesso ao banco de dados usando o ADO.NET diretamente (sem usar Entity Framework).
 
 > [!div class="step-by-step"]
 > [Anterior](monitoring-and-telemetry.md)

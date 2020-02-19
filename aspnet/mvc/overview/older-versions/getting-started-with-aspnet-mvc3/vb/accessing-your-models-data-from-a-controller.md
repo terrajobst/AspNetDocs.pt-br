@@ -1,67 +1,67 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/accessing-your-models-data-from-a-controller
-title: Acessando dados do seu modelo de um controlador (VB) | Microsoft Docs
+title: Acessando os dados do modelo de um controlador (VB) | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é...
+description: Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é...
 ms.author: riande
 ms.date: 01/12/2011
 ms.assetid: cad00de1-3c68-4ff4-a436-54236d449459
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
-ms.openlocfilehash: beaad3440a9f333ab22f29d0c6683d71e8962fc2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: 37f45d8f12e3ab5c485718bcf2c59934ad272118
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130051"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457911"
 ---
 # <a name="accessing-your-models-data-from-a-controller-vb"></a>Acessar dados de seu modelo por meio de um controlador (VB)
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se que você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no link a seguir: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar individualmente os pré-requisitos usando os links a seguir:
+> Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no seguinte link: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar os pré-requisitos individualmente usando os seguintes links:
 > 
-> - [Pré-requisitos de Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
+> - [Pré-requisitos do Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
 > - [Atualização de ferramentas do ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-> - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(tempo de execução de ferramentas de suporte +)
+> - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(suporte + ferramentas de tempo de execução)
 > 
-> Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+> Se você estiver usando o Visual Studio 2010 em vez do Visual Web Developer 2010, instale os pré-requisitos clicando no seguinte link: [pré-requisitos do Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o c#, alterne para o [c# versão](../cs/accessing-your-models-data-from-a-controller.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.net](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se preferir C#, alterne para a [ C# versão](../cs/accessing-your-models-data-from-a-controller.md) deste tutorial.
 
-Nesta seção, você criará um novo `MoviesController` de classe e escrever um código que recupera os dados do filme e o exibe no navegador usando um modelo de exibição. Certifique-se de criar seu aplicativo antes de continuar.
+Nesta seção, você criará uma nova classe de `MoviesController` e escreverá o código que recupera os dados do filme e os exibe no navegador usando um modelo de exibição. Certifique-se de compilar seu aplicativo antes de continuar.
 
-Clique com botão direito do *controladores* pasta e crie um novo `MoviesController` controlador. Selecione as seguintes opções:
+Clique com o botão direito do mouse na pasta *controladores* e crie um novo controlador de `MoviesController`. Selecione as seguintes opções:
 
-- Nome do controlador: **MoviesController**. (Esse é o padrão).
-- Modelo: **Controlador com ações de leitura/gravação e modos de exibição, usando o Entity Framework**.
-- Classe de modelo: **Movie (MvcMovie.Models)** .
-- Classe de contexto de dados: **MovieDBContext (MvcMovie.Models)** .
-- Modos de exibição: **O Razor (CSHTML)** . (O padrão).
+- Nome do controlador: **MoviesController**. (Esse é o padrão.)
+- Modelo: **controlador com ações de leitura/gravação e exibições, usando Entity Framework**.
+- Classe de modelo: **filme (MvcMovie. Models)** .
+- Classe de contexto de dados: **MovieDBContext (MvcMovie. Models)** .
+- Exibições: **Razor (cshtml)** . (O padrão.)
 
 [![5addMovieController](accessing-your-models-data-from-a-controller/_static/image2.png)](accessing-your-models-data-from-a-controller/_static/image1.png)
 
 Clique em **Adicionar**. O Visual Web Developer cria os seguintes arquivos e pastas:
 
-- *Um MoviesController.vb* arquivo do projeto *controladores* pasta.
-- Um *filmes* pasta do projeto *modos de exibição* pasta.
-- *Create.vbhtml, Delete.vbhtml, Details.vbhtml, Edit.vbhtml*, e *Index.vbhtml* no novo *exibições \ filmes* pasta.
+- *Um arquivo MoviesController. vb* na pasta *controladores* do projeto.
+- Uma pasta de *filmes* na pasta *views* do projeto.
+- *Crie. vbhtml, Delete. vbhtml, details. vbhtml, Edit. vbhtml*e *index. vbhtml* na nova pasta *Views\Movies*
 
 [![5_ScaffoldMovie](accessing-your-models-data-from-a-controller/_static/image4.png)](accessing-your-models-data-from-a-controller/_static/image3.png)
 
-O mecanismo de scaffolding do ASP.NET MVC 3 criado automaticamente o CRUD (criar, ler, atualizar e excluir) os métodos de ação e modos de exibição para você. Agora você tem um aplicativo web totalmente funcional que permite que você criar, listar, editar e excluir entradas de filme.
+O mecanismo ASP.NET MVC 3 scaffolding criou automaticamente os métodos de ação CRUD (criar, ler, atualizar e excluir) para você. Agora você tem um aplicativo Web totalmente funcional que permite criar, listar, editar e excluir entradas de filme.
 
-Execute o aplicativo e navegue até a `Movies` controlador por meio do acréscimo */Movies* para a URL na barra de endereços do navegador. Porque o aplicativo é contar com o roteamento padrão (definido na *global. asax* arquivo), a solicitação do navegador `http://localhost:xxxxx/Movies` é roteado para o padrão `Index` método de ação do `Movies` controlador. Em outras palavras, a solicitação do navegador `http://localhost:xxxxx/Movies` é praticamente o mesmo que a solicitação do navegador `http://localhost:xxxxx/Movies/Index`. O resultado é uma lista vazia de filmes, porque você não adicionou nenhum.
+Execute o aplicativo e navegue até o controlador de `Movies` anexando */Movies* à URL na barra de endereços do seu navegador. Como o aplicativo está contando com o roteamento padrão (definido no arquivo *global. asax* ), a solicitação do navegador `http://localhost:xxxxx/Movies` é roteada para o método de ação `Index` padrão do controlador de `Movies`. Em outras palavras, a solicitação do navegador `http://localhost:xxxxx/Movies` é efetivamente a mesma que a solicitação do navegador `http://localhost:xxxxx/Movies/Index`. O resultado é uma lista vazia de filmes, pois você ainda não adicionou nenhum.
 
 ![](accessing-your-models-data-from-a-controller/_static/image5.png)
 
-## <a name="creating-a-movie"></a>Criação de um filme
+## <a name="creating-a-movie"></a>Criando um filme
 
-Selecione o link **Criar Novo**. Insira alguns detalhes sobre um filme e, em seguida, clique no **criar** botão.
+Selecione o link **Criar Novo**. Insira alguns detalhes sobre um filme e, em seguida, clique no botão **criar** .
 
 ![](accessing-your-models-data-from-a-controller/_static/image6.png)
 
-Clicar a **criar** botão faz com que o formulário seja enviado ao servidor, onde as informações do filme é salvo no banco de dados. Em seguida, você será redirecionado para o */Movies* URL, onde você pode ver o filme recém-criado na lista.
+Clicar no botão **criar** faz com que o formulário seja Postado no servidor, onde as informações do filme são salvas no banco de dados. Em seguida, você será redirecionado para a URL */Movies* , onde poderá ver o filme recém-criado na lista.
 
 [![IndexWhenHarryMet](accessing-your-models-data-from-a-controller/_static/image8.png)](accessing-your-models-data-from-a-controller/_static/image7.png)
 
@@ -69,70 +69,70 @@ Crie duas mais entradas de filme adicionais. Experimente os links **Editar**, **
 
 ## <a name="examining-the-generated-code"></a>Examinando o código gerado
 
-Abra o *Controllers\MoviesController.vb* do arquivo e examine o gerado `Index` método. Uma parte do controlador de filmes com o `Index` método é mostrado abaixo.
+Abra o arquivo *Controllers\MoviesController.vb* e examine o método `Index` gerado. Uma parte do controlador de filme com o método `Index` é mostrada abaixo.
 
 [!code-vb[Main](accessing-your-models-data-from-a-controller/samples/sample1.vb)]
 
-A seguinte linha do `MoviesController` classe cria uma instância de um contexto de banco de dados de filme, conforme descrito anteriormente. Você pode usar o contexto de banco de dados de filme para consultar, editar e excluir filmes.
+A linha a seguir da classe `MoviesController` instancia um contexto de banco de dados de filme, conforme descrito anteriormente. Você pode usar o contexto de banco de dados de filme para consultar, editar e excluir filmes.
 
 [!code-vb[Main](accessing-your-models-data-from-a-controller/samples/sample2.vb)]
 
-Uma solicitação para o `Movies` controlador retorna todas as entradas na `Movies` tabela do banco de dados do filme e, em seguida, passa os resultados para o `Index` modo de exibição.
+Uma solicitação para o controlador de `Movies` retorna todas as entradas na tabela `Movies` do banco de dados de filmes e, em seguida, passa os resultados para a exibição `Index`.
 
-## <a name="strongly-typed-models-and-the-model-keyword"></a>Modelos fortemente tipados e a @model palavra-chave
+## <a name="strongly-typed-models-and-the-model-keyword"></a>Modelos fortemente tipados e a palavra-chave @model
 
-Neste tutorial, você viu como um controlador pode passar dados ou objetos para um modelo de exibição usando o `ViewBag` objeto. O `ViewBag` é um objeto dinâmico que fornece uma maneira conveniente de associação tardia para passar informações para um modo de exibição.
+Anteriormente neste tutorial, você viu como um controlador pode passar dados ou objetos para um modelo de exibição usando o objeto `ViewBag`. O `ViewBag` é um objeto dinâmico que fornece uma maneira conveniente de ligação tardia para passar informações para uma exibição.
 
-ASP.NET MVC também fornece a capacidade de passar fortemente tipados dados ou objetos para um modelo de exibição. Isso fortemente tipado a abordagem permite um melhor tempo de compilação de seu código e o IntelliSense mais sofisticado no editor do Visual Web Developer. Estamos usando essa abordagem com o `MoviesController` classe e *Index.vbhtml* modelo de exibição.
+O ASP.NET MVC também fornece a capacidade de passar objetos ou dados com rigidez de tipos para um modelo de exibição. Essa abordagem fortemente tipada permite uma melhor verificação de tempo de compilação do seu código e do IntelliSense mais rico no editor do Visual Web Developer. Estamos usando essa abordagem com a classe `MoviesController` e o modelo de exibição *index. vbhtml* .
 
-Observe como o código cria uma [ `List` ](https://msdn.microsoft.com/library/6sh2ey19.aspx) objeto quando ele chama o `View` método auxiliar no `Index` método de ação. Em seguida, o código passa esta `Movies` lista do controlador para o modo de exibição:
+Observe como o código cria um objeto [`List`](https://msdn.microsoft.com/library/6sh2ey19.aspx) ao chamar o método auxiliar `View` no método de ação `Index`. Em seguida, o código passa essa lista de `Movies` do controlador para a exibição:
 
 [!code-vb[Main](accessing-your-models-data-from-a-controller/samples/sample3.vb)]
 
-Ao incluir um `@ModelType` instrução na parte superior do arquivo de modelo de exibição, você pode especificar o tipo de objeto que espera que o modo de exibição. Quando você criou o controlador de filme, o Visual Web Developer incluiu automaticamente a seguinte `@model` instrução na parte superior de *Index.vbhtml* arquivo:
+Ao incluir uma instrução `@ModelType` na parte superior do arquivo de modelo de exibição, você pode especificar o tipo de objeto esperado pela exibição. Quando você criou o controlador de filme, o Visual Web Developer inclui automaticamente a seguinte instrução de `@model` na parte superior do arquivo *index. vbhtml* :
 
 [!code-vbhtml[Main](accessing-your-models-data-from-a-controller/samples/sample4.vbhtml)]
 
-Isso `@ModelType` diretiva permite que você acesse a lista de filmes que o controlador passou para o modo de exibição, usando um `Model` objeto fortemente tipado. Por exemplo, nos *Index.vbhtml* modelo, o código percorre os filmes fazendo uma `foreach` instrução fortemente tipado `Model` objeto:
+Essa diretiva de `@ModelType` permite que você acesse a lista de filmes que o controlador passou para a exibição usando um objeto `Model` que é fortemente tipado. Por exemplo, no modelo *index. vbhtml* , o código percorre os filmes fazendo uma instrução `foreach` sobre o objeto `Model` fortemente tipado:
 
 [!code-vbhtml[Main](accessing-your-models-data-from-a-controller/samples/sample5.vbhtml)]
 
-Porque o `Model` objeto é fortemente tipado (como uma `IEnumerable<Movie>` objeto), cada `item` objeto no loop é tipado como `Movie`. Entre outros benefícios, isso significa que você obtenha a verificação de tempo de compilação do código e total suporte IntelliSense no editor de código:
+Como o objeto `Model` é fortemente tipado (como um objeto `IEnumerable<Movie>`), cada objeto `item` no loop é digitado como `Movie`. Entre outros benefícios, isso significa que você obtém a verificação em tempo de compilação do código e o suporte total ao IntelliSense no editor de códigos:
 
 [![5_Intellisense](accessing-your-models-data-from-a-controller/_static/image10.png)](accessing-your-models-data-from-a-controller/_static/image9.png)
 
-## <a name="working-with-sql-server-compact"></a>Trabalhando com o SQL Server Compact
+## <a name="working-with-sql-server-compact"></a>Trabalhando com SQL Server Compact
 
-Entity Framework Code First detectou que a cadeia de caracteres de conexão de banco de dados que foi fornecida apontado para um `Movies` banco de dados que ainda não existia, portanto, o código primeiro criou o banco de dados automaticamente. Você pode verificar se ele é foi criado examinando os *App\_dados* pasta. Se você não vir as *Movies.sdf* arquivo, clique no **Mostrar todos os arquivos** botão no **Gerenciador de soluções** barra de ferramentas, clique no **atualizar** botão e, em seguida, expanda o *App\_dados* pasta.
+Entity Framework Code First detectou que a cadeia de conexão do banco de dados fornecida apontava para um banco de dados `Movies` que ainda não existia, portanto, Code First criou o banco de dados automaticamente. Você pode verificar se ele foi criado examinando a pasta de *dados de\_do aplicativo* . Se você não vir o arquivo *Movies. sdf* , clique no botão **Mostrar todos os arquivos** na barra de ferramentas **Gerenciador de soluções** , clique no botão **Atualizar** e expanda a pasta *\_dados do aplicativo* .
 
 [![SDF_in_SolnExp](accessing-your-models-data-from-a-controller/_static/image12.png)](accessing-your-models-data-from-a-controller/_static/image11.png)
 
-Clique duas vezes em *Movies.sdf* para abrir **Gerenciador de servidores**. Em seguida, expanda o **tabelas** pasta para ver as tabelas que foram criadas no banco de dados.
+Clique duas vezes em *Movies. sdf* para abrir **Gerenciador de servidores**. Em seguida, expanda a pasta **tabelas** para ver as tabelas que foram criadas no banco de dados.
 
 > [!NOTE]
-> Se você receber um erro quando você clica duas vezes *Movies.sdf*, verifique se você instalou **Visual Studio 2010 SP1 Tools para SQL Server Compact 4.0**. (Para obter links para o software, consulte a lista de pré-requisitos na parte 1 desta série de tutoriais). Se você instalar a versão, agora, você terá que fechar e reabrir o Visual Web Developer.
+> Se você receber um erro ao clicar duas vezes em *Movies. sdf*, verifique se instalou as **Ferramentas do Visual Studio 2010 SP1 para SQL Server Compact 4,0**. (Para obter links para o software, consulte a lista de pré-requisitos na parte 1 desta série de tutoriais.) Se você instalar a versão agora, precisará fechar e abrir novamente o Visual Web Developer.
 
 [![DB_explorer](accessing-your-models-data-from-a-controller/_static/image14.png)](accessing-your-models-data-from-a-controller/_static/image13.png)
 
-Há duas tabelas, uma para o `Movie` conjunto de entidades e, em seguida, o `EdmMetadata` tabela. O `EdmMetadata` pelo Entity Framework, a tabela é usada para determinar quando o modelo e o banco de dados estão fora de sincronia.
+Há duas tabelas, uma para a entidade `Movie` definida e, em seguida, a tabela `EdmMetadata`. A tabela `EdmMetadata` é usada pelo Entity Framework para determinar quando o modelo e o banco de dados estão fora de sincronia.
 
-Clique com botão direito do `Movies` de tabela e selecione **Mostrar dados da tabela** para ver os dados que você criou.
+Clique com o botão direito do mouse na tabela `Movies` e selecione **Mostrar dados da tabela** para ver os dados que você criou.
 
-[![MoviesTable](accessing-your-models-data-from-a-controller/_static/image16.png)](accessing-your-models-data-from-a-controller/_static/image15.png)
+[![Movietable](accessing-your-models-data-from-a-controller/_static/image16.png)](accessing-your-models-data-from-a-controller/_static/image15.png)
 
-Clique com botão direito do `Movies` de tabela e selecione **Editar esquema da tabela**.
+Clique com o botão direito do mouse na tabela `Movies` e selecione **Editar esquema de tabela**.
 
 [![EditTableSchema](accessing-your-models-data-from-a-controller/_static/image18.png)](accessing-your-models-data-from-a-controller/_static/image17.png)
 
 ![TableSchemaSM](accessing-your-models-data-from-a-controller/_static/image19.png)
 
-Observe como o esquema do `Movies` tabela mapeia para o `Movie` classe que você criou anteriormente. Entity Framework Code First criado automaticamente esse esquema para você com base em seu `Movie` classe.
+Observe como o esquema da tabela de `Movies` é mapeado para a classe `Movie` que você criou anteriormente. Entity Framework Code First criado automaticamente esse esquema para você com base em sua classe de `Movie`.
 
-Quando tiver terminado, feche a conexão. (Se você não fechar a conexão, você poderá receber um erro na próxima vez que você executar o projeto).
+Quando tiver terminado, feche a conexão. (Se você não fechar a conexão, poderá receber um erro na próxima vez que executar o projeto).
 
 [![CloseConnection](accessing-your-models-data-from-a-controller/_static/image21.png)](accessing-your-models-data-from-a-controller/_static/image20.png)
 
-Agora você tem o banco de dados e uma página de lista simples para exibir o conteúdo dele. No próximo tutorial, vamos examinar o restante do código gerado por scaffolding e adicionar um `SearchIndex` método e um `SearchIndex` modo de exibição que permite pesquisar filmes neste banco de dados.
+Agora você tem o banco de dados e uma página de listagem simples para exibir o conteúdo dele. No próximo tutorial, examinaremos o restante do código com Scaffold e adicionaremos um método `SearchIndex` e uma exibição `SearchIndex` que permite pesquisar filmes nesse banco de dados.
 
 > [!div class="step-by-step"]
 > [Anterior](adding-a-model.md)

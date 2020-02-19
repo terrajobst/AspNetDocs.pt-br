@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
-ms.openlocfilehash: d5c8190d0b0c91bf9e42f6ef03adc5b07a65359a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: e741a753a36ebdaefbff8eee0b38911785c716ac
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582886"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457161"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizar tudo (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -49,13 +49,13 @@ Para o aplicativo corrigir ti, criamos alguns scripts do Windows PowerShell que 
 
 O primeiro script que veremos é chamado de *New-AzureWebsiteEnv. ps1*. Ele cria um ambiente do Azure no qual você pode implantar o aplicativo corrigir ti para teste. As principais tarefas que esse script executa são as seguintes:
 
-- Criar um aplicativo Web.
-- Crie uma conta de armazenamento. (Necessário para BLOBs e filas, como você verá em capítulos posteriores.)
+- Crie um aplicativo Web.
+- Criar uma conta de armazenamento. (Necessário para BLOBs e filas, como você verá em capítulos posteriores.)
 - Crie um servidor do banco de dados SQL e dois bancos de dados: um banco de dados de aplicativo e um banco de dados de associação.
 - Armazene as configurações no Azure que o aplicativo usará para acessar a conta de armazenamento e os bancos de dados.
 - Crie arquivos de configurações que serão usados para automatizar a implantação.
 
-### <a name="run-the-script"></a>Execute o script
+### <a name="run-the-script"></a>Executar o script
 
 > [!NOTE]
 > Esta parte do capítulo mostra exemplos de scripts e os comandos que você insere para executá-los. Esta é uma demonstração e não fornece tudo o que você precisa saber para executar os scripts. Para obter instruções passo a passo, consulte [o apêndice: o aplicativo de exemplo corrigir ti](the-fix-it-sample-application.md#deploybase).
@@ -254,8 +254,8 @@ No [próximo capítulo](source-control.md) , veremos o código-fonte e explicamo
 - [Script de fim de semana: introdução com o Azure e o PowerShell](https://blogs.technet.com/b/heyscriptingguy/archive/2013/06/22/weekend-scripter-getting-started-with-windows-azure-and-powershell.aspx). Em um blog dedicado ao Windows PowerShell, esta postagem fornece uma ótima introdução ao uso do PowerShell para funções de gerenciamento do Azure.
 - [Instale e configure a interface de linha de comando de plataforma cruzada do Azure](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest). Tutorial de introdução para uma estrutura de script do Azure que funciona em Mac e Linux, bem como em sistemas Windows.
 - [Seção de ferramentas de linha de comando do tópico baixar SDKs e ferramentas do Azure](https://azure.microsoft.com/downloads/). Página do portal para documentação e downloads relacionados a ferramentas de linha de comando para o Azure.
-- [Automatizando tudo com as bibliotecas de gerenciamento do Azure e o .net](http://www.hanselman.com/blog/PennyPinchingInTheCloudAutomatingEverythingWithTheWindowsAzureManagementLibrariesAndNET.aspx). Scott Hanselman apresenta a API de gerenciamento do .NET para o Azure.
-- [Usando scripts do Windows PowerShell para publicar em ambientes de desenvolvimento e teste](https://msdn.microsoft.com/library/azure/dn642480.aspx). Documentação do MSDN que explica como usar scripts de publicação que o Visual Studio gera automaticamente para projetos Web.
+- [Automatizando tudo com as bibliotecas de gerenciamento do Azure e o .NET](http://www.hanselman.com/blog/PennyPinchingInTheCloudAutomatingEverythingWithTheWindowsAzureManagementLibrariesAndNET.aspx). Scott Hanselman apresenta a API de gerenciamento do .NET para o Azure.
+- [Usando scripts do Windows PowerShell para publicar em ambientes de desenvolvimento e de teste](https://msdn.microsoft.com/library/azure/dn642480.aspx). Documentação do MSDN que explica como usar scripts de publicação que o Visual Studio gera automaticamente para projetos Web.
 - [PowerShell Tools for Visual Studio 2013](https://visualstudiogallery.msdn.microsoft.com/c9eb3ba8-0c59-4944-9a62-6eee37294597). Extensão do Visual Studio que adiciona suporte a idiomas para o Windows PowerShell no Visual Studio.
 
 > [!div class="step-by-step"]

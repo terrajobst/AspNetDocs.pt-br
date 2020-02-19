@@ -8,20 +8,20 @@ ms.date: 03/14/2013
 ms.assetid: aadc5fa4-8215-4fc7-afd5-bcd2ef879728
 msc.legacyurl: /mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages
 msc.type: authoredcontent
-ms.openlocfilehash: fb7e76101cbe6a874ddf5b3429ca2dc6d474334b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 1965063a9b613d0e2857cddcc2165f5fda64ec0c
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595760"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455523"
 ---
 # <a name="xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages"></a>Prevenção de XSRF/CSRF no ASP.NET MVC e em páginas da Web
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> A solicitação entre sites forjada (também conhecida como XSRF ou CSRF) é um ataque contra aplicativos hospedados na Web, no qual um site mal-intencionado pode influenciar a interação entre um navegador cliente e um site confiável para esse navegador. Esses ataques são possíveis porque os navegadores da Web enviarão automaticamente tokens de autenticação com cada solicitação a um site. O exemplo canônico é um cookie de autenticação, como ASP. Tíquete de autenticação de formulários da rede. No entanto, os sites que usam qualquer mecanismo de autenticação persistente (como a autenticação do Windows, básica e assim por diante) podem ser direcionados por esses ataques.
+> A solicitação entre sites forjada (também conhecida como XSRF ou CSRF) é um ataque contra aplicativos hospedados na Web, no qual um site mal-intencionado pode influenciar a interação entre um navegador cliente e um site confiável para esse navegador. Esses ataques são possíveis porque os navegadores da Web enviarão automaticamente tokens de autenticação com cada solicitação a um site. O exemplo canônico é um cookie de autenticação, como o tíquete de autenticação de formulários do ASP.NET. No entanto, os sites que usam qualquer mecanismo de autenticação persistente (como a autenticação do Windows, básica e assim por diante) podem ser direcionados por esses ataques.
 > 
-> Um ataque de XSRF é diferente de um ataque de phishing. Os ataques de phishing exigem a interação da vítima. Em um ataque de phishing, um site mal-intencionado imita o site de destino, e a vítima é induzida a fornecer informações confidenciais para o invasor. Em um ataque de XSRF, geralmente não há nenhuma interação necessária da vítima. Em vez disso, o invasor está confiando no navegador enviando automaticamente todos os cookies relevantes para o site de destino.
+> Um ataque XSRF é diferente de um ataque de phishing. Os ataques de phishing exigem a interação da vítima. Em um ataque de phishing, um site mal-intencionado imita o site de destino, e a vítima é induzida a fornecer informações confidenciais para o invasor. Em um ataque XSRF, normalmente não é necessária nenhuma interação da vítima. Em vez disso, o invasor está confiando no navegador enviando automaticamente todos os cookies relevantes para o site de destino.
 > 
 > Para obter mais informações, consulte [Open Web Application Security Project](https://www.owasp.org/index.php/Main_Page)(OWASP) [XSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)).
 
@@ -159,13 +159,13 @@ O método *Gettokens* usa como entrada um token de sessão de verificação de s
 
 O desenvolvedor pode configurar o sistema XSRF do aplicativo\_iniciar. A configuração é programática. As propriedades do tipo estático *AntiForgeryConfig* são descritas abaixo. A maioria dos usuários que usam declarações desejará definir a propriedade UniqueClaimTypeIdentifier.
 
-| **Property** | **Descrição** |
+| **Propriedade** | **Descrição** |
 | --- | --- |
-| **AdditionalDataProvider** | Um [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) que fornece dados adicionais durante a geração de token e consome dados adicionais durante a validação do token. O valor padrão é *nulo*. Para obter mais informações, consulte a seção [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) . |
-| **CookieName** | Uma cadeia de caracteres que fornece o nome do cookie HTTP que é usado para armazenar o token de sessão XSRF. Se esse valor não for definido, um nome será gerado automaticamente com base no caminho virtual implantado do aplicativo. O valor padrão é *nulo*. |
+| **AdditionalDataProvider** | Um [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) que fornece dados adicionais durante a geração de token e consome dados adicionais durante a validação do token. O valor padrão é *null*. Para obter mais informações, consulte a seção [IAntiForgeryAdditionalDataProvider](https://msdn.microsoft.com/library/system.web.helpers.iantiforgeryadditionaldataprovider(v=vs.111).aspx) . |
+| **CookieName** | Uma cadeia de caracteres que fornece o nome do cookie HTTP que é usado para armazenar o token de sessão XSRF. Se esse valor não for definido, um nome será gerado automaticamente com base no caminho virtual implantado do aplicativo. O valor padrão é *null*. |
 | **RequireSsl** | Um booliano que determina se os tokens XSRF precisam ser enviados por um canal protegido por SSL. Se esse valor for *true*, todos os cookies gerados automaticamente terão o sinalizador "Secure" definido, e as APIs XSRF serão lançadas se chamadas de dentro de uma solicitação que não é enviada via SSL. O valor padrão é *false*. |
-| **SuppressIdentityHeuristicChecks** | Um booliano que determina se o sistema XSRF deve desativar seu suporte para identidades baseadas em declarações. Se esse valor for *true*, o sistema presumirá que *IIdentity.Name* é apropriado para uso como um identificador exclusivo por usuário e não tentará se *IClaimsIdentity* ou *ClClaimsIdentity* de casos especiais, conforme descrito no [WIF/ACS/ seção de autenticação baseada em declarações](#_WIF_ACS) . O valor padrão é `false`. |
-| **UniqueClaimTypeIdentifier** | Uma cadeia de caracteres que indica qual tipo de declaração é apropriado para uso como um identificador por usuário exclusivo. Se esse valor for definido e o *IIdentity* atual for baseado em declarações, o sistema tentará extrair uma declaração do tipo especificado por *UniqueClaimTypeIdentifier*e o valor correspondente será usado no lugar do nome do usuário quando gerando o token do campo. Se o tipo de declaração não for encontrado, o sistema falhará na solicitação. O valor padrão é *NULL*, que indica que o sistema deve usar a tupla (provedor de identidade, identificador de nome), conforme descrito anteriormente no lugar do nome de usuário. |
+| **SuppressIdentityHeuristicChecks** | Um booliano que determina se o sistema XSRF deve desativar seu suporte para identidades baseadas em declarações. Se esse valor for *true*, o sistema presumirá que *IIdentity.Name* é apropriado para uso como um identificador exclusivo por usuário e não tentará se *IClaimsIdentity* ou *ClClaimsIdentity* de caso especial, conforme descrito na seção [WIF/ACS/autenticação baseada em declarações](#_WIF_ACS) . O valor padrão é `false`. |
+| **UniqueClaimTypeIdentifier** | Uma cadeia de caracteres que indica qual tipo de declaração é apropriado para uso como um identificador por usuário exclusivo. Se esse valor for definido e o *IIdentity* atual for baseado em declarações, o sistema tentará extrair uma declaração do tipo especificado por *UniqueClaimTypeIdentifier*e o valor correspondente será usado no lugar do nome do usuário ao gerar o token do campo. Se o tipo de declaração não for encontrado, o sistema falhará na solicitação. O valor padrão é *NULL*, que indica que o sistema deve usar a tupla (provedor de identidade, identificador de nome), conforme descrito anteriormente no lugar do nome de usuário. |
 
 <a id="_IAntiForgeryAdditionalDataProvider"></a>
 

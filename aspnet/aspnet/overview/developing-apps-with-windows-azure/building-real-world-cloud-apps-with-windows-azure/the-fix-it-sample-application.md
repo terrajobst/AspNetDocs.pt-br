@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
-ms.openlocfilehash: e6fda47babd3c2505315f42667c45f09482218c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 896196bdb6a6b0d12a6c798ead510e37dd38a9fc
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74583740"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456875"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apêndice: o aplicativo de exemplo corrigir a ti (compilando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de correção de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4)
 
@@ -46,7 +46,7 @@ A lista a seguir inclui problemas que devem ser resolvidos em um aplicativo de p
 - Use HTTPS para páginas de entrada e cookies de autenticação.
 - Especifique um limite de tempo para os cookies de autenticação.
 
-### <a name="input-validation"></a>Validação de entrada
+### <a name="input-validation"></a>Validação da entrada
 
 Em geral, um aplicativo de produção faria mais validação de entrada do que o aplicativo corrigir ti. Por exemplo, o tamanho do arquivo de imagem/tamanho da imagem permitido para carregamento deve ser limitado.
 
@@ -215,7 +215,7 @@ Há duas maneiras de executar o aplicativo corrigir ti:
 <a id="runbase"></a>
 ### <a name="run-the-base-application"></a>Executar o aplicativo base
 
-1. Instale o [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
+1. Instalar o [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 2. Instale o [SDK do Azure para .net para Visual Studio](https://azure.microsoft.com/downloads/).
 3. Baixe o arquivo. zip da [Galeria de códigos do MSDN](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4).
 4. No explorador de arquivos, clique com o botão direito do mouse no arquivo. zip e clique em Propriedades e, em seguida, na janela Propriedades clique em desbloquear.
@@ -250,7 +250,7 @@ Há duas maneiras de executar o aplicativo corrigir ti:
    4. Selecione **vários projetos de inicialização**.
    5. Na lista suspensa de **ações** em MyFixIt e MyFixItCloudService, selecione **Iniciar**.
    6. Clique em **OK**.
-   7. Pressione **F5** para executar ambos os projetos.
+   7. Pressione **F5** para executar os dois projetos.
 
       Quando você executa o projeto MyFixItCloudService, o Visual Studio inicia o emulador de computação do Azure. Dependendo da configuração do firewall, talvez seja necessário permitir o emulador por meio do firewall.
 
@@ -263,7 +263,7 @@ Se você quiser executar o no Azure sem usar filas e tiver feito as alterações
 
 Estas instruções pressupõem que você já tenha baixado e executado a solução corrigir ti localmente e que tenha uma conta do Azure ou tenha uma assinatura do Azure que você está autorizado a gerenciar.
 
-1. Instale o console do **Azure PowerShell** . Para obter instruções, consulte [como instalar e configurar o Azure PowerShell](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
+1. Instale o console do **Azure PowerShell** . Para saber mais, confira [Como instalar e configurar o PowerShell do Azure](https://docs.microsoft.com/powershell/azure/overview?view=azurermps-4.3.1).
 
     Este console personalizado está configurado para funcionar com sua assinatura do Azure. O módulo do Azure é instalado no diretório *arquivos de programas* e é importado automaticamente em cada uso do console do Azure PowerShell.
 

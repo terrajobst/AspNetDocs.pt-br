@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
-ms.openlocfilehash: 7e32f444dc38132296cffd45ac658f5abf51f314
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 1ca93cce22487295a24aae95437b3e69dfc5b504
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585277"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457135"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Logon único (compilando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -84,7 +84,7 @@ Você pode criar um novo usuário que existe somente nesse diretório ou pode re
 
 Você pode atribuir o usuário a uma função.
 
-![Perfil do usuário](single-sign-on/_static/image11.png)
+![Perfil de Usuário](single-sign-on/_static/image11.png)
 
 E a conta é criada com uma senha temporária.
 
@@ -128,7 +128,7 @@ Você só precisa executar isso em um controlador de domínio na organização, 
 
 Às vezes, recebemos uma pergunta sobre quão seguro isso é: a Microsoft a utiliza para seus próprios dados comerciais confidenciais? E a resposta é sim. Por exemplo, se você acessar o site interno do Microsoft SharePoint em [https://microsoft.sharepoint.com/](https://microsoft.sharepoint.com/), você será solicitado a fazer logon.
 
-![Entrada do Office 365](single-sign-on/_static/image20.png)
+![Entrar no Office 365](single-sign-on/_static/image20.png)
 
 A Microsoft habilitou o ADFS, portanto, ao inserir uma ID da Microsoft, você será redirecionado para uma página de logon do ADFS.
 
@@ -146,7 +146,7 @@ O Visual Studio torna muito fácil criar um aplicativo que usa o Azure AD para l
 
 Quando você cria um novo aplicativo ASP.NET, o MVC ou o Web Forms, o método de autenticação padrão é ASP.NET Identity. Para alterar isso para o Azure AD, clique em um botão **alterar autenticação** .
 
-![Alterar autenticação](single-sign-on/_static/image23.png)
+![Alterar Autenticação](single-sign-on/_static/image23.png)
 
 Selecione contas organizacionais, insira seu nome de domínio e, em seguida, selecione logon único.
 
@@ -179,7 +179,7 @@ O [próximo capítulo](data-storage-options.md) analisa as opções de armazenam
 
 Para obter mais informações, consulte os seguintes recursos:
 
-- [Azure Active Directory documentação](https://docs.microsoft.com/azure/active-directory/). Página do portal para a documentação do Azure AD no site do windowsazure.com. Para obter os tutoriais passo a passo, consulte a seção **desenvolver** .
+- [Documentação do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Página do portal para a documentação do Azure AD no site do windowsazure.com. Para obter os tutoriais passo a passo, consulte a seção **desenvolver** .
 - [Autenticação multifator do Azure](https://docs.microsoft.com/azure/multi-factor-authentication/). Página do portal para obter a documentação sobre a autenticação multifator no Azure.
 - [Opções de autenticação da conta organizacional](../../../../visual-studio/overview/2013/creating-web-projects-in-visual-studio.md#orgauthoptions). Explicação das opções de autenticação do Azure AD na caixa de diálogo Visual Studio 2013 New-Project.
 - [Padrões e práticas da Microsoft – padrão de identidade federada](https://msdn.microsoft.com/library/dn589790.aspx).

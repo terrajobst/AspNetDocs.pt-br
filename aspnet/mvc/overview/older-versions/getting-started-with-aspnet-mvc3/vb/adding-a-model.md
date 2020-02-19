@@ -2,86 +2,86 @@
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-model
 title: Adicionando um modelo (VB) | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é...
+description: Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é...
 ms.author: riande
 ms.date: 01/12/2011
 ms.assetid: b3aa7720-5c78-4ca2-baef-9a52234fb7ce
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-model
 msc.type: authoredcontent
-ms.openlocfilehash: c2ec1f4cf8f68a426fa4cabfc36c5e7bf928fe32
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: e69d59aed4d74f08f1c653c4965b128c4dbe20ff
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130060"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457239"
 ---
 # <a name="adding-a-model-vb"></a>Adicionar um modelo (VB)
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se que você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no link a seguir: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar individualmente os pré-requisitos usando os links a seguir:
+> Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no seguinte link: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar os pré-requisitos individualmente usando os seguintes links:
 > 
-> - [Pré-requisitos de Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
+> - [Pré-requisitos do Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
 > - [Atualização de ferramentas do ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-> - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(tempo de execução de ferramentas de suporte +)
+> - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(suporte + ferramentas de tempo de execução)
 > 
-> Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+> Se você estiver usando o Visual Studio 2010 em vez do Visual Web Developer 2010, instale os pré-requisitos clicando no seguinte link: [pré-requisitos do Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o c#, alterne para o [c# versão](../cs/adding-a-model.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.net](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se preferir C#, alterne para a [ C# versão](../cs/adding-a-model.md) deste tutorial.
 
 ## <a name="adding-a-model"></a>Adicionar um modelo
 
-Nesta seção, você adicionará algumas classes para o gerenciamento de filmes em um banco de dados. Essas classes será a parte de "modelo" do aplicativo ASP.NET MVC.
+Nesta seção, você adicionará algumas classes para gerenciar filmes em um banco de dados. Essas classes serão a parte "modelo" do aplicativo MVC ASP.NET.
 
-Você usará uma tecnologia de acesso a dados do .NET Framework conhecida como o Entity Framework para definir e trabalhar com essas classes de modelo. A Entity Framework (também conhecido como EF) oferece suporte a um paradigma de desenvolvimento chamado *Code First*. Código primeiro permite que você crie objetos de modelo ao escrever classes simples. (Esses são também conhecidas como classes POCO, de "objetos CLR do BOM e velho".) Em seguida, você pode ter o banco de dados criado em tempo real de suas classes, que permite que um fluxo de trabalho de desenvolvimento muito claro e rápido.
+Você usará uma .NET Framework tecnologia de acesso a dados conhecida como Entity Framework para definir e trabalhar com essas classes de modelo. A Entity Framework (geralmente conhecida como EF) dá suporte a um paradigma de desenvolvimento chamado *Code First*. Code First permite que você crie objetos de modelo escrevendo classes simples. (Elas também são conhecidas como classes POCO, de "objetos CLR antigos".) Em seguida, você pode fazer com que o banco de dados seja criado dinamicamente de suas classes, o que permite um fluxo de trabalho de desenvolvimento muito limpo e rápido.
 
-## <a name="adding-model-classes"></a>Adicionando Classes de modelo
+## <a name="adding-model-classes"></a>Adicionando classes de modelo
 
-Na **Gerenciador de soluções**, clique com botão direito do *modelos* pasta, selecione **Add**e, em seguida, selecione **classe**.
+Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta *modelos* , selecione **Adicionar**e, em seguida, selecione **classe**.
 
 ![](adding-a-model/_static/image1.png)
 
-Nomeie a classe "Filme".
+Nomeie a classe "filme".
 
-Adicione as seguintes propriedades de cinco para o `Movie` classe:
+Adicione as cinco propriedades a seguir à classe `Movie`:
 
 [!code-vb[Main](adding-a-model/samples/sample1.vb)]
 
-Vamos usar o `Movie` classe para representar os filmes em um banco de dados. Cada instância de um `Movie` objeto corresponderá a uma linha em uma tabela de banco de dados e cada propriedade do `Movie` classe será mapeado para uma coluna na tabela.
+Usaremos a classe `Movie` para representar filmes em um banco de dados. Cada instância de um objeto `Movie` corresponderá a uma linha em uma tabela de banco de dados, e cada propriedade da classe `Movie` será mapeada para uma coluna na tabela.
 
-No mesmo arquivo, adicione o seguinte `MovieDBContext` classe:
+No mesmo arquivo, adicione a seguinte classe de `MovieDBContext`:
 
 [!code-vb[Main](adding-a-model/samples/sample2.vb)]
 
-O `MovieDBContext` classe representa o contexto de banco de dados de filme do Entity Framework, que lida com a busca, armazenar e atualizar `Movie` instâncias em um banco de dados de classe. O `MovieDBContext` deriva o `DbContext` fornecido pela estrutura de entidades de classe base. Para obter mais informações sobre `DbContext` e `DbSet`, consulte [melhorias de produtividade para o Entity Framework](https://blogs.msdn.com/b/efdesign/archive/2010/06/21/productivity-improvements-for-the-entity-framework.aspx?wa=wsignin1.0).
+A classe `MovieDBContext` representa o contexto de banco de dados Entity Framework filme, que lida com a busca, o armazenamento e a atualização de `Movie` instâncias de classe em um banco de dados. O `MovieDBContext` deriva da classe base `DbContext` fornecida pelo Entity Framework. Para obter mais informações sobre `DbContext` e `DbSet`, consulte [melhorias de produtividade para o Entity Framework](https://blogs.msdn.com/b/efdesign/archive/2010/06/21/productivity-improvements-for-the-entity-framework.aspx?wa=wsignin1.0).
 
-Para poder referenciar `DbContext` e `DbSet`, você precisará adicionar o seguinte `imports` instrução na parte superior do arquivo:
+Para poder referenciar `DbContext` e `DbSet`, você precisa adicionar a seguinte instrução `imports` na parte superior do arquivo:
 
 [!code-vb[Main](adding-a-model/samples/sample3.vb)]
 
-A conclusão *Movie.vb* arquivo é mostrado abaixo.
+O arquivo *Movie. vb* completo é mostrado abaixo.
 
 [!code-vb[Main](adding-a-model/samples/sample4.vb)]
 
-## <a name="creating-a-connection-string-and-working-with-sql-server-compact"></a>Criando uma cadeia de Conexão e trabalhar com o SQL Server Compact
+## <a name="creating-a-connection-string-and-working-with-sql-server-compact"></a>Criando uma cadeia de conexão e trabalhando com SQL Server Compact
 
-O `MovieDBContext` classe criada por você lida com a tarefa de conectar-se ao banco de dados e mapeamento `Movie` objetos para os registros de banco de dados. Uma pergunta que você pode fazer, no entanto, é como especificar qual banco de dados que ele se conectará. Você terá de fazer isso adicionando as informações de conexão na *Web. config* arquivo do aplicativo.
+A classe `MovieDBContext` que você criou manipula a tarefa de conexão com o banco de dados e o mapeamento de objetos `Movie` para registros de banco de dados. No entanto, uma pergunta que você pode fazer é como especificar a qual banco de dados ele será conectado. Você fará isso adicionando informações de conexão no arquivo *Web. config* do aplicativo.
 
-Abra a raiz do aplicativo *Web. config* arquivo. (Não o *Web. config* arquivo na *modos de exibição* pasta.) A imagem a seguir mostrar ambos *Web. config* arquivos; abrir os *Web. config* arquivo circulados em vermelho.
+Abra o arquivo *Web. config da* raiz do aplicativo. (Não o arquivo *Web. config* na pasta *views* .) A imagem abaixo mostra os arquivos *Web. config* ; Abra o arquivo *Web. config* circulado em vermelho.
 
 ![](adding-a-model/_static/image2.png)
 
-Adicione a seguinte cadeia de conexão para o `<connectionStrings>` elemento na *Web. config* arquivo.
+Adicione a seguinte cadeia de conexão ao elemento `<connectionStrings>` no arquivo *Web. config* .
 
 [!code-xml[Main](adding-a-model/samples/sample5.xml)]
 
-O exemplo a seguir mostra uma parte do *Web. config* arquivo com a cadeia de caracteres de conexão nova adicionada:
+O exemplo a seguir mostra uma parte do arquivo *Web. config* com a nova cadeia de conexão adicionada:
 
 [!code-xml[Main](adding-a-model/samples/sample6.xml)]
 
-Essa pequena quantidade de código e o XML é tudo o que precisa ser escrita para representar e armazenar os dados de filmes em um banco de dados.
+Essa pequena quantidade de código e XML é tudo o que você precisa para escrever a fim de representar e armazenar os dados do filme em um banco de dado.
 
-Em seguida, você criará um novo `MoviesController` classe que você pode usar para exibir os dados de filme e permitir que usuários criem novas listagens de filme.
+Em seguida, você criará uma nova classe `MoviesController` que pode ser usada para exibir os dados do filme e permitir que os usuários criem novas listagens de filmes.
 
 > [!div class="step-by-step"]
 > [Anterior](adding-a-view.md)

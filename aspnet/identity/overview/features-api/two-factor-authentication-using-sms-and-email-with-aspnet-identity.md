@@ -9,16 +9,16 @@ ms.assetid: 053e23c4-13c9-40fa-87cb-3e9b0823b31e
 ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity
 msc.type: authoredcontent
-ms.openlocfilehash: 5f5218ca6c65ed3a2cd39d4e100349efa35d14cd
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.openlocfilehash: 527b4392846e60dae0b216fdeabf21fd6618e4d7
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115096"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77456732"
 ---
 # <a name="two-factorauthentication-using-sms-and-email-with-aspnet-identity"></a>Autenticação de dois fatores usando SMS e email com ASP.NET Identity
 
-por [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Suhas Joshi](https://github.com/suhasj)
+por [Hao Kung](https://github.com/HaoK), [Pranav Rastogi](https://github.com/rustd), [Rick Anderson](https://twitter.com/RickAndMSFT), [Suhas Joshi](https://github.com/suhasj)
 
 > Este tutorial mostrará como configurar a autenticação de dois fatores (2FA) usando o SMS e o email.
 > 
@@ -69,7 +69,7 @@ Este tutorial fornece instruções para usar o twilio ou o ASPSMS, mas você pod
 2. **Instalando pacotes adicionais ou adicionando referências de serviço**  
   
    Twilio  
-   No console do Gerenciador de pacotes, digite o seguinte comando:  
+   No Console do Gerenciador de Pacotes, digite o seguinte comando:  
     `Install-Package Twilio`  
   
    ASPSMS:  
@@ -77,7 +77,7 @@ Este tutorial fornece instruções para usar o twilio ou o ASPSMS, mas você pod
   
     ![](two-factor-authentication-using-sms-and-email-with-aspnet-identity/_static/image1.png)  
   
-   Corrigir  
+   Endereço:  
     `https://webservice.aspsms.com/aspsmsx2.asmx?WSDL`  
   
    Namespace:  
@@ -266,7 +266,7 @@ Depois que o usuário envia a abordagem 2FA, o método de ação `HTTP POST Send
 
 [!code-csharp[Main](two-factor-authentication-using-sms-and-email-with-aspnet-identity/samples/sample19.cs?highlight=3,13-14,18)]
 
-## <a name="2fa-lockout"></a>Bloqueio de 2FA
+## <a name="2fa-lockout"></a>2FA Lockout
 
 Embora você possa definir o bloqueio de conta em falhas de tentativa de senha de logon, essa abordagem torna seu logon suscetível a bloqueios de [dos](http://en.wikipedia.org/wiki/Denial-of-service_attack) . É recomendável usar o bloqueio de conta somente com 2FA. Quando o `ApplicationUserManager` é criado, o código de exemplo define o bloqueio 2FA e `MaxFailedAccessAttemptsBeforeLockout` como cinco. Quando um usuário faz logon (por meio de conta local ou conta social), cada tentativa com falha em 2FA é armazenada e, se o máximo de tentativas for atingido, o usuário será bloqueado por cinco minutos (você pode definir o tempo de bloqueio com `DefaultAccountLockoutTimeSpan`).
 

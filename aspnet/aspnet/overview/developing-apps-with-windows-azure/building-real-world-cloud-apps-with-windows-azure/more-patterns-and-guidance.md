@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
-ms.openlocfilehash: afade34477d1136883e7543d09e73dfbe435690e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 57e32bf7568ecb0eb22f0f2b585310dcab2d5d43
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585355"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457070"
 ---
 # <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Mais padrões e diretrizes (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -51,7 +51,7 @@ Documentação
 - [FailSafe: Diretrizes para arquiteturas de nuvem resilientes](https://msdn.microsoft.com/library/windowsazure/jj853352.aspx). White Paper por Marc Mercuri, Ulrich Homann e Andrew TOWNHILL. Versão da página da Web da série de vídeos FailSafe.
 - [Diretrizes do Azure](https://azure.microsoft.com/develop/net/guidance/) Página do portal para documentação oficial relacionada ao desenvolvimento de aplicativos para o Azure.
 
-Vídeos
+vídeos
 
 - [Criando aplicativos de nuvem do mundo real com o Azure-parte 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324) e [parte 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325). Vídeo da apresentação de Scott Guthrie em que este e-book se baseia. Apresentado em Tech Ed Austrália em setembro de 2013. Uma versão anterior da mesma apresentação foi entregue em norueguês Developers Conference (NDC) em junho de 2013: [NDC parte 1](http://vimeo.com/68215538), [NDC parte 2](http://vimeo.com/68215602).
 - [FailSafe: criando serviços de nuvem escalonáveis e resilientes](https://channel9.msdn.com/Series/FailSafe). Série de vídeos de nove partes por Ulrich Homann, Marc Mercuri e marcas Simms. Apresenta uma exibição de nível 400 de como arquitetar aplicativos de nuvem. Esta série se concentra na teoria e nos motivos por trás dos padrões recomendados; para obter mais detalhes, consulte a criação de séries grandes por marca Simms.
@@ -120,7 +120,7 @@ Outros membros da DGAC revisados e comentados na estrutura preliminar:
 - Srdjan Bozovic
 - Ming Man
 - Gianni Rosa Gallina
-- Paulo MORGADO
+- Paulo Morgado
 - Jason Oliveira
 - Alberto Poblacion
 - Ryan Riley

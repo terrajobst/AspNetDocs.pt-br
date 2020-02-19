@@ -5,12 +5,12 @@ description: Trabalhar com cookies SameSite e com a interface Web aberta para .N
 ms.author: riande
 ms.date: 12/6/2019
 uid: owin-samesite
-ms.openlocfilehash: ac5ae24eeb9e8e1cc6296667a4bebef72c3eb62c
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.openlocfilehash: a3353fd0f0332899aaba26b83aea0ff7c3a6d19b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74993084"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77455731"
 ---
 # <a name="samesite-cookies-and-the-open-web-interface-for-net-owin"></a>SameSite cookies e a Open Web interface for .NET (OWIN)
 
@@ -81,7 +81,7 @@ O rascunho 2019 da especificação de `SameSite`:
 ## <a name="supporting-older-browsers"></a>Suporte a navegadores mais antigos
 
 O padrão de 2016 `SameSite` obrigatório que valores desconhecidos devem ser tratados como valores de `SameSite=Strict`. Os aplicativos acessados de navegadores mais antigos que dão suporte ao 2016 `SameSite` Standard podem falhar quando obtêm uma propriedade `SameSite` com um valor de `None`. Os aplicativos Web devem implementar a detecção do navegador se pretenderem oferecer suporte a navegadores mais antigos. O ASP.NET não implementa a detecção de navegador, pois os valores dos agentes de usuário são altamente voláteis e mudam com frequência. Um ponto de extensão no [ICookieManager](/previous-versions/aspnet/dn800238(v%3Dvs.113)) permite a conexão da lógica específica do agente do usuário.
-<!-- https://docs.microsoft.com/en-us/previous-versions/aspnet/dn800238(v%3Dvs.113) -->
+<!-- https://docs.microsoft.com/previous-versions/aspnet/dn800238(v%3Dvs.113) -->
 
 Em `Startup.Configuration`, adicione um código semelhante ao seguinte:
 
@@ -132,9 +132,9 @@ O Safari 12 implementou estritamente o rascunho anterior e falha quando o novo v
 
 O suporte do Firefox para o novo padrão pode ser testado na versão 68 +, optando na página de `about:config` com o sinalizador de recurso `network.cookie.sameSite.laxByDefault`. Não há relatórios de problemas de compatibilidade com versões mais antigas do Firefox.
 
-### <a name="test-with-edge-browser"></a>Testar com o navegador Microsoft Edge
+### <a name="test-with-edge-browser"></a>Testar com o navegador Edge
 
-O Microsoft Edge dá suporte ao antigo `SameSite` padrão. A versão 44 do Microsoft Edge não tem nenhum problema de compatibilidade conhecido com o novo padrão.
+O Edge dá suporte ao antigo `SameSite` padrão. A versão 44 do Edge não tem nenhum problema de compatibilidade conhecido com o novo padrão.
 
 ### <a name="test-with-edge-chromium"></a>Testar com borda (Chromium)
 

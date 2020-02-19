@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
-ms.openlocfilehash: 8a4ef3aa37a9296e92fbeb513968e3abeee072d0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: b88573b3702b755b155e8da35f5f8a67931bafc6
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585526"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457109"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Criando aplicativos de nuvem do mundo real com o Azure
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -101,7 +101,7 @@ Este livro eletrônico explica treze padrões recomendados para o desenvolviment
 - [Mais padrões e diretrizes de aplicativos de nuvem](more-patterns-and-guidance.md).
 - [Apêndice: o aplicativo de exemplo Fix It](the-fix-it-sample-application.md)
 
-    - Problemas Conhecidos
+    - Problemas conhecidos
     - Práticas recomendadas
     - Como baixar, compilar, executar e implantar.
 
@@ -174,4 +174,4 @@ Vídeos:
 - [Sites da Web do Azure internos com nir Mashkowski](https://channel9.msdn.com/Shows/Web+Camps+TV/Windows-Azure-Web-Sites-Internals-with-Nir-Mashkowski).
 
 > [!div class="step-by-step"]
-> [Avançar](automate-everything.md)
+> [Próximo](automate-everything.md)

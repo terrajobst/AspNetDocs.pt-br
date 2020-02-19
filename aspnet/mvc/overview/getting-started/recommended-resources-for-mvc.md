@@ -8,16 +8,16 @@ ms.date: 04/10/2014
 ms.assetid: 7958d725-e958-4566-a85b-535eeb985f94
 msc.legacyurl: /mvc/overview/getting-started/recommended-resources-for-mvc
 msc.type: authoredcontent
-ms.openlocfilehash: daccaedae0b0e60f5086f270f214f87da564a85d
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.openlocfilehash: 11f4a7cae8d425873b1828a9e5f51471def954fb
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074924"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457148"
 ---
 # <a name="mvc-recommended-resources"></a>Recursos de MVC recomendados
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > Este tópico fornece links para recursos de documentação sobre o ASP.NET MVC 5. Se você conhece uma ótima postagem no blog, thread [StackOverflow](http://stackoverflow.com/) ou qualquer outro link que seria útil, envie [-me](mailto:aspnetue@microsoft.com?subject=Great ASP.NET MVC link) um email com o link. Os links fornecidos aqui são atualizados periodicamente. Você pode encontrar links mais antigos (mas em muitos casos ainda relevantes) ASP.NET no [mapa de conteúdo do MSDN](https://msdn.microsoft.com/library/gg416514(v=vs.108).aspx).
 >
@@ -274,7 +274,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="mobile"></a>
 
-## <a name="mobile"></a>Móvel
+## <a name="mobile"></a>Mobilidade
 
 - [Tutorial do ASP.NET MVC 4 para dispositivos móveis](../older-versions/aspnet-mvc-4-mobile-features.md)
 - [Monitor Criando sites amigáveis para dispositivos móveis com o MVC 4](https://www.bitcast.io/v/building-mobile-friendly-websites-with-mvc-4)
@@ -327,7 +327,7 @@ por [Rick Anderson]((https://twitter.com/RickAndMSFT))
 
 <a id="best"></a>
 
-## <a name="best-practices"></a>Práticas Recomendadas
+## <a name="best-practices"></a>Práticas recomendadas
 
 - [O que fazer e o que não fazer em ASP.NET](../../../aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead.md)
 - [Lista de verificação do desenvolvedor da Web](http://webdevchecklist.com/aspnet)

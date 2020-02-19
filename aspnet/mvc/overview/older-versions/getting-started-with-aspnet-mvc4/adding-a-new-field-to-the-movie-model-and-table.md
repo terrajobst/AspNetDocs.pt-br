@@ -1,170 +1,170 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-new-field-to-the-movie-model-and-table
-title: Adicionando um novo campo para o modelo de filme e a tabela | Microsoft Docs
+title: Adicionando um novo campo ao modelo de filme e à tabela | Microsoft Docs
 author: Rick-Anderson
-description: 'Observação: Uma versão atualizada deste tutorial está disponível aqui que usa o ASP.NET MVC 5 e Visual Studio 2013. Ele é mais seguro e muito mais simples a seguir e demonstração...'
+description: 'Observação: uma versão atualizada deste tutorial está disponível aqui que usa o ASP.NET MVC 5 e o Visual Studio 2013. É mais seguro, muito mais simples de seguir e demonstrar...'
 ms.author: riande
 ms.date: 08/28/2012
 ms.assetid: 9ef2c4f1-a305-4e0a-9fb8-bfbd9ef331d9
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/adding-a-new-field-to-the-movie-model-and-table
 msc.type: authoredcontent
-ms.openlocfilehash: b0a66cf62c34a59ca5c89c2f380093165e765100
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: d966b95163f64b20a17d2327a12c5d6c44a4a66b
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129895"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457694"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-table"></a>Adicionar um novo campo ao modelo de filme e à tabela
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
 > > [!NOTE]
-> > Uma versão atualizada deste tutorial está disponível [aqui](../../getting-started/introduction/getting-started.md) que usa o ASP.NET MVC 5 e Visual Studio 2013. É mais seguro e muito mais simples a seguir e apresenta mais recursos.
+> > Uma versão atualizada deste tutorial está disponível [aqui](../../getting-started/introduction/getting-started.md) que usa o ASP.NET MVC 5 e o Visual Studio 2013. É mais seguro, muito mais simples de seguir e demonstra mais recursos.
 
-Nesta seção, você usará migrações do Entity Framework Code First para migrar algumas alterações para as classes de modelo para que a alteração será aplicada ao banco de dados.
+Nesta seção, você usará Migrações do Entity Framework Code First para migrar algumas alterações nas classes de modelo para que a alteração seja aplicada ao banco de dados.
 
-Por padrão, quando você usa o Entity Framework Code First para criar automaticamente um banco de dados, como você fez neste tutorial, Code First adiciona uma tabela no banco de dados para ajudar a controlar se o esquema do banco de dados está em sincronizado com as classes de modelo, que ele foi gerado. Se não estiverem sincronizados, o Entity Framework gera um erro. Isso torna mais fácil rastrear problemas em tempo de desenvolvimento que caso contrário, apenas talvez (por erros obscuros) em tempo de execução.
+Por padrão, quando você usa Entity Framework Code First para criar automaticamente um banco de dados, como fazia anteriormente neste tutorial, Code First adiciona uma tabela ao banco de dados para ajudar a controlar se o esquema do banco de dados está em sincronia com as classes de modelo das quais ele foi gerado. Se eles não estiverem em sincronia, o Entity Framework gerará um erro. Isso facilita o rastreamento de problemas em tempo de desenvolvimento que, de outra forma, você pode localizar (por erros obscuros) em tempo de execução.
 
-## <a name="setting-up-code-first-migrations-for-model-changes"></a>Configuração de migrações do Code First para alterações do modelo
+## <a name="setting-up-code-first-migrations-for-model-changes"></a>Configurando Migrações do Code First para alterações de modelo
 
-Se você estiver usando o Visual Studio 2012, clique duas vezes o *Movies.mdf* arquivo no Gerenciador de soluções para abrir a ferramenta de banco de dados. Visual Studio Express para Web mostrará o Gerenciador de banco de dados, o Visual Studio 2012 mostrará o Gerenciador de servidores. Se você estiver usando o Visual Studio 2010, use o Pesquisador de objetos do SQL Server.
+Se você estiver usando o Visual Studio 2012, clique duas vezes no arquivo *Movies. MDF* de Gerenciador de soluções para abrir a ferramenta de banco de dados. Visual Studio Express para Web mostrará Gerenciador de Banco de Dados, o Visual Studio 2012 mostrará Gerenciador de Servidores. Se você estiver usando o Visual Studio 2010, use Pesquisador de Objetos do SQL Server.
 
-Na ferramenta de banco de dados (Gerenciador de banco de dados, Gerenciador de servidores ou Pesquisador de objetos do SQL Server), clique com botão direito `MovieDBContext` e selecione **excluir** para descartar o banco de dados de filmes.
+Na ferramenta de banco de dados (Gerenciador de Banco de Dados, Gerenciador de Servidores ou Pesquisador de Objetos do SQL Server), clique com o botão direito do mouse em `MovieDBContext` e selecione **excluir** para remover o banco de dados de filmes.
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image1.png)
 
-Navegue de volta para o Gerenciador de soluções. Clique com botão direito do *Movies.mdf* do arquivo e selecione **excluir** para remover o banco de dados de filmes.
+Navegue de volta para Gerenciador de Soluções. Clique com o botão direito do mouse no arquivo *Movies. MDF* e selecione **excluir** para remover o banco de dados de filmes.
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image2.png)
 
-Compile o aplicativo para garantir que não existem erros.
+Compile o aplicativo para verificar se não existem erros.
 
-Dos **ferramentas** menu, clique em **Gerenciador de pacotes NuGet** e, em seguida, **Package Manager Console**.
+No menu **Ferramentas**, clique em **Gerenciador de Pacotes NuGet** e, em seguida, em **Console do Gerenciador de Pacotes**.
 
-![Adicionar pacote Man](adding-a-new-field-to-the-movie-model-and-table/_static/image3.png)
+![Adicionar Man de pacote](adding-a-new-field-to-the-movie-model-and-table/_static/image3.png)
 
-No **Package Manager Console** janela no `PM>` prompt insira "Enable-Migrations - ContextTypeName MvcMovie.Models.MovieDBContext".
+Na janela do **console do Gerenciador de pacotes** , na `PM>` prompt, digite "Enable-Migrations-ContextTypeName MvcMovie. Models. MovieDBContext".
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image4.png)
 
-O **Enable-Migrations** comando (mostrado acima) cria um *Configuration.cs* arquivo em uma nova *migrações* pasta.
+O comando **Enable-Migrations** (mostrado acima) cria um arquivo *Configuration.cs* em uma nova pasta *migrações* .
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image5.png)
 
-O Visual Studio abre o *Configuration.cs* arquivo. Substitua os `Seed` método na *Configuration.cs* arquivo pelo código a seguir:
+O Visual Studio abre o arquivo *Configuration.cs* . Substitua o método `Seed` no arquivo *Configuration.cs* pelo seguinte código:
 
 [!code-csharp[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample1.cs)]
 
-Clique com botão direito na linha curvada vermelha sob `Movie` e selecione **resolver** , em seguida, **usando** **mvcmovie. Models;**
+Clique com o botão direito do mouse na linha vermelha ondulada em `Movie` e selecione **resolver** e, em seguida, **usando** **MvcMovie. Models;**
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image6.png)
 
-Isso adiciona a seguinte instrução using:
+Isso adiciona a seguinte instrução Using:
 
 [!code-csharp[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample2.cs)]
 
 > [!NOTE] 
 > 
-> Code First Migrations chamadas a `Seed` método após cada migração (ou seja, chamando **Atualizar banco de dados** no Console do Gerenciador de pacotes), e esse método atualiza as linhas que já foram inseridas ou insere-os se eles ainda não existem.
+> Migrações do Code First chama o método `Seed` após cada migração (ou seja, chamando **Update-Database** no console do Gerenciador de pacotes) e esse método atualiza as linhas que já foram inseridas ou as insere se elas ainda não existirem.
 
-**Pressione CTRL-SHIFT-B para compilar o projeto.** (As etapas a seguir falhará se seu não crie neste momento.)
+**Pressione Ctrl-Shift-B para compilar o projeto.** (As etapas a seguir falharão se seu não for criado neste ponto.)
 
-A próxima etapa é criar um `DbMigration` classe para a migração inicial. Essa migração para cria um novo banco de dados, é por isso que você excluiu o *movie.mdf* arquivo em uma etapa anterior.
+A próxima etapa é criar uma classe de `DbMigration` para a migração inicial. Essa migração para criar um novo banco de dados, é por isso que você excluiu o arquivo *Movie. MDF* em uma etapa anterior.
 
-No **Package Manager Console** janela, digite o comando "add-migration Initial" para criar a migração inicial. O nome "Inicial" é arbitrário e é usado para nomear o arquivo de migração criado.
+Na janela do **console do Gerenciador de pacotes** , insira o comando "Add-Migration Initial" para criar a migração inicial. O nome "Initial" é arbitrário e é usado para nomear o arquivo de migração criado.
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image7.png)
 
-Migrações do Code First cria outro arquivo de classe na *migrações* pasta (com o nome *{carimbo de data}\_Initial.cs* ), e essa classe contém código que cria o esquema de banco de dados. O nome do arquivo de migração é previamente corrigido com um carimbo de hora para ajudar com a ordenação. Examine os *{carimbo de data}\_Initial.cs* arquivo, ele contém as instruções para criar a tabela de filmes para o banco de dados do filme. Quando você atualiza o banco de dados nas instruções a seguir, isso *{carimbo de data}\_Initial.cs* arquivo será executado e criar o esquema de banco de dados. Em seguida, a **semente** método será executado para preencher o banco de dados com dados de teste.
+Migrações do Code First cria outro arquivo de classe na pasta *migrações* (com o nome *{DateStamp}\_Initial.cs* ) e essa classe contém um código que cria o esquema de banco de dados. O nome de arquivo de migração é previamente corrigido com um carimbo de data/hora para ajudar com a ordenação. Examine o arquivo *{dateStamp}\_Initial.cs* , que contém as instruções para criar a tabela de filmes para o BD de filme. Quando você atualizar o banco de dados nas instruções abaixo, este arquivo *{dateStamp}\_Initial.cs* será executado e criará o esquema do BD. Em seguida, o método **semente** será executado para popular o DB com dados de teste.
 
-No **Package Manager Console**, insira o comando "update-database" para criar o banco de dados e executar o **semente** método.
+No **console do Gerenciador de pacotes**, digite o comando "Update-Database" para criar o banco de dados e executar o método **semente** .
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image8.png)
 
-Se você receber um erro que indica uma tabela já existe e não pode ser criada, provavelmente é porque você executou o aplicativo depois que você excluiu o banco de dados e antes da execução `update-database`. Nesse caso, exclua o *Movies.mdf* novamente e repita a `update-database` comando. Se você ainda receber um erro, exclua a pasta migrações e o conteúdo, comece com as instruções na parte superior desta página (que é exclusão a *Movies.mdf* de arquivo e em seguida, vá para Enable-Migrations).
+Se você receber um erro que indica que uma tabela já existe e não pode ser criada, é provável que você tenha executado o aplicativo depois de ter excluído o banco de dados e antes de executar `update-database`. Nesse caso, exclua o arquivo *Movies. MDF* novamente e repita o comando `update-database`. Se você ainda receber um erro, exclua a pasta de migrações e o conteúdo, em seguida, inicie com as instruções na parte superior desta página (isto é, exclua o arquivo *Movies. MDF* e continue para Enable-Migrations).
 
-Execute o aplicativo e navegue até a */Movies* URL. Os dados de semente são exibidos.
+Execute o aplicativo e navegue até a URL */Movies* . Os dados de semente são exibidos.
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image9.png)
 
 ## <a name="adding-a-rating-property-to-the-movie-model"></a>Adicionando uma propriedade de classificação ao modelo de filme
 
-Comece adicionando um novo `Rating` propriedade à existente `Movie` classe. Abra o *Models\Movie.cs* arquivo e adicione o `Rating` propriedade parecida com esta:
+Comece adicionando uma nova propriedade `Rating` à classe `Movie` existente. Abra o arquivo *Models\Movie.cs* e adicione a propriedade `Rating` como esta:
 
 [!code-csharp[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample3.cs)]
 
-Completo `Movie` classe agora parece o código a seguir:
+A classe completa `Movie` agora é semelhante ao seguinte código:
 
 [!code-csharp[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample4.cs?highlight=8)]
 
-Compile o aplicativo usando o **construir** &gt; **Build filme** menu de comando ou pressionando CTRL-SHIFT-B.
+Crie o aplicativo usando o comando de menu **criar** &gt;**Compilar filme** ou pressionando Ctrl-Shift-B.
 
-Agora que você atualizou o `Model` classe, você também precisa atualizar o *\Views\Movies\Index.cshtml* e *\Views\Movies\Create.cshtml* exibir modelos para exibir o novo `Rating`propriedade na exibição do navegador.
+Agora que você atualizou a classe `Model`, também precisa atualizar os modelos de exibição *\Views\Movies\Index.cshtml* e *\Views\Movies\Create.cshtml* para exibir a nova propriedade `Rating` no modo de exibição de navegador.
 
-Abra o<em>\Views\Movies\Index.cshtml</em> arquivo e adicione um `<th>Rating</th>` título de coluna logo após o <strong>preço</strong> coluna. Em seguida, adicione uma `<td>` coluna, próximo ao final do modelo para renderizar o `@item.Rating` valor. Abaixo está o que a atualização <em>index. cshtml</em> modelo de exibição se parece com:
+Abra o arquivo<em>\Views\Movies\Index.cshtml</em> e adicione um título de coluna `<th>Rating</th>` logo após a coluna <strong>Price</strong> . Em seguida, adicione uma coluna `<td>` próximo ao final do modelo para renderizar o valor de `@item.Rating`. Abaixo está a aparência do modelo de exibição <em>index. cshtml</em> atualizado:
 
 [!code-cshtml[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample5.cshtml?highlight=26-28,46-48)]
 
-Em seguida, abra o *\Views\Movies\Create.cshtml* arquivo e adicione a seguinte marcação próximo ao final do formulário. Isso renderiza uma caixa de texto para que você possa especificar uma classificação quando um novo filme é criado.
+Em seguida, abra o arquivo *\Views\Movies\Create.cshtml* e adicione a marcação a seguir próximo ao final do formulário. Isso renderiza uma caixa de texto para que você possa especificar uma classificação quando um novo filme é criado.
 
 [!code-cshtml[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample6.cshtml)]
 
-Agora você atualizou o código do aplicativo para dar suporte a novos `Rating` propriedade.
+Agora você atualizou o código do aplicativo para dar suporte à nova propriedade `Rating`.
 
-Agora, execute o aplicativo e navegue até a */Movies* URL. Quando você fizer isso, no entanto, você verá um dos seguintes erros:
+Agora, execute o aplicativo e navegue até a URL */Movies* . No entanto, ao fazer isso, você verá um dos seguintes erros:
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image10.png)
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image11.png)
 
-Você está vendo esse erro porque atualizada `Movie` classe de modelo no aplicativo agora é diferente do esquema do `Movie` tabela do banco de dados existente. (Não há nenhuma coluna `Rating` na tabela de banco de dados.)
+Você está vendo esse erro porque a classe do modelo de `Movie` atualizado no aplicativo agora é diferente do esquema da tabela `Movie` do banco de dados existente. (Não há nenhuma coluna `Rating` na tabela de banco de dados.)
 
 Existem algumas abordagens para resolver o erro:
 
-1. Faça com que o Entity Framework remova automaticamente e recrie o banco de dados com base no novo esquema de classe de modelo. Essa abordagem é muito conveniente ao fazer o desenvolvimento ativo em um banco de dados de teste; Ele permite que você desenvolva rapidamente o esquema de modelo e o banco de dados juntos. A desvantagem, no entanto, é que você perde os dados existentes no banco de dados — para que você *não* para usar essa abordagem em um banco de dados de produção! Geralmente é uma maneira produtiva de desenvolver um aplicativo usar um inicializador para propagar automaticamente um banco de dados com dados de teste. Para obter mais informações sobre inicializadores de banco de dados do Entity Framework, consulte de Tom Dykstra [tutorial do ASP.NET MVC/Entity Framework](../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md).
+1. Faça com que o Entity Framework remova automaticamente e recrie o banco de dados com base no novo esquema de classe de modelo. Essa abordagem é muito conveniente ao fazer o desenvolvimento ativo em um banco de dados de teste; Ele permite que você evolua rapidamente o modelo e o esquema de banco de dados juntos. No entanto, a desvantagem é que você perde os dados existentes no banco de dados – portanto, *não* convém usar essa abordagem em um banco de dados de produção! O uso de um inicializador para propagar automaticamente um banco de dados com dado de teste é geralmente uma maneira produtiva de desenvolver um aplicativo. Para obter mais informações sobre inicializadores de banco de dados Entity Framework, consulte o [tutorial ASP.NET MVC/Entity Framework](../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)de Tom Dykstra.
 2. Modifique explicitamente o esquema do banco de dados existente para que ele corresponda às classes de modelo. A vantagem dessa abordagem é que você mantém os dados. Faça essa alteração manualmente ou criando um script de alteração de banco de dados.
 3. Use as Migrações do Code First para atualizar o esquema de banco de dados.
 
 Para este tutorial, usaremos as Migrações do Code First.
 
-Atualize o método de propagação para que ele forneça um valor para a nova coluna. Abra o arquivo Migrations\Configuration.cs e adicionar um campo de classificação para cada objeto de filme.
+Atualize o método semente para que ele forneça um valor para a nova coluna. Abra o arquivo Migrations\Configuration.cs e adicione um campo de classificação a cada objeto de filme.
 
 [!code-csharp[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample7.cs?highlight=6)]
 
-Compile a solução e, em seguida, abra o **Package Manager Console** janela e digite o seguinte comando:
+Compile a solução e, em seguida, abra a janela do **console do Gerenciador de pacotes** e digite o seguinte comando:
 
 `add-migration AddRatingMig`
 
-O `add-migration` comando informa a estrutura de migração para examinar o modelo de filme atual com o esquema de banco de dados do filme atual e crie o código necessário para migrar o banco de dados para o novo modelo. O AddRatingMig é arbitrário e é usado para nomear o arquivo de migração. É útil usar um nome significativo para a etapa de migração.
+O comando `add-migration` informa à estrutura de migração para examinar o modelo de filme atual com o esquema atual do BD do filme e criar o código necessário para migrar o BD para o novo modelo. O AddRatingMig é arbitrário e é usado para nomear o arquivo de migração. É útil usar um nome significativo para a etapa de migração.
 
-Quando esse comando for concluído, o Visual Studio abre o arquivo de classe que define o novo `DbMigration` classe, derivada e, no `Up` método, você pode ver o código que cria a nova coluna.
+Quando esse comando for concluído, o Visual Studio abrirá o arquivo de classe que define a nova classe derivada `DbMigration` e, no método `Up`, você poderá ver o código que cria a nova coluna.
 
 [!code-csharp[Main](adding-a-new-field-to-the-movie-model-and-table/samples/sample8.cs)]
 
-Compile a solução e, em seguida, insira o comando "update-database" a **Package Manager Console** janela.
+Compile a solução e, em seguida, insira o comando "Update-Database" na janela do **console do Gerenciador de pacotes** .
 
-A imagem a seguir mostra a saída a **Package Manager Console** janela (o carimbo de data acrescentando AddRatingMig será diferente.)
+A imagem a seguir mostra a saída na janela do **console do Gerenciador de pacotes** (o carimbo de data AddRatingMig de pendência será diferente.)
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image12.png)
 
-Execute novamente o aplicativo e navegue até a URL /Movies. Você pode ver o novo campo de classificação.
+Execute novamente o aplicativo e navegue até a URL do/Movies. Você pode ver o novo campo de classificação.
 
 ![](adding-a-new-field-to-the-movie-model-and-table/_static/image13.png)
 
-Clique o **criar novo** link para adicionar um novo filme. Observe que você pode adicionar uma classificação.
+Clique no link **criar novo** para adicionar um novo filme. Observe que você pode adicionar uma classificação.
 
 ![7_CreateRioII](adding-a-new-field-to-the-movie-model-and-table/_static/image14.png)
 
-Clique em **Criar**. O novo filme, incluindo a classificação é exibido nos listagem de filmes:
+Clique em **Criar**. O novo filme, incluindo a classificação, agora aparece na listagem de filmes:
 
 ![7_ourNewMovie_SM](adding-a-new-field-to-the-movie-model-and-table/_static/image15.png)
 
-Você também deve adicionar o `Rating` modelos de exibição de campo para a edição, detalhes e SearchIndex.
+Você também deve adicionar o campo `Rating` aos modelos de exibição Editar, detalhes e SearchIndex.
 
-Você poderia digitar o comando "update-database" a **Package Manager Console** janela novamente e nenhuma alteração seria feita, pois o esquema coincide com o modelo.
+Você pode inserir o comando "Update-Database" na janela do **console do Gerenciador de pacotes** novamente e nenhuma alteração será feita, pois o esquema corresponde ao modelo.
 
-Nesta seção, você viu como você pode modificar objetos de modelo e manter o banco de dados em sincronia com as alterações. Você também aprendeu uma maneira de preencher um banco de dados recém-criado com dados de exemplo para que você pode experimentar os cenários. Em seguida, vamos dar uma olhada em como você pode adicionar lógica de validação mais avançada para as classes de modelo e habilitar algumas regras de negócio a serem impostos.
+Nesta seção, você viu como é possível modificar objetos de modelo e manter o banco de dados em sincronia com as alterações. Você também aprendeu uma maneira de preencher um banco de dados recém-criado com exemplos de dado, de modo que você possa experimentar cenários. Em seguida, vamos dar uma olhada em como você pode adicionar uma lógica de validação mais rica às classes de modelo e permitir que algumas regras de negócio sejam impostas.
 
 > [!div class="step-by-step"]
 > [Anterior](examining-the-edit-methods-and-edit-view.md)

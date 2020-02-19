@@ -1,122 +1,122 @@
 ---
 uid: mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-new-field
-title: Adicionando um novo campo para o modelo de filme e a tabela de banco de dados (VB) | Microsoft Docs
+title: Adicionando um novo campo ao modelo de filme e à tabela de banco de dados (VB) | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é...
+description: Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é...
 ms.author: riande
 ms.date: 01/12/2011
 ms.assetid: 28970e1b-1845-4015-86ef-121e52a6c397
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/adding-a-new-field
 msc.type: authoredcontent
-ms.openlocfilehash: c723134e829da23db8a43ef228db47ce9826f3e8
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.openlocfilehash: b2b26b6009c55f02c8a4159bda839fe7aefea4c0
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65129988"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457253"
 ---
 # <a name="adding-a-new-field-to-the-movie-model-and-database-table-vb"></a>Adicionar um novo campo ao modelo de filme e à tabela do banco de dados (VB)
 
-por [Rick Anderson]((https://twitter.com/RickAndMSFT))
+por [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-> Este tutorial ensinará os conceitos básicos da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se que você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no link a seguir: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar individualmente os pré-requisitos usando os links a seguir:
+> Este tutorial ensinará as noções básicas da criação de um aplicativo Web ASP.NET MVC usando o Microsoft Visual Web Developer 2010 Express Service Pack 1, que é uma versão gratuita do Microsoft Visual Studio. Antes de começar, verifique se você instalou os pré-requisitos listados abaixo. Você pode instalar todos eles clicando no seguinte link: [Web Platform Installer](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack). Como alternativa, você pode instalar os pré-requisitos individualmente usando os seguintes links:
 > 
-> - [Pré-requisitos de Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
+> - [Pré-requisitos do Visual Studio Web Developer Express SP1](https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack)
 > - [Atualização de ferramentas do ASP.NET MVC 3](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=MVC3)
-> - [SQL Server Compact 4.0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(tempo de execução de ferramentas de suporte +)
+> - [SQL Server Compact 4,0](https://www.microsoft.com/web/gallery/install.aspx?appid=SQLCE;SQLCEVSTools_4_0)(suporte + ferramentas de tempo de execução)
 > 
-> Se você estiver usando o Visual Studio 2010, em vez do Visual Web Developer 2010, instale os pré-requisitos, clicando no link a seguir: [Pré-requisitos de Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
+> Se você estiver usando o Visual Studio 2010 em vez do Visual Web Developer 2010, instale os pré-requisitos clicando no seguinte link: [pré-requisitos do Visual Studio 2010](https://www.microsoft.com/web/gallery/install.aspx?appsxml=&amp;appid=VS2010SP1Pack).
 > 
-> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.NET](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se você preferir o c#, alterne para o [c# versão](../cs/adding-a-new-field.md) deste tutorial.
+> Um projeto do Visual Web Developer com código-fonte VB.NET está disponível para acompanhar este tópico. [Baixe a versão do VB.net](https://code.msdn.microsoft.com/Introduction-to-MVC-3-10d1b098). Se preferir C#, alterne para a [ C# versão](../cs/adding-a-new-field.md) deste tutorial.
 
-Nesta seção, você vai fazer algumas alterações para as classes de modelo e saiba como você pode atualizar o esquema de banco de dados de acordo com as alterações do modelo.
+Nesta seção, você fará algumas alterações nas classes de modelo e aprenderá como é possível atualizar o esquema de banco de dados para corresponder às alterações de modelo.
 
 ## <a name="adding-a-rating-property-to-the-movie-model"></a>Adicionando uma propriedade de classificação ao modelo de filme
 
-Comece adicionando um novo `Rating` propriedade à existente `Movie` classe. Abra o *Movie.cs* arquivo e adicione o `Rating` propriedade parecida com esta:
+Comece adicionando uma nova propriedade `Rating` à classe `Movie` existente. Abra o arquivo *Movie.cs* e adicione a propriedade `Rating` como esta:
 
 [!code-vb[Main](adding-a-new-field/samples/sample1.vb)]
 
-Completo `Movie` classe agora parece o código a seguir:
+A classe completa `Movie` agora é semelhante ao seguinte código:
 
 [!code-vb[Main](adding-a-new-field/samples/sample2.vb)]
 
-Recompilar o aplicativo usando o **Debug** &gt; **Build filme** comando de menu.
+Recompile o aplicativo usando o comando **Debug** &gt;**Build Movie** menu.
 
-Agora que você atualizou o `Model` classe, você também precisa atualizar o *\Views\Movies\Index.vbhtml* e *\Views\Movies\Create.vbhtml* exibir modelos para dar suporte a novos `Rating`propriedade.
+Agora que você atualizou a classe `Model`, também precisa atualizar os modelos de exibição *\Views\Movies\Index.vbhtml* e *\Views\Movies\Create.vbhtml* para dar suporte à nova propriedade `Rating`.
 
-Abra o<em>\Views\Movies\Index.vbhtml</em> arquivo e adicione um `<th>Rating</th>` título de coluna logo após o <strong>preço</strong> coluna. Em seguida, adicione uma `<td>` coluna, próximo ao final do modelo para renderizar o `@item.Rating` valor. Abaixo está o que a atualização <em>Index.vbhtml</em> modelo de exibição se parece com:
+Abra o arquivo<em>\Views\Movies\Index.vbhtml</em> e adicione um título de coluna `<th>Rating</th>` logo após a coluna <strong>Price</strong> . Em seguida, adicione uma coluna `<td>` próximo ao final do modelo para renderizar o valor de `@item.Rating`. Abaixo está a aparência do modelo de exibição <em>index. vbhtml</em> atualizado:
 
 [!code-vbhtml[Main](adding-a-new-field/samples/sample3.vbhtml)]
 
-Em seguida, abra o *\Views\Movies\Create.vbhtml* arquivo e adicione a seguinte marcação próximo ao final do formulário. Isso renderiza uma caixa de texto para que você possa especificar uma classificação quando um novo filme é criado.
+Em seguida, abra o arquivo *\Views\Movies\Create.vbhtml* e adicione a marcação a seguir próximo ao final do formulário. Isso renderiza uma caixa de texto para que você possa especificar uma classificação quando um novo filme é criado.
 
 [!code-cshtml[Main](adding-a-new-field/samples/sample4.cshtml)]
 
-## <a name="managing-model-and-database-schema-differences"></a>Gerenciamento de modelo e diferenças de esquema de banco de dados
+## <a name="managing-model-and-database-schema-differences"></a>Gerenciando diferenças de modelo e esquema de banco de dados
 
-Agora você atualizou o código do aplicativo para dar suporte a novos `Rating` propriedade.
+Agora você atualizou o código do aplicativo para dar suporte à nova propriedade `Rating`.
 
-Agora, execute o aplicativo e navegue até a */Movies* URL. Quando você fizer isso, no entanto, você verá o seguinte erro:
+Agora, execute o aplicativo e navegue até a URL */Movies* . No entanto, ao fazer isso, você verá o seguinte erro:
 
 ![](adding-a-new-field/_static/image1.png)
 
-Você está vendo esse erro porque atualizada `Movie` classe de modelo no aplicativo agora é diferente do esquema do `Movie` tabela do banco de dados existente. (Não há nenhuma coluna `Rating` na tabela de banco de dados.)
+Você está vendo esse erro porque a classe do modelo de `Movie` atualizado no aplicativo agora é diferente do esquema da tabela `Movie` do banco de dados existente. (Não há nenhuma coluna `Rating` na tabela de banco de dados.)
 
-Por padrão, quando você usa o Entity Framework Code First para criar automaticamente um banco de dados, como você fez neste tutorial, Code First adiciona uma tabela no banco de dados para ajudar a controlar se o esquema do banco de dados está em sincronizado com as classes de modelo, que ele foi gerado. Se não estiverem sincronizados, o Entity Framework gera um erro. Isso torna mais fácil rastrear problemas em tempo de desenvolvimento que caso contrário, apenas talvez (por erros obscuros) em tempo de execução. O recurso de verificação de sincronização é o que faz com que a mensagem de erro a ser exibido que você acabou de ver.
+Por padrão, quando você usa Entity Framework Code First para criar automaticamente um banco de dados, como fazia anteriormente neste tutorial, Code First adiciona uma tabela ao banco de dados para ajudar a controlar se o esquema do banco de dados está em sincronia com as classes de modelo das quais ele foi gerado. Se eles não estiverem em sincronia, o Entity Framework gerará um erro. Isso facilita o rastreamento de problemas em tempo de desenvolvimento que, de outra forma, você pode localizar (por erros obscuros) em tempo de execução. O recurso de verificação de sincronização é o que faz com que a mensagem de erro seja exibida que você acabou de ver.
 
 Há duas abordagens para resolver o erro:
 
-1. Faça com que o Entity Framework remova automaticamente e recrie o banco de dados com base no novo esquema de classe de modelo. Essa abordagem é muito conveniente ao fazer o desenvolvimento ativo em um banco de dados de teste, porque ele permite que você desenvolva rapidamente o esquema de modelo e o banco de dados juntos. A desvantagem, no entanto, é que você perde os dados existentes no banco de dados — para que você *não* para usar essa abordagem em um banco de dados de produção!
+1. Faça com que o Entity Framework remova automaticamente e recrie o banco de dados com base no novo esquema de classe de modelo. Essa abordagem é muito conveniente ao fazer o desenvolvimento ativo em um banco de dados de teste, pois ele permite que você evolua rapidamente o modelo e o esquema de banco de dados juntos. No entanto, a desvantagem é que você perde os dados existentes no banco de dados – portanto, *não* convém usar essa abordagem em um banco de dados de produção!
 2. Modifique explicitamente o esquema do banco de dados existente para que ele corresponda às classes de modelo. A vantagem dessa abordagem é que você mantém os dados. Faça essa alteração manualmente ou criando um script de alteração de banco de dados.
 
-Para este tutorial, vamos usar a primeira abordagem, você terá o Entity Framework Code First automaticamente recriar o banco de dados a qualquer momento que o modelo é alterado.
+Para este tutorial, usaremos a primeira abordagem — você terá o Entity Framework Code First recriará o banco de dados automaticamente sempre que o modelo for alterado.
 
-## <a name="automatically-re-creating-the-database-on-model-changes"></a>Recriar automaticamente o banco de dados de alterações do modelo
+## <a name="automatically-re-creating-the-database-on-model-changes"></a>Recriar automaticamente o banco de dados em alterações de modelo
 
-Vamos atualizar o aplicativo para que o Code First automaticamente descarta e recria o banco de dados a qualquer momento que você alterar o modelo para o aplicativo.
+Vamos atualizar o aplicativo para que Code First automaticamente descartar e recriar o banco de dados sempre que você alterar o modelo para o aplicativo.
 
 > [!NOTE] 
 > 
-> **Aviso** você deve habilitar essa abordagem de automaticamente descartar e recriar o banco de dados somente quando você estiver usando um banco de dados de desenvolvimento ou teste, e *nunca* em um banco de dados de produção que contém dados reais. Usá-lo em um servidor de produção pode levar à perda de dados.
+> **Aviso** Você deve habilitar essa abordagem de descartar e recriar automaticamente o banco de dados somente quando estiver usando um banco de dados de desenvolvimento ou de teste, e *nunca* em um banco de dado de produção que contenha real Data. Usá-lo em um servidor de produção pode levar à perda de dados.
 
-Na **Gerenciador de soluções**, clique com botão direito do *modelos* pasta, selecione **Add**e, em seguida, selecione **classe**.
+Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta *modelos* , selecione **Adicionar**e, em seguida, selecione **classe**.
 
 ![](adding-a-new-field/_static/image2.png)
 
-Nomeie a classe &quot;MovieInitializer&quot;. Atualização de `MovieInitializer` classe para conter o código a seguir:
+Nomeie a classe &quot;MovieInitializer&quot;. Atualize a classe `MovieInitializer` para conter o seguinte código:
 
 [!code-vb[Main](adding-a-new-field/samples/sample5.vb)]
 
-O `MovieInitializer` classe especifica que o banco de dados usado pelo modelo deve ser descartado e novamente criado automaticamente se as classes de modelo mudem. O código inclui um `Seed` método para especificar alguns dados padrão para adicionar automaticamente para o banco de dados de qualquer uma vez que ele foi criado (ou recriado). Isso fornece uma maneira útil para popular o banco de dados com alguns dados de exemplo, sem a necessidade de você preencher manualmente cada vez que você alterar um modelo.
+A classe `MovieInitializer` especifica que o banco de dados usado pelo modelo deve ser descartado e recriado automaticamente se as classes de modelo forem alteradas. O código inclui um método de `Seed` para especificar alguns dados padrão a serem adicionados automaticamente ao Database sempre que ele for criado (ou recriado). Isso fornece uma maneira útil de preencher o banco de dados com alguns exemplos de dado, sem a necessidade de preenchê-lo manualmente sempre que você fizer uma alteração no modelo.
 
-Agora que você definiu o `MovieInitializer` classe, você vai querer fazer a conexão para que cada vez que o aplicativo é executado, ele verifica se as classes de modelo são diferentes do esquema no banco de dados. Se elas forem, você pode executar o inicializador para recriar o banco de dados para corresponder ao modelo e, em seguida, preencher o banco de dados com os dados de exemplo.
+Agora que você definiu a classe `MovieInitializer`, você desejará conectá-la para que cada vez que o aplicativo for executado, ele verificará se as classes de modelo são diferentes do esquema no banco de dados. Em caso afirmativo, você pode executar o inicializador para recriar o banco de dados para corresponder ao modelo e, em seguida, preencher o banco de dado com os data de exemplo.
 
-Abra o *global. asax* que está na raiz do arquivo a `MvcMovies` projeto:
+Abra o arquivo *global. asax* que está na raiz do projeto `MvcMovies`:
 
-O *global. asax* arquivo contém a classe que define todo o aplicativo para o projeto e contém um `Application_Start` manipulador de eventos que é executado quando o aplicativo é iniciado pela primeira vez.
+O arquivo *global. asax* contém a classe que define o aplicativo inteiro para o projeto e contém um manipulador de eventos `Application_Start` que é executado quando o aplicativo é iniciado pela primeira vez.
 
-Localizar o `Application_Start` método e adicione uma chamada para `Database.SetInitializer` no início do método, conforme mostrado abaixo:
+Localize o método `Application_Start` e adicione uma chamada para `Database.SetInitializer` no início do método, conforme mostrado abaixo:
 
 [!code-vb[Main](adding-a-new-field/samples/sample6.vb)]
 
-O `Database.SetInitializer` instrução que você acabou de adicionar indica que o banco de dados usado pelo `MovieDBContext` instância deverá ser automaticamente excluída e recriada se o esquema e o banco de dados não corresponderem. E como você viu, ele preencherá o banco de dados com os dados de exemplo que são especificados no também o `MovieInitializer` classe.
+A instrução de `Database.SetInitializer` que você acabou de adicionar indica que o banco de dados usado pela instância de `MovieDBContext` deve ser excluído e recriado automaticamente se o esquema e o banco de dados não corresponderem. E como você viu, ele também preencherá o banco de dados com o exemplo de dado especificado na classe `MovieInitializer`.
 
-Fechar o *global. asax* arquivo.
+Feche o arquivo *global. asax* .
 
-Executar o aplicativo novamente e navegue até a */Movies* URL. Quando o aplicativo é iniciado, ele detecta que a estrutura do modelo não coincide mais com o esquema de banco de dados. Ele automaticamente recria o banco de dados de acordo com a nova estrutura de modelo e preenche o banco de dados com os filmes de exemplo:
+Execute novamente o aplicativo e navegue até a URL do */Movies* . Quando o aplicativo é iniciado, ele detecta que a estrutura do modelo não corresponde mais ao esquema do banco de dados. Ele recria automaticamente o banco de dados para corresponder à nova estrutura de modelo e popula o banco de dados com os filmes de exemplo:
 
 ![7_MyMovieList_SM](adding-a-new-field/_static/image3.png)
 
-Clique o **criar novo** link para adicionar um novo filme. Observe que você pode adicionar uma classificação.
+Clique no link **criar novo** para adicionar um novo filme. Observe que você pode adicionar uma classificação.
 
 [![7_CreateRioII](adding-a-new-field/_static/image5.png)](adding-a-new-field/_static/image4.png)
 
-Clique em **Criar**. O novo filme, incluindo a classificação é exibido nos listagem de filmes:
+Clique em **Criar**. O novo filme, incluindo a classificação, agora aparece na listagem de filmes:
 
 ![7_ourNewMovie_SM](adding-a-new-field/_static/image6.png)
 
-Nesta seção, você viu como você pode modificar objetos de modelo e manter o banco de dados em sincronia com as alterações. Você também aprendeu uma maneira de preencher um banco de dados recém-criado com dados de exemplo para que você pode experimentar os cenários. Em seguida, vamos dar uma olhada em como você pode adicionar lógica de validação mais avançada para as classes de modelo e habilitar algumas regras de negócio a serem impostos.
+Nesta seção, você viu como é possível modificar objetos de modelo e manter o banco de dados em sincronia com as alterações. Você também aprendeu uma maneira de preencher um banco de dados recém-criado com exemplos de dado, de modo que você possa experimentar cenários. Em seguida, vamos dar uma olhada em como você pode adicionar uma lógica de validação mais rica às classes de modelo e permitir que algumas regras de negócio sejam impostas.
 
 > [!div class="step-by-step"]
 > [Anterior](examining-the-edit-methods-and-edit-view.md)

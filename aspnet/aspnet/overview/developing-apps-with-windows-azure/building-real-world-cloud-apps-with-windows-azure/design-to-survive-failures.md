@@ -8,16 +8,16 @@ ms.date: 06/12/2014
 ms.assetid: 364ce84e-5af8-4e08-afc9-75a512b01f84
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/design-to-survive-failures
 msc.type: authoredcontent
-ms.openlocfilehash: 9bf9acb8b4f8521d03c053c124c5fc4a07d6cb9a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.openlocfilehash: 348232af531b5d53dc3cb46d6d2c7931d95a572d
+ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74585662"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77457122"
 ---
 # <a name="design-to-survive-failures-building-real-world-cloud-apps-with-azure"></a>Design para sobreviver a falhas (criando aplicativos de nuvem do mundo real com o Azure)
 
-por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson]((https://twitter.com/RickAndMSFT)), [Tom Dykstra](https://github.com/tdykstra)
+por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitter.com/RickAndMSFT), [Tom Dykstra](https://github.com/tdykstra)
 
 [Baixar o projeto de ti](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4) ou [baixar o livro eletrônico](https://blogs.msdn.com/b/microsoft_press/archive/2014/07/23/free-ebook-building-cloud-apps-with-microsoft-azure.aspx)
 
@@ -58,7 +58,7 @@ Regiões inteiras podem falhar. Um desastre natural pode destruir um data center
 
 Uma meta do Azure é tornar a manipulação de todos esses tipos de falhas muito mais fácil, e você verá alguns exemplos de como estamos fazendo isso nos capítulos a seguir.
 
-## <a name="slas"></a>Elimina
+## <a name="slas"></a>SLAs
 
 As pessoas geralmente ouvem os SLAs (contratos de nível de serviço) no ambiente de nuvem. Basicamente, essas são as promessas de que as empresas fazem sobre a confiabilidade de seu serviço. Um SLA de 99,9% significa que você deve esperar que o serviço esteja funcionando corretamente 99,9% do tempo. Esse é um valor bastante típico para um SLA e parece ser um número muito alto, mas você pode não perceber quanto tempo de 0,1% realmente vale para. Aqui está uma tabela que mostra quanto tempo de inatividade vários percentuais de SLA valem para mais de um ano, um mês e uma semana.
 
