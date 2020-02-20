@@ -3770,7 +3770,19 @@
     - name: Whitepapers
       href: whitepapers/overview.md
     - name: ASP.NET SameSite
-      href: SameSite/system-web-samesite.md
+      items:
+        - name: Cookies do SameSite no ASP.NET
+          href: SameSite/system-web-samesite.md
+        - name: Artigos da Base de Dados de Conhecimento do SameSite
+          uid: samesite/kbs-samesite
+        - name: 'C# MVC'
+          uid: samesite/csMVC
+        - name: 'C# WebForms'
+          uid: samesite/CSharpWebForms
+        - name: VB WebForms
+          uid: samesite/vbWF
+        - name: VB MVC
+          uid: samesite/vbMVC
     - name: Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
       href: whitepapers/aspnet4/index.md
       items:
