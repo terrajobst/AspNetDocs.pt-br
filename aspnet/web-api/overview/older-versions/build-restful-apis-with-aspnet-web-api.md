@@ -43,7 +43,7 @@ Neste laboratório prático, você aprenderá como:
 - Chamar a API de um cliente HTML
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O exemplo a seguir é necessário para concluir este laboratório prático:
 
@@ -222,7 +222,7 @@ Essa tarefa demonstrará como extrair a funcionalidade em uma camada de serviço
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample4.cs)]
 5. Adicione o seguinte código realçado para o **ContactRepository.cs** arquivo para implementar o método GetAllContacts.
 
-    (Código de trecho de código – *Web repositório contato do laboratório de API - Ex01 -*)
+    (Código de trecho de código – *Web repositório contato do laboratório de API - Ex01 -* )
 
     [!code-csharp[Main](build-restful-apis-with-aspnet-web-api/samples/sample5.cs)]
 6. Abra o **ContactController.cs** arquivo caso ele não ainda estiver aberto.
@@ -484,7 +484,7 @@ Com trechos de código, você tem todo o código que necessário ao seu alcance.
 <a id="Appendix_B_Installing_Visual_Studio_Express_2012_for_Web"></a>
 ## <a name="appendix-b-installing-visual-studio-express-2012-for-web"></a>Apêndice b: Instalar o Visual Studio Express 2012 para Web
 
-Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
+Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)** . As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
 
 1. Vá para [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, se você já tiver instalado o Web Platform Installer, você pode abri-lo e pesquisar o produto &quot; <em>Visual Studio Express 2012 para Web com o SDK do Azure</em>&quot;.
 2. Clique em **instalar agora**. Se você não tiver **Web Platform Installer** você será redirecionado para baixar e instalá-lo primeiro.

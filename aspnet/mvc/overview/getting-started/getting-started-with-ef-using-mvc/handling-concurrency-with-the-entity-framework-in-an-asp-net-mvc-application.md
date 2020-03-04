@@ -33,7 +33,7 @@ Neste tutorial, você:
 > * Tratamento de simultaneidade de teste
 > * Atualizar a página Excluir
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Assíncrono e procedimentos armazenados](async-and-stored-procedures-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 

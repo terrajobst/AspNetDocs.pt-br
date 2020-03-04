@@ -39,7 +39,7 @@ Neste tutorial, você:
 > * Adicionar uma migração
 > * Atualizar o banco de dados
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Code First migrações e implantação](migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 

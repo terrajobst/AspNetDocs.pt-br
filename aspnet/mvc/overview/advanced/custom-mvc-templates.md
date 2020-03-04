@@ -30,7 +30,7 @@ Nenhuma das abordagens mencionadas anteriormente é ideal, portanto, decidimos a
 - O [Galeria do Visual Studio](https://visualstudiogallery.msdn.microsoft.com/) facilita a distribuir a extensão a um público amplo.
 - Extensões VSIX podem ser atualizadas que facilita a criação de correções e atualizações para seus modelos personalizados.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Os usuários precisam estar familiarizados com a criação de modelos de projeto, incluindo a marcação necessária para os arquivos de vstemplate etc.
 - Os usuários precisarão ter o Visual Studio Professional e superior instalado. SKUs de Express não dão suporte a criar projetos VSIX.

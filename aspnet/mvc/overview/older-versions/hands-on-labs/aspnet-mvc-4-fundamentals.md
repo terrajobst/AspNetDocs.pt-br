@@ -44,7 +44,7 @@ O aplicativo de web Store de música que será compilado em todo este laboratór
 <a id="ASPNET_MVC_4_Essentials"></a>
 ### <a name="aspnet-mvc-4-essentials"></a>Conceitos básicos do ASP.NET MVC 4
 
-Aplicativo de música Store será compilado usando **controlador MVC (Model View)**, um padrão de arquitetura que separa um aplicativo em três componentes principais:
+Aplicativo de música Store será compilado usando **controlador MVC (Model View)** , um padrão de arquitetura que separa um aplicativo em três componentes principais:
 
 - **Modelos de**: Objetos de modelo são as partes do aplicativo que implementam a lógica do domínio. Muitas vezes, os objetos de modelo também recuperar e armazenam o estado de modelo em um banco de dados.
 - **Exibições:** As exibições são os componentes que exibem a interface do usuário do aplicativo (UI). Normalmente, essa interface do usuário é criado a partir de dados de modelo. Um exemplo seria a exibição de edição de álbuns que exibe as caixas de texto e uma lista suspensa com base no estado atual de um objeto de álbum.
@@ -73,7 +73,7 @@ Neste laboratório prático, você aprenderá como:
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Você deve ter os seguintes itens para concluir este laboratório:
 
@@ -126,7 +126,7 @@ Neste exercício, você aprenderá como criar um aplicativo ASP.NET MVC no Visua
 2. No menu **Arquivo**, clique em **Novo Projeto**.
 3. No **novo projeto** caixa de diálogo, selecione o **aplicativo Web do ASP.NET MVC 4** tipo, localizado no projeto **Visual c#** **Web** modelo lista.
 4. Alterar o **nome** à *MvcMusicStore*.
-5. Defina o local da solução dentro de um novo **começar** na pasta de origem neste exercício, por exemplo **\Source\Ex01-CreatingMusicStoreProject\Begin [YOUR-CHOL-PATH]**. Clique em **OK**.
+5. Defina o local da solução dentro de um novo **começar** na pasta de origem neste exercício, por exemplo **\Source\Ex01-CreatingMusicStoreProject\Begin [YOUR-CHOL-PATH]** . Clique em **OK**.
 
     ![Criar caixa de diálogo Novo projeto](aspnet-mvc-4-fundamentals/_static/image2.png "criar caixa de diálogo Novo projeto")
 
@@ -269,9 +269,9 @@ Nesta tarefa, você irá testar o aplicativo em um navegador da web.
 1. Pressione **F5** para executar o aplicativo.
 2. O projeto é iniciado **Home** página. Altere a URL para verificar se a implementação de cada ação.
 
-    1. **/ Store**. Você verá  **&quot;Olá do Store.Index()&quot;**.
-    2. **/ Store/procura**. Você verá  **&quot;Olá do Store.Browse()&quot;**.
-    3. **/ Store/detalhes**. Você verá  **&quot;Olá do Store.Details()&quot;**.
+    1. **/ Store**. Você verá  **&quot;Olá do Store.Index()&quot;** .
+    2. **/ Store/procura**. Você verá  **&quot;Olá do Store.Browse()&quot;** .
+    3. **/ Store/detalhes**. Você verá  **&quot;Olá do Store.Details()&quot;** .
 
         ![Navegação StoreBrowse](aspnet-mvc-4-fundamentals/_static/image9.png "StoreBrowse de navegação")
 
@@ -309,7 +309,7 @@ Nesta tarefa, você aprenderá a usar o **querystring** para enviar parâmetros 
     [!code-csharp[Main](aspnet-mvc-4-fundamentals/samples/sample4.cs)]
 
 > [!NOTE]
-> Você está usando o **HttpUtility** método de utilitário para impede que os usuários injetando Javascript para o modo de exibição com um link como   **/Store/procurar? Gênero =&lt;script&gt;Window '[http://hackersite.com](http://hackersite.com)'&lt;/script&gt;**.
+> Você está usando o **HttpUtility** método de utilitário para impede que os usuários injetando Javascript para o modo de exibição com um link como   **/Store/procurar? Gênero =&lt;script&gt;Window '[http://hackersite.com](http://hackersite.com)'&lt; /script&gt;** .
 > 
 > Para obter mais explicações, visite [este artigo do msdn](https://msdn.microsoft.com/library/a2a4yykt(v=VS.80).aspx).
 
@@ -367,7 +367,7 @@ Neste exercício, você aprenderá como adicionar uma página de layout mestre p
 <a id="Ex4Task1"></a>
 
 <a id="Task_1_-_Modifying_the_file__layoutcshtml"></a>
-#### <a name="task-1---modifying-the-file-layoutcshtml"></a>Tarefa 1: modificar o arquivo \_layout. cshtml
+#### <a name="task-1---modifying-the-file-_layoutcshtml"></a>Tarefa 1: modificar o arquivo \_layout. cshtml
 
 O arquivo **~/Views/Shared/\_layout. cshtml** permite configurar um modelo para HTML comuns para usar em todo o site. Nesta tarefa, você adicionará uma página de layout mestre com um cabeçalho comum com links para a área de Home page e Store.
 
@@ -418,7 +418,7 @@ Nesta tarefa, você irá adicionar uma folha de estilos CSS para definir os esti
 
 Nesta tarefa, você adicionará um modelo de exibição para gerar a resposta HTML que usará a página mestra do layout e CSS adicionados neste exercício.
 
-1. Para usar um modelo de exibição quando a navegação na home page do site, você primeiro precisará indicar que em vez de retornar uma cadeia de caracteres, o **índice HomeController** método será retornado um **exibição**. Abra **HomeController** classe e altere seu **índice** método para retornar um **ActionResult**, e que ele retorne **View()**.
+1. Para usar um modelo de exibição quando a navegação na home page do site, você primeiro precisará indicar que em vez de retornar uma cadeia de caracteres, o **índice HomeController** método será retornado um **exibição**. Abra **HomeController** classe e altere seu **índice** método para retornar um **ActionResult**, e que ele retorne **View()** .
 
     (Código de trecho de código – *conceitos básicos do ASP.NET MVC 4 - Ex4 HomeController índice*)
 
@@ -459,7 +459,7 @@ Para verificar que você realizou corretamente todas as etapas no exercício ant
 
 Com o aplicativo aberto em um navegador, você deve observar que:
 
-1. Método de ação de índice do HomeController encontrado e exibidos a **\Views\Home\Index.cshtml** exibir modelo, mesmo que o código chamado **retornar View()**, porque o modelo de exibição seguido de convenção de nomenclatura padrão.
+1. Método de ação de índice do HomeController encontrado e exibidos a **\Views\Home\Index.cshtml** exibir modelo, mesmo que o código chamado **retornar View()** , porque o modelo de exibição seguido de convenção de nomenclatura padrão.
 2. A Home Page exibe a mensagem de boas-vinda definida dentro de **\Views\Home\Index.cshtml** modelo de exibição.
 3. A Home Page é usando o  **\_layout. cshtml** modelo, e, portanto, a mensagem de boas-vinda está contida o layout do site padrão HTML.
 
@@ -969,7 +969,7 @@ Ao concluir este laboratório prático, você aprendeu os conceitos básicos do 
 <a id="Appendix_A_Installing_Visual_Studio_Express_2012_for_Web"></a>
 ## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Apêndice a: Instalar o Visual Studio Express 2012 para Web
 
-Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
+Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)** . As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
 
 1. Vá para [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, se você já tiver instalado o Web Platform Installer, você pode abri-lo e pesquisar o produto &quot; <em>Visual Studio Express 2012 para Web com o SDK do Windows Azure</em>&quot;.
 2. Clique em **instalar agora**. Se você não tiver **Web Platform Installer** você será redirecionado para baixar e instalá-lo primeiro.

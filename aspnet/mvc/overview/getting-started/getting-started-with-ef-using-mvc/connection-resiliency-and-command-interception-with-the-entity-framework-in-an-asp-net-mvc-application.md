@@ -31,7 +31,7 @@ Neste tutorial, você:
 > * Habilitar a interceptação de comando
 > * A nova configuração de teste
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Classificação, filtragem e paginação](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 

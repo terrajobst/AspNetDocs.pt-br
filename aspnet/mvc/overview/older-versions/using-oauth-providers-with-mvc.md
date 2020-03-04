@@ -34,7 +34,7 @@ Há duas metas principais neste tutorial:
 
 Embora os exemplos neste tutorial se concentrar em usando o Facebook como provedor de autenticação, você pode modificar o código para usar qualquer um dos provedores. As etapas para implementar qualquer provedor são muito semelhantes às etapas que você verá neste tutorial. Você só verá diferenças significativas ao fazer chamadas diretas para a API do provedor definida.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Microsoft Visual Studio 2012](https://www.microsoft.com/visualstudio/eng/downloads#vs) ou [Microsoft Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/eng/downloads#d-2012-express)
 
@@ -82,7 +82,7 @@ Este tutorial não mostra todas as etapas que você deve executar para registrar
 - [Microsoft](http://manage.dev.live.com/)
 - [Twitter](https://dev.twitter.com/)
 
-Ao registrar o seu site com o Facebook, você pode fornecer &quot;localhost&quot; para o domínio do site e `&quot;http://localhost/&quot;` para a URL, conforme mostrado na imagem abaixo. Usando localhost funciona com a maioria dos provedores, mas atualmente não funciona com o provedor Microsoft. Para o provedor da Microsoft, você deve incluir uma URL de site válido.
+Ao registrar o seu site com o Facebook, você pode fornecer &quot;localhost&quot; para o domínio do site e `&quot; http://localhost/&quot;` para a URL, conforme mostrado na imagem abaixo. Usando localhost funciona com a maioria dos provedores, mas atualmente não funciona com o provedor Microsoft. Para o provedor da Microsoft, você deve incluir uma URL de site válido.
 
 ![Registre o site](using-oauth-providers-with-mvc/_static/image4.png)
 

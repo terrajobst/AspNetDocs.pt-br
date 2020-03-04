@@ -40,7 +40,7 @@ por Tim Ammann
 
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2012](https://www.microsoft.com/visualstudio/11) ou [Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/11/downloads#express-web).
 
@@ -53,7 +53,7 @@ O Page Inspector é fornecido com o Microsoft Web Developer Tools. A versão mai
 
 ## <a name="create-a-web-application"></a>Criar um aplicativo Web
 
-Primeiro, crie um aplicativo web que você usará com o Inspetor de página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#**, selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**.
+Primeiro, crie um aplicativo web que você usará com o Inspetor de página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#** , selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**.
 
 ![Novo aplicativo ASP.NET MVC](using-page-inspector-in-aspnet-mvc/_static/image2.png)
 
@@ -196,7 +196,7 @@ Agora, altere o valor para `background-color` para "vermelho". A alteração apa
 
 O editor de CSS no Visual Studio 2012 tem um seletor de cores que torna mais fácil escolher e inserir as cores. O seletor de cor inclui uma paleta de cores padrão, dá suporte a nomes de cores padrão, os códigos de hash, as cores RGB, RGBA, HSL e HSLA e mantém uma lista das cores usados mais recentemente no documento.
 
-Na seção anterior, você alterou o valor da `background-color` propriedade. Para invocar o seletor de cores, coloque o ponto de inserção depois do nome da propriedade e digite **#** ou **rgb (**.
+Na seção anterior, você alterou o valor da `background-color` propriedade. Para invocar o seletor de cores, coloque o ponto de inserção depois do nome da propriedade e digite **#** ou **rgb (** .
 
 ![A barra de seletor de cores CSS](using-page-inspector-in-aspnet-mvc/_static/image36.png)
 
@@ -236,7 +236,7 @@ Com a versão 1.3, o Page Inspector agora pode mapear itens que foram adicionado
 > [!NOTE]
 > O modelo SPA requer o [ASP.NET e Web Tools 2012.2](https://go.microsoft.com/fwlink/?LinkId=282650) atualizar.
 
-No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#**, selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**. Clique em **OK**.
+No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#** , selecione **Web**e, em seguida, selecione **aplicativo Web do ASP.NET MVC4**. Clique em **OK**.
 
 No **novo projeto ASP.NET MVC 4** caixa de diálogo, selecione **aplicativo de página única**.
 

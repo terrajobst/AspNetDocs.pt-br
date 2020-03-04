@@ -47,7 +47,7 @@ Esse tópico contém as seguintes seções:
 - [Executar testes](#runtests)
 
 <a id="prereqs"></a>
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community, Professional ou Enterprise edition
 

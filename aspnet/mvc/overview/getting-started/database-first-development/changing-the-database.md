@@ -28,7 +28,7 @@ Neste tutorial, você:
 > * Adicionar uma coluna
 > * Adicione a propriedade aos modos de exibição
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Gerando exibições](generating-views.md)
 

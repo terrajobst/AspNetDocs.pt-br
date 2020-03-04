@@ -47,7 +47,7 @@ Neste laboratório prático, você aprenderá como:
 - Escalar horizontalmente seu aplicativo SignalR usando **SQL Server**.
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O exemplo a seguir é necessário para concluir este laboratório prático:
 

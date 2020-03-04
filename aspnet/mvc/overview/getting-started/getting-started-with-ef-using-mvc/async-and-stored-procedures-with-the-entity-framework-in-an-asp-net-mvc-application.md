@@ -38,7 +38,7 @@ Neste tutorial, você:
 > * Use os procedimentos armazenados
 > * Implantar no Azure
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Atualização de dados relacionados](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 

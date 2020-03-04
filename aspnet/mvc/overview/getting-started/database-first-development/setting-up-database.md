@@ -31,7 +31,7 @@ Neste tutorial, você:
 > [!div class="checklist"]
 > * Configurar o banco de dados
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 
@@ -77,7 +77,7 @@ Adicione o seguinte código T-SQL para o script de pós-implantação. Esse scri
 
 Agora você tem arquivos de script SQL 4, mas nenhuma tabela real. Você está pronto para implantar seu projeto de banco de dados localdb. No Visual Studio, clique no botão Iniciar (ou F5) para compilar e implantar seu projeto de banco de dados. Verifique as **saída** tab para verificar se a compilação e implantação foi bem-sucedida.
 
-Para ver que o novo banco de dados foi criado, abra **Pesquisador de objetos do SQL Server** e procure o nome do projeto no servidor de banco de dados local correto (nesse caso **\ProjectsV13 (localdb)**).
+Para ver que o novo banco de dados foi criado, abra **Pesquisador de objetos do SQL Server** e procure o nome do projeto no servidor de banco de dados local correto (nesse caso **\ProjectsV13 (localdb)** ).
 
 Para ver que as tabelas são populadas com dados, uma tabela com o botão direito e selecione **exibir dados**.
 

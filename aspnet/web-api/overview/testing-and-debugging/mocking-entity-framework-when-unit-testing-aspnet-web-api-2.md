@@ -50,7 +50,7 @@ Esse tópico contém as seguintes seções:
 Se você já tiver concluído as etapas em [Unit Testing com o ASP.NET Web API 2](unit-testing-with-aspnet-web-api.md), você pode pular para a seção [adicionar o controlador](#controller).
 
 <a id="prereqs"></a>
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Edição do Visual Studio 2017 Community, Professional ou Enterprise
 

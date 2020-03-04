@@ -46,7 +46,7 @@ Definições de configuração de API da Web são definidas na [HttpConfiguratio
 | **Rotas** | A coleção de rotas. Ver [roteamento na API Web ASP.NET](../web-api-routing-and-actions/routing-in-aspnet-web-api.md). |
 | **Serviços** | A coleção de serviços. Ver [Services](#services). |
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community, Professional ou Enterprise edition.
 

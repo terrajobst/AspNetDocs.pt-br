@@ -42,7 +42,7 @@ Neste tutorial, você usará o SQL Server para distribuir mensagens através de 
 
 ![](scaleout-with-sql-server/_static/image1.png)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Microsoft SQL Server 2005 ou posterior. Backplane dá suporte a edições de área de trabalho e o servidor do SQL Server. Ele não oferece suporte a banco de dados do Azure ou SQL Server Compact Edition. (Se seu aplicativo estiver hospedado no Azure, considere o backplane do barramento de serviço em vez disso.)
 

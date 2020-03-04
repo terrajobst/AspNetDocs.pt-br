@@ -10,7 +10,7 @@ msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
 ms.openlocfilehash: 7b49c1e6425080693229c6c132df3879504c835c
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59379528"
@@ -24,7 +24,7 @@ ms.locfileid: "59379528"
 
 Nesta seção, você adicionará a funcionalidade de pesquisa para o `Index` método de ação que lhe permite pesquisar filmes por gênero ou nome.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para corresponder as capturas de tela desta seção, você precisa executar o aplicativo (F5) e adicione os seguintes filmes no banco de dados.
 

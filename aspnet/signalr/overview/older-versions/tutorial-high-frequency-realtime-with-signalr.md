@@ -54,7 +54,7 @@ Este tutorial contém as seções a seguir:
 
 <a id="prerequisites"></a>
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Este tutorial requer o Visual Studio 2012 ou Visual Studio 2010. Se for usado o Visual Studio 2010, o projeto usará o .NET Framework 4, em vez do .NET Framework 4.5.
 

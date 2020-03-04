@@ -59,7 +59,7 @@ O restante deste tópico examina esses estágios-chave desse ciclo de vida de im
 - **Implantação de preparo**: Como implantar específico cria para um ambiente de preparo e como executar "what if" implantações para garantir que uma implantação não causará problemas.
 - **Implantação na produção**: Como importar pacotes da web para um ambiente de produção quando a infraestrutura de rede impede que a implantação remota.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 A primeira tarefa em qualquer cenário de implantação é garantir que sua infraestrutura de servidor atende aos requisitos de suas ferramentas de implantação e técnicas. Nesse caso, a Fabrikam, Inc. tiver configurado sua infra-estrutura de servidor como este:
 

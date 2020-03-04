@@ -30,7 +30,7 @@ Durante este passo a passo, você aprenderá a:
 - Renomear variáveis e objetos.
 - Inserir trechos de código.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir este passo a passo, você precisará de:
 

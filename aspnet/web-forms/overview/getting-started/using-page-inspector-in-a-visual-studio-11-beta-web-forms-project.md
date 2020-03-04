@@ -45,7 +45,7 @@ por Tim Ammann
 
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2012](https://www.microsoft.com/visualstudio/11) ou [Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/11/downloads#express-web).
 
@@ -58,7 +58,7 @@ O Page Inspector é fornecido com o Microsoft Web Developer Tools. A versão mai
 
 ## <a name="create-a-web-application"></a>Criar um aplicativo Web
 
-Primeiro, você criará um aplicativo web que você usará com o Inspetor de página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#**, selecione **Web**e, em seguida, selecione **aplicativo ASP.NET Web Forms**.
+Primeiro, você criará um aplicativo web que você usará com o Inspetor de página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#** , selecione **Web**e, em seguida, selecione **aplicativo ASP.NET Web Forms**.
 
 ![Novo aplicativo de formulários da Web](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image1.png)
 
@@ -243,7 +243,7 @@ Quando você digita o primeiro caractere de cada palavra em uma propriedade sepa
 
 ![Valores de IntelliSense filtrado](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image24.png)
 
-Agora, digite dois-pontos. Quando você fizer isso, o nome da propriedade de cor de plano de fundo completa é inserido. Tipo de **#** ou **rgb (**, e a barra de seletor de cor é exibida:
+Agora, digite dois-pontos. Quando você fizer isso, o nome da propriedade de cor de plano de fundo completa é inserido. Tipo de **#** ou **rgb (** , e a barra de seletor de cor é exibida:
 
 ![A barra de seletor de cores CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image25.png)
 

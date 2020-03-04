@@ -41,7 +41,7 @@ Neste tutorial, você:
 > * Fechará conexões de banco de dados
 > * Lidar com transações
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Criar o modelo de dados do Entity Framework](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md)
 
@@ -111,7 +111,7 @@ No código a seguir, `courseID` não corresponde a um parâmetro de rota padrão
 
     <a id="overpost"></a>
 
-    ### <a name="security-warning---the-validateantiforgerytoken-attribute-helps-prevent-cross-site-request-forgerysecurityxsrfcsrf-prevention-in-aspnet-mvc-and-web-pagesmd-attacks-it-requires-a-corresponding-htmlantiforgerytoken-statement-in-the-view-which-youll-see-later"></a>Aviso de segurança - a `ValidateAntiForgeryToken` atributo ajuda a impedir [falsificação de solicitação intersite](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) ataques. Ele requer um correspondente `Html.AntiForgeryToken()` instrução no modo de exibição, você verá mais tarde.
+    ### <a name="security-warning---the-validateantiforgerytoken-attribute-helps-prevent-cross-site-request-forgery-attacks-it-requires-a-corresponding-htmlantiforgerytoken-statement-in-the-view-which-youll-see-later"></a>Aviso de segurança - a `ValidateAntiForgeryToken` atributo ajuda a impedir [falsificação de solicitação intersite](../../security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md) ataques. Ele requer um correspondente `Html.AntiForgeryToken()` instrução no modo de exibição, você verá mais tarde.
 
     O `Bind` atributo é uma maneira de proteger contra *overposting* em cenários de criação. Por exemplo, suponha que o `Student` entidade inclui um `Secret` propriedade que você não deseja que essa página da web para definir.
 
@@ -230,7 +230,7 @@ Você adicionará uma `try-catch` bloco para o <xref:System.Web.Mvc.HttpPostAttr
 
 4. Execute a página iniciando o programa selecionando o **alunos** guia e, em seguida, clicando em um **excluir** hiperlink.
 
-5. Escolher **exclua** na página que diz **tem certeza de que você deseja excluir este?**.
+5. Escolher **exclua** na página que diz **tem certeza de que você deseja excluir este?** .
 
     Exibe a página de índice sem o aluno excluído. (Você verá um exemplo de código na ação de manipulação de erros do [tutorial de simultaneidade](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application.md).)
 

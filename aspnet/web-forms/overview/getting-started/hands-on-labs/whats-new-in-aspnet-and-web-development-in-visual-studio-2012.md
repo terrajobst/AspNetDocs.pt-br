@@ -46,7 +46,7 @@ Este laboratório prático, você aprenderá como:
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 - [Microsoft Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) ou superior (leia [Apêndice A](#AppendixA) para obter instruções sobre como instalá-lo).
 - [Windows PowerShell](https://support.microsoft.com/kb/968930/) (para scripts de instalação - já instalados no Windows 8 e Windows Server 2008 R2)
@@ -410,7 +410,7 @@ Essa tarefa apresentará algumas dos novos recursos de editor do JavaScript, com
     ![Recursos do JavaScript HTML5 do JavaScript](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image39.png "recursos JavaScript HTML5 do JavaScript")
 
     *Recursos do JavaScript do HTML5 no JavaScript*
-6. Clique em qualquer colchete de abertura (**{**) do que o script de código e observe que os colchetes são realçados.
+6. Clique em qualquer colchete de abertura ( **{** ) do que o script de código e observe que os colchetes são realçados.
 
     ![Colchetes são realçados](whats-new-in-aspnet-and-web-development-in-visual-studio-2012/_static/image40.png "colchetes são realçados")
 
@@ -684,7 +684,7 @@ Ao concluir este laboratório prático, você tem aprendeu a usar os novos recur
 <a id="Appendix_A_Installing_Visual_Studio_Express_2012_for_Web"></a>
 ## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Apêndice a: Instalar o Visual Studio Express 2012 para Web
 
-Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
+Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)** . As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
 
 1. Vá para [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, se você já tiver instalado o Web Platform Installer, você pode abri-lo e pesquisar o produto &quot; <em>Visual Studio Express 2012 para Web com o SDK do Windows Azure</em>&quot;.
 2. Clique em **instalar agora**. Se você não tiver **Web Platform Installer** você será redirecionado para baixar e instalá-lo primeiro.

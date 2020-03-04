@@ -53,7 +53,7 @@ Neste laboratório prático, você aprenderá como:
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Você deve ter os seguintes itens para concluir este laboratório:
 
@@ -271,7 +271,7 @@ Neste exercício, você aprenderá como criar um formulário para permitir que o
 
 O método de ação Editar do controlador irá recuperar o álbum apropriado do banco de dados, crie uma **StoreManagerViewModel** objeto encapsulá-la (juntamente com uma lista dos artistas e gêneros) e, em seguida, transmiti-los para um modelo de exibição para renderize a página HTML para o usuário. Essa página conterá uma **&lt;formulário&gt;** elemento com caixas de texto e listas suspensas para editar as propriedades do álbum.
 
-Depois que o usuário atualiza os valores de formulário do álbum e clica o **salve** botão, as alterações são enviadas por meio de um POST HTTP retorno de chamada para **/StoreManager/Edit/id**. Embora a URL permanecerá o mesmo a última chamada, ASP.NET MVC identifica que desta vez, ele é um HTTP-POST e, portanto, executa um método de ação Editar diferente (um decorada com **[HttpPost]**).
+Depois que o usuário atualiza os valores de formulário do álbum e clica o **salve** botão, as alterações são enviadas por meio de um POST HTTP retorno de chamada para **/StoreManager/Edit/id**. Embora a URL permanecerá o mesmo a última chamada, ASP.NET MVC identifica que desta vez, ele é um HTTP-POST e, portanto, executa um método de ação Editar diferente (um decorada com **[HttpPost]** ).
 
 <a id="Ex3Task1"></a>
 
@@ -342,7 +342,7 @@ Nesta tarefa, você irá adicionar menus suspensos para o modelo de exibição c
     > [!NOTE]
     > Uma **Html.DropDownList** auxiliar foi adicionado para renderizar menus suspensos para a escolha de artistas e gêneros. Os parâmetros passados para **Html.DropDownList** são:
     > 
-    > 1. O nome do campo de formulário (**&quot;ArtistId&quot;**).
+    > 1. O nome do campo de formulário ( **&quot;ArtistId&quot;** ).
     > 2. O **SelectList** de valores para a lista suspensa.
 
 <a id="Ex3Task5"></a>
@@ -774,7 +774,7 @@ Ao concluir este laboratório prático, você aprendeu como habilitar usuários 
 <a id="Appendix_A_Installing_Visual_Studio_Express_2012_for_Web"></a>
 ## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Apêndice a: Instalar o Visual Studio Express 2012 para Web
 
-Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
+Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)** . As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
 
 1. Vá para [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, se você já tiver instalado o Web Platform Installer, você pode abri-lo e pesquisar o produto &quot; <em>Visual Studio Express 2012 para Web com o SDK do Windows Azure</em>&quot;.
 2. Clique em **instalar agora**. Se você não tiver **Web Platform Installer** você será redirecionado para baixar e instalá-lo primeiro.

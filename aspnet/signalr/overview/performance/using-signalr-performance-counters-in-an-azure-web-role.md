@@ -24,7 +24,7 @@ Por [Luke Latham](https://github.com/guardrex)
 
 Contadores de desempenho do SignalR são usados para monitorar o desempenho do seu aplicativo em uma função da Web do Azure. Os contadores são capturados pelo diagnóstico do Microsoft Azure. Instalar contadores de desempenho do SignalR no Azure com o *signalr.exe*, da mesma ferramenta usada para aplicativos autônomos ou local. Como as funções do Azure são transitórias, você pode configurar um aplicativo para instalar e registrar os contadores de desempenho do SignalR após a inicialização.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * Visual Studio 2015 ou [2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 * [SDK do Microsoft Azure para Visual Studio](https://azure.microsoft.com/downloads/) **Observação: Reinicie seu computador depois de instalar o SDK.**
@@ -36,7 +36,7 @@ Contadores de desempenho do SignalR são usados para monitorar o desempenho do s
 
 2. No Visual Studio, selecione **Arquivo** > **Novo** > **Projeto**.
 
-3. No **novo projeto** caixa de diálogo, selecione o **Visual c#** > **nuvem** categoria à esquerda e, em seguida, selecione o **serviço de nuvem do Azure** modelo. Nomeie o aplicativo **SignalRPerfCounters** e selecione **Okey**.
+3. No **novo projeto** caixa de diálogo, selecione o **Visual c#**  > **nuvem** categoria à esquerda e, em seguida, selecione o **serviço de nuvem do Azure** modelo. Nomeie o aplicativo **SignalRPerfCounters** e selecione **Okey**.
 
    ![Novo aplicativo de nuvem](using-signalr-performance-counters-in-an-azure-web-role/_static/image1.png)
 

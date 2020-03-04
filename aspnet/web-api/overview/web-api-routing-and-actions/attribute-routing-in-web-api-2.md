@@ -25,7 +25,7 @@ O estilo anterior de roteamento, chamado baseado em convenção de roteamento, a
 
 Este tópico mostra como habilitar o roteamento de atributo e descreve as várias opções para o roteamento de atributo. Para obter um tutorial de ponta a ponta que usa o roteamento de atributo, consulte [criar uma API REST com roteamento de atributo na API Web 2](create-a-rest-api-with-attribute-routing.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community, Professional ou Enterprise edition
 

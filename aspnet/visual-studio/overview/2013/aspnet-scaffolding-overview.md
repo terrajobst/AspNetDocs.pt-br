@@ -29,7 +29,7 @@ Por padrão, o Visual Studio 2013 não oferece suporte a geração de código pa
 
 Visual Studio 2013 atualização 2 (atualmente RC) fornece a capacidade de estender o Scaffolding do ASP.NET para atender aos requisitos do seu cenário. Com essa funcionalidade, você pode criar um modelo de scaffolding personalizado e adicioná-lo à caixa de diálogo Adicionar Scaffold novo. Dentro do modelo personalizado, você deve especificar o código que é gerado ao adicionar um item de scaffolding. Para obter mais informações, consulte [criando um Scaffolder personalizado para o Visual Studio](https://go.microsoft.com/fwlink/p/?LinkId=395029).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para usar o Scaffolding do ASP.NET, você deve ter:
 

@@ -33,7 +33,7 @@ Mover seu aplicativo envolve estas etapas:
 
 O [aplicativo finalizado](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) está no GitHub.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 A máquina de desenvolvimento deve ter o seguinte software:
 

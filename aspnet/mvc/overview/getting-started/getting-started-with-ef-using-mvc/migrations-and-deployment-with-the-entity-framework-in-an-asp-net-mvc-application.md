@@ -31,7 +31,7 @@ Neste tutorial, você:
 > * Habilitar migrações de Code First
 > * Implantar o aplicativo no Azure (opcional)
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Resiliência de conexão e interceptação de comando](connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 

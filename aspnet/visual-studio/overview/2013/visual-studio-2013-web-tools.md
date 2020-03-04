@@ -43,7 +43,7 @@ Neste laboratório prático, você aprenderá como:
 - Trocar dados entre o navegador e o Visual Studio usando o Link do navegador
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O exemplo a seguir é necessário para concluir este laboratório prático:
 
@@ -215,7 +215,7 @@ Nesta tarefa, você usará o Link do navegador **inspecionar modo** recurso para
     ![Elemento HTML selecionado no editor de HTML do Visual Studio](visual-studio-2013-web-tools/_static/image15.png "elemento HTML selecionado no editor de HTML do Visual Studio")
 
     *Elemento HTML selecionado no editor de HTML do Visual Studio*
-4. Agora você irá atualizar o **front** classe CSS para alterar o estilo do elemento selecionado. Para fazer isso, pressione **CTRL** + **,** para abrir o **navegar até** caixa de pesquisa. Tipo de **CSS** e pressione **ENTER** para abrir o arquivo.
+4. Agora você irá atualizar o **front** classe CSS para alterar o estilo do elemento selecionado. Para fazer isso, pressione **CTRL** +  **,** para abrir o **navegar até** caixa de pesquisa. Tipo de **CSS** e pressione **ENTER** para abrir o arquivo.
 
     ![Abrir o arquivo CSS](visual-studio-2013-web-tools/_static/image16.png "abrir o arquivo CSS")
 
@@ -250,7 +250,7 @@ Nesta tarefa, você usará o Link do navegador **inspecionar modo** recurso para
 
     *propriedade - webkit-border-radius do seletor de btn*
 14. Coloque o cursor na **- webkit-border-radius** propriedade. Uma linha azul deve aparecer sob a primeira letra da primeira palavra da propriedade. Esse é o **marca inteligente**.
-15. Pressione **CTRL** + **.** Para abrir o menu de sugestões e clique em **adicionar a propriedade padrão (raio de borda) ausente**.
+15. Pressione **CTRL** +  **.** Para abrir o menu de sugestões e clique em **adicionar a propriedade padrão (raio de borda) ausente**.
 
     ![Adicionar ausente sugestão de propriedade padrão](visual-studio-2013-web-tools/_static/image22.png "adicionar ausente sugestão de propriedade padrão")
 
@@ -355,7 +355,7 @@ Nesta tarefa, você criará um novo elemento de formulário HTML que contém um 
 4. A marca de entrada deve ser precedida por um rótulo com uma descrição do campo. Adicione o seguinte rótulo antes da marca de entrada.
 
     [!code-html[Main](visual-studio-2013-web-tools/samples/sample5.html)]
-5. O **para** atributo de uma **&lt;rótulo&gt;** Especifica qual elemento de formulário um rótulo está associado. O valor do atributo deve ser igual à id do elemento relacionado. Adicione a **para** atributo para o **&lt;rótulo&gt;** elemento. Conforme mostrado na figura a seguir, o &quot;nome&quot; valor aparece na caixa de IntelliSense, com base na id dos elementos dentro do mesmo escopo (circunscrição  **&lt;formulário&gt;**).
+5. O **para** atributo de uma **&lt;rótulo&gt;** Especifica qual elemento de formulário um rótulo está associado. O valor do atributo deve ser igual à id do elemento relacionado. Adicione a **para** atributo para o **&lt;rótulo&gt;** elemento. Conforme mostrado na figura a seguir, o &quot;nome&quot; valor aparece na caixa de IntelliSense, com base na id dos elementos dentro do mesmo escopo (circunscrição  **&lt;formulário&gt;** ).
 
     ![Mostrando a id no IntelliSense](visual-studio-2013-web-tools/_static/image35.png "mostrando a id no IntelliSense")
 
@@ -410,7 +410,7 @@ Com o Web Essentials 2013, folhas de estilo e páginas HTML produzem uma lista d
     (Código de trecho de código – *VisualStudio2013WebTooling* - *o Ex2* - *ReadyFunction*)
 
     [!code-javascript[Main](visual-studio-2013-web-tools/samples/sample9.js)]
-3. Coloque o cursor na **script** marca e pressione **CTRL** + **.** Para abrir o menu de sugestão.
+3. Coloque o cursor na **script** marca e pressione **CTRL** +  **.** Para abrir o menu de sugestão.
 4. Clique em **extrair arquivo**.
 
     ![Extraia o JavaScript para sugestão de arquivo](visual-studio-2013-web-tools/_static/image39.png "JavaScript extrair a sugestão de arquivo")

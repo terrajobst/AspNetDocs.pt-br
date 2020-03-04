@@ -55,7 +55,7 @@ Neste laboratório prático, você aprenderá como:
 - Implementar o processamento em formulários da Web de página assíncrona
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Você deve ter os seguintes itens para concluir este laboratório:
 
@@ -504,7 +504,7 @@ O recurso de validação de solicitação no ASP.NET fornece um certo nível de 
 
     *Validação de solicitação habilitada no restante dos campos*
 
-    Web Forms do ASP.NET 4.5 inclui um novo modo de validação de solicitação para executar a validação de solicitação lentamente. Com o modo de validação de solicitação definido como **4.5**, se uma parte do código acessos *Request. Form [&quot;chave&quot;]*, validação de solicitação do gatilho de será de validação somente solicitação do ASP.NET 4.5 para esse elemento específico na coleção de formulário.
+    Web Forms do ASP.NET 4.5 inclui um novo modo de validação de solicitação para executar a validação de solicitação lentamente. Com o modo de validação de solicitação definido como **4.5**, se uma parte do código acessos *Request. Form [&quot;chave&quot;]* , validação de solicitação do gatilho de será de validação somente solicitação do ASP.NET 4.5 para esse elemento específico na coleção de formulário.
 
     Além disso, o ASP.NET 4.5 agora inclui rotinas de codificação de núcleo do v4.0 a biblioteca do Microsoft Anti-XSS. As rotinas de codificação são implementadas pelo novo de Anti-XSS *AntiXssEncoder* tipo encontrado no novo **AntiXSS** namespace. Com o **encoderType** parâmetro configurado para usar *AntiXssEncoder*, toda a saída codificação dentro do ASP.NET automaticamente usa as rotinas de codifica de novo.
 8. Validação de solicitação 4.5 ASP.NET também dá suporte a acesso não validado para solicitar dados. ASP.NET 4.5 adiciona uma nova propriedade de coleção para o **HttpRequest** objeto chamado **Unvalidated**. Quando você navega até **HttpRequest.Unvalidated** você tem acesso a todas as partes comuns de dados de solicitação, incluindo formulários, as QueryStrings, Cookies, URLs e assim por diante.
@@ -629,7 +629,7 @@ Neste laboratório prático, os conceitos a seguir foram resolvidos e demonstrad
 <a id="Appendix_A_Installing_Visual_Studio_Express_2012_for_Web"></a>
 ## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Apêndice a: Instalar o Visual Studio Express 2012 para Web
 
-Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
+Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)** . As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
 
 1. Vá para [ [ https://go.microsoft.com/?linkid=9810169 ](https://go.microsoft.com/?linkid=9810169) ](https://go.microsoft.com/?linkid=9810169). Como alternativa, se você já tiver instalado o Web Platform Installer, você pode abri-lo e pesquisar o produto &quot; <em>Visual Studio Express 2012 para Web com o SDK do Azure</em>&quot;.
 2. Clique em **instalar agora**. Se você não tiver **Web Platform Installer** você será redirecionado para baixar e instalá-lo primeiro.

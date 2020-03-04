@@ -37,7 +37,7 @@ Neste tutorial, você:
 > * Atualizar DeleteConfirmed
 > * Adicionar local de escritório e cursos para a página Criar
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Leitura de dados relacionados](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 
@@ -134,7 +134,7 @@ O código faz o seguinte:
 
 - Altera o nome do método para `EditPost` porque a assinatura agora é igual a `HttpGet` método (o `ActionName` atributo especifica que a URL /Edit/ ainda é usada).
 - Obtém a entidade `Instructor` atual do banco de dados usando o carregamento adiantado para a propriedade de navegação `OfficeAssignment`. Isso é o mesmo que você fez `HttpGet` `Edit` método.
-- Atualiza a entidade `Instructor` recuperada com valores do associador de modelos. O [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) sobrecarga usada permite que você *inclua na lista de permissões* as propriedades que desejar. Isso impede o excesso de postagem, conforme explicado em [segundo tutorial](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
+- Atualiza a entidade `Instructor` recuperada com valores do associador de modelos. O [TryUpdateModel](https://msdn.microsoft.com/library/dd470908(v=vs.108).aspx) sobrecarga usada permite que você *lista branca* as propriedades que você deseja incluir. Isso impede o excesso de postagem, conforme explicado em [segundo tutorial](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md).
 
     [!code-csharp[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample12.cs)]
 - Define se o local do escritório estiver em branco, o `Instructor.OfficeAssignment` propriedade como nulo, de modo que a linha relacionada no `OfficeAssignment` tabela será excluída.
@@ -194,7 +194,7 @@ No *Views\Instructor\Edit.cshtml*, adicione um **cursos** campo com uma matriz d
 
 [!code-cshtml[Main](updating-related-data-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample21.cshtml)]
 
-Depois de colar o código, se as quebras de linha e o recuo não têm a mesma aparecem aqui, corrigir tudo manualmente para que ele se parece com o que você vê aqui. O recuo não precisa ser perfeito, mas cada uma das linhas `@</tr><tr>`, `@:<td>`, `@:</td>` e `@</tr>` precisa estar em uma única linha, conforme mostrado, ou você receberá um erro de tempo de execução.
+Depois de colar o código, se as quebras de linha e o recuo não têm a mesma aparecem aqui, corrigir tudo manualmente para que ele se parece com o que você vê aqui. O recuo não precisa ser perfeito, mas cada uma das linhas `@</tr><tr>`, `@:<td>`, `@:</td>` e `@</tr>` precisa estar em uma única linha, conforme mostrado, ou você receberá um erro de runtime.
 
 Esse código cria uma tabela HTML que contém três colunas. Em cada coluna há uma caixa de seleção, seguida de uma legenda que consiste no número e título do curso. Todas as caixas de seleção têm o mesmo nome ("selectedCourses"), que informa o associador de modelo que eles devem ser tratados como um grupo. O `value` atributo de cada caixa de seleção é definido como o valor da `CourseID.` quando a página é postada, o associador de modelos passa uma matriz para o controlador que consiste o `CourseID` valores para apenas as caixas de seleção que estão selecionados.
 

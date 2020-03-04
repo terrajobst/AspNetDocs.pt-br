@@ -42,7 +42,7 @@ Neste laboratório prático, você aprenderá como:
 - Expor o mesmo conjunto de informações em formatos de máquina - e legível por humanos usando a ferramenta certa para cada trabalho
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O exemplo a seguir é necessário para concluir este laboratório prático:
 
@@ -154,7 +154,7 @@ Nesta tarefa você executar a solução gerada, explorar o aplicativo e alguns d
     *URLs amigáveis*
 
     > [!NOTE]
-    > Como você pode ver, a URL é alterada para **/entre em contato com**. A partir **ASP.NET 4**, os recursos de roteamento de URL foram adicionados a formulários da Web, para que você possa escrever, como URLs *[ http://www.mysite.com/products/software ](http://www.mysite.com/products/software)* em vez de  *[http://www.mysite.com/products.aspx?category=software](http://www.mysite.com/products.aspx?category=software)*. Para obter mais informações, consulte [roteamento de URL](../../../web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing.md).
+    > Como você pode ver, a URL é alterada para **/entre em contato com**. A partir **ASP.NET 4**, os recursos de roteamento de URL foram adicionados a formulários da Web, para que você possa escrever, como URLs *[ http://www.mysite.com/products/software ](http://www.mysite.com/products/software)* em vez de  *[http://www.mysite.com/products.aspx?category=software](http://www.mysite.com/products.aspx?category=software)* . Para obter mais informações, consulte [roteamento de URL](../../../web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/url-routing.md).
 3. Agora, você explorará o fluxo de autenticação integrado ao aplicativo. Para fazer isso, clique em **registrar** no canto superior direito da página.
 
     ![Registrar um novo usuário](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/_static/image8.png)
@@ -204,7 +204,7 @@ Agora você definirá uma **pessoa** classe, que será o modelo usado pelo proce
     *Criando a classe de modelo da pessoa*
 4. Substitua o conteúdo a **Person.cs** arquivo pelo código a seguir. Pressione **CTRL + S** para salvar as alterações.
 
-    (Código de trecho de código – *PersonClass BringingTogetherOneAspNet - o Ex2 -*)
+    (Código de trecho de código – *PersonClass BringingTogetherOneAspNet - o Ex2 -* )
 
     [!code-csharp[Main](one-aspnet-integrating-aspnet-web-forms-mvc-and-web-api/samples/sample3.cs)]
 5. No **Gerenciador de soluções**, com o botão direito do **MyHybridSite** do projeto e selecione **Build**, ou pressione **CTRL + SHIFT + B** para compilar o projeto.

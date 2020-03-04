@@ -72,7 +72,7 @@ Neste laboratório prático, você aprenderá como:
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Você deve ter os seguintes itens para concluir este laboratório:
 

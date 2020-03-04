@@ -41,7 +41,7 @@ Neste laboratório prático, você aprenderá como:
 <a id="Prerequisites"></a>
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Você deve ter os seguintes itens para concluir este laboratório:
 
@@ -115,7 +115,7 @@ Neste exercício, você aprenderá a usar scaffolding do ASP.NET MVC 4 com o có
 
    1. No **modelo** lista suspensa, selecione o **controlador MVC com ações de leitura/gravação e modos de exibição, usando o Entity Framework** opção.
    2. No **classe de modelo** lista suspensa, selecione o **pessoa** classe.
-   3. No **classe de contexto de dados** lista, selecione  **&lt;novo contexto de dados... &gt;**. Escolha qualquer nome e clique em **Okey**.
+   3. No **classe de contexto de dados** lista, selecione  **&lt;novo contexto de dados... &gt;** . Escolha qualquer nome e clique em **Okey**.
    4. No **modos de exibição** suspensa lista, certifique-se de que **Razor** está selecionado.
 
       ![Adicionando o controlador de pessoa com scaffolding](aspnet-mvc-4-entity-framework-scaffolding-and-migrations/_static/image4.png "adicionando o controlador de pessoa com scaffolding")
@@ -273,7 +273,7 @@ Neste laboratório prático, você aprendeu as etapas simples para criar operaç
 <a id="Appendix_A_Installing_Visual_Studio_Express_2012_for_Web"></a>
 ## <a name="appendix-a-installing-visual-studio-express-2012-for-web"></a>Apêndice a: Instalar o Visual Studio Express 2012 para Web
 
-Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)**. As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
+Você pode instalar **Microsoft Visual Studio Express 2012 para Web** ou outra &quot;Express&quot; versão usando o **[Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx)** . As instruções a seguir guia você pelas etapas necessárias para instalar *Visual studio Express 2012 para Web* usando *Microsoft Web Platform Installer*.
 
 1. Acesse [https://go.microsoft.com/?linkid=9810169](https://go.microsoft.com/?linkid=9810169). Como alternativa, se você já tiver instalado o Web Platform Installer, você pode abri-lo e pesquisar o produto &quot; <em>Visual Studio Express 2012 para Web com o SDK do Windows Azure</em>&quot;.
 2. Clique em **instalar agora**. Se você não tiver **Web Platform Installer** você será redirecionado para baixar e instalá-lo primeiro.

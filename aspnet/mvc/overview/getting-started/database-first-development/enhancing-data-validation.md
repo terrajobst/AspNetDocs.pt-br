@@ -28,7 +28,7 @@ Neste tutorial, você:
 > * Adicionar anotações de dados
 > * Adicionar classes de metadados
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Personalizar um modo de exibição](customizing-a-view.md)
 

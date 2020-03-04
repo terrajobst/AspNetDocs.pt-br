@@ -31,7 +31,7 @@ Neste tutorial de ponta a ponta, você aprenderá como usar a API da Web para cr
 - No [primeira parte deste tutorial](#STEP1), você criará um aplicativo de API Web do ASP.NET que oferece suporte a todas as operações criar, ler, atualizar e excluir (CRUD) para gerenciar um catálogo de livro. Este aplicativo usará o [exemplo de arquivo XML (Books. xml)](https://msdn.microsoft.com/library/windows/desktop/ms762271.aspx) do MSDN.
 - No [segunda parte deste tutorial](#STEP2), você criará um aplicativo interativo do Windows Phone 8 que recupera os dados de seu aplicativo de API da Web.
 
-#### <a name="prerequisites"></a>Pré-requisitos
+#### <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2013 com o Windows Phone 8 SDK instalado
 - Windows 8 ou posterior em um sistema de 64 bits com o Hyper-V instalado

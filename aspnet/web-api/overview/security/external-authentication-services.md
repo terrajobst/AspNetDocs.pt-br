@@ -34,7 +34,7 @@ O Visual Studio 2017 e ASP.NET 4.7.2 expanda as opções de segurança [aplicati
     - [Como obter as configurações do aplicativo para autenticação da Microsoft](#OBTAIN)
     - [Opcional: Desabilitar o registro do Local](#DISABLE)
 
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 Para seguir os exemplos neste passo a passo, você precisa ter o seguinte:
 
@@ -82,7 +82,7 @@ Inicie o Visual Studio 2017 e selecione **novo projeto** na página inicial. Ou,
 
 <!-- [![](external-authentication-services/_static/image6.png "Click to Expand the Image")](external-authentication-services/_static/image5.png) -->
 
-Quando o **novo projeto** caixa de diálogo for exibida, selecione **instalado** e expanda **Visual C#** . Em **Visual C#**, selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web ASP.NET (.Net Framework)**. Insira um nome para seu projeto e clique em **Okey**.
+Quando o **novo projeto** caixa de diálogo for exibida, selecione **instalado** e expanda **Visual C#** . Em **Visual C#** , selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web ASP.NET (.Net Framework)** . Insira um nome para seu projeto e clique em **Okey**.
 
 [![](external-authentication-services/_static/image71.png "Clique para expandir a imagem")](external-authentication-services/_static/image71.png)
 
@@ -269,7 +269,7 @@ Alguns provedores de autenticação externa não dão suporte para a testar seu 
         <kbd>cd /d &quot;%ProgramFiles%\IIS Express&quot;</kbd>
     3. Digite o seguinte comando para adicionar o FQDN para o seu aplicativo:
 
-        <kbd>appcmd.exe set config -section:system.applicationHost/sites /+&quot;[name='WebApplication1'].bindings.[protocol='http',bindingInformation='*:80:www.wingtiptoys.com']&quot; /commit:apphost</kbd>
+        <kbd>appcmd.exe set config -section:system.applicationHost/sites /+&quot;[name='WebApplication1'].bindings.[protocol='http',bindingInformation='*:80: www.wingtiptoys.com']&quot; /commit:apphost</kbd>
 
   Em que **WebApplication1** é o nome do seu projeto e **bindingInformation** contém o número da porta e o FQDN que você deseja usar para seus testes.
 

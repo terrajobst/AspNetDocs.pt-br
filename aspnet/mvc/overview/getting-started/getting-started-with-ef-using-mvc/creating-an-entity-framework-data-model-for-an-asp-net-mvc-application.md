@@ -48,7 +48,7 @@ Neste tutorial, você:
 > * Criar um controlador e exibições
 > * Exibir o banco de dados
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
@@ -236,12 +236,12 @@ Agora, você criará uma página da web para exibir dados. O processo de solicit
 
 3. No **Adicionar controlador** caixa de diálogo, faça as seguintes seleções e, em seguida, escolha **Add**:
 
-   - Classe de modelo: **Aluno (ContosoUniversity.Models)**. (Se você não vir essa opção na lista suspensa, compile o projeto e tente novamente.)
-   - Classe de contexto de dados: **SchoolContext (ContosoUniversity.DAL)**.
+   - Classe de modelo: **Aluno (ContosoUniversity.Models)** . (Se você não vir essa opção na lista suspensa, compile o projeto e tente novamente.)
+   - Classe de contexto de dados: **SchoolContext (ContosoUniversity.DAL)** .
    - Nome do controlador: **StudentController** (não StudentsController).
    - Deixe os valores padrão para os outros campos.
 
-     Quando você clica em **Add**, o scaffolder cria um *StudentController.cs* arquivo e um conjunto de exibições (*. cshtml* arquivos) que funcionam com o controlador. No futuro quando você cria projetos que usam o Entity Framework, você pode também aproveitar algumas funcionalidades adicionais do scaffolder: criar sua primeira classe de modelo, não crie uma cadeia de caracteres de conexão e, em seguida, no **Adicionar controlador** especificar **novo contexto de dados** selecionando o **+** lado **classe de contexto de dados**. O scaffolder criará seu `DbContext` classe e sua conexão de cadeia de caracteres, bem como o controlador e exibições.
+     Quando você clica em **Add**, o scaffolder cria um *StudentController.cs* arquivo e um conjunto de exibições ( *. cshtml* arquivos) que funcionam com o controlador. No futuro quando você cria projetos que usam o Entity Framework, você pode também aproveitar algumas funcionalidades adicionais do scaffolder: criar sua primeira classe de modelo, não crie uma cadeia de caracteres de conexão e, em seguida, no **Adicionar controlador** especificar **novo contexto de dados** selecionando o **+** lado **classe de contexto de dados**. O scaffolder criará seu `DbContext` classe e sua conexão de cadeia de caracteres, bem como o controlador e exibições.
 4. O Visual Studio abre o *Controllers\StudentController.cs* arquivo. Você verá que uma variável de classe foi criada que instancia um objeto de contexto do banco de dados:
 
      [!code-csharp[Main](creating-an-entity-framework-data-model-for-an-asp-net-mvc-application/samples/sample11.cs)]

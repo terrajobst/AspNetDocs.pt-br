@@ -32,7 +32,7 @@ Neste tutorial, você:
 > * Adicionar paginação
 > * Criar uma página Sobre
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Implementar a funcionalidade CRUD básica](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)
 

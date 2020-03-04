@@ -28,7 +28,7 @@ Neste tutorial, você:
 > * Adicionar cursos para a página de detalhes do aluno
 > * Confirme que os cursos são adicionados à página
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Alterar o banco de dados](changing-the-database.md)
 

@@ -10,7 +10,7 @@ msc.legacyurl: /web-api/overview/web-api-routing-and-actions/create-a-rest-api-w
 msc.type: authoredcontent
 ms.openlocfilehash: a58daa96410de734619bf65f84346137c7d3cf44
 ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59393295"
@@ -44,7 +44,7 @@ Para a camada de dados, vamos usar Entity Framework. Registros de livro terão o
 
 Para a maioria das solicitações, no entanto, a API retornará um subconjunto desses dados (título, autor e gênero). Para obter o registro completo, o cliente solicitações `/api/books/{id}/details`.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) Community, Professional ou Enterprise edition.
 
@@ -52,7 +52,7 @@ Para a maioria das solicitações, no entanto, a API retornará um subconjunto d
 
 Comece executando o Visual Studio. Dos **arquivo** menu, selecione **New** e, em seguida, selecione **projeto**.
 
-Expanda o **Installed** > **Visual c#** categoria. Em **Visual C#**, selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web ASP.NET (.NET Framework)**. Nomeie o projeto &quot;BooksAPI&quot;.
+Expanda o **Installed** > **Visual c#** categoria. Em **Visual C#** , selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web ASP.NET (.NET Framework)** . Nomeie o projeto &quot;BooksAPI&quot;.
 
 ![](create-a-rest-api-with-attribute-routing/_static/image1.png)
 

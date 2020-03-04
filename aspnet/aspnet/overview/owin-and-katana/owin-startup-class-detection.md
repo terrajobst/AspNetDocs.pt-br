@@ -19,7 +19,7 @@ ms.locfileid: "65118209"
 
 > Este tutorial mostra como configurar qual classe de inicialização OWIN é carregado. Para obter mais informações sobre o OWIN, consulte [uma visão geral do projeto Katana](an-overview-of-project-katana.md). Este tutorial foi escrito por Rick Anderson ( [ @RickAndMSFT ](https://twitter.com/#!/RickAndMSFT) ), Howard Dierking e Praburaj Thiagarajan ( [ @howard \_dierking](https://twitter.com/howard_dierking) ).
 >
-> ## <a name="prerequisites"></a>Pré-requisitos
+> ## <a name="prerequisites"></a>Prerequisites
 >
 > [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 

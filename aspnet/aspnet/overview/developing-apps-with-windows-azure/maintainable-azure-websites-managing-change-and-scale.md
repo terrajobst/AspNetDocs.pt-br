@@ -52,7 +52,7 @@ Neste laboratório prático, você aprenderá como:
 - Criar e configurar um projeto de teste de carga no Visual Studio
 
 <a id="Prerequisites"></a>
-### <a name="prerequisites"></a>Pré-requisitos
+### <a name="prerequisites"></a>Prerequisites
 
 O exemplo a seguir é necessário para concluir este laboratório prático:
 

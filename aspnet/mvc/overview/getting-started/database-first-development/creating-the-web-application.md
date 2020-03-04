@@ -28,7 +28,7 @@ Neste tutorial, você:
 > * Criar um aplicativo Web ASP.NET
 > * Gerar modelos
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Introdução ao Entity Framework 6 Database First usando MVC 5](setting-up-database.md)
 
@@ -64,7 +64,7 @@ Clique em **Avançar**.
 
 Se você tiver conexões de banco de dados definidas dentro do ambiente de desenvolvimento, você poderá ver uma dessas conexões pré-selecionada. No entanto, você deseja criar uma nova conexão ao banco de dados que você criou na primeira parte deste tutorial. Clique o **nova Conexão** botão.
 
-Na janela Propriedades de Conexão, forneça o nome do servidor local em que seu banco de dados foi criado (neste caso **\ProjectsV13 (localdb)**). Depois de fornecer o nome do servidor, selecione o ContosoUniversityData de bancos de dados disponíveis.
+Na janela Propriedades de Conexão, forneça o nome do servidor local em que seu banco de dados foi criado (neste caso **\ProjectsV13 (localdb)** ). Depois de fornecer o nome do servidor, selecione o ContosoUniversityData de bancos de dados disponíveis.
 
 ![definir propriedades de conexão](creating-the-web-application/_static/image8.png)
 

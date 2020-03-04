@@ -40,7 +40,7 @@ Neste tutorial, você:
 > [!IMPORTANT]
 > Se você não quiser trabalhar com as etapas de criação do aplicativo, você pode instalar o pacote SignalR.Sample em um novo projeto de aplicativo Web ASP.NET vazio. Se você instalar o pacote do NuGet sem executar as etapas neste tutorial, você deve seguir as instruções de *Readme. txt* arquivo. Para executar o pacote que você precisa adicionar uma inicialização do OWIN de classe que chama o `ConfigureSignalR` método no pacote instalado. Você receberá um erro se você não adicionar a classe de inicialização do OWIN. Consulte a [instalar o exemplo StockTicker](#install-the-stockticker-sample) seção deste artigo.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 * [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) com o **ASP.NET e desenvolvimento web** carga de trabalho.
 
@@ -84,7 +84,7 @@ Você deseja apenas uma instância das `StockTicker` classe a ser executada no s
 
 1. Na **Gerenciador de soluções**, clique com botão direito no projeto e selecione **Add** > **Novo Item**.
 
-1. Na **Adicionar Novo Item – SignalR.StockTicker**, selecione **instalado** > **Visual C#**   >  **Web**  >  **SignalR** e, em seguida, selecione **classe de Hub do SignalR (v2)**.
+1. Na **Adicionar Novo Item – SignalR.StockTicker**, selecione **instalado** > **Visual C#**   >  **Web**  >  **SignalR** e, em seguida, selecione **classe de Hub do SignalR (v2)** .
 
 1. Nomeie a classe *StockTickerHub* e adicioná-lo ao projeto.
 

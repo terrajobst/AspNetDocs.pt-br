@@ -31,7 +31,7 @@ Neste tutorial, você modificará o aplicativo de exemplo Wingtip Toys para dar 
 - Como fornecer resiliência de conexão.
 - Como implementar a interceptação de comando.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, certifique-se de que você tenha o seguinte software instalado em seu computador:
 

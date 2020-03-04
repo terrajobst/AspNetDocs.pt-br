@@ -56,7 +56,7 @@ Este tutorial contém as seções a seguir:
 
 <a id="prerequisites"></a>
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, certifique-se de que você tenha o Visual Studio 2012 ou 2010 SP1 instalado no seu computador. Se você não tiver o Visual Studio, consulte [Downloads do ASP.NET](https://www.asp.net/downloads) para obter o Visual Studio 2012 Express gratuito da Web.
 
