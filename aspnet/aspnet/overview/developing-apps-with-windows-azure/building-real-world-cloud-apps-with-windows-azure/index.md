@@ -1,6 +1,6 @@
 ---
 uid: aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/index
-title: Criação de aplicativos de nuvem do mundo Real com o Azure | Microsoft Docs
+title: Criando aplicativos de nuvem do mundo real com o Azure | Microsoft Docs
 author: rick-anderson
 description: Criação aplicativos de nuvem para o mundo real com o Azure
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: b452a3af-4157-4056-a181-569d1735c239
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure
 msc.type: chapter
 ms.openlocfilehash: 85dea0990364ad9c791c6e2cd632dab644e3575e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118791"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617610"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Criação aplicativos de nuvem para o mundo real com o Azure
 
@@ -30,8 +30,8 @@ ms.locfileid: "65118791"
 - [Armazenamento de Blobs não estruturado](unstructured-blob-storage.md)
 - [Design para sobreviver a falhas](design-to-survive-failures.md)
 - [Monitoramento e telemetria](monitoring-and-telemetry.md)
-- [Tratamento de falhas transitórias](transient-fault-handling.md)
+- [Transient Fault Handling](transient-fault-handling.md)
 - [Cache distribuído](distributed-caching.md)
 - [Padrão de trabalho centrado em fila](queue-centric-work-pattern.md)
 - [Mais padrões e diretrizes](more-patterns-and-guidance.md)
-- [Apêndice: A correção do exemplo de aplicativo](the-fix-it-sample-application.md)
+- [Apêndice: o aplicativo de exemplo Fix It](the-fix-it-sample-application.md)

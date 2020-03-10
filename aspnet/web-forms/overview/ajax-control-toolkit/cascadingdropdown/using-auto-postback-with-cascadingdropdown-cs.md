@@ -9,11 +9,11 @@ ms.assetid: 6755d8d9-14be-4a1d-86e5-1a6110f3dea8
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/using-auto-postback-with-cascadingdropdown-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8bccd716814e7de544798010cecbc148ec50b5cd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574518"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78535948"
 ---
 # <a name="using-auto-postback-with-cascadingdropdown-c"></a>Uso de postback automático com CascadingDropDown (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. No entanto, ao usar o controle CascadingDropDown, o ASP. O recurso AutoPostBack do controle DropDownList da NET não funciona, pois o carregamento de dados de forma assíncrona na lista gera um postback (desnecessário) em si. Com algum código JavaScript, esse efeito pode ser evitado.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. (Por exemplo, uma lista fornece uma lista de Estados dos EUA e a próxima lista é então preenchida com cidades principais nesse estado.) No entanto, ao usar o controle CascadingDropDown, o ASP. O recurso AutoPostBack do controle DropDownList da NET não funciona, pois o carregamento de dados de forma assíncrona na lista gera um postback (desnecessário) em si. Com algum código JavaScript, esse efeito pode ser evitado.
 

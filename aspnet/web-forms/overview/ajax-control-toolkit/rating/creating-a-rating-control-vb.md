@@ -9,11 +9,11 @@ ms.assetid: 6d0d70f4-725e-4258-8ae8-24a6ba1ddbf7
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/rating/creating-a-rating-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 08e245edfe73db4e3896db51151e5d7a0fa9697c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611549"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612192"
 ---
 # <a name="creating-a-rating-control-vb"></a>Criação de um controle Classificação (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > Muitos sites, de comércio eletrônico a sites da Comunidade, oferecem aos usuários a taxa de artigos ou itens. Isso geralmente requer algum esforço de codificação, mas temos o kit de ferramentas de controle para nossa disposição.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Muitos sites, de comércio eletrônico a sites da Comunidade, oferecem aos usuários a taxa de artigos ou itens. Isso geralmente requer algum esforço de codificação, mas temos o kit de ferramentas de controle para nossa disposição.
 

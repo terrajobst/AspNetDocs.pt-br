@@ -7,11 +7,11 @@ ms.author: riande
 ms.date: 10/29/2018
 msc.type: content
 ms.openlocfilehash: 5299d9ab057c3096773955a7461e77a80673ebfe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74586760"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584507"
 ---
 # <a name="configuration-builders-for-aspnet"></a>Construtores de configuração para ASP.NET
 
@@ -34,7 +34,7 @@ Um cenário comum que pode ser tratado por construtores de configuração é for
 
 As configurações a seguir se aplicam a todos os construtores de configuração de chave/valor no `Microsoft.Configuration.ConfigurationBuilders`.
 
-### <a name="mode"></a>Mode.
+### <a name="mode"></a>Mode
 
 Os construtores de configuração usam uma fonte externa de informações de chave/valor para preencher os elementos de chave/valor selecionados do sistema de configuração. Especificamente, as seções `<appSettings/>` e `<connectionStrings/>` recebem tratamento especial dos criadores de configuração. Os criadores funcionam em três modos:
 
@@ -103,7 +103,7 @@ O código anterior definirá os valores de propriedade como:
 
 Por exemplo, usando o arquivo *Web. config* anterior, as chaves/valores na imagem do editor de ambiente anterior e o código anterior, os seguintes valores são definidos:
 
-|  Chave              | Value |
+|  Chave              | Valor |
 | ----------------- | ------------ |
 |     AppSetting_ServiceID           | AppSetting_ServiceID de variáveis ENV|
 |    AppSetting_default            | AppSetting_default valor de env |
@@ -136,11 +136,11 @@ O código anterior definirá os valores de propriedade como:
 
 Por exemplo, usando o arquivo *Web. config* anterior, as chaves/valores na imagem do editor de ambiente anterior e o código anterior, os seguintes valores são definidos:
 
-|  Chave              | Value |
+|  Chave              | Valor |
 | ----------------- | ------------ |
 |     ServiceID           | AppSetting_ServiceID de variáveis ENV|
-|    {1&gt;default&lt;1}            | AppSetting_default valor de env |
-|    {1&gt;default&lt;1}         | ConnStr_default Val de env|
+|    padrão            | AppSetting_default valor de env |
+|    padrão         | ConnStr_default Val de env|
 
 ### <a name="tokenpattern"></a>tokenPattern
 
@@ -277,7 +277,7 @@ Detalhes do atributo:
 
 * `jsonFile`-obrigatório. Especifica o arquivo JSON do qual ler. O caractere de `~` pode ser usado no início para fazer referência à raiz do aplicativo.
 * `optional`-booliano, o valor padrão é `true`. Impede o lançamento de exceções se o arquivo JSON não puder ser encontrado.
-* `jsonMode` - `[Flat|Sectional]`. `Flat` é o padrão. Quando `jsonMode` é `Flat`, o arquivo JSON é uma única origem de chave/valor simples. As `EnvironmentConfigBuilder` e `AzureKeyVaultConfigBuilder` também são fontes simples de chave/valor. Quando a `SimpleJsonConfigBuilder` é configurada no modo de `Sectional`:
+* `jsonMode` - `[Flat|Sectional]`. O padrão é `Flat`. Quando `jsonMode` é `Flat`, o arquivo JSON é uma única origem de chave/valor simples. As `EnvironmentConfigBuilder` e `AzureKeyVaultConfigBuilder` também são fontes simples de chave/valor. Quando a `SimpleJsonConfigBuilder` é configurada no modo de `Sectional`:
 
   * O arquivo JSON é dividido conceitualmente apenas no nível superior em vários dicionários.
   * Cada um dos dicionários só é aplicado à seção de configuração que corresponde ao nome de propriedade de nível superior anexado a eles. Por exemplo:

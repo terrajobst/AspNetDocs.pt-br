@@ -9,11 +9,11 @@ ms.assetid: 89a1d2bc-fdfd-4c5c-a3b0-49a08baaf63a
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/asp-net-hosting-options-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 2eafa750167d89fa996a442633e79dce3d5b85bd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74620768"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78637168"
 ---
 # <a name="aspnet-hosting-options-c"></a>Opções de hospedagem do ASP.NET (C#)
 
@@ -89,4 +89,4 @@ Boa programação!
 Esta série de tutoriais foi revisada por muitos revisores úteis. O revisor de Lead para este tutorial foi Teresa Murphy. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com](mailto:mitchell@4GuysFromRolla.com).
 
 > [!div class="step-by-step"]
-> [Avançar](determining-what-files-need-to-be-deployed-cs.md)
+> [Próximo](determining-what-files-need-to-be-deployed-cs.md)

@@ -1,6 +1,6 @@
 ---
 uid: web-forms/overview/index
-title: Web Forms do ASP.NET diretrizes | Microsoft Docs
+title: Diretrizes de Web Forms de ASP.NET | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,13 +9,13 @@ ms.assetid: b3fb4480-0f41-495b-add6-163ca92dc8a3
 msc.legacyurl: /web-forms/overview
 msc.type: book
 ms.openlocfilehash: 4b38d6b54f53508f7b568207fe7f1a624a7af5f3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59402265"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78639443"
 ---
-# <a name="aspnet-web-forms-guidance"></a>Diretrizes do ASP.NET Web Forms
+# <a name="aspnet-web-forms-guidance"></a>Diretrizes de Web Forms de ASP.NET
 
 - [Introdução](getting-started/index.md)
 
@@ -75,8 +75,8 @@ ms.locfileid: "59402265"
     - [ASP.NET 4 – introdução à implantação corporativa](deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
 
         - [Implantando aplicativos Web em cenários corporativos usando o Visual Studio 2010](deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-        - [Implantação da Web corporativa: Visão geral do cenário](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-        - [Gerenciamento de ciclo de vida do aplicativo: Do desenvolvimento à produção](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+        - [Implantação da Web corporativa: visão geral do cenário](deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+        - [Gerenciamento do Ciclo de Vida do Aplicativo: do desenvolvimento à produção](deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
     - [ASP.NET 4 – série 1 sobre implantação corporativa](deployment/web-deployment-in-the-enterprise/index.md)
 
         - [Implantação da Web na empresa](deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -94,9 +94,9 @@ ms.locfileid: "59402265"
 
         - [Configuração de ambientes de servidor para a Implantação da Web](deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
         - [Escolha da abordagem correta para a Implantação da Web](deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-        - [Cenário: Configurando um ambiente de teste para implantação da Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-        - [Cenário: Configurando um ambiente de preparo para a implantação da Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-        - [Cenário: Configurando um ambiente de produção para implantação da Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+        - [Cenário: configuração de um ambiente de teste para a Implantação da Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+        - [Cenário: configuração de um ambiente de preparo para a Implantação da Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+        - [Cenário: configuração de um ambiente de produção para a Implantação da Web](deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
         - [Configuração de um servidor Web para publicação de Implantação da Web (agente remoto)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
         - [Configuração de um servidor Web para publicação de Implantação da Web (manipulador de Implantação da Web)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
         - [Configuração de um servidor Web para publicação de Implantação da Web (implantação offline)](deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)
@@ -130,14 +130,14 @@ ms.locfileid: "59402265"
 
     - [ASP.NET 4 – Tailspin Spyworks](older-versions-getting-started/tailspin-spyworks/index.md)
 
-        - [Parte 1: Arquivo -> Novo projeto](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
-        - [Parte 2: Camada de acesso a dados](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
-        - [Parte 3: Layout e Menu de categoria](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
-        - [Parte 4: Listagem de produtos](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
-        - [Parte 5: Lógica de negócios](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
-        - [Parte 6: Associação do ASP.NET](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
-        - [Parte 7: Adição de recursos](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
-        - [Parte 8: Páginas finais, tratamento de exceção e conclusão](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
+        - [Parte 1: Arquivo -> Novo Projeto](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
+        - [Parte 2: Camada de Acesso a Dados](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
+        - [Parte 3: layout e menu de categoria](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
+        - [Parte 4: listagem de produtos](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
+        - [Parte 5: lógica de negócios](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
+        - [Parte 6: associação do ASP.NET](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
+        - [Parte 7: adição de recursos](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
+        - [Parte 8: páginas finais, tratamento de exceção e conclusão](older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
     - [ASP.NET 4 – Introdução ao Entity Framework 4 e Web Forms](older-versions-getting-started/getting-started-with-ef/index.md)
 
         - [Introdução ao Database First do Entity Framework 4.0](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
@@ -150,9 +150,9 @@ ms.locfileid: "59402265"
         - [Introdução ao Database First do Entity Framework 4.0 – parte 8](older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
     - [ASP.NET 4 – continuação com o Entity Framework 4 e o Web Forms](older-versions-getting-started/continuing-with-ef/index.md)
 
-        - [Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Guia de Introdução](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-        - [Entity Framework 4.0 e o controle ObjectDataSource, parte 2: Adicionando uma camada de lógica de negócios e testes de unidade](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-        - [Entity Framework 4.0 e o controle ObjectDataSource, parte 3: Classificação e filtragem](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+        - [Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Introdução](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+        - [Entity Framework 4.0 e o controle ObjectDataSource, parte 2: adição de uma camada de lógica de negócios e testes de unidade](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+        - [Entity Framework 4.0 e o controle ObjectDataSource, parte 3: classificação e filtragem](older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
         - [Tratamento de simultaneidade com o Entity Framework 4.0 no ASP.NET 4](older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [Maximizar o desempenho com o Entity Framework 4.0 no ASP.NET 4](older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
         - [Novidades no Entity Framework 4.0](older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)

@@ -9,11 +9,11 @@ ms.assetid: 75af2e17-6ed3-4d24-8ea1-bc340027c318
 msc.legacyurl: /single-page-application/overview/templates/hottowel-template
 msc.type: authoredcontent
 ms.openlocfilehash: eeab69e75546791978bb09d7823d95caf9dca1a0
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075054"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578480"
 ---
 # <a name="hot-towel-template"></a>Modelo Hot Towel
 

@@ -9,11 +9,11 @@ ms.assetid: 5c76891d-e515-4885-b576-76bd2c494efe
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/ui_and_navigation
 msc.type: authoredcontent
 ms.openlocfilehash: ac1dcaf1ba911fdcaeb3845c6836ec771733d93e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636811"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78643552"
 ---
 # <a name="ui-and-navigation"></a>Interface do usuário e navegação
 
@@ -93,11 +93,11 @@ O atributo `CodeBehind` contido na diretiva `@Page` especifica o nome do arquivo
 
 ### <a name="updating-the-master-page"></a>Atualizando a página mestra
 
-No ASP.NET Web Forms, as páginas mestras permitem que você crie um layout consistente para as páginas em seu aplicativo. Uma única página mestra define a aparência e o comportamento padrão que você deseja para todas as páginas (ou um grupo de páginas) em seu aplicativo. Em seguida, você pode criar páginas de conteúdo individuais que contêm o conteúdo que você deseja exibir, conforme explicado acima. Quando os usuários solicitam as páginas de conteúdo, o ASP.NET as mescla com a página mestra para produzir uma saída que combina o layout da página mestra com o conteúdo da página de conteúdo.
+Nos Web Forms ASP.NET, as páginas mestras permitem que você crie um layout consistente para as páginas em seu aplicativo. Uma única página mestra define a aparência e comportamento padrão que você deseja para todas as páginas (ou um grupo de páginas) em seu aplicativo. Em seguida, você pode criar páginas de conteúdo individuais que contêm o conteúdo que você deseja exibir, conforme explicado acima. Quando os usuários solicitam as páginas de conteúdo, o ASP.NET as combina com a página mestra para produzir um resultado que combine o layout da página mestra com o conteúdo da página de conteúdo.
 
 O novo site precisa de um único logotipo para ser exibido em cada página. Para adicionar esse logotipo, você pode modificar o HTML na página mestra.
 
-1. Em **Gerenciador de soluções**, localize e abra a página **site. Master** .
+1. No **Gerenciador de Soluções**, encontre a página **Site.Master** e abra-a.
 2. Se a página estiver no modo **design** , alterne para o modo de exibição de **código-fonte** .
 3. Atualize a página mestra **modificando ou adicionando** a marcação realçada em amarelo: 
 
@@ -142,7 +142,7 @@ O download inclui recursos na pasta *WingtipToys-assets* que são usados para cr
 Antes de adicionar navegação ao aplicativo Web, você primeiro adicionará duas novas páginas para as quais você navegará. Posteriormente nesta série de tutoriais, você exibirá produtos e detalhes do produto nessas novas páginas.
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **WingtipToys**, clique em **Adicionar**e em **novo item**.   
- A caixa de diálogo **Adicionar Novo Item** é exibida.
+ A caixa de diálogo **Adicionar novo item** é exibida.
 2. Selecione o grupo modelos **da Web** do **Visual C#**  -&gt; à esquerda. Em seguida, selecione **Web Form com página mestra** na lista intermediária e nomeie-o como *ProductList. aspx*. 
 
     ![IU e navegação – caixa de diálogo Adicionar novo item](ui_and_navigation/_static/image3.png)
@@ -208,7 +208,7 @@ Esse código exibirá todas as categorias do banco de dados. O controle **ListVi
 
 > [!NOTE] 
 > 
-> **Dicas**
+> **Dica**
 > 
 > Quando você adiciona código digitando durante o desenvolvimento, você pode ter certeza de que um membro válido de um objeto é encontrado porque os controles de dados com rigidez de tipos mostram os membros disponíveis com base no IntelliSense. O IntelliSense oferece opções de código apropriadas ao contexto à medida que você digita o código, como propriedades, métodos e objetos.
 
@@ -257,7 +257,7 @@ Agora você pode inspecionar os dados contidos no arquivo de banco de *wingtipto
     **Gerenciador de servidores** é exibido. 
 
     ![Interface do usuário e navegação-Gerenciador de Servidores](ui_and_navigation/_static/image8.png)
-4. Expanda a pasta *tabelas* .
+4. Expanda a pasta *Tabelas* .
 5. Clique com o botão direito do mouse na tabela **produtos**e selecione **Mostrar dados da tabela**.  
  A tabela **Products** é exibida. 
 

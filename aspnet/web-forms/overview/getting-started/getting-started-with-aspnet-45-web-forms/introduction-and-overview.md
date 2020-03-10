@@ -9,11 +9,11 @@ ms.assetid: 9b96eaa1-8ef0-4338-a2e8-e0f970bfaf68
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/introduction-and-overview
 msc.type: authoredcontent
 ms.openlocfilehash: 52d5eb7abe4520ebdf6667d299d055fc7619a635
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615462"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568218"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2017"></a>Introdução com o ASP.NET 4,5 Web Forms e o Visual Studio 2017
 
@@ -48,7 +48,7 @@ Para examinar essas áreas, considere estudar o seguinte conteúdo:
 Os recursos de formulário da Web do ASP.NET apresentados nesta série incluem:
 
 - O projeto de aplicativo Web (não o projeto de site da Web)
-- Web Forms
+- Formulários da Web
 - Páginas mestras, configuração
 - Inicialização
 - Entity Framework Code First, LocalDB
@@ -83,7 +83,7 @@ As tarefas da série de tutoriais incluem:
 - Registrando rotas para o aplicativo Web
 - Implementando o tratamento de erros e o log de erros
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Esta série de tutoriais destina-se a alguém familiarizado com conceitos de programação, mas novidade no ASP.NET Web Forms. Se você já estiver familiarizado com o ASP.NET Web Forms, esta série ainda poderá ajudá-lo a aprender sobre os novos recursos do ASP.NET 4,5. Para leitores que não conhecem os conceitos de programação e Web Forms ASP.NET, consulte os tutoriais de Web Forms adicionais fornecidos na seção [introdução](../../../index.md) no site do ASP.net.
 
@@ -134,7 +134,7 @@ Depois de retornar do PayPal, você pode revisar e concluir seu pedido.
 
 ![Wingtip Toys – revisão do pedido](introduction-and-overview/_static/image7.png)
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, verifique se o seguinte software está instalado no computador:
 
@@ -191,4 +191,4 @@ Comentários sobre esta série de tutoriais são bem-vindos. Quando essa série 
 Se ocorrer um erro, as mensagens de erro correspondentes poderão ser confusas, sem uma boa explicação sobre como corrigi-lo. Para obter ajuda, você pode verificar os [fóruns do ASP.net](https://forums.asp.net/). Outra boa fonte é a Q e uma seção na [introdução com ASP.NET 4,5 Web Forms e](https://go.microsoft.com/fwlink/?LinkID=389434&clcid=0x409) a página de exemplo Visual Studio 2013 daC#Wingtip Toys (). 
 
 > [!div class="step-by-step"]
-> [Avançar](create-the-project.md)
+> [Próximo](create-the-project.md)

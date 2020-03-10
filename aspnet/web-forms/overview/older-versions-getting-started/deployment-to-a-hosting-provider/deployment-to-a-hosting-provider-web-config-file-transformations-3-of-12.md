@@ -9,11 +9,11 @@ ms.assetid: 2b0df3d9-450b-4ea6-b315-4c9650722cad
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-web-config-file-transformations-3-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 9e7902bcf8a16c154aee1a982824bfaedeea7d9d
-ms.sourcegitcommit: 7b1e1784213dd4c301635f9e181764f3e2f94162
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76309230"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78634921"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-webconfig-file-transformations---3-of-12"></a>Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio ou o Visual Web Developer: transformações de arquivo Web. config-3 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como automatizar o processo de alteração do arquivo *Web. config* ao implantá-lo em ambientes de destino diferentes. A maioria dos aplicativos tem configurações no arquivo *Web. config* que devem ser diferentes quando o aplicativo é implantado. Automatizar o processo de fazer essas alterações evita que você precise fazê-las manualmente toda vez que implantar, o que seria entediante e propenso a erros.
 
@@ -139,7 +139,7 @@ O atributo `Transform` especifica que essa cadeia de conexão será adicionada a
 
 Agora você especificou todas as transformações de *Web. config* necessárias para implantar o aplicativo da Contoso University para teste e produção. No tutorial a seguir, você cuidará das tarefas de configuração de implantação que exigem a definição de propriedades do projeto.
 
-## <a name="more-information"></a>Mais Informações
+## <a name="more-information"></a>Mais informações
 
 Para obter mais informações sobre os tópicos abordados por este tutorial, consulte o cenário de transformação Web. config no [mapa de conteúdo de implantação do ASP.net](https://msdn.microsoft.com/library/bb386521.aspx).
 

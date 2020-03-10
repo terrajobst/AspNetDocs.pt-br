@@ -9,11 +9,11 @@ ms.assetid: 82b8dea0-f062-4ee4-8784-3ffa30fbb1ca
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/command-line-deployment
 msc.type: authoredcontent
 ms.openlocfilehash: 13cfe4492398b59f2c80394689cc113ccb218c60
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74634201"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630917"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-command-line-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: implantação de linha de comando
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como invocar o pipeline de publicação da Web do Visual Studio a partir da linha de comando. Isso é útil para cenários em que você deseja [automatizar o processo de implantação](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md) em vez de fazê-lo manualmente no Visual Studio, normalmente usando um [sistema de controle de versão de código-fonte](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control.md).
 
@@ -102,7 +102,7 @@ Há suporte para três métodos de publicação para publicação de linha de co
 
 A configuração e a plataforma de compilação devem ser definidas no Visual Studio ou na linha de comando. Os perfis de publicação incluem propriedades nomeadas `LastUsedBuildConfiguration` e `LastUsedPlatform`, mas você não pode definir essas propriedades para determinar como o projeto é compilado. Para obter mais informações, consulte [MSBuild: como definir a propriedade de configuração](http://sedodream.com/2012/10/27/MSBuildHowToSetTheConfigurationProperty.aspx) no blog de sayed Hashimi.
 
-## <a name="deploy-to-staging"></a>Implantar para preparo
+## <a name="deploy-to-staging"></a>Implantar no preparo
 
 Para implantar no Azure, você deve adicionar a senha à linha de comando. Se você salvou a senha no perfil de publicação no Visual Studio, ela foi armazenada em formato criptografado no arquivo *. pubxml. User* . Esse arquivo não é acessado pelo MSBuild quando você faz uma implantação de linha de comando, portanto, você precisa passar a senha em um parâmetro de linha de comando.
 

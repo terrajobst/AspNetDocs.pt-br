@@ -9,11 +9,11 @@ ms.assetid: 6d02d9f7-94e5-4140-9f51-5a6040f274f6
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-net-client
 msc.type: authoredcontent
 ms.openlocfilehash: d3536f1c15cd7dad7cd660becf0577e5c131f707
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057003"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578788"
 ---
 # <a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>Guia da API de hubs do Signalr ASP.NET –C#cliente .net ()
 
@@ -42,7 +42,7 @@ ms.locfileid: "74057003"
 >
 > Deixe comentários sobre como você gostou deste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver dúvidas que não estão diretamente relacionadas ao tutorial, poderá lançá-las no fórum do [signalr ASP.net](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [stackoverflow.com](http://stackoverflow.com/).
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>Visão geral
 
 Este documento contém as seguintes seções:
 
@@ -189,7 +189,7 @@ Para adicionar certificados de cliente, use o método `AddClientCertificate` no 
 
 ## <a name="how-to-create-the-hub-proxy"></a>Como criar o proxy de Hub
 
-Para definir métodos no cliente que um hub pode chamar do servidor e para invocar métodos em um Hub no servidor, crie um proxy para o Hub chamando `CreateHubProxy` no objeto de conexão. A cadeia de caracteres que você passa para `CreateHubProxy` é o nome da sua classe de Hub ou o nome especificado pelo atributo `HubName` se um foi usado no servidor. A correspondência de nomes não diferencia maiúsculas de minúsculas.
+Para definir métodos no cliente que um hub pode chamar do servidor e para invocar métodos em um Hub no servidor, crie um proxy para o Hub chamando `CreateHubProxy` no objeto de conexão. A cadeia de caracteres que você passa para `CreateHubProxy` é o nome da sua classe de Hub ou o nome especificado pelo atributo `HubName` se um foi usado no servidor. A correspondência de nome não diferencia maiúsculas de minúsculas.
 
 **Classe de Hub no servidor**
 

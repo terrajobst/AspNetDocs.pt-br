@@ -9,11 +9,11 @@ ms.assetid: 2469f7ea-1489-42fb-a8e1-414c90141ce9
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/executing-several-animations-at-the-same-time-vb
 msc.type: authoredcontent
 ms.openlocfilehash: fc11debd06c897c29db56d42167d483f5608cdf8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575340"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614250"
 ---
 # <a name="executing-several-animations-at-the-same-time-vb"></a>Executando várias animações ao mesmo tempo (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Ele permite executar várias animações de maneira paralela.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. Ele permite executar várias animações de maneira paralela.
 

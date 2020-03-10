@@ -9,11 +9,11 @@ ms.assetid: 3fc23eed-921d-4d46-a610-a2d156e4bd03
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: db8f58e3679e6dea865dadb6f64916032dd9f38c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74639869"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78528192"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-troubleshooting-12-of-12"></a>Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio ou o Visual Web Developer: solução de problemas (12 de 12)
 
@@ -44,7 +44,7 @@ Para permitir que o aplicativo exiba mensagens de erro detalhadas quando ele for
 1. Se o arquivo Web. config do aplicativo tiver um elemento `customErrors` no elemento `system.web`, altere o atributo `mode` para "off". Caso contrário, adicione um elemento `customErrors` no elemento `system.web` com o atributo `mode` definido como "desativado", conforme mostrado no exemplo a seguir:
 
     [!code-xml[Main](deployment-to-a-hosting-provider-creating-and-installing-deployment-packages-12-of-12/samples/sample2.xml?highlight=3)]
-2. implantar o aplicativo.
+2. Implante o aplicativo.
 3. Execute o aplicativo e repita o que fez anteriormente, o que causou a ocorrência do erro. Agora você pode ver qual é a mensagem de erro real.
 4. Quando você tiver resolvido o erro, restaure a configuração de `customErrors` original e reimplante o aplicativo.
 

@@ -1,26 +1,26 @@
 ---
 uid: web-forms/overview/ajax-control-toolkit/index
-title: Versões mais antigas – Ajax Control Toolkit | Microsoft Docs
+title: Versões mais antigas – AJAX Control Toolkit | Microsoft Docs
 author: rick-anderson
-description: Como começar com o Ajax Control Toolkit e como usar alguns dos controles mais populares. DevExpress mantém que o aberto e gratuito origem Ajax Contr....
+description: Como começar com o AJAX Control Toolkit e como usar alguns dos controles mais populares. DevExpress mantém a contr do AJAX livre e de código aberto...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 76242ce9-e611-41d2-95e8-dc5f406d4bfc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit
 msc.type: chapter
 ms.openlocfilehash: d7d0426ed427f3b8fc8c7f9c2fe1518b1887d695
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65115380"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554141"
 ---
 # <a name="older-versions---ajax-control-toolkit"></a>Versões mais antigas – Ajax Control Toolkit
 
-> Como começar com o Ajax Control Toolkit e como usar alguns dos controles mais populares. DevExpress mantém que o aberto e gratuito origem Ajax Control Toolkit.
+> Como começar com o AJAX Control Toolkit e como usar alguns dos controles mais populares. O DevExpress mantém o AJAX Control Toolkit gratuito e aberto.
 > 
 > 
-> ![](index/_static/image1.png) DevExpress, os desenvolvedores de formulários da Web do ASP.NET, MVC e controles de interface do usuário do HTML5 e estruturas, premiado assumiu a manutenção do ASP.NET AJAX Control Toolkit para colocar essa biblioteca de código-fonte aberto altamente exigidos novamente em um estado confiável. [Saiba mais](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_Tutorials.aspx).
+> ![](index/_static/image1.png) DevExpress, os desenvolvedores de premiados ASP.NET WebForms, MVC e HTML5 interface de usuário e estruturas de UI, assumiram a manutenção do ASP.NET AJAX Control Toolkit para colocar essa biblioteca de software livre altamente solicitada de volta para um estado confiável. [Saiba mais](https://go.devexpress.com/AjaxControlToolkit_ASP_Resources_Tutorials.aspx).
 
 - [Introdução](getting-started/index.md)
 

@@ -9,11 +9,11 @@ ms.assetid: 17772912-b47b-4557-9ce9-80f22df642f7
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/validating-user-credentials-against-the-membership-user-store-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 37574e4cdc86f518d01d12da58cc2862bc77d463
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643189"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78527926"
 ---
 # <a name="validating-user-credentials-against-the-membership-user-store-vb"></a>Validar credenciais de usuário no repositório de usuário associado (VB)
 
@@ -51,7 +51,7 @@ A interface do usuário da página de logon pode permanecer inalterada, mas prec
 
 Esse código é notavelmente simples. Começamos chamando o método `Membership.ValidateUser`, passando o nome de usuário e a senha fornecidos. Se esse método retornar true, o usuário será conectado ao site por meio do método RedirectFromLoginPage da classe `FormsAuthentication`. (Como discutimos em <a id="Tutorial02"> </a> [*uma visão geral do tutorial de autenticação de formulários*](../introduction/an-overview-of-forms-authentication-vb.md) , o `FormsAuthentication.RedirectFromLoginPage` cria o tíquete de autenticação de formulários e, em seguida, redireciona o usuário para a página apropriada.) Se as credenciais forem inválidas, no entanto, o rótulo de `InvalidCredentialsMessage` será exibido, informando ao usuário que seu nome de usuário ou senha estava incorreto.
 
-E isso é tudo!
+Isso é tudo!
 
 Para testar se a página de logon funciona conforme o esperado, tente fazer logon com uma das contas de usuário criadas no tutorial anterior. Ou, se você ainda não tiver criado uma conta, vá em frente e crie uma na página `~/Membership/CreatingUserAccounts.aspx`.
 

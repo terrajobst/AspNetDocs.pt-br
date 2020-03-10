@@ -9,11 +9,11 @@ ms.assetid: e6ee90bf-32a5-4987-a384-15cc7dd30c8a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/textboxwatermark/using-textboxwatermark-in-a-formview-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 13ac0da5ca53756aa7c660cdc47c96f0c865b006
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611337"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627144"
 ---
 # <a name="using-textboxwatermark-in-a-formview-c"></a>Uso de TextBoxWatermark em um FormView (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle TextBoxWatermark no AJAX Control Toolkit estende uma caixa de texto para que um texto seja exibido dentro da caixa. Quando um usuário clica na caixa, ele é esvaziado. Se o usuário deixar a caixa sem inserir o texto, o texto preenchedo reaparecerá. Isso também é possível dentro de um controle FormView.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de `TextBoxWatermark` no AJAX Control Toolkit estende uma caixa de texto para que um texto seja exibido dentro da caixa. Quando um usuário clica na caixa, ele é esvaziado. Se o usuário deixar a caixa sem inserir o texto, o texto preenchedo reaparecerá. Isso também é possível dentro de um controle de `FormView`.
 
@@ -52,4 +52,4 @@ Agora, quando o usuário muda para o modo de inserção do controle de `FormView
 A marca d' água no campo vem do extensor ([clique para exibir a imagem em tamanho normal](using-textboxwatermark-in-a-formview-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](using-textboxwatermark-with-validation-controls-cs.md)
+> [Próximo](using-textboxwatermark-with-validation-controls-cs.md)

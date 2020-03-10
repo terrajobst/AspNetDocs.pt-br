@@ -9,11 +9,11 @@ ms.assetid: ecb004b5-82c0-44fb-bcaf-233fffac6195
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dropshadow/adjusting-the-z-index-of-a-dropshadow-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 10495a9590ce1f25e9e3fa218ac5144268f50711
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574170"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613914"
 ---
 # <a name="adjusting-the-z-index-of-a-dropshadow-vb"></a>Ajuste do índice Z de um DropShadow (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle DropShadow no AJAX Control Toolkit estende um painel com uma sombra. No entanto, essa sombra às vezes entra em conflito com outros controles, por exemplo, o controle de menu ASP.NET. Quando uma entrada de menu é exibida, ela aparece atrás da sombra.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle DropShadow no AJAX Control Toolkit estende um painel com uma sombra. No entanto, essa sombra às vezes entra em conflito com outros controles, por exemplo, o controle de menu ASP.NET. Quando uma entrada de menu é exibida, ela aparece atrás da sombra.
 

@@ -9,11 +9,11 @@ ms.assetid: ba6e6baa-9b9f-471f-b39d-b007a3addadc
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/automate-everything
 msc.type: authoredcontent
 ms.openlocfilehash: e741a753a36ebdaefbff8eee0b38911785c716ac
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457161"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584941"
 ---
 # <a name="automate-everything-building-real-world-cloud-apps-with-azure"></a>Automatizar tudo (criando aplicativos de nuvem do mundo real com o Azure)
 
@@ -78,7 +78,7 @@ Uma conta de armazenamento:
 
 E um aplicativo Web:
 
-![Site](automate-everything/_static/image5.png)
+![Site da Web](automate-everything/_static/image5.png)
 
 Na guia **Configurar** do aplicativo Web, você pode ver que ele tem as configurações da conta de armazenamento e as cadeias de conexão do banco de dados SQL configuradas para o aplicativo corrigir ti.
 

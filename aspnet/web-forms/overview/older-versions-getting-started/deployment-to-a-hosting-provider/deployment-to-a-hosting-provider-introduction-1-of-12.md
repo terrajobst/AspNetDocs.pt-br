@@ -9,11 +9,11 @@ ms.assetid: a2d7f33b-8c4a-4b48-9fb1-9139cf9b9878
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-introduction-1-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: ea88da1e6d510f706fc7ca370cfa32974c1243f8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587729"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525630"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-introduction---1-of-12"></a>Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio: Introdução-1 de 12
 
@@ -31,7 +31,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Se você tiver dúvidas que não estão diretamente relacionadas ao tutorial, poderá lançá-las no fórum de [implantação do ASP.net](https://forums.asp.net/26.aspx/1?Configuration+and+Deployment).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Esses tutoriais orientam você pela implantação primeiro no IIS em seu computador de desenvolvimento local para teste e, em seguida, para um provedor de Hospedagem de terceiros. O aplicativo que você implantará usa um banco de dados de aplicativo e um banco de dados de associação do ASP.NET. Você começa a usar o SQL Server Compact e a implantação no SQL Server Compact, e os tutoriais posteriores mostram como implantar alterações no banco de dados e como migrar para o SQL Server.
 
@@ -39,7 +39,7 @@ O número de tutoriais – 11 em tudo mais uma página de solução de problemas
 
 Os tutoriais são projetados para serem executados em sequência e cada parte se baseia na parte anterior. No entanto, você pode ignorar partes que não são relevantes para sua situação. (Ignorar partes pode exigir que você ajuste os procedimentos em Tutoriais posteriores.)
 
-## <a name="intended-audience"></a>Público-Alvo
+## <a name="intended-audience"></a>Público-alvo
 
 Os tutoriais se destinam a desenvolvedores de ASP.NET que trabalham em pequenas organizações ou em outros ambientes em que:
 
@@ -77,7 +77,7 @@ Quando ocorrer um erro durante a implantação ou se o site implantado não for 
 
 Os comentários sobre os tutoriais são bem-vindos e, quando o tutorial for atualizado, todos os esforços serão feitos para levar em conta as correções ou sugestões para melhorias fornecidas nos comentários do tutorial.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, verifique se você tem o Windows 7 ou posterior e um dos seguintes produtos instalados em seu computador:
 
@@ -139,4 +139,4 @@ Os seguintes recursos do aplicativo afetam a maneira como você o implanta ou o 
 Neste primeiro tutorial da série, você baixou o projeto de exemplo do Visual Studio e revisou os recursos do site que afetam a forma como você implanta o aplicativo. Nos tutoriais a seguir, você se prepara para a implantação Configurando algumas dessas coisas para serem tratadas automaticamente. Outros que você cuida manualmente.
 
 > [!div class="step-by-step"]
-> [Avançar](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)
+> [Próximo](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md)

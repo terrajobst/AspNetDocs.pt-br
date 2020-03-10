@@ -1,23 +1,23 @@
 ---
 uid: web-pages/videos/aspnet-razor-pages/index
-title: Páginas do Razor do ASP.NET | Microsoft Docs
+title: ASP.NET Razor Pages | Microsoft Docs
 author: rick-anderson
-description: Os vídeos que você pode exibir para fazer uma busca detalhada em páginas da Web e o WebMatrix.
+description: Quais vídeos você pode exibir para fazer uma busca detalhada nas páginas da Web e no WebMatrix.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: ffad842d-548c-40c6-84c5-10858133e972
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages
 msc.type: chapter
 ms.openlocfilehash: c1889f0eab6d2df41ac6e19d433303198c4789f4
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127797"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633388"
 ---
 # <a name="aspnet-web-pages"></a>Páginas da Web do ASP.NET
 
-> Os vídeos que você pode exibir para fazer uma busca detalhada em páginas da Web e o WebMatrix.
+> Quais vídeos você pode exibir para fazer uma busca detalhada nas páginas da Web e no WebMatrix.
 
 - [Introdução ao WebMatrix e às Páginas da Web do ASP.NET](getting-started-with-webmatrix-and-aspnet-web-pages.md)
 - [Introdução à sintaxe Razor de programação da Web do ASP.NET](introduction-to-aspnet-web-programming-using-the-razor-syntax.md)

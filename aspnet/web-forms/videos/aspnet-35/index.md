@@ -2,24 +2,24 @@
 uid: web-forms/videos/aspnet-35/index
 title: ASP.NET 3.5 | Microsoft Docs
 author: rick-anderson
-description: Como criar aplicativos ASP.NET 3.5, com ênfase em novos recursos.
+description: Como criar aplicativos ASP.NET 3,5, com ênfase em novos recursos.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 2e6e9c24-bb97-446a-b05e-1bd88824d352
 msc.legacyurl: /web-forms/videos/aspnet-35
 msc.type: chapter
 ms.openlocfilehash: 369f3f1516dace0c7d8fc3a87b2d50ec71889de0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133771"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78572992"
 ---
 # <a name="aspnet-35"></a>ASP.NET 3.5
 
-> Como criar aplicativos ASP.NET 3.5, com ênfase em novos recursos.
+> Como criar aplicativos ASP.NET 3,5, com ênfase em novos recursos.
 
-- [Como faço para:](how-do-i/index.md)
+- [Como Fazer](how-do-i/index.md)
 
     - [Criar uma página mestra no Visual Studio 2008](how-do-i/how-do-i-create-a-master-page-in-visual-studio-2008.md)
     - [Criar página mestra aninhada no Visual Studio 2008](how-do-i/how-do-i-create-nested-master-page-in-visual-studio-2008.md)
@@ -37,7 +37,7 @@ ms.locfileid: "65133771"
     - [Suporte do AJAX ASP.NET no Visual Studio 2008](aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
     - [Adicionar a funcionalidade AJAX a uma página existente do ASP.NET](aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
     - [Criação e uso de um serviço Web habilitado para AJAX em um site](aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-    - [ASP.NET AJAX: Uma demonstração do AJAX ASP.NET](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+    - [AJAX ASP.NET: uma demonstração do AJAX ASP.NET](aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
     - [Serviços de Dados ADO.NET com o suporte do AJAX ASP.NET](aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
     - [Introdução ao histórico do Ajax ASP.NET](aspnet-ajax/introduction-to-aspnet-ajax-history.md)
     - [Uso de combinação de script para melhorar o desempenho do AJAX](aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)

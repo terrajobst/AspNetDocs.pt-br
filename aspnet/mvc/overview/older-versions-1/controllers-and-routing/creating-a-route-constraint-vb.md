@@ -1,75 +1,75 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
-title: Criar uma restrição de rota (VB) | Microsoft Docs
+title: Criando uma restrição de rota (VB) | Microsoft Docs
 author: StephenWalther
-description: Neste tutorial, Stephen Walther demonstra como você pode controlar como o navegador solicita as rotas de correspondência, criando restrições de rota com expressões regulares.
+description: Neste tutorial, Stephen Walther demonstra como você pode controlar como o navegador solicita as rotas correspondentes criando restrições de rota com expressões regulares.
 ms.author: riande
 ms.date: 02/16/2009
 ms.assetid: b7cce113-c82c-45bf-b97b-357e5d9f7f56
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/creating-a-route-constraint-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 205742dd8f866c8828008c8aac7ab3f98b173ceb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123418"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78601384"
 ---
 # <a name="creating-a-route-constraint-vb"></a>Criação de uma restrição de rota (VB)
 
 por [Stephen Walther](https://github.com/StephenWalther)
 
-> Neste tutorial, Stephen Walther demonstra como você pode controlar como o navegador solicita as rotas de correspondência, criando restrições de rota com expressões regulares.
+> Neste tutorial, Stephen Walther demonstra como você pode controlar como o navegador solicita as rotas correspondentes criando restrições de rota com expressões regulares.
 
-Você pode usar restrições de rota para restringir as solicitações de navegador que correspondam a uma rota específica. Você pode usar uma expressão regular para especificar uma restrição de rota.
+Você usa restrições de rota para restringir as solicitações do navegador que correspondem a uma rota específica. Você pode usar uma expressão regular para especificar uma restrição de rota.
 
-Por exemplo, imagine que você definiu a rota na listagem 1 no arquivo global. asax.
+Por exemplo, imagine que você definiu a rota na Listagem 1 em seu arquivo global. asax.
 
-**Listagem 1 - Global.asax.vb**
+**Listagem 1-global. asax. vb**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample1.vb)]
 
-Listagem 1 contém uma rota chamada Product. Você pode usar a rota de produto para mapear as solicitações do navegador para ProductController contida na listagem 2.
+A listagem 1 contém uma rota chamada Product. Você pode usar a rota do produto para mapear solicitações do navegador para o ProductController contido na Listagem 2.
 
-**Listagem 2 - Controllers\ProductController.vb**
+**Listagem 2-Controllers\ProductController.vb**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample2.vb)]
 
-Observe que a ação de Details() exposta pelo controlador de produto aceita um parâmetro único chamado productId. Esse parâmetro é um parâmetro de número inteiro.
+Observe que a ação Details () exposta pelo controlador do produto aceita um único parâmetro chamado productId. Esse parâmetro é um parâmetro inteiro.
 
-A rota definida na listagem 1 corresponderá a qualquer uma das seguintes URLs:
+A rota definida na Listagem 1 corresponderá a qualquer uma das seguintes URLs:
 
-- / Produto/23
-- / Produto/7
+- /Product/23
+- /Product/7
 
-Infelizmente, a rota também serão compatíveis com as seguintes URLs:
+Infelizmente, a rota também corresponderá às seguintes URLs:
 
-- / Produto/blah
-- / Produto/apple
+- /Product/blah
+- /Product/apple
 
-Porque a ação Details() espera um parâmetro de número inteiro, fazendo uma solicitação que contém algo diferente de um valor inteiro causará um erro. Por exemplo, se você digitar a URL /Product/apple no seu navegador, em seguida, você obterá a página de erro na Figura 1.
+Como a ação Details () espera um parâmetro inteiro, fazer uma solicitação que contém algo diferente de um valor inteiro causará um erro. Por exemplo, se você digitar a URL/Product/Apple em seu navegador, receberá a página de erro na Figura 1.
 
-[![A caixa de diálogo Novo projeto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
+[![caixa de diálogo novo projeto](creating-a-route-constraint-vb/_static/image1.jpg)](creating-a-route-constraint-vb/_static/image1.png)
 
-**Figura 01**: Vendo uma página explodir ([clique para exibir a imagem em tamanho normal](creating-a-route-constraint-vb/_static/image2.png))
+**Figura 01**: ver um detalhamento de página ([clique para exibir a imagem em tamanho normal](creating-a-route-constraint-vb/_static/image2.png))
 
-O que você realmente deseja fazer é correspondente somente a URLs que contêm um productId inteiro apropriado. Você pode usar uma restrição ao definir uma rota para restringir as URLs que correspondem à rota. A rota de produto modificada na listagem 3 contém uma restrição de expressão regular que corresponde apenas números inteiros.
+O que você realmente deseja fazer é corresponder apenas a URLs que contenham um número inteiro apropriado de productId. Você pode usar uma restrição ao definir uma rota para restringir as URLs que correspondem à rota. A rota de produto modificada na Listagem 3 contém uma restrição de expressão regular que só corresponde a inteiros.
 
-**Listagem 3 - Global.asax.vb**
+**Listagem 3-global. asax. vb**
 
 [!code-vb[Main](creating-a-route-constraint-vb/samples/sample3.vb)]
 
-A expressão regular \d+ corresponde a um ou mais números inteiros. Essa restrição faz com que a rota de produto coincidir com as seguintes URLs:
+A expressão regular \D + corresponde a um ou mais inteiros. Essa restrição faz com que a rota do produto corresponda às seguintes URLs:
 
-- / Produto/3
-- / Produto/8999
+- /Product/3
+- /Product/8999
 
-Mas não as URLs a seguir:
+Mas não as seguintes URLs:
 
-- / Produto/apple
-- / Produto
+- /Product/apple
+- /Product
 
-Essas solicitações do navegador serão tratadas por outra rota ou, se não houver rotas correspondentes, uma *não foi possível encontrar o recurso* erro será retornado.
+Essas solicitações de navegador serão tratadas por outra rota ou, se não houver rotas correspondentes, um erro *o recurso não pôde ser encontrado* será retornado.
 
 > [!div class="step-by-step"]
 > [Anterior](creating-custom-routes-vb.md)

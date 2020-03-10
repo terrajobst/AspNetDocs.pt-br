@@ -9,11 +9,11 @@ ms.assetid: d191a204-d7ea-458d-b81c-0b9049ecb55f
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-updating-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f0bb83b17585876dd6d28a5893a223cce15da31d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74591073"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78618359"
 ---
 # <a name="batch-updating-vb"></a>Atualização em lote (VB)
 
@@ -60,7 +60,7 @@ Antes de nos preocuparmos em criar um GridView em que as linhas são editáveis,
 
 **Figura 3**: recuperar os dados do produto usando o método `GetProducts` ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image6.png))
 
-Como o GridView, os recursos de modificação do ObjectDataSource s são projetados para funcionar por linha. Para atualizar um conjunto de registros, precisaremos escrever um pouco de código na classe code-behind da página ASP.NET, que coloca os dados em lotes e os transmite para a BLL. Portanto, defina as listas suspensas nas guias ObjectDataSource s UPDATE, INSERT e DELETE como (None). Clique em Concluir para concluir o assistente.
+Como o GridView, os recursos de modificação do ObjectDataSource s são projetados para funcionar por linha. Para atualizar um conjunto de registros, precisaremos escrever um pouco de código na classe code-behind da página ASP.NET, que coloca os dados em lotes e os transmite para a BLL. Portanto, defina as listas suspensas nas guias ObjectDataSource s UPDATE, INSERT e DELETE como (None). Clique em Concluir para finalizar o assistente.
 
 [![definir as listas suspensas nas guias atualizar, inserir e excluir para (nenhum)](batch-updating-vb/_static/image4.gif)](batch-updating-vb/_static/image7.png)
 
@@ -124,7 +124,7 @@ Arraste uma DropDownList da caixa de ferramentas até a `CategoryName` TemplateF
 
 **Figura 9**: recuperar os dados da categoria usando o método `GetCategories` ([clique para exibir a imagem em tamanho normal](batch-updating-vb/_static/image16.png))
 
-Como esse ObjectDataSource é usado apenas para recuperar dados, defina as listas suspensas nas guias atualizar e excluir como (nenhum). Clique em Concluir para concluir o assistente.
+Como esse ObjectDataSource é usado apenas para recuperar dados, defina as listas suspensas nas guias atualizar e excluir como (nenhum). Clique em Concluir para finalizar o assistente.
 
 [![definir as listas suspensas nas guias atualizar e excluir para (nenhum)](batch-updating-vb/_static/image10.gif)](batch-updating-vb/_static/image17.png)
 

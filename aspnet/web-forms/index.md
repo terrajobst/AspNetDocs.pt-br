@@ -1,19 +1,19 @@
 ---
 uid: web-forms/index
-title: Web Forms do ASP.NET | Microsoft Docs
+title: ASP.NET Web Forms | Microsoft Docs
 author: rick-anderson
-description: Baixe o Visual Web Developer Express & Aprenda a criar rapidamente environ aplicativos usando fáceis de entender os controles no Web Forms do ASP.NET em um design visual de web...
+description: Baixe o Visual Web Developer Express & saiba como criar aplicativos Web rapidamente usando controles fáceis de entender em ASP.NET Web Forms em um ambiente de Design Visual...
 ms.author: riande
 ms.date: 08/08/2011
 ms.assetid: 7e4ce5d2-ab22-44f0-9825-c12eed7b8fcb
 msc.legacyurl: /web-forms
 msc.type: categoryindex
 ms.openlocfilehash: 623df5d3ffe357f42d72ee0a33bc50aa60a8c4d0
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59397000"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554855"
 ---
 # <a name="aspnet-web-forms"></a>Web Forms do ASP.NET
 
@@ -77,8 +77,8 @@ ms.locfileid: "59397000"
         - [ASP.NET 4 – introdução à implantação corporativa](overview/deployment/deploying-web-applications-in-enterprise-scenarios/index.md)
 
             - [Implantando aplicativos Web em cenários corporativos usando o Visual Studio 2010](overview/deployment/deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-            - [Implantação da Web corporativa: Visão geral do cenário](overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-            - [Gerenciamento de ciclo de vida do aplicativo: Do desenvolvimento à produção](overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+            - [Implantação da Web corporativa: visão geral do cenário](overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+            - [Gerenciamento do Ciclo de Vida do Aplicativo: do desenvolvimento à produção](overview/deployment/deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
         - [ASP.NET 4 – série 1 sobre implantação corporativa](overview/deployment/web-deployment-in-the-enterprise/index.md)
 
             - [Implantação da Web na empresa](overview/deployment/web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -96,9 +96,9 @@ ms.locfileid: "59397000"
 
             - [Configuração de ambientes de servidor para a Implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
             - [Escolha da abordagem correta para a Implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-            - [Cenário: Configurando um ambiente de teste para implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-            - [Cenário: Configurando um ambiente de preparo para a implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-            - [Cenário: Configurando um ambiente de produção para implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+            - [Cenário: configuração de um ambiente de teste para a Implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+            - [Cenário: configuração de um ambiente de preparo para a Implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+            - [Cenário: configuração de um ambiente de produção para a Implantação da Web](overview/deployment/configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
             - [Configuração de um servidor Web para publicação de Implantação da Web (agente remoto)](overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
             - [Configuração de um servidor Web para publicação de Implantação da Web (manipulador de Implantação da Web)](overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
             - [Configuração de um servidor Web para publicação de Implantação da Web (implantação offline)](overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)
@@ -132,14 +132,14 @@ ms.locfileid: "59397000"
 
         - [ASP.NET 4 – Tailspin Spyworks](overview/older-versions-getting-started/tailspin-spyworks/index.md)
 
-            - [Parte 1: Arquivo -> Novo projeto](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
-            - [Parte 2: Camada de acesso a dados](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
-            - [Parte 3: Layout e Menu de categoria](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
-            - [Parte 4: Listagem de produtos](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
-            - [Parte 5: Lógica de negócios](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
-            - [Parte 6: Associação do ASP.NET](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
-            - [Parte 7: Adição de recursos](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
-            - [Parte 8: Páginas finais, tratamento de exceção e conclusão](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
+            - [Parte 1: Arquivo -> Novo Projeto](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1.md)
+            - [Parte 2: Camada de Acesso a Dados](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-2.md)
+            - [Parte 3: layout e menu de categoria](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-3.md)
+            - [Parte 4: listagem de produtos](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-4.md)
+            - [Parte 5: lógica de negócios](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-5.md)
+            - [Parte 6: associação do ASP.NET](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-6.md)
+            - [Parte 7: adição de recursos](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-7.md)
+            - [Parte 8: páginas finais, tratamento de exceção e conclusão](overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8.md)
         - [ASP.NET 4 – Introdução ao Entity Framework 4 e Web Forms](overview/older-versions-getting-started/getting-started-with-ef/index.md)
 
             - [Introdução ao Database First do Entity Framework 4.0](overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-1.md)
@@ -152,9 +152,9 @@ ms.locfileid: "59397000"
             - [Introdução ao Database First do Entity Framework 4.0 – parte 8](overview/older-versions-getting-started/getting-started-with-ef/the-entity-framework-and-aspnet-getting-started-part-8.md)
         - [ASP.NET 4 – continuação com o Entity Framework 4 e o Web Forms](overview/older-versions-getting-started/continuing-with-ef/index.md)
 
-            - [Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Guia de Introdução](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
-            - [Entity Framework 4.0 e o controle ObjectDataSource, parte 2: Adicionando uma camada de lógica de negócios e testes de unidade](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
-            - [Entity Framework 4.0 e o controle ObjectDataSource, parte 3: Classificação e filtragem](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
+            - [Entity Framework 4.0 e o controle ObjectDataSource, parte 1: Introdução](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-1-getting-started.md)
+            - [Entity Framework 4.0 e o controle ObjectDataSource, parte 2: adição de uma camada de lógica de negócios e testes de unidade](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-2-adding-a-business-logic-layer-and-unit-tests.md)
+            - [Entity Framework 4.0 e o controle ObjectDataSource, parte 3: classificação e filtragem](overview/older-versions-getting-started/continuing-with-ef/using-the-entity-framework-and-the-objectdatasource-control-part-3-sorting-and-filtering.md)
             - [Tratamento de simultaneidade com o Entity Framework 4.0 no ASP.NET 4](overview/older-versions-getting-started/continuing-with-ef/handling-concurrency-with-the-entity-framework-in-an-asp-net-web-application.md)
             - [Maximizar o desempenho com o Entity Framework 4.0 no ASP.NET 4](overview/older-versions-getting-started/continuing-with-ef/maximizing-performance-with-the-entity-framework-in-an-asp-net-web-application.md)
             - [Novidades no Entity Framework 4.0](overview/older-versions-getting-started/continuing-with-ef/what-s-new-in-the-entity-framework-4.md)
@@ -680,7 +680,7 @@ ms.locfileid: "59397000"
         - [Detectar recursos do navegador em Páginas da Web do ASP.NET](videos/how-do-i/how-do-i-detect-browser-capabilities-in-aspnet-web-pages.md)
         - [Mapear um controle de servidor do ASP.NET para o adaptador usado para renderizá-lo](videos/how-do-i/how-do-i-map-an-aspnet-server-control-to-the-adaptor-used-to-render-it.md)
         - [Passar informações de uma página a outra, usando uma cadeia de caracteres de consulta](videos/how-do-i/how-do-i-pass-information-from-one-page-to-another-using-a-query-string.md)
-        - [Use o aspnet\_merge.exe utilitário para mesclar Assemblies](videos/how-do-i/how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
+        - [Usar o utilitário ASPNET\_Merge. exe para mesclar assemblies](videos/how-do-i/how-do-i-use-the-aspnet_mergeexe-utility-to-merge-assemblies.md)
         - [Implementar um postback em outra página no ASP.NET](videos/how-do-i/how-do-i-implement-a-cross-page-postback-in-aspnet.md)
         - [Adicionar controles a uma Página da Web do ASP.NET por meio de programação](videos/how-do-i/how-do-i-add-controls-to-an-aspnet-web-page-programmatically.md)
         - [Usar um campo oculto para armazenar e manipular informações do lado do cliente](videos/how-do-i/how-do-i-use-a-hidden-field-to-store-and-manipulate-client-side-information.md)
@@ -828,16 +828,16 @@ ms.locfileid: "59397000"
         - [[Introdução ao ASP.NET 2.0:] conceitos básicos do ASP.NET 2.0](videos/migrating/intro-to-aspnet-20-aspnet-20-fundamentals.md)
         - [[Introdução ao ASP.NET 2.0:] elementos da interface do usuário](videos/migrating/intro-to-aspnet-20-user-interface-elements.md)
         - [[Migração do] ASP clássico para o ASP.NET](videos/migrating/migrating-from-classic-asp-to-aspnet.md)
-        - [Introdução ao ASP.NET para desenvolvedores de JSP: Bem-vindo ao ASP.NET 2.0](videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
-        - [Introdução ao ASP.NET para desenvolvedores de JSP: Criação de aplicativos](videos/migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
-        - [Introdução ao ASP.NET para desenvolvedores do ColdFusion: Adicionando o ASP.NET ao seu repertório](videos/migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
-        - [Introdução ao ASP.NET para desenvolvedores do ColdFusion: Criar um aplicativo ASP.NET](videos/migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
+        - [Introdução ao ASP.NET para desenvolvedores de JSP: bem-vindos ao ASP.NET 2.0](videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20.md)
+        - [Introdução ao ASP.NET para desenvolvedores de JSP: criação de aplicativos](videos/migrating/intro-to-aspnet-for-jsp-developers-building-applications.md)
+        - [Introdução ao ASP.NET para desenvolvedores do ColdFusion: adicionando o ASP.NET ao seu repertório](videos/migrating/intro-to-aspnet-for-coldfusion-developers-adding-aspnet-to-your-repertoire.md)
+        - [Introdução ao ASP.NET para desenvolvedores do ColdFusion: criação de um aplicativo do ASP.NET](videos/migrating/introduction-to-aspnet-for-coldfusion-developers-building-an-aspnet-application.md)
         - [Interoperabilidade entre o PHP e a plataforma Windows](videos/migrating/interop-between-php-and-the-windows-platform.md)
     - [Compilando aplicativos 2.0](videos/building-20-applications/index.md)
 
         - [[Lição 1:] Introdução ao Visual Web Developer Express](videos/building-20-applications/lesson-1-getting-started-with-visual-web-developer-express.md)
         - [[Lição 2:] Criando uma interface do usuário de Web Forms](videos/building-20-applications/lesson-2-creating-a-web-forms-user-interface.md)
-        - [[Lição 3:] Compreendendo melhor eventos e Postback](videos/building-20-applications/lesson-3-understanding-more-about-events-and-postback.md)
+        - [[Lição 3:] Compreendendo mais sobre eventos e postback](videos/building-20-applications/lesson-3-understanding-more-about-events-and-postback.md)
         - [[Lição 4:] Compreendendo o estado do aplicativo Web](videos/building-20-applications/lesson-4-understanding-web-application-state.md)
         - [[Lição 5:] Depuração e rastreamento do seu site](videos/building-20-applications/lesson-5-debugging-and-tracing-your-website.md)
         - [[Lição 6:] Trabalhando com folhas de estilos e páginas mestras](videos/building-20-applications/lesson-6-working-with-stylesheets-and-master-pages.md)
@@ -961,14 +961,14 @@ ms.locfileid: "59397000"
         - ["Como fazer?" com o LINQ](videos/data-access/how-do-i-with-linq/index.md)
 
             - [LINQ to SQL: visão geral](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
-            - [LINQ to SQL: Modelo de dados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
-            - [LINQ to SQL: Consultando o banco de dados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-            - [LINQ to SQL: Atualizando o banco de dados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+            - [LINQ to SQL: modelo de dados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
+            - [LINQ to SQL: consultando o banco de dados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
+            - [LINQ to SQL: atualização do banco de dados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
             - [LINQ to SQL: LinqDataSource](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
             - [LINQ to SQL: LinqDataSource personalizado](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-            - [LINQ to SQL: Usando procedimentos armazenados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
-            - [LINQ to SQL: Atualizando com procedimentos armazenados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
-            - [LINQ to SQL: Execução de SQL arbitrário](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
+            - [LINQ to SQL: uso de procedimentos armazenados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+            - [LINQ to SQL: atualizando com procedimentos armazenados](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
+            - [LINQ to SQL: execução de SQL arbitrário](videos/data-access/how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
         - [Vídeos de LINQ da equipe do VB](videos/data-access/linq-videos-from-the-vb-team/index.md)
 
             - [Introdução ao LINQ](videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq.md)
@@ -999,7 +999,7 @@ ms.locfileid: "59397000"
         - [Formatação de formulário personalizado de Dados Dinâmicos do ASP.NET](videos/aspnet-dynamic-data/aspnet-dynamic-data-custom-form-formatting.md)
     - [ASP.NET 3.5](videos/aspnet-35/index.md)
 
-        - [Como faço para:](videos/aspnet-35/how-do-i/index.md)
+        - [Como Fazer](videos/aspnet-35/how-do-i/index.md)
 
             - [Criar uma página mestra no Visual Studio 2008](videos/aspnet-35/how-do-i/how-do-i-create-a-master-page-in-visual-studio-2008.md)
             - [Criar página mestra aninhada no Visual Studio 2008](videos/aspnet-35/how-do-i/how-do-i-create-nested-master-page-in-visual-studio-2008.md)
@@ -1017,7 +1017,7 @@ ms.locfileid: "59397000"
             - [Suporte do AJAX ASP.NET no Visual Studio 2008](videos/aspnet-35/aspnet-ajax/aspnet-ajax-support-in-visual-studio-2008.md)
             - [Adicionar a funcionalidade AJAX a uma página existente do ASP.NET](videos/aspnet-35/aspnet-ajax/adding-ajax-functionality-to-an-existing-aspnet-page.md)
             - [Criação e uso de um serviço Web habilitado para AJAX em um site](videos/aspnet-35/aspnet-ajax/creating-and-using-an-ajax-enabled-web-service-in-a-web-site.md)
-            - [ASP.NET AJAX: Uma demonstração do AJAX ASP.NET](videos/aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
+            - [AJAX ASP.NET: uma demonstração do AJAX ASP.NET](videos/aspnet-35/aspnet-ajax/aspnet-ajax-a-demonstration-of-aspnet-ajax.md)
             - [Serviços de Dados ADO.NET com o suporte do AJAX ASP.NET](videos/aspnet-35/aspnet-ajax/adonet-data-services-with-aspnet-ajax-support.md)
             - [Introdução ao histórico do Ajax ASP.NET](videos/aspnet-35/aspnet-ajax/introduction-to-aspnet-ajax-history.md)
             - [Uso de combinação de script para melhorar o desempenho do AJAX](videos/aspnet-35/aspnet-ajax/using-script-combining-to-improve-ajax-performance.md)
@@ -1084,7 +1084,7 @@ ms.locfileid: "59397000"
         - [SEO](videos/net-4/seo/index.md)
 
             - [Metadados dinâmicos](videos/net-4/seo/aspnet-4-quick-hit-dynamic-metadata.md)
-    - [ASP.NET 4.5](videos/aspnet-web-forms-vnext/index.md)
+    - [ASP.NET 4,5](videos/aspnet-web-forms-vnext/index.md)
 
         - [Controles de dados fortemente tipados](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-strongly-typed-data-controls.md)
         - [Model binding parte 1: selecionar dados](videos/aspnet-web-forms-vnext/aspnet-vnext-videos-model-binding-part-1-selecting-data.md)

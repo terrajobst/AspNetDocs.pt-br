@@ -9,11 +9,11 @@ ms.assetid: ec9db57c-9f68-402a-bf4c-0d63d5f6908e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/handling-postbacks-from-a-popup-control-with-an-updatepanel-vb
 msc.type: authoredcontent
 ms.openlocfilehash: dd045ae56696c7944df98cf805ba812fde1bb4ff
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598807"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612892"
 ---
 # <a name="handling-postbacks-from-a-popup-control-with-an-updatepanel-vb"></a>Tratamento de postbacks de um controle pop-up com um UpdatePanel (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O extensor PopupControl no AJAX Control Toolkit oferece uma maneira fácil de disparar um popup quando qualquer outro controle é ativado. Deve-se tomar cuidado especial quando um postback ocorre dentro de um pop-up.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O extensor PopupControl no AJAX Control Toolkit oferece uma maneira fácil de disparar um popup quando qualquer outro controle é ativado. Deve-se tomar cuidado especial quando um postback ocorre dentro de um pop-up.
 

@@ -9,11 +9,11 @@ ms.assetid: 7e97cfc3-d830-4002-8ff7-5790d1ff49e6
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/more-patterns-and-guidance
 msc.type: authoredcontent
 ms.openlocfilehash: 57e32bf7568ecb0eb22f0f2b585310dcab2d5d43
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457070"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584871"
 ---
 # <a name="more-patterns-and-guidance-building-real-world-cloud-apps-with-azure"></a>Mais padrões e diretrizes (criando aplicativos de nuvem do mundo real com o Azure)
 
@@ -57,7 +57,7 @@ vídeos
 - [FailSafe: criando serviços de nuvem escalonáveis e resilientes](https://channel9.msdn.com/Series/FailSafe). Série de vídeos de nove partes por Ulrich Homann, Marc Mercuri e marcas Simms. Apresenta uma exibição de nível 400 de como arquitetar aplicativos de nuvem. Esta série se concentra na teoria e nos motivos por trás dos padrões recomendados; para obter mais detalhes, consulte a criação de séries grandes por marca Simms.
 - [Criando Big: lições aprendidas de clientes do Azure-parte 1](https://channel9.msdn.com/Events/Build/2012/3-029) e [parte 2](https://channel9.msdn.com/Events/Build/2012/3-030). Série de vídeos de duas partes de Simon Davies e Mark Simms, semelhante à série FailSafe, mas orientada mais em direção à implementação prática.
 
-Exemplos de código
+Exemplo de código
 
 - [O aplicativo corrigir ti que acompanha este livro eletrônico](https://code.msdn.microsoft.com/Fix-It-app-for-Building-cdd80df4?cdn_id=2013-12-03-002).
 - [Conceitos básicos do serviço de nuvem no C# Azure no para Visual Studio 2012](https://aka.ms/csf). O projeto que pode ser baixado no site da Galeria de código da Microsoft inclui o código e a documentação desenvolvidos pela equipe de consultoria ao cliente da Microsoft (CAT). Demonstra muitas das práticas recomendadas defensoras da FailSafe e da criação de grandes séries de vídeos e da white paper FailSafe. A página da Galeria de códigos também é vinculada a uma ampla documentação pelos autores do projeto – consulte especialmente a [coleção de wikis conceitos básicos do serviço de nuvem](https://social.technet.microsoft.com/wiki/contents/articles/17987.cloud-service-fundamentals.aspx) na caixa azul próxima à parte superior da descrição do projeto. Este projeto e a documentação para ele ainda estão sendo desenvolvidos ativamente, o que o torna uma opção melhor para informações sobre vários tópicos do que os White papers semelhantes, mas mais antigos.

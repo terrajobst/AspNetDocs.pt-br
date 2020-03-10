@@ -9,11 +9,11 @@ ms.assetid: 54d9df99-1161-4899-b4e8-2679c85915e7
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-partial-page-updates-with-asp-net-ajax
 msc.type: authoredcontent
 ms.openlocfilehash: 4b87cb8f58dbd7f27b16bcb0d488ff361770d4fe
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74622935"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78545965"
 ---
 # <a name="understanding-partial-page-updates-with-aspnet-ajax"></a>Noções básicas sobre atualizações de página parcial com o AJAX ASP.NET
 
@@ -103,25 +103,25 @@ O Visual Studio 2008 parece não vir com um modelo predefinido para um site da W
 
 Propriedades habilitadas para marcação:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
-| AllowCustomErrors-redirecionar | Bool | Especifica se a seção de erro personalizado do arquivo Web. config deve ser usada para tratar erros. |
-| AsyncPostBackError-mensagem | Cadeia de Caracteres | Obtém ou define a mensagem de erro enviada ao cliente se um erro for gerado. |
-| AsyncPostBack-tempo limite | Int32 | Obtém ou define o valor padrão de um tempo que um cliente deve aguardar até que a solicitação assíncrona seja concluída. |
-| XsltSettings-globalização | Bool | Obtém ou define se a globalização de script está habilitada. |
-| XsltSettings-localização | Bool | Obtém ou define se a localização de script está habilitada. |
+| AllowCustomErrors-Redirect | Bool | Especifica se a seção de erro personalizado do arquivo Web. config deve ser usada para tratar erros. |
+| AsyncPostBackError-Message | String | Obtém ou define a mensagem de erro enviada ao cliente se um erro for gerado. |
+| AsyncPostBack-Timeout | Int32 | Obtém ou define o valor padrão de um tempo que um cliente deve aguardar até que a solicitação assíncrona seja concluída. |
+| EnableScript-Globalization | Bool | Obtém ou define se a globalização de script está habilitada. |
+| EnableScript-Localization | Bool | Obtém ou define se a localização de script está habilitada. |
 | ScriptLoadTimeout | Int32 | Determina o número de segundos permitidos para carregar scripts no cliente |
 | ScriptMode | Enum (automático, depurar, liberar, herdar) | Obtém ou define se as versões de lançamento de scripts devem ser renderizadas |
-| ScriptPath | Cadeia de Caracteres | Obtém ou define o caminho raiz para o local dos arquivos de script a serem enviados ao cliente. |
+| ScriptPath | String | Obtém ou define o caminho raiz para o local dos arquivos de script a serem enviados ao cliente. |
 
 Propriedades somente de código:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
-| AuthenticationService | Gerenciador de AuthenticationService | Obtém detalhes sobre o proxy do serviço de autenticação ASP.NET que será enviado ao cliente. |
+| AuthenticationService | AuthenticationService-Manager | Obtém detalhes sobre o proxy do serviço de autenticação ASP.NET que será enviado ao cliente. |
 | IsDebuggingEnabled | Bool | Obtém se a depuração de script e de código está habilitada. |
 | IsInAsyncPostback | Bool | Obtém se a página está atualmente em uma solicitação de postback assíncrona. |
-| ProfileService | Gerenciador de ProfileService | Obtém detalhes sobre o proxy de serviço de criação de perfil do ASP.NET que será enviado ao cliente. |
+| ProfileService | ProfileService-Manager | Obtém detalhes sobre o proxy de serviço de criação de perfil do ASP.NET que será enviado ao cliente. |
 | Scripts | &gt; de referência de script de coleção&lt; | Obtém uma coleção de referências de script que serão enviadas ao cliente. |
 | Serviços | Coleção&lt;&gt; de referência de serviço | Obtém uma coleção de referências de proxy de serviço Web que serão enviadas ao cliente. |
 | SupportsPartialRendering | Bool | Obtém se o cliente atual dá suporte à renderização parcial. Se essa propriedade retornar **false**, todas as solicitações de página serão postagens padrão. |
@@ -130,11 +130,11 @@ Métodos de código público:
 
 | **Nome do método** | **Tipo** | **Descrição** |
 | --- | --- | --- |
-| SetFocus (cadeia de caracteres) | Void | Define o foco do cliente para um controle específico quando a solicitação é concluída. |
+| SetFocus(string) | Void | Define o foco do cliente para um controle específico quando a solicitação é concluída. |
 
 Descendentes de marcação:
 
-| **Tags** | **Descrição** |
+| **Tag** | **Descrição** |
 | --- | --- |
 | &gt; &lt;AuthenticationService | Fornece detalhes sobre o proxy para o serviço de autenticação ASP.NET. |
 | &gt; de &lt;ProfileService | Fornece detalhes sobre o proxy para o serviço de criação de perfil do ASP.NET. |
@@ -177,19 +177,19 @@ O controle ScriptManager fornece amplo suporte para a localização de cadeias d
 
 Propriedades habilitadas para marcação:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
-| ChildrenAsTriggers | {1&gt;bool&lt;1} | Especifica se os controles filho invocam a atualização automaticamente no postback. |
+| ChildrenAsTriggers | bool | Especifica se os controles filho invocam a atualização automaticamente no postback. |
 | RenderMode | enum (bloco, embutido) | Especifica a maneira como o conteúdo será visualmente apresentado. |
 | UpdateMode | enum (sempre, condicional) | Especifica se o UpdatePanel é sempre atualizado durante um processamento parcial ou se é atualizado apenas quando um gatilho é atingido. |
 
 Propriedades somente de código:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
-| IsInPartialRendering | {1&gt;bool&lt;1} | Obtém se o UpdatePanel está dando suporte à renderização parcial para a solicitação atual. |
+| IsInPartialRendering | bool | Obtém se o UpdatePanel está dando suporte à renderização parcial para a solicitação atual. |
 | ContentTemplate | ITemplate | Obtém o modelo de marcação para a solicitação de atualização. |
-| ContentTemplateContainer | Controle | Obtém o modelo programático para a solicitação de atualização. |
+| ContentTemplateContainer | Control | Obtém o modelo programático para a solicitação de atualização. |
 | Gatilhos | UpdatePanel-TriggerCollection | Obtém a lista de gatilhos associados ao UpdatePanel atual. |
 
 Métodos de código público:
@@ -200,7 +200,7 @@ Métodos de código público:
 
 Descendentes de marcação:
 
-| **Tags** | **Descrição** |
+| **Tag** | **Descrição** |
 | --- | --- |
 | &lt;ContentTemplate&gt; | Especifica a marcação a ser usada para renderizar o resultado da renderização parcial. Filho do &lt;ASP: UpdatePanel&gt;. |
 | &lt;Gatilhos&gt; | Especifica uma coleção de *n* controles associados à atualização deste UpdatePanel. Filho do &lt;ASP: UpdatePanel&gt;. |
@@ -267,15 +267,15 @@ Por fim, se um aplicativo exigir que os UpdatePanels sejam usados, as diretrizes
 
 Propriedades habilitadas para marcação:
 
-| **Nome da propriedade** | **Tipo** | **Descrição** |
+| **Nome da Propriedade** | **Tipo** | **Descrição** |
 | --- | --- | --- |
-| AssociatedUpdate-Panelid | Cadeia de Caracteres | Especifica a ID do UpdatePanel no qual este UpdateProgress deve se reportar. |
+| AssociatedUpdate-PanelID | String | Especifica a ID do UpdatePanel no qual este UpdateProgress deve se reportar. |
 | DisplayAfter | Int | Especifica o tempo limite em milissegundos antes que esse controle seja exibido após o início da solicitação assíncrona. |
-| DynamicLayout | {1&gt;bool&lt;1} | Especifica se o progresso é renderizado dinamicamente. |
+| DynamicLayout | bool | Especifica se o progresso é renderizado dinamicamente. |
 
 Descendentes de marcação:
 
-| **Tags** | **Descrição** |
+| **Tag** | **Descrição** |
 | --- | --- |
 | &lt;ProgressTemplate&gt; | Contém o conjunto de modelos de controle para o conteúdo que será exibido com este controle. |
 
@@ -302,4 +302,4 @@ Juntas, essas ferramentas ajudam a criar uma experiência de usuário rica e dir
 Scott Cate tem trabalhado com tecnologias Web da Microsoft desde 1997 e é presidente da myKB.com ([www.myKB.com](http://www.myKB.com)), onde é especialista em escrever aplicativos baseados em ASP.net voltados para as soluções de software da base de dados de conhecimento. Scott pode ser contatado por email em [scott.cate@myKB.com](mailto:scott.cate@myKB.com) ou em seu blog em [ScottCate.com](http://ScottCate.com)
 
 > [!div class="step-by-step"]
-> [Avançar](understanding-asp-net-ajax-updatepanel-triggers.md)
+> [Próximo](understanding-asp-net-ajax-updatepanel-triggers.md)

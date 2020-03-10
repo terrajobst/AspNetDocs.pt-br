@@ -9,11 +9,11 @@ ms.assetid: c3c76516-4c48-4153-bd03-d70e3a3edbb0
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 56ceabc79947967846d342354fd033510be5f05a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74625518"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568113"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-sql-server-compact-databases---2-of-12"></a>Implantando um aplicativo Web ASP.NET com o SQL Server Compact usando o Visual Studio ou o Visual Web Developer: Implantando bancos de dados do SQL Server Compact-2 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como configurar dois bancos de dados do SQL Server Compact e o mecanismo de banco de dados para implantação.
 
@@ -73,11 +73,11 @@ Compile o projeto e, em **Gerenciador de soluções** clique em **Mostrar todos 
 
 Expanda a pasta **bin** para ver as pastas **AMD64** e **x86** e, em seguida, selecione essas pastas, clique com o botão direito do mouse e selecione **incluir no projeto**.
 
-![amd64_and_x86_in_Solution_Explorer. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
+![amd64_and_x86_in_Solution_Explorer.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image2.png)
 
 Os ícones de pasta são alterados para mostrar que a pasta foi incluída no projeto.
 
-![Solution_Explorer_amd64_included. png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
+![Solution_Explorer_amd64_included.png](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image3.png)
 
 ## <a name="configuring-code-first-migrations-for-application-database-deployment"></a>Configurando Migrações do Code First para implantação de banco de dados de aplicativo
 
@@ -108,13 +108,13 @@ Em seguida, habilite Migrações do Code First.
 
 A primeira etapa é certificar-se de que o projeto ContosoUniversity seja definido como o projeto de inicialização. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto ContosoUniversity e selecione **definir como projeto de inicialização**. Migrações do Code First examinará o projeto de inicialização para localizar a cadeia de conexão do banco de dados.
 
-No menu **ferramentas** , clique em **Gerenciador de pacotes NuGet** e em **console do Gerenciador de pacotes**.
+No menu **Ferramentas**, clique em **Gerenciador de Pacotes NuGet** e, em seguida, em **Console do Gerenciador de Pacotes**.
 
 ![Selecting_Package_Manager_Console](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image6.png)
 
 Na parte superior da janela do **console do Gerenciador de pacotes** , selecione CONTOSOUNIVERSITY. Dal como o projeto padrão e, em seguida, no prompt de `PM>`, insira "Enable-Migrations".
 
-![Habilitar-migrations_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image7.png)
+![enable-migrations_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image7.png)
 
 Este comando cria um arquivo *Configuration.cs* em uma nova pasta de *migrações* no projeto ContosoUniversity. Dal.
 
@@ -153,13 +153,13 @@ Clique com o botão direito do mouse no arquivo *School. sdf* e clique em **excl
 
 Na janela do **console do Gerenciador de pacotes** , insira o comando "Add-Migration Initial" para criar a migração inicial e nomeie-a como "Initial".
 
-![Adicionar migration_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image11.png)
+![add-migration_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image11.png)
 
 Migrações do Code First cria outro arquivo de classe na pasta *migrações* , e essa classe contém um código que cria o esquema de banco de dados.
 
 No **console do Gerenciador de pacotes**, digite o comando "Update-Database" para criar o banco de dados e executar o método **semente** .
 
-![atualizar database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
+![update-database_command](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image12.png)
 
 (Se você receber um erro que indica que uma tabela já existe e não pode ser criada, é provável que você tenha executado o aplicativo depois de ter excluído o banco de dados e antes de executar `update-database`. Nesse caso, exclua o arquivo *School. sdf* novamente e repita o comando `update-database`.)
 
@@ -192,7 +192,7 @@ Em **Gerenciador de soluções**, renomeie o arquivo *ASPNET. sdf* na pasta de *
 
 Em **Gerenciador de soluções**, verifique se o projeto Web (ContosoUniversity, não CONTOSOUNIVERSITY. Dal) está selecionado. Em seguida, no menu **projeto** , selecione **configuração do ASP.net** para executar a ferramenta de administração de **site**(Wat).
 
-Clique na guia **Segurança**.
+Selecione a guia **Segurança** .
 
 [![WAT_Security_tab](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image20.png)](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image19.png)
 
@@ -206,7 +206,7 @@ Navegue de volta para a guia **segurança** , clique em **criar usuário**e adic
 
 Feche o navegador. Em **Gerenciador de soluções**, clique no botão atualizar para ver o novo arquivo *ASPNET. sdf* .
 
-![New_aspnet. sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
+![New_aspnet.sdf_in_Solution_Explorer](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image25.png)
 
 Clique com o botão direito do mouse em **ASPNET. sdf** e selecione **incluir no projeto**.
 
@@ -216,7 +216,7 @@ Nesta seção, você renomeará os bancos de dados para que as versões de desen
 
 Em **Gerenciador de soluções**, clique em **Atualizar** e expanda a pasta\_dados do aplicativo para ver o banco de dado escolar que você criou anteriormente; Clique com o botão direito do mouse e selecione **incluir no projeto**.
 
-![Including_School. sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
+![Including_School.sdf_in_project](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12/_static/image26.png)
 
 Renomeie *ASPNET. sdf* para *ASPNET-prod. sdf*.
 
@@ -234,7 +234,7 @@ Altere "ASPNET. sdf" para "aspnet-Dev. sdf" e altere "School. sdf" para "School-
 
 Agora, o mecanismo de banco de dados SQL Server Compact e ambos os bancos estão prontos para serem implantados. No tutorial a seguir, você configura as transformações de arquivo *Web. config* automáticas para as configurações que devem ser diferentes nos ambientes de desenvolvimento, teste e produção. (Entre as configurações que devem ser alteradas estão as cadeias de conexão, mas você irá configurar essas alterações posteriormente ao criar um perfil de publicação.)
 
-## <a name="more-information"></a>Mais Informações
+## <a name="more-information"></a>Mais informações
 
 Para obter mais informações sobre o NuGet, consulte [gerenciar bibliotecas de projetos com a](https://msdn.microsoft.com/magazine/hh547106.aspx) documentação do NuGet e [NuGet](http://docs.nuget.org/docs/start-here/overview). Se você não quiser usar o NuGet, precisará aprender como analisar um pacote NuGet para determinar o que ele faz quando ele está instalado. (Por exemplo, ele pode configurar transformações de *Web. config* , configurar scripts do PowerShell para serem executados no momento da compilação, etc.) Para saber mais sobre como o NuGet funciona, consulte especialmente [criação e publicação de um pacote](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) e de [transformações de código-fonte](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
 

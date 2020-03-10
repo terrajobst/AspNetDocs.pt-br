@@ -9,11 +9,11 @@ ms.assetid: 1bc333c5-f096-4ea7-b170-779accc21c1a
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/the-fix-it-sample-application
 msc.type: authoredcontent
 ms.openlocfilehash: 896196bdb6a6b0d12a6c798ead510e37dd38a9fc
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456875"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583443"
 ---
 # <a name="appendix-the-fix-it-sample-application-building-real-world-cloud-apps-with-azure"></a>Apêndice: o aplicativo de exemplo corrigir a ti (compilando aplicativos de nuvem do mundo real com o Azure)
 

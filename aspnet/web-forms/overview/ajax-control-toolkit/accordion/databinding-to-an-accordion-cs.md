@@ -9,11 +9,11 @@ ms.assetid: 9c8f0054-e319-46f8-80c0-35b606d2fbd4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/databinding-to-an-accordion-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 6c28cc958a1de9844627ae16175a5aed153993a8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607296"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614551"
 ---
 # <a name="databinding-to-an-accordion-c"></a>Associação de Dados com um Accordion (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle de acordeão no AJAX Control Toolkit fornece vários painéis e permite que o usuário exiba um deles de cada vez. Os painéis geralmente são declarados dentro da própria página, mas a associação a uma fonte de dados oferece mais flexibilidade.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de acordeão no AJAX Control Toolkit fornece vários painéis e permite que o usuário exiba um deles de cada vez. Os painéis geralmente são declarados dentro da própria página, mas a associação a uma fonte de dados oferece mais flexibilidade.
 
@@ -62,4 +62,4 @@ Para concluir este exemplo, você precisa definir as duas classes CSS que são r
 Os dados no acordeão são fornecidos diretamente da fonte de dados ([clique para exibir a imagem em tamanho normal](databinding-to-an-accordion-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](dynamically-adding-an-accordion-pane-cs.md)
+> [Próximo](dynamically-adding-an-accordion-pane-cs.md)

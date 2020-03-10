@@ -9,11 +9,11 @@ ms.assetid: 493b2a66-816c-485c-8315-952ed1085ccc
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 5d85232ff2cb229d771d517db7173721c9e277bf
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633421"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78635124"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-iis-as-a-test-environment---5-of-12"></a>Implantando um aplicativo Web ASP.NET com o SQL Server Compact usando o Visual Studio ou o Visual Web Developer: implantando no IIS como um ambiente de teste-5 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como implantar um aplicativo Web ASP.NET no IIS no computador local.
 
@@ -112,7 +112,7 @@ Antes de publicar, verifique se você está executando o Visual Studio no modo d
 
 Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto ContosoUniversity (não no projeto CONTOSOUNIVERSITY. Dal) e selecione **publicar**.
 
-O assistente **publicar Web** é exibido.
+O assistente **Publicar Web** é exibido.
 
 ![Publish_Web_wizard_Profile_tab](deployment-to-a-hosting-provider-deploying-to-iis-as-a-test-environment-5-of-12/_static/image9.png)
 
@@ -233,7 +233,7 @@ Essa cadeia de conexão adicional permite que você especifique uma conta de usu
 
 Agora você implantou seu aplicativo no IIS em seu computador de desenvolvimento e o testou lá. Isso verifica se o processo de implantação copiou o conteúdo do aplicativo para o local correto (excluindo os arquivos que você não deseja implantar) e também que Implantação da Web configurado corretamente o IIS durante a implantação. No próximo tutorial, você executará mais um teste que encontra uma tarefa de implantação que ainda não foi feita: definindo permissões de pasta na pasta *ELMAH* .
 
-## <a name="more-information"></a>Mais Informações
+## <a name="more-information"></a>Mais informações
 
 Para obter informações sobre como executar o IIS ou IIS Express no Visual Studio, consulte os seguintes recursos:
 

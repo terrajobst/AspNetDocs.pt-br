@@ -5,12 +5,12 @@ description: Saiba como usar o para SameSite cookies no ASP.NET
 ms.author: riande
 ms.date: 2/15/2019
 uid: samesite/system-web-samesite
-ms.openlocfilehash: edb368910b24be2d042afe3c19ffa1fb23245443
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.openlocfilehash: 7987a5d6c9b3a82679d42a2d381d471d56f495c2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77455693"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546742"
 ---
 # <a name="work-with-samesite-cookies-in-aspnet"></a>Trabalhar com cookies SameSite no ASP.NET
 
@@ -177,7 +177,7 @@ Essas detecções são os agentes de navegador mais comuns que vimos que dão su
 * Seu aplicativo pode ver os navegadores que nossos sites de teste não têm.
 * Você deve estar preparado para adicionar detecções conforme necessário para seu ambiente.
 
-A forma de conexão da detecção varia de acordo com a versão do .NET e a estrutura da Web que você está usando. O código a seguir pode ser chamado no site de chamada <xref:HTTP.HttpCookie>:
+A forma de conexão da detecção varia de acordo com a versão do .NET e a estrutura da Web que você está usando. O código a seguir pode ser chamado no site de chamada do [HttpCookie](/dotnet/api/system.web.httpcookie) :
 
 [!code-csharp[](sample/SameSiteCheck.cs?name=snippet)]
 
@@ -248,6 +248,8 @@ O Google não disponibiliza versões mais antigas do Chrome. Siga as instruçõe
 * [Chromium 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
 * Se você não estiver usando uma versão de 64 bits do Windows, poderá usar o [Visualizador do OmahaProxy](https://omahaproxy.appspot.com/) para procurar qual ramificação do Chromium corresponde ao Chrome 74 (v 74.0.3729.108) usando as [instruções fornecidas pelo Chromium](https://www.chromium.org/getting-involved/download-chromium).
 
+A partir do canário versão `80.0.3975.0`, a mitigação temporária mais completa pode ser desabilitada para fins de teste usando o novo sinalizador `--enable-features=SameSiteDefaultChecksMethodRigorously` para permitir o teste de sites e serviços no estado final eventual do recurso em que a mitigação foi removida. Para obter mais informações, consulte o Chromium Projects [SameSite updates](https://www.chromium.org/updates/same-site)
+
 #### <a name="test-with-chrome-80"></a>Teste com o Chrome 80 +
 
 [Baixe](https://www.google.com/chrome/) uma versão do Chrome que dê suporte a seu novo atributo. No momento da gravação, a versão atual é o Chrome 80. O Chrome 80 precisa do sinalizador `chrome://flags/#same-site-by-default-cookies` habilitado para usar o novo comportamento. Você também deve habilitar (`chrome://flags/#cookies-without-same-site-must-be-secure`) para testar o comportamento futuro de cookies que não têm o atributo sameSite habilitado. O Chrome 80 está no destino para fazer com que a opção trate cookies sem o atributo como `SameSite=Lax`, embora com um período de carência cronometrado para determinadas solicitações. Para desabilitar o período de carência cronometrado, o Chrome 80 pode ser iniciado com o seguinte argumento de linha de comando:
@@ -302,6 +304,7 @@ Atualize o *Web. config* para incluir as seguintes definições de configuraçã
 ## <a name="additional-resources"></a>Recursos adicionais
 
 * [Próximas alterações de cookie SameSite em ASP.NET e ASP.NET Core](https://devblogs.microsoft.com/aspnet/upcoming-samesite-cookie-changes-in-asp-net-and-asp-net-core/)
+* [Dicas para testar e depurar SameSite-por-padrão e "SameSite = None; Proteger "cookies](https://www.chromium.org/updates/same-site/test-debug)
 * [Blog do Chromium: desenvolvedores: Prepare-se para o New SameSite = None; Configurações de cookie seguro](https://blog.chromium.org/2019/10/developers-get-ready-for-new.html)
 * [SameSite cookies explicados](https://web.dev/samesite-cookies-explained/)
 * [Atualizações do Chrome](https://www.chromium.org/updates/same-site)

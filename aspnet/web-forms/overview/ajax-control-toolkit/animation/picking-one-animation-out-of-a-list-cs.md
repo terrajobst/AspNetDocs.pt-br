@@ -9,11 +9,11 @@ ms.assetid: 06a776fe-7c73-4ca7-8e02-5260a86edc03
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/animation/picking-one-animation-out-of-a-list-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 2bc203d694792716bbf4f7d7b8d152c589bf99b1
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575103"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78597968"
 ---
 # <a name="picking-one-animation-out-of-a-list-c"></a>Escolher uma animação em uma lista (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. A estrutura também permite que o programador escolha uma animação fora de uma lista de animações, dependendo da avaliação de algum código JavaScript.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de animação no ASP.NET AJAX Control Toolkit não é apenas um controle, mas uma estrutura inteira para adicionar animações a um controle. A estrutura também permite que o programador escolha uma animação fora de uma lista de animações, dependendo da avaliação de algum código JavaScript.
 

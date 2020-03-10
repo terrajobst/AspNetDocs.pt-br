@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/getting-started/index
-title: Introdução ao Web Forms do ASP.NET | Microsoft Docs
+title: Introdução com ASP.NET Web Forms | Microsoft Docs
 author: rick-anderson
-description: Saiba mais sobre Web Forms ASP.NET Web Forms do ASP.NET permite que você compilar sites dinâmicos usando um modelo familiar de arrastar e soltar, controlada por evento. Uma superfície de design e hund...
+description: Saiba mais sobre o ASP.NET Web Forms ASP.NET Web Forms permite que você crie sites dinâmicos usando um modelo familiar de arrastar e soltar baseado em evento. Uma superfície de design e Hund...
 ms.author: riande
 ms.date: 08/08/2011
 ms.assetid: f645d3b1-1092-43c6-a28a-074b413924b4
 msc.legacyurl: /web-forms/overview/getting-started
 msc.type: chapter
 ms.openlocfilehash: d76e65ae807b1da97d07199e7f0fce21fbf14af6
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133440"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632716"
 ---
-# <a name="getting-started-with-aspnet-web-forms"></a>Introdução ao Web Forms do ASP.NET
+# <a name="getting-started-with-aspnet-web-forms"></a>Introdução com ASP.NET Web Forms
 
-> O modelo de Web Forms e como criar páginas e usar os controles.
+> O modelo de Web Forms e como criar páginas e usar controles.
 
 - [Introdução ao Web Forms do ASP.NET 4.5 e ao Visual Studio 2013](getting-started-with-aspnet-45-web-forms/index.md)
 

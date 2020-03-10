@@ -9,11 +9,11 @@ ms.assetid: 7f9380c6-19f7-4c82-a019-916ec6dffc9c
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-debugging-capabilities
 msc.type: authoredcontent
 ms.openlocfilehash: 08ced380f3551407d757524dbc84b5feeeb5482b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601419"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629503"
 ---
 # <a name="understanding-aspnet-ajax-debugging-capabilities"></a>Noções básicas sobre os recursos de depuração do AJAX ASP.NET
 
@@ -218,7 +218,7 @@ A classe Sys. Debug expõe várias funções diferentes que podem ser usadas par
 
 | **Nome da Função** | **Descrição** |
 | --- | --- |
-| Assert (condição, mensagem, displayCaller) | Declara que o parâmetro Condition é true. Se a condição que está sendo testada for falsa, uma caixa de mensagem será usada para exibir o valor do parâmetro de mensagem. Se o parâmetro displayCaller for true, o método também exibirá informações sobre o chamador. |
+| assert(condition, message, displayCaller) | Declara que o parâmetro Condition é true. Se a condição que está sendo testada for falsa, uma caixa de mensagem será usada para exibir o valor do parâmetro de mensagem. Se o parâmetro displayCaller for true, o método também exibirá informações sobre o chamador. |
 | clearTrace() | Apaga a saída de instruções das operações de rastreamento. |
 | falha (mensagem) | Faz com que o programa pare a execução e quebre no depurador. O parâmetro Message pode ser usado para fornecer um motivo para a falha. |
 | rastreamento (mensagem) | Grava o parâmetro de mensagem na saída de rastreamento. |

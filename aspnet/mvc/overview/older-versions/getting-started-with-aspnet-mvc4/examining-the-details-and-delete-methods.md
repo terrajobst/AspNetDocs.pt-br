@@ -9,11 +9,11 @@ ms.assetid: 11425ff3-09fc-4efa-be9a-b53bce503460
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc4/examining-the-details-and-delete-methods
 msc.type: authoredcontent
 ms.openlocfilehash: 37787a26f37473b9d36792a9f7715982cb274074
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457551"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78599683"
 ---
 # <a name="examining-the-details-and-delete-methods"></a>Examinar os métodos Details e Delete
 
@@ -60,7 +60,7 @@ Agora você tem um aplicativo MVC ASP.NET completo que armazena dados em um banc
 
 ![](examining-the-details-and-delete-methods/_static/image2.png)
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Depois de criar e testar um aplicativo Web, a próxima etapa é disponibilizá-lo para outras pessoas usarem pela Internet. Para fazer isso, você precisa implantá-lo em um provedor de hospedagem na Web. A Microsoft oferece hospedagem na Web gratuita para até 10 sites em uma [conta de avaliação gratuita do Windows Azure](https://www.windowsazure.com/pricing/free-trial/?WT.mc_id=A443DD604). Sugiro que você siga o meu tutorial [implantar um aplicativo MVC do ASP.net seguro com associação, OAuth e banco de dados SQL em um site do Windows Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Um tutorial excelente é o nível intermediário de Tom Dykstra [criando um modelo de dados Entity Framework para um aplicativo MVC ASP.net](../../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md). Os fóruns do [StackOverflow](http://stackoverflow.com/help) e do [ASP.NET MVC](https://forums.asp.net/1146.aspx) são um ótimo lugar para fazer perguntas. Siga [-me](https://twitter.com/RickAndMSFT) no Twitter para que você possa obter atualizações sobre meus tutoriais mais recentes.
 

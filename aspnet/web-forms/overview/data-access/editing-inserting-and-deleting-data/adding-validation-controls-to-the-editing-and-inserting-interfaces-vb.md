@@ -9,11 +9,11 @@ ms.assetid: e3d7028a-7a22-4a4f-babe-d53afc41c0e2
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data/adding-validation-controls-to-the-editing-and-inserting-interfaces-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 5c5ad110ee0836f0a464b02a2b29254e2e06381e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74571349"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78592823"
 ---
 # <a name="adding-validation-controls-to-the-editing-and-inserting-interfaces-vb"></a>Adicionar controles de validação às interfaces de edição e inserção (VB)
 
@@ -33,7 +33,7 @@ Para fornecer uma interface personalizada de edição ou inserção, precisamos 
 
 Neste tutorial, veremos como é fácil adicionar controles de validação à `EditItemTemplate` do TemplateField e `InsertItemTemplate` para fornecer uma interface do usuário mais infalível. Especificamente, este tutorial usa o exemplo criado no tutorial [examinando os eventos associados à inserção, atualização e exclusão](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md) e aumenta as interfaces de edição e inserção para incluir a validação apropriada.
 
-## <a name="step-1-replicating-the-example-fromexamining-the-events-associated-with-inserting-updating-and-deletingexamining-the-events-associated-with-inserting-updating-and-deleting-vbmd"></a>Etapa 1: replicando o exemplo de[examinando os eventos associados à inserção, atualização e exclusão](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md)
+## <a name="step-1-replicating-the-example-fromexamining-the-events-associated-with-inserting-updating-and-deleting"></a>Etapa 1: replicando o exemplo de[examinando os eventos associados à inserção, atualização e exclusão](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md)
 
 No tutorial [examinando os eventos associados com a inserção, atualização e exclusão,](examining-the-events-associated-with-inserting-updating-and-deleting-vb.md) criamos uma página que listou os nomes e os preços dos produtos em um GridView editável. Além disso, a página incluía um DetailsView cuja propriedade `DefaultMode` foi definida como `Insert`, sendo assim, sempre renderizando no modo de inserção. A partir deste DetailsView, o usuário poderia inserir o nome e o preço de um novo produto, clicar em inserir e adicioná-lo ao sistema (consulte a Figura 1).
 

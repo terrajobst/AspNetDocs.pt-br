@@ -9,11 +9,11 @@ ms.assetid: cf025e08-48fc-4385-b176-8610aa7b5565
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/batch-inserting-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5dc4d0b6ac9bf3aa2baa54fe9f5d4149494e47d2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74584517"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78618520"
 ---
 # <a name="batch-inserting-c"></a>Inserção em lote (C#)
 
@@ -100,7 +100,7 @@ Com essa marcação inserida, retorne ao modo de exibição de Design. Essa `<ta
 
 Agora, estamos prontos para adicionar os controles da Web à interface de inserção. Arraste dois DropDownLists da caixa de ferramentas para as células apropriadas na tabela um para o fornecedor e outro para a categoria.
 
-Defina a propriedade do fornecedor DropDownList s `ID` como `Suppliers` e a associe a uma nova ObjectDataSource denominada `SuppliersDataSource`. Configure o novo ObjectDataSource para recuperar seus dados do método `SuppliersBLL` `GetSuppliers` classe e defina a lista suspensa da guia atualizar como (nenhum). Clique em Concluir para concluir o assistente.
+Defina a propriedade do fornecedor DropDownList s `ID` como `Suppliers` e a associe a uma nova ObjectDataSource denominada `SuppliersDataSource`. Configure o novo ObjectDataSource para recuperar seus dados do método `SuppliersBLL` `GetSuppliers` classe e defina a lista suspensa da guia atualizar como (nenhum). Clique em Concluir para finalizar o assistente.
 
 [![configurar o ObjectDataSource para usar o método SuppliersBLL da classe s getsuppliers](batch-inserting-cs/_static/image20.png)](batch-inserting-cs/_static/image19.png)
 

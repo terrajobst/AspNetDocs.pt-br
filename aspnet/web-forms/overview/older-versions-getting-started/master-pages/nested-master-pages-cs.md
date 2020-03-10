@@ -9,11 +9,11 @@ ms.assetid: 32b7fb6e-d74b-4048-91f8-70631b2523ee
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/nested-master-pages-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 67093266567a97cd22b353115616484fd9ef155e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74596779"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574378"
 ---
 # <a name="nested-master-pages-c"></a>Páginas mestras aninhadas (C#)
 
@@ -185,7 +185,7 @@ Esses dois desafios surgirão à medida que criarmos a página mestra aninhada e
 
 Nossa primeira tarefa é criar a página mestra aninhada a ser usada pelas páginas na seção Administração. Como vimos na etapa 2, ao adicionar uma nova página mestra aninhada, precisamos especificar a página mestra pai da página mestra aninhada. Mas temos duas páginas mestras de nível superior: `Site.master` e `Alternate.master`. Lembre-se de que criamos `Alternate.master` no tutorial anterior e escrevi o código na classe `BasePage` que define a propriedade `MasterPageFile` do objeto Page em tempo de execução para `Site.master` ou `Alternate.master` dependendo do valor da variável de sessão de `MyMasterPage`.
 
-Como podemos configurar nossa página mestra aninhada para que ela use a página mestra de nível superior apropriada? Temos duas opções:
+Como podemos configurar nossa página mestra aninhada para que ela use a página mestra de nível superior apropriada? Nós temos duas opções:
 
 - Crie duas páginas mestras aninhadas, `AdminNestedSite.master` e `AdminNestedAlternate.master`e associá-las às páginas mestras de nível superior `Site.master` e `Alternate.master`, respectivamente. Em `BasePage`, em seguida, definimos o `MasterPageFile` do objeto `Page` como a página mestra aninhada apropriada.
 - Crie uma única página mestra aninhada e faça com que as páginas de conteúdo usem essa página mestra específica. Em seguida, em tempo de execução, seria necessário definir a propriedade `MasterPageFile` da página mestra aninhada como a página mestra de nível superior apropriada em tempo de execução. (Como você já deve ter descoberto por enquanto, as páginas mestras também têm uma propriedade `MasterPageFile`.)

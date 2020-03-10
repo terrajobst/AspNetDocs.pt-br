@@ -9,11 +9,11 @@ ms.assetid: 08815768-2702-42ae-ae85-0a59934a11d1
 msc.legacyurl: /visual-studio/overview/2013/release-notes
 msc.type: authoredcontent
 ms.openlocfilehash: d8af9c8e7ee1316a5eac90c5959d07c628154e09
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600445"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557928"
 ---
 # <a name="aspnet-and-web-tools-for-visual-studio-2013-release-notes"></a>Notas de versão do ASP.NET and Web Tools para Visual Studio 2013
 
@@ -40,7 +40,7 @@ pela [Microsoft](https://github.com/microsoft)
 - [Web Forms ASP.NET](#TOC9)
 - [ASP.NET MVC 5](#TOC10)
 - [ASP.NET Web API 2](#TOC11)
-- [Sinalizador ASP.NET](#TOC13)
+- [ASP.NET SignalR](#TOC13)
 - [ASP.NET Identity](#TOC8)
 - [Componentes do Microsoft OWIN](#TOC7)
 - [Entity Framework 6](#ef6)
@@ -59,7 +59,7 @@ ASP.NET and Web Tools para Visual Studio 2013 são agrupadas no instalador princ
 Os tutoriais e outras informações sobre ASP.NET and Web Tools para Visual Studio 2013 estão disponíveis no [site da Web do ASP.net](https://www.asp.net/).
 
 <a id="TOC4"></a>
-## <a name="software-requirements"></a>Requisitos de software do
+## <a name="software-requirements"></a>Requisitos de software
 
 ASP.NET and Web Tools requer Visual Studio 2013.
 
@@ -82,7 +82,7 @@ Aprimoramos a experiência de criação de novos projetos da Web no Visual Studi
 
 A nova caixa de diálogo permite que você altere as opções de autenticação padrão para muitos dos modelos. Por exemplo, ao criar um projeto de Web Forms ASP.NET, você pode selecionar qualquer uma das seguintes opções:
 
-- Sem autenticação
+- Sem Autenticação
 - Contas de usuário individuais (associação ASP.NET ou logon de provedor social)
 - Contas organizacionais (Active Directory em um aplicativo de Internet)
 - Autenticação do Windows (Active Directory em um aplicativo de intranet)
@@ -131,7 +131,7 @@ Visual Studio 2013 também vem com CoffeeScript e menos editores internos. O edi
 
 No Visual Studio 2013 com o SDK do Azure para .NET 2,2, você pode usar **Gerenciador de servidores** para interagir diretamente com seus aplicativos Web remotos. Você pode entrar em sua conta do Azure, criar novos aplicativos Web, configurar aplicativos, exibir logs em tempo real e muito mais. Logo após o lançamento do SDK 2,2, você poderá executar o no modo de depuração remotamente no Azure. A maioria dos novos recursos para aplicativos Web do Azure App Service também funciona no Visual Studio 2012 quando você instala a versão atual do SDK do Azure para .NET.
 
-Para obter mais informações, consulte os seguintes recursos:
+Para saber mais, consulte os recursos a seguir:
 
 - [Criar um aplicativo Web ASP.NET no serviço Azure App](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-get-started/)
 - [Solucionar problemas de um aplicativo Web no Serviço de Aplicativo do Azure usando o Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
@@ -139,7 +139,7 @@ Para obter mais informações, consulte os seguintes recursos:
 <a id="publish"></a>
 ## <a name="web-publish-enhancements"></a>Aprimoramentos de publicação na Web
 
-O Visual Studio 2013 inclui recursos novos e aprimorados de publicação na Web. Aqui estão algumas delas:
+O Visual Studio 2013 inclui recursos novos e aprimorados de publicação na Web. Veja algumas opções:
 
 - Automatize facilmente a [criptografia de arquivo Web. config](https://go.microsoft.com/fwlink/?LinkId=325529). (Esse link e o seguinte apontam para a documentação no MSDN que podem não estar disponíveis até o final do dia em 10/17.)
 - [Automatize facilmente a colocação de um aplicativo offline durante a implantação](https://go.microsoft.com/fwlink/?LinkId=325530).
@@ -218,7 +218,7 @@ O roteamento de atributos também fornece uma sintaxe conveniente para especific
 
 Para obter mais informações sobre roteamento de atributos, consulte [Roteamento de atributos na API Web 2](../../../web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2.md).
 
-### <a name="oauth-20"></a>OAuth 2,0
+### <a name="oauth-20"></a>OAuth 2.0
 
 Os modelos de projeto de aplicativo de página única e API Web agora dão suporte à autorização usando OAuth 2,0. O OAuth 2,0 é uma estrutura para autorizar o acesso do cliente a recursos protegidos. Ele funciona para uma variedade de clientes, incluindo navegadores e dispositivos móveis.
 
@@ -280,9 +280,9 @@ Como a entidade para a solicitação está fluindo com a solicitação em vez de
 
 Graças a outra grande contribuição da Brock Allen, o ASP.NET agora dá suporte total ao CORS (compartilhamento de solicitação entre origens).
 
-A segurança do navegador impede que uma página da Web faça solicitações AJAX para outro domínio. O [CORS](http://www.w3.org/TR/cors/) é um padrão W3C que permite que um servidor Relaxe a política de mesma origem. Usando o CORS, um servidor pode permitir explicitamente algumas solicitações entre origens e, ao mesmo tempo, rejeitar outras.
+A segurança do navegador impede que uma página da Web envie solicitações do AJAX para outro domínio. O [CORS](http://www.w3.org/TR/cors/) é um padrão W3C que permite que um servidor Relaxe a política de mesma origem. Usando o CORS, um servidor pode explicitamente permitir algumas solicitações entre origens e rejeitar outras.
 
-A API da Web 2 agora oferece suporte a CORS, incluindo a manipulação automática de solicitações de simulação. Para obter mais informações, consulte [habilitando solicitações entre origens no ASP.NET Web API](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
+A API da Web 2 agora oferece suporte a CORS, incluindo a manipulação automática de solicitações de simulação. Para saber mais, confira [Permitindo solicitações entre origens na ASP.NET Web API](../../../web-api/overview/security/enabling-cross-origin-requests-in-web-api.md).
 
 ### <a name="authentication-filters"></a>Filtros de autenticação
 
@@ -678,7 +678,7 @@ Solução:
 
 2. Teste o cenário em um navegador que não seja o IE.
 
-### <a name="web-forms-scaffolding"></a>Web Forms scaffolding
+### <a name="web-forms-scaffolding"></a>Scaffolding de Web Forms
 
 Web Forms scaffolding foi removido do VS2013 e estará disponível em uma atualização futura do Visual Studio. No entanto, você ainda pode usar o scaffolding em um projeto Web Forms adicionando dependências MVC e gerando scaffolding para MVC. Seu projeto conterá uma combinação de Web Forms e MVC.
 

@@ -9,11 +9,11 @@ ms.assetid: 8b013630-842c-4d44-a6fc-c6be43e7210f
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-configuring-project-properties-4-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 6e63e75dca3d776fb9a1bd7e420ef48891daac69
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569808"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625856"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-configuring-project-properties---4-of-12"></a>Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio ou o Visual Web Developer: Configurando as propriedades do projeto-4 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Algumas opções de implantação são configuradas nas propriedades do projeto que são armazenadas no arquivo de projeto (o arquivo *. csproj* ou *. vbproj* ). Na maioria dos casos, os valores padrão dessas configurações são o que você deseja, mas você pode usar a interface do usuário de **Propriedades do projeto** interna no Visual Studio para trabalhar com essas configurações se precisar alterá-las. Neste tutorial, você revisará as configurações de implantação em **Propriedades do projeto**. Você também cria um arquivo de espaço reservado que faz com que uma pasta vazia seja implantada.
 

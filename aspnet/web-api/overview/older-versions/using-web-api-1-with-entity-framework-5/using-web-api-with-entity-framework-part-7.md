@@ -9,11 +9,11 @@ ms.assetid: eb32a17b-626c-4373-9a7d-3387992f3c04
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-7
 msc.type: authoredcontent
 ms.openlocfilehash: fe4074c701159a137be3644d65ca844f160c2399
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599984"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598675"
 ---
 # <a name="part-7-creating-the-main-page"></a>Parte 7: criando a página principal
 
@@ -44,7 +44,7 @@ Com base no design esboçado anteriormente, nosso modelo de exibição precisa d
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample3.js)]
 
-Os usuários podem adicionar itens da lista de produtos no carrinho e remover itens do carrinho. Para encapsular essas funções, criaremos outra classe View-Model que representa um produto. Adicione o seguinte código ao `AppViewModel`:
+Os usuários podem adicionar itens da lista de produtos no carrinho e remover itens do carrinho. Para encapsular essas funções, criaremos outra classe View-Model que representa um produto. Adicione o seguinte código a `AppViewModel`:
 
 [!code-javascript[Main](using-web-api-with-entity-framework-part-7/samples/sample4.js?highlight=4)]
 
@@ -72,7 +72,7 @@ Por fim, inicialize o modelo de exibição fazendo solicitações AJAX para os p
 
 OK, isso é muito código, mas nós o criamos passo a passo, então espero que o design esteja claro. Agora, podemos adicionar algumas associações knockout. js ao HTML.
 
-**Produto**
+**Produtos**
 
 Aqui estão as associações para a lista de produtos:
 

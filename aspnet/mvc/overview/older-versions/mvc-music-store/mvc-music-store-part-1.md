@@ -1,35 +1,35 @@
 ---
 uid: mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
-title: 'Parte 1: Visão geral e arquivo -> Novo projeto | Microsoft Docs'
+title: 'Parte 1: visão geral e arquivo-> novo projeto | Microsoft Docs'
 author: jongalloway
-description: Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 1 abrange visão geral e arquivo -> Novo projeto.
+description: Esta série de tutoriais detalha todas as etapas usadas para criar o aplicativo de exemplo de loja de música MVC do ASP.NET. A parte 1 abrange visão geral e arquivo-> novo projeto.
 ms.author: riande
 ms.date: 04/21/2011
 ms.assetid: bd356ca3-5bdb-4067-9dac-c9e9923a86e8
 msc.legacyurl: /mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-1
 msc.type: authoredcontent
 ms.openlocfilehash: 48428ff4ab5888253ed93ac41e79006eec823ad2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112936"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78559979"
 ---
-# <a name="part-1-overview-and-file-new-project"></a>Parte 1: Visão geral e Arquivo -> Novo Projeto
+# <a name="part-1-overview-and-file-new-project"></a>Parte 1: visão geral e arquivo-> novo projeto
 
 por [Jon Galloway](https://github.com/jongalloway)
 
-> A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e o Visual Studio para desenvolvimento da web.  
+> A loja de música MVC é um aplicativo de tutorial que apresenta e explica passo a passo como usar o ASP.NET MVC e o Visual Studio para desenvolvimento para a Web.  
 >   
-> A Store de música do MVC é uma implementação de repositório de exemplo leve que vende álbuns de música online e implementa a administração de site básico, entrada do usuário e a funcionalidade de carrinho de compras.  
+> A loja de música MVC é uma implementação de armazenamento de exemplo leve que vende os álbuns de música online e implementa a administração básica de site, a entrada do usuário e a funcionalidade do carrinho de compras.  
 >   
-> Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo de Store de música do ASP.NET MVC. Parte 1 aborda a visão geral e o arquivo -&gt;novo projeto.
+> Esta série de tutoriais detalha todas as etapas usadas para criar o aplicativo de exemplo de loja de música MVC do ASP.NET. A parte 1 abrange visão geral e arquivo-&gt;novo projeto.
 
 ## <a name="overview"></a>Visão geral
 
-A Store de música do MVC é um aplicativo tutorial que apresenta e explica passo a passo de como usar o ASP.NET MVC e Visual Web Developer para desenvolvimento da web. Podemos vai iniciar lentamente, portanto, a experiência de desenvolvimento para a web de nível iniciante é okey.
+A loja de música MVC é um aplicativo de tutorial que apresenta e explica passo a passo como usar o ASP.NET MVC e o Visual Web Developer para desenvolvimento para a Web. Começaremos lentamente, então a experiência de desenvolvimento para a Web de nível principiante está ok.
 
-O aplicativo, vou desenvolver é uma loja de música simples. Há três partes principais para o aplicativo: compras, check-out e administração.
+O aplicativo que iremos criar é uma loja de música simples. Há três partes principais para o aplicativo: compras, check-out e administração.
 
 ![](mvc-music-store-part-1/_static/image1.jpg)
 
@@ -41,17 +41,17 @@ Eles podem exibir um único álbum e adicioná-lo ao seu carrinho:
 
 ![](mvc-music-store-part-1/_static/image3.jpg)
 
-Eles podem revisar seu carrinho, removendo todos os itens que não deseja mais querem:
+Eles podem revisar seus carrinhos, removendo os itens que não desejam mais:
 
 ![](mvc-music-store-part-1/_static/image4.jpg)
 
-Continuar a fazer check-out lhe pedirá para fazer logon ou registre-se para uma conta de usuário.
+Prosseguir com o check-out solicitará que eles façam logon ou registrem-se para uma conta de usuário.
 
 ![](mvc-music-store-part-1/_static/image1.png)
 
 ![](mvc-music-store-part-1/_static/image2.png)
 
-Depois de criar uma conta, eles podem concluir o pedido, preenchendo as informações de envio e de pagamento. Para manter as coisas simples, estamos executando uma promoção incrível: tudo o que é gratuito se ele inserir o código de promoção "Gratuito"!
+Depois de criar uma conta, eles podem concluir o pedido preenchendo as informações de envio e pagamento. Para simplificar as coisas, estamos executando uma promoção incrível: tudo está livre se inserir o código de promoção "gratuito"!
 
 ![](mvc-music-store-part-1/_static/image5.jpg)
 
@@ -59,65 +59,65 @@ Após a ordenação, eles veem uma tela de confirmação simples:
 
 ![](mvc-music-store-part-1/_static/image6.jpg)
 
-Além das páginas voltadas ao cliente, também uma seção de administrador que mostra uma lista dos álbuns do qual os administradores podem criar, editar, criar e excluir álbuns:
+Além das páginas voltadas para o cliente, também criaremos uma seção de administrador que mostra uma lista de álbuns dos quais os administradores podem criar, editar e excluir álbuns:
 
 ![](mvc-music-store-part-1/_static/image7.jpg)
 
-## <a name="1-file--gt-new-project"></a>1. Arquivo -&gt; novo projeto
+## <a name="1-file--gt-new-project"></a>1. arquivo-&gt; novo projeto
 
-### <a name="installing-the-software"></a>A instalação do software
+### <a name="installing-the-software"></a>Instalando o software
 
-Este tutorial começar criando um novo projeto ASP.NET MVC 3 usando o gratuito Visual Web Developer 2010 Express (que é gratuito) e, em seguida, vamos incrementalmente adicionar recursos para criar um aplicativo funcional completo. Ao longo do caminho, vamos abordar o acesso de banco de dados, cenários de postagem de formulário, validação de dados, usando as páginas mestras para layout de página consistente, usando o AJAX para atualizações de página e validação, logon de usuário e muito mais.
+Este tutorial começará criando um novo projeto do ASP.NET MVC 3 usando o Visual Web Developer 2010 Express gratuito (que é gratuito) e, em seguida, adicionaremos os recursos de forma incremental para criar um aplicativo funcional completo. Ao longo do caminho, abordaremos o acesso ao banco de dados, os cenários de lançamento de formulário, a validação, a utilização de páginas mestras para layout de página consistente, usando AJAX para atualizações de página e validação, logon de usuário e muito mais.
 
-Você pode acompanhá-lo passo a passo, ou você pode baixar o aplicativo concluído no [MVC de música de Store](https://github.com/evilDave/MVC-Music-Store).
+Você pode acompanhar o passo a passo ou pode baixar o aplicativo concluído do [MVC-Music-Store](https://github.com/evilDave/MVC-Music-Store).
 
-Você pode usar o Visual Studio 2010 SP1 ou Visual Web Developer 2010 Express SP1 (uma versão gratuita do Visual Studio 2010) para compilar o aplicativo. Usaremos o SQL Server Compact (também gratuito) para hospedar o banco de dados. Antes de começar, verifique se que você instalou os pré-requisitos listados abaixo.
+Você pode usar o Visual Studio 2010 SP1 ou o Visual Web Developer 2010 Express SP1 (uma versão gratuita do Visual Studio 2010) para compilar o aplicativo. Vamos usar o SQL Server Compact (também gratuito) para hospedar o banco de dados. Antes de começar, verifique se você instalou os pré-requisitos listados abaixo.
 
-- [Pré-requisitos do visual Studio Web Developer Express SP1]
-- [Atualização de ferramentas do ASP.NET MVC 3]
-- [SQL Server Compact 4.0] - incluindo o suporte de tempo de execução e ferramentas
+- [Pré-requisitos do Visual Studio Web Developer Express SP1]
+- [Atualização de ferramentas do MVC 3 do ASP.NET]
+- [SQL Server Compact 4,0]-incluindo suporte para tempo de execução e ferramentas
 
-### <a name="creating-a-new-aspnet-mvc-3-project"></a>Criar um novo projeto ASP.NET MVC 3
+### <a name="creating-a-new-aspnet-mvc-3-project"></a>Criando um novo projeto do ASP.NET MVC 3
 
-Vamos começar selecionando "Novo projeto" no menu arquivo no Visual Web Developer. Isso abre a caixa de diálogo Novo projeto.
+Vamos começar selecionando "novo projeto" no menu arquivo no Visual Web Developer. Isso abre a caixa de diálogo novo projeto.
 
 ![](mvc-music-store-part-1/_static/image5.png)
 
-Vamos selecionar Visual c# -&gt; modelos da Web de grupo à esquerda, em seguida, escolha o modelo "Aplicativo de Web do ASP.NET MVC 3" na coluna central. Nomeie o projeto MvcMusicStore e pressione o botão Okey.
+Selecionaremos o grupo modelos C# da Web do Visual&gt; à esquerda e, em seguida, escolheremos o modelo "aplicativo Web ASP.NET MVC 3" na coluna central. Nomeie o projeto MvcMusicStore e pressione o botão OK.
 
 ![](mvc-music-store-part-1/_static/image8.jpg)
 
-Isso exibirá uma caixa de diálogo secundária, que nos permite fazer algumas configurações específicas do MVC para nosso projeto. Selecione o seguinte:
+Isso exibirá uma caixa de diálogo secundária, que nos permite fazer algumas configurações específicas do MVC para o nosso projeto. Selecione o seguinte:
 
-Modelo de projeto - selecione vazio
+Modelo de projeto-selecione vazio
 
-Mecanismo de exibição – selecionar Razor
+Exibir mecanismo-selecione Razor
 
-Use marcação semântica HTML5 - check
+Usar marcação semântica HTML5-verificada
 
-Verifique se que suas configurações são mostradas conforme abaixo e, em seguida, pressione o botão Okey.
+Verifique se as configurações são as mostradas abaixo e pressione o botão OK.
 
 ![](mvc-music-store-part-1/_static/image9.jpg)
 
-Isso criará o nosso projeto. Vamos dar uma olhada em pastas que foram adicionados ao nosso aplicativo no Gerenciador de soluções, no lado direito.
+Isso criará nosso projeto. Vamos dar uma olhada nas pastas que foram adicionadas ao nosso aplicativo na Gerenciador de Soluções no lado direito.
 
 ![](mvc-music-store-part-1/_static/image10.jpg)
 
-O modelo MVC 3 vazio não está completamente vazio – ele adiciona uma estrutura de pasta básica:
+O modelo MVC 3 vazio não está completamente vazio – ele adiciona uma estrutura de pastas básica:
 
 ![](mvc-music-store-part-1/_static/image6.png)
 
-ASP.NET MVC faz uso de algumas convenções básicas de nomenclatura para nomes de pastas:
+O ASP.NET MVC usa algumas convenções de nomenclatura básicas para nomes de pastas:
 
 | **Pasta** | **Finalidade** |
 | --- | --- |
-| **/Controllers** | Controladores de respondem à entrada do navegador, decidir o que fazer com ele e retornar a resposta para o usuário. |
-| **/Views** | Modos de exibição manter nossos modelos de interface do usuário |
-| **Ou os modelos** | Modelos de mantenham e manipulam dados |
+| **/Controllers** | Os controladores respondem à entrada do navegador, decidem o que fazer com ele e retornam a resposta ao usuário. |
+| **/Views** | Os modos de exibição mantêm nossos modelos de interface do usuário |
+| **/Models** | Modelos mantêm e manipulam dados |
 | **/Content** | Essa pasta contém nossas imagens, CSS e qualquer outro conteúdo estático |
-| **/Scripts** | Essa pasta contém nossos arquivos de JavaScript |
+| **/Scripts** | Essa pasta contém nossos arquivos JavaScript |
 
-Essas pastas são incluídas, mesmo em um aplicativo ASP.NET MVC vazio porque a estrutura ASP.NET MVC, por padrão, usa uma abordagem de "convention over configuration" e faz algumas suposições padrão com base nas convenções de nomenclatura de pasta. Por exemplo, controladores procurarem exibições na pasta modos de exibição por padrão sem a necessidade de especificar isso explicitamente em seu código. Adequar-se com as convenções padrão reduz a quantidade de código que você precisa para escrever, e pode também torna mais fácil para outros desenvolvedores a entender o seu projeto. Vamos explicar essas convenções mais durante a compilação de nosso aplicativo.
+Essas pastas são incluídas mesmo em um aplicativo ASP.NET MVC vazio, pois a estrutura MVC do ASP.NET, por padrão, usa uma abordagem "Convenção sobre configuração" e faz algumas suposições padrão com base nas convenções de nomenclatura de pastas. Por exemplo, controladores procuram exibições na pasta views por padrão sem a necessidade de especificar explicitamente isso em seu código. Aprimorar as convenções padrão reduz a quantidade de código que você precisa escrever e também pode facilitar para outros desenvolvedores a compreensão do seu projeto. Explicaremos essas convenções mais à medida que criarmos nosso aplicativo.
 
 > [!div class="step-by-step"]
-> [Avançar](mvc-music-store-part-2.md)
+> [Próximo](mvc-music-store-part-2.md)

@@ -9,11 +9,11 @@ ms.assetid: 81ee500f-fc37-40d6-8722-f1b64720fbb6
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
 msc.type: authoredcontent
 ms.openlocfilehash: dd2e55d68ceb5a90134e394c00f3a3a231cb27d6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457681"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566076"
 ---
 # <a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Criar um aplicativo do ASP.NET MVC 5 com logon OAuth2 no Facebook, Twitter, LinkedIn e Google (C#)
 
@@ -227,7 +227,7 @@ Os campos `HomeTown` e `BirthDate` são mostrados abaixo.
 
 Se você fizer logon em seu aplicativo com o Facebook, e depois fizer logoff e tentar fazer logon novamente com uma conta diferente do Facebook (usando o mesmo navegador), você estará imediatamente conectado à conta anterior do Facebook que você usou. Para usar outra conta, você precisa navegar até o Facebook e fazer logoff no Facebook. A mesma regra se aplica a qualquer outro provedor de autenticação de terceiros. Como alternativa, você pode fazer logon com outra conta usando um navegador diferente.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Consulte [apresentando as instruções do Yahoo e do LinkedIn OAuth Security Providers for OWIN](http://www.jerriepelser.com/blog/introducing-the-yahoo-linkedin-oauth-security-providers-for-owin/) by Jerrie Pelser for Yahoo e LinkedIn. Consulte os botões de logon de Jerrie para o ASP.NET MVC 5 para habilitar botões de logon social.
 

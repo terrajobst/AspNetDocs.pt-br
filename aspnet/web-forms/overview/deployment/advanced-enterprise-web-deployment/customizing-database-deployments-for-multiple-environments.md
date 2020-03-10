@@ -1,139 +1,139 @@
 ---
 uid: web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
-title: Personalizando as implantações de banco de dados para vários ambientes | Microsoft Docs
+title: Personalizando implantações de banco de dados para vários ambientes | Microsoft Docs
 author: jrjlee
-description: 'Este tópico descreve como personalizar as propriedades de um banco de dados para ambientes de destino específico como parte do processo de implantação. Observação: O tópico supõe th...'
+description: 'Este tópico descreve como personalizar as propriedades de um banco de dados para ambientes de destino específicos como parte do processo de implantação. Observação: o tópico pressupõe th...'
 ms.author: riande
 ms.date: 05/04/2012
 ms.assetid: a172979a-1318-4318-a9c6-4f9560d26267
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment/customizing-database-deployments-for-multiple-environments
 msc.type: authoredcontent
 ms.openlocfilehash: 8ae8cb1a322afb95c5d2e8d5e73c7825c7b2fe5a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108324"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78604023"
 ---
 # <a name="customizing-database-deployments-for-multiple-environments"></a>Personalização das implantações de banco de dados para vários ambientes
 
-by [Jason Lee](https://github.com/jrjlee)
+por [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Este tópico descreve como personalizar as propriedades de um banco de dados para ambientes de destino específico como parte do processo de implantação.
+> Este tópico descreve como personalizar as propriedades de um banco de dados para ambientes de destino específicos como parte do processo de implantação.
 > 
 > > [!NOTE]
-> > O tópico supõe que você está implantando um projeto de banco de dados do Visual Studio 2010 usando MSBuild.exe e VSDBCMD.exe. Para obter mais informações sobre por que você pode escolher essa abordagem, consulte [implantação da Web da empresa](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md) e [Implantando projetos de banco de dados](../web-deployment-in-the-enterprise/deploying-database-projects.md).
+> > O tópico pressupõe que você está implantando um projeto de banco de dados do Visual Studio 2010 usando MSBuild. exe e VSDBCMD. exe. Para obter mais informações sobre por que você pode escolher essa abordagem, consulte [implantação da Web na empresa](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md) e [Implantando projetos de banco de dados](../web-deployment-in-the-enterprise/deploying-database-projects.md).
 > 
 > 
-> Quando você implanta um projeto de banco de dados para vários destinos, muitas vezes você desejará personalizar as propriedades de implantação de banco de dados para cada ambiente de destino. Por exemplo, em ambientes de teste seria normalmente recriar o banco de dados em todas as implantações, ao passo que em ambientes de preparo ou produção, você seria muito mais provável que faça atualizações incrementais para preservar seus dados.
+> Ao implantar um projeto de banco de dados em vários destinos, muitas vezes você desejará personalizar as propriedades de implantação de banco de dados para cada ambiente de destino. Por exemplo, em ambientes de teste, você normalmente recriaria o banco de dados em todas as implantações, enquanto em ambientes de preparo ou de produção você seria muito mais provável de fazer atualizações incrementais para preservar seus dados.
 > 
-> Em um projeto de banco de dados do Visual Studio 2010, as configurações de implantação estão contidas em um arquivo de configuração (.sqldeployment) de implantação. Este tópico mostra como criar arquivos de configuração específicas do ambiente de implantação e especificar a que você deseja usar como um parâmetro VSDBCMD.
+> Em um projeto de banco de dados do Visual Studio 2010, as configurações de implantação estão contidas em um arquivo de configuração de implantação (. sqldeployment). Este tópico mostrará como criar arquivos de configuração de implantação específicos do ambiente e especificar aquele que você deseja usar como um parâmetro VSDBCMD.
 
-Este tópico faz parte de uma série de tutoriais com base em torno de requisitos corporativos de implantação de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução de exemplo&#x2014;o [entre em contato com o Gerenciador soluções](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)&#x2014;para representar um aplicativo web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, uma comunicação do Windows Serviço Foundation (WCF) e um projeto de banco de dados.
+Este tópico faz parte de uma série de tutoriais com base em relação aos requisitos de implantação empresarial de uma empresa fictícia chamada Fabrikam, Inc. Esta série de tutoriais usa uma solução&#x2014;de exemplo da&#x2014; [solução Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md)para representar um aplicativo Web com um nível realista de complexidade, incluindo um aplicativo ASP.NET MVC 3, um serviço Windows Communication Foundation (WCF) e um projeto de banco de dados.
 
-O método de implantação no centro desses tutoriais se baseia a abordagem de arquivo de projeto divisão descrita [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), em que o processo de compilação é controlado por dois arquivos de projeto&#x2014;uma contendo instruções que se aplicam a todos os ambientes de destino e que contém configurações específicas do ambiente de compilação e implantação de build. No momento da compilação, o arquivo de projeto específicas do ambiente é mesclado no arquivo de projeto de ambiente independente para formar um conjunto completo de instruções de compilação.
+O método de implantação no coração desses tutoriais baseia-se na abordagem de arquivo de projeto dividido descrita em [noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), no qual o processo de compilação é&#x2014;controlado por dois arquivos de projeto, um contendo instruções de Build que se aplicam a todos os ambientes de destino e um contendo configurações específicas de ambiente e de implantação. No momento da compilação, o arquivo de projeto específico do ambiente é mesclado no arquivo de projeto independente do ambiente para formar um conjunto completo de instruções de compilação.
 
 ## <a name="task-overview"></a>Visão geral da tarefa
 
 Este tópico pressupõe que:
 
-- Você usa a abordagem de arquivo de projeto de divisão para a implantação da solução, conforme descrito em [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md).
-- Chamar VSDBCMD do arquivo de projeto para implantar seu projeto de banco de dados, conforme descrito em [Noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md).
+- Você usa a abordagem de arquivo de projeto dividido para implantação de solução, conforme descrito em [noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md).
+- Você chama VSDBCMD do arquivo de projeto para implantar seu projeto de banco de dados, conforme descrito em [noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md).
 
-Para criar um sistema de implantação que dá suporte a variando as propriedades de implantação de banco de dados entre ambientes de destino, você precisará:
+Para criar um sistema de implantação que dê suporte à variação das propriedades de implantação de banco de dados entre os ambientes de destino, você precisará:
 
-- Crie um arquivo de configuração (.sqldeployment) de implantação para cada ambiente de destino.
-- Crie um comando VSDBCMD que especifica o arquivo de configuração de implantação como uma opção de linha de comando.
-- Parametrize o comando VSDBCMD em um arquivo de projeto do Microsoft Build Engine (MSBuild), para que as opções de VSDBCMD são apropriadas para o ambiente de destino.
+- Crie um arquivo de configuração de implantação (. sqldeployment) para cada ambiente de destino.
+- Crie um comando VSDBCMD que especifique o arquivo de configuração de implantação como uma opção de linha de comando.
+- Parametrizar o comando VSDBCMD em um arquivo de projeto Microsoft Build Engine (MSBuild), para que as opções VSDBCMD sejam apropriadas para o ambiente de destino.
 
-Este tópico mostra como executar cada um desses procedimentos.
+Este tópico mostrará como executar cada um desses procedimentos.
 
-## <a name="creating-environment-specific-deployment-configuration-files"></a>Criando arquivos de configuração específicas do ambiente de implantação
+## <a name="creating-environment-specific-deployment-configuration-files"></a>Criando arquivos de configuração de implantação específicos do ambiente
 
-Por padrão, um projeto de banco de dados contém um arquivo de configuração de implantação único chamado *Database.sqldeployment*. Se você abrir esse arquivo no Visual Studio 2010, você pode ver as opções de implantação diferentes que estão disponíveis para você:
+Por padrão, um projeto de banco de dados contém um único arquivo de configuração de implantação chamado *Database. sqldeployment*. Se você abrir esse arquivo no Visual Studio 2010, poderá ver as diferentes opções de implantação disponíveis para você:
 
-- **Agrupamento de comparação de implantação**. Isso permite que você escolha se deseja usar o agrupamento de banco de dados do seu projeto (o *fonte* agrupamento) ou o agrupamento de banco de dados do seu servidor de destino (o *destino* agrupamento). Na maioria dos casos, você desejará usar o agrupamento de origem quando você implantar em um desenvolvimento ou ambiente de teste. Quando você implanta em um ambiente de preparo ou produção, normalmente você desejará mantenha o agrupamento de destino inalterado para evitar problemas de interoperabilidade.
-- **Implantar propriedades do banco de dados**. Isso permite que você escolha se deseja aplicar as propriedades de banco de dados, conforme definido na *Database.sqlsettings* arquivo. Quando você implanta um banco de dados pela primeira vez, você deve implantar as propriedades de banco de dados. Se você estiver atualizando um banco de dados existente, as propriedades já devem estar em vigor e você não deve precisar implantá-las novamente.
-- **Sempre recriar banco de dados**. Isso permite que você escolha se deseja recriar o banco de dados de destino sempre que você implanta ou fazer alterações incrementais para trazer o banco de dados de destino atualizado com seu esquema. Se você recriar o banco de dados, você perderá todos os dados no banco de dados existente. Como tal, você geralmente defina **falsos** para implantações em ambientes de preparo ou produção.
-- **Bloquear implantação incremental se puder ocorrer perda de dados**. Isso permite que você escolha se a implantação será interrompida se uma alteração no esquema de banco de dados causará a perda de dados. Você normalmente defina isso como **verdadeira** para uma implantação em um ambiente de produção, para lhe dar a oportunidade de intervir e proteger dados importantes. Se você tiver definido **sempre recriar banco de dados** à **falso**, essa configuração não terá efeito.
-- **Executar a implantação no modo de usuário único**. Isso geralmente não é um problema em ambientes de desenvolvimento ou teste. No entanto, você normalmente deve definir isso **verdadeira** para implantações em ambientes de preparo ou produção. Isso impede que os usuários façam alterações no banco de dados, enquanto a implantação está em andamento.
-- **Fazer backup de banco de dados antes da implantação**. Você normalmente defina isso como **verdadeira** quando você implanta em um ambiente de produção, como precaução contra perda de dados. Você também deseja defini-lo como **verdadeira** quando você implanta em um ambiente de preparo, se seu banco de dados de preparo contiver muitos dados.
-- **Gerar instruções DROP para objetos que estão no banco de dados de destino, mas que não estão no projeto de banco de dados**. Na maioria dos casos, isso é uma parte integrante e essencial de fazer as alterações incrementais em um banco de dados. Se você tiver definido **sempre recriar banco de dados** à **falso**, essa configuração não terá efeito.
-- **Não usar instruções ALTER ASSEMBLY para atualizar tipos CLR**. Essa configuração determina como o SQL Server deve atualizar tipos common language runtime (CLR) para versões mais recentes do assembly. Isso deve ser definido como **falsos** na maioria dos cenários.
+- **Agrupamento de comparação de implantação**. Isso permite que você escolha se deseja usar o agrupamento de banco de dados do seu projeto (o agrupamento de *origem* ) ou o agrupamento de banco de dados do seu servidor de destino (o agrupamento de *destino* ). Na maioria dos casos, você desejará usar o agrupamento de origem ao implantar em um ambiente de desenvolvimento ou teste. Ao implantar em um ambiente de preparo ou de produção, normalmente você desejará deixar o agrupamento de destino inalterado para evitar problemas de interoperabilidade.
+- **Implantar Propriedades de banco de dados**. Isso permite que você escolha se deseja aplicar as propriedades do banco de dados, conforme definido no arquivo *Database. sqlsettings* . Ao implantar um banco de dados pela primeira vez, você deve implantar as propriedades do banco de dados. Se você estiver atualizando um banco de dados existente, as propriedades já deverão estar em vigor e você não precisará implantá-los novamente.
+- **Sempre recriar banco de dados**. Isso permite que você escolha se deseja recriar o banco de dados de destino toda vez que implantar ou fazer alterações incrementais para colocar o banco de dados de destino atualizado com o esquema. Se você recriar o banco de dados, perderá qualquer dado no banco de dados existente. Como tal, você geralmente deve definir isso como **false** para implantações em ambientes de preparo ou de produção.
+- **Bloquear a implantação incremental se ocorrer perda de dados**. Isso permite que você escolha se a implantação deve ser interrompida se uma alteração no esquema de banco de dados causar a perda de dado. Normalmente, você define isso como **verdadeiro** para uma implantação em um ambiente de produção, para dar a oportunidade de intervir e proteger dados importantes. Se você tiver definido **sempre recriar banco de dados** como **false**, essa configuração não terá efeito.
+- **Execute a implantação no modo de usuário único**. Isso geralmente não é um problema em ambientes de desenvolvimento ou teste. No entanto, você normalmente deve definir isso como **true** para implantações em ambientes de preparo ou produção. Isso impede que os usuários façam alterações no banco de dados enquanto a implantação está em andamento.
+- **Faça backup do banco de dados antes da implantação**. Normalmente, você define isso como **verdadeiro** ao implantar em um ambiente de produção, como uma precaução contra perda de dados. Talvez você também queira defini-lo como **true** quando implantar em um ambiente de preparo, se o banco de dados de preparo contiver muitos Data.
+- **Gerar instruções DROP para objetos que estão no banco de dados de destino, mas que não estão no projeto de banco de dados**. Na maioria dos casos, essa é uma parte integral e essencial da realização de alterações incrementais em um banco de dados. Se você tiver definido **sempre recriar banco de dados** como **false**, essa configuração não terá efeito.
+- Não **use instruções ALTER assembly para atualizar tipos CLR**. Essa configuração determina como SQL Server deve atualizar os tipos de Common Language Runtime (CLR) para versões mais recentes do assembly. Isso deve ser definido como **false** na maioria dos cenários.
 
-Esta tabela mostra as configurações comuns de implantação para ambientes de destino diferente. No entanto, as configurações podem ser diferentes dependendo de suas necessidades exatas.
+Esta tabela mostra configurações de implantação típicas para ambientes de destino diferentes. No entanto, suas configurações podem ser diferentes dependendo dos requisitos exatos.
 
 |  | Desenvolvedor/teste | Preparo/integração | Produção |
 | --- | --- | --- | --- |
-| **Agrupamento de comparação de implantação** | Origem | Destino | Destino |
-| **Implantar propriedades do banco de dados** | verdadeiro | Apenas na primeira vez | Apenas na primeira vez |
-| **Sempre recriar banco de dados** | verdadeiro | False | False |
-| **Bloquear implantação incremental se puder ocorrer perda de dados** | False | Talvez | verdadeiro |
-| **Executar o script de implantação no modo de usuário único** | False | verdadeiro | verdadeiro |
-| **Fazer backup de banco de dados antes da implantação** | False | Talvez | verdadeiro |
-| **Gerar instruções DROP para objetos que estão no banco de dados de destino, mas que não estão no projeto de banco de dados** | False | verdadeiro | verdadeiro |
-| **Não usar instruções ALTER ASSEMBLY para atualizar tipos CLR** | False | False | False |
+| **Agrupamento de comparação de implantação** | Fonte | Destino | Destino |
+| **Implantar Propriedades de banco de dados** | True | Somente a primeira vez | Somente a primeira vez |
+| **Sempre recriar banco de dados** | True | Falso | Falso |
+| **Bloquear a implantação incremental se puder ocorrer perda de dados** | Falso | Talvez | True |
+| **Executar script de implantação no modo de usuário único** | Falso | True | True |
+| **Fazer backup do banco de dados antes da implantação** | Falso | Talvez | True |
+| **Gerar instruções DROP para objetos que estão no banco de dados de destino, mas que não estão no projeto de banco de dados** | Falso | True | True |
+| **Não usar instruções ALTER ASSEMBLY para atualizar tipos CLR** | Falso | Falso | Falso |
 
 > [!NOTE]
-> Para obter mais informações sobre propriedades de implantação de banco de dados e considerações sobre o ambiente, consulte [uma visão geral do banco de dados de configurações do projeto](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx), [como: Configurar propriedades para obter detalhes de implantação](https://msdn.microsoft.com/library/dd172125.aspx), [compilar e implantar o banco de dados em um ambiente de desenvolvimento isolado](https://msdn.microsoft.com/library/dd193409.aspx), e [compilar e implantar bancos de dados para um preparo ou ambiente de produção](https://msdn.microsoft.com/library/dd193413.aspx).
+> Para obter mais informações sobre as propriedades de implantação de banco de dados e considerações de ambiente, consulte [uma visão geral das configurações de projeto de banco de dados](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx), [como configurar propriedades de detalhes de implantação](https://msdn.microsoft.com/library/dd172125.aspx), [criar e implantar banco de dados em um ambiente de desenvolvimento isolado](https://msdn.microsoft.com/library/dd193409.aspx)e [criar e implantar bancos de dados em um ambiente de preparo ou de produção](https://msdn.microsoft.com/library/dd193413.aspx).
 
-Para dar suporte a implantação de um projeto de banco de dados para vários destinos, você deve criar um arquivo de configuração de implantação para cada ambiente de destino.
+Para dar suporte à implantação de um projeto de banco de dados em vários destinos, você deve criar um arquivo de configuração de implantação para cada ambiente de destino.
 
-**Para criar um arquivo de configuração específicas do ambiente**
+**Para criar um arquivo de configuração específico do ambiente**
 
-1. No Visual Studio 2010, nos **Gerenciador de soluções** , clique em seu projeto de banco de dados e, em seguida, clique em **propriedades**.
-2. Na página de propriedades do projeto de banco de dados, sobre o **implantar** guia da **arquivo de configuração de implantação** de linha, clique em **New**.
+1. No Visual Studio 2010, na janela **Gerenciador de soluções** , clique com o botão direito do mouse no projeto de banco de dados e clique em **Propriedades**.
+2. Na página Propriedades do projeto de banco de dados, na guia **implantar** , na linha **arquivo de configuração de implantação** , clique em **novo**.
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image1.png)
-3. No **novo arquivo de configuração de implantação** diálogo caixa, dê um nome significativo ao arquivo (por exemplo, **TestEnvironment.sqldeployment**) e, em seguida, clique em **salvar**.
-4. Sobre o *[Filename]* **.sqldeployment** página, defina as propriedades de implantação para atender às necessidades do seu ambiente de destino e, em seguida, salve o arquivo.
+3. Na caixa de diálogo **novo arquivo de configuração de implantação** , dê ao arquivo um nome significativo (por exemplo, **TestEnvironment. sqldeployment**) e, em seguida, clique em **salvar**.
+4. Na página *[filename] * * *. sqldeployment**, defina as propriedades de implantação para corresponder aos requisitos do seu ambiente de destino e, em seguida, salve o arquivo.
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image2.png)
 5. Observe que o novo arquivo é adicionado à pasta propriedades em seu projeto de banco de dados.
 
     ![](customizing-database-deployments-for-multiple-environments/_static/image3.png)
 
-## <a name="specifying-the-deployment-configuration-file-in-vsdbcmd"></a>Especificando o arquivo de configuração de implantação em VSDBCMD
+## <a name="specifying-the-deployment-configuration-file-in-vsdbcmd"></a>Especificando o arquivo de configuração de implantação no VSDBCMD
 
-Quando você usa as configurações da solução (como depuração e versão) dentro do Visual Studio 2010, você pode associar um arquivo de configuração de implantação a cada configuração. Quando você cria uma configuração específica, o processo de compilação gera um arquivo de manifesto de implantação específicas de configuração que aponta para o arquivo de configuração de implantação específicas de configuração. No entanto, um dos principais objetivos da abordagem de implantação descrita nesses tutoriais é conceder a capacidade de controlar o processo de implantação sem usar o Visual Studio 2010 e configurações da solução. Nessa abordagem, a configuração da solução é o mesmo, independentemente do ambiente de implantação de destino. Para personalizar sua implantação de banco de dados em um ambiente de destino específico, você pode usar as opções de linha de comando VSDBCMD para especificar o arquivo de configuração de implantação.
+Ao usar as configurações de solução (como Debug e Release) no Visual Studio 2010, você pode associar um arquivo de configuração de implantação a cada configuração. Quando você cria uma configuração específica, o processo de compilação gera um arquivo de manifesto de implantação específico da configuração que aponta para o arquivo de configuração de implantação específica da configuração. No entanto, um dos principais objetivos da abordagem da implantação descrita nesses tutoriais é dar às pessoas a capacidade de controlar o processo de implantação sem usar o Visual Studio 2010 e as configurações de solução. Nessa abordagem, a configuração da solução é a mesma, independentemente do ambiente de implantação de destino. Para personalizar sua implantação de banco de dados para um ambiente de destino específico, você pode usar as opções de linha de comando VSDBCMD para especificar o arquivo de configuração de implantação.
 
-Para especificar um arquivo de configuração de implantação em seu VSDBCMD, use o **p/DeploymentConfigurationFile** alternar e forneça o caminho completo para o arquivo. Isso substituirá o arquivo de configuração de implantação que identifica o manifesto de implantação. Por exemplo, você pode usar esse comando VSDBCMD para implantar o **ContactManager** banco de dados para um ambiente de teste:
+Para especificar um arquivo de configuração de implantação em seu VSDBCMD, use a opção **p:/DeploymentConfigurationFile** e forneça o caminho completo para o arquivo. Isso substituirá o arquivo de configuração de implantação que o manifesto de implantação identifica. Por exemplo, você pode usar esse comando VSDBCMD para implantar o banco de dados **ContactManager** em um ambiente de teste:
 
 [!code-console[Main](customizing-database-deployments-for-multiple-environments/samples/sample1.cmd)]
 
 > [!NOTE]
-> Observe que o processo de compilação pode renomear seu arquivo .sqldeployment quando ele copia o arquivo para o diretório de saída.
+> Observe que o processo de compilação pode renomear o arquivo de implantação. sqlquando ele copia o arquivo para o diretório de saída.
 
-Se você usar variáveis de comando do SQL em seus scripts de pré-implantação ou pós-implantação SQL, você pode usar uma abordagem semelhante para associar um arquivo de .sqlcmdvars específicas do ambiente com sua implantação. Nesse caso, você usa o **p/SqlCommandVariablesFile** switch para identificar seu arquivo .sqlcmdvars.
+Se você usar variáveis de comando SQL em seus scripts SQL de pré-implantação ou pós-implantação, poderá usar uma abordagem semelhante para associar um arquivo. sqlcmdvars específico ao ambiente à sua implantação. Nesse caso, você usa a opção **p:/SqlCommandVariablesFile** para identificar o arquivo. sqlcmdvars.
 
 ## <a name="running-the-vsdbcmd-command-from-an-msbuild-project-file"></a>Executando o comando VSDBCMD de um arquivo de projeto do MSBuild
 
-Você pode invocar um comando VSDBCMD de um arquivo de projeto do MSBuild usando um **Exec** tarefa dentro de um destino do MSBuild. Em sua forma mais simples, ela teria esta aparência:
+Você pode invocar um comando VSDBCMD de um arquivo de projeto do MSBuild usando uma tarefa **exec** em um destino do MSBuild. Em sua forma mais simples, ele ficaria assim:
 
 [!code-xml[Main](customizing-database-deployments-for-multiple-environments/samples/sample2.xml)]
 
-- Na prática, para tornar seus arquivos de projeto fácil de ler e reutilizar, você desejará criar propriedades para armazenar os vários parâmetros de linha de comando. Isso torna mais fácil para os usuários para fornecer valores de propriedade em um arquivo de projeto de ambiente específicas ou para substituir os valores padrão da linha de comando MSBuild. Se você usar a abordagem de arquivo de projeto divisão descrita [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), você deve dividir suas propriedades entre os dois arquivos e as instruções de build adequadamente:
-- Configurações de ambiente específicas, como o nome de arquivo de configuração de implantação, a cadeia de caracteres de conexão de banco de dados e o nome do banco de dados de destino, devem ir no arquivo de projeto específicas do ambiente.
-- O destino do MSBuild que executa o comando VSDBCMD, junto com quaisquer propriedades universais, como o local do executável VSDBCMD, deve ir no arquivo de projeto universal.
+- Na prática, para tornar os arquivos de projeto fáceis de ler e reutilizar, você desejará criar propriedades para armazenar os vários parâmetros de linha de comando. Isso facilita que os usuários forneçam valores de propriedade em um arquivo de projeto específico do ambiente ou substituam os valores padrão da linha de comando do MSBuild. Se você usar a abordagem de arquivo de projeto dividido descrita em [noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md), deverá dividir suas instruções e propriedades de compilação entre os dois arquivos de acordo:
+- As configurações específicas do ambiente, como o nome de arquivo de configuração de implantação, a cadeia de conexão de banco de dados e o nome do banco de dados de destino, devem ir para o arquivo de projeto específico do ambiente.
+- O destino do MSBuild que executa o comando VSDBCMD, junto com todas as propriedades universais, como o local do executável VSDBCMD, deve ir para o arquivo de projeto universal.
 
-Você também deve garantir que você compilar o projeto de banco de dados antes de invocar VSDBCMD para que o arquivo .deploymanifest é criado e pronto para uso. Você pode ver um exemplo completo dessa abordagem no tópico [Noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md), que orienta os arquivos de projeto na [solução de exemplo do Gerenciador de contatos](../web-deployment-in-the-enterprise/the-contact-manager-solution.md).
+Você também deve certificar-se de criar o projeto de banco de dados antes de invocar VSDBCMD para que o arquivo. DeployManifest seja criado e pronto para uso. Você pode ver um exemplo completo dessa abordagem no tópico [noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md), que orienta você pelos arquivos de projeto na [solução de exemplo Contact Manager](../web-deployment-in-the-enterprise/the-contact-manager-solution.md).
 
 ## <a name="conclusion"></a>Conclusão
 
-Este tópico descreveu como você pode personalizar as propriedades de banco de dados para ambientes de destino diferente quando você implanta os projetos de banco de dados usando o MSBuild e VSDBCMD. Essa abordagem é útil quando você precisa implantar projetos de banco de dados como parte das soluções maiores, de escala empresarial. Geralmente, essas soluções são implantadas para vários destinos, como área restrita e ambientes de desenvolvimento ou teste, preparo ou integração de plataformas e produção ou ambientes em tempo real. Normalmente, cada um desses ambientes de destino requer um conjunto exclusivo de propriedades de implantação de banco de dados.
+Este tópico descreveu como você pode personalizar as propriedades do banco de dados para ambientes de destino diferentes ao implantar projetos de banco de dados usando o MSBuild e o VSDBCMD. Essa abordagem é útil quando você precisa implantar projetos de banco de dados como parte de soluções maiores e de escala empresarial. Essas soluções geralmente são implantadas em vários destinos, como ambientes de desenvolvimento ou teste em área restrita, plataformas de preparo ou de integração e ambientes de produção ou ao vivo. Cada um desses ambientes de destino geralmente requer um conjunto exclusivo de propriedades de implantação de banco de dados.
 
 ## <a name="further-reading"></a>Leitura adicional
 
-Para obter mais informações sobre como implantar projetos de banco de dados usando VSDBCMD.exe, consulte [implantar projetos de banco de dados](../web-deployment-in-the-enterprise/deploying-database-projects.md). Para obter mais informações sobre como usar arquivos de projeto personalizados do MSBuild para controlar o processo de implantação, consulte [Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md) e [Noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md).
+Para obter mais informações sobre como implantar projetos de banco de dados usando o VSDBCMD. exe, consulte [Implantando projetos de banco de dados](../web-deployment-in-the-enterprise/deploying-database-projects.md). Para obter mais informações sobre como usar arquivos de projeto do MSBuild personalizados para controlar o processo de implantação, consulte [noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md) e [noções básicas sobre o processo de compilação](../web-deployment-in-the-enterprise/understanding-the-build-process.md).
 
-Estes artigos no MSDN fornecem orientação geral sobre implantação de banco de dados:
+Estes artigos sobre o MSDN fornecem diretrizes mais gerais sobre a implantação de banco de dados:
 
 - [Uma visão geral das configurações de projeto de banco de dados](https://msdn.microsoft.com/library/aa833291(v=VS.100).aspx)
-- [Como: Configurar propriedades para obter detalhes de implantação](https://msdn.microsoft.com/library/dd172125.aspx)
-- [Compilar e implantar bancos de dados em um ambiente de desenvolvimento isolado](https://msdn.microsoft.com/library/dd193409.aspx)
-- [Criar e implantar bancos de dados para um ambiente de produção ou preparo](https://msdn.microsoft.com/library/dd193413.aspx)
+- [Como configurar propriedades para detalhes de implantação](https://msdn.microsoft.com/library/dd172125.aspx)
+- [Crie e implante bancos de dados em um ambiente de desenvolvimento isolado](https://msdn.microsoft.com/library/dd193409.aspx)
+- [Criar e implantar bancos de dados em um ambiente de preparo ou de produção](https://msdn.microsoft.com/library/dd193413.aspx)
 
 > [!div class="step-by-step"]
 > [Anterior](performing-a-what-if-deployment.md)

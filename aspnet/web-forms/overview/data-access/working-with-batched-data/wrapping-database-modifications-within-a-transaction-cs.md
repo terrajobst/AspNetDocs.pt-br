@@ -9,11 +9,11 @@ ms.assetid: b45fede3-c53a-4ea1-824b-20200808dbae
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data/wrapping-database-modifications-within-a-transaction-cs
 msc.type: authoredcontent
 ms.openlocfilehash: da69e466a5b506b869dc8fc0624f3e6a479199a8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74624649"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78604331"
 ---
 # <a name="wrapping-database-modifications-within-a-transaction-c"></a>Encapsulamento de modificações de banco de dados em uma transação (C#)
 
@@ -226,4 +226,4 @@ Para obter mais informações sobre os tópicos discutidos neste tutorial, consu
 Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial foram Dave Gardner, Hilton Giesenow e Teresa Murphy. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Avançar](batch-updating-cs.md)
+> [Próximo](batch-updating-cs.md)

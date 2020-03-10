@@ -9,11 +9,11 @@ ms.assetid: ec1cec4c-a75f-47af-a2ba-b1e2f971d24b
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/project-properties
 msc.type: authoredcontent
 ms.openlocfilehash: b2811791a897c9166f6222c23dddc6921e5267ab
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614948"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78643594"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-project-properties"></a>Implantação da Web do ASP.NET usando o Visual Studio: propriedades do projeto
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Algumas opções de implantação são configuradas nas propriedades do projeto que são armazenadas no arquivo de projeto (o arquivo *. csproj* ou *. vbproj* ). Na maioria dos casos, os valores padrão dessas configurações são o que você deseja, mas você pode usar a interface do usuário de **Propriedades do projeto** interna no Visual Studio para trabalhar com essas configurações se precisar alterá-las. Neste tutorial, você revisará as configurações de implantação em **Propriedades do projeto**. Você também cria um arquivo de espaço reservado que faz com que uma pasta vazia seja implantada.
 

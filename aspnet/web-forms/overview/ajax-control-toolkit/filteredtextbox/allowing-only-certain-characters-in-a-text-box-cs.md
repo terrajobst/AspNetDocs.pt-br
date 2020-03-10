@@ -9,11 +9,11 @@ ms.assetid: fd2a1c52-d717-44af-8a61-67c8279bb26e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/filteredtextbox/allowing-only-certain-characters-in-a-text-box-cs
 msc.type: authoredcontent
 ms.openlocfilehash: d1e367becd574e31d24fca8545f76b1ed3c4d85e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611737"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554232"
 ---
 # <a name="allowing-only-certain-characters-in-a-text-box-c"></a>Permitir somente determinados caracteres em uma caixa de texto (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > Os controles de validação ASP.NET podem garantir que apenas determinados caracteres sejam permitidos na entrada do usuário. No entanto, isso ainda não impede que os usuários digitem caracteres inválidos e tentem enviar o formulário.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Os controles de validação ASP.NET podem garantir que apenas determinados caracteres sejam permitidos na entrada do usuário. No entanto, isso ainda não impede que os usuários digitem caracteres inválidos e tentem enviar o formulário.
 
@@ -59,4 +59,4 @@ Execute a página e tente inserir uma letra se o JavaScript estiver habilitado, 
 Somente os dígitos podem ser inseridos ([clique para exibir a imagem em tamanho normal](allowing-only-certain-characters-in-a-text-box-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](allowing-only-certain-characters-in-a-text-box-vb.md)
+> [Próximo](allowing-only-certain-characters-in-a-text-box-vb.md)

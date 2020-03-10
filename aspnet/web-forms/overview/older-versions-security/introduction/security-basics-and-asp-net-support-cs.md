@@ -9,11 +9,11 @@ ms.assetid: 07e15538-2f29-40c6-b2e7-e6115075ac83
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 1ccaac101a83d0e28b07b220b8b7b61a9039227e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74642431"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640248"
 ---
 # <a name="security-basics-and-aspnet-support-c"></a>Noções básicas sobre segurança e suporte do ASP.NET (C#)
 
@@ -67,7 +67,7 @@ Por padrão, os navegadores enviam solicitações HTTP que não têm qualquer ti
 
 O fluxo de trabalho de autenticação do Windows usa uma das seguintes técnicas de autenticação:
 
-- Autenticação básica
+- Autenticação Básica
 - Autenticação resumida
 - Autenticação Integrada do Windows
 
@@ -183,4 +183,4 @@ Para obter mais informações sobre os tópicos discutidos neste tutorial, consu
 Esta série de tutoriais foi revisada por muitos revisores úteis. O revisor de cliente potencial deste tutorial foi que esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial incluem Alicja Maziarz, John Suru e Teresa Murphy. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Avançar](an-overview-of-forms-authentication-cs.md)
+> [Próximo](an-overview-of-forms-authentication-cs.md)

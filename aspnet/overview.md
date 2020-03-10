@@ -9,11 +9,11 @@ ms.date: 08/10/2019
 msc.legacyurl: ''
 msc.type: content
 ms.openlocfilehash: aa4f627bca99f0a7ffbbb53ea45ebdcf0850fd89
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519356"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537341"
 ---
 # <a name="aspnet-overview"></a>Visão geral do ASP.NET
 
@@ -33,13 +33,13 @@ Cada estrutura tem como alvo um estilo de desenvolvimento diferente. O que você
 
 Veja abaixo uma visão geral de cada uma das estruturas e algumas ideias sobre como escolher entre elas. Se você preferir uma introdução ao vídeo, consulte [fazendo sites com ASP.net](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/Making-Websites-with-ASPNET) e [o que são as ferramentas da Web?](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-web-tools)
 
-|   | Se você tiver experiência em | Estilo de desenvolvimento | Competências |
+|   | Se você tiver experiência em | Estilo de desenvolvimento | Conhecimentos |
 |-----------|----------------------|-----------------------------------------------------|----------------|
-| Web Forms | Win Forms, WPF, .NET | Desenvolvimento rápido usando uma biblioteca rica de controles que encapsulam marcação HTML | RAD avançado e de nível intermediário |
+| Formulários da Web | Win Forms, WPF, .NET | Desenvolvimento rápido usando uma biblioteca rica de controles que encapsulam marcação HTML | RAD avançado e de nível intermediário |
 | MVC       | Ruby on Rails, .NET  | Controle total sobre a marcação HTML, o código e a marcação separados e os testes fáceis de escrever. A melhor opção para aplicativos móveis e de página única (SPA). | Nível intermediário, avançado |
 | Páginas da Web  | ASP clássico, PHP     | Marcação HTML e seu código juntos no mesmo arquivo | Novo, de nível intermediário |
 
-### <a name="web-forms"></a>Web Forms
+### <a name="web-forms"></a>Formulários da Web
 
 Com o ASP.NET Web Forms, você pode criar sites dinâmicos usando um modelo familiar de arrastar e soltar orientado por evento. Uma superfície de design e muitos controles e componentes lhe permitem compilar rapidamente sites sofisticados, poderosos baseados em UI com acesso de dados.
 

@@ -10,11 +10,11 @@ ms.assetid: 08834147-77ec-454a-bb7a-d931d2a40dab
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/implementing-inheritance-with-the-entity-framework-in-an-asp-net-mvc-application
 msc.type: authoredcontent
 ms.openlocfilehash: 73a01ed47b0935a1a9734c197377470defb1fe36
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519382"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583058"
 ---
 # <a name="tutorial-implement-inheritance-with-ef-in-an-aspnet-mvc-5-app"></a>Tutorial: implementar a herança com o EF em um aplicativo MVC 5 do ASP.NET
 
@@ -33,7 +33,7 @@ Neste tutorial, você:
 > * Testará a implementação
 > * Implantar no Azure
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 * [Tratamento de simultaneidade](handling-concurrency-with-the-entity-framework-in-an-asp-net-mvc-application.md)
 
@@ -167,7 +167,7 @@ Links para outros recursos de Entity Framework podem ser encontrados nos [recurs
 
 Para obter mais informações sobre essa e outras estruturas de herança, consulte [padrão de herança de TPT](https://msdn.microsoft.com/data/jj618293) e padrão de herança de [TPH](https://msdn.microsoft.com/data/jj618292) no msdn. No próximo tutorial, você verá como lidar com uma variedade de cenários relativamente avançados do Entity Framework.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você:
 

@@ -2,26 +2,26 @@
 uid: web-forms/videos/sql-2005/what-is-a-database
 title: O que é um banco de dados? | Microsoft Docs
 author: microsoft
-description: 'Esta introdução abrange as perguntas e iniciantes do SQL Server de terminologia precisam criar e gerenciar bancos de dados, tais como: O que é um banco de dados do SQL Server? Como...'
+description: 'Esta introdução aborda as perguntas e a terminologia SQL Server os iniciantes precisam criar e gerenciar bancos de dados, como: o que é um banco de SQL Server? Como...'
 ms.author: riande
 ms.date: 03/29/2006
 ms.assetid: 560d2455-ce08-4b2a-900d-7e9ccf82e048
 msc.legacyurl: /web-forms/videos/sql-2005/what-is-a-database
 msc.type: video
 ms.openlocfilehash: 019383897daeb7d8885ea4b9c3609e7f8ef9f827
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59396662"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78637133"
 ---
 # <a name="what-is-a-database"></a>O que é um banco de dados?
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
-Esta introdução abrange as perguntas e iniciantes do SQL Server de terminologia precisam criar e gerenciar bancos de dados, tais como: O que é um banco de dados do SQL Server? Um banco de dados do SQL Server é diferente de uma planilha do Excel? O bancos de dados do SQL Server fazer em Meus aplicativos de software ou de site? O que é a relação do SQL Server Express para Visual Studio Express? O que fazer termos como "ADO.NET" significa?
+Esta introdução aborda as perguntas e a terminologia SQL Server os iniciantes precisam criar e gerenciar bancos de dados, como: o que é um banco de SQL Server? Como um banco de dados SQL Server é diferente de uma planilha do Excel? O que os bancos de dados SQL Server fazem em meu site ou aplicativos de software? Qual é a relação SQL Server Express ' para Visual Studio Express? O que significam termos como "ADO.NET"?
 
-[&#9654;Assista ao vídeo (28 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-a-database)
+[&#9654;Assistir ao vídeo (28 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/what-is-a-database)
 
 > [!div class="step-by-step"]
-> [Avançar](understanding-database-tables-and-records.md)
+> [Próximo](understanding-database-tables-and-records.md)

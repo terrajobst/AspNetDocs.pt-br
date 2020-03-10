@@ -1,35 +1,35 @@
 ---
 uid: web-pages/overview/testing-and-debugging/introduction-to-debugging
-title: Introdução à depuração da Web do ASP.NET (Razor) Sites de páginas | Microsoft Docs
+title: Introdução à depuração de sites Páginas da Web do ASP.NET (Razor) | Microsoft Docs
 author: Rick-Anderson
-description: Depuração é o processo de localizar e corrigir erros em suas páginas de código. Este capítulo mostra algumas ferramentas e técnicas que você pode usar para depurar e analisar...
+description: A depuração é o processo de localizar e corrigir erros em suas páginas de código. Este capítulo mostra algumas ferramentas e técnicas que você pode usar para depurar e analyz...
 ms.author: riande
 ms.date: 02/20/2014
 ms.assetid: 68de4326-7611-4b9b-b5f6-79b7adc3069f
 msc.legacyurl: /web-pages/overview/testing-and-debugging/introduction-to-debugging
 msc.type: authoredcontent
 ms.openlocfilehash: ae7d871e56326610c043dc20fe6e0919e1b4ac89
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127822"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78624365"
 ---
-# <a name="introduction-to-debugging-aspnet-web-pages-razor-sites"></a>Introdução à depuração da Web do ASP.NET (Razor) Sites de páginas
+# <a name="introduction-to-debugging-aspnet-web-pages-razor-sites"></a>Introdução à depuração de sites Páginas da Web do ASP.NET (Razor)
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este artigo explica as várias maneiras de depurar páginas em um site de páginas da Web do ASP.NET (Razor). Depuração é o processo de localizar e corrigir erros em suas páginas de código.
+> Este artigo explica várias maneiras de depurar páginas em um site Páginas da Web do ASP.NET (Razor). A depuração é o processo de localizar e corrigir erros em suas páginas de código.
 >
 > **O que você aprenderá:**
 >
 > - Como exibir informações que ajudam a analisar e depurar páginas.
-> - Como usar a depuração de ferramentas no Visual Studio.
+> - Como usar as ferramentas de depuração no Visual Studio.
 >
 >
-> Estes são os recursos do ASP.NET introduzidos no artigo:
+> Estes são os recursos do ASP.NET apresentados no artigo:
 >
-> - O `ServerInfo` auxiliar.
+> - O auxiliar de `ServerInfo`.
 > - `ObjectInfo` auxiliar.
 >
 >
@@ -40,100 +40,100 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - Visual Studio 2013
 >
 >
-> Este tutorial também funciona com ASP.NET Web Pages 2. Você pode usar o WebMatrix 3, mas não há suporte para o depurador integrado.
+> Este tutorial também funciona com o Páginas da Web do ASP.NET 2. Você pode usar o WebMatrix 3, mas não há suporte para o depurador integrado.
 
-É um aspecto importante da solução de problemas de erros e problemas em seu código para evitá-los em primeiro lugar. Você pode fazer isso colocando seções do seu código que podem causar erros em `try/catch` blocos. Para obter mais informações, consulte a seção sobre como tratar erros em [Introdução ao ASP.NET Web de programação usando a sintaxe do Razor](https://go.microsoft.com/fwlink/?LinkId=202890).
+Um aspecto importante de solucionar problemas de erros e problemas em seu código é evitá-los em primeiro lugar. Você pode fazer isso colocando seções de seu código que provavelmente causarão erros em blocos de `try/catch`. Para obter mais informações, consulte a seção sobre como lidar [com erros na introdução à programação da Web do ASP.NET usando a sintaxe do Razor](https://go.microsoft.com/fwlink/?LinkId=202890).
 
-O `ServerInfo` auxiliar é uma ferramenta de diagnóstico que lhe dá uma visão geral das informações sobre o ambiente de servidor web que hospeda sua página. Ele também mostra informações de solicitação HTTP são enviadas quando um navegador solicita a página. O `ServerInfo` auxiliar exibe a identidade do usuário atual, o tipo de navegador que fez a solicitação, e assim por diante. Esse tipo de informação pode ajudar você a solucionar problemas comuns.
+O auxiliar de `ServerInfo` é uma ferramenta de diagnóstico que fornece uma visão geral das informações sobre o ambiente do servidor Web que hospeda sua página. Ele também mostra as informações de solicitação HTTP que são enviadas quando um navegador solicita a página. O auxiliar de `ServerInfo` exibe a identidade do usuário atual, o tipo de navegador que fez a solicitação e assim por diante. Esse tipo de informação pode ajudá-lo a solucionar problemas comuns.
 
-1. Criar uma nova página da web denominado *ServerInfo.cshtml*.
-2. No final da página, logo antes do fechamento `</body>` marca, adicione `@ServerInfo.GetHtml()`:
+1. Crie uma nova página da Web chamada *ServerInfo. cshtml*.
+2. No final da página, logo antes da marca de `</body>` de fechamento, adicione `@ServerInfo.GetHtml()`:
 
     [!code-cshtml[Main](introduction-to-debugging/samples/sample1.cshtml)]
 
-    Você pode adicionar o `ServerInfo` código em qualquer lugar na página. Mas, adicioná-lo no final será manter sua saída separados de seus outros conteúdos da página, que torna mais fácil de ler.
+    Você pode adicionar o código de `ServerInfo` em qualquer lugar da página. Mas adicioná-lo no final manterá sua saída separada do conteúdo de outra página, o que facilitará a leitura.
 
     > [!NOTE]
     >
-    > **Importante** você deverá remover qualquer código de diagnóstico de suas páginas da web antes de mover as páginas da web para um servidor de produção. Isso se aplica ao `ServerInfo` auxiliar, bem como as outras técnicas de diagnóstico neste artigo que envolvem a adição de código para uma página. Você não deseja os visitantes do site para obter informações sobre seu nome do servidor, os nomes de usuário, os caminhos no seu servidor e detalhes semelhantes, pois esse tipo de informação pode ser útil para pessoas com más intenções.
-3. Salve a página e executá-lo em um navegador.
+    > **Importante** Você deve remover qualquer código de diagnóstico de suas páginas da Web antes de mover as páginas da Web para um servidor de produção. Isso se aplica ao auxiliar de `ServerInfo`, bem como às outras técnicas de diagnóstico neste artigo que envolvem a adição de código a uma página. Você não quer que os visitantes do site vejam informações sobre o nome do servidor, nomes de usuário, caminhos no servidor e detalhes semelhantes, pois esse tipo de informação pode ser útil para pessoas com más intenções.
+3. Salve a página e execute-a em um navegador.
 
-    ![Depuração de-1](introduction-to-debugging/_static/image1.jpg)
+    ![Depuração-1](introduction-to-debugging/_static/image1.jpg)
 
-    O `ServerInfo` auxiliar exibe quatro tabelas de informações na página:
+    O auxiliar de `ServerInfo` exibe quatro tabelas de informações na página:
 
-   - Configuração do servidor. Esta seção fornece informações sobre o servidor de hospedagem da web, incluindo o nome do computador, a versão do ASP.NET que você está executando, o nome de domínio e o tempo de servidor.
-   - Variáveis de servidor ASP.NET. Esta seção fornece detalhes sobre os diversos detalhes de protocolo HTTP (chamados variáveis HTTP) e valores que fazem parte de cada solicitação de página da web.
-   - Informações de tempo de execução de HTTP. Esta seção fornece detalhes sobre o que a versão do Microsoft .NET Framework que sua página da web está em execução no, o caminho, detalhes sobre o cache e assim por diante. (Como você aprendeu na [Introdução ao ASP.NET Web de programação usando a sintaxe do Razor](https://go.microsoft.com/fwlink/?LinkId=202890), páginas Web ASP.NET usando o Razor sintaxe baseiam-se na tecnologia ASP.NET da Microsoft web server, que também é desenvolvido em um amplo biblioteca de desenvolvimento chamado .NET Framework).
-   - Variáveis de ambiente. Esta seção fornece uma lista de todas as variáveis de ambiente local e seus valores no servidor web.
+   - Configuração do servidor. Esta seção fornece informações sobre o servidor Web de hospedagem, incluindo o nome do computador, a versão do ASP.NET que você está executando, o nome de domínio e a hora do servidor.
+   - Variáveis de servidor ASP.NET. Esta seção fornece detalhes sobre os muitos detalhes do protocolo HTTP (chamados de variáveis HTTP) e os valores que fazem parte de cada solicitação de página da Web.
+   - Informações de tempo de execução HTTP. Esta seção fornece detalhes sobre a versão do Microsoft .NET Framework na qual sua página da Web está sendo executada, o caminho, os detalhes sobre o cache e assim por diante. (Como você aprendeu na [introdução à programação da Web ASP.NET usando a sintaxe do Razor](https://go.microsoft.com/fwlink/?LinkId=202890), páginas da Web do ASP.NET usando a sintaxe Razor são criadas na tecnologia de servidor Web ASP.NET da Microsoft, que é criada em uma ampla biblioteca de desenvolvimento de software chamada .NET Framework.)
+   - Variáveis de ambiente. Esta seção fornece uma lista de todas as variáveis de ambiente local e seus valores no servidor Web.
 
-     Uma descrição completa de todas as informações de servidor e a solicitação está além do escopo deste artigo, mas você pode ver que o `ServerInfo` auxiliar retorna várias informações de diagnóstico. Para obter mais informações sobre os valores que `ServerInfo` retorna, consulte [variáveis de ambiente reconhecidas](https://technet.microsoft.com/library/dd560744(WS.10).aspx) no site da Microsoft TechNet e [variáveis de servidor IIS](https://msdn.microsoft.com/library/ms524602(VS.90).aspx) no site do MSDN.
+     Uma descrição completa de todas as informações de servidor e solicitação está além do escopo deste artigo, mas você pode ver que o auxiliar de `ServerInfo` retorna muitas informações de diagnóstico. Para obter mais informações sobre os valores que `ServerInfo` retorna, consulte [variáveis de ambiente reconhecidas](https://technet.microsoft.com/library/dd560744(WS.10).aspx) no site do Microsoft TechNet e nas [variáveis de servidor do IIS](https://msdn.microsoft.com/library/ms524602(VS.90).aspx) no site do MSDN.
 
-## <a name="embedding-output-expressions-to-display-page-values"></a>Inserir expressões de saída para exibir valores de página
+## <a name="embedding-output-expressions-to-display-page-values"></a>Inserindo expressões de saída para exibir valores de página
 
-Outra maneira de ver o que está acontecendo em seu código é inserir expressões de saída na página. Como você sabe, você pode exibir diretamente o valor de uma variável com a adição de algo como `@myVariable` ou `@(subTotal * 12)` para a página. Para depuração, você pode colocar essas expressões de saída em pontos estratégicos em seu código. Isso permite que você veja o valor de chave variáveis ou o resultado de cálculos, quando a página é executada. Quando você terminar de depuração, você pode remover as expressões ou comente-os. Este procedimento ilustra uma maneira comum de usar expressões inseridas para ajudar a depurar uma página.
+Outra maneira de ver o que está acontecendo em seu código é inserir expressões de saída na página. Como você sabe, você pode produzir o valor de uma variável diretamente, adicionando algo como `@myVariable` ou `@(subTotal * 12)` à página. Para depuração, você pode posicionar essas expressões de saída em pontos estratégicos em seu código. Isso permite que você veja o valor de variáveis de chave ou o resultado de cálculos quando sua página é executada. Quando você terminar a depuração, poderá remover as expressões ou comentar. Este procedimento ilustra uma maneira típica de usar expressões inseridas para ajudar a depurar uma página.
 
-1. Criar uma nova página do WebMatrix chamado *OutputExpression.cshtml*.
-2. Substitua a página de conteúdo com o seguinte:
+1. Crie uma nova página do WebMatrix chamada *outputid. cshtml*.
+2. Substitua o conteúdo da página pelo seguinte:
 
     [!code-html[Main](introduction-to-debugging/samples/sample2.html)]
 
-    O exemplo usa uma `switch` instrução para verificar o valor da `weekday` variável e, em seguida, exibir uma mensagem de saída diferente, dependendo de qual dia da semana é. No exemplo, o `if` bloco entre o primeiro bloco de código altera arbitrariamente o dia da semana com a adição de um dia para o valor de dia da semana atual. Esse é um erro introduzido para fins de ilustração.
-3. Salve a página e executá-lo em um navegador.
+    O exemplo usa uma instrução `switch` para verificar o valor da variável `weekday` e, em seguida, exibir uma mensagem de saída diferente, dependendo de qual dia da semana é. No exemplo, o bloco de `if` no primeiro bloco de código arbitrariamente altera o dia da semana adicionando um dia ao valor atual do dia da semana. Esse é um erro introduzido para fins de ilustração.
+3. Salve a página e execute-a em um navegador.
 
-    A página exibe a mensagem para o errado dia da semana. Qualquer dia da semana, na verdade, é, você verá a mensagem para um dia depois. Embora, nesse caso, você sabe por que a mensagem está desativado (porque o código deliberadamente define o valor de dia incorreta), na realidade, muitas vezes é difícil saber onde as coisas estão indo erradas no código. Para depurar, você precisa descobrir o que está acontecendo com o valor de variáveis e objetos de chave, como `weekday`.
-4. Adicionar expressões de saída inserindo `@weekday` conforme mostrado nos dois lugares indicados por comentários no código. Essas expressões de saída exibirá os valores da variável nesse ponto na execução do código.
+    A página exibe a mensagem para o dia da semana errado. Seja qual for o dia da semana na verdade, você verá a mensagem para um dia mais tarde. Embora, nesse caso, você saiba por que a mensagem está desativada (porque o código determina deliberadamente o valor de dia incorreto), na realidade, é difícil saber onde as coisas estão erradas no código. Para depurar, você precisa descobrir o que está acontecendo com o valor de objetos-chave e variáveis como `weekday`.
+4. Adicione expressões de saída inserindo `@weekday` conforme mostrado nos dois locais indicados por comentários no código. Essas expressões de saída exibirão os valores da variável nesse ponto na execução do código.
 
     [!code-csharp[Main](introduction-to-debugging/samples/sample3.cs?highlight=2-3,15-16)]
 5. Salve e execute a página em um navegador.
 
-    A página exibe o dia da semana real pela primeira vez, em seguida, atualizado dia da semana que resulta da adição de um dia e, em seguida, a mensagem resultante do `switch` instrução. A saída de duas expressões variáveis (`@weekday`) não tem espaços entre os dias porque você não adicionou qualquer HTML `<p>` marcas para a saída; as expressões são apenas para teste.
+    A página exibe o dia real da semana primeiro, depois o dia atualizado da semana resultante da adição de um dia e a mensagem resultante da instrução `switch`. A saída das duas expressões de variáveis (`@weekday`) não tem espaços entre os dias porque você não adicionou nenhuma marca HTML `<p>` à saída; as expressões são apenas para teste.
 
     ![Depuração-2](introduction-to-debugging/_static/image2.jpg)
 
-    Agora você pode ver onde está o erro. Quando você exibe primeiro a `weekday` variável no código, ele mostra o dia. Quando você exibi-lo na segunda vez, após o `if` blocos no código, o dia está desativado por um. Para que você saiba que algo aconteceu entre o primeiro e segundo o aparecimento da variável de dia da semana. Se esse fosse um bug real, esse tipo de abordagem seria ajudá-lo a restringir o local do código que está causando o problema.
-6. Corrija o código na página removendo as expressões de saída de dois que você adicionou e, em seguida, remover o código que altera o dia da semana. O restante, concluído o bloco de código é semelhante ao exemplo a seguir:
+    Agora você pode ver onde está o erro. Quando você exibe a variável `weekday` no código pela primeira vez, ela mostra o dia correto. Quando você o exibe na segunda vez, após o bloco de `if` no código, o dia é desativado em um. Portanto, você sabe que algo aconteceu entre a primeira e a segunda aparência da variável Weekday. Se esse fosse um bug real, esse tipo de abordagem o ajudaria a restringir o local do código que está causando o problema.
+6. Corrija o código na página removendo as duas expressões de saída adicionadas e removendo o código que altera o dia da semana. O bloco de código completo restante é semelhante ao exemplo a seguir:
 
     [!code-cshtml[Main](introduction-to-debugging/samples/sample4.cshtml)]
-7. Execute a página em um navegador. Neste momento você ver a mensagem correta exibida para o real dia da semana.
+7. Execute a página em um navegador. Desta vez, você verá a mensagem correta exibida para o dia real da semana.
 
-## <a name="using-the-objectinfo-helper-to-display-object-values"></a>Usando o auxiliar de ObjectInfo para exibir valores de objeto
+## <a name="using-the-objectinfo-helper-to-display-object-values"></a>Usando o auxiliar ObjectInfo para exibir valores de objeto
 
-O `ObjectInfo` auxiliar exibe o tipo e o valor de cada objeto que você passa para ele. Você pode usá-lo para exibir o valor de variáveis e objetos em seu código (como fiz com expressões de saída no exemplo anterior), além de poder ver dados informações sobre o objeto de tipo.
+O auxiliar de `ObjectInfo` exibe o tipo e o valor de cada objeto que você passa para ele. Você pode usá-lo para exibir o valor de variáveis e objetos em seu código (como você fez com expressões de saída no exemplo anterior), além de poder ver informações de tipo de dados sobre o objeto.
 
-1. Abra o arquivo chamado *OutputExpression.cshtml* que você criou anteriormente.
-2. Substitua todo o código na página com o seguinte bloco de código:
+1. Abra o arquivo chamado *OutputTable. cshtml* que você criou anteriormente.
+2. Substitua todo o código na página pelo seguinte bloco de código:
 
     [!code-html[Main](introduction-to-debugging/samples/sample5.html)]
 3. Salve e execute a página em um navegador.
 
-    ![4 de depuração](introduction-to-debugging/_static/image3.jpg)
+    ![Depuração-4](introduction-to-debugging/_static/image3.jpg)
 
-    Neste exemplo, o `ObjectInfo` auxiliar exibe dois itens:
+    Neste exemplo, o auxiliar `ObjectInfo` exibe dois itens:
 
    - O tipo. Para a primeira variável, o tipo é `DayOfWeek`. Para a segunda variável, o tipo é `String`.
-   - O valor. Nesse caso, porque você já pode exibir o valor da variável de saudação na página, o valor é exibido novamente quando você passa a variável para `ObjectInfo`.
+   - O valor. Nesse caso, como você já exibe o valor da variável greeting na página, o valor é exibido novamente quando você passa a variável para `ObjectInfo`.
 
-     Para obter objetos mais complexos, o `ObjectInfo` auxiliar pode exibir mais informações sobre &#8212; basicamente, ele pode exibir os tipos e valores de todas as propriedades de um objeto.
+     Para objetos mais complexos, o auxiliar de `ObjectInfo` pode exibir mais &#8212; informações basicamente, ele pode exibir os tipos e valores de todas as propriedades de um objeto.
 
-## <a name="using-debugging-tools-in-visual-studio"></a>Usando as ferramentas de depuração no Visual Studio
+## <a name="using-debugging-tools-in-visual-studio"></a>Usando ferramentas de depuração no Visual Studio
 
-Para uma experiência de depuração mais abrangente, use [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Com o Visual Studio, você pode definir um ponto de interrupção em seu código na linha que você deseja inspecionar.
+Para uma experiência de depuração mais abrangente, use o [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Com o Visual Studio, você pode definir um ponto de interrupção em seu código na linha que você deseja inspecionar.
 
 ![Definir ponto de interrupção](introduction-to-debugging/_static/image1.png)
 
-Quando você testar o site da web, o código de execução é interrompida no ponto de interrupção.
+Quando você testa o site da Web, o código de execução é interrompido no ponto de interrupção.
 
-![alcançar o ponto de interrupção](introduction-to-debugging/_static/image2.png)
+![ponto de interrupção de alcance](introduction-to-debugging/_static/image2.png)
 
-Você pode examinar os valores atuais das variáveis e percorrer a código linha por linha.
+Você pode examinar os valores atuais das variáveis e percorrer o código linha por linha.
 
-![ver valores](introduction-to-debugging/_static/image3.png)
+![Ver valores](introduction-to-debugging/_static/image3.png)
 
-Para obter informações sobre como usar o depurador integrado no Visual Studio para depurar páginas Razor do ASP.NET, consulte [Programming ASP.NET Web Pages (Razor) usando o Visual Studio](https://go.microsoft.com/fwlink/?LinkId=205854).
+Para obter informações sobre como usar o depurador integrado no Visual Studio para depurar páginas ASP.NET Razor, consulte [Programming páginas da Web do ASP.net (Razor) usando o Visual Studio](https://go.microsoft.com/fwlink/?LinkId=205854).
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Programação de páginas da Web ASP.NET (Razor) usando o Visual Studio](https://go.microsoft.com/fwlink/?LinkId=205854)
-- [Variáveis de servidor IIS](https://msdn.microsoft.com/library/ms524602(VS.90).aspx) (MSDN)
-- [Reconhecido variáveis de ambiente](https://technet.microsoft.com/library/dd560744(WS.10).aspx) (TechNet)
+- [Páginas da Web do ASP.NET de programação (Razor) usando o Visual Studio](https://go.microsoft.com/fwlink/?LinkId=205854)
+- [Variáveis do servidor IIS](https://msdn.microsoft.com/library/ms524602(VS.90).aspx) (MSDN)
+- [Variáveis de ambiente reconhecidas](https://technet.microsoft.com/library/dd560744(WS.10).aspx) (TechNet)

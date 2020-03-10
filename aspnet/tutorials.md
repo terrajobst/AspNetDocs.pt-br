@@ -2,27 +2,27 @@
 uid: tutorials
 title: Tutoriais do ASP.NET | Microsoft Docs
 author: tdykstra
-description: Uma lista de guias passo a passo para desenvolver aplicativos ASP.NET.
+description: Uma lista de guias passo a passo para o desenvolvimento de aplicativos ASP.NET.
 ms.assetid: fddf8e5e-c055-4f81-b691-78deef871112
 ms.author: riande
 ms.date: 09/20/2017
 ms.openlocfilehash: 106b4b88d2e7de90900b7a73570ecd6140e2db66
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113187"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558166"
 ---
 # <a name="aspnet-tutorials"></a>Tutoriais do ASP.NET
 
 [!INCLUDE[](~/includes/rp.md)]
 
-Os seguintes guias passo a passo para desenvolvimento de aplicativos do ASP.NET estão disponíveis.
+Os seguintes guias passo a passo para o desenvolvimento de aplicativos ASP.NET estão disponíveis.
 
 > [!NOTE]
-> Tutoriais do ASP.NET Core está procurando?  Encontrá-los [aqui](https://docs.microsoft.com/aspnet/core/tutorials/).
+> Procurando tutoriais de ASP.NET Core?  Encontre-os [aqui](https://docs.microsoft.com/aspnet/core/tutorials/).
 
-## <a name="web-forms"></a>Web Forms
+## <a name="web-forms"></a>Formulários da Web
 
 * [Edição de código de Web Forms do ASP.NET no Visual Studio 2013](web-forms/overview/getting-started/code-editing-in-web-forms-pages.md)
 * [Uso do Inspetor de Página no Visual Studio 2012](web-forms/overview/getting-started/hands-on-labs/using-page-inspector-in-visual-studio-2012.md)
@@ -47,8 +47,8 @@ Os seguintes guias passo a passo para desenvolvimento de aplicativos do ASP.NET 
 * [Uso do Inspetor de Página no ASP.NET MVC](mvc/overview/views/using-page-inspector-in-aspnet-mvc.md)
 * [Criar um aplicativo do ASP.NET MVC 5 com logon OAuth2 no Facebook, Twitter, LinkedIn e Google (C#)](mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md)
 * [Criar um aplicativo Web seguro do ASP.NET MVC 5 com logon, confirmação por email e redefinição de senha (C#)](mvc/overview/security/create-an-aspnet-mvc-5-web-app-with-email-confirmation-and-password-reset.md)
-* [Aplicativo do ASP.NET MVC 5 com autenticação de dois fatores por SMS e email](mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md)
-* [Prevenção de XSRF/CSRF no ASP.NET MVC e em páginas da Web](mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
+* [Aplicativo do ASP.NET MVC 5 com SMS e emails de autenticação de dois fatores](mvc/overview/security/aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md)
+* [Prevenção de XSRF/CSRF no ASP.NET MVC e páginas Web](mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages.md)
 * [Impedindo ataques de redirecionamento aberto (C#)](mvc/overview/security/preventing-open-redirection-attacks.md)
 * [Migrando aplicativos do ASP.NET MVC para contêineres do Windows](mvc/overview/deployment/docker-aspnetmvc.md)
 * [Analisar e depurar seu aplicativo do ASP.NET MVC com Glimpse](mvc/overview/performance/profile-and-debug-your-aspnet-mvc-app-with-glimpse.md)
@@ -60,7 +60,7 @@ Os seguintes guias passo a passo para desenvolvimento de aplicativos do ASP.NET 
 * [Introdução à API Web 2 (C#)](web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md)
 * [Uso da API Web com Web Forms do ASP.NET](web-api/overview/getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
 * [Criação páginas de ajuda da API Web](web-api/overview/getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-* [Laboratório prático: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+* [Laboratório prático: criar um SPA (aplicativo de página única) com o ASP.NET Web API e o Angular.js](web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 * [Criar uma API REST com roteamento de atributo na API Web 2](web-api/overview/web-api-routing-and-actions/create-a-rest-api-with-attribute-routing.md)
 * [Uso da API Web 2 com o Entity Framework 6](web-api/overview/data/using-web-api-with-entity-framework/index.md)
 * [Chamar a API Web em um aplicativo do Windows Phone 8 (C#)](web-api/overview/mobile-clients/calling-web-api-from-a-windows-phone-8-application.md)
@@ -78,8 +78,8 @@ Os seguintes guias passo a passo para desenvolvimento de aplicativos do ASP.NET 
 * [Hospedar a API Web 2 em uma função de trabalho do Azure](web-api/overview/hosting-aspnet-web-api/host-aspnet-web-api-in-an-azure-worker-role.md)
 * [Injeção de dependência na API Web 2](web-api/overview/advanced/dependency-injection.md)
 * [Chamar uma API Web em um cliente .NET (C#)](web-api/overview/advanced/calling-a-web-api-from-a-net-client.md)
-* [Enviar dados de formulário HTML na API Web: Dados de formulário urlencoded](web-api/overview/advanced/sending-html-form-data-part-1.md)
-* [Enviar dados de formulário HTML na API Web: Upload do arquivo e MIME com diversas partes](web-api/overview/advanced/sending-html-form-data-part-2.md)
+* [Enviar dados de formulário HTML na API Web: dados de formulário urlencoded](web-api/overview/advanced/sending-html-form-data-part-1.md)
+* [Enviar dados de formulário HTML na API Web: upload de arquivo e MIME com diversas partes](web-api/overview/advanced/sending-html-form-data-part-2.md)
 
 ## <a name="web-pages"></a>Páginas da Web
 
@@ -113,10 +113,10 @@ Os seguintes guias passo a passo para desenvolvimento de aplicativos do ASP.NET 
 ## <a name="aspnet-signalr"></a>ASP.NET SignalR
 
 * [Tutorial: Introdução ao SignalR 2](signalr/overview/getting-started/tutorial-getting-started-with-signalr.md)
-* [Tutorial: Introdução ao SignalR 2 e MVC 5](signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
-* [Tutorial: Em tempo real de alta frequência com SignalR 2](signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
-* [Tutorial: Transmissão de servidor com SignalR 2](signalr/overview/getting-started/tutorial-server-broadcast-with-signalr.md)
-* [Laboratório prático: Aplicativos Web em tempo real com SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
+* [Tutorial: Introdução ao SignalR 2 e ao MVC 5](signalr/overview/getting-started/tutorial-getting-started-with-signalr-and-mvc.md)
+* [Tutorial: tempo real de alta frequência com SignalR 2](signalr/overview/getting-started/tutorial-high-frequency-realtime-with-signalr.md)
+* [Tutorial: transmissão de servidor com SignalR 2](signalr/overview/getting-started/tutorial-server-broadcast-with-signalr.md)
+* [Laboratório prático: aplicativos Web em tempo real com SignalR](signalr/overview/getting-started/real-time-web-applications-with-signalr.md)
 * [Teste de unidade em aplicativos do SignalR](signalr/overview/testing-and-debugging/unit-testing-signalr-applications.md)
 * [Habilitar o rastreamento do SignalR](signalr/overview/testing-and-debugging/enabling-signalr-tracing.md)
 * [Expansão do SignalR com o Barramento de Serviço do Azure](signalr/overview/performance/scaleout-with-windows-azure-service-bus.md)
@@ -124,14 +124,14 @@ Os seguintes guias passo a passo para desenvolvimento de aplicativos do ASP.NET 
 * [Expansão do SignalR com o SQL Server](signalr/overview/performance/scaleout-with-sql-server.md)
 * [Testes de densidade de conexão do SignalR com Crank](signalr/overview/performance/signalr-connection-density-testing-with-crank.md)
 * [Uso de contadores de desempenho do SignalR em uma função web do Azure](signalr/overview/performance/using-signalr-performance-counters-in-an-azure-web-role.md)
-* [Tutorial: Auto-hospedar SignalR](signalr/overview/deployment/tutorial-signalr-self-host.md)
+* [Tutorial: auto-hospedar SignalR](signalr/overview/deployment/tutorial-signalr-self-host.md)
 * [Usando o SignalR com aplicativos Web no Serviço de Aplicativo do Azure](signalr/overview/deployment/using-signalr-with-azure-web-sites.md)
 
 ## <a name="aspnet-identity"></a>ASP.NET Identity
 
 * [Adição de Identidade do ASP.NET a um projeto vazio ou existente do Web Forms](identity/overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
 * [Desenvolvendo aplicativos do ASP.NET com o Azure Active Directory](identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-* [Identidade do ASP.NET: Usar o armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+* [Identidade do ASP.NET: uso de Armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](identity/overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
 * [Confirmação de conta e recuperação de senha na Identidade do ASP.NET (C#)](identity/overview/features-api/account-confirmation-and-password-recovery-with-aspnet-identity.md)
 * [Autenticação de dois fatores usando SMS e email com o ASP.NET Identity](identity/overview/features-api/two-factor-authentication-using-sms-and-email-with-aspnet-identity.md)
 * [Implementando um provedor de armazenamento personalizado de MySQL da Identidade do ASP.NET](identity/overview/extensibility/implementing-a-custom-mysql-aspnet-identity-storage-provider.md)

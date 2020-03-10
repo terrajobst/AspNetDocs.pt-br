@@ -1,80 +1,80 @@
 ---
 uid: aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead
-title: O que não fazer no ASP.NET e o que fazer em vez disso | Microsoft Docs
+title: O que não fazer em ASP.NET e o que fazer em vez disso | Microsoft Docs
 author: Rick-Anderson
-description: Este tópico descreve vários erros comuns que as pessoas fizer dentro de projetos web ASP.NET. Ele fornece recomendações para que você deve fazer para evitar esses comu...
+description: Este tópico descreve vários erros comuns que as pessoas fazem em projetos da Web do ASP.NET. Ele fornece recomendações sobre o que você deve fazer para evitar esses comentários...
 ms.author: riande
 ms.date: 01/28/2019
 ms.assetid: c39b9965-545c-4b04-8f55-21be7f28a9e5
 msc.legacyurl: /aspnet/overview/web-development-best-practices/what-not-to-do-in-aspnet-and-what-to-do-instead
 msc.type: authoredcontent
 ms.openlocfilehash: 980d3544df70643043391e6573803ce21b3a824f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118173"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616987"
 ---
 # <a name="what-not-to-do-in-aspnet-and-what-to-do-instead"></a>O que fazer e o que não fazer em ASP.NET
 
-> Este tópico descreve vários erros comuns que as pessoas fizer dentro de projetos web ASP.NET. Ele fornece recomendações para que você deve fazer para evitar esses erros comuns. Ele se baseia em uma [apresentação](http://vimeo.com/68390507) pela **Damian Edwards** na Norwegian Developers Conference.
+> Este tópico descreve vários erros comuns que as pessoas fazem em projetos da Web do ASP.NET. Ele fornece recomendações para o que você deve fazer para evitar esses erros comuns. Ele se baseia em uma [apresentação](http://vimeo.com/68390507) da **Damian Edwards** na conferência de desenvolvedores de norueguês.
 
-## <a name="disclaimer"></a>Aviso de isenção de responsabilidade
+## <a name="disclaimer"></a>Isenção de responsabilidade
 
-Este tópico não se destina como um guia completo para garantir que seu aplicativo é seguro e eficiente. Você ainda precisa seguir as práticas recomendadas para segurança e desempenho que não são descritas neste tópico. Ele apenas sugere como evitar erros comuns relacionados a processos e classes do .NET.
+Este tópico não é destinado a um guia completo para garantir que seu aplicativo seja seguro e eficiente. Você ainda precisa seguir as práticas recomendadas de segurança e desempenho que não estão descritos neste tópico. Ele apenas sugere como evitar erros comuns relacionados a processos e classes do .NET.
 
 ## <a name="overview"></a>Visão geral
 
-Esse tópico contém as seguintes seções:
+Este tópico contém as seguintes seções:
 
-- [Conformidade com padrões](#standards)
+- [Conformidade com os padrões](#standards)
 
     - [Adaptadores de controle](#adapters)
-    - [Propriedades de estilo para controles](#styleprop)
-    - [Página e retornos de chamada de controle](#callback)
-    - [Detecção de recurso do navegador](#browsercap)
+    - [Propriedades de estilo em controles](#styleprop)
+    - [Retornos de chamada de página e controle](#callback)
+    - [Detecção de capacidade do navegador](#browsercap)
 - [Segurança](#security)
 
     - [Validação de solicitação](#validation)
-    - [Sessão e autenticação de formulários sem cookies](#cookieless)
+    - [Autenticação e sessão de formulários sem cookie](#cookieless)
     - [EnableViewStateMac](#viewstatemac)
-    - [Nível de confiança médio](#medium)
+    - [Confiança média](#medium)
     - [&lt;appSettings&gt;](#appsettings)
     - [UrlPathEncode](#urlpathencode)
 - [Confiabilidade e desempenho](#performance)
 
     - [PreSendRequestHeaders e PreSendRequestContent](#presend)
     - [Eventos de página assíncrona com Web Forms](#asyncevents)
-    - [Disparar e esquecer de trabalho](#fire)
+    - [Trabalho de disparar e esquecer](#fire)
     - [Corpo da entidade de solicitação](#requestentity)
-    - [Response. Redirect e Response](#redirect)
-    - [EnableViewState e ViewStateMode](#viewstatemode)
+    - [Response. redirecionamento e resposta. end](#redirect)
+    - [EnableViewState e ViewStatemode](#viewstatemode)
     - [SqlMembershipProvider](#sqlprovider)
     - [Solicitações de execução longa (> 110 segundos)](#long)
 
 <a id="standards"></a>
 
-## <a name="standards-compliance"></a>Conformidade com padrões
+## <a name="standards-compliance"></a>Conformidade com os padrões
 
 <a id="adapters"></a>
 
 ### <a name="control-adapters"></a>Adaptadores de controle
 
-Recomendação: Parar de usar adaptadores de controle para renderização adaptável e, em vez disso, use consultas de mídia do CSS e HTML compatível com os padrões.
+Recomendação: Pare de usar adaptadores de controle para processamento adaptável e, em vez disso, use consultas de mídia CSS e HTML compatível com padrões.
 
-Adaptadores de controles foram introduzidas no .NET 2.0 para processar o código de apresentação que foi personalizado para ambientes e dispositivos diferentes. Agora, essa renderização adaptável pode ser feita com CSS e HTML. Você deve parar de usar adaptadores de controle e converter todos os adaptadores existentes em CSS e HTML.
+Os adaptadores de controles foram introduzidos no .NET 2,0 para renderizar o código de apresentação que foi personalizado para diferentes dispositivos e ambientes. Agora, essa renderização adaptável pode ser realizada com CSS e HTML. Você deve parar de usar os adaptadores de controle e converter quaisquer adaptadores existentes em CSS e HTML.
 
-Para obter mais informações, consulte [consultas de mídia](http://www.w3.org/TR/css3-mediaqueries/) e [How To: Adicionar páginas móveis ao seu Web Forms do ASP.NET / aplicativo MVC](../../../whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application.md).
+Para obter mais informações, consulte [consultas de mídia](http://www.w3.org/TR/css3-mediaqueries/) e [como adicionar páginas móveis ao seu aplicativo ASP.NET Web Forms/MVC](../../../whitepapers/add-mobile-pages-to-your-aspnet-web-forms-mvc-application.md).
 
 <a id="styleprop"></a>
 
-### <a name="style-properties-on-controls"></a>Propriedades de estilo para controles
+### <a name="style-properties-on-controls"></a>Propriedades de estilo em controles
 
-Recomendação: Parar de configurar os valores de estilo na marcação do controle e, em vez disso, defina valores de formatação em folhas de estilo CSS.
+Recomendação: Pare a configuração de valores de estilo na marcação de controle e, em vez disso, defina valores de formatação em folhas de estilos CSS.
 
-Controles de servidor Web com dezenas de propriedades que podem ser usadas para definir propriedades de estilo embutido. Por exemplo, a propriedade ForeColor define a cor do texto para um controle. Você pode fazer o mesmo efeito com mais eficiência por meio de folhas de estilo CSS. Folhas de estilo permitem que você centralize os valores de estilo e evite definir esses valores em todo o aplicativo.
+Os controles de servidor Web contêm dezenas de propriedades que podem ser usadas para definir propriedades de estilo na linha. Por exemplo, a propriedade ForeColor define a cor do texto de um controle. Você pode realizar esse mesmo efeito com mais eficiência por meio de folhas de estilo CSS. As folhas de estilos permitem centralizar valores de estilo e evitar definir esses valores em todo o aplicativo.
 
-O exemplo a seguir mostra uma classe CSS o texto de conjuntos para vermelho.
+O exemplo a seguir mostra uma classe CSS que define o texto como vermelho.
 
 [!code-css[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample1.css)]
 
@@ -86,17 +86,17 @@ O exemplo a seguir mostra como aplicar dinamicamente a classe CSS.
 
 ### <a name="page-and-control-callbacks"></a>Retornos de chamada de página e controle
 
-Recomendação: Parar de usar retornos de chamada de página e controle e, em vez disso, use qualquer um dos seguintes: AJAX, UpdatePanel, MVC métodos de ação, API da Web ou SignalR.
+Recomendação: Pare de usar retornos de chamada de página e controle e, em vez disso, use qualquer um dos seguintes: AJAX, UpdatePanel, métodos de ação MVC, API Web ou Signalr.
 
-Em versões anteriores do ASP.NET, métodos de retorno de chamada de página e controle habilitado atualizar parte da página da web sem atualizar uma página inteira. Agora você pode fazer atualizações parciais de página por meio [AJAX](../../../ajax/index.md), [UpdatePanel](https://msdn.microsoft.com/library/bb386454.aspx), [MVC](../../../mvc/index.md), [API da Web](../../../web-api/index.md) ou [SignalR](../../../signalr/index.md). Você deve interromper o roteamento e usar métodos de retorno de chamada porque podem causar problemas com URLs amigáveis. Por padrão, os controles não permitem que os métodos de retorno de chamada, mas se você habilitar esse recurso em um controle, você deve desabilitá-lo.
+Em versões anteriores do ASP.NET, os métodos de retorno de chamada Page e Control permitiam que você atualizasse parte da página da Web sem Atualizar uma página inteira. Agora você pode realizar atualizações de página parcial por meio de [Ajax](../../../ajax/index.md), [UpdatePanel](https://msdn.microsoft.com/library/bb386454.aspx), [MVC](../../../mvc/index.md), [API da Web](../../../web-api/index.md) ou [signalr](../../../signalr/index.md). Você deve interromper o uso de métodos de retorno de chamada porque eles podem causar problemas com URLs e roteamento amigáveis. Por padrão, os controles não habilitam métodos de retorno de chamada, mas se você habilitou esse recurso em um controle, você deve desabilitá-lo.
 
 <a id="browsercap"></a>
 
-### <a name="browser-capability-detection"></a>Detecção de recurso do navegador
+### <a name="browser-capability-detection"></a>Detecção de capacidade do navegador
 
-Recomendação: Parar de usar a detecção de recurso estático do navegador e, em vez disso, usar a detecção de recurso dinâmico.
+Recomendação: Pare de usar a detecção de capacidade de navegador estático e, em vez disso, use a detecção dinâmica de recursos.
 
-Em versões anteriores do ASP.NET, os recursos com suporte para cada navegador foram armazenados em um arquivo XML. Detectando suporte a recursos por meio de uma pesquisa estática não é a melhor abordagem. Agora, você pode detectar dinamicamente um navegador com suporte do recursos por meio de uma estrutura de detecção de recursos, como [Modernizr](http://modernizr.com/). Detecção de recurso determina o suporte a tentativa de usar um método ou propriedade e, em seguida, verificando para ver se o navegador produziu o resultado desejado. Por padrão, o Modernizr está incluído nos modelos de aplicativo Web.
+Em versões anteriores do ASP.NET, os recursos com suporte para cada navegador foram armazenados em um arquivo XML. A detecção de suporte a recursos por meio de uma pesquisa estática não é a melhor abordagem. Agora, você pode detectar dinamicamente os recursos com suporte do navegador usando uma estrutura de detecção de recursos, como o [Modernizr](http://modernizr.com/). A detecção de recursos determina o suporte ao tentar usar um método ou uma propriedade e, em seguida, verificar se o navegador produziu o resultado desejado. Por padrão, o Modernizr está incluído nos modelos de aplicativos Web.
 
 <a id="security"></a>
 
@@ -106,41 +106,41 @@ Em versões anteriores do ASP.NET, os recursos com suporte para cada navegador f
 
 ### <a name="request-validation"></a>Validação de solicitação
 
-Recomendação: Validar a entrada do usuário e codificar a saída dos usuários.
+Recomendação: validar a entrada do usuário e codificar a saída de usuários.
 
-Validação de solicitação é um recurso do ASP.NET que inspeciona cada solicitação e para a solicitação, se uma ameaça percebida for encontrada. Não dependem de validação de solicitação para proteger seu aplicativo contra ataques de script entre sites. Em vez disso, valide todas as entradas de usuários e codificar a saída. Em alguns casos limitados, você pode usar expressões regulares para validar a entrada, mas em casos mais complicados, a que você deve validar entrada do usuário por meio de classes do .NET que determinam se o valor corresponder valores permitidos.
+A validação de solicitação é um recurso de ASP.NET que inspeciona cada solicitação e interrompe a solicitação se uma ameaça percebida for encontrada. Não dependa da validação de solicitação para proteger seu aplicativo contra ataques de script entre sites. Em vez disso, valide todas as entradas de usuários e codifique a saída. Em alguns casos limitados, você pode usar expressões regulares para validar a entrada, mas em casos mais complicados, você deve validar a entrada do usuário usando classes do .NET que determinam se o valor corresponde aos valores permitidos.
 
-O exemplo a seguir mostra como usar um método estático na classe Uri para determinar se o Uri fornecido por um usuário é válido.
+O exemplo a seguir mostra como usar um método estático na classe URI para determinar se o URI fornecido por um usuário é válido.
 
 [!code-csharp[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample3.cs)]
 
-No entanto, para verificar suficientemente o Uri, você também deve verificar para certificar-se de que ele especifica `http` ou `https`. O exemplo a seguir usa os métodos de instância para verificar se o Uri é válido.
+No entanto, para verificar o URI suficientemente, você também deve verificar se ele especifica `http` ou `https`. O exemplo a seguir usa métodos de instância para verificar se o URI é válido.
 
 [!code-csharp[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample4.cs)]
 
-Antes de processar a entrada do usuário como HTML ou incluindo a entrada do usuário em uma consulta SQL, codificar os valores para garantir que o código mal-intencionado não está incluído.
+Antes de renderizar a entrada do usuário como HTML ou incluir a entrada do usuário em uma consulta SQL, codifique os valores para garantir que o código mal-intencionado não seja incluído.
 
-É possível que o HTML codificar o valor na marcação com o &lt;%: %&gt; sintaxe, conforme mostrado abaixo.
+Você pode codificar o valor em marcação com a sintaxe &lt;%:%&gt;, conforme mostrado abaixo.
 
 [!code-aspx[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample5.aspx?highlight=1)]
 
-Ou, na sintaxe do Razor, é possível que o HTML codificar com @, conforme mostrado abaixo.
+Ou, em sintaxe Razor, você pode codificar HTML com @, conforme mostrado abaixo.
 
 [!code-cshtml[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample6.cshtml?highlight=1)]
 
-A exemplo a seguir mostra como HTML codificar um valor no code-behind.
+O exemplo a seguir mostra como codificar em HTML um valor no code-behind.
 
 [!code-csharp[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample7.cs)]
 
-Para codificar com segurança um valor para comandos SQL, use parâmetros de comando, como o [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx). <a id="cookieless"></a>
+Para codificar com segurança um valor para comandos SQL, use parâmetros de comando como o [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx). <a id="cookieless"></a>
 
-### <a name="cookieless-forms-authentication-and-session"></a>Sessão e autenticação de formulários sem cookies
+### <a name="cookieless-forms-authentication-and-session"></a>Autenticação e sessão de formulários sem cookie
 
-Recomendação: Requer cookies.
+Recomendação: exigir cookies.
 
-Passar informações de autenticação na cadeia de caracteres de consulta não é seguro. Portanto, requerem cookies quando seu aplicativo inclui autenticação. Se seu cookie armazenar informações confidenciais, considere a exigência de SSL para o cookie.
+A passagem de informações de autenticação na cadeia de caracteres de consulta não é segura. Portanto, exija cookies quando seu aplicativo incluir autenticação. Se seu cookie armazena informações confidenciais, considere exigir SSL para o cookie.
 
-O exemplo a seguir mostra como especificar no arquivo Web. config que a autenticação de formulários exige um cookie que é transmitido por SSL.
+O exemplo a seguir mostra como especificar no arquivo Web. config que a autenticação de formulários requer um cookie que é transmitido por SSL.
 
 [!code-xml[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample8.xml)]
 
@@ -148,41 +148,41 @@ O exemplo a seguir mostra como especificar no arquivo Web. config que a autentic
 
 ### <a name="enableviewstatemac"></a>EnableViewStateMac
 
-Recomendação: Nunca defina como false.
+Recomendação: nunca definido como false.
 
-Por padrão, EnableViewStateMac está definido como true. Mesmo se seu aplicativo não estiver usando o estado de exibição, não defina EnableViewStateMac como false. Definir esse valor como false fará seu aplicativo vulnerável a XSS.
+Por padrão, o EnableViewStateMac é definido como true. Mesmo que seu aplicativo não esteja usando o estado de exibição, não defina o EnableViewStateMac como false. Definir esse valor como false tornará seu aplicativo vulnerável a scripts entre sites.
 
-A partir do ASP.NET 4.5.2, o tempo de execução impõe **EnableViewStateMac = true**. Mesmo se você defini-lo como false, o tempo de execução ignora esse valor e prossegue com o valor definido como true. Para obter mais informações, consulte [ASP.NET 4.5.2 e EnableViewStateMac](https://blogs.msdn.com/b/webdev/archive/2014/05/07/asp-net-4-5-2-and-enableviewstatemac.aspx).
+Começando com ASP.NET 4.5.2, o tempo de execução impõe **EnableViewStateMac = true**. Mesmo se você defini-lo como false, o tempo de execução ignora esse valor e prossegue com o valor definido como true. Para obter mais informações, consulte [ASP.NET 4.5.2 e EnableViewStateMac](https://blogs.msdn.com/b/webdev/archive/2014/05/07/asp-net-4-5-2-and-enableviewstatemac.aspx).
 
-O exemplo a seguir mostra como definir EnableViewStateMac como true. Você não precisa realmente definir esse valor como true, pois ele é verdadeiro por padrão. No entanto, se você tiver definido isso como false em qualquer página em seu aplicativo, você deve corrigir esse valor imediatamente.
+O exemplo a seguir mostra como definir o EnableViewStateMac como true. Você não precisa definir esse valor como true, pois ele é true por padrão. No entanto, se você definiu-a como false em qualquer página em seu aplicativo, deverá corrigir esse valor imediatamente.
 
 [!code-aspx[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample9.aspx)]
 
 <a id="medium"></a>
 
-### <a name="medium-trust"></a>Nível de confiança médio
+### <a name="medium-trust"></a>Confiança média
 
-Recomendação: Não dependem de confiança médio (ou qualquer outro nível de confiança) como um limite de segurança.
+Recomendação: não depende de confiança média (ou qualquer outro nível de confiança) como um limite de segurança.
 
-Confiança parcial não proteger adequadamente seu aplicativo e não deve ser usada. Em vez disso, use a confiança total e isolar aplicativos não confiáveis em pools de aplicativos separados. Além disso, execute cada pool de aplicativos com uma identidade exclusiva. Para obter mais informações, consulte [ASP.NET de confiança parcial não garante o isolamento de aplicativo](https://support.microsoft.com/kb/2698981).
+A confiança parcial não protege adequadamente seu aplicativo e não deve ser usada. Em vez disso, use confiança total e isole aplicativos não confiáveis em pools de aplicativos separados. Além disso, execute cada pool de aplicativos em uma identidade exclusiva. Para obter mais informações, consulte [confiança parcial do ASP.net não garante o isolamento do aplicativo](https://support.microsoft.com/kb/2698981).
 
 <a id="appsettings"></a>
 
 ### <a name="ltappsettingsgt"></a>&lt;appSettings&gt;
 
-Recomendação: Não desabilite as configurações de segurança no &lt;appSettings&gt; elemento.
+Recomendação: Não desabilite as configurações de segurança no elemento &lt;appSettings&gt;.
 
-O elemento de appSettings contém muitos valores que são necessários para atualizações de segurança. Você não deve alterar ou desativar esses valores. Se você precisar desabilitar esses valores ao implantar uma atualização, imediatamente habilite novamente depois de concluir a implantação.
+O elemento appSettings contém muitos valores que são necessários para atualizações de segurança. Você não deve alterar nem desabilitar esses valores. Se você precisar desabilitar esses valores ao implantar uma atualização, reabilitar imediatamente depois de concluir a implantação.
 
-Para obter detalhes, consulte [elemento de appSettings do ASP.NET](https://msdn.microsoft.com/library/hh975440.aspx).
+Para obter detalhes, consulte o [elemento ASP.net appSettings](https://msdn.microsoft.com/library/hh975440.aspx).
 
 <a id="urlpathencode"></a>
 
 ### <a name="urlpathencode"></a>UrlPathEncode
 
-Recomendação: Use [UrlEncode](https://msdn.microsoft.com/library/zttxte6w.aspx) em vez disso.
+Recomendação: em vez disso, use [UrlEncode](https://msdn.microsoft.com/library/zttxte6w.aspx) .
 
-O método UrlPathEncode foi adicionado para o .NET Framework para resolver um problema de compatibilidade do navegador muito específico. Ele não codifica uma URL adequadamente e não proteja seu aplicativo de script entre sites. Você nunca deve usá-lo em seu aplicativo. Em vez disso, use [UrlEncode](https://msdn.microsoft.com/library/zttxte6w.aspx).
+O método UrlPathEncode foi adicionado à .NET Framework para resolver um problema de compatibilidade de navegador muito específico. Ele não codifica uma URL de forma adequada e não protege seu aplicativo contra scripts entre sites. Você nunca deve usá-lo em seu aplicativo. Em vez disso, use [UrlEncode](https://msdn.microsoft.com/library/zttxte6w.aspx).
 
 O exemplo a seguir mostra como passar uma URL codificada como um parâmetro de cadeia de caracteres de consulta para um controle de hiperlink.
 
@@ -196,94 +196,94 @@ O exemplo a seguir mostra como passar uma URL codificada como um parâmetro de c
 
 ### <a name="presendrequestheaders-and-presendrequestcontent"></a>PreSendRequestHeaders e PreSendRequestContent
 
-Recomendação: Não use esses eventos com módulos gerenciados. Em vez disso, escreva um módulo nativo do IIS para executar a tarefa exigida. Ver [criação de módulos HTTP de código nativo](https://msdn.microsoft.com/library/ms693629.aspx).
+Recomendação: não use esses eventos com módulos gerenciados. Em vez disso, escreva um módulo do IIS nativo para executar a tarefa necessária. Consulte [criando módulos http de código nativo](https://msdn.microsoft.com/library/ms693629.aspx).
 
-Você pode usar o [PreSendRequestHeaders](https://msdn.microsoft.com/library/system.web.httpapplication.presendrequestheaders.aspx) e [PreSendRequestContent](https://msdn.microsoft.com/library/system.web.httpapplication.presendrequestcontent.aspx) eventos com os módulos IIS nativos.
+Você pode usar os eventos [PreSendRequestHeaders](https://msdn.microsoft.com/library/system.web.httpapplication.presendrequestheaders.aspx) e [PreSendRequestContent](https://msdn.microsoft.com/library/system.web.httpapplication.presendrequestcontent.aspx) com módulos nativos do IIS.
 > [!WARNING]
-> Não use `PreSendRequestHeaders` e `PreSendRequestContent` com os módulos gerenciados que implementam `IHttpModule`. Definir essas propriedades pode causar problemas com solicitações assíncronas. A combinação de aplicativo solicitado ARR (roteamento) e o WebSocket pode levar a exceções de violação de acesso que podem fazer com que w3wp falhe. Por exemplo, iiscore! W3_CONTEXT_BASE::GetIsLastNotification + 68 no iiscore.dll causou uma exceção de violação de acesso (0xC0000005).
+> Não use `PreSendRequestHeaders` e `PreSendRequestContent` com módulos gerenciados que implementam `IHttpModule`. A definição dessas propriedades pode causar problemas com solicitações assíncronas. A combinação de roteamento solicitado do aplicativo (ARR) e WebSockets pode levar a exceções de violação de acesso que podem causar falhas em w3wp. Por exemplo, iiscore! W3_CONTEXT_BASE:: GetIsLastNotification + 68 em iiscore. dll causou uma exceção de violação de acesso (0xC0000005).
 
 <a id="asyncevents"></a>
 
-### <a name="asynchronous-page-events-with-web-forms"></a>Eventos de página assíncrona com web forms
+### <a name="asynchronous-page-events-with-web-forms"></a>Eventos de página assíncrona com Web Forms
 
-Recomendação: No Web Forms, evite escrever async void métodos para eventos de ciclo de vida da página e, em vez disso, use [RegisterAsyncTask](https://msdn.microsoft.com/library/system.web.ui.page.registerasynctask.aspx) para código assíncrono.
+Recomendação: em Web Forms, evite escrever métodos Async void para eventos de ciclo de vida da página e, em vez disso, use [Page. RegisterAsyncTask](https://msdn.microsoft.com/library/system.web.ui.page.registerasynctask.aspx) para código assíncrono.
 
-Quando você marca um evento de página com **async** e **void**, não é possível determinar quando o código assíncrono foi concluído. Em vez disso, use RegisterAsyncTask para executar o código assíncrono de uma maneira que permite que você controle sua conclusão.
+Ao marcar um evento de página com **Async** e **void**, você não pode determinar quando o código assíncrono foi concluído. Em vez disso, use Page. RegisterAsyncTask para executar o código assíncrono de forma a permitir que você acompanhe sua conclusão.
 
-A exemplo a seguir mostra um botão Clique manipulador que contém o código assíncrono. Este exemplo inclui ler um valor de cadeia de caracteres de forma assíncrona, que é fornecido apenas como um exemplo simplificado de uma tarefa assíncrona e não como uma prática recomendada.
+O exemplo a seguir mostra um manipulador de clique de botão que contém código assíncrono. Este exemplo inclui a leitura de um valor de cadeia de caracteres de forma assíncrona, que é fornecido apenas como um exemplo simplificado de uma tarefa assíncrona e não como uma prática recomendada.
 
 [!code-csharp[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample11.cs)]
 
-Se você estiver usando tarefas assíncronas, defina a estrutura de destino do tempo de execução de Http para 4.5 (ou posterior) no arquivo Web. config. Definir a estrutura de destino para 4.5 ativa no novo contexto de sincronização que foi adicionado no .NET 4.5. Esse valor é definido por padrão em novos projetos no Visual Studio, mas é a não ser definida se você estiver trabalhando com um projeto existente.
+Se você estiver usando tarefas assíncronas, defina a estrutura de destino de tempo de execução http como 4,5 (ou posterior) no arquivo Web. config. Definir a estrutura de destino como 4,5 ativa o novo contexto de sincronização que foi adicionado no .NET 4,5. Esse valor é definido por padrão em novos projetos no Visual Studio, mas não será definido se você estiver trabalhando com um projeto existente.
 
 [!code-xml[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample12.xml)]
 
 <a id="fire"></a>
 
-### <a name="fire-and-forget-work"></a>Disparar e esquecer de trabalho
+### <a name="fire-and-forget-work"></a>Trabalho de disparar e esquecer
 
-Recomendação: Ao lidar com uma solicitação dentro do ASP.NET, evite iniciar o trabalho de disparar e esquecer (tal chamando o método ThreadPool. QueueUserWorkItem ou criando um temporizador que chama repetidamente um delegado).
+Recomendação: ao lidar com uma solicitação no ASP.NET, evite iniciar o trabalho de incêndio e esquecer (chamando o método ThreadPool. QueueUserWorkItem ou criando um temporizador que chame repetidamente um delegado).
 
-Se seu aplicativo tiver trabalho disparar e esquecer que é executado dentro do ASP.NET, seu aplicativo pode ficar fora de sincronizado. A qualquer momento, o domínio de aplicativo pode ser destruído que significa que seu processo contínuo não pode corresponder o estado atual do aplicativo.
+Se seu aplicativo tiver um trabalho de acionamento e esquecer que seja executado no ASP.NET, seu aplicativo poderá ficar fora de sincronia. A qualquer momento, o domínio do aplicativo pode ser destruído, o que significa que o processo em andamento pode não corresponder mais ao estado atual do aplicativo.
 
-Você deve mover esse tipo de trabalho fora do ASP.NET. Você pode usar os trabalhos da Web, serviço do Windows ou uma função de trabalho no Azure para executar um trabalho em andamento e executar esse código de outro processo.
+Você deve mover esse tipo de trabalho para fora do ASP.NET. Você pode usar trabalhos da Web, serviço do Windows ou uma função de trabalho no Azure para executar o trabalho em andamento e executar esse código a partir de outro processo.
 
-Se for preciso executar este trabalho dentro do ASP.NET, você pode adicionar o pacote do Nuget chamado [WebBackgrounder](http://www.nuget.org/packages/webbackgrounder) para executar o código.
+Se for necessário executar esse trabalho em ASP.NET, você poderá adicionar o pacote NuGet chamado [Webbackgrounder](http://www.nuget.org/packages/webbackgrounder) para executar o código.
 
 <a id="requestentity"></a>
 
 ### <a name="request-entity-body"></a>Corpo da entidade de solicitação
 
-Recomendação: Evite a leitura Request. Form ou Request. InputStream, antes do manipulador de evento de execução.
+Recomendação: Evite ler Request. Form ou Request. InputStream antes do evento de execução do manipulador.
 
-O mais antigo que você deve ler de Request. Form ou Request. InputStream é durante o manipulador execute eventos. No MVC, o controlador é o manipulador e evento de execução é quando o método de ação é executada. Nos Web Forms, a página é o manipulador e evento de execução é quando o evento Page.Init é acionado. Se você ler o corpo da entidade de solicitação anterior ao evento de execução, você interfere com o processamento da solicitação.
+O mais antigo que você deve ler de Request. Form ou Request. InputStream é durante o evento de execução do manipulador. No MVC, o controlador é o manipulador e o evento execute é quando o método de ação é executado. Em Web Forms, a página é o manipulador e o evento execute é quando o evento Page. Init é acionado. Se você ler o corpo da entidade de solicitação anterior ao evento de execução, você interferirá no processamento da solicitação.
 
-Se você precisar ler o corpo da entidade de solicitação antes do evento de execução, use [Request.GetBufferlessInputStream](https://msdn.microsoft.com/library/ff406798.aspx) ou [Request.GetBufferedInputStream](https://msdn.microsoft.com/library/system.web.httprequest.getbufferedinputstream.aspx). Quando você usa GetBufferlessInputStream, obtenha o fluxo bruto da solicitação e assuma a responsabilidade por processar a solicitação inteira. Depois de chamar GetBufferlessInputStream, Request. Form e Request. InputStream não estão disponíveis porque eles não foram populados pelo ASP.NET. Quando você usa GetBufferedInputStream, você obtém uma cópia do fluxo da solicitação. Request. Form e Request. InputStream ainda estarão disponíveis posteriormente na solicitação porque o ASP.NET preenche a outra cópia.
+Se você precisar ler o corpo da entidade de solicitação antes do evento execute, use [Request. GetBufferlessInputStream](https://msdn.microsoft.com/library/ff406798.aspx) ou [Request. GetBufferedInputStream](https://msdn.microsoft.com/library/system.web.httprequest.getbufferedinputstream.aspx). Ao usar o GetBufferlessInputStream, você obtém o fluxo bruto da solicitação e assume a responsabilidade pelo processamento de toda a solicitação. Depois de chamar GetBufferlessInputStream, Request. Form e Request. InputStream não estão disponíveis porque não foram populados pelo ASP.NET. Ao usar o GetBufferedInputStream, você obtém uma cópia do fluxo da solicitação. Request. Form e Request. InputStream ainda estão disponíveis mais tarde na solicitação porque ASP.NET popula a outra cópia.
 
 <a id="redirect"></a>
 
-### <a name="responseredirect-and-responseend"></a>Response. Redirect e Response
+### <a name="responseredirect-and-responseend"></a>Response. redirecionamento e resposta. end
 
-Recomendação: Esteja ciente das diferenças em como o thread é manipulado depois de chamar [Response.Redirect(String)](https://msdn.microsoft.com/library/t9dwyts4.aspx).
+Recomendação: esteja atento às diferenças em como o thread é tratado depois [de chamar Response. reredirect (String)](https://msdn.microsoft.com/library/t9dwyts4.aspx).
 
-O [Response.Redirect(String)](https://msdn.microsoft.com/library/t9dwyts4.aspx) método chama o método Response. Em um processo síncrono, chamar Request.Redirect faz com que o thread atual anular imediatamente. No entanto, em um processo assíncrono, chamar Response. Redirect não anular o thread atual, portanto, a execução de código continua para a solicitação. Em um processo assíncrono, você deve retornar a tarefa do método para interromper a execução de código.
+O método [Response. reredirect (String)](https://msdn.microsoft.com/library/t9dwyts4.aspx) chama o método Response. end. Em um processo síncrono, chamar Request. redirecionar faz com que o thread atual seja anulado imediatamente. No entanto, em um processo assíncrono, chamar Response. redirecionamento não anula o thread atual, portanto, a execução do código continua a solicitação. Em um processo assíncrono, você deve retornar a tarefa do método para interromper a execução do código.
 
-Em um projeto do MVC, você não deve chamar Response. Redirect. Em vez disso, retorne um RedirectResult.
+Em um projeto MVC, você não deve chamar Response. redirect. Em vez disso, retorne um RedirectResult.
 
 <a id="viewstatemode"></a>
 
-### <a name="enableviewstate-and-viewstatemode"></a>EnableViewState e ViewStateMode
+### <a name="enableviewstate-and-viewstatemode"></a>EnableViewState e ViewStatemode
 
-Recomendação: Use ViewStateMode, em vez de EnableViewState, para fornecer controle granular sobre quais controles usam o estado de exibição.
+Recomendação: Use ViewStatemode, em vez de EnableViewState, para fornecer controle granular sobre quais controles usam o estado de exibição.
 
-Quando você define EnableViewState como falso na diretiva Page, o estado de exibição está desabilitado para todos os controles dentro da página e não pode ser habilitado. Se você quiser habilitar o estado de exibição para apenas determinados controles em sua página, defina ViewStateMode como desabilitado para a página.
+Quando você define EnableViewState como false na diretiva Page, o estado de exibição é desabilitado para todos os controles dentro da página e não pode ser habilitado. Se você quiser habilitar o estado de exibição somente para determinados controles em sua página, defina ViewStatemode como desabilitado para a página.
 
 [!code-aspx[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample13.aspx)]
 
-Em seguida, defina ViewStateMode para habilitado nos controles que realmente precisam de estado de exibição.
+Em seguida, defina ViewStatemode como habilitado somente nos controles que realmente precisam de estado de exibição.
 
 [!code-aspx[Main](what-not-to-do-in-aspnet-and-what-to-do-instead/samples/sample14.aspx)]
 
-Habilitando o estado de exibição para os controles que precisam dele, você pode reduzir o tamanho do estado de exibição para suas páginas da web.
+Ao habilitar o estado de exibição somente para os controles que precisam dele, você pode reduzir o tamanho do estado de exibição para suas páginas da Web.
 
 <a id="sqlprovider"></a>
 
 ### <a name="sqlmembershipprovider"></a>SqlMembershipProvider
 
-Recomendação: Use provedores universais.
+Recomendação: Use Provedores Universais.
 
-Em modelos de projeto atual, SqlMembershipProvider foi substituído por [ASP.NET Universal Providers](http://www.nuget.org/packages/Microsoft.AspNet.Providers), que está disponível como um pacote do NuGet. Se você estiver usando SqlMembershipProvider em um projeto que foi criado com uma versão anterior dos modelos, você deve alternar para provedores universais. Os provedores universais funcionam com todos os bancos de dados que são suportados pelo Entity Framework.
+Nos modelos de projeto atuais, o SqlMembershipProvider foi substituído por [provedores universais ASP.net](http://www.nuget.org/packages/Microsoft.AspNet.Providers), que está disponível como um pacote NuGet. Se você estiver usando o SqlMembershipProvider em um projeto criado com uma versão anterior dos modelos, você deverá alternar para Provedores Universais. O Provedores Universais trabalhar com todos os bancos de dados com suporte no Entity Framework.
 
-Para obter mais informações, consulte [apresentando o ASP.NET Universal Providers](http://www.hanselman.com/blog/IntroducingSystemWebProvidersASPNETUniversalProvidersForSessionMembershipRolesAndUserProfileOnSQLCompactAndSQLAzure.aspx).
+Para obter mais informações, consulte [introducing provedores universais ASP.net](http://www.hanselman.com/blog/IntroducingSystemWebProvidersASPNETUniversalProvidersForSessionMembershipRolesAndUserProfileOnSQLCompactAndSQLAzure.aspx).
 
 <a id="long"></a>
 
 ### <a name="long-running-requests-110-seconds"></a>Solicitações de execução longa (> 110 segundos)
 
-Recomendação: Use [WebSockets](https://msdn.microsoft.com/library/system.net.websockets.websocket.aspx) ou [SignalR](../../../signalr/index.md) para clientes conectados e use operações de e/s assíncronas.
+Recomendação: Use o [WebSockets](https://msdn.microsoft.com/library/system.net.websockets.websocket.aspx) ou O [signalr](../../../signalr/index.md) para clientes conectados e use operações de e/s assíncronas.
 
-Solicitações de execução longa podem causar resultados imprevisíveis e baixo desempenho em seu aplicativo web. A configuração de tempo limite padrão para uma solicitação é de 110 segundos. Se você estiver usando o estado de sessão com uma solicitação de longa execução, o ASP.NET liberará o bloqueio no objeto de sessão depois de 110 segundos. No entanto, seu aplicativo pode ser no meio de uma operação no objeto de sessão quando o bloqueio seja liberado, e a operação pode não ser concluída com êxito. Se uma segunda solicitação do usuário for bloqueada enquanto a primeira solicitação está em execução, a segunda solicitação pode acessar o objeto de sessão em um estado inconsistente.
+Solicitações de execução longa podem causar resultados imprevisíveis e baixo desempenho em seu aplicativo Web. A configuração de tempo limite padrão para uma solicitação é de 110 segundos. Se você estiver usando o estado de sessão com uma solicitação de execução longa, o ASP.NET liberará o bloqueio no objeto de sessão após 110 segundos. No entanto, seu aplicativo pode estar no meio de uma operação no objeto de sessão quando o bloqueio é liberado e a operação pode não ser concluída com êxito. Se uma segunda solicitação do usuário for bloqueada enquanto a primeira solicitação estiver em execução, a segunda solicitação poderá acessar o objeto de sessão em um estado inconsistente.
 
-Se seu aplicativo inclui operações de e/s de bloqueio (ou síncronas), o aplicativo será sem resposta.
+Se seu aplicativo incluir operações de e/s de bloqueio (ou síncrona), o aplicativo não responderá.
 
-Para melhorar o desempenho, use as operações de e/s assíncronas no .NET Framework. Além disso, use o SignalR ou WebSockets para conectar clientes ao servidor. Esses recursos são projetados para manipular solicitações de execução longa.
+Para melhorar o desempenho, use as operações de e/s assíncronas no .NET Framework. Além disso, use WebSockets ou Signalr para conectar clientes ao servidor. Esses recursos são projetados para lidar com eficiência com as solicitações de longa execução.

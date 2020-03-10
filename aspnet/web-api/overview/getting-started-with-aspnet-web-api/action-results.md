@@ -10,11 +10,11 @@ ms.assetid: 2fc4797c-38ef-4cc7-926c-ca431c4739e8
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/action-results
 msc.type: authoredcontent
 ms.openlocfilehash: f00ac0db453053e53d6d6942dd1557b409f4167b
-ms.sourcegitcommit: 4b324a11131e38f920126066b94ff478aa9927f8
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70985847"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557053"
 ---
 # <a name="action-results-in-web-api-2"></a>Resultados da ação na API Web 2
 
@@ -24,7 +24,7 @@ Este tópico descreve como ASP.NET Web API converte o valor de retorno de uma a�
 
 Uma ação do controlador da API Web pode retornar qualquer um dos seguintes:
 
-1. void
+1. anulação
 2. **HttpResponseMessage**
 3. **IHttpActionResult**
 4. Algum outro tipo
@@ -33,16 +33,16 @@ Dependendo de quais delas é retornado, a API da Web usa um mecanismo diferente 
 
 | Tipo de retorno | Como a API da Web cria a resposta |
 | --- | --- |
-| void | Retornar 204 vazio (sem conteúdo) |
+| anulação | Retornar 204 vazio (sem conteúdo) |
 | **HttpResponseMessage** | Converter diretamente em uma mensagem de resposta HTTP. |
 | **IHttpActionResult** | Chame **ExecuteAsync** para criar um **HttpResponseMessage**e, em seguida, converta em uma mensagem de resposta http. |
 | Outro tipo | Gravar o valor de retorno serializado no corpo da resposta; retornar 200 (OK). |
 
 O restante deste tópico descreve cada opção mais detalhadamente.
 
-## <a name="void"></a>void
+## <a name="void"></a>anulação
 
-Se o tipo de retorno `void`for, a API Web simplesmente retornará uma resposta http vazia com o código de status 204 (sem conteúdo).
+Se o tipo de retorno for `void`, a API Web simplesmente retornará uma resposta HTTP vazia com o código de status 204 (sem conteúdo).
 
 Controlador de exemplo:
 
@@ -60,7 +60,7 @@ Essa opção lhe dá muito controle sobre a mensagem de resposta. Por exemplo, a
 
 [!code-csharp[Main](action-results/samples/sample3.cs)]
 
-Responde
+Resposta:
 
 [!code-console[Main](action-results/samples/sample4.cmd?highlight=2)]
 
@@ -92,7 +92,7 @@ Exemplo de ação do controlador:
 
 [!code-csharp[Main](action-results/samples/sample8.cs)]
 
-Responde
+Resposta:
 
 [!code-console[Main](action-results/samples/sample9.cmd)]
 
@@ -112,10 +112,10 @@ Uma desvantagem dessa abordagem é que você não pode retornar diretamente um c
 
 A API Web usa o cabeçalho Accept na solicitação para escolher o formatador. Para obter mais informações, consulte [negociação de conteúdo](../formats-and-model-binding/content-negotiation.md).
 
-Exemplo de solicitação
+Solicitação de exemplo
 
 [!code-console[Main](action-results/samples/sample12.cmd)]
 
-Resposta de exemplo
+Exemplo de resposta
 
 [!code-console[Main](action-results/samples/sample13.cmd)]

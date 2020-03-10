@@ -9,11 +9,11 @@ ms.assetid: d3a270b9-d7b1-47f2-8775-fc3beb518b5c
 msc.legacyurl: /mvc/overview/older-versions-1/unit-testing/creating-unit-tests-for-asp-net-mvc-applications-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 35fd0d85c63e5bd196394ce11b851c822a6405d9
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595281"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78623938"
 ---
 # <a name="creating-unit-tests-for-aspnet-mvc-applications-c"></a>Criação de testes de unidade para aplicativos do ASP.NET MVC (C#)
 
@@ -112,4 +112,4 @@ Em seguida, examinamos como você pode testar o conteúdo de `View Data`. Você 
 Por fim, discutimos como você pode testar se diferentes tipos de resultados de ação são retornados de uma ação do controlador. Você aprendeu como testar se um controlador retorna um `ViewResult` ou um `RedirectToRouteResult`.
 
 > [!div class="step-by-step"]
-> [Avançar](creating-unit-tests-for-asp-net-mvc-applications-vb.md)
+> [Próximo](creating-unit-tests-for-asp-net-mvc-applications-vb.md)

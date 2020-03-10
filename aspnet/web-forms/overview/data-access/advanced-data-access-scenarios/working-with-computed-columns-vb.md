@@ -9,11 +9,11 @@ ms.assetid: 5811b8ff-ed56-40fc-9397-6b69ae09a8f6
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/working-with-computed-columns-vb
 msc.type: authoredcontent
 ms.openlocfilehash: e425d7363c2cdea6efb0ba51f3fc2b6a5330bf2a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74603123"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78524482"
 ---
 # <a name="working-with-computed-columns-vb"></a>Trabalhar com colunas computadas (VB)
 
@@ -101,7 +101,7 @@ Depois de inserir a consulta principal e clicar em avançar, o assistente nos pe
 
 **Figura 4**: personalizar os nomes dos procedimentos armazenados gerados automaticamente ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image12.png))
 
-A próxima etapa do assistente nos permite nomear os métodos TableAdapter s e especificar os padrões usados para acessar e atualizar os dados. Deixe todas as três caixas de seleção marcadas, mas renomeie o método `GetData` como `GetSuppliers`. Clique em Concluir para concluir o assistente.
+A próxima etapa do assistente nos permite nomear os métodos TableAdapter s e especificar os padrões usados para acessar e atualizar os dados. Deixe todas as três caixas de seleção marcadas, mas renomeie o método `GetData` como `GetSuppliers`. Clique em Concluir para finalizar o assistente.
 
 [![renomear o método GetData para getsuppliers](working-with-computed-columns-vb/_static/image14.png)](working-with-computed-columns-vb/_static/image13.png)
 
@@ -111,7 +111,7 @@ Ao clicar em concluir, o assistente criará os quatro procedimentos armazenados 
 
 ## <a name="step-4-including-the-computed-column-in-the-tableadapter-s-main-query"></a>Etapa 4: incluindo a coluna computada na consulta principal do TableAdapter s
 
-Agora, precisamos atualizar o TableAdapter e DataTable criado na etapa 3 para incluir a `FullContactName` coluna computada. Isso é feito em duas etapas:
+Agora, precisamos atualizar o TableAdapter e DataTable criado na etapa 3 para incluir a `FullContactName` coluna computada. Isso envolve duas etapas:
 
 1. Atualizando o procedimento armazenado `Suppliers_Select` para retornar a `FullContactName` coluna computada e
 2. Atualizando DataTable para incluir uma coluna de `FullContactName` correspondente.
@@ -128,7 +128,7 @@ Em seguida, retorne ao DataSet Designer, clique com o botão direito do mouse no
 
 **Figura 6**: executar o assistente de configuração do TableAdapter s para atualizar as colunas DataTable s ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image18.png))
 
-Clique em Concluir para concluir o assistente. Isso adicionará automaticamente uma coluna correspondente à `SuppliersDataTable`. O assistente TableAdapter é inteligente o suficiente para detectar que a coluna `FullContactName` é uma coluna computada e, portanto, somente leitura. Consequentemente, ele define a propriedade s `ReadOnly` da coluna como `true`. Para verificar isso, selecione a coluna na `SuppliersDataTable` e, em seguida, vá para a janela Propriedades (veja a Figura 7). Observe que as propriedades `FullContactName` s `DataType` e `MaxLength` de coluna também são definidas de acordo.
+Clique em Concluir para finalizar o assistente. Isso adicionará automaticamente uma coluna correspondente à `SuppliersDataTable`. O assistente TableAdapter é inteligente o suficiente para detectar que a coluna `FullContactName` é uma coluna computada e, portanto, somente leitura. Consequentemente, ele define a propriedade s `ReadOnly` da coluna como `true`. Para verificar isso, selecione a coluna na `SuppliersDataTable` e, em seguida, vá para a janela Propriedades (veja a Figura 7). Observe que as propriedades `FullContactName` s `DataType` e `MaxLength` de coluna também são definidas de acordo.
 
 [![a coluna FullContactName está marcada como somente leitura](working-with-computed-columns-vb/_static/image20.png)](working-with-computed-columns-vb/_static/image19.png)
 
@@ -160,7 +160,7 @@ Por fim, o assistente nos solicita os padrões de acesso a dados e os nomes de m
 
 **Figura 10**: nomear os métodos TableAdapter `FillBySupplierID` e `GetSupplierBySupplierID` ([clique para exibir a imagem em tamanho normal](working-with-computed-columns-vb/_static/image30.png))
 
-Clique em Concluir para concluir o assistente.
+Clique em Concluir para finalizar o assistente.
 
 ## <a name="step-6-creating-the-business-logic-layer"></a>Etapa 6: criando a camada de lógica de negócios
 

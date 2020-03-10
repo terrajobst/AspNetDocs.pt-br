@@ -6,13 +6,13 @@ author: Rick-Anderson
 ms.author: riande
 title: Documentação do ASP.NET
 ms.date: 08/24/2018
-description: Saiba como desenvolver o ASP.NET e aplicativos Web ASP.NET. Obter documentação, código de exemplo, tutoriais e muito mais.
+description: Saiba como desenvolver o ASP.NET e aplicativos Web ASP.NET. Obtenha documentação, código de exemplo, tutoriais e muito mais.
 ms.openlocfilehash: 6309704444d60d42d49c3a8f1683045dc503e761
-ms.sourcegitcommit: cd35be4b25eb05724a5f074214bbdf6573349eda
-ms.translationtype: HT
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161688"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616420"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -80,7 +80,7 @@ ms.locfileid: "70161688"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Referência API</h3>
+                                                    <h3>Referência de API</h3>
                                                     <p>Explore a biblioteca de classes do ASP.NET Core.</p>
                                                 </div>
                                             </div>
@@ -99,7 +99,7 @@ ms.locfileid: "70161688"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Visão geral sobre o ASP.NET Core MVC</h3>
+                                                    <h3>Visão geral do ASP.NET Core MVC</h3>
                                                     <p>Saiba como a criar aplicativos Web e APIs usando o padrão de design MVC.</p>
                                                 </div>
                                             </div>
@@ -118,7 +118,7 @@ ms.locfileid: "70161688"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Princípios básicos</h3>
+                                                    <h3>Conceitos básicos</h3>
                                                     <p>Conheça os conceitos básicos do ASP.NET Core.</p>
                                                 </div>
                                             </div>
@@ -309,7 +309,7 @@ ms.locfileid: "70161688"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Baixe o Visual Studio</h3>
+                                                    <h3>Baixar o Visual Studio</h3>
                                                     <p>O Visual Studio é um IDE gratuito para o ASP.NET no Windows.</p>
                                                 </div>
                                             </div>
@@ -404,7 +404,7 @@ ms.locfileid: "70161688"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Em tempo real</h3>
+                                                    <h3>Tempo real</h3>
                                                     <p>Saiba como criar um aplicativo de chat usando o ASP.NET SignalR 2 e o Visual Studio.</p>
                                                 </div>
                                             </div>
@@ -457,7 +457,7 @@ ms.locfileid: "70161688"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Web Forms</h3>
+                                                    <h3>Formulários da Web</h3>
                                                     <p>Crie sites dinâmicos usando um modelo familiar do tipo "arrastar e soltar" controlado por evento.</p>
                                                 </div>
                                             </div>

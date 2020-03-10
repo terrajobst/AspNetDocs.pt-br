@@ -9,11 +9,11 @@ ms.assetid: e454c67d-a86e-4119-a858-eb04bbec2dff
 msc.legacyurl: /mvc/overview/older-versions-1/views/creating-custom-html-helpers-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 264ff9850bad397826b45649d52fbfefafc53a01
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594497"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78600236"
 ---
 # <a name="creating-custom-html-helpers-c"></a>Criação de auxiliares de HTML personalizados (C#)
 
@@ -33,17 +33,17 @@ Um auxiliar HTML é apenas um método que retorna uma cadeia de caracteres. A ca
 
 O ASP.NET MVC Framework inclui o seguinte conjunto de auxiliares HTML padrão (esta não é uma lista completa):
 
-- HTML. ActionLink ()
-- HTML. BeginForm ()
-- HTML. CheckBox ()
-- HTML. DropDownList ()
-- HTML. EndForm ()
-- HTML. Hidden ()
-- HTML. ListBox ()
-- HTML. Password ()
-- HTML. RadioButton ()
-- HTML. TextArea ()
-- HTML. TextBox ()
+- Html.ActionLink()
+- Html.BeginForm()
+- Html.CheckBox()
+- Html.DropDownList()
+- Html.EndForm()
+- Html.Hidden()
+- Html.ListBox()
+- Html.Password()
+- Html.RadioButton()
+- Html.TextArea()
+- Html.TextBox()
 
 Por exemplo, considere o formulário na Listagem 1. Esse formulário é renderizado com a ajuda de dois dos auxiliares HTML padrão (consulte a Figura 1). Esse formulário usa os métodos auxiliares `Html.BeginForm()` e `Html.TextBox()` para renderizar um formulário HTML simples.
 

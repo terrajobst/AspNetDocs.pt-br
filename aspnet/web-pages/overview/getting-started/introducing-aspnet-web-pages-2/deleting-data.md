@@ -1,25 +1,25 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
-title: Introdução ao ASP.NET Web Pages – excluindo o banco de dados | Microsoft Docs
+title: Introdução ao Páginas da Web do ASP.NET-excluindo dados do banco de dados | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial mostra como excluir uma entrada de banco de dados individuais. Ele pressupõe que você tenha concluído a série por meio de atualização de banco de dados no PA da Web do ASP.NET....
+description: Este tutorial mostra como excluir uma entrada de banco de dados individual. Ele pressupõe que você concluiu a série por meio da atualização de dados do banco de dados no ASP.NET Web PA...
 ms.author: riande
 ms.date: 01/02/2018
 ms.assetid: 75b5c1cf-84bd-434f-8a86-85c568eb5b09
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/deleting-data
 msc.type: authoredcontent
 ms.openlocfilehash: c8620fc1abc61d514bdc039c66f7a84e67e89abe
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133483"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629034"
 ---
-# <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Introdução ao ASP.NET Web Pages – excluindo o banco de dados
+# <a name="introducing-aspnet-web-pages---deleting-database-data"></a>Apresentando Páginas da Web do ASP.NET-excluindo dados do banco
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este tutorial mostra como excluir uma entrada de banco de dados individuais. Ele pressupõe que você tenha concluído a série por meio [atualização do banco de dados em páginas da Web do ASP.NET](updating-data.md).
+> Este tutorial mostra como excluir uma entrada de banco de dados individual. Ele pressupõe que você concluiu a série por meio da [atualização de dados do banco de dados no páginas da Web do ASP.net](updating-data.md).
 > 
 > O que você aprenderá:
 > 
@@ -28,144 +28,144 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > - Como verificar se um botão específico foi clicado em um formulário.
 >   
 > 
-> Recursos/tecnologias abordadas:
+> Recursos/tecnologias abordados:
 > 
-> - O `WebGrid` auxiliar.
-> - O SQL `Delete` comando.
-> - O `Database.Execute` método para executar um SQL `Delete` comando.
+> - O auxiliar de `WebGrid`.
+> - O comando SQL `Delete`.
+> - O método `Database.Execute` para executar um comando SQL `Delete`.
 
-## <a name="what-youll-build"></a>O que você vai criar
+## <a name="what-youll-build"></a>O que você vai construir
 
-No tutorial anterior, você aprendeu como atualizar um registro de banco de dados existente. Este tutorial é semelhante, exceto que em vez de atualizar o registro, você poderá excluí-lo. Os processos são muito parecidas, exceto que a exclusão é mais simples, portanto, este tutorial é curto.
+No tutorial anterior, você aprendeu a atualizar um registro de banco de dados existente. Este tutorial é semelhante, exceto que, em vez de atualizar o registro, você o excluirá. Os processos são muito semelhantes, exceto que a exclusão é mais simples, portanto, este tutorial será curto.
 
-No *filmes* página, você atualizará o `WebGrid` auxiliar de modo que ele exibe um **excluir** link ao lado de cada filme para acompanhar o **editar** link adicionado anteriormente.
+Na página *filmes* , você atualizará o `WebGrid` auxiliar para que ele exiba um link de **exclusão** ao lado de cada filme para acompanhar o link de **edição** adicionado anteriormente.
 
-![Página de filmes mostrando um link de Delete para cada filme](deleting-data/_static/image1.png)
+![Página de filmes mostrando um link de exclusão para cada filme](deleting-data/_static/image1.png)
 
-Assim como acontece com a edição, quando você clica o **excluir** link, ele leva você até uma página diferente, onde as informações do filme já estão em um formulário:
+Assim como acontece com a edição, quando você clica no link **excluir** , ele leva para uma página diferente, onde as informações do filme já estão em um formato:
 
-![Excluir página de filmes com um filme exibido](deleting-data/_static/image2.png)
+![Excluir página de filme com um filme exibido](deleting-data/_static/image2.png)
 
-Clique no botão para excluí-lo permanentemente.
+Em seguida, você pode clicar no botão para excluir o registro permanentemente.
 
-## <a name="adding-a-delete-link-to-the-movie-listing"></a>Adicionar um Link de exclusão para a listagem de filmes
+## <a name="adding-a-delete-link-to-the-movie-listing"></a>Adicionando um link de exclusão à listagem de filmes
 
-Você começa pela adição de um **excluir** link para o `WebGrid` auxiliar. Esse link é semelhante para o **editar** link adicionado em um tutorial anterior.
+Você começará adicionando um link de **exclusão** ao auxiliar de `WebGrid`. Esse link é semelhante ao link de **edição** que você adicionou em um tutorial anterior.
 
-Abra o *Movies.cshtml* arquivo.
+Abra o arquivo *Movies. cshtml* .
 
-Alterar o `WebGrid` marcação no corpo da página, adicionando uma coluna. Aqui está a marcação modificada:
+Altere a marcação de `WebGrid` no corpo da página adicionando uma coluna. Aqui está a marcação modificada:
 
 [!code-html[Main](deleting-data/samples/sample1.html?highlight=9-10)]
 
-A nova coluna é este:
+A nova coluna é esta:
 
 [!code-html[Main](deleting-data/samples/sample2.html)]
 
-A maneira como a grade estiver configurada, o **editar** coluna é mais à esquerda na grade e o **excluir** coluna é mais à direita. (Há uma vírgula após o `Year` coluna agora, caso você não notei isso.) Não há nada de especial sobre onde ir essas colunas de link, e você pode colocá-los tão facilmente próximos uns dos outros. Nesse caso, eles são separados para torná-los mais difícil de se misturar.
+A maneira como a grade é configurada, a coluna de **edição** fica mais à esquerda na grade e a coluna **excluir** é a mais à direita. (Há uma vírgula após a `Year` coluna agora, caso você não tenha notado isso.) Não há nada de especial sobre onde essas colunas de link vão, e você poderia colocá-las facilmente ao lado umas das outras. Nesse caso, eles são separados para torná-los mais difíceis de serem misturados.
 
-![Página de filmes com links de edição e detalhes marcada para mostrar que não estão próximos uns dos outros](deleting-data/_static/image3.png)
+![Página de filmes com links de edição e detalhes marcados para mostrar que eles não estão próximos uns dos outros](deleting-data/_static/image3.png)
 
-A nova coluna mostra um link (`<a>` elemento) cujo texto é "Excluir". O destino do link (sua `href` atributo) é o código que é resolvida, por fim, para algo como essa URL com o `id` valor diferente para cada filme:
+A nova coluna mostra um link (`<a>` elemento) cujo texto diz "excluir". O destino do link (seu atributo `href`) é o código que, em última instância, é resolvido para algo como essa URL, com o valor de `id` diferente para cada filme:
 
 [!code-css[Main](deleting-data/samples/sample3.css)]
 
-Esse link invocará uma página chamada *DeleteMovie* e passá-lo a ID do filme que você selecionou.
+Esse link invocará uma página chamada *DeleteMovie* e passará a ID do filme que você selecionou.
 
-Este tutorial não entrarei em detalhes sobre como esse link é construído, porque ele é quase idêntico do **editar** link do tutorial anterior ([atualização do banco de dados em páginas da Web do ASP.NET](updating-data.md)).
+Este tutorial não entrará em detalhes sobre como esse link é construído, pois ele é quase idêntico ao link de **edição** do tutorial anterior ([atualizando dados de banco em páginas da Web do ASP.net](updating-data.md)).
 
-## <a name="creating-the-delete-page"></a>Criando a página Excluir
+## <a name="creating-the-delete-page"></a>Criando a página excluir
 
-Agora você pode criar a página que será o destino para o **excluir** link na grade.
+Agora você pode criar a página que será o destino do link de **exclusão** na grade.
 
 > [!NOTE] 
 > 
-> **Importante** a técnica de primeiro selecionando um registro a ser excluído e, em seguida, usando uma página separada e um botão para confirmar o processo é extremamente importante para a segurança. Como você já leu nos tutoriais anteriores, tornando *qualquer* tipo de alteração para o seu site deve *sempre* ser feito usando um formulário &mdash; ou seja, usando uma operação HTTP POST. Se você agora é possível alterar o site apenas clicando em um link (ou seja, usando uma operação GET), as pessoas poderia fazer solicitações simples para seu site e excluir seus dados. Até mesmo um rastreador de mecanismo de pesquisa que seu site é a indexação inadvertidamente puder excluir dados apenas por links a seguir.
+> **Importante** A técnica de primeiro selecionar um registro para excluir e, em seguida, usar uma página e um botão separados para confirmar se o processo é extremamente importante para a segurança. Como você leu nos tutoriais anteriores, fazer *qualquer* tipo de alteração em seu site *sempre* deve ser feito usando um formulário &mdash; ou seja, usando uma operação http post. Se você tornou possível alterar o site apenas clicando em um link (ou seja, usando uma operação GET), as pessoas podem fazer solicitações simples ao seu site e excluir seus dados. Até mesmo um rastreador de mecanismo de pesquisa que está indexando seu site pode excluir dados inadvertidamente apenas pelos links a seguir.
 > 
-> Quando seu aplicativo permite que as pessoas alterar um registro, você precisa apresentar o registro para o usuário para edição de qualquer forma. Mas você pode ficar tentado a ignorar esta etapa para exclusão de um registro. Não ignore essa etapa, no entanto. (Também é útil para os usuários ver o registro e confirmar que ele está excluindo o registro que eles se destinam.)
+> Quando seu aplicativo permite que as pessoas alterem um registro, você precisa apresentar o registro ao usuário para edição de qualquer forma. Mas você pode estar tentado a ignorar esta etapa para excluir um registro. No entanto, não pule essa etapa. (Também é útil para os usuários ver o registro e confirmar que estão excluindo o registro que pretendiam.)
 > 
-> Um conjunto de tutoriais subsequente, você verá como adicionar funcionalidade de logon para que um usuário precise entrar antes de excluir um registro.
+> Em um conjunto de tutorial subsequente, você verá como adicionar a funcionalidade de logon para que um usuário precise fazer logon antes de excluir um registro.
 
-Crie uma página chamada *DeleteMovie.cshtml* e substituir o que está no arquivo com a seguinte marcação:
+Crie uma página chamada *DeleteMovie. cshtml* e substitua o que está no arquivo pela seguinte marcação:
 
 [!code-cshtml[Main](deleting-data/samples/sample4.cshtml)]
 
-Essa marcação é como o *EditMovie* páginas, exceto que em vez de usar as caixas de texto (`<input type="text">`), a marcação inclui `<span>` elementos. Não há nada aqui para editar. Tudo o que você precisa fazer é exibir os detalhes do filme, para que os usuários podem ter certeza de que eles está excluindo o filme à direita.
+Essa marcação é como as páginas *EditMovie* , exceto que, em vez de usar caixas de texto (`<input type="text">`), a marcação inclui elementos `<span>`. Não há nada aqui para editar. Tudo o que você precisa fazer é exibir os detalhes do filme para que os usuários possam ter certeza de que estão excluindo o filme correto.
 
-A marcação já contém um link que permite que o usuário retornar à página de listagem de filmes.
+A marcação já contém um link que permite que o usuário retorne à página de listagem de filmes.
 
-Como mostra a *EditMovie* página, a ID do filme selecionado é armazenada em um campo oculto. (Ele é passado para a página inicialmente como um valor de cadeia de caracteres de consulta.) Há um `Html.ValidationSummary` chamada que exibirá os erros de validação. Nesse caso, o erro pode ser que não há ID de filme foi passado para a página ou a ID de filme é inválida. Essa situação pode ocorrer se alguém executou desta página sem primeiro selecionar um filme na *filmes* página.
+Como na página *EditMovie* , a ID do filme selecionado é armazenada em um campo oculto. (Ele é passado para a página em primeiro lugar como um valor de cadeia de caracteres de consulta.) Há uma chamada `Html.ValidationSummary` que exibirá erros de validação. Nesse caso, o erro pode ser que nenhuma ID de filme foi passada para a página ou que a ID do filme seja inválida. Essa situação pode ocorrer se alguém executar essa página sem primeiro selecionar um filme na página *filmes* .
 
-É a legenda do botão **excluir filme**, e seu atributo name é definido como `buttonDelete`. O `name` atributo será usado no código para identificar o botão que enviou o formulário.
+A legenda do botão é **excluir filme**e seu atributo Name é definido como `buttonDelete`. O atributo `name` será usado no código para identificar o botão que enviou o formulário.
 
-Você precisará escrever código para 1) Leia os detalhes do filme quando a página é exibida pela primeira vez e 2) exclui o filme quando o usuário clica no botão.
+Você precisará escrever código para 1) ler os detalhes do filme quando a página for exibida pela primeira vez e 2), na verdade, excluir o filme quando o usuário clicar no botão.
 
 ## <a name="adding-code-to-read-a-single-movie"></a>Adicionando código para ler um único filme
 
-Na parte superior do *DeleteMovie.cshtml* página, adicione o seguinte bloco de código:
+Na parte superior da página *DeleteMovie. cshtml* , adicione o seguinte bloco de código:
 
 [!code-cshtml[Main](deleting-data/samples/sample5.cshtml)]
 
-Essa marcação é o mesmo que o código correspondente na *EditMovie* página. Ele obtém a ID de filme fora a cadeia de caracteres de consulta e usa a ID para ler um registro do banco de dados. O código inclui o teste de validação (`IsInt()` e `row != null`) para certificar-se de que a ID de filme que está sendo passada para a página é válida.
+Essa marcação é igual ao código correspondente na página *EditMovie* . Ele obtém a ID do filme da cadeia de caracteres de consulta e usa a ID para ler um registro do banco de dados. O código inclui o teste de validação (`IsInt()` e `row != null`) para garantir que a ID do filme que está sendo passada para a página seja válida.
 
-Lembre-se de que esse código deve apenas ser executado na primeira vez em que a página é executada. Você não deseja ler novamente o registro de filme do banco de dados quando o usuário clica o **filme excluir** botão. Portanto, o código para ler o filme está dentro de um teste que diz `if(!IsPost)` &mdash; , ou seja, *se a solicitação não é uma operação post (envio do formulário)*.
+Lembre-se de que esse código só deve ser executado na primeira vez em que a página for executada. Você não deseja ler novamente o registro do filme do banco de dados quando o usuário clica no botão **excluir filme** . Portanto, o código para ler o filme está dentro de um teste que diz `if(!IsPost)` &mdash; ou seja, *se a solicitação não for uma operação post (envio de formulário)* .
 
 ## <a name="adding-code-to-delete-the-selected-movie"></a>Adicionando código para excluir o filme selecionado
 
-Para excluir o filme quando o usuário clica no botão, adicione o seguinte código dentro da chave de fechamento do `@` bloco:
+Para excluir o filme quando o usuário clicar no botão, adicione o seguinte código apenas dentro da chave de fechamento do bloco de `@`:
 
 [!code-csharp[Main](deleting-data/samples/sample6.cs)]
 
-Esse código é semelhante ao código para atualizar um registro existente, mas é mais simples. Basicamente, o código executa um SQL `Delete` instrução.
+Esse código é semelhante ao código para atualizar um registro existente, mas mais simples. O código basicamente executa uma instrução SQL `Delete`.
 
- Como mostra a *EditMovie* página, o código está em um `if(IsPost)` bloco. Neste momento, o `if()` condição é um pouco mais complicada: 
+ Como na página *EditMovie* , o código está em um bloco de `if(IsPost)`. Desta vez, a condição de `if()` é um pouco mais complicada: 
 
 [!code-csharp[Main](deleting-data/samples/sample7.cs)]
 
-Há duas condições aqui. A primeira é que a página está sendo enviada, como você viu antes &mdash; `if(IsPost)`.
+Há duas condições aqui. A primeira é que a página está sendo enviada, como você viu antes de &mdash; `if(IsPost)`.
 
-A segunda condição for `!Request["buttonDelete"].IsEmpty()`, que significa que a solicitação tem um objeto chamado `buttonDelete`. Sem dúvida, é uma maneira indireta de teste qual botão enviado o formulário. Se um formulário contiver vários botões de envio, apenas o nome do botão que foi clicado é exibido na solicitação. Portanto, logicamente, se o nome de um determinado botão aparece na solicitação &mdash; ou conforme declarado no código, se esse botão não estiver vazio &mdash; que é o botão que enviou o formulário.
+A segunda condição é `!Request["buttonDelete"].IsEmpty()`, o que significa que a solicitação tem um objeto chamado `buttonDelete`. Reconhecidamente, é uma maneira indireta de testar qual botão enviou o formulário. Se um formulário contiver vários botões de envio, somente o nome do botão que foi clicado aparecerá na solicitação. Portanto, logicamente, se o nome de um botão específico for exibido na solicitação &mdash; ou conforme indicado no código, se esse botão não estiver vazio &mdash; é o botão que enviou o formulário.
 
-O `&&` significa que o operador "e" (AND lógico). Portanto, todo o `if` condição é...
+O operador de `&&` significa "and" (and lógico). Portanto, toda a condição de `if` é...
 
-*Essa solicitação é uma postagem (não uma solicitação pela primeira vez)*  
+*Esta solicitação é uma postagem (não é uma solicitação de primeira vez)*  
   
  AND  
   
-*O* `buttonDelete` *botão foi o botão que enviou o formulário.*
+*O botão de* `buttonDelete`*foi o botão que enviou o formulário.*
 
-Este formulário (na verdade, essa página) contém apenas um botão, portanto, o teste adicional para `buttonDelete` tecnicamente não é necessária. Ainda assim, você está prestes a realizar uma operação que irá remover permanentemente os dados. Portanto, você queira Certifique-se como possível que você está executando a operação somente quando o usuário tiver solicitado explicitamente. Por exemplo, suponha que você expandido essa página posteriormente e adicionou outros botões para ele. Mesmo assim, o código que exclui o filme será executado somente se o `buttonDelete` botão foi clicado.
+Esse formulário (na verdade, essa página) contém apenas um botão, portanto, o teste adicional para `buttonDelete` tecnicamente não é necessário. Ainda assim, você está prestes a executar uma operação que removerá permanentemente os dados. Portanto, você deve ter a certeza de que está executando a operação somente quando o usuário a solicitou explicitamente. Por exemplo, suponha que você expandiu essa página posteriormente e adicionou outros botões a ela. Mesmo assim, o código que exclui o filme será executado somente se o botão de `buttonDelete` foi clicado.
 
-Como mostra a *EditMovie* página, obter a ID do campo oculto e, em seguida, execute o comando SQL. A sintaxe para o `Delete` instrução é:
+Como na página *EditMovie* , você obtém a ID do campo oculto e, em seguida, executa o comando SQL. A sintaxe para a instrução `Delete` é:
 
 `DELETE FROM table WHERE ID = value`
 
-É vital para incluir o `WHERE` cláusula e a ID. Se você deixar a cláusula WHERE *todos os registros na tabela serão excluídos*. Como você viu, passar o valor da ID para o comando SQL usando um espaço reservado.
+É vital incluir a cláusula `WHERE` e a ID. Se você sair da cláusula WHERE, *todos os registros na tabela serão excluídos*. Como já foi visto, você passa o valor de ID para o comando SQL usando um espaço reservado.
 
-## <a name="testing-the-movie-delete-process"></a>Testar o processo de exclusão de filme
+## <a name="testing-the-movie-delete-process"></a>Testando o processo de exclusão do filme
 
-Agora você pode testar. Execute o *filmes* da página e clique em **excluir** ao lado de um filme. Quando o *DeleteMovie* página for exibida, clique em **filme excluir**.
+Agora você pode testar. Execute a página *filmes* e clique em **excluir** ao lado de um filme. Quando a página *DeleteMovie* for exibida, clique em **excluir filme**.
 
-![Excluir página de filmes com o botão Excluir filme realçado](deleting-data/_static/image4.png)
+![Página excluir filme com o botão excluir filme realçado](deleting-data/_static/image4.png)
 
-Quando você clica no botão, o código exclui os filmes e retorna para a listagem de filmes. Lá você pode procurar o filme excluído e confirme se ele foi excluído.
+Quando você clica no botão, o código exclui os filmes e retorna para a listagem de filmes. Lá, você pode pesquisar o filme excluído e confirmar que ele foi excluído.
 
-## <a name="coming-up-next"></a>Próximo
+## <a name="coming-up-next"></a>Chegando em seguida
 
-O próximo tutorial mostra como fornecer todas as páginas em seu site de uma aparência comum e o layout.
+O próximo tutorial mostra como dar a você uma aparência e um layout comuns a todas as páginas de seu site.
 
-## <a name="complete-listing-for-movie-page-updated-with-delete-links"></a>Listagem completa para a página de filme (atualizada com os Links excluir)
+## <a name="complete-listing-for-movie-page-updated-with-delete-links"></a>Listagem completa da página de filme (atualizada com links de exclusão)
 
 [!code-cshtml[Main](deleting-data/samples/sample8.cshtml)]
 
-## <a name="complete-listing-for-deletemovie-page"></a>Listagem completa para a página DeleteMovie
+## <a name="complete-listing-for-deletemovie-page"></a>Listagem completa da página DeleteMovie
 
 [!code-cshtml[Main](deleting-data/samples/sample9.cshtml)]
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução à programação Web do ASP.NET usando a sintaxe do Razor](../introducing-razor-syntax-c.md)
-- [Instrução DELETE do SQL](http://www.w3schools.com/sql/sql_delete.asp) no site W3Schools
+- [Introdução à programação da Web do ASP.NET usando a sintaxe do Razor](../introducing-razor-syntax-c.md)
+- [Instrução SQL Delete](http://www.w3schools.com/sql/sql_delete.asp) no site W3Schools
 
 > [!div class="step-by-step"]
 > [Anterior](updating-data.md)

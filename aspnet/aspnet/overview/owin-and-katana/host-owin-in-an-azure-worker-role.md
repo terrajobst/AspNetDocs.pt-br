@@ -1,137 +1,137 @@
 ---
 uid: aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role
-title: Hospedar OWIN em uma função de trabalho do Azure | Microsoft Docs
+title: Host OWIN em uma função de trabalho do Azure | Microsoft Docs
 author: MikeWasson
-description: Este tutorial mostra como hospedar internamente o OWIN em uma função de trabalho do Microsoft Azure. Open Web Interface para .NET (OWIN) define uma abstração entre o servidor de web do .NET...
+description: Este tutorial mostra como hospedar automaticamente o OWIN em uma função de trabalho Microsoft Azure. Open Web interface para .NET (OWIN) define uma abstração entre o servidor Web do .NET...
 ms.author: riande
 ms.date: 04/11/2014
 ms.assetid: 07aa855a-92ee-4d43-ba66-5bfd7de20ee6
 msc.legacyurl: /aspnet/overview/owin-and-katana/host-owin-in-an-azure-worker-role
 msc.type: authoredcontent
 ms.openlocfilehash: 59d2e0d549427093f8a2424b17af81169b78ef30
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65118266"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584612"
 ---
 # <a name="host-owin-in-an-azure-worker-role"></a>Hospedar OWIN em uma função de trabalho do Azure
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-> Este tutorial mostra como hospedar internamente o OWIN em uma função de trabalho do Microsoft Azure.
+> Este tutorial mostra como hospedar automaticamente o OWIN em uma função de trabalho Microsoft Azure.
 >
-> [Open Web Interface para .NET](http://owin.org/) (OWIN) define uma abstração entre servidores de web do .NET e aplicativos da web. OWIN separa o aplicativo web do servidor, o que torna o OWIN ideal para auto-hospedagem em um aplicativo web em seu próprio processo, fora do IIS – por exemplo, dentro de uma função de trabalho do Azure.
+> O [Open Web interface for .net](http://owin.org/) (OWIN) define uma abstração entre servidores Web e aplicativos Web do .net. OWIN dissocia o aplicativo Web do servidor, o que torna o OWIN ideal para hospedar internamente um aplicativo Web em seu próprio processo, fora do IIS – por exemplo, dentro de uma função de trabalho do Azure.
 >
-> Neste tutorial, você aprenderá como hospedar internamente um aplicativos OWIN dentro de uma função de trabalho do Microsoft Azure. Para saber mais sobre as funções de trabalho, consulte [modelos de execução do Azure](https://azure.microsoft.com/documentation/articles/fundamentals-application-models/#CloudServices).
+> Neste tutorial, você aprenderá a hospedar internamente um aplicativo OWIN dentro de uma função de trabalho Microsoft Azure. Para saber mais sobre as funções de trabalho, consulte [modelos de execução do Azure](https://azure.microsoft.com/documentation/articles/fundamentals-application-models/#CloudServices).
 >
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
 >
 >
 > - [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)
-> - [SDK do Azure para .NET 2.3](https://azure.microsoft.com/downloads/)
-> - [Microsoft.Owin.Selfhost 2.1.0](http://www.nuget.org/packages/Microsoft.Owin.SelfHost/2.1.0)
+> - [SDK do Azure para .NET 2,3](https://azure.microsoft.com/downloads/)
+> - [Microsoft. Owin. Selfhost 2.1.0](http://www.nuget.org/packages/Microsoft.Owin.SelfHost/2.1.0)
 
-## <a name="create-a-microsoft-azure-project"></a>Criar um projeto do Microsoft Azure
+## <a name="create-a-microsoft-azure-project"></a>Criar um projeto Microsoft Azure
 
-Inicie o Visual Studio com privilégios de administrador. Privilégios de administrador são necessárias para depurar o aplicativo localmente, usando o emulador de computação do Azure.
+Inicie o Visual Studio com privilégios de administrador. São necessários privilégios de administrador para depurar o aplicativo localmente, usando o emulador de computação do Azure.
 
-No **arquivo** menu, clique em **New**, em seguida, clique em **projeto**. Partir **modelos instalados**, no Visual c#, clique em **nuvem** e, em seguida, clique em **serviço de nuvem do Windows Azure**. Nomeie o projeto "AzureApp" e clique em **Okey**.
+No menu **arquivo** , clique em **novo**e em **projeto**. Em **modelos instalados**, em Visual C#, clique em **nuvem** e, em seguida, clique em **serviço de nuvem do Windows Azure**. Nomeie o projeto "AzureApp" e clique em **OK**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image2.png)](host-owin-in-an-azure-worker-role/_static/image1.png)
 
-No **novo serviço de nuvem do Windows Azure** caixa de diálogo, clique duas vezes em **função de trabalho**. Deixe o nome padrão ("WorkerRole1"). Esta etapa adiciona uma função de trabalho à solução. Clique em **OK**.
+Na caixa de diálogo **novo serviço de nuvem do Windows Azure** , clique duas vezes em **função de trabalho**. Deixe o nome padrão ("WorkerRole1"). Esta etapa adiciona uma função de trabalho à solução. Clique em **OK**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image4.png)](host-owin-in-an-azure-worker-role/_static/image3.png)
 
-A solução do Visual Studio criado contém dois projetos:
+A solução do Visual Studio criada contém dois projetos:
 
 - &quot;AzureApp&quot; define as funções e a configuração para o aplicativo do Azure.
-- &quot;WorkerRole1&quot; contém o código da função de trabalho.
+- &quot;WorkerRole1&quot; contém o código para a função de trabalho.
 
-Em geral, um aplicativo do Azure pode conter várias funções, embora este tutorial usa uma única função.
+Em geral, um aplicativo do Azure pode conter várias funções, embora este tutorial use uma única função.
 
 ![](host-owin-in-an-azure-worker-role/_static/image5.png)
 
-## <a name="add-the-owin-self-host-packages"></a>Adicione os pacotes de auto-hospedagem de OWIN
+## <a name="add-the-owin-self-host-packages"></a>Adicionar os pacotes de auto-host OWIN
 
-Do **ferramentas** menu, clique em **Gerenciador de pacotes NuGet**, em seguida, clique em **Package Manager Console**.
+No menu **ferramentas** , clique em **Gerenciador de pacotes NuGet**e em **console do Gerenciador de pacotes**.
 
-Na janela do Console do Gerenciador de pacotes, digite o seguinte comando:
+Na janela Console do Gerenciador de Pacotes, digite o seguinte comando:
 
 [!code-console[Main](host-owin-in-an-azure-worker-role/samples/sample1.cmd)]
 
 ## <a name="add-an-http-endpoint"></a>Adicionar um ponto de extremidade HTTP
 
-No Gerenciador de soluções, expanda o projeto AzureApp. Expanda o nó funções, WorkerRole1 com o botão direito e selecione **propriedades**.
+Em Gerenciador de Soluções, expanda o projeto AzureApp. Expanda o nó funções, clique com o botão direito do mouse em WorkerRole1 e selecione **Propriedades**.
 
 ![](host-owin-in-an-azure-worker-role/_static/image6.png)
 
-Clique em **pontos de extremidade**e, em seguida, clique em **Adicionar ponto de extremidade**.
+Clique em **Pontos de Extremidade** e clique em **Adicionar Ponto de Extremidade**.
 
-No **protocolo** lista suspensa, selecione "http". Na **porta pública** e **porta privada**, digite 80. Esses números de porta podem ser diferentes. A porta pública é o que os clientes usam quando eles enviam uma solicitação para a função.
+Na lista suspensa **protocolo** , selecione "http". Em porta **pública** e **porta privada**, digite 80. O número de porta pode ser diferente. A porta pública é o que os clientes usam quando enviam uma solicitação para a função.
 
 [![](host-owin-in-an-azure-worker-role/_static/image8.png)](host-owin-in-an-azure-worker-role/_static/image7.png)
 
 ## <a name="create-the-owin-startup-class"></a>Criar a classe de inicialização OWIN
 
-No Gerenciador de soluções, com o botão direito do mouse no projeto WorkerRole1 e selecione **Add** / **classe** para adicionar uma nova classe. Nomeie a classe `Startup`.
+Em Gerenciador de Soluções, clique com o botão direito do mouse no projeto WorkerRole1 e selecione **adicionar** / **classe** para adicionar uma nova classe. Nome da classe `Startup`.
 
-Substitua todo o código clichê com o seguinte:
+Substitua todo o código clichê pelo seguinte:
 
 [!code-csharp[Main](host-owin-in-an-azure-worker-role/samples/sample2.cs)]
 
-O `UseWelcomePage` método de extensão adiciona uma página HTML simples ao seu aplicativo, para verificar se o site está funcionando.
+O método de extensão `UseWelcomePage` adiciona uma página HTML simples ao seu aplicativo, para verificar se o site está funcionando.
 
-## <a name="start-the-owin-host"></a>Iniciar o Host OWIN
+## <a name="start-the-owin-host"></a>Iniciar o host OWIN
 
-Abra o arquivo WorkerRole.cs. Essa classe define o código que é executado quando a função de trabalho é iniciada e parada.
+Abra o arquivo WorkerRole.cs. Essa classe define o código que é executado quando a função de trabalho é iniciada e interrompida.
 
-Adicione a seguinte instrução using:
+Adicione a seguinte instrução usando:
 
 [!code-csharp[Main](host-owin-in-an-azure-worker-role/samples/sample3.cs)]
 
-Adicionar um **IDisposable** membro para o `WorkerRole` classe:
+Adicione um membro **IDisposable** à classe `WorkerRole`:
 
 [!code-csharp[Main](host-owin-in-an-azure-worker-role/samples/sample4.cs)]
 
-No `OnStart` método, adicione o seguinte código para iniciar o host:
+No método `OnStart`, adicione o seguinte código para iniciar o host:
 
 [!code-csharp[Main](host-owin-in-an-azure-worker-role/samples/sample5.cs?highlight=5)]
 
-O **WebApp.Start** método inicia o host do OWIN. O nome da `Startup` classe é um parâmetro de tipo para o método. Por convenção, o host chamará o `Configure` método dessa classe.
+O método **webapp. Start** inicia o host OWIN. O nome da classe de `Startup` é um parâmetro de tipo para o método. Por convenção, o host chamará o método `Configure` desta classe.
 
-Substituir a `OnStop` descartar o  *\_aplicativo* instância:
+Substitua o `OnStop` para descartar a instância do *aplicativo\_* :
 
 [!code-csharp[Main](host-owin-in-an-azure-worker-role/samples/sample6.cs)]
 
-Aqui está o código completo para WorkerRole.cs:
+Este é o código completo para WorkerRole.cs:
 
 [!code-csharp[Main](host-owin-in-an-azure-worker-role/samples/sample7.cs)]
 
-Compile a solução e pressione F5 para executar o aplicativo localmente no emulador de computação do Azure. Dependendo de suas configurações de firewall, você precisa permitir que o emulador através do firewall.
+Compile a solução e pressione F5 para executar o aplicativo localmente no emulador de computação do Azure. Dependendo das configurações do firewall, talvez seja necessário permitir o emulador por meio do firewall.
 
-O emulador de computação atribui um endereço IP local para o ponto de extremidade. Você pode encontrar o endereço IP, exibindo a interface de usuário do emulador de computação. Clique com botão direito no ícone do emulador na tarefa de área de notificação da barra e, em seguida, selecione **mostrar IU do emulador de computação**.
+O emulador de computação atribui um endereço IP local ao ponto de extremidade. Você pode encontrar o endereço IP exibindo a interface do usuário do emulador de computação. Clique com o botão direito no ícone do emulador na área de notificação da barra de tarefas e selecione **Mostrar interface do usuário do emulador de computação**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image10.png)](host-owin-in-an-azure-worker-role/_static/image9.png)
 
-Localize o endereço IP em implantações de serviços de implantação [id], detalhes do serviço. Abra um navegador da web e navegue para http:\/\/*endereço*, onde *endereço* é o endereço IP atribuído pelo emulador de computação; por exemplo, `http://127.0.0.1:80`. Você verá a página de boas-vinda do OWIN:
+Localize o endereço IP em implantações de serviço, implantação [ID], detalhes do serviço. Abra um navegador da Web e navegue até http:\/*endereço*de \/, em que *endereço* é o endereço IP atribuído pelo emulador de computação; por exemplo, `http://127.0.0.1:80`. Você deverá ver a página de boas-vindas do OWIN:
 
 ![](host-owin-in-an-azure-worker-role/_static/image11.png)
 
 ## <a name="deploy-to-azure"></a>Implantar no Azure
 
-Para esta etapa, você deve ter uma conta do Azure. Se você ainda não tiver uma, você pode criar uma conta de avaliação gratuita em apenas alguns minutos. Para obter detalhes, consulte [avaliação gratuita do Microsoft Azure](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A261C142F).
+Para esta etapa, você deve ter uma conta do Azure. Se você ainda não tiver uma, poderá criar uma conta de avaliação gratuita em apenas alguns minutos. Para obter detalhes, consulte [Microsoft Azure avaliação gratuita](https://azure.microsoft.com/pricing/free-trial/?WT.mc_id=A261C142F).
 
-No Gerenciador de soluções, clique com botão direito no projeto AzureApp. Selecione **Publicar**.
+Em Gerenciador de Soluções, clique com o botão direito do mouse no projeto AzureApp. Selecione **Publicar**.
 
 ![](host-owin-in-an-azure-worker-role/_static/image12.png)
 
-Se você não estiver conectado à sua conta do Azure, clique em **Sign In**.
+Se você não estiver conectado à sua conta do Azure, clique em **entrar**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image14.png)](host-owin-in-an-azure-worker-role/_static/image13.png)
 
-Depois que você está conectado, escolha uma assinatura e clique em **próxima**.
+Depois de entrar, escolha uma assinatura e clique em **Avançar**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image16.png)](host-owin-in-an-azure-worker-role/_static/image15.png)
 
@@ -143,7 +143,7 @@ Clique em **Publicar**.
 
 [![](host-owin-in-an-azure-worker-role/_static/image19.png)](host-owin-in-an-azure-worker-role/_static/image18.png)
 
-A janela de Log de atividades do Azure mostra o progresso da implantação. Quando o aplicativo é implantado, navegue até `http://appname.cloudapp.net/`, onde *appname* é o nome do seu serviço de nuvem.
+A janela log de atividades do Azure mostra o progresso da implantação. Quando o aplicativo for implantado, navegue até `http://appname.cloudapp.net/`, em que *AppName* é o nome do seu serviço de nuvem.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 

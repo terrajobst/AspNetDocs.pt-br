@@ -9,11 +9,11 @@ ms.assetid: d62c3a63-0940-4019-874e-4a4047df0c1c
 msc.legacyurl: /web-forms/overview/data-access/basic-reporting/displaying-data-with-the-objectdatasource-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 754188352cbfb08e610027f5b7890a32bd88ae26
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74609556"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78597044"
 ---
 # <a name="displaying-data-with-the-objectdatasource-vb"></a>Exibir dados com o ObjectDataSource (VB)
 
@@ -140,7 +140,7 @@ Com nosso tema definido, a última etapa é aplicar o tema à nossa página ASP.
 
 [!code-xml[Main](displaying-data-with-the-objectdatasource-vb/samples/sample5.xml)]
 
-E isso é tudo! A configuração `styleSheetTheme` indica que as propriedades especificadas no tema *não* devem substituir as propriedades especificadas no nível de controle. Para especificar que as configurações de tema devem ser configurações de controle de trunfo, use o atributo `theme` no lugar de `styleSheetTheme`; Infelizmente, as configurações de tema não aparecem no modo de exibição de Design do Visual Studio. Consulte [visão geral de temas e capas do ASP.net](https://msdn.microsoft.com/library/ykzx33wh.aspx) e [estilos do lado do servidor usando temas](https://quickstarts.asp.net/quickstartv20/aspnet/doc/themes/stylesheettheme.aspx) para obter mais informações sobre temas e capas; consulte [como: aplicar temas do ASP.net](https://msdn.microsoft.com/library/0yy5hxdk%28VS.80%29.aspx) para saber mais sobre como configurar uma página para usar um tema.
+Isso é tudo! A configuração `styleSheetTheme` indica que as propriedades especificadas no tema *não* devem substituir as propriedades especificadas no nível de controle. Para especificar que as configurações de tema devem ser configurações de controle de trunfo, use o atributo `theme` no lugar de `styleSheetTheme`; Infelizmente, as configurações de tema não aparecem no modo de exibição de Design do Visual Studio. Consulte [visão geral de temas e capas do ASP.net](https://msdn.microsoft.com/library/ykzx33wh.aspx) e [estilos do lado do servidor usando temas](https://quickstarts.asp.net/quickstartv20/aspnet/doc/themes/stylesheettheme.aspx) para obter mais informações sobre temas e capas; consulte [como: aplicar temas do ASP.net](https://msdn.microsoft.com/library/0yy5hxdk%28VS.80%29.aspx) para saber mais sobre como configurar uma página para usar um tema.
 
 [![o GridView exibe o nome, a categoria, o fornecedor, o preço e as informações descontinuadas do produto](displaying-data-with-the-objectdatasource-vb/_static/image31.png)](displaying-data-with-the-objectdatasource-vb/_static/image30.png)
 

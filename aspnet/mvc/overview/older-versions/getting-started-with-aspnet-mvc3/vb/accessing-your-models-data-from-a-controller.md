@@ -9,11 +9,11 @@ ms.assetid: cad00de1-3c68-4ff4-a436-54236d449459
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-aspnet-mvc3/vb/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 37f45d8f12e3ab5c485718bcf2c59934ad272118
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457911"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615251"
 ---
 # <a name="accessing-your-models-data-from-a-controller-vb"></a>Acessar dados de seu modelo por meio de um controlador (VB)
 

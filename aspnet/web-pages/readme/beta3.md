@@ -1,6 +1,6 @@
 ---
 uid: web-pages/readme/beta3
-title: Web Matrix e Leiame de versão Beta 3 do ASP.NET Web Pages (Razor) | Microsoft Docs
+title: Leiame da versão beta 3 do Web Matrix e do Páginas da Web do ASP.NET (Razor) | Microsoft Docs
 author: rick-anderson
 description: Leiame do Web Matrix e de Páginas da Web do ASP.NET (Razor) versão beta 3
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: ffa3d5c9-91e5-4da3-b409-560b0c7fbbf0
 msc.legacyurl: /web-pages/readme/beta3
 msc.type: content
 ms.openlocfilehash: dc1d9237c04a7fcdbf4db6ccc8c36d255f6de003
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124111"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78628894"
 ---
 # <a name="web-matrix-and-aspnet-web-pages-razor-beta-3-release-readme"></a>Leiame do Web Matrix e de Páginas da Web do ASP.NET (Razor) versão beta 3
 
@@ -25,13 +25,13 @@ ms.locfileid: "65124111"
 
 - [Visão geral](#Overview)
 - [Instalação](#Installation_Notes)
-- [Novos recursos, alterações e problemas conhecidos na versão Beta 3](#Known_Issues)
+- [Novos recursos, alterações e problemas conhecidos na versão beta 3](#Known_Issues)
 
     - [Problemas de instalação do WebMatrix](#Known_Issues_Installation)
     - [Páginas da Web do ASP.NET](#Known_Issues_ASPNET)
     - [SQL Server Compact](#Known_Issues_SQL_Server_Compact)
-    - [Instalação de aplicativos](#Known_Issues_Installing_Applications)
-    - [Publicação de aplicativos](#Known_Issues_Publishing_Applications)
+    - [Instalando aplicativos](#Known_Issues_Installing_Applications)
+    - [Publicando aplicativos](#Known_Issues_Publishing_Applications)
     - [Outros problemas](#Known_Issues_Other_Issues)
 - [Para obter mais informações](#More_Info)
 
@@ -39,36 +39,36 @@ ms.locfileid: "65124111"
 
 ## <a name="overview"></a>Visão geral
 
-> Microsoft WebMatrix Beta é uma pilha de desenvolvimento da web gratuito que instala em minutos. Ele integra um servidor web com o banco de dados e estruturas para criar uma experiência única e integrada de programação. Você pode usar o WebMatrix Beta para simplificar a maneira de código, testar e publicar seu próprio site ASP.NET ou PHP, ou você pode usar a versão Beta do WebMatrix para iniciar um novo site usando aplicativos de software livre populares, como o Joomla, Umbraco, WordPress ou DotNetNuke. O WebMatrix Beta usa o mesmo servidor da web avançados, o mecanismo de banco de dados e o ambiente de estruturas que executará o seu site na internet, o que faz a transição do desenvolvimento para produção simples e direta.
+> O Microsoft WebMatrix beta é uma pilha de desenvolvimento na Web gratuita que é instalada em minutos. Ele integra um servidor Web com estruturas de banco de dados e programação para criar uma experiência única e integrada. Você pode usar o WebMatrix beta para simplificar a maneira como você codifica, testa e publica seu próprio site ASP.NET ou PHP ou pode usar o WebMatrix beta para iniciar um novo site usando aplicativos de software livre populares, como o DotNetNuke, o Umbraco, o WordPress ou o Joomla. O WebMatrix beta usa o mesmo ambiente avançado de servidor Web, mecanismo de banco de dados e estruturas que executará seu site na Internet, o que torna a transição do desenvolvimento para a produção tranqüila e contínua.
 
 <a id="Installation_Notes"></a>
 
 ## <a name="installation"></a>Instalação
 
-> Para instalar o WebMatrix Beta 3, você deve usar [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/fwlink/?LinkID=194638). Depois de instalar o Web Platform Installer, você pode usá-lo para instalar o WebMatrix Beta 3.
+> Para instalar o WebMatrix Beta 3, você usa [Microsoft Web Platform Installer 3,0](https://go.microsoft.com/fwlink/?LinkID=194638). Depois de instalar o Web Platform Installer, você poderá usá-lo para instalar o WebMatrix Beta 3.
 > 
-> Se você tiver problemas durante a instalação, consulte [Solucionando problemas com o Microsoft Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=196212).
+> Se você tiver problemas durante a instalação, consulte [Solucionando problemas com Microsoft Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=196212).
 
 <a id="Installation_Notes0"></a>
 
-## <a name="instructions-for-publishing-applications"></a>Instruções para a publicação de aplicativos
+## <a name="instructions-for-publishing-applications"></a>Instruções para publicação de aplicativos
 
-> Consulte [instruções passo a passo para a publicação de aplicativos](https://go.microsoft.com/fwlink/?LinkID=196149)
+> Consulte [as instruções passo a passo para publicar aplicativos](https://go.microsoft.com/fwlink/?LinkID=196149)
 
 <a id="Known_Issues"></a>
 
-## <a name="new-features-changes-andknown-issues"></a>Novos recursos, alterações, andKnown problemas
+## <a name="new-features-changes-andknown-issues"></a>Novos recursos, alterações, problemas de andKnown
 
 <a id="Known_Issues_Installation"></a>
 
 ### <a name="webmatrix-beta-3-installation"></a>Instalação do WebMatrix Beta 3
 
-#### <a name="issue-webmatrix-beta-3-is-only-available-on-platforms-that-support-microsoft-net-framework-4"></a>Problema: O WebMatrix Beta 3 está disponível apenas em plataformas que dão suporte ao Microsoft .NET Framework 4
+#### <a name="issue-webmatrix-beta-3-is-only-available-on-platforms-that-support-microsoft-net-framework-4"></a>Problema: o WebMatrix Beta 3 só está disponível em plataformas que dão suporte ao Microsoft .NET Framework 4
 
-> O .NET Framework versão 4 é necessário para o WebMatrix Beta. Em alguns casos, o instalador do WebMatrix Beta serão permitem que você tente instalar em uma plataforma que não faz parte do conjunto de configurações com suporte. Em particular, Windows Vista sem a atualização do SP1 lhe permitirá começar a instalação da versão Beta do WebMatrix, mas o componente do .NET Framework 4 falhará e bloquear a instalação.
+> O .NET Framework versão 4 é necessário para o WebMatrix beta. Em determinados casos, o instalador do WebMatrix beta permitirá que você tente instalar o em uma plataforma que não faça parte do conjunto de configuração com suporte. Em particular, o Windows Vista sem a atualização do SP1 permitirá que você comece a instalação do WebMatrix beta, mas o componente .NET Framework 4 falhará e bloqueará sua instalação.
 > 
 > **Solução alternativa**  
-> Instale em uma plataforma com suporte, que inclui:
+> Instale o em uma plataforma com suporte, que inclui:
 > 
 > - Windows 7
 > - Windows Server 2008
@@ -77,37 +77,37 @@ ms.locfileid: "65124111"
 > - Windows XP SP3
 > - Windows Server 2003 SP2
 
-#### <a name="issue-cannot-install-webmatrix-beta-3-if-microsoft-visual-studio-2008-is-installed-without-microsoft-visual-studio-2008-sp1"></a>Problema: Não é possível instalar o WebMatrix Beta 3, se o Microsoft Visual Studio 2008 é instalado sem o Microsoft Visual Studio 2008 SP1
+#### <a name="issue-cannot-install-webmatrix-beta-3-if-microsoft-visual-studio-2008-is-installed-without-microsoft-visual-studio-2008-sp1"></a>Problema: não é possível instalar o WebMatrix Beta 3 se o Microsoft Visual Studio 2008 for instalado sem Microsoft Visual Studio 2008 SP1
 
 > **Solução alternativa**  
-> Instale [Microsoft Visual Studio 2008 SP1](https://www.microsoft.com/downloads/details.aspx?FamilyId=FBEE1648-7106-44A7-9649-6D9F6D58056E&amp;displaylang=en) do Centro de Download da Microsoft.
+> Instale o [Microsoft Visual Studio 2008 SP1](https://www.microsoft.com/downloads/details.aspx?FamilyId=FBEE1648-7106-44A7-9649-6D9F6D58056E&amp;displaylang=en) no centro de download da Microsoft.
 
-#### <a name="issue-some-assemblies-for-sql-server-compact-40-are-not-installed-in-the-gac"></a>Problema: Alguns assemblies para o SQL Server Compact 4.0 não estão instalados no GAC
+#### <a name="issue-some-assemblies-for-sql-server-compact-40-are-not-installed-in-the-gac"></a>Problema: alguns assemblies para o SQL Server Compact 4,0 não estão instalados no GAC
 
-> Os assemblies gerenciados para o SQL Server Compact 4.0 não são colocados no cache de assembly global (GAC), quando você instala o SQL Server Compact 4.0 em um computador de 64 bits e o computador tem apenas o .NET Framework 3.5 SP1 Client Profile instalado. São os assemblies gerenciados que não estão instalados no GAC:
+> Os assemblies gerenciados para SQL Server Compact 4,0 não são colocados no GAC (cache de assembly global) quando você instala o SQL Server Compact 4,0 em um computador de 64 bits e o computador tem apenas o perfil de cliente do .NET Framework 3,5 SP1 instalado. Os assemblies gerenciados que não estão instalados no GAC são:
 > 
-> - *System.Data.SqlServerCe.dll* (ADO.NET provider)
-> - *System.Data.SqlServerCe.Entity.dll* (ADO.NET Entity Framework )
+> - *System. Data. SqlServerCe. dll* (provedor ADO.net)
+> - *System. Data. SqlServerCe. Entity. dll* (ADO.NET Entity Framework)
 > 
 > **Solução alternativa**  
-> Desinstalar o SQL Server Compact 4.0. Baixe e instale a versão completa do .NET Framework 3.5 SP1 no seguinte local:  
+> Desinstale o SQL Server Compact 4,0. Baixe e instale a versão completa do .NET Framework 3,5 SP1 no seguinte local:  
 >   
-> [Microsoft .NET Framework 3.5 Service pack 1 (pacote completo)](https://go.microsoft.com/fwlink/?LinkId=194828)  
+> [Microsoft .NET Framework 3,5 Service Pack 1 (pacote completo)](https://go.microsoft.com/fwlink/?LinkId=194828)  
 >   
-> Em seguida, reinstale o SQL Server Compact 4.0.
+> Em seguida, reinstale o SQL Server Compact 4,0.
 
-#### <a name="issue-cannot-uninstall-sql-server-compact-using-the-command-line"></a>Problema: Não é possível desinstalar o SQL Server Compact usando a linha de comando
+#### <a name="issue-cannot-uninstall-sql-server-compact-using-the-command-line"></a>Problema: não é possível desinstalar SQL Server Compact usando a linha de comando
 
-> Desinstalação do SQL Server Compact usando as opções de linha de comando não funciona nesta versão.
+> A desinstalação do SQL Server Compact usando opções de linha de comando não funciona nesta versão.
 > 
 > **Solução alternativa**  
-> Use *programas e recursos* no painel de controle do Windows para desinstalar o Microsoft SQL Server Compact 4.0.
+> Use *programas e recursos* no painel de controle do Windows para desinstalar o Microsoft SQL Server Compact 4,0.
 
 <a id="Known_Issues_ASPNET"></a>
 
 ### <a name="aspnet-web-pages"></a>Páginas da Web do ASP.NET
 
-Esta seção do documento descreve novos recursos, alterações e problemas conhecidos com a versão Beta 3 do ASP.NET Web Pages com sintaxe do Razor.
+Esta seção do documento descreve novos recursos, alterações e problemas conhecidos com a versão beta 3 do Páginas da Web do ASP.NET com sintaxe Razor.
 
 - [Novos recursos](#NewFeatures)
 - [Alterações](#Changes)
@@ -115,11 +115,11 @@ Esta seção do documento descreve novos recursos, alterações e problemas conh
 
 <a id="NewFeatures"></a>
 
-#### <a name="new-features-in-beta-3-for-aspnet-web-pages-with-razor-syntax"></a>Novos recursos na versão Beta 3 páginas da Web ASP.NET com sintaxe do Razor
+#### <a name="new-features-in-beta-3-for-aspnet-web-pages-with-razor-syntax"></a>Novos recursos na versão beta 3 para Páginas da Web do ASP.NET com a sintaxe do Razor
 
-#### <a name="new-htmlraw-method-renders-unencoded-markup"></a>Novo: Método de "HTML. Raw" renderiza a marcação sem codificação
+#### <a name="new-htmlraw-method-renders-unencoded-markup"></a>Novo: o método "HTML. Raw" renderiza a marcação não codificada
 
-> O novo `Html.Raw` método permite renderizar marcação HTML como marcação em vez de renderizar a saída codificada. (Por padrão, ASP.NET Razor codifica cadeias de caracteres antes de renderizá-los.) A sintaxe é:
+> O novo método `Html.Raw` permite que você processe a marcação HTML como marcação em vez de renderizar a saída codificada. (Por padrão, o ASP.NET Razor codifica cadeias de caracteres antes de renderizá-las.) A sintaxe é:
 > 
 > `Html.Raw(value)`
 > 
@@ -129,134 +129,134 @@ Esta seção do documento descreve novos recursos, alterações e problemas conh
 
 <a id="Changes"></a>
 
-#### <a name="changes-in-beta-3-for-aspnet-web-pages-with-razor-syntax"></a>Alterações na versão Beta 3 páginas da Web ASP.NET com sintaxe do Razor
+#### <a name="changes-in-beta-3-for-aspnet-web-pages-with-razor-syntax"></a>Alterações na versão beta 3 para Páginas da Web do ASP.NET com a sintaxe do Razor
 
-#### <a name="change-hrefattribute-method-removed"></a>Alteração: Método "HrefAttribute" removido
+#### <a name="change-hrefattribute-method-removed"></a>Alteração: método "Hrefattribute" removido
 
-> O `HrefAttribute` método da `WebPage` classe foi removida. Este auxiliar foi usado para codificar caracteres não seguros em URLs. Não é necessário porque o ASP.NET Razor automaticamente codifica cadeias de caracteres. (Use o novo `Html.Raw` método para renderizar cadeias de caracteres sem codificação.)
+> O método `HrefAttribute` da classe `WebPage` foi removido. Esse auxiliar foi usado para codificar caracteres não seguros em URLs. Ele não é mais necessário porque o ASP.NET Razor codifica automaticamente as cadeias de caracteres. (Use o novo método `Html.Raw` para renderizar cadeias de caracteres não codificadas.)
 
-#### <a name="change-syntax-for-declarative-helper-helpers-changed"></a>Alteração: Sintaxe declarativa "@helper" auxiliares alterados
+#### <a name="change-syntax-for-declarative-helper-helpers-changed"></a>Alteração: sintaxe para auxiliares "@helper" declarativos alterada
 
-> Na versão Beta 3, ASP.NET muda como ele analisa os auxiliares que são criados usando o `@helper` sintaxe. Em essência, o `@helper` sintaxe agora é analisado como um bloco de código em vez de como um bloco de marcação que pode incluir código. Portanto, o código dentro do auxiliar não precisa ser colocado entre `@{ }` blocos. Por outro lado, marcação dentro do auxiliar deve ser incluído explicitamente em elementos HTML ou em ASP.NET Razor `<text></text>` marcas.
+> Na versão beta 3, o ASP.NET altera como ele analisa auxiliares criados usando a sintaxe `@helper`. Em essência, a sintaxe de `@helper` agora é analisada como um bloco de código em vez de como um bloco de marcação que pode incluir código. Portanto, o código dentro do auxiliar não precisa ser colocado em blocos de `@{ }`. Por outro lado, a marcação dentro do auxiliar deve ser incluída explicitamente em elementos HTML ou em marcas de `<text></text>` Razor do ASP.NET.
 > 
-> Por exemplo, a seguinte `@helper` sintaxe funciona na versão Beta 3:
+> Por exemplo, a sintaxe de `@helper` a seguir funciona na versão beta 3:
 > 
 > [!code-cshtml[Main](beta3/samples/sample2.cshtml)]
 > 
-> Na versão Beta 3, esse auxiliar deve ser alterada para se parecer com o exemplo a seguir:
+> Na versão beta 3, esse auxiliar deve ser alterado para ser semelhante ao exemplo a seguir:
 > 
 > [!code-cshtml[Main](beta3/samples/sample3.cshtml)]
 > 
-> Observe que o `@{ }` caracteres ao redor do código inicial no auxiliar não é mais usada. Isso ocorre porque o conteúdo dos auxiliares é tratado como um bloco de código por padrão. O auxiliar de marcação, que começa com a abertura de renderiza `<a>` marca. Se o auxiliar deve renderizar texto sem formatação ou marcas que não incluem uma marca de fechamento (por exemplo, `<meta>` marcas), o conteúdo a ser renderizado deve estar no `<text></text>` marcas.
+> Observe que o `@{ }` caracteres em volta do código inicial no auxiliar não é mais usado. Isso ocorre porque o conteúdo dos auxiliares é tratado como um bloco de código por padrão. O auxiliar renderiza a marcação, que começa com a marca de `<a>` de abertura. Se o auxiliar precisar renderizar texto sem formatação ou marcas que não incluam uma marca de fechamento (por exemplo, marcas de `<meta>`), o conteúdo a ser renderizado deverá estar em marcas `<text></text>`.
 
-#### <a name="change-webpagecontexthttpcontext-removed"></a>Alteração: "WebPageContext.HttpContext" removido
+#### <a name="change-webpagecontexthttpcontext-removed"></a>Alteração: "WebPageContext. HttpContext" removido
 
-> O `WebPageContext.HttpContext` propriedade foi removida. Use `HttpContext.Current` em seu lugar. (O `WebPageContext.HttpContext` propriedade simplesmente encapsulada isso.)
+> A propriedade `WebPageContext.HttpContext` foi removida. Use `HttpContext.Current` em vez disso. (A propriedade `WebPageContext.HttpContext` simplesmente encapsulava isso.)
 
-#### <a name="change-facebook-helper-moved-to-new-package"></a>Alteração: Auxiliar de "Facebook" movido para o novo pacote
+#### <a name="change-facebook-helper-moved-to-new-package"></a>Alteração: o auxiliar "Facebook" foi movido para o novo pacote
 
-> O `Facebook` auxiliar foi movido para o *Facebook.Helper* biblioteca, que inclui o `Facebook` auxiliar e funcionalidade adicional. Você deve instalar essa biblioteca como um pacote separado, conforme descrito em "Instalar auxiliares com o Gerenciador de pacotes" no tutorial [Introdução a páginas ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202889).
+> O auxiliar de `Facebook` foi movido para a biblioteca do *Facebook. Helper* , que inclui o auxiliar de `Facebook` e a funcionalidade adicional. Você deve instalar essa biblioteca como um pacote separado, conforme descrito em "Instalando auxiliares com o Gerenciador de pacotes" no tutorial [introdução com páginas ASP.net](https://go.microsoft.com/fwlink/?LinkId=202889).
 
-#### <a name="change-membership-role-and-security-types-moves-to-new-assembly"></a>Alteração: Tipos de associação, a função e a segurança se move para o novo assembly
+#### <a name="change-membership-role-and-security-types-moves-to-new-assembly"></a>Alteração: Associação, função e tipos de segurança são movidos para o novo assembly
 
-> Os seguintes tipos foram movidos para o `WebMatrix.WebData` assembly:
+> Os seguintes tipos foram movidos para o assembly `WebMatrix.WebData`:
 > 
 > - `ExtendedMembershipProvider`
 > - `SimpleMembershipProvider`
 > - `SimpleRoleProvider`
 > - `WebSecurity`
 
-#### <a name="change-tagbuilder-class-moved-to-systemwebwebpagesdll-assembly"></a>Alteração: Classe "TagBuilder" movido para o assembly System.Web.WebPages.dll
+#### <a name="change-tagbuilder-class-moved-to-systemwebwebpagesdll-assembly"></a>Alteração: a classe "TagBuilder" foi movida para o assembly System. Web. webpages. dll
 
-> O `TagBuilde` classe r foi movido para o assembly System.Web.WebPages.dll. Anteriormente, isso era em um assembly que fazia parte do ASP.NET MVC. Essa alteração significa que você não precisa instalar o ASP.NET MVC para usar o `TagBuilder` classe.
+> A classe `TagBuilde` r foi movida para o assembly System. Web. webpages. dll. Anteriormente, isso estava em um assembly que era parte do ASP.NET MVC. Essa alteração significa que você não precisa instalar o ASP.NET MVC para usar a classe `TagBuilder`.
 > 
-> No entanto, a classe ainda está no `System.Web.Mvc` namespace. Para usar o `TagBuilder` classe (por exemplo, em um ASP.NET Razor auxiliar personalizado), você deve fazer referência ao namespace (por exemplo, adicionando `@using System.Web.Mvc` ao seu código).
+> No entanto, a classe ainda está no namespace `System.Web.Mvc`. Para usar a classe `TagBuilder` (por exemplo, em um auxiliar personalizado do Razor do ASP.NET), você deve referenciar o namespace (por exemplo, adicionando `@using System.Web.Mvc` ao seu código).
 
-#### <a name="change-request-validation-syntax-changed-validation-class-removed"></a>Alteração: Sintaxe de validação alterado; solicitação Classe de "Validação" removido
+#### <a name="change-request-validation-syntax-changed-validation-class-removed"></a>Alteração: sintaxe de validação de solicitação alterada; Classe de "validação" removida
 
-> Na versão Beta 3, para desabilitar a validação para um campo individual ou um conjunto de campos, você pode chamar o `Validation.Exclude` método, passando o nome ou os nomes dos campos a serem excluídos da validação. Uma nova sintaxe está disponível na versão Beta 3 para ignorar a validação. O `Validation` método usado na versão Beta 3 foi removido.
+> Na versão beta 3, para desabilitar a validação de um campo individual ou de um conjunto de campos, você pode chamar o método `Validation.Exclude`, passando o nome ou os nomes dos campos a serem excluídos da validação. Uma nova sintaxe está disponível na versão beta 3 para ignorar a validação. O método `Validation` usado na versão beta 3 foi removido.
 > 
 > > [!NOTE]
-> > Se você não desabilitar a validação de solicitação, se os usuários tentarem carregar uma marcação HTML (por exemplo, usando um editor de rich text em uma página), o site relatará um erro como *um valor Request. Form potencialmente perigoso foi detectado no cliente*e a entrada do usuário não é aceito. Se você desabilitar a validação de solicitação, você deve verificar manualmente a entrada do usuário para certificar-se de que ele não contém marcação potencialmente perigosa ou de script usando algo como o [Microsoft anti-Cross Site Scripting Library V4.0](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=f4cd231b-7e06-445b-bec7-343e5884e651).
+> > Se você não desabilitar a validação de solicitação, se os usuários tentarem carregar a marcação HTML (por exemplo, usando um editor de Rich Text em uma página), o site relatará um erro como *um valor de solicitação potencialmente perigoso. formulário foi detectado no cliente* e a entrada do usuário não será aceita. Se você desabilitar a validação de solicitação, deverá verificar manualmente a entrada do usuário para certificar-se de que ela não contém marcação potencialmente perigosa ou script usando algo como a [biblioteca de scripts do Microsoft anti-cross site v 4.0](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=f4cd231b-7e06-445b-bec7-343e5884e651).
 > 
 > 
-> Para desabilitar a validação de solicitação automática, chame o `Request.Unvalidated` método, passando o nome do campo ou outro objeto de postagem que deseja ignorar a validação de solicitação para. Você pode usar esse método para ignorar a validação para todos os itens na `Form`, `QueryString`, `Cookies`, e `ServerVariables` coleções. Os exemplos a seguir mostram como usar o `Unvalidated` método:
+> Para desabilitar a validação automática de solicitação, chame o método `Request.Unvalidated`, passando o nome do campo ou outro objeto post para o qual você deseja ignorar a validação de solicitação. Você pode usar esse método para ignorar a validação de todos os itens nas coleções `Form`, `QueryString`, `Cookies`e `ServerVariables`. Os exemplos a seguir mostram como usar o método `Unvalidated`:
 > 
 > [!code-csharp[Main](beta3/samples/sample4.cs)]
 
 <a id="Issues"></a>
 
-#### <a name="known-issues-for-aspnet-web-pages-with-razor-syntax"></a>Problemas conhecidos do ASP.NET Web Pages com sintaxe do Razor
+#### <a name="known-issues-for-aspnet-web-pages-with-razor-syntax"></a>Problemas conhecidos para Páginas da Web do ASP.NET com a sintaxe do Razor
 
-#### <a name="issue-unexpected-behavior-when-using-a-custom-user-table-for-membership"></a>Problema: Comportamento inesperado ao usar uma tabela de usuário personalizada para a associação
+#### <a name="issue-unexpected-behavior-when-using-a-custom-user-table-for-membership"></a>Problema: comportamento inesperado ao usar uma tabela de usuário personalizada para associação
 
-> Para inicializar o provedor de associação para um site do ASP.NET Razor, você deve chamar o `WebSecurity.InitializeDatabaseConnection` método. (No WebMatrix, o modelo Site inicial inclui uma chamada para esse método na  *\_AppStart.cshtml* arquivo.) Se o `autoCreateTables` parâmetro desse método é definido como true (por padrão, ele é definido como true no modelo de Site inicial), e se um nome de tabela não reconhecido é passado para o método (o segundo parâmetro), o método não lança um erro. Em vez disso, ele automaticamente cria a tabela.
+> Para inicializar o provedor de associação para um site do Razor do ASP.NET, chame o método `WebSecurity.InitializeDatabaseConnection`. (No WebMatrix, o modelo de site inicial inclui uma chamada para esse método no arquivo *\_AppStart. cshtml* ). Se o parâmetro `autoCreateTables` desse método for definido como true (por padrão, ele será definido como true no modelo de site inicial) e, se um nome de tabela não reconhecido for passado para o método (o segundo parâmetro), o método não gerará um erro. Em vez disso, ele cria automaticamente a tabela.
 > 
-> Isso pode ser um problema se você pretende usar uma tabela de usuário personalizada para a associação, mas passe o nome da tabela incorreta para o `WebSecurity.InitializeDatabaseConnection` método. Como o método por padrão gerará um erro se a tabela que você especificar não existir, e em vez disso, ele cria uma nova tabela, o aplicativo pode parecer estar funcionando. No entanto, o código do aplicativo que se baseia em sua tabela de usuário personalizada (e em campos nele), eventualmente, pode falhar com erros inesperados.
-> 
-> **Solução alternativa**  
-> Certifique-se de que o nome passado a `InitializeDatabaseConnection` correspondências de método, o perfil do usuário no banco de dados de associação de tabela, ou certifique-se de que o `autoCreateTables` parâmetro é definido como false.
-
-#### <a name="issue-failed-to-generate-a-user-instance-of-sql-server-error"></a>Problema: Erro "Falha ao gerar uma instância de usuário do SQL Server"
-
-> Se um aplicativo Web do WebMatrix usa o SQL Server Express e está executando o IIS 7.5 no Windows 7 ou Windows Server 2008 R2, você poderá ver um erro que indica que o SQL Server não pode recuperar caminho do aplicativo local do usuário em tempo de execução.
-> 
-> **Solução alternativa** Certifique-se de que a conta do Windows que o aplicativo é executado (normalmente o serviço de rede) tem permissões de leitura/gravação para pastas raiz do aplicativo em subpastas, como *aplicativo\_dados*. Informações mais detalhadas estão disponíveis no artigo da Base de Conhecimento [problemas com a instância de usuário do SQL Server Express e o ASP.net Web Application Projects](https://support.microsoft.com/kb/2002980).
-
-#### <a name="issue-in-visual-studio-namespaces-for-custom-assemblies-dlls-are-not-imported-automatically"></a>Problema: No Visual Studio, namespaces para assemblies personalizados (DLLs) não são importados automaticamente
-
-> Se você usar assemblies personalizados em um projeto no Visual Studio, os namespaces declarados nesses assemblies não são importados automaticamente no tempo de design. Como resultado, as referências a tipos personalizados não podem ser reconhecidas em tempo de design e são marcadas como não reconhecido no Visual Studio (usando uma "linha ondulada"). Esse problema ocorre somente em tempo de design no Visual Studio; o aplicativo em si seja executado corretamente.
+> Isso pode ser um problema se você pretender usar uma tabela de usuário personalizada para associação, mas passar o nome de tabela incorreto para o método `WebSecurity.InitializeDatabaseConnection`. Como o método não gera, por padrão, um erro se a tabela especificada não existir e, em vez disso, criar uma nova tabela, o aplicativo poderá parecer estar funcionando. No entanto, o código do aplicativo que depende da sua tabela de usuário personalizada (e em campos) pode eventualmente falhar com erros inesperados.
 > 
 > **Solução alternativa**  
-> Incluir um `using` instrução (`imports` no Visual Basic) que faz referência as entidades que não são reconhecidas em tempo de design.
+> Verifique se o nome passado no método `InitializeDatabaseConnection` corresponde à tabela de perfil de usuário no banco de dados de associação ou certifique-se de que o parâmetro `autoCreateTables` está definido como false.
 
-#### <a name="issue-visual-studio-intellisense-and-project-templates-available-only-in-aspnet-mvc-version-3"></a>Problema: Studio IntelliSense e o projeto de modelos do Visual disponíveis apenas no ASP.NET MVC versão 3
+#### <a name="issue-failed-to-generate-a-user-instance-of-sql-server-error"></a>Problema: erro "falha ao gerar uma instância de usuário do SQL Server"
 
-> Instalar páginas da Web ASP.NET não também instalará as ferramentas para Visual Studio como IntelliSense e modelos de projeto para aplicativos de páginas da Web ASP.NET.
+> Se um aplicativo Web do WebMatrix usar SQL Server Express e estiver executando o IIS 7,5 no Windows 7 ou no Windows Server 2008 R2, você poderá ver um erro que indica que SQL Server não é possível recuperar o caminho do aplicativo local do usuário em tempo de execução.
 > 
-> **Solução alternativa** para usar o IntelliSense e modelos de projeto para aplicativos de páginas da Web ASP.NET no Visual Studio, instalar o ASP.NET MVC 3 RC por meio do Web Platform Installer ou o [instalador autônomo](https://go.microsoft.com/fwlink/?LinkID=191797).
+> **Solução alternativa** Verifique se a conta do Windows em que o aplicativo é executado (normalmente serviço de rede) tem permissões de leitura/gravação para pastas raiz do aplicativo e para subpastas como *dados de\_de aplicativo*. Informações mais detalhadas estão disponíveis nos problemas do artigo da base de conhecimento [com SQL Server Express instanciação de usuário e projetos de aplicativo Web ASP.net](https://support.microsoft.com/kb/2002980).
 
-#### <a name="issue-lthelpergt-class-cannot-be-found-error"></a>Problema: "&lt;auxiliar&gt; classe não pode ser encontrado" Erro
+#### <a name="issue-in-visual-studio-namespaces-for-custom-assemblies-dlls-are-not-imported-automatically"></a>Problema: no Visual Studio, os namespaces para assemblies personalizados (DLLs) não são importados automaticamente
 
-> Depois de atualizar a versão Beta 3, você poderá ver um erro que uma classe auxiliar (por exemplo, o `Facebook` classe) não pode ser encontrado. Começando na versão Beta 2 e continuando na versão Beta 3, os auxiliares foram movidos para pacotes que você deve instalar explicitamente. Sites existentes não são atualizados para incluir esses pacotes; Isso inclui sites na *\My Documents\IISExpress* ou *\My Sites da Web* pastas. Em particular, você verá esse erro se você usar o site padrão no *Meus Sites* (WebSite1), que inclui uma referência para o `Twitter` auxiliar.
+> Se você usar assemblies personalizados em um projeto no Visual Studio, os namespaces declarados nesses assemblies não serão importados automaticamente em tempo de design. Como resultado, as referências a tipos personalizados podem não ser reconhecidas em tempo de design e são marcadas como não reconhecidas no Visual Studio (usando um "rabisco"). Esse problema ocorre apenas em tempo de design no Visual Studio; o aplicativo em si é executado corretamente.
 > 
 > **Solução alternativa**  
-> Comente a chamadas para qualquer auxiliares no site, execute as  *\_Admin* da página e instalar o pacote ou pacotes que incluem os auxiliares que você deseja usar. Depois de instalar o pacote, você pode remover o comentário as linhas que fazem referência a auxiliares.
+> Inclua uma instrução `using` (`imports` em Visual Basic) que faça referência às entidades que não são reconhecidas no tempo de design.
 
-#### <a name="issue-deploying-beta-3-aspnet-razor-assemblies-to-the-bin-folder-might-not-work-on-hosting-sites"></a>Problema: Implantar assemblies da versão Beta 3 ASP.NET Razor para a pasta Bin pode não funcionar na hospedagem de sites
+#### <a name="issue-visual-studio-intellisense-and-project-templates-available-only-in-aspnet-mvc-version-3"></a>Problema: Visual Studio IntelliSense e modelos de projeto disponíveis somente no ASP.NET MVC versão 3
 
-> Se você implantar um site de páginas da Web ASP.NET em um site de hospedagem, e se você implantar os assemblies do ASP.NET Razor Beta 3 para o site *Bin* pasta, você pode enfrentar erros, incluindo o seguinte:
+> A instalação do Páginas da Web do ASP.NET não também instala ferramentas para o Visual Studio, como IntelliSense e modelos de projeto para Páginas da Web do ASP.NET aplicativos.
+> 
+> **Solução alternativa** Para usar o IntelliSense e modelos de projeto para Páginas da Web do ASP.NET aplicativos no Visual Studio, instale o ASP.NET MVC 3 RC por meio do Web Platform Installer ou do [instalador](https://go.microsoft.com/fwlink/?LinkID=191797)autônomo.
+
+#### <a name="issue-lthelpergt-class-cannot-be-found-error"></a>Problema: erro "&lt;auxiliar&gt; classe não pode ser encontrado"
+
+> Depois de atualizar para a versão beta 3, você poderá ver um erro de que uma classe auxiliar (por exemplo, a classe `Facebook`) não pode ser encontrada. A partir da versão beta 2 e continuando na versão beta 3, os auxiliares foram movidos para os pacotes que você deve instalar explicitamente. Os sites existentes não são atualizados para incluir esses pacotes; Isso inclui sites nas pastas da Web de *\Meus Documents\IISExpress* ou *\Meus documentos\Minhas sites* . Em particular, você verá esse erro se usar o site padrão em *meus sites* (WebSite1), que inclui uma referência ao auxiliar de `Twitter`.
+> 
+> **Solução alternativa**  
+> Comente as chamadas para os auxiliares no site, execute a página *\_admin* e instale o pacote ou os pacotes que incluem os auxiliares que você deseja usar. Depois de instalar o pacote, você pode remover os comentários das linhas que fazem referência aos auxiliares.
+
+#### <a name="issue-deploying-beta-3-aspnet-razor-assemblies-to-the-bin-folder-might-not-work-on-hosting-sites"></a>Problema: a implantação de assemblies do Razor do beta 3 ASP.NET na pasta bin pode não funcionar em sites de hospedagem
+
+> Se você implantar um site Páginas da Web do ASP.NET em um site de hospedagem e, se implantar os assemblies do ASP.NET Razor Beta 3 na pasta *bin* do site, poderá encontrar erros, incluindo o seguinte:
 > 
 > `Could not load type 'Microsoft.Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility' from assembly 'Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35'.`
 > 
-> Isso pode acontecer se o provedor de hospedagem tiver instalado os assemblies do ASP.NET Web Pages Beta 1 no cache do servidor de aplicativo global (GAC). Assemblies no GAC têm precedência sobre os assemblies instalados localmente na *Bin* pasta.
+> Isso pode acontecer se o provedor de hospedagem tiver instalado os assemblies Páginas da Web do ASP.NET beta 1 no cache de aplicativo global (GAC) do servidor. Os assemblies no GAC obtêm precedência sobre assemblies instalados localmente na pasta *bin* .
 > 
-> **Solução alternativa** entre em contato com seu provedor de hospedagem para confirmar se os erros que você está vendo devido a um conflito entre versões do provedor de assemblies e o seu. Nesse caso, solicite que o provedor de hospedagem atualizem os assemblies no GAC do servidor.
+> **Solução alternativa** Entre em contato com seu provedor de hospedagem para confirmar se os erros que você está vendo estão devido a um conflito entre as versões do provedor dos assemblies e seus. Nesse caso, solicite que o provedor de hospedagem atualize os assemblies no GAC do servidor.
 
-#### <a name="issue-reading-feeds-or-other-external-data-via-a-proxy-server"></a>Problema: Feeds de leitura ou outros dados externos por meio de um servidor proxy
+#### <a name="issue-reading-feeds-or-other-external-data-via-a-proxy-server"></a>Problema: lendo feeds ou outros dados externos por meio de um servidor proxy
 
-> Se o servidor que executa o site estiver atrás de um servidor proxy, você talvez precise configurar informações de proxy nas *Web. config* arquivo para que seja possível ler informações provenientes de fora do site. Por exemplo, se você usar o `ReCaptcha` auxiliar, o auxiliar se comunica com o serviço reCAPTCHA, mas podem ser bloqueado pelo seu servidor proxy. Da mesma forma, os feeds que são usados no ASP.NET Web Pages, como o feed usado pelo Gerenciador de pacote, podem exigir configuração de proxy.
+> Se o servidor que está executando o site estiver protegido por um servidor proxy, talvez seja necessário configurar as informações de proxy no arquivo *Web. config* para poder ler as informações provenientes de fora do site. Por exemplo, se você usar o auxiliar de `ReCaptcha`, o auxiliar se comunicará com o serviço reCAPTCHA, mas poderá ser bloqueado pelo servidor proxy. Da mesma forma, os feeds usados no Páginas da Web do ASP.NET, como o feed usado pelo Gerenciador de pacotes, podem exigir a configuração de proxy.
 > 
-> Se você tiver problemas em trabalhar com um serviço externo ou trabalhar com o feed de pacote, coloque os seguintes elementos raiz do seu aplicativo *Web. config* arquivo:
+> Se você tiver problemas ao trabalhar com um serviço externo ou trabalhar com o feed de pacote, coloque os seguintes elementos no arquivo *Web. config* da raiz do aplicativo:
 > 
 > [!code-xml[Main](beta3/samples/sample5.xml)]
 > 
-> Para obter mais informações sobre como configurar um servidor proxy, consulte [ &lt;proxy&gt; (configurações de rede)](https://msdn.microsoft.com/library/sa91de1e.aspx) no site do MSDN.
+> Para obter mais informações sobre como configurar um servidor proxy, consulte [&lt;elemento&gt; proxy (configurações de rede)](https://msdn.microsoft.com/library/sa91de1e.aspx) no site do MSDN.
 
-#### <a name="issue-microsoftwebinfrastructuredll-cannot-be-loaded-error"></a>Problema: Erro "Não é possível carregar Microsoft.Web.Infrastructure.dll"
+#### <a name="issue-microsoftwebinfrastructuredll-cannot-be-loaded-error"></a>Problema: erro "Microsoft. Web. Infrastructure. dll não pode ser carregado"
 
-> Se você instalou a versão Beta 1 do ASP.NET Web Pages com sintaxe do Razor e, em seguida, instale a versão Beta 3, todos os assemblies apropriados estão instalados no GAC, exceto *Microsoft.Web.Infrastructure.dll*. Como consequência, quando você executa páginas Razor do ASP.NET, você verá um erro que indica que *Microsoft.Web.Infrastructure.dll* não pôde ser carregado.
+> Se você tiver instalado anteriormente a versão beta 1 do Páginas da Web do ASP.NET com sintaxe Razor e, em seguida, instalar a versão beta 3, todos os assemblies apropriados serão instalados no GAC, exceto *Microsoft. Web. Infrastructure. dll*. Como consequência, ao executar ASP.NET páginas Razor, você verá um erro que indica que *Microsoft. Web. Infrastructure. dll* não pôde ser carregado.
 > 
-> Esse problema não ocorre se você tiver carregado a versão Beta 3 em um computador limpo.
+> Esse problema não ocorrerá se você carregou a versão beta 3 em um computador limpo.
 > 
 > **Solução alternativa**  
-> No painel de controle, desinstale as páginas da Web ASP.NET. Em seguida, reinstale a versão Beta 3.
+> No painel de controle, desinstale o Páginas da Web do ASP.NET. Em seguida, reinstale a versão beta 3.
 
-#### <a name="issue-uninstalling-the-net-framework-version-4-disables-aspnet-web-pages-with-razor-syntax"></a>Problema: Desinstalando o .NET Framework versão 4 desabilita a ASP.NET Web Pages com sintaxe do Razor
+#### <a name="issue-uninstalling-the-net-framework-version-4-disables-aspnet-web-pages-with-razor-syntax"></a>Problema: a desinstalação do .NET Framework versão 4 desabilita Páginas da Web do ASP.NET com a sintaxe do Razor
 
-> Se você desinstalar o .NET Framework versão 4 e, em seguida, reinstalá-lo, ASP.NET Web Pages com sintaxe do Razor estão desabilitados. As páginas com as *. cshtml* extensão não são executados corretamente. Páginas da Web ASP.NET registra um assembly na raiz da máquina *Web. config* arquivo e remover o .NET Framework remove esse arquivo. Reinstalar o .NET Framework instala uma nova versão do arquivo de configuração, mas não adiciona a referência para o assembly de páginas da Web ASP.NET.
+> Se você desinstalar o .NET Framework versão 4 e, em seguida, reinstalá-lo, Páginas da Web do ASP.NET com sintaxe Razor será desabilitado. As páginas com a extensão *. cshtml* não são executadas corretamente. Páginas da Web do ASP.NET registra um assembly no arquivo *Web. config da* raiz do computador e a remoção do .NET Framework remove esse arquivo. Reinstalar o .NET Framework instala uma nova versão do arquivo de configuração, mas não adiciona a referência para o assembly Páginas da Web do ASP.NET.
 > 
-> **Solução alternativa** após reinstalar o .NET Framework, reinstale o ASP.NET Web Pages com sintaxe do Razor. Isso adiciona o elemento a seguir para o *Web. config* arquivo na raiz do computador, que normalmente é no seguinte local:  
+> **Solução alternativa** Depois de reinstalar o .NET Framework, reinstale o Páginas da Web do ASP.NET com sintaxe Razor. Isso adiciona o seguinte elemento ao arquivo *Web. config* na raiz do computador, que normalmente está no seguinte local:  
 > 
 > `C:\Windows\Microsoft.NET\Framework\v4.0.30319\Config (32-bit)`  
 > 
@@ -264,35 +264,35 @@ Esta seção do documento descreve novos recursos, alterações e problemas conh
 > 
 > [!code-xml[Main](beta3/samples/sample6.xml)]
 
-#### <a name="issue-applications-previously-deployed-with-aspnet-assemblies-in-the-bin-folder-experience-errors"></a>Problema: Erros de aplicativos implantados anteriormente com o ASP.NET assemblies na pasta Bin
+#### <a name="issue-applications-previously-deployed-with-aspnet-assemblies-in-the-bin-folder-experience-errors"></a>Problema: os aplicativos implantados anteriormente com assemblies ASP.NET na pasta bin apresentam erros
 
-> Durante a implantação, cópias dos assemblies páginas da Web ASP.NET (por exemplo, *Microsoft.WebPages.dll*) para o *Bin* pasta do site no servidor. (Isso pode ter acontecido automaticamente durante a implantação ou porque o desenvolvedor copiados explicitamente os assemblies.) No entanto, quando a versão Beta 3 está instalada, erros ocorre, como os erros que certos tipos não podem ser encontrados. Isso ocorre porque vários tipos de páginas da Web ASP.NET foram movidos para namespaces diferentes para a versão Beta 3.
+> Durante a implantação, as cópias dos assemblies de Páginas da Web do ASP.NET (por exemplo, *Microsoft. webpages. dll*) para a pasta *bin* do site no servidor. (Isso pode ter ocorrido automaticamente durante a implantação ou porque o desenvolvedor copiou explicitamente os assemblies.) No entanto, quando a versão beta 3 estiver instalada, ocorrerão erros, como erros que determinados tipos não podem ser encontrados. Isso ocorre porque vários tipos de Páginas da Web do ASP.NET foram movidos para namespaces diferentes para a versão beta 3.
 > 
 > **Solução alternativa**   
-> Desmarque a *Bin* pasta do aplicativo implantado, copie os novos assemblies para a pasta (ou reimplantar o aplicativo) e, em seguida, reinicie o aplicativo.
+> Limpe a pasta *bin* do aplicativo implantado, copie os novos assemblies para a pasta (ou reimplante o aplicativo) e reinicie o aplicativo.
 
-#### <a name="issue-extensionless-urls-do-not-find-cshtmlvbhtml-files-on-iis-7-or-iis-75"></a>Problema: URLs sem extensão não encontrar arquivos.cshtml/.vbhtml no IIS 7 ou IIS 7.5
+#### <a name="issue-extensionless-urls-do-not-find-cshtmlvbhtml-files-on-iis-7-or-iis-75"></a>Problema: URLs sem extensão não localizam arquivos. cshtml/. vbhtml no IIS 7 ou IIS 7,5
 
-> No IIS 7 ou IIS 7.5, solicitações com uma URL semelhante à seguinte não serão possível localizar as páginas que têm o *. cshtml* ou *. vbhtml* extensão:  
+> No IIS 7 ou IIS 7,5, as solicitações com uma URL como esta não são capazes de localizar páginas que tenham a extensão *. cshtml* ou *. vbhtml* :  
 > 
 > `http://www.example.com/ExampleSite/ExampleFile`  
 > 
-> O problema surge porque a regravação de URL não está habilitado por padrão para o IIS 7 ou IIS 7.5. O cenário mais provável é que você não vir o problema ao testar localmente usando o IIS Express, mas a experiência quando você implanta seu site em um site de hospedagem.
+> O problema ocorre porque a regravação de URL não está habilitada por padrão para o IIS 7 ou o IIS 7,5. O cenário likeliest é que você não vê o problema ao testar localmente usando IIS Express, mas você o experimenta quando implanta seu site em um site de hospedagem.
 > 
 > **Solução alternativa**
 > 
-> - Se você tiver controle sobre o computador do servidor, no computador do servidor instale a atualização descrita no [uma atualização está disponível que permite que certos manipuladores do IIS 7.0 ou IIS 7.5 para manipular as solicitações cujas URLs não terminam com um período](https://support.microsoft.com/kb/980368).
-> - Se você não tem controle sobre o computador do servidor (por exemplo, você estiver implantando em um site de hospedagem), adicione o seguinte para o site *Web. config* arquivo:
+> - Se você tiver controle sobre o computador servidor, no computador servidor, instale a atualização descrita em [uma atualização disponível que permite que determinados manipuladores do iis 7,0 ou iis 7,5 manipulem solicitações cujas URLs não terminam com um ponto](https://support.microsoft.com/kb/980368).
+> - Se você não tiver controle sobre o computador servidor (por exemplo, você está implantando em um site de hospedagem), adicione o seguinte ao arquivo *Web. config* do site:
 > 
 > 
 > [!code-xml[Main](beta3/samples/sample7.xml)]
 
-#### <a name="issue-using-web-application-project-or-aspnet-mvc-and-aspnet-web-pages-in-the-same-application"></a>Problema: Usando o projeto de aplicativo Web ou páginas ASP.NET MVC e Web ASP.NET no mesmo aplicativo
+#### <a name="issue-using-web-application-project-or-aspnet-mvc-and-aspnet-web-pages-in-the-same-application"></a>Problema: usando o projeto de aplicativo Web ou o ASP.NET MVC e as páginas da Web do ASP.NET no mesmo aplicativo
 
-> Se você estivesse usando páginas da Web ASP.NET em um projeto de aplicativo Web ou um aplicativo ASP.NET MVC, você poderá ver um erro que *WebPageHttpApplication* não pode ser encontrado.
+> Se você estiver usando Páginas da Web do ASP.NET em um projeto de aplicativo Web ou em um aplicativo ASP.NET MVC, poderá ver um erro de que *WebPageHttpApplication* não pode ser encontrado.
 > 
 > **Solução alternativa**  
-> Se você receber esse erro, altere a classe base da qual deriva o aplicativo. No *global. asax* file, altere a linha a seguir:
+> Se você receber esse erro, altere a classe base da qual o aplicativo deriva. No arquivo *global. asax* , altere a seguinte linha:
 > 
 > [!code-csharp[Main](beta3/samples/sample8.cs)]
 > 
@@ -300,196 +300,196 @@ Esta seção do documento descreve novos recursos, alterações e problemas conh
 > 
 > [!code-csharp[Main](beta3/samples/sample9.cs)]
 > 
-> Isso inverte a uma alteração que foi introduzida em vigor para a versão Beta 1 do ASP.NET Web Pages com sintaxe do Razor.
+> Isso, em vigor, reverte uma alteração que foi introduzida para a versão beta 1 do Páginas da Web do ASP.NET com sintaxe Razor.
 
-#### <a name="issue-deploying-an-application-to-a-computer-that-does-not-have-sql-server-compact-installed"></a>Problema: Implantando um aplicativo em um computador que não tenha o SQL Server Compact instalado
+#### <a name="issue-deploying-an-application-to-a-computer-that-does-not-have-sql-server-compact-installed"></a>Problema: Implantando um aplicativo em um computador que não tem SQL Server Compact instalado
 
-> Aplicativos que incluem bancos de dados do SQL Server Compact podem ser executados em um computador em que o SQL Server Compact não está instalado. Microsoft WebMatrix Beta 3 copia esses binários para você automaticamente e executa apropriado *Web. config* transformações de arquivo.
+> Os aplicativos que incluem bancos de dados do SQL Server Compact podem ser executados em um computador onde o SQL Server Compact não está instalado. O Microsoft WebMatrix Beta 3 copia automaticamente esses binários para você e executa as transformações de arquivo *Web. config* apropriadas.
 > 
-> **Solução alternativa** se você precisar copiar esses arquivos e fazer a *Web. config* alterações de arquivo manualmente, faça o seguinte:
+> **Solução alternativa** Se você precisar copiar esses arquivos e fazer com que o arquivo *Web. config* seja alterado manualmente, faça o seguinte:
 > 
-> 1. Copie os assemblies do mecanismo de banco de dados para o *Bin* pasta (e as subpastas) do aplicativo no computador de destino: 
+> 1. Copie os assemblies do mecanismo de banco de dados para a pasta *bin* (e subpastas) do aplicativo no computador de destino: 
 > 
->     - Copy *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll* **to** *\Bin*
->     - Cópia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\x86\\** **para** *\Bin\x86*
->     - Cópia *C:\Program Files\Microsoft SQL Server Compact Edition\v4.0\Private\amd64\\** **para** *\Bin\amd64*
-> 2. Na pasta raiz do site, crie ou abra uma *Web. config* arquivo. (No WebMatrix Beta 3, esse tipo de arquivo estará disponível se você clicar **todos os** na **escolher um tipo de arquivo** caixa de diálogo.)
-> 3. Adicione o seguinte elemento como um filho do **&lt;configuration&gt;** elemento (não dentro de **&lt;System. Web&gt;** elemento):
+>     - Copiar *c:\Arquivos de programas\microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll* **para** *\Bin*
+>     - Copie *c:\Arquivos de programas\microsoft SQL Server Compact Edition\v4.0\Private\x86\\* * **para** *\Bin\x86*
+>     - Copie *c:\Arquivos de programas\microsoft SQL Server Compact Edition\v4.0\Private\amd64\\* * **para** *\Bin\amd64*
+> 2. Na pasta raiz do site, crie ou abra um arquivo *Web. config* . (No WebMatrix Beta 3, esse tipo de arquivo estará disponível se você clicar em **tudo** na caixa de diálogo **escolher um tipo de arquivo** .)
+> 3. Adicione o seguinte elemento como um filho do elemento **&lt;configuration&gt;** (não dentro do elemento **&lt;system. Web&gt;** ):
 > 
 > 
 > [!code-xml[Main](beta3/samples/sample10.xml)]
 
-#### <a name="issue-database-and-webgrid-helpers-do-not-work-in-medium-trust-in-visual-basic"></a>Problema: Os auxiliares de banco de dados e o WebGrid não funcionam no nível de confiança média no Visual Basic
+#### <a name="issue-database-and-webgrid-helpers-do-not-work-in-medium-trust-in-visual-basic"></a>Problema: os auxiliares de banco de dados e WebGrid não funcionam em confiança média no Visual Basic
 
-> Se você estiver usando o Visual Basic (criando *. vbhtml* arquivos), o `Database` e `WebGrid` auxiliares não funcionará se o aplicativo está configurado para usar confiança média.
+> Se você estiver usando Visual Basic (criando arquivos *. vbhtml* ), os auxiliares `Database` e `WebGrid` não funcionarão se o aplicativo for definido para usar a confiança média.
 > 
 > **Solução alternativa**  
-> Defina temporariamente o aplicativo para usar a confiança total.
+> Defina temporariamente o aplicativo para usar confiança total.
 
 <a id="Known_Issues_SQL_Server_Compact"></a>
 ### <a name="sql-server-compact"></a>SQL Server Compact
 
-#### <a name="issue-encrypt-property-is-not-recognized"></a>Problema: A propriedade "Criptografar" não é reconhecida
+#### <a name="issue-encrypt-property-is-not-recognized"></a>Problema: a propriedade "Encrypt" não é reconhecida
 
-> SQL Server Compact 4.0 não reconhece o `Encrypt` propriedade do `SqlCeConnection` classe. Você não deve usar essa propriedade para criptografar arquivos de banco de dados. O `Encrypt` propriedade foi preterida na versão 3.5 compacto do SQL Server e foi mantida somente para compatibilidade com versões anteriores. 
+> SQL Server Compact 4,0 não reconhece a propriedade `Encrypt` da classe `SqlCeConnection`. Você não deve usar essa propriedade para criptografar arquivos de banco de dados. A propriedade `Encrypt` foi preterida na versão SQL Server Compact 3,5 e foi retida apenas para compatibilidade com versões anteriores. 
 > 
 > **Solução alternativa**  
-> Use o `Encryption Mode` propriedade do `SqlCeConnection` classe para criptografar arquivos de banco de dados do SQL Server Compact 4.0. O exemplo a seguir mostra como criar um banco de dados SQL Server Compact 4.0 criptografada usando o `Encryption Mode` propriedade:
+> Use a propriedade `Encryption Mode` da classe `SqlCeConnection` para criptografar arquivos de banco de dados SQL Server Compact 4,0. O exemplo a seguir mostra como criar um banco de dados criptografado SQL Server Compact 4,0 usando a propriedade `Encryption Mode`:
 > 
 > [!code-csharp[Main](beta3/samples/sample11.cs)]
 > 
 > [!code-vb[Main](beta3/samples/sample12.vb)]
 > 
-> Para alterar o modo de criptografia de banco de dados SQL Server Compact 4.0 existente, faça o seguinte:
+> Para alterar o modo de criptografia de um banco de dados SQL Server Compact 4,0 existente, faça o seguinte:
 > 
 > [!code-csharp[Main](beta3/samples/sample13.cs)]
 > 
 > [!code-vb[Main](beta3/samples/sample14.vb)]
 > 
-> Para criptografar um banco de dados do SQL Server Compact 4.0 não criptografado, faça o seguinte:
+> Para criptografar um banco de dados do SQL Server Compact 4,0 não criptografado, faça o seguinte:
 > 
 > [!code-csharp[Main](beta3/samples/sample15.cs)]
 > 
 > [!code-vb[Main](beta3/samples/sample16.vb)]
 
-#### <a name="issue-microsoft-visual-c-2008-runtime-libraries-are-required"></a>Problema: Serão necessárias as bibliotecas de tempo de execução do Microsoft Visual C++ 2008
+#### <a name="issue-microsoft-visual-c-2008-runtime-libraries-are-required"></a>Problema: as bibliotecas C++ de tempo de execução do Microsoft Visual 2008 são necessárias
 
-> O native DLLs do SQL Server Compact 4.0 é necessário o Microsoft Visual C++ 2008 bibliotecas de Runtime (x86, IA64 e x64), o Service Pack 1.
+> As DLLs nativas do SQL Server Compact 4,0 precisam das bibliotecas C++ de tempo de execução do Microsoft Visual 2008 (x86, IA64 e x64), Service Pack 1.
 > 
 > **Solução alternativa**  
-> Instale o .NET Framework 3.5 SP1. Isso também instala o Visual C++ 2008 tempo de execução de bibliotecas do SP1. Você pode baixar as bibliotecas do seguinte local:   
+> Instale o .NET Framework 3,5 SP1. Isso também instala as bibliotecas C++ de tempo de execução do Visual 2008 SP1. Você pode baixar as bibliotecas do seguinte local:   
 >   
-> [Atualização de segurança ATL do Microsoft Visual C++ 2008 Service Pack 1 Redistributable Package](https://go.microsoft.com/fwlink/?LinkId=194827)
+> [Atualização de C++ segurança da ATL do pacote redistribuível do Microsoft Visual 2008 Service Pack 1](https://go.microsoft.com/fwlink/?LinkId=194827)
 > 
 > [!NOTE]
-> Observe que o .NET Framework 2.0, 3.0, a instalação ou 4 faz *não* instalar o SP1 de bibliotecas de tempo de execução do Visual C++ 2008.
+> Observe que a instalação do .NET Framework 2,0, 3,0 ou 4 *não* instala as bibliotecas de C++ tempo de execução do Visual 2008 SP1.
 
-#### <a name="issue-if-sql-server-compact-is-installed-prior-to-installing-net-framework-on-the-computer-its-provider-invariant-name-is-not-registered-in-the-net-framework-machineconfig-file"></a>Problema: Se o SQL Server Compact está instalado antes de instalar o .NET Framework no computador, seu nome invariável do provedor não está registrado no arquivo Machine. config do .NET Framework
+#### <a name="issue-if-sql-server-compact-is-installed-prior-to-installing-net-framework-on-the-computer-its-provider-invariant-name-is-not-registered-in-the-net-framework-machineconfig-file"></a>Problema: se o SQL Server Compact for instalado antes da instalação do .NET Framework no computador, o nome invariável do provedor não será registrado no arquivo Machine. config do .NET Framework
 
-> O SQL Server Compact pode ser instalado em um computador que não tenha o .NET Framework instalado, pois o SQL Server Compact requerem o .NET framework. Se nem o .NET Framework versão 3.5 nem 4 está instalado antes de instalar o SQL Server Compact, a instalação do SQL Server Compact não registra seu nome invariável do provedor na *Machine. config* arquivo. Qualquer aplicativo que se baseia na entrada do SQL Server Compact na *Machine. config* arquivo falhará. A entrada de registro de nome invariável na *Machine. config* se parece com o exemplo a seguir:
+> SQL Server Compact pode ser instalado em um computador que não tenha o .NET Framework instalado porque SQL Server Compact requer o .NET Framework. Se nenhuma .NET Framework versão 3,5 nem 4 estiver instalada antes de instalar o SQL Server Compact, a instalação do SQL Server Compact não registrará seu nome invariável do provedor no arquivo *Machine. config* . Qualquer aplicativo que dependa da entrada SQL Server Compact no arquivo *Machine. config* falhará. A entrada de registro de nome invariável em *Machine. config* é semelhante ao exemplo a seguir:
 > 
 > [!code-xml[Main](beta3/samples/sample17.xml)]
 > 
 > **Solução alternativa**  
-> Desinstale o SQL Server Compact 4.0 CTP1. Baixe e instale as versões completas do .NET Framework do seguinte local:
+> Desinstale SQL Server Compact 4,0 CTP1. Baixe e instale as versões completas do .NET Framework do seguinte local:
 > 
-> [Microsoft .NET Framework 3.5 Service pack 1 (pacote completo)](https://go.microsoft.com/fwlink/?LinkId=194828)  
-> [Versão do Microsoft .NET Framework 4.0 (pacote completo)](https://www.microsoft.com/downloads/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&amp;displaylang=en)
+> [Microsoft .NET Framework 3,5 Service Pack 1 (pacote completo)](https://go.microsoft.com/fwlink/?LinkId=194828)  
+> [Versão do Microsoft .NET Framework 4,0 (pacote completo)](https://www.microsoft.com/downloads/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&amp;displaylang=en)
 > 
-> Em seguida, reinstalar [SQL Server Compact 4.0 CTP1](https://www.microsoft.com/downloads/details.aspx?FamilyID=0d2357ea-324f-46fd-88fc-7364c80e4fdb&amp;displaylang=en).
+> Em seguida, reinstale [SQL Server Compact 4,0 CTP1](https://www.microsoft.com/downloads/details.aspx?FamilyID=0d2357ea-324f-46fd-88fc-7364c80e4fdb&amp;displaylang=en).
 
 <a id="Known_Issues_Installing_Applications"></a>
 
-### <a name="installing-applications"></a>Instalação de aplicativos
+### <a name="installing-applications"></a>Instalando aplicativos
 
-#### <a name="issue-installing-an-application-can-take-a-long-time-if-the-users-my-documents-folder-is-redirected-to-a-network-share"></a>Problema: Instalação de um aplicativo pode levar muito tempo se a pasta Meus documentos do usuário é redirecionada para um compartilhamento de rede
+#### <a name="issue-installing-an-application-can-take-a-long-time-if-the-users-my-documents-folder-is-redirected-to-a-network-share"></a>Problema: a instalação de um aplicativo pode levar muito tempo se a pasta meus documentos do usuário for redirecionada para um compartilhamento de rede
 
 > **Solução alternativa**  
-> nenhuma. O aplicativo pode levar algum tempo para ser instalado, mas será instalado corretamente.
+> Nenhum. O aplicativo pode levar algum tempo para ser instalado, mas será instalado corretamente.
 
 <a id="Known_Issues_Publishing_Applications"></a>
 
-### <a name="publishing-applications"></a>Publicação de aplicativos
+### <a name="publishing-applications"></a>Publicando aplicativos
 
-#### <a name="issue-site-might-not-work-after-publishing-if-the-destination-url-field-is-not-prefixed-with-http-or-https"></a>Problema: Site pode não funcionar após a publicação se o campo "URL de destino" não é prefixado com http:// ou https://
+#### <a name="issue-site-might-not-work-after-publishing-if-the-destination-url-field-is-not-prefixed-with-http-or-https"></a>Problema: o site pode não funcionar após a publicação se o campo "URL de destino" não for prefixado com http://ou https://
 
-> No **configurações de publicação** caixa de diálogo, se a URL de destino não começa com `http://` ou `https://`, o site pode não funcionar após a implantação.
+> Na caixa de diálogo **configurações de publicação** , se a URL de destino não começar com `http://` ou `https://`, o site poderá não funcionar após a implantação.
 > 
 > **Solução alternativa**  
-> Certifique-se de que antes de publicar um site, a URL de destino na **configurações de publicação** caixa de diálogo começa com `http://` ou `https://`.
+> Certifique-se de que, antes de publicar um site, a URL de destino na caixa de diálogo **configurações de publicação** comece com `http://` ou `https://`.
 
-#### <a name="issue-publishing-a-mysql-database-fails-with-the-error-failed-to-publish-the-database-this-can-happen-if-the-remote-database-cannot-run-the-script"></a>Problema: Um banco de dados MySQL de publicação falha com o erro "Falha ao publicar o banco de dados. Isso pode acontecer se o banco de dados remoto não é possível executar o script."
+#### <a name="issue-publishing-a-mysql-database-fails-with-the-error-failed-to-publish-the-database-this-can-happen-if-the-remote-database-cannot-run-the-script"></a>Problema: a publicação de um banco de dados MySQL falha com o erro "falha ao publicar o banco de dados. Isso pode acontecer se o banco de dados remoto não puder executar o script. "
 
-> O erro pode ocorrer por vários motivos. Um motivo que você pode ver esse erro é se o script de banco de dados contém um caractere de aspas simples (') e o conjunto de caracteres de padrão de destino MySQL do banco de dados não está em UTF-8.
+> O erro pode ocorrer por vários motivos. Um motivo para você ver esse erro é se o script de banco de dados contiver um caractere de aspas simples (') e o conjunto de caracteres padrão do banco de dados MySQL de destino não for UTF-8.
 > 
 > **Solução alternativa**  
-> Defina o caractere padrão definido para o banco de dados remoto do MySQL como UTF-8.
+> Defina o conjunto de caracteres padrão para o banco de dados MySQL remoto como UTF-8.
 
 <a id="Known_Issues_Other_Issues"></a>
 
-### <a name="other-issues"></a>Outros Problemas
+### <a name="other-issues"></a>Outros problemas
 
-#### <a name="issue-searchfilter-does-not-work-in-reports-for-group-by-issue-type"></a>Problema: Filtro de pesquisa/não funciona em relatórios para agrupar por: Tipo de problema
+#### <a name="issue-searchfilter-does-not-work-in-reports-for-group-by-issue-type"></a>Problema: a pesquisa/filtro não funciona em relatórios para Group by: tipo de problema
 
-> Quando você executa um relatório para um site, se você inserir texto na *filtrar por URL* caixa e clique em *pesquisa*, nada acontece. Isso ocorre porque esse controle não está funcionando enquanto os *Group By* o estado do relatório é definido como *tipo de problema*, que é o padrão.
+> Ao executar um relatório para um site, se você inserir texto na caixa *Filtrar por URL* e clicar em *Pesquisar*, nada acontecerá. Isso ocorre porque esse controle não é funcional enquanto o estado *Group by* do relatório é definido como *tipo de emissão*, que é o padrão.
 > 
-> **Solução alternativa** no *Group By* guia da faixa de opções, clique em *URL* para agrupar as entradas por sua URL de origem. A caixa de texto e o botão para filtrar as entradas são funcionais enquanto nesse estado.
+> **Solução alternativa** Na guia *Agrupar por* da faixa de, clique em *URL* para agrupar as entradas por sua URL de origem. A caixa de texto e o botão para filtrar as entradas são funcionais enquanto estão nesse estado.
 
-#### <a name="issue-wcf-applications-fail-to-run-with-iis-express"></a>Problema: Os aplicativos do WCF não sejam executados com o IIS Express
+#### <a name="issue-wcf-applications-fail-to-run-with-iis-express"></a>Problema: falha na execução de aplicativos WCF com o IIS Express
 
-> Navegando para um aplicativo WCF resulta em um erro semelhante ao seguinte:
+> A navegação para um aplicativo WCF resulta em um erro como o seguinte:
 > 
-> *Não foi possível carregar arquivo ou assembly ' Administration, versão = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35' ou uma de suas dependências. O sistema não pode localizar o arquivo especificado.*
+> *Não foi possível carregar o arquivo ou o assembly ' Microsoft. Web. Administration, versão = 7.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35 ' ou uma de suas dependências. O sistema não pode localizar o arquivo especificado.*
 > 
-> Isso ocorre porque a versão do IIS Express Beta não dá suporte a WCF por padrão.
+> Isso ocorre porque IIS Express versão beta não dá suporte ao WCF por padrão.
 > 
-> **Solução alternativa** usar qualquer uma das seguintes alternativas (solução alternativa 2 # requer o Microsoft Windows Vista ou superior):
+> **Solução alternativa** Use qualquer uma das seguintes soluções alternativas (a solução alternativa #2 requer o Microsoft Windows Vista ou superior):
 > 
 > 
-> 1. Cópia de *Microsoft.Web.dll* e *Administration* assemblies do local de instalação do WebMatrix para o *bin* do WCF aplicativo. Por padrão, o WebMatrix é instalado na *o Microsoft WebMatrix* subpasta do sistema *arquivos de programas* pasta.
-> 2. No Microsoft Windows Vista ou versões posteriores, crie um symlink para os assemblies na *bin* usando os seguintes comandos do diretório. (Essa abordagem tem a vantagem que ele não cria uma cópia dos assemblies.)
+> 1. Copie os assemblies *Microsoft. Web. dll* e *Microsoft. Web. Administration. dll* do local de instalação do WebMatrix para o diretório *bin* do aplicativo WCF. Por padrão, o WebMatrix é instalado na subpasta *Microsoft WebMatrix* na pasta *arquivos de programas* do sistema.
+> 2. No Microsoft Windows Vista ou superior, crie um symlink para os assemblies no diretório *bin* usando os comandos a seguir. (Essa abordagem tem a vantagem de que ele não cria uma cópia dos assemblies.)
 > 
 >     [!code-console[Main](beta3/samples/sample18.cmd)]
 > 3. Instale os dois assemblies no GAC. Em um prompt com privilégios elevados, execute os seguintes comandos:
 > 
 >     [!code-console[Main](beta3/samples/sample19.cmd)]
 
-#### <a name="issue-webmatrix-beta-3-is-unable-to-perform-certain-tasks-that-require-elevation"></a>Problema: O WebMatrix Beta 3 não é capaz de executar determinadas tarefas que exigem elevação
+#### <a name="issue-webmatrix-beta-3-is-unable-to-perform-certain-tasks-that-require-elevation"></a>Problema: o WebMatrix Beta 3 não pode executar determinadas tarefas que exigem elevação
 
-> O WebMatrix Beta 3 é capaz de realizar certas tarefas que exigem elevação de privilégio, como a instalação de componentes adicionais nas seguintes situações:
+> O WebMatrix Beta 3 não pode executar determinadas tarefas que exigem elevação, como a instalação de componentes adicionais nas seguintes situações:
 > 
-> - No Windows Vista ou Windows 7, você está conectado com uma conta que não tem privilégios administrativos e controle de conta de usuário (UAC) está desabilitado.
-> - Você está usando o Microsoft Windows XP ou Microsoft Windows Server 2003.
+> - No Windows Vista ou no Windows 7, você está conectado com uma conta que não tem privilégios administrativos e o UAC (controle de conta de usuário) está desabilitado.
+> - Você está usando o Microsoft Windows XP ou o Microsoft Windows Server 2003.
 > 
 > **Solução alternativa**  
-> A maioria das tarefas no WebMatrix Beta 3 não exigem permissão administrativa. Para aqueles que fazer, você pode executar a operação como um administrador ou siga estas etapas:
+> A maioria das tarefas no WebMatrix Beta 3 não requer permissão administrativa. Para aqueles que fazem isso, você pode executar a operação como administrador ou seguir estas etapas:
 > 
-> - No Windows Vista ou Windows 7, habilite o UAC.
+> - No Windows Vista ou no Windows 7, habilite o UAC.
 > - No Windows XP, adicione o usuário ao grupo de segurança Administradores.
 
-#### <a name="issue-site-from-web-gallery-is-disabled"></a>Problema: "Site da Galeria de Web" está desabilitado
+#### <a name="issue-site-from-web-gallery-is-disabled"></a>Problema: "site da Galeria da Web" está desabilitado
 
-> O **Site da Galeria de Web** opção será desabilitada se o Web Platform Installer 3.0 não está instalado.
+> A opção **site da Galeria da Web** será desabilitada se o Web Platform Installer 3,0 não estiver instalado.
 > 
 > **Solução alternativa**  
-> Instalar o [Microsoft Web Platform Installer 3.0](https://go.microsoft.com/fwlink/?LinkID=194638).
+> Instale o [Microsoft Web Platform Installer 3,0](https://go.microsoft.com/fwlink/?LinkID=194638).
 
-#### <a name="issue-on-windows-server-2003-iis-express-does-not-start-for-a-non-administrative-user"></a>Problema: No Windows Server 2003, o IIS Express não é iniciado para um usuário não administrativo
+#### <a name="issue-on-windows-server-2003-iis-express-does-not-start-for-a-non-administrative-user"></a>Problema: no Windows Server 2003, o IIS Express não é iniciado para um usuário não administrativo
 
-> No Windows Server 2003, quando você iniciar uma página ou iniciar o IIS Express, o IIS Express não é iniciado. Páginas da Web, um erro será exibido que indica se o aplicativo foi iniciado por um usuário não administrativo.
+> No Windows Server 2003, quando você inicia uma página ou inicia IIS Express, IIS Express não é iniciado. Para páginas da Web, é exibido um erro que indica que o aplicativo foi iniciado por um usuário não administrativo.
 > 
 > **Solução alternativa**  
-> Inicie o WebMatrix Beta 3 como um usuário administrativo. Para obter mais detalhes, consulte o seguinte artigo da Base de Conhecimento:  
+> Inicie o WebMatrix Beta 3 como um usuário administrativo. Para obter mais detalhes, consulte o seguinte artigo da base de conhecimento:  
 >   
-> [Um aplicativo que é iniciado por um usuário não administrativo não pode ouvir o tráfego HTTP do computador no qual o aplicativo é executado no Windows Vista, Windows Server 2003 ou Windows XP.](https://support.microsoft.com/kb/939786)
+> [Um aplicativo que é iniciado por um usuário não administrativo não pode escutar o tráfego HTTP do computador no qual o aplicativo está sendo executado no Windows Vista, no Windows Server 2003 ou no Windows XP.](https://support.microsoft.com/kb/939786)
 
-#### <a name="issue-google-chrome-is-not-available-as-a-run-option"></a>Problema: Google Chrome não está disponível como uma opção de execução
+#### <a name="issue-google-chrome-is-not-available-as-a-run-option"></a>Problema: o Google Chrome não está disponível como uma opção de execução
 
-> Google Chrome não é exibido na lista de navegadores em **executados** sobre o **Home** guia.
+> O Google Chrome não é exibido na lista de navegadores em **executar** na guia **início** .
 > 
 > **Solução alternativa**  
-> Algumas versões do Google Chrome não se registram corretamente com o recurso de programas padrão no Windows. Como alternativa, inicie o Google Chrome, clique o *personalizar e controle Google Chrome* menu, clique em *opções*e, em seguida, clique em *Make Google Chrome meu navegador padrão*.
+> Algumas versões do Google Chrome não se registram corretamente com o recurso de programas padrão no Windows. Como alternativa, inicie o Google Chrome, clique no menu *Personalizar e controlar Google Chrome* , clique em *Opções*e, em seguida, clique em *tornar o Google Chrome meu navegador padrão*.
 
-#### <a name="issue-the-foreign-key-dialog-box-doesnt-allow-entering-a-primary-key"></a>Problema: A caixa de diálogo "Foreign Key" não permite a inserção de uma chave primária
+#### <a name="issue-the-foreign-key-dialog-box-doesnt-allow-entering-a-primary-key"></a>Problema: a caixa de diálogo "chave estrangeira" não permite inserir uma chave primária
 
-> O **Foreign Key** caixa de diálogo não permite que você insira o nome da chave primário da tabela de chave primária.
+> A caixa de diálogo **chave estrangeira** não permite que você insira o nome da chave primária da tabela de chave primária.
 > 
 > **Solução alternativa**  
-> Isso é intencional. Você não precisará inserir o nome da chave primária da tabela de chave primária.
+> Isso é intencional. Você não precisa inserir o nome da chave primária da tabela de chave primária.
 
-#### <a name="issue-the-relationships-button-is-disabled"></a>Problema: O botão "Relações" está desabilitado
+#### <a name="issue-the-relationships-button-is-disabled"></a>Problema: o botão "relações" está desabilitado
 
-> O **relacionamentos** botão sob o **tabela** guia o **bancos de dados** espaço de trabalho está desabilitado para bancos de dados do SQL Server Compact.
+> O botão **relações** na guia **tabela** do espaço de trabalho **bancos de dados** está desabilitado para bancos de dados SQL Server Compact.
 > 
 > **Solução alternativa**  
-> nenhuma. O SQL Server Compact não oferece suporte a relações entre tabelas.
+> Nenhum. SQL Server Compact não oferece suporte a relações entre tabelas.
 
-#### <a name="issue-parameterized-sql-queries-throw-exceptions"></a>Problema: Consultas SQL parametrizadas lançam exceções
+#### <a name="issue-parameterized-sql-queries-throw-exceptions"></a>Problema: as consultas SQL parametrizadas geram exceções
 
-> No SQL Server Compact 4.0, se você não especificar um tipo de dados, como `SqlDbType` ou `DbType` para parâmetros em consultas parametrizadas, uma exceção é lançada quando a consulta é executada.
+> No SQL Server Compact 4,0, se você não especificar um tipo de dados como `SqlDbType` ou `DbType` para parâmetros em consultas parametrizadas, uma exceção será lançada quando a consulta for executada.
 > 
 > **Solução alternativa**  
-> Definir explicitamente o tipo de dados para parâmetros, como `SqlDbType` ou `DbType`. Isso é importante no caso de tipos de dados BLOB (`image` e `ntext`). Use o código semelhante ao seguinte:
+> Defina explicitamente o tipo de dados para parâmetros como `SqlDbType` ou `DbType`. Isso é crítico no caso de tipos de dados de BLOB (`image` e `ntext`). Use um código semelhante ao seguinte:
 > 
 > [!code-sql[Main](beta3/samples/sample20.sql)]
 > 

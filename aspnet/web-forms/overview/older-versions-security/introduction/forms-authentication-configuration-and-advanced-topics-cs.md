@@ -9,11 +9,11 @@ ms.assetid: b9c29865-a34e-48bb-92c0-c443a72cb860
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/forms-authentication-configuration-and-advanced-topics-cs
 msc.type: authoredcontent
 ms.openlocfilehash: b296f31da1c73df97175d94402b4d618df425d8d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74579268"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641767"
 ---
 # <a name="forms-authentication-configuration-and-advanced-topics-c"></a>Configuração de autenticação de formulários e tópicos avançados (C#)
 
@@ -37,19 +37,19 @@ O sistema de autenticação de formulários no ASP.NET oferece várias definiç�
 
 A tabela 1 resume as propriedades que podem ser personalizadas por meio do elemento &lt;Forms&gt;. Como o Web. config é um arquivo XML, os nomes de atributo na coluna esquerda diferenciam maiúsculas de minúsculas.
 
-| <strong>Attribute</strong> |                                                                                                                                                                                                                                     <strong>Descrição</strong>                                                                                                                                                                                                                                      |
+| <strong>Atributo</strong> |                                                                                                                                                                                                                                     <strong>Descrição</strong>                                                                                                                                                                                                                                      |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         cookies         |                                                                                                                Esse atributo especifica em quais condições o tíquete de autenticação é armazenado em um cookie versus inserido na URL. Os valores permitidos são: UseCookies; UseUri; Detecção automática e UseDeviceProfile (o padrão). A etapa 2 examina essa configuração mais detalhadamente.                                                                                                                |
 |         defaultUrl         |                                                                                                                                                         Indica a URL para a qual os usuários são redirecionados depois de entrar na página de logon, se não houver nenhum valor de RedirectUrl especificado na QueryString. O valor padrão é default. aspx.                                                                                                                                                         |
-|           domain           | Ao usar tíquetes de autenticação baseada em cookie, essa configuração especifica o valor de domínio do cookie. O valor padrão é uma cadeia de caracteres vazia, o que faz com que o navegador use o domínio do qual foi emitido (como www.yourdomain.com). Nesse caso, o cookie <strong>não</strong> será enviado ao fazer solicitações para subdomínios, como admin.yourdomain.com. Se desejar que o cookie seja passado para todos os subdomínios, você precisará personalizar o atributo de domínio definindo-o como yourdomain.com. |
-|  enableCrossAppRedirects   |                                                                                                                                                                   Um valor booliano que indica se os usuários autenticados são lembrados quando redirecionados para URLs em outros aplicativos Web no mesmo servidor. O padrão é falso.                                                                                                                                                                   |
+|           domínio           | Ao usar tíquetes de autenticação baseada em cookie, essa configuração especifica o valor de domínio do cookie. O valor padrão é uma cadeia de caracteres vazia, o que faz com que o navegador use o domínio do qual foi emitido (como www.yourdomain.com). Nesse caso, o cookie <strong>não</strong> será enviado ao fazer solicitações para subdomínios, como admin.yourdomain.com. Se desejar que o cookie seja passado para todos os subdomínios, você precisará personalizar o atributo de domínio definindo-o como yourdomain.com. |
+|  enableCrossAppRedirects   |                                                                                                                                                                   Um valor booliano que indica se os usuários autenticados são lembrados quando redirecionados para URLs em outros aplicativos Web no mesmo servidor. O padrão é false.                                                                                                                                                                   |
 |          loginUrl          |                                                                                                                                                                                                                      A URL da página de logon. O valor padrão é login.aspx.                                                                                                                                                                                                                      |
-|            {1&gt;name&lt;1}            |                                                                                                                                                                                                   Ao usar tíquetes de autenticação baseada em cookie, o nome do cookie. O padrão é. ASPXAUTH.                                                                                                                                                                                                   |
-|            path            |                                                                             Ao usar tíquetes de autenticação baseada em cookie, essa configuração especifica o atributo Path do cookie. O atributo Path permite que um desenvolvedor limite o escopo de um cookie a uma hierarquia de diretório específica. O valor padrão é/, que informa ao navegador para enviar o cookie de tíquete de autenticação para qualquer solicitação feita ao domínio.                                                                              |
+|            name            |                                                                                                                                                                                                   Ao usar tíquetes de autenticação baseada em cookie, o nome do cookie. O padrão é. ASPXAUTH.                                                                                                                                                                                                   |
+|            caminho            |                                                                             Ao usar tíquetes de autenticação baseada em cookie, essa configuração especifica o atributo Path do cookie. O atributo Path permite que um desenvolvedor limite o escopo de um cookie a uma hierarquia de diretório específica. O valor padrão é/, que informa ao navegador para enviar o cookie de tíquete de autenticação para qualquer solicitação feita ao domínio.                                                                              |
 |         proteção         |                                                                                                                                            Indica quais técnicas são usadas para proteger o tíquete de autenticação de formulários. Os valores permitidos são: ALL (o padrão); Encripta None e validação. Essas configurações são discutidas detalhadamente na etapa 3.                                                                                                                                            |
 |         requireSSL         |                                                                                                                                                                                Um valor booliano que indica se uma conexão SSL é necessária para transmitir o cookie de autenticação. O valor padrão é false.                                                                                                                                                                                |
 |     slidingExpiration      |                                                                                                 Um valor booliano que indica se o tempo limite do cookie de autenticação é redefinido cada vez que o usuário visita o site durante uma única sessão. O valor padrão é verdadeiro. A política de tempo limite de tíquete de autenticação é discutida mais detalhadamente na seção especificando o valor de tempo limite do tíquete.                                                                                                 |
-|          timeout           |                                                                                                                               Especifica o tempo, em minutos, após o qual o cookie de tíquete de autenticação expira. O valor padrão é 30. A política de tempo limite de tíquete de autenticação é discutida mais detalhadamente na seção especificando o valor de tempo limite do tíquete.                                                                                                                               |
+|          tempo limite           |                                                                                                                               Especifica o tempo, em minutos, após o qual o cookie de tíquete de autenticação expira. O valor padrão é 30. A política de tempo limite de tíquete de autenticação é discutida mais detalhadamente na seção especificando o valor de tempo limite do tíquete.                                                                                                                               |
 
 **Tabela 1**: um resumo dos atributos do elemento do &lt;Forms&gt;
 
@@ -185,7 +185,7 @@ A Microsoft recomenda enfaticamente o uso da configuração ALL.
 
 Os algoritmos de criptografia e de hash usados pelo sistema de autenticação de formulários para criptografar e validar o tíquete de autenticação são personalizáveis por meio do [elemento&lt;machineKey&gt;](https://msdn.microsoft.com/library/w8h3skw9.aspx) no Web. config. A tabela 2 descreve os atributos do elemento &lt;machineKey&gt; e seus valores possíveis.
 
-| **Attribute** | **Descrição** |
+| **Atributo** | **Descrição** |
 | --- | --- |
 | descriptografia | Indica o algoritmo usado para criptografia. Esse atributo pode ter um dos quatro valores a seguir:-auto-o padrão; determina o algoritmo com base no comprimento do atributo decryptionKey. -AES – usa o algoritmo de [criptografia AES (AES)](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard) . -DES-usa o [padrão de criptografia de dados (des)](http://en.wikipedia.org/wiki/Data_Encryption_Standard) esse algoritmo é considerado computacionalmente fraco e não deve ser usado. -3DES-usa o algoritmo [des triplo](http://en.wikipedia.org/wiki/Triple_DES) , que funciona aplicando o algoritmo des três vezes. |
 | decryptionKey | A chave secreta usada pelo algoritmo de criptografia. Esse valor deve ser uma cadeia de caracteres hexadecimal do comprimento apropriado (com base no valor em descriptografia), AutoGenerate ou um valor acrescentado com, IsolateApps. Adicionar IsolateApps instrui o ASP.NET a usar um valor exclusivo para cada aplicativo. O padrão é AutoGenerate, IsolateApps. |
@@ -244,23 +244,23 @@ No tutorial anterior, se as credenciais fornecidas fossem válidas, chamamos ape
 
 Essas etapas são replicadas no código acima. Primeiro, a cadeia de caracteres que eventualmente armazenaremos na Propriedade UserData é formada pela combinação do nome da empresa e do título, delimitando os dois valores com um caractere de barra vertical (|).
 
-Cadeia de caracteres userdatastring = cadeia de caracteres. Concat (companyName [i], "|", titleAtCompany [i]);
+string userDataString = string.Concat(companyName[i], "|", titleAtCompany[i]);
 
 Em seguida, o método FormsAuthentication. GetAuthCookie é invocado, que cria o tíquete de autenticação, criptografa e valida-o de acordo com as definições de configuração e o coloca em um objeto HttpCookie.
 
-HttpCookie authCookie = FormsAuthentication. GetAuthCookie (UserName. Text, RememberMe. Checked);
+HttpCookie authCookie = FormsAuthentication.GetAuthCookie(UserName.Text, RememberMe.Checked);
 
 Para trabalhar com o FormAuthenticationTicket incorporado no cookie, precisamos chamar o [método Decrypt](https://msdn.microsoft.com/library/system.web.security.formsauthentication.decrypt.aspx)da classe FormAuthentication, passando o valor do cookie.
 
-Tíquete FormsAuthenticationTicket = FormsAuthentication. Decrypt (authCookie. Value);
+FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(authCookie.Value);
 
 Em seguida, criamos uma *nova* instância de FormsAuthenticationTicket com base nos valores de FormsAuthenticationTicket existentes. No entanto, esse novo tíquete inclui as informações específicas do usuário (userdatastring).
 
-FormsAuthenticationTicket newTicket = New FormsAuthenticationTicket (tíquete. Versão, tíquete. Nome, tíquete. Foi emitido, ticket. Expiração, tíquete. Ispersistente, userdatastring);
+FormsAuthenticationTicket newTicket = new FormsAuthenticationTicket(ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration, ticket.IsPersistent, userDataString);
 
 Em seguida, criptografamos (e validamos) a nova instância FormsAuthenticationTicket chamando o [método Encrypt](https://msdn.microsoft.com/library/system.web.security.formsauthentication.encrypt.aspx)e colocamos esses dados criptografados (e validados) novamente no authCookie.
 
-authCookie. Value = FormsAuthentication. Encrypt (newTicket);
+authCookie.Value = FormsAuthentication.Encrypt(newTicket);
 
 Por fim, authCookie é adicionado à coleção Response. cookies e o método GetRedirectUrl é chamado para determinar a página apropriada para enviar o usuário.
 

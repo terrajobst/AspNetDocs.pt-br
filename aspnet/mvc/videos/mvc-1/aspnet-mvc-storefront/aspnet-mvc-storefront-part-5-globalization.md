@@ -1,27 +1,27 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-5-globalization
-title: 'Vitrine do ASP.NET MVC, parte 5: Globalização | Microsoft Docs'
+title: 'Vitrine do ASP.NET MVC parte 5: globalização | Microsoft Docs'
 author: robconery
-description: Rob Conery funciona com Damien Guard para refatorar o banco de dados para lidar com problemas de globalização e dados de teste.
+description: Rob cônicas funciona com o Damien Guard para refatorar o banco de dados a fim de lidar com os problemas de globalização e dado de teste.
 ms.author: riande
 ms.date: 05/27/2008
 ms.assetid: ec659d9f-8172-4c9e-9dd0-f5743bb27d4b
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-5-globalization
 msc.type: video
 ms.openlocfilehash: ae94433a1eae82a37e230266d06eb3ee483725cd
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410066"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537719"
 ---
-# <a name="aspnet-mvc-storefront-part-5-globalization"></a>Vitrine do ASP.NET MVC, parte 5: Globalização
+# <a name="aspnet-mvc-storefront-part-5-globalization"></a>Vitrine do ASP.NET MVC parte 5: globalização
 
-por [Rob Conery](https://github.com/robconery)
+por [Rob cônica](https://github.com/robconery)
 
-Rob Conery funciona com Damien Guard para refatorar o banco de dados para lidar com problemas de globalização e dados de teste.
+Rob cônicas funciona com o Damien Guard para refatorar o banco de dados a fim de lidar com os problemas de globalização e dado de teste.
 
-[&#9654;Assista ao vídeo (11 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-5-globalization)
+[&#9654;Assistir ao vídeo (11 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-5-globalization)
 
 > [!div class="step-by-step"]
 > [Anterior](aspnet-mvc-storefront-part-4-linq-to-sql-spike.md)

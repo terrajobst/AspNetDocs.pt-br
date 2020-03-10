@@ -9,11 +9,11 @@ ms.assetid: 4f3ba53f-d166-422d-b29c-403348057836
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/slider/databinding-the-slider-control-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 9c14373bdfdead9916950b8a1cf61f427f7ba50b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598289"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627214"
 ---
 # <a name="databinding-the-slider-control-vb"></a>Associação de Dados do controle deslizante (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse. É possível associar a posição atual do controle deslizante a outro controle ASP.NET.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle deslizante no AJAX Control Toolkit fornece um controle deslizante gráfico que pode ser controlado usando o mouse. É possível associar a posição atual do controle deslizante a outro controle ASP.NET.
 

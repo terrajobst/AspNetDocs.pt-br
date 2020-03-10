@@ -9,11 +9,11 @@ ms.assetid: a585c9a2-7c8e-478b-9706-90f3739c50d1
 msc.legacyurl: /web-forms/overview/performance-and-caching/using-asynchronous-methods-in-aspnet-45
 msc.type: authoredcontent
 ms.openlocfilehash: 7abc3d7acc60d7d868958f2a313bc408f96c95a4
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457564"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78625191"
 ---
 # <a name="using-asynchronous-methods-in-aspnet-45"></a>Uso de métodos assíncronos no ASP.NET 4.5
 

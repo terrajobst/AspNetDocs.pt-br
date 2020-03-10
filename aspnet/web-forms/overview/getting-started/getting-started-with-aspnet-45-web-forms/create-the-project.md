@@ -9,11 +9,11 @@ ms.assetid: 2ce36f78-8ecb-4ab1-b748-6d0ab633ea3f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
 msc.type: authoredcontent
 ms.openlocfilehash: 62918b17f42e54dfe4e45a08927b1039dcbb7012
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576061"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78571984"
 ---
 # <a name="create-the-project"></a>Criar o projeto
 
@@ -35,12 +35,12 @@ Neste tutorial, você criará, examinará e executará o projeto padrão no Visu
 
 ## <a name="creating-the-project"></a>Criando o Projeto
 
-1. {1&gt;Abra o Visual Studio.&lt;1}
+1. Abra o Visual Studio.
 2. Selecione **novo projeto** no menu **arquivo** no Visual Studio. 
 
     ![Criar o item de menu projeto-novo projeto](create-the-project/_static/image1.png)
 3. Selecione os **modelos** -&gt; **Visual C#**  -&gt; grupo de modelos **da Web** à esquerda.
-4. Escolha o modelo de **aplicativo Web ASP.net** na coluna central.  
+4. Selecione o modelo **Aplicativo Web ASP.NET** na coluna central.  
  Esta série de tutoriais está usando .NET Framework 4.5.2.
 5. Nomeie o projeto *WingtipToys* e escolha o botão **OK** . 
 
@@ -49,7 +49,7 @@ Neste tutorial, você criará, examinará e executará o projeto padrão no Visu
     > [!NOTE]
     > O nome do projeto nesta série de tutoriais é **WingtipToys**. É recomendável que você use esse nome de projeto *exato* para que o código fornecido durante a série de tutoriais funcione conforme o esperado.
 
-6. Clique no botão **alterar autenticação** . Selecione **contas de usuário individuais** e clique no botão **OK** .
+6. Clique no botão **Alterar Autenticação**. Selecione **contas de usuário individuais** e clique no botão **OK** .
 
 7. Selecione o modelo de **Web Forms** e clique no botão **OK** .
 
@@ -96,7 +96,7 @@ O Visual Studio cria algumas pastas e arquivos iniciais para seu projeto. Os pri
 | *Default. aspx* | Normalmente, a primeira página exibida quando o aplicativo é executado em um navegador. |
 | *Site. Master* | Uma página que permite que você crie um layout consistente e use o comportamento padrão para páginas em seu aplicativo. |
 | *Global. asax* | Um arquivo opcional que contém o código para responder a eventos no nível de aplicativo e de sessão gerados pelo ASP.NET ou por módulos HTTP. |
-| *Web. config* | Os dados de configuração de um aplicativo. |
+| *Web.config* | Os dados de configuração de um aplicativo. |
 
 ### <a name="running-the-default-web-application"></a>Executando o aplicativo Web padrão
 

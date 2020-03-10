@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory
 msc.type: authoredcontent
 ms.openlocfilehash: 28425ea8d1312dfc6e14df9677396f2cbcf6f16d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456719"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583849"
 ---
 # <a name="developing-aspnet-apps-with-azure-active-directory"></a>Desenvolver aplicativos do ASP.NET com o Azure Active Directory
 
@@ -24,7 +24,7 @@ As ferramentas de Microsoft ASP.NET para Azure Active Directory simplificam a ha
 
 Este tutorial mostrará como criar um aplicativo ASP.NET configurado para logon com o [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx) (AD do Azure). Você também aprenderá a chamar o API do Graph para obter informações sobre o usuário conectado no momento e como implantar o aplicativo no Azure.
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 1. [Visual Studio Express 2013 para Web](https://my.visualstudio.com/Downloads?q=visual%20studio%202013#d-2013-express) ou [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013).
 2. [Visual Studio 2013 Update 4](https://www.microsoft.com/download/details.aspx?id=44921) -a atualização 3 ou superior é necessária.
@@ -34,7 +34,7 @@ Este tutorial mostrará como criar um aplicativo ASP.NET configurado para logon 
 
 1. Entre no [Portal de Gerenciamento do Azure](https://manage.windowsazure.com/).
 2. Todas as contas do Azure contêm um **diretório padrão** --clique nele e, em seguida, clique na guia **usuários** na parte superior da página (consulte a imagem abaixo).
-3. Clique em Adicionar Usuário.
+3. Clique em Adicionar usuário.
     ![](developing-aspnet-apps-with-windows-azure-active-directory/_static/image1.png)
 4. Crie um novo usuário com a função de **administrador global** . Clique em **usuários** no menu superior e, em seguida, clique no botão **Adicionar usuário** na barra de comandos.
 5. Na caixa de diálogo **Adicionar usuário** , insira um nome para o novo usuário e clique na seta para a direita.

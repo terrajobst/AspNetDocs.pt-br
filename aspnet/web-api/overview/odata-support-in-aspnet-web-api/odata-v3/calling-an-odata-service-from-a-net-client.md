@@ -9,11 +9,11 @@ ms.assetid: 6f448917-ad23-4dcc-9789-897fad74051b
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/calling-an-odata-service-from-a-net-client
 msc.type: authoredcontent
 ms.openlocfilehash: 6a289fcb843634eeeefef1e0767e04e0be8b6973
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600371"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614677"
 ---
 # <a name="calling-an-odata-service-from-a-net-client-c"></a>Chamar um serviço OData em um cliente .NET (C#)
 
@@ -71,7 +71,7 @@ em que *Port* é o número da porta.
 
 Para **namespace**, digite "ProductService". Essa opção define o namespace da classe proxy.
 
-Clique em **ir**. O Visual Studio lê o documento de metadados OData para descobrir as entidades no serviço.
+Clique em **Ir**. O Visual Studio lê o documento de metadados OData para descobrir as entidades no serviço.
 
 [![](calling-an-odata-service-from-a-net-client/_static/image7.png)](calling-an-odata-service-from-a-net-client/_static/image6.png)
 

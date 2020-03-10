@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/advanced-data-access-scenarios/index
-title: Cenários de acesso de dados avançados | Microsoft Docs
+title: Cenários de acesso a dados avançados | Microsoft Docs
 author: rick-anderson
-description: Esses tutoriais abordam como trabalhar com procedimentos armazenados e as colunas computadas, como usar junções com tabelas de banco de dados e como criptografar as informações de conexão de dados...
+description: Esses tutoriais abordam como trabalhar com procedimentos armazenados e colunas computadas, como usar junções com tabelas de banco de dados e como criptografar as informações de conexão...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 00d198ed-fddc-4fd3-a86e-3f29c5f707cc
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios
 msc.type: chapter
 ms.openlocfilehash: 25041560b9e8ff0a8c944572dad344e655100b0d
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108540"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78533050"
 ---
 # <a name="advanced-data-access-scenarios"></a>Cenários de acesso de dados avançados
 
-> Esses tutoriais abordam como trabalhar com procedimentos armazenados e as colunas computadas, como usar junções com tabelas de banco de dados e como criptografar informações de conexão de dados.
+> Esses tutoriais abordam como trabalhar com procedimentos armazenados e colunas computadas, como usar junções com tabelas de banco de dados e como criptografar as informações de conexão.
 
 - [Criando novos procedimentos armazenados para os TableAdapters do conjunto de dados tipado (C#)](creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
 - [Uso de procedimentos armazenados existentes para os TableAdapters do conjunto de dados tipado (C#)](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)

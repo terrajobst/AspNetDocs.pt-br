@@ -1,35 +1,35 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
-title: Contenção no OData v4 usando a API Web 2.2 | Microsoft Docs
+title: Contenção no OData v4 usando a API Web 2,2 | Microsoft Docs
 author: rick-anderson
-description: Tradicionalmente, uma entidade pode ser acessada somente se ele foi encapsulado dentro de um conjunto de entidades. Mas o OData v4 fornece duas opções adicionais, Singleton e Con...
+description: Tradicionalmente, uma entidade só poderia ser acessada se fosse encapsulada dentro de um conjunto de entidades. Mas o OData v4 fornece duas opções adicionais, singleton e con...
 ms.author: riande
 ms.date: 06/27/2014
 ms.assetid: 5fbfefad-a17a-4c46-8646-f1ccd154cd56
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
 msc.type: authoredcontent
 ms.openlocfilehash: 50050e40c4c42bf6d769d077c27864ee6417d4db
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131634"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525119"
 ---
-# <a name="containment-in-odata-v4-using-web-api-22"></a>Contenção no OData v4 usando a API Web 2.2
+# <a name="containment-in-odata-v4-using-web-api-22"></a>Contenção no OData v4 usando a API Web 2,2
 
-by Jinfu Tan
+por JinFu Tan
 
-> Tradicionalmente, uma entidade pode ser acessada somente se ele foi encapsulado dentro de um conjunto de entidades. Mas o OData v4 fornece duas opções adicionais, Singleton e contenção, que oferece suporte da API Web 2.2.
+> Tradicionalmente, uma entidade só poderia ser acessada se fosse encapsulada dentro de um conjunto de entidades. Mas o OData v4 fornece duas opções adicionais, singleton e confinamento, que são compatíveis com o WebAPI 2,2.
 
-Este tópico mostra como definir um conjunto de contenção em um ponto de extremidade OData na API Web 2.2. Para obter mais informações sobre a contenção, consulte [confinamento estará disponível com o OData v4](https://blogs.msdn.com/b/odatateam/archive/2014/03/13/containment-is-coming-with-odata-v4.aspx). Para criar um ponto de extremidade OData V4 no API da Web, consulte [criar um OData v4 ponto de extremidade usando API Web ASP.NET 2.2](create-an-odata-v4-endpoint.md).
+Este tópico mostra como definir uma contenção em um ponto de extremidade OData no WebApi 2,2. Para obter mais informações sobre contenção, consulte [a contenção é proveniente do OData v4](https://blogs.msdn.com/b/odatateam/archive/2014/03/13/containment-is-coming-with-odata-v4.aspx). Para criar um ponto de extremidade do OData v4 na API Web, consulte [criar um ponto de extremidade do OData v4 usando ASP.NET Web API 2,2](create-an-odata-v4-endpoint.md).
 
-Primeiro, vamos criar um modelo de domínio de confinamento no serviço do OData, usando esse modelo de dados:
+Primeiro, criaremos um modelo de domínio de confinamento no serviço OData, usando este modelo de dados:
 
 ![Modelo de dados](odata-containment-in-web-api-22/_static/image1.png)
 
-Uma conta contém muitos PaymentInstruments (PI), mas não definimos uma conjunto de entidades para um PI. Em vez disso, os PIs só podem ser acessados por meio de uma conta.
+Uma conta contém muitos PaymentInstruments (PI), mas não definimos um conjunto de entidades para um PI. Em vez disso, o PIs só pode ser acessado por meio de uma conta.
 
-Você pode baixar a solução usada neste tópico de [CodePlex](https://aspnet.codeplex.com/SourceControl/latest#Samples/WebApi/OData/v4/ODataContainmentSample/).
+Você pode baixar a solução usada neste tópico do [codeplex](https://aspnet.codeplex.com/SourceControl/latest#Samples/WebApi/OData/v4/ODataContainmentSample/).
 
 ## <a name="defining-the-data-model"></a>Definindo o modelo de dados
 
@@ -37,25 +37,25 @@ Você pode baixar a solução usada neste tópico de [CodePlex](https://aspnet.c
 
     [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample1.cs)]
 
-    O `Contained` atributo é usado para as propriedades de navegação de contenção.
-2. Gere o modelo EDM com base nos tipos de CLR.
+    O atributo `Contained` é usado para propriedades de navegação de confinamento.
+2. Gere o modelo EDM com base nos tipos CLR.
 
     [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample2.cs)]
 
-    O `ODataConventionModelBuilder` manipulará a criação do modelo EDM, se o `Contained` atributo é adicionado à propriedade de navegação correspondente. Se a propriedade for um tipo de coleção, um `GetCount(string NameContains)` função também será criada.
+    O `ODataConventionModelBuilder` tratará da criação do modelo EDM se o atributo `Contained` for adicionado à propriedade de navegação correspondente. Se a propriedade for um tipo de coleção, uma função `GetCount(string NameContains)` também será criada.
 
-    Os metadados gerados terão a seguinte aparência:
+    Os metadados gerados serão semelhantes ao seguinte:
 
     [!code-xml[Main](odata-containment-in-web-api-22/samples/sample3.xml?highlight=10)]
 
-    O `ContainsTarget` atributo indica que a propriedade de navegação é um conjunto de contenção.
+    O atributo `ContainsTarget` indica que a propriedade de navegação é uma contenção.
 
-## <a name="define-the-containing-entity-set-controller"></a>Definir o controlador de conjunto de entidade que contém
+## <a name="define-the-containing-entity-set-controller"></a>Definir o controlador de conjunto de entidades de contenção
 
-Entidades independentes não tem seu próprio controlador; a ação está definida no controlador de conjunto de entidade que contém. Neste exemplo, há um AccountsController, mas nenhum PaymentInstrumentsController.
+Entidades contidas não têm seu próprio controlador; a ação é definida no controlador de conjunto de entidades que a contém. Neste exemplo, há um AccountsController, mas nenhum PaymentInstrumentsController.
 
 [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample4.cs)]
 
-Se o caminho do OData é 4 ou mais segmentos, atributo somente roteamento funciona, como `[ODataRoute("Accounts({accountId})/PayinPIs({paymentInstrumentId})")]` no controlador acima. Caso contrário, o atributo e o roteamento convencional funciona: por exemplo, `GetPayInPIs(int key)` corresponde ao `GET ~/Accounts(1)/PayinPIs`.
+Se o caminho OData for de 4 ou mais segmentos, somente o roteamento de atributos funcionará, como `[ODataRoute("Accounts({accountId})/PayinPIs({paymentInstrumentId})")]` no controlador acima. Caso contrário, o atributo e o roteamento convencional funcionarão: por exemplo, `GetPayInPIs(int key)` corresponde a `GET ~/Accounts(1)/PayinPIs`.
 
-*Graças ao Leo Hu para o conteúdo original deste artigo.*
+*Agradecemos ao Leo Hu pelo conteúdo original deste artigo.*

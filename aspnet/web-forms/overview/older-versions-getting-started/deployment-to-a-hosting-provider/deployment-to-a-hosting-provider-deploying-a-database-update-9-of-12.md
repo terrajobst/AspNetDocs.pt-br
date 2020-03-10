@@ -9,11 +9,11 @@ ms.assetid: a8d776af-4735-4612-87f6-9f326587f2d3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 3385e1019d9e7a9263fd9513c39b25eb85febbb5
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74582009"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78564438"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-database-update---9-of-12"></a>Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio ou o Visual Web Developer: Implantando uma atualização de banco de dados-9 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Neste tutorial, você faz uma alteração de banco de dados e alterações de código relacionadas, testa as alterações no Visual Studio e, em seguida, implanta a atualização para os ambientes de teste e de produção.
 

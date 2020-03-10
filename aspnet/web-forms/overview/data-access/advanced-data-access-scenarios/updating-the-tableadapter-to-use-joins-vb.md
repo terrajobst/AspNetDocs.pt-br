@@ -9,11 +9,11 @@ ms.assetid: e624a3e0-061b-4efc-8b0e-5877f9ff6714
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/updating-the-tableadapter-to-use-joins-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 5c94baa99b126cdd24d69afc3d02bfe8b069419b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74604194"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78532266"
 ---
 # <a name="updating-the-tableadapter-to-use-joins-vb"></a>Atualizar o TableAdapter para usar JOINs (VB)
 
@@ -68,7 +68,7 @@ Por padrão, o TableAdapter criará automaticamente `INSERT`, `UPDATE`e `DELETE`
 
 **Figura 2**: inserir uma consulta principal que contém `JOIN` s
 
-Clique em Concluir para concluir o assistente. Neste ponto, o designer do seu conjunto de seus DataSet incluirá um único TableAdapter com uma DataTable com colunas para cada um dos campos retornados na lista de colunas da consulta `SELECT`. Isso inclui o `CategoryName` e `SupplierName`, como mostra a Figura 3.
+Clique em Concluir para finalizar o assistente. Neste ponto, o designer do seu conjunto de seus DataSet incluirá um único TableAdapter com uma DataTable com colunas para cada um dos campos retornados na lista de colunas da consulta `SELECT`. Isso inclui o `CategoryName` e `SupplierName`, como mostra a Figura 3.
 
 ![A DataTable inclui uma coluna para cada campo retornado na lista de colunas](updating-the-tableadapter-to-use-joins-vb/_static/image5.png)
 
@@ -161,7 +161,7 @@ Para ilustrar que o procedimento armazenado `Employees_Select` atualizado está 
 
 ## <a name="step-4-implementing-the-business-logic-layer"></a>Etapa 4: implementando a camada de lógica de negócios
 
-Crie um novo arquivo de classe na pasta `~/App_Code/BLL` chamada `EmployeesBLLWithSprocs.vb`. Essa classe imita a semântica da classe de `EmployeesBLL` existente, somente essa nova fornece menos métodos e usa o conjunto de `NorthwindWithSprocs` DataSet (em vez do conjunto de `Northwind` DataSet). Adicione o código a seguir à classe `EmployeesBLLWithSprocs`.
+Crie um novo arquivo de classe na pasta `~/App_Code/BLL` chamada `EmployeesBLLWithSprocs.vb`. Essa classe imita a semântica da classe de `EmployeesBLL` existente, somente essa nova fornece menos métodos e usa o conjunto de `NorthwindWithSprocs` DataSet (em vez do conjunto de `Northwind` DataSet). Adicione o código a seguir à classe `EmployeesBLLWithSprocs` .
 
 [!code-vb[Main](updating-the-tableadapter-to-use-joins-vb/samples/sample6.vb)]
 

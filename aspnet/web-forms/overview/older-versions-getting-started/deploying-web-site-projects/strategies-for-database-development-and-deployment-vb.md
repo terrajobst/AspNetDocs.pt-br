@@ -9,11 +9,11 @@ ms.assetid: 07b8905d-78ac-4252-97fb-8675b3fb0bbf
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/strategies-for-database-development-and-deployment-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 1ea4ade32fb05b9e69647ece7d1a4c400fe9fb21
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74616115"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546546"
 ---
 # <a name="strategies-for-database-development-and-deployment-vb"></a>Estratégias de desenvolvimento e implantação de banco de dados (VB)
 
@@ -91,7 +91,7 @@ Há uma variedade de ferramentas de comparação de banco de dados de terceiros 
 > [!NOTE]
 > No momento em que este artigo foi escrito, a versão atual do SQL Compare era a versão 7,1, com o custo de edição Standard $395. Você pode acompanhar o download de uma avaliação gratuita de 14 dias.
 
-Quando a comparação de SQL inicia a caixa de diálogo projetos de comparação é aberta, mostrando os projetos de comparação SQL salvos. Crie um novo projeto. Isso inicia o assistente de configuração de projeto, que solicita informações sobre os bancos de dados a serem comparados (consulte a Figura 1). Insira as informações para os bancos de dados do ambiente de desenvolvimento e de produção.
+Quando a comparação de SQL inicia a caixa de diálogo projetos de comparação é aberta, mostrando os projetos de comparação SQL salvos. Criar um novo projeto. Isso inicia o assistente de configuração de projeto, que solicita informações sobre os bancos de dados a serem comparados (consulte a Figura 1). Insira as informações para os bancos de dados do ambiente de desenvolvimento e de produção.
 
 [![comparar os bancos de dados de desenvolvimento e produção](strategies-for-database-development-and-deployment-vb/_static/image2.jpg)](strategies-for-database-development-and-deployment-vb/_static/image1.jpg)
 

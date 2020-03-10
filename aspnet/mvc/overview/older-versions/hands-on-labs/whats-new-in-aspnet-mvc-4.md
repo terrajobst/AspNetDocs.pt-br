@@ -9,15 +9,15 @@ ms.assetid: 48f7feb3-872f-485d-b96f-e30011ff8c4a
 msc.legacyurl: /mvc/overview/older-versions/hands-on-labs/whats-new-in-aspnet-mvc-4
 msc.type: authoredcontent
 ms.openlocfilehash: 4235f4fe666cdeb7d0821127a2b349f2ff30cd6e
-ms.sourcegitcommit: 295cf898a4c87e264b0c35c7254b0fa4169f2278
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057039"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78539434"
 ---
 # <a name="whats-new-in-aspnet-mvc-4"></a>Novidades no ASP.NET MVC 4
 
-Por [equipe de acampamentos da Web](https://twitter.com/webcamps)
+por [equipe de acampamentos da Web](https://twitter.com/webcamps)
 
 [Baixe o kit de treinamento do Web acampamentos](https://aka.ms/webcamps-training-kit)
 
@@ -57,7 +57,7 @@ Você deve ter os seguintes itens para concluir este laboratório:
 <a id="Setup"></a>
 
 <a id="Setup"></a>
-### <a name="setup"></a>Configuração
+### <a name="setup"></a>Instalação
 
 Em todo o documento do laboratório, você será instruído a inserir blocos de código. Para sua conveniência, a maior parte desse código é fornecida como trechos de Visual Studio Code, que podem ser usados no Visual Studio para evitar a necessidade de adicioná-lo manualmente.
 
@@ -101,7 +101,7 @@ Neste exercício, você irá explorar os aprimoramentos nos modelos de projeto d
     > [!NOTE]
     > Posteriormente, você personalizará a solução ASP.NET MVC 4 do Gallery que está criando agora.
 
-    ![Criando um novo projeto](whats-new-in-aspnet-mvc-4/_static/image1.png "Criando um novo projeto")
+    ![Criando um novo projeto](whats-new-in-aspnet-mvc-4/_static/image1.png "Criar um novo projeto")
 
     *Criando um novo projeto*
 3. Na caixa de diálogo **novo projeto do ASP.NET MVC 4** , selecione o modelo de projeto de **aplicativo da Internet** e clique em **OK**. Verifique se você selecionou Razor como o mecanismo de exibição.
@@ -203,12 +203,12 @@ O ASP.NET MVC 4 facilita o desenvolvimento de sites para navegadores móveis e t
 
         O modelo de projeto de aplicativo móvel inclui a biblioteca do jQuery Mobile, que é uma biblioteca de software livre para compatibilidade com navegadores móveis. o jQuery Mobile aplica aprimoramento progressivo a navegadores móveis que dão suporte a CSS e a JavaScript. O aprimoramento progressivo permite que todos os navegadores exibam o conteúdo básico de uma página da Web, enquanto só permite que os navegadores mais poderosos exibam o conteúdo rico. Os arquivos JavaScript e CSS, incluídos no estilo do jQuery Mobile, ajudam os navegadores móveis a ajustar o conteúdo na tela sem fazer nenhuma alteração na marcação da página.
 
-        ![jQuery-mobile-Library-Included-in-the-template](whats-new-in-aspnet-mvc-4/_static/image12.png)
+        ![jQuery-mobile-library-included-in-the-template](whats-new-in-aspnet-mvc-4/_static/image12.png)
 
         *biblioteca do jQuery Mobile incluída no modelo*
     - **Marcação baseada em HTML5**
 
-        ![Mobile-aplicativo-modelo-using-HTML5-Markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
+        ![Mobile-application-template-using-HTML5-markup](whats-new-in-aspnet-mvc-4/_static/image13.png)
 
         *Modelo de aplicativo móvel usando marcação HTML5, (login. cshtml e index. cshtml)*
 4. Pressione **F5** para executar a solução.
@@ -318,7 +318,7 @@ Nesta tarefa, você criará uma simulação do serviço de foto para recuperar o
 
     *Testando o serviço de foto fictício*
 
-Em uma implementação real, você pode usar [ASP.NET Web API](../../../../web-api/index.md) para implementar o serviço Galeria de fotos. ASP.NET Web API é uma estrutura que facilita a criação de serviços HTTP que atingem uma ampla variedade de clientes, incluindo navegadores e dispositivos móveis. O ASP.NET Web API é uma plataforma ideal para o desenvolvimento de aplicativos RESTful no .NET Framework.
+Em uma implementação real, você pode usar [ASP.NET Web API](../../../../web-api/index.md) para implementar o serviço Galeria de fotos. O ASP.NET Web API é uma estrutura que facilita o desenvolvimento de serviços HTTP que alcançam uma ampla variedade de clientes, incluindo navegadores e dispositivos móveis. O ASP.NET Web API é uma plataforma ideal para o desenvolvimento de aplicativos RESTful no .NET Framework.
 
 <a id="Task_2_-_Displaying_the_Photo_Gallery"></a>
 #### <a name="task-2---displaying-the-photo-gallery"></a>Tarefa 2 – exibindo a Galeria de fotos
@@ -397,7 +397,7 @@ Uma das principais atualizações no ASP.NET MVC 4 é o suporte para desenvolvim
 
     - **Views/Shared/\_layout. Mobile. cshtml**: é um layout baseado em Mobile do jQuery otimizado para uma tela menor. Quando o site receber uma solicitação de um navegador móvel, ele substituirá o layout original (\_layout. cshtml) por este.
     - Um componente de seletor de exibição: consiste na exibição parcial views **/Shared/\_ViewSwitcher. cshtml** e no controlador **ViewSwitcherController.cs** . Este componente mostrará um link em navegadores móveis para permitir que os usuários alternem para a versão de área de trabalho da página.  
-        ![Projeto da Galeria de fotos com suporte móvel](whats-new-in-aspnet-mvc-4/_static/image23.png "Phprojeto da galeria do cronização com suporte móvel ")
+        ![Projeto da Galeria de fotos com suporte móvel](whats-new-in-aspnet-mvc-4/_static/image23.png "Projeto da Galeria de fotos com suporte móvel")
 
         *Projeto da Galeria de fotos com suporte móvel*
 4. Registre os pacotes móveis. Para fazer isso, abra o arquivo **global.asax.cs** e adicione a linha a seguir.
@@ -516,7 +516,7 @@ Nesta tarefa, você irá explorar a implementação de exemplo de um seletor de 
 
     - O método **HttpContext. ClearOverriddenBrowser ()** remove qualquer agente de usuário substituído da solicitação atual.
     - O método **HttpContext. SetOverriddenBrowser ()** substitui o valor real do agente do usuário da solicitação usando o agente do usuário especificado.  
-        ![Controlador ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "ViControlador ewSwitcher ")  
+        ![Controlador ViewSwitcher](whats-new-in-aspnet-mvc-4/_static/image31.png "Controlador ViewSwitcher")  
 *Controlador ViewSwitcher*
 
         A substituição do navegador é um recurso fundamental do ASP.NET MVC 4, que também está disponível mesmo se você não instalar o pacote jQuery. Mobile. MVC. No entanto, esse recurso afeta apenas exibição, layout e exibição parcial e não afeta nenhum dos recursos que dependem do objeto Request. browser.
@@ -538,7 +538,7 @@ Nesta tarefa, você atualizará o layout da área de trabalho para incluir o sel
     ![Exibir seletor renderizado na exibição de área de trabalho](whats-new-in-aspnet-mvc-4/_static/image32.png "Exibir seletor renderizado na exibição de área de trabalho")
 
     *Exibir seletor renderizado na exibição de área de trabalho*
-7. Alterne para o modo de exibição móvel novamente e navegue até a página **sobre** (http://localhost [porta]/Home/about). Observe que, mesmo que você não tenha criado uma exibição about. Mobile. cshtml, a página About é exibida usando o layout móvel (\_layout. Mobile. cshtml).
+7. Alterne para o modo de exibição móvel novamente e navegue até a página **sobre** (http://localhost[porta]/Home/about). Observe que, mesmo que você não tenha criado uma exibição about. Mobile. cshtml, a página About é exibida usando o layout móvel (\_layout. Mobile. cshtml).
 
     ![Página sobre](whats-new-in-aspnet-mvc-4/_static/image33.png "Página Sobre")
 
@@ -589,7 +589,7 @@ Agora você tem três layouts em seu aplicativo ASP.NET MVC 4:
 7. Pressione **F5** para executar o aplicativo e procurar o site no **emulador de Windows Phone**.
 8. Abra um **simulador de iPhone** (consulte o [Apêndice C](#AppendixC) para obter instruções sobre como instalar e configurar um simulador de iPhone) e navegue até o site também. Observe que cada telefone está usando o modelo específico.
 
-    ![Usando-modos de exibição diferentes-para-cada-móvel-dispositivo2](whats-new-in-aspnet-mvc-4/_static/image35.png)
+    ![Using-different-views-for-each-mobile-device2](whats-new-in-aspnet-mvc-4/_static/image35.png)
 
     *Usando diferentes modos de exibição para cada dispositivo móvel*
 
@@ -933,7 +933,7 @@ Este apêndice mostrará como criar um novo site da Web do Windows Azure Portal 
 7. Na página **painel** , na seção **visão rápida** , clique no link **baixar perfil de publicação** .
 
     > [!NOTE]
-    > O *perfil de publicação* contém todas as informações necessárias para publicar um aplicativo Web em um site do Windows Azure para cada método de publicação habilitado. O perfil de publicação contém as URLs, as credenciais de usuário e as cadeias de caracteres de banco de dados necessárias para se conectar e autenticar em cada um dos pontos de extremidade para os quais um método de publicação está habilitado. **O Microsoft WebMatrix 2**, **Microsoft Visual Studio Express para Web** e **Microsoft Visual Studio 2012** dão suporte à leitura de perfis de publicação para automatizar a configuração desses programas para a publicação de aplicativos Web em sites do Windows Azure.
+    > O *perfil de publicação* contém todas as informações necessárias para publicar um aplicativo Web em um site do Windows Azure para cada método de publicação habilitado. O perfil de publicação contém as URLs, as credenciais de usuário e as cadeias de conexão de banco de dados necessárias para conectar-se e autenticar cada um dos pontos de extremidade para os quais um método de publicação é habilitado. **O Microsoft WebMatrix 2**, **Microsoft Visual Studio Express para Web** e **Microsoft Visual Studio 2012** dão suporte à leitura de perfis de publicação para automatizar a configuração desses programas para a publicação de aplicativos Web em sites do Windows Azure.
 
     ![Baixando o perfil de publicação do site](whats-new-in-aspnet-mvc-4/_static/image67.png "Baixando o perfil de publicação do site")
 
@@ -1005,12 +1005,12 @@ Se seu aplicativo utiliza bancos de dados SQL Server, você precisará criar um 
      ![Configurando a cadeia de conexão de destino](whats-new-in-aspnet-mvc-4/_static/image77.png "Configurando a cadeia de conexão de destino")
 
      *Configurando a cadeia de conexão de destino*
-6. Clique em **OK**. Quando for solicitado a criar o banco de dados, clique em **Sim**.
+6. Em seguida, clique em **OK**. Quando for solicitado a criar o banco de dados, clique em **Sim**.
 
     ![Criando o banco de dados](whats-new-in-aspnet-mvc-4/_static/image78.png "Criando a cadeia de caracteres do banco de dados")
 
     *Criando o banco de dados*
-7. A cadeia de conexão que você usará para se conectar ao banco de dados SQL no Windows Azure é mostrada na caixa de texto conexão padrão. Clique em **Avançar**.
+7. A cadeia de conexão que você usará para se conectar ao banco de dados SQL no Windows Azure é mostrada na caixa de texto conexão padrão. Em seguida, clique em **Próximo**.
 
     ![Cadeia de conexão apontando para o banco de dados SQL](whats-new-in-aspnet-mvc-4/_static/image79.png "Cadeia de conexão apontando para o banco de dados SQL")
 

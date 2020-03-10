@@ -9,11 +9,11 @@ ms.assetid: f904cd2c-a408-4484-9324-8b8d7fe33893
 msc.legacyurl: /web-forms/overview/data-access/database-driven-site-maps/building-a-custom-database-driven-site-map-provider-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 78051696bd75e1d574f55b1c5d5891fe67c3030d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74630451"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78595364"
 ---
 # <a name="building-a-custom-database-driven-site-map-provider-vb"></a>Criação de um provedor de mapa de site personalizado controlado por banco de dados (VB)
 
@@ -108,7 +108,7 @@ Abra a página `ProductsByCategory.aspx` e adicione um GridView, nomeando-o `Pro
 
 **Figura 8**: usar o método de `GetProductsByCategoryID(categoryID)` da classe `ProductsBLL` ([clique para exibir a imagem em tamanho normal](building-a-custom-database-driven-site-map-provider-vb/_static/image10.png))
 
-A etapa final do assistente para configurar fonte de dados solicita uma origem de parâmetro para *CategoryID*. Como essas informações são passadas pelo campo QueryString `CategoryID`, selecione QueryString na lista suspensa e insira CategoryID na caixa de texto QueryStringfield, como mostra a Figura 9. Clique em Concluir para concluir o assistente.
+A etapa final do assistente para configurar fonte de dados solicita uma origem de parâmetro para *CategoryID*. Como essas informações são passadas pelo campo QueryString `CategoryID`, selecione QueryString na lista suspensa e insira CategoryID na caixa de texto QueryStringfield, como mostra a Figura 9. Clique em Concluir para finalizar o assistente.
 
 [![usar o campo CódigoDaCategoria QueryString para o parâmetro categoryID](building-a-custom-database-driven-site-map-provider-vb/_static/image9.gif)](building-a-custom-database-driven-site-map-provider-vb/_static/image11.png)
 
@@ -189,7 +189,7 @@ Por motivos de desempenho e escalabilidade, é importante que armazenamos em cac
 
 ## <a name="step-6-creating-the-custom-site-map-provider"></a>Etapa 6: criando o provedor de mapa do site personalizado
 
-Para criar um provedor de mapa do site personalizado que cria o mapa do site de categorias e produtos no banco de dados Northwind, precisamos criar uma classe que estenda `StaticSiteMapProvider`. Na etapa 1, pedia que você adicionasse uma pasta `CustomProviders` na pasta `App_Code` – adicione uma nova classe a essa pasta denominada `NorthwindSiteMapProvider`. Adicione o seguinte código à classe `NorthwindSiteMapProvider`:
+Para criar um provedor de mapa do site personalizado que cria o mapa do site de categorias e produtos no banco de dados Northwind, precisamos criar uma classe que estenda `StaticSiteMapProvider`. Na etapa 1, pedia que você adicionasse uma pasta `CustomProviders` na pasta `App_Code` – adicione uma nova classe a essa pasta denominada `NorthwindSiteMapProvider`. Adicione o código a seguir à classe `NorthwindSiteMapProvider`:
 
 [!code-vb[Main](building-a-custom-database-driven-site-map-provider-vb/samples/sample6.vb)]
 

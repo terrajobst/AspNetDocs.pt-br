@@ -1,259 +1,259 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
-title: Introdução ao ASP.NET Web Pages - inserindo o banco de dados usando formulários | Microsoft Docs
+title: Introdução à Páginas da Web do ASP.NET-inserindo dados de banco usando formulários | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial mostra como criar um formulário de entrada e, em seguida, insira os dados que você obtém do formulário em uma tabela de banco de dados quando você usa o ASP.NET Web Pages (...
+description: Este tutorial mostra como criar um formulário de entrada e, em seguida, inserir os dados obtidos do formulário em uma tabela de banco de dado quando você usa Páginas da Web do ASP.NET (...
 ms.author: riande
 ms.date: 05/28/2015
 ms.assetid: d37c93fc-25fd-4e94-8671-0d437beef206
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/entering-data
 msc.type: authoredcontent
 ms.openlocfilehash: b9354a7b97a7df9020a681f709e16a92650cfcf0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132966"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78624533"
 ---
-# <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introdução ao ASP.NET Web Pages - inserindo o banco de dados usando formulários
+# <a name="introducing-aspnet-web-pages---entering-database-data-by-using-forms"></a>Introdução à Páginas da Web do ASP.NET-inserindo dados de banco usando formulários
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este tutorial mostra como criar um formulário de entrada e, em seguida, insira os dados que você obtém do formulário em uma tabela de banco de dados quando você usa o ASP.NET Web Pages (Razor). Ele pressupõe que você tenha concluído a série por meio [Noções básicas de formulários em HTML em páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=251581).
+> Este tutorial mostra como criar um formulário de entrada e, em seguida, inserir os dados obtidos do formulário em uma tabela do banco de dados quando você usa o Páginas da Web do ASP.NET (Razor). Ele pressupõe que você tenha concluído a série por meio [de noções básicas de formulários HTML no páginas da Web do ASP.net](https://go.microsoft.com/fwlink/?LinkId=251581).
 > 
 > O que você aprenderá:
 > 
-> - Mais informações sobre como processar formulários de entrada.
-> - Como adicionar dados (insert) em um banco de dados.
-> - Como certificar-se de que os usuários tiverem inserido um valor obrigatório em um formulário (como validar a entrada do usuário).
+> - Mais sobre como processar formulários de entrada.
+> - Como adicionar (inserir) dados em um banco de dado.
+> - Como certificar-se de que os usuários inseriram um valor necessário em um formulário (como validar a entrada do usuário).
 > - Como exibir erros de validação.
-> - Como alternar para outra página da página atual.
+> - Como ir para outra página da página atual.
 >   
 > 
-> Recursos/tecnologias abordadas:
+> Recursos/tecnologias abordados:
 > 
 > - O método `Database.Execute`.
-> - O SQL `Insert Into` instrução
-> - O `Validation` auxiliar.
+> - A instrução SQL `Insert Into`
+> - O auxiliar de `Validation`.
 > - O método `Response.Redirect`.
 
-## <a name="what-youll-build"></a>O que você vai criar
+## <a name="what-youll-build"></a>O que você vai construir
 
-No tutorial anterior que mostrou como criar um banco de dados, você inseriu dados do banco de dados por meio da edição do banco de dados diretamente no WebMatrix, trabalhando na **banco de dados** espaço de trabalho. Na maioria dos aplicativos, que não é uma maneira prática para colocar dados no banco de dados, no entanto. Portanto, neste tutorial, você criará uma interface baseada na web que permite que você ou qualquer pessoa inserir dados e salvá-lo ao banco de dados.
+No tutorial anterior que mostrou como criar um banco de dados, você inseriu o banco de dado, editando-o diretamente no WebMatrix, trabalhando **no espaço de** trabalho. No entanto, na maioria dos aplicativos, essa não é uma maneira prática de colocar dados no banco de dados. Portanto, neste tutorial, você criará uma interface baseada na Web que permite que você ou qualquer pessoa insira dados e salve-os no banco de dado.
 
-Você criará uma página onde você pode inserir novos filmes. A página conterá um formulário de entrada que tem campos (caixas de texto) em que você pode inserir um título do filme, gênero e ano. A página será semelhante a esta página:
+Você criará uma página onde poderá inserir novos filmes. A página conterá um formulário de entrada com campos (caixas de texto) em que você pode inserir um título, gênero e ano do filme. A página se parecerá com esta página:
 
-!['Adicionar filme' página no navegador](entering-data/_static/image1.png)
+![Página ' Adicionar filme ' no navegador](entering-data/_static/image1.png)
 
-As caixas de texto será HTML `<input>` elementos que irá procurar como essa marcação:
+As caixas de texto serão HTML `<input>` elementos que se parecerão com esta marcação:
 
 `<input type="text" name="genre" value="" />`
 
 ## <a name="creating-the-basic-entry-form"></a>Criando o formulário de entrada básico
 
-Crie uma página chamada *AddMovie.cshtml*.
+Crie uma página chamada *addmovie. cshtml*.
 
-Substitua o que está no arquivo com a marcação a seguir. Substituir tudo. Você adicionará um bloco de código na parte superior em breve.
+Substitua o que está no arquivo pela marcação a seguir. Substituir tudo; Você adicionará um bloco de código na parte superior em breve.
 
 [!code-cshtml[Main](entering-data/samples/sample1.cshtml)]
 
-Este exemplo mostra o HTML típica para a criação de um formulário. Ele usa `<input>` elementos para as caixas de texto e para o botão Enviar. As legendas para as caixas de texto são criadas usando o padrão `<label>` elementos. O `<fieldset>` e `<legend>` elementos coloque uma caixa de BOM no formulário.
+Este exemplo mostra HTML típico para criar um formulário. Ele usa elementos `<input>` para as caixas de texto e para o botão enviar. As legendas para as caixas de texto são criadas usando elementos de `<label>` padrão. Os elementos `<fieldset>` e `<legend>` colocam uma ótima caixa ao lado do formulário.
 
-Observe que nessa página, o `<form>` usa o elemento `post` como o valor para o `method` atributo. No tutorial anterior, você criou um formulário que é usado o `get` método. Isso foi correto, porque embora o formulário enviado valores para o servidor, a solicitação não fez as alterações. Tudo o que fazia era buscar dados de maneiras diferentes. No entanto, nesta página você *serão* fazer alterações — você vai adicionar novos registros de banco de dados. Portanto, esse formulário deve usar o `post` método. (Para obter mais informações sobre a diferença entre `GET` e `POST` operações, consulte o[GET, POST e segurança do verbo HTTP](https://go.microsoft.com/fwlink/?LinkId=251581#GET,_POST,_and_HTTP_Verb_Safety) barra lateral no tutorial anterior.)
+Observe que nessa página, o elemento `<form>` usa `post` como o valor para o atributo `method`. No tutorial anterior, você criou um formulário que usou o método `get`. Isso estava correto, porque embora o formulário tenha enviado valores para o servidor, a solicitação não fez nenhuma alteração. Tudo o que ele tinha foi buscar dados de maneiras diferentes. No entanto, nesta página você *fará* alterações — você vai adicionar novos registros de banco de dados. Portanto, esse formulário deve usar o método `post`. (Para obter mais informações sobre a diferença entre as operações de `GET` e `POST`, consulte a barra lateral de[segurança do verbo GET, post e http](https://go.microsoft.com/fwlink/?LinkId=251581#GET,_POST,_and_HTTP_Verb_Safety) no tutorial anterior.)
 
-Observe que cada caixa de texto tem um `name` elemento (`title`, `genre`, `year`). Como você viu no tutorial anterior, esses nomes são importantes porque você deve ter esses nomes para que você possa obter a entrada do usuário mais tarde. Você pode usar qualquer nome. Vale a pena usar nomes significativos que ajudam você a se lembrar de quais dados você está trabalhando com.
+Observe que cada caixa de texto tem um elemento `name` (`title`, `genre``year`). Como vimos no tutorial anterior, esses nomes são importantes porque você deve ter esses nomes para poder obter a entrada do usuário mais tarde. Você pode usar qualquer nome. É útil usar nomes significativos que o ajudarão a se lembrar de quais dados você está trabalhando.
 
-O `value` atributo de cada `<input>` elemento contém um pouco de código do Razor (por exemplo, `Request.Form["title"]`). Uma versão desse truque você aprendeu no tutorial anterior para preservar o valor inserido na caixa de texto (se houver) depois que o formulário foi enviado.
+O atributo `value` de cada elemento `<input>` contém um pouco de código Razor (por exemplo, `Request.Form["title"]`). Você aprendeu uma versão desse truque no tutorial anterior para preservar o valor inserido na caixa de texto (se houver) após o envio do formulário.
 
-## <a name="getting-the-form-values"></a>Obtendo os valores de formulário
+## <a name="getting-the-form-values"></a>Obtendo os valores do formulário
 
-Em seguida, você pode adicionar código que processa o formulário. Na estrutura de tópicos, você fará o seguinte:
+Em seguida, você adiciona o código que processa o formulário. Em contorno, você fará o seguinte:
 
-1. Verifique se a página está sendo lançada (foi enviado). Você deseja para seu código ser executado somente quando os usuários clicaram no botão, não quando a página é executada.
-2. Obter os valores que o usuário inseriu nas caixas de texto. Nesse caso, porque o formulário está usando o `POST` verbo, você obtém os valores de formulário do `Request.Form` coleção.
-3. Inserir os valores como um novo registro na *filmes* tabela de banco de dados.
+1. Verifique se a página está sendo postada (enviada). Você deseja que seu código seja executado somente quando os usuários clicarem no botão, não quando a página for executada pela primeira vez.
+2. Obtenha os valores inseridos pelo usuário nas caixas de texto. Nesse caso, como o formulário está usando o `POST` verbo, você obtém os valores de formulário da coleção de `Request.Form`.
+3. Insira os valores como um novo registro na tabela de banco de dados de *filmes* .
 
 Na parte superior do arquivo, adicione o seguinte código:
 
 [!code-cshtml[Main](entering-data/samples/sample2.cshtml)]
 
-As primeiras linhas criam variáveis (`title`, `genre`, e `year`) para conter os valores das caixas de texto. A linha `if(IsPost)` torna-se de que as variáveis são definidas *apenas* quando os usuários clicarem o **Adicionar filme** botão — ou seja, quando o formulário foi postado.
+As primeiras linhas criam variáveis (`title`, `genre`e `year`) para manter os valores das caixas de texto. A linha `if(IsPost)` garante que as variáveis sejam definidas *somente* quando os usuários clicarem no botão **Adicionar filme** — ou seja, quando o formulário tiver sido postado.
 
-Como você viu em um tutorial anterior, você obtém o valor de uma caixa de texto usando uma expressão como `Request.Form["name"]`, onde *nome* é o nome da `<input>` elemento.
+Como vimos em um tutorial anterior, você obtém o valor de uma caixa de texto usando uma expressão como `Request.Form["name"]`, em que *Name* é o nome do elemento `<input>`.
 
-Os nomes das variáveis (`title`, `genre`, e `year`) são arbitrárias. Como os nomes que você atribui a `<input>` elementos, você pode chamá-los que desejar. (Os nomes das variáveis não precisam corresponder os atributos de nome de `<input>` elementos no formulário.) Mas assim como acontece com o `<input>` elementos, é uma boa ideia usar nomes de variáveis que refletem os dados que eles contêm. Quando você escreve o código, nomes consistentes tornam mais fácil de lembrar quais dados você está trabalhando.
+Os nomes das variáveis (`title`, `genre`e `year`) são arbitrários. Como os nomes que você atribui a elementos `<input>`, você pode chamá-los de qualquer coisa que desejar. (Os nomes das variáveis não precisam corresponder aos atributos de nome dos elementos `<input>` no formulário.) Mas, assim como acontece com os elementos de `<input>`, é uma boa ideia usar nomes de variáveis que reflitam os dados que eles contêm. Quando você escreve o código, os nomes consistentes facilitam a memorização dos dados com os quais você está trabalhando.
 
-## <a name="adding-data-to-the-database"></a>Adicionando dados ao banco de dados
+## <a name="adding-data-to-the-database"></a>Adicionando dados ao banco de dado
 
-No código bloquear você recém-adicionada, basta *dentro de* a chave de fechamento ( `}` ) do `if` bloquear (não apenas dentro do bloco de código), adicione o seguinte código:
+No bloco de código que você acabou de adicionar, apenas *dentro* da chave de fechamento (`}`) do bloco de `if` (não apenas dentro do bloco de código), adicione o seguinte código:
 
 [!code-csharp[Main](entering-data/samples/sample3.cs)]
 
-Este exemplo é semelhante ao código usado em um tutorial anterior para busca e exibir os dados. A linha que começa com `db =` abre o banco de dados, como antes e a próxima linha define uma instrução SQL, novamente como você viu antes. No entanto, desta vez ele define um SQL `Insert Into` instrução. O exemplo a seguir mostra a sintaxe geral do `Insert Into` instrução:
+Este exemplo é semelhante ao código usado em um tutorial anterior para buscar e exibir dados. A linha que começa com `db =` abre o banco de dados, como antes, e a próxima linha define uma instrução SQL, novamente como visto anteriormente. No entanto, desta vez ele define uma instrução SQL `Insert Into`. O exemplo a seguir mostra a sintaxe geral da instrução `Insert Into`:
 
 `INSERT INTO table (column1, column2, column3, ...) VALUES (value1, value2, value3, ...)`
 
-Em outras palavras, você especificar a tabela a ser inserido, em seguida, liste as colunas a ser inserido e, em seguida, lista os valores a serem inseridos. (Conforme observado anteriormente, SQL, não diferencia maiusculas de minúsculas, mas algumas pessoas capitalizar as palavras-chave para torná-lo mais fácil de ler o comando.)
+Em outras palavras, especifique a tabela a ser inserida e, em seguida, liste as colunas a serem inseridas e, em seguida, liste os valores a serem inseridos. (Como observado anteriormente, o SQL não diferencia maiúsculas de minúsculas, mas algumas pessoas capitalizam as palavras-chave para facilitar a leitura do comando.)
 
-As colunas que você está inserindo já estão listadas no comando — `(Title, Genre, Year)`. A parte interessante é como obter os valores de caixas de texto para o `VALUES` faz parte do comando. Em vez de valores reais, você verá `@0`, `@1`, e `@2`, é claro, que são espaços reservados. Quando você executa o comando (no `db.Execute` linha), você passa os valores que você obteve as caixas de texto.
+As colunas que você está inserindo já estão listadas no comando — `(Title, Genre, Year)`. A parte interessante é como você obtém os valores das caixas de texto na `VALUES` parte do comando. Em vez de valores reais, você vê `@0`, `@1`e `@2`, que são de espaços reservados do curso. Ao executar o comando (na linha de `db.Execute`), você passa os valores obtidos nas caixas de texto.
 
-**Importante!** Lembre-se de que a única maneira de você nunca deve incluir os dados inseridos online por um usuário em uma instrução SQL é usar espaços reservados, como você pode ver aqui (`VALUES(@0, @1, @2)`). Se você concatenar a entrada do usuário em uma instrução SQL, você abre por conta própria a um ataque de injeção de SQL, conforme explicado em [Noções básicas de formulário em páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=251581) (tutorial anterior).
+**Importante!** Lembre-se de que a única maneira de incluir dados inseridos online por um usuário em uma instrução SQL é usar espaços reservados, como você pode ver aqui (`VALUES(@0, @1, @2)`). Se você concatenar a entrada do usuário em uma instrução SQL, você se abre em um ataque de injeção de SQL, conforme explicado em [noções básicas de formulário no páginas da Web do ASP.net](https://go.microsoft.com/fwlink/?LinkId=251581) (o tutorial anterior).
 
-Ainda dentro de `if` blocos, adicione a seguinte linha após o `db.Execute` linha:
+Ainda dentro do bloco de `if`, adicione a seguinte linha após a linha de `db.Execute`:
 
 [!code-css[Main](entering-data/samples/sample4.css)]
 
-Depois que o novo filme foi inserido no banco de dados, esta linha você (redirecionamentos) salta para o *filmes* página para que você possa ver o filme que você acabou de digitar. O `~` operador significa "" raiz"do site. (O `~` operador geralmente funciona apenas em páginas ASP.NET, não em HTML.)
+Depois que o novo filme tiver sido inserido no banco de dados, essa linha saltará você (redireciona) para a página de *filmes* para que você possa ver o filme que acabou de inserir. O operador de `~` significa "raiz do site". (O operador `~` só funciona em páginas ASP.NET, e não em HTML geralmente.)
 
 O bloco de código completo é semelhante a este exemplo:
 
 [!code-cshtml[Main](entering-data/samples/sample5.cshtml)]
 
-## <a name="testing-the-insert-command-so-far"></a>Teste o comando de inserção (até o momento)
+## <a name="testing-the-insert-command-so-far"></a>Testando o comando Insert (até agora)
 
-Você não ainda terminou, mas agora é um bom momento para testar.
+Você ainda não terminou, mas agora é um bom momento para testar.
 
-Na exibição de árvore de arquivos no WebMatrix, clique com botão direito do *AddMovie.cshtml* da página e, em seguida, clique em **iniciar no navegador**.
+No modo de exibição de árvore de arquivos no WebMatrix, clique com o botão direito do mouse na página *addmovie. cshtml* e clique em **Iniciar no navegador**.
 
-!['Adicionar filme' página no navegador](entering-data/_static/image2.png)
+![Página ' Adicionar filme ' no navegador](entering-data/_static/image2.png)
 
-(Se você acabará com uma página diferente no navegador, certifique-se de que a URL é `http://localhost:nnnnn/AddMovie`), onde *nnnnn* é o número da porta que você está usando.)
+(Se você terminar com uma página diferente no navegador, certifique-se de que a URL é `http://localhost:nnnnn/AddMovie`), em que *nnnnn* é o número da porta que você está usando.)
 
-Você obteve uma página de erro? Nesse caso, leia com atenção e certifique-se de que o código parece exatamente o que estava listado anteriormente.
+Você obteve uma página de erro? Nesse caso, leia com cuidado e verifique se o código é exatamente o que foi listado anteriormente.
 
-Insira um filme no formulário &mdash; por exemplo, use "Cidadão Kane", "Drama" e "1941". (Ou qualquer outro.) Em seguida, clique em **filme adicionar**.
+Insira um filme no formato &mdash; por exemplo, use "Cidadão Kane", "de baixo" e "1941". (Ou qualquer coisa.) Em seguida, clique em **Adicionar filme**.
 
-Se tudo correr bem, você será redirecionado para o *filmes* página. Certifique-se de que o novo filme esteja listado.
+Se tudo correr bem, você será redirecionado para a página *filmes* . Verifique se o novo filme está listado.
 
-![Página de filmes mostrando recentemente adicionada filme](entering-data/_static/image3.png)
+![Página de filmes mostrando o filme recém adicionado](entering-data/_static/image3.png)
 
-## <a name="validating-user-input"></a>Validação de entrada do usuário
+## <a name="validating-user-input"></a>Validando entradas de usuário
 
-Volte para o *AddMovie* página ou executá-lo novamente. Insira outro filme, mas desta vez, insira somente o título &mdash; por exemplo, digite "Entrando ' no the Rain". Em seguida, clique em **filme adicionar**.
+Volte para a página *addmovie* ou execute-a novamente. Insira outro filme, mas, desta vez, insira apenas o título &mdash; por exemplo, digite "Singin' na chuva". Em seguida, clique em **Adicionar filme**.
 
-Você será redirecionado para o *filmes* página novamente. Você pode encontrar o novo filme, mas ele está incompleto.
+Você será redirecionado para a página de *filmes* novamente. Você pode encontrar o novo filme, mas ele está incompleto.
 
-![Página de filmes mostrando novo filme que alguns valores está ausentes](entering-data/_static/image4.png)
+![Página de filmes mostrando um novo filme que não tem alguns valores](entering-data/_static/image4.png)
 
-Quando você criou o *filmes* tabela, você explicitamente disse que nenhum dos campos pode ser nulo. Aqui, você tem um formulário de entrada para novos filmes e que está saindo campos em branco. Que é um erro.
+Quando você criou a tabela de *filmes* , disse explicitamente que nenhum dos campos pode ser nulo. Aqui você tem um formulário de entrada para novos filmes e está deixando os campos em branco. Isso é um erro.
 
-Nesse caso, o banco de dados, na verdade, não geram (ou *lançar*) um erro. Você não forneceu um gênero ou um ano, portanto, o código na *AddMovie* página tratado esses valores como chamados *cadeias de caracteres vazias*. Quando o SQL `Insert Into` comando foi executado, os campos de gênero e ano não tinham dados úteis neles, mas eles não eram nulos.
+Nesse caso, o banco de dados não gerou (ou *gerava*) um erro. Você não forneceu um gênero ou um ano, portanto, o código na página *addmovie* tratava esses valores como chamadas *cadeias de caracteres vazias*. Quando o comando SQL `Insert Into` é executado, os campos gênero e year não tinham dados úteis neles, mas não eram nulos.
 
-Obviamente, você não deseja permitir que os usuários a inserir informações sobre filmes metade vazio no banco de dados. A solução é validar a entrada do usuário. Inicialmente, a validação simplesmente garantirá que o usuário inseriu um valor para todos os campos (ou seja, que nenhuma delas contém uma cadeia de caracteres vazia).
+Obviamente, você não deseja permitir que os usuários insiram informações de filmes semivazias no banco de dados. A solução é validar a entrada do usuário. Inicialmente, a validação simplesmente garantirá que o usuário tenha inserido um valor para todos os campos (ou seja, que nenhum deles contenha uma cadeia de caracteres vazia).
 
 > [!TIP]
 > 
-> **Cadeias de caracteres vazias e nulas**
+> **Cadeias de caracteres nulas e vazias**
 > 
-> Em programação, há uma distinção entre Noções diferentes de "sem valor". Em geral, é um valor *nulo* se ele nunca foi definido ou inicializado de forma alguma. Em contraste, uma variável que espera dados de caracteres (cadeias de caracteres) pode ser definida como um *cadeia de caracteres vazia*. Nesse caso, o valor não é nulo. ele é apenas foi explicitamente definido como uma cadeia de caracteres cujo comprimento é zero. Essas duas instruções mostram a diferença:
+> Em programação, há uma distinção entre as diferentes noções de "nenhum valor". Em geral, um valor será *nulo* se nunca tiver sido definido ou inicializado de forma alguma. Por outro lado, uma variável que espera dados de caractere (cadeias de caracteres) pode ser definida como uma *cadeia de caracteres vazia*. Nesse caso, o valor não é nulo; Ele acabou de ser definido explicitamente como uma cadeia de caracteres cujo comprimento é zero. Essas duas instruções mostram a diferença:
 > 
 > [!code-csharp[Main](entering-data/samples/sample6.cs)]
 > 
-> É um pouco mais complicado do que isso, mas o ponto importante é que `null` represente um tipo de estado indeterminado.
+> É um pouco mais complicado do que isso, mas o ponto importante é que `null` representa um tipo de estado indeterminado.
 > 
-> Agora e, em seguida, é importante compreender exatamente quando um valor é nulo e quando ele é apenas uma cadeia de caracteres vazia. No código para o *AddMovie* página, você obtém os valores das caixas de texto usando `Request.Form["title"]` e assim por diante. Quando a página executa pela primeira vez (antes de você clicar no botão), o valor de `Request.Form["title"]` é nulo. Mas quando você enviar o formulário `Request.Form["title"]` obtém o valor da `title` caixa de texto. Não é óbvio, mas uma caixa de texto vazia não é nula. Ele apenas tem uma cadeia de caracteres vazia. Portanto, quando o código é executado em resposta ao botão clique, `Request.Form["title"]` tem uma cadeia de caracteres vazia em si.
+> Agora, é importante entender exatamente quando um valor é nulo e quando é apenas uma cadeia de caracteres vazia. No código da página *addmovie* , você obtém os valores das caixas de texto usando `Request.Form["title"]` e assim por diante. Quando a página é executada pela primeira vez (antes de você clicar no botão), o valor de `Request.Form["title"]` é nulo. Mas quando você envia o formulário, `Request.Form["title"]` Obtém o valor da caixa de texto `title`. Não é óbvio, mas uma caixa de texto vazia não é nula; Ele tem apenas uma cadeia de caracteres vazia. Assim, quando o código é executado em resposta ao clique do botão, `Request.Form["title"]` tem uma cadeia de caracteres vazia.
 > 
-> Por que essa distinção é importante? Quando você criou o *filmes* tabela, você explicitamente disse que nenhum dos campos pode ser nulo. Mas aqui, você tem um formulário de entrada para novos filmes e que está saindo campos em branco. Você seria razoável esperar o banco de dados reclamará quando você tentou salvar novos filmes que não têm valores para gênero ou ano. Mas esse é o ponto &mdash; mesmo se você deixar essas caixas de texto em branco, os valores não nulos; elas estão cadeias de caracteres vazias. Como resultado, você é capaz de salvar novos filmes no banco de dados com essas colunas vazias &mdash; , mas não nulo! valores &mdash;. Portanto, é necessário que certificar-se de que os usuários não enviar uma cadeia de caracteres vazia, o que pode ser feito por meio da validação de entrada do usuário.
+> Por que essa distinção é importante? Quando você criou a tabela de *filmes* , disse explicitamente que nenhum dos campos pode ser nulo. Mas aqui você tem um formulário de entrada para novos filmes e está deixando os campos em branco. Você esperaria que o banco de dados reclamar quando tentou salvar novos filmes que não tinham valores para gênero ou year. Mas esse é o ponto &mdash; mesmo que você deixe essas caixas de texto em branco, os valores não são nulos; Elas são cadeias de caracteres vazias. Como resultado, você pode salvar novos filmes no banco de dados com essas colunas vazias &mdash; mas não nulas! valores &mdash;. Portanto, você precisa certificar-se de que os usuários não enviem uma cadeia de caracteres vazia, o que pode ser feito validando a entrada do usuário.
 
 ### <a name="the-validation-helper"></a>O auxiliar de validação
 
-Páginas da Web ASP.NET inclui um auxiliar &mdash; as `Validation` auxiliar &mdash; que você pode usar para certificar-se de que os usuários insiram dados que atenda às suas necessidades. O `Validation` auxiliar é um dos auxiliares que é interna para ASP.NET Web Pages, portanto, você não precisa instalá-lo como um pacote usando o NuGet, a maneira que você instalou o Gravatar auxiliar em um tutorial anterior.
+O Páginas da Web do ASP.NET inclui um auxiliar &mdash; o &mdash; auxiliar do `Validation` que você pode usar para garantir que os usuários insiram dados que atendam às suas necessidades. O auxiliar de `Validation` é um dos auxiliares que é integrado ao Páginas da Web do ASP.NET, de modo que você não precisa instalá-lo como um pacote usando o NuGet, como você instalou o auxiliar Gravatar em um tutorial anterior.
 
 Para validar a entrada do usuário, você fará o seguinte:
 
-- Use o código para especificar que você deseja exigir valores nas caixas de texto na página.
-- Coloque um teste no código para que as informações do filme seja adicionadas ao banco de dados somente se tudo for validado corretamente.
-- Adicione o código na marcação para exibir mensagens de erro.
+- Use o código para especificar que você deseja exigir valores nas caixas de texto da página.
+- Coloque um teste no código para que as informações do filme sejam adicionadas ao banco de dados somente se tudo for validado corretamente.
+- Adicione o código à marcação para exibir mensagens de erro.
 
-No bloco de código a *AddMovie* de página, direita para cima na parte superior antes das declarações de variável, adicione o seguinte código:
+No bloco de código da página *addmovie* , diretamente na parte superior antes das declarações de variável, adicione o seguinte código:
 
 [!code-csharp[Main](entering-data/samples/sample7.cs)]
 
-Você chama `Validation.RequireField` uma vez para cada campo (`<input>` elemento) onde você deseja exigir uma entrada. Você também pode adicionar uma mensagem de erro personalizada para cada chamada, como você vê aqui. (Estamos variadas as mensagens apenas para mostrar que você pode colocar qualquer coisa que você deseja lá).
+Você chama `Validation.RequireField` uma vez para cada campo (elemento`<input>`) em que você deseja exigir uma entrada. Você também pode adicionar uma mensagem de erro personalizada para cada chamada, como você vê aqui. (Variamos as mensagens apenas para mostrar que você pode colocar qualquer coisa que desejar.)
 
-Se houver um problema, você deseja impedir que as novas informações do filme que está sendo inserido no banco de dados. No `if(IsPost)` bloco, use `&&` (AND lógico) para adicionar outra condição que testa `Validation.IsValid()`. Quando você terminar, todo o `if(IsPost)` bloco se parece com este código:
+Se houver um problema, você desejará impedir que as novas informações do filme sejam inseridas no banco de dados. No bloco de `if(IsPost)`, use `&&` (AND lógico) para adicionar outra condição que teste `Validation.IsValid()`. Quando terminar, o bloco de `if(IsPost)` inteiro será semelhante a este código:
 
 [!code-csharp[Main](entering-data/samples/sample8.cs)]
 
-Se não houver um erro de validação com qualquer um dos campos que você registrou usando o `Validation` auxiliar, o `Validation.IsValid` método retornará false. E, nesse caso, nenhum código daquele bloco será executado, portanto, nenhuma entrada inválida de filme será inserida no banco de dados. E, obviamente você não será redirecionado para o *filmes* página.
+Se houver um erro de validação com qualquer um dos campos que você registrou usando o auxiliar de `Validation`, o método `Validation.IsValid` retornará false. E nesse caso, nenhum código nesse bloco será executado, portanto, nenhuma entrada de filme inválida será inserida no banco de dados. E, claro, você não é redirecionado para a página de *filmes* .
 
-O bloco de código completo, incluindo o código de validação, agora se parece com este exemplo:
+O bloco de código completo, incluindo o código de validação, agora é semelhante a este exemplo:
 
 [!code-cshtml[Main](entering-data/samples/sample9.cshtml?highlight=10)]
 
 ## <a name="displaying-validation-errors"></a>Exibindo erros de validação
 
-A última etapa é exibir qualquer mensagem de erro. Você pode exibir as mensagens individuais para cada erro de validação, ou você pode exibir um resumo ou ambos. Para este tutorial, você fará ambos para que você possa ver como ele funciona.
+A última etapa é exibir todas as mensagens de erro. Você pode exibir mensagens individuais para cada erro de validação ou pode exibir um resumo, ou ambos. Para este tutorial, você fará ambos para que possa ver como ele funciona.
 
-Ao lado de cada `<input>` elemento que você está validando, a chamada a `Html.ValidationMessage` método e passe o nome da `<input>` elemento você está validando. Você coloca o `Html.ValidationMessage` à direita do método onde você deseja que a mensagem de erro seja exibida. Quando a página é executada, o `Html.ValidationMessage` método renderiza um `<span>` elemento aonde o erro de validação. (Se não houver nenhum erro, o `<span>` elemento é processado, mas não há nenhum texto nele.)
+Ao lado de cada elemento `<input>` que você está validando, chame o método `Html.ValidationMessage` e passe-o o nome do elemento `<input>` que você está validando. Você coloca o método `Html.ValidationMessage` logo em que deseja que a mensagem de erro seja exibida. Quando a página é executada, o método `Html.ValidationMessage` processa um elemento `<span>` em que o erro de validação será usado. (Se não houver erro, o elemento `<span>` será renderizado, mas não há nenhum texto nele.)
 
-Altere a marcação na página de modo que ela inclua uma `Html.ValidationMessage` método para cada um dos três `<input>` elementos na página, como neste exemplo:
+Altere a marcação na página para que ela inclua um método `Html.ValidationMessage` para cada um dos três elementos `<input>` na página, como neste exemplo:
 
 [!code-cshtml[Main](entering-data/samples/sample10.cshtml?highlight=3,8,13)]
 
-Para ver como funciona o resumo, também adicione a seguinte marcação e código logo após o `<h1>Add a Movie</h1>` elemento na página:
+Para ver como o resumo funciona, adicione também a seguinte marcação e código logo após o elemento `<h1>Add a Movie</h1>` na página:
 
 [!code-cshtml[Main](entering-data/samples/sample11.cshtml)]
 
-Por padrão, o `Html.ValidationSummary` método exibe todas as mensagens de validação em uma lista (uma `<ul>` elemento que está dentro de um `<div>` elemento). Assim como acontece com o `Html.ValidationMessage` método, a marcação para o resumo de validação é sempre renderizada; se não houver nenhum erro, nenhum item de lista é renderizados.
+Por padrão, o método `Html.ValidationSummary` exibe todas as mensagens de validação em uma lista (um elemento `<ul>` que está dentro de um elemento `<div>`). Assim como com o método `Html.ValidationMessage`, a marcação para o resumo de validação é sempre renderizada; Se não houver erros, nenhum item de lista será renderizado.
 
-O resumo pode ser uma maneira alternativa de exibir mensagens de validação em vez de por meio de `Html.ValidationMessage` método para exibir cada erro de campo específicos. Ou você pode usar um resumo e detalhes. Ou você pode usar o `Html.ValidationSummary` método para exibir um erro genérico e, em seguida, usar individuais `Html.ValidationMessage` chamadas para exibir detalhes.
+O resumo pode ser uma maneira alternativa de exibir mensagens de validação em vez de usar o método `Html.ValidationMessage` para exibir cada erro específico de campo. Ou você pode usar um resumo e os detalhes. Ou você pode usar o método `Html.ValidationSummary` para exibir um erro genérico e, em seguida, usar chamadas `Html.ValidationMessage` individuais para exibir detalhes.
 
-A página concluída agora se parece com este exemplo:
+A página completa agora se parece com este exemplo:
 
 [!code-cshtml[Main](entering-data/samples/sample12.cshtml)]
 
-Isso é tudo. Agora você pode testar a página pela adição de um filme, mas omitindo um ou mais dos campos. Quando você fizer isso, consulte o seguinte erro de exibição:
+É isso. Agora você pode testar a página adicionando um filme, mas deixando um ou mais campos. Ao fazer isso, você verá a seguinte exibição de erro:
 
 ![Adicionar página de filme mostrando mensagens de erro de validação](entering-data/_static/image5.png)
 
-## <a name="styling-the-validation-error-messages"></a>As mensagens de erro de validação de definição de estilo
+## <a name="styling-the-validation-error-messages"></a>Estilizando as mensagens de erro de validação
 
-Você pode ver que há mensagens de erro, mas eles não realmente se destacam muito bem. Há uma maneira fácil de definir o estilo de mensagens de erro, no entanto.
+Você pode ver que há mensagens de erro, mas elas não realmente se destacam muito bem. No entanto, há uma maneira fácil de estilizar as mensagens de erro.
 
-Para definir o estilo de mensagens de erro individuais que são exibidas pelo `Html.ValidationMessage`, crie uma classe de estilo CSS denominada `field-validation-error`. Para definir a aparência para o resumo de validação, crie uma classe de estilo CSS chamada `validation-summary-errors`.
+Para estilizar as mensagens de erro individuais que são exibidas pelo `Html.ValidationMessage`, crie uma classe de estilo CSS chamada `field-validation-error`. Para definir a aparência do Resumo de validação, crie uma classe de estilo CSS chamada `validation-summary-errors`.
 
-Para ver como essa técnica funciona, adicione uma `<style>` elemento dentro do `<head>` seção da página. Em seguida, definir classes de estilo nomeadas `field-validation-error` e `validation-summary-errors` que contêm as seguintes regras:
+Para ver como essa técnica funciona, adicione um elemento `<style>` dentro da seção `<head>` da página. Em seguida, defina classes de estilo chamadas `field-validation-error` e `validation-summary-errors` que contenham as seguintes regras:
 
 [!code-cshtml[Main](entering-data/samples/sample13.cshtml?highlight=4-17)]
 
-Normalmente você provavelmente seria colocar informações de estilo em um separado *. CSS* arquivo, mas para manter a simplicidade pode colocá-los na página por enquanto. (Posteriormente neste conjunto de tutoriais, você moverá as regras de CSS para um separado *. CSS* arquivo.)
+Normalmente, você provavelmente colocaria as informações de estilo em um arquivo *. css* separado, mas, para simplificar, você pode colocá-las na página por enquanto. (Posteriormente neste conjunto de tutorial, você moverá as regras de CSS para um arquivo *. css* separado.)
 
-Se não houver um erro de validação, o `Html.ValidationMessage` método renderiza um `<span>` elemento inclui `class="field-validation-error"`. Adicionando uma definição de estilo para essa classe, você pode configurar a aparência a mensagem. Se houver erros, o `ValidationSummary` método processa da mesma forma dinamicamente o atributo `class="validation-summary-errors"`.
+Se houver um erro de validação, o método `Html.ValidationMessage` renderizará um elemento `<span>` que inclui `class="field-validation-error"`. Ao adicionar uma definição de estilo para essa classe, você pode configurar a aparência da mensagem. Se houver erros, o método `ValidationSummary` da mesma forma dinamicamente processará o atributo `class="validation-summary-errors"`.
 
-Execute novamente a página e deliberadamente deixe alguns dos campos. Os erros agora são mais perceptíveis. (Na verdade, eles são houver abuso, mas que é apenas para mostrar o que você pode fazer.)
+Execute a página novamente e desmarque deliberadamente alguns campos. Os erros agora são mais perceptíveis. (Na verdade, eles são abuso, mas isso é apenas para mostrar o que você pode fazer.)
 
-![Adicionar página de filme mostrando erros de validação que tem sido criado o estilo](entering-data/_static/image6.png)
+![Adicionar página de filme mostrando erros de validação que foram estilizados](entering-data/_static/image6.png)
 
-## <a name="adding-a-link-to-the-movies-page"></a>Adicionar um Link para a página de filmes
+## <a name="adding-a-link-to-the-movies-page"></a>Adicionando um link à página de filmes
 
-Uma etapa final é tornar fácil obter o *AddMovie* página da listagem de filmes original.
+Uma etapa final é tornar conveniente chegar à página *addmovie* da listagem de filmes original.
 
-Abra o *filmes* página novamente. Após o fechamento `</div>` marca que segue o `WebGrid` auxiliar, adicione a seguinte marcação:
+Abra a página de *filmes* novamente. Após a marcação de `</div>` de fechamento que segue o auxiliar de `WebGrid`, adicione a seguinte marcação:
 
 [!code-cshtml[Main](entering-data/samples/sample14.cshtml)]
 
-Como você viu antes, o ASP.NET interpreta o `~` operador como a raiz do site. Você não precisa usar o `~` operador; você pode usar a marcação `<a href="./AddMovie">Add a movie</a>` ou alguma outra maneira para definir o caminho que entende de HTML. Mas o `~` operador é uma boa abordagem geral quando você cria links para páginas do Razor, pois ele torna o site mais flexíveis — se você mover a página atual para uma subpasta, o link ainda irá para o *AddMovie* página. (Lembre-se de que o `~` operador funciona apenas *. cshtml* páginas. ASP.NET entende, mas não é HTML padrão.)
+Como vimos anteriormente, o ASP.NET interpreta o operador de `~` como a raiz do site. Você não precisa usar o operador de `~`; Você pode usar o `<a href="./AddMovie">Add a movie</a>` de marcação ou alguma outra maneira de definir o caminho que o HTML entende. Mas o operador de `~` é uma boa abordagem geral quando você cria links para páginas Razor, pois torna o site mais flexível — se você mover a página atual para uma subpasta, o link ainda vai para a página *addmovie* . (Lembre-se de que o operador de `~` só funciona em páginas *. cshtml* . ASP.NET entende isso, mas não é HTML padrão.)
 
-Quando terminar, execute as *filmes* página. Ele será semelhante a esta página:
+Quando terminar, execute a página *filmes* . Ele se parecerá com esta página:
 
-![Página de filmes com link para a página 'Adicionar filmes'](entering-data/_static/image7.png)
+![Página de filmes com link para a página ' Adicionar filmes '](entering-data/_static/image7.png)
 
-Clique o **adicionar um filme** link para certificar-se de que ele vai para o *AddMovie* página.
+Clique no link **Adicionar um filme** para certificar-se de que ele vá para a página *addmovie* .
 
-## <a name="coming-up-next"></a>Próximo
+## <a name="coming-up-next"></a>Chegando em seguida
 
-No próximo tutorial, você aprenderá a permitir aos usuários editar dados que já estão no banco de dados.
+No próximo tutorial, você aprenderá a permitir que os usuários editem dados que já estão no banco de dado.
 
-## <a name="complete-listing-for-addmovie-page"></a>Listagem completa para a página AddMovie
+## <a name="complete-listing-for-addmovie-page"></a>Listagem completa para a página addmovie
 
 [!code-cshtml[Main](entering-data/samples/sample15.cshtml)]
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
-- [Inserir na instrução SQL](http://www.w3schools.com/sql/sql_insert.asp) no site W3Schools
-- [Validação de entrada do usuário na Web ASP.NET de Sites de páginas](https://go.microsoft.com/fwlink/?LinkId=253002). Para obter mais informações sobre como trabalhar com o `Validation` auxiliar.
+- [Introdução à programação da Web do ASP.NET usando a sintaxe do Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Instrução SQL INSERT INTO](http://www.w3schools.com/sql/sql_insert.asp) no site W3Schools
+- [Validando a entrada do usuário em páginas da Web do ASP.net sites](https://go.microsoft.com/fwlink/?LinkId=253002). Mais informações sobre como trabalhar com o auxiliar de `Validation`.
 
 > [!div class="step-by-step"]
 > [Anterior](form-basics.md)

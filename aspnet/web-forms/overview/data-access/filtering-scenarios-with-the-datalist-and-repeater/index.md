@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/index
-title: Cenários de filtragem com o DataList e Repeater | Microsoft Docs
+title: Filtrando cenários com o DataList e o Repeater | Microsoft Docs
 author: rick-anderson
-description: Nesses tutoriais, você verá como exibir os relatórios mestre/detalhes usando listas suspensas para os registros mestres e um controle DataList para obter detalhes.
+description: Nesses tutoriais, você verá como exibir relatórios mestre/detalhados usando listas suspensas para os registros mestres e um controle DataList para os detalhes.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 80b17464-8395-4b82-8f11-5d8ee1351d53
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater
 msc.type: chapter
 ms.openlocfilehash: f45fb29c03db21a34419c14150c88b6b58ea05d0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109059"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78590324"
 ---
 # <a name="filtering-scenarios-with-the-datalist-and-repeater"></a>Cenários de filtragem com o DataList e o Repeater
 
-> Nesses tutoriais, você verá como exibir os relatórios mestre/detalhes usando listas suspensas para os registros mestres e um controle DataList para obter detalhes.
+> Nesses tutoriais, você verá como exibir relatórios mestre/detalhados usando listas suspensas para os registros mestres e um controle DataList para os detalhes.
 
 - [Filtragem mestre/detalhes com uma DropDownList (C#)](master-detail-filtering-with-a-dropdownlist-datalist-cs.md)
 - [Filtragem mestre/detalhes em duas páginas (C#)](master-detail-filtering-acess-two-pages-datalist-cs.md)

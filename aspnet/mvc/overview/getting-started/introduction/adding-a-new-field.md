@@ -9,11 +9,11 @@ ms.assetid: 4085de68-d243-4378-8a64-86236ea8d2da
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-a-new-field
 msc.type: authoredcontent
 ms.openlocfilehash: 5974e53e4610dccc7812df261dc97a9b0327de85
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456680"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582904"
 ---
 # <a name="adding-a-new-field"></a>Adicionando um Novo Campo
 
@@ -111,7 +111,7 @@ A classe completa `Movie` agora é semelhante ao seguinte código:
 
 Compile o aplicativo (Ctrl + Shift + B).
 
-Como você adicionou um novo campo à classe `Movie`, também precisa atualizar a *lista de permissões* de associação para que essa nova propriedade seja incluída. Atualize o atributo `bind` para `Create` e `Edit` métodos de ação para incluir a propriedade `Rating`:
+Como você adicionou um novo campo à classe `Movie`, também precisa atualizar a *lista branca* de associação para que essa nova propriedade seja incluída. Atualize o atributo `bind` para `Create` e `Edit` métodos de ação para incluir a propriedade `Rating`:
 
 [!code-csharp[Main](adding-a-new-field/samples/sample7.cs?highlight=1)]
 

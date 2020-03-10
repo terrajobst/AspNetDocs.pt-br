@@ -1,6 +1,6 @@
 ---
 uid: web-api/overview/data/using-web-api-with-entity-framework/part-8
-title: Exibir detalhes de Item | Microsoft Docs
+title: Exibir detalhes do item | Microsoft Docs
 author: MikeWasson
 description: ''
 ms.author: riande
@@ -9,27 +9,27 @@ ms.assetid: 75ef94b1-bbec-4681-9210-452dba816144
 msc.legacyurl: /web-api/overview/data/using-web-api-with-entity-framework/part-8
 msc.type: authoredcontent
 ms.openlocfilehash: 3f48c5ad73ceb9a4873fbbb621b518553a498966
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59389044"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557319"
 ---
 # <a name="display-item-details"></a>Exibir detalhes do item
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-[Baixe o projeto concluído](https://github.com/MikeWasson/BookService)
+[Baixar projeto concluído](https://github.com/MikeWasson/BookService)
 
-Nesta seção, você adicionará a capacidade de exibir os detalhes de cada livro. No App. js, adicione o seguinte código para o modelo de exibição:
+Nesta seção, você adicionará a capacidade de exibir detalhes de cada livro. No app. js, adicione ao seguinte código ao modelo de exibição:
 
 [!code-javascript[Main](part-8/samples/sample1.js)]
 
-No Views/Home/Index.cshtml, adicione um elemento de ligação de dados para o link de detalhes:
+Em views/home/index. cshtml, adicione um elemento de vinculação de dados ao link detalhes:
 
 [!code-html[Main](part-8/samples/sample2.html?highlight=5)]
 
-Isso vincula o manipulador de cliques para o &lt;uma&gt; elemento para o `getBookDetail` função no modelo de exibição.
+Isso associa o manipulador de cliques para o &lt;um elemento&gt; à função `getBookDetail` no modelo de exibição.
 
 No mesmo arquivo, substitua a seguinte marcação:
 
@@ -39,13 +39,13 @@ por este:
 
 [!code-html[Main](part-8/samples/sample4.html)]
 
-Essa marcação cria uma tabela que está associado a dados para as propriedades do `detail` observável no modelo de exibição.
+Essa marcação cria uma tabela que está associada a dados para as propriedades do `detail` observável no modelo de exibição.
 
-O "&lt;! – ko –&gt; &quot; sintaxe permite que você inclua uma associação Knockout fora de um elemento DOM. Nesse caso, o `if` associação faz com que esta seção de marcação a ser exibido apenas quando `details` não for nulo.
+A sintaxe de &quot; "&lt;!--ko--&gt;permite incluir uma associação de Knockout fora de um elemento DOM. Nesse caso, a associação de `if` faz com que esta seção de marcação seja exibida somente quando `details` não é nulo.
 
 [!code-html[Main](part-8/samples/sample5.html)]
 
-Agora, se você executa o aplicativo e clique em um dos &quot;detalhe&quot; links, o aplicativo exibirá os detalhes do livro.
+Agora, se você executar o aplicativo e clicar em uma das &quot;detalhes&quot; links, o aplicativo exibirá os detalhes do livro.
 
 [![](part-8/_static/image2.png)](part-8/_static/image1.png)
 

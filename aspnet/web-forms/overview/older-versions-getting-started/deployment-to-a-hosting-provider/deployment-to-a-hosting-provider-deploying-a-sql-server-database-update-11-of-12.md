@@ -9,11 +9,11 @@ ms.assetid: 5e2bb092-cb22-4511-ad0a-22ae12dd99b3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: 0894c0ac24737e66b6960ef3d48aa17f78c6aa1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621075"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78528122"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-a-sql-server-database-update---11-of-12"></a>Implantando um aplicativo Web ASP.NET com o SQL Server Compact usando o Visual Studio ou o Visual Web Developer: Implantando uma atualização de banco de dados SQL Server-11 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para obter um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar em sites do Windows Azure, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como implantar uma atualização de banco de dados em um banco de dados SQL Server completo. Como Migrações do Code First faz todo o trabalho de atualizar o banco de dados, o processo é quase idêntico ao que você fez por SQL Server Compact no tutorial [implantando uma atualização de banco de dados](deployment-to-a-hosting-provider-deploying-a-database-update-9-of-12.md) .
 
@@ -47,11 +47,11 @@ No projeto ContosoUniversity, abra *instrutores. aspx* e adicione um novo campo 
 
 [!code-aspx[Main](deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12/samples/sample3.aspx)]
 
-{1&gt;Compile a solução.&lt;1}
+Compile a solução.
 
 Abra a janela do **console do Gerenciador de pacotes** e selecione CONTOSOUNIVERSITY. Dal como o **projeto padrão**.
 
-Insira os seguintes comandos:
+Digite os seguintes comandos:
 
 [!code-powershell[Main](deployment-to-a-hosting-provider-deploying-a-sql-server-database-update-11-of-12/samples/sample4.ps1)]
 
@@ -119,7 +119,7 @@ Abra o assistente **publicar Web** novamente e clique em **importar**.
 
 Na guia **conexão** , altere a **URL de destino** para o valor apropriado se você estiver usando uma URL temporária.
 
-Clique em **Avançar**.
+Clique em **Próximo**.
 
 Na guia **configurações** , clique em **habilitar novos aprimoramentos de publicação de banco de dados**.
 
@@ -147,11 +147,11 @@ Migrações do Code First atualiza o banco de dados da mesma maneira que fazia n
 
 Agora você implantou com êxito uma atualização de aplicativo que incluiu uma alteração de banco de dados, usando um banco de dados SQL Server.
 
-## <a name="more-information"></a>Mais Informações
+## <a name="more-information"></a>Mais informações
 
 Isso conclui esta série de tutoriais sobre como implantar um aplicativo Web ASP.NET em um provedor de Hospedagem de terceiros. Para obter mais informações sobre qualquer um dos tópicos abordados nesses tutoriais, consulte o [mapa de conteúdo de implantação do ASP.net](https://msdn.microsoft.com/library/bb386521(v=vs.110).aspx) no site do MSDN.
 
-## <a name="acknowledgements"></a>Agradecimentos
+## <a name="acknowledgements"></a>Confirmações
 
 Gostaria de agradecer às seguintes pessoas que fizeram contribuições significativas para o conteúdo desta série de tutoriais:
 

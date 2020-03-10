@@ -2,22 +2,22 @@
 uid: web-forms/videos/aspnet-35/how-do-i/index
 title: Como faço para | Microsoft Docs
 author: rick-anderson
-description: Esta série de vídeos com várias parte mostra como tirar proveito dos novos recursos no ASP.NET 3.5 e Visual Studio 2008.
+description: Esta série de vídeos de várias partes mostra como aproveitar os novos recursos do ASP.NET 3,5 e do Visual Studio 2008.
 ms.author: riande
 ms.date: 11/14/2011
 ms.assetid: 6a25069b-c80f-45f3-a901-4548442c37b6
 msc.legacyurl: /web-forms/videos/aspnet-35/how-do-i
 msc.type: chapter
 ms.openlocfilehash: 73e3191b168b7d7ea92d1ee7d6509d283a9d5b39
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133792"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573006"
 ---
-# <a name="how-do-i"></a>Como faço para
+# <a name="how-do-i"></a>Como Posso
 
-> Esta série de vídeos com várias parte mostra como tirar proveito dos novos recursos no ASP.NET 3.5 e Visual Studio 2008.
+> Esta série de vídeos de várias partes mostra como aproveitar os novos recursos do ASP.NET 3,5 e do Visual Studio 2008.
 
 - [Criar uma página mestra no Visual Studio 2008](how-do-i-create-a-master-page-in-visual-studio-2008.md)
 - [Criar página mestra aninhada no Visual Studio 2008](how-do-i-create-nested-master-page-in-visual-studio-2008.md)

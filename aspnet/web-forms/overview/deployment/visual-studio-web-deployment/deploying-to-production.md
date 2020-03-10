@@ -9,11 +9,11 @@ ms.assetid: 416438a1-3b2f-4d27-bf53-6b76223c33bf
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-production
 msc.type: authoredcontent
 ms.openlocfilehash: ddc3d15f0436c4c3a24491cf0377111768da67df
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74617636"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632779"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-production"></a>Implantação da Web do ASP.NET usando o Visual Studio: implantando na produção
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Neste tutorial, você configura uma conta de Microsoft Azure, cria ambientes de preparo e produção e implanta seu aplicativo Web ASP.NET nos ambientes de preparo e produção usando o recurso de publicação com um clique do Visual Studio.
 
@@ -33,7 +33,7 @@ Lembrete: se você receber uma mensagem de erro ou algo não funcionar enquanto 
 
 ## <a name="get-a-microsoft-azure-account"></a>Obter uma conta de Microsoft Azure
 
-Se você ainda não tiver uma conta do Azure, poderá criar uma conta de avaliação gratuita em apenas alguns minutos. Para obter detalhes, consulte [avaliação gratuita do Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
+Se você ainda não tiver uma conta do Azure, poderá criar uma conta de avaliação gratuita em apenas alguns minutos. Para obter detalhes, consulte [Avaliação gratuita do Azure](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
 
 ## <a name="create-a-staging-environment"></a>Criar um ambiente de preparo
 
@@ -55,7 +55,7 @@ Nesta seção do tutorial, você criará um aplicativo Web e um banco de dados a
     O assistente **novo site-criação personalizada** é aberto. O assistente de **criação personalizada** permite que você crie um site da Web e um banco de dados ao mesmo tempo.
 3. Na etapa **criar site** do assistente, insira uma cadeia de caracteres na caixa **URL** para usar como a URL exclusiva para o ambiente de preparo do seu aplicativo. Por exemplo, digite ContosoUniversity-staging123 (incluindo números aleatórios no final para torná-lo exclusivo no caso de ContosoUniversity-preparo ser obtido).
 
-    A URL completa consistirá no que você inserir aqui, além do sufixo que você vê ao lado da caixa de texto.
+    A URL completa consistirá no que você digitar aqui mais o sufixo que você vê ao lado da caixa de texto.
 4. Na lista suspensa **região** , escolha a região mais próxima de você.
 
     Essa configuração especifica em qual data center seu aplicativo Web será executado.
@@ -67,12 +67,12 @@ Nesta seção do tutorial, você criará um aplicativo Web e um banco de dados a
 
     ![Criar etapa do site](deploying-to-production/_static/image1.png)
 
-    O assistente avança para a etapa **especificar configurações de banco de dados** .
+    O assistente avança para a etapa **Especificar configurações do banco de dados** .
 8. Na caixa **nome** , digite *ContosoUniversity* mais um número aleatório para torná-lo exclusivo, por exemplo, *ContosoUniversity123*.
 9. Na caixa **servidor** , selecione **novo servidor de banco de dados SQL**.
 10. Insira um nome de administrador e uma senha.
 
-    Você não está inserindo um nome e senha existentes aqui. Você está inserindo um novo nome e senha que você está definindo agora para usar posteriormente ao acessar o banco de dados.
+    Você não está inserindo um nome e senha existentes aqui. Você digitará um novo nome e senha que você está definindo agora para usar mais tarde ao acessar o banco de dados.
 11. Na caixa **região** , escolha a mesma região que você escolheu para o aplicativo Web.
 
     Manter o servidor Web e o servidor de banco de dados na mesma região oferece o melhor desempenho e minimiza as despesas.
@@ -110,14 +110,14 @@ Agora que você criou um aplicativo Web e um banco de dados para o ambiente de p
     ![salvando o arquivo. publishsettings](deploying-to-production/_static/image6.png)
 
     > [!WARNING]
-    > Segurança-o arquivo *. publishsettings* contém suas credenciais (sem codificação) que são usadas para administrar suas assinaturas e serviços do Azure. A prática recomendada de segurança para esse arquivo é armazená-lo temporariamente fora dos diretórios de origem (por exemplo, na pasta Libraries\Documents) e, em seguida, excluí-lo após a conclusão da importação. Um usuário mal-intencionado que obtém acesso ao arquivo *. publishsettings* pode editar, criar e excluir seus serviços do Azure.
+    > Segurança-o arquivo *. publishsettings* contém suas credenciais (sem codificação) que são usadas para administrar suas assinaturas e serviços do Azure. A melhor prática de segurança para este arquivo é armazená-lo temporariamente fora dos diretórios de origem (por exemplo, na pasta Libraries\Documents) e, em seguida, excluí-la após a conclusão da importação. Um usuário mal-intencionado que obtém acesso ao arquivo *. publishsettings* pode editar, criar e excluir seus serviços do Azure.
 
 ### <a name="create-a-publish-profile"></a>Criar um perfil de publicação
 
 1. No Visual Studio, clique com o botão direito do mouse no projeto ContosoUniversity em **Gerenciador de soluções** e selecione **publicar** no menu de contexto.
 
-    O assistente **publicar Web** é aberto.
-2. Clique na guia **perfil** .
+    O assistente de **Publicar Web** é aberto.
+2. Clique na guia **Perfil**.
 3. Clique em **Importar**.
 4. Navegue até o arquivo *. publishsettings* baixado anteriormente e clique em **abrir**.
 
@@ -127,7 +127,7 @@ Agora que você criou um aplicativo Web e um banco de dados para o ambiente de p
     Quando a conexão for validada, uma marca de seleção verde será mostrada ao lado do botão **validar conexão** .
 
     Para alguns provedores de hospedagem, ao clicar em **validar conexão**, você poderá ver uma caixa de diálogo de **erro de certificado** . Se você fizer isso, verifique se o nome do servidor é o esperado. Se o nome do servidor estiver correto, selecione **salvar este certificado para futuras sessões do Visual Studio** e clique em **aceitar**. (Esse erro significa que o provedor de hospedagem optou por evitar a despesa de comprar um certificado SSL para a URL na qual você está implantando. Se preferir estabelecer uma conexão segura usando um certificado válido, entre em contato com seu provedor de hospedagem.)
-6. Clique em **Avançar**.
+6. Clique em **Próximo**.
 
     ![ícone de conexão com êxito e botão Avançar na guia conexão](deploying-to-production/_static/image8.png)
 7. Na guia **configurações** , expanda **Opções de publicação de arquivo**e, em seguida, selecione **Excluir arquivos da pasta de dados de\_de aplicativos**.
@@ -198,13 +198,13 @@ Para este tutorial, você criará um arquivo *robots. txt* .
 
     Você deseja que os mecanismos de pesquisa catálogom seu aplicativo de produção, portanto, você precisa excluir esse arquivo da implantação de produção. Para fazer isso, você definirá uma configuração no perfil de publicação de produção ao criá-lo.
 
-### <a name="deploy-to-staging"></a>Implantar para preparo
+### <a name="deploy-to-staging"></a>Implantar no preparo
 
 1. Abra o assistente **publicar na Web** clicando com o botão direito do mouse no projeto Contoso University e clicando em **publicar**.
 2. Verifique se o perfil de **preparo** está selecionado.
 3. Clique em **Publicar**.
 
-    A janela **saída** mostra quais ações de implantação foram executadas e relata a conclusão bem-sucedida da implantação. O navegador padrão é aberto automaticamente para a URL do aplicativo Web implantado.
+    A janela **Saída** mostra quais ações de implantação foram executadas e os relatórios da conclusão com êxito da implantação. O navegador padrão é aberto automaticamente para a URL do aplicativo Web implantado.
 
 ## <a name="test-in-the-staging-environment"></a>Testar no ambiente de preparo
 
@@ -287,7 +287,7 @@ Agora você implantou e testou com êxito seu aplicativo Web e ele está dispon�
 No próximo tutorial, você atualizará o código do aplicativo e implantará a alteração nos ambientes de teste, de preparo e de produção.
 
 > [!NOTE]
-> Enquanto seu aplicativo está em uso no ambiente de produção, você deve implementar um plano de recuperação. Ou seja, você deve fazer backup periodicamente de seus bancos de dados do aplicativo de produção para um local de armazenamento seguro, e deve manter várias gerações desses backups. Ao atualizar o banco de dados, você deve fazer uma cópia de backup imediatamente antes da alteração. Em seguida, se você cometer um erro e não o descobrir até depois de implantá-lo na produção, ainda poderá recuperar o banco de dados para o estado em que estava antes de ele ser corrompido. Para obter mais informações, consulte [backup e restauração do banco de dados SQL do Azure](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
+> Enquanto seu aplicativo está em uso no ambiente de produção, você deve implementar um plano de recuperação. Ou seja, você deve fazer backup periodicamente de seus bancos de dados do aplicativo de produção para um local de armazenamento seguro, e deve manter várias gerações desses backups. Ao atualizar o banco de dados, você deve fazer uma cópia de backup imediatamente antes da alteração. Em seguida, se você cometer um erro e não o descobrir até depois de implantá-lo na produção, ainda poderá recuperar o banco de dados para o estado em que estava antes de ele ser corrompido. Para saber mais, confira [Backup e restauração do Banco de dados SQL do Azure](https://msdn.microsoft.com/library/windowsazure/jj650016.aspx).
 > 
 > 
 > [!NOTE]

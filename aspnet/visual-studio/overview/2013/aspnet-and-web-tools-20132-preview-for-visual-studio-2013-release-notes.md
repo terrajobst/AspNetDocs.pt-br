@@ -1,6 +1,6 @@
 ---
 uid: visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
-title: ASP.NET e Web Tools 2013.2 para notas de versão do Visual Studio 2013 | Microsoft Docs
+title: ASP.NET and Web Tools 2013,2 para notas de versão do Visual Studio 2013 | Microsoft Docs
 author: microsoft
 description: ''
 ms.author: riande
@@ -9,263 +9,263 @@ ms.assetid: 7ef5f73c-ca60-43c1-bdb2-702800347e7e
 msc.legacyurl: /visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
 msc.type: authoredcontent
 ms.openlocfilehash: 22d4d4afd6963f23d6cfef1745a859c20b69d599
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422987"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78623189"
 ---
 # <a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>Notas de versão do ASP.NET and Web Tools 2013.2 para Visual Studio 2013
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
 ## <a name="installation-notes"></a>Notas de instalação
 
-ASP.NET e Web Tools para Visual Studio 2013.2 são empacotadas no instalador do principal e pode ser baixado como parte da [Visual Studio 2013 atualização 2](https://go.microsoft.com/fwlink/?LinkId=390521).
+ASP.NET and Web Tools para Visual Studio 2013,2 são agrupadas no instalador principal e podem ser baixadas como parte do [Visual Studio 2013 atualização 2](https://go.microsoft.com/fwlink/?LinkId=390521).
 
 ## <a name="documentation"></a>Documentação
 
-Tutoriais e outras informações sobre o ASP.NET and Web Tools para Visual Studio 2013.2 estão disponíveis na [site da web ASP.NET](https://www.asp.net/).
+Os tutoriais e outras informações sobre ASP.NET and Web Tools para o Visual Studio 2013,2 estão disponíveis no [site do ASP.net](https://www.asp.net/).
 
 ## <a name="software-requirements"></a>Requisitos de software
 
-ASP.NET e Web Tools para Visual Studio 2013.2 requer o Visual Studio 2013.
+O ASP.NET and Web Tools para Visual Studio 2013,2 requer Visual Studio 2013.
 
-## <a name="new-features-in-aspnet-and-web-tools-for-visual-studio-20132"></a>Novos recursos no ASP.NET e Web Tools para Visual Studio 2013.2
+## <a name="new-features-in-aspnet-and-web-tools-for-visual-studio-20132"></a>Novos recursos no ASP.NET and Web Tools para Visual Studio 2013,2
 
 As seções a seguir descrevem os recursos que foram introduzidos na versão.
 
-- [Modelos de um projeto do ASP.NET](#oneaspnet)
-- [Suporte a SSL ao iniciar os aplicativos Web no IIS Express](#ssl)
-- [Aprimoramentos do Editor do Visual Studio Web](#vswebeditor)
+- [Um modelo de projeto do ASP.NET](#oneaspnet)
+- [Suporte a SSL ao iniciar aplicativos Web no IIS Express](#ssl)
+- [Aprimoramentos do editor da Web do Visual Studio](#vswebeditor)
 - [Link do navegador](#browserlink)
-- [Suporte para aplicativos de Web do serviço de aplicativo do Azure no Visual Studio](#waws)
-- [Criar recursos do Azure remotos ao criar um novo projeto Web](#AzureResources)
-- [Aprimoramentos de publicar Web](#webpublish)
-- [Scaffolding do ASP.NET](#scaffolding)
+- [Suporte para aplicativos Web do serviço Azure App no Visual Studio](#waws)
+- [Criar recursos remotos do Azure ao criar um novo projeto Web](#AzureResources)
+- [Aprimoramentos de publicação na Web](#webpublish)
+- [ASP.NET scaffolding](#scaffolding)
 - [NuGet 2.8.1](#nuget)
-- [Web Forms do ASP.NET](#webforms)
+- [Web Forms ASP.NET](#webforms)
 - [ASP.NET MVC 5.1.2](#mvc)
-- [2.1.2 da API Web ASP.NET](#webapi)
-- [3.1.2 de páginas da Web ASP.NET](#webpages)
-- [Entity Framework 6.1](#ef)
-- [O ASP.NET Identity 2.0.0](#identity)
+- [ASP.NET Web API 2.1.2](#webapi)
+- [Páginas da Web do ASP.NET 3.1.2](#webpages)
+- [Entity Framework 6,1](#ef)
+- [ASP.NET Identity 2.0.0](#identity)
 - [Componentes do Microsoft OWIN](#owin)
-- [ASP.NET SignalR 2.0.2](#signalr)
+- [ASP.NET Signalr 2.0.2](#signalr)
 
 <a id="oneaspnet"></a>
-### <a name="one-aspnet-project-templates"></a>Modelos de um projeto do ASP.NET
+### <a name="one-aspnet-project-templates"></a>Um modelo de projeto do ASP.NET
 
-- Atualizações para modelos de projeto do ASP.NET para dar suporte à confirmação de conta e redefinição de senha.
-- Atualize o modelo de API Web do ASP.NET para dar suporte à autenticação usando no local contas organizacionais.
-- O modelo de SPA ASP.NET agora contém a autenticação baseada em modos de exibição do MVC e o servidor. O modelo tem um controlador de API da Web que pode ser acessado somente por usuários autenticados.
+- Atualizações para modelos de projeto ASP.NET para dar suporte à confirmação da conta e à redefinição de senha.
+- Atualize ASP.NET Web API modelo para dar suporte à autenticação usando contas organizacionais locais.
+- O modelo SPA ASP.NET agora contém autenticação baseada em exibições do MVC e do lado do servidor. O modelo tem um controlador WebAPI que só pode ser acessado por usuários autenticados.
 
 <a id="ssl"></a>
-### <a name="support-ssl-when-launching-web-applications-on-iis-express"></a>Suporte a SSL ao iniciar os aplicativos Web no IIS Express
+### <a name="support-ssl-when-launching-web-applications-on-iis-express"></a>Suporte a SSL ao iniciar aplicativos Web no IIS Express
 
-Para eliminar o aviso de segurança quando a navegação e depuração HTTPS no localhost, adicionamos uma caixa de diálogo para permitir que o Internet Explorer e Chrome para confiar o autoassinado do IIS express certificado SSL.
+Para eliminar o aviso de segurança durante a navegação e a depuração de HTTPS no localhost, adicionamos uma caixa de diálogo para permitir que o Internet Explorer e o Chrome confiem no certificado SSL expresso do IIS Express autoassinado.
 
-Por exemplo, uma propriedade de projeto da web pode ser definida para usar SSL. Clique em F4 para abrir a caixa de diálogo de propriedades. Alteração **SSL habilitado** como true. Copie a URL do SSL.
+Por exemplo, uma propriedade de projeto Web pode ser definida para usar SSL. Clique em F4 para exibir a caixa de diálogo Propriedades. Altere **SSL habilitado** para verdadeiro. Copie a URL do SSL.
 
-![Propriedade Enabled do SSL](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image1.png)
+![Propriedade SSL habilitada](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image1.png)
 
-Definir guia web projeto propriedade página da web para usar o HTTPS com base em URL (a URL do SSL será `https://localhost:44300/` , a menos que você criou Sites da Web SSL anteriormente.)
+Defina a guia Web da página de propriedades do projeto Web para usar a URL baseada em HTTPS (a URL SSL será `https://localhost:44300/`, a menos que você tenha criado sites SSL anteriormente).
 
-![Definir a URL do projeto (HTTPS)](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image2.png)
+![Definir URL do projeto (HTTPS)](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image2.png)
 
-Pressione CTRL+F5 para executar o aplicativo. Siga as instruções para confiar no certificado autoassinado que o IIS Express gerou.
+Pressione CTRL+F5 para executar o aplicativo. Siga as instruções para confiar no certificado autoassinado que IIS Express gerou.
 
-![Aviso de SSL](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image3.png)
+![Aviso SSL](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image3.png)
 
-Leia as **aviso de segurança** caixa de diálogo e clique **Sim** se você quiser instalar o certificado que representa o localhost.
+Leia a caixa de diálogo **aviso de segurança** e clique em **Sim** se desejar instalar o certificado que representa o localhost.
 
 ![Aviso de segurança](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image4.png)
 
-O site será mostrado no Internet Explorer ou Chrome sem aviso de certificado no navegador.
+O site será mostrado no IE ou no Chrome sem o aviso do certificado no navegador.
 
 ![Página HTTPS sem avisos](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image5.png)
 
 O Firefox usa seu próprio repositório de certificados, portanto, ele exibirá um aviso.
 
 <a id="vswebeditor"></a>
-### <a name="visual-studio-web-editor-enhancements"></a>Aprimoramentos do Editor do Visual Studio Web
+### <a name="visual-studio-web-editor-enhancements"></a>Aprimoramentos do editor da Web do Visual Studio
 
-- **Novo item de projeto do JSON e editor**: Adicionamos um item de projeto do JSON e o editor para o Visual Studio. Recursos do editor de JSON atuais incluem colorização, validação de sintaxe, preenchimento de chaves, de estrutura de tópicos, configuração da opção de ferramentas e muito mais.
+- **Novo editor e item de projeto JSON**: adicionamos um editor e item de projeto JSON ao Visual Studio. Os recursos atuais do editor JSON incluem colorização, validação de sintaxe, preenchimento de chave, estrutura de opções, configuração de opção de ferramentas e muito mais.
 
     ![JSON Editor](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image6.png)
 
-    O IntelliSense agora dá suporte à [esquema JSON](http://json-schema.org/) v3 e v4. Há uma caixa de combinação de esquema para escolher esquemas existentes, edite o caminho do local de esquema, ou simplesmente arrastar e soltar um arquivo de projeto JSON a ele para obter o caminho relativo.
+    O IntelliSense agora dá suporte ao [esquema JSON](http://json-schema.org/) v3 e v4. Há uma caixa de combinação de esquema para escolher esquemas existentes, editar o caminho do esquema local ou simplesmente arrastar e soltar um arquivo JSON do projeto para ele para obter o caminho relativo.
 
-    ![JSON Intellisense](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image7.png)    ![Editor de esquema JSON](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image8.png)
-- **Novo editor de Sass (SCSS)**: Adicionamos menor no VS2013 RTM, e agora temos um item de projeto do Sass e editor. Editor do sass recursos são comparáveis para o editor do LESS e incluem colorização, variável e Mixins IntelliSense, remova os comentários comentário /, informações rápidas, formatação, validação de sintaxe, estrutura de tópicos, ir para definição, seletor de cores, as ferramentas de configuração de opção de etc.
+    ![JSON IntelliSense](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image7.png)    ![Editor de esquema JSON](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image8.png)
+- **Novo editor de Sass (SCSS)** : adicionamos menos no VS2013 RTM, e agora temos um editor e item de projeto do Sass. Os recursos do editor do Sass são comparáveis ao editor LESS e incluem colorização, variável e mesclas IntelliSense, comentário/Remover comentário, informações rápidas, formatação, validação de sintaxe, estrutura de tópicos, definição de Goto, seletor de cores, configuração de opção de ferramentas, etc.
 
-    ![Adicione Novo Item: Folha de estilo SCSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image9.png)    ![Editor de folhas de estilo](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image10.png)
-- **Novo seletor de URL em HTML, Razor, CSS, menos e documentos do Sass:** VS 2013 é fornecido com o seletor nenhuma URL fora de páginas de Web Forms. O novo seletor de URL para HTML, Razor, CSS, LESS e Sass editores é um seletor de digitação livre de caixa de diálogo, fluente que compreende '.. ' e listas de arquivo de filtros para obter links e marcas img adequadamente.
+    ![Adicionar novo item: folha de estilos SCSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image9.png)    ![Editor de folhas de estilo](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image10.png)
+- **Novo seletor de URL em documentos HTML, Razor, CSS, menos e Sass:** O VS 2013 foi fornecido sem nenhum seletor de URL fora das páginas Web Forms. O novo seletor de URL para editores HTML, Razor, CSS, LESS e Sass é um seletor de digitação Fluent sem caixa de diálogo que compreende '.. ' e filtra as listas de arquivos adequadamente para marcas e links img.
 
-    ![Seletor de URL para a marca de imagem](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image11.png)    ![Seletor de URL para modos de exibição](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image12.png)    ![Seletor de URL para o CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image13.png)
-- **Atualizações para o editor do LESS, adicionando mais recursos**
-- **Atualização de Intellisense do Knockout**: Adicionamos uma sintaxe KnockOut não padrão para o intelliSense do VS, "viewModel ko-vs-editor:" sintaxe. Ele pode ser usado para associar a vários modelos de exibição em uma página usando comentários na forma:
+    ![Seletor de URL para marca de imagem](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image11.png)    ![Seletor de URL para exibições](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image12.png)    ![Seletor de URL para CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image13.png)
+- **Atualizações para menos editor adicionando mais recursos**
+- **Atualização do IntelliSense do Knockout**: adicionamos uma sintaxe de vazado não padrão para o vs IntelliSense, sintaxe "ko-vs-editor viewModel:". Ele pode ser usado para associar vários modelos de exibição em uma página usando comentários no formulário:
 
-    ![Intellisense do Knockout](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image14.png)
+    ![IntelliSense do Knockout](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image14.png)
 
-    Também adicionamos suporte ao IntelliSense, ViewModel aninhados, portanto, você pode analisar os objetos profundamente aninhados no ViewModel.
+    Também adicionamos suporte para IntelliSense ViewModel aninhado, para que você possa analisar objetos profundamente aninhados no ViewModel.
 
     `<div data-bind="text: foo.bar.baz.etc" />`
 
     O IntelliSense exibido é o IntelliSense completo do objeto JavaScript.
 
-    ![IntelliSense mostrando completa do objeto JavaScript](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image15.png)
-- **Novo seletor de URL em HTML, Razor, CSS, menos e documentos de Sass**: VS 2013 é fornecido com o seletor nenhuma URL fora de páginas de Web Forms. O novo seletor de URL para HTML, Razor, CSS, LESS e Sass editores é um seletor de digitação livre de caixa de diálogo, fluente que compreende '.. ' e listas de arquivo de filtros para obter links e marcas img adequadamente.
+    ![IntelliSense mostrando objeto JavaScript completo](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image15.png)
+- **Novo seletor de URL em documentos HTML, Razor, CSS, menos e Sass**: vs 2013 fornecido sem nenhum seletor de URL fora das páginas Web Forms. O novo seletor de URL para editores HTML, Razor, CSS, LESS e Sass é um seletor de digitação Fluent sem caixa de diálogo que compreende '.. ' e filtra as listas de arquivos adequadamente para marcas e links img.
 
-    ![Seletor de URL para a marca de imagem](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image16.png)    ![Seletor de URL para modos de exibição](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image17.png)    ![Seletor de URL para o CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image18.png)
+    ![Seletor de URL para marca de imagem](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image16.png)    ![Seletor de URL para exibições](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image17.png)    ![Seletor de URL para CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image18.png)
 
 <a id="browserlink"></a>
 ### <a name="browser-link"></a>Link do navegador
 
-- Link do navegador agora dá suporte a conexões HTTPS e listará que no painel com outras conexões, desde o certificado é confiável pelo navegador.
-- Mapeamento de código-fonte HTML estático
-- SPA suporte para mapeamento de dados
-- Dados de mapeamento de atualização automática
+- O link do navegador agora dá suporte a conexões HTTPS e listará isso no painel com outras conexões, desde que o certificado seja confiável pelo navegador.
+- Mapeamento de origem HTML estático
+- Suporte a SPA para mapeamento de dados
+- Atualizar dados de mapeamento automaticamente
 
 <a id="waws"></a>
-### <a name="support-for-azure-app-service-web-apps-in-visual-studio"></a>Suporte para aplicativos de Web do serviço de aplicativo do Azure no Visual Studio
+### <a name="support-for-azure-app-service-web-apps-in-visual-studio"></a>Suporte para aplicativos Web do serviço Azure App no Visual Studio
 
-- **Suporte Azure entrar.**
-- **Depuração remota e a exibição remota para aplicativos web**: Agora, damos suporte [depuração remota para aplicativos web no serviço de aplicativo do Azure](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio) e visualização remota de arquivos de conteúdo de aplicativo da web no Gerenciador de servidores.
+- **Suporte à entrada do Azure.**
+- **Depuração remota e exibição remota para aplicativos Web**: Agora damos suporte à [depuração remota para aplicativos web no serviço Azure app](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio) e exibição remota de arquivos de conteúdo do aplicativo Web no Gerenciador de servidores.
 
 <a id="AzureResources"></a>
-### <a name="create-remote-azure-resources-when-creating-a-new-web-project"></a>Criar recursos do Azure remotos ao criar um novo projeto Web
+### <a name="create-remote-azure-resources-when-creating-a-new-web-project"></a>Criar recursos remotos do Azure ao criar um novo projeto Web
 
-Adicionamos do Azure ["Criar recursos remotos"](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet) caixa de seleção na caixa de diálogo Novo do aplicativo web. Escolhendo-lo, você será capaz de se integrar a experiência de criar um novo aplicativo web, como configurar o site de publicação do Azure para teste e criação de perfil de publicação em poucas etapas simples.
+Adicionamos uma caixa de seleção ["criar recursos remotos"](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet) do Azure na caixa de diálogo novo aplicativo Web. Ao escolher, você poderá integrar a experiência de criação de um novo aplicativo Web, configurar o site de publicação do Azure para teste e criar o perfil de publicação em algumas etapas simples.
 
-![Novo projeto com recursos do Azure](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image19.png)![Publicação no Azure](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image20.png)
+![Novo projeto com recursos do Azure](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image19.png)![Publicando no Azure](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image20.png)
 
 <a id="webpublish"></a>
-### <a name="web-publish-enhancements"></a>Aprimoramentos de publicar Web
+### <a name="web-publish-enhancements"></a>Aprimoramentos de publicação na Web
 
-- Melhore a experiência do usuário para a publicação.
+- Melhore a experiência do usuário para publicação.
 
 <a id="scaffolding"></a>
-### <a name="aspnet-scaffolding"></a>Scaffolding do ASP.NET
+### <a name="aspnet-scaffolding"></a>ASP.NET scaffolding
 
-- **Suporte a enum:** Se seu modelo estiver usando enumerações, o Scaffolder de MVC irá gerar o menu suspenso para Enum. Isso usa os auxiliares de Enum no MVC.
-- **Inicializar o suporte**: Atualizados os modelos de EditorFor no Scaffolding do MVC para que eles usam as classes de inicialização.
-- **Suporte de pacote**: MVC e os Scaffolders do API da Web adicionará 5.1 pacotes de MVC e API da Web
+- **Suporte a enum:** Se seu modelo estiver usando enums, o MVC Scaffolder gerará DropDown para enum. Isso usa os auxiliares de enumeração no MVC.
+- **Suporte à inicialização**: os modelos EditorFor atualizados no MVC scaffolding para que usem as classes bootstrap.
+- **Suporte a pacotes**: o MVC e a API Web Scaffolders adicionarão pacotes de 5,1 para MVC e API Web
 
-As capturas de tela a seguir demonstram os modelos de scaffolding.
+As capturas de tela a seguir demonstram modelos scaffolding.
 
-- Código de modelo:
+- Código do modelo:
 
-     ![Código de modelo](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image21.png)
-- Compilar o código de modelo, clique com botão direito e selecione **Add**, **Novo Item de Scaffold**.
+     ![Código do modelo](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image21.png)
+- Compile o código do modelo, clique com o botão direito do mouse e selecione **Adicionar**, **novo item com Scaffold**.
 
-     ![Adicionar Novo Item com Scaffold](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image22.png)
-- Escolher **MVC5 controlador com exibições, usando o Entity Framework**:
+     ![Adicionar novo item com Scaffold](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image22.png)
+- Escolha **controlador MVC5 com exibições, usando Entity Framework**:
 
-     ![Adicionar novo controlador MVC5 com modos de exibição](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image23.png)
+     ![Adicionar novo controlador MVC5 com exibições](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image23.png)
 - **Adicionar controlador** usando o modelo:
 
     ![](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image24.png)
-- Verifique o código gerado, por exemplo, Views/WeekdayModels/Edit.cshtml contém `@Html.EnumDropDownListFor`: ![Modo de exibição que contém EnumDropDownListFor](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image25.png)
-- Execute a página para ver a caixa de combinação de enum gerada, observe que, se um valor pode ser nulo, uma cadeia de caracteres vazia pode ser escolhida para a caixa de combinação. Por exemplo, o **criar** página mostra o seguinte:
+- Verifique o código gerado; por exemplo, views/WeekdayModels/Edit. cshtml contém `@Html.EnumDropDownListFor`![exibição que contém EnumDropDownListFor](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image25.png)
+- Execute a página para ver a ComboBox enum gerada, observe que, se um valor puder ser nulo, uma cadeia de caracteres vazia poderá ser escolhida para a caixa de combinação. Por exemplo, a página **criar** mostra o seguinte:
 
-    ![Caixa de combinação, permitindo que a cadeia de caracteres vazia](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image26.png)
+    ![Caixa de combinação permitindo cadeia de caracteres vazia](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image26.png)
 
 <a id="nuget"></a>
 ### <a name="nuget-281"></a>NuGet 2.8.1
 
-NuGet 2.8.1 que RTM será lançado em abril de 2014. Aqui estão os pontos de destaque das notas de versão, mas verifique se o [notas de versão completas](http://docs.nuget.org/docs/release-notes/nuget-2.8) para obter mais informações sobre essas alterações.
+O NuGet 2.8.1 RTM será lançado em abril de 2014. Aqui estão os pontos evidentes das notas de versão, mas consulte as [notas de versão completas](http://docs.nuget.org/docs/release-notes/nuget-2.8) para obter mais informações sobre essas alterações.
 
-- **Destino Windows Phone 8.1 aplicativos**: O NuGet 2.8.1 agora dá suporte ao direcionamento de aplicativos do Windows Phone 8.1 usando os monikers da estrutura de destino 'WindowsPhoneApp', 'WPA', 'WindowsPhoneApp81' e 'WPA81'.
+- **Windows Phone aplicativos de destino 8,1**: o NuGet 2.8.1 agora dá suporte ao direcionamento de Windows Phone aplicativos 8,1 usando os monikers da estrutura de destino ' WindowsPhoneApp ', ' wpa ', ' WindowsPhoneApp81 ' e ' WPA81 '.
 
-- **Resolução de patches para dependências**: Para resolver as dependências do pacote, o NuGet historicamente implementou uma estratégia de selecionar a versão mais antiga do pacote principal e secundária que satisfaça as dependências do pacote. Ao contrário da versão principal e secundária, no entanto, a versão de patch sempre foi resolvida para a versão mais recente. Embora o comportamento era bem-intencionado, ele criou uma falta de determinismo para instalar pacotes com dependências.
-- **A opção DependencyVersion**: Embora o NuGet 2.8 altera a *padrão* comportamento para resolver as dependências, ele também adiciona um controle mais preciso sobre o processo de resolução de dependência por meio da opção - DependencyVersion no console do Gerenciador de pacotes. O comutador permite resolver as dependências para a versão mais antiga possível (comportamento padrão), a versão mais alta possível, ou o mais alto minor ou versão de patch. Essa opção só funciona para o pacote de instalação no comando do powershell.
-- **Atributo DependencyVersion**: Além do comutador - DependencyVersion detalhado acima, o NuGet também permitiu a capacidade de definir um novo atributo no arquivo NuGet. config definindo o que é o valor padrão, se o comutador - DependencyVersion não for especificado em uma invocação de pacote de instalação. Esse valor também será respeitado pela caixa de diálogo Gerenciador de pacotes NuGet para operações de pacote de instalação. Para definir esse valor, adicione o atributo abaixo ao seu arquivo NuGet. config:
+- **Resolução de patch para dependências**: ao resolver dependências de pacote, o NuGet implementou historicamente uma estratégia de seleção da versão mais baixa e secundária do pacote que satisfaz as dependências no pacote. No entanto, ao contrário da versão principal e secundária, a versão do patch foi sempre resolvida para a versão mais recente. Embora o comportamento tenha sido bem intencional, ele criou uma falta de determinantes para a instalação de pacotes com dependências.
+- **Opção DependencyVersion**: embora o NuGet 2,8 altere o comportamento *padrão* para resolver dependências, ele também adiciona controle mais preciso sobre o processo de resolução de dependência por meio da opção-DependencyVersion no console do Gerenciador de pacotes. A opção habilita a resolução de dependências para a versão mais baixa possível (comportamento padrão), a versão mais alta possível ou a versão secundária ou de patch mais alta. Essa opção funciona apenas para Install-Package no comando do PowerShell.
+- **Atributo DependencyVersion**: além da opção-DependencyVersion detalhadamente acima, o NuGet também permitiu a capacidade de definir um novo atributo no arquivo NuGet. config que define o valor padrão é, se a opção-DependencyVersion não for especificada em uma invocação do pacote de instalação. Esse valor também será respeitado pela caixa de diálogo Gerenciador de pacotes NuGet para qualquer operação de pacote de instalação. Para definir esse valor, adicione o atributo abaixo ao seu arquivo NuGet. config:
 
     `<config> <add key="dependencyversion" value="Highest" /> </config>`
-- **Visualizar as operações do NuGet com - WhatIf**: Alguns pacotes do NuGet podem ter gráficos de dependência profunda, e como tal, ele pode ser útil durante a instalação, desinstalar ou operação de atualização para o primeiro ver o que acontecerá. NuGet 2.8 adiciona o PowerShell padrão-se mudar para os comandos do pacote de atualização, desinstalar-package e install-package para habilitar a visualizar o fechamento inteiro de pacotes para o qual o comando será aplicado.
-- **Fazer o downgrade de pacote**: Não é incomum para instalar uma versão de pré-lançamento de um pacote para investigar os novos recursos e então decidir se deseja reverter para a última versão estável. Antes do NuGet 2.8, isso era um processo de várias etapa de desinstalar o pacote de pré-lançamento e suas dependências e, em seguida, instalar a versão anterior. Com o NuGet 2.8, no entanto, o pacote de atualização agora reverterá o fechamento do pacote inteiro (por exemplo, árvore de dependência do pacote) para a versão anterior.
-- **Dependências de desenvolvimento**: Muitos tipos diferentes de recursos podem ser entregues como pacotes do NuGet – incluindo as ferramentas que são usadas para otimizar o processo de desenvolvimento. Esses componentes, embora eles podem ser muito útil no desenvolvimento de um novo pacote, não devem ser consideradas uma dependência do novo pacote quando ele é mais recente publicada. NuGet 2.8 habilita um pacote para se identificar no arquivo. NuSpec como um developmentDependency. Quando instalado, esses metadados também serão adicionados ao arquivo Packages. config do projeto no qual o pacote foi instalado. Quando esse arquivo Packages. config é posteriormente analisado para as dependências do NuGet durante nuget.exe pack, ele excluirá essas dependências marcadas como dependências de desenvolvimento.
-- **Arquivos Packages. config individuais para diferentes plataformas**: Ao desenvolver aplicativos para várias plataformas de destino, é comum ter diferentes arquivos de projeto para cada um dos ambientes de compilação respectivo. Também é comum para consumir diferentes pacotes do NuGet em arquivos de projeto diferentes, como pacotes têm diferentes níveis de suporte para plataformas diferentes. NuGet 2.8 oferece suporte aprimorado para este cenário, criando arquivos Packages. config diferente para arquivos de projeto diferente de específico da plataforma.
-- **Fallback para o Cache Local**: Embora os pacotes do NuGet normalmente são consumidos de uma galeria remota, como o [Galeria do NuGet](http://www.nuget.org) usando uma conexão de rede, há muitos cenários em que o cliente não está conectado. Sem uma conexão de rede, o cliente do NuGet não foi capaz de instalar com êxito pacotes – mesmo quando esses pacotes já estavam na máquina do cliente no cache local do NuGet. NuGet 2.8 adiciona o fallback de cache automático para o console do Gerenciador de pacotes.
+- **Visualizar operações do NuGet com-WhatIf**: alguns pacotes NuGet podem ter grafos de dependência profunda e, dessa forma, podem ser úteis durante uma operação de instalação, desinstalação ou atualização para ver primeiro o que acontecerá. O NuGet 2,8 adiciona o padrão PowerShell – e se mudar para os comandos install-Package, Uninstall-Package e Update-Package para habilitar a visualização de todo o fechamento de pacotes ao qual o comando será aplicado.
+- **Pacote de downgrade**: não é incomum instalar uma versão de pré-lançamento de um pacote para investigar novos recursos e, em seguida, decidir reverter para a última versão estável. Antes do NuGet 2,8, esse era um processo de várias etapas para desinstalar o pacote de pré-lançamento e suas dependências e, em seguida, instalar a versão anterior. Com o NuGet 2,8, no entanto, o Update-Package agora reverterá todo o fechamento do pacote (por exemplo, a árvore de dependência do pacote) para a versão anterior.
+- **Dependências de desenvolvimento**: muitos tipos diferentes de recursos podem ser fornecidos como pacotes NuGet, incluindo ferramentas que são usadas para otimizar o processo de desenvolvimento. Esses componentes, embora possam ser fundamentais no desenvolvimento de um novo pacote, não devem ser considerados uma dependência do novo pacote quando ele for publicado posteriormente. O NuGet 2,8 permite que um pacote se identifique no arquivo. nuspec como um developmentDependency. Quando instalado, esses metadados também serão adicionados ao arquivo Packages. config do projeto no qual o pacote foi instalado. Quando esse arquivo Packages. config for posteriormente analisado para as dependências do NuGet durante o pacote NuGet. exe, ele excluirá as dependências marcadas como dependências de desenvolvimento.
+- **Arquivos. config de pacotes individuais para diferentes plataformas**: ao desenvolver aplicativos para várias plataformas de destino, é comum ter arquivos de projeto diferentes para cada um dos respectivos ambientes de compilação. Também é comum consumir diferentes pacotes NuGet em arquivos de projeto diferentes, pois os pacotes têm níveis variados de suporte para diferentes plataformas. O NuGet 2,8 fornece suporte aprimorado para esse cenário criando arquivos Packages. config diferentes para diferentes arquivos de projeto específicos da plataforma.
+- **Fallback para o cache local**: embora os pacotes NuGet normalmente são consumidos de uma galeria remota, como a [Galeria do NuGet](http://www.nuget.org) usando uma conexão de rede, há muitos cenários em que o cliente não está conectado. Sem uma conexão de rede, o cliente NuGet não conseguiu instalar pacotes com êxito, mesmo quando esses pacotes já estavam no computador do cliente no cache do NuGet local. O NuGet 2,8 adiciona o fallback de cache automático para o console do Gerenciador de pacotes.
 
-    O recurso de fallback de cache não requer nenhum argumento de comando específico. Além disso, o cache fallback atualmente funciona apenas no console de Gerenciador de pacotes – o comportamento não funciona no momento na caixa de diálogo de Gerenciador de pacote.
-- **Correções de bug**: Um das principais correções de bug feitas era melhoria de desempenho no pacote de atualização-reinstale o comando.
+    O recurso fallback de cache não requer nenhum argumento de comando específico. Além disso, o fallback de cache atualmente funciona apenas no console do Gerenciador de pacotes-o comportamento não funciona atualmente na caixa de diálogo Gerenciador de pacotes.
+- **Correções de bugs**: uma das principais correções de bugs feitas foi a melhoria no desempenho do comando Update-Package-REINSTALL.
 
-    Além desses recursos e a correção de desempenho mencionado anteriormente, esta versão do NuGet também inclui muitas correções de bugs. Havia 181 total de problemas abordados na versão. Para obter uma lista completa de trabalho itens corrigidos no NuGet 2.8, por favor, modo de exibição de [rastreador de problemas do NuGet](https://nuget.codeplex.com/workitem/list/advanced?release=NuGet%202.8&status=all) para esta versão.
+    Além desses recursos e da correção de desempenho mencionada anteriormente, esta versão do NuGet também inclui muitas outras correções de bugs. Havia 181 problemas totais abordados na versão. Para obter uma lista completa dos itens de trabalho corrigidos no NuGet 2,8, consulte o [rastreador de problemas do NuGet](https://nuget.codeplex.com/workitem/list/advanced?release=NuGet%202.8&status=all) para esta versão.
 
 <a id="webforms"></a>
 ### <a name="aspnet-web-forms"></a>Web Forms do ASP.NET
 
-- Os modelos de formulários da Web agora mostram como fazer a confirmação de conta e redefinição de senha para a identidade do ASP.NET.
-- O controle de fonte de dados de entidade e o provedor de dados dinâmico para o Entity Framework 6. Para obter mais detalhes, consulte o seguinte blog do MSDN: [Provedor de dados dinâmico e controle EntityDataSource para Entity Framework 6](https://blogs.msdn.com/b/webdev/archive/2014/01/30/announcing-preview-of-dynamic-data-provider-and-entitydatasource-control-for-entity-framework-6.aspx).
+- Os modelos de Web Forms agora mostram como fazer a confirmação da conta e a redefinição de senha para ASP.NET Identity.
+- O controle da fonte de dados de entidade e o provedor de Dados Dinâmicos para Entity Framework 6. Para obter mais detalhes, consulte o seguinte blog do MSDN: [provedor de dados dinâmicos e controle de EntityDataSource para Entity Framework 6](https://blogs.msdn.com/b/webdev/archive/2014/01/30/announcing-preview-of-dynamic-data-provider-and-entitydatasource-control-for-entity-framework-6.aspx).
 
 <a id="mvc"></a>
 ### <a name="aspnet-mvc-512"></a>ASP.NET MVC 5.1.2
 
-- [Aprimoramentos de roteamento de atributo](../../../mvc/overview/releases/mvc51-release-notes.md#AttributeRouting)
-- [Suporte de inicialização para modelos de editor](../../../mvc/overview/releases/mvc51-release-notes.md#Bootstrap)
-- [Suporte a enum nos modos de exibição](../../../mvc/overview/releases/mvc51-release-notes.md#Enum)
-- [Suporte discreto para MinLength / MaxLength atributos](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
-- [Suporte a contexto 'this' em Ajax discreto](../../../mvc/overview/releases/mvc51-release-notes.md#thisContext)
-- Vários [correções de bugs](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=MVC&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
+- [Aprimoramentos de roteamento de atributos](../../../mvc/overview/releases/mvc51-release-notes.md#AttributeRouting)
+- [Suporte de inicialização para modelos do editor](../../../mvc/overview/releases/mvc51-release-notes.md#Bootstrap)
+- [Suporte de enumeração em exibições](../../../mvc/overview/releases/mvc51-release-notes.md#Enum)
+- [Suporte não invasivo para atributos MinLength/MaxLength](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
+- [Dando suporte ao contexto ' this ' em AJAX discreto](../../../mvc/overview/releases/mvc51-release-notes.md#thisContext)
+- Várias [correções de bugs](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=MVC&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 
 <a id="webapi"></a>
-### <a name="aspnet-web-api-212"></a>2.1.2 da API Web ASP.NET
+### <a name="aspnet-web-api-212"></a>ASP.NET Web API 2.1.2
 
 - [Tratamento de erro global](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#global-error)
-- [Aprimoramentos de roteamentos de atributo](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#attribute-routing)
-- [Melhorias na página de ajuda](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#help-page)
-- [Suporte de IgnoreRoute](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#ignoreroute)
+- [Aprimoramentos de roteamento de atributos](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#attribute-routing)
+- [Aprimoramentos na página de ajuda](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#help-page)
+- [Suporte do IgnoreRoute](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#ignoreroute)
 - [Formatador de tipo de mídia BSON](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#bson)
 - [Melhor suporte para filtros assíncronos](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#async-filters)
-- [Análise para o cliente de biblioteca de formatação de consulta](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#query-parsing)
-- Vários [correções de bugs](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20API%7cWeb%20API%20OData&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
+- [Análise de consulta para a biblioteca de formatação de cliente](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#query-parsing)
+- Várias [correções de bugs](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20API%7cWeb%20API%20OData&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 
 <a id="webpages"></a>
-### <a name="aspnet-web-pages-312"></a>3.1.2 de páginas da Web ASP.NET
+### <a name="aspnet-web-pages-312"></a>Páginas da Web do ASP.NET 3.1.2
 
-- Vários [correções de bugs](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20Pages/Razor&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
+- Várias [correções de bugs](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20Pages/Razor&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 
 <a id="ef"></a>
-### <a name="entity-framework-61"></a>Entity Framework 6.1
+### <a name="entity-framework-61"></a>Entity Framework 6,1
 
-Entity Framework foi atualizado para a versão 6.1 para tempo de execução e ferramentas. 6.1 Entity Framework (EF) é uma pequena atualização para o Entity Framework 6 e inclui uma série de correções de bugs e novos recursos. Para obter informações detalhadas sobre o EF6.1, incluindo links para documentação para os novos recursos, consulte [histórico de versão do Entity Framework](https://msdn.microsoft.com/data/jj574253). Os novos recursos nesta versão incluem:
+O Entity Framework foi atualizado para a versão 6,1 para tempo de execução e ferramentas. O Entity Framework (EF) 6,1 é uma pequena atualização para Entity Framework 6 e inclui uma série de correções de bugs e novos recursos. Para obter informações detalhadas sobre o EF 6.1, incluindo links para a documentação dos novos recursos, consulte [Entity Framework histórico de versão](https://msdn.microsoft.com/data/jj574253). Os novos recursos desta versão incluem:
 
-- **Consolidação de ferramentas** fornece uma maneira consistente para criar um novo modelo do EF. Esse recurso estende o Assistente de modelo de dados de entidade ADO.NET para dar suporte à criação de modelos Code First, incluindo engenharia reversa de um banco de dados existente. Esses recursos estavam disponíveis anteriormente na qualidade Beta no EF Power Tools.
-- **Tratamento de falhas de confirmação da transação** fornece as novas [System.Data.Entity.Infrastructure.CommitFailureHandler](https://msdn.microsoft.com/library/system.data.entity.infrastructure.commitfailurehandler(v=vs.113).aspx) que usa a capacidade de recentemente introduzida para interceptar operações de transação. O **CommitFailureHandler** permite a recuperação automática de falhas de conexão enquanto confirmar uma transação.
-- **IndexAttribute** permite que os índices seja especificado, colocando um atributo em uma propriedade (ou propriedades) em seu modelo Code First. Código pela primeira vez, em seguida, criará um índice correspondente no banco de dados.
-- **A API pública do mapeamento** fornece acesso às informações de EF tem sobre como as propriedades e tipos são mapeados para colunas e tabelas no banco de dados. Em versões anteriores dessa API foi interna.
-- **Capacidade de configurar interceptores por meio do arquivo App/Web.config**(permitindo que os interceptadores a ser adicionado sem recompilar o aplicativo).
-- **DatabaseLogger** é um novo interceptador que torna mais fácil registrar todas as operações de banco de dados em um arquivo. Em combinação com o recurso anterior, isso permite que você alterne facilmente o registro em log de operações de banco de dados para um aplicativo implantado, sem a necessidade de recompilar.
-- **Detecção de alteração do modelo de migrações** foi aprimorado para que as migrações gerado por scaffolding sejam mais precisas; o desempenho do processo de detecção de alteração também foi bastante aprimorado.
-- **Melhorias de desempenho** incluindo operações de redução do banco de dados durante a inicialização, otimizações para comparação de igualdade nulo em consultas LINQ, mais rápido exibir geração (criação de modelo) em mais cenários e mais eficiente materialização de entidades controladas com várias associações.
+- A **consolidação de ferramentas** fornece uma maneira consistente de criar um novo modelo do EF. Esse recurso estende o assistente de Modelo de Dados de Entidade de ADO.NET para dar suporte à criação de modelos de Code First, incluindo a engenharia reversa de um banco de dados existente. Esses recursos estavam disponíveis anteriormente em qualidade beta no EF Power Tools.
+- A **manipulação de falhas de confirmação de transação** fornece o novo [System. Data. Entity. Infrastructure. CommitFailureHandler](https://msdn.microsoft.com/library/system.data.entity.infrastructure.commitfailurehandler(v=vs.113).aspx) que usa a capacidade introduzida recentemente para interceptar operações de transação. O **CommitFailureHandler** permite a recuperação automática de falhas de conexão durante a confirmação de uma transação.
+- **Indexattribute** permite que os índices sejam especificados colocando um atributo em uma propriedade (ou Propriedades) em seu modelo de Code First. Code First criará um índice correspondente no banco de dados.
+- **A API de mapeamento público** fornece acesso às informações que o EF tem sobre como as propriedades e os tipos são mapeados para colunas e tabelas no banco de dados. Em versões anteriores, essa API era interna.
+- **Capacidade de configurar interceptores por meio do arquivo app/Web. config**(permitindo que os interceptores sejam adicionados sem recompilar o aplicativo).
+- **DatabaseLogger** é um novo interceptador que torna mais fácil registrar em log todas as operações de banco de dados em um arquivo. Em combinação com o recurso anterior, isso permite que você alterne facilmente o log de operações de banco de dados para um aplicativo implantado, sem a necessidade de recompilar.
+- A **detecção de alteração do modelo de migrações** foi aprimorada para que as migrações de com Scaffold sejam mais precisas; o desempenho do processo de detecção de alteração também foi muito aprimorado.
+- **Melhorias de desempenho** , incluindo operações de banco de dados reduzidas durante a inicialização, otimizações para comparação de igualdade nula em consultas LINQ, geração de exibição mais rápida (criação de modelo) em mais cenários e materialização mais eficiente de entidades rastreadas com várias associações.
 
 <a id="identity"></a>
-### <a name="aspnet-identity-200"></a>O ASP.NET Identity 2.0.0
+### <a name="aspnet-identity-200"></a>ASP.NET Identity 2.0.0
 
-- **Autenticação de dois fatores**: Identidade do ASP.NET agora oferece suporte à autenticação de dois fatores. Autenticação de dois fatores fornece uma camada extra de segurança para suas contas de usuário no caso em que sua senha for comprometida. Também há proteção para ataques de força bruta contra os códigos de dois fatores.
-- **Bloqueio de conta:** Fornece uma maneira de bloquear o usuário se o usuário digitar incorretamente sua senha ou códigos de dois fatores. O número de tentativas inválidas e o período de tempo para que os usuários estão bloqueados pode ser configurado. Um desenvolvedor pode, opcionalmente, desativar o bloqueio de conta para determinadas contas de usuário caso precisem.
-- **Confirmação de conta:** O sistema de identidade do ASP.NET agora oferece suporte a confirmação de conta. Isso é um cenário bastante comum na maioria dos sites hoje em dia em que, quando você registra uma nova conta no site, é necessário confirmar seu email antes de poder fazer qualquer coisa no site do. Email de confirmação é útil porque ele evita que contas falsas que está sendo criado. Isso é extremamente útil se você estiver usando o email como um método de comunicação com os usuários do seu site, como sites, serviços bancários, comércio eletrônico ou sites sociais do Fórum.
-- **Redefinição de senha:** Senha de redefinição é um recurso em que o usuário pode redefinir sua senha se eles tem esquecido sua senha.
-- **Carimbo de segurança (sinal de saída em todos os lugares):** Dá suporte a uma maneira para regenerar o Token de segurança para o usuário em casos quando o usuário altera sua senha ou qualquer outro tipo de segurança relacionadas a informações de como remover um logon associado (como Facebook, Google, Microsoft Account e assim por diante). Isso é necessário para garantir que todos os tokens gerados com a senha antiga são invalidados. No projeto de exemplo, no se você alterar a senha do usuário, em seguida, um novo token é gerado para o usuário e todos os tokens anteriores são invalidados. Esse recurso fornece uma camada extra de segurança para seu aplicativo desde quando você alterar sua senha, você será desconectado de todos os lugares (todos os outros navegadores) em que você fez logon no aplicativo.
-- **Verifique o tipo de chave primária a ser extensível para usuários e funções**: No ASP.NET 1.0 de identidade, o tipo de chave primária para a tabela de usuários e funções era cadeias de caracteres. Isso significa que quando o sistema ASP.NET Identity foi mantido no SQL Server usando o Entity Framework, estávamos usando nvarchar. Havia muitas discussões sobre esta implementação padrão no Stack Overflow e com base nos comentários recebidos. Nós fornecemos um gancho de extensibilidade onde você pode especificar qual deve ser a chave primária da tabela de usuários e funções. Esse gancho de extensibilidade é particularmente útil que se você estiver migrando seu aplicativo e o aplicativo estava armazenando UserIds são GUIDs ou ints.
-- **Suporte a IQueryable em usuários e funções**: Suporte adicionado para IQueryable em UsersStore e RolesStore, você pode facilmente obter a lista de usuários e funções.
-- **Operação de exclusão de suporte por meio do UserManager**
-- **A indexação em nome de usuário**: Na implementação do Entity Framework do ASP.NET Identity, adicionamos um índice exclusivo no nome de usuário usando o novo IndexAttribute no EF 6.1.0. Isso torna-se de que os nomes de usuário são sempre exclusivos e não havia nenhuma condição de corrida em que você pode acabar com nomes de usuário duplicado.
-- **Validador de senha aprimorada:** O validador de senha que foi entregue no ASP.NET Identity 1.0 foi um validador de senha bem básica que só foi Validando o comprimento mínimo. Há um novo validador de senha que lhe dá mais controle sobre a complexidade da senha. Observe que, mesmo se você ativar todas as configurações nessa senha, incentivamos você a habilitar a autenticação de dois fatores para as contas de usuário.
-- **IdentityFactory Middleware / CreatePerOwinContext**:
+- **Autenticação de dois fatores**: o ASP.net Identity agora dá suporte à autenticação de dois fatores. A autenticação de dois fatores fornece uma camada extra de segurança para suas contas de usuário no caso em que a senha é comprometida. Também há proteção para ataques de força bruta contra os códigos de dois fatores.
+- **Bloqueio de conta:** Fornece uma maneira de bloquear o usuário se o usuário inserir sua senha ou códigos de dois fatores incorretamente. O número de tentativas inválidas e o período de tempo para os usuários estão bloqueados podem ser configurados. Um desenvolvedor pode opcionalmente desativar o bloqueio de conta para determinadas contas de usuário, caso seja necessário.
+- **Confirmação da conta:** O sistema de ASP.NET Identity agora dá suporte à confirmação da conta. Esse é um cenário bastante comum na maioria dos sites hoje em que, quando você se registra para uma nova conta no site, é necessário confirmar seu email para poder fazer qualquer coisa no site. A confirmação por email é útil porque impede que contas falsas sejam criadas. Isso é extremamente útil se você estiver usando email como um método de comunicação com os usuários do seu site, como sites de fórum, serviços bancários, comércio eletrônico ou sites sociais.
+- **Redefinição de senha:** A redefinição de senha é um recurso em que o usuário pode redefinir suas senhas se tiver esquecido sua senha.
+- **Carimbo de segurança (sair em qualquer lugar):** Dá suporte a uma maneira de regenerar o token de segurança para o usuário em casos em que o usuário altera sua senha ou qualquer outra informação relacionada à segurança, como remover um logon associado (como Facebook, Google, conta da Microsoft e assim por diante). Isso é necessário para garantir que todos os tokens gerados com a senha antiga sejam invalidados. No projeto de exemplo, se você alterar a senha do usuário, um novo token será gerado para o usuário e quaisquer tokens anteriores serão invalidados. Esse recurso fornece uma camada extra de segurança para seu aplicativo desde que, quando você alterar sua senha, você será desconectado de todos os lugares (todos os outros navegadores) em que você fez logon neste aplicativo.
+- **Tornar o tipo de chave primária extensível para usuários e funções**: no ASP.net Identity 1,0, o tipo de chave primária para usuários e funções de tabela era cadeia de caracteres. Isso significa que quando o sistema de ASP.NET Identity persistiu em SQL Server usando Entity Framework, estávamos usando nvarchar. Havia muitas discussões sobre essa implementação padrão no Stack Overflow e com base nos comentários recebidos. Fornecemos um gancho de extensibilidade onde você pode especificar o que deve ser a chave primária da tabela Users e Roles. Esse gancho de extensibilidade é particularmente útil se você estiver migrando seu aplicativo e o aplicativo estava armazenando UserIds são GUIDs ou ints.
+- **Suporte a IQueryable em usuários e funções**: suporte adicionado para IQueryable em UsersStore e RolesStore, você pode obter facilmente a lista de usuários e funções.
+- **Suporte à operação de exclusão por meio do usermanager**
+- **Indexação em nome de usuário**: na implementação ASP.net Identity Entity Framework, adicionamos um índice exclusivo no nome de usuário usando o novo indexattribute no EF 6.1.0. Isso garante que os nomes de usersejam sempre exclusivos e não haja nenhuma condição de corrida na qual você possa acabar com nomes de userduplicados.
+- **Validador de senha aprimorado:** O validador de senha enviado no ASP.NET Identity 1,0 foi um validador de senha bastante básico que estava Validando apenas o comprimento mínimo. Há um novo validador de senha que oferece mais controle sobre a complexidade da senha. Observe que, mesmo que você ative todas as configurações nesta senha, incentivamos você a habilitar a autenticação de dois fatores para as contas de usuário.
+- **Middleware IdentityFactory/CreatePerOwinContext**:
 
-    - **Gerenciador de usuários**: Você pode usar a implementação de fábrica para obter uma instância do UserManager do contexto OWIN. Esse padrão é semelhante ao que usamos para obter AuthenticationManager de contexto do OWIN para entrar e sair. Essa é uma maneira recomendada de obtenção de uma instância do UserManager por solicitação para o aplicativo.
-    - **DbContextFactory**: Identidade do ASP.NET usa o Entity Framework para manter o sistema de identidade no SQL Server. Para fazer isso no sistema de identidade tem uma referência para o ApplicationDbContext. O DbContextFactory Middleware retorna uma instância do ApplicationDbContext por solicitação que você pode usar em seu aplicativo.
-- **Pacote de NuGet de exemplos de identidade do ASP.NET**: O pacote NuGet de amostras pode tornar mais fácil instalar e executar os exemplos para a identidade do ASP.NET e siga as práticas recomendadas. Este é um aplicativo ASP.NET MVC de exemplo. Modifique o código de acordo com seu aplicativo antes de implantá-lo em produção. O exemplo deve ser instalado em um aplicativo ASP.NET vazio. Para obter mais informações sobre o pacote, vá para a seguinte postagem de blog: [Anunciando o RTM do ASP.NET Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx)
+    - **Gerenciador de usuários**: você pode usar a implementação de fábrica para obter uma instância de usermanager do contexto OWIN. Esse padrão é semelhante ao que usamos para obter CustomTargetNameDictionary do contexto OWIN para Signe e SignOut. Essa é uma maneira recomendada de obter uma instância de usermanager por solicitação para o aplicativo.
+    - **DbContextFactory**: o ASP.NET Identity usa Entity Framework para persistir o sistema de identidade no SQL Server. Para fazer isso, o sistema de identidade tem uma referência ao ApplicationDbContext. O middleware DbContextFactory retorna uma instância do ApplicationDbContext por solicitação que você pode usar em seu aplicativo.
+- **Pacote NuGet de exemplos de ASP.net Identity**: o pacote NuGet de exemplos pode facilitar a instalação e a execução de exemplos para ASP.net Identity e seguir as práticas recomendadas. Este é um aplicativo ASP.NET MVC de exemplo. Modifique o código para se adequar ao seu aplicativo antes de implantá-lo em produção. O exemplo deve ser instalado em um aplicativo ASP.NET vazio. Para obter mais informações sobre o pacote, acesse a seguinte postagem no blog: [anunciando a versão RTM do ASP.net Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx)
 
 <a id="owin"></a>
-### <a name="microsoft-owin-components"></a>Componentes do Microsoft OWIN
+### <a name="microsoft-owin-components"></a>Componentes Microsoft OWIN
 
-Havia muitos bugs que foram corrigidos nesta versão. Consulte a [notas de versão para o 2.1.0 versão](https://katanaproject.codeplex.com/releases/view/113281) para obter mais informações.
+Houve muitos bugs que foram corrigidos nesta versão. Consulte as [notas de versão da versão 2.1.0](https://katanaproject.codeplex.com/releases/view/113281) para obter informações mais detalhadas.
 
 <a id="signalr"></a>
-### <a name="aspnet-signalr-202"></a>ASP.NET SignalR 2.0.2
+### <a name="aspnet-signalr-202"></a>ASP.NET Signalr 2.0.2
 
-Havia muitos bugs que foram corrigidos nesta versão. Consulte a [notas de versão para o 2.0.2 versão](https://github.com/SignalR/SignalR/releases/tag/2.0.2) para obter mais informações.
+Houve muitos bugs que foram corrigidos nesta versão. Consulte as [notas de versão da versão 2.0.2](https://github.com/SignalR/SignalR/releases/tag/2.0.2) para obter informações mais detalhadas.

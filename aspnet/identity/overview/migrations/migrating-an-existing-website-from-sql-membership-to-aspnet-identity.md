@@ -10,11 +10,11 @@ ms.assetid: 220d3d75-16b2-4240-beae-a5b534f06419
 msc.legacyurl: /identity/overview/migrations/migrating-an-existing-website-from-sql-membership-to-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 633229cc4311d151121bf6a91b9fa8aeecca1197
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456147"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583723"
 ---
 # <a name="migrating-an-existing-website-from-sql-membership-to-aspnet-identity"></a>Migração de um site existente da Associação do SQL para a Identidade do ASP.NET
 
@@ -85,27 +85,27 @@ Para que ASP.NET Identity classes funcionem prontamente com os dados dos usuári
 
 | **IdentityUser** | **Tipo** | **IdentityRole** | **IdentityUserRole** | **IdentityUserLogin** | **IdentityUserClaim** |
 | --- | --- | --- | --- | --- | --- |
-| Id | string | Id | RoleId | ProviderKey | Id |
-| Nome de Usuário | string | {1&gt;Nome&lt;1} | UserId | UserId | ClaimType |
+| ID | string | ID | RoleId | ProviderKey | ID |
+| Nome de Usuário | string | Nome | UserId | UserId | ClaimType |
 | PasswordHash | string |  |  | LoginProvider | ClaimValue |
 | SecurityStamp | string |  |  |  | ID de\_de usuário |
 | Email | string |  |  |  |  |
-| EmailConfirmed | {1&gt;bool&lt;1} |  |  |  |  |
+| EmailConfirmed | bool |  |  |  |  |
 | PhoneNumber | string |  |  |  |  |
-| PhoneNumberConfirmed | {1&gt;bool&lt;1} |  |  |  |  |
-| LockoutEnabled | {1&gt;bool&lt;1} |  |  |  |  |
+| PhoneNumberConfirmed | bool |  |  |  |  |
+| LockoutEnabled | bool |  |  |  |  |
 | LockoutEndDate | Datetime |  |  |  |  |
-| AccessFailedCount | int |  |  |  |  |
+| AccessFailedCount | INT |  |  |  |  |
 
 Precisamos ter tabelas para cada um desses modelos com colunas correspondentes às propriedades. O mapeamento entre classes e tabelas é definido no método `OnModelCreating` da `IdentityDBContext`. Isso é conhecido como o método de API fluente de configuração e mais informações podem ser encontradas [aqui](https://msdn.microsoft.com/data/jj591617.aspx). A configuração das classes é conforme mencionado abaixo
 
 | **Classe** | **Table** | **Chave primária** | **Chave estrangeira** |
 | --- | --- | --- | --- |
-| IdentityUser | AspnetUsers | Id |  |
-| IdentityRole | AspnetRoles | Id |  |
+| IdentityUser | AspnetUsers | ID |  |
+| IdentityRole | AspnetRoles | ID |  |
 | IdentityUserRole | AspnetUserRole | UserId + RoleID | ID de\_de usuário-&gt;AspnetUsers RoleID-&gt;AspnetRoles |
 | IdentityUserLogin | AspnetUserLogins | ProviderKey + UserId + Loginprovider | UserId-&gt;AspnetUsers |
-| IdentityUserClaim | AspnetUserClaims | Id | ID de\_de usuário-&gt;AspnetUsers |
+| IdentityUserClaim | AspnetUserClaims | ID | ID de\_de usuário-&gt;AspnetUsers |
 
 Com essas informações, podemos criar instruções SQL para criar novas tabelas. Podemos escrever cada instrução individualmente ou gerar o script inteiro usando os comandos do EntityFramework PowerShell, que podemos editar conforme necessário. Para fazer isso, no VS Abra o **console do Gerenciador de pacotes** no menu **Exibir** ou **ferramentas**
 
@@ -215,7 +215,7 @@ Use o nome de usuário e a senha antigos para fazer logon em um existente. Use a
 
 Portar para o sistema de identidade ajuda o usuário a adicionar o OAuth (autenticação aberta) ao aplicativo. Consulte o exemplo [aqui](https://github.com/aspnet/samples/tree/master/samples/aspnet/Identity/SQLMembership-Identity-OWIN/) , que tem o OAuth habilitado.
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, mostramos como portar usuários da associação do SQL para ASP.NET Identity, mas não portamos dados de perfil. No próximo tutorial, vamos examinar a porta de dados de perfil da associação do SQL para o novo sistema de identidade.
 

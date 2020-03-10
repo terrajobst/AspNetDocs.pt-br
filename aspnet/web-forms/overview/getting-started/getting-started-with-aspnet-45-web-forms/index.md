@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/index
-title: Introdução ao ASP.NET 4.5 do Web Forms e Visual Studio 2013 | Microsoft Docs
+title: Introdução com ASP.NET 4,5 Web Forms e Visual Studio 2013 | Microsoft Docs
 author: rick-anderson
-description: Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Visual Studio 2013 Express para Web. A Visua...
+description: Esta série de tutoriais ensinará as noções básicas da criação de um aplicativo ASP.NET Web Forms usando o ASP.NET 4,5 e o Visual Studio 2013 Express para Web. Um visua...
 ms.author: riande
 ms.date: 04/09/2012
 ms.assetid: dc6aa59a-9cb0-4a81-b5f3-ec545a0e958d
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms
 msc.type: chapter
 ms.openlocfilehash: 75ac7d454462a7f7f1e071ce5ee9d892eb329c6f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131388"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78571886"
 ---
 # <a name="getting-started-with-aspnet-45-web-forms-and-visual-studio-2013"></a>Introdução ao Web Forms do ASP.NET 4.5 e ao Visual Studio 2013
 
-> Esta série de tutoriais ensinará os conceitos básicos da criação de um aplicativo de Web Forms do ASP.NET usando o ASP.NET 4.5 e do Microsoft Visual Studio Express 2013 para Web. Um projeto do Visual Studio 2013 com código-fonte c# está disponível para acompanhar esta série de tutoriais.
+> Esta série de tutoriais ensinará as noções básicas da criação de um aplicativo ASP.NET Web Forms usando o ASP.NET 4,5 e o Microsoft Visual Studio Express 2013 para a Web. Um projeto Visual Studio 2013 com C# código-fonte está disponível para acompanhar esta série de tutoriais.
 
 - [Introdução ao Web Forms e ao Visual Studio](introduction-and-overview.md)
 - [Criar o projeto](create-the-project.md)

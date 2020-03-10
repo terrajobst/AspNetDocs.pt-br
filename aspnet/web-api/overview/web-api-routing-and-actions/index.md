@@ -1,23 +1,23 @@
 ---
 uid: web-api/overview/web-api-routing-and-actions/index
-title: Roteamento de API da Web | Microsoft Docs
+title: Roteamento de API Web | Microsoft Docs
 author: rick-anderson
-description: Como o ASP.NET Web API encaminha solicitações HTTP para controladores e ações.
+description: Como ASP.NET Web API roteia solicitações HTTP para controladores e ações.
 ms.author: riande
 ms.date: 01/26/2012
 ms.assetid: 8447679a-2556-4411-b758-bbe55cfa4805
 msc.legacyurl: /web-api/overview/web-api-routing-and-actions
 msc.type: chapter
 ms.openlocfilehash: 965fb110e1c42d8e6ebe198da4a904e1601bcf29
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133675"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614614"
 ---
-# <a name="web-api-routing"></a>Roteamento de API da Web
+# <a name="web-api-routing"></a>Roteamento da API Web
 
-> Como o ASP.NET Web API encaminha solicitações HTTP para controladores e ações.
+> Como ASP.NET Web API roteia solicitações HTTP para controladores e ações.
 
 - [Roteamento na API Web](routing-in-aspnet-web-api.md)
 - [Roteamento e seleção de ação na API Web](routing-and-action-selection.md)

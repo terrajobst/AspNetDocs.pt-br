@@ -9,11 +9,11 @@ ms.assetid: 22ca8efa-7cd1-45a7-b9ce-ce6eb3b3ff95
 msc.legacyurl: /web-forms/overview/data-access/caching-data/caching-data-at-application-startup-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a0b55b0df1b7843120de284891e16178df23fabe
-ms.sourcegitcommit: fe5c7512383a9b0a05d321ff10d3cca1611556f0
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70386530"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576905"
 ---
 # <a name="caching-data-at-application-startup-c"></a>Armazenar dados em cache na inicialização do aplicativo (C#)
 
@@ -124,7 +124,7 @@ Para esses tutoriais, precisamos apenas adicionar código ao método `Applicatio
 
 [!code-aspx[Main](caching-data-at-application-startup-cs/samples/sample6.aspx)]
 
-E isso é tudo! Na inicialização do aplicativo, o método `LoadStaticCache()` obterá as informações do fornecedor da BLL e a armazenará em uma variável de membro estático (ou em qualquer armazenamento de cache que você tenha terminado usando a classe `StaticCache`). Para verificar esse comportamento, defina um ponto de interrupção no método `Application_Start` e execute o aplicativo. Observe que o ponto de interrupção é atingido no início do aplicativo. As solicitações subsequentes, no entanto, não fazem com que o método `Application_Start` seja executado.
+Isso é tudo! Na inicialização do aplicativo, o método `LoadStaticCache()` obterá as informações do fornecedor da BLL e a armazenará em uma variável de membro estático (ou em qualquer armazenamento de cache que você tenha terminado usando a classe `StaticCache`). Para verificar esse comportamento, defina um ponto de interrupção no método `Application_Start` e execute o aplicativo. Observe que o ponto de interrupção é atingido no início do aplicativo. As solicitações subsequentes, no entanto, não fazem com que o método `Application_Start` seja executado.
 
 [![usar um ponto de interrupção para verificar se o manipulador de eventos Application_Start está sendo executado](caching-data-at-application-startup-cs/_static/image7.png)](caching-data-at-application-startup-cs/_static/image6.png)
 

@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/getting-started/aspnet-identity-recommended-resources
 msc.type: authoredcontent
 ms.openlocfilehash: 4b2a6689839f66121f4a32ee5934f6cda50ae812
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456564"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616588"
 ---
 # <a name="aspnet-identity-recommended-resources"></a>Recursos recomendados da Identidade do ASP.NET
 

@@ -8,29 +8,29 @@ ms.date: 11/24/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/advanced/calling-a-web-api-from-a-net-client
 msc.type: authoredcontent
-ms.openlocfilehash: 960960d26863cc3f725eee8a6c98844c5d3ce721
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.openlocfilehash: ab3ba71839123e848dffaa59871f9dac8c1a88d0
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519174"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78622615"
 ---
 # <a name="call-a-web-api-from-a-net-client-c"></a>Chamar uma API da Web de um cliente .NETC#()
 
 por [Mike Wasson](https://github.com/MikeWasson) e [Rick Anderson](https://twitter.com/RickAndMSFT)
 
-[Download do projeto concluído](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample). [Instruções de download](/aspnet/core/tutorials/#how-to-download-a-sample). 
+[Download do projeto concluído](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample). [Instruções de download](/aspnet/core/tutorials/#how-to-download-a-sample). 
 
 Este tutorial mostra como chamar uma API da Web de um aplicativo .NET, usando [System .net. http. HttpClient.](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)
 
 Neste tutorial, um aplicativo cliente é escrito que consome a seguinte API da Web:
 
-| Action | Método HTTP | URI relativo |
+| Ação | Método HTTP | URI relativo |
 | --- | --- | --- |
-| Obter um produto por ID | OBTER | *ID* do/API/Products/ |
-| Criar um novo produto | POSTAR | /api/products |
+| Obter um produto por ID | GET | *ID* do/API/Products/ |
+| Criar um novo produto | POST | /api/products |
 | Atualizar um produto | PUT | *ID* do/API/Products/ |
-| Excluir um produto | DELETE | *ID* do/API/Products/ |
+| Excluir um produto | Delete (excluir) | *ID* do/API/Products/ |
 
 Para saber como implementar essa API com ASP.NET Web API, consulte [criando uma API Web que oferece suporte a operações CRUD](xref:web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 ).
@@ -55,7 +55,7 @@ O código anterior é o aplicativo cliente completo.
 
 Use o Gerenciador de pacotes NuGet para instalar o pacote de bibliotecas de cliente de API Web.
 
-No menu **Ferramentas**, selecione **Gerenciador de Pacotes NuGet** > **Console do Gerenciador de Pacotes**. No console do Gerenciador de pacotes (PMC), digite o seguinte comando:
+No menu **Ferramentas** selecione **Gerenciador de Pacotes NuGet** > **Console do Gerenciador de Pacotes**. No console do Gerenciador de pacotes (PMC), digite o seguinte comando:
 
 `Install-Package Microsoft.AspNet.WebApi.Client`
 
@@ -165,7 +165,7 @@ Como GET, uma solicitação de exclusão não tem um corpo de solicitação. Voc
 
 Para testar o aplicativo cliente:
 
-1. [Baixe](https://github.com/aspnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample/server) e execute o aplicativo de servidor. [Instruções de download](/aspnet/core/#how-to-download-a-sample). Verifique se o aplicativo do servidor está funcionando. Por exemplo, `http://localhost:64195/api/products` deve retornar uma lista de produtos.
+1. [Baixe](https://github.com/dotnet/AspNetDocs/tree/master/aspnet/web-api/overview/advanced/calling-a-web-api-from-a-net-client/sample/server) e execute o aplicativo de servidor. [Instruções de download](/aspnet/core/#how-to-download-a-sample). Verifique se o aplicativo do servidor está funcionando. Por exemplo, `http://localhost:64195/api/products` deve retornar uma lista de produtos.
 2. Defina o URI de base para solicitações HTTP. Altere o número da porta para a porta usada no aplicativo do servidor.
     [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet5&highlight=2)]
 

@@ -9,11 +9,11 @@ ms.assetid: fae968c9-1902-487d-b053-86a46dd52c3f
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/accordion/dynamically-adding-an-accordion-pane-vb
 msc.type: authoredcontent
 ms.openlocfilehash: be48db5ea3de4af46b0f864cc9e73d2f518294a4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74607196"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598318"
 ---
 # <a name="dynamically-adding-an-accordion-pane-vb"></a>Adicionando dinamicamente um painel de acordeão (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle de acordeão no AJAX Control Toolkit fornece vários painéis e permite que o usuário exiba um deles de cada vez. Os painéis geralmente são declarados dentro da própria página, mas o código do servidor pode ser usado para obter o mesmo resultado.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de acordeão no AJAX Control Toolkit fornece vários painéis e permite que o usuário exiba um deles de cada vez. Os painéis geralmente são declarados dentro da própria página, mas o código do servidor pode ser usado para obter o mesmo resultado.
 

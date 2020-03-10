@@ -9,11 +9,11 @@ ms.assetid: 0591cacc-b34b-4cf6-885e-2c9953bb0946
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 09d3faf811f21a66bb5c234f71d77b2552ae6516
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623481"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78611856"
 ---
 # <a name="displaying-data-with-the-datalist-and-repeater-controls-c"></a>Exibir dados com os controles DataList e o Repeater (C#)
 
@@ -111,7 +111,7 @@ Como o GridView, o DataList oferece várias propriedades relacionadas a estilo, 
 
 Conforme discutido no tutorial [exibindo dados com o ObjectDataSource](../basic-reporting/displaying-data-with-the-objectdatasource-cs.md) , um arquivo de capa especifica as propriedades padrão relacionadas à aparência para um controle da Web; um tema é uma coleção de arquivos de capa, CSS, de imagem e JavaScript que definem uma aparência específica para um site. No tutorial *exibindo dados com o ObjectDataSource* , criamos um `DataWebControls` tema (que é implementado como uma pasta dentro da pasta `App_Themes`) que tem, atualmente, dois arquivos de capa-`GridView.skin` e `DetailsView.skin`. Vamos adicionar um terceiro arquivo de capa para especificar as configurações de estilo predefinidas para DataList.
 
-Para adicionar um arquivo de capa, clique com o botão direito do mouse na pasta `App_Themes/DataWebControls`, escolha Adicionar um novo item e selecione a opção arquivo de capa na lista. Dê o nome `DataList.skin` para o arquivo.
+Para adicionar um arquivo de capa, clique com o botão direito do mouse na pasta `App_Themes/DataWebControls`, escolha Adicionar um novo item e selecione a opção arquivo de capa na lista. Nomeie o arquivo `DataList.skin`.
 
 [![criar um novo arquivo de capa chamado DataList. Skin](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image22.png)](displaying-data-with-the-datalist-and-repeater-controls-cs/_static/image21.png)
 
@@ -267,4 +267,4 @@ Boa programação!
 Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial foram Yaakov Ellis, Liz Shulok, Randy Schmidt e Stacy Park. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Avançar](formatting-the-datalist-and-repeater-based-upon-data-cs.md)
+> [Próximo](formatting-the-datalist-and-repeater-based-upon-data-cs.md)

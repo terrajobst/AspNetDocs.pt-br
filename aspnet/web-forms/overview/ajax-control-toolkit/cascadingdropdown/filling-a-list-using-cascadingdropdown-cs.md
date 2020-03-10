@@ -9,11 +9,11 @@ ms.assetid: f949aafa-fe57-43b0-b722-f0dd33a900be
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/filling-a-list-using-cascadingdropdown-cs
 msc.type: authoredcontent
 ms.openlocfilehash: b5e9874fb5b6d3e55c8af5b85d12bf1ffacc116b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574831"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614208"
 ---
 # <a name="filling-a-list-using-cascadingdropdown-c"></a>Preencher uma lista usando o CascadingDropDown (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. (Por exemplo, uma lista fornece uma lista de Estados dos EUA e a próxima lista é então preenchida com cidades principais nesse estado.) O primeiro desafio a ser resolvido é realmente preencher uma lista suspensa usando esse controle.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. (Por exemplo, uma lista fornece uma lista de Estados dos EUA e a próxima lista é então preenchida com cidades principais nesse estado.) O primeiro desafio a ser resolvido é realmente preencher uma lista suspensa usando esse controle.
 
@@ -64,4 +64,4 @@ Carregar a página no navegador irá disparar a lista a ser preenchida com três
 A lista é preenchida automaticamente ([clique para exibir a imagem em tamanho normal](filling-a-list-using-cascadingdropdown-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](using-cascadingdropdown-with-a-database-cs.md)
+> [Próximo](using-cascadingdropdown-with-a-database-cs.md)

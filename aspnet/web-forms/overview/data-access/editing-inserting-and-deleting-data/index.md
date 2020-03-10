@@ -2,22 +2,22 @@
 uid: web-forms/overview/data-access/editing-inserting-and-deleting-data/index
 title: Editando, inserindo e excluindo dados | Microsoft Docs
 author: rick-anderson
-description: Nesses tutoriais, você ver como mapear os métodos do controle ObjectDataSource para métodos BLL e como configurar o GridView, DetailsView e FormView co...
+description: Nestes tutoriais, você verá como mapear métodos do controle ObjectDataSource para métodos de BLL e como configurar o conjunto GridView, DetailsView e FormView...
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 9fc60498-ced4-47c6-b2cf-8d464e6aeef8
 msc.legacyurl: /web-forms/overview/data-access/editing-inserting-and-deleting-data
 msc.type: chapter
 ms.openlocfilehash: 4657a52b05c1cf8a991158f212d6b6ce849ef276
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109049"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78607712"
 ---
 # <a name="editing-inserting-and-deleting-data"></a>Editar, inserir e excluir dados
 
-> Nesses tutoriais, você ver como mapear os métodos do controle ObjectDataSource para métodos BLL e como configurar o GridView, DetailsView e FormView os controles para permitir que os usuários modifiquem dados.
+> Nestes tutoriais, você verá como mapear métodos do controle ObjectDataSource para métodos de BLL e como configurar os controles GridView, DetailsView e FormView para permitir que os usuários modifiquem dados.
 
 - [Visão geral de inserção, atualização e exclusão de dados (C#)](an-overview-of-inserting-updating-and-deleting-data-cs.md)
 - [Examinando os eventos associados à inserção, atualização e exclusão (C#)](examining-the-events-associated-with-inserting-updating-and-deleting-cs.md)

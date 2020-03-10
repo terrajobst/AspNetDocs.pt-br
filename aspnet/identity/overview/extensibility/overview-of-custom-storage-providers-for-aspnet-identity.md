@@ -10,11 +10,11 @@ ms.custom: seoapril2019
 msc.legacyurl: /identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity
 msc.type: authoredcontent
 ms.openlocfilehash: 21baedf6285b411f89627df9ca25d47a2a42e387
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519096"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78584409"
 ---
 # <a name="overview-of-custom-storage-providers-for-aspnet-identity"></a>Visão geral de provedores de armazenamento personalizados para a Identidade do ASP.NET
 
@@ -29,7 +29,7 @@ por [Tom FitzMacken](https://github.com/tfitzmac)
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
 > 
 > 
-> - Visual Studio 2013 com Atualização 2
+> - Visual Studio 2013 com atualização 2
 > - ASP.NET Identity 2
 
 ## <a name="introduction"></a>Introdução
@@ -68,12 +68,12 @@ Você não precisa personalizar as classes de Gerenciador porque ao criar uma no
 
 Para implementar um provedor de armazenamento personalizado, você deve entender os tipos de dados usados com ASP.NET Identity e decidir quais recursos são relevantes para seu aplicativo.
 
-| Dados | Descrição |
+| data | DESCRIÇÃO |
 | --- | --- |
-| Usuários do | Usuários registrados do seu site da Web. Inclui a ID de usuário e o nome de usuário. Pode incluir uma senha com hash se os usuários fizerem logon com credenciais específicas para seu site (em vez de usar credenciais de um site externo, como o Facebook) e o carimbo de segurança para indicar se alguma coisa foi alterada nas credenciais do usuário. Também pode incluir endereço de email, número de telefone, se a autenticação de dois fatores está habilitada, o número atual de logons com falha e se uma conta foi bloqueada. |
+| Usuários | Usuários registrados do seu site da Web. Inclui a ID de usuário e o nome de usuário. Pode incluir uma senha com hash se os usuários fizerem logon com credenciais específicas para seu site (em vez de usar credenciais de um site externo, como o Facebook) e o carimbo de segurança para indicar se alguma coisa foi alterada nas credenciais do usuário. Também pode incluir endereço de email, número de telefone, se a autenticação de dois fatores está habilitada, o número atual de logons com falha e se uma conta foi bloqueada. |
 | Declarações de usuário | Um conjunto de instruções (ou declarações) sobre o usuário que representa a identidade do usuário. Pode habilitar uma expressão maior da identidade do usuário do que pode ser obtido por meio de funções. |
 | Logons de usuário | Informações sobre o provedor de autenticação externa (como o Facebook) para usar ao fazer logon em um usuário. |
-| Funções do | Grupos de autorização para seu site. Inclui a ID da função e o nome da função (como "admin" ou "Employee"). |
+| Funções | Grupos de autorização para seu site. Inclui a ID da função e o nome da função (como "admin" ou "Employee"). |
 
 <a id="dal"></a>
 ## <a name="create-the-data-access-layer"></a>Criar a camada de acesso a dados
@@ -86,14 +86,14 @@ Para obter uma implementação do MySQL de repositórios de dados para o ASP.NET
 
 Na camada de acesso a dados, você fornece a lógica para salvar os dados de ASP.NET Identity em sua fonte de dados. A camada de acesso a dados para seu provedor de armazenamento personalizado pode incluir as seguintes classes para armazenar informações de usuário e função.
 
-| Classe | Descrição | Exemplo |
+| Classe | DESCRIÇÃO | Exemplo |
 | --- | --- | --- |
 | Contexto | Encapsula as informações para se conectar ao mecanismo de persistência e executar consultas. Essa classe é fundamental para sua camada de acesso a dados. As outras classes de dados exigirão uma instância dessa classe para executar suas operações. Você também inicializará suas classes de armazenamento com uma instância dessa classe. | [MySQLDatabase](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/MySQLDatabase.cs) |
 | Armazenamento do usuário | Armazena e recupera informações do usuário (como o nome de usuário e o hash de senha). | [Usertable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserTable.cs) |
-| Armazenamento de função | Armazena e recupera informações de função (como o nome da função). | [RoleTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/RoleTable.cs) |
+| Armazenamento de função | Armazena e recupera informações de função (como o nome da função). | [Função (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/RoleTable.cs) |
 | Armazenamento de userreivindicações | Armazena e recupera informações de declaração do usuário (como o tipo e o valor da declaração). | [O MySQL (userclaimtable)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserClaimsTable.cs) |
 | Armazenamento de userlogons | Armazena e recupera informações de logon de usuário (como um provedor de autenticação externa). | [UserLoginsTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserLoginsTable.cs) |
-| Armazenamento de UserRole | Armazena e recupera a quais funções um usuário é atribuído. | [UserRoleTable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserRoleTable.cs) |
+| Armazenamento de UserRole | Armazena e recupera a quais funções um usuário é atribuído. | [Sqlroletable (MySQL)](https://github.com/aspnet/samples/blob/master/samples/aspnet/Identity/AspNet.Identity.MySQL/UserRoleTable.cs) |
 
 Novamente, você só precisa implementar as classes que pretende usar em seu aplicativo.
 

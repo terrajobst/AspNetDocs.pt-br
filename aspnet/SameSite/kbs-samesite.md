@@ -6,11 +6,11 @@ ms.author: riande
 ms.date: 12/03/2019
 uid: samesite/kbs-samesite
 ms.openlocfilehash: 5774fe9e3dcced8c572a24d2e696abc4b67f2b2e
-ms.sourcegitcommit: e365196c75ce93cd8967412b1cfdc27121816110
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074872"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78545006"
 ---
 # <a name="kb-articles-that-support-samesite-in-net-framework"></a>Artigos da base de conhecimento que dão suporte a SameSite no .NET Framework
 

@@ -9,11 +9,11 @@ ms.assetid: de2d65b9-aadc-42ba-abe1-4e87e66521a0
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/an-overview-of-forms-authentication-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 009c3f84e00d648ede4a15e530ceac2d23e01eec
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74620751"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546427"
 ---
 # <a name="an-overview-of-forms-authentication-c"></a>Uma visão geral da autenticação deC#formulários ()
 
@@ -205,7 +205,7 @@ Como você pode ver, há três contas de usuário válidas – Scott, Jisun e Sa
 
 Quando um usuário insere credenciais válidas, mencionei que elas são redirecionadas para a "página apropriada". No entanto, qual é a página apropriada? Lembre-se de que quando um usuário visita uma página que não está autorizada a exibir, o FormsAuthenticationModule os redireciona automaticamente para a página de logon. Ao fazer isso, ele inclui a URL solicitada na QueryString por meio do parâmetro ReturnUrl. Ou seja, se um usuário tentou visitar ProtectedPage. aspx e não tiver autorização para fazer isso, o FormsAuthenticationModule o redirecionaria para:
 
-Login. aspx? ReturnUrl = ProtectedPage. aspx
+Login.aspx?ReturnUrl=ProtectedPage.aspx
 
 Após fazer logon com êxito, o usuário deve ser Redirecionado de volta para ProtectedPage. aspx. Como alternativa, os usuários podem visitar a página de logon em seu próprio Volition. Nesse caso, depois de fazer logon no usuário, eles devem ser enviados à página default. aspx da pasta raiz.
 
@@ -221,7 +221,7 @@ GetAuthCookie é útil quando você precisa modificar o tíquete de autenticaç�
 
 Como queremos fazer logon no usuário e redirecioná-los para a página apropriada, vamos usar RedirectFromLoginPage. Atualize o manipulador de eventos de clique do LoginButton, substituindo as duas linhas de tarefas comentadas pela seguinte linha de código:
 
-FormsAuthentication. RedirectFromLoginPage (UserName. Text, RememberMe. Checked);
+FormsAuthentication.RedirectFromLoginPage(UserName.Text, RememberMe.Checked);
 
 Ao criar o tíquete de autenticação de formulários, usamos a propriedade Text da caixa de texto nome de usuário para o parâmetro *nome de usuário* do tíquete de autenticação de formulários e o estado marcado da caixa de seleção rememberMe para o parâmetro *persistCookie* .
 
@@ -289,7 +289,7 @@ O ponto importante a ser resumido aqui é que o parâmetro *username* especifica
 
 Vamos fornecer uma mensagem mais personalizada em Default. aspx. Atualize a página\_carregar manipulador de eventos para que a propriedade Text do rótulo WelcomeBackMessage seja atribuída à cadeia de caracteres "Welcome Back, *username*!"
 
-WelcomeBackMessage. Text = "Welcome Back", + User.Identity.Name + "!";
+WelcomeBackMessage.Text = "Welcome back, " + User.Identity.Name + "!";
 
 A Figura 13 mostra o efeito dessa modificação (ao fazer logon como o usuário Scott).
 

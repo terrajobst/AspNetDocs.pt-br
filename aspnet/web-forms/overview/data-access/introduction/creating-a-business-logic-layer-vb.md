@@ -9,11 +9,11 @@ ms.assetid: 142e5181-29ce-4bb9-907b-2a0becf7928b
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-business-logic-layer-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 2ee4789ea9567b7bcd70eb63695e0b1d73076dc2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74572608"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78605381"
 ---
 # <a name="creating-a-business-logic-layer-vb"></a>Criação de uma camada de lógica de negócios (VB)
 
@@ -147,7 +147,7 @@ Infelizmente, não podemos especificar verificações de limites, como o valor d
 
 Em seguida, crie um manipulador de eventos para o evento `ColumnChanging` que garante que os valores de coluna `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`e `ReorderLevel` (se não `NULL`) sejam maiores ou iguais a zero. Se qualquer coluna desse tipo estiver fora do intervalo, lance um `ArgumentException`.
 
-ProductsDataTable. ColumnChanging. vb
+ProductsDataTable.ColumnChanging.vb
 
 [!code-vb[Main](creating-a-business-logic-layer-vb/samples/sample5.vb)]
 

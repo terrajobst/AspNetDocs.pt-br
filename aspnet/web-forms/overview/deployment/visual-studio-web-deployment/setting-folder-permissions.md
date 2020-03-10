@@ -9,11 +9,11 @@ ms.assetid: 9715a121-fa55-4f1b-a5d2-fb3f6cd8be8f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/setting-folder-permissions
 msc.type: authoredcontent
 ms.openlocfilehash: 410525bb2e3f6e5a0be6d7d6b33fb3a40509041a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614933"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576058"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-setting-folder-permissions"></a>Implantação da Web do ASP.NET usando o Visual Studio: definindo permissões de pasta
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Neste tutorial, você definirá permissões de pasta para a pasta *ELMAH* no site da Web implantado para que o aplicativo possa criar arquivos de log nessa pasta.
 

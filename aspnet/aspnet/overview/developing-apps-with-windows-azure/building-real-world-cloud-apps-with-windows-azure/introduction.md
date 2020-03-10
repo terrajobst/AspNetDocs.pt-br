@@ -9,11 +9,11 @@ ms.assetid: accfa16a-ab15-4c26-9ad4-babdc2a77d2e
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: b88573b3702b755b155e8da35f5f8a67931bafc6
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457109"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617589"
 ---
 # <a name="building-real-world-cloud-apps-with-azure"></a>Criando aplicativos de nuvem do mundo real com o Azure
 
@@ -25,7 +25,7 @@ por [Mike Wasson](https://github.com/MikeWasson), [Rick Anderson](https://twitte
 > 
 > O conteúdo é baseado em uma apresentação desenvolvida por Scott Guthrie e entregue por ele na conferência de desenvolvedores de norueguês (NDC) em junho de 2013 ([parte 1](http://vimeo.com/68215538), [parte 2](http://vimeo.com/68215602)) e no Microsoft Tech Ed austrália em setembro de 2013 ([parte 1](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR324), [parte 2](https://channel9.msdn.com/Events/TechEd/Australia/2013/AZR325)). [Muitos outros](more-patterns-and-guidance.md#acknowledgments) atualizaram e aumentaram o conteúdo ao fazer a transição do vídeo para o formato escrito.
 
-## <a name="intended-audience"></a>Público-Alvo
+## <a name="intended-audience"></a>Público-alvo
 
 Os desenvolvedores que estão curiosos sobre o desenvolvimento para a nuvem, considerando uma mudança para a nuvem ou são novos no desenvolvimento na nuvem encontrarão aqui uma visão geral concisa dos conceitos e das práticas mais importantes que eles precisam saber. Os conceitos são ilustrados com exemplos concretos e cada capítulo vincula-se a outros recursos para obter informações mais detalhadas. Os exemplos e os links para recursos adicionais são para Microsoft frameworks e serviços, mas os princípios ilustrados também se aplicam a outras estruturas de desenvolvimento da Web e ambientes de nuvem.
 
@@ -102,7 +102,7 @@ Este livro eletrônico explica treze padrões recomendados para o desenvolviment
 - [Apêndice: o aplicativo de exemplo Fix It](the-fix-it-sample-application.md)
 
     - Problemas conhecidos
-    - Práticas recomendadas
+    - Práticas Recomendadas
     - Como baixar, compilar, executar e implantar.
 
 Esses padrões se aplicam a todos os ambientes de nuvem, mas os ilustraremos usando exemplos baseados em tecnologias e serviços da Microsoft, como o Visual Studio, o Team Foundation Service, o ASP.NET e o Azure.

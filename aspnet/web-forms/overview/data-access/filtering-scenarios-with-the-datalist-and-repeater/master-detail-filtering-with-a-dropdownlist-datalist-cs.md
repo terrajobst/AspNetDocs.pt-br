@@ -9,11 +9,11 @@ ms.assetid: 07fa47ae-e491-4a2f-b265-d342b9ddef46
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8289f46fd6d0143802269d5c6196a4c40db9378c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74631038"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78590261"
 ---
 # <a name="masterdetail-filtering-with-a-dropdownlist-c"></a>Filtragem mestre/detalhes com uma DropDownList (C#)
 
@@ -115,7 +115,7 @@ Ao visitar pela primeira vez o `FilterByDropDownList.aspx` página, o primeiro i
 
 Para adicionar um novo item de lista à DropDownList, vá para a janela Propriedades e clique nas reticências na propriedade `Items`. Adicione um novo item de lista com o `Text` "--escolha uma categoria--" e o `Value` `0`.
 
-![Adicionar um](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image27.png)
+![Adicionar](master-detail-filtering-with-a-dropdownlist-datalist-cs/_static/image27.png)
 
 **Figura 11**: adicionar um item de lista "--escolher uma categoria--"
 
@@ -154,4 +154,4 @@ Boa programação!
 Esta série de tutoriais foi revisada por muitos revisores úteis. O revisor de Lead para este tutorial foi Randy Schmidt. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Avançar](master-detail-filtering-acess-two-pages-datalist-cs.md)
+> [Próximo](master-detail-filtering-acess-two-pages-datalist-cs.md)

@@ -9,11 +9,11 @@ ms.assetid: 6898c601-6c31-432f-8388-e6843f8a17cb
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/shopping-cart
 msc.type: authoredcontent
 ms.openlocfilehash: d3b619ebd9448d30857ffbaf17fd245b1d54a662
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519291"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641466"
 ---
 # <a name="shopping-cart"></a>Carrinho de compras
 
@@ -56,7 +56,7 @@ Anteriormente nesta série de tutoriais, você definiu o esquema para os dados d
 1. Clique com o botão direito do mouse na pasta *modelos* e selecione **Adicionar** -&gt; **novo item**. 
 
     ![Carrinho de compras-novo item](shopping-cart/_static/image1.png)
-2. A caixa de diálogo **Adicionar Novo Item** é exibida. Selecione **código**e, em seguida, selecione **classe**. 
+2. A caixa de diálogo **Adicionar novo item** é exibida. Selecione **código**e, em seguida, selecione **classe**. 
 
     ![Carrinho de compras – caixa de diálogo Adicionar novo item](shopping-cart/_static/image2.png)
 3. Nomeie essa nova classe *CartItem.cs*.
@@ -130,7 +130,7 @@ Como mencionado anteriormente, você criará uma página de processamento chamad
 #### <a name="to-create-the-add-to-cart-functionality"></a>Para criar a funcionalidade de adição a carrinho:
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **WingtipToys**, clique em **Adicionar** -&gt; **novo item**.  
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Adicione uma nova página padrão (Web Form) ao aplicativo chamado *addToCart. aspx*. 
 
     ![Carrinho de compras – Adicionar formulário da Web](shopping-cart/_static/image4.png)
@@ -148,7 +148,7 @@ Como mencionado anteriormente, um `ID` de usuário é usado para identificar os 
 A página *ShoppingCart. aspx* exibirá os produtos que o usuário adicionou ao carrinho de compras. Ele também fornecerá a capacidade de adicionar, remover e atualizar itens no carrinho de compras.
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **WingtipToys**, clique em **Adicionar** -&gt; **novo item**.  
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Adicione uma nova página (formulário da Web) que inclui uma página mestra selecionando **formulário da Web usando a página mestra**. Nomeie a nova página *ShoppingCart. aspx*.
 3. Selecione **site. Master** para anexar a página mestra à página *. aspx* recém-criada.
 4. Na página *ShoppingCart. aspx* , substitua a marcação existente pela marcação a seguir:   

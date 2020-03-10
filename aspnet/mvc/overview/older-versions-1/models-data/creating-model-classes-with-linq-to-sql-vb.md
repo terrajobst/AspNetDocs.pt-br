@@ -9,11 +9,11 @@ ms.assetid: a4a25a75-d71f-4509-98b4-df72e748985a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/creating-model-classes-with-linq-to-sql-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 88a5f1037d93ef3bdc95bf60b6005ebb254ab440
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588537"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78581266"
 ---
 # <a name="creating-model-classes-with-linq-to-sql-vb"></a>Criação de classes de modelo com o LINQ to SQL (VB)
 
@@ -63,11 +63,11 @@ Precisamos adicionar uma tabela ao nosso banco de dados que representa nossos fi
 
 Precisamos adicionar as seguintes colunas à nossa tabela de banco de dados:
 
-| **Nome da coluna** | **Tipo de dados** | **Permitir nulos** |
+| **Nome da Coluna** | **Tipo de Dados** | **Permitir Nulos** |
 | --- | --- | --- |
-| Id | Int | False |
-| Cargo | Nvarchar (200) | False |
-| Pasta | Nvarchar (50) | False |
+| ID | Int | Falso |
+| Title | Nvarchar(200) | Falso |
+| Diretor | Nvarchar(50) | Falso |
 
 Você precisa fazer duas coisas especiais para a coluna ID. Primeiro, você precisa marcar a coluna ID como uma coluna de chave primária selecionando a coluna na Designer de Tabela e clicando no ícone de uma chave. LINQ to SQL exige que você especifique as colunas de chave primária ao executar inserções ou atualizações no banco de dados.
 

@@ -9,11 +9,11 @@ ms.assetid: 848e6bcf-4c3f-4d14-974d-e45b9444ab79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/reorderlist/drag-and-drop-via-reorderlist-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 3f7c5749053d8bf587467fb1939fca05ce2872a4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74598703"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78553917"
 ---
 # <a name="drag-and-drop-via-reorderlist-vb"></a>Arrastar e soltar por meio de ReorderList (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle reorganizelist no AJAX Control Toolkit fornece uma lista que pode ser reordenada pelo usuário por meio de arrastar e soltar. A ordem atual da lista deve ser persistida no servidor.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de `ReorderList` no AJAX Control Toolkit fornece uma lista que pode ser reordenada pelo usuário por meio de arrastar e soltar. A ordem atual da lista deve ser persistida no servidor.
 

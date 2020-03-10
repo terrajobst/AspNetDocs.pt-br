@@ -1,85 +1,85 @@
 ---
 uid: web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview
-title: 'Implantação da Web corporativa: Visão geral do cenário | Microsoft Docs'
+title: 'Enterprise Web Deployment: visão geral do cenário | Microsoft Docs'
 author: jrjlee
-description: Esse conjunto de tutoriais usa uma solução de exemplo com um nível realista de complexidade, junto com um cenário de implantação da empresa fictícia, para fornecer uma ref...
+description: Esse conjunto de tutoriais usa uma solução de exemplo com um nível realista de complexidade, junto com um cenário de implantação empresarial fictício, para fornecer uma referência...
 ms.author: riande
 ms.date: 05/03/2012
 ms.assetid: aa862153-4cd8-4e33-beeb-abf502c6664f
 msc.legacyurl: /web-forms/overview/deployment/deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview
 msc.type: authoredcontent
 ms.openlocfilehash: 9786879844da13c21e6a953b1ab24b29ca8121e2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109139"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574126"
 ---
-# <a name="enterprise-web-deployment-scenario-overview"></a>Implantação da Web corporativa: Visão geral do cenário
+# <a name="enterprise-web-deployment-scenario-overview"></a>Enterprise Web Deployment: visão geral do cenário
 
-by [Jason Lee](https://github.com/jrjlee)
+por [Jason Lee](https://github.com/jrjlee)
 
 [Baixar PDF](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/63/56/8130.DeployingWebAppsInEnterpriseScenarios.pdf)
 
-> Esse conjunto de tutoriais usa uma solução de exemplo com um nível realista de complexidade, junto com um cenário de implantação da empresa fictícia, para fornecer uma implementação de referência e conceder a tarefas e instruções passo a passo um contexto comuns. Este tópico descreve o cenário do tutorial e apresenta a solução de exemplo.
+> Esse conjunto de tutoriais usa uma solução de exemplo com um nível realista de complexidade, junto com um cenário de implantação empresarial fictício, para fornecer uma implementação de referência e dar às tarefas e passo a passos um contexto comum. Este tópico descreve o cenário do tutorial e apresenta a solução de exemplo.
 
 ## <a name="scenario-description"></a>Descrição do cenário
 
-A Fabrikam, Inc., uma empresa fictícia, está criando uma solução que permite que as equipes de vendas remotas armazenar e recuperar informações de contato de uma interface da web.
+A Fabrikam, Inc., uma empresa fictícia, está criando uma solução que permite que as equipes de vendas remotas armazenem e recuperem informações de contato de uma interface da Web.
 
-Os processos de gerenciamento de ciclo de vida de aplicativos (ALM) na Fabrikam, Inc. exigem a solução ser implantada em três ambientes de servidor em vários estágios do processo de desenvolvimento de software:
+Os processos de gerenciamento do ciclo de vida do aplicativo (ALM) na Fabrikam, Inc. exigem que a solução seja implantada em três ambientes de servidor em vários estágios do processo de desenvolvimento de software:
 
-- Um ambiente de teste ou "área restrita" de desenvolvedor.
+- Um ambiente de teste do desenvolvedor ou "sandbox".
 - Um ambiente de preparo baseado na intranet.
-- Um ambiente de produção para a Internet.
+- Um ambiente de produção voltado para a Internet.
 
-Cada um desses ambientes tem diferente requisitos de configuração e segurança, e cada um apresenta desafios de implantação exclusivo.
+Cada um desses ambientes tem requisitos de configuração e segurança diferentes, e cada um apresenta desafios de implantação exclusivos.
 
-### <a name="the-fabrikam-inc-server-infrastructure"></a>The Fabrikam, Inc. Infraestrutura de servidor
+### <a name="the-fabrikam-inc-server-infrastructure"></a>A infraestrutura de servidor da Fabrikam, Inc.
 
-Isso é a infraestrutura de desenvolvimento e implantação de alto nível da Fabrikam, Inc.
+Esta é a infra-estrutura de desenvolvimento e implantação de alto nível na Fabrikam, Inc.
 
 ![](enterprise-web-deployment-scenario-overview/_static/image1.png)
 
-As estações de trabalho do desenvolvedor, a infra-estrutura de controle do código-fonte, o ambiente de teste do desenvolvedor e o ambiente de preparo que residem na rede intranet dentro do domínio Fabrikam.net. O ambiente de produção reside em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada e sub-rede filtrada), que é isolada da rede intranet por um firewall. Esse é um cenário de implantação comum: você normalmente isolar seus servidores da web para a Internet de sua infraestrutura de servidor interno com o uso de firewalls ou servidores de gateway.
+As estações de trabalho do desenvolvedor, a infraestrutura de controle do código-fonte, o ambiente de teste do desenvolvedor e o ambiente de preparo residem na rede da intranet dentro do domínio Fabrikam.net. O ambiente de produção reside em uma rede de perímetro (também conhecida como DMZ, zona desmilitarizada e sub-rede filtrada), que é isolada da rede de intranet por um firewall. Esse é um cenário de implantação comum: você normalmente isola seus servidores Web voltados para a Internet da sua infraestrutura de servidor interna por meio do uso de firewalls ou servidores de gateway.
 
 Neste exemplo:
 
-- Um servidor do Team Foundation Server (TFS) 2010 com um servidor de compilação separado fornece controle de origem e a funcionalidade de CI (integração contínua).
-- O ambiente de teste do desenvolvedor inclui um servidor web de serviços de informações da Internet (IIS) 7.5 e um servidor de banco de dados do SQL Server 2008 R2.
-- O ambiente de produção inclui vários servidores de web IIS 7.5 sincronizados por um servidor de controlador do Web Farm Framework (WFF), junto com um servidor de banco de dados do SQL Server 2008 R2. Na prática, o servidor de banco de dados pode usar clustering ou o espelhamento para melhorar a escalabilidade e disponibilidade.
-- O ambiente de preparo foi projetado para replicar a configuração do ambiente de produção mais próximo possível.
-- As políticas de isolamento de rede e firewall não permitem a implantação direta e automatizada da intranet para a rede de perímetro.
+- Um servidor Team Foundation Server (TFS) 2010 com um servidor de Build separado fornece a funcionalidade de controle do código-fonte e de CI (integração contínua).
+- O ambiente de teste do desenvolvedor inclui um servidor Web Serviços de Informações da Internet (IIS) 7,5 e um servidor de banco de dados SQL Server 2008 R2.
+- O ambiente de produção inclui vários servidores Web do IIS 7,5 sincronizados por um servidor de controlador de WFF (estrutura de Web farm), junto com um servidor de banco de dados SQL Server 2008 R2. Na prática, o servidor de banco de dados pode usar clustering ou espelhamento para melhorar a escalabilidade e a disponibilidade.
+- O ambiente de preparo foi projetado para replicar a configuração do ambiente de produção o mais próximo possível.
+- As diretivas de firewall e de isolamento de rede não permitem a implantação direta e automatizada da intranet na rede de perímetro.
 
-A configuração de cada um desses ambientes é descrita mais detalhadamente no segundo tutorial [Configurando ambientes de servidor para implantação da Web](../configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md).
+A configuração de cada um desses ambientes é descrita mais detalhadamente no segundo tutorial, [Configurando ambientes de servidor para implantação da Web](../configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md).
 
-### <a name="team-roles-for-alm"></a>Funções de equipe para o ALM
+### <a name="team-roles-for-alm"></a>Funções de equipe para ALM
 
-Esses usuários estão envolvidos na criação, gerenciar, criar e publicar a solução de Gerenciador de contatos:
+Esses usuários estão envolvidos na criação, no gerenciamento, na criação e na publicação da solução Contact Manager:
 
-- Matt Hink é um desenvolvedor de aplicativo da web na Fabrikam, Inc. Ele faz parte da equipe que desenvolveu a solução do Contact Manager usando o Visual Studio 2010. Matt tem direitos totais de administrador nos servidores em que o ambiente de teste do desenvolvedor, que permite a configurar o ambiente para atender às suas necessidades. Ele também tem acesso de usuário à instância do Visual Studio 2010 TFS em que ele armazena o código-fonte para a solução de Gerenciador de contatos.
-- Rob Walters é um administrador do servidor para a equipe de desenvolvimento Fabrikam, Inc. Rob tem acesso administrativo no servidor do TFS para que ele possa configurar todos os aspectos do TFS e Team Build. Rob também tem acesso administrativo para o teste e os servidores de web de preparo e atua como o administrador de banco de dados (DBA) para os servidores de banco de dados no teste e ambientes de preparo. Rob tiver configurado o Team Build no servidor do TFS para executar estas tarefas:
+- Matt hink é um desenvolvedor de aplicativos Web da Fabrikam, Inc. Ele faz parte da equipe que desenvolveu a solução Contact Manager usando o Visual Studio 2010. Matt tem direitos totais de administrador sobre os servidores no ambiente de teste do desenvolvedor, que permite que ele configure o ambiente para atender às suas necessidades. Ele também tem acesso de usuário à instância do TFS do Visual Studio 2010 em que armazena o código-fonte para a solução Contact Manager.
+- Rob Fábio é um administrador de servidor da equipe de desenvolvimento da Fabrikam, Inc. Rob tem acesso administrativo no servidor TFS para que ele possa configurar todos os aspectos do TFS e do Team Build. Rob também tem acesso administrativo aos servidores Web de teste e de preparo e atua como o administrador de banco de dados (DBA) para os servidores de banco de dados nos ambientes de teste e de preparo. Rob configurou o Team Build no servidor TFS para executar estas tarefas:
 
-    - Compilar e executar testes de unidade no aplicativo, sempre que verifica se um usuário em um arquivo para o TFS. Isso é chamado de CI.
-    - Implante o aplicativo Contact Manager ao ambiente de teste automaticamente depois que o aplicativo aprovado em testes de unidade. Isso inclui o banco de dados de publicação para os servidores de teste na implantação inicial e todas as atualizações para o banco de dados após a implantação inicial.
-    - Implante o aplicativo Contact Manager ao ambiente de preparo em um processo passo a passo.
-    - Crie um pacote da Web que um administrador do servidor Web e um DBA podem usar para publicar o aplicativo no ambiente de produção.
-- Lisa Andrews é responsável pela implantação de aplicativos para servidores de produção Fabrikam, Inc. um administrador do servidor. Ela tem acesso de leitura ao compartilhamento em que o TFS Team Build armazena o pacote de implantação da web depois que ele cria o aplicativo Gerenciador de contatos. Ela também tem acesso administrativo aos servidores web de produção para que ela possa implantar o aplicativo em produção. Além disso, ela atua como o DBA que implanta atualizações de banco de dados e bancos de dados para o servidor de banco de dados no ambiente de produção.
+    - Compilar e executar testes de unidade no aplicativo sempre que um usuário fizer check-in de um arquivo para o TFS. Isso é chamado de CI.
+    - Implante o aplicativo Contact Manager no ambiente de teste automaticamente depois que o aplicativo passar testes de unidade. Isso inclui a publicação do banco de dados nos servidores de teste na implantação inicial e em todas as atualizações do banco de dados após a implantação inicial.
+    - Implante o aplicativo Contact Manager no ambiente de preparo em um processo de etapa única.
+    - Crie um pacote da Web que um administrador do servidor Web e um DBA possam usar para publicar o aplicativo no ambiente de produção.
+- Lisa Andrews é um administrador de servidor responsável pela implantação de aplicativos nos servidores de produção Fabrikam, Inc. Ela tem acesso de leitura ao compartilhamento em que o TFS Team Build armazena o pacote de implantação da Web depois de criar o aplicativo Contact Manager. Ela também tem acesso administrativo aos servidores Web de produção para que ela possa implantar o aplicativo em produção. Além disso, ela atua como o DBA que implanta bancos de dados e atualizações de banco de dados no servidor de banco de dados no ambiente de produção.
 
 <a id="_The_Contact_Manager"></a>
 
 ### <a name="the-contact-manager-solution"></a>A solução Gerenciador de Contatos
 
-A solução de Gerenciador de contatos é projetada para permitir que os usuários registrados, conectado, adicionar e editar as informações de contato por meio de uma interface da web. A solução do Contact Manager consiste em quatro projetos individuais:
+A solução Contact Manager foi projetada para permitir que usuários registrados e conectados adicionem e editem informações de contato por meio de uma interface da Web. A solução Contact Manager consiste em quatro projetos individuais:
 
 ![](enterprise-web-deployment-scenario-overview/_static/image2.png)
 
-- **ContactManager.Mvc**. Isso é um projeto de aplicativo web do ASP.NET MVC3 que representa o ponto de entrada para a solução. Ele oferece algumas funcionalidades do aplicativo web básico, como fornecer aos usuários a capacidade de criar e exibir detalhes de contato. O aplicativo se baseia em um serviço do Windows Communication Foundation (WCF) para gerenciar contatos e um banco de dados do serviços de aplicativo ASP.NET para gerenciar a autenticação e autorização.
-- **ContactManager.Database**. Este é um projeto de banco de dados do Visual Studio 2010. O projeto define o esquema para um banco de dados que armazena os detalhes de contato.
-- **ContactManager.Service**. Isso é um projeto de serviço web WCF. Expõe o WCF que cria um ponto de extremidade que permite que os chamadores executar, recuperar, atualizar e excluir (CRUD) no banco de dados do Gerenciador de contatos. O serviço depende do banco de dados do Gerenciador de contatos e o assembly ContactManager.Common.dll.
-- **ContactManager.Common**. Este é um projeto de biblioteca de classe. O serviço WCF se baseia em tipos definidos nesse assembly.
+- **ContactManager. Mvc**. Este é um projeto de aplicativo Web ASP.NET MVC3 que representa o ponto de entrada para a solução. Ele oferece uma funcionalidade básica de aplicativo Web, como fornecer aos usuários a capacidade de criar e exibir detalhes de contato. O aplicativo depende de um serviço de Windows Communication Foundation (WCF) para gerenciar contatos e um banco de dados de serviços de aplicativos ASP.NET para gerenciar a autenticação e a autorização.
+- **ContactManager. Database**. Este é um projeto de banco de dados do Visual Studio 2010. O projeto define o esquema para um banco de dados que armazena detalhes de contato.
+- **ContactManager. Service**. Este é um projeto de serviço Web WCF. O WCF expõe um ponto de extremidade que permite que os chamadores realizem operações de criação, recuperação, atualização e exclusão (CRUD) no banco de dados do Gerenciador de contatos. O serviço depende do banco de dados do Contact Manager e do assembly ContactManager. Common. dll.
+- **ContactManager. Common**. Este é um projeto de biblioteca de classes. O serviço WCF depende de tipos definidos neste assembly.
 
-Uma revisão completa da solução e seus requisitos de implantação é fornecida no primeiro tutorial nesta série [implantação da Web na empresa](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md).
+Uma revisão completa da solução e de seus requisitos de implantação é fornecida no primeiro tutorial desta série, [a implantação da Web na empresa](../web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md).
 
 <a id="_Deployment_Tasks"></a>
 
@@ -89,34 +89,34 @@ Há várias tarefas distintas envolvidas na implantação de aplicativos em ambi
 
 ![](enterprise-web-deployment-scenario-overview/_static/image3.png)
 
-Aqui está uma lista de cada etapa no processo de implantação da perspectiva dos usuários descrito anteriormente neste documento:
+Aqui está uma lista de cada etapa no processo de implantação a partir da perspectiva dos usuários descritos anteriormente neste documento:
 
-1. Todos os membros da equipe de examinar a solução do Gerenciador de contatos no Visual Studio 2010 para determinar problemas e requisitos de implantação da chave.
-2. Matt Hink pode implantar a solução de Gerenciador de contatos diretamente da estação de trabalho de desenvolvedor para o ambiente de teste do desenvolvedor, conduzir um teste inicial da lógica de implantação.
-3. Matt Hink adiciona o aplicativo ao controle de origem no TFS.
-4. Rob Walters cria várias definições de compilação para a solução de Gerenciador de contatos no Team Build. Uma definição de compilação usa CI para implantar a solução para o ambiente de teste do desenvolvedor, sempre que verifica se um usuário no novo código. Outra definição de compilação permite implantações de gatilho de usuários ao ambiente de preparo conforme necessário.
-5. Sempre que um usuário faz check-in do novo código, Team Build automaticamente cria os componentes da solução, executa testes de unidade e implanta a solução para o ambiente de teste do desenvolvedor se a compilação foi bem-sucedida e os testes de unidade aprovados.
-6. Quando um usuário dispara uma implantação para o ambiente de preparo, a solução é empacotada e implantada em um processo passo a passo. Esse processo também gera um pacote para implantação manual para o ambiente de produção.
-7. Lisa Andrews implanta o aplicativo no ambiente de produção, importe manualmente o pacote da web criado na etapa 6.
+1. Todos os membros da equipe revisam a solução Contact Manager no Visual Studio 2010 para determinar os principais problemas e requisitos de implantação.
+2. Matt hink pode implantar a solução Contact Manager diretamente da estação de trabalho do desenvolvedor para o ambiente de teste do desenvolvedor, para conduzir um teste inicial da lógica de implantação.
+3. Matt hink adiciona o aplicativo ao controle do código-fonte no TFS.
+4. Rob Fábio cria várias definições de Build para a solução Contact Manager no Team Build. Uma definição de compilação usa CI para implantar a solução no ambiente de teste do desenvolvedor sempre que um usuário faz o check-in de um novo código. Outra definição de compilação permite que os usuários disparem implantações no ambiente de preparo conforme necessário.
+5. Toda vez que um usuário faz o check-in de um novo código, o Team Build cria automaticamente os componentes da solução, executa testes de unidade e implanta a solução no ambiente de teste do desenvolvedor se a compilação foi bem-sucedida e os testes de unidade são aprovados.
+6. Quando um usuário dispara uma implantação para o ambiente de preparo, a solução é empacotada e implantada em um processo de etapa única. Esse processo também gera um pacote para implantação manual no ambiente de produção.
+7. Lisa Andrews implanta o aplicativo no ambiente de produção importando manualmente o pacote da Web criado na etapa 6.
 
-### <a name="key-deployment-issues"></a>Problemas de implantação de chave
+### <a name="key-deployment-issues"></a>Principais problemas de implantação
 
-A solução de Gerenciador de contatos e o cenário do Fabrikam, Inc. realçar vários problemas comuns e desafios que você pode encontrar quando você implanta complexo, soluções de escala empresarial. Por exemplo:
+A solução Contact Manager e o cenário Fabrikam, Inc. destacam vários problemas comuns e desafios que você pode encontrar ao implantar soluções complexas de escala empresarial. Por exemplo:
 
-- Você precisa ser capaz de implantar projetos em vários ambientes, como desenvolvedor ou ambientes de teste de preparação plataformas e servidores de produção. A solução precisa ser implantado com configurações diferentes para cada ambiente.
-- Você precisará implantar vários projetos dependentes simultaneamente como parte de um processo de compilação e implantação passo a passo ou automatizado.
-- Você precisa ser capaz de implantação de unidade de um processo automatizado. Por exemplo, você deseja usar um processo de CI para implantar aplicativos da web para um ambiente de preparo quando o novo código é verificado.
-- Você precisa ser capaz de controlar o processo de implantação e definir variáveis de implantação de fora do Visual Studio, como os desenvolvedores podem não ter as definições de configuração correto ou as credenciais necessárias para cada ambiente de destino.
-- Você precisa implantar projetos com base no esquema de banco de dados e preservar os dados existentes nas implantações subsequentes.
-- Você precisa implantar bancos de dados de associação em uma base ad hoc sem implantar dados da conta de usuário. Talvez você também precise atualizar o esquema de bancos de dados de associação implantado sem perda de dados de conta de usuário existente.
-- Você precisará excluir determinados arquivos ou pastas quando você implanta conteúdo em vários ambientes de destino.
+- Você precisa ser capaz de implantar projetos em vários ambientes, como ambientes de desenvolvimento ou de teste, plataformas de preparo e servidores de produção. A solução precisa ser implantada com definições de configuração diferentes para cada ambiente.
+- Você precisa implantar vários projetos dependentes simultaneamente como parte de um processo de compilação e implantação automatizado ou de etapa única.
+- Você precisa ser capaz de impulsionar a implantação de um processo automatizado. Por exemplo, você deseja usar um processo de CI para implantar aplicativos Web em um ambiente de preparo quando o check-in do novo código é feito.
+- Você precisa ser capaz de controlar o processo de implantação e definir variáveis de implantação de fora do Visual Studio, já que os desenvolvedores provavelmente têm as definições de configuração corretas ou as credenciais necessárias para cada ambiente de destino.
+- Você precisa implantar projetos de banco de dados baseados em esquema e preservar os existentes em implantações subsequentes.
+- Você precisa implantar bancos de dados de associação em uma base ad hoc sem implantar a conta de usuário. Talvez você também precise atualizar o esquema dos bancos de dados de associação implantados sem perder os existentes.
+- Você precisa excluir determinados arquivos ou pastas ao implantar conteúdo em vários ambientes de destino.
 
-Além disso, o gerenciamento de implantação quando as atualizações são incrementais e frequentes levanta alguns desafios adicionais. Por exemplo:
+Além disso, o gerenciamento da implantação quando as atualizações são frequentes e incrementais geram alguns desafios adicionais. Por exemplo:
 
-- Você executar testes de unidade toda vez que um desenvolvedor faz check-in do novo código. Você deseja implantar a solução, se o código passa os testes de unidade.
-- Quando você implanta um aplicativo web em um ambiente de preparo ou produção, você deseja redirecionar os usuários para um *app\_offline.htm* arquivo durante o processo de implantação.
-- Você deseja fazer logon atividades de implantação. O processo de implantação deve enviar notificações por email de implantações com êxito ou falhas para destinatários designados.
-- Se uma implantação automatizada falhar, o processo de implantação deve tentar novamente a implantação atual ou implantar o pacote da web anterior em vez disso.
+- Você executa testes de unidade toda vez que um desenvolvedor faz check-in de um novo código. Você só deseja implantar a solução se o código passar pelos testes de unidade.
+- Ao implantar um aplicativo Web em um ambiente de preparo ou de produção, você deseja redirecionar os usuários para um *aplicativo\_arquivo offline. htm* durante o processo de implantação.
+- Você deseja registrar em log as atividades de implantação. O processo de implantação deve enviar notificações por email de implantações bem-sucedidas ou com falha para os destinatários designados.
+- Se uma implantação automatizada falhar, o processo de implantação deverá repetir a implantação atual ou implantar o pacote da Web anterior em vez disso.
 
 > [!div class="step-by-step"]
 > [Anterior](deploying-web-applications-in-enterprise-scenarios.md)

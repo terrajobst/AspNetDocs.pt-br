@@ -9,11 +9,11 @@ ms.assetid: 91511b0b-311d-481f-9e7c-73f07b813b79
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/popup/using-multiple-popup-controls-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8700fe89af591e8b481e853580b0efa0cddbf1bc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74611636"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612647"
 ---
 # <a name="using-multiple-popup-controls-c"></a>Uso de vários controles pop-up (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O extensor PopupControl no AJAX Control Toolkit oferece uma maneira fácil de disparar um popup quando qualquer outro controle é ativado. Também é possível usar mais de um controle popup em uma página.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O extensor PopupControl no AJAX Control Toolkit oferece uma maneira fácil de disparar um popup quando qualquer outro controle é ativado. Também é possível usar mais de um controle popup em uma página.
 
@@ -52,4 +52,4 @@ Agora, sempre que você clicar em um campo de texto, um calendário será exibid
 O calendário é exibido quando o usuário clica na caixa de texto ([clique para exibir a imagem em tamanho normal](using-multiple-popup-controls-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)
+> [Próximo](handling-postbacks-from-a-popup-control-with-an-updatepanel-cs.md)

@@ -9,11 +9,11 @@ ms.assetid: 440bef2a-1641-4238-99e3-8e2d44e7d94c
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs
 msc.type: authoredcontent
 ms.openlocfilehash: cfe03c244fb6f9f0a201aecb6eae211ab946175f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74604125"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78531951"
 ---
 # <a name="using-existing-stored-procedures-for-the-typed-datasets-tableadapters-c"></a>Uso de procedimentos armazenados existentes para os TableAdapters do conjunto de dados tipado (C#)
 
@@ -130,7 +130,7 @@ Em seguida, arraste um GridView para o designer, colocando-o sob a DropDownList.
 
 **Figura 10**: recuperar dados do método `GetProductsByCategoryID(categoryID)` ([clique para exibir a imagem em tamanho normal](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs/_static/image30.png))
 
-O método escolhido na guia selecionar espera um parâmetro, portanto, a etapa final do assistente nos solicita a origem do parâmetro. Defina a lista suspensa origem do parâmetro para controlar e escolha o controle de `Categories` na lista suspensa ControlID. Clique em Concluir para concluir o assistente.
+O método escolhido na guia selecionar espera um parâmetro, portanto, a etapa final do assistente nos solicita a origem do parâmetro. Defina a lista suspensa origem do parâmetro para controlar e escolha o controle de `Categories` na lista suspensa ControlID. Clique em Concluir para finalizar o assistente.
 
 [![usar as categorias DropDownList como a origem do parâmetro categoryID](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs/_static/image32.png)](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs/_static/image31.png)
 

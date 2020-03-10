@@ -1,43 +1,43 @@
 ---
 uid: mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
-title: Usar controladores e exibições para implementar uma interface do usuário de listagem/detalhes | Microsoft Docs
+title: Usar controladores e exibições para implementar uma interface de usuário de listagem/detalhes | Microsoft Docs
 author: microsoft
-description: Etapa 4 mostra como adicionar um controlador para o aplicativo que tira proveito do nosso modelo para fornecer aos usuários uma experiência de navegação de listagem/detalhes de dados...
+description: A etapa 4 mostra como adicionar um controlador ao aplicativo que aproveita o nosso modelo para fornecer aos usuários uma experiência de navegação de listagem de dados/detalhes...
 ms.author: riande
 ms.date: 07/27/2010
 ms.assetid: 64116e56-1c9a-4f07-8097-bb36cbb6e57f
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/use-controllers-and-views-to-implement-a-listingdetails-ui
 msc.type: authoredcontent
 ms.openlocfilehash: 74319fe5ea4c79b50140834349e2fdf86420cfbb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128210"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78600740"
 ---
 # <a name="use-controllers-and-views-to-implement-a-listingdetails-ui"></a>Usar controladores e exibições para implementar uma interface do usuário de listagem/detalhes
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
-> Esta é a etapa 4 do grátis [aplicativo "NerdDinner"](introducing-the-nerddinner-tutorial.md) que orienta-through como criar um pequeno, mas concluir, o aplicativo web usando ASP.NET MVC 1.
+> Esta é a etapa 4 de um [tutorial de aplicativo "NerdDinner"](introducing-the-nerddinner-tutorial.md) gratuito que percorre como criar um aplicativo Web pequeno, mas completo usando o ASP.NET MVC 1.
 > 
-> Etapa 4 mostra como adicionar um controlador para o aplicativo que tira proveito do nosso modelo para fornecer aos usuários uma experiência de navegação da listagem/detalhes de dados para jantares em nosso site do NerdDinner.
+> A etapa 4 mostra como adicionar um controlador ao aplicativo que aproveita o nosso modelo para fornecer aos usuários uma experiência de navegação de listagem de dados/detalhes para jantares em nosso site NerdDinner.
 > 
-> Se você estiver usando o ASP.NET MVC 3, recomendamos que você siga a [obtendo iniciado com o MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de música do MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriais.
+> Se você estiver usando o ASP.NET MVC 3, recomendamos seguir as [introdução com](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) os tutoriais da [loja de música](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) MVC 3 ou MVC.
 
-## <a name="nerddinner-step-4-controllers-and-views"></a>Etapa 4 do NerdDinner: Controladores e exibições
+## <a name="nerddinner-step-4-controllers-and-views"></a>Etapa 4 do NerdDinner: controladores e exibições
 
-Com estruturas da web tradicional (ASP clássico, Web Forms do ASP.NET, PHP etc), as URLs de entrada são mapeadas normalmente a arquivos no disco. Por exemplo: uma solicitação para uma URL como "/ products. aspx" ou "/ products" pode ser processada por um arquivo de "Products. aspx" ou "Products".
+Com estruturas da Web tradicionais (ASP clássico, PHP, ASP.NET Web Forms, etc.), as URLs de entrada são normalmente mapeadas para arquivos no disco. Por exemplo: uma solicitação para uma URL como "/Products.aspx" ou "/Products.php" pode ser processada por um arquivo "Products. aspx" ou "Products. php".
 
-Estruturas MVC baseado na Web mapeiam URLs para o código do servidor de forma ligeiramente diferente. Em vez de mapeamento de URLs de entrada aos arquivos, em vez disso, eles mapeiam URLs para métodos nas classes. Essas classes são chamadas de "Controladores" e eles são responsáveis pelo processamento de solicitações HTTP de entrada, manipulando a entrada do usuário, recuperar e salvar dados e determinar a resposta para enviar de volta para o cliente (exibição de HTML, baixar um arquivo, redirecionar para outra URL, etc.).
+As estruturas MVC baseadas na Web mapeiam URLs para código de servidor de forma ligeiramente diferente. Em vez de mapear URLs de entrada para arquivos, eles mapeiam URLs para métodos em classes. Essas classes são chamadas de "controladores" e são responsáveis pelo processamento de solicitações HTTP de entrada, tratamento de entrada do usuário, recuperação e salvamento de dados e determinação da resposta a ser enviada de volta ao cliente (exibir HTML, baixar um arquivo, redirecionar para outro URL, etc.).
 
-Agora que criamos um modelo básico de nosso aplicativo NerdDinner, nossa próxima etapa será adicionar um controlador para o aplicativo que tira proveito para fornecer aos usuários uma experiência de navegação da listagem/detalhes de dados para jantares em nosso site.
+Agora que criamos um modelo básico para nosso aplicativo NerdDinner, nossa próxima etapa será adicionar um controlador ao aplicativo que tira proveito dele para fornecer aos usuários uma experiência de navegação de listagem de dados/detalhes para jantares em nosso site.
 
 ### <a name="adding-a-dinnerscontroller-controller"></a>Adicionando um controlador DinnersController
 
-Vamos começar pelo botão direito do mouse na pasta "Controladores de" dentro do nosso projeto web e, em seguida, selecione a **Add -&gt;controlador** comando de menu (você também pode executar esse comando, digitando Ctrl-M, Ctrl-C):
+Vamos começar clicando com o botão direito do mouse na pasta "controladores" em nosso projeto Web e, em seguida, selecionando o comando de menu do **controlador Add-&gt;** (você também pode executar esse comando digitando Ctrl-M, CTRL-C):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image1.png)
 
@@ -45,257 +45,257 @@ Isso abrirá a caixa de diálogo "Adicionar controlador":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image2.png)
 
-Vamos nomear o novo controlador "DinnersController" e clique no botão "Adicionar". Visual Studio, em seguida, adicionará um arquivo DinnersController.cs em nosso diretório \Controllers:
+Vamos nomear o novo controlador "DinnersController" e clicar no botão "Add" (Adicionar). O Visual Studio adicionará um arquivo DinnersController.cs em nosso diretório \Controllers:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image3.png)
 
-Ele também será aberta a nova classe DinnersController dentro do editor de código.
+Ele também abrirá a nova classe DinnersController dentro do editor de código.
 
-### <a name="adding-index-and-details-action-methods-to-the-dinnerscontroller-class"></a>Adicionando Index () e métodos de ação de Details() à classe DinnersController
+### <a name="adding-index-and-details-action-methods-to-the-dinnerscontroller-class"></a>Adicionando os métodos de ação index () e Details () à classe DinnersController
 
-Queremos permitir que os visitantes usando nosso aplicativo para procurar uma lista de jantares futuros e permitir que eles se clicar em qualquer jantar na lista para ver detalhes específicos sobre ele. Faremos isso ao publicar as seguintes URLs do nosso aplicativo:
+Queremos permitir que os visitantes usem nosso aplicativo para procurar uma lista de jantares futuros e permitir que eles cliquem em qualquer jantar na lista para ver detalhes específicos sobre ele. Faremos isso publicando as seguintes URLs de nosso aplicativo:
 
 | **URL** | **Finalidade** |
 | --- | --- |
-| */Dinners/* | Exibir uma lista HTML de jantares futuras |
-| */Dinners/Details/[id]* | Exibir detalhes sobre um jantar específico indicado por um parâmetro de "id" embutido na URL – que corresponderá a DinnerID de jantar no banco de dados. Por exemplo: /Dinners/Details/2 exibiria uma página HTML com detalhes sobre o jantar cujo valor DinnerID é 2. |
+| */Dinners/* | Exibir uma lista HTML de futuros jantares |
+| */Dinners/Details/[ID]* | Exibir detalhes sobre um jantar específico indicado por um parâmetro "ID" inserido na URL, que corresponderá ao Jantarid do jantar no banco de dados. Por exemplo:/Dinners/Details/2 exibiria uma página HTML com detalhes sobre o jantar cujo valor de Jantarid é 2. |
 
-Publicaremos inicias implementações dessas URLs, adicionando duas público "métodos de ação" à nossa classe DinnersController como abaixo:
+Publicaremos as implementações iniciais dessas URLs adicionando dois "métodos de ação" públicos à nossa classe DinnersController, como a seguir:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample1.cs)]
 
-Em seguida, vamos executar o aplicativo NerdDinner e usar nosso navegador para invocá-los. Digitando o *"Jantares /"* fará com que a URL do nosso *Index ()* método para execução e ele enviará de volta a seguinte resposta:
+Em seguida, executaremos o aplicativo NerdDinner e usaremos nosso navegador para chamá-los. Digitar a URL *"/Dinners/"* fará com que o método *Index ()* seja executado e ele retornará a seguinte resposta:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image4.png)
 
-Digitando o *"/ detalhes/jantares/2"* fará com que a URL do nosso *Details()* método para executar e enviar de volta a seguinte resposta:
+Digitar a URL *"/Dinners/Details/2"* fará com que o método *Details ()* seja executado e envie de volta a seguinte resposta:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image5.png)
 
-Você deve estar se perguntando - como ASP.NET MVC sabia para criar nossa classe DinnersController e chamar esses métodos? Para entender que vamos dar uma olhada rápida em como funciona o roteamento.
+Você deve estar se perguntando – como ASP.NET MVC sabia criar nossa classe DinnersController e invocar esses métodos? Para entender isso, vamos dar uma olhada rápida em como funciona o roteamento.
 
-### <a name="understanding-aspnet-mvc-routing"></a>Noções básicas sobre encaminhamento do ASP.NET MVC
+### <a name="understanding-aspnet-mvc-routing"></a>Entendendo o roteamento do ASP.NET MVC
 
-O ASP.NET MVC inclui um poderoso mecanismo de roteamento de URL que fornece uma grande flexibilidade para controlar como as URLs são mapeadas para classes do controlador. Ele nos permite personalizar completamente como o ASP.NET MVC escolhe qual classe de controlador para criar, qual método de invocá-lo, bem como configurar diferentes maneiras que variáveis podem ser automaticamente analisadas a partir do URL/Querystring e passadas para o método como parâmetro argumentos. Ele oferece a flexibilidade para totalmente otimizar um site para SEO (otimização do mecanismo de pesquisa), bem como qualquer estrutura de URL que queremos por meio de um aplicativo de publicação.
+O ASP.NET MVC inclui um poderoso mecanismo de roteamento de URL que fornece muita flexibilidade no controle de como as URLs são mapeadas para as classes de controlador. Ele nos permite personalizar completamente como o ASP.NET MVC escolhe qual classe de controlador deve ser criada, qual método invocar, bem como configurar diferentes maneiras pelas quais as variáveis podem ser analisadas automaticamente a partir da URL/QueryString e passadas para o método como argumentos de parâmetro. Ele fornece a flexibilidade para otimizar totalmente um site para SEO (otimização do mecanismo de pesquisa), bem como publicar qualquer estrutura de URL que desejamos de um aplicativo.
 
-Por padrão, os novos projetos do ASP.NET MVC vêm com um conjunto predefinido de regras de roteamento de URL já registrado. Isso nos permite facilmente começar a usar em um aplicativo sem a necessidade de configurar qualquer coisa explicitamente. Os registros de regra de roteamento padrão podem ser encontrados dentro da classe de "Aplicativo" de nossos projetos – o que pode ser aberto clicando duas vezes o arquivo "Global. asax" na raiz do nosso projeto:
+Por padrão, novos projetos do ASP.NET MVC vêm com um conjunto pré-configurado de regras de roteamento de URL já registradas. Isso nos permite começar a usar um aplicativo com facilidade sem precisar configurar explicitamente nada. Os registros de regra de roteamento padrão podem ser encontrados na classe "aplicativo" de nossos projetos, que podemos abrir clicando duas vezes no arquivo "global. asax" na raiz do nosso projeto:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image6.png)
 
-As regras de roteamento do ASP.NET MVC padrão são registradas dentro do método "RegisterRoutes" desta classe:
+As regras de roteamento padrão do ASP.NET MVC são registradas no método "RegisterRoutes" dessa classe:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample2.cs)]
 
-As rotas". MapRoute() "acima da chamada de método registra uma regra de roteamento padrão que mapeia as URLs de entrada para classes de controlador usando o formato de URL:" / {controller} / {action} / {id} "– onde"controller"é o nome da classe do controlador para criar uma instância,"ação"é o nome de um método público a ser invocado e "id" é um parâmetro opcional embutido na URL que pode ser passado como um argumento para o método. O terceiro parâmetro passado para a chamada do método "MapRoute()" é um conjunto de valores padrão a ser usado para os valores de id/de ação de controlador que não estiverem presentes na URL (controlador = "Home" Action = "Index", Id = "").
+As "rotas. A chamada de método MapRoute () "acima registra uma regra de roteamento padrão que mapeia URLs de entrada para classes de controlador usando o formato de URL:"/{Controller}/{Action}/{ID} "– onde" Controller "é o nome da classe do controlador a ser instanciada," Action "é o nome de um método público a ser invocado, e" ID "é um parâmetro opcional inserido dentro da URL que pode ser passado como um argumento para o método. O terceiro parâmetro passado para a chamada do método "MapRoute ()" é um conjunto de valores padrão a ser usado para os valores de Controller/Action/ID no caso de eles não estarem presentes na URL (Controller = "Home", Action = "index", ID = "").
 
-Abaixo está uma tabela que demonstra como uma variedade de URLs são mapeados usando o padrão "<em>/ {controladores} / {action} / {id}"</em>regra de rota:
+Abaixo está uma tabela que demonstra como uma variedade de URLs é mapeada usando a regra de rota "<em>/{Controllers}/{Action}/{ID}"</em>padrão:
 
 | **URL** | **Classe de controlador** | **Método de ação** | **Parâmetros passados** |
 | --- | --- | --- | --- |
-| */Dinners/Details/2* | DinnersController | Details(ID) | id=2 |
-| *Jantares/5/edição* | DinnersController | Edit(ID) | id=5 |
-| */Dinners/Create* | DinnersController | Create() | N/D |
-| */Dinners* | DinnersController | Index) | N/D |
-| */Home* | HomeController | Index) | N/D |
-| */* | HomeController | Index) | N/D |
+| */Dinners/Details/2* | DinnersController | Detalhes (ID) | id=2 |
+| */Dinners/Edit/5* | DinnersController | Editar (ID) | id=5 |
+| */Dinners/Create* | DinnersController | Criar() | N/D |
+| */Dinners* | DinnersController | Índice () | N/D |
+| */Home* | HomeController | Índice () | N/D |
+| */* | HomeController | Índice () | N/D |
 
-As três últimas linhas mostram os valores padrão (controlador Home, = Action = índice, Id = "") que está sendo usado. Porque o método "Index" é registrado como o nome da ação padrão se nenhuma for especificada, o "/ jantares" e "/home" causa de URLs do método de ação Index () a ser invocada em suas classes de controlador. Porque o controlador "Home" é registrado como o controlador padrão se nenhuma for especificada, a URL "/" faz com que o HomeController a ser criado e o método de ação Index () em que ele seja invocado.
+As três últimas linhas mostram os valores padrão (Controller = Home, Action = index, ID = "") que estão sendo usados. Como o método "index" é registrado como o nome da ação padrão, se um não for especificado, as URLs "/Dinners" e "/Home" farão com que o método de ação index () seja invocado em suas classes de controlador. Como o controlador "Home" é registrado como o controlador padrão, se um não for especificado, a URL "/" fará com que o HomeController seja criado e o método de ação index () nele seja invocado.
 
-Se você não gostar essas regras de roteamento de URL padrão, a boa notícia é que eles sejam fáceis de alterar - simplesmente edite-os no método RegisterRoutes acima. Para nosso aplicativo NerdDinner, no entanto, não vamos alterar qualquer uma das regras de roteamento de URL padrão – em vez disso, vamos apenas usá-los como-está.
+Se você não gostar dessas regras de roteamento de URL padrão, a boa notícia é que elas são fáceis de alterar. basta editá-las no método RegisterRoutes acima. No entanto, para nosso aplicativo NerdDinner, não vamos alterar nenhuma das regras de roteamento de URL padrão. em vez disso, vamos usá-las como estão.
 
-### <a name="using-the-dinnerrepository-from-our-dinnerscontroller"></a>Usando o DinnerRepository do nosso DinnersController
+### <a name="using-the-dinnerrepository-from-our-dinnerscontroller"></a>Usando o DinnerRepository da nossa DinnersController
 
-Vamos agora substituir nossa implementação atual do DinnersController métodos de ação Index () e Details() com implementações que usam nosso modelo.
+Agora, vamos substituir nossa implementação atual dos métodos de ação index () e Details () do DinnersController por implementações que usam nosso modelo.
 
-Vamos usar a classe de DinnerRepository que criamos anteriormente para implementar o comportamento. Vamos começar pela adição de uma instrução "using" que faz referência ao namespace "NerdDinner.Models" e, em seguida, declarar uma instância do nosso DinnerRepository como um campo em nossa classe DinnerController.
+Vamos usar a classe DinnerRepository criada anteriormente para implementar o comportamento. Vamos começar adicionando uma instrução "using" que faz referência ao namespace "NerdDinner. Models" e, em seguida, declare uma instância de nosso DinnerRepository como um campo em nossa classe DinnerController.
 
-Mais adiante neste capítulo vamos introduzir o conceito de "Injeção de dependência" e mostrar outra maneira para que os controladores obter uma referência a um DinnerRepository que permite melhor unidade teste – mas, para a direita, agora vamos simplesmente criar uma instância do nosso DinnerRepository embutido, como abaixo.
+Posteriormente neste capítulo, apresentaremos o conceito de "injeção de dependência" e mostraremos outra maneira para nossos controladores obterem uma referência a um DinnerRepository que permite um melhor teste de unidade – mas, para agora, vamos criar uma instância de nosso DinnerRepository embutido como abaixo.
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample3.cs)]
 
-Agora estamos prontos para gerar uma resposta HTML usando nossos objetos de modelo de dados recuperados.
+Agora estamos prontos para gerar uma resposta HTML de volta usando nossos objetos de modelo de dados recuperados.
 
 ### <a name="using-views-with-our-controller"></a>Usando exibições com nosso controlador
 
-Embora seja possível escrever código em nossos métodos de ação para montar o HTML e, em seguida, usar o *Response* método auxiliar para enviará de volta para o cliente, que abordagem torna-se bastante complicada rapidamente. Uma abordagem muito melhor é para que possamos executar somente aplicativos e lógica de dados dentro de nossos métodos de ação DinnersController e, em seguida, passar os dados necessários para renderizar uma resposta HTML a um modelo de "exibição" separada que é responsável por gerar a representação de HTML dele. Como veremos daqui a pouco, um modelo de "Exibir" é um arquivo de texto que geralmente contém uma combinação de marcação HTML e código de renderização incorporado.
+Embora seja possível escrever código dentro de nossos métodos de ação para montar HTML e, em seguida, usar o método auxiliar *Response. Write ()* para enviá-lo de volta ao cliente, essa abordagem se torna bastante complicada rapidamente. Uma abordagem muito melhor é para que possamos executar apenas aplicativos e lógica de dados dentro de nossos métodos de ação DinnersController e, em seguida, passar os dados necessários para processar uma resposta em HTML para um modelo de "exibição" separado que seja responsável pela saída da representação HTML de ti. Como veremos daqui a pouco, um modelo de "exibição" é um arquivo de texto que normalmente contém uma combinação de marcação HTML e código de renderização incorporado.
 
-Separar nossa lógica do controlador de renderização da exibição traz várias grandes benefícios. Em particular, ele ajuda impor uma clara "separação de preocupações" entre o código do aplicativo e o código de formatação/renderização de interface do usuário. Isso facilita muito a lógica do aplicativo de teste de unidade em isolamento de lógica de processamento de interface do usuário. Ele facilita a posterior modificar os modelos de renderização de interface do usuário sem precisar fazer alterações de código do aplicativo. E ele pode tornar mais fácil para desenvolvedores e designers colaborem em projetos.
+Separar nossa lógica do controlador de nossa exibição de visualização traz vários grandes benefícios. Em particular, ele ajuda a impor uma "separação de preocupações" clara entre o código do aplicativo e o código de formatação/renderização da interface do usuário. Isso torna muito mais fácil a lógica do aplicativo de teste de unidade isoladamente da lógica de renderização da interface do usuário. Ele facilita a modificação posterior dos modelos de renderização da interface do usuário sem a necessidade de fazer alterações no código do aplicativo. E isso pode facilitar para os desenvolvedores e designers colaborarem juntos em projetos.
 
-Podemos atualizar nossa classe DinnersController para indicar que desejamos usar um modelo de exibição para enviar de volta uma resposta de IU em HTML, alterando as assinaturas de método nossos dois de métodos de ação da necessidade de um tipo de retorno de "void" em vez disso, ter um tipo de retorno de "ActionResult". Em seguida, podemos chamar o *View()* método auxiliar na classe base do controlador para retornar um objeto "ViewResult" como abaixo:
+Podemos atualizar nossa classe DinnersController para indicar que queremos usar um modelo de exibição para enviar de volta uma resposta de interface do usuário HTML alterando as assinaturas de método dos nossos dois métodos de ação de ter um tipo de retorno de "Void" para, em vez disso, ter um tipo de retorno de "ActionResult". Em seguida, podemos chamar o método auxiliar *View ()* na classe base Controller para retornar um objeto "ViewResult" como abaixo:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample4.cs)]
 
-A assinatura do *View()* método auxiliar que estamos usando acima a aparência abaixo:
+A assinatura do método auxiliar *View ()* que estamos usando é semelhante ao seguinte:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image7.png)
 
-O primeiro parâmetro para o *View()* método auxiliar é o nome do arquivo de modelo de exibição que queremos usar para processar a resposta HTML. O segundo parâmetro é um objeto de modelo que contém os dados que o modelo de exibição precisa para processar a resposta HTML.
+O primeiro parâmetro para o método auxiliar *View ()* é o nome do arquivo de modelo de exibição que desejamos usar para renderizar a resposta HTML. O segundo parâmetro é um objeto de modelo que contém os dados de que o modelo de exibição precisa para processar a resposta HTML.
 
-Em nosso método de ação Index (), chamamos o *View()* método auxiliar e que indica que desejamos renderizar uma lista de HTML de jantares usando um modelo de exibição "Index". Estamos passando o modelo de exibição de uma sequência de objetos de jantar para gerar a lista de:
+Dentro do nosso método de ação index (), estamos chamando o método auxiliar *View ()* e indicando que desejamos renderizar uma listagem HTML de jantares usando um modelo de exibição "index". Estamos passando o modelo de exibição uma sequência de objetos de jantar para gerar a lista:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample5.cs)]
 
-Dentro do nosso método de ação Details() podemos tentar recuperar um objeto de Dinner usando a id fornecida na URL. Se um jantar válido for encontrado, chamamos o *View()* método auxiliar, que indica que queremos usar um modelo de exibição "Detalhes" para renderizar o objeto recuperado do jantar. Se for solicitado um jantar inválido, podemos processar uma mensagem de erro útil que indica que o jantar não existe usando um modelo de exibição de "NotFound" (e uma versão sobrecarregada do *View()* método auxiliar que usa apenas o nome do modelo ):
+Em nosso método de ação de detalhes (), tentamos recuperar um objeto de jantar usando a ID fornecida na URL. Se for encontrado um jantar válido, chamamos o método auxiliar *View ()* , indicando que queremos usar um modelo de exibição de "detalhes" para renderizar o objeto de jantar recuperado. Se um jantar inválido for solicitado, renderizaremos uma mensagem de erro útil que indica que o jantar não existe usando um modelo de exibição "não encontrado" (e uma versão sobrecarregada do método auxiliar *View ()* que simplesmente usa o nome do modelo):
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample6.cs)]
 
-Agora, vamos implementar os modelos de exibição "Index", "Detalhes" e "NotFound".
+Agora, vamos implementar os modelos de exibição "não encontrado", "detalhes" e "índice".
 
-### <a name="implementing-the-notfound-view-template"></a>Implementando o modelo de exibição de "NotFound"
+### <a name="implementing-the-notfound-view-template"></a>Implementando o modelo de exibição "não encontrado"
 
-Vamos começar com a implementação do modelo de exibição de "NotFound" – que exibe uma mensagem de erro amigável indicando que o jantar solicitado não foi encontrado.
+Começaremos implementando o modelo de exibição "não encontrado" – que exibe uma mensagem de erro amigável indicando que o jantar solicitado não foi encontrado.
 
-Podemos vai criar um novo modelo de exibição posicionando nosso cursor de texto dentro de um método de ação do controlador e, em seguida, clique com botão direito e escolha o comando de menu "Adicionar exibição" (que também pode executar esse comando, digitando Ctrl-M, Ctrl + V):
+Vamos criar um novo modelo de exibição posicionando nosso cursor de texto dentro de um método de ação do controlador e, em seguida, clicar com o botão direito do mouse e escolher o comando de menu "Add View" (também é possível executar esse comando digitando Ctrl-M, Ctrl-V):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image8.png)
 
-Isso abrirá uma caixa de diálogo "Adicionar exibição", como abaixo. Por padrão, que a caixa de diálogo irá preencher previamente o nome de exibição a ser criada para corresponder ao nome do método de ação o cursor estava quando a caixa de diálogo foi iniciada (no caso "Detalhes"). Como queremos primeiro implementar o modelo de "NotFound", vamos substituir esse nome de exibição e defini-la em "NotFound" em vez disso:
+Isso abrirá uma caixa de diálogo "Adicionar exibição", como abaixo. Por padrão, a caixa de diálogo preencherá previamente o nome da exibição a ser criada para corresponder ao nome do método de ação no qual o cursor se encontrava quando a caixa de diálogo foi iniciada (neste caso, "detalhes"). Como desejamos implementar primeiro o modelo "não encontrado", vamos substituir esse nome de exibição e defini-lo como "não encontrado":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image9.png)
 
-Quando clicamos no botão "Adicionar", o Visual Studio criará um novo modelo de exibição de "NotFound.aspx" para que possamos dentro do diretório "\Views\Dinners" (que também será criado se o diretório ainda não existir):
+Quando clicamos no botão "Add" (Adicionar), o Visual Studio criará um novo modelo de exibição "não encontrado. aspx" para nós no diretório "\Views\Dinners" (que também será criado se o diretório ainda não existir):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image10.png)
 
-Ele também será aberta nosso novo modelo de exibição de "NotFound.aspx" dentro do editor de código:
+Ele também abrirá nosso novo modelo de exibição "não encontrado. aspx" no editor de código:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image11.png)
 
-Modelos de exibição por padrão têm dois "áreas de conteúdo" em que podemos adicionar conteúdo e o código. A primeira permite personalizar o "title" da página HTML enviada de volta. O segundo nos permite personalizar o "conteúdo principal" da página HTML enviado de volta.
+Por padrão, os modelos de exibição têm duas "regiões de conteúdo", nas quais podemos adicionar conteúdo e código. O primeiro nos permite personalizar o "título" da página HTML enviada de volta. O segundo nos permite personalizar o "conteúdo principal" da página HTML enviada de volta.
 
-Para implementar nosso modelo de exibição de "NotFound" Vamos adicionar algum conteúdo básico:
+Para implementar nosso modelo de exibição "não encontrado", adicionaremos um conteúdo básico:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample7.aspx)]
 
-Podemos pode, em seguida, experimente dentro do navegador. Para fazer isso vamos solicitação a *"/ detalhes/jantares/9999"* URL. Isso fará referência a um jantar que atualmente não existe no banco de dados e fará com que nosso método de ação DinnersController.Details() renderizar o nosso modelo de exibição de "NotFound":
+Em seguida, podemos experimentá-lo no navegador. Para fazer isso, vamos solicitar a URL *"/Dinners/Details/9999"* . Isso fará referência a um jantar que atualmente não exista no banco de dados e fará com que nosso método de ação DinnersController. Details () processe nosso modelo de exibição "não encontrado":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image12.png)
 
-Uma coisa que você observará na captura de tela acima é que o nosso modelo de exibição básica herdou um monte de HTML que circunda o conteúdo principal na tela. Isso ocorre porque o nosso modelo de exibição está usando um modelo de "página mestra" que permite aplicar um layout consistente em todas as exibições no site. Discutiremos como páginas mestras funcionam mais em uma parte posterior deste tutorial.
+Uma coisa que você observará na captura de tela acima é que nosso modelo de exibição básico herdou um monte de HTML que circunda o conteúdo principal na tela. Isso ocorre porque nosso View-template está usando um modelo de "página mestra" que nos permite aplicar um layout consistente em todas as exibições no site. Vamos discutir como as páginas mestras funcionam mais em uma parte posterior deste tutorial.
 
-### <a name="implementing-the-details-view-template"></a>Implementando o modelo de exibição "Detalhes"
+### <a name="implementing-the-details-view-template"></a>Implementando o modelo de exibição "detalhes"
 
-Agora, vamos implementar o modelo de exibição "Detalhes" – que irá gerar HTML para um único modelo de jantar.
+Agora, vamos implementar o modelo de exibição "detalhes", que irá gerar HTML para um único modelo de jantar.
 
-Podemos vai fazer isso posicionando o cursor nosso texto dentro do método de ação de detalhes e, em seguida, clique com botão direito e escolha o comando de menu "Adicionar exibição" (ou pressione Ctrl-M, Ctrl + V):
+Vamos fazer isso posicionando nosso cursor de texto dentro do método de ação de detalhes e, em seguida, clicar com o botão direito do mouse e escolher o comando de menu "Add View" (ou pressione CTRL-M, Ctrl-V):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image13.png)
 
-Isso abrirá a caixa de diálogo "Adicionar exibição". Vamos manter o nome de exibição padrão ("Detalhes"). Também vamos selecionar a caixa de seleção "Criar uma exibição fortemente tipada" na caixa de diálogo e selecionar (usando o controle suspenso combobox) o nome do tipo de modelo que estamos passando do controlador para o modo de exibição. Para este modo de exibição que estão passando um objeto de jantar (o nome totalmente qualificado para este tipo é: "NerdDinner.Models.Dinner"):
+Isso abrirá a caixa de diálogo "Adicionar exibição". Vamos manter o nome da exibição padrão ("Details"). Também selecionaremos a caixa de seleção "criar uma exibição fortemente tipada" na caixa de diálogo e selecionar (usando o menu suspenso ComboBox) o nome do tipo de modelo que estamos passando do controlador para a exibição. Para este modo de exibição, estamos passando um objeto de jantar (o nome totalmente qualificado para esse tipo é: "NerdDinner. Models. jantar"):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image14.png)
 
-Ao contrário do modelo anterior, onde podemos optar por criar um "modo de exibição vazio", neste momento, que podemos optar por automaticamente "scaffold" modo de exibição usando um modelo de "Detalhes". É possível indicar isso alterando a "Conteúdo do modo de exibição" na lista suspensa caixa de diálogo acima.
+Ao contrário do modelo anterior, no qual optamos por criar uma "exibição vazia", desta vez, optaremos por "Scaffold" automaticamente o modo de exibição usando um modelo de "detalhes". Podemos indicar isso alterando a lista suspensa "exibir conteúdo" na caixa de diálogo acima.
 
-"O scaffolding" irá gerar uma implementação inicial de nosso modelo de exibição de detalhes com base no objeto de Dinner que estamos passando a ele. Isso fornece uma maneira fácil para que possamos começar a usar rapidamente em nossa implementação do modelo de exibição.
+"Scaffolding" irá gerar uma implementação inicial de nosso modelo de exibição de detalhes com base no objeto de jantar que estamos passando para ele. Isso fornece uma maneira fácil para que possamos rapidamente começar a nossa implementação de modelo de exibição.
 
-Quando clicamos no botão "Adicionar", o Visual Studio criará um novo arquivo de modelo de exibição "Details. aspx" para que possamos dentro do nosso diretório "\Views\Dinners":
+Quando clicamos no botão "Add" (Adicionar), o Visual Studio criará um novo arquivo de modelo de exibição "details. aspx" para nós em nosso diretório "\Views\Dinners":
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image15.png)
 
-Ele também será aberta nosso novo modelo de exibição de "Details. aspx" dentro do editor de código. Ele conterá uma implementação de scaffold inicial de uma exibição de detalhes com base em um modelo de jantar. O mecanismo de scaffolding usa a reflexão do .NET para examinar as propriedades públicas expostas na classe passada a ele e adicionará o conteúdo apropriado com base em cada tipo de encontrar:
+Ele também abrirá nosso novo modelo de exibição "details. aspx" no editor de código. Ele conterá uma implementação inicial de Scaffold de uma exibição de detalhes com base em um modelo de jantar. O mecanismo scaffolding usa a reflexão do .NET para examinar as propriedades públicas expostas na classe transmitida e adicionará o conteúdo apropriado com base em cada tipo que encontrar:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample8.aspx)]
 
-Podemos pode solicitar a *"/ detalhes/jantares/1"* URL para ver como essa implementação de scaffold "Detalhes" aparece no navegador. Usar essa URL exibirá um dos jantares que manualmente adicionamos ao nosso banco de dados quando é criado ele:
+Podemos solicitar a URL *"/Dinners/Details/1"* para ver o que é a implementação de Scaffold "detalhes" no navegador. Usar essa URL exibirá um dos jantares que adicionamos manualmente ao nosso banco de dados quando o criamos pela primeira vez:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image16.png)
 
-Isso nos leva rapidamente em funcionamento e nos fornece uma implementação inicial de nossa exibição details. aspx. Em seguida, podemos ir e ajustá-lo para personalizar a interface do usuário para nossa satisfação.
+Isso nos coloca em funcionamento rapidamente e nos fornece uma implementação inicial de nossa exibição details. aspx. Em seguida, podemos prosseguir e ajustá-lo para personalizar a interface do usuário para nossa satisfação.
 
-Quando olhamos o modelo details. aspx mais de perto, podemos encontrará que ele contém o HTML estático, bem como código de renderização inserido. &lt;% %&gt; nuggets de código para executar código quando renderiza o modelo de exibição, e &lt;% = %&gt; nuggets de código executará o código contido dentro deles e, em seguida, renderizar o resultado ao fluxo de saída do modelo.
+Quando examinamos mais detalhadamente o modelo details. aspx, descobrimos que ele contém HTML estático, bem como código de renderização inserido. &lt;%%&gt; código Nuggets executar código quando o modelo de exibição for renderizado e &lt;% =%&gt; código Nuggets executar o código contido neles e, em seguida, renderizar o resultado para o fluxo de saída do modelo.
 
-Podemos escrever código dentro de nosso modo de exibição que acessa o objeto de modelo "Jantar" que foi passado do nosso controlador usando uma propriedade de "Modelo" fortemente tipados. Visual Studio fornece nós com o intellisense de código completo ao acessar essa propriedade "Model" dentro do editor:
+Podemos escrever código dentro de nossa exibição que acessa o objeto de modelo "jantar" que foi passado do nosso controlador usando uma propriedade de "modelo" fortemente tipada. O Visual Studio nos fornece o Code-IntelliSense completo ao acessar essa propriedade de "modelo" dentro do editor:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image17.png)
 
-Vamos fazer alguns ajustes para que a fonte para o nosso modelo de exibição de detalhes final a aparência abaixo:
+Vamos fazer alguns ajustes para que a origem de nosso modelo de exibição de detalhes final seja parecida com a seguinte:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample9.aspx)]
 
-Quando podemos acessar o *"/ detalhes/jantares/1"* URL novamente ele será agora renderização como abaixo:
+Quando Acessamos a URL *"/Dinners/Details/1"* novamente, agora ele será renderizado da seguinte maneira:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image18.png)
 
-### <a name="implementing-the-index-view-template"></a>Implementando o modelo de exibição "Index"
+### <a name="implementing-the-index-view-template"></a>Implementando o modelo de exibição "index"
 
-Agora, vamos implementar o modelo de exibição "Index" – que irá gerar uma listagem de jantares futuros. Tarefas pendentes isso podemos posicionar nosso cursor de texto dentro do método de ação de índice e, em seguida, com o botão direito clique e escolha o comando de menu "Adicionar exibição" (ou pressione Ctrl-M, Ctrl + V).
+Agora, vamos implementar o modelo de exibição "index", que irá gerar uma lista de jantares futuros. Para fazer isso, vamos posicionar nosso cursor de texto dentro do método de ação de índice e clicar com o botão direito do mouse e escolher o comando de menu "Add View" (ou pressione CTRL-M, Ctrl-V).
 
-Na caixa de diálogo "Adicionar exibição" Vamos manter o modelo de exibição denominado "Index" e marque a caixa de seleção "Criar uma exibição fortemente tipada". Desta vez, escolheremos para automaticamente gerar um modelo de exibição de "Lista" e selecione "NerdDinner.Models.Dinner" como o tipo de modelo passado para o modo de exibição (que porque estamos indicou que estamos criando uma "lista" scaffold fará com que a caixa de diálogo Adicionar modo de exibição para supor que estamos passando uma sequência de objetos de jantar de nosso controlador para o modo de exibição):
+Na caixa de diálogo "Adicionar exibição", manteremos o modelo de exibição chamado "index" e selecionaremos a caixa de seleção "criar uma exibição fortemente tipada". Desta vez, optaremos por gerar automaticamente um modelo de exibição de "lista" e selecionar "NerdDinner. Models. jantar" como o tipo de modelo passado para a exibição (que porque indicamos que estamos criando uma "List" Scaffold fará com que a caixa de diálogo Adicionar exibição assuma que estamos passando uma sequência de objetos de jantar de nosso controlador para a exibição):
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image19.png)
 
-Quando clicamos no botão "Adicionar", o Visual Studio criará um novo arquivo de modelo de exibição "Aspx" para que possamos dentro do nosso diretório "\Views\Dinners". Ele será "criar o scaffolding de" uma implementação inicial dentro dele que fornece uma listagem de tabela HTML dos jantares passamos para o modo de exibição.
+Quando clicamos no botão "Add" (Adicionar), o Visual Studio criará um novo arquivo de modelo de exibição "index. aspx" para nós em nosso diretório "\Views\Dinners". Ele "Scaffold" uma implementação inicial dentro dela, que fornece uma listagem de tabela HTML dos jantares que passamos para a exibição.
 
-Quando executamos o aplicativo e o acesso a *"Jantares /"* renderizará nossa lista de jantares de URL da seguinte forma:
+Quando executamos o aplicativo e acessamos a URL *"/Dinners/"* , ele renderiza a nossa lista de jantares da seguinte forma:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image20.png)
 
-A solução de tabela acima nos dá um layout de grade de nossos dados jantar – que não não exatamente o que queremos para nosso consumidor voltado para a listagem de jantar. Podemos atualizar o modelo de exibição de aspx e modificá-lo para menos colunas de dados de lista e use uma &lt;ul&gt; elemento para renderizá-los em vez de uma tabela usando o código a seguir:
+A solução de tabela acima nos fornece um layout de grade de nossos dados de jantar, que não é exatamente o que queremos para nossa listagem de jantar voltada para o consumidor. Podemos atualizar o modelo de exibição index. aspx e modificá-lo para listar menos colunas de dados e usar um elemento &lt;UL&gt; para renderizá-los em vez de uma tabela usando o código abaixo:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample10.aspx)]
 
-Estamos usando a palavra-chave de "var" dentro da instrução foreach acima conforme executamos um loop sobre cada jantar em nosso modelo. Aqueles familiarizados com c# 3.0 podem pensar que, usar "var" significa que o objeto de jantar é associação tardia. Em vez disso, significa que o compilador está usando inferência de tipo em relação a propriedade "Model" com rigidez de tipos (que é do tipo "IEnumerable&lt;Dinner&gt;") e compilar a variável local "Jantar" como um tipo de jantar – o que significa que podemos obter completos IntelliSense e procurando dentro de blocos de código de tempo de compilação:
+Estamos usando a palavra-chave "var" dentro da instrução foreach acima enquanto executamos um loop em cada jantar em nosso modelo. Aqueles que não conhecem C# o 3,0 podem imaginar que o uso de "var" significa que o objeto do jantar é vinculado à tarde. Em vez disso, isso significa que o compilador está usando a inferência de tipos em relação à propriedade "modelo" fortemente tipada (que é do tipo "IEnumerable&lt;jantar&gt;") e compilando a variável "jantar" local como um tipo de jantar, o que significa que obtemos o IntelliSense completo e a verificação de tempo de compilação para ele nos blocos de código:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image21.png)
 
-Quando clicar em atualizar o */Dinners* URL em nosso navegador nossa exibição atualizada agora parece abaixo:
+Quando pressionamos a atualização na URL do */Dinners* em nosso navegador, nosso modo de exibição atualizado agora se parece com o seguinte:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image22.png)
 
-Isso é uma aparência bem melhor – mas ainda não está totalmente lá. Nossa última etapa é habilitar os usuários finais a clicar jantares individuais na lista e ver detalhes sobre eles. Implementaremos isso por meio da renderização de elementos de hiperlink HTML que vincule o método de ação de detalhes no nosso DinnersController.
+Isso está com uma aparência melhor, mas ainda não está totalmente lá. Nossa última etapa é permitir que os usuários finais cliquem em JANTARS individuais na lista e vejam detalhes sobre eles. Implementaremos isso renderizando elementos de hiperlink HTML que são vinculados ao método de ação de detalhes em nosso DinnersController.
 
-Podemos gerar esses hiperlinks dentro do nosso modo de exibição de índice em uma das duas maneiras. A primeira é criar manualmente o HTML &lt;uma&gt; elementos como abaixo, onde podemos incorporar &lt;% %&gt; bloqueia dentro de &lt;um&gt; elemento HTML:
+Podemos gerar esses hiperlinks em nossa exibição de índice de uma das duas maneiras. A primeira é criar o HTML manualmente &lt;um&gt; elementos como abaixo, onde inserimos &lt;%%&gt; blocos dentro do &lt;um elemento HTML&gt;:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image23.png)
 
-Uma abordagem alternativa que podemos usar é aproveitar o método de auxiliar interno "Html.ActionLink()" dentro do ASP.NET MVC que oferece suporte à criação por meio de programação um HTML &lt;um&gt; elemento que vincula-se para outro método de ação em um Controlador:
+Uma abordagem alternativa que podemos usar é aproveitar o método auxiliar interno "HTML. ActionLink ()" no ASP.NET MVC que dá suporte à criação programática de um HTML &lt;um elemento&gt; que se vincula a outro método de ação em um controlador:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample11.aspx)]
 
-O primeiro parâmetro para o método auxiliar Html.ActionLink() é o texto do link para exibir (no caso do título do jantar), o segundo parâmetro é o nome da ação de controlador que queremos gerar o link para (neste caso, o método de detalhes) e o terceiro parâmetro é um conjunto de parâmetros a serem enviados para a ação (implementada como um tipo anônimo com valores/nome de propriedade). Nesse caso, estamos especificando o parâmetro "id" do jantar queremos vincular a e como o roteamento de URL padrão de regra no ASP.NET MVC é "{Controller} / {Action} / {id}" o método auxiliar Html.ActionLink() gerará a seguinte saída:
+O primeiro parâmetro para o HTML. o método auxiliar ActionLink () é o texto de link a ser exibido (nesse caso, o título do jantar), o segundo parâmetro é o nome da ação do controlador para o qual desejamos gerar o link (neste caso, o método Details) e o terceiro parâmetro é um conjunto de parâmetros a serem enviados à ação (implementado como um tipo anônimo com nome/valores de propriedade). Nesse caso, estamos especificando o parâmetro "ID" do jantar para o qual desejamos vincular e, como a regra de roteamento de URL padrão no MVC ASP.NET é "{Controller}/{Action}/{id}", o método auxiliar HTML. ActionLink () gerará a seguinte saída:
 
 [!code-html[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample12.html)]
 
-Para nossa exibição aspx usaremos a abordagem de método auxiliar Html.ActionLink() e ter cada jantar no link para a URL apropriada de detalhes lista:
+Para nossa exibição index. aspx, usaremos a abordagem do método auxiliar HTML. ActionLink () e temos cada jantar na lista vinculada à URL de detalhes apropriada:
 
 [!code-aspx[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample13.aspx)]
 
-E agora quando nos deparamos com o */Dinners* URL nossa lista de jantar a aparência abaixo:
+E agora, quando atingirmos a URL do */Dinners* , a nossa lista de JANTARS é semelhante à seguinte:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image24.png)
 
-Quando clicamos em qualquer um dos jantares na lista vamos navegar para ver detalhes sobre ele:
+Quando clicamos em qualquer um dos jantares na lista, navegamos para ver os detalhes sobre ele:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image25.png)
 
-### <a name="convention-based-naming-and-the-views-directory-structure"></a>Baseado em convenção de nomenclatura e a estrutura do diretório \Views
+### <a name="convention-based-naming-and-the-views-directory-structure"></a>Nomenclatura baseada em convenção e a estrutura de diretório \Views
 
-Por padrão, aplicativos ASP.NET MVC usam um estrutura de nomenclatura durante a resolução de modelos de exibição de diretório baseado em convenção. Isso permite que os desenvolvedores evitar ter que qualificar totalmente-um caminho de local ao fazer referência a exibições de dentro de uma classe de controlador. Por padrão ASP.NET MVC procurará o arquivo de modelo de exibição dentro de * \Views\[Nomedocontrolador]\* diretório sob o aplicativo.
+Por padrão, os aplicativos MVC do ASP.NET usam uma estrutura de nomenclatura de diretório baseada em Convenção ao resolver modelos de exibição. Isso permite que os desenvolvedores evitem ter que qualificar totalmente um caminho de local ao referenciar exibições de dentro de uma classe de controlador. Por padrão, o ASP.NET MVC procurará o arquivo de modelo de exibição dentro do diretório * \Views\[ControllerName]\* sob o aplicativo.
 
-Por exemplo, temos trabalhado na classe DinnersController – que faz referência explícita a três modelos de exibição: "Index", "Detalhes" e "NotFound". ASP.NET MVC por padrão procurará por essas exibições dentro de *\Views\Dinners* diretório sob nosso diretório raiz do aplicativo:
+Por exemplo, trabalhamos na classe DinnersController – que referencia explicitamente três modelos de exibição: "index", "Details" e "Found". O ASP.NET MVC, por padrão, procurará essas exibições no diretório *\Views\Dinners* abaixo do diretório raiz do aplicativo:
 
 ![](use-controllers-and-views-to-implement-a-listingdetails-ui/_static/image26.png)
 
-Observe acima como não há no momento, há três classes de controlador dentro do projeto (DinnersController, HomeController e AccountController – as duas últimas foram adicionadas por padrão, quando criamos o projeto), e há três (um para cada um de seus subdiretórios controlador) dentro do diretório \Views.
+Observe que, no momento, há três classes de controlador no projeto (DinnersController, HomeController e AccountController – as últimas duas foram adicionadas por padrão quando criamos o projeto), e há três subdiretórios (um para cada de domínio) no diretório \Views
 
-Exibições referenciadas nos controladores Home e contas de resolverá automaticamente seus modelos de exibição do respectivo *\Views\Home* e *\Views\Account* diretórios. O *\Views\Shared* subdiretório fornece uma maneira de armazenar modelos de exibição que são reutilizados em vários controladores dentro do aplicativo. Quando o ASP.NET MVC tenta resolver um modelo de exibição, ele primeiro verifica dentro de *\Views\[controlador]* diretório específico, e se ele não é possível localizar o modelo de exibição lá ele irá procurar no *\Views\ Compartilhado* directory.
+As exibições referenciadas por meio de controladores domésticos e de contas resolverão automaticamente seus modelos de exibição dos respectivos diretórios *\Views\Home* e *\Views\Account* . O subdiretório *pasta \views\shared* fornece uma maneira de armazenar modelos de exibição que são reutilizados em vários controladores dentro do aplicativo. Quando o ASP.NET MVC tenta resolver um modelo de exibição, ele primeiro faz o check-in do diretório específico do *\Views\[Controller]* e, se ele não conseguir localizar o modelo de exibição, ele procurará no diretório *pasta \views\shared* .
 
-Quando se trata de modelos de exibição individual de nomeação, a orientação recomendada é ter o modelo de exibição compartilham o mesmo nome que o método de ação que causou a renderizar. Por exemplo, acima nosso "Index" método de ação está usando o modo de exibição "Index" para renderizar o resultado de exibição e o método de ação "Detalhes" está usando o modo de exibição "Detalhes" para processar seus resultados. Isso facilita ver rapidamente o modelo que está associado com cada ação.
+Quando se trata de nomear modelos de exibição individuais, as diretrizes recomendadas para fazer com que o modelo de exibição Compartilhe o mesmo nome que o método de ação que fez com que ele fosse renderizado. Por exemplo, acima de nosso método de ação "index" está usando a exibição "index" para renderizar o resultado da exibição e o método de ação "Details" está usando a exibição "detalhes" para renderizar seus resultados. Isso facilita a visualização rápida do modelo associado a cada ação.
 
-Os desenvolvedores não precisam especificar explicitamente o nome do modelo de exibição quando o modelo de exibição tem o mesmo nome que o método de ação que está sendo invocado no controlador. Podemos em vez disso, basta passar o objeto de modelo para o método auxiliar "View()" (sem especificar o nome de exibição) e ASP.NET MVC automaticamente irá inferir que queremos usar o *\Views\[Nomedocontrolador]\[ActionName]* modelo de exibição no disco para renderizá-lo.
+Os desenvolvedores não precisam especificar explicitamente o nome do modelo de exibição quando o modelo de exibição tem o mesmo nome que o método de ação que está sendo invocado no controlador. Em vez disso, podemos apenas passar o objeto de modelo para o método auxiliar "View ()" (sem especificar o nome da exibição) e o ASP.NET MVC inferirá automaticamente que desejamos usar o modelo de exibição *\Views\[ControllerName]\[açãoname]* no disco para renderizá-lo.
 
-Isso nos permite limpar um pouco o nosso código de controlador e evitar a duplicação do nome duas vezes em nosso código:
+Isso nos permite limpar o código do controlador um pouco e evitar duplicar o nome duas vezes em nosso código:
 
 [!code-csharp[Main](use-controllers-and-views-to-implement-a-listingdetails-ui/samples/sample14.cs)]
 
-O código acima é tudo o que é necessário para implementar um jantar listagem/detalhes boa experiência para o site.
+O código acima é tudo o que é necessário para implementar uma experiência de listagem/detalhes de jantar interessante para o site.
 
 #### <a name="next-step"></a>Próxima etapa
 
-Agora temos um bom jantar criada de experiência de navegação.
+Agora temos uma boa experiência de navegação de jantar criada.
 
-Agora, vamos Habilitar suporte de edição de formulários de dados CRUD (Create, Read, Update, Delete).
+Agora, vamos habilitar o suporte à edição do formulário de dados CRUD (criar, ler, atualizar, excluir).
 
 > [!div class="step-by-step"]
 > [Anterior](build-a-model-with-business-rule-validations.md)

@@ -9,11 +9,11 @@ ms.assetid: c1a35f18-bab9-41f7-8497-15530c37a09d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-localization
 msc.type: authoredcontent
 ms.openlocfilehash: 003e7939accd7a68dab97441b3d999bca835b85a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600852"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566216"
 ---
 # <a name="understanding-aspnet-ajax-localization"></a>Noções básicas sobre a localização do AJAX ASP.NET
 
@@ -57,12 +57,12 @@ Os scripts de cultura neutra não devem incluir nenhum identificador de cultura 
 
 A tabela a seguir resume as convenções de nomenclatura de arquivo com exemplos:
 
-| Nome do Arquivo | Significado |
+| Nome de arquivo | Significado |
 | --- | --- |
-| Script. js | Um script de cultura neutra de versão release. |
-| Script. Debug. js | Um script de cultura neutra de versão de depuração. |
-| Script. en-US. js | Uma versão de lançamento em inglês, Estados Unidos script. |
-| Script.debug.es-CO. js | Um script de Colômbia de versão de depuração espanhol. |
+| Script.js | Um script de cultura neutra de versão release. |
+| Script.debug.js | Um script de cultura neutra de versão de depuração. |
+| Script.en-US.js | Uma versão de lançamento em inglês, Estados Unidos script. |
+| Script.debug.es-CO.js | Um script de Colômbia de versão de depuração espanhol. |
 
 ## <a name="walkthrough-create-an-localized-embedded-script"></a>Walkthrough: criar um script localizado e inserido
 
@@ -101,7 +101,7 @@ Para aqueles que não conhecem a sintaxe de Regex de JavaScript, o texto em barr
 
 [!code-aspx[Main](understanding-asp-net-ajax-localization/samples/sample4.aspx)]
 
-1. {1&gt;Pressione {2&gt;F5&lt;2}.&lt;1} Se solicitado, habilite a depuração. Quando a página for carregada, pressione o botão excluir. Observe que você será solicitado em inglês (a menos que o computador esteja configurado para preferir recursos de idioma espanhol por padrão) para confirmação.
+1. Pressione F5. Se solicitado, habilite a depuração. Quando a página for carregada, pressione o botão excluir. Observe que você será solicitado em inglês (a menos que o computador esteja configurado para preferir recursos de idioma espanhol por padrão) para confirmação.
 2. Feche a janela do navegador e retorne para default. aspx. Na diretiva de cabeçalho @Page, substitua auto para Culture e UICulture por es-ES. Pressione F5 novamente para iniciar o aplicativo Web no navegador novamente. Desta vez, observe que você será solicitado a excluir o arquivo em espanhol:
 
 [![](understanding-asp-net-ajax-localization/_static/image2.png)](understanding-asp-net-ajax-localization/_static/image1.png)

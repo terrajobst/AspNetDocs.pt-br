@@ -9,11 +9,11 @@ ms.assetid: a89d6f32-b71b-4036-8ff7-5f8ac2a6eca8
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: c5281a42596d95e725b32e652c75785abe0fd64e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640622"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78573461"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-migrating-to-sql-server---10-of-12"></a>Implantando um aplicativo Web ASP.NET com SQL Server Compact usando o Visual Studio ou o Visual Web Developer: migrando para o SQL Server-10 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como migrar de SQL Server Compact para SQL Server. Um motivo para você fazer isso é aproveitar os recursos de SQL Server aos quais SQL Server Compact não oferece suporte, como procedimentos armazenados, gatilhos, exibições ou replicação. Para obter mais informações sobre as diferenças entre SQL Server Compact e SQL Server, consulte o tutorial [Implantando SQL Server Compact](deployment-to-a-hosting-provider-deploying-sql-server-compact-databases-2-of-12.md) .
 
@@ -112,7 +112,7 @@ A guia **pacote/publicar SQL** normalmente está desabilitada porque especifica 
 
 Clique em **importar de Web. config**.
 
-![Selecting_Import_from_Web. config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
+![Selecting_Import_from_Web.config](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/_static/image5.png)
 
 O Visual Studio procura cadeias de conexão no arquivo *Web. config* , localiza uma para o banco de dados de associação e outra para o banco de dados escolar e adiciona uma linha correspondente a cada cadeia de conexão na tabela **entradas de banco de dados** . As cadeias de conexão encontradas são para os bancos de dados do SQL Server Compact existentes e a próxima etapa será configurar como e onde implantar esses bancos de dados.
 
@@ -224,7 +224,7 @@ Em **Gerenciador de soluções**, clique com o botão direito do mouse no projet
 
 Selecione a guia **perfil** .
 
-Clique em **gerenciar perfis**.
+Clique em **Gerenciar Perfis**.
 
 Selecione **teste**, clique em **remover**e, em seguida, clique em **Fechar**.
 
@@ -244,7 +244,7 @@ Na caixa **site/aplicativo** , digite *Default Web site/ContosoUniversity*.
 
 Na caixa **URL de destino** , digite `http://localhost/ContosoUniversity/`.
 
-Clique em **Avançar**.
+Clique em **Próximo**.
 
 A guia **configurações** avisa que a guia **pacote/publicar SQL** foi configurada e oferece a oportunidade de substituí-las clicando em habilitar os novos aprimoramentos de publicação de banco de dados. Para essa implantação, você não deseja substituir as configurações da guia **pacote/publicar do SQL** , portanto, basta clicar em **Avançar**.
 
@@ -281,7 +281,7 @@ Na mesma página, clique em **criar usuário**. Nos servidores do Cytanium, em v
 Preencha os campos obrigatórios na página de **Propriedades do usuário do SQL** :
 
 - Insira "ContosoUniversityUser" como o nome.
-- Insira uma senha.
+- Digite uma senha.
 - Selecione **contosouSchool** como o banco de dados padrão.
 - Marque a caixa de seleção **contosouSchool** .
 
@@ -347,7 +347,7 @@ Em **Gerenciador de soluções**, clique com o botão direito do mouse no projet
 
 Selecione a guia **perfil** .
 
-Clique em **gerenciar perfis**.
+Clique em **Gerenciar Perfis**.
 
 Selecione **produção**, clique em **remover**e, em seguida, clique em **Fechar**.
 
@@ -414,7 +414,7 @@ Abra a janela do console do Gerenciador de pacotes.
 
 Na lista suspensa **projeto padrão** , selecione o projeto CONTOSOUNIVERSITY. Dal.
 
-Digite o seguinte comando:
+Insira o seguinte comando:
 
 [!code-powershell[Main](deployment-to-a-hosting-provider-migrating-to-sql-server-10-of-12/samples/sample9.ps1)]
 

@@ -9,11 +9,11 @@ ms.assetid: d6e758b6-6571-484d-a132-34ee6c47747a
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/displaying-a-table-of-database-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3c908d030076fc8400190ef3cf1672632ac1ed6b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589610"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78543137"
 ---
 # <a name="displaying-a-table-of-database-data-c"></a>Exibir uma tabela de dados de banco de dados (C#)
 
@@ -31,12 +31,12 @@ Vamos exibir o conjunto de registros da tabela de banco de dados de filmes. A ta
 
 <a id="0.3_table01"></a>
 
-| **Nome da coluna** | **Tipo de dados** | **Permitir nulos** |
+| **Nome da Coluna** | **Tipo de Dados** | **Permitir Nulos** |
 | --- | --- | --- |
-| Id | Int | False |
-| Cargo | Nvarchar (200) | False |
-| Pasta | NVarchar (50) | False |
-| DateReleased | DateTime | False |
+| ID | Int | Falso |
+| Title | Nvarchar(200) | Falso |
+| Diretor | NVarchar(50) | Falso |
+| DateReleased | Datetime | Falso |
 
 Para representar a tabela de filmes em nosso aplicativo MVC ASP.NET, precisamos criar uma classe de modelo. Neste tutorial, usamos o Entity Framework da Microsoft para criar nossas classes de modelo.
 
@@ -53,7 +53,7 @@ Siga estas etapas para iniciar o assistente de Modelo de Dados de Entidade:
 Depois que você clicar no botão Adicionar, o assistente de Modelo de Dados de Entidade será exibido (consulte a Figura 1). Siga estas etapas para concluir o assistente:
 
 1. Na etapa **escolher conteúdo do modelo** , selecione a opção **gerar do banco de dados** .
-2. Na etapa **escolher sua conexão de dados** , use a conexão de dados *MoviesDB. MDF* e o nome *MoviesDBEntities* para as configurações de conexão. Clique no botão **Avançar** .
+2. Na etapa **escolher sua conexão de dados** , use a conexão de dados *MoviesDB. MDF* e o nome *MoviesDBEntities* para as configurações de conexão. Clique no botão **Avançar**.
 3. Na etapa **escolher seus objetos de banco de dados** , expanda o nó tabelas, selecione a tabela filmes. Insira os *modelos* de namespace e clique no botão **concluir** .
 
 [![criar classes de LINQ to SQL](displaying-a-table-of-database-data-cs/_static/image1.jpg)](displaying-a-table-of-database-data-cs/_static/image1.png)

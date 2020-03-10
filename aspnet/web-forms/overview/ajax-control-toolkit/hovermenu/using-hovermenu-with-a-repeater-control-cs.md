@@ -9,11 +9,11 @@ ms.assetid: e7700e7b-edc3-4183-a713-70e507cc7490
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/hovermenu/using-hovermenu-with-a-repeater-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3e38b91d837c65191d4b3797fa31ef6112a1f070
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606714"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578123"
 ---
 # <a name="using-hovermenu-with-a-repeater-control-c"></a>Uso de HoverMenu com um controle repetidor (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle HoverMenu no AJAX Control Toolkit fornece um efeito simples de popup: quando o ponteiro do mouse passa sobre um elemento, um pop-up aparece em uma posição especificada. Também é possível usar esse controle dentro de um repetidor.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de `HoverMenu` no AJAX Control Toolkit fornece um efeito simples de popup: quando o ponteiro do mouse passa sobre um elemento, um pop-up aparece em uma posição especificada. Também é possível usar esse controle dentro de um repetidor.
 
@@ -56,4 +56,4 @@ Agora, todos os itens da fonte de dados exibem um pop-up à direita (`PopupPosit
 O menu em foco é exibido ao lado de cada item no repetidor ([clique para exibir a imagem em tamanho normal](using-hovermenu-with-a-repeater-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](using-hovermenu-with-a-repeater-control-vb.md)
+> [Próximo](using-hovermenu-with-a-repeater-control-vb.md)

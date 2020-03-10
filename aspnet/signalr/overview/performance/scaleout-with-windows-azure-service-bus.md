@@ -1,19 +1,19 @@
 ---
 uid: signalr/overview/performance/scaleout-with-windows-azure-service-bus
-title: Expansão do SignalR com o barramento de serviço do Azure | Microsoft Docs
+title: Expansão do signalr com o barramento de serviço do Azure | Microsoft Docs
 author: bradygaster
-description: Versões de software usada nesta versão do Visual Studio 2013 .NET 4.5 SignalR tópico 2 versões anteriores dessa versão do tópico para o SignalR 1.x desse tópico,...
+description: As versões de software usadas neste tópico Visual Studio 2013 o .NET 4,5 Signaler versão 2 versões anteriores deste tópico para a versão do Signalr 1. x deste tópico,...
 ms.author: bradyg
 ms.date: 06/10/2014
 ms.assetid: ce1305f9-30fd-49e3-bf38-d0a78dfb06c3
 msc.legacyurl: /signalr/overview/performance/scaleout-with-windows-azure-service-bus
 msc.type: authoredcontent
 ms.openlocfilehash: 73ed95c5027f57c7e390069dcb36b18a3714973f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113627"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78579173"
 ---
 # <a name="signalr-scaleout-with-azure-service-bus"></a>Expansão do SignalR com o Barramento de Serviço do Azure
 
@@ -21,47 +21,47 @@ por [Mike Wasson](https://github.com/MikeWasson), [Patrick Fletcher](https://git
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-Neste tutorial, você implantará um aplicativo do SignalR para uma função do Windows Azure Web, usando o backplane do barramento de serviço para distribuir mensagens a cada instância de função. (Você também pode usar o backplane do barramento de serviço com [aplicativos web no serviço de aplicativo do Azure](https://docs.microsoft.com/azure/app-service-web/).)
+Neste tutorial, você implantará um aplicativo Signalr em uma função Web do Windows Azure, usando o backplane do barramento de serviço para distribuir mensagens para cada instância de função. (Você também pode usar o backplane do barramento de serviço com [aplicativos Web no serviço Azure app](https://docs.microsoft.com/azure/app-service-web/).)
 
 ![](scaleout-with-windows-azure-service-bus/_static/image1.png)
 
 Pré-requisitos:
 
 - Uma conta do Windows Azure.
-- O [Windows Azure SDK](https://go.microsoft.com/fwlink/?linkid=254364&amp;clcid=0x409).
+- O [SDK do Windows Azure](https://go.microsoft.com/fwlink/?linkid=254364&amp;clcid=0x409).
 - Visual Studio 2012 ou 2013.
 
-O backplane de barramento de serviço também é compatível com [do barramento de serviço para o Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versão 1.1. No entanto, não é compatível com a versão 1.0 do barramento de serviço para o Windows Server.
+O backplane do barramento de serviço também é compatível com o [barramento de serviço para Windows Server](https://msdn.microsoft.com/library/windowsazure/dn282144.aspx), versão 1,1. No entanto, ele não é compatível com a versão 1,0 do barramento de serviço para Windows Server.
 
 ## <a name="pricing"></a>Preços
 
-Backplane do barramento de serviço usa tópicos para enviar mensagens. Para as informações de preços mais recentes, consulte [do barramento de serviço](https://azure.microsoft.com/pricing/details/service-bus/). No momento da redação deste artigo, você pode enviar 1.000.000 mensagens por mês para menos de US $1. Backplane envia uma mensagem do barramento de serviço para cada invocação de um método de hub do SignalR. Também há algumas mensagens de controle para conexões, desconexões, junção ou deixando grupos e assim por diante. Na maioria dos aplicativos, a maioria do tráfego de mensagem será invocações de método de hub.
+O backplane do barramento de serviço usa tópicos para enviar mensagens. Para obter as informações de preços mais recentes, consulte [Service Bus](https://azure.microsoft.com/pricing/details/service-bus/). No momento da redação deste artigo, você pode enviar 1 milhão mensagens por mês para menos de $1. O backplane envia uma mensagem do barramento de serviço para cada invocação de um método de Hub do Signalr. Há também algumas mensagens de controle para conexões, desconexões, junção ou saída de grupos e assim por diante. Na maioria dos aplicativos, a maior parte do tráfego de mensagens será invocações de método de Hub.
 
 ## <a name="overview"></a>Visão geral
 
-Antes de passarmos para o tutorial detalhado, aqui está uma visão rápida do que você deve fazer.
+Antes de chegarmos ao tutorial detalhado, aqui está uma visão geral rápida do que você fará.
 
-1. Use o portal do Windows Azure para criar um novo namespace do barramento de serviço.
-2. Adicione esses pacotes do NuGet ao seu aplicativo: 
+1. Use o portal do Azure do Windows para criar um novo namespace do barramento de serviço.
+2. Adicione esses pacotes NuGet ao seu aplicativo: 
 
-    - [Microsoft.AspNet.SignalR](http://nuget.org/packages/Microsoft.AspNet.SignalR)
-    - [Microsoft.AspNet.SignalR.ServiceBus3](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus3) ou [Microsoft.AspNet.SignalR.ServiceBus](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus)
-3. Crie um aplicativo do SignalR.
-4. Adicione o seguinte código para o Startup.cs para configurar o backplane: 
+    - [Microsoft. AspNet. Signalr](http://nuget.org/packages/Microsoft.AspNet.SignalR)
+    - [Microsoft. AspNet. signalr. ServiceBus3](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus3) ou [Microsoft. AspNet. Signalr. ServiceBus](https://www.nuget.org/packages/Microsoft.AspNet.SignalR.ServiceBus)
+3. Crie um aplicativo Signalr.
+4. Adicione o seguinte código a Startup.cs para configurar o backplane: 
 
     [!code-csharp[Main](scaleout-with-windows-azure-service-bus/samples/sample1.cs)]
 
-Esse código configura o backplane com os valores padrão para [TopicCount](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.servicebusscaleoutconfiguration.topiccount(v=vs.118).aspx) e [MaxQueueLength](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.messaging.scaleoutconfiguration.maxqueuelength(v=vs.118).aspx). Para obter informações sobre como alterar esses valores, consulte [desempenho do SignalR: Métricas de expansão](signalr-performance.md#scaleout_metrics).
+Esse código configura o backplane com os valores padrão para [TopicCount](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.servicebusscaleoutconfiguration.topiccount(v=vs.118).aspx) e [MaxQueueLength](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.messaging.scaleoutconfiguration.maxqueuelength(v=vs.118).aspx). Para obter informações sobre como alterar esses valores, consulte [desempenho do signalr: métricas de scale](signalr-performance.md#scaleout_metrics)out.
 
 Para cada aplicativo, escolha um valor diferente para "Nomedoseuaplicativo". Não use o mesmo valor em vários aplicativos.
 
 ## <a name="create-the-azure-services"></a>Criar os serviços do Azure
 
-Criar um serviço de nuvem, conforme descrito em [como criar e implantar um serviço de nuvem](https://docs.microsoft.com/azure/cloud-services/cloud-services-how-to-create-deploy). Siga as etapas na seção "como: Crie um serviço de nuvem usando a criação rápida". Para este tutorial, você não precisa carregar um certificado.
+Crie um serviço de nuvem, conforme descrito em [como criar e implantar um serviço de nuvem](https://docs.microsoft.com/azure/cloud-services/cloud-services-how-to-create-deploy). Siga as etapas na seção "como criar um serviço de nuvem usando a criação rápida". Para este tutorial, você não precisa carregar um certificado.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image2.png)
 
-Crie um novo namespace do barramento de serviço, conforme descrito em [como o barramento de serviço para usar tópicos/assinaturas](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Siga as etapas na seção "Criar um Namespace de serviço".
+Crie um novo namespace do barramento de serviço, conforme descrito em [como usar os tópicos/assinaturas do barramento de serviço](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Siga as etapas na seção "criar um namespace de serviço".
 
 ![](scaleout-with-windows-azure-service-bus/_static/image3.png)
 
@@ -70,48 +70,48 @@ Crie um novo namespace do barramento de serviço, conforme descrito em [como o b
 
 ## <a name="create-the-visual-studio-project"></a>Criar o projeto do Visual Studio
 
-Inicie o Visual Studio. Dos **arquivo** menu, clique em **novo projeto**.
+Inicie o Visual Studio. No menu **Arquivo**, clique em **Novo Projeto**.
 
-No **novo projeto** diálogo caixa, expanda **Visual c#**. Sob **modelos instalados**, selecione **nuvem** e, em seguida, selecione **serviço de nuvem do Windows Azure**. Mantenha o padrão do .NET Framework 4.5. Nome do aplicativo ChatService e clique em **Okey**.
+Na caixa de diálogo **novo projeto** , expanda **Visual C#** . Em **modelos instalados**, selecione **nuvem** e, em seguida, selecione **serviço de nuvem do Windows Azure**. Mantenha o .NET Framework padrão 4,5. Nomeie o aplicativo ChatService e clique em **OK**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image4.png)
 
-No **novo serviço de nuvem do Windows Azure** caixa de diálogo Selecionar função de Web do ASP.NET. Clique no botão de seta para a direita (**&gt;**) para adicionar a função à sua solução.
+Na caixa de diálogo **novo serviço de nuvem do Windows Azure** , selecione função Web ASP.net. Clique no botão de seta para a direita ( **&gt;** ) para adicionar a função à sua solução.
 
-Passe o mouse sobre a nova função, portanto, visíveis no ícone de lápis. Clique nesse ícone para renomear a função. Nome da função "SignalRChat" e clique em **Okey**.
+Passe o mouse sobre a nova função, portanto, o ícone de lápis está visível. Clique nesse ícone para renomear a função. Nomeie a função "SignalRChat" e clique em **OK**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image5.png)
 
-No **novo projeto ASP.NET** caixa de diálogo, selecione **MVC**e clique em Okey.
+Na caixa de diálogo **novo projeto ASP.net** , selecione **MVC**e clique em OK.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image6.png)
 
-O Assistente de projeto cria dois projetos:
+O assistente de projeto cria dois projetos:
 
-- ChatService: Este projeto é o aplicativo do Windows Azure. Ele define as funções do Azure e outras opções de configuração.
-- SignalRChat: Esse projeto é o seu projeto ASP.NET MVC 5.
+- ChatService: este projeto é o aplicativo do Windows Azure. Ele define as funções do Azure e outras opções de configuração.
+- SignalRChat: este projeto é seu projeto do ASP.NET MVC 5.
 
-## <a name="create-the-signalr-chat-application"></a>Criar o aplicativo de Chat SignalR
+## <a name="create-the-signalr-chat-application"></a>Criar o aplicativo de chat do Signalr
 
-Para criar o aplicativo de bate-papo, siga as etapas no tutorial [Introdução ao SignalR e ao MVC 5](../getting-started/tutorial-getting-started-with-signalr-and-mvc.md).
+Para criar o aplicativo de chat, siga as etapas no tutorial [introdução com signalr e MVC 5](../getting-started/tutorial-getting-started-with-signalr-and-mvc.md).
 
-Use o NuGet para instalar as bibliotecas necessárias. Dos **ferramentas** menu, selecione **Gerenciador de pacotes NuGet**, em seguida, selecione **Package Manager Console**. No **Package Manager Console** janela, digite os seguintes comandos:
+Use o NuGet para instalar as bibliotecas necessárias. No menu **ferramentas** , selecione **Gerenciador de pacotes NuGet**e, em seguida, selecione **console do Gerenciador de pacotes**. Na janela do **console do Gerenciador de pacotes** , digite os seguintes comandos:
 
 [!code-powershell[Main](scaleout-with-windows-azure-service-bus/samples/sample2.ps1)]
 
-Use o `-ProjectName` opção para instalar os pacotes para o projeto ASP.NET MVC, em vez de projeto do Windows Azure.
+Use a opção `-ProjectName` para instalar os pacotes no projeto MVC do ASP.NET, em vez de no projeto do Windows Azure.
 
-## <a name="configure-the-backplane"></a>Configurar o Backplane
+## <a name="configure-the-backplane"></a>Configurar o backplane
 
-No arquivo de Startup.cs do seu aplicativo, adicione o seguinte código:
+No arquivo Startup.cs do seu aplicativo, adicione o seguinte código:
 
 [!code-csharp[Main](scaleout-with-windows-azure-service-bus/samples/sample3.cs)]
 
-Agora, você precisará obter sua cadeia de conexão do barramento de serviço. No portal do Azure, selecione o namespace do barramento de serviço que você criou e clique no ícone de chave de acesso.
+Agora você precisa obter a cadeia de conexão do barramento de serviço. No portal do Azure, selecione o namespace do barramento de serviço que você criou e clique no ícone de chave de acesso.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image7.png)
 
-Copie a cadeia de conexão para a área de transferência e, em seguida, cole-o na *connectionString* variável.
+Copie a cadeia de conexão para a área de transferência e cole-a na variável *ConnectionString* .
 
 ![](scaleout-with-windows-azure-service-bus/_static/image8.png)
 
@@ -119,46 +119,46 @@ Copie a cadeia de conexão para a área de transferência e, em seguida, cole-o 
 
 ## <a name="deploy-to-azure"></a>Implantar no Azure
 
-No Gerenciador de soluções, expanda o **funções** pasta dentro do projeto ChatService.
+Em Gerenciador de Soluções, expanda a pasta **funções** dentro do projeto ChatService.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image9.png)
 
-A função SignalRChat com o botão direito e selecione **propriedades**. Selecione a guia **Configuração**. Sob **instâncias** selecione 2. Você também pode definir o tamanho da VM **Extra pequena**.
+Clique com o botão direito do mouse na função SignalRChat e selecione **Propriedades**. Selecione a guia **configuração** . Em **instâncias** , selecione 2. Você também pode definir o tamanho da VM para **extra pequena**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image10.png)
 
 Salve as alterações.
 
-No Gerenciador de soluções, clique com botão direito no projeto ChatService. Selecione **Publicar**.
+Em Gerenciador de Soluções, clique com o botão direito do mouse no projeto ChatService. Selecione **Publicar**.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image11.png)
 
-Se esta for sua primeira tempo publicando no Windows Azure, você deve baixar suas credenciais. No **publicar** assistente, clique em "Entrar baixar credenciais". Isso solicitará que você entrar no portal do Windows Azure e baixar um arquivo de configurações de publicação.
+Se esta for a primeira vez que você publica no Windows Azure, você deve baixar suas credenciais. No assistente de **publicação** , clique em "entrar para baixar credenciais". Isso solicitará que você entre no portal do Azure do Windows e baixe um arquivo de configurações de publicação.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image12.png)
 
-Clique em **importação** e selecione o arquivo de configurações de publicação que você baixou.
+Clique em **importar** e selecione o arquivo de configurações de publicação que você baixou.
 
-Clique em **Avançar**. No **configurações de publicação** caixa de diálogo, em **serviço de nuvem**, selecione o serviço de nuvem que você criou anteriormente.
+Clique em **Próximo**. Na caixa de diálogo **configurações de publicação** , em **serviço de nuvem**, selecione o serviço de nuvem que você criou anteriormente.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image13.png)
 
-Clique em **Publicar**. Ele pode levar alguns minutos para implantar o aplicativo e iniciar as máquinas virtuais.
+Clique em **Publicar**. Pode levar alguns minutos para implantar o aplicativo e iniciar as VMs.
 
-Agora quando você executa o aplicativo de bate-papo, as instâncias de função se comunicam por meio do barramento de serviço do Azure, usando um tópico do barramento de serviço. Um tópico é uma fila de mensagens que permite que vários assinantes.
+Agora, quando você executa o aplicativo de chat, as instâncias de função se comunicam por meio do barramento de serviço do Azure, usando um tópico do barramento de serviço. Um tópico é uma fila de mensagens que permite vários assinantes.
 
-Backplane cria automaticamente o tópico e as assinaturas. Para ver as assinaturas e a atividade de mensagens, abra o portal do Azure, selecione o namespace do barramento de serviço e clique em "Tópicos".
+O backplane cria automaticamente o tópico e as assinaturas. Para ver a atividade de assinaturas e mensagens, abra o portal do Azure, selecione o namespace do barramento de serviço e clique em "tópicos".
 
 ![](scaleout-with-windows-azure-service-bus/_static/image14.png)
 
-Poderá levar alguns minutos para que a atividade de mensagem sejam exibidos no painel.
+Reserve alguns minutos para que a atividade de mensagem seja exibida no painel.
 
 ![](scaleout-with-windows-azure-service-bus/_static/image15.png)
 
-O SignalR gerencia o tempo de vida do tópico. Desde que o aplicativo for implantado, não tente excluir tópicos ou alterar as configurações de tópico manualmente.
+O signalr gerencia o tempo de vida do tópico. Desde que seu aplicativo seja implantado, não tente excluir manualmente os tópicos ou alterar as configurações no tópico.
 
-## <a name="troubleshooting"></a>Solução de problemas
+## <a name="troubleshooting"></a>solução de problemas
 
-**System. InvalidOperationException "A única IsolationLevel com suporte é 'IsolationLevel.Serializable'".**
+**System. InvalidOperationException "o único IsolationLevel com suporte é ' IsolationLevel. Serializable '."**
 
-Esse erro pode ocorrer se o nível de transação para uma operação é definido como algo diferente de `Serializable`. Verifique se que as operações não estão sendo executadas com outros níveis de transação.
+Esse erro poderá ocorrer se o nível de transação de uma operação for definido como algo diferente de `Serializable`. Verifique se nenhuma operação está sendo executada com outros níveis de transação.

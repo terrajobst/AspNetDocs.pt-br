@@ -9,11 +9,11 @@ ms.assetid: fc98bde7-484a-4191-bba2-04d29551cb8f
 msc.legacyurl: ''
 msc.type: content
 ms.openlocfilehash: 10ee617ff5653bcc478364b7bea75bac4f4770f6
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59388849"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78564564"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Rede de Distribuição de Conteúdo do Microsoft Ajax
 
@@ -57,7 +57,7 @@ ms.locfileid: "59388849"
     - [jQuery UI 1.12.1 na CDN do Microsoft Ajax](jquery-ui/cdnjqueryui1121.md)
 - [Validar jQuery](jquery-validate/index.md)
 
-    - [jQuery Validation 1.17.0](jquery-validate/cdnjqueryvalidate1170.md)
+    - [1.17.0 de validação jQuery](jquery-validate/cdnjqueryvalidate1170.md)
     - [Validação do jQuery 1.16.0](jquery-validate/cdnjqueryvalidate1160.md)
     - [Validação do jQuery 1.15.1](jquery-validate/cdnjqueryvalidate1151.md)
     - [Validação do jQuery 1.15.0](jquery-validate/cdnjqueryvalidate1150.md)

@@ -9,11 +9,11 @@ ms.assetid: b381b1da-feb3-4776-bc1b-75db53eb90ab
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/uploading-files-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 4e3e32a829de386a681504c8d5d61dd258b8b2e6
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74581674"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548793"
 ---
 # <a name="uploading-files-c"></a>Carregar arquivos (C#)
 
@@ -151,7 +151,7 @@ Na terceira etapa, insira a seguinte consulta SQL e clique em Avançar:
 
 [!code-sql[Main](uploading-files-cs/samples/sample3.sql)]
 
-A última etapa é escolher o nome para o novo método. Use `FillCategoryWithBinaryDataByCategoryID` e `GetCategoryWithBinaryDataByCategoryID` para preencher uma DataTable e retornar os padrões de DataTable, respectivamente. Clique em Concluir para concluir o assistente.
+A última etapa é escolher o nome para o novo método. Use `FillCategoryWithBinaryDataByCategoryID` e `GetCategoryWithBinaryDataByCategoryID` para preencher uma DataTable e retornar os padrões de DataTable, respectivamente. Clique em Concluir para finalizar o assistente.
 
 [![escolher os nomes para os métodos TableAdapter s](uploading-files-cs/_static/image10.gif)](uploading-files-cs/_static/image15.png)
 
@@ -253,4 +253,4 @@ Para obter mais informações sobre os tópicos discutidos neste tutorial, consu
 Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial foram Teresa Murphy e Bernadette Leigh. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Avançar](displaying-binary-data-in-the-data-web-controls-cs.md)
+> [Próximo](displaying-binary-data-in-the-data-web-controls-cs.md)

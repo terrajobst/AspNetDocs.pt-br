@@ -9,11 +9,11 @@ ms.assetid: b83ab819-2b05-4776-b7b4-79ef78d457a5
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deployment-to-a-hosting-provider/deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12
 msc.type: authoredcontent
 ms.openlocfilehash: db838633accdedd7c0693b126a007e254ca681e4
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74627461"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568015"
 ---
 # <a name="deploying-an-aspnet-web-application-with-sql-server-compact-using-visual-studio-or-visual-web-developer-deploying-to-the-production-environment---7-of-12"></a>Implantando um aplicativo Web ASP.NET com o SQL Server Compact usando o Visual Studio ou o Visual Web Developer: implantando no ambiente de produção-7 de 12
 
@@ -25,7 +25,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Para ver um tutorial que mostra os recursos de implantação introduzidos após a versão RC do Visual Studio 2012, mostra como implantar SQL Server edições diferentes de SQL Server Compact e mostra como implantar o Azure App aplicativos Web do serviço, consulte [implantação da Web do ASP.NET usando o Visual Studio](../../deployment/visual-studio-web-deployment/introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Neste tutorial, você configura uma conta com um provedor de hospedagem e implanta seu aplicativo Web ASP.NET no ambiente de produção usando o recurso de publicação com um clique do Visual Studio.
 
@@ -99,7 +99,7 @@ Selecione a guia **publicação na Web** .
 
 ![Guia de publicação na Web do painel de controle](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image21.png)
 
-Crie credenciais a serem usadas para publicação na Web inserindo um nome de usuário e senha. Você pode inserir as mesmas credenciais que usa para fazer logon no painel de controle. Em seguida, clique em **habilitar**.
+Crie credenciais a serem usadas para publicação na Web inserindo um nome de usuário e senha. Você pode inserir as mesmas credenciais que usa para fazer logon no painel de controle. Em seguida, clique em **Habilitar**.
 
 ![Criar credenciais de publicação no painel de controle](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image22.png)
 
@@ -129,7 +129,7 @@ Ao clicar em validar conexão, você poderá ver uma caixa de diálogo de **erro
 
 ![Erro de certificado](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image27.png)
 
-Clique em **Avançar**.
+Clique em **Próximo**.
 
 Na seção **bancos de dados** da guia **configurações** , insira os mesmos valores que você inseriu para o perfil de publicação de teste. Você encontrará as cadeias de conexão necessárias nas listas suspensas.
 
@@ -140,7 +140,7 @@ Na seção **bancos de dados** da guia **configurações** , insira os mesmos va
 
 ![Guia de configurações do assistente publicar Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image28.png)
 
-Clique em **Avançar**.
+Clique em **Próximo**.
 
 Na guia **Visualização** , clique em **Iniciar visualização** para ver uma lista dos arquivos que serão copiados. Você verá a mesma lista que viu anteriormente ao implantar no IIS no computador local.
 
@@ -148,7 +148,7 @@ Antes de publicar, altere o nome do perfil para que o arquivo de transformação
 
 ![Assistente de publicação na Web gerenciar perfis](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image29.png)
 
-Na caixa de diálogo **Editar perfis de publicação na Web** , selecione o perfil de produção, clique em **renomear**e altere o nome do perfil para produção. Em seguida, clique em **fechar**.
+Na caixa de diálogo **Editar perfis de publicação na Web** , selecione o perfil de produção, clique em **renomear**e altere o nome do perfil para produção. Em seguida, clique em **Fechar**.
 
 ![Caixa de diálogo Editar perfis de publicação na Web](deployment-to-a-hosting-provider-deploying-to-the-production-environment-7-of-12/_static/image30.png)
 

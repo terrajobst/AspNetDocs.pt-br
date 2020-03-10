@@ -9,11 +9,11 @@ ms.assetid: c0090595-ab3b-4b9b-9e16-7a1891e8cb2f
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/troubleshooting
 msc.type: authoredcontent
 ms.openlocfilehash: b42476fca18b04f4557a216ee205cfd9220023e8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74623579"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78576093"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-troubleshooting"></a>Implantação da Web do ASP.NET usando o Visual Studio: solução de problemas
 
@@ -25,10 +25,10 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 Esta página descreve alguns problemas comuns que podem surgir quando você implanta um aplicativo Web ASP.NET usando o Visual Studio. Para cada uma, uma ou mais causas possíveis e as soluções correspondentes são fornecidas.
 
-Os cenários mostrados se aplicam ao Azure e a provedores de Hospedagem de terceiros. Para obter mais informações sobre como solucionar problemas de aplicativos Web no serviço Azure App, consulte os seguintes recursos:
+Os cenários mostrados se aplicam ao Azure e a provedores de Hospedagem de terceiros. Para saber mais sobre como solucionar problemas de aplicativos Web no Serviço de Aplicativo do Azure, confira os seguintes recursos:
 
 - [Solucionar problemas de um aplicativo Web no Serviço de Aplicativo do Azure usando o Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/)
-- [Monitorar aplicativos Web no serviço Azure App](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
+- [Monitorar aplicativos Web no Serviço de Aplicativo do Azure](https://azure.microsoft.com/documentation/articles/web-sites-monitor//)
 - [Anunciando o lançamento do SDK do Windows Azure 2,0 para .net](http://https://weblogs.asp.net/scottgu/announcing-the-release-of-windows-azure-sdk-2-0-for-net) (blog do ScottGu, mostra como obter logs de diagnóstico no Visual Studio)
 
 ## <a name="server-error-in--application---current-custom-error-settings-prevent-details-of-the-error-from-being-viewed-remotely"></a>Erro de servidor no aplicativo '/'-as configurações de erro personalizadas atuais impedem que os detalhes do erro sejam exibidos remotamente
@@ -48,7 +48,7 @@ Para permitir que o aplicativo exiba mensagens de erro detalhadas quando ele for
 1. Se o arquivo Web. config do aplicativo tiver um elemento customErrors no elemento System. Web, altere o atributo Mode para "off". Caso contrário, adicione um elemento customErrors no elemento System. Web com o atributo mode definido como "off", conforme mostrado no exemplo a seguir: 
 
     [!code-xml[Main](troubleshooting/samples/sample2.xml)]
-2. implantar o aplicativo.
+2. Implante o aplicativo.
 3. Execute o aplicativo e repita o que fez anteriormente, o que causou a ocorrência do erro. Agora você pode ver qual é a mensagem de erro real.
 4. Quando você tiver resolvido o erro, restaure a configuração original customErrors e reimplante o aplicativo.
 
@@ -172,7 +172,7 @@ Talvez você também precise definir manualmente a versão .NET Framework do poo
 
 Você atualizou a cadeia de conexão do arquivo *Web. config* para apontar para um banco de dados SQL Server Express como um arquivo *. MDF* em sua pasta de *\_de dados do aplicativo* e, na primeira vez que executar o aplicativo, você verá a seguinte mensagem de erro:
 
-System. Data. SqlClient. SqlException: não é possível abrir o banco de dados "DatabaseName" solicitado pelo logon. O logon falhou.
+System. Data. SqlClient. SqlException: não é possível abrir o banco de dados "DatabaseName" solicitado pelo logon. Falha no logon.
 
 ### <a name="possible-cause-and-solution"></a>Possível causa e solução
 

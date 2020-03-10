@@ -9,11 +9,11 @@ ms.assetid: 0fab5e35-8c1f-43d4-8635-b8aba8766a71
 msc.legacyurl: /signalr/overview/getting-started/introduction-to-signalr
 msc.type: authoredcontent
 ms.openlocfilehash: 8dbc31a5c8d59fa55dc5b513c1a51d24d18a685f
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519395"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78536431"
 ---
 # <a name="introduction-to-signalr"></a>Introdução ao SignalR
 
@@ -39,7 +39,7 @@ O signalr fornece uma API simples para criar chamadas de procedimento remoto (RP
 
 ![Invocando métodos com Signalr](introduction-to-signalr/_static/image1.png)
 
-O SignalR lida com o gerenciamento de conexões automaticamente e permite transmitir mensagens a todos os clientes conectados ao mesmo tempo, como uma sala de chat. Você também pode enviar mensagens para clientes específicos. A conexão entre o cliente e o servidor é persistente, diferente de uma conexão HTTP clássica, que é restabelecida para cada comunicação.
+O signalr lida automaticamente com o gerenciamento de conexões e permite que você transmita mensagens a todos os clientes conectados simultaneamente, como uma sala de bate-papo. Você também pode enviar mensagens para clientes específicos. A conexão entre o cliente e o servidor é persistente, ao contrário de uma conexão HTTP clássica, que é restabelecida para cada comunicação.
 
 O signalr dá suporte à funcionalidade de "push de servidor", na qual o código do servidor pode chamar o código do cliente no navegador usando RPC (chamadas de procedimento remoto), em vez do modelo de solicitação-resposta comum na Web hoje.
 
@@ -144,7 +144,7 @@ Uma conexão representa um ponto de extremidade simples para enviar mensagens de
 
 Um hub é um pipeline de nível mais alto criado com base na API de conexão que permite que o cliente e o servidor chamem métodos entre si diretamente. O signalr lida com a expedição entre limites de máquina como se fosse mágica, permitindo que os clientes chamem métodos no servidor tão facilmente quanto os métodos locais, e vice-versa. Usar o modelo de comunicação de hubs será familiar aos desenvolvedores que usaram APIs de invocação remota, como a comunicação remota do .NET. O uso de um hub também permite que você passe parâmetros fortemente tipados para métodos, habilitando a associação de modelo.
 
-### <a name="architecture-diagram"></a>Diagrama da arquitetura
+### <a name="architecture-diagram"></a>Diagrama de arquitetura
 
 O diagrama a seguir mostra a relação entre hubs, conexões persistentes e as tecnologias subjacentes usadas para transportes.
 

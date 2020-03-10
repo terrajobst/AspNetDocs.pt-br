@@ -9,11 +9,11 @@ ms.assetid: e1fec43e-1daf-49d2-b0c7-7f1b930455cc
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/dynamicpopulate/dynamically-populating-a-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 24f88e44e0f878127314774d4e8846f80133413e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599279"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78535801"
 ---
 # <a name="dynamically-populating-a-control-c"></a>Preenchimento dinâmico de um controle (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle DynamicPopulate no kit de ferramentas de controle AJAX ASP.NET chama um serviço Web (ou método de página) e preenche o valor resultante em um controle de destino na página, sem uma atualização de página.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle de `DynamicPopulate` no ASP.NET AJAX Control Toolkit chama um serviço Web (ou método de página) e preenche o valor resultante em um controle de destino na página, sem uma atualização de página. Este tutorial mostra como configurar isso.
 
@@ -69,4 +69,4 @@ Execute a página ASP.NET no navegador e clique no botão; Você receberá a dat
 Um clique no botão recupera a data do servidor ([clique para exibir a imagem em tamanho normal](dynamically-populating-a-control-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](dynamically-populating-a-control-using-javascript-code-cs.md)
+> [Próximo](dynamically-populating-a-control-using-javascript-code-cs.md)

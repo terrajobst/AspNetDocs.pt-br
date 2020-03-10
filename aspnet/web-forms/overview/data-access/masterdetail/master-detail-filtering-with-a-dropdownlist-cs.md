@@ -9,11 +9,11 @@ ms.assetid: 53e659cc-eefb-40c1-a1dc-559481c99443
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filtering-with-a-dropdownlist-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3ec549f9da7a2b3a021e77827f0039e6ae60b5c5
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74616064"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78528815"
 ---
 # <a name="masterdetail-filtering-with-a-dropdownlist-c"></a>Filtragem mestre/detalhes com uma DropDownList (C#)
 
@@ -143,4 +143,4 @@ Boa programação!
 [Scott Mitchell](http://www.4guysfromrolla.com/ScottMitchell.shtml), autor de sete livros sobre ASP/ASP. net e fundador da [4guysfromrolla.com](http://www.4guysfromrolla.com), tem trabalhado com tecnologias Web da Microsoft desde 1998. Scott trabalha como consultor, instrutor e escritor independentes. Seu livro mais recente é que a [*Sams ensina a ASP.NET 2,0 em 24 horas*](https://www.amazon.com/exec/obidos/ASIN/0672327384/4guysfromrollaco). Ele pode ser acessado em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com) ou por meio de seu blog, que pode ser encontrado em [http://ScottOnWriting.NET](http://ScottOnWriting.NET).
 
 > [!div class="step-by-step"]
-> [Avançar](master-detail-filtering-with-two-dropdownlists-cs.md)
+> [Próximo](master-detail-filtering-with-two-dropdownlists-cs.md)

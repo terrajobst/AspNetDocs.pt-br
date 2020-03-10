@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
-title: 'Laboratório prático: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js - ASP.NET 4.x'
+title: 'Laboratório prático: criar um aplicativo de página única (SPA) com ASP.NET Web API e angular. js-ASP.NET 4. x'
 author: rick-anderson
-description: 'Passo a passo de código: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js para o ASP.NET 4. x.'
+description: 'Código passo a passo: Crie um aplicativo de página única (SPA) com ASP.NET Web API e angular. js para ASP.NET 4. x.'
 ms.author: riande
 ms.date: 09/30/2015
 ms.custom: seoapril2019
@@ -10,68 +10,68 @@ ms.assetid: 719727b7-bef3-45ad-bfe9-ba5bcdb2305f
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
 msc.type: authoredcontent
 ms.openlocfilehash: 86833a890da759e489dd11dc9afb128a9b7a75e3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125252"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557039"
 ---
-# <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: Criar um SPA (aplicativo de página única) com o ASP.NET Web API e o Angular.js
+# <a name="hands-on-lab-build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs"></a>Laboratório prático: criar um aplicativo de página única (SPA) com ASP.NET Web API e angular. js
 
-por [Web Camps equipe](https://twitter.com/webcamps)
+por [equipe de acampamentos da Web](https://twitter.com/webcamps)
 
-[Baixe o Kit de treinamento do Web Camps](https://aka.ms/webcamps-training-kit)
+[Baixe o kit de treinamento do Web acampamentos](https://aka.ms/webcamps-training-kit)
 
-Este laboratório prático mostra como criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js para o ASP.NET 4. x.
+Este laboratório prático mostra como criar um aplicativo de página única (SPA) com ASP.NET Web API e angular. js para ASP.NET 4. x.
 
-Neste laboratório em mãos, você irá tirar proveito dessas tecnologias para implementar o nerd do teste, um site de desafio com base no conceito SPA. Primeiro, você implementará a camada de serviço com a API Web do ASP.NET para expor os pontos de extremidade necessários para recuperar as perguntas de teste e armazenar as respostas. Em seguida, você irá criar uma interface de usuário rica e responsiva usando efeitos de transformação do AngularJS e CSS3.
+Neste laboratório prático, você aproveitará essas tecnologias para implementar um teste de pau, um site Trívia com base no conceito de SPA. Primeiro, você implementará a camada de serviço com ASP.NET Web API para expor os pontos de extremidade necessários para recuperar as perguntas do teste e armazenar as respostas. Em seguida, você criará uma interface do usuário avançada e responsiva usando efeitos de transformação AngularJS e CSS3.
 
-Em aplicativos web tradicionais, o cliente (navegador) inicia a comunicação com o servidor, solicitando uma página. O servidor, em seguida, processa a solicitação e envia o HTML da página para o cliente. As interações subsequentes com a página – por exemplo, o usuário navega para um link ou envia um formulário com dados – uma nova solicitação é enviada ao servidor, e o fluxo será iniciado novamente: o servidor processa a solicitação e envia uma nova página para o navegador em resposta à nova solicitação de ação ED pelo cliente.
+Em aplicativos Web tradicionais, o cliente (navegador) inicia a comunicação com o servidor solicitando uma página. Em seguida, o servidor processa a solicitação e envia o HTML da página para o cliente. Em interações subsequentes com a página – por exemplo, o usuário navega para um link ou envia um formulário com dados – uma nova solicitação é enviada ao servidor e o fluxo é iniciado novamente: o servidor processa a solicitação e envia uma nova página para o navegador em resposta à nova solicitação de ação Ed pelo cliente.
 > 
-> Em aplicativos de única página (SPAs) toda a página é carregada no navegador após a solicitação inicial, mas as interações subsequentes ocorrem por meio de solicitações Ajax. Isso significa que o navegador é necessário atualizar somente a parte da página que foi alterado; Não há nenhuma necessidade de recarregar a página inteira. A abordagem SPA reduz o tempo gasto pelo aplicativo para responder às ações do usuário, resultando em uma experiência mais fluida.
+> Em aplicativos de página única (SPAs), a página inteira é carregada no navegador após a solicitação inicial, mas as interações subsequentes ocorrem por meio de solicitações Ajax. Isso significa que o navegador precisa atualizar apenas a parte da página que foi alterada; Não é necessário recarregar a página inteira. A abordagem SPA reduz o tempo gasto pelo aplicativo para responder às ações do usuário, resultando em uma experiência mais fluida.
 > 
-> A arquitetura de um SPA envolve determinados desafios que não estão presentes nos aplicativos web tradicionais. No entanto, tecnologias, como API Web ASP.NET emergentes, estruturas de JavaScript como AngularJS e novos recursos de estilo fornecidos pelo CSS3 facilitam realmente a design e criação de SPAs.
+> A arquitetura de um SPA envolve determinados desafios que não estão presentes em aplicativos Web tradicionais. No entanto, as tecnologias emergentes, como ASP.NET Web API, estruturas JavaScript como AngularJS e novos recursos de estilo fornecidos pelo CSS3 tornam muito fácil criar e criar SPAs.
 > 
 > 
-> Todo o código de exemplo e trechos de código são incluídos no Web Camps treinamento Kit, disponível em [ https://aka.ms/webcamps-training-kit ](https://aka.ms/webcamps-training-kit).
+> Todos os códigos de exemplo e trechos de código estão incluídos no kit de treinamento do acampamentos da Web, disponível em [https://aka.ms/webcamps-training-kit](https://aka.ms/webcamps-training-kit).
 
 ## <a name="overview"></a>Visão geral
 
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Objetivos
 
-Neste laboratório prático, você aprenderá como:
+Neste laboratório prático, você aprenderá a:
 
-- Crie um serviço de API Web ASP.NET para enviar e receber dados JSON
-- Criar uma interface de usuário responsiva, usando o AngularJS
-- Aprimorar a experiência de interface do usuário com transformações do CSS3
+- Criar um serviço de ASP.NET Web API para enviar e receber dados JSON
+- Criar uma interface do usuário responsiva usando AngularJS
+- Aprimore a experiência de interface do usuário com transformações de CSS3
 
 <a id="Prerequisites"></a>
 ### <a name="prerequisites"></a>Prerequisites
 
-O exemplo a seguir é necessário para concluir este laboratório prático:
+O seguinte é necessário para concluir este laboratório prático:
 
-- [O Visual Studio Express 2013 para Web](https://www.microsoft.com/visualstudio/) ou maior
+- [Visual Studio Express 2013 para Web](https://www.microsoft.com/visualstudio/) ou superior
 
 <a id="Setup"></a>
-### <a name="setup"></a>Configuração
+### <a name="setup"></a>Instalação
 
-Para executar os exercícios neste laboratório prático, você precisará configurar seu ambiente pela primeira vez.
+Para executar os exercícios neste laboratório prático, você precisará configurar seu ambiente primeiro...
 
-1. Abra o Windows Explorer e navegue para o laboratório **origem** pasta.
-2. Clique duas vezes em **Setup. cmd** e selecione **executar como administrador** para iniciar o processo de instalação que irá configurar seu ambiente e instalem os trechos de código do Visual Studio para este laboratório.
-3. Se a caixa de diálogo controle de conta de usuário for mostrada, confirme a ação para continuar.
+1. Abra o Windows Explorer e navegue até a pasta de **origem** do laboratório.
+2. Clique com o botão direito do mouse em **Setup. cmd** e selecione **Executar como administrador** para iniciar o processo de instalação que irá configurar seu ambiente e instalar os trechos de código do Visual Studio para este laboratório.
+3. Se a caixa de diálogo controle de conta de usuário for exibida, confirme a ação para continuar.
 
 > [!NOTE]
-> Verifique se que você tiver marcado todas as dependências para este laboratório antes de executar a instalação.
+> Verifique se você verificou todas as dependências deste laboratório antes de executar a instalação.
 
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando os trechos de código
 
-Em todo o documento de laboratório, você será instruído a inserir blocos de código. Para sua conveniência, a maioria desse código é fornecido como o Visual Studio trechos de código que pode ser acessada de dentro do Visual Studio 2013 para evitar ter que adicioná-lo manualmente.
+Em todo o documento do laboratório, você será instruído a inserir blocos de código. Para sua conveniência, a maior parte desse código é fornecida como trechos de Visual Studio Code, que podem ser acessados em Visual Studio 2013 para evitar a necessidade de adicioná-lo manualmente.
 
 > [!NOTE]
-> Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
+> Cada exercício é acompanhado por uma solução inicial localizada na pasta **begin** do exercício que permite que você siga cada exercício independentemente dos outros. Lembre-se de que os trechos de código que são adicionados durante um exercício estão ausentes dessas soluções iniciais e podem não funcionar até que você conclua o exercício. Dentro do código-fonte de um exercício, você também encontrará uma pasta **final** contendo uma solução do Visual Studio com o código que resulta da conclusão das etapas no exercício correspondente. Você pode usar essas soluções como diretrizes se precisar de ajuda adicional ao trabalhar com este laboratório prático.
 
 ---
 
@@ -80,367 +80,367 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 
 Este laboratório prático inclui os seguintes exercícios:
 
-1. [Criando uma API da Web](#Exercise1)
-2. [Criando uma Interface do SPA](#Exercise2)
+1. [Criando uma API Web](#Exercise1)
+2. [Criando uma interface SPA](#Exercise2)
 
 Tempo estimado para concluir este laboratório: **60 minutos**
 
 > [!NOTE]
-> Quando você inicia o Visual Studio pela primeira vez, você deve selecionar uma das coleções de configurações predefinidas. Cada coleção predefinida foi projetada para corresponder a um estilo de desenvolvimento específico e determina o comportamento do editor, layouts de janela, trechos de código IntelliSense e opções da caixa de diálogo. Os procedimentos neste laboratório descrevem as ações necessárias para realizar uma determinada tarefa no Visual Studio ao usar o **configurações gerais de desenvolvimento** coleção. Se você escolher uma coleção de configurações diferentes para seu ambiente de desenvolvimento, pode haver diferenças nas etapas que você deve levar em conta.
+> Ao iniciar o Visual Studio pela primeira vez, você deve selecionar uma das coleções de configurações predefinidas. Cada coleção predefinida é projetada para corresponder a um estilo de desenvolvimento específico e determina layouts de janela, comportamento do editor, trechos de código IntelliSense e opções da caixa de diálogo. Os procedimentos neste laboratório descrevem as ações necessárias para realizar uma determinada tarefa no Visual Studio ao usar a coleção de **configurações de desenvolvimento geral** . Se você escolher uma coleção de configurações diferentes para seu ambiente de desenvolvimento, poderá haver diferenças nas etapas que você deve levar em conta.
 
 <a id="Exercise1"></a>
-### <a name="exercise-1-creating-a-web-api"></a>Exercício 1: Criando uma API da Web
+### <a name="exercise-1-creating-a-web-api"></a>Exercício 1: criando uma API Web
 
-Uma das principais partes de um SPA é a camada de serviço. Ele é responsável por processar chamadas Ajax enviadas pela interface do usuário e os dados retornados em resposta a essa chamada. Os dados recuperados devem ser apresentados em um formato legível para ser analisado e consumido pelo cliente.
+Uma das principais partes de um SPA é a camada de serviço. Ele é responsável por processar as chamadas AJAX enviadas pela interface do usuário e retornar dados em resposta a essa chamada. Os dados recuperados devem ser apresentados em um formato legível por máquina para serem analisados e consumidos pelo cliente.
 
-A estrutura da API Web é parte da pilha do ASP.NET e é projetada para facilitar a implementar os serviços HTTP, geralmente, enviar e receber dados formatados em XML ou JSON por meio de uma API RESTful. Neste exercício, você criará o site da Web para hospedar o aplicativo do Geek Quiz e, em seguida, implementar o serviço de back-end para expor e persistir os dados de teste usando a API Web do ASP.NET.
+A estrutura da API Web faz parte da pilha ASP.NET e é projetada para facilitar a implementação de serviços HTTP, geralmente enviando e recebendo dados formatados em JSON ou XML por meio de uma API RESTful. Neste exercício, você criará o site para hospedar o aplicativo de teste de especialista e, em seguida, implementará o serviço de back-end para expor e manter os dados do teste usando ASP.NET Web API.
 
 <a id="Ex1Task1"></a>
-#### <a name="task-1--creating-the-initial-project-for-geek-quiz"></a>Tarefa 1 – criar o projeto inicial para Geek Quiz
+#### <a name="task-1--creating-the-initial-project-for-geek-quiz"></a>Tarefa 1 – criando o projeto inicial para o teste de pau
 
-Nesta tarefa você começará criando um novo projeto ASP.NET MVC com suporte para API Web ASP.NET com base nas **One ASP.NET** tipo que vem com o Visual Studio de projeto. **One ASP.NET** unifica todas as tecnologias do ASP.NET e lhe dá a opção de misturar e combiná-los conforme desejado. Em seguida, você irá adicionar classes de modelo do Entity Framework e o inicializador de banco de dados para inserir as perguntas de teste.
+Nesta tarefa, você começará a criar um novo projeto MVC do ASP.NET com suporte para ASP.NET Web API com base em um tipo de projeto **ASP.net** que vem com o Visual Studio. **Uma ASP.net** unifica todas as tecnologias de ASP.net e oferece a opção de misturar e CORRESP-las conforme desejado. Em seguida, você adicionará as classes de modelo do Entity Framework e o inicializador de banco de dados para inserir as perguntas do teste.
 
-1. Abra **Visual Studio Express 2013 para Web** e selecione **arquivo | Novo projeto...**  para iniciar uma nova solução.
+1. Abra **Visual Studio Express 2013 para Web** e selecione **arquivo | Novo projeto...** para iniciar uma nova solução.
 
-    ![Criar um novo projeto](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image1.png "criando um novo projeto")
+    ![Criando um novo projeto](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image1.png "Criando um novo projeto")
 
-    *Criar um novo projeto*
-2. No **novo projeto** caixa de diálogo, selecione **aplicativo Web ASP.NET** sob o **Visual c# | Web** guia. Certifique-se **.NET Framework 4.5** é selecionada, nomeie- *GeekQuiz*, escolha um **local** e clique em **Okey**.
+    *Criando um novo projeto*
+2. Na caixa de diálogo **novo projeto** , selecione **ASP.NET aplicativo Web** no **Visual C# | Guia da Web** . Verifique se **.NET Framework 4,5** está selecionado, nomeie-o *GeekQuiz*, escolha um **local** e clique em **OK**.
 
-    ![Criar um novo projeto de aplicativo Web ASP.NET](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image2.png "criando um novo projeto de aplicativo Web ASP.NET")
+    ![Criando um novo projeto de aplicativo Web ASP.NET](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image2.png "Criando um novo projeto de aplicativo Web ASP.NET")
 
-    *Criar um novo projeto de aplicativo Web ASP.NET*
-3. No **novo projeto ASP.NET** caixa de diálogo, selecione o **MVC** modelo e selecione o **API da Web** opção. Além disso, certifique-se de que o **autenticação** opção for definida como **contas de usuário individuais**. Clique em **OK** para continuar.
+    *Criando um novo projeto de aplicativo Web ASP.NET*
+3. Na caixa de diálogo **novo projeto ASP.net** , selecione o modelo **MVC** e selecione a opção **API Web** . Além disso, verifique se a opção de **autenticação** está definida para **contas de usuário individuais**. Clique em **OK** para continuar.
 
-    ![Criar um novo projeto com o modelo MVC, incluindo componentes de API da Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image3.png)
+    ![Criando um novo projeto com o modelo MVC, incluindo componentes da API Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image3.png)
 
-    *Criar um novo projeto com o modelo MVC, incluindo componentes de API da Web*
-4. No **Gerenciador de soluções**, clique com botão direito a **modelos** pasta da **GeekQuiz** do projeto e selecione **adicionar | Item existente...** .
+    *Criando um novo projeto com o modelo MVC, incluindo componentes da API Web*
+4. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta **modelos** do projeto **GeekQuiz** e selecione **Adicionar | Item existente...** .
 
-    ![Adicionando um item existente](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image4.png "adicionando um item existente")
+    ![Adicionando um item existente](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image4.png "Adicionando um item existente")
 
     *Adicionando um item existente*
-5. No **Adicionar Item existente** caixa de diálogo, navegue até a **modelos/de ativos de origem** pasta e selecione todos os arquivos. Clique em **Adicionar**.
+5. Na caixa de diálogo **Adicionar item existente** , navegue até a pasta **origem/ativos/modelos** e selecione todos os arquivos. Clique em **Adicionar**.
 
-    ![Adicionar os ativos de modelo](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image5.png "adicionando os ativos de modelo")
+    ![Adicionando os ativos do modelo](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image5.png "Adicionando os ativos do modelo")
 
-    *Adicionar os ativos de modelo*
+    *Adicionando os ativos do modelo*
 
     > [!NOTE]
-    > Ao adicionar esses arquivos, você está adicionando o modelo de dados, o contexto de banco de dados do Entity Framework e o inicializador de banco de dados para o aplicativo de teste "geek".
+    > Ao adicionar esses arquivos, você está adicionando o modelo de dados, o contexto de banco de dado do Entity Framework e o inicializador de banco de dados para o aplicativo de teste de especialista.
     > 
-    > **Entity Framework (EF)** é um mapeador relacional de objeto (ORM) que permite que você crie aplicativos de acesso de dados por meio da programação com um modelo de aplicativo conceitual em vez de programação diretamente usando um esquema de armazenamento relacional. Você pode aprender mais sobre o Entity Framework [aqui](../../../entity-framework.md).
+    > **Entity Framework (EF)** é um mapeador relacional de objeto (ORM) que permite que você crie aplicativos de acesso a dados programando com um modelo de aplicativo conceitual em vez de programar diretamente usando um esquema de armazenamento relacional. Você pode saber mais sobre Entity Framework [aqui](../../../entity-framework.md).
     > 
-    > A seguir está uma descrição das classes que você acabou de adicionar:
+    > Veja a seguir uma descrição das classes que você acabou de adicionar:
     > 
     > - **TriviaOption:** representa uma única opção associada a uma pergunta de teste
-    > - **TriviaQuestion:** representa uma pergunta de teste e expõe as opções associadas por meio de **opções** propriedade
+    > - **TriviaQuestion:** representa uma pergunta de teste e expõe as opções associadas por meio da propriedade **Options**
     > - **TriviaAnswer:** representa a opção selecionada pelo usuário em resposta a uma pergunta de teste
-    > - **TriviaContext:** representa o contexto de banco de dados do Entity Framework do aplicativo Geek do teste. Essa classe deriva **DContext** e expõe **DbSet** propriedades que representam coleções de entidades descritas acima.
-    > - **TriviaDatabaseInitializer:** a implementação do inicializador do Entity Framework para o **TriviaContext** classe que herda de **CreateDatabaseIfNotExists**. O comportamento padrão dessa classe é criar o banco de dados somente se ele não existir, a inserção de entidades especificado na **semente** método.
-6. Abra o **Global.asax.cs** de arquivo e adicione a seguinte instrução using.
+    > - **TriviaContext:** representa o contexto de banco de dados do Entity Framework do aplicativo de teste de especialista. Essa classe deriva de **DContext** e expõe as propriedades **DbSet** que representam as coleções das entidades descritas acima.
+    > - **TriviaDatabaseInitializer:** a implementação do inicializador de Entity Framework para a classe **TriviaContext** que herda de **CreateDatabaseIfNotExists**. O comportamento padrão dessa classe é criar o banco de dados somente se ele não existir, inserindo as entidades especificadas no método **semente** .
+6. Abra o arquivo **global.asax.cs** e adicione a instrução using a seguir.
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample1.cs)]
-7. Adicione o seguinte código no início do **Application\_começar** método para definir a **TriviaDatabaseInitializer** do inicializador de banco de dados.
+7. Adicione o seguinte código no início do **aplicativo\_** método de início para definir o **TriviaDatabaseInitializer** como inicializador de banco de dados.
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample2.cs)]
-8. Modificar a **Home** controlador para restringir o acesso a usuários autenticados. Para fazer isso, abra o **HomeController.cs** dentro do arquivo a **controladores** pasta e adicione o **autorizar** atributo para o **HomeController**definição de classe.
+8. Modifique o controlador **inicial** para restringir o acesso a usuários autenticados. Para fazer isso, abra o arquivo **HomeController.cs** dentro da pasta **controladores** e adicione o atributo **autorizar** à definição de classe **HomeController** .
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample3.cs)]
 
     > [!NOTE]
-    > O **autorizar** filtrar verifica se o usuário é autenticado. Se o usuário não é autenticado, ele retorna o código de status HTTP 401 (não autorizado) sem invocar a ação. Você pode aplicar o filtro globalmente, no nível do controlador ou no nível de ações individuais.
-9. Agora você irá personalizar o layout de páginas da web e a identidade visual. Para fazer isso, abra o  **\_layout. cshtml** dentro do arquivo a **exibições | Compartilhado** pasta e atualizar o conteúdo do **&lt;título&gt;** elemento, substituindo *meu aplicativo ASP.NET* com *Geek Quiz* .
+    > O filtro **autorizar** verifica se o usuário está autenticado. Se o usuário não for autenticado, ele retornará o código de status HTTP 401 (não autorizado) sem invocar a ação. Você pode aplicar o filtro globalmente, no nível do controlador ou no nível de ações individuais.
+9. Agora, você personalizará o layout das páginas da Web e da identidade visual. Para fazer isso, abra o arquivo **\_layout. cshtml** dentro dos **modos de exibição | Pasta compartilhada** e atualize o conteúdo do elemento **&lt;title&gt;** substituindo *meu aplicativo ASP.net* por *especialista em pau*.
 
     [!code-cshtml[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample4.cshtml)]
-10. No mesmo arquivo, atualizar a barra de navegação, removendo o *sobre* e *entre em contato com* links e renomear o *página inicial* vincular ao *reproduzir*. Além disso, renomeie o *nome do aplicativo* vincular ao *Geek Quiz*. O HTML para a barra de navegação deve parecer com o código a seguir.
+10. No mesmo arquivo, atualize a barra de navegação removendo os links *about* e *Contact* e renomeando o link *Home* para *reproduzir*. Além disso, renomeie o link do *nome do aplicativo* para *teste de especialista*. O HTML da barra de navegação deve ser semelhante ao código a seguir.
 
     [!code-cshtml[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample5.cshtml)]
-11. Atualize o rodapé da página de layout, substituindo *meu aplicativo ASP.NET* com *Geek Quiz*. Para fazer isso, substitua o conteúdo a **&lt;rodapé&gt;** elemento com o seguinte código realçado.
+11. Atualize o rodapé da página de layout substituindo *meu aplicativo ASP.net* por *especialista em pau*. Para fazer isso, substitua o conteúdo do elemento **&lt;footer&gt;** pelo código realçado a seguir.
 
     [!code-html[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample6.html)]
 
 <a id="Ex1Task2"></a>
-#### <a name="task-2--creating-the-triviacontroller-web-api"></a>Tarefa 2 – criar a API da Web TriviaController
+#### <a name="task-2--creating-the-triviacontroller-web-api"></a>Tarefa 2 – Criando a API Web TriviaController
 
-Na tarefa anterior, você criou a estrutura inicial do aplicativo web Geek do teste. Agora, você criará um serviço de API da Web simples que interage com o modelo de dados de teste e expõe as seguintes ações:
+Na tarefa anterior, você criou a estrutura inicial do aplicativo Web de teste de especialista. Agora, você criará um serviço de API Web simples que interage com o modelo de dados de teste e expõe as seguintes ações:
 
-- **GET/api/desafios**: Recupera a próxima pergunta na lista de teste a serem respondidas pelo usuário autenticado.
-- **POST/api/desafios**: Armazena a resposta de teste especificada pelo usuário autenticado.
+- **Get/API/Trivia**: recupera a próxima pergunta da lista de testes a ser respondida pelo usuário autenticado.
+- **Post/API/Trivia**: armazena a resposta do teste especificada pelo usuário autenticado.
 
-Você usará as ferramentas de Scaffolding do ASP.NET fornecidas pelo Visual Studio para criar a linha de base para a classe de controlador de API da Web.
+Você usará as ferramentas do ASP.NET scaffolding fornecidas pelo Visual Studio para criar a linha de base para a classe do controlador da API Web.
 
-1. Abra o **WebApiConfig.cs** dentro do arquivo a **App\_iniciar** pasta. Esse arquivo define a configuração do serviço de API da Web, semelhante a como as rotas são mapeadas para ações do controlador de API da Web.
+1. Abra o arquivo **WebApiConfig.cs** dentro do **aplicativo\_pasta inicial** . Esse arquivo define a configuração do serviço de API Web, como as rotas são mapeadas para as ações do controlador da API Web.
 2. Adicione a seguinte instrução using no início do arquivo.
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample7.cs)]
-3. Adicione o seguinte código realçado para o **registrar** método para definir globalmente o formatador para os dados JSON recuperados pelos métodos de ação de API da Web.
+3. Adicione o seguinte código realçado ao método **Register** para configurar globalmente o formatador para os dados JSON recuperados pelos métodos de ação da API Web.
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample8.cs)]
 
     > [!NOTE]
-    > O **CamelCasePropertyNamesContractResolver** converte automaticamente os nomes de propriedade *camel* caso, que é a convenção geral para nomes de propriedade em JavaScript.
-4. No **Gerenciador de soluções**, clique com botão direito o **controladores** pasta do **GeekQuiz** do projeto e selecione **adicionar | Novo Item com Scaffold...** .
+    > O **CamelCasePropertyNamesContractResolver** converte automaticamente os nomes de propriedade em *Camel* Case, que é a Convenção geral para nomes de propriedade em JavaScript.
+4. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta **controladores** do projeto **GeekQuiz** e selecione **Adicionar | Novo item de com Scaffold...**
 
-    ![Criando um novo item com Scaffold](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image6.png "criando um novo item com Scaffold")
+    ![Criando um novo item com Scaffold](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image6.png "Criando um novo item com Scaffold")
 
     *Criando um novo item com Scaffold*
-5. No **adicionar Scaffold** diálogo caixa, certifique-se de que o **comum** nó é selecionado no painel esquerdo. Em seguida, selecione a **controlador Web API 2 - vazio** modelo no painel central e clique **Add**.
+5. Na caixa de diálogo **Adicionar Scaffold** , verifique se o nó **comum** está selecionado no painel esquerdo. Em seguida, selecione o modelo **controlador da API Web 2 – vazio** no painel central e clique em **Adicionar**.
 
-    ![Selecionando o modelo Web API 2 Controller vazio](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image7.png "selecionando o modelo Web API 2 Controller vazio")
+    ![Selecionando o modelo vazio do controlador da API Web 2](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image7.png "Selecionando o modelo vazio do controlador da API Web 2")
 
-    *Selecionando o modelo Web API 2 Controller vazio*
+    *Selecionando o modelo vazio do controlador da API Web 2*
 
     > [!NOTE]
-    > **Scaffolding do ASP.NET** é uma estrutura de geração de código para aplicativos Web do ASP.NET. Visual Studio 2013 inclui geradores de código previamente instalados para projetos MVC e API da Web. Você deve usar o scaffolding em seu projeto quando você deseja adicionar rapidamente o código que interage com os modelos de dados para reduzir a quantidade de tempo necessário para desenvolver as operações de dados padrão.
+    > **ASP.net scaffolding** é uma estrutura de geração de código para aplicativos ASP.NET Web. Visual Studio 2013 inclui geradores de código pré-instalados para projetos MVC e de API Web. Você deve usar o scaffolding em seu projeto quando desejar adicionar rapidamente o código que interage com modelos de dados para reduzir a quantidade de tempo necessária para desenvolver operações de dados padrão.
     > 
-    > O processo de scaffolding também garante que todas as dependências necessárias são instaladas no projeto. Por exemplo, se você iniciar com um projeto ASP.NET vazio e, em seguida, utilizar o scaffolding para adicionar um controlador de API da Web, os pacotes do NuGet da API Web necessários e as referências são adicionadas ao seu projeto automaticamente.
-6. No **Adicionar controlador** caixa de diálogo, digite *TriviaController* no **nome do controlador** caixa de texto e clique em **adicionar**.
+    > O processo scaffolding também garante que todas as dependências necessárias sejam instaladas no projeto. Por exemplo, se você começar com um projeto ASP.NET vazio e, em seguida, usar scaffolding para adicionar um controlador de API Web, os pacotes e as referências do NuGet da API Web necessários serão adicionados ao seu projeto automaticamente.
+6. Na caixa de diálogo **Adicionar controlador** , digite *TriviaController* na caixa de texto **nome do controlador** e clique em **Adicionar**.
 
-    ![Adicionando o controlador de desafios](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image8.png "adicionando o controlador de desafios")
+    ![Adicionando o controlador Trívia](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image8.png "Adicionando o controlador Trívia")
 
-    *Adicionando o controlador de desafios*
-7. O **TriviaController.cs** arquivo, em seguida, é adicionado à **controladores** pasta dos **GeekQuiz** projeto que contém um vazio **TriviaController** classe. Adicione o seguinte usando instruções no início do arquivo.
+    *Adicionando o controlador Trívia*
+7. O arquivo **TriviaController.cs** é então adicionado à pasta **controladores** do projeto **GeekQuiz** , que contém uma classe **TriviaController** vazia. Adicione as seguintes instruções using no início do arquivo.
 
-    (Código de trecho de código – *TriviaControllerUsings AspNetWebApiSpa - Ex1 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX1-TriviaControllerUsings*)
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample9.cs)]
-8. Adicione o seguinte código no início do **TriviaController** classe para definir, inicializar e descartar os **TriviaContext** instância no controlador.
+8. Adicione o seguinte código no início da classe **TriviaController** para definir, inicializar e descartar a instância **TriviaContext** no controlador.
 
-    (Código de trecho de código – *TriviaControllerContext AspNetWebApiSpa - Ex1 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX1-TriviaControllerContext*)
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample10.cs)]
 
     > [!NOTE]
-    > O **Dispose** método de **TriviaController** invoca o **Dispose** o método da **TriviaContext** instância, o que garante que todos os os recursos usados pelo objeto de contexto são liberados quando a **TriviaContext** instância é descartada ou jogada fora. Isso inclui o fechamento de todas as conexões de banco de dados abertas pelo Entity Framework.
-9. Adicione o seguinte método auxiliar no final de **TriviaController** classe. Esse método recupera as seguintes perguntas de teste do banco de dados a serem respondidas pelo usuário especificado.
+    > O método **Dispose** de **TriviaController** invoca o método **Dispose** da instância **TriviaContext** , que garante que todos os recursos usados pelo objeto Context sejam liberados quando a instância **TriviaContext** for descartada ou coletada como lixo. Isso inclui fechar todas as conexões de banco de dados abertas pelo Entity Framework.
+9. Adicione o seguinte método auxiliar ao final da classe **TriviaController** . Esse método recupera a seguinte pergunta do teste do banco de dados a ser respondida pelo usuário especificado.
 
-    (Código de trecho de código – *TriviaControllerNextQuestion AspNetWebApiSpa - Ex1 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX1-TriviaControllerNextQuestion*)
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample11.cs)]
-10. Adicione o seguinte **Obtenha** método de ação para o **TriviaController** classe. Esse método de ação chama o **NextQuestionAsync** método auxiliar definido na etapa anterior para recuperar a próxima pergunta para o usuário autenticado.
+10. Adicione o seguinte método **Get** Action à classe **TriviaController** . Esse método de ação chama o método auxiliar **NextQuestionAsync** definido na etapa anterior para recuperar a próxima pergunta para o usuário autenticado.
 
-    (Código de trecho de código – *TriviaControllerGetAction AspNetWebApiSpa - Ex1 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX1-TriviaControllerGetAction*)
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample12.cs)]
-11. Adicione o seguinte método auxiliar no final de **TriviaController** classe. Este método armazena a resposta especificada no banco de dados e retorna um valor booliano que indica se a resposta está correta.
+11. Adicione o seguinte método auxiliar ao final da classe **TriviaController** . Esse método armazena a resposta especificada no banco de dados e retorna um valor booliano que indica se a resposta está correta ou não.
 
-    (Código de trecho de código – *TriviaControllerStoreAsync AspNetWebApiSpa - Ex1 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX1-TriviaControllerStoreAsync*)
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample13.cs)]
-12. Adicione o seguinte **Post** método de ação para o **TriviaController** classe. Esse método de ação associa a resposta para o usuário autenticado e chama o **StoreAsync** método auxiliar. Em seguida, ele envia uma resposta com o valor booliano retornado pelo método auxiliar.
+12. Adicione o seguinte método de ação **post** à classe **TriviaController** . Esse método de ação associa a resposta ao usuário autenticado e chama o método auxiliar **StoreAsync** . Em seguida, ele envia uma resposta com o valor booliano retornado pelo método auxiliar.
 
-    (Código de trecho de código – *TriviaControllerPostAction AspNetWebApiSpa - Ex1 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX1-TriviaControllerPostAction*)
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample14.cs)]
-13. Modificar o controlador de API da Web para restringir o acesso a usuários autenticados, adicionando a **Authorize** atributo para o **TriviaController** definição de classe.
+13. Modifique o controlador da API Web para restringir o acesso a usuários autenticados adicionando o atributo **Authorize** à definição de classe **TriviaController** .
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample15.cs)]
 
 <a id="Ex1Task3"></a>
-#### <a name="task-3--running-the-solution"></a>Tarefa 3 – executar a solução
+#### <a name="task-3--running-the-solution"></a>Tarefa 3 – executando a solução
 
-Nesta tarefa, você verificará se o serviço de API da Web que você criou na tarefa anterior está funcionando conforme o esperado. Você usará o Internet Explorer **ferramentas de desenvolvedor F12** para capturar o tráfego de rede e inspecione a resposta completa do serviço de API da Web.
+Nesta tarefa, você verificará se o serviço de API Web criado na tarefa anterior está funcionando conforme o esperado. Você usará o Ferramentas para Desenvolvedores de **F12** do Internet Explorer para capturar o tráfego de rede e inspecionar a resposta completa do serviço de API Web.
 
 > [!NOTE]
-> Certifique-se de que **Internet Explorer** está selecionado na **iniciar** botão localizado na barra de ferramentas do Visual Studio.
+> Verifique se o **Internet Explorer** está selecionado no botão **Iniciar** localizado na barra de ferramentas do Visual Studio.
 > 
 > ![Opção do Internet Explorer](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image9.png)
 
-1. Pressione **F5** para executar a solução. O **faça logon no** página deve ser exibida no navegador.
+1. Pressione **F5** para executar a solução. A página de **logon** deve aparecer no navegador.
 
     > [!NOTE]
-    > Quando o aplicativo é iniciado, a rota do padrão MVC é disparada, o que, por padrão é mapeado para o **índice** ação da **HomeController** classe. Uma vez que **HomeController** é restrito a usuários autenticados (Lembre-se de que você decorado que dessa classe com o **autorizar** atributo no Exercício 1) e não há nenhum usuário autenticado ao mesmo tempo, o aplicativo Redireciona a solicitação original para a página de logon.
+    > Quando o aplicativo é iniciado, a rota padrão do MVC é disparada, que por padrão é mapeada para a ação de **índice** da classe **HomeController** . Como o **HomeController** é restrito a usuários autenticados (Lembre-se de que você decorau essa classe com o atributo **Authorize** no exercício 1) e não há nenhum usuário autenticado ainda, o aplicativo redireciona a solicitação original para a página de logon.
 
-    ![Executar a solução](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image10.png "executar a solução")
+    ![Executando a solução](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image10.png "Executando a solução")
 
-    *Executar a solução*
+    *Executando a solução*
 2. Clique em **registrar** para criar um novo usuário.
 
-    ![Registrar um novo usuário](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image11.png "registrar um novo usuário")
+    ![Registrando um novo usuário](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image11.png "Registrando um novo usuário")
 
-    *Registrar um novo usuário*
-3. No **registre** , insira um **nome de usuário** e **senha**e, em seguida, clique em **registrar**.
+    *Registrando um novo usuário*
+3. Na página **registrar** , insira um **nome de usuário** e **senha**e, em seguida, clique em **registrar**.
 
-    ![Página registrar](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image12.png "página de registro")
+    ![Página de registro](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image12.png "Página de registro")
 
     *Página de registro*
-4. O aplicativo registra a nova conta e o usuário é autenticado e redirecionado de volta para a home page.
+4. O aplicativo registra a nova conta e o usuário é autenticado e Redirecionado de volta para a home page.
 
-    ![Usuário é autenticado](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image13.png "usuário autenticado")
+    ![O usuário está autenticado](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image13.png "Usuário autenticado")
 
-    *Autenticação do usuário*
-5. No navegador, pressione **F12** para abrir o **ferramentas de desenvolvedor** painel. Pressione **CTRL + 4** ou clique no **rede** ícone e, em seguida, clique botão de seta verde para começar a capturar o tráfego de rede.
+    *O usuário está autenticado*
+5. No navegador, pressione **F12** para abrir o painel de **ferramentas para desenvolvedores** . Pressione **Ctrl + 4** ou clique no ícone de **rede** e, em seguida, clique no botão de seta verde para começar a capturar o tráfego de rede.
 
-    ![Iniciando captura de rede da API Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image14.png "captura de rede iniciando a API da Web")
+    ![Iniciando a captura de rede da API Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image14.png "Iniciando a captura de rede da API Web")
 
-    *Iniciando captura de rede de API da Web*
-6. Acrescente **api/desafios** para a URL na barra de endereços do navegador. Agora, você inspecionará os detalhes da resposta do **Obtenha** método de ação **TriviaController**.
+    *Iniciando a captura de rede da API Web*
+6. Acrescente **API/Trívia** à URL na barra de endereços do navegador. Agora, você inspecionará os detalhes da resposta do método **Get** Action em **TriviaController**.
 
-    ![Recuperando os próxima pergunta que os dados por meio da API Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image15.png "recuperar os dados da próxima pergunta por meio da API da Web")
+    ![Recuperando os dados da próxima pergunta por meio da API da Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image15.png "Recuperando os dados da próxima pergunta por meio da API da Web")
 
-    *Recuperando os próxima pergunta que os dados por meio da API da Web*
+    *Recuperando os dados da próxima pergunta por meio da API da Web*
 
     > [!NOTE]
-    > Quando o download for concluído, você precisará fazer uma ação com o arquivo baixado. Deixe a caixa de diálogo aberta para que seja possível assistir o conteúdo da resposta por meio da janela de ferramenta de desenvolvedores.
-7. Agora você irá inspecionar o corpo da resposta. Para fazer isso, clique o **detalhes** guia e, em seguida, clique em **corpo da resposta**. Você pode verificar que os dados baixados são um objeto com as propriedades **opções** (que é uma lista de **TriviaOption** objetos), **id** e **título** que correspondam ao **TriviaQuestion** classe.
+    > Quando o download for concluído, você será solicitado a fazer uma ação com o arquivo baixado. Deixe a caixa de diálogo aberta para poder assistir ao conteúdo da resposta por meio da janela de ferramentas de desenvolvedores.
+7. Agora, você inspecionará o corpo da resposta. Para fazer isso, clique na guia **detalhes** e, em seguida, clique em **corpo da resposta**. Você pode verificar se os dados baixados são um objeto com as **Opções** de Propriedades (que é uma lista de objetos **TriviaOption** ), **ID** e **título** que correspondem à classe **TriviaQuestion** .
 
-    ![Exibindo o corpo de resposta da API Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image16.png "exibindo o corpo de resposta da API da Web")
+    ![Exibindo o corpo da resposta da API Web](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image16.png "Exibindo o corpo da resposta da API Web")
 
-    *Corpo de resposta da API da Web exibindo*
-8. Volte para o Visual Studio e pressione **SHIFT + F5** para parar a depuração.
+    *Exibindo o corpo da resposta da API Web*
+8. Volte para o Visual Studio e pressione **Shift + F5** para parar a depuração.
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-creating-the-spa-interface"></a>Exercício 2: Criando a Interface do SPA
+### <a name="exercise-2-creating-the-spa-interface"></a>Exercício 2: criando a interface SPA
 
-Neste exercício primeiro você criará a parte de front-end da web do Geek Quiz, concentrando-se no aplicativo de página única interação usando **AngularJS**. Em seguida, você será aprimorar a experiência do usuário com o CSS3 para executar animações avançadas e fornecer um efeito visual de alternância quando a transição de uma pergunta para a próxima de contexto.
+Neste exercício, você primeiro criará a parte de front-end da Web do teste de especialista, concentrando-se na interação do aplicativo de página única usando **AngularJS**. Em seguida, você aprimorará a experiência do usuário com o CSS3 para executar animações avançadas e fornecer um efeito visual de alternância de contexto ao fazer a transição de uma pergunta para a próxima.
 
 <a id="Ex2Task1"></a>
-#### <a name="task-1--creating-the-spa-interface-using-angularjs"></a>Tarefa 1 – criar a Interface do SPA usando o AngularJS
+#### <a name="task-1--creating-the-spa-interface-using-angularjs"></a>Tarefa 1 – criando a interface SPA usando AngularJS
 
-Essa tarefa, você usará **AngularJS** para implementar o lado do cliente do aplicativo Geek do teste. **AngularJS** é uma estrutura de JavaScript de código-fonte aberto que aumenta a aplicativos baseados em navegador com *Model-View-Controller* capacidade (MVC), facilitando tanto de desenvolvimento e teste.
+Nesta tarefa, você usará o **AngularJS** para implementar o lado do cliente do aplicativo de teste de especialista. O **AngularJS** é uma estrutura JavaScript de software livre que aumenta os aplicativos baseados em navegador com o recurso MVC ( *Model-View-Controller* ), facilitando o desenvolvimento e os testes.
 
-Você irá iniciar instalando AngularJS por meio do Console do Gerenciador de pacotes do Visual Studio. Em seguida, você criará o controlador para fornecer o comportamento do aplicativo Geek de teste e o modo de exibição para renderizar as perguntas de teste e respostas usando o mecanismo de modelo do AngularJS.
+Você começará instalando o AngularJS no console do Gerenciador de pacotes do Visual Studio. Em seguida, você criará o controlador para fornecer o comportamento do aplicativo de teste de especialista e a exibição para renderizar as perguntas e respostas do teste usando o mecanismo de modelo AngularJS.
 
 > [!NOTE]
-> Para obter mais informações sobre como AngularJS, consulte [ [ http://angularjs.org/ ](http://angularjs.org/) ](http://angularjs.org/).
+> Para obter mais informações sobre o AngularJS, consulte [[http://angularjs.org/](http://angularjs.org/)](http://angularjs.org/).
 
-1. Abra **Visual Studio Express 2013 para Web** e abra o **GeekQuiz.sln** solução localizada no **origem/o Ex2-CreatingASPAInterface/início** pasta. Como alternativa, você pode continuar com a solução que você obteve no exercício anterior.
-2. Abra o **Package Manager Console** de **ferramentas** > **NuGet Package Manager**. Digite o seguinte comando para instalar o **AngularJS.Core** pacote do NuGet.
+1. Abra **Visual Studio Express 2013 para Web** e abra a solução **GeekQuiz. sln** localizada na pasta **Source/EX2-CreatingASPAInterface/Begin** . Como alternativa, você pode continuar com a solução que você obteve no exercício anterior.
+2. Abra o **console do Gerenciador de pacotes** em **ferramentas** > **Gerenciador de pacotes NuGet**. Digite o seguinte comando para instalar o pacote do NuGet **. Core do AngularJS** .
 
     [!code-powershell[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample16.ps1)]
-3. No **Gerenciador de soluções**, com o botão direito do **Scripts** pasta do **GeekQuiz** do projeto e selecione **adicionar | Nova pasta**. Nomeie a pasta **app** e pressione **Enter**.
-4. Clique com botão direito do **app** pasta que você acabou de criar e selecione **adicionar | Arquivo JavaScript**.
+3. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta **scripts** do projeto **GeekQuiz** e selecione **Adicionar | Nova pasta**. Nomeie o **aplicativo** de pasta e pressione **Enter**.
+4. Clique com o botão direito do mouse na pasta do **aplicativo** que você acabou de criar e selecione **Adicionar | Arquivo JavaScript**.
 
     ![Criando um novo arquivo JavaScript](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image17.png)
 
     *Criando um novo arquivo JavaScript*
-5. No **especificar nome para o Item** caixa de diálogo, digite *controlador de teste* no **nome do Item** caixa de texto e clique em **Okey**.
+5. Na caixa de diálogo **especificar nome para o item** , *digite teste-controlador* na caixa de texto **nome do item** e clique em **OK**.
 
-    ![Nomear o novo arquivo JavaScript](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image18.png)
+    ![Nomeando o novo arquivo JavaScript](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image18.png)
 
-    *Nomear o novo arquivo JavaScript*
-6. No **teste controller.js** do arquivo, adicione o seguinte código para declarar e inicializar o AngularJS **QuizCtrl** controlador.
+    *Nomeando o novo arquivo JavaScript*
+6. No arquivo **quiz-Controller. js** , adicione o código a seguir para declarar e inicializar o controlador de **QuizCtrl** AngularJS.
 
-    (Código de trecho de código – *AngularQuizController AspNetWebApiSpa - o Ex2 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX2-AngularQuizController*)
 
     [!code-javascript[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample17.js)]
 
     > [!NOTE]
-    > Função do construtor de **QuizCtrl** controlador espera um parâmetro injectable chamado **$scope**. O estado inicial do escopo deve ser configurado na função de construtor, anexando propriedades para o **$scope** objeto. As propriedades contêm o **modelo de exibição**e poderá ser acessado no modelo quando o controlador é registrado.
+    > A função de construtor do controlador **QuizCtrl** espera um parâmetro injetado chamado **$Scope**. O estado inicial do escopo deve ser configurado na função do Construtor anexando Propriedades ao objeto **$Scope** . As propriedades contêm o **modelo de exibição**e estarão acessíveis ao modelo quando o controlador for registrado.
     > 
-    > O **QuizCtrl** controlador é definido dentro de um módulo chamado **QuizApp**. Os módulos são unidades de trabalho que permitem a você dividir seu aplicativo em componentes separados. As principais vantagens do uso de módulos é que o código é mais fácil de entender e facilita os testes de unidade, a capacidade de reutilização e a facilidade de manutenção.
-7. Agora você irá adicionar comportamento para o escopo para reagir a eventos disparados do modo de exibição. Adicione o seguinte código no final do **QuizCtrl** controlador para definir o **nextQuestion** funcionar a **$scope** objeto.
+    > O controlador **QuizCtrl** é definido dentro de um módulo chamado **QuizApp**. Os módulos são unidades de trabalho que permitem dividir seu aplicativo em componentes separados. As principais vantagens de usar os módulos é que o código é mais fácil de entender e facilita o teste de unidade, reusabilidade e capacidade de manutenção.
+7. Agora, você adicionará o comportamento ao escopo para reagir a eventos disparados a partir da exibição. Adicione o seguinte código ao final do controlador **QuizCtrl** para definir a função **nextQuestion** no objeto **$Scope** .
 
-    (Código de trecho de código – *AngularQuizControllerNextQuestion AspNetWebApiSpa - o Ex2 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX2-AngularQuizControllerNextQuestion*)
 
     [!code-javascript[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample18.js)]
 
     > [!NOTE]
-    > Essa função recupera a próxima pergunta do **Trívia** API da Web criado no exercício anterior e anexa os pergunta que os dados para o **$scope** objeto.
-8. Insira o seguinte código no final dos **QuizCtrl** controlador para definir o **sendAnswer** funcionar no **$scope** objeto.
+    > Essa função recupera a próxima pergunta da API Web **Trívia** criada no exercício anterior e anexa os dados da pergunta ao objeto **$Scope** .
+8. Insira o código a seguir no final do controlador **QuizCtrl** para definir a função **sendAnswer** no objeto **$Scope** .
 
-    (Código de trecho de código – *AngularQuizControllerSendAnswer AspNetWebApiSpa - o Ex2 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX2-AngularQuizControllerSendAnswer*)
 
     [!code-javascript[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample19.js)]
 
     > [!NOTE]
-    > Essa função envia a resposta selecionada pelo usuário para o **Trívia** API Web e armazena o resultado – por exemplo, se a resposta estiver correta ou não – na **$scope** objeto.
+    > Essa função envia a resposta selecionada pelo usuário para a API Web **Trívia** e armazena o resultado – ou seja, se a resposta estiver correta ou não, no objeto **$Scope** .
     > 
-    > O **nextQuestion** e **sendAnswer** funções acima usam o AngularJS **$http** objeto abstrair a comunicação com a API da Web via XMLHttpRequest Objeto de JavaScript do navegador. AngularJS oferece suporte a outro serviço que traz um nível mais alto de abstração para executar operações CRUD em relação a um recurso por meio de APIs RESTful. O AngularJS **$resource** objeto tem métodos de ação que fornecem os comportamentos de alto nível sem a necessidade de interagir com o **$http** objeto. Considere o uso de **$resource** objeto em cenários que requer o modelo CRUD (para obter informações, consulte o [$resource documentação](https://docs.angularjs.org/api/ngResource/service/$resource)).
-9. A próxima etapa é criar o modelo de AngularJS que define o modo de exibição para o teste. Para fazer isso, abra o **index. cshtml** dentro do arquivo a **exibições | Página inicial** pasta e substitua o conteúdo pelo código a seguir.
+    > As funções **nextQuestion** e **sendAnswer** acima usam o objeto de **$http** AngularJS para abstrair a comunicação com a API da Web por meio do objeto JavaScript XMLHttpRequest do navegador. O AngularJS dá suporte a outro serviço que leva um nível mais alto de abstração para executar operações CRUD em um recurso por meio de APIs RESTful. O objeto **$Resource** AngularJS tem métodos de ação que fornecem comportamentos de alto nível sem a necessidade de interagir com o objeto **$http** . Considere usar o objeto **$Resource** em cenários que exijam o modelo CRUD (informações de primeiro plano, consulte a [documentação do $Resource](https://docs.angularjs.org/api/ngResource/service/$resource)).
+9. A próxima etapa é criar o modelo AngularJS que define a exibição do teste. Para fazer isso, abra o arquivo **index. cshtml** dentro dos **modos de exibição | Pasta base** e substitua o conteúdo pelo código a seguir.
 
-    (Código de trecho de código – *GeekQuizView AspNetWebApiSpa - o Ex2 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX2-GeekQuizView*)
 
     [!code-cshtml[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample20.cshtml)]
 
     > [!NOTE]
-    > O modelo de AngularJS é uma especificação declarativa que usa as informações do modelo e o controlador para transformar a marcação estática em exibição dinâmica do que o usuário vê no navegador. A seguir está exemplos de AngularJS elementos e atributos do elemento que podem ser usados em um modelo:
+    > O modelo AngularJS é uma especificação declarativa que usa informações do modelo e do controlador para transformar a marcação estática na exibição dinâmica que o usuário vê no navegador. Veja a seguir exemplos de elementos AngularJS e atributos de elemento que podem ser usados em um modelo:
     > 
-    > - O **app-ng** diretiva diz ao AngularJS do elemento DOM que representa o elemento raiz do aplicativo.
-    > - O **ng-controller** diretiva anexa um controlador para o DOM no ponto onde a diretiva é declarada.
-    > - A notação de chave de abertura **{{}}** denota ligações para as propriedades de escopo definidas no controlador.
-    > - O **ng-click** diretiva é usada para invocar as funções definidas no escopo em resposta a cliques do usuário.
-10. Abra o **CSS** dentro do arquivo a **conteúdo** pasta e adicione os seguintes estilos realçados no final do arquivo para fornecer uma aparência para o modo de exibição de teste.
+    > - A diretiva **ng-app** informa ao AngularJS o elemento DOM que representa o elemento raiz do aplicativo.
+    > - A diretiva **ng-Controller** anexa um controlador ao dom no ponto em que a diretiva é declarada.
+    > - A notação de chave **{{}}** denota associações às propriedades de escopo definidas no controlador.
+    > - A diretiva **ng-Click** é usada para invocar as funções definidas no escopo em resposta a cliques do usuário.
+10. Abra o arquivo **site. css** dentro da pasta de **conteúdo** e adicione os seguintes estilos realçados ao final do arquivo para fornecer uma aparência para a exibição do teste.
 
-    (Código de trecho de código – *GeekQuizStyles AspNetWebApiSpa - o Ex2 -* )
+    (Trecho de código- *AspNetWebApiSpa-EX2-GeekQuizStyles*)
 
     [!code-css[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample21.css)]
 
 <a id="Ex2Task2"></a>
-#### <a name="task-2--running-the-solution"></a>Tarefa 2 – executar a solução
+#### <a name="task-2--running-the-solution"></a>Tarefa 2 – executando a solução
 
-Nesta tarefa, você vai executar a solução usando o novo usuário interface compilado com o AngularJS para responder a algumas das perguntas de teste.
+Nesta tarefa, você executará a solução usando a nova interface do usuário criada com o AngularJS para responder a algumas das perguntas do teste.
 
 1. Pressione **F5** para executar a solução.
-2. Registre uma nova conta de usuário. Para fazer isso, siga as etapas de Registro descritas no Exercício 1, tarefa 3.
+2. Registrar uma nova conta de usuário. Para fazer isso, siga as etapas de registro descritas no exercício 1, tarefa 3.
 
     > [!NOTE]
-    > Se você estiver usando a solução do exercício anterior, você pode fazer logon com a conta de usuário que você criou antes.
-3. O **Home** página deve ser exibida, mostrando a primeira pergunta do teste. Responda à pergunta, clicando em uma das opções. Isso vai disparar a **sendAnswer** função definida anteriormente, que envia a opção selecionada para o **Trívia** API da Web.
+    > Se estiver usando a solução do exercício anterior, você poderá fazer logon com a conta de usuário que você criou antes.
+3. A **Home** Page deve aparecer, mostrando a primeira pergunta do teste. Responda à pergunta clicando em uma das opções. Isso irá disparar a função **sendAnswer** definida anteriormente, que envia a opção selecionada para a API Web **Trívia** .
 
-    ![Responder a uma pergunta](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image19.png "responder a uma pergunta")
+    ![Respondendo a uma pergunta](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image19.png "Respondendo a uma pergunta")
 
-    *Responder a uma pergunta*
-4. Depois de clicar em um dos botões, a resposta deverá aparecer. Clique em **próxima pergunta** para mostrar a pergunta a seguir. Isso vai disparar a **nextQuestion** função definida no controlador.
+    *Respondendo a uma pergunta*
+4. Depois de clicar em um dos botões, a resposta deve aparecer. Clique em **próxima pergunta** para mostrar a pergunta a seguir. Isso irá disparar a função **nextQuestion** definida no controlador.
 
-    ![Solicitando a próxima pergunta](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image20.png "solicitando a próxima pergunta")
+    ![Solicitando a próxima pergunta](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image20.png "Solicitando a próxima pergunta")
 
     *Solicitando a próxima pergunta*
-5. A próxima pergunta deve aparecer. Continue respondendo perguntas quantas vezes desejar. Depois de concluir todas as perguntas, você deve retornar à primeira pergunta.
+5. A próxima pergunta deve aparecer. Continue respondendo às perguntas quantas vezes desejar. Depois de concluir todas as perguntas, você deve retornar à primeira pergunta.
 
-    ![Outra pergunta](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image21.png "outra pergunta")
+    ![Outra pergunta](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image21.png "Outra pergunta")
 
     *Próxima pergunta*
-6. Volte para o Visual Studio e pressione **SHIFT + F5** para parar a depuração.
+6. Volte para o Visual Studio e pressione **Shift + F5** para parar a depuração.
 
 <a id="Ex2Task3"></a>
-#### <a name="task-3--creating-a-flip-animation-using-css3"></a>Tarefa 3 – criar uma animação de Flip usando CSS3
+#### <a name="task-3--creating-a-flip-animation-using-css3"></a>Tarefa 3 – criando uma animação invertida usando CSS3
 
-Nesta tarefa, você usará propriedades CSS3 para executar animações avançadas, adicionando um efeito de flip quando uma pergunta é respondida e quando a próxima pergunta é recuperada.
+Nesta tarefa, você usará as propriedades do CSS3 para executar animações avançadas adicionando um efeito de inversão quando uma pergunta for respondida e quando a próxima pergunta for recuperada.
 
-1. No **Gerenciador de soluções**, com o botão direito do **conteúdo** pasta do **GeekQuiz** do projeto e selecione **adicionar | Item existente...** .
+1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta de **conteúdo** do projeto **GeekQuiz** e selecione **Adicionar | Item existente...** .
 
-    ![Adicionando um item existente para a pasta Content](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image22.png "adicionando um item existente para a pasta de conteúdo")
+    ![Adicionando um item existente à pasta de conteúdo](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image22.png "Adicionando um item existente à pasta de conteúdo")
 
-    *Adicionando um item existente para a pasta de conteúdo*
-2. No **Adicionar Item existente** caixa de diálogo, navegue até a **origem/ativos** pasta e selecione **Flip.css**. Clique em **Adicionar**.
+    *Adicionando um item existente à pasta de conteúdo*
+2. Na caixa de diálogo **Adicionar item existente** , navegue até a pasta **origem/ativos** e selecione **inverter. css**. Clique em **Adicionar**.
 
-    ![Adicionando o arquivo de Flip.css de ativos](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image23.png "adicionando o arquivo de Flip.css de ativos")
+    ![Adicionando o arquivo flip. CSS dos ativos](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image23.png "Adicionando o arquivo flip. CSS dos ativos")
 
-    *Adicionando o arquivo de Flip.css de ativos*
-3. Abra o **Flip.css** arquivo que você acabou de adicionar e inspecione seu conteúdo.
-4. Localize o **inverter transformação** comentário. Os estilos inferiores a esse comentário usam o CSS **perspectiva** e **rotateY** transformações para gerar um &quot;cartão flip&quot; efeito.
+    *Adicionando o arquivo flip. CSS dos ativos*
+3. Abra o arquivo **flip. css** que você acabou de adicionar e inspecione seu conteúdo.
+4. Localize o comentário de **transformação inverter** . Os estilos abaixo desse comentário usam a **perspectiva** de CSS e as transformações de **rotação** para gerar um efeito de&quot; de inversão de cartão &quot;.
 
     [!code-css[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample22.css)]
-5. Localize o **ocultar parte traseira do painel durante flip** comentário. O estilo abaixo desse comentário oculta o lado de trás as faces quando eles estão enfrentando distante do visualizador, definindo o **visibilidade de seleção de face** propriedade CSS *oculto*.
+5. Localize o **painel ocultar atrás durante** o comentário de flip. O estilo abaixo desse comentário oculta o lado do verso das faces quando eles estão voltados para fora do visualizador, definindo a propriedade CSS de **visibilidade de backface** como *Hidden*.
 
     [!code-css[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample23.css)]
-6. Abra o **BundleConfig.cs** dentro do arquivo a **aplicativo\_iniciar** pasta e adicionar a referência ao **Flip.css** de arquivo no **&quot;~/Content/css&quot;** pacote de estilo
+6. Abra o arquivo **BundleConfig.cs** dentro do **aplicativo\_pasta inicial** e adicione a referência ao arquivo **flip. css** no grupo estilo de **&quot;&quot;~/Content/CSS**
 
     [!code-csharp[Main](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/samples/sample24.cs)]
-7. Pressione **F5** para executar a solução e faça logon com suas credenciais.
-8. Responda a uma pergunta, clicando em uma das opções. Observe o efeito de flip durante a transição entre os modos de exibição.
+7. Pressione **F5** para executar a solução e fazer logon com suas credenciais.
+8. Responda a uma pergunta clicando em uma das opções. Observe o efeito de inverter ao fazer a transição entre exibições.
 
-    ![Responder a uma pergunta com o efeito de flip](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image24.png "responder a uma pergunta com o efeito de flip")
+    ![Respondendo uma pergunta com o efeito de inverter](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image24.png "Respondendo uma pergunta com o efeito de inverter")
 
-    *Responder a uma pergunta com o efeito de flip*
-9. Clique em **próxima pergunta** para recuperar a pergunta a seguir. O efeito de flip deverá aparecer novamente.
+    *Respondendo uma pergunta com o efeito de inverter*
+9. Clique em **próxima pergunta** para recuperar a seguinte pergunta. O efeito de inversão deve aparecer novamente.
 
-    ![Recuperando a pergunta a seguir com o efeito de flip](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image25.png "Recuperando a pergunta a seguir com o efeito de flip")
+    ![Recuperando a seguinte pergunta com o efeito de inverter](build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs/_static/image25.png "Recuperando a seguinte pergunta com o efeito de inverter")
 
-    *Recuperando a pergunta a seguir com o efeito de flip*
+    *Recuperando a seguinte pergunta com o efeito de inverter*
 
 ---
 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo
 
-Ao concluir este laboratório prático que você aprendeu como:
+Ao concluir este laboratório prático, você aprendeu a:
 
-- Criar um controlador de API Web ASP.NET usando o Scaffolding do ASP.NET
-- Implementar uma ação Get de API da Web para recuperar a próxima pergunta de teste
-- Implementar uma ação de postagem da API da Web para armazenar as respostas dos teste
-- Instalar o AngularJS no Visual Studio Package Manager Console
-- Implemente AngularJS modelos e controladores
-- Use as transições do CSS3 para executar os efeitos de animação
+- Criar um controlador de ASP.NET Web API usando ASP.NET scaffolding
+- Implemente uma ação de API Web get para recuperar a próxima pergunta do quiz
+- Implementar uma ação de postagem da API Web para armazenar as respostas do teste
+- Instalar o AngularJS no console do Gerenciador de pacotes do Visual Studio
+- Implementar modelos e controladores AngularJS
+- Usar as transições do CSS3 para executar efeitos de animação

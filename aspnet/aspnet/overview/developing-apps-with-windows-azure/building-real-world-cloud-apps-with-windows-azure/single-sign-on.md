@@ -9,11 +9,11 @@ ms.assetid: 7d82d5e9-0619-4f22-9e03-32a6d52940a5
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/single-sign-on
 msc.type: authoredcontent
 ms.openlocfilehash: 1ca93cce22487295a24aae95437b3e69dfc5b504
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457135"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617442"
 ---
 # <a name="single-sign-on-building-real-world-cloud-apps-with-azure"></a>Logon único (compilando aplicativos de nuvem do mundo real com o Azure)
 
@@ -42,7 +42,7 @@ O que o Azure AD permite fazer é criar um diretório na nuvem. É um recurso gr
 
 Ele pode ser totalmente independente do seu Active Directory local; Você pode colocar qualquer um que desejar nele e autenticá-los em aplicativos de Internet.
 
-![Windows Azure do Active Directory](single-sign-on/_static/image2.png)
+![Windows Azure Active Directory](single-sign-on/_static/image2.png)
 
 Ou você pode integrá-lo ao seu AD local.
 
@@ -177,7 +177,7 @@ O [próximo capítulo](data-storage-options.md) analisa as opções de armazenam
 <a id="resources"></a>
 ## <a name="resources"></a>Recursos
 
-Para obter mais informações, consulte os seguintes recursos:
+Para saber mais, consulte os recursos a seguir:
 
 - [Documentação do Azure Active Directory](https://docs.microsoft.com/azure/active-directory/). Página do portal para a documentação do Azure AD no site do windowsazure.com. Para obter os tutoriais passo a passo, consulte a seção **desenvolver** .
 - [Autenticação multifator do Azure](https://docs.microsoft.com/azure/multi-factor-authentication/). Página do portal para obter a documentação sobre a autenticação multifator no Azure.

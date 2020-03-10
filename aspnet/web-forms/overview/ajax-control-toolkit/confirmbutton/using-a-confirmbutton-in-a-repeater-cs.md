@@ -9,11 +9,11 @@ ms.assetid: a973ed3e-400c-4925-ace2-0b086b479301
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/confirmbutton/using-a-confirmbutton-in-a-repeater-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 468a830f01c48dc39b22bc5d826f80533df65c1a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574380"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554281"
 ---
 # <a name="using-a-confirmbutton-in-a-repeater-c"></a>Uso de um ConfirmButton em um repetidor (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O extensor ConfirmButton no AJAX Control Toolkit cria um pop-up sim/não quando o usuário clica em um botão (incluindo o controle LinkButton). Somente se sim for clicado, a ação do botão será executada, caso contrário, cancelada. Isso também é possível em um repetidor.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O extensor ConfirmButton no AJAX Control Toolkit cria um pop-up sim/não quando o usuário clica em um botão (incluindo o controle LinkButton). Somente se sim for clicado, a ação do botão será executada, caso contrário, cancelada. Isso também é possível em um repetidor.
 
@@ -50,4 +50,4 @@ Essa fonte de dados pode ser usada em um repetidor. Como de costume, o método `
 O botão confirmar é exibido ao lado de cada entrada da fonte de dados ([clique para exibir a imagem em tamanho normal](using-a-confirmbutton-in-a-repeater-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](using-a-confirmbutton-in-a-repeater-vb.md)
+> [Próximo](using-a-confirmbutton-in-a-repeater-vb.md)

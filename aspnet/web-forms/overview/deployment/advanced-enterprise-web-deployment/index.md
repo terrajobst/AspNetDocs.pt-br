@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/deployment/advanced-enterprise-web-deployment/index
-title: ASP.NET 4 – série sobre implantação do Enterprise 4 tópicos avançados | Microsoft Docs
+title: Tópicos avançados da série de implantação do ASP.NET 4-Enterprise Deployment | Microsoft Docs
 author: rick-anderson
-description: Este tutorial mostra como executar várias tarefas que são necessárias ou desejável em muitos cenários de implantação do enterprise.
+description: Este tutorial mostrará como executar várias tarefas que são necessárias ou desejáveis em muitos cenários de implantação corporativa.
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: eacf0e3a-c2e9-4f77-a676-249146f393e8
 msc.legacyurl: /web-forms/overview/deployment/advanced-enterprise-web-deployment
 msc.type: chapter
 ms.openlocfilehash: f72ec780623b4240762f35e479b36895db42cee0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127110"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574966"
 ---
 # <a name="aspnet-4---enterprise-deployment-series-4-advanced-topics"></a>ASP.NET 4 – Série 4 sobre implantação corporativa: tópicos avançados
 
-> Este tutorial mostra como executar várias tarefas que são necessárias ou desejável em muitos cenários de implantação do enterprise.
+> Este tutorial mostrará como executar várias tarefas que são necessárias ou desejáveis em muitos cenários de implantação corporativa.
 
 - [Implantação da Web corporativa avançada](advanced-enterprise-web-deployment.md)
 - [Execução de uma implantação "What If"](performing-a-what-if-deployment.md)

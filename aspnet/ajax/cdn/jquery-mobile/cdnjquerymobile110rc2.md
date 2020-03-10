@@ -9,11 +9,11 @@ ms.assetid: 50a56675-fb2e-4a5b-b756-ec4e7a9dad61
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile110rc2
 msc.type: content
 ms.openlocfilehash: e86ee753c985017ea104da605f1a413698f2cbdf
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59379216"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563073"
 ---
 # <a name="jquery-mobile-110-rc2-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.1.0 RC2 na CDN do Microsoft Ajax
 

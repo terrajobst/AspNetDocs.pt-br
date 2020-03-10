@@ -9,11 +9,11 @@ ms.assetid: 11de31e8-a78a-4f96-bd75-66e994175902
 msc.legacyurl: /web-forms/overview/data-access/custom-formatting/using-templatefields-in-the-gridview-control-cs
 msc.type: authoredcontent
 ms.openlocfilehash: ec17a16d7bb487d1c5cacf2d5971bbeffc1ba031
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74627763"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78595497"
 ---
 # <a name="using-templatefields-in-the-gridview-control-c"></a>Uso de TemplateFields no controle GridView (C#)
 
@@ -176,7 +176,7 @@ Até agora, vimos dois aplicativos de TemplateFields:
 
 Um terceiro uso de TemplateFields está na exibição de metadados sobre os dados subjacentes do GridView. Além de mostrar as datas de contratação dos funcionários, por exemplo, talvez também queiramos ter uma coluna que exibe o número total de dias em que eles estavam no trabalho.
 
-Mas outro uso de TemplateFields surge em cenários quando os dados subjacentes precisam ser exibidos de forma diferente no relatório de página da Web do que no formato armazenado no banco de dados. Imagine que a tabela `Employees` tinha um campo `Gender` que armazenou o `M` de caracteres ou `F` para indicar o sexo do funcionário. Ao exibir essas informações em uma página da Web, talvez você queira mostrar o gênero como "masculino" ou "feminino", em vez de apenas "M" ou "F".
+Mas outro uso de TemplateFields surge em cenários quando os dados subjacentes precisam ser exibidos de forma diferente no relatório de página da Web do que no formato armazenado no banco de dados. Imagine que a tabela `Employees` tinha um campo `Gender` que armazenou o `M` de caracteres ou `F` para indicar o sexo do funcionário. Ao exibir essas informações em uma página da Web, talvez você queira mostrar o gênero como "macho" ou "fêmea", em vez de apenas "M" ou "F".
 
 Ambos os cenários podem ser tratados pela criação de um *método de formatação* na classe code-behind da página ASP.net (ou em uma biblioteca de classes separada, implementada como um método `static`) que é invocado a partir do modelo. Esse método de formatação é invocado a partir do modelo usando a mesma sintaxe de DataBinding vista anteriormente. O método de formatação pode ter qualquer número de parâmetros, mas deve retornar uma cadeia de caracteres. Essa cadeia de caracteres retornada é o HTML que é injetado no modelo.
 

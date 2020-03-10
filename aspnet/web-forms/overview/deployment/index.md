@@ -2,22 +2,22 @@
 uid: web-forms/overview/deployment/index
 title: Implantação | Microsoft Docs
 author: rick-anderson
-description: Como implantar projetos de Web Forms do ASP.NET em um servidor.
+description: Como implantar projetos do ASP.NET Web Forms em um servidor.
 ms.author: riande
 ms.date: 08/18/2011
 ms.assetid: 05e4c88f-5101-4277-a323-b6774d98f69e
 msc.legacyurl: /web-forms/overview/deployment
 msc.type: chapter
 ms.openlocfilehash: 1483abc212b5f122ad3e2b88474c42b208bb748e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134299"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640605"
 ---
 # <a name="deployment"></a>Implantação
 
-> Como implantar projetos de Web Forms do ASP.NET em um servidor.
+> Como implantar projetos do ASP.NET Web Forms em um servidor.
 
 - [Implantação da Web do ASP.NET com uso do Visual Studio](visual-studio-web-deployment/index.md)
 
@@ -36,8 +36,8 @@ ms.locfileid: "65134299"
 - [ASP.NET 4 – introdução à implantação corporativa](deploying-web-applications-in-enterprise-scenarios/index.md)
 
     - [Implantando aplicativos Web em cenários corporativos usando o Visual Studio 2010](deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md)
-    - [Implantação da Web corporativa: Visão geral do cenário](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
-    - [Gerenciamento de ciclo de vida do aplicativo: Do desenvolvimento à produção](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
+    - [Implantação da Web corporativa: visão geral do cenário](deploying-web-applications-in-enterprise-scenarios/enterprise-web-deployment-scenario-overview.md)
+    - [Gerenciamento do Ciclo de Vida do Aplicativo: do desenvolvimento à produção](deploying-web-applications-in-enterprise-scenarios/application-lifecycle-management-from-development-to-production.md)
 - [ASP.NET 4 – série 1 sobre implantação corporativa](web-deployment-in-the-enterprise/index.md)
 
     - [Implantação da Web na empresa](web-deployment-in-the-enterprise/web-deployment-in-the-enterprise.md)
@@ -55,9 +55,9 @@ ms.locfileid: "65134299"
 
     - [Configuração de ambientes de servidor para a Implantação da Web](configuring-server-environments-for-web-deployment/configuring-server-environments-for-web-deployment.md)
     - [Escolha da abordagem correta para a Implantação da Web](configuring-server-environments-for-web-deployment/choosing-the-right-approach-to-web-deployment.md)
-    - [Cenário: Configurando um ambiente de teste para implantação da Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
-    - [Cenário: Configurando um ambiente de preparo para a implantação da Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
-    - [Cenário: Configurando um ambiente de produção para implantação da Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
+    - [Cenário: configuração de um ambiente de teste para a Implantação da Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-test-environment-for-web-deployment.md)
+    - [Cenário: configuração de um ambiente de preparo para a Implantação da Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-staging-environment-for-web-deployment.md)
+    - [Cenário: configuração de um ambiente de produção para a Implantação da Web](configuring-server-environments-for-web-deployment/scenario-configuring-a-production-environment-for-web-deployment.md)
     - [Configuração de um servidor Web para publicação de Implantação da Web (agente remoto)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-remote-agent.md)
     - [Configuração de um servidor Web para publicação de Implantação da Web (manipulador de Implantação da Web)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler.md)
     - [Configuração de um servidor Web para publicação de Implantação da Web (implantação offline)](configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-offline-deployment.md)

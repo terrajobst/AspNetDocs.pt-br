@@ -9,11 +9,11 @@ ms.assetid: 04c79748-0f21-4a3b-aba5-e1ce3161c32e
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/cascadingdropdown/presetting-list-entries-with-cascadingdropdown-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 3bb4a51092534e6fddbd40f868c53c58d12eef2f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74574665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78597898"
 ---
 # <a name="presetting-list-entries-with-cascadingdropdown-c"></a>Predefinição de entradas de lista com CascadingDropDown (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. Com um pouco de código, é possível que um elemento de lista seja preselecionado quando os dados tiverem sido carregados dinamicamente.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle CascadingDropDown no AJAX Control Toolkit estende um controle DropDownList para que as alterações em uma DropDownList carreguem valores associados em outra DropDownList. (Por exemplo, uma lista fornece uma lista de Estados dos EUA e a próxima lista é então preenchida com cidades principais nesse estado.) Com um pouco de código, é possível que um elemento de lista seja preselecionado quando os dados tiverem sido carregados dinamicamente.
 

@@ -9,15 +9,15 @@ ms.assetid: 99dd9ca6-27e6-48cb-8b8e-625022e0c5a0
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile130
 msc.type: content
 ms.openlocfilehash: 74c04ba9d44584bec3ea417cdc9e4ae4850bff7e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59390994"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78562982"
 ---
 # <a name="jquery-mobile-130-on-the-microsoft-ajax-cdn"></a>jQuery Mobile 1.3.0 na CDN do Microsoft Ajax
 
-A biblioteca do jQuery Mobile 1.3.0 inclui os seguintes arquivos:
+A biblioteca jQuery Mobile 1.3.0 inclui os seguintes arquivos:
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.0/jquery.mobile.structure-1.3.0.css
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.3.0/jquery.mobile.structure-1.3.0.min.css

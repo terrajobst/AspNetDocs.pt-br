@@ -9,11 +9,11 @@ ms.assetid: 06c6bbd2-4bdc-435b-87a3-df2c868f4baa
 msc.legacyurl: /web-forms/overview/data-access/custom-button-actions/adding-and-responding-to-buttons-to-a-gridview-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 8727d8faead02340d223c75845bf29f63d1a0834
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74601357"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78549472"
 ---
 # <a name="adding-and-responding-to-buttons-to-a-gridview-vb"></a>Adicionar e responder a botões em um GridView (VB)
 

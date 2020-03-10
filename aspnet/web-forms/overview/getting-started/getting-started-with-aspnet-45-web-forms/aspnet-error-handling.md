@@ -9,11 +9,11 @@ ms.assetid: 423498f7-1a4b-44a1-b342-5f39d0bcf94f
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/aspnet-error-handling
 msc.type: authoredcontent
 ms.openlocfilehash: 9514142ca50b33470a3f4c033e4f8e319a9ee09b
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74636465"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78566678"
 ---
 # <a name="aspnet-error-handling"></a>Tratamento de erro do ASP.NET
 
@@ -33,7 +33,7 @@ Neste tutorial, você modificará o aplicativo de exemplo Wingtip Toys para incl
 - Como exibir mensagens de erro que não comprometem a segurança.
 - Como implementar o log de erros de módulos e manipuladores de log de erros (ELMAH).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Os aplicativos ASP.NET devem ser capazes de lidar com erros que ocorrem durante a execução de maneira consistente. O ASP.NET usa o Common Language Runtime (CLR), que fornece uma maneira de notificar aplicativos de erros de maneira uniforme. Quando ocorre um erro, uma exceção é lançada. Uma exceção é qualquer erro, condição ou comportamento inesperado que um aplicativo encontra.
 
@@ -53,8 +53,8 @@ O tempo de execução tem um conjunto base de exceções derivadas da classe `Sy
 
 Em um aplicativo de Web Forms ASP.NET, exceções podem ser manipuladas com base em uma hierarquia de manipulação específica. Uma exceção pode ser tratada nos seguintes níveis:
 
-- Nível do aplicativo
-- Nível da página
+- Nível de aplicativo
+- Nível de página
 - Nível de código
 
 Quando um aplicativo manipula exceções, as informações adicionais sobre a exceção herdadas da classe de exceção geralmente podem ser recuperadas e exibidas para o usuário. Além do aplicativo, da página e do nível de código, você também pode tratar exceções no nível do módulo HTTP e usando um manipulador personalizado do IIS.
@@ -100,7 +100,7 @@ No código acima, o bloco try contém o código que precisa ser protegido contra
 Antes de adicionar o tratamento de erros ao aplicativo de exemplo Wingtip Toys, você adicionará suporte ao log de erros adicionando uma classe de `ExceptionUtility` à pasta *lógica* . Ao fazer isso, sempre que o aplicativo tratar um erro, os detalhes do erro serão adicionados ao arquivo de log de erros.
 
 1. Clique com o botão direito do mouse na pasta *lógica* e selecione **Adicionar** -&gt; **novo item**.   
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Selecione o grupo de modelos de **código** do **Visual C#**  -&gt; à esquerda. Em seguida, selecione **classe**na lista intermediária e nomeie-a **ExceptionUtility.cs**.
 3. Escolha **Adicionar**. O novo arquivo de classe é exibido.
 4. Substitua o código existente pelo seguinte:  
@@ -114,7 +114,7 @@ Quando ocorre uma exceção, a exceção pode ser gravada em um arquivo de log d
 No aplicativo de exemplo Wingtip Toys, uma página será usada para exibir erros. A página de erro foi projetada para mostrar uma mensagem de erro segura para os usuários do site. No entanto, se o usuário for um desenvolvedor que faz uma solicitação HTTP que está sendo servida localmente no computador onde o código reside, detalhes adicionais do erro serão exibidos na página de erro.
 
 1. Clique com o botão direito do mouse no nome do projeto (**Wingtip Toys**) em **Gerenciador de soluções** e selecione **Adicionar** -&gt; **novo item**.   
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Selecione o grupo modelos **da Web** do **Visual C#**  -&gt; à esquerda. Na lista intermediária, selecione **Web Form com página mestra**e nomeie-o **ErrorPage. aspx**.
 3. Clique em **Adicionar**.
 4. Selecione o arquivo *site. Master* como a página mestra e escolha **OK**.
@@ -139,7 +139,7 @@ Atualize a configuração adicionando uma seção `customErrors` ao arquivo *Web
 2. Adicione a seção `customErrors` ao arquivo *Web. config* dentro do nó `<system.web>` da seguinte maneira:   
 
     [!code-xml[Main](aspnet-error-handling/samples/sample8.xml?highlight=3-5)]
-3. Salve o arquivo *Web. config* .
+3. Salve o arquivo *Web.config* .
 
 A seção `customErrors` especifica o modo, que é definido como "on". Ele também especifica o `defaultRedirect`, que informa ao aplicativo em qual página navegar quando ocorre um erro. Além disso, você adicionou um elemento error específico que especifica como tratar um erro 404 quando uma página não é encontrada. Posteriormente neste tutorial, você adicionará tratamento de erro adicional que capturará os detalhes de um erro no nível do aplicativo.
 
@@ -327,12 +327,12 @@ Saiba mais sobre como implantar seu aplicativo Web para Microsoft Azure, consult
 [Log de detalhes de erro com  de monitoramento de integridade do ASP.net](../../older-versions-getting-started/deploying-web-site-projects/logging-error-details-with-asp-net-health-monitoring-cs.md)  
 [ELMAH](https://code.google.com/p/elmah/)
 
-## <a name="acknowledgements"></a>Agradecimentos
+## <a name="acknowledgements"></a>Confirmações
 
 Gostaria de agradecer às seguintes pessoas que fizeram contribuições significativas para o conteúdo desta série de tutoriais:
 
 - [Alberto Poblacion, MVP &amp; MCT, Espanha](https://mvp.microsoft.com/mvp/Alberto%20Poblacion%20Bolano-36772)
-- [Alex Thissen, Países Baixos](http://blog.alexthissen.nl/) (twitter: [@alexthissen](http://twitter.com/alexthissen))
+- [Alex Thissen, Holanda](http://blog.alexthissen.nl/) (twitter: [@alexthissen](http://twitter.com/alexthissen))
 - [Andre Tournier, EUA](http://andret503.wordpress.com/)
 - Apurva Joshi, Microsoft
 - [Bojan Vrhovnik, Eslovênia](http://twitter.com/bvrhovnik)
@@ -349,7 +349,7 @@ Gostaria de agradecer às seguintes pessoas que fizeram contribuições signific
 - [Tim Ammann, Microsoft](https://blogs.iis.net/timamm/default.aspx)
 - [Tom Dykstra, Microsoft](https://blogs.msdn.com/aspnetue)
 
-## <a name="community-contributions"></a>Contribuições da comunidade
+## <a name="community-contributions"></a>Contribuições da Comunidade
 
 - Graham Mendick ([@grahammendick](http://twitter.com/grahammendick))  
   Exemplo de código relacionado ao Visual Studio 2012 no MSDN: [Navigation Wingtip Toys](https://code.msdn.microsoft.com/Navigation-Wingtip-Toys-5f0daba2)

@@ -1,427 +1,427 @@
 ---
 uid: mvc/overview/older-versions-1/nerddinner/provide-crud-create-read-update-delete-data-form-entry-support
-title: Fornecer CRUD (criar, ler, atualizar e excluir) dados formam o suporte de entrada | Microsoft Docs
+title: Fornecer suporte à entrada do formulário de dados CRUD (criar, ler, atualizar, excluir) | Microsoft Docs
 author: microsoft
-description: Etapa 5 mostra como realizar a nossa classe DinnersController ainda mais ao habilitar suporte para edição, criação e a exclusão de jantares com ele também.
+description: A etapa 5 mostra como usar ainda mais a nossa classe DinnersController habilitando o suporte para edição, criação e exclusão de jantares com ele também.
 ms.author: riande
 ms.date: 07/27/2010
 ms.assetid: bbb976e5-6150-4283-a374-c22fbafe29f5
 msc.legacyurl: /mvc/overview/older-versions-1/nerddinner/provide-crud-create-read-update-delete-data-form-entry-support
 msc.type: authoredcontent
 ms.openlocfilehash: b3123af9a1477bc496a0d229d628510fc202b6d2
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65128335"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78580552"
 ---
 # <a name="provide-crud-create-read-update-delete-data-form-entry-support"></a>Fornecer suporte de CRUD (criar, ler, atualizar e excluir) ao formulário de entrada de dados
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
 [Baixar PDF](http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf)
 
-> Esta é a etapa 5 do grátis [aplicativo "NerdDinner"](introducing-the-nerddinner-tutorial.md) que orienta-through como criar um pequeno, mas concluir, o aplicativo web usando ASP.NET MVC 1.
+> Esta é a etapa 5 de um [tutorial de aplicativo "NerdDinner"](introducing-the-nerddinner-tutorial.md) gratuito que percorre como criar um aplicativo Web pequeno, mas completo usando o ASP.NET MVC 1.
 > 
-> Etapa 5 mostra como realizar a nossa classe DinnersController ainda mais ao habilitar suporte para edição, criação e a exclusão de jantares com ele também.
+> A etapa 5 mostra como usar ainda mais a nossa classe DinnersController habilitando o suporte para edição, criação e exclusão de jantares com ele também.
 > 
-> Se você estiver usando o ASP.NET MVC 3, recomendamos que você siga a [obtendo iniciado com o MVC 3](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) ou [Store de música do MVC](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) tutoriais.
+> Se você estiver usando o ASP.NET MVC 3, recomendamos seguir as [introdução com](../../older-versions/getting-started-with-aspnet-mvc3/cs/intro-to-aspnet-mvc-3.md) os tutoriais da [loja de música](../../older-versions/mvc-music-store/mvc-music-store-part-1.md) MVC 3 ou MVC.
 
-## <a name="nerddinner-step-5-create-update-delete-form-scenarios"></a>Etapa 5 do NerdDinner: Criar, atualizar, excluir os cenários de formulário
+## <a name="nerddinner-step-5-create-update-delete-form-scenarios"></a>Etapa 5: criar, atualizar, excluir cenários de formulário
 
-Já apresentamos controladores e exibições e abordou como usá-los para implementar uma experiência de listagem/detalhes para jantares no site. Nossa próxima etapa será executar nossa classe DinnersController adicional e habilitar o suporte para edição, criação e a exclusão de jantares com ele também.
+Apresentamos os controladores e os modos de exibição e abordamos como usá-los para implementar uma experiência de listagem/detalhes para jantares no site. Nossa próxima etapa será levar ainda mais nossa classe DinnersController e habilitar o suporte para edição, criação e exclusão de jantares também.
 
-### <a name="urls-handled-by-dinnerscontroller"></a>URLs manipuladas pelo DinnersController
+### <a name="urls-handled-by-dinnerscontroller"></a>URLs manipuladas por DinnersController
 
-Adicionamos anteriormente métodos de ação ao DinnersController que implementou o suporte para duas URLs: */Dinners* e */Dinners/detalhes / [id]*.
+Anteriormente adicionamos métodos de ação a DinnersController que implementou o suporte para duas URLs: */Dinners* e */Dinners/Details/[ID]* .
 
-| **URL** | **VERB** | **Finalidade** |
+| **URL** | **VERBO** | **Finalidade** |
 | --- | --- | --- |
-| */Dinners/* | OBTER | Exiba uma lista HTML de jantares futuros. |
-| */Dinners/Details/[id]* | OBTER | Exibir detalhes sobre um jantar específico. |
+| */Dinners/* | GET | Exibir uma lista HTML de futuros jantares. |
+| */Dinners/Details/[ID]* | GET | Exibir detalhes sobre um jantar específico. |
 
-Agora, adicionaremos métodos de ação para implementar as três URLs adicionais: */Dinners/Editar / [id]*, *jantares/Create*, e */Dinners/Delete / [id]*. Essas URLs serão habilitar o suporte para edição jantares existentes, criando novos jantares e excluindo jantares.
+Agora, adicionaremos métodos de ação para implementar três URLs adicionais: */Dinners/Edit/[ID]* , */Dinners/Create*e */Dinners/Delete/[ID]* . Essas URLs permitirão o suporte à edição de jantares existentes, à criação de novos jantares e à exclusão de jantares.
 
-Daremos suporte a interações de verbo HTTP GET e HTTP POST com essas novas URLs. Solicitações HTTP GET para essas URLs exibirá o modo de exibição HTML inicial dos dados (um formulário preenchido com os dados de jantar no caso de "Editar", um formulário em branco no caso de "criar" e uma tela de confirmação de exclusão no caso de "exclusão"). Solicitações de HTTP POST a essas URLs serão salvar/atualizar/excluir os dados de jantar nosso DinnerRepository (e daí para o banco de dados).
+Suportaremos as interações de verbo HTTP GET e HTTP POST com essas novas URLs. As solicitações HTTP GET para essas URLs exibirão a exibição HTML inicial dos dados (um formulário preenchido com os dados do jantar no caso de "Edit", um formulário em branco no caso de "Create" e uma tela de confirmação de exclusão no caso de "Delete"). As solicitações HTTP POST para essas URLs salvarão/atualizarão os dados do jantar em nosso DinnerRepository (e daí no banco de dado).
 
-| **URL** | **VERB** | **Finalidade** |
+| **URL** | **VERBO** | **Finalidade** |
 | --- | --- | --- |
-| */Dinners/Edit/[id]* | OBTER | Exiba um formulário HTML editável preenchido com dados de jantar. |
-| POSTAR | Salve as alterações do formulário em um jantar específico para o banco de dados. |
-| */Dinners/Create* | OBTER | Exiba um formulário HTML vazio que permite aos usuários definir jantares novo. |
-| POSTAR | Crie um novo jantar e salvá-lo no banco de dados. |
-| */Dinners/Delete/[id]* | OBTER | Exibir a tela de confirmação de exclusão. |
-| POSTAR | Exclui o jantar especificado do banco de dados. |
+| */Dinners/Edit/[ID]* | GET | Exibe um formulário HTML editável populado com dados de jantar. |
+| POST | Salve as alterações de formulário para um jantar específico no banco de dados. |
+| */Dinners/Create* | GET | Exibe um formulário HTML vazio que permite aos usuários definir novos jantares. |
+| POST | Crie um novo jantar e salve-o no banco de dados. |
+| */Dinners/Delete/[ID]* | GET | Exibir tela de confirmação de exclusão. |
+| POST | Exclui o jantar especificado do banco de dados. |
 
-### <a name="edit-support"></a>Editar o suporte
+### <a name="edit-support"></a>Editar suporte
 
-Comecemos Implementando o cenário de "Editar".
+Vamos começar implementando o cenário de "edição".
 
-#### <a name="the-http-get-edit-action-method"></a>O método de ação de edição de HTTP-GET
+#### <a name="the-http-get-edit-action-method"></a>O método de ação de edição HTTP-GET
 
-Vamos começar implementando o comportamento de "Introdução" de HTTP de nosso método de ação de editar. Esse método será invocado quando o */Dinners/Editar / [id]* URL é solicitada. Nossa implementação se parecerá com:
+Vamos começar implementando o comportamento de HTTP "GET" do nosso método Edit Action. Esse método será invocado quando a URL de */Dinners/Edit/[ID]* for solicitada. Nossa implementação terá a seguinte aparência:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample1.cs)]
 
-O código acima usa o DinnerRepository para recuperar um objeto do jantar. Ela então processa um modelo de exibição usando o objeto de jantar. Como ainda não explicitamente passamos um nome de modelo para o *View()* método auxiliar, ele usará o caminho do baseado na convenção padrão para resolver o modelo de exibição: /Views/Dinners/Edit.aspx.
+O código acima usa o DinnerRepository para recuperar um objeto de jantar. Em seguida, ele renderiza um modelo de exibição usando o objeto de jantar. Como não passamos explicitamente um nome de modelo para o método auxiliar *View ()* , ele usará o caminho padrão baseado em Convenção para resolver o modelo de exibição:/views/Dinners/Edit.aspx.
 
-Agora, vamos criar esse modelo de exibição. Faremos isso clicando duas vezes dentro do método Edit e selecionando o comando de menu de contexto "Adicionar exibição":
+Agora, vamos criar esse modelo de exibição. Faremos isso clicando com o botão direito do mouse no método Edit e selecionando o comando de menu de contexto "Add View":
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image1.png)
 
-Na caixa de diálogo "Adicionar exibição" indicaremos que está passando um objeto de jantar ao nosso modelo de exibição como seu modelo e escolher o modelo "Editar" para o scaffold automaticamente:
+Na caixa de diálogo "Adicionar exibição", indicaremos que estamos passando um objeto de jantar para nosso modelo de exibição como modelo e optamos por scaffoldr automaticamente um modelo de "edição":
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image2.png)
 
-Quando clicamos no botão "Adicionar", o Visual Studio irá adicionar um novo arquivo de modelo de exibição de "Edit" para que possamos dentro do diretório "\Views\Dinners". Ele também abrirá o novo modelo de exibição de "Edit" no editor de código-– preenchido com uma "Editar" scaffold implementação inicial como abaixo:
+Quando clicamos no botão "Add" (Adicionar), o Visual Studio adicionará um novo arquivo de modelo de exibição "Edit. aspx" para nós no diretório "\Views\Dinners". Ele também abrirá o novo modelo de exibição "Edit. aspx" no editor de código – preenchido com uma implementação inicial de Scaffold "Edit", como abaixo:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image3.png)
 
-Vamos fazer algumas alterações para o padrão "Editar" scaffold gerado e atualizar o modelo de exibição de edição para que o conteúdo abaixo (o que remove algumas das propriedades que não queremos expor):
+Vamos fazer algumas alterações no scaffold de "edição" padrão gerado e atualizar o modelo de exibição de edição para que o conteúdo seja mostrado abaixo (o que remove algumas das propriedades que não queremos expor):
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample2.aspx)]
 
-Quando executamos o aplicativo e a solicitação a *"/ Editar/jantares/1"* URL veremos a seguinte página:
+Quando executarmos o aplicativo e solicitarmos a URL *"/Dinners/Edit/1"* , veremos a seguinte página:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image4.png)
 
-A marcação HTML gerada pelo nosso ver a aparência abaixo. É HTML padrão – com uma &lt;formulário&gt; elemento que realiza um HTTP POST para o */Dinners/Edit/1* URL quando o "Salvar" &lt;tipo de entrada = "Enviar" /&gt; botão é pressionado. Uma HTML &lt;tipo de entrada = "text" /&gt; elemento tiver sido a saída para cada propriedade editável:
+A marcação HTML gerada por nossa exibição é parecida com a mostrada abaixo. É HTML padrão – com um &lt;formulário&gt; elemento que executa um HTTP POST para a URL */Dinners/Edit/1* quando o botão "salvar" &lt;entrada tipo = "enviar"/&gt; é enviado por push. Um HTML &lt;tipo de entrada = "texto"/&gt; elemento foi apresentado para cada propriedade editável:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image5.png)
 
-#### <a name="htmlbeginform-and-htmltextbox-html-helper-methods"></a>Html.BeginForm() e métodos de auxiliar Html Html.TextBox()
+#### <a name="htmlbeginform-and-htmltextbox-html-helper-methods"></a>Métodos auxiliares HTML. BeginForm () e HTML. TextBox ()
 
-Nosso modelo de exibição de "Edit" está usando vários métodos "Auxiliares Html": Html.ValidationSummary(), Html.BeginForm(), Html.TextBox(), and Html.ValidationMessage(). Além de gerar uma marcação HTML para nós, esses métodos auxiliares fornecem validação e manipulação de erros internos dão suporte.
+Nosso modelo de exibição "Edit. aspx" está usando vários métodos "HTML Helper": HTML. ValidationSummary (), HTML. BeginForm (), HTML. TextBox () e HTML. ValidationMessage (). Além de gerar marcação HTML para nós, esses métodos auxiliares fornecem tratamento de erro interno e suporte à validação.
 
-##### <a name="htmlbeginform-helper-method"></a>Método auxiliar de Html.BeginForm()
+##### <a name="htmlbeginform-helper-method"></a>Método auxiliar HTML. BeginForm ()
 
-O método auxiliar Html.BeginForm() é o que o HTML de saída &lt;formulário&gt; elemento na nossa marcação. Nosso modelo de exibição de Edit, você observará que estamos aplicando uma "instrução c# using" ao usar esse método. A chave de abertura aberto indica o início do &lt;formulário&gt; conteúdo e a chave de fechamento é o que indica o fim do &lt;/formulário&gt; elemento:
+O método auxiliar HTML. BeginForm () é a saída do elemento HTML &lt;Form&gt; em nossa marcação. Em nosso modelo de exibição Edit. aspx, você observará que estamos aplicando uma C# instrução "using" ao usar esse método. A chave de abertura indica o início do &lt;formulário&gt; conteúdo, e a chave de fechamento é o que indica o final do elemento&gt; &lt;do formulário:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample3.cs)]
 
-Como alternativa, se você achar que a instrução "using" abordar não natural para um cenário como esse, você pode usar uma combinação de Html.BeginForm() e Html.EndForm() (que faz a mesma coisa):
+Como alternativa, se você achar que a abordagem de instrução "using" não é natural para um cenário como esse, você pode usar uma combinação de HTML. BeginForm () e HTML. endformat () (que faz a mesma coisa):
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample4.aspx)]
 
-Chamar Html.BeginForm() sem nenhum parâmetro fará com que um elemento de formulário que faz um POST HTTP para a URL da solicitação de saída. Isto é por que nossa exibição de edição gera uma *&lt;ação de formulário = método "/ Editar/jantares/1" = "post"&gt;* elemento. Poderia ter como alternativa, passamos parâmetros explícitos para Html.BeginForm() se quiséssemos postar em uma URL diferente.
+Chamar HTML. BeginForm () sem nenhum parâmetro fará com que ele gere um elemento de formulário que faça um HTTP-POST para a URL da solicitação atual. É por isso que nosso modo de exibição de edição gera uma *ação de&lt;formulário = "/Dinners/Edit/1" método = "post"&gt;* elemento. Poderíamos ter passado, como alternativa, parâmetros explícitos para HTML. BeginForm () se quiséssemos postar em uma URL diferente.
 
-##### <a name="htmltextbox-helper-method"></a>Método auxiliar de Html.TextBox()
+##### <a name="htmltextbox-helper-method"></a>Método auxiliar HTML. TextBox ()
 
-Nossa exibição Edit usa o método auxiliar Html.TextBox() para gerar &lt;tipo de entrada = "text" /&gt; elementos:
+Nossa exibição Edit. aspx usa o método auxiliar HTML. TextBox () para saída &lt;tipo de entrada = "texto"/elementos de&gt;:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample5.aspx)]
 
-Método Html.TextBox() acima usa um único parâmetro – o que está sendo usado para especificar os atributos de nome/id do &lt;tipo de entrada = "text" /&gt; saída, bem como a propriedade do modelo para preencher o valor da caixa de texto do elemento. Por exemplo, o objeto de jantar são passados para a exibição de edição tinha um valor da propriedade "Title" de ".NET futura", e então, nosso método Html.TextBox("Title") chamadas de saída: *&lt;identificação de entrada = "Title" name = "Title" type = "text" value = "Futura do .NET" /&gt;*.
+O método html. TextBox () acima usa um único parâmetro – que está sendo usado para especificar os atributos de ID/nome do &lt;tipo de entrada = "texto"/&gt; elemento para saída, bem como a propriedade do modelo para popular o valor da caixa de texto. Por exemplo, o objeto de jantar que passamos para o modo de exibição de edição tinha um valor de propriedade "title" de ".NET Futures" e, portanto, nosso método html. TextBox ("title") é chamado de saída: *&lt;ID de entrada = "title" Name = "título" Type = "text" value = ". net Futures"/&gt;* .
 
-Como alternativa, podemos usar o primeiro parâmetro Html.TextBox() para especificar o nome/id do elemento e, em seguida, transmitir explicitamente o valor a ser usado como um segundo parâmetro:
+Como alternativa, podemos usar o primeiro parâmetro HTML. TextBox () para especificar a ID/nome do elemento e, em seguida, passar explicitamente o valor a ser usado como um segundo parâmetro:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample6.aspx)]
 
-Geralmente queremos executar a formatação personalizada no valor que é a saída. O método estático integrado ao .NET Format () é útil para esses cenários. Nosso modelo de exibição de Edit está usando isso para formatar o valor de EventDate (que é do tipo DateTime) para que ele não mostra segundos para o tempo:
+Muitas vezes, vamos querer executar a formatação personalizada no valor que é a saída. O método estático String. Format () interno do .NET é útil para esses cenários. Nosso modelo de exibição Edit. aspx está usando isso para formatar o valor EventDate (que é do tipo DateTime) para que ele não mostre segundos para o tempo:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample7.aspx)]
 
-Um terceiro parâmetro Html.TextBox() opcionalmente pode ser usado para a saída de atributos adicionais de HTML. O trecho de código abaixo demonstra como renderizar um adicionais de tamanho = atributo "30" e uma classe = "mycssclass" atributo na &lt;tipo de entrada = "text" /&gt; elemento. Observe como estamos são escape o nome do atributo de classe usando um "@" character because "classe" é uma palavra-chave reservada no c#:
+Um terceiro parâmetro para HTML. TextBox () pode, opcionalmente, ser usado para gerar atributos HTML adicionais. O trecho de código a seguir demonstra como renderizar um atributo size = "30" adicional e um atributo Class = "mycssclass" no &lt;tipo de entrada = "text"/&gt; elemento. Observe como podemos escapar o nome do atributo de classe usando uma "classe@" character because "" é uma palavra-chave reservada C#em:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample8.aspx)]
 
-#### <a name="implementing-the-http-post-edit-action-method"></a>Implementando o método de ação de edição de HTTP POST
+#### <a name="implementing-the-http-post-edit-action-method"></a>Implementando o método de ação HTTP-POST Edit
 
-Agora temos a versão de HTTP GET do nosso método de ação Editar implementado. Quando um usuário solicita a */Dinners/Edit/1* URL, eles recebem uma página HTML semelhante ao seguinte:
+Agora temos a versão HTTP-GET do nosso método de ação de edição implementado. Quando um usuário solicita a URL */Dinners/Edit/1* , eles recebem uma página HTML semelhante à seguinte:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image6.png)
 
-Pressionar o botão "Salvar" faz com que uma postagem de formulário para o */Dinners/Edit/1* URL, e envia o HTML &lt;entrada&gt; valores usando o verbo HTTP POST de formulário. Agora, vamos implementar o comportamento do HTTP POST do nosso método de ação Editar – que irá manipular salvando o jantar.
+Pressionar o botão "salvar" faz com que um formulário poste na URL */Dinners/Edit/1* e envia o HTML &lt;entrada&gt; valores de formulário usando o verbo HTTP post. Agora, vamos implementar o comportamento HTTP POST do nosso método de ação de edição, que manipulará o salvamento do jantar.
 
-Vamos começar pela adição de um método sobrecarregado da ação de "Editar" para nosso DinnersController que tem um atributo "AcceptVerbs" nele que indica que ele lida com cenários de HTTP POST:
+Vamos começar adicionando um método de ação "Editar" sobrecarregado a nosso DinnersController que tem um atributo "AcceptVerbs" que indica que ele lida com cenários HTTP POST:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample9.cs)]
 
-Quando o atributo [AcceptVerbs] é aplicado aos métodos de ação sobrecarregado, o ASP.NET MVC controla automaticamente solicitações de expedição para o método de ação apropriada dependendo do verbo HTTP de entrada. Solicitações HTTP POST */Dinners/Editar / [id]* URLs ir para o método acima de edição, enquanto todas as outras solicitações de verbo HTTP para */Dinners/Editar / [id]* URLs passará para o primeiro método de edição que implementamos (que foi não tem um `[AcceptVerbs]` atributo).
+Quando o atributo [AcceptVerbs] é aplicado a métodos de ação sobrecarregados, o ASP.NET MVC manipula automaticamente as solicitações de expedição para o método de ação apropriado, dependendo do verbo HTTP de entrada. Solicitações HTTP POST para */Dinners/Edit/[ID]* URLs vão para o método Edit acima, enquanto todas as outras solicitações HTTP Verb para */Dinners/Edit/[ID]* URLs vão para o primeiro método de edição que implementamos (que não tinha um atributo `[AcceptVerbs]`).
 
-| **Tópico de lado: Por que diferencia por meio de verbos HTTP?** |
+| **Tópico lateral: por que diferenciar por verbos HTTP?** |
 | --- |
-| Você pode perguntar – por que estamos usando uma única URL e diferenciar seu comportamento por meio do verbo HTTP? Por que não tem apenas duas URLs separadas para tratar o carregamento e salvar as alterações de edição? Por exemplo: /Dinners/Editar / [id] para exibir o formulário inicial e /Dinners/Save / [id] para lidar com a postagem de formulário para salvá-lo? A desvantagem com publicação duas URLs separadas é que em casos onde podemos enviar para /Dinners/Save/2 e, em seguida, precisa exibir novamente o formulário HTML devido a um erro de entrada, o usuário final acabará tendo a URL de jantares/Save/2 na barra de endereços do seu navegador (desde que foi a URL do formulário postado). Se o usuário final indicadores desta página redisplayed para sua lista de favoritos do navegador, ou cópia/cola a URL e envia por email para um amigo, elas terminarão salvando uma URL que não funcionará no futuro (já que essa URL depende de valores de post). Expondo uma única URL (como: /Dinners/Edit/[id]) e diferenciar o processamento dele por um verbo HTTP, é seguro aos usuários finais para a página de edição de indicador e/ou enviar a URL para outras pessoas. |
+| Você pode perguntar: por que estamos usando uma única URL e diferenciando seu comportamento por meio do verbo HTTP? Por que não ter apenas duas URLs separadas para lidar com o carregamento e salvar as alterações de edição? Por exemplo:/Dinners/Edit/[ID] para exibir o formulário inicial e/Dinners/Save/[ID] para lidar com a postagem de formulário para salvá-lo? A desvantagem de publicar duas URLs separadas é que nos casos em que publicamos em/Dinners/Save/2 e, em seguida, preciso exibir novamente o formulário HTML devido a um erro de entrada, o usuário final acabará tendo a URL/Dinners/Save/2 na barra de endereços do navegador (desde que essa era a URL em que o formulário foi Postado). Se o usuário final marcar essa página novamente para a lista de favoritos do navegador ou copiar/colar a URL e enviar por email para um amigo, eles acabarão salvando uma URL que não funcionará no futuro (já que essa URL depende dos valores de post). Ao expor uma única URL (como:/Dinners/Edit/[ID]) e diferenciar o processamento dela por verbo HTTP, é seguro para os usuários finais marcarem a página de edição e/ou enviarem a URL para outras pessoas. |
 
 #### <a name="retrieving-form-post-values"></a>Recuperando valores de postagem de formulário
 
-Há várias maneiras que podemos acessar postadas parâmetros de formulário dentro do nosso método de "Editar" de HTTP POST. Uma abordagem simples é usar apenas a propriedade de solicitação na classe base do controlador para acessar a coleção de formulário e recuperar os valores postados diretamente:
+Há várias maneiras pelas quais podemos acessar parâmetros de formulário postados em nosso método HTTP POST "Edit". Uma abordagem simples é simplesmente usar a propriedade Request na classe base do controlador para acessar a coleção de formulários e recuperar os valores postados diretamente:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample10.cs)]
 
-A abordagem acima é um pouco detalhada, no entanto, especialmente quando podemos adicionar lógica de tratamento de erros.
+A abordagem acima é um pouco detalhada, mas, especialmente depois de adicionarmos a lógica de tratamento de erro.
 
-Uma melhor abordagem para esse cenário é aproveitar o interno *UpdateModel()* método auxiliar na classe base do controlador. Ele dá suporte à atualização das propriedades de um objeto que passamos a ela usando os parâmetros de formulário de entrada. Ele usa a reflexão para determinar os nomes de propriedade no objeto e, em seguida, automaticamente converte e atribui valores a elas com base nos valores de entrada enviados pelo cliente.
+Uma abordagem melhor para esse cenário é aproveitar o método auxiliar *UpdateModel ()* interno na classe base do controlador. Ele dá suporte à atualização das propriedades de um objeto que passamos usando os parâmetros de formulário de entrada. Ele usa a reflexão para determinar os nomes de propriedade no objeto e, em seguida, converte e atribui automaticamente valores a eles com base nos valores de entrada enviados pelo cliente.
 
-Poderíamos usar o método UpdateModel() para simplificar nossa ação de editar do HTTP POST usando este código:
+Poderíamos usar o método UpdateModel () para simplificar nossa ação de edição HTTP-POST usando este código:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample11.cs)]
 
-Agora podemos pode visitar o */Dinners/Edit/1* URL e altere o título do nosso jantar:
+Agora podemos visitar a URL do */Dinners/Edit/1* e alterar o título do nosso jantar:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image7.png)
 
-Quando clicamos no botão "Salvar", executaremos uma postagem de formulário para nossa ação de editar e os valores atualizados serão mantidos no banco de dados. Podemos será, em seguida, ser redirecionados para a URL de detalhes para o jantar (que exibe os valores salvos recentemente):
+Quando clicamos no botão "salvar", executaremos uma postagem de formulário em nossa ação de edição e os valores atualizados serão persistidos no banco de dados. Em seguida, será redirecionado para a URL de detalhes do jantar (que exibirá os valores recentemente salvos):
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image8.png)
 
 #### <a name="handling-edit-errors"></a>Tratamento de erros de edição
 
-Nosso atual funciona de implementação de HTTP-POST bem – exceto quando há erros.
+Nossa implementação HTTP-POST atual funciona bem, exceto quando há erros.
 
-Quando um usuário faz um engano um formulário de edição, é necessário certificar-se de que o formulário é reexibido com uma mensagem de erro informativas-os para corrigi-lo. Isso inclui os casos em que um usuário final envia entrada incorreta (por exemplo: uma cadeia de caracteres de data malformados), bem como casos onde o formato de entrada é válido, mas há uma violação de regra de negócios. Quando ocorrem erros que o formulário deve preservar os dados de entrada o usuário inserido originalmente para que eles não precisam preencher novamente suas alterações manualmente. Esse processo deve ser repetida quantas vezes forem necessárias até que o formulário for concluída com êxito.
+Quando um usuário faz um erro ao editar um formulário, precisamos garantir que o formulário seja exibido novamente com uma mensagem de erro informativa que os orienta para corrigi-lo. Isso inclui casos em que um usuário final posta uma entrada incorreta (por exemplo: uma cadeia de caracteres de data malformada), bem como casos em que o formato de entrada é válido, mas há uma violação de regra de negócio. Quando ocorrem erros, o formulário deve preservar os dados de entrada que o usuário inseriu originalmente para que eles não precisem reabastecer suas alterações manualmente. Esse processo deve ser repetido quantas vezes forem necessárias até que o formulário seja concluído com êxito.
 
-O ASP.NET MVC inclui bons recursos internos que facilitam o tratamento de erros e a nova exibição de formulário. Para ver esses recursos em ação vamos atualizar nosso método de ação Editar com o código a seguir:
+O ASP.NET MVC inclui alguns recursos internos interessantes que facilitam o tratamento de erros e a reexibição de formulários. Para ver esses recursos em ação, vamos atualizar nosso método Edit Action com o seguinte código:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample12.cs)]
 
-O código acima é semelhante à nossa implementação de anterior, exceto pelo fato de que estamos agora encapsulando um bloco de tratamento de erro try/catch em torno de nosso trabalho. Se ocorrer uma exceção ao chamar UpdateModel() ou quando podemos testar e salvar o DinnerRepository (que irá gerar uma exceção se o objeto de Dinner que estamos tentando salvar é inválido devido a uma violação de regra dentro do nosso modelo), nosso bloco de tratamento de erro catch será Execute. Dentro dele vamos executar um loop sobre quaisquer violações de regra que existe no objeto de jantar e adicioná-los a um objeto ModelState (que discutiremos em breve). Podemos, em seguida, exiba novamente a exibição.
+O código acima é semelhante à nossa implementação anterior, exceto que agora estamos encapsulando um bloco de tratamento de erros try/catch em nosso trabalho. Se ocorrer uma exceção ao chamar UpdateModel (), ou quando tentarmos salvar o DinnerRepository (que gerará uma exceção se o objeto de jantar que estamos tentando salvar for inválido devido a uma violação de regra em nosso modelo), nosso bloco de tratamento de erro catch será executados. Dentro dele, executamos um loop em todas as violações de regra existentes no objeto de jantar e as adicionamos a um objeto ModelState (que discutiremos em breve). Em seguida, reexibimos o modo de exibição.
 
-Para ver isso funcionando vamos executar o aplicativo novamente, editar um jantar e alterá-lo para ter um título vazio, um EventDate de "BOGUS" e use um número de telefone do Reino Unido com um valor de país do EUA. Quando clicamos no botão "Salvar" nosso método Editar do HTTP POST não poderá salvar o jantar (porque há erros) e exibir o formulário será novamente:
+Para ver isso funcionando, vamos executar novamente o aplicativo, editar um jantar e alterá-lo para ter um título vazio, um EventDate de "falso" e usar um número de telefone do Reino Unido com um valor de país de EUA. Quando pressionamos o botão "Save", nosso método HTTP POST Edit não poderá salvar o jantar (porque há erros) e exibirá novamente o formulário:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image9.png)
 
-Nosso aplicativo tem uma experiência de erro decente. Os elementos de texto com uma entrada inválida são realçados em vermelho, e mensagens de erro de validação são exibidas para o usuário final sobre eles. O formulário também é preservar os dados de entrada que o usuário inseriu originalmente – para que eles não precisem reabastecer nada.
+Nosso aplicativo tem uma experiência de erro razoável. Os elementos de texto com a entrada inválida são realçados em vermelho e as mensagens de erro de validação são exibidas para o usuário final sobre eles. O formulário também está preservando os dados de entrada que o usuário inseriu originalmente – para que eles não precisem reabastecer nada.
 
-Como fazer isso, você pode perguntar, isso ocorreu? Como as caixas de texto do título, EventDate e ContactPhone destacar a mesmos em vermelho e saber para gerar os valores de usuário inserido originalmente? E, como as mensagens de erro exibidas na lista na parte superior? A boa notícia é que isso não ocorria por mágica — em vez disso, ele foi porque usamos alguns dos recursos internos do ASP.NET MVC que facilitam a validação de entrada e de erro de cenários de tratamento.
+Como você pode perguntar, isso ocorreu? Como as caixas de texto title, EventDate e ContactPhone se realçam em vermelho e sabem para gerar os valores de usuário inseridos originalmente? E como as mensagens de erro são exibidas na lista na parte superior? A boa notícia é que isso não ocorreu pela mágica, em vez disso, porque usamos alguns dos recursos internos do MVC ASP.NET que facilitam a validação de entrada e os cenários de tratamento de erros.
 
-#### <a name="understanding-modelstate-and-the-validation-html-helper-methods"></a>Noções básicas sobre ModelState e os métodos de auxiliares de HTML de validação
+#### <a name="understanding-modelstate-and-the-validation-html-helper-methods"></a>Entendendo ModelState e os métodos auxiliares HTML de validação
 
-As classes do controlador tem uma coleção de propriedades "ModelState" que fornece uma maneira para indicar a existem de erros com um objeto de modelo que está sendo passado para um modo de exibição. Entradas de erro dentro da coleção ModelState identificam o nome da propriedade do modelo com o problema (por exemplo: "Title", "EventDate" ou "ContactPhone") e permitir que uma mensagem de erro amigável a humanos sejam especificados (por exemplo: "Título é necessário").
+As classes de controlador têm uma coleção de propriedades "ModelState" que fornece uma maneira de indicar que há erros com um objeto de modelo que está sendo passado para uma exibição. As entradas de erro dentro da coleção ModelState identificam o nome da Propriedade do modelo com o problema (por exemplo: "title", "EventDate" ou "ContactPhone") e permitem que uma mensagem de erro amigável seja especificada (por exemplo: "título necessário").
 
-O *UpdateModel()* método auxiliar preenche automaticamente a coleção ModelState quando ele encontra erros ao tentar atribuir valores de formulário a propriedades no objeto de modelo. Por exemplo, nosso jantar EventDate propriedade de objeto é do tipo DateTime. Quando o método UpdateModel() era não é possível atribuir o valor de cadeia de caracteres "BOGUS" a ele no cenário acima, o método UpdateModel() adicionado a uma entrada à coleção ModelState indicando um erro de atribuição tivesse ocorrido com essa propriedade.
+O método auxiliar *UpdateModel ()* preenche automaticamente a coleção ModelState quando encontra erros ao tentar atribuir valores de formulário às propriedades no objeto de modelo. Por exemplo, a propriedade EventDate do nosso objeto jantar é do tipo DateTime. Quando o método UpdateModel () não pôde atribuir o valor de cadeia de caracteres "falso" a ele no cenário acima, o método UpdateModel () adicionou uma entrada à coleção ModelState indicando que ocorreu um erro de atribuição com essa propriedade.
 
-Os desenvolvedores também podem escrever código para adicionar entradas de erro na coleção ModelState explicitamente, como estamos fazendo abaixo em nosso "catch" Erro tratamento de bloco, que está preenchendo a coleção ModelState com entradas com base em violações de regra ativa no Objeto de jantar:
+Os desenvolvedores também podem escrever código para adicionar explicitamente entradas de erro à coleção ModelState, como estamos fazendo abaixo em nosso bloco de tratamento de erros "catch", que está populando a coleção ModelState com entradas com base nas violações de regra ativas no Objeto de jantar:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample13.cs)]
 
-#### <a name="html-helper-integration-with-modelstate"></a>Integração de auxiliar HTML com ModelState
+#### <a name="html-helper-integration-with-modelstate"></a>Integração do auxiliar HTML com ModelState
 
-Métodos de auxiliares HTML - como Html.TextBox() - verificam a coleção de ModelState durante a renderização de saída. Se houver um erro para o item, eles processam o valor inserido pelo usuário e uma classe de erro CSS.
+Métodos auxiliares HTML – como HTML. TextBox ()-Verifique a coleção ModelState ao renderizar a saída. Se houver um erro para o item, eles renderizarão o valor inserido pelo usuário e uma classe de erro CSS.
 
-Por exemplo, na nossa exibição "Editar" Estamos usando o método auxiliar Html.TextBox() para renderizar o EventDate do nosso objeto de jantar:
+Por exemplo, em nossa exibição de "Editar", estamos usando o método auxiliar HTML. TextBox () para renderizar o EventDate do nosso objeto de jantar:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample14.aspx)]
 
-Quando o modo de exibição foi renderizado no cenário de erro, o método Html.TextBox() verificada a coleção de ModelState para ver se houve erros associados com a propriedade "EventDate" do nosso objeto de jantar. Quando isso foi determinado que houve um erro, renderizado a entrada de usuário enviado ("BOGUS") como o valor e adicionado a uma classe de erro de css para o &lt;tipo de entrada = "caixa de texto" /&gt; marcação gerado por ele:
+Quando o modo de exibição foi renderizado no cenário de erro, o método html. TextBox () verificou a coleção ModelState para ver se houve erros associados à propriedade "EventDate" do nosso objeto de jantar. Quando determinado que houve um erro, ele gerou a entrada do usuário enviado ("falso") como o valor e adicionou uma classe de erro de CSS à &lt;tipo de entrada = "TextBox"/&gt; marcação gerada:
 
 [!code-html[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample15.html)]
 
-Você pode personalizar a aparência da classe css de erro para procurar a desejar. A classe de erro CSS padrão – "entrada-erro de validação" – é definida na *\content\site.css* folha de estilos e se parece como abaixo:
+Você pode personalizar a aparência da classe de erro CSS para ter a aparência desejada. A classe de erro CSS padrão – "entrada-validação-erro" – é definida na folha de estilos *\content\site.css* e se parece com a seguinte:
 
 [!code-css[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample16.css)]
 
-Essa regra CSS é o que causou a nossos elementos de entrada inválidos para ser realçada como abaixo:
+Essa regra CSS é o que causou a realce de nossos elementos de entrada inválidos, como abaixo:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image10.png)
 
-##### <a name="htmlvalidationmessage-helper-method"></a>Método auxiliar de Html.ValidationMessage()
+##### <a name="htmlvalidationmessage-helper-method"></a>Método auxiliar HTML. ValidationMessage ()
 
-O método auxiliar Html.ValidationMessage() pode ser usado para gerar a mensagem de erro ModelState associada com uma propriedade de modelo específico:
+O método auxiliar HTML. ValidationMessage () pode ser usado para produzir a mensagem de erro ModelState associada a uma propriedade de modelo específica:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample17.aspx)]
 
-Gera o código acima:  *&lt;estendem a classe = "Erro de validação do campo"&gt; o valor 'BOGUS' é inválido &lt; /span&gt;*
+O código acima gera: *&lt;span class = "Field-Validation-Error"&gt; o valor ' falso ' é inválido&lt;/span&gt;*
 
-O método auxiliar Html.ValidationMessage() também dá suporte a um segundo parâmetro que permite que os desenvolvedores substituam a mensagem de texto de erro é exibida:
+O método auxiliar HTML. ValidationMessage () também dá suporte a um segundo parâmetro que permite aos desenvolvedores substituir a mensagem de texto de erro exibida:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample18.aspx)]
 
-Gera o código acima: *&lt;estendem a classe = "Erro de validação do campo"&gt;\*&lt;/span&gt;* em vez do texto de erro padrão quando houver um erro para o Propriedade EventDate.
+O código acima gera: *&lt;span class = "Field-Validation-Error"&gt;\*&lt;/span&gt;* em vez do texto de erro padrão quando um erro está presente para a propriedade EventDate.
 
-##### <a name="htmlvalidationsummary-helper-method"></a>Método auxiliar de Html.ValidationSummary()
+##### <a name="htmlvalidationsummary-helper-method"></a>Método auxiliar HTML. ValidationSummary ()
 
-O método auxiliar Html.ValidationSummary() pode ser usado para processar uma mensagem de erro resumido, acompanhada por uma &lt;ul&gt;&lt;li /&gt;&lt;/UL&gt; lista de erros detalhado de todas as mensagens no Coleção ModelState:
+O método auxiliar HTML. ValidationSummary () pode ser usado para renderizar uma mensagem de erro de resumo, acompanhada por um &lt;UL&gt;&lt;li/&gt;&lt;/UL&gt; lista de todas as mensagens de erro detalhadas na coleção ModelState:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image11.png)
 
-O método auxiliar Html.ValidationSummary() aceita um parâmetro de cadeia de caracteres opcional – que define uma mensagem de resumo de erro a ser exibido acima da lista de erros detalhados:
+O método auxiliar HTML. ValidationSummary () usa um parâmetro de cadeia de caracteres opcional – que define uma mensagem de erro de resumo a ser exibida acima da lista de erros detalhados:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample19.aspx)]
 
-Opcionalmente, você pode usar o CSS para substituir a aparência de lista de erros.
+Opcionalmente, você pode usar o CSS para substituir a aparência da lista de erros.
 
 #### <a name="using-a-addruleviolations-helper-method"></a>Usando um método auxiliar AddRuleViolations
 
-Nossa implementação de HTTP-POST Editar inicial usado uma instrução foreach dentro do seu bloco catch para executar um loop sobre violações de regra do objeto de jantar e adicioná-los à coleção de ModelState do controlador:
+Nossa implementação inicial de edição HTTP-POST usou uma instrução Foreach dentro de seu bloco catch para executar um loop sobre as violações de regra do objeto de jantar e adicioná-las à coleção ModelState do controlador:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample20.cs)]
 
-Podemos fazer esse código um pouco limpo, adicionando um "ControllerHelpers" classe ao projeto NerdDinner e implementar um método de extensão "AddRuleViolations" dentro dele que adiciona um método auxiliar para a classe ModelStateDictionary do ASP.NET MVC. Esse método de extensão pode encapsular a lógica necessária popular o ModelStateDictionary com uma lista de erros de RuleViolation:
+Podemos tornar esse código um pouco mais claro adicionando uma classe "ControllerHelpers" ao projeto NerdDinner e implementar um método de extensão "AddRuleViolations" dentro dele que adiciona um método auxiliar à classe ASP.NET MVC ModelStateDictionary. Esse método de extensão pode encapsular a lógica necessária para popular o ModelStateDictionary com uma lista de erros RuleViolation:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample21.cs)]
 
-Em seguida, podemos atualizar nosso método de ação Editar do HTTP POST para usar esse método de extensão para popular a coleção ModelState com nosso violações de regra de jantar.
+Em seguida, podemos atualizar nosso método de ação HTTP-POST Edit para usar esse método de extensão para popular a coleção ModelState com nossas violações de regra de jantar.
 
-#### <a name="complete-edit-action-method-implementations"></a>Conclua as implementações de método de ação Editar
+#### <a name="complete-edit-action-method-implementations"></a>Concluir as implementações do método de ação de edição
 
-O código a seguir implementa toda a lógica do controlador necessária para o nosso cenário de edição:
+O código a seguir implementa toda a lógica do controlador necessária para nosso cenário de edição:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample22.cs)]
 
-A boa notícia sobre nossa implementação de edição é nossa classe de controlador nem o nosso modelo de exibição tem saber nada sobre a validação específica ou as regras de negócio que está sendo impostas pelo nosso modelo de jantar. Podemos pode adicionar mais regras ao nosso modelo no futuro e não precisa fazer nenhuma alteração de código para o nosso controlador ou exibição na ordem para que eles possam ser suportados. Isso fornece a flexibilidade de evoluir facilmente a nossos requisitos de aplicativos no futuro com um mínimo de alterações de código.
+A boa coisa sobre nossa implementação de edição é que nem nossa classe de controlador nem nosso modelo de exibição precisa saber nada sobre a validação específica ou regras de negócio sendo impostas por nosso modelo de jantar. Podemos adicionar mais regras ao nosso modelo no futuro e não é necessário fazer nenhuma alteração de código em nosso controlador ou exibição para que eles tenham suporte. Isso nos fornece a flexibilidade para desenvolver facilmente nossos requisitos de aplicativo no futuro, com um mínimo de alterações de código.
 
-### <a name="create-support"></a>Crie o suporte
+### <a name="create-support"></a>Criar suporte
 
-Concluímos a implementar o comportamento de "Editar" da nossa classe DinnersController. Vamos agora passar para implementar o suporte de "Criar" nele – que permitirá que os usuários adicionem novos jantares.
+Acabamos de implementar o comportamento de "Editar" de nossa classe DinnersController. Agora, vamos passar para implementar o suporte "Create" (criar), que permitirá aos usuários adicionar novos jantares.
 
-#### <a name="the-http-get-create-action-method"></a>HTTP-GET criar método de ação
+#### <a name="the-http-get-create-action-method"></a>O método de ação de criação HTTP-GET
 
-Começaremos por implementar o comportamento de "Introdução" de HTTP de nosso método de ação de criar. Esse método será chamado quando alguém visita a *jantares/criar* URL. Nossa implementação é semelhante a:
+Vamos começar implementando o comportamento de HTTP "GET" do nosso método Create Action. Esse método será chamado quando alguém visitar a URL do */Dinners/Create* . Nossa implementação é semelhante a:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample23.cs)]
 
-O código anterior cria um novo objeto de jantar e atribui sua propriedade EventDate como uma semana no futuro. Ele, em seguida, renderiza uma exibição com base no novo objeto de jantar. Como ainda não explicitamente passamos um nome para o *View()* método auxiliar, ele usará o caminho do baseado na convenção padrão para resolver o modelo de exibição: /Views/Dinners/Create.aspx.
+O código acima cria um novo objeto de jantar e atribui sua propriedade EventDate a uma semana no futuro. Em seguida, ele renderiza uma exibição com base no novo objeto de jantar. Como não passamos explicitamente um nome para o método auxiliar *View ()* , ele usará o caminho padrão baseado em Convenção para resolver o modelo de exibição:/views/Dinners/Create.aspx.
 
-Agora, vamos criar esse modelo de exibição. Podemos fazer isso clicando duas vezes no método de ação criar e selecionando o comando de menu de contexto "Adicionar exibição". Na caixa de diálogo "Adicionar exibição" indicaremos que estiver passando um objeto de jantar para o modelo de exibição e optar por scaffold automaticamente um modelo de "Criar":
+Agora, vamos criar esse modelo de exibição. Podemos fazer isso clicando com o botão direito do mouse no método Create Action e selecionando o comando de menu de contexto "Add View". Na caixa de diálogo "Adicionar exibição", indicaremos que estamos passando um objeto de jantar para o modelo de exibição e optamos por scaffoldr automaticamente um modelo de "criação":
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image12.png)
 
-Quando clicamos no botão "Adicionar", o Visual Studio salvar uma nova exibição de "Aspx" com base em scaffold no diretório "\Views\Dinners" e abri-lo dentro do IDE:
+Quando clicamos no botão "Add" (Adicionar), o Visual Studio salvará uma nova exibição "Create. aspx" baseada em Scaffold no diretório "\Views\Dinners" e a abrirá no IDE:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image13.png)
 
-Vamos fazer algumas alterações no padrão "criar" scaffold arquivo que foi gerado para nós e modificá-lo para cima a aparência abaixo:
+Vamos fazer algumas alterações no arquivo de Scaffold "criar" padrão que foi gerado para nós e modificá-lo para que se pareça com o seguinte:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample24.aspx)]
 
-E agora quando executamos nosso aplicativo e o acesso a *"Jantares/criar"* URL no navegador, ele será renderizado da interface do usuário como abaixo da nossa implementação de ação de criar:
+E agora, quando executamos nosso aplicativo e acessamos a URL *"/Dinners/Create"* no navegador, ele renderizará a interface do usuário como a mostrada abaixo da nossa implementação de ação de criação:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image14.png)
 
-#### <a name="implementing-the-http-post-create-action-method"></a>Implementando o HTTP-POST criar método de ação
+#### <a name="implementing-the-http-post-create-action-method"></a>Implementando o método de ação HTTP-POST Create
 
-Temos a versão de HTTP GET do nosso método de ação Create implementado. Quando um usuário clica no botão "Salvar", ele executa uma postagem de formulário para o *jantares/Create* URL, e envia o HTML &lt;entrada&gt; valores usando o verbo HTTP POST de formulário.
+Temos a versão HTTP-GET do nosso método Create Action implementado. Quando um usuário clica no botão "salvar", ele realiza uma postagem de formulário na URL */Dinners/Create* e envia o HTML &lt;entrada&gt; valores de formulário usando o verbo HTTP post.
 
-Agora, vamos implementar o comportamento do HTTP POST do nosso método de ação de criar. Vamos começar pela adição de um método sobrecarregado de ação "Criar" para nosso DinnersController que tem um atributo "AcceptVerbs" nele que indica que ele lida com cenários de HTTP POST:
+Agora, vamos implementar o comportamento HTTP POST do nosso método Create Action. Vamos começar adicionando um método de ação sobrecarregado "Create" ao nosso DinnersController que tem um atributo "AcceptVerbs" que indica que ele lida com cenários HTTP POST:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample25.cs)]
 
-Há uma variedade de maneiras que podemos acessar os parâmetros de formulário postados no nosso método de "Criar" de HTTP-POST habilitado.
+Há várias maneiras pelas quais podemos acessar os parâmetros de formulário postados em nosso método "Create" habilitado para HTTP POST.
 
-Uma abordagem é criar um novo objeto de jantar e, em seguida, use o *UpdateModel()* método auxiliar (como fizemos com a ação Editar) para preenchê-lo com os valores de formulário postados. Em seguida, podemos adicioná-la à nossa DinnerRepository, mantê-lo no banco de dados e redirecionar o usuário para nossa ação de detalhes para mostrar o jantar recém-criado usando o código a seguir:
+Uma abordagem é criar um novo objeto de jantar e, em seguida, usar o método auxiliar *UpdateModel ()* (como fizemos com a ação de edição) para preenchê-lo com os valores de formulário postados. Em seguida, podemos adicioná-lo ao nosso DinnerRepository, mantê-lo no banco de dados e redirecionar o usuário para nossa ação de detalhes para mostrar o jantar recém-criado usando o código abaixo:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample26.cs)]
 
-Como alternativa, podemos usar uma abordagem em que temos nosso método de ação Create () utilizam um objeto de jantar como um parâmetro de método. ASP.NET MVC, em seguida, automaticamente instanciar um novo objeto de jantar para nós, preencher as propriedades usando as entradas de formulário e passá-la ao nosso método de ação:
+Como alternativa, podemos usar uma abordagem em que temos nosso método de ação Create () pegar um objeto de jantar como um parâmetro de método. O ASP.NET MVC criará automaticamente um novo objeto de jantar para nós, preencherá suas propriedades usando as entradas do formulário e passará para o nosso método de ação:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample27.cs)]
 
-Nosso método de ação acima verifica que o objeto de jantar com êxito preenchido, com os valores de postagem de formulário, verificando a propriedade ModelState. Isso retornará false se não houver problemas de conversão de entrada (por exemplo: uma cadeia de caracteres de "BOGUS" para a propriedade EventDate), e se houver problemas de nosso método de ação exibe novamente o formulário.
+Nosso método de ação acima verifica se o objeto de jantar foi preenchido com êxito com os valores de postagem do formulário, verificando a Propriedade ModelState. IsValid. Isso retornará false se houver problemas de conversão de entrada (por exemplo: uma cadeia de caracteres de "falso" para a propriedade EventDate) e, se houver algum problema, nosso método de ação reexibirá o formulário.
 
-Se os valores de entrada forem válidos, o método de ação tenta adicionar e salvar o jantar novo para o DinnerRepository. Ele encapsula esse trabalho dentro de um bloco try/catch e exibe novamente o formulário se há quaisquer violações de regra de negócios (o que faria com que o método dinnerRepository.Save() gerar uma exceção).
+Se os valores de entrada forem válidos, o método de ação tentará adicionar e salvar o novo jantar no DinnerRepository. Ele encapsula esse trabalho em um bloco try/catch e exibe novamente o formulário se houver alguma violação de regra de negócio (o que faria com que o método dinnerRepository. Save () gere uma exceção).
 
-Para ver esse comportamento em ação de tratamento de erro, podemos pode solicitar a *jantares/criar* URL e preencha os detalhes sobre um novo jantar. Entrada incorreta ou valores fará com que o formulário Criar ser exibida novamente com os erros realçados como abaixo:
+Para ver esse comportamento de tratamento de erros em ação, podemos solicitar a URL do */Dinners/Create* e preencher os detalhes de um novo jantar. Entrada ou valores incorretos farão com que o formulário de criação seja exibido novamente com os erros realçados como abaixo:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image15.png)
 
-Observe como o nosso formulário de criação é respeitando as exatas mesmas validação e regras de negócios como nosso formulário de edição. Isso é porque nossas regras de negócios e validação foram definidas no modelo e não estiverem inseridas dentro da interface do usuário ou o controlador do aplicativo. Isso significa que podemos pode posteriormente alterar/evoluir nosso validação ou regras de negócio em uma única colocarem e aplique-os em todo o nosso aplicativo. Não temos que alterar qualquer código dentro de qualquer um de nossos editar ou criar métodos de ação para respeitar automaticamente quaisquer novas regras ou modificações aos existentes.
+Observe como nosso formulário de criação está respeitando exatamente as mesmas regras de validação e de negócios que o nosso formulário de edição. Isso ocorre porque nossa validação e regras de negócio foram definidas no modelo e não foram inseridas na interface do usuário nem no controlador do aplicativo. Isso significa que, posteriormente, podemos alterar/desenvolver nossas regras de validação ou de negócios em um único lugar e fazer com que elas se apliquem em todo o nosso aplicativo. Não precisaremos alterar nenhum código em nossos métodos de ação de edição ou de criação para atender automaticamente a quaisquer novas regras ou modificações nos existentes.
 
-Ao corrigir os valores de entrada e clique no botão "Salvar" novamente, nossa além de DinnerRepository terá êxito e um jantar novo será adicionado ao banco de dados. Podemos, em seguida, serão redirecionados para o */Dinners/detalhes / [id]* URL – onde podemos verá detalhes sobre o jantar recém-criado:
+Quando corrigimos os valores de entrada e clicamos no botão "salvar" novamente, nossa adição ao DinnerRepository terá sucesso e um novo jantar será adicionado ao banco de dados. Em seguida, será redirecionado para a URL do */Dinners/Details/[ID]* – onde serão apresentados detalhes sobre o jantar recém-criado:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image16.png)
 
-### <a name="delete-support"></a>Excluir o suporte
+### <a name="delete-support"></a>Excluir suporte
 
-Agora, vamos adicionar suporte de "Excluir" para nosso DinnersController.
+Agora, vamos adicionar o suporte de "excluir" ao nosso DinnersController.
 
-#### <a name="the-http-get-delete-action-method"></a>O método de ação de exclusão de HTTP-GET
+#### <a name="the-http-get-delete-action-method"></a>O método de ação de exclusão HTTP-GET
 
-Vamos começar implementando o comportamento HTTP GET do nosso método de ação de exclusão. Esse método será chamado quando alguém visita a */Dinners/Delete / [id]* URL. Abaixo está a implementação:
+Começaremos implementando o comportamento HTTP GET do nosso método de ação de exclusão. Esse método será chamado quando alguém visitar a URL do */Dinners/Delete/[ID]* . Abaixo está a implementação:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample28.cs)]
 
-O método de ação tenta recuperar o jantar a ser excluído. Se o jantar existir, ele renderiza uma exibição baseada em objeto jantar. Se o objeto não existe (ou já foi excluído) ele retorna uma exibição que renderiza o "NotFound" Exibir modelo criado anteriormente para nosso método de ação "Detalhes".
+O método de ação tenta recuperar o jantar a ser excluído. Se o jantar existir, ele renderiza uma exibição com base no objeto de jantar. Se o objeto não existir (ou já tiver sido excluído), ele retornará uma exibição que renderiza o modelo de exibição "não encontrado" criado anteriormente para nosso método de ação "detalhes".
 
-Podemos criar o modelo de exibição de "Excluir" clicando duas vezes dentro do método de ação de exclusão e selecionando o comando de menu de contexto "Adicionar exibição". Na caixa de diálogo "Adicionar exibição" indicaremos que está passando um objeto de jantar ao nosso modelo de exibição como seu modelo e optar por criar um modelo vazio:
+Podemos criar o modelo de exibição "excluir" clicando com o botão direito do mouse no método de ação Excluir e selecionando o comando de menu de contexto "Adicionar exibição". Na caixa de diálogo "Adicionar exibição", indicaremos que estamos passando um objeto de jantar para nosso modelo de exibição como modelo e optamos por criar um modelo vazio:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image17.png)
 
-Quando clicamos no botão "Adicionar", o Visual Studio irá adicionar um novo arquivo de modelo de exibição de "Delete.aspx" para que possamos dentro do nosso diretório "\Views\Dinners". Vamos adicionar algum HTML e o código para o modelo para implementar uma tela de confirmação de exclusão como abaixo:
+Quando clicamos no botão "Add" (Adicionar), o Visual Studio adicionará um novo arquivo de modelo de exibição "Delete. aspx" para nós em nosso diretório "\Views\Dinners". Vamos adicionar um HTML e código ao modelo para implementar uma tela de confirmação de exclusão, como abaixo:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample29.aspx)]
 
-O código acima exibe o título do jantar a ser excluído e saídas de um &lt;formulário&gt; elemento que faz um POST para a URL de /Dinners/Delete / [id] se o usuário final clica no botão "Excluir" dentro dele.
+O código acima exibe o título do jantar a ser excluído e gera um &lt;formulário&gt; elemento que faz um POST para a URL do/Dinners/Delete/[ID] se o usuário final clicar no botão "excluir" dentro dele.
 
-Quando executamos nosso aplicativo e o acesso a *"/ jantares/Delete / [id]"* URL em um jantar válido de objeto renderiza a interface do usuário, como abaixo:
+Quando executamos nosso aplicativo e acessamos a URL *"/Dinners/Delete/[ID]"* para um objeto de jantar válido, ele renderiza a interface do usuário da seguinte maneira:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image18.png)
 
-| **Tópico de lado: Por que estamos fazendo uma POSTAGEM?** |
+| **Tópico lateral: por que estamos fazendo uma POSTAgem?** |
 | --- |
-| Você pode perguntar – por que tivemos o esforço de criação de um &lt;formulário&gt; dentro de nossa tela de confirmação de exclusão? Por que não usar apenas um hiperlink padrão para vincular a um método de ação que faz a operação de exclusão real? O motivo é que queremos ter cuidado para proteger contra rastreadores da web e descobrindo nossas URLs e inadvertidamente, fazendo com que dados sejam excluídos quando eles sigam os links de mecanismos de pesquisa. Com base em HTTP-GET URLs são consideradas "seguras" para que eles/rastreamento de acesso, e eles se destinam a seguir não aquelas de HTTP-POST. Uma boa regra é garantir que você sempre colocar destrutivas ou operações de modificação de dados por trás das solicitações HTTP POST. |
+| Você pode perguntar: por que passamos pelo esforço de criar um formulário de &lt;&gt; em nossa tela de confirmação de exclusão? Por que não usar apenas um hiperlink padrão para vincular a um método de ação que faz a operação de exclusão real? O motivo é que queremos ter cuidado para se proteger contra rastreadores da Web e mecanismos de pesquisa descobrindo nossas URLs e fazendo com que os dados sejam excluídos inadvertidamente ao seguirem os links. As URLs baseadas em HTTP GET são consideradas "seguras" para que sejam acessadas/rastreadas, e elas devem não seguir as POSTAgens HTTP. Uma boa regra é garantir que você sempre coloque as operações destrutivas ou de modificação de dados por trás das solicitações HTTP-POST. |
 
-#### <a name="implementing-the-http-post-delete-action-method"></a>Implementando o método de ação de exclusão de HTTP POST
+#### <a name="implementing-the-http-post-delete-action-method"></a>Implementando o método de ação HTTP-POST Delete
 
-Agora temos a versão de HTTP GET do nosso método de ação de exclusão implementada que exibe uma tela de confirmação de exclusão. Quando um usuário final clica no botão "Excluir", ele executará uma postagem de formulário para o */Dinners/jantar / [id]* URL.
+Agora temos a versão HTTP-GET do nosso método de ação de exclusão implementado, que exibe uma tela de confirmação de exclusão. Quando um usuário final clica no botão "excluir", ele executará uma postagem de formulário na URL de */Dinners/Dinner/[ID]* .
 
-Agora, vamos implementar o comportamento de "POST" de HTTP do método de ação de exclusão usando o código a seguir:
+Agora, vamos implementar o comportamento de HTTP "POST" do método de ação de exclusão usando o código abaixo:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample30.cs)]
 
-A versão do HTTP POST do nosso método de ação de exclusão tenta recuperar o objeto de jantar para excluir. Se ele não é possível encontrá-lo (porque ele já foi excluído) ele processa o nosso modelo de "NotFound". Se ele encontrar o jantar, ele exclui-lo a DinnerRepository. Ela então processa um modelo de "Excluído".
+A versão HTTP-POST do nosso método de ação de exclusão tenta recuperar o objeto de jantar a ser excluído. Se ele não conseguir encontrá-lo (porque ele já foi excluído), ele renderiza o modelo "não encontrado". Se encontrar o jantar, ele o excluirá do DinnerRepository. Em seguida, ele renderiza um modelo "excluído".
 
-Para implementar o modelo de "Excluído" Vamos com o botão direito no método de ação e escolha o menu de contexto "Adicionar exibição". Vamos nomear nossa exibição "Excluído" e tiver de ser um modelo vazio (e não utilizam um objeto de modelo fortemente tipado). Em seguida, vamos adicionar algum conteúdo HTML a ele:
+Para implementar o modelo "excluído", clicaremos com o botão direito do mouse no método de ação e escolheremos o menu de contexto "Adicionar exibição". Vamos nomear nossa exibição "Deleted" e ser um modelo vazio (e não pegar um objeto de modelo fortemente tipado). Em seguida, adicionaremos um conteúdo HTML a ele:
 
 [!code-aspx[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample31.aspx)]
 
-E agora quando executamos nosso aplicativo e o acesso a *"/ jantares/Delete / [id]"* URL em um jantar válido, confirmação de exclusão de objeto, ele será renderizado da nossa jantar tela como abaixo:
+E agora, quando executamos nosso aplicativo e acessamos a URL *"/Dinners/Delete/[ID]"* para um objeto de jantar válido, ele renderizará nossa tela de confirmação de exclusão do jantar, como abaixo:
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image19.png)
 
-Quando clicamos no botão "Excluir", ele executará um POST HTTP para o */Dinners/Delete / [id]* URL, que excluirá o jantar do nosso banco de dados e exibir o nosso modelo de exibição de "Excluído":
+Quando clicamos no botão "excluir", ele executará um HTTP-POST para a URL de */Dinners/Delete/[ID]* , que excluirá o jantar do nosso banco de dados e exibirá nosso modelo de exibição "excluído":
 
 ![](provide-crud-create-read-update-delete-data-form-entry-support/_static/image20.png)
 
 ### <a name="model-binding-security"></a>Segurança de associação de modelo
 
-Discutimos duas maneiras diferentes de usar os recursos de associação de modelos internos do ASP.NET MVC. O primeiro usando o método UpdateModel() para atualizar as propriedades em um objeto de modelo existente e o segundo usando o suporte de ASP.NET MVC para passar objetos de modelo no como parâmetros de método de ação. Ambas as técnicas são muito eficientes e extremamente útil.
+Discutimos duas maneiras diferentes de usar os recursos internos de associação de modelo do ASP.NET MVC. O primeiro é usar o método UpdateModel () para atualizar propriedades em um objeto de modelo existente e o segundo usando o suporte do ASP.NET MVC para passar objetos de modelo no como parâmetros do método de ação. Essas duas técnicas são muito poderosas e extremamente úteis.
 
-Essa capacidade também traz consigo responsabilidade. É importante sempre ser paranoicos sobre a segurança ao aceitar a entrada do usuário, e isso também é verdadeiro quando a associação de objetos a entrada de formulário. Você deve ter cuidado para sempre o HTML codificar quaisquer valores inseridos pelo usuário para evitar ataques de injeção de HTML e JavaScript e tenha cuidado com ataques de injeção de SQL (Observação: estamos usando LINQ to SQL para nosso aplicativo, o que codifica automaticamente os parâmetros para evitar esses tipos de ataques). Você nunca deve depende da validação do lado do cliente apenas e sempre empregar a validação do lado do servidor para se proteger contra hackers tentar enviar a você valores falsos.
+Essa energia também traz a responsabilidade de ti. É importante sempre ser paranóicos sobre segurança ao aceitar qualquer entrada do usuário, e isso também é verdadeiro ao associar objetos à entrada de formulário. Você deve ter cuidado para sempre codificar em HTML qualquer valor inserido pelo usuário para evitar ataques de injeção de HTML e JavaScript e ter cuidado com ataques de injeção de SQL (Observação: estamos usando LINQ to SQL para nosso aplicativo, que codifica automaticamente os parâmetros para impedir que eles tipos de ataques). Você nunca deve confiar apenas na validação do lado do cliente e sempre empregar a validação do lado do servidor para se proteger contra hackers tentando enviar valores falsos.
 
-Um item de segurança adicional para garantir que você pensar sobre quando usar os recursos de associação do ASP.NET MVC é o escopo dos objetos que você está associando. Especificamente, você deseja certificar-se de que você entenda as implicações de segurança das propriedades que for definida permissão a ser associado e verifique se você permitir que somente as propriedades que realmente devem ser atualizadas por um usuário final a ser atualizada.
+Um item de segurança adicional para certificar-se de que você considere ao usar os recursos de associação do ASP.NET MVC é o escopo dos objetos que você está associando. Especificamente, você deseja ter certeza de que entendeu as implicações de segurança das propriedades que você está permitindo que estejam associadas e garantir que só seja possível atualizá-las por um usuário final para ser atualizada.
 
-Por padrão, o método UpdateModel() tentará atualizar todas as propriedades no objeto de modelo que correspondem aos valores de parâmetro de formulário de entrada. Da mesma forma, podem ter objetos passados como parâmetros de método de ação também por padrão todas as suas propriedades definidas por meio de parâmetros de formulário.
+Por padrão, o método UpdateModel () tentará atualizar todas as propriedades no objeto de modelo que correspondem aos valores de parâmetro de formulário de entrada. Da mesma forma, os objetos passados como parâmetros de método de ação também podem ter todas as suas propriedades definidas por meio de parâmetros de formulário.
 
-#### <a name="locking-down-binding-on-a-per-usage-basis"></a>Bloquear a associação em uma base por uso
+#### <a name="locking-down-binding-on-a-per-usage-basis"></a>Bloqueando a associação em uma base por uso
 
-Você pode bloquear a política de associação em uma base por uso por fornecendo um explícito "incluir lista" de propriedades que podem ser atualizadas. Isso pode ser feito, passando um parâmetro de matriz de cadeia de caracteres extras para o método UpdateModel() como abaixo:
+Você pode bloquear a política de associação por uso fornecendo uma "lista de inclusões" explícita de propriedades que podem ser atualizadas. Isso pode ser feito passando um parâmetro de matriz de cadeia de caracteres extra para o método UpdateModel (), como abaixo:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample32.cs)]
 
-Os objetos passados como parâmetros de método de ação também dão suporte a um atributo [Bind] que permite que um "incluir lista" de permitidas propriedades sejam especificadas como abaixo:
+Objetos passados como parâmetros de método de ação também dão suporte a um atributo [BIND] que permite que uma "lista de inclusões" de propriedades permitidas seja especificada como abaixo:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample33.cs)]
 
-#### <a name="locking-down-binding-on-a-type-basis"></a>Bloquear a associação em uma base de tipo
+#### <a name="locking-down-binding-on-a-type-basis"></a>Bloqueando a associação com base em um tipo
 
-Você também pode bloquear as regras de associação em uma base por tipo. Isso permite que você especificar as regras de associação de uma vez e, em seguida, aplique-los em todos os cenários (incluindo os cenários de parâmetro de método UpdateModel e ação) em todos os controladores e métodos de ação.
+Você também pode bloquear as regras de associação de acordo com o tipo. Isso permite que você especifique as regras de associação uma vez e, em seguida, elas se aplicam em todos os cenários (incluindo cenários de parâmetro de método de ação e UpdateModel) em todos os controladores e métodos de ação.
 
-Você pode personalizar as regras de associação por tipo, adicionando um atributo [Bind] para um tipo ou registrando-o no arquivo global. asax do aplicativo (útil para cenários em que você não possui o tipo). Você pode usar Include a ligação do atributo e Exclude propriedades para controlar as propriedades que são associáveis para a determinada classe ou interface.
+Você pode personalizar as regras de associação por tipo adicionando um atributo [BIND] em um tipo ou registrando-o no arquivo global. asax do aplicativo (útil para cenários em que você não possui o tipo). Você pode usar as propriedades include e Exclude do atributo BIND para controlar quais propriedades são vinculáveis para a classe ou interface específica.
 
-Nós vai usar essa técnica para a classe Dinner em nosso aplicativo NerdDinner e adicione um atributo [Bind] a ele que restringe a lista de propriedades vinculáveis ao seguinte:
+Usaremos essa técnica para a classe de jantar em nosso aplicativo NerdDinner e adicionaremos um atributo [BIND] a ela que restringe a lista de propriedades vinculáveis ao seguinte:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample34.cs)]
 
-Observe que não estamos permitindo a coleção RSVPs ser manipulados por meio de associação, nem são estamos permitindo que as propriedades DinnerID ou HostedBy a ser definido por meio de associação. Por motivos de segurança, em vez disso, vai manipular apenas essas propriedades específicas usando código explícito em nossos métodos de ação.
+Observe que não estamos permitindo que a coleção de RSVPs seja manipulada por meio de associação, nem estamos permitindo que as propriedades Jantarid ou HostedBy sejam definidas por meio de associação. Por motivos de segurança, em vez disso, só manipularemos essas propriedades específicas usando código explícito dentro de nossos métodos de ação.
 
-### <a name="crud-wrap-up"></a>Encerramento CRUD
+### <a name="crud-wrap-up"></a>Encapsulamento CRUD
 
-O ASP.NET MVC inclui um número de recursos incorporados que ajudam a implementar cenários de postagem de formulário. Usamos uma variedade desses recursos para fornecer suporte de CRUD da interface do usuário na parte superior do nosso DinnerRepository.
+O ASP.NET MVC inclui vários recursos internos que ajudam na implementação de cenários de lançamento de formulário. Usamos uma variedade desses recursos para fornecer suporte à interface do usuário CRUD sobre nosso DinnerRepository.
 
-Estamos usando uma abordagem voltada para o modelo para implementar nosso aplicativo. Isso significa que todos os nossos lógica é definida dentro de nossa camada de modelo – e não dentro do nosso controladores ou exibições de regra de negócio e validação. Nossa classe de controlador nem a nossos modelos de exibição saber nada sobre as regras de negócio específico que está sendo impostas por nossa classe de modelo do jantar.
+Estamos usando uma abordagem com foco no modelo para implementar nosso aplicativo. Isso significa que toda a lógica de validação e regra de negócio é definida em nossa camada de modelo – e não em nossos controladores ou exibições. Nem nossa classe de controlador nem nossos modelos de exibição sabem nada sobre as regras de negócios específicas sendo impostas por nossa classe de modelo de jantar.
 
-Isso manterá a nossa arquitetura de aplicativo limpa e torná-lo mais fácil de testar. Podemos adicionar regras de negócio adicionais à nossa camada de modelo no futuro e *não precisa fazer nenhuma alteração de código* a nosso controlador ou a exibição para que eles possam ser suportados. Isso vai nos forneceu uma grande quantidade de agilidade para evoluírem e forem alterados no futuro, nosso aplicativo.
+Isso manterá nossa arquitetura de aplicativo limpa e facilitará o teste. Podemos adicionar mais regras de negócios à nossa camada de modelo no futuro e *não é necessário fazer nenhuma alteração de código* em nosso controlador ou exibição para que eles tenham suporte. Isso vai nos fornecer uma grande agilidade para evoluir e alterar nosso aplicativo no futuro.
 
-Nosso DinnersController agora permite que o jantar listagens/detalhes, bem como criar, editar e excluir suporte. O código completo para a classe pode ser encontrado abaixo:
+Nosso DinnersController agora habilita listagens/detalhes de jantar, bem como suporte para criar, editar e excluir. O código completo para a classe pode ser encontrado abaixo:
 
 [!code-csharp[Main](provide-crud-create-read-update-delete-data-form-entry-support/samples/sample35.cs)]
 
 ### <a name="next-step"></a>Próxima etapa
 
-Agora temos suporte básico de CRUD (criar, ler, atualizar e excluir) implementar dentro de nossa classe DinnersController.
+Agora temos a implementação básica de suporte CRUD (criar, ler, atualizar e excluir) em nossa classe DinnersController.
 
-Agora vejamos como podemos usar classes ViewData e ViewModel para habilitar o ainda mais avançado da interface do usuário em nossos formulários.
+Agora, vamos examinar como podemos usar as classes ViewData e ViewModel para habilitar uma interface do usuário ainda mais rica em nossos formulários.
 
 > [!div class="step-by-step"]
 > [Anterior](use-controllers-and-views-to-implement-a-listingdetails-ui.md)

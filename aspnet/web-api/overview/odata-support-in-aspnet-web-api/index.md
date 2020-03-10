@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/index
-title: OData na API Web ASP.NET - ASP.NET 4.x
+title: OData em ASP.NET Web API-ASP.NET 4. x
 author: rick-anderson
-description: Como criar pontos de extremidade OData na API Web ASP.NET para ASP.NET 4. x
+description: Como criar pontos de extremidade OData em ASP.NET Web API para ASP.NET 4. x
 ms.author: riande
 ms.date: 08/17/2012
 ms.custom: seoapril2019
@@ -10,15 +10,15 @@ ms.assetid: 9151c605-e911-4f24-95b5-ca310b105abf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api
 msc.type: chapter
 ms.openlocfilehash: 6d84b458a02b63b24334b137afdb5b710d91c5ee
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65133164"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78598759"
 ---
-# <a name="odata-in-aspnet-web-api"></a>OData na API Web ASP.NET
+# <a name="odata-in-aspnet-web-api"></a>OData no ASP.NET Web API
 
-> Como criar pontos de extremidade OData na API Web ASP.NET para ASP.NET 4. x. O OData é um protocolo de acesso de dados para a web. Ele fornece uma maneira uniforme para consultar e manipular os conjuntos de dados. API da Web dá suporte à versão 3 e 4 da versão do protocolo OData.
+> Como criar pontos de extremidade OData em ASP.NET Web API para ASP.NET 4. x. OData é um protocolo de acesso a dados para a Web. Ele fornece uma maneira uniforme de consultar e manipular conjuntos de dados. A API Web dá suporte à versão 3 e à versão 4 do protocolo OData.
 
 - [OData v4](odata-v4/index.md)
 

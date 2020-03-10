@@ -9,6 +9,6 @@ Considere o uso [da API Web do ASP.NET Core](/aspnet/core/web-api). Ele tem as s
 * Um sistema de configuração baseado em ambiente pronto para a nuvem.
 * Injeção de dependência interna.
 * Um pipeline de solicitação HTTP leve, modular e de alto desempenho.
-* Capacidade de hospedar em [Kestrel](/aspnet/core/fundamentals/servers/kestrel), [IIS] (xref: host-and-Deploy/IIS/index, [http. sys](xref:fundamentals/servers/httpsys), [Nginx](xref:host-and-deploy/linux-nginx), [Apache](xref:host-and-deploy/linux-apache)e [Docker](xref:host-and-deploy/docker/index).
+* Capacidade de hospedar em [Kestrel](/aspnet/core/fundamentals/servers/kestrel), [IIS](xref:host-and-deploy/iis/index), [http. sys](xref:fundamentals/servers/httpsys), [Nginx](xref:host-and-deploy/linux-nginx), [Apache](xref:host-and-deploy/linux-apache)e [Docker](xref:host-and-deploy/docker/index).
 * Controle de versão lado a lado.
 * Ferramentas que simplificam o moderno desenvolvimento para a Web.

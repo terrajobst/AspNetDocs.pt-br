@@ -9,11 +9,11 @@ ms.assetid: c76dbc35-a914-4ee3-919c-4f4d1fa05104
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-a-code-update
 msc.type: authoredcontent
 ms.openlocfilehash: 3881833bfe2a50a38a357614f92f434a04a8ab08
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74626774"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78567399"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-a-code-update"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantando uma atualização de código
 
@@ -23,13 +23,13 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Após a implantação inicial, seu trabalho de manutenção e desenvolvimento de seu site continua e, antes de longo, você desejará implantar uma atualização. Este tutorial orienta você pelo processo de implantação de uma atualização no código do aplicativo. A atualização implementada e implantada neste tutorial não envolve uma alteração no banco de dados; Você verá o que há de diferente na implantação de uma alteração de banco de dados no próximo tutorial.
 
 Lembrete: se você receber uma mensagem de erro ou algo não funcionar enquanto percorre o tutorial, certifique-se de verificar a [página de solução de problemas](troubleshooting.md).
 
-## <a name="make-a-code-change"></a>Fazer uma alteração de código
+## <a name="make-a-code-change"></a>Alterar um código
 
 Como um exemplo simples de uma atualização para seu aplicativo, você adicionará à página **instrutores** uma lista de cursos ensinados pelo instrutor selecionado.
 
@@ -53,7 +53,7 @@ Antes de poder usar seus perfis de publicação para implantar para teste, prepa
 
 1. Abra o assistente **publicar na Web** clicando com o botão direito do mouse no projeto ContosoUniversity e clicando em **publicar**.
 2. Clique no perfil de **teste** na lista suspensa **perfil** .
-3. Clique na guia **configurações** .
+3. Clique na guia **Configurações** .
 4. Em **DefaultConnection** na seção **databases** , desmarque a caixa de seleção **Atualizar banco de dados** .
 5. Clique na guia **perfil** e, em seguida, clique no perfil de **preparo** na lista suspensa **perfil** .
 6. Quando for perguntado se deseja salvar as alterações feitas no perfil de **teste** , clique em **Sim**.
@@ -163,7 +163,7 @@ Ao usar o assistente **publicar Web** para publicar o projeto, você pode ver qu
     ![Visualizar alterações em site. css](deploying-a-code-update/_static/image10.png)
 
     Se você clicar duas vezes no arquivo *Web. config* , a caixa de diálogo **Visualizar alterações** mostrará o efeito de suas transformações de configuração de compilação e publicação das transformações de perfil. Neste ponto, você não fez nada que faria com que o arquivo *Web. config* no servidor fosse alterado, portanto, você espera não ver nenhuma alteração. No entanto, a janela **Visualizar alterações** incorretamente mostra duas alterações. Parece que dois elementos XML serão removidos. Esses elementos são adicionados pelo processo de publicação quando você seleciona **executar migrações do Code First no início do aplicativo** para uma classe de contexto de Code First. A comparação é feita antes que o processo de publicação adicione esses elementos, portanto, parece que eles estão sendo removidos, embora não sejam removidos. Esse erro será corrigido em uma versão futura.
-5. Clique em **Fechar**.
+5. Clique em **fechar**
 6. Clique em **Publicar**.
 7. Quando o navegador for aberto na home page do site de teste, pressione CTRL + F5 para fazer uma atualização impressa para ver o efeito da alteração do CSS.
 
@@ -184,7 +184,7 @@ Suponha que você não goste do plano de fundo azul e queira reverter para a cor
 
     Uma janela é aberta para mostrar as diferenças entre o arquivo local e a versão dele no ambiente de destino.
 
-    ![Diff-Content/site. css](deploying-a-code-update/_static/image13.png)
+    ![Diff-Content/Site.css](deploying-a-code-update/_static/image13.png)
 4. Em **Gerenciador de soluções**, clique com o botão direito do mouse em **site. css** novamente e clique em **publicar site. css**.
 
     A janela **atividade de publicação na Web** mostra que o arquivo foi publicado.

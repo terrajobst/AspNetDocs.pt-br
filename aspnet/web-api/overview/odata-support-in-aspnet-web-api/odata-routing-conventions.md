@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
-title: Convenções de roteamento na API Web ASP.NET 2 Odata - ASP.NET 4.x
+title: Convenções de roteamento no ASP.NET Web API 2 OData-ASP.NET 4. x
 author: MikeWasson
-description: Descreve as convenções de roteamentos dessa API Web 2 no ASP.NET 4. x usa pontos de extremidade OData.
+description: Descreve as convenções de roteamento que a API da Web 2 no ASP.NET 4. x usa para pontos de extremidade OData.
 ms.author: riande
 ms.date: 07/31/2013
 ms.custom: seoapril2019
@@ -10,31 +10,31 @@ ms.assetid: adbc175a-14eb-4ab2-a441-d056ffa8266f
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-routing-conventions
 msc.type: authoredcontent
 ms.openlocfilehash: 63df4a82cd8df92631485b2544117844cfd0ca56
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130481"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614712"
 ---
-# <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenções de roteamento na API Web ASP.NET 2 Odata
+# <a name="routing-conventions-in-aspnet-web-api-2-odata"></a>Convenções de roteamento no OData ASP.NET Web API 2
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-> Este artigo descreve as convenções de roteamento dessa API Web 2 no ASP.NET 4. x usa pontos de extremidade OData.
+> Este artigo descreve as convenções de roteamento que a API da Web 2 no ASP.NET 4. x usa para pontos de extremidade OData.
 
-Quando a API Web recebe uma solicitação de OData, ele mapeia a solicitação para um nome de controlador e um nome de ação. O mapeamento é baseado no método HTTP e o URI. Por exemplo, `GET /odata/Products(1)` mapeia para `ProductsController.GetProduct`.
+Quando a API da Web recebe uma solicitação OData, ela mapeia a solicitação para um nome de controlador e um nome de ação. O mapeamento é baseado no método HTTP e no URI. Por exemplo, `GET /odata/Products(1)` é mapeado para `ProductsController.GetProduct`.
 
-Na parte 1 deste artigo, descrevo as convenções de roteamento internas do OData. Essas convenções são projetadas especificamente para pontos de extremidade OData e substituir o sistema de roteamento de API da Web padrão. (A substituição acontece quando você chama **MapODataRoute**.)
+Na parte 1 deste artigo, descrevo as convenções internas de roteamento do OData. Essas convenções são projetadas especificamente para pontos de extremidade OData e substituem o sistema de roteamento da API Web padrão. (A substituição ocorre quando você chama **MapODataRoute**.)
 
-Na parte 2, mostro como adicionar convenções de roteamentos personalizadas. Atualmente, as convenções internas não abrangem o intervalo inteiro de OData URIs, mas você pode estendê-las para lidar com casos adicionais.
+Na parte 2, eu mostro como adicionar convenções de roteamento personalizadas. Atualmente, as convenções internas não abrangem todo o intervalo de URIs OData, mas você pode estendê-las para lidar com casos adicionais.
 
 - [Convenções de roteamento internas](#conventions)
-- [Convenções de roteamentos personalizadas](#custom)
+- [Convenções de roteamento personalizadas](#custom)
 
 <a id="conventions"></a>
 ## <a name="built-in-routing-conventions"></a>Convenções de roteamento internas
 
-Antes de eu descrevem as convenções de roteamento OData na API da Web, é útil entender os URIs de OData. Uma [URI do OData](http://www.odata.org/documentation/odata-v3-documentation/url-conventions/) consiste em:
+Antes de descrever as convenções de roteamento do OData na API Web, é útil entender os URIs do OData. Um [URI do OData](http://www.odata.org/documentation/odata-v3-documentation/url-conventions/) consiste em:
 
 - A raiz do serviço
 - O caminho do recurso
@@ -44,139 +44,139 @@ Antes de eu descrevem as convenções de roteamento OData na API da Web, é úti
 
 Para o roteamento, a parte importante é o caminho do recurso. O caminho do recurso é dividido em segmentos. Por exemplo, `/Products(1)/Supplier` tem três segmentos:
 
-- `Products` se refere a um conjunto de entidades chamado "Produtos".
+- `Products` se refere a um conjunto de entidades chamado "produtos".
 - `1` é uma chave de entidade, selecionando uma única entidade do conjunto.
 - `Supplier` é uma propriedade de navegação que seleciona uma entidade relacionada.
 
-Portanto, esse caminho selecionará o fornecedor do produto 1.
+Portanto, esse caminho escolhe o fornecedor do produto 1.
 
 > [!NOTE]
-> Segmentos de caminho OData nem sempre correspondem aos segmentos URI. Por exemplo, "1" é considerado um segmento de caminho.
+> Os segmentos de caminho OData nem sempre correspondem aos segmentos de URI. Por exemplo, "1" é considerado um segmento de caminho.
 
-**Nomes do controlador.** O nome de controlador sempre é derivado da entidade definidas na raiz do caminho do recurso. Por exemplo, se o caminho do recurso é `/Products(1)/Supplier`, API da Web procura por um controlador chamado `ProductsController`.
+**Nomes de controlador.** O nome do controlador é sempre derivado do conjunto de entidades na raiz do caminho do recurso. Por exemplo, se o caminho do recurso for `/Products(1)/Supplier`, a API Web procurará um controlador chamado `ProductsController`.
 
-**Nomes de ação.** Nomes de ação são derivados de segmentos de caminho mais o modelo de dados de entidade (EDM), conforme listado nas tabelas a seguir. Em alguns casos, você terá duas opções para o nome da ação. Por exemplo, "Get" ou &quot;GetProducts&quot;.
+**Nomes de ação.** Os nomes de ação são derivados dos segmentos de caminho mais o EDM (modelo de dados de entidade), conforme listado nas tabelas a seguir. Em alguns casos, você tem duas opções para o nome da ação. Por exemplo, "Get" ou &quot;GetProducts&quot;.
 
-**Consultar entidades**
+**Consultando entidades**
 
-| Solicitação | Exemplo de URI | Nome da ação | Exemplo de ação |
+| Solicitação | URI de exemplo | Nome da ação | Exemplo de ação |
 | --- | --- | --- | --- |
-| OBTER /entityset | / Produtos | GetEntitySet ou Get | GetProducts |
-| GET /entityset(key) | /Products(1) | GetEntityType ou Get | GetProduct |
-| OBTER /entityset (chave) / convertido | / /Models.Book produtos (1) | GetEntityType ou Get | GetBook |
+| OBTER/EntitySet | /Products | Getentityset ou Get | GetProducts |
+| OBTER/EntitySet (chave) | /Products (1) | Getentitytype ou Get | Getproduct |
+| OBTER/EntitySet (chave)/Cast | /Products (1)/Models.Book | Getentitytype ou Get | GetBook |
 
-Para obter mais informações, consulte [criar um ponto de extremidade de OData de somente leitura](odata-v3/creating-an-odata-endpoint.md).
+Para obter mais informações, consulte [criar um ponto de extremidade OData somente leitura](odata-v3/creating-an-odata-endpoint.md).
 
 **Criando, atualizando e excluindo entidades**
 
-| Solicitação | Exemplo de URI | Nome da ação | Exemplo de ação |
+| Solicitação | URI de exemplo | Nome da ação | Exemplo de ação |
 | --- | --- | --- | --- |
-| POSTAR /entityset | / Produtos | PostEntityType ou Post | PostProduct |
-| COLOCAR /entityset(key) | /Products(1) | PutEntityType ou Put | PutProduct |
-| COLOCAR /entityset (chave) / convertido | / /Models.Book produtos (1) | PutEntityType ou Put | PutBook |
-| PATCH /entityset(key) | /Products(1) | PatchEntityType ou Patch | PatchProduct |
-| PATCH /entityset (chave) / convertido | / /Models.Book produtos (1) | PatchEntityType ou Patch | PatchBook |
-| DELETE /entityset(key) | /Products(1) | DeleteEntityType ou Delete | DeleteProduct |
-| Excluir /entityset (chave) / convertido | / /Models.Book produtos (1) | DeleteEntityType ou Delete | DeleteBook |
+| POSTAR/EntitySet | /Products | Createentitytype ou post | Produto |
+| COLOCAR/EntitySet (chave) | /Products (1) | PutEntityType ou put | PutProduct |
+| COLOCAR/EntitySet (chave)/Cast | /Products (1)/Models.Book | PutEntityType ou put | PutBook |
+| PATCH/EntitySet (chave) | /Products (1) | PatchEntityType ou patch | PatchProduct |
+| PATCH/EntitySet (Key)/Cast | /Products (1)/Models.Book | PatchEntityType ou patch | PatchBook |
+| EXCLUIR/EntitySet (chave) | /Products (1) | DeleteEntityType ou Delete | DeleteProduct |
+| EXCLUIR/EntitySet (chave)/Cast | /Products (1)/Models.Book | DeleteEntityType ou Delete | DeleteBook |
 
-**Consultar uma propriedade de navegação**
+**Consultando uma propriedade de navegação**
 
-| Solicitação | Exemplo de URI | Nome da ação | Exemplo de ação |
+| Solicitação | URI de exemplo | Nome da ação | Exemplo de ação |
 | --- | --- | --- | --- |
-| GET /entityset (chave) / navegação | / Produtos (1) / fornecedor | GetNavigationFromEntityType ou GetNavigation | GetSupplierFromProduct |
-| OBTER a navegação/cast//entityset (chave) | / /Models.Book/Author produtos (1) | GetNavigationFromEntityType ou GetNavigation | GetAuthorFromBook |
+| OBTER/EntitySet (chave)/Navigation | /Products (1)/Supplier | GetNavigationFromEntityType ou getnavegation | GetSupplierFromProduct |
+| OBTER/EntitySet (chave)/Cast/Navigation | /Products (1)/Models.Book/Author | GetNavigationFromEntityType ou getnavegation | GetAuthorFromBook |
 
 Para obter mais informações, consulte [trabalhando com relações de entidade](odata-v3/working-with-entity-relations.md).
 
-**Criação e exclusão de Links**
+**Criando e excluindo links**
 
-| Solicitação | Exemplo de URI | Nome da ação |
+| Solicitação | URI de exemplo | Nome da ação |
 | --- | --- | --- |
-| POST /entityset(key)/$links/navigation | /Products(1)/$links/Supplier | CreateLink |
-| PUT /entityset(key)/$links/navigation | /Products(1)/$links/Supplier | CreateLink |
-| DELETE /entityset(key)/$links/navigation | /Products(1)/$links/Supplier | DeleteLink |
-| DELETE /entityset(key)/$links/navigation(relatedKey) | /Products/(1)/$links/Suppliers(1) | DeleteLink |
+| POST/EntitySet (chave)/$links/Navigation | /Products (1)/$links/Supplier | CreateLink |
+| COLOCAR/EntitySet (Key)/$links/Navigation | /Products (1)/$links/Supplier | CreateLink |
+| EXCLUIR/EntitySet (chave)/$links/Navigation | /Products (1)/$links/Supplier | DeleteLink |
+| DELETE /entityset(key)/$links/navigation(relatedKey) | /Products/(1)/$links/suppliers (1) | DeleteLink |
 
 Para obter mais informações, consulte [trabalhando com relações de entidade](odata-v3/working-with-entity-relations.md).
 
 **Propriedades**
 
-*Requer a API Web 2*
+*Requer API Web 2*
 
-| Solicitação | Exemplo de URI | Nome da ação | Exemplo de ação |
+| Solicitação | URI de exemplo | Nome da ação | Exemplo de ação |
 | --- | --- | --- | --- |
-| GET /entityset (chave) / propriedade | / Produtos (1) / nome | GetPropertyFromEntityType ou GetProperty | GetNameFromProduct |
-| OBTER propriedade/cast//entityset (chave) | / /Models.Book/Author produtos (1) | GetPropertyFromEntityType ou GetProperty | GetTitleFromBook |
+| OBTER/EntitySet (chave)/Property | /Products (1)/Name | GetPropertyFromEntityType ou GetProperty | GetNameFromProduct |
+| OBTER/EntitySet (chave)/Cast/Property | /Products (1)/Models.Book/Author | GetPropertyFromEntityType ou GetProperty | GetTitleFromBook |
 
 **Ações**
 
-| Solicitação | Exemplo de URI | Nome da ação | Exemplo de ação |
+| Solicitação | URI de exemplo | Nome da ação | Exemplo de ação |
 | --- | --- | --- | --- |
-| POST /entityset(key)/action | / Produtos (1) / taxa | ActionNameOnEntityType ou o nome da ação | RateOnProduct |
-| POST /entityset(key)/cast/action | /Products(1)/Models.Book/CheckOut | ActionNameOnEntityType ou o nome da ação | CheckOutOnBook |
+| POST/EntitySet (chave)/Action | /Products (1)/Rate | ActionNameOnEntityType ou ActionName | RateOnProduct |
+| POST/EntitySet (chave)/Cast/Action | /Products(1)/Models.Book/CheckOut | ActionNameOnEntityType ou ActionName | CheckOutOnBook |
 
-Para obter mais informações, consulte [ações de OData](odata-v3/odata-actions.md).
+Para obter mais informações, consulte [ações do OData](odata-v3/odata-actions.md).
 
 **Assinaturas de método**
 
 Aqui estão algumas regras para as assinaturas de método:
 
-- Se o caminho contiver uma chave, a ação deve ter um parâmetro denominado *chave*.
-- Se o caminho contiver uma chave em uma propriedade de navegação, a ação deve ter um parâmetro denominado *relatedKey*.
-- Decore *chave* e *relatedKey* parâmetros com o **[FromODataUri]** parâmetro.
-- POST e PUT solicitações usam um parâmetro do tipo de entidade.
-- Solicitações de PATCH utilizam um parâmetro do tipo **Delta&lt;T&gt;**, onde *T* é o tipo de entidade.
+- Se o caminho contiver uma chave, a ação deverá ter um parâmetro chamado *Key*.
+- Se o caminho contiver uma chave em uma propriedade de navegação, a ação deverá ter um parâmetro chamado *relatedKey*.
+- Decorar os parâmetros *Key* e *relatedKey* com o parâmetro **[FromODataUri]** .
+- As solicitações POST e PUT usam um parâmetro do tipo de entidade.
+- As solicitações de PATCH assumem um parâmetro do tipo **Delta&lt;t&gt;** , em que *t* é o tipo de entidade.
 
-Para referência, aqui está um exemplo que mostra as assinaturas de método para cada convenção de roteamento interna do OData.
+Para referência, aqui está um exemplo que mostra as assinaturas de método para cada convenção interna de roteamento OData.
 
 [!code-csharp[Main](odata-routing-conventions/samples/sample1.cs)]
 
 <a id="custom"></a>
-## <a name="custom-routing-conventions"></a>Convenções de roteamentos personalizadas
+## <a name="custom-routing-conventions"></a>Convenções de roteamento personalizadas
 
-As convenções internas não cobre atualmente todos os URIs do OData possíveis. Você pode adicionar novas convenções de Implementando a **IODataRoutingConvention** interface. Essa interface tem dois métodos:
+Atualmente, as convenções internas não abrangem todos os URIs OData possíveis. Você pode adicionar novas convenções implementando a interface **IODataRoutingConvention** . Essa interface tem dois métodos:
 
 [!code-csharp[Main](odata-routing-conventions/samples/sample2.cs)]
 
 - **SelectController** retorna o nome do controlador.
 - **SelectAction** retorna o nome da ação.
 
-Para ambos os métodos, se a convenção não se aplica a essa solicitação, o método deve retornar nulo.
+Para ambos os métodos, se a Convenção não se aplicar a essa solicitação, o método deverá retornar NULL.
 
-O **ODataPath** parâmetro representa o caminho de recurso de OData analisado. Ele contém uma lista de **[ODataPathSegment](https://msdn.microsoft.com/library/system.web.http.odata.routing.odatapathsegment.aspx)** instâncias, uma para cada segmento do caminho do recurso. **ODataPathSegment** é uma classe abstrata; cada tipo de segmento é representado por uma classe que deriva de **ODataPathSegment**.
+O parâmetro **ODataPath** representa o caminho de recurso OData analisado. Ele contém uma lista de instâncias de **[ODataPathSegment](https://msdn.microsoft.com/library/system.web.http.odata.routing.odatapathsegment.aspx)** , uma para cada segmento do caminho do recurso. **ODataPathSegment** é uma classe abstrata; cada tipo de segmento é representado por uma classe derivada de **ODataPathSegment**.
 
-O **ODataPath.TemplatePath** propriedade é uma cadeia de caracteres que representa a concatenação de todos os segmentos de caminho. Por exemplo, se o URI é `/Products(1)/Supplier`, é o modelo de caminho &quot;~/entityset/key/navigation&quot;. Observe que os segmentos não correspondem diretamente aos segmentos de URI. Por exemplo, a chave de entidade (1) é representada como seu próprio **ODataPathSegment**.
+A propriedade **ODataPath. TemplatePath** é uma cadeia de caracteres que representa a concatenação de todos os segmentos de caminho. Por exemplo, se o URI for `/Products(1)/Supplier`, o modelo de caminho será &quot;~/EntitySet/Key/Navigation&quot;. Observe que os segmentos não correspondem diretamente aos segmentos de URI. Por exemplo, a chave de entidade (1) é representada como seu próprio **ODataPathSegment**.
 
 Normalmente, uma implementação de **IODataRoutingConvention** faz o seguinte:
 
-1. Compare o modelo de caminho para ver se essa convenção aplica-se a solicitação atual. Se não for aplicável, retorne nulo.
-2. Se aplica-se a convenção, use as propriedades do **ODataPathSegment** instâncias para derivar os nomes de controlador e ação.
-3. Para ações, adicione todos os valores no dicionário de rota deve associar aos parâmetros de ação (normalmente chaves de entidade).
+1. Compare o modelo de caminho para ver se essa convenção se aplica à solicitação atual. Se não for aplicável, retornará NULL.
+2. Se a Convenção se aplicar, use as propriedades das instâncias **ODataPathSegment** para derivar os nomes do controlador e da ação.
+3. Para ações, adicione quaisquer valores ao dicionário de rotas que devem ser associados aos parâmetros de ação (normalmente, chaves de entidade).
 
-Vamos examinar um exemplo específico. As convenções de roteamento internas não dão suporte a indexação em uma coleção de navegação. Em outras palavras, não há nenhum convenção para URIs semelhante ao seguinte:
+Vejamos um exemplo específico. As convenções de roteamento internas não dão suporte à indexação em uma coleção de navegação. Em outras palavras, não há nenhuma convenção para URIs como a seguinte:
 
 [!code-javascript[Main](odata-routing-conventions/samples/sample3.js)]
 
-Aqui está uma convenção de roteamento personalizada para lidar com esse tipo de consulta.
+Aqui está uma Convenção de roteamento personalizada para lidar com esse tipo de consulta.
 
 [!code-csharp[Main](odata-routing-conventions/samples/sample4.cs)]
 
-Notas:
+Observações:
 
-1. Eu derivam **EntitySetRoutingConvention**, porque o **SelectController** método nessa classe é apropriado para essa nova convenção de roteamento. Isso significa que eu não preciso reimplementar **SelectController**.
-2. A convenção aplica-se apenas a solicitações GET, e somente quando o modelo de caminho é &quot;~/entityset/key/navigation/key&quot;.
-3. É o nome da ação &quot;obter {EntityType}&quot;, onde *{EntityType}* é o tipo de coleção de navegação. Por exemplo, &quot;GetSupplier&quot;. Você pode usar qualquer convenção de nomenclatura que desejar &#8212; apenas certifique-se de ações do controlador correspondem.
-4. A ação utiliza dois parâmetros chamados *chave* e *relatedKey*. (Para obter uma lista de alguns nomes de parâmetro predefinidos, consulte [ODataRouteConstants](https://msdn.microsoft.com/library/system.web.http.odata.routing.odatarouteconstants.aspx).)
+1. Eu derivo de **EntitySetRoutingConvention**, pois o método **SelectController** nessa classe é apropriado para essa nova Convenção de roteamento. Isso significa que eu não preciso implementar novamente o **SelectController**.
+2. A Convenção se aplica somente a solicitações GET e somente quando o modelo de caminho é &quot;~/EntitySet/Key/Navigation/Key&quot;.
+3. O nome da ação é &quot;obter {EntityType}&quot;, em que *{EntityType}* é o tipo da coleção de navegação. Por exemplo, &quot;getsupplier&quot;. Você pode usar qualquer Convenção de nomenclatura que desejar &#8212; apenas para verificar se as ações do controlador correspondem.
+4. A ação usa dois parâmetros chamados *Key* e *relatedKey*. (Para obter uma lista de alguns nomes de parâmetro predefinidos, consulte [ODataRouteConstants](https://msdn.microsoft.com/library/system.web.http.odata.routing.odatarouteconstants.aspx).)
 
-A próxima etapa é adicionar a nova convenção à lista de convenções de roteamento. Isso acontece durante a configuração, conforme mostrado no código a seguir:
+A próxima etapa é adicionar a nova Convenção à lista de convenções de roteamento. Isso ocorre durante a configuração, conforme mostrado no código a seguir:
 
 [!code-csharp[Main](odata-routing-conventions/samples/sample5.cs)]
 
-Aqui estão alguns outras exemplo convenções de roteamento que ser úteis para estudo:
+Aqui estão algumas outras convenções de roteamento de exemplo que são úteis para estudar:
 
 - [CompositeKeyRoutingConvention](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/ODataCompositeKeySample/ODataCompositeKeySample/Extensions/CompositeKeyRoutingConvention.cs)
 - [CustomNavigationRoutingConvention](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/ODataServiceSample/ODataService/Extensions/CustomNavigationRoutingConvention.cs)
 - [NonBindableActionRoutingConvention](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/ODataActionsSample/ODataActionsSample/NonBindableActionRoutingConvention.cs)
 - [ODataVersionRouteConstraint](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/ODataVersioningSample/ODataVersioningSample/Extensions/ODataVersionRouteConstraint.cs)
 
-E claro própria API Web é o código-fonte aberto, para que você possa ver os [código-fonte](http://aspnetwebstack.codeplex.com/) para as convenções de roteamento internas. Eles são definidos na **System.Web.Http.OData.Routing.Conventions** namespace.
+E, naturalmente, a própria API da Web é de código-fonte aberto, para que você possa ver o [código-fonte](http://aspnetwebstack.codeplex.com/) das convenções de roteamento internas. Eles são definidos no namespace **System. Web. http. OData. Routing. Conventions** .
