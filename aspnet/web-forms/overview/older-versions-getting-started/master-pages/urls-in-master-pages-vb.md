@@ -9,11 +9,11 @@ ms.assetid: 43d1e83c-0092-4dcf-977c-e709c4dce7c3
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/urls-in-master-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 01627988f68bb619969a5fe3cfaae68fe70b5d4f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588230"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548107"
 ---
 # <a name="urls-in-master-pages-vb"></a>URLs em páginas mestras (VB)
 
@@ -58,7 +58,7 @@ Em seguida, atualize o arquivo de `Web.sitemap` para incluir uma nova entrada de
 
 [!code-xml[Main](urls-in-master-pages-vb/samples/sample3.xml)]
 
-A página de `Default.aspx` recém-criada deve ter quatro controles de conteúdo correspondentes aos quatro ContentPlaceHolders em `Site.master`. Adicione texto ao controle de conteúdo referenciando o `MainContent` ContentPlaceHolder e visite a página por meio de um navegador. Como mostra a Figura 2, o navegador não consegue localizar o arquivo de imagem `PoweredByASPNET.gif`. O que está acontecendo aqui?
+A página de `Default.aspx` recém-criada deve ter quatro controles de conteúdo correspondentes aos quatro ContentPlaceHolders em `Site.master`. Adicione texto ao controle de conteúdo referenciando o `MainContent` ContentPlaceHolder e visite a página por meio de um navegador. Como mostra a Figura 2, o navegador não consegue localizar o arquivo de imagem `PoweredByASPNET.gif`. O que está acontecendo?
 
 A página de conteúdo `~/Admin/Default.aspx` é enviada ao mesmo HTML para a região de `footerContent`, como foi a página `About.aspx`:
 
@@ -127,7 +127,7 @@ Remova a marcação do elemento `<a>` e adicione um controle HyperLink em seu lu
 
 [!code-aspx[Main](urls-in-master-pages-vb/samples/sample8.aspx)]
 
-É só isso! Neste ponto, todas as URLs em nossa página mestra são corretamente baseadas quando renderizadas por uma página de conteúdo, independentemente de quais pastas a página mestra e a página de conteúdo estão localizadas.
+É isso! Neste ponto, todas as URLs em nossa página mestra são corretamente baseadas quando renderizadas por uma página de conteúdo, independentemente de quais pastas a página mestra e a página de conteúdo estão localizadas.
 
 ### <a name="automatic-url-resolution-in-theheadsection"></a>Resolução automática de URL na seção`<head>`
 

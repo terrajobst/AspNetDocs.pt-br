@@ -1,39 +1,39 @@
 ---
 uid: signalr/overview/getting-started/real-time-web-applications-with-signalr
-title: 'Laboratório prático: Aplicativos Web em tempo real com SignalR | Microsoft Docs'
+title: 'Laboratório prático: aplicativos Web em tempo real com Signalr | Microsoft Docs'
 author: bradygaster
-description: A capacidade de conteúdo por push do servidor para os clientes conectados conforme ela ocorre em tempo real de recursos de aplicativos da Web em tempo real. Para desenvolvedores do ASP.NET, ASP...
+description: Os aplicativos Web em tempo real apresentam a capacidade de enviar por push o conteúdo do lado do servidor para os clientes conectados conforme eles ocorrem, em tempo real. Para desenvolvedores de ASP.NET, ASP...
 ms.author: bradyg
 ms.date: 07/16/2014
 ms.assetid: ba07958c-42e1-4da0-81db-ba6925ed6db0
 msc.legacyurl: /signalr/overview/getting-started/real-time-web-applications-with-signalr
 msc.type: authoredcontent
 ms.openlocfilehash: 9e39fd3f2fc9d4e791002450085215096c222fcd
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65119999"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537096"
 ---
-# <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratório prático: Aplicativos Web em tempo real com SignalR
+# <a name="hands-on-lab-real-time-web-applications-with-signalr"></a>Laboratório prático: aplicativos Web em tempo real com Signalr
 
-por [Web Camps equipe](https://twitter.com/webcamps)
+por [equipe de acampamentos da Web](https://twitter.com/webcamps)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-[Baixar a Web Camps treinamento Kit, versão de outubro de 2015](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b)
+[Baixe o Web acampamentos Training Kit, versão de outubro de 2015](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b)
 
-> A capacidade de conteúdo por push do servidor para os clientes conectados conforme ela ocorre em tempo real de recursos de aplicativos da Web em tempo real. Para desenvolvedores do ASP.NET **SignalR do ASP.NET** é uma biblioteca para adicionar a funcionalidade da web em tempo real aos seus aplicativos. Ela tira proveito de vários transportes, selecionar automaticamente o melhor considerando o cliente e transporte disponíveis melhor do servidor de transporte disponível. Ele aproveita **WebSocket**, uma API de HTML5 que permite a comunicação bidirecional entre o navegador e o servidor.
+> Os aplicativos Web em tempo real apresentam a capacidade de enviar por push o conteúdo do lado do servidor para os clientes conectados conforme eles ocorrem, em tempo real. Para desenvolvedores de ASP.NET, o **signalr ASP.net** é uma biblioteca para adicionar funcionalidade da Web em tempo real a seus aplicativos. Ele tira proveito de vários transportes, selecionando automaticamente o melhor transporte disponível, considerando o melhor transporte disponível do cliente e do servidor. Ele aproveita o **WebSocket**, uma API HTML5 que permite a comunicação bidirecional entre o navegador e o servidor.
 > 
-> **SignalR** também fornece uma API simple e de alto nível para fazer o servidor para cliente RPC (chamada de funções do JavaScript em navegadores de seus clientes com o código do lado do servidor .NET) em seu aplicativo ASP.NET, bem como a adição de ganchos úteis para o gerenciamento de conexão como conectar/desconectar eventos, as conexões de agrupamento e autorização.
+> O **signalr** também fornece uma API simples e de alto nível para fazer RPC do servidor para o cliente (chamar funções JavaScript nos navegadores de seus clientes do código .net do lado do servidor) em seu aplicativo ASP.net, bem como adicionar ganchos úteis para o gerenciamento de conexões, como eventos de conexão/desconexão, agrupamento de conexões e autorização.
 > 
-> **O SignalR** é uma abstração de alguns dos transportes que são necessários para realizar trabalho em tempo real entre cliente e servidor. Um **SignalR** conexão começa como HTTP e, em seguida, é promovido para um **WebSocket** conexão se estiver disponível. **WebSocket** é o transporte ideal para **SignalR**, pois ele torna o uso mais eficiente da memória do servidor, tem a menor latência e os recursos mais subjacentes (como a comunicação full-duplex entre cliente e servidor), mas ele também tem os requisitos mais rígidos: **WebSocket** exige que o servidor usar **Windows Server 2012** ou **Windows 8**, junto com **.NET Framework 4.5**. Se esses requisitos não forem atendidos, **SignalR** tentará usar outros transportes para fazer suas conexões (como *Ajax sondagem longa*).
+> O **signalr** é uma abstração de alguns dos transportes que são necessários para realizar o trabalho em tempo real entre o cliente e o servidor. Uma conexão de **signalr** inicia como http e é promovida para uma conexão **WebSocket** , se disponível. **WebSocket** é o transporte ideal para **signalr**, já que ele faz o uso mais eficiente da memória do servidor, tem a menor latência e tem os recursos mais subjacentes (como a comunicação full duplex entre cliente e servidor), mas também tem os requisitos mais rígidos: **WebSocket** requer que o servidor esteja usando o **Windows Server 2012** ou o **Windows 8**, juntamente com **.NET Framework 4,5**. Se esses requisitos não forem atendidos, o **signalr** tentará usar outros transportes para fazer suas conexões (como *sondagem longa do AJAX*).
 > 
-> O **SignalR** API contém dois modelos para a comunicação entre clientes e servidores: **Conexões persistentes** e **Hubs**. Um **Conexão** representa um ponto de extremidade simple para enviar um único destinatário, agrupados ou mensagens de difusão. Um **Hub** é um pipeline de mais alto nível construído com a API de Conexão que permite que seu cliente e servidor chamar métodos entre si diretamente.
+> A API do **signalr** contém dois modelos para a comunicação entre clientes e servidores: **conexões persistentes** e **hubs**. Uma **conexão** representa um ponto de extremidade simples para enviar mensagens de destinatário único, agrupadas ou de difusão. Um **Hub** é um pipeline de nível mais alto criado com base na API de conexão que permite que o cliente e o servidor chamem métodos entre si diretamente.
 > 
-> ![Arquitetura do SignalR](real-time-web-applications-with-signalr/_static/image1.png)
+> ![Arquitetura do signalr](real-time-web-applications-with-signalr/_static/image1.png)
 > 
-> Todo o código de exemplo e trechos de código são incluídos no Kit de treinamento do Web Camps, outubro de 2015 liberar, disponível em [ https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b ](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b).  Observe que o link do instalador nessa página não funciona; Use um dos links na seção de ativos.
+> Todos os códigos de exemplo e trechos de código estão incluídos no kit de treinamento do acampamentos da Web, versão de outubro de 2015, disponível em [https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b](https://github.com/Microsoft-Web/WebCampTrainingKit/releases/tag/v2015.10.13b).  Observe que o link do instalador nessa página não funciona mais; em vez disso, use um dos links na seção ativos.
 
 <a id="Overview"></a>
 ## <a name="overview"></a>Visão geral
@@ -41,37 +41,37 @@ por [Web Camps equipe](https://twitter.com/webcamps)
 <a id="Objectives"></a>
 ### <a name="objectives"></a>Objetivos
 
-Neste laboratório prático, você aprenderá como:
+Neste laboratório prático, você aprenderá a:
 
-- Envie notificações do servidor para o cliente usando o SignalR.
-- Escalar horizontalmente seu aplicativo SignalR usando **SQL Server**.
+- Enviar notificações do servidor para o cliente usando o Signalr.
+- Scale Out seu aplicativo Signalr usando **SQL Server**.
 
 <a id="Prerequisites"></a>
 ### <a name="prerequisites"></a>Prerequisites
 
-O exemplo a seguir é necessário para concluir este laboratório prático:
+O seguinte é necessário para concluir este laboratório prático:
 
-- [O Visual Studio Express 2013 para Web](https://www.microsoft.com/visualstudio/) ou maior
+- [Visual Studio Express 2013 para Web](https://www.microsoft.com/visualstudio/) ou superior
 
 <a id="Setup"></a>
-### <a name="setup"></a>Configuração
+### <a name="setup"></a>Instalação
 
-Para executar os exercícios neste laboratório prático, você precisará configurar seu ambiente pela primeira vez.
+Para executar os exercícios neste laboratório prático, você precisará configurar seu ambiente primeiro...
 
-1. Abra uma janela do Windows Explorer e navegue até o laboratório **origem** pasta.
-2. Clique com botão direito **Setup. cmd** e selecione **executar como administrador** para iniciar o processo de instalação que irá configurar seu ambiente e instalem os trechos de código do Visual Studio para este laboratório.
-3. Se a caixa de diálogo controle de conta de usuário for mostrada, confirme a ação para continuar.
+1. Abra uma janela do Windows Explorer e navegue até a pasta de **origem** do laboratório.
+2. Clique com o botão direito do mouse em **Setup. cmd** e selecione **Executar como administrador** para iniciar o processo de instalação que irá configurar seu ambiente e instalar os trechos de código do Visual Studio para este laboratório.
+3. Se a caixa de diálogo controle de conta de usuário for exibida, confirme a ação para continuar.
 
 > [!NOTE]
-> Verifique se que você tiver marcado todas as dependências para este laboratório antes de executar a instalação.
+> Verifique se você verificou todas as dependências deste laboratório antes de executar a instalação.
 
 <a id="CodeSnippets"></a>
 ### <a name="using-the-code-snippets"></a>Usando os trechos de código
 
-Em todo o documento de laboratório, você será instruído a inserir blocos de código. Para sua conveniência, a maioria desse código é fornecido como o Visual Studio trechos de código que pode ser acessada de dentro do Visual Studio 2013 para evitar ter que adicioná-lo manualmente.
+Em todo o documento do laboratório, você será instruído a inserir blocos de código. Para sua conveniência, a maior parte desse código é fornecida como trechos de Visual Studio Code, que podem ser acessados em Visual Studio 2013 para evitar a necessidade de adicioná-lo manualmente.
 
 > [!NOTE]
-> Cada exercício é acompanhado por uma solução inicial localizada na **começar** pasta do exercício que permite que você siga cada exercício independentemente dos outros. Esteja ciente de que os trechos de código são adicionados durante um exercício estão ausentes desses iniciando soluções e podem não funcionar até concluir o exercício. Dentro do código-fonte para um exercício, você também encontrará uma **final** pasta que contém uma solução do Visual Studio com o código que é o resultado de concluir as etapas no exercício correspondente. Você pode usar essas soluções como uma diretriz se você precisar de ajuda adicional ao trabalhar com este laboratório prático.
+> Cada exercício é acompanhado por uma solução inicial localizada na pasta **begin** do exercício que permite que você siga cada exercício independentemente dos outros. Lembre-se de que os trechos de código que são adicionados durante um exercício estão ausentes dessas soluções iniciais e podem não funcionar até que você conclua o exercício. Dentro do código-fonte de um exercício, você também encontrará uma pasta **final** contendo uma solução do Visual Studio com o código que resulta da conclusão das etapas no exercício correspondente. Você pode usar essas soluções como diretrizes se precisar de ajuda adicional ao trabalhar com este laboratório prático.
 
 ---
 
@@ -80,309 +80,309 @@ Em todo o documento de laboratório, você será instruído a inserir blocos de 
 
 Este laboratório prático inclui os seguintes exercícios:
 
-1. [Trabalhando com dados em tempo real usando SignalR](#Exercise1)
-2. [Escala horizontal usando o SQL Server](#Exercise2)
+1. [Trabalhando com dados em tempo real usando Signalr](#Exercise1)
+2. [Dimensionamento usando SQL Server](#Exercise2)
 
 Tempo estimado para concluir este laboratório: **60 minutos**
 
 > [!NOTE]
-> Quando você inicia o Visual Studio pela primeira vez, você deve selecionar uma das coleções de configurações predefinidas. Cada coleção predefinida foi projetada para corresponder a um estilo de desenvolvimento específico e determina o comportamento do editor, layouts de janela, trechos de código IntelliSense e opções da caixa de diálogo. Os procedimentos neste laboratório descrevem as ações necessárias para realizar uma determinada tarefa no Visual Studio ao usar o **configurações gerais de desenvolvimento** coleção. Se você escolher uma coleção de configurações diferentes para seu ambiente de desenvolvimento, pode haver diferenças nas etapas que você deve levar em conta.
+> Ao iniciar o Visual Studio pela primeira vez, você deve selecionar uma das coleções de configurações predefinidas. Cada coleção predefinida é projetada para corresponder a um estilo de desenvolvimento específico e determina layouts de janela, comportamento do editor, trechos de código IntelliSense e opções da caixa de diálogo. Os procedimentos neste laboratório descrevem as ações necessárias para realizar uma determinada tarefa no Visual Studio ao usar a coleção de **configurações de desenvolvimento geral** . Se você escolher uma coleção de configurações diferentes para seu ambiente de desenvolvimento, poderá haver diferenças nas etapas que você deve levar em conta.
 
 <a id="Exercise1"></a>
-### <a name="exercise-1-working-with-real-time-data-using-signalr"></a>Exercício 1: Trabalhando com dados em tempo real usando SignalR
+### <a name="exercise-1-working-with-real-time-data-using-signalr"></a>Exercício 1: trabalhando com dados em tempo real usando o Signalr
 
-Embora o bate-papo geralmente é usado como um exemplo, você pode fazer um todo muito mais com a funcionalidade da Web em tempo real. Sempre que um usuário atualiza uma página da web para ver os novos dados ou a página implementa o Ajax longo de sondagem para recuperar novos dados, você pode usar o SignalR.
+Embora o chat seja geralmente usado como exemplo, você pode fazer muito mais com a funcionalidade da Web em tempo real. Sempre que um usuário atualiza uma página da Web para ver novos dados ou a página implementa a sondagem longa Ajax para recuperar novos dados, você pode usar o Signalr.
 
-Dá suporte ao SignalR **por push** ou **difusão** funcionalidade; ele lida com gerenciamento de conexão automaticamente. No clássicas conexões de HTTP para comunicação cliente-servidor, conexão for restabelecida para cada solicitação, mas o SignalR fornece uma conexão persistente entre o cliente e servidor. No SignalR que chama o código do servidor para um código de cliente no navegador usando chamadas de procedimento remoto (RPC), em vez do modelo de solicitação-resposta conhecemos hoje.
+O signalr dá suporte à funcionalidade de Push ou de **difusão** **do servidor** ; Ele lida com o gerenciamento de conexão automaticamente. Em conexões HTTP clássicas para comunicação cliente-servidor, a conexão é restabelecida para cada solicitação, mas o Signalr fornece uma conexão persistente entre o cliente e o servidor. No Signalr, o código do servidor chama um código de cliente no navegador usando RPC (chamadas de procedimento remoto), em vez do modelo de solicitação-resposta que conhecemos hoje.
 
-Neste exercício, você irá configurar o aplicativo **Geek Quiz** para usar o SignalR para exibir o painel de estatísticas com as métricas atualizadas sem a necessidade de atualizar a página inteira.
+Neste exercício, você configurará o aplicativo de **teste de especialista** para usar o signalr para exibir o painel de estatísticas com as métricas atualizadas sem a necessidade de atualizar a página inteira.
 
 <a id="Ex1Task1"></a>
-#### <a name="task-1--exploring-the-geek-quiz-statistics-page"></a>Tarefa 1 – Explorando a página de estatísticas de teste Geek
+#### <a name="task-1--exploring-the-geek-quiz-statistics-page"></a>Tarefa 1 – explorando a página de estatísticas do teste de especialista
 
-Nesta tarefa, você percorrer o aplicativo e verificar como a página de estatísticas é mostrada e como você pode melhorar a maneira como as informações é atualizado.
+Nesta tarefa, você passará pelo aplicativo e verificará como a página de estatísticas é mostrada e como você pode melhorar a maneira como as informações são atualizadas.
 
-1. Abra **Visual Studio Express 2013 para Web** e abra o **GeekQuiz.sln** solução localizada no **Source\Ex1 WorkingWithRealTimeData\Begin** pasta.
-2. Pressione **F5** para executar a solução. O **faça logon no** página deve ser exibida no navegador.
+1. Abra **Visual Studio Express 2013 para Web** e abra a solução **GeekQuiz. sln** localizada na pasta **Source\Ex1-WorkingWithRealTimeData\Begin** .
+2. Pressione **F5** para executar a solução. A página de **logon** deve aparecer no navegador.
 
-    ![Executar a solução](real-time-web-applications-with-signalr/_static/image2.png "executar a solução")
+    ![Executando a solução](real-time-web-applications-with-signalr/_static/image2.png "Executando a solução")
 
-    *Executar a solução*
+    *Executando a solução*
 3. Clique em **registrar** no canto superior direito da página para criar um novo usuário no aplicativo.
 
-    ![Registre-se o link](real-time-web-applications-with-signalr/_static/image3.png "link registrar")
+    ![Link de registro](real-time-web-applications-with-signalr/_static/image3.png "Link de registro")
 
     *Link de registro*
-4. No **registre** , insira um **nome de usuário** e **senha**e, em seguida, clique em **registrar**.
+4. Na página **registrar** , insira um **nome de usuário** e **senha**e, em seguida, clique em **registrar**.
 
-    ![Registrar um usuário](real-time-web-applications-with-signalr/_static/image4.png "registrar um usuário")
+    ![Registrando um usuário](real-time-web-applications-with-signalr/_static/image4.png "Registrando um usuário")
 
-    *Registrar um usuário*
-5. O aplicativo registra a nova conta e o usuário é autenticado e redirecionado de volta para a home page, mostrando a primeira pergunta de teste.
-6. Abra o **estatísticas** página em uma nova janela e colocar o **Home** página e **estatísticas** página lado a lado.
+    *Registrando um usuário*
+5. O aplicativo registra a nova conta e o usuário é autenticado e Redirecionado de volta para o home page mostrando a primeira pergunta do teste.
+6. Abra a página **estatísticas** em uma nova janela e coloque a página **inicial** e a página **estatísticas** lado a lado.
 
-    ![Windows lado a lado](real-time-web-applications-with-signalr/_static/image5.png "pelo windows lado a lado")
+    ![Janelas lado a lado](real-time-web-applications-with-signalr/_static/image5.png "Janelas lado a lado")
 
-    *Windows lado a lado*
-7. No **Home** página, responder à pergunta, clicando em uma das opções.
+    *Janelas lado a lado*
+7. Na **Home** Page, responda à pergunta clicando em uma das opções.
 
-    ![Responder a uma pergunta](real-time-web-applications-with-signalr/_static/image6.png "responder a uma pergunta")
+    ![Respondendo a uma pergunta](real-time-web-applications-with-signalr/_static/image6.png "Respondendo a uma pergunta")
 
-    *Responder a uma pergunta*
-8. Depois de clicar em um dos botões, a resposta deverá aparecer.
+    *Respondendo a uma pergunta*
+8. Depois de clicar em um dos botões, a resposta deve aparecer.
 
-    ![Pergunta respondida correto](real-time-web-applications-with-signalr/_static/image7.png "pergunta respondida correto")
+    ![Pergunta respondida correta](real-time-web-applications-with-signalr/_static/image7.png "Pergunta respondida correta")
 
-    *Perguntas respondidas corretamente*
-9. Observe que as informações fornecidas na página de estatísticas estão desatualizadas. Atualize a página para ver os resultados atualizados.
+    *Pergunta respondida corretamente*
+9. Observe que as informações fornecidas na página estatísticas estão desatualizadas. Atualize a página para ver os resultados atualizados.
 
-    ![Página de estatísticas](real-time-web-applications-with-signalr/_static/image8.png "página de estatísticas")
+    ![Página de estatísticas](real-time-web-applications-with-signalr/_static/image8.png "Página de estatísticas")
 
     *Página de estatísticas*
-10. Volte para o Visual Studio e parar a depuração.
+10. Volte para o Visual Studio e pare a depuração.
 
 <a id="Ex1Task2"></a>
-#### <a name="task-2--adding-signalr-to-geek-quiz-to-show-online-charts"></a>Tarefa 2 – adicionando SignalR ao Geek Quiz para mostrar gráficos Online
+#### <a name="task-2--adding-signalr-to-geek-quiz-to-show-online-charts"></a>Tarefa 2 – adicionando o Signalr ao quiz para pau para mostrar gráficos online
 
-Nesta tarefa, você adicionar o SignalR para a solução e enviar atualizações para os clientes automaticamente quando uma nova resposta é enviada ao servidor.
+Nesta tarefa, você adicionará o Signalr à solução e enviará atualizações para os clientes automaticamente quando uma nova resposta for enviada ao servidor.
 
-1. Dos **ferramentas** menu no Visual Studio, selecione **Gerenciador de pacotes NuGet**e, em seguida, clique em **Package Manager Console**.
-2. No **Package Manager Console** janela, execute o seguinte comando:
+1. No menu **ferramentas** no Visual Studio, selecione **Gerenciador de pacotes NuGet**e clique em **console do Gerenciador de pacotes**.
+2. Na janela do **console do Gerenciador de pacotes** , execute o seguinte comando:
 
     [!code-powershell[Main](real-time-web-applications-with-signalr/samples/sample1.ps1)]
 
-    ![Instalação de pacote do SignalR](real-time-web-applications-with-signalr/_static/image9.png "instalação do pacote de SignalR")
+    ![Instalação do pacote do signalr](real-time-web-applications-with-signalr/_static/image9.png "Instalação do pacote do signalr")
 
-    *Instalação do pacote de SignalR*
+    *Instalação do pacote do signalr*
 
    > [!NOTE]
-   > Ao instalar **SignalR** versão de pacotes do NuGet 2.0.2 de um aplicativo MVC 5 totalmente novo, você precisará atualizar manualmente **OWIN** pacotes para a versão 2.0.1 (ou superior) antes de instalar o SignalR. Para fazer isso, você pode executar o script a seguir na **Package Manager Console**:
+   > Ao instalar o **signalr** NuGet Packages versão 2.0.2 de um aplicativo totalmente novo MVC 5, você precisará atualizar manualmente os pacotes do **OWIN** para a versão 2.0.1 (ou superior) antes de instalar o signalr. Para fazer isso, você pode executar o seguinte script no **console do Gerenciador de pacotes**:
    > 
    > [!code-powershell[Main](real-time-web-applications-with-signalr/samples/sample2.ps1)]
    > 
-   > Em uma versão futura do SignalR, dependências OWIN serão atualizadas automaticamente.
-3. Na **Gerenciador de soluções**, expanda o **Scripts** pasta e observe que o SignalR *js* arquivos foram adicionados à solução.
+   > Em uma versão futura do Signalr, as dependências do OWIN serão atualizadas automaticamente.
+3. No **Gerenciador de soluções**, expanda a pasta **scripts** e observe que os arquivos *js* do signalr foram adicionados à solução.
 
-    ![SignalR JavaScript referencia](real-time-web-applications-with-signalr/_static/image10.png "SignalR JavaScript faz referência")
+    ![Referências de JavaScript do signalr](real-time-web-applications-with-signalr/_static/image10.png "Referências de JavaScript do signalr")
 
-    *Referências de JavaScript do SignalR*
-4. No **Gerenciador de soluções**, com o botão direito do **GeekQuiz** projeto, selecione **Add** | **nova pasta**e nomeie-  **Hubs**.
-5. Clique com botão direito do **Hubs** pasta e selecione **adicionar | Novo Item**.
+    *Referências de JavaScript do signalr*
+4. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **GeekQuiz** , selecione **Adicionar** | **nova pasta**e nomeie os **hubs**de ti.
+5. Clique com o botão direito do mouse na pasta **hubs** e selecione **Adicionar | Novo item**.
 
-    ![Adicionar novo item](real-time-web-applications-with-signalr/_static/image11.png "adicionar novo item")
+    ![Adicionar novo item](real-time-web-applications-with-signalr/_static/image11.png "Adicionar novo item")
 
     *Adicionar novo item*
-6. No **Adicionar Novo Item** caixa de diálogo, selecione o **Visual c# | Web | O SignalR** nó no painel esquerdo, selecione **classe de Hub do SignalR (v2)** do painel central, nomeie o arquivo **StatisticsHub.cs** e clique em **Add**.
+6. Na caixa de diálogo **Adicionar novo item** , selecione o **Visual C# | Web | Nó do signalr** no painel esquerdo, selecione **classe de Hub do signalr (v2)** no painel central, nomeie o arquivo **StatisticsHub.cs** e clique em **Adicionar**.
 
-    ![Caixa de diálogo Adicionar novo item](real-time-web-applications-with-signalr/_static/image12.png "caixa de diálogo Adicionar novo item")
+    ![Caixa de diálogo Adicionar novo item](real-time-web-applications-with-signalr/_static/image12.png "Caixa de diálogo Adicionar novo item")
 
-    *Adicionar caixa de diálogo novo item*
-7. Substitua o código na **StatisticsHub** classe pelo código a seguir.
+    *Caixa de diálogo Adicionar novo item*
+7. Substitua o código na classe **StatisticsHub** pelo código a seguir.
 
-    (Código de trecho de código – *StatisticsHubClass RealTimeSignalR - Ex1 -* )
+    (Trecho de código- *RealTimeSignalR-EX1-StatisticsHubClass*)
 
     [!code-csharp[Main](real-time-web-applications-with-signalr/samples/sample3.cs)]
-8. Abra **Startup.cs** e adicione a seguinte linha no final o **configuração** método.
+8. Abra **Startup.cs** e adicione a linha a seguir ao final do método de **configuração** .
 
-    (Código de trecho de código – *MapSignalR RealTimeSignalR - Ex1 -* )
+    (Trecho de código- *RealTimeSignalR-EX1-MapSignalR*)
 
     [!code-csharp[Main](real-time-web-applications-with-signalr/samples/sample4.cs)]
-9. Abra o **StatisticsService.cs** página dentro a **serviços** pasta e adicione o seguinte usando diretivas.
+9. Abra a página **StatisticsService.cs** dentro da pasta **Serviços** e adicione as seguintes diretivas using.
 
-    (Código de trecho de código – *UsingDirectives RealTimeSignalR - Ex1 -* )
+    (Trecho de código- *RealTimeSignalR-EX1-UsingDirectives*)
 
     [!code-csharp[Main](real-time-web-applications-with-signalr/samples/sample5.cs)]
-10. Para notificar os clientes conectados de atualizações, você primeiro recupere uma **contexto** objeto para a conexão atual. O **Hub** objeto contém métodos para enviar mensagens para um único cliente ou clientes de difusão para todos. Adicione o seguinte método para o **StatisticsService** classe para transmitir os dados de estatísticas.
+10. Para notificar os clientes conectados de atualizações, primeiro recupere um objeto de **contexto** para a conexão atual. O objeto **Hub** contém métodos para enviar mensagens a um único cliente ou difundir para todos os clientes conectados. Adicione o método a seguir à classe **StatisticsService** para transmitir os dados de estatísticas.
 
-    (Código de trecho de código – *NotifyUpdatesMethod RealTimeSignalR - Ex1 -* )
+    (Trecho de código- *RealTimeSignalR-EX1-NotifyUpdatesMethod*)
 
     [!code-csharp[Main](real-time-web-applications-with-signalr/samples/sample6.cs)]
 
     > [!NOTE]
-    > No código acima, você estiver usando um nome de método arbitrário para chamar uma função no cliente (ou seja: *updateStatistics*). O nome do método que você especificar será interpretado como um objeto dinâmico, o que significa que nenhum IntelliSense ou validação de tempo de compilação para ele. A expressão é avaliada em tempo de execução. Quando a chamada de método é executado, o SignalR envia o nome do método e os valores de parâmetro para o cliente. Se o cliente tem um método que corresponde ao nome, esse método é chamado e os valores de parâmetro são passados para ele. Se nenhum método correspondente for encontrado no cliente, nenhum erro será gerado. Para obter mais informações, consulte [guia da API do ASP.NET SignalR Hubs](../guide-to-the-api/hubs-api-guide-server.md).
-11. Abra o **TriviaController.cs** página dentro a **controladores** pasta e adicione o seguinte usando diretivas.
+    > No código acima, você está usando um nome de método arbitrário para chamar uma função no cliente (ou seja: *updateStatistics*). O nome do método que você especifica é interpretado como um objeto dinâmico, o que significa que não há nenhuma validação de tempo de compilação ou IntelliSense para ele. A expressão é avaliada em tempo de execução. Quando a chamada de método é executada, o Signalr envia o nome do método e os valores de parâmetro para o cliente. Se o cliente tiver um método que corresponda ao nome, esse método será chamado e os valores de parâmetro serão passados para ele. Se nenhum método correspondente for encontrado no cliente, nenhum erro será gerado. Para obter mais informações, consulte o [guia da API de hubs do signalr ASP.net](../guide-to-the-api/hubs-api-guide-server.md).
+11. Abra a página **TriviaController.cs** dentro da pasta **Controllers** e adicione as seguintes diretivas using.
 
     [!code-csharp[Main](real-time-web-applications-with-signalr/samples/sample7.cs)]
-12. Adicione o seguinte código realçado para o **Post** método de ação.
+12. Adicione o seguinte código realçado ao método **post** Action.
 
-    (Código de trecho de código – *NotifyUpdatesCall RealTimeSignalR - Ex1 -* )
+    (Trecho de código- *RealTimeSignalR-EX1-NotifyUpdatesCall*)
 
     [!code-csharp[Main](real-time-web-applications-with-signalr/samples/sample8.cs)]
-13. Abra o **Statistics.cshtml** página dentro de **modos de exibição | Página inicial** pasta. Localize o **Scripts** seção e adicione as seguintes referências de script no início da seção.
+13. Abra a página **Statistics. cshtml** dentro das **exibições | Pasta base** . Localize a seção **scripts** e adicione as seguintes referências de script no início da seção.
 
-    (Código de trecho de código – *SignalRScriptReferences RealTimeSignalR - Ex1 -* )
+    (Trecho de código- *RealTimeSignalR-EX1-SignalRScriptReferences*)
 
     [!code-cshtml[Main](real-time-web-applications-with-signalr/samples/sample9.cshtml)]
 
     > [!NOTE]
-    > Quando você adiciona o SignalR e outras bibliotecas de script ao seu projeto do Visual Studio, o Gerenciador de pacotes poderá instalar uma versão do arquivo de script SignalR é mais recente que a versão mostrada neste tópico. Certifique-se de que a referência de script em seu código corresponda à versão da biblioteca de script instalada em seu projeto.
-14. Adicione o seguinte código realçado para se conectar ao cliente para o hub do SignalR e atualizar os dados de estatísticas quando uma nova mensagem é recebida do hub.
+    > Quando você adiciona o Signalr e outras bibliotecas de scripts ao seu projeto do Visual Studio, o Gerenciador de pacotes pode instalar uma versão do arquivo de script do Signalr mais recente do que a versão mostrada neste tópico. Certifique-se de que a referência de script em seu código corresponda à versão da biblioteca de scripts instalada em seu projeto.
+14. Adicione o seguinte código realçado para conectar o cliente ao Hub do Signalr e atualizar os dados de estatísticas quando uma nova mensagem for recebida do Hub.
 
-    (Código de trecho de código – *SignalRClientCode RealTimeSignalR - Ex1 -* )
+    (Trecho de código- *RealTimeSignalR-EX1-SignalRClientCode*)
 
     [!code-cshtml[Main](real-time-web-applications-with-signalr/samples/sample10.cshtml)]
 
-    Nesse código, você está criando um Proxy de Hub e registrar um manipulador de eventos para escutar as mensagens enviadas pelo servidor. Nesse caso, você escuta as mensagens enviadas por meio de *updateStatistics* método.
+    Nesse código, você está criando um proxy de Hub e registrando um manipulador de eventos para escutar mensagens enviadas pelo servidor. Nesse caso, você escuta mensagens enviadas por meio do método *updateStatistics* .
 
 <a id="Ex1Task3"></a>
-#### <a name="task-3--running-the-solution"></a>Tarefa 3 – executar a solução
+#### <a name="task-3--running-the-solution"></a>Tarefa 3 – executando a solução
 
-Nesta tarefa, você executará a solução para verificar se o modo de exibição de estatísticas é atualizado automaticamente usando o SignalR depois de responder a uma nova pergunta.
+Nesta tarefa, você executará a solução para verificar se o modo de exibição de estatísticas é atualizado automaticamente usando Signalr depois de responder a uma nova pergunta.
 
 1. Pressione **F5** para executar a solução.
 
     > [!NOTE]
     > Se ainda não estiver conectado ao aplicativo, faça logon com o usuário que você criou na tarefa 1.
-2. Abra o **estatísticas** página em uma nova janela e colocar o **Home** página e **estatísticas** página lado a lado, como você fez na tarefa 1.
-3. No **Home** página, responder à pergunta, clicando em uma das opções.
+2. Abra a página **estatísticas** em uma nova janela e coloque a página página **inicial** e **estatísticas** lado a lado, como você fez na tarefa 1.
+3. Na **Home** Page, responda à pergunta clicando em uma das opções.
 
-    ![Respondendo a outra pergunta](real-time-web-applications-with-signalr/_static/image13.png "responder outra pergunta")
+    ![Respondendo a outra pergunta](real-time-web-applications-with-signalr/_static/image13.png "Respondendo a outra pergunta")
 
     *Respondendo a outra pergunta*
-4. Depois de clicar em um dos botões, a resposta deverá aparecer. Observe que as informações de estatísticas na página são atualizadas automaticamente depois de responder à pergunta com as informações atualizadas sem a necessidade de atualizar a página inteira.
+4. Depois de clicar em um dos botões, a resposta deve aparecer. Observe que as informações de estatísticas na página são atualizadas automaticamente depois de responder à pergunta com as informações atualizadas sem a necessidade de atualizar a página inteira.
 
-    ![Página de estatísticas atualizado após a resposta](real-time-web-applications-with-signalr/_static/image14.png "página estatísticas atualizadas após a resposta")
+    ![Página de estatísticas atualizada após a resposta](real-time-web-applications-with-signalr/_static/image14.png "Página de estatísticas atualizada após a resposta")
 
     *Página de estatísticas atualizada após a resposta*
 
 <a id="Exercise2"></a>
-### <a name="exercise-2-scaling-out-using-sql-server"></a>Exercício 2: Escala horizontal usando o SQL Server
+### <a name="exercise-2-scaling-out-using-sql-server"></a>Exercício 2: escalar horizontalmente usando SQL Server
 
-Ao dimensionar um aplicativo web, geralmente você pode escolher entre *escalar verticalmente* e *escalando horizontalmente* opções. *Escalar verticalmente* significa usar um servidor maior, com mais recursos (CPU, RAM, etc.) enquanto *escalar horizontalmente* significa adicionar mais servidores para lidar com a carga. O problema com o último é que os clientes podem obter roteados para diferentes servidores. Um cliente que está conectado a um servidor não receberá as mensagens enviadas do outro servidor.
+Ao dimensionar um aplicativo Web, geralmente você pode escolher entre *expandir* e *escalar* horizontalmente as opções. *Escalar verticalmente* significa usar um servidor maior, com mais recursos (CPU, RAM, etc.) enquanto *expande* significa adicionar mais servidores para lidar com a carga. O problema com o último é que os clientes podem ser roteados para servidores diferentes. Um cliente que está conectado a um servidor não receberá mensagens enviadas de outro servidor.
 
-Você pode resolver esses problemas por meio de um componente chamado *backplane*para encaminhar mensagens entre servidores. Com um backplane habilitado, cada instância do aplicativo envia mensagens ao backplane e backplane encaminha-os para as outras instâncias do aplicativo.
+Você pode resolver esses problemas usando um componente chamado *backplane*para encaminhar mensagens entre servidores. Com um backplane habilitado, cada instância do aplicativo envia mensagens para o backplane e o backplane as encaminha para as outras instâncias do aplicativo.
 
-Atualmente, há três tipos de backplanes para SignalR:
+Atualmente, há três tipos de backplanes para o Signalr:
 
-- **Windows Azure Service Bus**. O barramento de serviço é uma infraestrutura de mensagens que permite que os componentes enviar mensagens de acoplamento fraco.
-- **SQL Server**. Backplane do SQL Server grava mensagens em tabelas SQL. Backplane usa o Service Broker para o sistema de mensagens eficiente. No entanto, ele também funciona se o Service Broker não está habilitado.
-- **Redis**. O redis é um repositório de chave-valor na memória. Redis oferece suporte a um padrão de publicação/assinatura ("pub/sub") para enviar mensagens.
+- **Barramento de serviço do Windows Azure**. O barramento de serviço é uma infraestrutura de mensagens que permite que os componentes enviem mensagens menos rígidas.
+- **SQL Server**. O backplane SQL Server grava mensagens em tabelas SQL. O backplane usa Service Broker para mensagens eficientes. No entanto, ele também funcionará se o Service Broker não estiver habilitado.
+- **Redis**. Redis é um repositório de chave-valor na memória. O Redis dá suporte a um padrão de publicação/assinatura ("pub/sub") para enviar mensagens.
 
-Cada mensagem é enviada por meio de um barramento de mensagem. Um barramento de mensagem implementa o [IMessageBus](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.messaging.imessagebus(v=vs.100).aspx) interface, que fornece uma abstração de publicação/assinatura. Os backplanes funcionam, substituindo o padrão **IMessageBus** com barramento projetado por esse backplane.
+Cada mensagem é enviada por meio de um barramento de mensagem. Um barramento de mensagem implementa a interface [IMessageBus](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.messaging.imessagebus(v=vs.100).aspx) , que fornece uma abstração de publicação/assinatura. As backplanes funcionam substituindo o padrão **IMessageBus** por um barramento projetado para esse backplane.
 
-Cada instância de servidor se conecta ao backplane por meio do barramento. Quando uma mensagem é enviada, ela vai para o backplane e o backplane envia para cada servidor. Quando um servidor recebe uma mensagem do backplane, ele armazena a mensagem em seu cache local. O servidor, em seguida, entrega mensagens para os clientes de seu cache local.
+Cada instância de servidor conecta-se ao backplane através do barramento. Quando uma mensagem é enviada, ela vai para o backplane e o backplane a envia para todos os servidores. Quando um servidor recebe uma mensagem do backplane, ele armazena a mensagem em seu cache local. Em seguida, o servidor entrega mensagens a clientes de seu cache local.
 
-Para obter mais informações sobre como funciona o backplane SignalR, leia esta [artigo](../performance/scaleout-in-signalr.md).
+Para obter mais informações sobre como funciona o backplane do Signalr, leia este [artigo](../performance/scaleout-in-signalr.md).
 
 > [!NOTE]
-> Existem alguns cenários onde um backplane pode se tornar um gargalo. Aqui estão alguns cenários típicos do SignalR:
+> Há alguns cenários em que um backplane pode se tornar um afunilamento. Aqui estão alguns cenários típicos do Signalr:
 > 
-> - [Servidor de transmissão](tutorial-server-broadcast-with-signalr.md) (por exemplo, bolsa): Backplanes funcionam bem para este cenário, porque o servidor controla a taxa na qual as mensagens são enviadas.
-> - [Cliente-para-cliente](tutorial-getting-started-with-signalr.md) (por exemplo, bate-papo): Nesse cenário, o backplane pode ser um gargalo se o número de mensagens pode ser dimensionado com o número de clientes. ou seja, se a taxa de mensagens aumenta proporcionalmente de mais clientes unir.
-> - [Em tempo real de alta frequência](tutorial-high-frequency-realtime-with-signalr.md) (por exemplo, jogos em tempo real): Um backplane não é recomendado para este cenário.
+> - Difusão de servidor (por exemplo, cotação de ações): os planos de [retransmissão](tutorial-server-broadcast-with-signalr.md) funcionam bem para esse cenário, pois o servidor controla a taxa na qual as mensagens são enviadas.
+> - [Cliente para cliente](tutorial-getting-started-with-signalr.md) (por exemplo, chat): nesse cenário, o backplane poderá ser um afunilamento se o número de mensagens for dimensionado com o número de clientes; ou seja, se a taxa de mensagens aumentar proporcionalmente à medida que mais clientes ingressarem.
+> - [Tempo real de alta frequência](tutorial-high-frequency-realtime-with-signalr.md) (por exemplo, jogos em tempo real): um backplane não é recomendado para esse cenário.
 
-Neste exercício, você usará **SQL Server** para distribuir mensagens entre o aplicativo **Geek Quiz**. Você executará essas tarefas em um computador de teste único para aprender a definir a configuração, mas para obter o efeito completo, você precisará implantar o aplicativo do SignalR em dois ou mais servidores. Você também deve instalar o SQL Server em um dos servidores, ou em um servidor dedicado separado.
+Neste exercício, você usará **SQL Server** para distribuir mensagens pelo aplicativo de **teste de especialista** . Você executará essas tarefas em um único computador de teste para saber como configurar a configuração, mas para obter o efeito completo, você precisará implantar o aplicativo Signalr em dois ou mais servidores. Você também deve instalar o SQL Server em um dos servidores ou em um servidor dedicado separado.
 
-![Escale horizontalmente usando o diagrama de SQL Server](real-time-web-applications-with-signalr/_static/image15.png)
+![Scale Out usando SQL Server diagrama](real-time-web-applications-with-signalr/_static/image15.png)
 
 <a id="Ex2Task1"></a>
-#### <a name="task-1---understanding-the-scenario"></a>Tarefa 1: Noções básicas sobre o cenário
+#### <a name="task-1---understanding-the-scenario"></a>Tarefa 1-noções básicas sobre o cenário
 
-Nesta tarefa, você executará 2 instâncias de **Geek Quiz** simular IIS de várias instâncias no seu computador local. Nesse cenário, ao responder às perguntas de desafios em um aplicativo, a atualização não será notificada na página de estatísticas da segunda instância. Essa simulação é semelhante a um ambiente onde o aplicativo é implantado em várias instâncias e usando um balanceador de carga para se comunicar com eles.
+Nesta tarefa, você executará 2 instâncias do **teste de especialista** que simulam várias instâncias do IIS em seu computador local. Nesse cenário, ao responder perguntas de Trívia em um aplicativo, a atualização não será notificada na página de estatísticas da segunda instância. Essa simulação é semelhante a um ambiente em que seu aplicativo é implantado em várias instâncias e usando um balanceador de carga para se comunicar com eles.
 
-1. Abra o **Begin.sln** solução localizada na **origem/o Ex2-ScalingOutWithSQLServer/início** pasta. Uma vez carregado, você perceberá na **Gerenciador de servidores** que a solução tem dois projetos com idênticos, mas diferentes nomes de estruturas. Isso será simular que executa duas instâncias do mesmo aplicativo em seu computador local.
+1. Abra a solução **begin. sln** localizada na pasta **Source/EX2-ScalingOutWithSQLServer/Begin** . Depois de carregado, você observará na **Gerenciador de servidores** que a solução tem dois projetos com estruturas idênticas, mas com nomes diferentes. Isso simulará a execução de duas instâncias do mesmo aplicativo em seu computador local.
 
-    ![Começar a solução de simulação de 2 instâncias do Geek Quiz](real-time-web-applications-with-signalr/_static/image16.png "começar a solução de simulação de 2 instâncias do Geek Quiz")
+    ![Comece a solução simulando 2 instâncias de teste de especialista](real-time-web-applications-with-signalr/_static/image16.png "Comece a solução simulando 2 instâncias de teste de especialista")
 
-    *Começar a solução de simulação de 2 instâncias do Geek Quiz*
-2. Abra a página de propriedades da solução clicando duas vezes no nó da solução e selecionando **propriedades**. Sob **projeto de inicialização**, selecione **vários projetos de inicialização** e altere a **ação** valor para ambos os projetos para *iniciar*.
+    *Comece a solução simulando 2 instâncias de teste de especialista*
+2. Abra a página de propriedades da solução clicando com o botão direito do mouse no nó da solução e selecionando **Propriedades**. Em **projeto de inicialização**, selecione **vários projetos de inicialização** e altere o valor da **ação** para ambos os projetos para *Iniciar*.
 
-    ![Iniciando vários projetos](real-time-web-applications-with-signalr/_static/image17.png "iniciando vários projetos")
+    ![Iniciando vários projetos](real-time-web-applications-with-signalr/_static/image17.png "Iniciando vários projetos")
 
     *Iniciando vários projetos*
-3. Pressione **F5** para executar a solução. O aplicativo será iniciado de duas instâncias do **Geek Quiz** em portas diferentes, simulando várias instâncias do mesmo aplicativo. Fixe um dos navegadores à esquerda e o outro à direita da tela. Faça logon com suas credenciais ou registre um novo usuário. Depois de conectado, mantenha a página de desafio à esquerda e vá para o **estatísticas** página no navegador à direita.
+3. Pressione **F5** para executar a solução. O aplicativo iniciará duas instâncias de **teste de especialista** em diferentes portas, simulando várias instâncias do mesmo aplicativo. Fixe um dos navegadores à esquerda e o outro à direita da tela. Faça logon com suas credenciais ou registre um novo usuário. Depois de conectado, mantenha a página Trívia à esquerda e vá para a página **estatísticas** no navegador à direita.
 
-    ![Geek Quiz lado a lado](real-time-web-applications-with-signalr/_static/image18.png)
+    ![Teste de pau lado a lado](real-time-web-applications-with-signalr/_static/image18.png)
 
-    *Geek Quiz lado a lado*
+    *Teste de pau lado a lado*
 
-    ![Teste de Geek em portas diferentes](real-time-web-applications-with-signalr/_static/image19.png)
+    ![Teste de especialista em portas diferentes](real-time-web-applications-with-signalr/_static/image19.png)
 
-    *Teste de Geek em portas diferentes*
-4. Começar respondendo perguntas no navegador à esquerda e você observará que o **estatísticas** página no navegador à direita não está sendo atualizado. Isso ocorre porque **SignalR** usa um local de cache para distribuir mensagens através de seus clientes e esse cenário está simulando várias instâncias, portanto, o cache não é compartilhado entre eles. Você pode verificar se **SignalR** está funcionando, teste as mesmas etapas, mas usando um único aplicativo. As tarefas a seguir, você configurará um backplane para replicar as mensagens entre instâncias.
-5. Volte para o Visual Studio e parar a depuração.
+    *Teste de especialista em portas diferentes*
+4. Comece a responder a perguntas no navegador esquerdo e você observará que a página de **estatísticas** no navegador direito não está sendo atualizada. Isso ocorre porque o **signalr** usa um cache local para distribuir mensagens entre seus clientes e esse cenário está simulando várias instâncias, portanto, o cache não é compartilhado entre elas. Você pode verificar se o **signalr** está funcionando testando as mesmas etapas, mas usando um único aplicativo. Nas tarefas a seguir, você configurará um backplane para replicar as mensagens entre instâncias.
+5. Volte para o Visual Studio e pare a depuração.
 
 <a id="Ex2Task2"></a>
-#### <a name="task-2--creating-the-sql-server-backplane"></a>Tarefa 2 – criar o Backplane do SQL Server
+#### <a name="task-2--creating-the-sql-server-backplane"></a>Tarefa 2 – Criando o SQL Server backplane
 
-Nesta tarefa, você criará um banco de dados que servirá como um backplane para o aplicativo **Geek Quiz**. Você usará **Pesquisador de objetos do SQL Server** procurar seu servidor e inicializar o banco de dados. Além disso, você habilitará o **Service Broker**.
+Nesta tarefa, você criará um banco de dados que servirá como um backplane para o aplicativo de **teste de especialista** . Você usará **pesquisador de objetos do SQL Server** para procurar o servidor e inicializar o banco de dados. Além disso, você habilitará o **Service Broker**.
 
-1. Na **Visual Studio**, abra menu **exibição** e selecione **Pesquisador de objetos do SQL Server**.
-2. Conectar-se à instância do LocalDB clicando com o **SQL Server** nó e selecionando **adicionar SQL Server...**  opção.
+1. No **Visual Studio**, abra o **modo de exibição** de menu e selecione **pesquisador de objetos do SQL Server**.
+2. Conecte-se à instância do LocalDB clicando com o botão direito do mouse no nó **SQL Server** e selecionando **Adicionar SQL Server...** opção.
 
-    ![Adição de uma instância do SQL Server](real-time-web-applications-with-signalr/_static/image20.png "adicionando uma instância do SQL Server")
+    ![Adicionando uma instância de SQL Server](real-time-web-applications-with-signalr/_static/image20.png "Adicionando uma instância de SQL Server")
 
-    *A adição de uma instância do SQL Server para o Pesquisador de objetos do SQL Server*
-3. Defina o **nome do servidor** para *(localdb) \v11.0* e deixe **autenticação do Windows** como seu modo de autenticação. Clique em **Connect** para continuar.
+    *Adicionando uma instância de SQL Server ao Pesquisador de Objetos do SQL Server*
+3. Defina o **nome do servidor** como *(LocalDB) \v11.0* e deixe a **autenticação do Windows** como seu modo de autenticação. Clique em **Conectar** para continuar.
 
-    ![Conectar-se ao LocalDB](real-time-web-applications-with-signalr/_static/image21.png "conectar-se ao LocalDB")
+    ![Conectando ao LocalDB](real-time-web-applications-with-signalr/_static/image21.png "Conectando ao LocalDB")
 
-    *Conectar-se ao LocalDB*
-4. Agora que você está conectado à sua instância de LocalDB, você precisará criar um banco de dados que representará o backplane do SQL Server para o SignalR. Para fazer isso, clique com botão direito do **bancos de dados** nó e selecione **adicionar novo banco de dados**.
+    *Conectando ao LocalDB*
+4. Agora que você está conectado à instância do LocalDB, será necessário criar um banco de dados que representará o SQL Server backplane para o Signalr. Para fazer isso, clique com o botão direito do mouse no nó **bancos** de dados e selecione **Add New Database**.
 
-    ![Adicionando um novo banco de dados](real-time-web-applications-with-signalr/_static/image22.png "adicionando um novo banco de dados")
+    ![Adicionando um novo banco de dados](real-time-web-applications-with-signalr/_static/image22.png "Adicionando um novo banco de dados")
 
     *Adicionando um novo banco de dados*
-5. Defina o nome do banco de dados como *SignalR* e clique em **Okey** para criá-lo.
+5. Defina o nome do banco de dados como *signalr* e clique em **OK** para criá-lo.
 
-    ![Criando o banco de dados do SignalR](real-time-web-applications-with-signalr/_static/image23.png "criando o banco de dados do SignalR")
+    ![Criando o banco de dados Signalr](real-time-web-applications-with-signalr/_static/image23.png "Criando o banco de dados Signalr")
 
-    *Criando o banco de dados do SignalR*
+    *Criando o banco de dados Signalr*
 
     > [!NOTE]
     > Você pode escolher qualquer nome para o banco de dados.
-6. Para receber atualizações com mais eficiência do backplane, é recomendável habilitar o Service Broker para o banco de dados. O Service Broker fornece suporte nativo para mensagens e enfileiramento no SQL Server. Backplane também funciona sem o Service Broker. Abra uma nova consulta clicando com o banco de dados e selecione **nova consulta**.
+6. Para receber atualizações com mais eficiência do backplane, é recomendável habilitar Service Broker para o banco de dados. O Service Broker fornece suporte nativo para mensagens e enfileiramento no SQL Server. O backplane também funciona sem Service Broker. Abra uma nova consulta clicando com o botão direito do mouse no banco de dados e selecionando **nova consulta**.
 
-    ![Abrir uma nova consulta](real-time-web-applications-with-signalr/_static/image24.png "abrindo uma nova consulta")
+    ![Abrindo uma nova consulta](real-time-web-applications-with-signalr/_static/image24.png "Abrindo uma nova consulta")
 
-    *Abrir uma nova consulta*
-7. Para verificar se o Service Broker está habilitado, consulte o **está\_broker\_habilitada** coluna no **sys. Databases** exibição do catálogo. Execute o seguinte script na janela de consulta abertos recentemente.
+    *Abrindo uma nova consulta*
+7. Para verificar se Service Broker está habilitado, consulte a coluna **is\_Broker\_Enabled** na exibição do catálogo **Sys. databases** . Execute o script a seguir na janela de consulta aberta recentemente.
 
     [!code-sql[Main](real-time-web-applications-with-signalr/samples/sample11.sql)]
 
-    ![Consultar o Status do Service Broker](real-time-web-applications-with-signalr/_static/image25.png "consultar o Status do Service Broker")
+    ![Consultando o status de Service Broker](real-time-web-applications-with-signalr/_static/image25.png "Consultando o status de Service Broker")
 
-    *Consultar o Status do Service Broker*
-8. Se o valor da **está\_broker\_habilitada** coluna em seu banco de dados é &quot;0&quot;, use o seguinte comando para habilitá-lo. Substitua **&lt;seu banco de dados&gt;** com o nome definido ao criar o banco de dados (por exemplo: SignalR).
+    *Consultando o status de Service Broker*
+8. Se o valor da coluna **is\_broker\_habilitado** em seu banco de dados for &quot;0&quot;, use o comando a seguir para habilitá-lo. Substitua **&lt;seu&gt;de banco de dados** pelo nome que você definiu ao criar o banco de dados (por exemplo: signalr).
 
     [!code-sql[Main](real-time-web-applications-with-signalr/samples/sample12.sql)]
 
-    ![Habilitando o Service Broker](real-time-web-applications-with-signalr/_static/image26.png "habilitando o Service Broker")
+    ![Habilitando Service Broker](real-time-web-applications-with-signalr/_static/image26.png "Habilitando o Service Broker")
 
-    *Habilitando o Service Broker*
+    *Habilitando Service Broker*
 
     > [!NOTE]
-    > Se essa consulta é exibido um deadlock, certifique-se não há nenhum aplicativo conectado ao banco de dados.
+    > Se essa consulta aparecer para deadlock, verifique se não há aplicativos conectados ao BD.
 
 <a id="Ex2Task3"></a>
-#### <a name="task-3--configuring-the-signalr-application"></a>Tarefa 3 – configurar o aplicativo de SignalR
+#### <a name="task-3--configuring-the-signalr-application"></a>Tarefa 3 – Configurando o aplicativo Signalr
 
-Nesta tarefa, você configurará **Geek Quiz** para se conectar ao backplane do SQL Server. Primeiro, você irá adicionar o **SignalR.SqlServer** pacote NuGet e a conexão do conjunto de cadeia de caracteres para seu banco de dados do backplane.
+Nesta tarefa, você configurará o **teste de especialista** para se conectar ao backplane de SQL Server. Primeiro, você adicionará o pacote NuGet do **signalr. SqlServer** e definirá a cadeia de conexão para o banco de dados do backplane.
 
-1. Abra o **Package Manager Console** de **ferramentas** > **NuGet Package Manager**. Certifique-se de que **GeekQuiz** projeto for selecionado na **projeto padrão** lista suspensa. Digite o seguinte comando para instalar o **Microsoft.AspNet.SignalR.SqlServer** pacote do NuGet.
+1. Abra o **console do Gerenciador de pacotes** em **ferramentas** > **Gerenciador de pacotes NuGet**. Verifique se o projeto **GeekQuiz** está selecionado na lista suspensa **projeto padrão** . Digite o seguinte comando para instalar o pacote NuGet **Microsoft. AspNet. signalr. SqlServer** .
 
     [!code-powershell[Main](real-time-web-applications-with-signalr/samples/sample13.ps1)]
 2. Repita a etapa anterior, mas desta vez para o projeto **GeekQuiz2**.
-3. Para configurar o backplane do SQL Server, abra o **Startup.cs** arquivo da **GeekQuiz** do projeto e adicione o seguinte código para o **configurar** método. Substitua **&lt;seu banco de dados&gt;** com seu nome de banco de dados que você usou ao criar o backplane do SQL Server. Repita essa etapa para o **GeekQuiz2** projeto.
+3. Para configurar o SQL Server backplane, abra o arquivo **Startup.cs** do projeto **GeekQuiz** e adicione o código a seguir ao método **Configure** . Substitua **&lt;seu&gt;de banco de dados** pelo nome do banco de dados usado ao criar o SQL Server backplane. Repita esta etapa para o projeto **GeekQuiz2** .
 
-    (Código de trecho de código – *StartupConfiguration RealTimeSignalR - o Ex2 -* )
+    (Trecho de código- *RealTimeSignalR-EX2-StartupConfiguration*)
 
     [!code-csharp[Main](real-time-web-applications-with-signalr/samples/sample14.cs)]
-4. Agora que ambos os projetos são configurados para usar o backplane do SQL Server, pressione **F5** executá-los simultaneamente.
-5. Novamente, **Visual Studio** iniciará duas instâncias do **Geek Quiz** em portas diferentes. Fixar um dos navegadores à esquerda e o outro à direita da tela e faça logon com suas credenciais. Mantenha a página de desafio à esquerda e vá para **estatísticas** pagein navegador à direita.
-6. Começar a responder às perguntas no navegador à esquerda. Neste momento, o **estatísticas** página é atualizada, graças ao backplane. Alternar entre aplicativos (**estatísticas** agora está à esquerda, e **Trívia** está à direita) e repita o teste para validar se ele está funcionando para ambas as instâncias. Backplane serve como uma *cache compartilhado do* de mensagens para cada servidor conectado e cada servidor armazena as mensagens em seu próprio cache local para distribuir aos clientes conectados.
-7. Volte para o Visual Studio e parar a depuração.
-8. O componente de backplane do SQL Server gera automaticamente as tabelas necessárias no banco de dados especificado. No **Pesquisador de objetos do SQL Server** painel, abra o banco de dados que você criou para o backplane (por exemplo: SignalR) e expanda suas tabelas. Você deve ver as tabelas a seguir:
+4. Agora que ambos os projetos estão configurados para usar o SQL Server backplane, pressione **F5** para executá-los simultaneamente.
+5. Novamente, o **Visual Studio** iniciará duas instâncias de **teste de especialista** em diferentes portas. Fixe um dos navegadores à esquerda e o outro à direita da tela e faça logon com suas credenciais. Mantenha a página Trívia à esquerda e vá para a página de **estatísticas** no navegador certo.
+6. Comece a responder a perguntas no navegador esquerdo. Desta vez, a página **estatísticas** é atualizada graças ao backplane. Alterne entre aplicativos (as**estatísticas** estão agora à esquerda e **Trívia** está à direita) e repita o teste para validar que ele está funcionando para ambas as instâncias. O backplane serve como um *cache compartilhado* de mensagens para cada servidor conectado, e cada servidor armazenará as mensagens em seu próprio cache local para distribuir aos clientes conectados.
+7. Volte para o Visual Studio e pare a depuração.
+8. O componente de backplane SQL Server gera automaticamente as tabelas necessárias no banco de dados especificado. No painel de **pesquisador de objetos do SQL Server** , abra o banco de dados criado para o backplane (por exemplo: signalr) e expanda suas tabelas. Você deve ver as seguintes tabelas:
 
-    ![Backplane gerado tabelas](real-time-web-applications-with-signalr/_static/image27.png)
+    ![Tabelas geradas do backplane](real-time-web-applications-with-signalr/_static/image27.png)
 
-    *Backplane gerado tabelas*
-9. Clique com botão direito do **SignalR.Messages\_0** da tabela e selecione **exibir dados**.
+    *Tabelas geradas do backplane*
+9. Clique com o botão direito do mouse na tabela **signalr. messages\_0** e selecione **exibir dados**.
 
-    ![Exibir tabela de mensagens do SignalR Backplane](real-time-web-applications-with-signalr/_static/image28.png)
+    ![Exibir tabela de mensagens do backplane do Signalr](real-time-web-applications-with-signalr/_static/image28.png)
 
-    *Exibir tabela de mensagens do SignalR Backplane*
-10. Você pode ver as diferentes mensagens enviadas para o **Hub** ao responder as perguntas de desafios. Backplane distribui essas mensagens para qualquer instância conectada.
+    *Exibir tabela de mensagens do backplane do Signalr*
+10. Você pode ver as diferentes mensagens enviadas ao **Hub** ao responder às perguntas trívias. O backplane distribui essas mensagens para qualquer instância conectada.
 
     ![Tabela de mensagens do backplane](real-time-web-applications-with-signalr/_static/image29.png)
 
@@ -393,4 +393,4 @@ Nesta tarefa, você configurará **Geek Quiz** para se conectar ao backplane do 
 <a id="Summary"></a>
 ## <a name="summary"></a>Resumo
 
-Neste laboratório prático, você aprendeu a adicionar **SignalR** para seu aplicativo e enviar notificações do servidor para seus clientes conectados usando **Hubs**. Além disso, você aprendeu a expandir seu aplicativo usando um *backplane* componente quando o aplicativo for implantado em várias instâncias do IIS.
+Neste laboratório prático, você aprendeu como adicionar o **signalr** ao seu aplicativo e enviar notificações do servidor para seus clientes conectados usando **hubs**. Além disso, você aprendeu como escalar horizontalmente seu aplicativo usando um componente do *backplane* quando seu aplicativo é implantado em várias instâncias do IIS.

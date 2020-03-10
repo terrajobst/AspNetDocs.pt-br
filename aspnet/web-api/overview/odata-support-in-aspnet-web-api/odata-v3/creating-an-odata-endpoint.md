@@ -9,11 +9,11 @@ ms.assetid: 262843d6-43a2-4f1c-82d9-0b90ae6df0cf
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v3/creating-an-odata-endpoint
 msc.type: authoredcontent
 ms.openlocfilehash: e68a454398f109dfd089be9c9a44d3fe662acc2f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600428"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556409"
 ---
 # <a name="creating-an-odata-v3-endpoint-with-web-api-2"></a>Criando um ponto de extremidade OData v3 com a API Web 2
 
@@ -64,9 +64,9 @@ Na caixa de diálogo **novo projeto ASP.net** , selecione o modelo **vazio** . E
 <a id="add-model"></a>
 ## <a name="add-an-entity-model"></a>Adicionar um modelo de entidade
 
-Um *modelo* é um objeto que representa os dados em seu aplicativo. Para este tutorial, precisamos de um modelo que represente um produto. O modelo corresponde ao nosso tipo de entidade OData.
+Um *modelo* é um objeto que representa os dados no seu aplicativo. Para este tutorial, precisamos de um modelo que represente um produto. O modelo corresponde ao nosso tipo de entidade OData.
 
-Em Gerenciador de Soluções, clique com o botão direito do mouse na pasta modelos. No menu de contexto, selecione **Adicionar** e selecione **classe**.
+No Gerenciador de Soluções, clique com o botão direito do mouse na pasta Modelos. No menu de contexto, selecione **Adicionar** e, em seguida, selecione **Classe**.
 
 ![](creating-an-odata-endpoint/_static/image3.png)
 
@@ -90,7 +90,7 @@ Compile o projeto agora. Na próxima etapa, usaremos algumas scaffolding do Visu
 
 Um *controlador* é uma classe que MANIPULA solicitações HTTP. Você define um controlador separado para cada conjunto de entidades no serviço OData. Neste tutorial, criaremos um único controlador.
 
-Em Gerenciador de Soluções, clique com o botão direito do mouse na pasta controladores. Selecione **Adicionar** e, em seguida, selecione **controlador**.
+Em Gerenciador de Soluções, clique com o botão direito do mouse na pasta controladores. Selecione **Adicionar** e, em seguida, selecione **Controlador**.
 
 ![](creating-an-odata-endpoint/_static/image5.png)
 
@@ -152,7 +152,7 @@ O primeiro parâmetro é um nome amigável para a rota. Os clientes do seu servi
 
 Nesta etapa, você usará Entity Framework para propagar o banco de dados com algum dado de teste. Esta etapa é opcional, mas permite testar seu ponto de extremidade OData imediatamente.
 
-No menu **ferramentas** , selecione **Gerenciador de pacotes NuGet**e, em seguida, selecione **console do Gerenciador de pacotes**. Na janela do console do Gerenciador de pacotes, digite o seguinte comando:
+No menu **ferramentas** , selecione **Gerenciador de pacotes NuGet**e, em seguida, selecione **console do Gerenciador de pacotes**. Na janela Console do Gerenciador de Pacotes, digite o seguinte comando:
 
 [!code-console[Main](creating-an-odata-endpoint/samples/sample5.cmd)]
 
@@ -187,7 +187,7 @@ Usando o Fiddler, insira o seguinte URI na guia **compositor** : `http://localho
 
 ![](creating-an-odata-endpoint/_static/image13.png)
 
-Clique no botão **executar** . O Fiddler envia uma solicitação HTTP GET para seu aplicativo. Você deve ver a resposta na lista de sessões da Web. Se tudo estiver funcionando, o código de status será 200.
+Clique no botão **Executar** . O Fiddler envia uma solicitação HTTP GET para seu aplicativo. Você deve ver a resposta na lista de sessões da Web. Se tudo estiver funcionando, o código de status será 200.
 
 ![](creating-an-odata-endpoint/_static/image14.png)
 

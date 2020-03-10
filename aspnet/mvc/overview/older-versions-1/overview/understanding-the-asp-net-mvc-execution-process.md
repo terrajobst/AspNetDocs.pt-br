@@ -2,56 +2,56 @@
 uid: mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process
 title: Noções básicas sobre o processo de execução do ASP.NET MVC | Microsoft Docs
 author: microsoft
-description: Saiba como o ASP.NET MVC framework processa uma solicitação do navegador passo a passo.
+description: Saiba como o ASP.NET MVC Framework processa uma solicitação de navegador passo a passo.
 ms.author: riande
 ms.date: 01/27/2009
 ms.assetid: d1608db3-660d-4079-8c15-f452ff01f1db
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-the-asp-net-mvc-execution-process
 msc.type: authoredcontent
 ms.openlocfilehash: 28940947253e0af43886cf1231f8aaf4615526cc
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125477"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78541513"
 ---
 # <a name="understanding-the-aspnet-mvc-execution-process"></a>Noções básicas sobre o processo de execução do ASP.NET MVC
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
-> Saiba como o ASP.NET MVC framework processa uma solicitação do navegador passo a passo.
+> Saiba como o ASP.NET MVC Framework processa uma solicitação de navegador passo a passo.
 
-As solicitações para um aplicativo Web com base no ASP.NET MVC primeiro passam por meio de **UrlRoutingModule** objeto, que é um módulo HTTP. Esse módulo analisa a solicitação e executa a seleção de rota. O **UrlRoutingModule** objeto seleciona o primeiro objeto de rota que corresponde à solicitação atual. (Um objeto de rota é uma classe que implementa **RouteBase**, e normalmente é uma instância das **rota** classe.) Se nenhuma rota corresponde a, o **UrlRoutingModule** objeto não faz nada e permite que a solicitação de fallback para a solicitação ASP.NET ou IIS regular processamento.
+As solicitações para um aplicativo Web baseado em ASP.NET MVC primeiro passam pelo objeto **UrlRoutingModule** , que é um módulo http. Este módulo analisa a solicitação e executa a seleção de rota. O objeto **UrlRoutingModule** seleciona o primeiro objeto de rota que corresponde à solicitação atual. (Um objeto de rota é uma classe que implementa **RouteBase**e normalmente é uma instância da classe **Route** .) Se nenhuma rota corresponder, o objeto **UrlRoutingModule** não fará nada e permitirá que a solicitação volte para o processamento de solicitações ASP.net ou IIS regular.
 
-De selecionado **rota** objeto, o **UrlRoutingModule** objeto obtém os **IRouteHandler** objeto que está associado com o **rota**objeto. Normalmente, em um aplicativo MVC, isso será uma instância do **MvcRouteHandler**. O **IRouteHandler** instância cria um **IHttpHandler** do objeto e o passa a **IHttpContext** objeto. Por padrão, o **IHttpHandler** da instância para o MVC é a **MvcHandler** objeto. O **MvcHandler** objeto, em seguida, seleciona o controlador que, por fim, tratará a solicitação.
+A partir do objeto de **rota** selecionado, o objeto **UrlRoutingModule** Obtém o objeto **IRouteHandler** associado ao objeto de **rota** . Normalmente, em um aplicativo MVC, essa será uma instância de **MvcRouteHandler**. A instância **IRouteHandler** cria um objeto **IHttpHandler** e o passa para o objeto **IHttpContext** . Por padrão, a instância **IHttpHandler** para MVC é o objeto **MvcHandler** . Em seguida, o objeto **MvcHandler** seleciona o controlador que, por fim, manipulará a solicitação.
 
 > [!NOTE]
-> Quando um aplicativo Web ASP.NET MVC é executado no IIS 7.0, sem extensão de nome de arquivo é necessário para projetos MVC. No entanto, no IIS 6.0, o manipulador requer que você mapear a extensão de nome de arquivo. MVC para a DLL ISAPI do ASP.NET.
+> Quando um aplicativo Web ASP.NET MVC é executado no IIS 7,0, nenhuma extensão de nome de arquivo é necessária para projetos do MVC. No entanto, no IIS 6,0, o manipulador requer que você mapeie a extensão de nome de arquivo. Mvc para a DLL ISAPI ASP.NET.
 
 O módulo e o manipulador são os pontos de entrada para a estrutura MVC do ASP.NET. Eles executam as seguintes ações:
 
-- Selecione o controlador apropriado em um aplicativo Web do MVC.
-- Obtenha uma instância de controlador específico.
-- Chame o controlador **Execute** método.
+- Selecione o controlador apropriado em um aplicativo Web MVC.
+- Obtenha uma instância de controlador específica.
+- Chame o método **Execute** do controlador.
 
-O exemplo a seguir lista os estágios da execução de um projeto Web do MVC:
+O seguinte lista os estágios de execução de um projeto Web MVC:
 
 - Receber a primeira solicitação para o aplicativo 
 
-    - No arquivo global. asax, **rota** objetos são adicionados para o **RouteTable** objeto.
+    - No arquivo global. asax, os objetos de **rota** são adicionados ao objeto **RouteTable** .
 - Executar roteamento 
 
-    - O **UrlRoutingModule** módulo usa a primeira correspondência **rota** objeto o **RouteTable** coleção para criar o **RouteData** objeto, que, em seguida, ele usa para criar uma **RequestContext** (**IHttpContext**) objeto.
-- Criar um manipulador de solicitação do MVC 
+    - O **módulo UrlRoutingModule** usa o primeiro objeto **de rota** correspondente na coleção **RouteTable** para criar o objeto **RouteData** , que ele usa para criar um objeto **RequestContext** (**IHttpContext**).
+- Criar manipulador de solicitação MVC 
 
-    - O **MvcRouteHandler** objeto cria uma instância das **MvcHandler** de classe e a passa a **RequestContext** instância.
-- Criar um controlador 
+    - O objeto **MvcRouteHandler** cria uma instância da classe **MvcHandler** e a passa para a instância de **RequestContext** .
+- Criar controlador 
 
-    - O **MvcHandler** objeto usa o **RequestContext** instância para identificar o **IControllerFactory** objeto (geralmente uma instância do  **DefaultControllerFactory** classe) para criar a instância de controlador com.
-- Controlador execute - o **MvcHandler** instância chama o controlador s **Execute** método. |
-- Invocar ação 
+    - O objeto **MvcHandler** usa a instância **RequestContext** para identificar o objeto **IControllerFactory** (normalmente uma instância da classe **DefaultControllerFactory** ) para criar a instância do controlador com o.
+- Executar controlador-a instância **MvcHandler** chama o método **Execute** do controlador. |
+- Ação de invocação 
 
-    - A maioria dos controladores herdam de **controlador** classe base. Para controladores que fazer isso, o **ControllerActionInvoker** objeto que está associado com o controlador determina qual método de ação da classe do controlador para chamar e, em seguida, chama esse método.
-- Resultado de execução 
+    - A maioria dos controladores herdam da classe base do **controlador** . Para controladores que fazem isso, o objeto **ControllerActionInvoker** associado ao controlador determina qual método de ação da classe de controlador chamar e, em seguida, chama esse método.
+- Executar resultado 
 
-    - Um método de ação típica pode receber entrada do usuário, preparar os dados de resposta apropriada e, em seguida, o resultado de execução, retornando um tipo de resultado. Os tipos de resultado internos que podem ser executados incluem o seguinte: **ViewResult** (que renderiza uma exibição e é o tipo de resultado usados com mais frequência), **RedirectToRouteResult**, **RedirectResult**, **ContentResult**,  **JsonResult**, e **EmptyResult**.
+    - Um método de ação típico pode receber entrada do usuário, preparar os dados de resposta apropriados e, em seguida, executar o resultado retornando um tipo de resultado. Os tipos de resultados internos que podem ser executados incluem o seguinte: **ViewResult** (que renderiza uma exibição e é o tipo de resultado usado com mais frequência), **RedirectToRouteResult**, **RedirectResult**, **ContentResult**, **JsonResult**e **EmptyResult**.

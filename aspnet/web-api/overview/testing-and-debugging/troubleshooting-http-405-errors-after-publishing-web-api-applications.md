@@ -9,11 +9,11 @@ ms.assetid: 07ec7d37-023f-43ea-b471-60b08ce338f7
 msc.legacyurl: /web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications
 msc.type: authoredcontent
 ms.openlocfilehash: 1b47f1ade3619cfd010260352f6a96985ab3598b
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445703"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78555016"
 ---
 # <a name="troubleshoot-web-api2-apps-that-work-in-visual-studio-and-fail-on-a-production-iis-server"></a>Solucionar problemas de aplicativos Web API2 que funcionam no Visual Studio e falham em um servidor IIS de produção
 
@@ -23,29 +23,29 @@ ms.locfileid: "73445703"
 > 
 > 
 > - [Serviços de informações da Internet (IIS)](https://www.iis.net/) (versão 7 ou posterior)
-> - [API Web](../../index.md) 
+> - [API da Web](../../index.md) 
 
 Os aplicativos de API Web normalmente usam vários verbos HTTP: GET, POST, PUT, DELETE e, às vezes, PATCH. Dito isso, os desenvolvedores podem se deparar com situações em que esses verbos são implementados por outro módulo do IIS em seu servidor IIS de produção, o que leva a uma situação em que um controlador de API da Web que funciona corretamente no Visual Studio ou em um servidor de desenvolvimento irá retornar um erro HTTP 405 quando ele for implantado em um servidor IIS de produção.
 
 ## <a name="what-causes-http-405-errors"></a>O que causa erros HTTP 405
 
-A primeira etapa para aprender a solucionar erros de HTTP 405 é entender o que um erro HTTP 405 realmente significa. O documento principal de controle para HTTP é [RFC 2616](http://www.ietf.org/rfc/rfc2616.txt), que define o código de status http 405 como ***método não permitido***e descreve ainda mais esse código de status como uma situação em que &quot;o método especificado na linha de solicitação não é permitido para o recurso identificado pelo URI de solicitação.&quot; em outras palavras, o verbo HTTP não é permitido para a URL específica que um cliente HTTP solicitou.
+A primeira etapa para aprender a solucionar erros de HTTP 405 é entender o que um erro HTTP 405 realmente significa. O documento principal de controle para HTTP é [RFC 2616](http://www.ietf.org/rfc/rfc2616.txt), que define o código de status http 405 como ***método não permitido***e descreve ainda mais esse código de status como uma situação em que &quot;o método especificado na linha de solicitação não é permitido para o recurso identificado pelo URI da solicitação.&quot; em outras palavras, o verbo HTTP não é permitido para a URL específica que um cliente HTTP solicitou.
 
 Como uma breve revisão, aqui estão vários dos métodos de HTTP mais usados, conforme definido em RFC 2616, RFC 4918 e RFC 5789:
 
-| Método HTTP | Descrição |
+| Método HTTP | DESCRIÇÃO |
 | --- | --- |
-| **Obter** | Esse método é usado para recuperar dados de um URI e, provavelmente, o método HTTP mais usado. |
+| **GET** | Esse método é usado para recuperar dados de um URI e, provavelmente, o método HTTP mais usado. |
 | **HEAD** | Esse método é muito parecido com o método GET, exceto que ele não recupera realmente os dados do URI de solicitação – ele simplesmente recupera o status HTTP. |
-| **Postar** | Normalmente, esse método é usado para enviar novos dados para o URI; A POSTAgem é frequentemente usada para enviar dados de formulário. |
-| **Posicione** | Esse método é normalmente usado para enviar dados brutos para o URI; PUT geralmente é usado para enviar dados JSON ou XML para aplicativos de API Web. |
+| **POST** | Normalmente, esse método é usado para enviar novos dados para o URI; A POSTAgem é frequentemente usada para enviar dados de formulário. |
+| **PUT** | Esse método é normalmente usado para enviar dados brutos para o URI; PUT geralmente é usado para enviar dados JSON ou XML para aplicativos de API Web. |
 | **DELETE** | Esse método é usado para remover dados de um URI. |
 | **OPTIONS** | Esse método é normalmente usado para recuperar a lista de métodos HTTP com suporte para um URI. |
 | **COPIAR MOVIMENTAÇÃO** | Esses dois métodos são usados com o WebDAV e sua finalidade é auto-explicativa. |
 | **MKCOL** | Esse método é usado com o WebDAV e é usado para criar uma coleção (por exemplo, um diretório) no URI especificado. |
 | **PROPPATCH PROPFIND** | Esses dois métodos são usados com o WebDAV e são usados para consultar ou definir propriedades para um URI. |
 | **DESBLOQUEAR BLOQUEIO** | Esses dois métodos são usados com o WebDAV e são usados para bloquear/desbloquear o recurso identificado pelo URI de solicitação durante a criação. |
-| **DISTRIBUÍDO** | Esse método é usado para modificar um recurso HTTP existente. |
+| **PATCH** | Esse método é usado para modificar um recurso HTTP existente. |
 
 Quando um desses métodos HTTP estiver configurado para uso no servidor, o servidor responderá com o status HTTP e outros dados que são apropriados para a solicitação. (Por exemplo, um método GET pode receber uma resposta HTTP 200 ***OK*** e um método Put pode receber uma resposta http 201 ***criada*** .)
 
@@ -69,7 +69,7 @@ Neste exemplo, o cliente HTTP enviou uma solicitação JSON válida para a URL d
 
 ## <a name="resolve-http-405-errors"></a>Resolver erros HTTP 405
 
-Há várias razões pelas quais um verbo HTTP específico pode não ser permitido, mas há um cenário primário que é a causa principal desse erro no IIS: vários manipuladores são definidos para o mesmo verbo/método, e um dos manipuladores está bloqueando o manipulador esperado de processando a solicitação. Por meio de explicação, o IIS processa os manipuladores do primeiro até o último com base nas entradas do manipulador de pedidos nos arquivos *ApplicationHost. config* e *Web. config* , em que a primeira combinação correspondente de caminho, verbo, recurso etc., será usada para manipular a solicitação.
+Há várias razões pelas quais um verbo HTTP específico pode não ser permitido, mas há um cenário primário que é a causa principal desse erro no IIS: vários manipuladores são definidos para o mesmo verbo/método, e um dos manipuladores está impedindo o manipulador esperado do processamento da solicitação. Por meio de explicação, o IIS processa os manipuladores da primeira para a última base nas entradas do manipulador de pedidos nos arquivos *ApplicationHost. config* e *Web. config* , em que a primeira combinação correspondente de caminho, verbo, recurso, etc., será usada para lidar com a solicitação.
 
 O exemplo a seguir é um trecho de um arquivo *ApplicationHost. config* para um servidor IIS que estava retornando um erro http 405 ao usar o método Put para enviar dados a um aplicativo de API da Web. Neste trecho, vários manipuladores HTTP são definidos, e cada manipulador tem um conjunto diferente de métodos HTTP para o qual está configurado-a última entrada na lista é o manipulador de conteúdo estático, que é o manipulador padrão que é usado depois que os outros manipuladores tinham um chanc e para examinar a solicitação:
 

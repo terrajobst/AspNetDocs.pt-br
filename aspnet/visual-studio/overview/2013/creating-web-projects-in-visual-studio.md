@@ -9,11 +9,11 @@ ms.assetid: 61941e64-0c0d-4996-9270-cb8ccfd0cabc
 msc.legacyurl: /visual-studio/overview/2013/creating-web-projects-in-visual-studio
 msc.type: authoredcontent
 ms.openlocfilehash: fbb4cd7afa2506879d47bce980bf0164aad40c2c
-ms.sourcegitcommit: 88fc80e3f65aebdf61ec9414810ddbc31c543f04
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519265"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78555219"
 ---
 # <a name="creating-aspnet-web-projects-in-visual-studio-2013"></a>Criação de Projetos Web do ASP.NET no Visual Studio 2013
 
@@ -31,7 +31,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > Para obter informações sobre como criar projetos da Web para serviços de nuvem do Azure ou serviços móveis do Azure, consulte Introdução [aos serviços de nuvem do Azure e ASP.net](https://azure.microsoft.com/documentation/articles/cloud-services-dotnet-get-started/) e [criar um aplicativo placar com o back-end .net dos serviços móveis do Azure](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-backend-windows-store-dotnet-leaderboard/).
 
 <a id="prerequisites"></a>
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Este artigo se aplica a [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566) com a [atualização 3](https://go.microsoft.com/fwlink/?linkid=397827&amp;clcid=0x409) instalada.
 
@@ -59,7 +59,7 @@ As etapas a seguir mostram como criar um projeto Web:
     ![Caixa de diálogo Novo Projeto](creating-web-projects-in-visual-studio/_static/image2.png)
 5. Clique em um modelo.
 
-    ![Selecionar um modelo](creating-web-projects-in-visual-studio/_static/image3.png)
+    ![Selecione um modelo](creating-web-projects-in-visual-studio/_static/image3.png)
 6. Se você quiser adicionar suporte para estruturas adicionais não incluídas no modelo, clique na caixa de seleção apropriada. (No exemplo mostrado, você pode adicionar MVC e/ou API Web a um projeto Web Forms.)
 
     ![Adicionar estruturas](creating-web-projects-in-visual-studio/_static/image4.png)
@@ -257,7 +257,7 @@ Se você usar o designer de Web Forms no Visual Studio, observe que o designer n
 
 Quando você seleciona um modelo, a caixa de seleção para as estruturas usadas pelo modelo é selecionada automaticamente. Por exemplo, se você selecionar o modelo de **Web Forms** , a caixa de seleção **Web Forms** será marcada e você não poderá limpá-la.
 
-![Selecionar um modelo](creating-web-projects-in-visual-studio/_static/image21.png)
+![Selecione um modelo](creating-web-projects-in-visual-studio/_static/image21.png)
 
 ![Adicionar estruturas](creating-web-projects-in-visual-studio/_static/image22.png)
 
@@ -317,13 +317,13 @@ ASP.NET Identity é uma boa opção se você estiver criando um site da Internet
 
 Para obter mais informações sobre a opção de contas de usuário individuais, consulte os seguintes recursos:
 
-- [www.asp.net/identity](../../../identity/index.md). Documentação sobre ASP.NET Identity no site da ASP.NET.
+- [www.ASP.net/Identity](../../../identity/index.md). Documentação sobre ASP.NET Identity no site da ASP.NET.
 - [Crie um aplicativo ASP.NET MVC 5 com o Facebook e o Google OAuth2 e o logon OpenID](../../../mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on.md). Também mostra como personalizar os dados de perfil do usuário.
 - [API Web-serviços de autenticação externa](../../../web-api/overview/security/external-authentication-services.md)
 - [Adicionando logons externos ao seu aplicativo ASP.NET no Visual Studio 2013](https://blogs.msdn.com/b/webdev/archive/2013/06/27/adding-external-logins-to-your-asp-net-application-in-visual-studio-2013.aspx)
 
 <a id="orgauth"></a>
-### <a name="organizational-accounts"></a>Contas institucionais
+### <a name="organizational-accounts"></a>Contas organizacionais
 
 Se você selecionar **contas organizacionais**, o aplicativo de exemplo será configurado para usar o Windows Identity Foundation (WIF) para autenticação com base em contas de usuário no Azure Active Directory (Azure AD, que inclui o Office 365) ou o Windows Server Active Directory. Para obter mais informações, consulte [Opções de autenticação de conta institucional](#orgauthoptions) mais adiante neste tópico.
 
@@ -357,7 +357,7 @@ Se você quiser experimentar uma das opções do Azure AD, mas ainda não tiver 
 
 Escolha esta opção se desejar habilitar a autenticação para contas de usuário definidas em um [locatário](https://technet.microsoft.com/library/jj573650.aspx)do Azure AD. Por exemplo, o site é contoso.com e será disponibilizado para os funcionários da empresa contoso que estão no locatário contoso.onmicrosoft.com. Você não conseguirá configurar o Azure AD para permitir que usuários de outros locatários acessem o aplicativo.
 
-#### <a name="domain"></a>Domain
+#### <a name="domain"></a>Domínio
 
 Insira o domínio do Azure AD no qual você deseja configurar o aplicativo, por exemplo: `contoso.onmicrosoft.com`. Se você tiver um [domínio personalizado](http://www.cloudidentity.com/blog/2013/04/14/adding-a-custom-domain-to-your-windows-azure-ad/), como `contoso.com` em vez de `contoso.onmicrosoft.com`, poderá inseri-lo aqui.
 
@@ -419,6 +419,6 @@ Insira uma URL que aponte para o documento de metadados. O documento de metadado
 Forneça um URI exclusivo que o AD possa usar para identificar esse aplicativo ou deixe em branco para permitir que o Visual Studio crie um.
 
 <a id="nextsteps"></a>
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Este documento forneceu uma ajuda básica para criar um novo projeto Web ASP.NET no Visual Studio 2013. Para obter mais informações sobre como usar o para o desenvolvimento para Web do Visual Studio, consulte [https://www.asp.net/visual-studio/](../../index.md).

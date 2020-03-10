@@ -9,11 +9,11 @@ ms.assetid: 1cd91055-84bc-42c6-9d80-646f41429d4d
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-extra-files
 msc.type: authoredcontent
 ms.openlocfilehash: eaa3141c22980f0c816e2f33b5597ac9fe69c23c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74594900"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548408"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-extra-files"></a>Implantação da Web do ASP.NET usando o Visual Studio: Implantando arquivos extras
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como estender o pipeline de publicação da Web do Visual Studio para realizar uma tarefa adicional durante a implantação. A tarefa é copiar arquivos extras que não estão na pasta do projeto para o site de destino.
 
@@ -81,7 +81,7 @@ Isso conclui esta série de tutoriais sobre como implantar um aplicativo Web ASP
 
 Se você souber como trabalhar com arquivos MSBuild, poderá automatizar muitas outras tarefas de implantação escrevendo código em arquivos *. pubxml* (para tarefas específicas de perfil) ou o arquivo Project *. WPP. targets* (para tarefas que se aplicam a todos os perfis). Para obter mais informações sobre arquivos *. pubxml* e *. WPP. targets* , consulte [como: Editar configurações de implantação em arquivos de perfil de publicação (. pubxml) e o arquivo. WPP. targets em projetos Web do Visual Studio](https://msdn.microsoft.com/library/ff398069). Para obter uma introdução básica ao código do MSBuild, consulte **a anatomia de um arquivo de projeto** na [série de implantação corporativa: Noções básicas sobre o arquivo de projeto](../web-deployment-in-the-enterprise/understanding-the-project-file.md). Para saber como trabalhar com arquivos MSBuild para executar tarefas para seus próprios cenários, consulte este livro: [dentro do Microsoft Build Engine: usando o MSBuild e o Team Foundation Build](http://msbuildbook.com) de Sayed Ibraham Hashimi e William Bartholomew.
 
-## <a name="acknowledgements"></a>Agradecimentos
+## <a name="acknowledgements"></a>Confirmações
 
 Gostaria de agradecer às seguintes pessoas que fizeram contribuições significativas para o conteúdo desta série de tutoriais:
 

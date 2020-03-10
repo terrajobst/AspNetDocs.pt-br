@@ -9,11 +9,11 @@ ms.assetid: 6b9ae3c4-0274-4170-a1bb-9df9c546b2a9
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-3
 msc.type: authoredcontent
 ms.openlocfilehash: f39be7a84e85db93487d246e9f8cb59c401fe5ce
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600036"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556045"
 ---
 # <a name="part-3-creating-an-admin-controller"></a>Parte 3: Criando um controlador de administração
 
@@ -64,13 +64,13 @@ Um **DbSet** representa um conjunto de entidades que podem ser consultadas. Aqui
 
 A classe `AdminController` define cinco métodos que implementam a funcionalidade CRUD básica. Cada método corresponde a um URI que o cliente pode invocar:
 
-| Método de controlador | Descrição | {1&gt;URI&lt;1} | Método HTTP |
+| Método de controlador | DESCRIÇÃO | URI | Método HTTP |
 | --- | --- | --- | --- |
-| GetProducts | Obtém todos os produtos. | API/produtos | Obter |
-| Getproduct | Localiza um produto por ID. | API/produtos/*ID* | Obter |
+| GetProducts | Obtém todos os produtos. | API/produtos | GET |
+| Getproduct | Localiza um produto por ID. | API/produtos/*ID* | GET |
 | PutProduct | Atualiza um produto. | API/produtos/*ID* | PUT |
-| Produto | Cria um novo produto. | API/produtos | Postar |
-| DeleteProduct | Exclui um produto. | API/produtos/*ID* | DELETE |
+| Produto | Cria um produto. | API/produtos | POST |
+| DeleteProduct | Exclui um produto. | API/produtos/*ID* | Delete (excluir) |
 
 Cada método chama `OrdersContext` para consultar o banco de dados. Os métodos que modificam a coleção (PUT, POST e DELETE) chamam `db.SaveChanges` para persistir as alterações no banco de dados. Os controladores são criados por solicitação HTTP e, em seguida, descartados, portanto, é necessário manter as alterações antes que um método seja retornado.
 
@@ -78,7 +78,7 @@ Cada método chama `OrdersContext` para consultar o banco de dados. Os métodos 
 
 Entity Framework tem um bom recurso que permite que você preencha o banco de dados na inicialização e recrie o banco de dados automaticamente sempre que os modelos forem alterados. Esse recurso é útil durante o desenvolvimento, porque você sempre tem alguns dados de teste, mesmo se você alterar os modelos.
 
-Em Gerenciador de Soluções, clique com o botão direito do mouse na pasta modelos e crie uma nova classe chamada `OrdersContextInitializer`. Cole a seguinte implementação:
+Em Gerenciador de Soluções, clique com o botão direito do mouse na pasta modelos e crie uma nova classe chamada `OrdersContextInitializer`. Cole na seguinte implementação:
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-3/samples/sample4.cs)]
 

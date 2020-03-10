@@ -10,11 +10,11 @@ ms.assetid: bffd7863-f63b-4b23-a13c-372b5492e9fb
 msc.legacyurl: /web-api/overview/error-handling/web-api-global-error-handling
 msc.type: authoredcontent
 ms.openlocfilehash: 94f2d6d31d0b37f9bb0077e6258c70a2dfb1918d
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457733"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78557277"
 ---
 # <a name="global-error-handling-in-aspnet-web-api-2"></a>Tratamento de erro global no ASP.NET Web API 2
 

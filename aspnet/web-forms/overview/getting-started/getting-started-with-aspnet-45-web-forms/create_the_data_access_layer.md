@@ -9,11 +9,11 @@ ms.assetid: 0bbf7a6e-d7eb-4091-91e4-fff892777f32
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create_the_data_access_layer
 msc.type: authoredcontent
 ms.openlocfilehash: 0fcf050474a57be9ed53ec0783a6d6b7dde2bf4c
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74575745"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544922"
 ---
 # <a name="create-the-data-access-layer"></a>Criar a camada de acesso a dados
 
@@ -64,7 +64,7 @@ Neste tutorial, você começará adicionando classes de entidade simples represe
 
     ![Criar a camada de acesso a dados – menu novo item](create_the_data_access_layer/_static/image1.png)
 
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Em **Visual C#**  no painel **instalado** à esquerda, selecione **código**. 
 
     ![Criar a camada de acesso a dados – menu novo item](create_the_data_access_layer/_static/image2.png)
@@ -91,7 +91,7 @@ Para começar a usar as classes de acesso a dados, você deve definir uma classe
 Este procedimento adiciona uma nova C# classe de contexto à pasta *modelos* .
 
 1. Clique com o botão direito do mouse na pasta *modelos* e selecione **Adicionar** -&gt; **novo item**.   
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Selecione **classe** no painel central, nomeie-a *ProductContext.cs* e clique em **Adicionar**.
 3. Substitua o código padrão contido na classe pelo código a seguir:   
 
@@ -178,7 +178,7 @@ No próximo tutorial, você atualizará a interface do usuário, adicionará a n
 [Guia para iniciantes do ADO.NET Entity Framework](https://msdn.microsoft.com/data/ee712907)   
 [Desenvolvimento de Code First com Entity Framework](http://www.msteched.com/2010/Europe/DEV212) (vídeo)   
 [API fluente de relações de Code First](https://msdn.microsoft.com/data/hh134698)   
-[Code First anotações de dados](https://msdn.microsoft.com/data/gg193958)  
+[Anotações de dados do primeiro código](https://msdn.microsoft.com/data/gg193958)  
 [Melhorias de produtividade para o Entity Framework](https://blogs.msdn.com/b/efdesign/archive/2010/06/21/productivity-improvements-for-the-entity-framework.aspx?wa=wsignin1.0)
 
 > [!div class="step-by-step"]

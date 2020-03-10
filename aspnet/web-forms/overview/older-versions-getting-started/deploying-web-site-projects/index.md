@@ -1,23 +1,23 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/deploying-web-site-projects/index
-title: Implantação de projetos de Site da Web no Visual Studio 2008 e versões anteriores | Microsoft Docs
+title: Implantando projetos de site no Visual Studio 2008 e versões anteriores | Microsoft Docs
 author: rick-anderson
-description: Aplicativos web ASP.NET normalmente são projetados, criados e testado em um ambiente de desenvolvimento local e precisam ser implantados em um ambiente de produção e s...
+description: Os aplicativos Web ASP.NET são normalmente projetados, criados e testados em um ambiente de desenvolvimento local e precisam ser implantados em um ambiente de produção o...
 ms.author: riande
 ms.date: 05/16/2012
 ms.assetid: 6f72bde8-f2f1-4e4a-94e5-494c3c153c14
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects
 msc.type: chapter
 ms.openlocfilehash: 43c2397ef4ccc5eacb2ff4c5d04f62b9c8c481b7
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134418"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78524055"
 ---
 # <a name="deploying-web-site-projects-in-visual-studio-2008-and-earlier"></a>Implantação de projetos de site da Web no Visual Studio 2008 e versões anteriores
 
-> Aplicativos web ASP.NET normalmente são projetados, criados e testados em um ambiente de desenvolvimento local e precisa ser implantado em um ambiente de produção quando ele estiver pronto para lançamento. Esta série de tutoriais fornece detalhes sobre o processo de implantação.
+> Os aplicativos Web ASP.NET são normalmente projetados, criados e testados em um ambiente de desenvolvimento local e precisam ser implantados em um ambiente de produção quando estiverem prontos para o lançamento. Esta série de tutoriais detalha o processo de implantação.
 
 - [Opções de hospedagem do ASP.NET (C#)](asp-net-hosting-options-cs.md)
 - [Determinando quais arquivos precisam ser implantados (C#)](determining-what-files-need-to-be-deployed-cs.md)

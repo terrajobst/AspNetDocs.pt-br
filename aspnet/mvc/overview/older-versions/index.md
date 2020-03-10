@@ -9,11 +9,11 @@ ms.assetid: 151cd274-3daa-4f88-ad3b-bffb99a9d545
 msc.legacyurl: /mvc/overview/older-versions
 msc.type: chapter
 ms.openlocfilehash: aa38ea8984f958939261d494f65bfa2108f87068
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65112447"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78560049"
 ---
 # <a name="older-versions---mvc-3-and-4"></a>Versões mais antigas – MVC 3 e 4
 
@@ -81,24 +81,24 @@ ms.locfileid: "65112447"
 - [Criação de um aplicativo do MVC 3 com Razor e JavaScript não obstrusivo](creating-a-mvc-3-application-with-razor-and-unobtrusive-javascript.md)
 - [Loja de Música do MVC 3](mvc-music-store/index.md)
 
-    - [Parte 1: Visão geral e arquivo -> Novo projeto](mvc-music-store/mvc-music-store-part-1.md)
-    - [Parte 2: Controladores](mvc-music-store/mvc-music-store-part-2.md)
-    - [Parte 3: Views e ViewModels](mvc-music-store/mvc-music-store-part-3.md)
-    - [Parte 4: Acesso a dados e modelos](mvc-music-store/mvc-music-store-part-4.md)
-    - [Parte 5: Formulários de edição e modelagem](mvc-music-store/mvc-music-store-part-5.md)
-    - [Parte 6: Usando anotações de dados para validação de modelo](mvc-music-store/mvc-music-store-part-6.md)
-    - [Parte 7: Associação e a autorização](mvc-music-store/mvc-music-store-part-7.md)
-    - [Parte 8: Carrinho de compras com atualizações do Ajax](mvc-music-store/mvc-music-store-part-8.md)
-    - [Parte 9: Registro e check-out](mvc-music-store/mvc-music-store-part-9.md)
-    - [Parte 10: Atualizações finais à navegação e Design de Site, conclusão](mvc-music-store/mvc-music-store-part-10.md)
+    - [Parte 1: visão geral e Arquivo -> Novo Projeto](mvc-music-store/mvc-music-store-part-1.md)
+    - [Parte 2: controladores](mvc-music-store/mvc-music-store-part-2.md)
+    - [Parte 3: exibições e ViewModels](mvc-music-store/mvc-music-store-part-3.md)
+    - [Parte 4: modelos e Acesso a Dados](mvc-music-store/mvc-music-store-part-4.md)
+    - [Parte 5: formulários de edição e modelagem](mvc-music-store/mvc-music-store-part-5.md)
+    - [Parte 6: uso de anotações de dados para a validação de modelo](mvc-music-store/mvc-music-store-part-6.md)
+    - [Parte 7: associação e a autorização](mvc-music-store/mvc-music-store-part-7.md)
+    - [Parte 8: carrinho de compras com atualizações do Ajax](mvc-music-store/mvc-music-store-part-8.md)
+    - [Parte 9: registro e check-out](mvc-music-store/mvc-music-store-part-9.md)
+    - [Parte 10: atualizações finais à navegação e ao design do site e conclusão](mvc-music-store/mvc-music-store-part-10.md)
 - [MVC 3 – O HTML5 e o calendário pop-up Datepicker do jQuery UI](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/index.md)
 
     - [HTML5 e calendário pop-up Datepicker do jQuery UI com o ASP.NET MVC – parte 1](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-1.md)
     - [HTML5 e calendário pop-up Datepicker do jQuery UI com o ASP.NET MVC – parte 2](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-2.md)
-    - [HTML5 e calendário jQuery UI Datepicker pop-up com o ASP.NET MVC – parte 3](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-3.md)
+    - [Calendário de pop-up DatePicker do HTML5 e jQuery UI com ASP.NET MVC-parte 3](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-3.md)
     - [HTML5 e calendário pop-up Datepicker do jQuery UI com o ASP.NET MVC – parte 4](using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc/using-the-html5-and-jquery-ui-datepicker-popup-calendar-with-aspnet-mvc-part-4.md)
 - [MVC 3 – trabalhando com a caixa DropDownList e o jQuery](working-with-the-dropdownlist-box-and-jquery/index.md)
 
     - [Usando o auxiliar do DropDownList com ASP.NET MVC](working-with-the-dropdownlist-box-and-jquery/using-the-dropdownlist-helper-with-aspnet-mvc.md)
-    - [Examinando como o ASP.NET MVC faz Scaffold do auxiliar DropDownList](working-with-the-dropdownlist-box-and-jquery/examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
+    - [Examinando como o ASP.NET MVC aplica Scaffold o auxiliar DropDownList](working-with-the-dropdownlist-box-and-jquery/examining-how-aspnet-mvc-scaffolds-the-dropdownlist-helper.md)
     - [Adicionando uma nova categoria ao DropDownList usando o jQuery UI](working-with-the-dropdownlist-box-and-jquery/adding-a-new-category-to-the-dropdownlist-using-jquery-ui.md)

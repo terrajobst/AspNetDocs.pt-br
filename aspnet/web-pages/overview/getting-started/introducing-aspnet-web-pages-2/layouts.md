@@ -1,185 +1,185 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
-title: Introdução ao ASP.NET Web Pages - criando um Layout consistente | Microsoft Docs
+title: Introdução ao Páginas da Web do ASP.NET-Criando um layout consistente | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial mostra como usar layouts para criar uma aparência consistente para as páginas em um site que usa as páginas da Web ASP.NET. Ele pressupõe que você tenha concluído a...
+description: Este tutorial mostra como usar layouts para criar uma aparência consistente para as páginas em um site que usa Páginas da Web do ASP.NET. Ele pressupõe que você concluiu o...
 ms.author: riande
 ms.date: 05/28/2015
 ms.assetid: c85ec591-f8d7-4882-b763-de6ab9f3df7a
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/layouts
 msc.type: authoredcontent
 ms.openlocfilehash: 678eb7089e95e3d221d6b2d82034a62aefa75757
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131830"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78526687"
 ---
-# <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introdução ao ASP.NET Web Pages - criando um Layout consistente
+# <a name="introducing-aspnet-web-pages---creating-a-consistent-layout"></a>Introdução ao Páginas da Web do ASP.NET-Criando um layout consistente
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este tutorial mostra como usar *layouts* para criar uma aparência consistente para as páginas em um site que usa as páginas da Web ASP.NET. Ele pressupõe que você tenha concluído a série por meio [excluir do banco de dados em páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=251584).
+> Este tutorial mostra como usar *layouts* para criar uma aparência consistente para as páginas em um site que usa páginas da Web do ASP.net. Ele pressupõe que você concluiu a série por meio da [exclusão de dados de banco de dado no páginas da Web do ASP.net](https://go.microsoft.com/fwlink/?LinkId=251584).
 > 
 > O que você aprenderá:
 > 
-> - É o que uma página de layout.
-> - Como combinar as páginas de layout com conteúdo dinâmico.
+> - O que é uma página de layout.
+> - Como combinar páginas de layout com conteúdo dinâmico.
 > - Como passar valores para uma página de layout.
 
-## <a name="about-layouts"></a>Sobre Layouts
+## <a name="about-layouts"></a>Sobre layouts
 
-As páginas que você criou até agora todas forem concluídas, páginas autônomas. Todos eles pertencem ao mesmo site, mas eles não têm uma aparência padrão ou todos os elementos comuns.
+As páginas que você criou até agora foram todas concluídas, páginas autônomas. Todos eles pertencem ao mesmo site, mas não têm nenhum elemento comum ou uma aparência padrão.
 
-A maioria dos sites têm uma aparência consistente e o layout. Por exemplo, se você for para o [Microsoft.com/web](https://www.microsoft.com/web/) do site e olhar em volta, você verá que as páginas de todas as aderem a um layout geral e um tema visual:
+A maioria dos sites tem uma aparência e um layout consistentes. Por exemplo, se você for para o site do [Microsoft.com/Web](https://www.microsoft.com/web/) e observar, verá que as páginas são todas seguidas em um layout geral e em um tema Visual:
 
-![Página do site Microsoft.com/Web que mostra o layout do cabeçalho, área de navegação, área de conteúdo e do rodapé](layouts/_static/image1.png)
+![Página do site do Microsoft.com/web mostrando o layout do cabeçalho, da área de navegação, da área de conteúdo e do rodapé](layouts/_static/image1.png)
 
-Uma *ineficiente* maneira para criar esse layout seria definir um cabeçalho, barra de navegação e rodapé separadamente em cada uma das suas páginas. Você poderia ser duplicando a mesma marcação cada vez. Se você quiser alterar algo (por exemplo, atualize o rodapé), você precisaria alterar cada página separadamente.
+Uma maneira *ineficiente* de criar esse layout seria definir um cabeçalho, uma barra de navegação e um rodapé separadamente em cada uma de suas páginas. Você estaria duplicando a mesma marcação a cada vez. Se você quisesse alterar algo (por exemplo, atualizar o rodapé), precisaria alterar cada página separadamente.
 
-É aí que estão *páginas de layout* entram. Em páginas de Web do ASP.NET, você pode definir uma página de layout que fornece um contêiner geral para páginas em seu site. Por exemplo, a página de layout pode conter o cabeçalho, área de navegação e rodapé. A página de layout inclui um espaço reservado para onde vai o conteúdo principal.
+É aí que entram as *páginas de layout* . No Páginas da Web do ASP.NET, você pode definir uma página de layout que fornece um contêiner geral para páginas em seu site. Por exemplo, a página de layout pode conter o cabeçalho, a área de navegação e o rodapé. A página de layout inclui um espaço reservado onde o conteúdo principal vai.
 
-Em seguida, você pode definir páginas de conteúdo individuais que contêm a marcação e o código para essa página somente. Páginas de conteúdo não precisam ser completar páginas HTML; eles nem precisam ter um `<body>` elemento. Eles também têm uma linha de código que diz ao ASP.NET qual página de layout que você deseja exibir o conteúdo. Aqui está uma figura que mostra mais ou menos como funciona essa relação:
+Em seguida, você pode definir páginas de conteúdo individuais que contêm a marcação e o código somente para essa página. As páginas de conteúdo não precisam ser páginas HTML completas; Eles nem precisam ter um elemento `<body>`. Eles também têm uma linha de código que diz ao ASP.NET em qual página de layout você deseja exibir o conteúdo. Aqui está uma imagem que mostra aproximadamente como essa relação funciona:
 
-![Diagrama conceitual que mostra duas páginas de conteúdo e uma página de layout no qual eles se ajustam](layouts/_static/image2.png)
+![Diagrama conceitual que mostra duas páginas de conteúdo e uma página de layout na qual elas se ajustam](layouts/_static/image2.png)
 
-Essa interação é fácil de entender quando você vê-lo em ação. Neste tutorial, você alterará as páginas de filmes para usar um layout.
+Essa interação é fácil de entender quando você a vê em ação. Neste tutorial, você alterará suas páginas de filmes para usar um layout.
 
-## <a name="adding-a-layout-page"></a>Adicionando uma página de Layout
+## <a name="adding-a-layout-page"></a>Adicionando uma página de layout
 
-Você começará criando uma página de layout que define um layout de página típico com um cabeçalho, rodapé e uma área para o conteúdo principal. No site WebPagesMovies, adicionar uma página CSHTML denominada  *\_layout. cshtml*.
+Você começará criando uma página de layout que define um layout de página típico com um cabeçalho, um rodapé e uma área para o conteúdo principal. No site do WebPagesMovies, adicione uma página CSHTML denominada *\_layout. cshtml*.
 
-O sublinhado à esquerda ( `_` ) caractere é significativo. Se o nome de uma página começa com um sublinhado, o ASP.NET não enviará diretamente nessa página para o navegador. Essa convenção permite definir as páginas que são necessárias para seu site, mas que os usuários não devem ser capazes de solicitar diretamente.
+O caractere de sublinhado à esquerda (`_`) é significativo. Se o nome de uma página começar com um sublinhado, ASP.NET não enviará diretamente essa página para o navegador. Essa Convenção permite definir páginas que são necessárias para seu site, mas que os usuários não devem ser capazes de solicitar diretamente.
 
-Substitua o conteúdo da página com o seguinte:
+Substitua o conteúdo da página pelo seguinte:
 
 [!code-html[Main](layouts/samples/sample1.html)]
 
-Como você pode ver, essa marcação é apenas o HTML que usa `<div>` elementos para definir três seções na página, além do ano mais `<div>` elemento para conter as três seções. O rodapé contém um pouco de código Razor: `@DateTime.Now.Year`, que será renderizado o ano atual nesse local na página.
+Como você pode ver, essa marcação é apenas HTML que usa elementos `<div>` para definir três seções na página mais um elemento mais `<div>` para manter as três seções. O rodapé contém um pouco de código do Razor: `@DateTime.Now.Year`, que renderizará o ano atual nesse local na página.
 
-Observe que há um link para uma folha de estilo nomeada *Movies.css*. A folha de estilos é onde os detalhes do layout físico dos elementos serão definidos. Você vai criar que em breve.
+Observe que há um link para uma folha de estilos chamada *Movies. css*. A folha de estilos é onde os detalhes do layout físico dos elementos serão definidos. Você criará isso daqui a pouco.
 
-O recurso somente incomum desta  *\_layout. cshtml* página é o `@Render.Body()` linha. Esse é o espaço reservado aonde o conteúdo quando este layout é mesclado com outra página.
+O único recurso incomum neste *\_página layout. cshtml* é a linha de `@Render.Body()`. Esse é o espaço reservado onde o conteúdo será usado quando esse layout for mesclado com outra página.
 
-## <a name="adding-a-css-file"></a>Adicionando um arquivo. CSS
+## <a name="adding-a-css-file"></a>Adicionando um arquivo. css
 
-A maneira preferencial para definir a organização real (ou seja, aparência) dos elementos na página é usar regras de (CSS) de folha de estilos em cascata. Portanto, você criará um *. CSS* arquivo com as regras para seu novo layout.
+A maneira preferida de definir a organização real (ou seja, aparência) dos elementos na página é usar as regras de CSS (folha de estilos em cascata). Portanto, você criará um arquivo *. css* que tem as regras para o novo layout.
 
-No WebMatrix, selecione a raiz do seu site. Em seguida, no **arquivos** guia de faixa de opções, clique na seta sob o **New** botão e, em seguida, clique em **nova pasta**.
+No WebMatrix, selecione a raiz do seu site. Na guia **arquivos** da faixa de faixas, clique na seta sob o botão **novo** e clique em **nova pasta**.
 
-![A opção 'Nova pasta' em novo na faixa de opções.](layouts/_static/image3.png)
+![A opção ' nova pasta ' em novo na faixa de opções.](layouts/_static/image3.png)
 
-Nomeie a nova pasta *estilos*.
+Nomeie os novos *estilos*de pasta.
 
-![Nomear a nova pasta 'Estilos'](layouts/_static/image4.png)
+![Nomeando a nova pasta ' Styles '](layouts/_static/image4.png)
 
-Dentro do novo *estilos* pasta, crie um arquivo chamado *Movies.css*.
+Dentro da nova pasta *estilos* , crie um arquivo chamado *Movies. css*.
 
-![Criando um novo arquivo Movies.css](layouts/_static/image5.png)
+![Criando um novo arquivo Movies. css](layouts/_static/image5.png)
 
-Substitua o conteúdo do novo *. CSS* arquivo com o seguinte:
+Substitua o conteúdo do novo arquivo *. css* pelo seguinte:
 
 [!code-css[Main](layouts/samples/sample2.css)]
 
-Não falaremos muito sobre essas regras CSS, exceto a Observe duas coisas. Uma é que além de definir fontes e tamanhos, as regras de usam posicionamento absoluto para estabelecer o local do cabeçalho, rodapé e área de conteúdo principal. Se você for novo no posicionamento no CSS, você pode ler o [posicionamento CSS](http://www.w3schools.com/css/css_positioning.asp) tutorial no site W3Schools.
+Não vamos dizer muito sobre essas regras de CSS, exceto para observar duas coisas. Uma delas é que, além de definir fontes e tamanhos, as regras usam o posicionamento absoluto para estabelecer o local do cabeçalho, do rodapé e da área de conteúdo principal. Se você for novo no posicionamento em CSS, poderá ler o tutorial de [posicionamento de CSS](http://www.w3schools.com/css/css_positioning.asp) no site do w3schools.
 
-A outra coisa a observar é que, na parte inferior, podemos ter copiado as regras de estilo que foram originalmente definida individualmente na *Movies.cshtml* arquivo. Essas regras foram usadas na [Introdução aos dados exibindo por usando páginas da Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=251580) tutorial para tornar o `WebGrid` auxiliar renderizar a marcação que adicionou faixas à tabela. (Se você pretende usar um *. CSS* arquivo para definições de estilo, você também pode colocar as regras de estilo para o site inteiro nele.)
+Outra coisa a ser observada é que, na parte inferior, copiamos as regras de estilo que foram originalmente definidas individualmente no arquivo *Movies. cshtml* . Essas regras foram usadas na [introdução à exibição de dados usando páginas da Web do ASP.net](https://go.microsoft.com/fwlink/?LinkId=251580) tutorial para fazer com que o auxiliar de `WebGrid` processe a marcação que adicionou as faixas à tabela. (Se você for usar um arquivo *. css* para definições de estilo, você também poderá colocar as regras de estilo para todo o site nele.)
 
-## <a name="updating-the-movies-file-to-use-the-layout"></a>Atualizando o arquivo de filmes para usar o Layout
+## <a name="updating-the-movies-file-to-use-the-layout"></a>Atualizando o arquivo de filmes para usar o layout
 
-Agora você pode atualizar os arquivos existentes no seu site para usar o novo layout. Abra o *Movies.cshtml* arquivo. Na parte superior, como a primeira linha de código, adicione o seguinte:
+Agora você pode atualizar os arquivos existentes no seu site para usar o novo layout. Abra o arquivo *Movies. cshtml* . Na parte superior, como a primeira linha de código, adicione o seguinte:
 
 [!code-csharp[Main](layouts/samples/sample3.cs)]
 
-Agora começa a página dessa forma:
+A página agora começa desta forma:
 
 [!code-cshtml[Main](layouts/samples/sample4.cshtml?highlight=2)]
 
-Esta linha de código diz ao ASP.NET que, quando o *filmes* página é executada, ele deve ser mesclado com o  *\_layout. cshtml* arquivo.
+Essa linha de código informa ao ASP.NET que, quando a página de *filmes* é executada, ela deve ser mesclada com o arquivo *layout. cshtml de\_* .
 
-Uma vez que o *Movies.cshtml* arquivo agora usa uma página de layout, você pode remover a marcação da *Movies.cshtml* página já foi solucionado pelo  *\_layout. cshtml*arquivo. Tire o `<!DOCTYPE>`, `<html>`, e `<body>` de abertura e fechamento de marcas. Remova todo o `<head>` elemento e seu conteúdo, que inclui as regras de estilo para a grade, uma vez que você já tem essas regras um *. CSS* arquivo. Enquanto você faz isso, alterar existente `<h1>` elemento para um `<h2>` elemento; você tem um `<h1>` elemento na página de layout já. Alterar o `<h2>` texto para "Lista de filmes".
+Como o arquivo *Movies. cshtml* agora usa uma página de layout, você pode remover a marcação da página *Movies. cshtml* que é manipulada pelo arquivo *layout. cshtml de\_* . Retire as marcas `<!DOCTYPE>`, `<html>`e `<body>` de abertura e fechamento. Retire todo o elemento `<head>` e seu conteúdo, que inclui as regras de estilo para a grade, já que você tem essas regras em um arquivo *. css* . Enquanto estiver, altere o elemento `<h1>` existente para um elemento `<h2>`; Você já tem um elemento `<h1>` na página de layout. Altere o texto do `<h2>` para "listar filmes".
 
-Normalmente você não teria que fazer esses tipos de alterações em uma página de conteúdo. Quando você começar seu site com uma página de layout, criar páginas de conteúdo sem todos esses elementos para começar. Nesse caso, no entanto, você está convertendo uma página autônoma para uma que usa um layout, portanto, não há um pouco de limpeza.
+Normalmente, você não precisaria fazer esses tipos de alterações em uma página de conteúdo. Ao iniciar o site com uma página de layout, você cria páginas de conteúdo sem todos esses elementos para começar. Nesse caso, no entanto, você está convertendo uma página autônoma para uma que usa um layout, portanto, há um pouco de limpeza.
 
-Quando tiver terminado, o *Movies.cshtml* página ficará semelhante ao seguinte:
+Quando tiver terminado, a página *Movies. cshtml* será parecida com a seguinte:
 
 [!code-cshtml[Main](layouts/samples/sample5.cshtml)]
 
-### <a name="testing-the-layout"></a>Teste o Layout
+### <a name="testing-the-layout"></a>Testando o layout
 
-Agora você pode ver a aparência do layout. No WebMatrix, clique com botão direito do *Movies.cshtml* página e selecione **iniciar no navegador**. Quando o navegador exibe a página, ele se parece com esta página:
+Agora você pode ver qual é a aparência do layout. No WebMatrix, clique com o botão direito do mouse na página *Movies. cshtml* e selecione **Iniciar no navegador**. Quando o navegador exibe a página, ele é semelhante a esta página:
 
 ![Página de filmes renderizada usando um layout](layouts/_static/image6.png)
 
-ASP.NET mesclou o conteúdo da página Movies.cshtml para o  *\_layout. cshtml* página direita, onde o `RenderBody` método é. E claro o  *\_layout. cshtml* página referências uma *. CSS* arquivo que define a aparência da página.
+ASP.NET mesclou o conteúdo da página Movies. cshtml na página *\_layout. cshtml* , onde o método `RenderBody` é. E, claro, a página *\_layout. cshtml* faz referência a um arquivo *. css* que define a aparência da página.
 
-## <a name="updating-the-addmovie-page-to-use-the-layout"></a>Atualizando a página de AddMovie para usar o Layout
+## <a name="updating-the-addmovie-page-to-use-the-layout"></a>Atualizando a página addmovie para usar o layout
 
-O verdadeiro benefício de layouts é que você pode usá-los para todas as páginas em seu site. Abra o *AddMovie.cshtml* página.
+O verdadeiro benefício dos layouts é que você pode usá-los para todas as páginas do seu site. Abra a página *addmovie. cshtml* .
 
-Você pode se lembrar de que o *AddMovie.cshtml* página originalmente tinha algumas regras CSS nele para definir a aparência das mensagens de erro de validação. Como você tem um *. CSS* arquivo do seu site agora, você pode mover essas regras para o *. CSS* arquivo. Removê-los da *AddMovie.cshtml* do arquivo e adicioná-los na parte inferior do *Movies.css* arquivo. Você está movendo as regras a seguir:
+Você pode se lembrar de que a página *addmovie. cshtml* tinha originalmente algumas regras de CSS nela para definir a aparência das mensagens de erro de validação. Como você tem um arquivo *. css* para seu site agora, você pode mover essas regras para o arquivo *. css* . Remova-os do arquivo *addmovie. cshtml* e adicione-os à parte inferior do arquivo *Movies. css* . Você está movendo as seguintes regras:
 
 [!code-css[Main](layouts/samples/sample6.css)]
 
-Agora, verifique os mesmos tipos de alterações no *AddMovie.cshtml* que você fez para *Movies.cshtml* — adicione `Layout="~/_Layout.cshtml;` e remova a marcação HTML que agora é irrelevante. Alterar o `<h1>` elemento para `<h2>`. Quando terminar, a página se parecerá com este exemplo:
+Agora faça os mesmos tipos de alterações em *addmovie. cshtml* que você fez para *Movies. cshtml* — adicione `Layout="~/_Layout.cshtml;` e remova a marcação HTML que agora é estranha. Altere o elemento `<h1>` para `<h2>`. Quando terminar, a página se parecerá com este exemplo:
 
 [!code-cshtml[Main](layouts/samples/sample7.cshtml)]
 
-Execute a página. Agora, ele se parece com esta ilustração:
+Execute a página. Agora, ele é semelhante a esta ilustração:
 
-![Renderizado usando um layout de página 'Adicionar filmes'](layouts/_static/image7.png)
+![Página ' Adicionar filmes ' processada usando um layout](layouts/_static/image7.png)
 
-Você deseja fazer alterações semelhantes para as páginas no site — *EditMovie.cshtml* e *DeleteMovie.cshtml*. No entanto, antes de fazer, você pode fazer outra alteração no layout que torna um pouco mais flexível.
+Você deseja fazer alterações semelhantes às páginas no site — *EditMovie. cshtml* e *DeleteMovie. cshtml*. No entanto, antes de fazer isso, você pode fazer outra alteração no layout que o torna um pouco mais flexível.
 
-## <a name="passing-title-information-to-the-layout-page"></a>Passando informações de título para a página de Layout
+## <a name="passing-title-information-to-the-layout-page"></a>Passando informações de título para a página de layout
 
-O  *\_layout. cshtml* página que você criou tem um `<title>` elemento que é definido como "Meu Site de filme". A maioria dos navegadores exibir o conteúdo desse elemento como o texto em uma guia:
+A página *\_layout. cshtml* que você criou tem um elemento `<title>` definido como "meu site de filmes". A maioria dos navegadores exibe o conteúdo deste elemento como o texto em uma guia:
 
-![A página &lt;título&gt; elemento exibido em uma guia do navegador](layouts/_static/image8.png)
+![O título da &lt;da página&gt; elemento exibido em uma guia do navegador](layouts/_static/image8.png)
 
-Essas informações de título são genéricas. Suponha que você deseja que o texto do título para ser mais específico para a página atual. (O texto do título também é usado pelos mecanismos de pesquisa para determinar qual é sua página sobre.) Você pode passar informações de uma página de conteúdo, como *Movies.cshtml* ou *AddMovie.cshtml* para o layout da página e, em seguida, use essas informações para personalizar a página de layout processa.
+Essa informação de título é genérica. Suponha que você deseja que o texto do título seja mais específico para a página atual. (O texto do título também é usado pelos mecanismos de pesquisa para determinar a sua página.) Você pode passar informações de uma página de conteúdo como *Movies. cshtml* ou *addmovie. cshtml* para a página de layout e, em seguida, usar essas informações para personalizar o que a página de layout renderiza.
 
-Abra o *Movies.cshtml* página novamente. No código na parte superior, adicione a seguinte linha:
+Abra a página *Movies. cshtml* novamente. No código na parte superior, adicione a seguinte linha:
 
 [!code-csharp[Main](layouts/samples/sample8.cs)]
 
-O `Page` objeto está disponível em todos os *. cshtml* páginas e é para essa finalidade, ou seja, para compartilhar informações entre uma página e seu layout.
+O objeto `Page` está disponível em todas as páginas *. cshtml* e é para essa finalidade, ou seja, para compartilhar informações entre uma página e seu layout.
 
-Abra o  *\_layout. cshtml* página. Alterar o `<title>` , de modo que ele se parece com essa marcação:
+Abra a página *\_layout. cshtml* . Altere o elemento `<title>` de forma que ele se pareça com esta marcação:
 
 [!code-html[Main](layouts/samples/sample9.html)]
 
-Esse código renderiza tudo o que está no `Page.Title` propriedade diretamente nesse local na página.
+Esse código renderiza o que estiver na propriedade `Page.Title` diretamente nesse local na página.
 
-Execute o *Movies.cshtml* página. Desta vez, a guia do navegador mostra o que é passado como o valor do `Page.Title`:
+Execute a página *Movies. cshtml* . Desta vez, a guia Navegador mostra o que você passou como o valor de `Page.Title`:
 
 ![Uma guia do navegador mostrando o título criado dinamicamente](layouts/_static/image9.png)
 
-Se desejar, exiba a origem da página no navegador. Você pode ver que o `<title>` elemento é renderizado como `<title>List Movies</title>`.
+Se desejar, exiba a origem da página no navegador. Você pode ver que o elemento `<title>` é renderizado como `<title>List Movies</title>`.
 
 > [!TIP] 
 > 
-> **O objeto de página**
+> **O objeto Page**
 > 
-> Um recurso útil do `Page` é que ele é um objeto dinâmico — o `Title` propriedade não é um nome reservado ou fixo. Você pode usar *qualquer* nome do valor de `Page` objeto. Por exemplo, você poderia facilmente passar o título usando uma propriedade chamada `Page.CurrentName` ou `Page.MyPage`. A única restrição é que o nome deve seguir as regras normais de quais propriedades podem ser nomeadas. (Por exemplo, o nome não pode conter um espaço.)
+> Um recurso útil do `Page` é que ele é um objeto dinâmico — a propriedade `Title` não é um nome fixo ou reservado. Você pode usar *qualquer* nome para um valor do objeto `Page`. Por exemplo, você poderia facilmente passar o título usando uma propriedade chamada `Page.CurrentName` ou `Page.MyPage`. A única restrição é que o nome precisa seguir as regras normais para quais propriedades podem ser nomeadas. (Por exemplo, o nome não pode conter um espaço).
 > 
-> Você pode passar qualquer número de valores usando o `Page` objeto. Se você quiser passar informações de filmes para a página de layout, você pode passar valores usando algo como `Page.MovieTitle` e `Page.Genre` e `Page.MovieYear`. (Ou outros nomes inventada para armazenar as informações.) O único requisito — que é provavelmente óbvia — é que você precisa usar os mesmos nomes na página de conteúdo e a página de layout.
+> Você pode passar qualquer número de valores usando o objeto `Page`. Se você quisesse passar informações de filme para a página de layout, poderá passar valores usando algo como `Page.MovieTitle` e `Page.Genre` e `Page.MovieYear`. (Ou quaisquer outros nomes que você inventou para armazenar as informações.) O único requisito, que provavelmente é óbvio, é que você precisa usar os mesmos nomes na página de conteúdo e na página de layout.
 > 
-> As informações transmitidas por meio de `Page` objeto não está limitado a apenas texto a ser exibido na página de layout. Você pode passar um valor para a página de layout e, em seguida, o código na página de layout pode usar o valor para decidir se deve exibir uma seção da página, o que *. CSS* de arquivos para usar e assim por diante. Os valores que você passe a `Page` objeto são como quaisquer outros valores que você usar no código. É assim que os valores são originadas na página de conteúdo e são passados para a página de layout.
+> As informações que você passa usando o objeto `Page` não estão limitadas a apenas texto a ser exibido na página de layout. Você pode passar um valor para a página de layout e, em seguida, o código na página de layout pode usar o valor para decidir se deve exibir uma seção da página, o arquivo *. css* a ser usado e assim por diante. Os valores que você passa no objeto `Page` são como quaisquer outros valores que você usa no código. É apenas que os valores se originam na página de conteúdo e são passados para a página de layout.
 
-Abra o *AddMovie.cshtml* da página e adicione uma linha na parte superior do código que fornece um título para o *AddMovie.cshtml* página:
+Abra a página *addmovie. cshtml* e adicione uma linha à parte superior do código que fornece um título para a página *addmovie. cshtml* :
 
 [!code-csharp[Main](layouts/samples/sample10.cs)]
 
-Execute o *AddMovie.cshtml* página. Você verá o novo título lá:
+Execute a página *addmovie. cshtml* . Você verá o novo título lá:
 
-![Uma guia do navegador mostrando o título 'Adicionar filmes' criado dinamicamente](layouts/_static/image10.png)
+![Uma guia do navegador mostrando o título ' Adicionar filmes ' criado dinamicamente](layouts/_static/image10.png)
 
-## <a name="updating-the-remaining-pages-to-use-the-layout"></a>Atualizando as páginas restantes para usar o Layout
+## <a name="updating-the-remaining-pages-to-use-the-layout"></a>Atualizando as páginas restantes para usar o layout
 
-Agora você pode concluir as páginas restantes no seu site para que eles usem o novo layout. Abra *EditMovie.cshtml* e *DeleteMovie.cshtml* por sua vez e fazer as mesmas alterações em cada um.
+Agora você pode concluir as páginas restantes no seu site para que elas usem o novo layout. Abra *EditMovie. cshtml* e *DeleteMovie. cshtml* por vez e faça as mesmas alterações em cada um.
 
-Adicione a linha de código que vincula a página de layout:
+Adicione a linha de código que vincula à página de layout:
 
 [!code-csharp[Main](layouts/samples/sample11.cs)]
 
@@ -191,46 +191,46 @@ ou:
 
 [!code-csharp[Main](layouts/samples/sample13.cs)]
 
-Remover toda a marcação HTML estranhas — basicamente, deixar apenas os bits que estão dentro do `<body>` elemento (mais o bloco de código na parte superior).
+Remover toda a marcação HTML incorreta — basicamente, deixe apenas os bits que estão dentro do elemento `<body>` (mais o bloco de código na parte superior).
 
-Alterar o `<h1>` elemento seja um `<h2>` elemento.
+Altere o elemento `<h1>` para que seja um elemento `<h2>`.
 
-Quando você fez essas alterações, teste cada e certifique-se de que ela está exibindo corretamente e se o título está correto.
+Quando você fez essas alterações, teste cada uma e verifique se ela está sendo exibida corretamente e se o título está correto.
 
-## <a name="parting-thoughts-about-layout-pages"></a>Pensamentos para encerrar sobre páginas de Layout
+## <a name="parting-thoughts-about-layout-pages"></a>Ideias de partes sobre páginas de layout
 
-Neste tutorial, você criou uma  *\_layout. cshtml* página e usado o `RenderBody` método para mesclar o conteúdo de outra página. Que é o padrão básico para usar layouts em páginas da Web.
+Neste tutorial, você criou uma página *\_layout. cshtml* e usou o método `RenderBody` para Mesclar conteúdo de outra página. Esse é o padrão básico para usar layouts em páginas da Web.
 
-Páginas de layout têm recursos adicionais que não abordaremos aqui. Por exemplo, você pode aninhar as páginas de layout — uma página de layout por sua vez pode referenciar outro. Layouts aninhados podem ser útil se você estiver trabalhando com subseções de um site que exigem diferentes layouts. Você também pode usar métodos adicionais (por exemplo, `RenderSection`) para configurar a chamada seções na página de layout.
+As páginas de layout têm recursos adicionais que não abordamos aqui. Por exemplo, você pode aninhar páginas de layout — uma página de layout pode, por sua vez, fazer referência a outra. Layouts aninhados podem ser úteis se você estiver trabalhando com subseções de um site que exigem layouts diferentes. Você também pode usar métodos adicionais (por exemplo, `RenderSection`) para configurar seções nomeadas na página layout.
 
-A combinação de páginas de layout e *. CSS* arquivos é poderoso. Como você verá na próxima série de tutoriais, no WebMatrix, você pode criar um site com base em um *modelo*, que oferece um site que possui funcionalidade predefinidas nele. Os modelos faça bom uso de CSS para criar sites que combinam bem e que têm recursos como menus e páginas de layout. Aqui está uma captura de tela da home page de um site com base em um modelo, mostrando os recursos que usam páginas de layout e CSS:
+A combinação de páginas de layout e arquivos *. css* é eficiente. Como você verá na próxima série de tutoriais, no WebMatrix, você pode criar um site com base em um *modelo*, que fornece um site com funcionalidade predefinida. Os modelos fazem uso bom das páginas de layout e do CSS para criar sites que têm uma aparência ótima e que têm recursos como menus. Aqui está uma captura de tela da home page de um site com base em um modelo, mostrando recursos que usam páginas de layout e CSS:
 
 ![Layout criado pelo modelo de site do WebMatrix mostrando o cabeçalho, área de navegação, área de conteúdo, seção opcional e links de logon](layouts/_static/image11.png)
 
-## <a name="complete-listing-for-movie-page-updated-to-use-a-layout-page"></a>Listagem completa para a página de filme (atualizada para usar uma página de Layout)
+## <a name="complete-listing-for-movie-page-updated-to-use-a-layout-page"></a>Listagem completa da página de filme (atualizada para usar uma página de layout)
 
 [!code-cshtml[Main](layouts/samples/sample14.cshtml)]
 
-## <a name="complete-page-listing-for-add-movie-page-updated-for-layout"></a>Página concluída listagem para adicionar a página de filme (atualizada para o Layout)
+## <a name="complete-page-listing-for-add-movie-page-updated-for-layout"></a>Lista completa de páginas para adicionar filme (atualizado para layout)
 
 [!code-cshtml[Main](layouts/samples/sample15.cshtml)]
 
-## <a name="complete-page-listing-for-delete-movie-page-updated-for-layout"></a>Listagem completa da página para página de exclusão de filme (atualizada para o Layout)
+## <a name="complete-page-listing-for-delete-movie-page-updated-for-layout"></a>Concluir a listagem de página para excluir página de filme (atualizada para layout)
 
 [!code-cshtml[Main](layouts/samples/sample16.cshtml)]
 
-## <a name="complete-page-listing-for-edit-movie-page-updated-for-layout"></a>Listagem de página completa para a página de edição do filme (atualizada para o Layout)
+## <a name="complete-page-listing-for-edit-movie-page-updated-for-layout"></a>Lista completa de páginas para editar filme (atualizado para layout)
 
 [!code-cshtml[Main](layouts/samples/sample17.cshtml)]
 
-## <a name="coming-up-next"></a>Próximo
+## <a name="coming-up-next"></a>Chegando em seguida
 
-O próximo tutorial, você aprenderá como publicar seu site na Internet para que qualquer pessoa pode vê-lo.
+No próximo tutorial, você aprenderá a publicar seu site na Internet para que todos possam vê-lo.
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Criar uma aparência consistente](https://go.microsoft.com/fwlink/?LinkID=202891) — um artigo que fornece mais detalhes sobre como trabalhar com layouts. Ele também descreve como passar um valor para uma página de layout que mostra ou oculta a parte do conteúdo.
-- [Páginas de Layout com o Razor aninhadas](http://www.mikesdotnetting.com/Article/164/Nested-Layout-Pages-with-Razor) — blogs de Mike Brind um exemplo de como aninhar páginas de layout. (Inclui um download das páginas).
+- [Criando uma aparência consistente](https://go.microsoft.com/fwlink/?LinkID=202891) — um artigo que fornece mais detalhes sobre como trabalhar com layouts. Ele também descreve como passar um valor para uma página de layout que mostra ou oculta parte do conteúdo.
+- [Páginas de layout aninhadas com Razor](http://www.mikesdotnetting.com/Article/164/Nested-Layout-Pages-with-Razor) — Mike Brind bloga um exemplo de como aninhar páginas de layout. (Inclui um download das páginas.)
 
 > [!div class="step-by-step"]
 > [Anterior](deleting-data.md)

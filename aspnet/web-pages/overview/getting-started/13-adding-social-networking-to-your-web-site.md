@@ -1,109 +1,109 @@
 ---
 uid: web-pages/overview/getting-started/13-adding-social-networking-to-your-web-site
-title: A adição de redes sociais da Web do ASP.NET (Razor) Sites de páginas | Microsoft Docs
+title: Adicionando redes sociais a sites Páginas da Web do ASP.NET (Razor) | Microsoft Docs
 author: Rick-Anderson
-description: Este capítulo explica como integrar o seu site com serviços de rede social. Neste capítulo, você aprenderá a permitir que as pessoas/link de indicador seu site...
+description: Este capítulo explica como integrar seu site com os serviços de rede social. Neste capítulo, você aprenderá como permitir que as pessoas marquem/vinculem seu site...
 ms.author: riande
 ms.date: 02/21/2014
 ms.assetid: 03c342f9-b35c-4d7c-b9ed-cd9aaaffedb6
 msc.legacyurl: /web-pages/overview/getting-started/13-adding-social-networking-to-your-web-site
 msc.type: authoredcontent
 ms.openlocfilehash: 1637464b0473bba8133acbbf8918d92b4f552701
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114485"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78526932"
 ---
-# <a name="adding-social-networking-to-aspnet-web-pages-razor-sites"></a>Adicionando rede Social para páginas da Web ASP.NET (Razor) Sites
+# <a name="adding-social-networking-to-aspnet-web-pages-razor-sites"></a>Adicionando redes sociais a sites Páginas da Web do ASP.NET (Razor)
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este artigo explica como adicionar links de rede social para Facebook, Twitter, Reddit e Digg para páginas em um site de páginas da Web do ASP.NET (Razor) e como incluir imagens Gravatar, cartões de jogador do Xbox e feeds do Twitter.
+> Este artigo explica como adicionar links de rede social para Facebook, Twitter, Reddit e Digg a páginas em um site Páginas da Web do ASP.NET (Razor) e como incluir feeds do Twitter, cartões de Game do Xbox e imagens do Gravatar.
 > 
 > O que você aprenderá:
 > 
-> - Como permitir que as pessoas/link de indicador seu site.
+> - Como permitir que as pessoas marquem/vinculem seu site.
 > - Como adicionar um feed do Twitter.
-> - Como adicionar um Facebook **como** botão às páginas.
+> - Como adicionar um botão **like** do Facebook a páginas.
 > - Como renderizar imagens Gravatar.com.
-> - Como exibir um cartão de jogador do Xbox em seu site.
+> - Como exibir um cartão de Game do Xbox em seu site.
 >   
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
 > 
 > 
 > - Páginas da Web do ASP.NET (Razor) 2
-> - Biblioteca auxiliar da Web ASP.NET (pacote do NuGet)
+> - Biblioteca auxiliar da Web do ASP.NET (pacote NuGet)
 >   
 > 
-> Este tutorial também funciona com 3 de páginas da Web do ASP.NET, exceto para as partes que usam a biblioteca de auxiliar de Web do ASP.NET.
+> Este tutorial também funciona com o Páginas da Web do ASP.NET 3, exceto para partes que usam a biblioteca auxiliar da Web do ASP.NET.
 
 <a id="Linking_Your_Website"></a>
-## <a name="linking-your-website-on-social-networking-sites"></a>Vinculando seu site em Sites de rede Social
+## <a name="linking-your-website-on-social-networking-sites"></a>Vinculando seu site em sites de rede social
 
-Se as pessoas gostam de algo em seu site, muitas vezes querem compartilhá-lo com amigos. Você pode fazer isso fácil por meio da exibição de glifos (ícones) que pode ser clicado para compartilhar uma página no Digg, Reddit, Facebook, Twitter ou sites semelhantes.
+Se as pessoas gostam de algo em seu site, muitas vezes desejam compartilhá-las com amigos. Você pode facilitar essa tarefa exibindo glifos (ícones) que as pessoas podem clicar para compartilhar uma página em Digg, Reddit, Facebook, Twitter ou sites semelhantes.
 
-Para exibir esses glifos, adicione o `LinkSharecode` auxiliar a uma página. As pessoas que visitam a página podem clicar em um glifo individuais. Se eles tiverem uma conta com esse site de rede social, eles podem, em seguida, postar um link para sua página no site em questão.
+Para exibir esses glifos, adicione o auxiliar de `LinkSharecode` a uma página. As pessoas que visitam sua página podem clicar em um glifo individual. Se eles tiverem uma conta com esse site de rede social, eles poderão postar um link para sua página nesse site.
 
-![Figura 1](13-adding-social-networking-to-your-web-site/_static/image1.jpg)
+![Imagem 1](13-adding-social-networking-to-your-web-site/_static/image1.jpg)
 
-1. Adicionar o ASP.NET Web Helpers Library ao seu site, conforme descrito em [auxiliares de instalação em um Site de páginas da Web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=252372), se você ainda não tenha adicionado proprietário. - criar uma página chamada *ListLinkShare.cshtml* e adicionar a marcação a seguir:
+1. Adicione a biblioteca de auxiliares Web do ASP.NET ao seu site, conforme descrito em [instalando auxiliares em um páginas da Web do ASP.net site](https://go.microsoft.com/fwlink/?LinkId=252372), se você ainda não o tiver adicionado.-Crie uma página chamada *ListLinkShare. cshtml* e adicione a seguinte marcação:
 
     [!code-cshtml[Main](13-adding-social-networking-to-your-web-site/samples/sample1.cshtml)]
 
-    Neste exemplo, quando o `LinkShare` auxiliar execuções, o título da página é passado como um parâmetro, que por sua vez, passa o título da página para o site de rede social. No entanto, você pode passar qualquer cadeia de caracteres que você deseja. Este exemplo também especifica quais sites de redes sociais para incluir na lista. Você pode especificar os sites de rede social que são relevantes para seu site.
-2. Execute o *ListLinkShare.cshtml* página em um navegador. (Certifique-se de que a página está selecionada na **arquivos** espaço de trabalho antes de executá-lo.)
-3. Clique em um glifo para um dos sites que você inscreveu-se em. O link leva você à página no site de rede social selecionado em que você pode compartilhar um link. Por exemplo, se você clicar no link do Reddit, você é levado para a `submit to reddit` página no site da Reddit.
+    Neste exemplo, quando o auxiliar de `LinkShare` é executado, o título da página é passado como um parâmetro que, por sua vez, passa o título da página para o site de rede social. No entanto, você pode passar qualquer cadeia de caracteres que desejar. Este exemplo também especifica quais sites de rede social incluir na lista. Você pode especificar os sites de rede social que são relevantes para seu site.
+2. Execute a página *ListLinkShare. cshtml* em um navegador. (Verifique se a página está selecionada no espaço de trabalho **arquivos** antes de executá-la.)
+3. Clique em um glifo para um dos sites para os quais você está inscrito. O link leva você para a página no site de rede social selecionado, onde você pode compartilhar um link. Por exemplo, se você clicar no link Reddit, você será levado para a página `submit to reddit` no site do reddit.
 
-     ![Figura 2](13-adding-social-networking-to-your-web-site/_static/image2.jpg)
+     ![Imagem 2](13-adding-social-networking-to-your-web-site/_static/image2.jpg)
 
 <a id="Adding_a_Twitter_Feed"></a>
-## <a name="adding-a-twitter-feed"></a>Adicionar um Twitter Feed
+## <a name="adding-a-twitter-feed"></a>Adicionando um feed do Twitter
 
-Para obter informações sobre como usar um auxiliar do Twitter que é compatível com a versão atual da API do Twitter, consulte [auxiliar do Twitter](../ui-layouts-and-themes/twitter-helper.md). Este exemplo mostra como escrever seu próprio auxiliar para que possa reutilizar facilmente o código de várias páginas.
+Para obter informações sobre como usar um auxiliar do Twitter que seja compatível com a versão atual da API do Twitter, consulte [auxiliar do Twitter](../ui-layouts-and-themes/twitter-helper.md). Este exemplo mostra como escrever seu próprio auxiliar para que você possa reutilizar facilmente o código de várias páginas.
 
 <a id="Displaying_a_Facebook_Button"></a>
-## <a name="displaying-a-facebook-quotlikequot-button"></a>Exibindo um Facebook &quot;como&quot; botão
+## <a name="displaying-a-facebook-quotlikequot-button"></a>Exibindo um &quot;do Facebook como botão de&quot;
 
-Em alguns casos, a melhor opção é obter o código diretamente do provedor de rede social em vez de depender de um auxiliar. Isso é especialmente verdadeiro se o provedor de rede social atualiza suas opções mais rapidamente do que o auxiliar é atualizado.
+Em alguns casos, a melhor opção é obter o código diretamente do provedor de rede social em vez de depender de um auxiliar. Isso é especialmente verdadeiro se o provedor de rede social atualizar suas opções mais rapidamente do que o auxiliar é atualizado.
 
-Para adicionar recursos do Facebook (por exemplo, o botão Like) em seu site, você pode recuperar os trechos de código do [developers.facebook.com](https://developers.facebook.com/) site. No site do Facebook, você pode usar suas ferramentas para gerar um trecho de código que é relevante para seu site.
+Para adicionar recursos do Facebook (como o botão like) ao seu site, você pode recuperar trechos de código do site [Developers.Facebook.com](https://developers.facebook.com/) . No site do Facebook, você usa suas ferramentas para gerar um trecho de código relevante para seu site.
 
-O seguinte código realçado é o código que foi recuperado da ferramenta, como o botão no site de developers.facebook.com. Você deve fornecer sua própria ID do aplicativo.
+O código realçado a seguir é o código que foi recuperado da ferramenta de botão like no site developers.facebook.com. Você deve fornecer sua própria ID de aplicativo.
 
 [!code-html[Main](13-adding-social-networking-to-your-web-site/samples/sample2.html?highlight=7-14,16-17)]
 
 <a id="Rendering_a_Gravatar_Image"></a>
-## <a name="rendering-a-gravatar-image"></a>Renderizar uma imagem de Gravatar
+## <a name="rendering-a-gravatar-image"></a>Renderizando uma imagem Gravatar
 
-Um *Gravatar* (um &quot;avatar globalmente reconhecido&quot;) é uma imagem que pode ser usada em vários sites como seu avatar &#8212; , ou seja, uma imagem que representa a você. Por exemplo, um Gravatar pode identificar uma pessoa em uma postagem no fórum, em um comentário de blog e assim por diante. (Você pode registrar seu próprios Gravatar no site no Gravatar [ http://www.gravatar.com/ ](http://www.gravatar.com/).) Se você quiser exibir imagens ao lado das pessoas nomes ou endereços de email em seu site, você pode usar o auxiliar Gravatar.
+Um *Gravatar* (um &quot;avatar reconhecido globalmente&quot;) é uma imagem que pode ser usada em vários sites como seu &#8212; avatar, uma imagem que o representa. Por exemplo, um gravatar pode identificar uma pessoa em uma postagem de fórum, em um comentário de blog e assim por diante. (Você pode registrar seu próprio Gravatar no site do gravatar em [http://www.gravatar.com/](http://www.gravatar.com/).) Se desejar exibir imagens ao lado de nomes de pessoas ou endereços de email em seu site, você poderá usar o auxiliar Gravatar.
 
-Neste exemplo, você está usando um único Gravatar que representa a mesmo. Outra maneira de usar um Gravatar é permitir que as pessoas especifique seu endereço de Gravatar quando eles se registram no seu site. (Você pode aprender como permitir que as pessoas se registrar no [adicionando segurança e associação a um Site de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202904).) Em seguida, sempre que você exibe informações de que o usuário, você pode adicionar apenas o Gravatar para onde você pode exibir o nome do usuário.
+Neste exemplo, você está usando um único Gravatar que representa você mesmo. Outra maneira de usar um Gravatar é permitir que as pessoas especifiquem seu endereço Gravatar ao se registrarem em seu site. (Você pode aprender como permitir que as pessoas se registrem na [adição de segurança e associação a um Site páginas da Web do ASP.net](https://go.microsoft.com/fwlink/?LinkId=202904).) Em seguida, sempre que exibir informações para esse usuário, você pode simplesmente adicionar o Gravatar ao local em que você exibe o nome do usuário.
 
-1. Adicionar o ASP.NET Web Helpers Library ao seu site, conforme descrito em [auxiliares de instalação em um Site de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=252372), se você ainda não fez isso.
-2. Criar uma nova página da web denominado *Gravatar.cshtml*.
+1. Adicione a biblioteca de auxiliares Web do ASP.NET ao seu site, conforme descrito em [instalando auxiliares em um páginas da Web do ASP.net site](https://go.microsoft.com/fwlink/?LinkId=252372), se ainda não tiver feito isso.
+2. Crie uma nova página da Web chamada *Gravatar. cshtml*.
 3. Adicione a seguinte marcação ao arquivo: 
 
     [!code-cshtml[Main](13-adding-social-networking-to-your-web-site/samples/sample3.cshtml)]
 
-    O `Gravatar.GetHtml` método exibe a imagem do Gravatar na página. Para alterar o tamanho da imagem, você pode incluir um número como um segundo parâmetro. O tamanho padrão é 80. Números de marca de menos de 80 a imagem menor. Números maiores que 80 tornar a imagem maior.
-4. No `Gravatar.GetHtml` substitua métodos, `<Your Gravatar account here>` com o endereço de email que você usa para sua conta do Gravatar. (Se você não tiver uma conta de Gravatar, você pode usar o endereço de email de alguém que tenha.)
-5. Execute a página em seu navegador. A página exibe duas imagens Gravatar para o endereço de email especificado. A segunda imagem é menor do que o primeiro. 
+    O método `Gravatar.GetHtml` exibe a imagem Gravatar na página. Para alterar o tamanho da imagem, você pode incluir um número como um segundo parâmetro. O tamanho padrão é 80. Números menores que 80 tornam a imagem menor. Números maiores que 80 tornam a imagem maior.
+4. Nos métodos de `Gravatar.GetHtml`, substitua `<Your Gravatar account here>` pelo endereço de email que você usa para sua conta do Gravatar. (Se você não tiver uma conta do Gravatar, poderá usar o endereço de email de alguém que o faz.)
+5. Execute a página em seu navegador. A página exibe duas imagens Gravatar para o endereço de email que você especificou. A segunda imagem é menor do que a primeira. 
 
-    ![Figura 4](13-adding-social-networking-to-your-web-site/_static/image3.jpg)
+    ![Imagem 4](13-adding-social-networking-to-your-web-site/_static/image3.jpg)
 
 <a id="Displaying_an_Xbox_Gamer_Card"></a>
-## <a name="displaying-an-xbox-gamer-card"></a>Exibindo um cartão de jogador do Xbox
+## <a name="displaying-an-xbox-gamer-card"></a>Exibindo um cartão de Game-Xbox
 
-Quando as pessoas jogam Xbox Microsoft online, cada usuário tem uma ID exclusiva. As estatísticas são mantidas para cada jogador na forma de um cartão de jogador, que mostra a sua reputação, a pontuação do jogador e executados recentemente jogos. Se você for um jogador do Xbox, você pode mostrar seu cartão de jogador nas páginas do seu site usando o `GamerCard` auxiliar.
+Quando as pessoas tocam os jogos do Microsoft Xbox online, cada usuário tem uma ID exclusiva. As estatísticas são mantidas para cada jogador na forma de um cartão de jogador, que mostra a reputação, a pontuação de jogador e jogos reproduzidos recentemente. Se você for um jogador do Xbox, poderá mostrar seu cartão de jogador em páginas no seu site usando o auxiliar de `GamerCard`.
 
-1. Adicionar o ASP.NET Web Helpers Library ao seu site, conforme descrito em [auxiliares de instalação em um Site de páginas da Web do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=252372), se você ainda não fez isso.
-2. Criar uma nova página chamada *XboxGamer.cshtml* e adicione a marcação a seguir.
+1. Adicione a biblioteca de auxiliares Web do ASP.NET ao seu site, conforme descrito em [instalando auxiliares em um páginas da Web do ASP.net site](https://go.microsoft.com/fwlink/?LinkId=252372), se ainda não tiver feito isso.
+2. Crie uma nova página chamada *XboxGamer. cshtml* e adicione a marcação a seguir.
 
     [!code-cshtml[Main](13-adding-social-networking-to-your-web-site/samples/sample4.cshtml)]
 
-    Você usa o `GamerCard.GetHtml` propriedade para especificar o alias para o jogador cartão a ser exibido.
-3. Execute a página em seu navegador. A página exibe o cartão de jogador do Xbox que você especificou.
+    Use a propriedade `GamerCard.GetHtml` para especificar o alias para o cartão de Gamer a ser exibido.
+3. Execute a página em seu navegador. A página exibe o cartão de Game do Xbox que você especificou.
 
     ![Figura 5](13-adding-social-networking-to-your-web-site/_static/image4.jpg)

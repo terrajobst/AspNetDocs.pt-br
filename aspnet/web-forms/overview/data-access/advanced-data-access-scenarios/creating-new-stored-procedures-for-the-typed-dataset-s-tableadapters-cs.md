@@ -9,11 +9,11 @@ ms.assetid: 751282ca-5870-4d66-84e4-6cefae23eb4a
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-new-stored-procedures-for-the-typed-dataset-s-tableadapters-cs
 msc.type: authoredcontent
 ms.openlocfilehash: db0d83a0fd1f1f175001d20844b298be0cf7e1cd
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74609780"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78533708"
 ---
 # <a name="creating-new-stored-procedures-for-the-typed-datasets-tableadapters-c"></a>Criar novos procedimentos armazenados para os TableAdapters do conjunto de dados tipado (C#)
 
@@ -329,4 +329,4 @@ Para obter mais informações sobre os tópicos discutidos neste tutorial, consu
 Esta série de tutoriais foi revisada por muitos revisores úteis. O revisor de Lead para este tutorial foi Hilton Geisenow. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Avançar](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)
+> [Próximo](using-existing-stored-procedures-for-the-typed-dataset-s-tableadapters-cs.md)

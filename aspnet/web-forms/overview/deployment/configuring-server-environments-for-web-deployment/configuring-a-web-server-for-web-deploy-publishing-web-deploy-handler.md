@@ -9,11 +9,11 @@ ms.assetid: 90ebf911-1c46-4470-b876-1335bd0f590f
 msc.legacyurl: /web-forms/overview/deployment/configuring-server-environments-for-web-deployment/configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler
 msc.type: authoredcontent
 ms.openlocfilehash: baaebd32f08d3c6b861572c5c5a16ec0fb70aaf0
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74589032"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78568561"
 ---
 # <a name="configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler"></a>Configuração de um servidor Web para publicação de Implantação da Web (manipulador de Implantação da Web)
 
@@ -86,7 +86,7 @@ Nesse caso, você precisa instalar estas coisas:
 
     > [!NOTE]
     > Agora você pode iniciar o Web Platform Installer a qualquer momento no menu **Iniciar** . Para fazer isso, no menu **Iniciar** , clique em **todos os programas**e, em seguida, clique em **Microsoft Web Platform Installer**.
-3. Na parte superior da janela do **Web Platform Installer** , clique em **produtos**.
+3. Na parte superior da janela do **Web Platform Installer**, clique em **Produtos**.
 4. No lado esquerdo da janela, no painel de navegação, clique em **estruturas**.
 5. Na linha **Microsoft .NET Framework 4** , se o .NET Framework ainda não estiver instalado, clique em **Adicionar**.
 
@@ -204,7 +204,7 @@ Embora não haja nada para impedir que você implante conteúdo no site padrão 
     > [!NOTE]
     > Em um ambiente de produção, você provavelmente desejará hospedar seu site na porta 80 e configurar um cabeçalho de host, junto com os registros DNS correspondentes. Para obter mais informações sobre como configurar cabeçalhos de host no IIS 7, consulte [configurar um cabeçalho de host para um site da Web (IIS 7)](https://technet.microsoft.com/library/cc753195(WS.10).aspx). Para obter mais informações sobre a função de servidor DNS no Windows Server, consulte [visão geral do servidor](https://technet.microsoft.com/library/cc770392.aspx) DNS e [servidor DNS](https://technet.microsoft.com/windowsserver/dd448607).
 9. No painel **Ações** , em **Editar Site**, clique em **Ligações**.
-10. Na caixa de diálogo **ligações do site** , clique em **Adicionar**.
+10. Na caixa de diálogo **Ligações do Site**, clique em **Adicionar**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image12.png)
 11. Na caixa de diálogo **Adicionar associação do site** , defina o **endereço IP** e a **porta** para corresponder à configuração do site existente.
@@ -214,7 +214,7 @@ Embora não haja nada para impedir que você implante conteúdo no site padrão 
 
     > [!NOTE]
     > A associação do primeiro site permite que você acesse o site localmente usando o endereço IP e a porta ou `http://localhost:85`. A segunda Associação de site permite que você acesse o site de outros computadores no domínio usando o nome do computador (por exemplo, http://stageweb1:85).
-13. Na caixa de diálogo **ligações do site** , clique em **fechar**.
+13. Na caixa de diálogo **Ligações do Site**, clique em **Fechar**.
 14. No painel **conexões** , clique em **pools de aplicativos**.
 15. No painel **pools de aplicativos** , clique com o botão direito do mouse no nome do pool de aplicativos e clique em **configurações básicas**. Por padrão, o nome do pool de aplicativos corresponderá ao nome do seu site (por exemplo, **DemoSite**).
 16. Na lista **versão do .NET CLR** , selecione **.NET CLR v 4.0.30319**e clique em **OK**.
@@ -240,8 +240,8 @@ A abordagem mais comum é atribuir permissões ao grupo local **\_IUSRS do IIS**
 
 1. No Windows Explorer, navegue até o local da sua pasta local.
 2. Clique com o botão direito do mouse na pasta e clique em **Propriedades**.
-3. Na guia **segurança** , clique em **Editar**e em **Adicionar**.
-4. Clique em **locais**. Na caixa de diálogo **locais** , selecione o servidor local e clique em **OK**.
+3. Sobre a guia **Security** , clique em **Edit**e, em seguida, em **Add**.
+4. Clique em **Locais**. Na caixa de diálogo **locais** , selecione o servidor local e clique em **OK**.
 
     ![](configuring-a-web-server-for-web-deploy-publishing-web-deploy-handler/_static/image15.png)
 5. Na caixa de diálogo **Selecionar usuários ou grupos** , digite **IIS\_IUSRS**, clique em **verificar nomes**e clique em **OK**.
@@ -276,7 +276,7 @@ Por padrão, o serviço de gerenciamento da Web do IIS escuta na porta TCP 8172.
 | Direção | Da porta | Para porta | Tipo de Porta |
 | --- | --- | --- | --- |
 | Entrada | Qualquer | 8172 | TCP |
-| SA | 8172 | Qualquer | TCP |
+| Saída | 8172 | Qualquer | TCP |
 
 Para obter mais informações sobre como configurar regras no firewall do Windows, consulte [Configurando regras de firewall](https://technet.microsoft.com/library/dd448559(WS.10).aspx). Para firewalls de terceiros, consulte a documentação do produto.
 

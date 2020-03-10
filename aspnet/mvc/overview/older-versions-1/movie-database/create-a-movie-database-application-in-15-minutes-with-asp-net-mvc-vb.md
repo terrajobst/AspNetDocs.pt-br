@@ -9,11 +9,11 @@ ms.assetid: e4ba9786-734c-4eb3-91bb-089793325d0d
 msc.legacyurl: /mvc/overview/older-versions-1/movie-database/create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0ce8161d29a8ab4005e2b20462b08c9e10ee815a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74595736"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78541884"
 ---
 # <a name="create-a-movie-database-application-in-15-minutes-with-aspnet-mvc-vb"></a>Criar um aplicativo de banco de dados de filme em 15 minutos com o ASP.NET MVC (VB)
 
@@ -120,12 +120,12 @@ Em seguida, precisamos criar uma nova tabela de banco de dados. De dentro da jan
 
 <a id="0.2_table01"></a>
 
-| **Nome da coluna** | **Tipo de dados** | **Permitir nulos** |
+| **Nome da Coluna** | **Tipo de Dados** | **Permitir Nulos** |
 | --- | --- | --- |
-| Id | Int | False |
-| Cargo | Nvarchar (100) | False |
-| Pasta | Nvarchar (100) | False |
-| DateReleased | DateTime | False |
+| ID | Int | Falso |
+| Title | Nvarchar(100) | Falso |
+| Diretor | Nvarchar(100) | Falso |
+| DateReleased | Datetime | Falso |
 
 A primeira coluna, a coluna ID, tem duas propriedades especiais. Primeiro, você precisa marcar a coluna ID como a coluna de chave primária. Depois de selecionar a coluna ID, clique no botão **definir chave primária** (é o ícone que se parece com uma chave). Em segundo lugar, você precisa marcar a coluna ID como uma coluna de identidade. Na janela Propriedades de coluna, role para baixo até a seção especificação de identidade e expanda-a. Altere a propriedade **is Identity** para o valor **Yes**. Quando você terminar, a tabela deverá ser parecida com a Figura 4.
 
@@ -158,7 +158,7 @@ Siga estas etapas para iniciar o assistente de Modelo de Dados de Entidade:
 Depois que você clicar no botão Adicionar, o assistente de Modelo de Dados de Entidade será exibido (consulte a Figura 6). Siga estas etapas para concluir o assistente:
 
 1. Na etapa **escolher conteúdo do modelo** , selecione a opção **gerar do banco de dados** .
-2. Na etapa **escolher sua conexão de dados** , use a conexão de dados *MoviesDB. MDF* e o nome *MoviesDBEntities* para as configurações de conexão. Clique no botão **Avançar** .
+2. Na etapa **escolher sua conexão de dados** , use a conexão de dados *MoviesDB. MDF* e o nome *MoviesDBEntities* para as configurações de conexão. Clique no botão **Avançar**.
 3. Na etapa **escolher seus objetos de banco de dados** , expanda o nó tabelas, selecione a tabela filmes. Insira o namespace *MovieApp. Models* e clique no botão **concluir** .
 
 [![caixa de diálogo novo projeto](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image6.jpg)](create-a-movie-database-application-in-15-minutes-with-asp-net-mvc-vb/_static/image11.png)

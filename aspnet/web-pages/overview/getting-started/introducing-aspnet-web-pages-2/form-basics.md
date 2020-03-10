@@ -1,153 +1,153 @@
 ---
 uid: web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
-title: Introdução ao ASP.NET Web Pages - Noções básicas de formulário HTML | Microsoft Docs
+title: Introdução ao Páginas da Web do ASP.NET-noções básicas de formulário HTML | Microsoft Docs
 author: Rick-Anderson
-description: Este tutorial mostra os fundamentos de como criar um formulário de entrada e como lidar com a entrada do usuário quando você usa o ASP.NET Web Pages (Razor). E agora que você...
+description: Este tutorial mostra as noções básicas de como criar um formulário de entrada e como tratar a entrada do usuário quando você usa Páginas da Web do ASP.NET (Razor). E agora que você...
 ms.author: riande
 ms.date: 05/28/2015
 ms.assetid: 81ed82bf-b940-44f1-b94a-555d0cb7cc98
 msc.legacyurl: /web-pages/overview/getting-started/introducing-aspnet-web-pages-2/form-basics
 msc.type: authoredcontent
 ms.openlocfilehash: f57661077ec3bb13f3d4ec41b130bda4d2fb9070
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65132956"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78574280"
 ---
-# <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introdução ao ASP.NET Web Pages - Noções básicas de formulário HTML
+# <a name="introducing-aspnet-web-pages---html-form-basics"></a>Introdução ao Páginas da Web do ASP.NET-noções básicas de formulários HTML
 
 por [Tom FitzMacken](https://github.com/tfitzmac)
 
-> Este tutorial mostra os fundamentos de como criar um formulário de entrada e como lidar com a entrada do usuário quando você usa o ASP.NET Web Pages (Razor). E agora que você tem um banco de dados, você usará o suas habilidades de formulário para permitir que os usuários a localizar filmes específicos no banco de dados. Ele pressupõe que você tenha concluído a série por meio [Introduction para exibir dados usando o ASP.NET Web Pages](/aspnet/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data).
+> Este tutorial mostra as noções básicas de como criar um formulário de entrada e como tratar a entrada do usuário quando você usa Páginas da Web do ASP.NET (Razor). E agora que você tem um banco de dados, você usará suas habilidades de formulário para permitir que os usuários localizem filmes específicos no banco de dados. Ele pressupõe que você concluiu a série por meio da [introdução à exibição de dados usando páginas da Web do ASP.net](/aspnet/web-pages/overview/getting-started/introducing-aspnet-web-pages-2/displaying-data).
 > 
 > O que você aprenderá:
 > 
 > - Como criar um formulário usando elementos HTML padrão.
-> - Como ler o usuário do entrada em um formulário.
-> - Como criar uma consulta SQL que seletivamente obtém os dados usando uma pesquisa de termos que o usuário fornece.
-> - Como fazer com que os campos na página "lembrar" o que o usuário inseriu.
+> - Como ler a entrada do usuário em um formulário.
+> - Como criar uma consulta SQL que obtém dados seletivamente usando um termo de pesquisa que o usuário fornece.
+> - Como os campos na página "lembram" o que o usuário inseriu.
 >   
 > 
-> Recursos/tecnologias abordadas:
+> Recursos/tecnologias abordados:
 > 
 > - O objeto `Request`.
-> - O SQL `Where` cláusula.
+> - A cláusula SQL `Where`.
 
-## <a name="what-youll-build"></a>O que você vai criar
+## <a name="what-youll-build"></a>O que você vai construir
 
-No tutorial anterior, você criou um banco de dados, adicionar dados a ele e usado, em seguida, o `WebGrid` auxiliar para exibir os dados. Neste tutorial, você adicionará uma caixa de pesquisa que permite que você encontre os filmes de um gênero específico ou cujo título contém qualquer palavra que você inserir. (Por exemplo, você poderá encontrar todos os filmes cujo gênero é "Ação" ou cujo título contém "Harry" ou "Adventure.")
+No tutorial anterior, você criou um banco de dados, adicionou um dado a ele e, em seguida, usou o auxiliar de `WebGrid` para exibir os dados. Neste tutorial, você adicionará uma caixa de pesquisa que permite encontrar filmes de um gênero específico ou cujo título contém qualquer palavra que você inserir. (Por exemplo, você poderá localizar todos os filmes cujo gênero seja "ação" ou cujo título contenha "Jaime" ou "aventura".)
 
-Quando você concluir este tutorial, você terá uma página como esta:
+Quando você terminar este tutorial, terá uma página como esta:
 
-![Página de filmes com pesquisa de título e gênero](form-basics/_static/image1.png)
+![Página de filmes com a pesquisa de gênero e de título](form-basics/_static/image1.png)
 
-A parte de listagem da página é o mesmo do último tutorial &mdash; uma grade. A diferença será que a grade mostrará apenas os filmes que você pesquisou.
+A parte de listagem da página é a mesma do último tutorial &mdash; uma grade. A diferença será que a grade mostrará apenas os filmes que você pesquisou.
 
-## <a name="about-html-forms"></a>Sobre os formulários HTML
+## <a name="about-html-forms"></a>Sobre formulários HTML
 
-(Se você tem experiência com a criação de formulários HTML e com a diferença entre `GET` e `POST`, você poderá ignorar esta seção.)
+(Se você tiver experiência com a criação de formulários HTML e com a diferença entre `GET` e `POST`, poderá ignorar esta seção.)
 
-Um formulário tem elementos de entrada do usuário &mdash; caixas de texto, botões, botões de opção, caixas de seleção, listas suspensas e assim por diante. Os usuários preenchem esses controles ou faça seleções e, em seguida, enviarem o formulário clicando em um botão.
+Um formulário tem elementos de entrada do usuário &mdash; caixas de texto, botões, botões de opção, caixas de seleção, listas suspensas e assim por diante. Os usuários preenchem esses controles ou fazem seleções e, em seguida, enviam o formulário clicando em um botão.
 
-A sintaxe básica de HTML de um formulário é ilustrada por este exemplo:
+A sintaxe HTML básica de um formulário é ilustrada por este exemplo:
 
 [!code-html[Main](form-basics/samples/sample1.html)]
 
-Quando essa marcação é executado em uma página, ele cria um formulário simples que se parece com esta ilustração:
+Quando essa marcação é executada em uma página, ela cria um formulário simples semelhante a esta ilustração:
 
-![Formulário básico de HTML como renderizado no navegador](form-basics/_static/image2.png)
+![Formulário HTML básico como processado no navegador](form-basics/_static/image2.png)
 
-O `<form>` elemento abrange elementos HTML para serem enviadas. (Um erro fácil fazer é adicionar elementos à página, mas esquecer de colocá-los dentro de um `<form>` elemento. Nesse caso, nada será enviado.) O `method` atributo informa ao navegador como enviar a entrada do usuário. Defina isso como `post` se você estiver executando uma atualização no servidor ou para `get` se você apenas estiver buscando dados do servidor.
+O elemento `<form>` inclui elementos HTML a serem enviados. (Um equívoco fácil de fazer é adicionar elementos à página, mas, em seguida, esquecer de colocá-los dentro de um elemento de `<form>`. Nesse caso, nada é enviado.) O atributo `method` informa ao navegador como enviar a entrada do usuário. Defina isso para `post` se estiver executando uma atualização no servidor ou para `get` se você estiver apenas buscando dados do servidor.
 
 <a id="GET,_POST,_and_HTTP_Verb_Safety"></a>
 
 > [!TIP] 
 > 
-> **GET, POST e segurança do verbo HTTP**
+> **Segurança de verbo GET, POST e HTTP**
 > 
-> HTTP, o protocolo usado por navegadores e servidores para trocar informações, é surpreendentemente simple em suas operações básicas. Os navegadores usam apenas alguns verbos para fazer solicitações para servidores. Quando você escreve o código para a web, é útil entender esses verbos e usá-los como o navegador e o servidor. Longe os verbos mais comumente usados são estes:
+> O HTTP, o protocolo que os navegadores e os servidores usam para trocar informações, é notavelmente simples em suas operações básicas. Os navegadores usam apenas alguns verbos para fazer solicitações aos servidores. Quando você escreve o código para a Web, é útil entender esses verbos e como o navegador e o servidor os usam. Os verbos mais comumente usados são:
 > 
-> - `GET`. O navegador usará esse verbo para buscar algo no servidor. Por exemplo, quando você digita uma URL no seu navegador, o navegador executa um `GET` operação para solicitar a página desejada. Se a página inclui elementos gráficos, o navegador executa adicionais `GET` operações para obter as imagens. Se o `GET` operação tem que passar informações para o servidor, as informações são passadas como parte da URL na cadeia de caracteres de consulta.
-> - `POST`. O navegador envia um `POST` solicitação a fim de enviar dados a serem adicionadas ou alteradas no servidor. Por exemplo, o `POST` verbo é usado para criar registros em um banco de dados ou alterar os existentes. Na maioria das vezes, quando você preenche um formulário e clique no botão Enviar, o navegador executa um `POST` operação. Em um `POST` operação, os dados que está sendo passados para o servidor estão no corpo da página.
+> - `GET`. O navegador usa esse verbo para buscar algo do servidor. Por exemplo, quando você digita uma URL em seu navegador, o navegador executa uma operação de `GET` para solicitar a página desejada. Se a página incluir elementos gráficos, o navegador executará operações `GET` adicionais para obter as imagens. Se a operação de `GET` tiver que passar informações para o servidor, as informações serão passadas como parte da URL na cadeia de caracteres de consulta.
+> - `POST`. O navegador envia uma solicitação de `POST` para enviar dados a serem adicionados ou alterados no servidor. Por exemplo, o verbo `POST` é usado para criar registros em um banco de dados ou alterar os existentes. Na maioria das vezes, quando você preenche um formulário e clica no botão enviar, o navegador executa uma operação de `POST`. Em uma operação `POST`, os dados que estão sendo passados para o servidor estão no corpo da página.
 > 
-> Uma importante distinção entre esses verbos é que um `GET` operação não deve alterar nada no servidor — ou colocá-lo de forma um pouco mais abstrata, um `GET` operação não resultará em uma alteração de estado no servidor. Você pode executar um `GET` operação nos mesmos recursos de quantas vezes desejar, e esses recursos não são alterados. (Um `GET` operação geralmente é dito "seguro", ou para usar um termo técnico, está *idempotente*.) Por outro lado, é claro, um `POST` solicitar alterações algo no servidor cada vez que você executa a operação.
+> Uma distinção importante entre esses verbos é que uma operação de `GET` não deve alterar nada no servidor — ou colocá-lo de forma ligeiramente mais abstrata, uma operação de `GET` não resulta em uma alteração no estado no servidor. Você pode executar uma operação `GET` nos mesmos recursos quantas vezes desejar, e esses recursos não são alterados. (Geralmente, uma operação de `GET` é considerada "segura" ou usar um termo técnico, é *idempotente*.) Por outro lado, é claro que uma solicitação de `POST` altera algo no servidor cada vez que você executa a operação.
 > 
-> Dois exemplos ajudarão a ilustrar essa distinção. Quando você executa uma pesquisa usando um mecanismo como o Bing ou o Google, você preenche um formulário que consiste em uma caixa de texto e, em seguida, clique no botão Pesquisar. O navegador executa um `GET` operação com o valor inserido na caixa de passada como parte da URL. Usando um `GET` operação para esse tipo de formulário é bom, porque uma operação de pesquisa não altera todos os recursos no servidor, ele simplesmente busca informações.
+> Dois exemplos ajudarão a ilustrar essa distinção. Ao executar uma pesquisa usando um mecanismo como o Bing ou o Google, você preenche um formulário que consiste em uma caixa de texto e clica no botão Pesquisar. O navegador executa uma operação `GET`, com o valor inserido na caixa passada como parte da URL. O uso de uma operação de `GET` para esse tipo de formulário é bom, porque uma operação de pesquisa não altera nenhum recurso no servidor, ele apenas busca informações.
 > 
-> Agora, considere o processo de ordenação algo on-line. Preencha os detalhes do pedido e, em seguida, clique no botão Enviar. Esta operação será um `POST` solicitar, porque a operação resultará em alterações no servidor, como um novo registro de ordem, uma alteração nas informações de conta e talvez muitas outras alterações. Ao contrário de `GET` operação, você não pode se repetir seu `POST` solicitação — se você fez, cada vez que você reenviar a solicitação, geraria um novo pedido no servidor. (Em casos como esse, sites geralmente avisará que você não clique em um botão enviar mais de uma vez ou desabilitará o botão Enviar para que você não envie o formulário novamente acidentalmente.)
+> Agora, considere o processo de ordenar algo online. Preencha os detalhes do pedido e, em seguida, clique no botão enviar. Essa operação será uma `POST` solicitação, porque a operação resultará em alterações no servidor, como um novo registro de pedido, uma alteração nas informações da conta e, talvez, muitas outras alterações. Ao contrário da operação de `GET`, não é possível repetir a solicitação de `POST` — se você fez isso, sempre que reenviou a solicitação, você geraria um novo pedido no servidor. (Em casos como esse, os sites geralmente avisam que você não deve clicar em um botão de envio mais de uma vez ou desabilitará o botão enviar para que você não reenvie o formulário acidentalmente.)
 > 
-> No decorrer deste tutorial, você vai usar um `GET` operação e um `POST` operação para trabalhar com formulários HTML. Vamos explicar cada motivo caso o verbo que você usa é aquele apropriado.
+> No decorrer deste tutorial, você usará uma operação de `GET` e uma `POST` operação para trabalhar com formulários HTML. Explicaremos em cada caso por que o verbo usado é o apropriado.
 > 
-> (Para saber mais sobre verbos HTTP, consulte o [definições de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) artigo no site do W3C.)
+> (Para saber mais sobre verbos HTTP, consulte o artigo [definições de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) no site do W3C.)
 
-A maioria dos elementos de entrada do usuário são HTML `<input>` elementos. Elas se pareçam com `<input type="type" name="name">,` onde *tipo* indica o tipo de controle de entrada do usuário desejado. Esses elementos são mais comuns:
+A maioria dos elementos de entrada do usuário são elementos HTML `<input>`. Eles parecem `<input type="type" name="name">,` em que *Type* indica o tipo de controle de entrada do usuário desejado. Esses elementos são os comuns:
 
 - Caixa de texto: `<input type="text">`
 - Caixa de seleção: `<input type="check">`
 - Botão de opção: `<input type="radio">`
 - Botão: `<input type="button">`
-- Botão de envio: `<input type="submit">`
+- Botão enviar: `<input type="submit">`
 
-Você também pode usar o `<textarea>` elemento para criar uma caixa de texto de várias linhas e o `<select>` elemento para criar uma lista suspensa ou uma lista rolável. (Para mais informações sobre HTML formarem elementos, consulte [formulários HTML e a entrada](http://www.w3schools.com/html/html_forms.asp) no site W3Schools.)
+Você também pode usar o elemento `<textarea>` para criar uma caixa de texto de várias linhas e o elemento `<select>` para criar uma lista suspensa ou lista rolável. (Para obter mais informações sobre elementos de formulário HTML, consulte [formulários HTML e entrada](http://www.w3schools.com/html/html_forms.asp) no site W3Schools.)
 
-O `name` atributo é muito importante, porque o nome é como você obterá o valor do elemento mais tarde, como você verá em breve.
+O atributo `name` é muito importante, pois o nome é como você obterá o valor do elemento posteriormente, como você verá em breve.
 
-A parte interessante é que você, o desenvolvedor da página, fazer com a entrada do usuário. Não há nenhum comportamento interno associado a esses elementos. Em vez disso, você precisa obter os valores que o usuário tiver inserido ou selecionado e fazer algo com eles. Esse é o que você aprenderá neste tutorial.
+A parte interessante é o que você, o desenvolvedor de páginas, faz com a entrada do usuário. Não há nenhum comportamento interno associado a esses elementos. Em vez disso, você precisa obter os valores que o usuário inseriu ou selecionou e faz algo com eles. É isso que você aprenderá neste tutorial.
 
 > [!TIP] 
 > 
 > **HTML5 e formulários de entrada**
 > 
-> Como você deve saber, HTML está em transição; a versão mais recente (HTML5) inclui suporte para as formas mais intuitivas para que os usuários insiram informações. Por exemplo, em HTML5, você (o desenvolvedor da página) pode informar a página que você deseja que o usuário insira uma data. O navegador pode exibir automaticamente um calendário, em vez de exigir que o usuário insira uma data manualmente. No entanto, o HTML5 é novo e ainda não é suportado em todos os navegadores.
+> Como você deve saber, o HTML está em transição e a versão mais recente (HTML5) inclui suporte para maneiras mais intuitivas para os usuários inserirem informações. Por exemplo, no HTML5, você (o desenvolvedor da página) pode informar à página que você deseja que o usuário insira uma data. O navegador pode exibir automaticamente um calendário em vez de exigir que o usuário insira uma data manualmente. No entanto, o HTML5 é novo e ainda não tem suporte em todos os navegadores.
 > 
-> Páginas da Web do ASP.NET oferece suporte a HTML5 na medida em que faz o navegador do usuário de entrada. Para ter uma ideia dos novos atributos para o `<input>` elemento em HTML5, consulte [HTML &lt;entrada&gt; atributo de tipo](http://www.w3schools.com/html/html_form_input_types.asp) no site W3Schools.
+> Páginas da Web do ASP.NET dá suporte à entrada HTML5 na medida que o navegador do usuário faz. Para obter uma ideia dos novos atributos para o elemento `<input>` no HTML5, consulte [HTML &lt;input&gt; atributo Type](http://www.w3schools.com/html/html_form_input_types.asp) no site W3Schools.
 
 ## <a name="creating-the-form"></a>Criando o formulário
 
-No WebMatrix, nos **arquivos** espaço de trabalho, abra o *Movies.cshtml* página.
+No WebMatrix, no espaço de trabalho **arquivos** , abra a página *Movies. cshtml* .
 
-Após o fechamento `</h1>` marca e antes da abertura `<div>` marca do `grid.GetHtml` chamar, adicione a seguinte marcação:
+Após a marcação de `</h1>` de fechamento e antes da marcação de `<div>` de abertura da chamada `grid.GetHtml`, adicione a seguinte marcação:
 
 [!code-html[Main](form-basics/samples/sample2.html)]
 
-Essa marcação cria um formulário que tenha uma caixa de texto denominada `searchGenre` e um botão Enviar. O texto da caixa e enviar o botão são incluídos em uma `<form>` elemento cujo `method` atributo é definido como `get`. (Lembre-se de que se você não colocar a caixa de texto e botão dentro de enviar um `<form>` elemento, nada será enviado quando você clica no botão.) Você usa o `GET` verbo aqui porque você está criando um formulário que não faz qualquer alteração no servidor — ele apenas resulta em uma pesquisa. (No tutorial anterior, você usou um `post` método, que é como você envia alterações para o servidor. Você verá que no próximo tutorial novamente.)
+Essa marcação cria um formulário que tem uma caixa de texto chamada `searchGenre` e um botão enviar. A caixa de texto e o botão enviar são colocados em um elemento `<form>` cujo atributo `method` está definido como `get`. (Lembre-se de que, se você não colocar a caixa de texto e o botão enviar dentro de um elemento `<form>`, nada será enviado quando você clicar no botão.) Você usa o verbo `GET` aqui porque está criando um formulário que não faz nenhuma alteração no servidor — ele simplesmente resulta em uma pesquisa. (No tutorial anterior, você usou um método `post`, que é como você envia as alterações para o servidor. Você verá isso no próximo tutorial novamente.)
 
-Execute a página. Embora você ainda não definiu nenhum comportamento para o formulário, você pode ver sua aparência:
+Execute a página. Embora você não tenha definido nenhum comportamento para o formulário, você pode ver como ele se parece com:
 
 ![Página de filmes com caixa de pesquisa para gênero](form-basics/_static/image3.png)
 
-Insira um valor na caixa de texto, como "Comédia." Em seguida, clique em **gênero pesquisa**.
+Insira um valor na caixa de texto, como "comédia". Em seguida, clique em **Pesquisar gênero**.
 
-Anote a URL da página. Porque você definiu a `<form>` do elemento `method` atributo `get`, o valor inserido é agora parte da cadeia de caracteres de consulta na URL, como este:
+Anote a URL da página. Como você define o atributo de `method` do elemento de `<form>` como `get`, o valor que você inseriu agora é parte da cadeia de caracteres de consulta na URL, desta forma:
 
 `http://localhost:45661/Movies.cshtml?searchGenre=Comedy`
 
-## <a name="reading-form-values"></a>Valores de formulário de leitura
+## <a name="reading-form-values"></a>Lendo valores de formulário
 
-A página já contém um código que obtém dados do banco de dados e exibe os resultados em uma grade. Agora você precisa adicionar um código que lê o valor da caixa de texto para que você possa executar uma consulta SQL que inclui o termo de pesquisa.
+A página já contém algum código que obtém os dados do banco e exibe os resultados em uma grade. Agora, você precisa adicionar algum código que leia o valor da caixa de texto para que você possa executar uma consulta SQL que inclui o termo de pesquisa.
 
-Porque você definiu o método do formulário como `get`, você pode ler o valor digitado na caixa de texto usando código semelhante ao seguinte:
+Como você define o método do formulário como `get`, você pode ler o valor que foi inserido na caixa de texto usando um código semelhante ao seguinte:
 
 `var searchTerm = Request.QueryString["searchGenre"];`
 
-O `Request.QueryString` objeto (o `QueryString` propriedade da `Request` objeto) inclui os valores dos elementos que foram enviados como parte do `GET` operação. O `Request.QueryString` propriedade contém um *coleção* (uma lista) dos valores que são enviados no formulário. Para obter qualquer valor individual, você deve especificar o nome do elemento que você deseja. É por isso que você precisa ter uma `name` atributo o `<input>` elemento (`searchTerm`) que cria a caixa de texto. (Para obter mais informações sobre o `Request` do objeto, consulte a [barra lateral](#BKMK_TheRequestObject) posteriormente.)
+O objeto `Request.QueryString` (a propriedade `QueryString` do objeto `Request`) inclui os valores de elementos que foram enviados como parte da operação de `GET`. A propriedade `Request.QueryString` contém uma *coleção* (uma lista) dos valores que são enviados no formulário. Para obter qualquer valor individual, especifique o nome do elemento desejado. É por isso que você precisa ter um atributo `name` no elemento `<input>` (`searchTerm`) que cria a caixa de texto. (Para obter mais informações sobre o objeto `Request`, consulte a [barra lateral](#BKMK_TheRequestObject) mais tarde.)
 
-É simple o suficiente para ler o valor da caixa de texto. Porém, se o usuário não inserir nada em todos os na caixa de texto, mas clicou **pesquisa** de qualquer forma, você pode ignorar esse clique, já que não há nada para pesquisar.
+É simples o suficiente para ler o valor da caixa de texto. Mas se o usuário não inseriu nada na caixa de texto, mas clicou em **Pesquisar** mesmo assim, você pode ignorar esse clique, já que não há nada a ser pesquisado.
 
-O código a seguir é um exemplo que mostra como implementar essas condições. (Você não precisa adicionar esse código ainda; você terá de fazer isso em instantes).
+O código a seguir é um exemplo que mostra como implementar essas condições. (Você não precisa adicionar esse código ainda; você fará isso daqui a pouco.)
 
 [!code-csharp[Main](form-basics/samples/sample3.cs)]
 
-O teste é dividida desta forma:
+O teste é dividido desta forma:
 
-- Obter o valor de `Request.QueryString["searchGenre"]`, ou seja, o que foi inserido no valor de `<input>` elemento chamado `searchGenre`.
-- Descobrir se ele está vazio usando o `IsEmpty` método. Esse método é o modo padrão para determinar se algo (por exemplo, um elemento de formulário) contém um valor. Mas, você se importa realmente somente se ele tiver *não* vazio, portanto...
-- Adicione a `!` operador na frente do `IsEmpty` de teste. (O `!` significa que operador NOT lógico).
+- Obtenha o valor de `Request.QueryString["searchGenre"]`, ou seja, o valor que foi inserido no elemento `<input>` chamado `searchGenre`.
+- Descubra se ele está vazio usando o método `IsEmpty`. Esse método é a maneira padrão de determinar se algo (por exemplo, um elemento form) contém um valor. Mas, na verdade, você se preocupa apenas se *não* estiver vazio, portanto...
+- Adicione o operador de `!` na frente do teste de `IsEmpty`. (O operador de `!` significa lógico não).
 
-Em inglês sem formatação, toda a `if` condição traduz da seguinte maneira: *Se o elemento de searchGenre do formulário não estiver vazio, então...*
+Em inglês simples, a condição de `if` inteira se traduz no seguinte: *se o elemento searchGenre do formulário não estiver vazio, então.* ..
 
-Este bloco prepara o terreno para a criação de uma consulta que usa o termo de pesquisa. Você terá de fazer isso na próxima seção.
+Esse bloco define o estágio para criar uma consulta que usa o termo de pesquisa. Você fará isso na próxima seção.
 
 <a id="BKMK_TheRequestObject"></a>
 
@@ -155,204 +155,204 @@ Este bloco prepara o terreno para a criação de uma consulta que usa o termo de
 > 
 > **O objeto de solicitação**
 > 
-> O `Request` objeto contém todas as informações que o navegador envia para seu aplicativo quando uma página é solicitada ou enviada. Este objeto inclui todas as informações fornecidas pelo usuário, como valores de caixa de texto ou um arquivo para carregar. Ele também inclui todos os tipos de informações adicionais, assim como os cookies, valores de cadeia de consulta de URL (se houver), o caminho do arquivo da página que está em execução, o tipo de navegador que o usuário está usando, a lista de idiomas que são definidas no navegador e muito mais.
+> O objeto `Request` contém todas as informações que o navegador envia para seu aplicativo quando uma página é solicitada ou enviada. Esse objeto inclui todas as informações que o usuário fornece, como valores de caixa de texto ou um arquivo para carregar. Ele também inclui todos os tipos de informações adicionais, como cookies, valores na cadeia de caracteres de consulta de URL (se houver), o caminho do arquivo da página em execução, o tipo de navegador que o usuário está usando, a lista de idiomas que estão definidos no navegador e muito mais.
 > 
-> O `Request` objeto é um *coleção* (lista) de valores. Você obtém um valor individual da coleção especificando seu nome:
+> O objeto `Request` é uma *coleção* (lista) de valores. Você Obtém um valor individual da coleção especificando seu nome:
 > 
 > `var someValue = Request["name"];`
 > 
-> O `Request` objeto realmente expõe várias subconjuntos. Por exemplo:
+> O objeto `Request` realmente expõe vários subconjuntos. Por exemplo:
 > 
-> - `Request.Form` fornece valores de elementos dentro de enviado `<form>` elemento se a solicitação for uma `POST` solicitação.
-> - `Request.QueryString` fornece apenas os valores na cadeia de caracteres de consulta da URL. (Em uma URL como `http://mysite/myapp/page?searchGenre=action&page=2`, o `?searchGenre=action&page=2` seção da URL é a cadeia de caracteres de consulta.)
-> - `Request.Cookies` coleção fornece acesso aos cookies que o navegador enviou.
+> - `Request.Form` fornece valores de elementos dentro do elemento `<form>` enviado se a solicitação for uma solicitação de `POST`.
+> - `Request.QueryString` fornece apenas os valores na cadeia de caracteres de consulta da URL. (Em uma URL como `http://mysite/myapp/page?searchGenre=action&page=2`, a seção `?searchGenre=action&page=2` da URL é a cadeia de caracteres de consulta.)
+> - `Request.Cookies` coleção fornece acesso a cookies que o navegador enviou.
 > 
-> Para obter um valor que você sabe que está no formulário enviado, você pode usar `Request["name"]`. Como alternativa, você pode usar as versões mais específicas `Request.Form["name"]` (para `POST` solicitações) ou `Request.QueryString["name"]` (para `GET` solicitações). É claro *nome* é o nome do item a ser obtido.
+> Para obter um valor que você sabe que está no formulário enviado, você pode usar `Request["name"]`. Como alternativa, você pode usar as versões mais específicas `Request.Form["name"]` (para solicitações de `POST`) ou `Request.QueryString["name"]` (para solicitações de `GET`). É claro que *Name* é o nome do item a ser obtido.
 > 
-> O nome do item que você deseja obter deve ser exclusivo dentro da coleção que você está usando. É por isso que o `Request` objeto fornece, como os subconjuntos `Request.Form` e `Request.QueryString`. Suponha que sua página contém um elemento de formulário chamado `userName` e *também* contém um cookie chamado `userName`. Se você receber `Request["userName"]`, é ambíguo se deseja que o valor de formulário ou o cookie. No entanto, se você obtiver `Request.Form["userName"]` ou `Request.Cookie["userName"]`, você está sendo explícito sobre qual valor a ser obtido.
+> O nome do item que você deseja obter deve ser exclusivo na coleção que você está usando. É por isso que o objeto `Request` fornece os subconjuntos como `Request.Form` e `Request.QueryString`. Suponha que sua página contenha um elemento Form chamado `userName` e *também* contenha um cookie chamado `userName`. Se você receber `Request["userName"]`, será ambíguo se você quiser o valor do formulário ou o cookie. No entanto, se você obter `Request.Form["userName"]` ou `Request.Cookie["userName"]`, você está sendo explícito sobre qual valor obter.
 > 
-> Ele é uma boa prática para ser específico e usar o subconjunto de `Request` que você está interessado, como `Request.Form` ou `Request.QueryString`. Para as páginas simples que você está criando neste tutorial, provavelmente não realmente faz alguma diferença. No entanto, quando você cria páginas mais complexas, usando a versão explícita `Request.Form` ou `Request.QueryString` pode ajudá-lo a evitar problemas que podem surgir quando a página contém um formulário (ou vários formulários), cookies, valores de cadeia de caracteres de consulta e assim por diante.
+> É uma boa prática ser específica e usar o subconjunto de `Request` em que você está interessado, como `Request.Form` ou `Request.QueryString`. Para as páginas simples que você está criando neste tutorial, ele provavelmente não faz nenhuma diferença. No entanto, à medida que você cria páginas mais complexas, usar a versão explícita `Request.Form` ou `Request.QueryString` pode ajudá-lo a evitar problemas que podem surgir quando a página contém um formulário (ou vários formulários), cookies, valores de cadeia de caracteres de consulta e assim por diante.
 
 ## <a name="creating-a-query-by-using-a-search-term"></a>Criando uma consulta usando um termo de pesquisa
 
-Agora que você sabe como obter o termo de pesquisa que o usuário inseriu, você pode criar uma consulta que usa a ele. Lembre-se de que, para obter todos os itens de filme do banco de dados, você está usando uma consulta SQL que se parece com esta instrução:
+Agora que você sabe como obter o termo de pesquisa que o usuário inseriu, você pode criar uma consulta que o utiliza. Lembre-se de que, para obter todos os itens de filme do banco de dados, você está usando uma consulta SQL parecida com esta instrução:
 
 `SELECT * FROM Movies`
 
-Para obter somente determinados filmes, você precisa usar uma consulta que inclui um `Where` cláusula. Essa cláusula permite definir uma condição em que as linhas são retornadas pela consulta. Veja um exemplo:
+Para obter apenas alguns filmes, você precisa usar uma consulta que inclua uma cláusula `Where`. Essa cláusula permite definir uma condição na qual as linhas são retornadas pela consulta. Aqui está um exemplo:
 
 `SELECT * FROM Movies WHERE Genre = 'Action'`
 
-O formato básico é `WHERE column = value`. Você pode usar operadores diferentes, além de apenas `=`, como `>` (maior que), `<` (menor que), `<>` (igual a), `<=` (menor ou igual a), etc., dependendo o que você está procurando.
+O formato básico é `WHERE column = value`. Você pode usar operadores diferentes, além de apenas `=`, como `>` (maior que), `<` (menor que), `<>` (diferente de), `<=` (menor ou igual a), etc., dependendo do que você está procurando.
 
-Caso você esteja se perguntando, instruções SQL não diferenciam maiusculas de minúsculas &mdash; `SELECT` é o mesmo que `Select` (ou até mesmo `select`). No entanto, as pessoas geralmente capitalizar as palavras-chave em uma instrução SQL, como `SELECT` e `WHERE`, para facilitar a leitura.
+Caso você esteja imaginando, as instruções SQL não diferenciam maiúsculas de minúsculas &mdash; `SELECT` é o mesmo que `Select` (ou até mesmo `select`). No entanto, as pessoas frequentemente capitalizam palavras-chave em uma instrução SQL, como `SELECT` e `WHERE`, para facilitar a leitura.
 
 ### <a name="passing-the-search-term-as-a-parameter"></a>Passando o termo de pesquisa como um parâmetro
 
-Ao procurar por um gênero específico é muito fácil (`WHERE Genre = 'Action'`), mas você deseja ser capaz de procurar qualquer gênero inseridas pelo usuário. Para fazer isso, você cria como a consulta SQL que inclui um espaço reservado para o valor para pesquisar. Ele se parecerá com este comando:
+Pesquisar por um gênero específico é fácil o suficiente (`WHERE Genre = 'Action'`), mas você deseja ser capaz de pesquisar qualquer gênero que o usuário inserir. Para fazer isso, você cria como consulta SQL que inclui um espaço reservado para o valor a ser pesquisado. Ele se parecerá com este comando:
 
 `SELECT * FROM Movies WHERE Genre = @0`
 
-O espaço reservado é a `@` caracteres seguidos por zero. Como você pode imaginar, uma consulta pode conter vários espaços reservados e seria nomeados `@0`, `@1`, `@2`, etc.
+O espaço reservado é o `@` caractere seguido de zero. Como você pode imaginar, uma consulta pode conter vários espaços reservados e ele será nomeado `@0`, `@1`, `@2`, etc.
 
-Para configurar a consulta e passar para ele, na verdade, o valor, você deve usar o código semelhante ao seguinte:
+Para configurar a consulta e, na verdade, passá-la para o valor, use o código como o seguinte:
 
 [!code-sql[Main](form-basics/samples/sample4.sql)]
 
-Esse código é semelhante a o que já foi feito para exibir dados na grade. As únicas diferenças são:
+Esse código é semelhante ao que você já fez para exibir dados na grade. As únicas diferenças são:
 
 - A consulta contém um espaço reservado (`WHERE Genre = @0"`).
-- A consulta é colocada em uma variável (`selectCommand`); antes, a consulta é passado diretamente para o `db.Query` método.
-- Quando você chama o `db.Query` método, você passa a consulta e o valor a ser usado para o espaço reservado. (Se a consulta tiver vários espaços reservados, você deve passá-los como valores separados para o método.)
+- A consulta é colocada em uma variável (`selectCommand`); antes, você passou a consulta diretamente para o método `db.Query`.
+- Ao chamar o método `db.Query`, você passa a consulta e o valor a ser usado para o espaço reservado. (Se a consulta tivesse vários espaços reservados, você os passaria como valores separados para o método.)
 
-Se você reunir todos esses elementos, você obterá o código a seguir:
+Se você colocar todos esses elementos juntos, obterá o seguinte código:
 
 [!code-csharp[Main](form-basics/samples/sample5.cs)]
 
 > [!NOTE] 
 > 
-> **Importante!** Uso de espaços reservados (como `@0`) passar valores para um comando SQL está *extremamente importante* para segurança. A maneira que você vê-la aqui, com espaços reservados para dados da variável, é a única maneira de você deve construir comandos SQL.
+> **Importante!** O uso de espaços reservados (como `@0`) para passar valores para um comando SQL é *extremamente importante* para a segurança. A maneira como você o vê aqui, com espaços reservados para dados variáveis, é a única maneira de construir comandos SQL.
 > 
-> Nunca construa uma instrução SQL reunindo valores que obter do usuário e texto literal (concatenar). Concatenação de entrada do usuário em uma instrução SQL é aberta no seu site para um *ataque de injeção de SQL* em que um usuário mal-intencionado envia valores para sua página que hack seu banco de dados. (Você pode ler mais no artigo [injeção de SQL](https://msdn.microsoft.com/library/ms161953.aspx) site do MSDN.)
+> Nunca Construa uma instrução SQL reunindo (concatenando) o texto literal e os valores obtidos do usuário. Concatenar a entrada do usuário em uma instrução SQL abre seu site para um *ataque de injeção de SQL* em que um usuário mal-intencionado envia valores para sua página que atacam seu banco de dados. (Você pode ler mais no artigo [injeção de SQL](https://msdn.microsoft.com/library/ms161953.aspx) no site do MSDN.)
 
-## <a name="updating-the-movies-page-with-search-code"></a>Atualizar a página de filmes com código de pesquisa
+## <a name="updating-the-movies-page-with-search-code"></a>Atualizando a página de filmes com o código de pesquisa
 
-Agora você pode atualizar o código na *Movies.cshtml* arquivo. Para começar, substitua o código no bloco de código na parte superior da página com este código:
+Agora você pode atualizar o código no arquivo *Movies. cshtml* . Para começar, substitua o código no bloco de código na parte superior da página por este código:
 
 [!code-csharp[Main](form-basics/samples/sample6.cs)]
 
-A diferença aqui é que você os colocou a consulta para o `selectCommand` variável, que você passará para `db.Query` mais tarde. Colocando a instrução SQL em uma variável permite alterar a instrução, que é o que você fará para executar a pesquisa.
+A diferença aqui é que você colocou a consulta na variável `selectCommand`, que você passará para `db.Query` mais tarde. Colocar a instrução SQL em uma variável permite que você altere a instrução, que é o que você fará para executar a pesquisa.
 
-Também removeu estas duas linhas, você vai colocar de volta no posteriormente:
+Você também removeu essas duas linhas, as quais você colocará de volta mais tarde:
 
 [!code-csharp[Main](form-basics/samples/sample7.cs)]
 
-Você não quiser executar a consulta ainda (ou seja, chame `db.Query`) e você não deseja inicializar o `WebGrid` auxiliar ainda qualquer um. Depois que você descobriu quais instrução SQL deve ser executado, você fará essas coisas.
+Você não deseja executar a consulta ainda (ou seja, chamar `db.Query`) e não quer inicializar o auxiliar de `WebGrid` ainda. Você fará essas coisas depois de descobrir qual instrução SQL precisa ser executada.
 
-Após esse bloco reconfigurado, você pode adicionar a nova lógica para lidar com a pesquisa. O código completo será a seguinte aparência. Atualize o código em sua página para que coincida com este exemplo:
+Após esse bloco reescrito, você pode adicionar a nova lógica para manipular a pesquisa. O código completo se parecerá com o seguinte. Atualize o código em sua página para que ele corresponda a este exemplo:
 
 [!code-cshtml[Main](form-basics/samples/sample8.cshtml)]
 
-A página agora funciona da seguinte maneira. Sempre que a página é executada, o código abre o banco de dados e o `selectCommand` variável é definida como a instrução SQL que obtém todos os registros do `Movies` tabela. O código também inicializa o `searchTerm` variável.
+A página agora funciona como esta. Toda vez que a página é executada, o código abre o banco de dados e a variável `selectCommand` é definida como a instrução SQL que obtém todos os registros da tabela `Movies`. O código também inicializa a variável `searchTerm`.
 
-No entanto, se a solicitação atual inclui um valor para o `searchGenre` elemento, o código define `selectCommand` para uma consulta diferente — ou seja, para um que inclua o `Where` cláusula para procurar um gênero. Ele também define `searchTerm` tudo o que foi passado para a caixa de pesquisa (que pode ser nada).
+No entanto, se a solicitação atual incluir um valor para o elemento `searchGenre`, o código definirá `selectCommand` para uma consulta diferente — ou seja, para um que inclua a cláusula `Where` para pesquisar um gênero. Ele também define `searchTerm` como o que foi passado para a caixa de pesquisa (que pode ser Nothing).
 
-Independentemente de qual SQL instrução está em `selectCommand`, o código, em seguida, chama `db.Query` para executar a consulta, passando a ele qualquer é `searchTerm`. Se não houver nada `searchTerm`, não importa, porque nesse caso, não há nenhum parâmetro para passar o valor para `selectCommand` mesmo assim.
+Independentemente de qual instrução SQL está em `selectCommand`, o código então chama `db.Query` para executar a consulta, passando o que estiver em `searchTerm`. Se não houver nada em `searchTerm`, não importa, porque nesse caso não há nenhum parâmetro para passar o valor para `selectCommand` mesmo assim.
 
-Por fim, o código inicializa o `WebGrid` auxiliar usando os resultados da consulta, como antes.
+Por fim, o código inicializa o `WebGrid` auxiliar usando os resultados da consulta, assim como antes.
 
-Você pode ver que, colocando a instrução SQL e o termo de pesquisa em variáveis, você adicionou flexibilidade ao código. Como você verá posteriormente no tutorial, você pode usar essa estrutura básica e Continue adicionando a lógica para diferentes tipos de pesquisas.
+Você pode ver que, colocando a instrução SQL e o termo de pesquisa em variáveis, você adicionou flexibilidade ao código. Como você verá mais adiante neste tutorial, você pode usar essa estrutura básica e continuar adicionando lógica para diferentes tipos de pesquisas.
 
-## <a name="testing-the-search-by-genre-feature"></a>Testar o recurso de pesquisa por gênero
+## <a name="testing-the-search-by-genre-feature"></a>Testando o recurso Pesquisar por gênero
 
-No WebMatrix, execute as *Movies.cshtml* página. Você verá a página com a caixa de texto do gênero.
+No WebMatrix, execute a página *Movies. cshtml* . Você vê a página com a caixa de texto para gênero.
 
-Insira um gênero que você inseriu para um dos seus registros de teste, clique **pesquisa**. Neste momento, você verá uma listagem dos apenas filmes que correspondem daquele gênero:
+Insira um gênero que você inseriu para um dos seus registros de teste e clique em **Pesquisar**. Desta vez, você verá uma listagem apenas dos filmes que correspondem a esse gênero:
 
-![Página de filmes listando depois de pesquisar por gênero 'Comedies'](form-basics/_static/image4.png)
+![Listagem de filmes página depois de procurar o gênero ' Comedies '](form-basics/_static/image4.png)
 
-Insira um gênero diferente e pesquise novamente. Tente inserir o gênero usando todas as letras em maiusculas ou minúsculas para que você possa ver que a pesquisa não diferencia maiusculas de minúsculas.
+Insira um gênero diferente e pesquise novamente. Tente inserir o gênero usando todas as letras maiúsculas ou minúsculas para que você possa ver que a pesquisa não diferencia maiúsculas de minúsculas.
 
-## <a name="remembering-what-the-user-entered"></a>"Lembrar" o que o usuário inseriu
+## <a name="remembering-what-the-user-entered"></a>"Lembrando" o que o usuário inseriu
 
-Você deve ter notado que depois que você inseriu um gênero e clicado **gênero pesquisa**, você viu uma listagem para daquele gênero. No entanto, a caixa de texto de pesquisa estava vazia &mdash; em outras palavras, ele não Lembre-se você tivesse inserido.
+Você deve ter notado que depois de inserir um gênero e clicar em **Pesquisar gênero**, você viu uma listagem para esse gênero. No entanto, a caixa de texto de pesquisa estava vazia &mdash; em outras palavras, não se lembra do que você inseriu.
 
-É importante entender por que esse comportamento ocorre. Quando você enviar uma página, o navegador envia uma solicitação ao servidor web. Quando o ASP.NET obtém a solicitação, ele cria uma instância totalmente nova da página, executará o código e, em seguida, renderiza a página para o navegador novamente. Na verdade, no entanto, a página não sabe que você estava trabalhando apenas com uma versão anterior de si mesmo. Tudo o que ele sabe é que ele recebeu uma solicitação que tinha alguns dados de formulário nele.
+É importante entender por que esse comportamento ocorre. Quando você envia uma página, o navegador envia uma solicitação ao servidor Web. Quando o ASP.NET obtém a solicitação, ele cria uma instância totalmente nova da página, executa o código nela e, em seguida, renderiza a página para o navegador novamente. No entanto, na verdade, a página não sabe que você estava apenas trabalhando com uma versão anterior de si mesma. Tudo o que ele sabe é que ele recebeu uma solicitação que tinha alguns dados de formulário.
 
-Sempre que você solicita uma página &mdash; pela primeira vez ou enviando-o &mdash; você está obtendo uma nova página. O servidor web não tem memória de sua última solicitação. Também não o ASP.NET, e também não o navegador. A única conexão entre essas instâncias separadas da página é uma todos os dados transmitidos entre eles. Se você enviar uma página, por exemplo, a nova instância de página pode obter os dados de formulário que foi enviados pela instância anterior. (É outra maneira de passar dados entre páginas use cookies.)
+Sempre que você solicitar uma página &mdash; se pela primeira vez ou enviando-a &mdash; você está obtendo uma nova página. O servidor Web não tem memória de sua última solicitação. Nenhuma das ASP.NET, e nenhuma delas faz o navegador. A única conexão entre essas instâncias separadas da página é qualquer dado que você transmite entre elas. Se você enviar uma página, por exemplo, a nova instância de página poderá obter os dados do formulário que foram enviados pela instância anterior. (Outra maneira de passar dados entre páginas é usar cookies.)
 
-Uma maneira formal para descrever essa situação é dizer que as páginas da web estão *sem monitoração de estado*. Servidores Web e as próprias páginas e os elementos na página não mantêm todas as informações sobre o estado anterior de uma página. A web foi projetada dessa forma porque a manutenção do estado de solicitações individuais seria rapidamente esgotar os recursos dos servidores web, que geralmente manipulam milhares, talvez até mesmo centenas de milhares de solicitações por segundo.
+Uma maneira formal de descrever essa situação é dizer que as páginas da Web são *sem estado*. Os servidores Web e as próprias páginas e os elementos na página não mantêm nenhuma informação sobre o estado anterior de uma página. A Web foi projetada dessa forma porque manter o estado das solicitações individuais esgotaria rapidamente os recursos dos servidores Web, que geralmente lidam com milhares, talvez até centenas de milhares de solicitações por segundo.
 
-É por isso que a caixa de texto estava vazia. Depois que a página é enviada, o ASP.NET criado uma nova instância da página e foi executado por meio do código e marcação. Não havia nada em que o código que disse ASP.NET para colocar um valor na caixa de texto. Portanto, o ASP.NET não fez nada e a caixa de texto foi renderizada sem um valor nele.
+É por isso que a caixa de texto estava vazia. Depois de enviar a página, o ASP.NET criou uma nova instância da página e executou o código e a marcação. Não havia nada no código que disse ASP.NET para colocar um valor na caixa de texto. Portanto, o ASP.NET não fez nada e a caixa de texto foi renderizada sem um valor nele.
 
-Há, na verdade, uma maneira fácil de contornar esse problema. O gênero que você inseriu na caixa de texto *está* disponíveis para você no código &mdash; está em `Request.QueryString["searchGenre"]`.
+Na verdade, há uma maneira fácil de contornar esse problema. O gênero que você inseriu na caixa de texto *está* disponível no código &mdash; ele está em `Request.QueryString["searchGenre"]`.
 
-Atualize a marcação da caixa de texto, de modo que o `value` atributo obtém seu valor de `searchTerm`, como neste exemplo:
+Atualize a marcação da caixa de texto para que o atributo `value` Obtenha seu valor de `searchTerm`, como neste exemplo:
 
 [!code-html[Main](form-basics/samples/sample9.html?highlight=1)]
 
-Nessa página, você pode ter também definir a `value` de atributo para o `searchTerm` variável, uma vez que essa variável também contém o gênero que você inseriu. Mas o uso de `Request` objeto para definir o `value` atributo conforme mostrado aqui é o modo padrão para realizar essa tarefa. (Supondo que você deseja fazer isso até mesmo &mdash; em algumas situações, você talvez queira processar a página *sem* valores nos campos. Tudo depende o que está acontecendo com seu aplicativo.)
+Nesta página, você também poderia definir o atributo `value` como a variável `searchTerm`, já que essa variável também contém o gênero que você inseriu. Mas usar o objeto `Request` para definir o atributo `value`, como mostrado aqui é a maneira padrão de realizar essa tarefa. (Supondo que você ainda deseja fazer isso &mdash; em algumas situações, talvez você queira renderizar a página *sem* valores nos campos. Tudo depende do que está acontecendo com seu aplicativo.)
 
 > [!NOTE]
-> Você não pode "lembrar" o valor de uma caixa de texto que é usado para senhas. Seria uma brecha de segurança para permitir que pessoas preencher um campo de senha por meio de código.
+> Não é possível "lembrar" o valor de uma caixa de texto usada para senhas. Seria uma brecha de segurança para permitir que as pessoas preencham um campo de senha usando código.
 
-Execute novamente a página, insira um gênero e clique em **gênero pesquisa**. Desta vez não só você ver os resultados da pesquisa, mas a caixa de texto se lembra de que você inseriu última vez:
+Execute a página novamente, insira um gênero e clique em **Pesquisar gênero**. Dessa vez, não só você vê os resultados da pesquisa, mas a caixa de texto lembra o que você inseriu pela última vez:
 
-![Página mostrando que a caixa de texto tem 'lembradas' a entrada anterior](form-basics/_static/image5.png)
+![Página mostrando que a caixa de texto tem ' lembrado ' da entrada anterior](form-basics/_static/image5.png)
 
-## <a name="searching-for-any-word-in-the-title"></a>Procurando por qualquer palavra no título
+## <a name="searching-for-any-word-in-the-title"></a>Pesquisando qualquer palavra no título
 
-Agora você pode pesquisar qualquer gênero, mas você também poderá pesquisar um título. É difícil de acertar um título exatamente quando você pesquisa, portanto, em vez disso, que você pode pesquisar uma palavra que aparece em qualquer lugar dentro de um título. Para fazer isso no SQL, você deve usar o `LIKE` operador e a sintaxe semelhante ao seguinte:
+Agora você pode pesquisar por qualquer gênero, mas também convém procurar um título. É difícil obter um título exatamente à direita ao pesquisar, então você pode pesquisar uma palavra que aparece em qualquer lugar dentro de um título. Para fazer isso no SQL, use o operador de `LIKE` e a sintaxe como a seguinte:
 
 `SELECT * FROM Movies WHERE Title LIKE '%adventure%'`
 
-Esse comando obtém todos os filmes cujos títulos contêm "adventure". Quando você usa o `LIKE` operador, você incluir o caractere curinga `%` como parte do termo de pesquisa. A pesquisa `LIKE 'adventure%'` significa "começando com 'adventure'". (Tecnicamente, isso significa "A cadeia de caracteres 'adventure', seguida por qualquer coisa.") Da mesma forma, o termo de pesquisa `LIKE '%adventure'` significa que "nada seguido pela cadeia de caracteres 'adventure'", que é outra maneira de dizer "termina com 'adventure'".
+Esse comando obtém todos os filmes cujos títulos contêm "Adventure". Ao usar o operador de `LIKE`, você inclui o caractere curinga `%` como parte do termo de pesquisa. A pesquisa `LIKE 'adventure%'` significa "começando com ' Adventure '". (Tecnicamente, isso significa "a cadeia de caracteres ' aventura ' seguida de qualquer coisa.") Da mesma forma, o termo de pesquisa `LIKE '%adventure'` significa "qualquer coisa seguida pela cadeia de caracteres ' Adventure '", que é outra maneira de dizer "terminando com ' Adventure '".
 
-O termo de pesquisa `LIKE '%adventure%'` , portanto, significa "com a"adventure' em qualquer lugar no título." (Tecnicamente, "qualquer coisa no título, seguido de 'adventure', seguida por qualquer coisa".)
+O termo de pesquisa `LIKE '%adventure%'`, portanto, significa "com ' Adventure ' em qualquer lugar no título." (Tecnicamente, "qualquer coisa no título, seguido de ' Adventure ', seguido de qualquer coisa.")
 
-Dentro de `<form>` elemento, adicione a seguinte marcação imediatamente sob o fechamento `</div>` marca para a pesquisa de gênero (antes do fechamento `</form>` elemento):
+Dentro do elemento `<form>`, adicione a seguinte marcação logo abaixo da marca `</div>` de fechamento para a pesquisa de gênero (logo antes do elemento `</form>` de fechamento):
 
 [!code-html[Main](form-basics/samples/sample10.html)]
 
-O código para lidar com essa pesquisa é semelhante ao código para a pesquisa de gênero, exceto que você precisa que montar o `LIKE` pesquisa. Dentro do bloco de código na parte superior da página, adicione `if` bloquear logo após o `if` bloco para a pesquisa de Gênero:
+O código para lidar com essa pesquisa é semelhante ao código da pesquisa de gênero, exceto pelo fato de que você precisa montar a pesquisa de `LIKE`. Dentro do bloco de código na parte superior da página, adicione esse `if` bloco logo após o bloco de `if` para a pesquisa de Gênero:
 
 [!code-csharp[Main](form-basics/samples/sample11.cs)]
 
-Esse código usa a mesma lógica que você viu anteriormente, exceto que a pesquisa usa um `LIKE` operador e coloca o código "`%`" antes e depois o termo de pesquisa.
+Esse código usa a mesma lógica que você viu anteriormente, exceto que a pesquisa usa um operador de `LIKE` e o código coloca "`%`" antes e depois do termo de pesquisa.
 
-Observe como ele foi fácil de adicionar outra pesquisa para a página. Tudo o que você precisava fazer era:
+Observe como é fácil adicionar outra pesquisa à página. Tudo o que você precisava fazer era:
 
-- Criar um `if` bloco testado para ver se a caixa de pesquisa relevantes tinha um valor.
-- Defina o `selectCommand` variável para uma nova instrução SQL.
-- Defina o `searchTerm` variável como o valor para passar para a consulta.
+- Crie um bloco de `if` que foi testado para ver se a caixa de pesquisa relevante tinha um valor.
+- Defina a variável `selectCommand` como uma nova instrução SQL.
+- Defina a variável `searchTerm` como o valor a ser passado para a consulta.
 
-Aqui está o bloco de código completo, que contém a nova lógica de uma pesquisa de título:
+Aqui está o bloco de código completo, que contém a nova lógica para uma pesquisa de título:
 
 [!code-cshtml[Main](form-basics/samples/sample12.cshtml)]
 
 Aqui está um resumo do que esse código faz:
 
-- As variáveis `searchTerm` e `selectCommand` são inicializados na parte superior. Você vai definir essas variáveis para o termo de pesquisa apropriado (se houver) e o comando SQL apropriado com base em que o usuário faz na página. A pesquisa padrão é o caso mais simples de obter todos os filmes de banco de dados.
-- Nos testes para `searchGenre` e `searchTitle`, o código define `searchTerm` para o valor que você deseja pesquisar. Os blocos de código também definir `selectCommand` para um comando SQL apropriado para que a pesquisa.
-- O `db.Query` método é invocado apenas uma vez, usando qualquer outro comando SQL está em `selectedCommand` e o valor que está em `searchTerm`. Se não houver nenhum termo de pesquisa (sem gênero e nenhuma palavra título), o valor de `searchTerm` é uma cadeia de caracteres vazia. No entanto, isso não importa, porque nesse caso, a consulta não requer um parâmetro.
+- As variáveis `searchTerm` e `selectCommand` são inicializadas na parte superior. Você vai definir essas variáveis para o termo de pesquisa apropriado (se houver) e o comando SQL apropriado com base no que o usuário faz na página. A pesquisa padrão é o caso simples de obter todos os filmes do banco de dados.
+- Nos testes para `searchGenre` e `searchTitle`, o código define `searchTerm` para o valor que você deseja pesquisar. Esses blocos de código também definem `selectCommand` para um comando SQL apropriado para essa pesquisa.
+- O método `db.Query` é invocado apenas uma vez, usando qualquer comando SQL que esteja em `selectedCommand` e qualquer valor que esteja em `searchTerm`. Se não houver nenhum termo de pesquisa (sem gênero e nenhuma palavra de título), o valor de `searchTerm` será uma cadeia de caracteres vazia. No entanto, isso não importa, porque nesse caso a consulta não requer um parâmetro.
 
-## <a name="testing-the-title-search-feature"></a>Testar o recurso de pesquisa de título
+## <a name="testing-the-title-search-feature"></a>Testando o recurso de pesquisa de título
 
-Agora você pode testar sua página de pesquisa concluída. Execute *Movies.cshtml*.
+Agora você pode testar a página de pesquisa concluída. Execute *Movies. cshtml*.
 
-Insira um gênero e clique em **gênero pesquisa**. A grade exibe os filmes daquele gênero, como antes.
+Insira um gênero e clique em **Pesquisar gênero**. A grade exibe filmes desse gênero, como antes.
 
-Insira uma palavra de título e clique em **pesquisar título**. A grade exibe filmes com essa palavra no título.
+Insira uma palavra de título e clique em **título de pesquisa**. A grade exibe os filmes que têm essa palavra no título.
 
-![Listagem depois de pesquisar por 'O' no título de página de filmes](form-basics/_static/image6.png)
+![Página de filmes listando depois de procurar ' o ' no título](form-basics/_static/image6.png)
 
-Deixe as caixas de texto em branco e clique em um dos botões. A grade exibe todos os filmes.
+Deixe ambas as caixas de texto em branco e clique em um dos botões. A grade exibe todos os filmes.
 
 ## <a name="combining-the-queries"></a>Combinando as consultas
 
-Você pode observar que as pesquisas que você pode executar são exclusivas. É possível pesquisar o título e o gênero ao mesmo tempo, mesmo que ambas as caixas de pesquisa têm valores neles. Por exemplo, você não pode procurar todos os filmes de ação cujo título contém "Adventure". (A página é codificado agora, se você inserir valores para o gênero e o título, a pesquisa de título obtém precedência). Para criar uma pesquisa que combina as condições, você precisaria criar uma consulta SQL que tem uma sintaxe semelhante ao seguinte:
+Você pode observar que as pesquisas que você pode executar são exclusivas. Não é possível pesquisar o título e o gênero ao mesmo tempo, mesmo se ambas as caixas de pesquisa tiverem valores. Por exemplo, você não pode pesquisar por todos os filmes de ação cujo título contenha "Adventure". (Como a página é codificada agora, se você inserir valores para o gênero e o título, a pesquisa de título obterá precedência.) Para criar uma pesquisa que combine as condições, você precisaria criar uma consulta SQL que tenha sintaxe semelhante à seguinte:
 
 `SELECT * FROM Movies WHERE Genre = @0 AND Title LIKE @1`
 
-E você teria de executar a consulta usando uma instrução semelhante ao seguinte (em termos gerais):
+E você precisaria executar a consulta usando uma instrução como a seguinte (aproximadamente falando):
 
 `var selectedData = db.Query(selectCommand, searchGenre, searchTitle);`
 
-Criar a lógica para permitir que muitas permutações de critérios de pesquisa pode obter um pouco envolvido, como você pode ver. Portanto, vamos parar aqui.
+A criação de lógica para permitir muitas permutações de critérios de pesquisa pode ficar um pouco envolvida, como você pode ver. Portanto, vamos parar aqui.
 
-## <a name="coming-up-next"></a>Próximo
+## <a name="coming-up-next"></a>Chegando em seguida
 
-O próximo tutorial, você criará uma página que usa um formulário para permitir que usuários adicionem filmes no banco de dados.
+No próximo tutorial, você criará uma página que usa um formulário para permitir que os usuários adicionem filmes ao banco de dados.
 
-## <a name="complete-listing-for-movie-page-updated-with-search"></a>Listagem completa para a página de filme (atualizada com a pesquisa)
+## <a name="complete-listing-for-movie-page-updated-with-search"></a>Listagem completa da página de filme (atualizada com pesquisa)
 
 [!code-cshtml[Main](form-basics/samples/sample13.cshtml)]
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [Introdução à programação Web do ASP.NET usando a sintaxe Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
-- [Cláusula WHERE SQL](http://www.w3schools.com/sql/sql_where.asp) no site W3Schools
-- [As definições de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) artigo no site do W3C
+- [Introdução à programação da Web do ASP.NET usando a sintaxe do Razor](https://go.microsoft.com/fwlink/?LinkID=202890)
+- [Cláusula WHERE do SQL](http://www.w3schools.com/sql/sql_where.asp) no site W3Schools
+- Artigo [definições de método](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html) no site W3C
 
 > [!div class="step-by-step"]
 > [Anterior](displaying-data.md)

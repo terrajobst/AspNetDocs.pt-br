@@ -9,11 +9,11 @@ ms.assetid: faab8503-2984-48a9-8a40-7728461abc50
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-updatepanel-triggers
 msc.type: authoredcontent
 ms.openlocfilehash: b1cc869f373d4f8283b4d92af74707c3f11fef61
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588794"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78547449"
 ---
 # <a name="understanding-aspnet-ajax-updatepanel-triggers"></a>Noções básicas sobre os gatilhos UpdatePanel do AJAX ASP.NET
 
@@ -53,7 +53,7 @@ Da mesma forma, o elemento `<asp:PostBackTrigger>` pode ser usado para disparar 
 
 *Descendentes de marcação:*
 
-| **Tags** | **Descrição** |
+| **Tag** | **Descrição** |
 | --- | --- |
 | &lt;ASP: AsyncPostBackTrigger&gt; | Especifica um controle e evento que causará uma atualização parcial de página para o UpdatePanel que contém essa referência de gatilho. |
 | &lt;ASP: PostBackTrigger&gt; | Especifica um controle e evento que causará uma atualização de página completa (uma atualização de página completa). Essa marca pode ser usada para forçar uma atualização completa quando um controle, de outra forma, dispararia a renderização parcial. |

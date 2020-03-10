@@ -9,11 +9,11 @@ ms.assetid: 5894dc13-5d45-4dad-8096-136499120f1d
 msc.legacyurl: /mvc/overview/performance/bundling-and-minification
 msc.type: authoredcontent
 ms.openlocfilehash: 61bfe5dbac04b57e1461183b66ead2f01fe0734c
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457759"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78538594"
 ---
 # <a name="bundling-and-minification"></a>Empacotamento e minimização
 
@@ -53,9 +53,9 @@ Além de remover os comentários e o espaço em branco desnecessário, os seguin
 
 | **Original** | **Renomeado** |
 | --- | --- |
-| imageTagAndImageID | {1&gt;{2&gt;n&lt;2}&lt;1} |
+| imageTagAndImageID | n |
 | imageContext | t |
-| imageElement | {1&gt;i&lt;1} |
+| imageElement | i |
 
 ## <a name="impact-of-bundling-and-minification"></a>Impacto do agrupamento e Minificação
 

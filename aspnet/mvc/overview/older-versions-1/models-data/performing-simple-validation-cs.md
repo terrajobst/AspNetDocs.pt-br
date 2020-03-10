@@ -1,119 +1,119 @@
 ---
 uid: mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
-title: Realizar validação simples (c#) | Microsoft Docs
+title: Executando a validação simplesC#() | Microsoft Docs
 author: StephenWalther
-description: Saiba como executar a validação em um aplicativo ASP.NET MVC. Neste tutorial, Stephen Walther apresenta você ao estado de modelo e o auxiliar de validação HTML...
+description: Saiba como executar a validação em um aplicativo MVC ASP.NET. Neste tutorial, Stephen Walther apresenta o estado de modelo e o auxiliar HTML de validação...
 ms.author: riande
 ms.date: 03/02/2009
 ms.assetid: 21383c9d-6aea-4bad-a99b-b5f2c9d6503f
 msc.legacyurl: /mvc/overview/older-versions-1/models-data/performing-simple-validation-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e33f522af74efe97b5a245e956bc0b918ea769af
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65122362"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78542990"
 ---
 # <a name="performing-simple-validation-c"></a>Realizar validação simples (C#)
 
 por [Stephen Walther](https://github.com/StephenWalther)
 
-> Saiba como executar a validação em um aplicativo ASP.NET MVC. Neste tutorial, Stephen Walther apresenta você ao estado de modelo e os auxiliares de validação HTML.
+> Saiba como executar a validação em um aplicativo MVC ASP.NET. Neste tutorial, Stephen Walther apresenta o estado de modelo e os auxiliares HTML de validação.
 
-O objetivo deste tutorial é explicar como você pode executar a validação dentro de um aplicativo ASP.NET MVC. Por exemplo, você aprenderá a evitar que alguém envie um formulário que não contém um valor para um campo obrigatório. Você aprenderá a usar o estado de modelo e os auxiliares HTML de validação.
+O objetivo deste tutorial é explicar como você pode executar a validação em um aplicativo MVC ASP.NET. Por exemplo, você aprende a impedir que alguém envie um formulário que não contém um valor para um campo obrigatório. Você aprende a usar o estado do modelo e os auxiliares HTML de validação.
 
-## <a name="understanding-model-state"></a>Compreendendo o estado do modelo
+## <a name="understanding-model-state"></a>Entendendo o estado do modelo
 
-Use o estado do modelo - ou mais precisamente, o dicionário de estado de modelo - para representar erros de validação. Por exemplo, a ação Create () na listagem 1 valida as propriedades de uma classe de produto antes de adicionar a classe de produto a um banco de dados.
+Você usa o estado do modelo-ou com mais precisão, o dicionário de estado do modelo – para representar erros de validação. Por exemplo, a ação criar () na Listagem 1 valida as propriedades de uma classe Product antes de adicionar a classe Product a um banco de dados.
 
-Eu não estou recomendando que você adicione sua lógica de validação ou o banco de dados a um controlador. Um controlador deve conter apenas a lógica relacionada ao controle de fluxo do aplicativo. Estamos realizando um atalho para manter as coisas simples.
+Não estou recomendando que você adicione sua validação ou lógica de banco de dados a um controlador. Um controlador deve conter apenas lógica relacionada ao controle de fluxo do aplicativo. Estamos adotando um atalho para manter as coisas simples.
 
-**Listagem 1 - Controllers\ProductController.cs**
+**Listagem 1-Controllers\ProductController.cs**
 
 [!code-csharp[Main](performing-simple-validation-cs/samples/sample1.cs)]
 
-Na listagem 1, as propriedades de nome, descrição e UnitsInStock da classe Product são validadas. Se qualquer uma dessas propriedades realizar um teste de validação um erro será adicionado ao dicionário de estado de modelo (representado pela propriedade ModelState da classe Controller).
+Na Listagem 1, as propriedades Name, Description e UnidadesEmEstoque da classe Product são validadas. Se qualquer uma dessas propriedades falhar em um teste de validação, um erro será adicionado ao dicionário de estado do modelo (representado pela Propriedade ModelState da classe Controller).
 
-Se houver erros no estado de modelo, em seguida, a propriedade ModelState retornará false. Nesse caso, o formulário HTML para a criação de um novo produto é exibida novamente. Caso contrário, se não houver nenhum erro de validação, o novo produto é adicionado ao banco de dados.
+Se houver erros no estado do modelo, a Propriedade ModelState. IsValid retornará false. Nesse caso, o formulário HTML para a criação de um novo produto é exibido novamente. Caso contrário, se não houver nenhum erro de validação, o novo produto será adicionado ao banco de dados.
 
 ## <a name="using-the-validation-helpers"></a>Usando os auxiliares de validação
 
-O ASP.NET MVC framework inclui dois auxiliares de validação: o auxiliar de Html.ValidationMessage() e o auxiliar Html.ValidationSummary(). Você pode usar esses dois auxiliares em uma exibição para exibir mensagens de erro de validação.
+A estrutura MVC do ASP.NET inclui dois auxiliares de validação: o auxiliar HTML. ValidationMessage () e o auxiliar HTML. ValidationSummary (). Você usa esses dois auxiliares em uma exibição para exibir mensagens de erro de validação.
 
-Os auxiliares Html.ValidationMessage() e Html.ValidationSummary() são usados nas exibições de criar e editar que são geradas automaticamente pelo scaffolding MVC do ASP.NET. Siga estas etapas para gerar a exibição Create:
+Os auxiliares HTML. ValidationMessage () e HTML. ValidationSummary () são usados nas exibições criar e editar que são geradas automaticamente pelo scaffolding MVC do ASP.NET. Siga estas etapas para gerar o modo de exibição de criação:
 
-1. A ação Create () no controlador de produto com o botão direito e selecione a opção de menu **adicionar exibição** (veja a Figura 1).
-2. No **adicionar exibição** caixa de diálogo, marque a caixa de seleção **criar uma exibição fortemente tipada** (veja a Figura 2).
-3. Dos **exibir dados de classe** lista suspensa, selecione a classe Product.
-4. Dos **exibir o conteúdo** lista suspensa, selecione Criar.
-5. Clique no botão **Adicionar**.
+1. Clique com o botão direito do mouse na ação criar () no controlador do produto e selecione a opção de menu **Adicionar modo de exibição** (consulte a Figura 1).
+2. No diálogo **Adicionar exibição** , marque a caixa de seleção **criar uma exibição fortemente tipada** (consulte a Figura 2).
+3. Na lista suspensa da **classe exibir dados** , selecione a classe produto.
+4. Na lista suspensa **Exibir conteúdo** , selecione criar.
+5. Clique no botão **Adicionar** .
 
-Certifique-se de que você compila seu aplicativo antes de adicionar um modo de exibição. Caso contrário, a lista de classes não aparecerá na **exibir dados de classe** lista suspensa.
+Certifique-se de compilar seu aplicativo antes de adicionar um modo de exibição. Caso contrário, a lista de classes não aparecerá na lista suspensa **Exibir classe de dados** .
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
+[![caixa de diálogo novo projeto](performing-simple-validation-cs/_static/image1.jpg)](performing-simple-validation-cs/_static/image1.png)
 
-**Figura 01**: Adicionando uma exibição ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image2.png))
+**Figura 01**: adicionando uma exibição ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image2.png))
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
+[![caixa de diálogo novo projeto](performing-simple-validation-cs/_static/image2.jpg)](performing-simple-validation-cs/_static/image3.png)
 
-**Figura 02**: Criando uma exibição fortemente tipada ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image4.png))
+**Figura 02**: criando uma exibição fortemente tipada ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image4.png))
 
-Depois de concluir essas etapas, você obtém o modo de exibição criar na listagem 2.
+Depois de concluir essas etapas, você obterá a exibição criar na Listagem 2.
 
-**Listagem 2 - Views\Product\Create.aspx**
+**Listagem 2-Views\Product\Create.aspx**
 
 [!code-aspx[Main](performing-simple-validation-cs/samples/sample2.aspx)]
 
-Na listagem 2, o auxiliar Html.ValidationSummary() é chamado imediatamente acima do formulário HTML. Esse auxiliar é usado para exibir uma lista de mensagens de erro de validação. O auxiliar Html.ValidationSummary() renderiza os erros em uma lista com marcadores.
+Na Listagem 2, o auxiliar HTML. ValidationSummary () é chamado imediatamente acima do formulário HTML. Esse auxiliar é usado para exibir uma lista de mensagens de erro de validação. O auxiliar HTML. ValidationSummary () renderiza os erros em uma lista com marcadores.
 
-O auxiliar Html.ValidationMessage() é chamado ao lado de cada um dos campos de formulário HTML. Esse auxiliar é usado para exibir uma mensagem de erro ao lado de um campo de formulário. No caso da listagem 2, o auxiliar Html.ValidationMessage() exibe um asterisco, quando ocorre um erro.
+O auxiliar HTML. ValidationMessage () é chamado ao lado de cada um dos campos de formulário HTML. Esse auxiliar é usado para exibir uma mensagem de erro ao lado de um campo de formulário. No caso da listagem 2, o auxiliar HTML. ValidationMessage () exibe um asterisco quando há um erro.
 
 A página na Figura 3 ilustra as mensagens de erro renderizadas pelos auxiliares de validação quando o formulário é enviado com campos ausentes e valores inválidos.
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
+[![caixa de diálogo novo projeto](performing-simple-validation-cs/_static/image3.jpg)](performing-simple-validation-cs/_static/image5.png)
 
-**Figura 03**: Modo de exibição criar enviado com problemas ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image6.png))
+**Figura 03**: a exibição criar foi enviada com problemas ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image6.png))
 
-Observe que a aparência do HTML entrada campos também são modificados quando há um erro de validação. Os renderizadores de auxiliar Html.TextBox() uma *classe = "Erro de validação de entrada"* atributo quando há um erro de validação associado à propriedade renderizada pelo auxiliar de Html.TextBox().
+Observe que a aparência dos campos de entrada HTML também é modificada quando há um erro de validação. O auxiliar HTML. TextBox () renderiza um atributo *Class = "entrada-validação-erro"* quando há um erro de validação associado à propriedade renderizada pelo auxiliar HTML. TextBox ().
 
 Há três classes de folha de estilo em cascata usadas para controlar a aparência de erros de validação:
 
-- entrada-erro de validação - aplicado para o &lt;entrada&gt; renderizada pelo Html.TextBox() auxiliar de marca.
-- campo--erro de validação - aplicado à &lt;span&gt; renderizada pelo Html.ValidationMessage() auxiliar de marca.
-- – Resumo – erros de validação - aplicado para o &lt;ul&gt; renderizada pelo Html.ValidationSummary() auxiliar de marca.
+- entrada-validação-erro-aplicado à marca de&gt; de entrada de &lt;renderizada pelo auxiliar HTML. TextBox ().
+- campo-validação-erro-aplicado ao &lt;span&gt; marcação renderizado pelo auxiliar HTML. ValidationMessage ().
+- validação-resumo-erros-aplicados à &lt;UL&gt; marca renderizada pelo auxiliar HTML. ValidationSummary ().
 
-Você pode modificar essas classes de folha de estilo em cascata e, portanto, modificar a aparência dos erros de validação, modificando o arquivo CSS localizado na pasta de conteúdo.
+Você pode modificar essas classes de folha de estilo em cascata e, portanto, modificar a aparência dos erros de validação, modificando o arquivo site. css localizado na pasta conteúdo.
 
 > [!NOTE] 
 > 
-> A classe HtmlHelper inclui propriedades estáticas somente leitura para recuperar os nomes de validação relacionados a CSS classes. Essas propriedades estáticas são nomeadas ValidationInputCssClassName, ValidationFieldCssClassName e ValidationSummaryCssClassName.
+> A classe HtmlHelper inclui propriedades estáticas somente leitura para recuperar os nomes das classes CSS relacionadas à validação. Essas propriedades estáticas são nomeadas ValidationInputCssClassName, ValidationFieldCssClassName e ValidationSummaryCssClassName.
 
-## <a name="prebinding-validation-and-postbinding-validation"></a>Prebinding validação e a validação de Postbinding
+## <a name="prebinding-validation-and-postbinding-validation"></a>Validação de prebindion e Postbinding
 
-Se você enviar o formulário HTML para a criação de um produto e insira um valor inválido para o campo de preço e nenhum valor para o campo UnitsInStock, em seguida, você receberá as mensagens de validação exibidas na Figura 4. Onde vêm essas mensagens de erro de validação?
+Se você enviar o formulário HTML para criar um produto e inserir um valor inválido para o campo preço e nenhum valor para o campo UnidadesEmEstoque, você obterá as mensagens de validação exibidas na Figura 4. De onde vêm essas mensagens de erro de validação?
 
-[![A caixa de diálogo Novo projeto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
+[![caixa de diálogo novo projeto](performing-simple-validation-cs/_static/image4.jpg)](performing-simple-validation-cs/_static/image7.png)
 
-**Figura 04**: Erros de validação de prebinding ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image8.png))
+**Figura 04**: erros de validação de prebinding ([clique para exibir a imagem em tamanho normal](performing-simple-validation-cs/_static/image8.png))
 
-Há realmente dois tipos de mensagens de erro de validação - aqueles gerados antes que os campos de formulário HTML são associados a uma classe e aqueles gerados depois que os campos de formulário são associados à classe. Em outras palavras, há prebinding erros de validação e postbinding erros de validação.
+Na verdade, há dois tipos de mensagens de erro de validação – aquelas geradas antes que os campos de formulário HTML sejam associados a uma classe e aqueles gerados depois que os campos de formulário são associados à classe. Em outras palavras, há erros de validação de prebind e erros de validação de postbinding.
 
-A ação Create () exposta pelo controlador de produto na listagem 1 aceita uma instância da classe Product. A assinatura do método Create tem esta aparência:
+A ação criar () exposta pelo controlador do produto na Listagem 1 aceita uma instância da classe Product. A assinatura do método Create é parecida com esta:
 
 [!code-csharp[Main](performing-simple-validation-cs/samples/sample3.cs)]
 
-Os valores dos campos de formulário HTML do formulário Criar são associados à classe productToCreate por algo chamado de um associador de modelo. O associador de modelo padrão adiciona uma mensagem de erro para o estado de modelo automaticamente quando ele não é possível associar um campo de formulário a uma propriedade de formulário.
+Os valores dos campos de formulário HTML do formulário criar são associados à classe productToCreate por algo chamado de associador de modelo. O associador de modelo padrão adiciona uma mensagem de erro ao estado do modelo automaticamente quando não é possível associar um campo de formulário a uma propriedade de formulário.
 
-O associador de modelo padrão não é possível associar a cadeia de caracteres "apple" para a propriedade de preço da classe Product. É possível atribuir uma cadeia de caracteres a uma propriedade decimal. Portanto, o associador de modelo adiciona um erro para o estado de modelo.
+O associador de modelo padrão não pode associar a cadeia de caracteres "Apple" à propriedade Price da classe Product. Não é possível atribuir uma cadeia de caracteres a uma propriedade decimal. Portanto, o associador de modelo adiciona um erro ao estado do modelo.
 
-O associador de modelo padrão também não é possível atribuir um valor nulo a uma propriedade que não aceita valores nulos. Em particular, o associador de modelo não é possível atribuir um valor nulo para a propriedade UnitsInStock. Mais uma vez, o associador de modelo desiste e adiciona uma mensagem de erro para o estado de modelo.
+O associador de modelo padrão também não pode atribuir um valor nulo a uma propriedade que não aceita valores nulos. Em particular, o associador de modelo não pode atribuir um valor nulo à propriedade UnidadesEmEstoque. Mais uma vez, o associador de modelo abre e adiciona uma mensagem de erro ao estado do modelo.
 
-Se você quiser personalizar a aparência desses prebinding mensagens de erro, em seguida, você precisa criar cadeias de caracteres de recurso para essas mensagens.
+Se desejar personalizar a aparência dessas mensagens de erro de preligação, você precisará criar cadeias de caracteres de recurso para essas mensagens.
 
 ## <a name="summary"></a>Resumo
 
-O objetivo deste tutorial era descrever a mecânica básica de validação na estrutura do ASP.NET MVC. Você aprendeu a usar o estado de modelo e os auxiliares HTML de validação. Também discutimos a distinção entre prebinding e postbinding validação. Outros tutoriais, discutiremos várias estratégias para mover o código de validação para fora de seus controladores de e para suas classes de modelo.
+O objetivo deste tutorial era descrever a mecânica básica de validação no ASP.NET MVC Framework. Você aprendeu a usar o estado do modelo e os auxiliares HTML de validação. Também discutimos a distinção entre a validação de prebind e de postbinding. Em outros tutoriais, discutiremos várias estratégias para mover seu código de validação para fora de seus controladores e para suas classes de modelo.
 
 > [!div class="step-by-step"]
 > [Anterior](displaying-a-table-of-database-data-cs.md)

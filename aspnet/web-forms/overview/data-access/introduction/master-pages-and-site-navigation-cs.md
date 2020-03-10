@@ -9,11 +9,11 @@ ms.assetid: 5aee8202-a4e3-4aa9-8a95-cd5d156cea4c
 msc.legacyurl: /web-forms/overview/data-access/introduction/master-pages-and-site-navigation-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e1ddd43524a61ff2e012171eba1a8dc8efbf8f1d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587497"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78530838"
 ---
 # <a name="master-pages-and-site-navigation-c"></a>Páginas mestras e navegação no site (C#)
 
@@ -51,7 +51,7 @@ Para criar uma página mestra, clique com o botão direito do mouse no nome do p
 
 Defina o layout de página de todo o site aqui na página mestra. Você pode usar a modo de exibição de Design e adicionar quaisquer controles de layout ou Web necessários, ou pode adicionar manualmente a marcação à mão na exibição de origem. Em minha página mestra, uso [folhas de estilo em cascata](http://www.w3schools.com/css/default.asp) para posicionamento e estilos com as configurações de CSS definidas no arquivo externo `Style.css`. Embora não seja possível determinar a partir da marcação mostrada abaixo, as regras de CSS são definidas de modo que o conteúdo da `<div>`de navegação seja absolutamente posicionado para que ele apareça à esquerda e tenha uma largura fixa de 200 pixels.
 
-Site. Master
+Site.master
 
 [!code-aspx[Main](master-pages-and-site-navigation-cs/samples/sample1.aspx)]
 
@@ -129,7 +129,7 @@ O arquivo de mapa do site é um arquivo XML. Observe que o Visual Studio fornece
 
 Defina o mapa do site para imitar a estrutura do sistema de arquivos. Ou seja, adicione um elemento `<siteMapNode>` para cada uma das três pastas e os elementos de `<siteMapNode>` filhos para cada uma das páginas ASP.NET nessas pastas, desta forma:
 
-Web. sitemap
+Web.sitemap
 
 [!code-xml[Main](master-pages-and-site-navigation-cs/samples/sample4.xml)]
 
@@ -219,7 +219,7 @@ Vamos exibir uma lista não ordenada usando um repetidor novamente, mas desta ve
 
 **Figura 13**: adicionar um novo controle de usuário da Web à pasta `UserControls` ([clique para exibir a imagem em tamanho normal](master-pages-and-site-navigation-cs/_static/image31.png))
 
-SectionLevelTutorialListing. ascx
+SectionLevelTutorialListing.ascx
 
 [!code-aspx[Main](master-pages-and-site-navigation-cs/samples/sample12.aspx)]
 

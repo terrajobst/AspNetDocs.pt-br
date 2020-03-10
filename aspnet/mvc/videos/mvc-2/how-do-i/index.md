@@ -1,23 +1,23 @@
 ---
 uid: mvc/videos/mvc-2/how-do-i/index
-title: Como faço | Microsoft Docs
+title: Instruções-I | Microsoft Docs
 author: rick-anderson
-description: Vídeos nesta seção abordam o ASP.NET MVC, incluindo como criar um aplicativo inteiro de comércio eletrônico do início ao fim de 'A vitrine -'.
+description: Os vídeos nesta seção abrangem o ASP.NET MVC, incluindo como criar "a vitrine" – um aplicativo de comércio eletrônico inteiro do início ao fim.
 ms.author: riande
 ms.date: 09/15/2011
 ms.assetid: 9bc6c53a-3e54-4f9d-8bef-0f3359aecf7b
 msc.legacyurl: /mvc/videos/mvc-2/how-do-i
 msc.type: chapter
 ms.openlocfilehash: 7c2fd0d57cdd6775eb027c0dc9b360443bacbfed
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65120523"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537432"
 ---
 # <a name="how-do-i"></a>Como
 
-> Vídeos nesta seção abordam o ASP.NET MVC, incluindo como criar um aplicativo inteiro de comércio eletrônico do início ao fim de "The Storefront -".
+> Os vídeos nesta seção abrangem o ASP.NET MVC, incluindo como criar "a vitrine" – um aplicativo de comércio eletrônico inteiro do início ao fim.
 
 - [Criação de um aplicativo de lista de tarefas com o ASP.NET MVC](creating-a-tasklist-application-with-aspnet-mvc.md)
 - [Criação de um aplicativo de banco de dados de filme em 15 minutos com o ASP.NET MVC](creating-a-movie-database-application-in-15-minutes-with-aspnet-mvc.md)
@@ -33,7 +33,7 @@ ms.locfileid: "65120523"
 - [Exibindo uma tabela de dados de banco de dados](displaying-a-table-of-database-data.md)
 - [O que é o ASP.NET MVC? Vídeo técnico de 80 minutos para desenvolvedores, com a criação do NerdDinner](what-is-aspnet-mvc-80-minute-technical-video-for-developers-building-nerddinner.md)
 - [Por que o ASP.NET MVC? Vídeo de visão geral de 3 minutos para tomadores de decisão](why-aspnet-mvc-3-minute-overview-video-for-decision-makers.md)
-- [ASP.NET MVC: Como 10 por minuto vídeo técnico para desenvolvedores](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
+- [ASP.NET MVC: como? Vídeo técnico de 10 minutos para desenvolvedores](aspnet-mvc-how-10-minute-technical-video-for-developers.md)
 - [Retornar dados em formato JSON para uma chamada do AJAX em um aplicativo Web do ASP.NET MVC](how-do-i-return-json-formatted-data-for-an-ajax-call-in-an-aspnet-mvc-web-application.md)
 - [Trabalhar com os dados em exibições parciais do ASP.NET MVC](how-do-i-work-with-data-in-aspnet-mvc-partial-views.md)
 - [Implementar modelos de exibição para gerenciar dados para exibições do ASP.NET MVC](how-do-i-implement-view-models-to-manage-data-for-aspnet-mvc-views.md)

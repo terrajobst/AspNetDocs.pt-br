@@ -9,11 +9,11 @@ ms.assetid: 732a2316-e49f-4f72-becd-0cd72f14457e
 msc.legacyurl: /web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/membership-and-administration
 msc.type: authoredcontent
 ms.openlocfilehash: ab00bc90bfc767d06e747be6dfb973245b5aae88
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74615466"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546735"
 ---
 # <a name="membership-and-administration"></a>Associação e administração
 
@@ -25,7 +25,7 @@ por [Erik Reitan](https://github.com/Erikre)
 
 Este tutorial mostra como atualizar o aplicativo de exemplo Wingtip Toys para adicionar uma função personalizada e usar ASP.NET Identity. Ele também mostra como implementar uma página de administração da qual o usuário com uma função personalizada pode adicionar e remover produtos do site.
 
-[ASP.net Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md) é o sistema de associação usado para criar o aplicativo Web ASP.net e está disponível no ASP.NET 4,5. ASP.NET Identity é usado no modelo de projeto Visual Studio 2013 Web Forms, bem como os modelos para [ASP.NET MVC](../../../../mvc/index.md), [ASP.NET Web API](../../../../web-api/index.md)e [ASP.NET aplicativo de página única](../../../../single-page-application/index.md). Você também pode instalar especificamente o sistema de ASP.NET Identity usando o NuGet ao iniciar com um aplicativo Web vazio. No entanto, nesta série de tutoriais, você usa o **Web Forms**ProjectTemplate, que inclui o sistema ASP.net Identity. ASP.NET Identity facilita a integração de dados de perfil específicos do usuário com os dados do aplicativo. Além disso, ASP.NET Identity permite que você escolha o modelo de persistência para perfis de usuário em seu aplicativo. Você pode armazenar os dados em um banco de dados de SQL Server ou em outro repositório, incluindo armazenamentos de dados *NoSQL* , como tabelas de armazenamento do Windows Azure.
+[ASP.net Identity](../../../../identity/overview/getting-started/introduction-to-aspnet-identity.md) é o sistema de associação usado para criar o aplicativo Web ASP.net e está disponível no ASP.NET 4,5. ASP.NET Identity é usado no modelo de projeto Visual Studio 2013 Web Forms, bem como os modelos para [ASP.NET MVC](../../../../mvc/index.md), [ASP.NET Web API](../../../../web-api/index.md)e [ASP.NET aplicativo de página única](../../../../single-page-application/index.md). Você também pode instalar especificamente o sistema de ASP.NET Identity usando o NuGet ao iniciar com um aplicativo Web vazio. No entanto, nesta série de tutoriais, você usa o **Web Forms**ProjectTemplate, que inclui o sistema ASP.net Identity. ASP.NET Identity facilita a integração de dados de perfil específicos do usuário com os dados do aplicativo. Além disso, a Identidade ASP.NET permite que você escolha o modelo de persistência para perfis de usuário em seu aplicativo. Você pode armazenar os dados em um banco de dados de SQL Server ou em outro repositório, incluindo armazenamentos de dados *NoSQL* , como tabelas de armazenamento do Windows Azure.
 
 Este tutorial se baseia no tutorial anterior intitulado "check-out e pagamento com o PayPal" na série de tutoriais da Wingtip Toys.
 
@@ -61,7 +61,7 @@ Usando ASP.NET Identity, você pode adicionar uma função personalizada e atrib
 5. Modifique o arquivo *global.asax.cs* adicionando o código realçado em amarelo para que ele apareça da seguinte maneira:  
 
     [!code-csharp[Main](membership-and-administration/samples/sample2.cs?highlight=11,26-28)]
-6. Observe que `AddUserAndRole` é sublinhada em vermelho. Clique duas vezes no código AddUserAndRole.  
+6. Observe que `AddUserAndRole` está sublinhado em vermelho. Clique duas vezes no código AddUserAndRole.  
    A letra "A" no início do método realçado será sublinhada.
 7. Passe o mouse sobre a letra "A" e clique na interface do usuário que permite gerar um stub de método para o método `AddUserAndRole`. 
 
@@ -113,7 +113,7 @@ Em seguida, você criará uma pasta chamada *admin* para o usuário "canEditUser
 1. Clique com o botão direito do mouse no nome do projeto (**Wingtip Toys**) em **Gerenciador de soluções** e selecione **Adicionar** -&gt; **nova pasta**.
 2. Nomeie o novo *administrador*da pasta.
 3. Clique com o botão direito do mouse na pasta *admin* e selecione **Adicionar** -&gt; **novo item**.   
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 4. Selecione o grupo modelos <strong>da Web</strong> do <strong>Visual C#</strong> -&gt; à esquerda. Na lista intermediária, selecione <strong>Web Form com página mestra</strong>, nomeie-o <em>AdminPage. aspx</em>e<strong>,</strong> em seguida, selecione <strong>Adicionar</strong>.
 5. Selecione o arquivo *site. Master* como a página mestra e escolha **OK**.
 
@@ -122,13 +122,13 @@ Em seguida, você criará uma pasta chamada *admin* para o usuário "canEditUser
 Ao adicionar um arquivo *Web. config* à pasta *admin* , você pode restringir o acesso à página contida na pasta.
 
 1. Clique com o botão direito do mouse na pasta *admin* e selecione **Adicionar** -&gt; **novo item**.  
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Na lista de modelos do C# Visual Web, selecione <strong>arquivo de configuração da Web</strong>na lista intermediária, aceite o nome padrão de <em>Web. config</em><strong>e, em seguida, selecione</strong> <strong>Adicionar</strong>.
-3. Substitua o conteúdo XML existente no arquivo *Web. config* pelo seguinte:  
+3. Substitua o conteúdo XML existente no arquivo *Web.config* pelo seguinte:  
 
     [!code-xml[Main](membership-and-administration/samples/sample4.xml)]
 
-Salve o arquivo *Web. config* . O arquivo *Web. config* especifica que apenas o usuário pertencente à função "CanEdit" do aplicativo pode acessar a página contida na pasta *admin* .
+Salve o arquivo *Web.config* . O arquivo *Web. config* especifica que apenas o usuário pertencente à função "CanEdit" do aplicativo pode acessar a página contida na pasta *admin* .
 
 ### <a name="including-custom-role-navigation"></a>Incluindo navegação de função personalizada
 
@@ -160,7 +160,7 @@ Até agora, você criou a função "CanEdit" e adicionou um usuário "canEditUse
 No código que você inseriu para o arquivo code-behind *AdminPage.aspx.cs* , uma classe chamada `AddProducts` faz o trabalho real de adicionar produtos ao banco de dados. Essa classe ainda não existe, portanto, você a criará agora.
 
 1. Em **Gerenciador de soluções**, clique com o botão direito do mouse na pasta *lógica* e, em seguida, selecione **Adicionar** -&gt; **novo item**.   
-   A caixa de diálogo **Adicionar Novo Item** é exibida.
+   A caixa de diálogo **Adicionar novo item** é exibida.
 2. Selecione o grupo de modelos de **código** do **Visual C#**  -&gt; à esquerda. Em seguida, selecione **classe**na lista intermediária e nomeie-a *AddProducts.cs*.   
    O novo arquivo de classe é exibido.
 3. Substitua o código existente pelo seguinte:  
@@ -175,7 +175,7 @@ Os detalhes do produto que o usuário fornece na página *AdminPage. aspx* são 
 
 [!code-xml[Main](membership-and-administration/samples/sample10.xml)]
 
-#### <a name="regular-expressions"></a>Expressões Regulares
+#### <a name="regular-expressions"></a>Expressões regulares
 
 O preço do produto na página *AdminPage. aspx* é validado usando um controle **RegularExpressionValidator** . Esse controle valida se o valor do controle de entrada associado (a caixa de texto "AddProductPrice") corresponde ao padrão especificado pela expressão regular. Uma expressão regular é uma notação de correspondência de padrões que permite localizar e corresponder rapidamente padrões de caracteres específicos. O controle **RegularExpressionValidator** inclui uma propriedade chamada `ValidationExpression` que contém a expressão regular usada para validar a entrada de preço, conforme mostrado abaixo:
 

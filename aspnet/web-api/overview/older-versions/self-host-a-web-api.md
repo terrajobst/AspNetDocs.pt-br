@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/older-versions/self-host-a-web-api
-title: Hospedar internamente o ASP.NET Web API 1 (C#)-ASP.NET 4.x
+title: Auto-host ASP.NET Web API 1 (C#)-ASP.NET 4. x
 author: MikeWasson
-description: Tutorial com o código mostra como hospedar uma API da web dentro de um aplicativo de console.
+description: O tutorial com código mostra como hospedar uma API Web dentro de um aplicativo de console.
 ms.author: riande
 ms.date: 01/26/2012
 ms.custom: seoapril2019
@@ -10,19 +10,19 @@ ms.assetid: be5ab1e2-4140-4275-ac59-ca82a1bac0c1
 msc.legacyurl: /web-api/overview/older-versions/self-host-a-web-api
 msc.type: authoredcontent
 ms.openlocfilehash: bae1737ba5b16bc67fa0ed0474ff04df0add1b3a
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65134768"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525084"
 ---
-# <a name="self-host-aspnet-web-api-1-c"></a>Hospedar internamente o ASP.NET Web API 1 (c#)
+# <a name="self-host-aspnet-web-api-1-c"></a>Auto-host ASP.NET Web API 1 (C#)
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-> Este tutorial mostra como hospedar uma API da web dentro de um aplicativo de console. API Web ASP.NET não requer o IIS. Você pode hospedar internamente uma API da web em seu próprio processo de host. 
+> Este tutorial mostra como hospedar uma API Web dentro de um aplicativo de console. ASP.NET Web API não exige o IIS. Você pode hospedar automaticamente uma API Web em seu próprio processo de host. 
 > 
-> **Novos aplicativos devem usar o OWIN para auto-hospedar a API da Web.** Ver [usar o OWIN para auto-hospedar a API Web ASP.NET 2](../hosting-aspnet-web-api/use-owin-to-self-host-web-api.md).
+> **Os novos aplicativos devem usar o OWIN para a API Web de hospedagem própria.** Confira [usar o OWIN para o autohost ASP.NET Web API 2](../hosting-aspnet-web-api/use-owin-to-self-host-web-api.md).
 > 
 > ## <a name="software-versions-used-in-the-tutorial"></a>Versões de software usadas no tutorial
 > 
@@ -30,159 +30,159 @@ por [Mike Wasson](https://github.com/MikeWasson)
 > - API Web 1
 > - Visual Studio 2012
 
-## <a name="create-the-console-application-project"></a>Criar o projeto de aplicativo de Console
+## <a name="create-the-console-application-project"></a>Criar o projeto de aplicativo de console
 
-Inicie o Visual Studio e selecione **Novo projeto** na página **Iniciar**. Ou, no menu **Arquivo**, selecione **Novo** e, em seguida, **Projeto**.
+Inicie o Visual Studio e selecione **novo projeto** na página **inicial** . Ou, no menu **arquivo** , selecione **novo** e **projeto**.
 
-No painel **Modelos**, selecione **Modelos Instalados** e expanda o nó **Visual C#**. Sob **Visual c#**, selecione **Windows**. Na lista de modelos de projeto, selecione **aplicativo de Console**. Nomeie o projeto &quot;SelfHost&quot; e clique em **Okey**.
+No painel **modelos** , selecione **modelos instalados** e expanda o **nó C# Visual** . Em **Visual C#** , selecione **Windows**. Na lista de modelos de projeto, selecione **aplicativo de console**. Nomeie o projeto &quot;SelfHost&quot; e clique em **OK**.
 
 ![](self-host-a-web-api/_static/image1.png)
 
-## <a name="set-the-target-framework-visual-studio-2010"></a>Defina a estrutura de destino (Visual Studio 2010)
+## <a name="set-the-target-framework-visual-studio-2010"></a>Definir a estrutura de destino (Visual Studio 2010)
 
-Se você estiver usando o Visual Studio 2010, altere a estrutura de destino para o .NET Framework 4.0. (Por padrão, os destinos de modelo de projeto do [perfil do .net Framework Client](https://msdn.microsoft.com/library/cc656912.aspx#features_not_included_in_the_net_framework_client_profile).)
+Se você estiver usando o Visual Studio 2010, altere a estrutura de destino para .NET Framework 4,0. (Por padrão, o modelo de projeto destina-se ao [perfil de cliente do .NET Framework](https://msdn.microsoft.com/library/cc656912.aspx#features_not_included_in_the_net_framework_client_profile).)
 
-No Gerenciador de soluções, clique com botão direito no projeto e selecione **propriedades**. No **estrutura de destino** lista suspensa lista, altere a estrutura de destino para o .NET Framework 4.0. Quando solicitado para aplicar a alteração, clique em **Sim**.
+Em Gerenciador de Soluções, clique com o botão direito do mouse no projeto e selecione **Propriedades**. Na lista suspensa **estrutura de destino** , altere a estrutura de destino para .NET Framework 4,0. Quando for solicitado a aplicar a alteração, clique em **Sim**.
 
 ![](self-host-a-web-api/_static/image2.png)
 
 ## <a name="install-nuget-package-manager"></a>Instalar o Gerenciador de pacotes NuGet
 
-O Gerenciador de pacotes do NuGet é a maneira mais fácil para adicionar os assemblies de API da Web a um projeto não seja ASP.NET.
+O Gerenciador de pacotes NuGet é a maneira mais fácil de adicionar os assemblies da API Web a um projeto do non-ASP.NET.
 
-Para verificar se o Gerenciador de pacotes do NuGet está instalado, clique o **ferramentas** menu do Visual Studio. Se você vir um item de menu chamado **Gerenciador de pacotes NuGet**, em seguida, você tem o Gerenciador de pacotes NuGet.
+Para verificar se o Gerenciador de pacotes NuGet está instalado, clique no menu **ferramentas** no Visual Studio. Se você vir um item de menu chamado **Gerenciador de pacotes NuGet**, você terá o Gerenciador de pacotes NuGet.
 
 Para instalar o Gerenciador de pacotes NuGet:
 
 1. Inicie o Visual Studio.
-2. Dos **ferramentas** menu, selecione **extensões e atualizações**.
-3. No **extensões e atualizações** caixa de diálogo, selecione **Online**.
-4. Se você não vir "Gerenciador de pacotes do NuGet", digite "Gerenciador de pacotes do nuget" na caixa de pesquisa.
-5. Selecione o Gerenciador de pacotes do NuGet e clique em **baixar**.
-6. Após a conclusão do download, você será solicitado a instalar.
-7. Depois que a instalação for concluída, você talvez seja solicitado para reiniciar o Visual Studio.
+2. No menu **Ferramentas**, selecione **Extensões e atualizações**.
+3. Na caixa de diálogo **extensões e atualizações** , selecione **online**.
+4. Se você não vir o "Gerenciador de pacotes NuGet", digite "Gerenciador de pacotes NuGet" na caixa de pesquisa.
+5. Selecione o Gerenciador de pacotes NuGet e clique em **baixar**.
+6. Após a conclusão do download, você será solicitado a instalar o.
+7. Após a conclusão da instalação, talvez seja solicitado que você reinicie o Visual Studio.
 
 ![](self-host-a-web-api/_static/image3.png)
 
-## <a name="add-the-web-api-nuget-package"></a>Adicione o pacote do NuGet da API Web
+## <a name="add-the-web-api-nuget-package"></a>Adicionar o pacote NuGet da API Web
 
-Depois de instalar o Gerenciador de pacotes NuGet, adicione o pacote de Self de API da Web ao seu projeto.
+Depois que o Gerenciador de pacotes NuGet estiver instalado, adicione o pacote de autohospedagem da API Web ao seu projeto.
 
-1. Dos **ferramentas** menu, selecione **Gerenciador de pacotes NuGet**. *Observação*: Se você não vê esse menu item, certifique-se de que NuGet Package Manager instalada corretamente.
+1. No menu **ferramentas** , selecione **Gerenciador de pacotes NuGet**. *Observação*: se você não vir esse item de menu, verifique se o Gerenciador de pacotes NuGet foi instalado corretamente.
 2. Selecione **gerenciar pacotes NuGet para solução**
-3. No **gerenciar pacotes NuGet** caixa de diálogo, selecione **Online**.
-4. Na caixa de pesquisa, digite &quot;Microsoft.AspNet.WebApi.SelfHost&quot;.
-5. Selecione o pacote de Host de autoatendimento do ASP.NET Web API e clique em **instalar**.
-6. Depois de instala o pacote, clique em **feche** para fechar a caixa de diálogo.
+3. Na caixa de diálogo **gerenciar pacotes do preciosidade** , selecione **online**.
+4. Na caixa de pesquisa, digite &quot;Microsoft. AspNet. WebApi. SelfHost&quot;.
+5. Selecione o pacote do ASP.NET Web API Self host e clique em **instalar**.
+6. Após a instalação do pacote, clique em **fechar** para fechar a caixa de diálogo.
 
 > [!NOTE]
-> Certifique-se de instalar o pacote denominado Microsoft.AspNet.WebApi.SelfHost, não AspNetWebApi.SelfHost.
+> Certifique-se de instalar o pacote denominado Microsoft. AspNet. WebApi. SelfHost, não AspNetWebApi. SelfHost.
 
 ![](self-host-a-web-api/_static/image4.png)
 
 ## <a name="create-the-model-and-controller"></a>Criar o modelo e o controlador
 
-Este tutorial usa as mesmas classes de modelo e controlador como o [guia de Introdução](../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md) tutorial.
+Este tutorial usa as mesmas classes de modelo e controlador do tutorial de [introdução](../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md) .
 
-Adicione uma classe pública denominada `Product`.
+Adicione uma classe pública chamada `Product`.
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample1.cs)]
 
-Adicione uma classe pública denominada `ProductsController`. Derive essa classe de **ApiController**.
+Adicione uma classe pública chamada `ProductsController`. Derive essa classe de **System. Web. http. ApiController**.
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample2.cs)]
 
-Para obter mais informações sobre o código neste controlador, consulte o [guia de Introdução](../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md) tutorial. Esse controlador define três ações GET:
+Para obter mais informações sobre o código nesse controlador, consulte o tutorial de [introdução](../getting-started-with-aspnet-web-api/tutorial-your-first-web-api.md) . Esse controlador define três ações GET:
 
-| URI | Descrição |
+| URI | DESCRIÇÃO |
 | --- | --- |
-| produtos/api / | Obtenha uma lista de todos os produtos. |
-| /api/products/*id* | Obter um produto por ID. |
-| /api/products/?category=*category* | Obtenha uma lista de produtos por categoria. |
+| /api/products | Obtenha uma lista de todos os produtos. |
+| *ID* do/API/Products/ | Obter um produto por ID. |
+| /API/Products/? categoria =*categoria* | Obter uma lista de produtos por categoria. |
 
-## <a name="host-the-web-api"></a>Hospedar a API da Web
+## <a name="host-the-web-api"></a>Hospedar a API Web
 
 Abra o arquivo Program.cs e adicione as seguintes instruções using:
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample3.cs)]
 
-Adicione o seguinte código para o **programa** classe.
+Adicione o código a seguir à classe **programa** .
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample4.cs)]
 
-## <a name="optional-add-an-http-url-namespace-reservation"></a>(Opcional) Adicionar uma reserva de Namespace de URL HTTP
+## <a name="optional-add-an-http-url-namespace-reservation"></a>Adicional Adicionar uma reserva de namespace de URL HTTP
 
-Esse aplicativo atende a `http://localhost:8080/`. Por padrão, escutando em um determinado endereço HTTP requer privilégios de administrador. Portanto, quando você executar o tutorial, você pode receber esse erro: "HTTP não foi possível registrar a URL http://+:8080/" há duas maneiras de evitar esse erro:
+Este aplicativo escuta `http://localhost:8080/`. Por padrão, a escuta em um endereço HTTP específico requer privilégios de administrador. Ao executar o tutorial, portanto, você pode receber esse erro: "HTTP não pôde registrar a URL http://+:8080/" há duas maneiras de evitar esse erro:
 
-- Executar o Visual Studio com permissões de administrador com privilégios elevados, ou
-- Use Netsh.exe para conceder as permissões de conta para reservar a URL.
+- Execute o Visual Studio com permissões de administrador elevadas ou
+- Use o netsh. exe para conceder permissões de conta para reservar a URL.
 
-Para usar Netsh.exe, abra um prompt de comando com privilégios de administrador e digite o seguinte comando: comando a seguir:
+Para usar o netsh. exe, abra um prompt de comando com privilégios de administrador e insira o comando a seguir:
 
 [!code-console[Main](self-host-a-web-api/samples/sample5.cmd)]
 
-em que *máquina \ nomedeusuário* é sua conta de usuário.
+em que *nomedeusuário* é sua conta de usuário.
 
-Quando tiver terminado de hospedagem interna, não se esqueça de excluir a reserva:
+Quando você terminar a hospedagem interna, certifique-se de excluir a reserva:
 
 [!code-console[Main](self-host-a-web-api/samples/sample6.cmd)]
 
-## <a name="call-the-web-api-from-a-client-application-c"></a>Chamar a API Web de um aplicativo cliente (c#)
+## <a name="call-the-web-api-from-a-client-application-c"></a>Chamar a API da Web de um aplicativo clienteC#()
 
-Vamos escrever um aplicativo de console simples que chama a API da web.
+Vamos escrever um aplicativo de console simples que chama a API da Web.
 
 Adicione um novo projeto de aplicativo de console à solução:
 
-- No Gerenciador de soluções, a solução com o botão direito e selecione **adicionar novo projeto**.
-- Criar um novo aplicativo de console chamado &quot;ClientApp&quot;.
+- Em Gerenciador de Soluções, clique com o botão direito do mouse na solução e selecione **Adicionar novo projeto**.
+- Crie um novo aplicativo de console chamado &quot;ClientApp&quot;.
 
 ![](self-host-a-web-api/_static/image5.png)
 
-Use o Gerenciador de pacotes de NuGet para adicionar o pacote de bibliotecas de núcleo do ASP.NET Web API:
+Use o Gerenciador de pacotes NuGet para adicionar o pacote ASP.NET Web API Core Libraries:
 
-- No menu Ferramentas, selecione **Gerenciador de pacotes NuGet**.
+- No menu ferramentas, selecione **Gerenciador de pacotes NuGet**.
 - Selecione **gerenciar pacotes NuGet para solução**
-- No **gerenciar pacotes NuGet** caixa de diálogo, selecione **Online**.
-- Na caixa de pesquisa, digite &quot;Microsoft.AspNet.WebApi.Client&quot;.
-- Selecione o pacote de bibliotecas de cliente do Microsoft ASP.NET Web API e clique em **instalar**.
+- Na caixa de diálogo **gerenciar pacotes NuGet** , selecione **online**.
+- Na caixa de pesquisa, digite &quot;Microsoft. AspNet. WebApi. Client&quot;.
+- Selecione o pacote Microsoft ASP.NET bibliotecas de cliente da API Web e clique em **instalar**.
 
-Adicione uma referência no ClientApp ao projeto SelfHost:
+Adicione uma referência em ClientApp ao projeto SelfHost:
 
-- No Gerenciador de soluções, clique com botão direito no projeto ClientApp.
+- Em Gerenciador de Soluções, clique com o botão direito do mouse no projeto ClientApp.
 - Selecione **Adicionar Referência**.
-- No **Gerenciador de referências** caixa de diálogo, em **solução**, selecione **projetos**.
+- Na caixa de diálogo **Gerenciador de referências** , em **solução**, selecione **projetos**.
 - Selecione o projeto SelfHost.
 - Clique em **OK**.
 
 ![](self-host-a-web-api/_static/image6.png)
 
-Abra o arquivo Client/Program.cs. Adicione o seguinte **usando** instrução:
+Abra o arquivo cliente/programa. cs. Adicione a seguinte instrução **using** :
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample7.cs)]
 
-Adicionar um estático **HttpClient** instância:
+Adicione uma instância **HttpClient** estática:
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample8.cs)]
 
-Adicione os seguintes métodos para listar todos os produtos, um produto por ID de lista e listam os produtos por categoria.
+Adicione os seguintes métodos para listar todos os produtos, listar um produto por ID e listar produtos por categoria.
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample9.cs)]
 
 Cada um desses métodos segue o mesmo padrão:
 
-1. Chame **HttpClient.GetAsync** para enviar uma solicitação GET para o URI apropriado.
-2. Chame **HttpResponseMessage.EnsureSuccessStatusCode**. Esse método gera uma exceção se o status da resposta HTTP é um código de erro.
-3. Chame **ReadAsAsync&lt;T&gt;**  para desserializar um tipo CLR da resposta HTTP. Esse método é um método de extensão definido no **System.Net.Http.HttpContentExtensions**.
+1. Chame **HttpClient. getasync** para enviar uma solicitação get para o URI apropriado.
+2. Chame **HttpResponseMessage. EnsureSuccessStatusCode**. Esse método gera uma exceção se o status de resposta HTTP é um código de erro.
+3. Chame **ReadAsAsync&lt;t&gt;** para desserializar um tipo CLR da resposta http. Esse método é um método de extensão, definido em **System .net. http. HttpContentExtensions**.
 
-O **GetAsync** e **ReadAsAsync** métodos são assíncronas. Elas retornam **tarefa** objetos que representam a operação assíncrona. Introdução a **resultado** propriedade bloqueará o thread até que a operação seja concluída.
+Os métodos **getasync** e **ReadAsAsync** são assíncronos. Elas retornam objetos de **tarefa** que representam a operação assíncrona. Obter a propriedade **Result** bloqueia o thread até que a operação seja concluída.
 
-Para obter mais informações sobre como usar o HttpClient, incluindo como fazer chamadas sem bloqueio, consulte [chamar um Web API de um cliente .NET](../advanced/calling-a-web-api-from-a-net-client.md).
+Para obter mais informações sobre como usar HttpClient, incluindo como fazer chamadas sem bloqueio, consulte [chamando uma API da Web de um cliente .net](../advanced/calling-a-web-api-from-a-net-client.md).
 
-Antes de chamar esses métodos, defina a propriedade BaseAddress na instância do HttpClient para "`http://localhost:8080`". Por exemplo:
+Antes de chamar esses métodos, defina a propriedade BaseAddress na instância HttpClient como "`http://localhost:8080`". Por exemplo:
 
 [!code-csharp[Main](self-host-a-web-api/samples/sample10.cs)]
 
-Essa saída a seguir. (Lembre-se de executar o aplicativo SelfHost primeiro.)
+Isso deve gerar o seguinte. (Lembre-se de executar o aplicativo SelfHost primeiro.)
 
 [!code-console[Main](self-host-a-web-api/samples/sample11.cmd)]
 

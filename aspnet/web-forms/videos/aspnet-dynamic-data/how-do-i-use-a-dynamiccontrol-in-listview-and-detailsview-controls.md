@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/aspnet-dynamic-data/how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls
-title: Como usar um DynamicControl em ListView e DetailsView controles? | Microsoft Docs
+title: Como usar um DynamicControl em controles ListView e DetailsView? | Microsoft Docs
 author: shanselman
-description: Este vídeo compara o mesmo aplicativo gravado duas vezes, uma vez com os dados dinâmicos e outra sem. O processo, você adiciona objetos DynamicControl ao ListView um...
+description: Este vídeo compara o mesmo aplicativo gravado duas vezes, uma vez com Dados Dinâmicos e uma vez sem. No processo, você adiciona objetos DynamicControl ao ListView a...
 ms.author: riande
 ms.date: 05/08/2008
 ms.assetid: 816175a2-47b1-49ba-b346-cfb1ee33096a
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data/how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls
 msc.type: video
 ms.openlocfilehash: 4916885afff0900d85f7ef58b84abc50144aa29e
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406321"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78546259"
 ---
-# <a name="how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls"></a>Como usar um DynamicControl em ListView e DetailsView controles?
+# <a name="how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls"></a>Como usar um DynamicControl em controles ListView e DetailsView?
 
 por [Scott Hanselman](https://github.com/shanselman)
 
-Este vídeo compara o mesmo aplicativo gravado duas vezes, uma vez com os dados dinâmicos e outra sem. O processo, você adicionará **DynamicControl** objetos **ListView** e **DetailsView** controles.
+Este vídeo compara o mesmo aplicativo gravado duas vezes, uma vez com Dados Dinâmicos e uma vez sem. No processo, você adiciona objetos **DynamicControl** a controles **ListView** e **DetailsView** .
 
-[&#9654;Assista ao vídeo (5 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls)
+[&#9654;Assistir ao vídeo (5 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-use-a-dynamiccontrol-in-listview-and-detailsview-controls)
 
 > [!div class="step-by-step"]
 > [Anterior](how-do-i-display-unknown-datatypes.md)

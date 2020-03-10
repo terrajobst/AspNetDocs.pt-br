@@ -9,11 +9,11 @@ ms.assetid: 081fe010-ba0f-4e7d-b4ba-774840b601c2
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/interacting-with-the-master-page-from-the-content-page-vb
 msc.type: authoredcontent
 ms.openlocfilehash: fe1f7b80b26ff25c1ce744e4f823e3fb35eea074
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74577214"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78548212"
 ---
 # <a name="interacting-with-the-master-page-from-the-content-page-vb"></a>Interagir com a página de conteúdo através da página mestra (VB)
 
@@ -123,7 +123,7 @@ Em seguida, na guia Inserir, adicione a seguinte instrução de `INSERT`:
 
 Depois de concluir o assistente, vá para a marca inteligente de DetailsView e marque a caixa de seleção "Habilitar inserção". Isso adiciona um CommandField ao DetailsView com sua propriedade `ShowInsertButton` definida como true. Como este DetailsView será usado unicamente para inserir dados, defina a propriedade `DefaultMode` do DetailsView como `Insert`.
 
-E isso é tudo! Vamos testar esta página. Visite `AddProduct.aspx` por meio de um navegador, insira um nome e um preço (consulte a Figura 6).
+Isso é tudo! Vamos testar esta página. Visite `AddProduct.aspx` por meio de um navegador, insira um nome e um preço (consulte a Figura 6).
 
 [![adicionar um novo produto ao banco de dados](interacting-with-the-master-page-from-the-content-page-vb/_static/image17.png)](interacting-with-the-master-page-from-the-content-page-vb/_static/image16.png)
 
