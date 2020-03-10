@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-validate/cdnjqueryvalidate16
-title: Validar jQuery 1.6 | Microsoft Docs
+title: jQuery validar 1,6 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: 5c890d81-a1a9-4b4f-9221-6947978ae336
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate16
 msc.type: content
 ms.openlocfilehash: e42a53f6d79a14800dab05c87e0943db470c2b7d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59388082"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78585095"
 ---
-# <a name="jquery-validate-16"></a><span data-ttu-id="12567-102">Validar jQuery 1.6</span><span class="sxs-lookup"><span data-stu-id="12567-102">jQuery Validate 1.6</span></span>
+# <a name="jquery-validate-16"></a><span data-ttu-id="0e452-102">Validar jQuery 1.6</span><span class="sxs-lookup"><span data-stu-id="0e452-102">jQuery Validate 1.6</span></span>
 
-<span data-ttu-id="12567-103">Os seguintes arquivos são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="12567-103">The following files are hosted on the CDN:</span></span>
+<span data-ttu-id="0e452-103">Os seguintes arquivos são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="0e452-103">The following files are hosted on the CDN:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jQuery.Validate/1.6/jQuery.Validate.js
 - https://ajax.aspnetcdn.com/ajax/jQuery.Validate/1.6/jQuery.Validate.min.js

@@ -9,15 +9,15 @@ ms.assetid: 423d024d-eda3-4c9d-b6e8-4c6d479be692
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile140
 msc.type: content
 ms.openlocfilehash: 4b97fa8b367c4fdd314c4c807d4be29440bfe0f3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59383493"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78562681"
 ---
-# <a name="jquery-mobile-140-on-the-microsoft-ajax-cdn"></a><span data-ttu-id="fe5f8-102">jQuery Mobile 1.4.0 na CDN do Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="fe5f8-102">jQuery Mobile 1.4.0 on the Microsoft Ajax CDN</span></span>
+# <a name="jquery-mobile-140-on-the-microsoft-ajax-cdn"></a><span data-ttu-id="3c955-102">jQuery Mobile 1.4.0 na CDN do Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="3c955-102">jQuery Mobile 1.4.0 on the Microsoft Ajax CDN</span></span>
 
-<span data-ttu-id="fe5f8-103">A biblioteca do jQuery Mobile 1.4.0 inclui os seguintes arquivos:</span><span class="sxs-lookup"><span data-stu-id="fe5f8-103">The jQuery Mobile 1.4.0 library includes the following files:</span></span>
+<span data-ttu-id="3c955-103">A biblioteca jQuery Mobile 1.4.0 inclui os seguintes arquivos:</span><span class="sxs-lookup"><span data-stu-id="3c955-103">The jQuery Mobile 1.4.0 library includes the following files:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.4.0/jquery.mobile.structure-1.4.0.css
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css

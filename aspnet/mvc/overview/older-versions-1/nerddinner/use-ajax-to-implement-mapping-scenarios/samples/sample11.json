@@ -1,7 +1,7 @@
 [
     {
         "DinnerID": 53,
-        "Title": "<span data-ttu-id=\"fb99c-101\">Jantar com a família</span><span class=\"sxs-lookup\"><span data-stu-id=\"fb99c-101\">Dinner with the Family</span></span>",
+        "Title": "Jantar com a família",
         "Latitude": 47.64312,
         "Longitude": -122.130609,
         "Description": "Fun dinner",
@@ -9,7 +9,7 @@
     },
     {
         "DinnerID": 54,
-        "Title": "<span data-ttu-id=\"fb99c-102\">Outro jantar</span><span class=\"sxs-lookup\"><span data-stu-id=\"fb99c-102\">Another Dinner</span></span>",
+        "Title": "Outro jantar",
         "Latitude": 47.632546,
         "Longitude": -122.21201,
         "Description": "Dinner with Friends",

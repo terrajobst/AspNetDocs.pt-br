@@ -9,14 +9,14 @@ ms.assetid: aba1e91b-57cf-4c02-9ab1-5374310be497
 msc.legacyurl: /visual-studio/overview/2012/visual-studio-2012-css-editor
 msc.type: video
 ms.openlocfilehash: 8b0998a328f851ffccad7c4065f6a5eba9660427
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59410117"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78578417"
 ---
-# <a name="visual-studio-2012-css-editor"></a><span data-ttu-id="4b5b8-102">Editor de CSS do Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="4b5b8-102">Visual Studio 2012 CSS Editor</span></span>
+# <a name="visual-studio-2012-css-editor"></a><span data-ttu-id="fa52b-102">Editor de CSS do Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="fa52b-102">Visual Studio 2012 CSS Editor</span></span>
 
-<span data-ttu-id="4b5b8-103">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="4b5b8-103">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="fa52b-103">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="fa52b-103">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-[<span data-ttu-id="4b5b8-104">&#9654;Assista ao vídeo (4 minutos)</span><span class="sxs-lookup"><span data-stu-id="4b5b8-104">&#9654; Watch video (4 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/visual-studio-2012-css-editor)
+[<span data-ttu-id="fa52b-104">&#9654;Assistir ao vídeo (4 minutos)</span><span class="sxs-lookup"><span data-stu-id="fa52b-104">&#9654; Watch video (4 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/visual-studio-2012-css-editor)

@@ -9,21 +9,21 @@ ms.assetid: bf751e1f-7db9-4039-be55-d1ee33769c3a
 msc.legacyurl: /web-pages/videos/aspnet-razor-pages/working-with-forms-part-1
 msc.type: video
 ms.openlocfilehash: dcbc86e137f8e4d2539f27bf6d188df90119d867
-ms.sourcegitcommit: 84b1681d4e6253e30468c8df8a09fe03beea9309
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445500"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633290"
 ---
-# <a name="working-with-forms-part-1"></a><span data-ttu-id="ddca2-103">Trabalhar com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="ddca2-103">Working with Forms (Part 1)</span></span>
+# <a name="working-with-forms-part-1"></a><span data-ttu-id="0a634-103">Trabalhar com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="0a634-103">Working with Forms (Part 1)</span></span>
 
-<span data-ttu-id="ddca2-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="ddca2-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="0a634-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="0a634-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="ddca2-105">Ótima de vídeo para o tutorial trabalhando com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="ddca2-105">Video accompaniment to the Working with Forms tutorial (Part 1)</span></span>
+<span data-ttu-id="0a634-105">Ótima de vídeo para o tutorial trabalhando com formulários (parte 1)</span><span class="sxs-lookup"><span data-stu-id="0a634-105">Video accompaniment to the Working with Forms tutorial (Part 1)</span></span>
 
-<span data-ttu-id="ddca2-106">[&#9654;Assistir ao vídeo (14 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-1))</span><span class="sxs-lookup"><span data-stu-id="ddca2-106">[&#9654; Watch video (14 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-1))</span></span>
+<span data-ttu-id="0a634-106">[&#9654;Assistir ao vídeo (14 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-1))</span><span class="sxs-lookup"><span data-stu-id="0a634-106">[&#9654; Watch video (14 minutes)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/working-with-forms-(part-1))</span></span>
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="ddca2-107">[Anterior](creating-a-consistent-look-part-2.md)
-> [Próximo](working-with-forms-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="ddca2-107">[Previous](creating-a-consistent-look-part-2.md)
+> <span data-ttu-id="0a634-107">[Anterior](creating-a-consistent-look-part-2.md)
+> [Próximo](working-with-forms-part-2.md)</span><span class="sxs-lookup"><span data-stu-id="0a634-107">[Previous](creating-a-consistent-look-part-2.md)
 [Next](working-with-forms-part-2.md)</span></span>

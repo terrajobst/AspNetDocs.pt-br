@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-validate/cdnjqueryvalidate155
-title: Validar jQuery 1.5.5 | Microsoft Docs
+title: 1\.5.5 de validação jQuery | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: d1c0bb58-4450-464c-8db7-8ddaf2283ffa
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate155
 msc.type: content
 ms.openlocfilehash: 4ed047bacdf5cb6eb7e86f1ce58d65003d2cd2f8
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59418684"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78585102"
 ---
-# <a name="jquery-validate-155"></a><span data-ttu-id="d9817-102">Validar jQuery 1.5.5</span><span class="sxs-lookup"><span data-stu-id="d9817-102">jQuery Validate 1.5.5</span></span>
+# <a name="jquery-validate-155"></a><span data-ttu-id="b8106-102">Validar jQuery 1.5.5</span><span class="sxs-lookup"><span data-stu-id="b8106-102">jQuery Validate 1.5.5</span></span>
 
-<span data-ttu-id="d9817-103">Os seguintes arquivos são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="d9817-103">The following files are hosted on the CDN:</span></span>
+<span data-ttu-id="b8106-103">Os seguintes arquivos são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="b8106-103">The following files are hosted on the CDN:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.5.5/jquery.validate.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.5.5/jquery.validate.min.js

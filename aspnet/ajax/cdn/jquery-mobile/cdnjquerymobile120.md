@@ -9,15 +9,15 @@ ms.assetid: 62622f82-77e2-4e6c-b114-32d1674de7af
 msc.legacyurl: /ajax/cdn/jquery-mobile/cdnjquerymobile120
 msc.type: content
 ms.openlocfilehash: ce57295bb0a320158ceec2732905f43ce49ef60b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59415941"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563059"
 ---
-# <a name="jquery-mobile-120-on-the-microsoft-ajax-cdn"></a><span data-ttu-id="cb1b8-102">jQuery Mobile 1.2.0 na CDN do Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="cb1b8-102">jQuery Mobile 1.2.0 on the Microsoft Ajax CDN</span></span>
+# <a name="jquery-mobile-120-on-the-microsoft-ajax-cdn"></a><span data-ttu-id="0526d-102">jQuery Mobile 1.2.0 na CDN do Microsoft Ajax</span><span class="sxs-lookup"><span data-stu-id="0526d-102">jQuery Mobile 1.2.0 on the Microsoft Ajax CDN</span></span>
 
-<span data-ttu-id="cb1b8-103">A biblioteca do jQuery Mobile 1.2.0 inclui os seguintes arquivos:</span><span class="sxs-lookup"><span data-stu-id="cb1b8-103">The jQuery Mobile 1.2.0 library includes the following files:</span></span>
+<span data-ttu-id="0526d-103">A biblioteca jQuery Mobile 1.2.0 inclui os seguintes arquivos:</span><span class="sxs-lookup"><span data-stu-id="0526d-103">The jQuery Mobile 1.2.0 library includes the following files:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile.structure-1.2.0.css
 - https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css

@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-datatables/cdnjquerydatatables190
-title: jQuery DataTables 1.9.0 | Microsoft Docs
+title: 1\.9.0 de DataTables do jQuery | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,15 +9,15 @@ ms.assetid: 0f9c7b5e-bac0-40f1-b353-bd46e8759836
 msc.legacyurl: /ajax/cdn/jquery-datatables/cdnjquerydatatables190
 msc.type: content
 ms.openlocfilehash: c2f251f6b2ca9a810de5d6e7fb93886ae510094b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59408544"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78563185"
 ---
-# <a name="jquery-datatables-190"></a><span data-ttu-id="bebec-102">jQuery DataTables 1.9.0</span><span class="sxs-lookup"><span data-stu-id="bebec-102">jQuery DataTables 1.9.0</span></span>
+# <a name="jquery-datatables-190"></a><span data-ttu-id="4f71b-102">jQuery DataTables 1.9.0</span><span class="sxs-lookup"><span data-stu-id="4f71b-102">jQuery DataTables 1.9.0</span></span>
 
-<span data-ttu-id="bebec-103">Os seguintes arquivos para o plug-ins de DataTables do jQuery são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="bebec-103">The following files for the jQuery DataTables plugins are hosted on the CDN:</span></span>
+<span data-ttu-id="4f71b-103">Os seguintes arquivos para os plug-ins do jQuery DataTables estão hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="4f71b-103">The following files for the jQuery DataTables plugins are hosted on the CDN:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.js
 - https://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.0/jquery.dataTables.min.js
