@@ -1,29 +1,29 @@
 ---
 uid: web-forms/videos/aspnet-ajax/how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel
-title: Como alterar dinamicamente o CSS usando UpdatePanel do ASP.NET AJAX | Microsoft Docs
+title: Como alterar dinamicamente o CSS usando o ASP.NET AJAX UpdatePanel | Microsoft Docs
 author: JoeStagner
-description: Este vídeo ilustra como modificar dinamicamente o estilo de sua página usando CSS e o UpdatePanel do AJAX.
+description: Este vídeo ilustra como modificar dinamicamente o estilo da página usando CSS e o UpdatePanel do AJAX.
 ms.author: riande
 ms.date: 04/16/2008
 ms.assetid: 6e0eca38-0344-4732-97de-73acf0551c28
 msc.legacyurl: /web-forms/videos/aspnet-ajax/how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel
 msc.type: video
 ms.openlocfilehash: 8e8939ce74c75f632227d38b87b2f0710c44c52f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59416474"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78628628"
 ---
-# <a name="how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel"></a><span data-ttu-id="12675-103">Como alterar dinamicamente o CSS usando UpdatePanel do AJAX ASP.NET</span><span class="sxs-lookup"><span data-stu-id="12675-103">How To Dynamically Change CSS Using the ASP.NET AJAX UpdatePanel</span></span>
+# <a name="how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel"></a><span data-ttu-id="6d790-103">Como alterar dinamicamente o CSS usando o ASP.NET AJAX UpdatePanel</span><span class="sxs-lookup"><span data-stu-id="6d790-103">How To Dynamically Change CSS Using the ASP.NET AJAX UpdatePanel</span></span>
 
-<span data-ttu-id="12675-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="12675-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="6d790-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="6d790-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="12675-105">Este vídeo ilustra como modificar dinamicamente o estilo de sua página usando CSS e o UpdatePanel do AJAX.</span><span class="sxs-lookup"><span data-stu-id="12675-105">This video illustrates how to dynamically modify the style of your page using CSS and the AJAX UpdatePanel.</span></span>
+<span data-ttu-id="6d790-105">Este vídeo ilustra como modificar dinamicamente o estilo da página usando CSS e o UpdatePanel do AJAX.</span><span class="sxs-lookup"><span data-stu-id="6d790-105">This video illustrates how to dynamically modify the style of your page using CSS and the AJAX UpdatePanel.</span></span>
 
-[<span data-ttu-id="12675-106">&#9654;Assista ao vídeo (11 minutos)</span><span class="sxs-lookup"><span data-stu-id="12675-106">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel)
+[<span data-ttu-id="6d790-106">&#9654;Assistir ao vídeo (11 minutos)</span><span class="sxs-lookup"><span data-stu-id="6d790-106">&#9654; Watch video (11 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-to-dynamically-change-css-using-the-aspnet-ajax-updatepanel)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="12675-107">[Anterior](basic-aspnet-authentication-in-an-ajax-enabled-application.md)
-> [Próximo](how-to-dynamically-add-controls-to-a-web-page.md)</span><span class="sxs-lookup"><span data-stu-id="12675-107">[Previous](basic-aspnet-authentication-in-an-ajax-enabled-application.md)
+> <span data-ttu-id="6d790-107">[Anterior](basic-aspnet-authentication-in-an-ajax-enabled-application.md)
+> [Próximo](how-to-dynamically-add-controls-to-a-web-page.md)</span><span class="sxs-lookup"><span data-stu-id="6d790-107">[Previous](basic-aspnet-authentication-in-an-ajax-enabled-application.md)
 [Next](how-to-dynamically-add-controls-to-a-web-page.md)</span></span>
