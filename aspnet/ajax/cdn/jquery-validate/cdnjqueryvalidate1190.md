@@ -1,24 +1,24 @@
 ---
 uid: ajax/cdn/jquery-validate/cdnjqueryvalidate1190
-title: jQuery Validation 1.19.0 | Microsoft Docs
+title: 1\.19.0 de validação jQuery | Microsoft Docs
 author: guardrex
 description: ''
 ms.author: csfanos
 ms.date: 01/10/2019
 msc.type: content
 ms.openlocfilehash: b5f38285128bd2119fb88b94ffa84cb6e1af3401
-ms.sourcegitcommit: 6a564984ad448db34cdfab5458af755d6b65e69c
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67538779"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78544530"
 ---
-# <a name="jquery-validation-1190"></a><span data-ttu-id="d4ab1-102">jQuery Validation 1.19.0</span><span class="sxs-lookup"><span data-stu-id="d4ab1-102">jQuery Validation 1.19.0</span></span>
+# <a name="jquery-validation-1190"></a><span data-ttu-id="1c83d-102">1\.19.0 de validação jQuery</span><span class="sxs-lookup"><span data-stu-id="1c83d-102">jQuery Validation 1.19.0</span></span>
 
-<span data-ttu-id="d4ab1-103">Os seguintes arquivos são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="d4ab1-103">The following files are hosted on the CDN:</span></span>
+<span data-ttu-id="1c83d-103">Os seguintes arquivos são hospedados na CDN:</span><span class="sxs-lookup"><span data-stu-id="1c83d-103">The following files are hosted on the CDN:</span></span>
 
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/jquery.validate.min.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/additional-methods.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.0/additional-methods.min.js
-- <span data-ttu-id="d4ab1-104">Arquivos de localização em https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/localization/messages\_##.js onde # # é o código de loc.</span><span class="sxs-lookup"><span data-stu-id="d4ab1-104">Localization Files at https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/localization/messages\_##.js where ## is the loc code.</span></span>
+- <span data-ttu-id="1c83d-104">Arquivos de localização em https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/localization/messages\_##.js em que # # é o código Loc.</span><span class="sxs-lookup"><span data-stu-id="1c83d-104">Localization Files at https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/localization/messages\_##.js where ## is the loc code.</span></span>

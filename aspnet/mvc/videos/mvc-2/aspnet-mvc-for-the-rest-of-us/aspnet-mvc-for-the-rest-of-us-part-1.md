@@ -1,27 +1,27 @@
 ---
 uid: mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-1
-title: 'ASP.NET MVC para o restante de nós: Part 1 | Microsoft Docs'
+title: 'ASP.NET MVC para o restante de nós: parte 1 | Microsoft Docs'
 author: JoeStagner
-description: Neste vídeo da Microsoft Joe Stagner baseia-se um recurso de "Fale conosco" para um aplicativo ASP.NET MVC, adicionando uma exibição, a lógica do controlador e um modelo personalizado para t...
+description: Neste vídeo, Joe Stagner cria um recurso de "fale conosco" para um aplicativo MVC ASP.NET adicionando uma exibição, a lógica do controlador e um modelo personalizado a t...
 ms.author: riande
 ms.date: 04/22/2010
 ms.assetid: c56355c3-821f-43e2-9058-9499a1d63f80
 msc.legacyurl: /mvc/videos/mvc-2/aspnet-mvc-for-the-rest-of-us/aspnet-mvc-for-the-rest-of-us-part-1
 msc.type: video
 ms.openlocfilehash: ac872869f97aab679384c7cda9f6c8399cd966a3
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59384670"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78559153"
 ---
-# <a name="aspnet-mvc-for-the-rest-of-us-part-1"></a><span data-ttu-id="a8187-103">ASP.NET MVC para o restante de nós: Parte 1</span><span class="sxs-lookup"><span data-stu-id="a8187-103">ASP.NET MVC For the Rest of Us: Part 1</span></span>
+# <a name="aspnet-mvc-for-the-rest-of-us-part-1"></a><span data-ttu-id="224da-103">ASP.NET MVC para o restante de nós: parte 1</span><span class="sxs-lookup"><span data-stu-id="224da-103">ASP.NET MVC For the Rest of Us: Part 1</span></span>
 
-<span data-ttu-id="a8187-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="a8187-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
+<span data-ttu-id="224da-104">por [Joe Stagner](https://github.com/JoeStagner)</span><span class="sxs-lookup"><span data-stu-id="224da-104">by [Joe Stagner](https://github.com/JoeStagner)</span></span>
 
-<span data-ttu-id="a8187-105">Neste vídeo da Microsoft Joe Stagner cria um recurso de "Fale conosco" para um aplicativo ASP.NET MVC, adicionando uma exibição, a lógica do controlador e um modelo personalizado para o aplicativo ASP.NET padrão.</span><span class="sxs-lookup"><span data-stu-id="a8187-105">In this Video Microsoft's Joe Stagner builds a "Contact Us" feature for an ASP.NET MVC application by adding a View, Controller Logic and a Custom Model to the default ASP.NET Application.</span></span> <span data-ttu-id="a8187-106">Você verá algumas das diferenças fundamentais entre trabalhar com o ASP.NET MVC em comparação com Web Forms do ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="a8187-106">You'll see some of the fundamental differences between working with ASP.NET MVC versus ASP.NET Web Forms.</span></span>
+<span data-ttu-id="224da-105">Neste vídeo, Joe Stagner cria um recurso "fale conosco" para um aplicativo MVC ASP.NET adicionando uma exibição, lógica do controlador e um modelo personalizado ao aplicativo ASP.NET padrão.</span><span class="sxs-lookup"><span data-stu-id="224da-105">In this Video Microsoft's Joe Stagner builds a "Contact Us" feature for an ASP.NET MVC application by adding a View, Controller Logic and a Custom Model to the default ASP.NET Application.</span></span> <span data-ttu-id="224da-106">Você verá algumas das diferenças fundamentais entre trabalhar com ASP.NET MVC versus ASP.NET Web Forms.</span><span class="sxs-lookup"><span data-stu-id="224da-106">You'll see some of the fundamental differences between working with ASP.NET MVC versus ASP.NET Web Forms.</span></span>
 
-[<span data-ttu-id="a8187-107">&#9654;Assista ao vídeo (36 minutos)</span><span class="sxs-lookup"><span data-stu-id="a8187-107">&#9654; Watch video (36 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-1)
+[<span data-ttu-id="224da-107">&#9654;Assistir ao vídeo (36 minutos)</span><span class="sxs-lookup"><span data-stu-id="224da-107">&#9654; Watch video (36 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-for-the-rest-of-us-part-1)
 
 > [!div class="step-by-step"]
-> [<span data-ttu-id="a8187-108">Avançar</span><span class="sxs-lookup"><span data-stu-id="a8187-108">Next</span></span>](aspnet-mvc-for-the-rest-of-us-part-2.md)
+> [<span data-ttu-id="224da-108">Próximo</span><span class="sxs-lookup"><span data-stu-id="224da-108">Next</span></span>](aspnet-mvc-for-the-rest-of-us-part-2.md)

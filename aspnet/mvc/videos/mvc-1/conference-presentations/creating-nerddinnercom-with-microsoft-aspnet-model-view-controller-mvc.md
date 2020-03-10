@@ -1,24 +1,24 @@
 ---
 uid: mvc/videos/mvc-1/conference-presentations/creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc
-title: Criação do NerdDinner.com o controlador de exibição de modelo ASP.NET da Microsoft (MVC) | Microsoft Docs
+title: Criando NerdDinner.com com o MVC (Model View Controller) do Microsoft ASP.NET | Microsoft Docs
 author: shanselman
-description: Nenhum slide. Apenas o código. Iniciar com o arquivo novo e criar um site da Web real com o ASP.NET, ASP.NET AJAX, autenticação, autorização, MVC, Microsoft SQL Server e...
+description: Nenhum slide. Apenas código. Comece com arquivo-novo e crie um site real com ASP.NET, ASP.NET AJAX, autenticação, autorização, MVC, Microsoft SQL Server e...
 ms.author: riande
 ms.date: 05/12/2009
 ms.assetid: 4009c18d-cde6-4bbb-b1a4-ae0c6b3f8091
 msc.legacyurl: /mvc/videos/mvc-1/conference-presentations/creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc
 msc.type: video
 ms.openlocfilehash: 238061172fafeb59a46349b6f82c2ea11afb0919
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59404488"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78537607"
 ---
-# <a name="creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc"></a><span data-ttu-id="35a3f-105">Criação do NerdDinner.com o Microsoft ASP.NET MVC (Model View Controller)</span><span class="sxs-lookup"><span data-stu-id="35a3f-105">Creating NerdDinner.com with Microsoft ASP.NET Model View Controller (MVC)</span></span>
+# <a name="creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc"></a><span data-ttu-id="a8239-105">Criação do NerdDinner.com o Microsoft ASP.NET MVC (Model View Controller)</span><span class="sxs-lookup"><span data-stu-id="a8239-105">Creating NerdDinner.com with Microsoft ASP.NET Model View Controller (MVC)</span></span>
 
-<span data-ttu-id="35a3f-106">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="35a3f-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
+<span data-ttu-id="a8239-106">por [Scott Hanselman](https://github.com/shanselman)</span><span class="sxs-lookup"><span data-stu-id="a8239-106">by [Scott Hanselman](https://github.com/shanselman)</span></span>
 
-<span data-ttu-id="35a3f-107">Nenhum slide.</span><span class="sxs-lookup"><span data-stu-id="35a3f-107">No slides.</span></span> <span data-ttu-id="35a3f-108">Apenas o código.</span><span class="sxs-lookup"><span data-stu-id="35a3f-108">Just code.</span></span> <span data-ttu-id="35a3f-109">Iniciar com arquivo novo e criar um site da Web real com ASP.NET, ASP.NET AJAX, autenticação, autorização, MVC, Microsoft SQL Server e o jQuery em cinco de sessenta minutos ou menos.</span><span class="sxs-lookup"><span data-stu-id="35a3f-109">Start with File-New and build a real Web site with ASP.NET, ASP.NET AJAX, Authentication, Authorization, MVC, Microsoft SQL Server and jQuery in sixty-five minutes or less.</span></span>
+<span data-ttu-id="a8239-107">Nenhum slide.</span><span class="sxs-lookup"><span data-stu-id="a8239-107">No slides.</span></span> <span data-ttu-id="a8239-108">Apenas código.</span><span class="sxs-lookup"><span data-stu-id="a8239-108">Just code.</span></span> <span data-ttu-id="a8239-109">Comece com o arquivo-novo e crie um site real com ASP.NET, ASP.NET AJAX, autenticação, autorização, MVC, Microsoft SQL Server e jQuery em 65 minutos ou menos.</span><span class="sxs-lookup"><span data-stu-id="a8239-109">Start with File-New and build a real Web site with ASP.NET, ASP.NET AJAX, Authentication, Authorization, MVC, Microsoft SQL Server and jQuery in sixty-five minutes or less.</span></span>
 
-[<span data-ttu-id="35a3f-110">&#9654;Assista ao vídeo (minutos 71)</span><span class="sxs-lookup"><span data-stu-id="35a3f-110">&#9654; Watch video (71 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc)
+[<span data-ttu-id="a8239-110">&#9654;Assistir ao vídeo (71 minutos)</span><span class="sxs-lookup"><span data-stu-id="a8239-110">&#9654; Watch video (71 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/creating-nerddinnercom-with-microsoft-aspnet-model-view-controller-mvc)

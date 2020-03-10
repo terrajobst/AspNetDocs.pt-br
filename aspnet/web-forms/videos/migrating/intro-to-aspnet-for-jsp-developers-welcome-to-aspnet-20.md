@@ -1,29 +1,29 @@
 ---
 uid: web-forms/videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20
-title: 'Introdução ao ASP.NET para desenvolvedores do JSP: Bem-vindo ao ASP.NET 2.0 | Microsoft Docs'
+title: 'Introdução ao ASP.NET para desenvolvedores JSP: Bem-vindo ao ASP.NET 2,0 | Microsoft Docs'
 author: microsoft
-description: Esta sessão concentra-se do plano de fundo básicos necessários para compreender o ASP.NET e como o ASP.NET se integra com o .NET Framework e o Microsoft IIS.
+description: Esta sessão se concentra no plano de fundo básico necessário para entender o ASP.NET e como o ASP.NET se integra ao .NET Framework e ao Microsoft IIS.
 ms.author: riande
 ms.date: 07/25/2006
 ms.assetid: 1a95474a-a897-4ba1-b372-8a112cb324ba
 msc.legacyurl: /web-forms/videos/migrating/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20
 msc.type: video
 ms.openlocfilehash: 978236ae72ec0908b09901d8a8d4d3fd27770b86
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59401628"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78525273"
 ---
-# <a name="intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20"></a><span data-ttu-id="fcf91-103">Introdução ao ASP.NET para desenvolvedores do JSP: Bem-vindo ao ASP.NET 2.0</span><span class="sxs-lookup"><span data-stu-id="fcf91-103">Intro to ASP.NET for JSP Developers: Welcome to ASP.NET 2.0</span></span>
+# <a name="intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20"></a><span data-ttu-id="40505-103">Introdução ao ASP.NET para desenvolvedores JSP: Bem-vindo ao ASP.NET 2,0</span><span class="sxs-lookup"><span data-stu-id="40505-103">Intro to ASP.NET for JSP Developers: Welcome to ASP.NET 2.0</span></span>
 
-<span data-ttu-id="fcf91-104">por [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="fcf91-104">by [Microsoft](https://github.com/microsoft)</span></span>
+<span data-ttu-id="40505-104">pela [Microsoft](https://github.com/microsoft)</span><span class="sxs-lookup"><span data-stu-id="40505-104">by [Microsoft](https://github.com/microsoft)</span></span>
 
-<span data-ttu-id="fcf91-105">Esta sessão concentra-se do plano de fundo básicos necessários para compreender o ASP.NET e como o ASP.NET se integra com o .NET Framework e o Microsoft IIS.</span><span class="sxs-lookup"><span data-stu-id="fcf91-105">This session focuses on the basic background necessary to understand ASP.NET and how ASP.NET integrates with the .NET Framework and Microsoft IIS.</span></span>
+<span data-ttu-id="40505-105">Esta sessão se concentra no plano de fundo básico necessário para entender o ASP.NET e como o ASP.NET se integra ao .NET Framework e ao Microsoft IIS.</span><span class="sxs-lookup"><span data-stu-id="40505-105">This session focuses on the basic background necessary to understand ASP.NET and how ASP.NET integrates with the .NET Framework and Microsoft IIS.</span></span>
 
-[<span data-ttu-id="fcf91-106">&#9654;Assista ao vídeo (61 minutos)</span><span class="sxs-lookup"><span data-stu-id="fcf91-106">&#9654; Watch video (61 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20)
+[<span data-ttu-id="40505-106">&#9654;Assistir ao vídeo (61 minutos)</span><span class="sxs-lookup"><span data-stu-id="40505-106">&#9654; Watch video (61 minutes)</span></span>](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/intro-to-aspnet-for-jsp-developers-welcome-to-aspnet-20)
 
 > [!div class="step-by-step"]
-> <span data-ttu-id="fcf91-107">[Anterior](migrating-from-classic-asp-to-aspnet.md)
-> [Próximo](intro-to-aspnet-for-jsp-developers-building-applications.md)</span><span class="sxs-lookup"><span data-stu-id="fcf91-107">[Previous](migrating-from-classic-asp-to-aspnet.md)
+> <span data-ttu-id="40505-107">[Anterior](migrating-from-classic-asp-to-aspnet.md)
+> [Próximo](intro-to-aspnet-for-jsp-developers-building-applications.md)</span><span class="sxs-lookup"><span data-stu-id="40505-107">[Previous](migrating-from-classic-asp-to-aspnet.md)
 [Next](intro-to-aspnet-for-jsp-developers-building-applications.md)</span></span>
