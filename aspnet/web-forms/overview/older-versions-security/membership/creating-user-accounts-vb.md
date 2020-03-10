@@ -9,11 +9,11 @@ ms.assetid: 9ef3e893-bebe-4b13-9fe5-8b71720dd85e
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-user-accounts-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 01be198c329f372ddcd529ad8a369f2d3426a9fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74628082"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78586817"
 ---
 # <a name="creating-user-accounts-vb"></a>Criação de contas de usuário (VB)
 
@@ -35,7 +35,7 @@ Vamos começar!
 
 Antes de começarmos a trabalhar com a estrutura de associação, vamos examinar as etapas importantes que levamos para chegar a esse ponto. Ao usar a estrutura de associação com o `SqlMembershipProvider` em um cenário de autenticação baseada em formulários, as etapas a seguir precisam ser executadas antes de implementar a funcionalidade de associação em seu aplicativo Web:
 
-1. **Habilite a autenticação baseada em formulários.** Como discutimos em *<a id="_msoanchor_4"></a>[uma visão geral da autenticação de formulários](../introduction/an-overview-of-forms-authentication-vb.md)* , a autenticação de formulários é habilitada editando `Web.config` e definindo o atributo `<authentication>` do elemento `mode` como `Forms`. Com a autenticação de formulários habilitada, cada solicitação de entrada é examinada para um *tíquete de autenticação de formulários*, que, se presente, identifica o solicitante.
+1. **Habilite a autenticação baseada em formulários.** Como discutimos em *<a id="_msoanchor_4"></a>[uma visão geral da autenticação de formulários](../introduction/an-overview-of-forms-authentication-vb.md)* , a autenticação de formulários é habilitada editando `Web.config` e definindo o atributo `mode` do elemento `<authentication>` como `Forms`. Com a autenticação de formulários habilitada, cada solicitação de entrada é examinada para um *tíquete de autenticação de formulários*, que, se presente, identifica o solicitante.
 2. **Adicione o esquema de serviços de aplicativos ao banco de dados apropriado.** Ao usar o `SqlMembershipProvider` precisamos instalar o esquema de serviços de aplicativo em um banco de dados. Normalmente, esse esquema é adicionado ao mesmo banco de dados que contém o modelo de dado do aplicativo. O *<a id="_msoanchor_5"></a>[tutorial Criando o esquema de associação no SQL Server](creating-the-membership-schema-in-sql-server-vb.md)* examinou o uso da ferramenta `aspnet_regsql.exe` para fazer isso.
 3. **Personalize as configurações do aplicativo Web para fazer referência ao banco de dados da etapa 2.** O tutorial *criando o esquema de associação no SQL Server* mostrou duas maneiras de configurar o aplicativo Web para que o `SqlMembershipProvider` use o banco de dados selecionado na etapa 2: modificando o nome da cadeia de conexão `LocalSqlServer`; ou adicionando um novo provedor registrado à lista de provedores de estrutura de associação e personalizando esse novo provedor para usar o banco de dados da etapa 2.
 
