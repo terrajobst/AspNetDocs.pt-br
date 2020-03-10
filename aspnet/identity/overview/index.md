@@ -1,6 +1,6 @@
 ---
 uid: identity/overview/index
-title: Visão geral da identidade do ASP.NET - ASP.NET 4.x
+title: Visão geral de ASP.NET Identity-ASP.NET 4. x
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,13 +9,13 @@ ms.assetid: d3972a0e-9ff6-4de1-bf4d-c94943cab048
 msc.legacyurl: /identity/overview
 msc.type: book
 ms.openlocfilehash: ef4eb7428770453596090af111576ab23a27206b
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59406165"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78583814"
 ---
-# <a name="aspnet-identity-overview"></a>Visão geral da identidade do ASP.NET
+# <a name="aspnet-identity-overview"></a>Visão geral de ASP.NET Identity
 
 - [Introdução à Identidade do ASP.NET](getting-started/index.md)
 
@@ -23,7 +23,7 @@ ms.locfileid: "59406165"
     - [Recursos recomendados da Identidade do ASP.NET](getting-started/aspnet-identity-recommended-resources.md)
     - [Adição de Identidade do ASP.NET a um projeto vazio ou existente do Web Forms](getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
     - [Desenvolvendo aplicativos do ASP.NET com o Azure Active Directory](getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-    - [Identidade do ASP.NET: Usar o armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+    - [Identidade do ASP.NET: uso de Armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
 - [Recursos e API](features-api/index.md)
 
     - [Melhores práticas para implantar senhas e outros dados confidenciais no ASP.NET e no Serviço de Aplicativo do Azure](features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)

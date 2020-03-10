@@ -9,11 +9,11 @@ ms.assetid: 8bf2c4fb-4ee5-4841-bfc2-03462c1f7a7a
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis
 msc.type: authoredcontent
 ms.openlocfilehash: 738318cce442fdc5d58dd1e4c992d4941be2487e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74591249"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640598"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-deploying-to-test"></a>Implantação da Web do ASP.NET usando o Visual Studio: implantação no teste
 
@@ -23,7 +23,7 @@ Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.
 
 Para obter uma versão atual da implantação no Azure, consulte [criar um aplicativo web ASP.NET Core no Azure](/azure/app-service/app-service-web-get-started-dotnet).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Neste tutorial, você implantará um aplicativo Web ASP.NET no IIS (servidor de informações da Internet) em seu computador local.
 
@@ -174,13 +174,13 @@ Você pode configurar o perfil de publicação para executar o script de concess
 
 1. No Visual Studio, abra o arquivo *Grant. SQL* que você criou anteriormente.
 
-2. Selecione **conectar**. 
+2. Selecione **Conectar**. 
 
     ![Botão conectar](deploying-to-iis/_static/image11.png)
 
-3. Na caixa de diálogo **conectar ao servidor** , digite *.\sqlexpress* como o **nome do servidor**. Selecione **conectar**.
+3. Na caixa de diálogo **conectar ao servidor** , digite *.\sqlexpress* como o **nome do servidor**. Selecione **Conectar**.
 
-4. Na lista suspensa banco de dados, selecione **ContosoUniversity**. Selecione **executar**. 
+4. Na lista suspensa banco de dados, selecione **ContosoUniversity**. Selecione **Executar**. 
 
    ![](deploying-to-iis/_static/image12.png)
 

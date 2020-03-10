@@ -2,22 +2,22 @@
 uid: web-forms/overview/data-access/working-with-batched-data/index
 title: Trabalhando com dados em lote | Microsoft Docs
 author: rick-anderson
-description: Esses tutoriais de examinam a atualização, exclusão e inserção de lotes de dados de uso de transações.
+description: Esses tutoriais examinam a atualização, a exclusão e a inserção de lotes de dados usando transações.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 95a1d7d3-7fc2-44ac-b27b-912e0e045ee5
 msc.legacyurl: /web-forms/overview/data-access/working-with-batched-data
 msc.type: chapter
 ms.openlocfilehash: e2451ae17d1c271f49b08793e5c75e9fc8b9ca2e
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65108495"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78589064"
 ---
 # <a name="working-with-batched-data"></a>Trabalhar com os dados em lote
 
-> Esses tutoriais de examinam a atualização, exclusão e inserção de lotes de dados de uso de transações.
+> Esses tutoriais examinam a atualização, a exclusão e a inserção de lotes de dados usando transações.
 
 - [Encapsulamento de modificações de banco de dados em uma transação (C#)](wrapping-database-modifications-within-a-transaction-cs.md)
 - [Atualização em lote (C#)](batch-updating-cs.md)

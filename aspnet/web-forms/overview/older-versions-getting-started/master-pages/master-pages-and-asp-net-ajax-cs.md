@@ -9,11 +9,11 @@ ms.assetid: 0c55eb66-ba44-4d49-98e8-5c87fd9b1111
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/master-pages/master-pages-and-asp-net-ajax-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 8cd1d57b4d2aa01654da53ab2b1cc01f71ad8a87
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74639621"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78629160"
 ---
 # <a name="master-pages-and-aspnet-ajax-c"></a>Páginas mestras e AJAX ASP.NET (C#)
 
@@ -129,7 +129,7 @@ Crie um manipulador de eventos para o evento de `Tick` do temporizador. Nesse ma
 
 [!code-csharp[Main](master-pages-and-asp-net-ajax-cs/samples/sample6.cs)]
 
-E isso é tudo! Revisite a página por meio de um navegador. Inicialmente, as informações de um produto aleatório são exibidas. Se você observar o paciente da tela, observará que, após 15 segundos, as informações sobre um novo produto substituem mágica a exibição existente.
+Isso é tudo! Revisite a página por meio de um navegador. Inicialmente, as informações de um produto aleatório são exibidas. Se você observar o paciente da tela, observará que, após 15 segundos, as informações sobre um novo produto substituem mágica a exibição existente.
 
 Para ver melhor o que está acontecendo aqui, vamos adicionar um controle rótulo ao UpdatePanel que exibe a hora em que a exibição foi atualizada pela última vez. Adicione um controle rótulo da Web dentro do UpdatePanel, defina seu `ID` como `LastUpdateTime`e desmarque sua propriedade `Text`. Em seguida, crie um manipulador de eventos para o evento de `Load` do UpdatePanel e exiba a hora atual no rótulo. (O evento `Load` do UpdatePanel é disparado em todos os postbacks de página completos ou parciais.)
 

@@ -9,11 +9,11 @@ ms.assetid: d7729af4-1eda-4ff2-8b61-dbbe4fc11d10
 msc.legacyurl: /whitepapers/aspnet4
 msc.type: content
 ms.openlocfilehash: ecde48f6bd88ee5f569bfeb8b70c26a50bc869c2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74576863"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78630168"
 ---
 # <a name="aspnet-4-and-visual-studio-2010-web-development-overview"></a>Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010
 
@@ -21,7 +21,7 @@ ms.locfileid: "74576863"
 > 
 > [Baixe este White Paper](https://download.microsoft.com/download/7/1/A/71A105A9-89D6-4201-9CC5-AD6A3B7E2F22/ASP_NET_4_and_Visual_Studio_2010_Web_Development_Overview.pdf)
 
-**Conteúdo**
+**Contents**
 
 **[Serviços principais](#0.2__Toc253429238 "_Toc253429238")**  
 [Refatoração de arquivo Web. config](#0.2__Toc253429239 "_Toc253429239")  
@@ -353,7 +353,7 @@ Por exemplo, se você definir a propriedade AjaxFrameworkMode para o valor Expli
 
 <a id="0.2__The_DataView_Control"></a><a id="0.2__The_DataContext_and"></a><a id="0.2__Refactoring_the_Microsoft"></a><a id="0.2__Toc224729032"></a><a id="0.2__Toc253429256"></a><a id="0.2__Toc243304630"></a>
 
-## <a name="web-forms"></a>Web Forms
+## <a name="web-forms"></a>Formulários da Web
 
 Web Forms tem sido um recurso fundamental no ASP.NET desde o lançamento do ASP.NET 1,0. Muitos aprimoramentos estão nessa área para ASP.NET 4, incluindo o seguinte:
 
@@ -781,7 +781,7 @@ Para facilitar a filtragem, um novo controle *QueryExtender* foi adicionado no A
 
 O controle *QueryExtender* dá suporte a uma variedade de opções de filtro. As seções a seguir descrevem essas opções e fornecem exemplos de como usá-las.
 
-#### <a name="search"></a>Pesquisar
+#### <a name="search"></a>Search
 
 Para a opção de pesquisa, o controle *QueryExtender* executa uma pesquisa em campos especificados. No exemplo a seguir, o controle usa o texto que é inserido no controle TextBoxSearch e procura seu conteúdo nas colunas `ProductName` e `Supplier.CompanyName` nos dados retornados do controle *LinqDataSource* .
 
@@ -927,8 +927,8 @@ Por padrão, quando um aplicativo ou site da Web tem como alvo o .NET Framework 
 
 O valor de *controlRenderingCompatibility* é uma cadeia de caracteres, que permite novas definições de versão em potencial em versões futuras. Na versão atual, os seguintes valores têm suporte para essa propriedade:
 
-- "3,5". Essa configuração indica renderização e marcação herdadas. A marcação renderizada por controles é de 100% compatível com versões anteriores e a configuração da propriedade *xhtmlConformance* é respeitada.
-- "4,0". Se a propriedade tiver essa configuração, os controles de servidor Web ASP.NET farão o seguinte:
+- "3.5". Essa configuração indica renderização e marcação herdadas. A marcação renderizada por controles é de 100% compatível com versões anteriores e a configuração da propriedade *xhtmlConformance* é respeitada.
+- "4.0". Se a propriedade tiver essa configuração, os controles de servidor Web ASP.NET farão o seguinte:
 - A propriedade *xhtmlConformance* é sempre tratada como "estrita". Como resultado, os controles renderizam a marcação de XHTML 1,0 estrita.
 - A desabilitação de controles que não são de entrada não renderiza mais estilos inválidos.
 - os elementos da *div* sobre os campos ocultos agora são estilizados para que não interfiram nas regras de CSS criadas pelo usuário.
@@ -977,10 +977,10 @@ Em seguida, você pode definir uma classe CSS que se aplica somente aos elemento
 Por padrão, os seguintes controles de servidor Web ASP.NET que dão suporte a modelos são automaticamente encapsulados em uma tabela externa que é usada para aplicar estilos embutidos:
 
 - *FormView*
-- *Entrar*
+- *Logon*
 - *PasswordRecovery*
 - *ChangePassword*
-- *Para*
+- *Assistente*
 - *CreateUserWizard*
 
 Uma nova propriedade chamada *RenderOuterTable* foi adicionada a esses controles que permite que a tabela externa seja removida da marcação. Por exemplo, considere o seguinte exemplo de um controle *FormView* :
@@ -1360,17 +1360,17 @@ Os sites a seguir fornecem informações adicionais sobre o ASP.NET 4 e o Visual
 
 <a id="0.2__Toc224729061"></a><a id="0.2__Toc253429298"></a><a id="0.2__Toc243304669"></a>
 
-## <a name="disclaimer"></a>Aviso de isenção de responsabilidade
+## <a name="disclaimer"></a>Isenção de responsabilidade
 
 Este é um documento preliminar e pode ser alterado substancialmente antes da versão comercial final do software descrito aqui.
 
-As informações contidas neste documento representam o ponto de vista atual da Microsoft Corporation em relação aos assuntos abordados na data da publicação. Como a Microsoft deve responder às mudanças das condições de mercado, este material não deve ser interpretado como um compromisso por parte da Microsoft, e a Microsoft não poderá garantir a precisão das informações apresentadas após a data da publicação.
+As informações contidas neste documento representam a visão atual da Microsoft Corporation acerca das questões discutidas até a data da publicação. Como a Microsoft deve reagir às dinâmicas condições do mercado, essas informações não devem ser interpretadas como um compromisso por parte da Microsoft e a Microsoft não garante a precisão de qualquer informação apresentada após a data de publicação.
 
 Este white paper é fornecido apenas para fins informativos. A MICROSOFT NÃO OFERECE NENHUMA GARANTIA EXPRESSA, IMPLÍCITA OU ESTATUTÁRIA EM RELAÇÃO ÀS INFORMAÇÕES CONTIDAS NESTE DOCUMENTO.
 
-O cumprimento de todas as leis de direito autorais aplicáveis é de responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte deste documento pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.
+Obedecer a todas as leis de direitos autorais aplicáveis é responsabilidade do usuário. Sem limitar os direitos autorais, nenhuma parte deste documento pode ser reproduzida, armazenada ou introduzida em um sistema de recuperação, ou transmitida de qualquer forma ou por qualquer meio (seja eletrônico, mecânico, fotocópia, gravação ou outro), ou para qualquer finalidade, sem a permissão expressa e por escrito da Microsoft Corporation.
 
-A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo deste documento. A posse deste documento não lhe confere nenhum direito sobre as citadas patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.
+A Microsoft pode ter patentes ou requisições para obtenção de patente, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual que abrangem o conteúdo deste documento. A posse deste documento não lhe confere nenhum direito sobre patentes, marcas comerciais, direitos autorais ou outros direitos de propriedade intelectual, salvo aqueles expressamente mencionados em um contrato de licença, por escrito, da Microsoft.
 
 Salvo indicação em contrário, os exemplos de empresas, organizações, produtos, nomes de domínio, endereços de email, logotipos, pessoas, lugares e eventos aqui mencionados são fictícios e nenhuma associação com qualquer empresa, organização, produto, nome de domínio, emails reais Endereço, logotipo, pessoa, local ou evento é intencional ou deve ser inferido.
 

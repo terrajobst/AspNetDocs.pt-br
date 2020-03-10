@@ -9,11 +9,11 @@ ms.assetid: 1642132a-1ca5-4872-983f-ab59fc8865d3
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/storing-additional-user-information-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 24b96e86bc93e03d2639b73e35ed1fd1271bac5a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74641007"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78634865"
 ---
 # <a name="storing-additional-user-information-c"></a>Armazenar informações de usuário adicionais (C#)
 
@@ -94,7 +94,7 @@ Agora, precisamos associar três colunas a cada conta de usuário para armazenar
 
 - <strong>Adicione novas colunas às</strong> tabelas<strong>`aspnet_Users`</strong> <strong>ou</strong> <strong>`aspnet_Membership`</strong> <strong>.</strong> Eu não recomendaria essa abordagem porque ela modifica o esquema usado pelo `SqlMembershipProvider`. Essa decisão pode voltar a contra-lo. Por exemplo, e se uma versão futura do ASP.NET usar um esquema de `SqlMembershipProvider` diferente. A Microsoft pode incluir uma ferramenta para migrar os dados de `SqlMembershipProvider` do ASP.NET 2,0 para o novo esquema, mas se você tiver modificado o esquema de `SqlMembershipProvider` do ASP.NET 2,0, essa conversão poderá não ser possível.
 
-- **Use ASP. Estrutura de perfil da rede, definindo uma propriedade de perfil para a cidade natal, Home Page e assinatura.** O ASP.NET inclui uma estrutura de perfil projetada para armazenar dados adicionais específicos do usuário. Como a estrutura de associação, a estrutura de perfil é criada sobre o modelo de provedor. O .NET Framework é fornecido com um `SqlProfileProvider` sthat armazena dados de perfil em um banco de SQL Server. Na verdade, nosso banco de dados já tem a tabela usada pelo `SqlProfileProvider` (`aspnet_Profile`), pois ele foi adicionado quando adicionamos os serviços de aplicativo novamente <a id="_msoanchor_2"> </a>no tutorial [*criando o esquema de associação no SQL Server*](creating-the-membership-schema-in-sql-server-cs.md) .   
+- **Use ASP. Estrutura de perfil da rede, definindo uma propriedade de perfil para a cidade principal, Home Page e assinatura.** O ASP.NET inclui uma estrutura de perfil projetada para armazenar dados adicionais específicos do usuário. Como a estrutura de associação, a estrutura de perfil é criada sobre o modelo de provedor. O .NET Framework é fornecido com um `SqlProfileProvider` sthat armazena dados de perfil em um banco de SQL Server. Na verdade, nosso banco de dados já tem a tabela usada pelo `SqlProfileProvider` (`aspnet_Profile`), pois ele foi adicionado quando adicionamos os serviços de aplicativo novamente <a id="_msoanchor_2"> </a>no tutorial [*criando o esquema de associação no SQL Server*](creating-the-membership-schema-in-sql-server-cs.md) .   
   O principal benefício da estrutura de perfil é que ele permite que os desenvolvedores definam as propriedades de perfil no `Web.config` – nenhum código precisa ser escrito para serializar os dados de perfil de e para o armazenamento de dados subjacente. Em suma, é incrivelmente fácil definir um conjunto de propriedades de perfil e trabalhar com eles no código. No entanto, o sistema de perfis deixa muito a desejar quando se trata do controle de versão, portanto, se você tiver um aplicativo em que você espera que novas propriedades específicas do usuário sejam adicionadas posteriormente, ou que as existentes sejam removidas ou modificadas, a estrutura do perfil poderá não ser a  melhor opção. Além disso, a `SqlProfileProvider` armazena as propriedades de perfil de uma maneira altamente desnormalizada, tornando-a próxima de impossível executar consultas diretamente nos dados de perfil (como quantos usuários têm uma cidade de Nova York).   
   Para obter mais informações sobre a estrutura de perfil, consulte a seção "leituras adicionais" no final deste tutorial.
 
@@ -142,7 +142,7 @@ Infelizmente, não há nenhuma origem de parâmetro interna para retornar o valo
 
 **Figura 10**: adicionar um parâmetro de filtro na coluna `UserId` ([clique para exibir a imagem em tamanho normal](storing-additional-user-information-cs/_static/image30.png))
 
-Depois de clicar em OK, você será retornado para a tela mostrada na Figura 9. Desta vez, no entanto, a consulta SQL na parte inferior da tela deve incluir uma cláusula `WHERE`. Clique em avançar para passar para a tela "consulta de teste". Aqui você pode executar a consulta e ver os resultados. Clique em Concluir para concluir o assistente.
+Depois de clicar em OK, você será retornado para a tela mostrada na Figura 9. Desta vez, no entanto, a consulta SQL na parte inferior da tela deve incluir uma cláusula `WHERE`. Clique em avançar para passar para a tela "consulta de teste". Aqui você pode executar a consulta e ver os resultados. Clique em Concluir para finalizar o assistente.
 
 Após a conclusão do assistente de configuração de fonte de fontes, o Visual Studio cria o controle SqlDataSource com base nas configurações especificadas no assistente. Além disso, ele adiciona manualmente os BoundFields ao DetailsView para cada coluna retornada pelo `SelectCommand`do SqlDataSource. Não é necessário mostrar o campo `UserId` no DetailsView, já que o usuário não precisa saber esse valor. Você pode remover esse campo diretamente da marcação declarativa do controle DetailsView ou clicando no link "editar campos" em sua marca inteligente.
 
@@ -324,7 +324,7 @@ O site do tutorial baixável neste tutorial ilustra as duas técnicas. A proprie
 > [!NOTE]
 > Atualmente, a página `AdditionalUserInfo.aspx` permite que o usuário exiba e edite sua home page, Home Page e configurações de assinatura. Pode ser interessante atualizar `AdditionalUserInfo.aspx` para exibir os comentários do livro de visitas do usuário conectado. Ou seja, além de examinar e modificar suas informações, um usuário pode visitar a página `AdditionalUserInfo.aspx` para ver quais comentários do livro de visitas ela fez no passado. Deixe isso como um exercício para o leitor interessado.
 
-## <a name="step-6-customizing-the-createuserwizard-control-to-include-an-interface-for-the-home-town-homepage-and-signature"></a>Etapa 6: Personalizando o controle CreateUserWizard para incluir uma interface para a cidade natal, Home Page e assinatura
+## <a name="step-6-customizing-the-createuserwizard-control-to-include-an-interface-for-the-home-town-homepage-and-signature"></a>Etapa 6: Personalizando o controle CreateUserWizard para incluir uma interface para a cidade principal, Home Page e assinatura
 
 A consulta `SELECT` usada pela página `Guestbook.aspx` usa uma `INNER JOIN` para combinar os registros relacionados entre as tabelas `GuestbookComments`, `UserProfiles`e `aspnet_Users`. Se um usuário que não tem registro no `UserProfiles` fizer um comentário do livro de visitas, o comentário não será exibido na ListView porque a `INNER JOIN` retorna apenas `GuestbookComments` registros quando há registros correspondentes em `UserProfiles` e `aspnet_Users`. E como vimos na etapa 3, se um usuário não tiver um registro em `UserProfiles` ela não poderá exibir ou editar suas configurações na página `AdditionalUserInfo.aspx`.
 
@@ -392,7 +392,7 @@ A figura 21 mostra o fluxo de trabalho quando o `WizardStep` adicionado precede 
 
 **Figura 21**: o fluxo de trabalho CreateUserWizard quando um `WizardStep` adicional precede a `CreateUserWizardStep` ([clique para exibir a imagem em tamanho normal](storing-additional-user-information-cs/_static/image63.png))
 
-Se o `WizardStep` personalizado for colocado *após* a `CreateUserWizardStep`, no entanto, o processo de criação de conta de usuário ocorrerá antes que o usuário tenha a oportunidade de inserir sua cidade natal, Home Page ou assinatura. Nesse caso, essas informações adicionais precisam ser inseridas no banco de dados depois que a conta de usuário tiver sido criada, como mostra a Figura 22.
+Se o `WizardStep` personalizado for colocado *após* a `CreateUserWizardStep`, no entanto, o processo de criação de conta de usuário ocorrerá antes que o usuário tenha a oportunidade de inserir seu cidade principal, Home Page ou assinatura. Nesse caso, essas informações adicionais precisam ser inseridas no banco de dados depois que a conta de usuário tiver sido criada, como mostra a Figura 22.
 
 [![o fluxo de trabalho CreateUserWizard quando um WizardStep adicional vier após o CreateUserWizardStep](storing-additional-user-information-cs/_static/image65.png)](storing-additional-user-information-cs/_static/image64.png)
 
@@ -421,7 +421,7 @@ Crie uma interface do usuário na etapa "suas configurações" que contém três
 
 [!code-aspx[Main](storing-additional-user-information-cs/samples/sample14.aspx)]
 
-Vá em frente e visite esta página por meio de um navegador e crie uma nova conta de usuário, especificando valores para a cidade natal, Home Page e assinatura. Depois de concluir a `CreateUserWizardStep` a conta de usuário é criada na estrutura de associação e o manipulador de eventos de `CreatedUser` é executado, o que adiciona uma nova linha a `UserProfiles`, mas com um banco de dados `NULL` valor para `HomeTown`, `HomepageUrl`e `Signature`. Os valores inseridos para a cidade natal, Home Page e assinatura nunca são usados. O resultado líquido é uma nova conta de usuário com um registro de `UserProfiles` cujos campos `HomeTown`, `HomepageUrl`e `Signature` ainda devem ser especificados.
+Vá em frente e visite esta página por meio de um navegador e crie uma nova conta de usuário, especificando valores para a cidade principal, Home Page e assinatura. Depois de concluir a `CreateUserWizardStep` a conta de usuário é criada na estrutura de associação e o manipulador de eventos de `CreatedUser` é executado, o que adiciona uma nova linha a `UserProfiles`, mas com um banco de dados `NULL` valor para `HomeTown`, `HomepageUrl`e `Signature`. Os valores inseridos para a cidade principal, Home Page e assinatura nunca são usados. O resultado líquido é uma nova conta de usuário com um registro de `UserProfiles` cujos campos `HomeTown`, `HomepageUrl`e `Signature` ainda devem ser especificados.
 
 Precisamos executar o código após a etapa "Your Settings" (suas configurações) que usa a cidade inicial, honepage e valores de assinatura inseridos pelo usuário e atualiza o registro de `UserProfiles` apropriado. Cada vez que o usuário se move entre as etapas em um controle de assistente, o [evento de`ActiveStepChanged`](https://msdn.microsoft.com/library/system.web.ui.webcontrols.wizard.activestepchanged.aspx) do assistente é acionado. Podemos criar um manipulador de eventos para esse evento e atualizar a tabela `UserProfiles` quando a etapa "suas configurações" for concluída.
 
@@ -433,7 +433,7 @@ O código acima começa determinando se nós acabamos de chegar à etapa "conclu
 
 Nesse caso, precisamos fazer referência programaticamente aos controles TextBox dentro do `UserSettings WizardStep`. Isso é feito primeiro usando o método `FindControl` para referenciar programaticamente o `UserSettings WizardStep`e, em seguida, novamente para fazer referência às caixas de mensagem de dentro do `WizardStep`. Depois que as caixas de entrada tiverem sido referenciadas, estamos prontos para executar a instrução `UPDATE`. A instrução `UPDATE` tem o mesmo número de parâmetros que a instrução `INSERT` no manipulador de eventos `CreatedUser`, mas aqui usamos a cidade inicial, a Home Page e os valores de assinatura fornecidos pelo usuário.
 
-Com esse manipulador de eventos em vigor, visite a página `EnhancedCreateUserWizard.aspx` por meio de um navegador e crie uma nova conta de usuário especificando valores para a cidade natal, Home Page e assinatura. Depois de criar a nova conta, você deve ser redirecionado para a página `AdditionalUserInfo.aspx`, em que as informações da Home, da página inicial, da Home Page e da assinatura são exibidas.
+Com esse manipulador de eventos em vigor, visite a página `EnhancedCreateUserWizard.aspx` por meio de um navegador e crie uma nova conta de usuário especificando valores para a cidade principal, Home Page e assinatura. Depois de criar a nova conta, você deve ser redirecionado para a página `AdditionalUserInfo.aspx`, em que as informações da Home, da página inicial, da Home Page e da assinatura são exibidas.
 
 > [!NOTE]
 > No momento, nosso site tem duas páginas das quais um visitante pode criar uma nova conta: `CreatingUserAccounts.aspx` e `EnhancedCreateUserWizard.aspx`. O mapa do site e a página de logon apontam para a página de `CreatingUserAccounts.aspx`, mas a página de `CreatingUserAccounts.aspx` não solicita ao usuário o seu local principal, a Home Page e as informações de assinatura e não adiciona uma linha correspondente à `UserProfiles`. Portanto, atualize a página `CreatingUserAccounts.aspx` para que ela ofereça essa funcionalidade ou atualize a página sitemap e login para fazer referência a `EnhancedCreateUserWizard.aspx` em vez de `CreatingUserAccounts.aspx`. Se você escolher a última opção, certifique-se de atualizar o arquivo de `Web.config` da pasta `Membership` para permitir que usuários anônimos acessem a página `EnhancedCreateUserWizard.aspx`.

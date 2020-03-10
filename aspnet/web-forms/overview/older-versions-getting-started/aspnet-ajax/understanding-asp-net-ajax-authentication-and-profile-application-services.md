@@ -9,11 +9,11 @@ ms.assetid: 6ab4efb6-aab6-45ac-ad2c-bdec5848ef9e
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/aspnet-ajax/understanding-asp-net-ajax-authentication-and-profile-application-services
 msc.type: authoredcontent
 ms.openlocfilehash: cab9acb1ffd75cca87f6c575a6abdd000235828e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74635687"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640528"
 ---
 # <a name="understanding-aspnet-ajax-authentication-and-profile-application-services"></a>Noções básicas sobre Serviços de Aplicativos de perfil e autenticação do AJAX ASP.NET
 
@@ -57,18 +57,18 @@ Depois que o serviço de autenticação AJAX estiver habilitado e configurado, o
 
 O método login () inicia uma solicitação para autenticar as credenciais do usuário. Esse método é assíncrono e não bloqueia a execução.
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| Usu | Necessária. O nome de usuário a ser autenticado. |
-| senha do | Opcional (o padrão é NULL). A senha do usuário. |
-| IsPersistent | Opcional (o padrão é false). Se o cookie de autenticação do usuário deve persistir entre as sessões. Se for false, o usuário fará logoff quando o navegador for fechado ou a sessão expirar. |
+| userName | Obrigatórios. O nome de usuário a ser autenticado. |
+| password | Opcional (o padrão é NULL). A senha do usuário. |
+| isPersistent | Opcional (o padrão é false). Se o cookie de autenticação do usuário deve persistir entre as sessões. Se for false, o usuário fará logoff quando o navegador for fechado ou a sessão expirar. |
 | redirectUrl | Opcional (o padrão é NULL). A URL para redirecionar o navegador para após a autenticação bem-sucedida. Se esse parâmetro for nulo ou uma cadeia de caracteres vazia, nenhum redirecionamento ocorrerá. |
 | customInfo | Opcional (o padrão é NULL). Este parâmetro não é usado no momento e está reservado para uso futuro. |
 | loginCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logon for concluído com êxito. Se especificado, esse parâmetro substitui a propriedade defaultLoginCompleted. |
 | failedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logon tiver falhado. Se especificado, esse parâmetro substitui a propriedade defaultFailedCallback. |
-| Context | Opcional (o padrão é NULL). Dados de contexto de usuário personalizados que devem ser passados para as funções de retorno de chamada. |
+| userContext | Opcional (o padrão é NULL). Dados de contexto de usuário personalizados que devem ser passados para as funções de retorno de chamada. |
 
 *Valor de retorno:*
 
@@ -82,14 +82,14 @@ Essa função não inclui um valor de retorno. No entanto, vários comportamento
 
 O método logout () remove o cookie de credenciais e faz logoff do usuário atual do aplicativo Web.
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
 | redirectUrl | Opcional (o padrão é NULL). A URL para redirecionar o navegador para após a autenticação bem-sucedida. Se esse parâmetro for nulo ou uma cadeia de caracteres vazia, nenhum redirecionamento ocorrerá. |
 | logoutCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logout for concluído com êxito. Se especificado, esse parâmetro substitui a propriedade defaultLogoutCompleted. |
 | failedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o logon tiver falhado. Se especificado, esse parâmetro substitui a propriedade defaultFailedCallback. |
-| Context | Opcional (o padrão é NULL). Dados de contexto de usuário personalizados que devem ser passados para as funções de retorno de chamada. |
+| userContext | Opcional (o padrão é NULL). Dados de contexto de usuário personalizados que devem ser passados para as funções de retorno de chamada. |
 
 *Valor de retorno:*
 
@@ -107,13 +107,13 @@ A referência de função especificada por essa propriedade deve ter a seguinte 
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample2.js)]
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
 | erro | Especifica as informações de erro. |
-| Context | Especifica as informações de contexto de usuário fornecidas quando a função de logon ou logout foi chamada. |
-| MethodName | O nome do método de chamada. |
+| userContext | Especifica as informações de contexto de usuário fornecidas quando a função de logon ou logout foi chamada. |
+| methodName | O nome do método de chamada. |
 
 *Propriedade defaultLoginCompletedCallback (Get, Set):*
 
@@ -123,13 +123,13 @@ A referência de função especificada por essa propriedade deve ter a seguinte 
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample3.js)]
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
 | validCredentials | Especifica se o usuário forneceu credenciais válidas. `true` se o usuário fez logon com êxito; caso contrário `false`. |
-| Context | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
-| MethodName | O nome do método de chamada. |
+| userContext | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
+| methodName | O nome do método de chamada. |
 
 *Propriedade defaultLogoutCompletedCallback (Get, Set):*
 
@@ -139,13 +139,13 @@ A referência de função especificada por essa propriedade deve ter a seguinte 
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample4.js)]
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| disso | Esse parâmetro sempre será `null`; Ele é reservado para uso futuro. |
-| Context | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
-| MethodName | O nome do método de chamada. |
+| result | Esse parâmetro sempre será `null`; Ele é reservado para uso futuro. |
+| userContext | Especifica as informações de contexto de usuário fornecidas quando a função de logon foi chamada. |
+| methodName | O nome do método de chamada. |
 
 *Propriedade islogind (Get):*
 
@@ -203,14 +203,14 @@ O campo Propriedades expõe todos os dados de perfil configurados como proprieda
 
 Carrega uma lista selecionada ou todas as propriedades do servidor.
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| propriedadenames | Opcional (o padrão é NULL). As propriedades a serem carregadas do servidor. |
+| propertyNames | Opcional (o padrão é NULL). As propriedades a serem carregadas do servidor. |
 | loadCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o carregamento for concluído. |
 | failedCallback | Opcional (o padrão é NULL). A função a ser chamada se ocorrer um erro. |
-| Context | Opcional (o padrão é NULL). Informações de contexto a serem passadas para a função de retorno de chamada. |
+| userContext | Opcional (o padrão é NULL). Informações de contexto a serem passadas para a função de retorno de chamada. |
 
 A função load não tem um valor de retorno. Se a chamada for concluída com êxito, ela chamará o parâmetro `loadCompletedCallback` ou a propriedade `defaultLoadCompletedCallback`. Se a chamada tiver falhado ou o tempo limite expirar, o parâmetro `failedCallback` ou a propriedade `defaultFailedCallback` será chamada.
 
@@ -220,14 +220,14 @@ Se o parâmetro `propertyNames` não for fornecido, todas as propriedades de lei
 
 O método Save () salva a lista de propriedades especificada (ou todas as propriedades) no perfil ASP.NET do usuário.
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| propriedadenames | Opcional (o padrão é NULL). As propriedades a serem salvas no servidor. |
+| propertyNames | Opcional (o padrão é NULL). As propriedades a serem salvas no servidor. |
 | saveCompletedCallback | Opcional (o padrão é NULL). A função a ser chamada quando o salvamento for concluído. |
 | failedCallback | Opcional (o padrão é NULL). A função a ser chamada se ocorrer um erro. |
-| Context | Opcional (o padrão é NULL). Informações de contexto a serem passadas para a função de retorno de chamada. |
+| userContext | Opcional (o padrão é NULL). Informações de contexto a serem passadas para a função de retorno de chamada. |
 
 A função Save não tem um valor de retorno. Se a chamada for concluída com êxito, ela chamará o parâmetro `saveCompletedCallback` ou a propriedade `defaultSaveCompletedCallback`. Se a chamada tiver falhado ou o tempo limite expirar, a propriedade `failedCallback` ou `defaultFailedCallback` será chamada.
 
@@ -241,13 +241,13 @@ A referência de função especificada por essa propriedade deve ter a seguinte 
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample9.js)]
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
-| Erro do | Especifica as informações de erro. |
-| Context | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
-| MethodName | O nome do método de chamada. |
+| Erro | Especifica as informações de erro. |
+| userContext | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
+| methodName | O nome do método de chamada. |
 
 *Propriedade defaultSaveCompleted (Get, Set):*
 
@@ -257,13 +257,13 @@ A referência de função especificada por essa propriedade deve ter a seguinte 
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample10.js)]
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
 | numPropsSaved | Especifica o número de propriedades que foram salvas. |
-| Context | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
-| MethodName | O nome do método de chamada. |
+| userContext | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
+| methodName | O nome do método de chamada. |
 
 *Propriedade defaultLoadCompleted (Get, Set):*
 
@@ -273,13 +273,13 @@ A referência de função especificada por essa propriedade deve ter a seguinte 
 
 [!code-javascript[Main](understanding-asp-net-ajax-authentication-and-profile-application-services/samples/sample11.js)]
 
-*Parâmetro*
+*Parâmetros:*
 
 | **Nome do parâmetro** | **Significado** |
 | --- | --- |
 | numPropsLoaded | Especifica o número de propriedades carregadas. |
-| Context | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
-| MethodName | O nome do método de chamada. |
+| userContext | Especifica as informações de contexto de usuário fornecidas quando a função carregar ou salvar foi chamada. |
+| methodName | O nome do método de chamada. |
 
 *Propriedade Path (Get, Set):*
 

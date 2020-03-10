@@ -9,11 +9,11 @@ ms.assetid: 24ad086d-865e-433c-9ac9-05f1a553da16
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/introduction
 msc.type: authoredcontent
 ms.openlocfilehash: 96dd31d949633e001fc595621bedbf74e98000fc
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640230"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642215"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-introduction"></a>Implantação da Web do ASP.NET usando o Visual Studio: introdução
 
@@ -31,7 +31,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 > 
 > Esse conteúdo também está disponível como um livro eletrônico gratuito na [Galeria de livros eletrônicos do TechNet](https://social.technet.microsoft.com/wiki/contents/articles/11608.e-book-gallery-for-microsoft-technologies.aspx#ASPNETWebDeploymentusingVisualStudio).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Esses tutoriais orientam você pela implantação de um aplicativo Web ASP.NET que inclui bancos de dados SQL Server. Você implantará primeiro no IIS em seu computador de desenvolvimento local para teste e, em seguida, em aplicativos Web no serviço de Azure App e no banco de dados SQL do Azure para preparo e produção. Você verá como implantar usando a publicação de um clique do Visual Studio e verá como implantar usando a linha de comando.
 
@@ -49,7 +49,7 @@ Os tutoriais se destinam a desenvolvedores de ASP.NET que trabalham em ambientes
 A implantação do [controle do código-fonte](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/source-control.md) usando um processo de [entrega contínua](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md) não é abordada nesses tutoriais, exceto por um tutorial que mostra como implantar a partir da linha de comando. Para obter informações sobre a entrega contínua, consulte os seguintes recursos:
 
 - [Integração contínua e entrega contínua (criando aplicativos de nuvem do mundo real com o Windows Azure)](../../../../aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/continuous-integration-and-continuous-delivery.md)
-- [Implantar um aplicativo Web no serviço Azure App](https://azure.microsoft.com/documentation/articles/web-sites-deploy/)
+- [Implantar um aplicativo Web no Serviço de Aplicativo do Azure](https://azure.microsoft.com/documentation/articles/web-sites-deploy/)
 - [Implantação de aplicativos Web em cenários empresariais](../deploying-web-applications-in-enterprise-scenarios/deploying-web-applications-in-enterprise-scenarios.md) (um conjunto mais antigo de tutoriais escritos para o Visual Studio 2010, que ainda tem informações úteis para ambientes empresariais.)
 
 ## <a name="using-a-third-party-hosting-provider"></a>Usando um provedor de Hospedagem de terceiros
@@ -110,13 +110,13 @@ Os comentários sobre os tutoriais são bem-vindos e, quando o tutorial for atua
 
 <a id="prerequisites"></a>
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
 Este tutorial foi escrito para os seguintes produtos:
 
 - Windows 8 ou Windows 7.
 - Visual Studio 2012 ou Visual Studio 2012 Express para Web com [a atualização mais recente](https://go.microsoft.com/fwlink/?LinkId=272486).
-- [SDK do Azure para Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkId=254364)
+- [SDK do Azure para o Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkId=254364)
 
 Você pode seguir o tutorial usando o Visual Studio 2010 SP1 ou Visual Studio 2013, mas algumas capturas de tela serão diferentes e alguns recursos serão diferentes.
 
@@ -154,12 +154,12 @@ Para preparar o projeto para trabalhar nas etapas do tutorial, execute as seguin
     (Para as capturas de tela deste tutorial, a pasta do projeto está localizada no diretório raiz na unidade `C`:.)
 2. Inicie o Visual Studio e abra o projeto.
 3. Em **Gerenciador de soluções**, clique com o botão direito do mouse na solução e clique em **EnableNuGet pacote de restauração**.
-4. {1&gt;Compile a solução.&lt;1}
+4. Compile a solução.
 5. Se você receber erros de compilação, restaure manualmente os pacotes NuGet:
 
     1. No **Gerenciador de soluções**, clique com o botão direito do mouse na solução e clique em **gerenciar pacotes NuGet para solução**.
     2. Na parte superior da caixa de diálogo **gerenciar pacotes NuGet** , você verá que **alguns pacotes NuGet estão ausentes dessa solução. Clique para restaurar.** Clique no botão **restaurar** .
-    3. Recompile a solução.
+    3. Recriar a solução.
 6. Pressione CTRL-F5 para executar o aplicativo.
 
     O aplicativo é aberto para a Contoso University home page.
@@ -198,4 +198,4 @@ Os seguintes recursos do aplicativo afetam a maneira como você o implanta ou o 
 Neste primeiro tutorial da série, você baixou o projeto de exemplo do Visual Studio e revisou os recursos do site que afetam a forma como você implanta o aplicativo. Nos tutoriais a seguir, você se prepara para a implantação Configurando algumas dessas coisas para serem tratadas automaticamente. Outros que você cuida manualmente.
 
 > [!div class="step-by-step"]
-> [Avançar](preparing-databases.md)
+> [Próximo](preparing-databases.md)

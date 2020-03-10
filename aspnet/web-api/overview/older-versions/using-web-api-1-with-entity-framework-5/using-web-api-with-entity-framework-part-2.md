@@ -9,11 +9,11 @@ ms.assetid: fe3ef85f-bdc6-4e10-9768-25aa565c01d0
 msc.legacyurl: /web-api/overview/older-versions/using-web-api-1-with-entity-framework-5/using-web-api-with-entity-framework-part-2
 msc.type: authoredcontent
 ms.openlocfilehash: 7c5ed1bdb4b390c94907b14e208231f16ad42d96
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600368"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621817"
 ---
 # <a name="part-2-creating-the-domain-models"></a>Parte 2: criando os modelos de domínio
 
@@ -36,7 +36,7 @@ Como POCOs não carregam nenhuma propriedade extra que descreva o [estado do ban
 Criaremos o seguinte POCOs:
 
 - Produto
-- Ordem
+- Order
 - OrderDetail
 
 Para criar cada classe, clique com o botão direito do mouse na pasta modelos em Gerenciador de Soluções. No menu de contexto, selecione **Adicionar** e, em seguida, selecione **classe.**
@@ -75,7 +75,7 @@ Um [formatador de tipo de mídia](../../formats-and-model-binding/media-formatte
 
 A serialização por valor criará um problema se um gráfico de objetos contiver referências circulares. Isso é exatamente o caso com as classes `Order` e `OrderDetail`, porque cada uma tem uma referência para a outra. O formatador seguirá as referências, gravando cada objeto por valor e acessará os círculos. Portanto, precisamos alterar o comportamento padrão.
 
-Em Gerenciador de Soluções, expanda a pasta\_iniciar o aplicativo e abra o arquivo chamado WebApiConfig.cs. Adicione o seguinte código à classe `WebApiConfig`:
+Em Gerenciador de Soluções, expanda a pasta\_iniciar o aplicativo e abra o arquivo chamado WebApiConfig.cs. Adicione o código a seguir à classe `WebApiConfig`:
 
 [!code-csharp[Main](using-web-api-with-entity-framework-part-2/samples/sample4.cs?highlight=11)]
 

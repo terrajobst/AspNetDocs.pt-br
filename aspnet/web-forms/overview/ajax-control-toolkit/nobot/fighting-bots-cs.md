@@ -9,11 +9,11 @@ ms.assetid: 0a1917e0-884a-4576-8e93-9ed660faae51
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/nobot/fighting-bots-cs
 msc.type: authoredcontent
 ms.openlocfilehash: fef55edf12a024e4dd66e2a18ea371ab4dac861f
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606442"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78627410"
 ---
 # <a name="fighting-bots-c"></a>Bots de combate (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > Weblogs automáticos de bots Plaster e outros sites com spam, enviando formulários de comentários sem nenhuma interação do usuário. O controle NoBot no ASP.NET AJAX Control Toolkit pode ajudar a combater esses bots.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Weblogs automáticos de bots Plaster e outros sites com spam, enviando formulários de comentários sem nenhuma interação do usuário. O controle NoBot no ASP.NET AJAX Control Toolkit pode ajudar a combater esses bots.
 
@@ -68,4 +68,4 @@ Quando você executar esse script e desativar o JavaScript ou enviar o formulár
 Essa mensagem de erro pode ter sido causada por um bot ([clique para exibir a imagem em tamanho normal](fighting-bots-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](fighting-bots-vb.md)
+> [Próximo](fighting-bots-vb.md)

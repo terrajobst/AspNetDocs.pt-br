@@ -9,11 +9,11 @@ ms.assetid: 6227233a-6254-4b6b-9a89-947efef22330
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 51c9255f80f83a68cf26decf318347752498491a
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74634725"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78604555"
 ---
 # <a name="creating-a-data-access-layer-vb"></a>Criação de uma Camada de Acesso a Dados (VB)
 
@@ -168,11 +168,11 @@ Esse código não exigia a gravação de um pouco de código específico de aces
 
 Cada objeto usado neste exemplo também é fortemente tipado, permitindo que o Visual Studio forneça verificação de tipo IntelliSense e de tempo de compilação. E o melhor de todas as tabelas de dados retornadas pelo TableAdapter pode ser associado aos controles da Web ASP.NET Data, como GridView, DetailsView, DropDownList, CheckBoxList e vários outros. O exemplo a seguir ilustra a associação da DataTable retornada pelo método `GetProducts()` a um GridView em apenas uma escassa três linhas de código dentro do manipulador de eventos `Page_Load`.
 
-Todos os Products. aspx
+AllProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-vb/samples/sample2.aspx)]
 
-MyProducts. aspx. vb
+AllProducts.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample3.vb)]
 
@@ -230,7 +230,7 @@ Bebidas. aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-vb/samples/sample4.aspx)]
 
-Bebidas. aspx. vb
+Beverages.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample5.vb)]
 
@@ -422,11 +422,11 @@ Esses dados também podem ser exibidos em qualquer ASP. Controles da Web de dado
 
 Vamos examinar como exibir esses relatórios de detalhes mestres em Tutoriais futuros. Por enquanto, este exemplo foi projetado para ilustrar o uso do método personalizado adicionado à classe `Northwind.SuppliersRow`.
 
-SuppliersAndProducts. aspx
+SuppliersAndProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-vb/samples/sample24.aspx)]
 
-SuppliersAndProducts. aspx. vb
+SuppliersAndProducts.aspx.vb
 
 [!code-vb[Main](creating-a-data-access-layer-vb/samples/sample25.vb)]
 

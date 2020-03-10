@@ -1,33 +1,33 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1
-title: 'Parte 1: Arquivo -> Novo projeto | Microsoft Docs'
+title: 'Parte 1: arquivo-> novo projeto | Microsoft Docs'
 author: JoeStagner
-description: Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo Tailspin Spyworks. Parte 1 aborda a visão geral e o arquivo/novo projeto.
+description: Esta série de tutoriais detalha todas as etapas usadas para criar o aplicativo de exemplo Tailspin Spyworks. A parte 1 abrange visão geral e arquivo/novo projeto.
 ms.author: riande
 ms.date: 07/21/2010
 ms.assetid: 15d4652b-d5aa-4172-b186-2c7f96ba316d
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-1
 msc.type: authoredcontent
 ms.openlocfilehash: 05a3ace3d8fef9c1f3593f7948e42b4725d70134
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130576"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78636125"
 ---
-# <a name="part-1-file--new-project"></a>Parte 1: Arquivo -> Novo Projeto
+# <a name="part-1-file--new-project"></a>Parte 1: arquivo-> novo projeto
 
 por [Joe Stagner](https://github.com/JoeStagner)
 
-> Tailspin Spyworks demonstra como incrivelmente simples é criar aplicativos avançados e escalonáveis para a plataforma .NET. Ele mostra como usar os novos recursos no ASP.NET 4 para criar uma loja online, incluindo as compras, check-out e administração.
+> A Tailspin Spyworks demonstra como é extremamente simples criar aplicativos poderosos e escalonáveis para a plataforma .NET. Ele mostra como usar os ótimos novos recursos do ASP.NET 4 para criar uma loja online, incluindo compras, check-out e administração.
 > 
-> Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo Tailspin Spyworks. Parte 1 aborda a visão geral e o arquivo/novo projeto.
+> Esta série de tutoriais detalha todas as etapas usadas para criar o aplicativo de exemplo Tailspin Spyworks. A parte 1 abrange visão geral e arquivo/novo projeto.
 
-## <a id="_Toc260221666"></a>  Visão geral
+## <a id="_Toc260221666"></a>Sobre
 
-Este tutorial é uma introdução ao ASP.NET WebForms. Podemos vai iniciar lentamente, portanto, a experiência de desenvolvimento para a web de nível iniciante é okey.
+Este tutorial é uma introdução aos WebForms do ASP.NET. Começaremos lentamente, então a experiência de desenvolvimento para a Web de nível principiante está ok.
 
-O aplicativo, vou desenvolver é um repositório online simples.
+O aplicativo que iremos criar é um armazenamento online simples.
 
 ![](tailspin-spyworks-part-1/_static/image1.jpg)
 
@@ -39,11 +39,11 @@ Eles podem exibir um único produto e adicioná-lo ao seu carrinho:
 
 ![](tailspin-spyworks-part-1/_static/image3.jpg)
 
-Eles podem revisar seu carrinho, removendo todos os itens que não deseja mais querem:
+Eles podem revisar seus carrinhos, removendo os itens que não desejam mais:
 
 ![](tailspin-spyworks-part-1/_static/image4.jpg)
 
-Continuar a fazer check-out pedirá para
+Prosseguir para o check-out solicitará a eles
 
 ![](tailspin-spyworks-part-1/_static/image5.jpg)
 
@@ -53,51 +53,51 @@ Após a ordenação, eles veem uma tela de confirmação simples:
 
 ![](tailspin-spyworks-part-1/_static/image7.jpg)
 
-Vamos começar criando um novo projeto de formulários da Web do ASP.NET no Visual Studio 2010, e vamos incrementalmente adicionar recursos para criar um aplicativo funcional completo. Ao longo do caminho, vamos abordar o acesso de banco de dados, modos de exibição de lista e grade, páginas de atualização de dados, validação de dados, usando as páginas mestras para layout de página consistente, AJAX, validação, associação de usuário e muito mais.
+Vamos começar criando um novo projeto WebForms do ASP.NET no Visual Studio 2010 e, incrementalmente, adicionaremos recursos para criar um aplicativo funcional completo. Ao longo do caminho, abordaremos o acesso ao banco de dados, exibições de lista e de grade, páginas de atualização, validação de dados, uso de páginas mestras para layout de página consistente, AJAX, validação, associação de usuário e muito mais.
 
-Você pode acompanhá-lo passo a passo, ou você pode baixar o aplicativo concluído no [http://tailspinspyworks.codeplex.com/](http://tailspinspyworks.codeplex.com/)
+Você pode acompanhar o passo a passo ou pode baixar o aplicativo concluído de [http://tailspinspyworks.codeplex.com/](http://tailspinspyworks.codeplex.com/)
 
-Você pode usar o Visual Studio 2010 ou o gratuito Visual Web Developer 2010 da [ https://www.microsoft.com/express/Web/ ](https://www.microsoft.com/express/Web/). Para compilar o aplicativo, você pode usar o SQL Server ou o SQL Server Express gratuito para hospedar o banco de dados.
+Você pode usar o Visual Studio 2010 ou a versão gratuita do Visual Web Developer 2010 do [https://www.microsoft.com/express/Web/](https://www.microsoft.com/express/Web/). Para compilar o aplicativo, você pode usar SQL Server ou o SQL Server Express gratuito para hospedar o banco de dados.
 
-## <a id="_Toc260221667"></a>  Arquivo / novo projeto
+## <a id="_Toc260221667"></a>Arquivo/novo projeto
 
-Vamos começar selecionando o novo projeto no menu arquivo no Visual Studio. Isso abre a caixa de diálogo Novo projeto.
+Vamos começar selecionando o novo projeto no menu arquivo no Visual Studio. Isso abre a caixa de diálogo novo projeto.
 
 ![](tailspin-spyworks-part-1/_static/image8.jpg)
 
-Vamos selecionar Visual C# / modelos da Web de grupo à esquerda e, em seguida, escolha o modelo de "Aplicativo Web do ASP.NET" na coluna central. Nomeie o projeto TailspinSpyworks e pressione o botão Okey.
+Selecionaremos o grupo de C# modelos visuais/Web à esquerda e, em seguida, escolheremos o modelo "aplicativo Web ASP.net" na coluna central. Nomeie o projeto TailspinSpyworks e pressione o botão OK.
 
 ![](tailspin-spyworks-part-1/_static/image9.jpg)
 
-Isso criará o nosso projeto. Vamos dar uma olhada nas pastas que estão incluídos em nosso aplicativo no Gerenciador de soluções, no lado direito.
+Isso criará nosso projeto. Vamos dar uma olhada nas pastas que estão incluídas em nosso aplicativo na Gerenciador de Soluções no lado direito.
 
 ![](tailspin-spyworks-part-1/_static/image10.jpg)
 
-Esvaziar a solução não está completamente vazia – ele adiciona uma estrutura de pasta básica:
+A solução vazia não está completamente vazia – ela adiciona uma estrutura de pastas básica:
 
 ![](tailspin-spyworks-part-1/_static/image1.png)
 
 Observe as convenções implementadas pelo modelo de projeto padrão ASP.NET 4.
 
-- A pasta "Account" implementa uma interface do usuário básica para ASP. Subsistema de associação da rede.
-- A pasta "Scripts" serve como repositório para arquivos de JavaScript do lado do cliente e os arquivos. js do jQuery core estão disponíveis por padrão.
-- A pasta "Estilos" é usada para organizar a nossos visuais do site da web (folhas de estilo CSS)
+- A pasta "Account" implementa uma interface de usuário básica para ASP. Subsistema de associação da rede.
+- A pasta "scripts" serve como o repositório para arquivos JavaScript do lado do cliente e os arquivos principais do jQuery. js são disponibilizados por padrão.
+- A pasta "estilos" é usada para organizar nossos elementos visuais de site (folhas de estilo CSS)
 
-Quando clicamos em F5 para executar nosso aplicativo e renderizar a página Default. aspx, podemos ver o seguinte.
+Quando pressionamos F5 para executar nosso aplicativo e renderizamos a página default. aspx, vemos o seguinte.
 
 ![](tailspin-spyworks-part-1/_static/image11.jpg)
 
-Nossa primeira aprimoramento do aplicativo será substituir o arquivo Style CSS do modelo de formulários da Web padrão com classes CSS e arquivos de imagem associado que processarão o asthetics visual que queremos que nosso aplicativo Tailspin Spyworks.
+Nosso primeiro aprimoramento de aplicativo será substituir o arquivo Style. CSS do modelo WebForms padrão pelas classes CSS e arquivos de imagem associados que processarão o Visual Asthetics que desejamos para nosso aplicativo Tailspin Spyworks.
 
-Depois de fazer isso nossa página Default. aspx renderiza como este.
+Depois de fazer isso, nossa página default. aspx é renderizada dessa forma.
 
 ![](tailspin-spyworks-part-1/_static/image12.jpg)
 
-Observe os links de imagem na parte superior direita da página e os itens de menu que foram adicionados à página mestra. Apenas os links "Entrar" e "Conta" apontam para páginas que existem (geradas pelo modelo padrão) e o restante das páginas que vamos implementar durante a compilação de nosso aplicativo.
+Observe os links de imagem na parte superior direita da página e os itens de menu que foram adicionados à página mestra. Somente os links "entrar" e "conta" apontam para páginas que existem (geradas pelo modelo padrão) e o restante das páginas que iremos implementar à medida que criamos nosso aplicativo.
 
-Também vamos realocar a página mestra para o diretório de estilos. Embora isso seja apenas uma preferência pode fazer as coisas um pouco mais fácil se podemos decidir fazer nosso aplicativo "skinable" no futuro.
+Também vamos realocar a página mestra para o diretório de estilos. Embora essa seja apenas uma preferência, isso pode tornar as coisas um pouco mais fáceis se decidirmos tornar nosso aplicativo "em pele" no futuro.
 
-Depois de fazer isso, precisamos alterar a página mestra referências em todos os arquivos. aspx gerada pelo padrão páginas ASP.NET WebForms.
+Depois de fazer isso, precisaremos alterar as referências da página mestra em todos os arquivos. aspx gerados pelas páginas WebForms padrão do ASP.NET.
 
 > [!div class="step-by-step"]
-> [Avançar](tailspin-spyworks-part-2.md)
+> [Próximo](tailspin-spyworks-part-2.md)

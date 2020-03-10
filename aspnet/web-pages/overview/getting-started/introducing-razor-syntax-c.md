@@ -9,11 +9,11 @@ ms.assetid: aa67d304-583b-4bf8-a231-195656cfb587
 msc.legacyurl: /web-pages/overview/getting-started/introducing-razor-syntax-c
 msc.type: authoredcontent
 ms.openlocfilehash: c2f420bb7c2f7d2e31654c20fb9ec7497a30a9f7
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564881"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641571"
 ---
 # <a name="introduction-to-aspnet-web-programming-using-the-razor-syntax-c"></a>Introdução à programação da Web do ASP.NET usando a sintaxeC#do Razor ()
 
@@ -241,7 +241,7 @@ Em blocos de código de servidor, muitas vezes você deseja produzir texto ou ma
     > [!NOTE]
     > Quando você faz a saída de texto conforme mostrado &#8212; nesta seção usando um elemento HTML, o operador `@:` ou o elemento &#8212; `<text>` ASP.net não codifica a saída em HTML. (Como observado anteriormente, o ASP.NET codifica a saída de expressões de código do servidor e os blocos de código do servidor que são precedidos por `@`, exceto nos casos especiais indicados nesta seção.)
 
-### <a name="whitespace"></a>Whitespace
+### <a name="whitespace"></a>Espaço em branco
 
 Espaços extras em uma instrução (e fora de um literal de cadeia de caracteres) não afetam a instrução:
 
@@ -295,7 +295,7 @@ Ao contrário dos comentários do Razor, os comentários HTML *são* renderizado
 
 O Razor tem limitações em blocos aninhados do C#. Para obter mais informações [, C# consulte variáveis nomeadas e blocos aninhados geram código quebrado](http://aspnetwebstack.codeplex.com/workitem/1914)
 
-## <a name="variables"></a>Variáveis
+## <a name="variables"></a>variáveis
 
 Uma variável é um objeto nomeado que você usa para armazenar dados. Você pode nomear variáveis como qualquer coisa, mas o nome deve começar com um caractere alfabético e não pode conter espaços em branco ou caracteres reservados.
 
@@ -655,7 +655,7 @@ Em um arquivo *. cshtml* ou *. vbhtml* , você pode fazer referência ao caminho
 Se o site for `http://myserver/myapp`, aqui está como o ASP.NET tratará esses caminhos quando a página for executada:
 
 - `myImagesFolder`: `http://myserver/myapp/images`
-- `myStyleSheet`: `http://myserver/myapp/styles/Stylesheet.css`
+- `myStyleSheet` : `http://myserver/myapp/styles/Stylesheet.css`
 
 (Você realmente não verá esses caminhos como os valores da variável, mas ASP.NET tratará os caminhos como se fosse isso.)
 
@@ -836,7 +836,7 @@ Se o código não tratar a exceção, você verá uma página de erro como a cap
 
 [Apêndice: linguagem e sintaxe de Visual Basic](https://go.microsoft.com/fwlink/?LinkId=202908)
 
-**Documentação de referência**
+**Documentação de Referência**
 
 [ASP.NET](https://msdn.microsoft.com/library/ee532866.aspx)
 

@@ -9,15 +9,15 @@ ms.assetid: f44c166e-7e91-48a0-a6f8-d9285f3594e5
 msc.legacyurl: /whitepapers/mvc3-release-notes
 msc.type: content
 ms.openlocfilehash: 504202068f5db4f8614bba02e8066ffecfd15b48
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74619233"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78618044"
 ---
 # <a name="aspnet-mvc-3"></a>ASP.NET MVC 3
 
-- [Visão Geral](#overview)
+- [Visão geral](#overview)
 - [Notas de instalação](#installation-notes)
 - [Requisitos de software](#software-requirements)
 - [Documentação](#documentation)
@@ -31,14 +31,14 @@ ms.locfileid: "74619233"
     - [Os modelos de projeto incluem versões atualizadas do jQuery, da interface do usuário do jQuery e da validação do jQuery](#tu-UpdatedJQuery)
     - [Os modelos de projeto agora incluem ADO.NET Entity Framework 4,1 como um pacote NuGet pré-instalado](#tu-EF)
     - [Os modelos de projeto incluem bibliotecas JavaScript como pacotes NuGet pré-instalados](#tu-JavaScriptLibsNuget)
-    - [Problemas conhecidos](#tu-KI)
+    - [Problemas Conhecidos](#tu-KI)
 - [ASP.NET MVC 3 RTM (13 de janeiro de 2011)](#MVC3RTM)
 
     - [Alteração: atualização da versão da interface do usuário do jQuery para 1.8.7](#RTM-1)
     - [Alterar: o ModelMetadataProvider padrão foi alterado de volta para DataAnnotationsModelMetadataProvider](#RTM-2)
     - [Corrigido: a colagem de parte de uma expressão Razor que contém os resultados de espaço em branco são revertidas](#RTM-3)
     - [Corrigido: a renomeação de um arquivo Razor aberto no editor desabilita a colorização de sintaxe e o IntelliSense](#RTM-4)
-    - [Problemas conhecidos](#RTM-KI)
+    - [Problemas Conhecidos](#RTM-KI)
     - [Alterações recentes](#RTM-BC)
 - [ASP.NET MVC 3 versão Release Candidate 2 (10 de dezembro de 2010)](#_Toc2)
 
@@ -56,11 +56,11 @@ ms.locfileid: "74619233"
     - [Correção do auxiliar "LabelFor" para emitir o valor correto para o atributo "for"](#_Toc2_11)
     - [Corrigido o método "Renderingaction" para dar precedência de valores explícitos durante a associação de modelo](#_Toc2_12)
     - [Alterações recentes](#_Toc2_BC)
-    - [Problemas conhecidos](#_Toc2_KI)
+    - [Problemas Conhecidos](#_Toc2_KI)
 - [ASP.NET MVC 3 Release Candidate (9 de novembro de 2010)](#TOC_ASP_NET_3_RC)
 
     - [Novos recursos no ASP.NET MVC 3 RC](#_Toc276711785)
-    - [Gerenciador de pacotes NuGet](#_Toc276711786)
+    - [Gerenciador de Pacotes do NuGet](#_Toc276711786)
     - [Caixa de diálogo "novo projeto" aprimorada](#_Toc276711787)
     - [Controladores de sessão](#_Toc276711788)
     - [Novos atributos de validação](#_Toc276711789)
@@ -69,7 +69,7 @@ ms.locfileid: "74619233"
     - [Aprimoramentos da caixa de diálogo "Adicionar exibição"](#_Toc276711792)
     - [Validação de solicitação granular](#_Toc276711793)
     - [Alterações recentes](#_Toc276711794)
-    - [Problemas conhecidos](#_Toc276711795)
+    - [Problemas Conhecidos](#_Toc276711795)
 - [ASP. Notas beta do MVC 3 (6 de outubro de 2010)](#TOC_ASP_NET_3_Beta)
 
     - [Novos recursos no ASP.NET MVC 3 beta](#0.1__Toc274034215)
@@ -85,13 +85,13 @@ ms.locfileid: "74619233"
     - [Novo suporte para a sintaxe VBHTML Razor](#0.1__Toc274034225)
     - [Controle mais granular sobre ValidateInputAttribute](#0.1__Toc274034226)
     - [Os auxiliares convertem sublinhados em hifens para nomes de atributo HTML especificados usando objetos anônimos](#0.1__Toc274034227)
-    - [Correções de bugs](#0.1__Toc274034228)
+    - [Correções de bug](#0.1__Toc274034228)
     - [Alterações recentes](#0.1__Toc274034229)
-    - [Problemas conhecidos](#0.1__Toc274034230)
+    - [Problemas Conhecidos](#0.1__Toc274034230)
 - [Enção](#0.1__Toc274034231)
 
 <a id="overview"></a>
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este documento descreve o lançamento do ASP.NET MVC 3 RTM para Visual Studio 2010. O ASP.NET MVC é uma estrutura para o desenvolvimento de aplicativos Web que usa o padrão MVC (Model-View-Controller). O instalador do ASP.NET MVC 3 inclui os seguintes componentes:
 
@@ -120,7 +120,7 @@ https://go.microsoft.com/fwlink/?LinkID=208140
 O ASP.NET MVC 3 pode ser instalado e pode ser executado lado a lado com o ASP.NET MVC 2.
 
 <a id="software-requirements"></a>
-## <a name="software-requirements"></a>Requisitos de software do
+## <a name="software-requirements"></a>Requisitos de software
 
 Os componentes de tempo de execução do ASP.NET MVC 3 exigem o seguinte software:
 
@@ -141,7 +141,7 @@ Os tutoriais e outras informações sobre o ASP.NET MVC estão disponíveis na p
 [https://www.asp.net/mvc/](../mvc/index.md)
 
 <a id="support"></a>
-## <a name="support"></a>Suporte do
+## <a name="support"></a>Suporte
 
 Esta é uma versão totalmente suportada. Informações sobre como obter suporte técnico podem ser encontradas no [site suporte da Microsoft](https://support.microsoft.com/).
 
@@ -293,7 +293,7 @@ Por exemplo, considerando a frequência de novas versões do jQuery, a versão d
 Como o jQuery inclui o número de versão no nome do arquivo, atualizar o jQuery para a versão mais recente também requer a atualização da marca de `<script>` que faz referência ao arquivo jQuery para usar o novo nome de arquivo. Outras bibliotecas de scripts incluídas não incluem o número de versão no nome do script, para que possam ser atualizadas com mais facilidade para suas versões mais recentes.
 
 <a id="tu-KI"></a>
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 - Em alguns casos, a instalação pode falhar com a mensagem de erro "falha na instalação com código de erro (0x80070643)". Para obter informações sobre como contornar esse problema, consulte o [artigo 2531566 da base de conhecimento](https://support.microsoft.com/kb/2531566).
 - O scaffolding para adicionar um controlador não Scaffold entidades que aproveitam o suporte à herança de entidade no Entity Framework. Por exemplo, considerando uma classe *Person* base herdada por uma classe *Student* , scaffolding a classe *Student* resultará em um código gerado que não é compilado.
@@ -341,7 +341,7 @@ Esse problema foi corrigido na versão RTM para que a expressão seja preservada
 Renomear um arquivo Razor usando Gerenciador de Soluções enquanto o arquivo é aberto na janela do editor faz com que o realce da sintaxe e o IntelliSense parem de funcionar para esse arquivo. Isso foi corrigido para que o realce e o IntelliSense sejam mantidos após uma renomeação.
 
 <a id="RTM-KI"></a>
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 - Se você fechar o Visual Studio 2010 SP1 Beta enquanto o console do Gerenciador de pacotes NuGet estiver aberto, o Visual Studio falhará e tentará reiniciar. Isso será corrigido na versão RTM do Visual Studio 2010 SP1.
 - O instalador do ASP.NET MVC 3 é capaz de instalar apenas uma versão inicial do Gerenciador de pacotes NuGet. Depois de instalar a versão inicial, o NuGet pode ser instalado e atualizado usando o Gerenciador de extensões do Visual Studio. Se você já tiver o NuGet instalado, vá para a Galeria de extensões do Visual Studio para atualizar para a versão mais recente do NuGet.
@@ -355,7 +355,7 @@ Renomear um arquivo Razor usando Gerenciador de Soluções enquanto o arquivo é
 - Se você instalar o ASP.NET MVC 3 para Visual Web Developer Express em um computador em que o Visual Studio não está instalado e depois instalar o Visual Studio, será necessário reinstalar o ASP.NET MVC 3. O Visual Studio e o Visual Web Developer Express compartilham componentes que são atualizados pelo instalador do ASP.NET MVC 3. O mesmo problema se aplica se você instalar o ASP.NET MVC 3 para Visual Studio em um computador que não tenha o Visual Web Developer Express e, depois, instalar o Visual Web Developer Express.
 
 <a id="RTM-BC"></a>
-## <a name="breaking-changes"></a>Alterações significativas
+## <a name="breaking-changes"></a>Alterações de quebra
 
 - Nas versões anteriores do ASP.NET MVC, os filtros de ação são criados por solicitação, exceto em alguns casos. Esse comportamento nunca foi um comportamento garantido, mas meramente um detalhe de implementação e o contrato de filtros era considerá-los sem monitoração de estado. No ASP.NET MVC 3, os filtros são armazenados em cache de forma mais agressiva. Portanto, qualquer filtro de ação personalizada que armazena incorretamente o estado da instância pode ser rompido.
 - A ordem de execução dos filtros de exceção foi alterada para filtros de exceção que têm o mesmo valor de *ordem* . No ASP.NET MVC 2 e versões anteriores, os filtros de exceção no controlador que têm o mesmo valor de *ordem* que aqueles em um método de ação são executados antes dos filtros de exceção no método de ação. Normalmente, esse seria o caso quando os filtros de exceção são aplicados sem um valor de *ordem* especificado. No ASP.NET MVC 3, esse pedido foi revertido para que o manipulador de exceção mais específico seja executado primeiro. Como nas versões anteriores, se a propriedade *Order* for explicitamente especificada, os filtros serão executados na ordem especificada.
@@ -457,7 +457,7 @@ Um bug foi corrigido quando o método *LabelFor* renderizava um atributo *for* q
 Em versões anteriores, os valores explícitos que foram passados para o método *RenderAction* estavam sendo ignorados em favor dos valores do formulário atual durante a associação de modelo dentro de uma ação filho. A correção garante que os valores explícitos tenham precedência durante a associação de modelo.
 
 <a id="_Toc2_BC"></a>
-## <a name="breaking-changes"></a>Alterações significativas
+## <a name="breaking-changes"></a>Alterações de quebra
 
 - Nas versões anteriores do ASP.NET MVC, os filtros de ação foram criados por solicitação, exceto em alguns casos. Esse comportamento nunca foi um comportamento garantido, mas meramente um detalhe de implementação e o contrato de filtros era considerá-los sem monitoração de estado. No ASP.NET MVC 3, os filtros são armazenados em cache de forma mais agressiva. Portanto, qualquer filtro de ação personalizada que armazena incorretamente o estado da instância pode ser rompido.
 - A ordem de execução dos filtros de exceção foi alterada para filtros de exceção que têm o mesmo valor de *ordem* . No ASP.NET MVC 2 e versões anteriores, os filtros de exceção no controlador que tinha o mesmo valor de *pedido* que aqueles em um método de ação foram executados antes dos filtros de exceção no método de ação. Normalmente, esse seria o caso quando filtros de exceção foram aplicados sem um valor de *ordem* especificado. No ASP.NET MVC 3, esse pedido foi revertido para que o manipulador de exceção mais específico seja executado primeiro. Como nas versões anteriores, se a propriedade *Order* for explicitamente especificada, os filtros serão executados na ordem especificada.
@@ -465,7 +465,7 @@ Em versões anteriores, os valores explícitos que foram passados para o método
 - As implementações de fábrica de controlador personalizado que implementam diretamente a interface *IControllerFactory* devem fornecer uma implementação do novo método *GetControllerSessionBehavior* que foi adicionado à interface nesta versão. Em geral, é recomendável que você não implemente essa interface diretamente e, em vez disso, derive sua classe de *DefaultControllerFactory*.
 
 <a id="_Toc2_KI"></a>
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 - O instalador do ASP.NET MVC 3 é capaz de instalar apenas uma versão inicial do Gerenciador de pacotes NuGet. Depois de instalar a versão inicial, o NuGet pode ser instalado e atualizado usando o Gerenciador de extensões do Visual Studio. Se você já tiver o NuGet instalado, vá para a Galeria de extensões do Visual Studio para atualizar para a versão mais recente do NuGet.
 - Criar um novo projeto do ASP.NET MVC 3 dentro de uma pasta de solução causa um erro *NullReferenceException* . A solução alternativa é criar o projeto do ASP.NET MVC 3 na raiz da solução e, em seguida, movê-lo para a pasta da solução.
@@ -488,7 +488,7 @@ O ASP.NET MVC Release Candidate foi lançado em 9 de novembro de 2010.
 Esta seção descreve os recursos que foram introduzidos na versão RC do ASP.NET MVC 3 desde a versão beta.
 
 <a id="_Toc276711786"></a>
-### <a name="nuget-package-manager"></a>Gerenciador de pacotes do NuGet
+### <a name="nuget-package-manager"></a>Gerenciador de Pacotes NuGet
 
 O ASP.NET MVC 3 inclui o Gerenciador de pacotes NuGet (anteriormente conhecido como NuPack), que é uma ferramenta de gerenciamento de pacotes integrada para adicionar bibliotecas e ferramentas a projetos do Visual Studio. Essa ferramenta automatiza as etapas que os desenvolvedores levam hoje para obter uma biblioteca em sua árvore de origem.
 
@@ -578,7 +578,7 @@ ClassName (namespace)
 
 Em versões anteriores, isso teria sido exibido da seguinte maneira:
 
-Namespace. ClassName
+Namespace.ClassName
 
 <a id="_Toc276711793"></a>
 ### <a name="granular-request-validation"></a>Validação de solicitação granular
@@ -602,13 +602,13 @@ Como alternativa, para desativar a validação de solicitação para cada propri
 [!code-csharp[Main](mvc3-release-notes/samples/sample24.cs)]
 
 <a id="_Toc276711794"></a>
-## <a name="breaking-changes"></a>Alterações significativas
+## <a name="breaking-changes"></a>Alterações de quebra
 
 - A ordem de execução dos filtros de exceção foi alterada para filtros de exceção que têm o mesmo valor de *ordem* . No ASP.NET MVC 2 e versões anteriores, os filtros de exceção no controlador que tinha a mesma *ordem* que aqueles em um método de ação foram executados antes dos filtros de exceção no método de ação. Normalmente, esse seria o caso quando filtros de exceção foram aplicados sem um valor de *ordem* especificado. No ASP.NET MVC 3, esse pedido foi revertido para que o manipulador de exceção mais específico seja executado primeiro. Como nas versões anteriores, se a propriedade *Order* for explicitamente especificada, os filtros serão executados na ordem especificada.
 - Adicionada uma nova propriedade chamada *FileExtensions* à classe base *VirtualPathProviderViewEngine* . Ao pesquisar uma exibição por caminho (e não por nome), somente as exibições com uma extensão de arquivo contida na lista especificada por essa nova propriedade serão consideradas. Essa é uma alteração significativa para aqueles que registram um provedor de compilação personalizado para habilitar uma extensão de arquivo Personalizada para exibições de formulário da Web e estão fazendo referência a essas exibições usando um caminho completo em vez de um nome. A solução alternativa é modificar o valor da propriedade *FileExtensions* para incluir a extensão de arquivo personalizado.
 
 <a id="_Toc276711795"></a>
-## <a name="known-issues"></a>Problemas Conhecidos
+## <a name="known-issues"></a>Problemas conhecidos
 
 - O instalador pode levar muito mais tempo do que as versões anteriores do ASP.NET MVC para serem concluídas porque atualiza os componentes do Visual Studio 2010.
 - O Add View scaffolding ao selecionar a exibição tipada astrongly aplica Scaffold propriedades somente gravação. Eles devem ser sempre ignorados pelo scaffolding. A caixa de diálogo Adicionar exibição também aplica Scaffold propriedades somente leitura ao gerar uma exibição "Editar" ou "criar". As propriedades somente leitura só devem ser com Scaffold para as exibições de exibição e lista.
@@ -734,14 +734,14 @@ A nova versão inclui suporte à resolução de dependência para os seguintes s
 O ASP.NET MVC inclui métodos auxiliares do Ajax, como o seguinte:
 
 - Ajax. ActionLink
-- Ajax. RouteLink
-- Ajax. BeginForm
-- Ajax. BeginRouteForm
+- Ajax.RouteLink
+- Ajax.BeginForm
+- Ajax.BeginRouteForm
 
 Esses métodos usam o JavaScript para invocar um método de ação no servidor em vez de usar um postback completo. Essa funcionalidade foi atualizada para aproveitar o jQuery de maneira discreta. Em vez de emitir os scripts de cliente embutidos de forma invasiva, esses métodos auxiliares separam o comportamento da marcação emitindo atributos HTML5 usando o prefixo *Data-Ajax* . O comportamento é então aplicado à marcação referenciando os arquivos JavaScript apropriados. Verifique se os seguintes arquivos JavaScript são referenciados:
 
-- jQuery-1.4.1. js
-- jQuery. não invasivo. Ajax. js
+- jquery-1.4.1.js
+- jquery.unobtrusive.ajax.js
 
 Esse recurso é habilitado por padrão no arquivo Web. config nos modelos de novo projeto do ASP.NET MVC 3, mas está desabilitado por padrão para projetos existentes. Para obter mais informações, consulte [sinalizadores de todo o aplicativo adicionados para validação de cliente e JavaScript discreto](#0.1_AddedApplicationWideFlagsForClientValida) mais adiante neste documento.
 
@@ -757,9 +757,9 @@ Isso requer que a Propriedade ViewContext. UnobtrusiveJavaScriptEnabled seja def
 
 Verifique também se os seguintes arquivos JavaScript são referenciados.
 
-- jQuery-1.4.1. js
-- jQuery. Validate. js
-- jQuery. Validate. discreta. js
+- jquery-1.4.1.js
+- jquery.validate.js
+- jquery.validate.unobtrusive.js
 
 Esse recurso está habilitado no por padrão no arquivo Web. config nos novos modelos de projeto do ASP.NET MVC 3, mas está desabilitado por padrão para projetos existentes. Para obter mais informações, consulte [novos sinalizadores de todo o aplicativo para validação de cliente e JavaScript discreto](#0.1_AddedApplicationWideFlagsForClientValida) mais adiante neste documento.
 
@@ -839,7 +839,7 @@ O JsonValueProviderFactory agora está registrado por padrão.
 
 A ordem de execução dos filtros de exceção foi alterada para filtros de exceção que têm o mesmo valor de ordem. No ASP.NET MVC 2 e versões anteriores, os filtros de exceção no controlador com a mesma ordem que aqueles em um método de ação foram executados antes dos filtros de exceção no método de ação. Normalmente, esse seria o caso quando filtros de exceção foram aplicados sem um valor de ordem especificado. No ASP.NET MVC 3, esse pedido foi revertido para que o manipulador de exceção mais específico seja executado primeiro. Como nas versões anteriores, se a propriedade Order for explicitamente especificada, os filtros serão executados na ordem especificada.
 
-## <a id="0.1__Toc274034230"></a>Problemas conhecidos
+## <a id="0.1__Toc274034230"></a>  Problemas Conhecidos
 
 Durante a instalação, a caixa de diálogo aceitação do EULA exibe os termos de licença em uma janela que é menor do que o esperado.
 
@@ -861,6 +861,6 @@ Há um problema conhecido que faz com que a autenticação de formulários sempr
 
 ## <a id="0.1__Toc274034231"></a>Enção
 
-© 2011 Microsoft Corporation. Todos os direitos reservados. Este documento é fornecido "no estado em que se encontra". As informações e visualizações apresentadas neste documento, incluindo URL e outras referências a sites da Web, podem ser alteradas sem aviso prévio. O usuário assume os riscos de utilizar este conteúdo.
+© 2011 Microsoft Corporation. Todos os direitos reservados. Este documento é fornecido "no estado em que se encontra". Informações e opiniões expressadas neste documento, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio. Você assume o risco de usá-las.
 
-Este documento não oferece a você quaisquer direitos legais sobre propriedade intelectual para qualquer produto da Microsoft. Você pode copiar e usar este documento para fins internos de referência.
+Este documento não fornece a você nenhum direito legal a qualquer propriedade intelectual de qualquer produto da Microsoft. Você pode copiar e usar este documento para fins de consulta interna.

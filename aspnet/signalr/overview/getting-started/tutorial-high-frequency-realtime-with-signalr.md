@@ -10,11 +10,11 @@ msc.legacyurl: /signalr/overview/getting-started/tutorial-high-frequency-realtim
 msc.type: authoredcontent
 ms.topic: tutorial
 ms.openlocfilehash: 2503e90735d6cfa445ee08c9e43f8443aa106096
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74600449"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558621"
 ---
 # <a name="tutorial-create-high-frequency-real-time-app-with-signalr-2"></a>Tutorial: criar um aplicativo em tempo real de alta frequência com o Signalr 2
 
@@ -38,9 +38,9 @@ Neste tutorial, você:
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+## <a name="prerequisites"></a>Prerequisites
 
-* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) com a ASP.net e a carga de trabalho de **desenvolvimento da Web** .
+* [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) com a carga de trabalho **ASP.NET e desenvolvimento para a Web**.
 
 ## <a name="set-up-the-project"></a>Configurar o projeto
 
@@ -62,7 +62,7 @@ Esta seção mostra como usar o Visual Studio 2017 para criar um aplicativo Web 
 
     Esta etapa cria o arquivo de classe *MoveShapeHub.cs* . Simultaneamente, ele adiciona um conjunto de arquivos de script e referências de assembly que dão suporte ao Signalr para o projeto.
 
-1. Selecione **ferramentas** > **Gerenciador de pacotes NuGet** > **console do Gerenciador de pacotes**.
+1. Selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Console do Gerenciador de Pacotes**.
 
 1. No **console do Gerenciador de pacotes**, execute este comando:
 
@@ -240,7 +240,7 @@ Para obter mais informações sobre o Signalr, consulte os seguintes recursos:
 
 * [Wiki do signalr](https://github.com/SignalR/SignalR/wiki)
 
-## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+## <a name="next-steps"></a>Próximas etapas
 
 Neste tutorial, você:
 

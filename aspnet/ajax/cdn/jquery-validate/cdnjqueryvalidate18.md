@@ -1,6 +1,6 @@
 ---
 uid: ajax/cdn/jquery-validate/cdnjqueryvalidate18
-title: jQuery. Validate versão 1.8 | Microsoft Docs
+title: jQuery. validar a versão 1,8 | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: 68fa43ec-b976-49ca-8e0f-fe317a0e598c
 msc.legacyurl: /ajax/cdn/jquery-validate/cdnjqueryvalidate18
 msc.type: content
 ms.openlocfilehash: 9afd45f6ac09bb7f9863e017211088c30dadd799
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59378310"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78585060"
 ---
 # <a name="jqueryvalidate-version-18"></a>jquery.validate versão 1.8
 
@@ -24,4 +24,4 @@ Os seguintes arquivos são hospedados na CDN:
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/jquery.validate-vsdoc.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/additional-methods.js
 - https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/additional-methods.min.js
-- Arquivos de localização em https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/localization/messages\_##.js onde # # é o código de loc.
+- Arquivos de localização em https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8/localization/messages\_##.js em que # # é o código Loc.

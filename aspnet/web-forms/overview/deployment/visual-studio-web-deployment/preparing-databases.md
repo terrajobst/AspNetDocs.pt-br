@@ -9,11 +9,11 @@ ms.assetid: ae4def81-fa37-4883-a13e-d9896cbf6c36
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/preparing-databases
 msc.type: authoredcontent
 ms.openlocfilehash: cdcb3578725c41e3c801afd54e6d34455bc4b281
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74618524"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78636993"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-preparing-for-database-deployment"></a>Implantação da Web do ASP.NET usando o Visual Studio: preparando para implantação de banco de dados
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como preparar o projeto para implantação de banco de dados. A estrutura do banco de dados e alguns (nem todos) dos os dois bancos de dado do aplicativo devem ser implantados em ambientes de teste, de preparo e de produção.
 
@@ -185,7 +185,7 @@ Na primeira página da central de instalação do SQL Server, clique em **novo S
 4. Na caixa de diálogo **gerar e publicar scripts** , clique em **definir opções de script**.
 
     Você pode ignorar a etapa **escolher objetos** porque o padrão é o **banco de dados inteiro do script e todos os objetos de banco de dados** e isso é o que você deseja.
-5. Clique em **Avançadas**.
+5. Clique em **Avançado**.
 
     ![Opções de script do SSMS](preparing-databases/_static/image12.png)
 6. Na caixa de diálogo **Opções de script avançadas** , role para baixo até **tipos de dados para script**e clique na opção **somente dados** na lista suspensa.
@@ -197,7 +197,7 @@ Na primeira página da central de instalação do SQL Server, clique em **novo S
 10. Clique em **Avançar** para ir para a guia **Resumo** e, em seguida, clique em **Avançar** novamente para criar o script.
 
     ![Script do SSMS criado](preparing-databases/_static/image14.png)
-11. Clique em **Finalizar**.
+11. Clique em **Concluir**.
 
 ### <a name="create-the-production-database-script"></a>Criar o script do banco de dados de produção
 
@@ -220,7 +220,7 @@ Os dois bancos de dados agora estão prontos para serem implantados e você tem 
 
 No tutorial a seguir, você define as configurações de projeto que afetam a implantação e configura as transformações de arquivo *Web. config* automáticas para as configurações que devem ser diferentes no aplicativo implantado.
 
-## <a name="more-information"></a>Mais Informações
+## <a name="more-information"></a>Mais informações
 
 Para obter mais informações sobre o NuGet, consulte [gerenciar bibliotecas de projetos com a](https://msdn.microsoft.com/magazine/hh547106.aspx) documentação do NuGet e [NuGet](http://docs.nuget.org/docs/start-here/overview). Se você não quiser usar o NuGet, precisará aprender como analisar um pacote NuGet para determinar o que ele faz quando ele está instalado. (Por exemplo, ele pode configurar transformações de *Web. config* , configurar scripts do PowerShell para serem executados no momento da compilação, etc.) Para saber mais sobre como o NuGet funciona, consulte [criando e publicando um pacote](http://docs.nuget.org/docs/creating-packages/creating-and-publishing-a-package) e as [transformações de código-fonte e o arquivo de configuração](http://docs.nuget.org/docs/creating-packages/configuration-file-and-source-code-transformations).
 

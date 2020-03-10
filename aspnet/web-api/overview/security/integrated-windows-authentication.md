@@ -1,39 +1,39 @@
 ---
 uid: web-api/overview/security/integrated-windows-authentication
-title: Autenticação do Windows integrada | Microsoft Docs
+title: Autenticação integrada do Windows | Microsoft Docs
 author: MikeWasson
-description: Descreve como usar a autenticação integrada do Windows na API Web ASP.NET.
+description: Descreve o uso da autenticação integrada do Windows no ASP.NET Web API.
 ms.author: riande
 ms.date: 12/18/2012
 ms.assetid: 71ee4c78-c500-4d1c-b761-b4e161a291b5
 msc.legacyurl: /web-api/overview/security/integrated-windows-authentication
 msc.type: authoredcontent
 ms.openlocfilehash: e4f31f191f3c0fabff308ea5dadb0f1d9ce7d448
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65125210"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78621740"
 ---
 # <a name="integrated-windows-authentication"></a>Autenticação Integrada do Windows
 
 por [Mike Wasson](https://github.com/MikeWasson)
 
-Autenticação integrada do Windows permite que os usuários façam logon com suas credenciais do Windows, usando Kerberos ou NTLM. O cliente envia as credenciais no cabeçalho de autorização. Autenticação do Windows é mais adequada para um ambiente de intranet. Para obter mais informações, veja [Autenticação do Windows](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication).
+A autenticação integrada do Windows permite que os usuários façam logon com suas credenciais do Windows, usando Kerberos ou NTLM. O cliente envia credenciais no cabeçalho de autorização. A autenticação do Windows é mais adequada para um ambiente de intranet. Para obter mais informações, veja [Autenticação do Windows](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication).
 
 | Vantagens | Desvantagens |
 | --- | --- |
-| -Incorporada ao IIS. -Não envia as credenciais do usuário na solicitação. -Se o computador cliente pertença ao domínio (por exemplo, o aplicativo de intranet), o usuário não precisa inserir credenciais. | -Não é recomendado para aplicativos da Internet. -Requer suporte a Kerberos ou NTLM no cliente. -Cliente deve estar no domínio do Active Directory. |
+| -Interno ao IIS. -Não envia as credenciais do usuário na solicitação. -Se o computador cliente pertencer ao domínio (por exemplo, aplicativo de intranet), o usuário não precisará inserir as credenciais. | -Não é recomendado para aplicativos da Internet. -Requer suporte a Kerberos ou NTLM no cliente. -O cliente deve estar no domínio Active Directory. |
 
 > [!NOTE]
-> Se o aplicativo estiver hospedado no Azure e você tiver um domínio do Active Directory local, considere a possibilidade de federar seu AD local com o Azure Active Directory. Dessa forma, os usuários podem fazer com suas credenciais locais, mas a autenticação é realizada pelo Azure AD. Para obter mais informações, consulte [autenticação do Azure](../../../visual-studio/overview/2012/windows-azure-authentication.md).
+> Se seu aplicativo estiver hospedado no Azure e você tiver um domínio de Active Directory local, considere a Federação de seu anúncio local com Azure Active Directory. Dessa forma, os usuários podem fazer logon com suas credenciais locais, mas a autenticação é executada pelo Azure AD. Para obter mais informações, consulte [autenticação do Azure](../../../visual-studio/overview/2012/windows-azure-authentication.md).
 
-Para criar um aplicativo que usa a autenticação do Windows integrada, selecione o modelo "Aplicativo de Intranet" no Assistente de projeto MVC 4. Este modelo de projeto coloca a seguinte configuração no arquivo Web. config:
+Para criar um aplicativo que usa a autenticação integrada do Windows, selecione o modelo "aplicativo de intranet" no assistente de projeto MVC 4. Este modelo de projeto coloca a seguinte configuração no arquivo Web. config:
 
 [!code-xml[Main](integrated-windows-authentication/samples/sample1.xml)]
 
-No lado do cliente, autenticação do Windows integrada funciona com qualquer navegador que ofereça suporte a [Negotiate](http://www.ietf.org/rfc/rfc4559.txt) esquema de autenticação, que inclui a maioria dos principais navegadores. Para aplicativos de cliente .NET, o **HttpClient** classe dá suporte à autenticação do Windows:
+No lado do cliente, a autenticação integrada do Windows funciona com qualquer navegador que dê suporte ao esquema de autenticação [Negotiate](http://www.ietf.org/rfc/rfc4559.txt) , que inclui a maioria dos principais navegadores. Para aplicativos cliente .NET, a classe **HttpClient** dá suporte à autenticação do Windows:
 
 [!code-csharp[Main](integrated-windows-authentication/samples/sample2.cs)]
 
-A autenticação do Windows é vulnerável a ataques de solicitação forjada (CSRF) entre sites. Ver [impedindo solicitação intersite forjada (CSRF) ataques](preventing-cross-site-request-forgery-csrf-attacks.md).
+A autenticação do Windows é vulnerável a ataques CSRF (solicitação entre sites forjada). Consulte [impedindo ataques CSRF (solicitação entre sites forjada)](preventing-cross-site-request-forgery-csrf-attacks.md).

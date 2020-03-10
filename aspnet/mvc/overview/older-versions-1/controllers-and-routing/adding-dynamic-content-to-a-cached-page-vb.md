@@ -1,95 +1,95 @@
 ---
 uid: mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-vb
-title: Adicionando conteúdo dinâmico a uma página em cache (VB) | Microsoft Docs
+title: Adicionando conteúdo dinâmico a uma página armazenada em cache (VB) | Microsoft Docs
 author: microsoft
-description: Saiba como a combinação de conteúdo dinâmico e armazenados em cache na mesma página. Substituição do pós-cache de permite que você exiba o conteúdo dinâmico, como faixa anúncios s...
+description: Saiba como misturar conteúdo dinâmico e armazenado em cache na mesma página. A substituição após o cache permite que você exiba conteúdo dinâmico, como anúncios de faixa o...
 ms.author: riande
 ms.date: 01/27/2009
 ms.assetid: 68acd884-fb57-4486-a1be-aaa93e380780
 msc.legacyurl: /mvc/overview/older-versions-1/controllers-and-routing/adding-dynamic-content-to-a-cached-page-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f2f4372498e5a38bbfcb96d6e9f6338b0ef4df1f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65123664"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78601608"
 ---
 # <a name="adding-dynamic-content-to-a-cached-page-vb"></a>Adicionar conteúdo dinâmico a uma página em cache (VB)
 
-por [Microsoft](https://github.com/microsoft)
+pela [Microsoft](https://github.com/microsoft)
 
-> Saiba como a combinação de conteúdo dinâmico e armazenados em cache na mesma página. Substituição do pós-cache de permite que você exiba o conteúdo dinâmico, como anúncios de banner ou itens de notícias, dentro de uma página que tem sido a saída armazenada em cache.
+> Saiba como misturar conteúdo dinâmico e armazenado em cache na mesma página. A substituição após o cache permite que você exiba conteúdo dinâmico, como anúncios de faixa ou itens de notícias, dentro de uma página que tenha sido de saída armazenada em cache.
 
-Aproveitando o cache de saída, você pode melhorar consideravelmente o desempenho de um aplicativo ASP.NET MVC. Em vez de regenerar uma página de cada vez que a página é solicitada, a página pode ser gerada uma vez e armazenado em cache na memória para vários usuários.
+Aproveitando o cache de saída, você pode melhorar drasticamente o desempenho de um aplicativo MVC ASP.NET. Em vez de regenerar uma página cada e sempre que a página é solicitada, a página pode ser gerada uma vez e armazenada em cache na memória para vários usuários.
 
-Mas há um problema. E se você precisa exibir o conteúdo dinâmico na página? Por exemplo, imagine que você deseja exibir uma faixa de anúncio na página. Você não quer o anúncio em faixa sejam armazenados em cache para que cada usuário vê o anúncio do mesmo. Você não faria qualquer dinheiro dessa maneira!
+Mas há um problema. E se você precisar exibir conteúdo dinâmico na página? Por exemplo, imagine que você deseja exibir um anúncio de faixa na página. Você não quer que o anúncio de faixa seja armazenado em cache para que todos os usuários vejam o mesmo anúncio. Você não ganharia nenhum dinheiro assim!
 
-Felizmente, há uma solução fácil. Você pode tirar proveito de um recurso da estrutura do ASP.NET chamado *pós-cache substituição*. Substituição do pós-cache de permite que você substitua o conteúdo dinâmico em uma página que foi armazenado em cache na memória.
+Felizmente, há uma solução fácil. Você pode aproveitar um recurso da estrutura ASP.NET chamada *substituição*pós-cache. A substituição após o cache permite que você substitua o conteúdo dinâmico em uma página que foi armazenada em cache na memória.
 
-Normalmente, quando você emitir armazenar em cache uma página usando o &lt;OutputCache&gt; atributo, a página é armazenada em cache no servidor e o cliente (navegador da web). Quando você usa a substituição do cache de postagem, uma página é armazenada em cache apenas no servidor.
+Normalmente, quando você faz o cache de saída de uma página usando o atributo &lt;OutputCache&gt;, a página é armazenada em cache no servidor e no cliente (o navegador da Web). Quando você usa a substituição pós-cache, uma página é armazenada em cache somente no servidor.
 
-#### <a name="using-post-cache-substitution"></a>Usando a substituição do Cache de postagem
+#### <a name="using-post-cache-substitution"></a>Usando a substituição pós-cache
 
-Usando a substituição de POST-cache requer duas etapas. Primeiro, você precisa definir um método que retorna uma cadeia de caracteres que representa o conteúdo dinâmico que você deseja exibir na página em cache. Em seguida, você chamar o método de HttpResponse.WriteSubstitution() para inserir o conteúdo dinâmico na página.
+O uso da substituição após o cache requer duas etapas. Primeiro, você precisa definir um método que retorne uma cadeia de caracteres que represente o conteúdo dinâmico que você deseja exibir na página armazenada em cache. Em seguida, você chama o método HttpResponse. WriteSubstitution () para injetar o conteúdo dinâmico na página.
 
-Por exemplo, imagine que você deseja exibir aleatoriamente os itens de notícias diferentes em uma página em cache. A classe na listagem 1 expõe um único método, chamado RenderNews(), que retorna aleatoriamente um item de notícias de uma lista de três itens de notícias.
+Imagine, por exemplo, que você deseja exibir aleatoriamente diferentes itens de notícias em uma página armazenada em cache. A classe na Listagem 1 expõe um único método, chamado RenderNews (), que retorna aleatoriamente um item de notícias de uma lista de três itens de notícias.
 
 **Listagem 1 – Models\News.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample1.vb)]
 
-Para tirar proveito de substituição do cache de postagem, você chamar o método HttpResponse.WriteSubstitution(). O método WriteSubstitution() define o código para substituir uma região da página em cache com conteúdo dinâmico. O método WriteSubstitution() é usado para exibir o item de notícias aleatório no modo de exibição na listagem 2.
+Para aproveitar a substituição após o cache, chame o método HttpResponse. WriteSubstitution (). O método WriteSubstitution () configura o código para substituir uma região da página armazenada em cache por conteúdo dinâmico. O método WriteSubstitution () é usado para exibir o item de notícias aleatório na exibição na Listagem 2.
 
 **Listagem 2 – Views\Home\Index.aspx**
 
 [!code-aspx[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample2.aspx)]
 
-O método RenderNews é passado para o método WriteSubstitution(). Observe que o método RenderNews não é chamado. Em vez disso, uma referência para o método é passada para WriteSubstitution() com a Ajuda do operador AddressOf.
+O método RenderNews é passado para o método WriteSubstitution (). Observe que o método RenderNews não é chamado. Em vez disso, uma referência ao método é passada para WriteSubstitution () com a ajuda do operador AddressOf.
 
-O modo de exibição de índice é armazenado em cache. O modo de exibição é retornado pelo controlador na listagem 3. Observe que a ação Index () é decorada com um &lt;OutputCache&gt; atributo que faz com que o modo de exibição de índice a ser armazenado em cache por 60 segundos.
+A exibição do índice é armazenada em cache. A exibição é retornada pelo controlador na Listagem 3. Observe que a ação index () é decorada com um atributo &lt;OutputCache&gt; que faz com que a exibição de índice seja armazenada em cache por 60 segundos.
 
 **Listagem 3 – Controllers\HomeController.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample3.vb)]
 
-Mesmo que o modo de exibição de índice é armazenado em cache, os itens de notícias aleatórios diferentes são exibidos quando você solicita a página de índice. Quando você solicita a página de índice, não altera a hora exibida pela página por 60 segundos (veja a Figura 1). O fato de que o tempo não é alterado prova que a página é armazenada em cache. No entanto, o conteúdo é injetado pelas alterações de método – o item de notícias aleatório – WriteSubstitution() com cada solicitação.
+Embora a exibição do índice seja armazenada em cache, diferentes itens de notícias aleatórios são exibidos quando você solicita a página de índice. Quando você solicita a página de índice, a hora exibida pela página não é alterada por 60 segundos (consulte a Figura 1). O fato de que a hora não muda, comprova que a página está armazenada em cache. No entanto, o conteúdo injetado pelo método WriteSubstitution () – o item de notícias aleatório – muda com cada solicitação.
 
-**Figura 1 – injetando itens de notícias dinâmico em uma página em cache**
+**Figura 1 – injetando itens de notícias dinâmicos em uma página armazenada em cache**
 
 ![clip_image002](adding-dynamic-content-to-a-cached-page-vb/_static/image1.jpg)
 
-#### <a name="using-post-cache-substitution-in-helper-methods"></a>Usar substituição POST-Cache em métodos auxiliares
+#### <a name="using-post-cache-substitution-in-helper-methods"></a>Usando a substituição pós-cache em métodos auxiliares
 
-Uma maneira mais fácil para tirar proveito de substituição do cache de postagem é encapsular a chamada ao método WriteSubstitution() dentro de um método auxiliar personalizado. Essa abordagem é ilustrada pelo método auxiliar na listagem 4.
+Uma maneira mais fácil de aproveitar a substituição após o cache é encapsular a chamada para o método WriteSubstitution () em um método auxiliar personalizado. Essa abordagem é ilustrada pelo método auxiliar na Listagem 4.
 
 **Listagem 4 – Helpers\AdHelper.vb**
 
 [!code-vb[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample4.vb)]
 
-Listagem 4 contém um módulo do Visual Basic que expõe dois métodos: RenderBanner() e RenderBannerInternal(). O método RenderBanner() representa o método auxiliar real. Este método estende a classe HtmlHelper do ASP.NET MVC padrão para que você possa chamar Html.RenderBanner() em uma exibição exatamente como qualquer outro método auxiliar.
+A listagem 4 contém um módulo Visual Basic que expõe dois métodos: RenderBanner () e RenderBannerInternal (). O método RenderBanner () representa o método auxiliar real. Esse método estende a classe ASP.NET MVC HtmlHelper padrão para que você possa chamar HTML. RenderBanner () em uma exibição, assim como qualquer outro método auxiliar.
 
-O método RenderBanner() chama o método de HttpResponse.WriteSubstitution() passando o método RenderBannerInternal() para o método WriteSubstitution().
+O método RenderBanner () chama o método HttpResponse. WriteSubstitution () passando o método RenderBannerInternal () para o método WriteSubstitution ().
 
-O método RenderBannerInternal() é um método particular. Esse método não sejam exposto como um método auxiliar. O método RenderBannerInternal() aleatoriamente retorna uma imagem de anúncio da faixa de uma lista de três imagens de anúncio de faixa.
+O método RenderBannerInternal () é um método particular. Esse método não será exposto como um método auxiliar. O método RenderBannerInternal () retorna aleatoriamente uma imagem de anúncio de faixa de uma lista de três imagens de anúncio de faixa.
 
-O modo de exibição do índice modificado na listagem 5 ilustra como você pode usar o método auxiliar RenderBanner(). Observe que adicional &lt;% @ % importação&gt; diretiva está incluída na parte superior do modo de exibição para importar o namespace MvcApplication1.Helpers. Se você não importar esse namespace, o método RenderBanner() não aparecerá como um método em que a propriedade de Html.
+A exibição de índice modificada na listagem 5 ilustra como você pode usar o método auxiliar RenderBanner (). Observe que uma diretiva &lt;% @ Import%&gt; adicional está incluída na parte superior da exibição para importar o namespace MvcApplication1. Helpers. Se você não importar esse namespace, o método RenderBanner () não aparecerá como um método na propriedade HTML.
 
-**Listagem 5 – Views\Home\Index.aspx (com o método RenderBanner())**
+**Listagem 5 – Views\Home\Index.aspx (com o método RenderBanner ())**
 
 [!code-aspx[Main](adding-dynamic-content-to-a-cached-page-vb/samples/sample5.aspx)]
 
-Quando você solicita a página renderizada pela exibição na listagem 5, uma faixa diferente de anúncio é exibido com cada solicitação (veja a Figura 2). A página é armazenada em cache, mas a faixa de anúncio é injetada dinamicamente pelo método auxiliar RenderBanner().
+Quando você solicita a página renderizada pela exibição na listagem 5, um anúncio de faixa diferente é exibido com cada solicitação (consulte a Figura 2). A página é armazenada em cache, mas o anúncio de banner é injetado dinamicamente pelo método auxiliar RenderBanner ().
 
-**Figura 2 – o modo de exibição de índice exibindo um anúncio em faixa aleatório**
+**Figura 2 – a exibição de índice exibindo um anúncio de banner aleatório**
 
 ![clip_image004](adding-dynamic-content-to-a-cached-page-vb/_static/image2.jpg)
 
 #### <a name="summary"></a>Resumo
 
-Este tutorial explicou como você pode atualizar dinamicamente o conteúdo em uma página em cache. Você aprendeu como usar o método HttpResponse.WriteSubstitution() para habilitar o conteúdo dinâmico a ser injetado em uma página em cache. Você também aprendeu como encapsular a chamada ao método WriteSubstitution() dentro de um método auxiliar HTML.
+Este tutorial explicou como você pode atualizar dinamicamente o conteúdo em uma página armazenada em cache. Você aprendeu a usar o método HttpResponse. WriteSubstitution () para permitir que o conteúdo dinâmico seja injetado em uma página armazenada em cache. Você também aprendeu como encapsular a chamada para o método WriteSubstitution () dentro de um método auxiliar HTML.
 
-Tirar proveito do armazenamento em cache sempre que possível – ele pode ter um impacto significativo sobre o desempenho de seus aplicativos web. Conforme explicado neste tutorial, você pode tirar proveito do armazenamento em cache, mesmo quando você precisa exibir o conteúdo dinâmico em suas páginas.
+Aproveite o armazenamento em cache sempre que possível – ele pode ter um impacto considerável sobre o desempenho de seus aplicativos Web. Conforme explicado neste tutorial, você pode aproveitar o cache mesmo quando precisa exibir conteúdo dinâmico em suas páginas.
 
 > [!div class="step-by-step"]
 > [Anterior](improving-performance-with-output-caching-vb.md)

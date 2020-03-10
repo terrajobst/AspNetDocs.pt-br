@@ -9,11 +9,11 @@ ms.assetid: 9f24fb82-c7ac-48da-b8e2-51b3da17e365
 msc.legacyurl: /web-forms/overview/presenting-and-managing-data/model-binding/retrieving-data
 msc.type: authoredcontent
 ms.openlocfilehash: 81cca22cb4752d071d2a68986ae9ac2bed737594
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74633181"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640192"
 ---
 # <a name="retrieving-and-displaying-data-with-model-binding-and-web-forms"></a>Recuperando e exibindo dados com associação de modelo e formulários da Web
 
@@ -36,7 +36,7 @@ ms.locfileid: "74633181"
 
 ## <a name="what-youll-build"></a>O que você criará
 
-Neste tutorial, você vai:
+Neste tutorial, você aprenderá a:
 
 * Crie objetos de dados que reflitam uma universidade com alunos registrados em cursos
 * Criar tabelas de banco de dados a partir dos objetos
@@ -47,7 +47,7 @@ Neste tutorial, você vai:
 
 1. No Visual Studio 2017, crie um projeto de **aplicativo Web ASP.net (.NET Framework)** chamado **ContosoUniversityModelBinding**.
 
-   ![Criar projeto](retrieving-data/_static/image19.png)
+   ![criar projeto](retrieving-data/_static/image19.png)
 
 2. Selecione **OK**. A caixa de diálogo para selecionar um modelo é exibida.
 
@@ -99,7 +99,7 @@ Neste tutorial, você vai:
 
 Na pasta **modelos** , adicione uma classe chamada **UniversityModels.cs**.
 
-   1. Clique com o botão direito do mouse em **modelos**, selecione **Adicionar**e **novo item**. A caixa de diálogo **Adicionar Novo Item** é exibida.
+   1. Clique com o botão direito do mouse em **modelos**, selecione **Adicionar**e **novo item**. A caixa de diálogo **Adicionar Novo Item** aparecerá.
 
    2. No menu de navegação à esquerda, selecione **código**e **classe**.
 
@@ -121,7 +121,7 @@ Na pasta **modelos** , adicione uma classe chamada **UniversityModels.cs**.
 
 Este tutorial usa [migrações do Code First](https://docs.microsoft.com/ef/ef6/modeling/code-first/migrations/) para criar objetos e tabelas de banco de dados. Essas tabelas armazenam informações sobre os alunos e seus cursos.
 
-   1. Selecione **ferramentas** > **Gerenciador de pacotes NuGet** > **console do Gerenciador de pacotes**.
+   1. Selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Console do Gerenciador de Pacotes**.
 
    2. No **console do Gerenciador de pacotes**, execute este comando:  
       `enable-migrations -ContextTypeName ContosoUniversityModelBinding.Models.SchoolContext`
@@ -136,7 +136,7 @@ Este tutorial usa [migrações do Code First](https://docs.microsoft.com/ef/ef6/
 
    1. Abra Configuration.cs.
    
-   2. Adicione o seguinte código ao método de `Seed` . Além disso, adicione uma instrução `using` para o namespace `ContosoUniversityModelBinding. Models`.
+   2. Adicione o seguinte código ao `Seed` método. Além disso, adicione uma instrução `using` para o namespace `ContosoUniversityModelBinding. Models`.
 
       [!code-csharp[Main](retrieving-data/samples/sample5.cs)]
 
@@ -187,7 +187,7 @@ Com os dados populados do banco, agora você está pronto para recuperar esses d
  
    4. Salve Students.aspx.cs.
 
-## <a name="run-your-application"></a>Executar seu aplicativo 
+## <a name="run-your-application"></a>Execute seu aplicativo. 
 
 Execute seu aplicativo Web (**F5**) e navegue até a página **alunos** , que exibe o seguinte:
 
@@ -214,4 +214,4 @@ Neste tutorial, você criou classes de modelo de dados e gerou um banco de dado 
 No próximo [tutorial](updating-deleting-and-creating-data.md) desta série, você habilitará a atualização, a exclusão e a criação de dados.
 
 > [!div class="step-by-step"]
-> [Avançar](updating-deleting-and-creating-data.md)
+> [Próximo](updating-deleting-and-creating-data.md)

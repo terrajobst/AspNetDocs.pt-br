@@ -9,11 +9,11 @@ ms.assetid: e9dd1d5a-a1db-4114-981d-6a91acb1d709
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/mutuallyexclusivecheckbox/creating-mutually-exclusive-checkboxes-vb
 msc.type: authoredcontent
 ms.openlocfilehash: f33936dd4d71f6bbf08f02966eefe44c8c152eba
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606488"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78554008"
 ---
 # <a name="creating-mutually-exclusive-checkboxes-vb"></a>Criação de caixas de seleção mutuamente exclusivas (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > Quando apenas um de um conjunto de opções pode ser selecionado, os botões de opção geralmente são usados. Há uma desvantagem, porém: quando um botão de opção em um grupo é selecionado, não é possível desmarcar todos os botões de opção. As caixas de seleção podem ser desmarcadas a qualquer momento, no entanto, não são mutuamente exclusivas. Este tutorial fornece o melhor das duas abordagens: caixas de seleção que são mutuamente exclusivas.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Quando apenas um de um conjunto de opções pode ser selecionado, os botões de opção geralmente são usados. Há uma desvantagem, porém: quando um botão de opção em um grupo é selecionado, não é possível desmarcar todos os botões de opção. As caixas de seleção podem ser desmarcadas a qualquer momento, no entanto, não são mutuamente exclusivas. Este tutorial fornece o melhor das duas abordagens: caixas de seleção que são mutuamente exclusivas.
 

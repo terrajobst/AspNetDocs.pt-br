@@ -9,11 +9,11 @@ ms.assetid: 9c31a42f-d8bb-4c0f-9ccc-597d4f70ac42
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/deploying-web-site-projects/configuring-a-website-that-uses-application-services-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 19e7258b558372259c7554a36c6ad73ce572dfa8
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74588739"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78642096"
 ---
 # <a name="configuring-a-website-that-uses-application-services-vb"></a>Configuração de um site que usa Serviços de Aplicativos (VB)
 
@@ -127,7 +127,7 @@ Você só precisará usar a ferramenta `aspnet_regsql.exe` ao implantar seu apli
 
 ### <a name="copying-user-accounts-from-development-to-production"></a>Copiando contas de usuário de desenvolvimento para produção
 
-Ao usar as classes de provedor `SqlMembershipProvider` e `SqlRoleProvider` para armazenar as informações de serviços de aplicativos em um banco de dados SQL Server, a conta de usuário e as informações de função são armazenadas em uma variedade de tabelas de banco de dados, incluindo `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`e `aspnet_UsersInRoles`, entre outras. Se durante o desenvolvimento você criar contas de usuário no ambiente de desenvolvimento, poderá replicar essas contas de usuário em produção copiando os registros correspondentes das tabelas de banco de dados aplicáveis. Se você usou o assistente de publicação de banco de dados para implantar os objetos de banco de dados dos serviços de aplicativos, você também pode ter optado por copiar os registros, o que resultaria em que as contas de usuário criadas no desenvolvimento também estejam em produção. Mas, dependendo de suas definições de configuração, você pode achar que os usuários cujas contas foram criadas no desenvolvimento e copiados para produção não podem fazer logon no site de produção. O que dá?
+Ao usar as classes de provedor `SqlMembershipProvider` e `SqlRoleProvider` para armazenar as informações de serviços de aplicativos em um banco de dados SQL Server, a conta de usuário e as informações de função são armazenadas em uma variedade de tabelas de banco de dados, incluindo `aspnet_Users`, `aspnet_Membership`, `aspnet_Roles`e `aspnet_UsersInRoles`, entre outras. Se durante o desenvolvimento você criar contas de usuário no ambiente de desenvolvimento, poderá replicar essas contas de usuário em produção copiando os registros correspondentes das tabelas de banco de dados aplicáveis. Se você usou o assistente de publicação de banco de dados para implantar os objetos de banco de dados dos serviços de aplicativos, você também pode ter optado por copiar os registros, o que resultaria em que as contas de usuário criadas no desenvolvimento também estejam em produção. Mas, dependendo de suas definições de configuração, você pode achar que os usuários cujas contas foram criadas no desenvolvimento e copiados para produção não podem fazer logon no site de produção. O que acontece?
 
 As classes de provedor `SqlMembershipProvider` e `SqlRoleProvider` foram projetadas de modo que um único banco de dados possa servir como um armazenamento de usuários para vários aplicativos, em que cada aplicativo poderia, teoricamente, ter usuários com sobreposição de nomes de usuário e funções com o mesmo nome. Para permitir essa flexibilidade, o banco de dados mantém uma lista de aplicativos na tabela `aspnet_Applications` e cada usuário é associado a um desses aplicativos. Especificamente, a tabela `aspnet_Users` tem uma coluna `ApplicationId` que vincula cada usuário a um registro na tabela `aspnet_Applications`.
 

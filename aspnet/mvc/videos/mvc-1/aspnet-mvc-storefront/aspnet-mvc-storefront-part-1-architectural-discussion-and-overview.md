@@ -1,27 +1,27 @@
 ---
 uid: mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview
-title: 'Vitrine do ASP.NET MVC, parte 1: Discussões sobre arquitetura e visão geral | Microsoft Docs'
+title: 'Vitrine do ASP.NET MVC parte 1: visão geral e discussão sobre arquitetura | Microsoft Docs'
 author: robconery
-description: Rob Conery aborda a arquitetura inicial aqui, na parte 1, onde ele discute o padrão Repository com Ayende Rahien e Steve Harman. Ele também solicita a Phil...
+description: Rob cônica aborda a arquitetura inicial aqui, na parte 1, onde ele aborda o padrão de repositório com Ayende Rahien e Steve Harman. Ele também pergunta Phil...
 ms.author: riande
 ms.date: 05/27/2008
 ms.assetid: 194a163b-2aad-4cad-bf1f-e9ce3f80add0
 msc.legacyurl: /mvc/videos/mvc-1/aspnet-mvc-storefront/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview
 msc.type: video
 ms.openlocfilehash: a3df375425c4c79f1274f466a6669997a1e3676f
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59390595"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78559293"
 ---
-# <a name="aspnet-mvc-storefront-part-1-architectural-discussion-and-overview"></a>Vitrine do ASP.NET MVC, parte 1: Discussões sobre arquitetura e visão geral
+# <a name="aspnet-mvc-storefront-part-1-architectural-discussion-and-overview"></a>Vitrine do ASP.NET MVC parte 1: visão geral e discussão sobre arquitetura
 
-por [Rob Conery](https://github.com/robconery)
+por [Rob cônica](https://github.com/robconery)
 
-Rob Conery aborda a arquitetura inicial aqui, na parte 1, onde ele discute o padrão Repository com Ayende Rahien e Steve Harman. Ele também solicita Phil Haack o que é o primeiro: A galinha de teste ou de Ovo de modelo.
+Rob cônica aborda a arquitetura inicial aqui, na parte 1, onde ele aborda o padrão de repositório com Ayende Rahien e Steve Harman. Ele também pergunta Phil Haack o que é primeiro: o teste de galinha ou o ovo do modelo.
 
-[&#9654;Assista ao vídeo (10 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview)
+[&#9654;Assistir ao vídeo (10 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/aspnet-mvc-storefront-part-1-architectural-discussion-and-overview)
 
 > [!div class="step-by-step"]
-> [Avançar](aspnet-mvc-storefront-part-2-the-repository-pattern.md)
+> [Próximo](aspnet-mvc-storefront-part-2-the-repository-pattern.md)

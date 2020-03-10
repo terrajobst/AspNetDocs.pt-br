@@ -9,11 +9,11 @@ ms.assetid: caa1ba4a-f9f0-4181-ba21-042e3997861d
 msc.legacyurl: /mvc/overview/getting-started/introduction/accessing-your-models-data-from-a-controller
 msc.type: authoredcontent
 ms.openlocfilehash: 5d882d765133d32d3acdba9ffb5d43b69119a273
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77457226"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78615916"
 ---
 # <a name="accessing-your-models-data-from-a-controller"></a>Acessar dados do seu modelo por meio de um controlador
 
@@ -60,7 +60,7 @@ Selecione o link **Criar Novo**. Insira alguns detalhes sobre um filme e, em seg
 ![](accessing-your-models-data-from-a-controller/_static/image5.png)
 
 > [!NOTE]
-> Talvez você não consiga inserir pontos decimais ou vírgulas no campo preço. Para dar suporte à validação do jQuery para localidades não inglesas que usam uma vírgula (&quot;,&quot;) para um ponto decimal, e os formatos de data em inglês dos EUA, você deve incluir *globalizable. js* e seu arquivo *culturas/globalizate. culturas* específico (de [https://github.com/jquery/globalize](https://github.com/jquery/globalize) ) e JavaScript para usar `Globalize.parseFloat`. Mostrarei como fazer isso no próximo tutorial. Por enquanto, digite apenas números inteiros como 10.
+> Talvez você não consiga inserir pontos decimais ou vírgulas no campo preço. Para dar suporte à validação do jQuery para localidades não inglesas que usam uma vírgula (&quot;,&quot;) para um ponto decimal, e os formatos de data em inglês dos EUA, você deve incluir *globalizable. js* e seu arquivo *culturas/globalizate. culturas* específico (de [https://github.com/jquery/globalize](https://github.com/jquery/globalize) ) e JavaScript para usar `Globalize.parseFloat`. Mostrarei como fazer isso no próximo tutorial. Por enquanto, insira apenas números inteiros como 10.
 
 Clicar no botão **criar** faz com que o formulário seja Postado no servidor, onde as informações do filme são salvas no banco de dados. Em seguida, você será redirecionado para a URL */Movies* , onde poderá ver o filme recém-criado na lista.
 

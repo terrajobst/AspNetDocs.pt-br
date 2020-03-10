@@ -2,326 +2,326 @@
 uid: whitepapers/overview
 title: White papers | Microsoft Docs
 author: rick-anderson
-description: Nesta página você encontrará white papers para ajudá-lo a instalar e configurar o ASP.NET e para ajudar a escrever aplicativos do ASP.NET seguros, rápidos e flexíveis.
+description: Nesta página, você encontrará White papers para ajudá-lo a instalar e configurar o ASP.NET e para ajudá-lo a escrever aplicativos ASP.NET seguros, rápidos e flexíveis.
 ms.author: riande
 ms.date: 11/15/2011
 ms.assetid: d5e79470-01f2-4d65-8077-11c3e10a6784
 msc.legacyurl: /whitepapers
 msc.type: content
 ms.openlocfilehash: 1a3a9fe5d685d4b38efe666fc88ff57016482ada
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114513"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640850"
 ---
-# <a name="whitepapers"></a>Whitepapers
+# <a name="whitepapers"></a>White papers
 
-> Nesta página você encontrará white papers para ajudá-lo a instalar e configurar o ASP.NET e para ajudar a escrever aplicativos do ASP.NET seguros, rápidos e flexíveis.
+> Nesta página, você encontrará White papers para ajudá-lo a instalar e configurar o ASP.NET e para ajudá-lo a escrever aplicativos ASP.NET seguros, rápidos e flexíveis.
 > 
 > - [ASP.NET 4](#aspnet4)
 > - [White papers de segurança do ASP.NET](#security)
-> - [Instalação e white papers do programa de instalação](#setup)
+> - [White papers de instalação e configuração](#setup)
 > - [White papers do SQL Server](#sql)
-> - [White papers de geral](#general)
+> - [White papers gerais](#general)
 
 <a id="aspnet4"></a>
 ## <a name="aspnet-4"></a>ASP.NET 4
 
-Informações relacionadas ao ASP.NET 4 e Visual Studio 2010.
+Informações relacionadas ao ASP.NET 4 e ao Visual Studio 2010.
 
-[Notas de versão do ASP.NET MVC 4](mvc4-beta-release-notes.md "mvc4 notas de versão")
+[Notas de versão do ASP.NET MVC 4](mvc4-beta-release-notes.md "mvc4-Release-observações")
 
-Este documento descreve novos recursos e aprimoramentos introduzidos na visualização do desenvolvedor do ASP.NET MVC 4 para Visual Studio 2010, bem como notas de instalação e problemas conhecidos.
+Este documento descreve os novos recursos e melhorias introduzidos no ASP.NET MVC 4 Developer Preview para Visual Studio 2010, bem como notas de instalação e problemas conhecidos.
 
-[Notas de versão do ASP.NET MVC 3](mvc3-release-notes.md "mvc3 notas de versão")
+[Notas de versão do ASP.NET MVC 3](mvc3-release-notes.md "MvC3-Release-observações")
 
-Este documento descreve novos recursos e aprimoramentos introduzidos no ASP.NET MVC 3, bem como notas de instalação e problemas conhecidos.
+Este documento descreve os novos recursos e melhorias introduzidos no ASP.NET MVC 3, bem como notas de instalação e problemas conhecidos.
 
-[ASP.NET 4 e visão geral de desenvolvimento Visual Studio 2010 Web](aspnet4/index.md "aspnet4")
+[Visão geral sobre desenvolvimento para a Web do ASP.NET 4 e Visual Studio 2010](aspnet4/index.md "aspnet4")
 
-Muitas alterações interessantes para o ASP.NET estão sendo disponibilizados no .NET Framework versão 4. Este documento fornece uma visão geral de muitos dos novos recursos que estão incluídos na próxima versão.
+Muitas alterações empolgantes para ASP.NET são disponibilizadas na versão 4 do .NET Framework. Este documento fornece uma visão geral de muitos dos novos recursos que estão incluídos na próxima versão.
 
-[Alterações do ASP.NET 4 Beta 2 quebra](aspnet4/breaking-changes.md "alterações significativas")
+[ASP.NET 4 beta 2-alterações significativas](aspnet4/breaking-changes.md "alterações de quebra")
 
-Este documento descreve as alterações que foram feitas para a versão do .NET Framework 4 Beta 2 versão (ou seja, a versão Beta 2 do ASP.NET 4) que pode afetar aplicativos que foram criados usando versões anteriores, incluindo a versão Beta 1 do ASP.NET 4.
+Este documento descreve as alterações que foram feitas para o .NET Framework versão 4 beta 2 versão (ou seja, a versão ASP.NET 4 beta 2) que pode afetar potencialmente os aplicativos que foram criados usando versões anteriores, incluindo a versão do ASP.NET 4 beta 1.
 
-[O que há de novo no ASP.NET MVC 2](what-is-new-in-aspnet-mvc.md "o que há de novo no ASP.NET mvc")
+[Novidades no ASP.NET MVC 2](what-is-new-in-aspnet-mvc.md "Novidades no ASPNET MVC")
 
-Este documento descreve novos recursos e aprimoramentos introduzidos no ASP.NET MVC 2.
+Este documento descreve os novos recursos e melhorias introduzidos no ASP.NET MVC 2.
 
-[Atualizando um aplicativo ASP.NET MVC 1.0 para o ASP.NET MVC 2](aspnet-mvc2-upgrade-notes.md "aspnet-mvc2 – notas de atualização")
+[Atualização de um aplicativo do ASP.NET MVC 1.0 para o ASP.NET MVC 2](aspnet-mvc2-upgrade-notes.md "ASPNET-MVC2-upgrade-observações")
 
-ASP.NET MVC 2 pode ser instalado lado a lado com o ASP.NET MVC 1.0 no mesmo servidor. Isso fornece flexibilidade de desenvolvedores de aplicativo na escolha quando atualizar um aplicativo ASP.NET MVC 1.0 para o ASP.NET MVC 2. Este descreve documento ambas as como atualizar manualmente e com um assistente no Visual...
+O ASP.NET MVC 2 pode ser instalado lado a lado com o ASP.NET MVC 1,0 no mesmo servidor. Isso proporciona aos desenvolvedores de aplicativos flexibilidade na escolha de quando atualizar um aplicativo ASP.NET MVC 1,0 para o ASP.NET MVC 2. Este documento descreve como atualizar manualmente e com um assistente no Visual...
 
 <a id="security"></a>
 ## <a name="aspnet-security-whitepapers"></a>White papers de segurança do ASP.NET
 
-A segurança é um aspecto importante de aplicativos da internet, e esses white papers discutem como projetar e implementar aplicativos ASP.NET seguros.
+A segurança é um aspecto importante dos aplicativos da Internet, e esses White papers discutem como projetar e implementar aplicativos ASP.NET seguros.
 
-[O ASP.NET 2.0 de instrumentar aplicativos para segurança](https://msdn.microsoft.com/library/ms998325.aspx)
+[Aplicativos Instrument ASP.NET 2,0 para segurança](https://msdn.microsoft.com/library/ms998325.aspx)
 
-Este artigo "como" mostra como usar eventos de monitoramento de integridade personalizadas para instrumentar seu aplicativo ASP.NET para acompanhar eventos relacionados à segurança e operações. Versão do ASP.NET 2.0 fornece integridade de monitoramento, que inclui a instrumentação para muitos padrão...
+Este "como" mostra como usar eventos personalizados de monitoramento de integridade para instrumentar seu aplicativo ASP.NET para rastrear eventos e operações relacionados à segurança. A versão 2,0 do ASP.NET fornece monitoramento de integridade que inclui instrumentação para muitos padrões...
 
-[Executar uma revisão de implantação de segurança para o ASP.NET 2.0](https://msdn.microsoft.com/library/ms998367.aspx)
+[Executar uma revisão de implantação de segurança para o ASP.NET 2,0](https://msdn.microsoft.com/library/ms998367.aspx)
 
-Este "como" mostra de que como executar uma revisão de segurança de implantação para um aplicativo ASP.NET 2.0 identificar possíveis vulnerabilidades de segurança introduzidas por configurações inadequadas. A maior parte do processo de revisão envolve a tomada de...
+Este "como" mostra como executar uma revisão de implantação de segurança para um aplicativo ASP.NET 2,0 para identificar possíveis vulnerabilidades de segurança introduzidas por definições de configuração inadequadas. A maior parte do processo de revisão envolve fazer...
 
-[Uso do ADAM para funções no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998331.aspx)
+[Usar o ADAM para funções no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998331.aspx)
 
-Este tópico como fazer mostra como você pode desenvolver um site ASP.NET que usa o aplicativo de modo de ADAM (Active Directory) para armazenar as funções do ASP.NET. Ele mostra como configurar o ADAM e o repositório de políticas do Gerenciador de autorização (AzMan), como criar novas funções e...
+Este "como" mostra como você pode desenvolver um site da Web ASP.NET que usa o ADAM (modo de aplicativo Active Directory) para armazenar funções ASP.NET. Ele mostra como configurar ADAM e o repositório de políticas do AzMan (Gerenciador de autorização), como criar novas funções e...
 
-[Usar o Gerenciador de autorização (AzMan) com o ASP.NET 2.0](https://msdn.microsoft.com/library/ms998336.aspx)
+[Usar o AzMan (Gerenciador de autorização) com o ASP.NET 2,0](https://msdn.microsoft.com/library/ms998336.aspx)
 
-Este tópico como fazer mostra como usar o Gerenciador de autorização (AzMan) em conjunto com o Gerenciador de funções API para gerenciar funções, verificar a associação de função de usuário e autorizar funções do ASP.NET para executar operações específicas em relação a um armazenamento de diretivas de AzMan. O como...
+Este "como" mostra como usar o AzMan (Gerenciador de autorização) em conjunto com a API do Gerenciador de funções do ASP.NET para gerenciar funções, verificar a associação de função de usuário e autorizar funções para executar operações específicas em um repositório de políticas de AzMan. O como...
 
-[Usar a associação do ASP.NET 2.0](https://msdn.microsoft.com/library/ms998347.aspx)
+[Usar associação no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998347.aspx)
 
-Este "como" mostra de que forma usar o recurso de associação em aplicativos do ASP.NET versão 2.0. Ele mostra como usar dois provedores de associação diferentes: o ActiveDirectoryMembershipProvider e o SqlMembershipProvider. O recurso de associação...
+Este "como" mostra como usar o recurso de associação nos aplicativos ASP.NET versão 2,0. Ele mostra como usar dois provedores de associação diferentes: ActiveDirectoryMembershipProvider e SqlMembershipProvider. O recurso de associação...
 
-[Usar o Gerenciador de funções no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998314.aspx)
+[Usar o Gerenciador de funções no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998314.aspx)
 
-Este artigo "como" mostra como usar o Gerenciador de funções do ASP.NET 2.0. O Gerenciador de funções facilita a tarefa de funções de gerenciamento e execução de autorização baseado em função em seu aplicativo. Ele mostra como configurar os vários provedores de função para uso com o seu...
+Este "como" mostra como usar o Gerenciador de funções do ASP.NET 2,0. O Gerenciador de funções facilita a tarefa de gerenciar funções e executar autorização baseada em função em seu aplicativo. Ele mostra como configurar os vários provedores de função para uso com seu...
 
-[Usar a autenticação do Windows no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998358.aspx)
+[Usar a autenticação do Windows no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998358.aspx)
 
-Este artigo "como" mostra como configurar e usar a autenticação do Windows em um aplicativo Web ASP.NET. Autenticação do Windows é a abordagem preferida, sempre que os usuários fazem parte do seu domínio do Windows. Essa abordagem permite que você use um repositório de identidades existente...
+Este "como" mostra como configurar e usar a autenticação do Windows em um aplicativo Web ASP.NET. A autenticação do Windows é a abordagem preferida sempre que os usuários fazem parte do seu domínio do Windows. Essa abordagem permite que você use um repositório de identidades existente...
 
 [Executar uma revisão de código de segurança para código gerenciado (atividade de linha de base)](https://msdn.microsoft.com/library/ms998364.aspx)
 
-Este "como" mostra de que como realizar revisões de código de segurança. Este módulo apresenta as etapas envolvidas na atividade e técnicas para analisar os resultados. Use este como com "lista de perguntas de segurança: (.NET Framework 2.0) de código gerenciado "...
+Este "como" mostra como executar revisões de código de segurança. Esse módulo apresenta as etapas envolvidas na atividade e as técnicas para analisar os resultados. Use este "como" lista de perguntas de segurança: código gerenciado (.NET Framework 2,0) "...
 
-[Executar uma revisão de implantação de segurança para o ASP.NET 2.0](https://msdn.microsoft.com/library/ms998367.aspx)
+[Executar uma revisão de implantação de segurança para o ASP.NET 2,0](https://msdn.microsoft.com/library/ms998367.aspx)
 
-Este "como" mostra de que como executar uma revisão de segurança de implantação para um aplicativo ASP.NET 2.0 identificar possíveis vulnerabilidades de segurança introduzidas por configurações inadequadas. A maior parte do processo de revisão envolve a tomada de...
+Este "como" mostra como executar uma revisão de implantação de segurança para um aplicativo ASP.NET 2,0 para identificar possíveis vulnerabilidades de segurança introduzidas por definições de configuração inadequadas. A maior parte do processo de revisão envolve fazer...
 
 [Implementar a delegação Kerberos para Windows 2000](https://msdn.microsoft.com/library/aa302400.aspx)
 
-A delegação de Kerberos permite que você fluxo uma identidade autenticada em várias camadas físicas de um aplicativo para dar suporte à autorização e autenticação de downstream. Como este mostra a você as etapas de configuração necessárias para fazer isso funcionar.
+A delegação de Kerberos permite que você flua uma identidade autenticada em várias camadas físicas de um aplicativo para dar suporte à autenticação e autorização downstream. Este "como" mostra as etapas de configuração necessárias para fazer isso funcionar.
 
-[Use a representação e delegação no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998351.aspx)
+[Usar representação e delegação no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998351.aspx)
 
-Este tópico como fazer mostra como e quando você deve usar a representação em aplicativos ASP.NET 2.0. Por padrão, representação está desativada e você pode acessar recursos usando a identidade do processo do aplicativo Web do ASP.NET. No entanto, você pode usar...
+Este "como" mostra como e quando você deve usar a representação em aplicativos ASP.NET 2,0. Por padrão, a representação é desativada e você pode acessar recursos usando a identidade do processo do aplicativo Web ASP.NET. No entanto, você pode usar...
 
-[Criar um modelo de risco para um aplicativo Web em tempo de Design](https://msdn.microsoft.com/library/ms978527.aspx)
+[Criar um modelo de ameaça para um aplicativo Web em tempo de design](https://msdn.microsoft.com/library/ms978527.aspx)
 
-Este "como" descreve de que uma abordagem para a criação de um modelo de risco para um aplicativo Web. A atividade de modelagem de ameaças ajudam você a seu design de segurança de modelo para que você pode expor vulnerabilidades e possíveis falhas de design de segurança antes de você investir...
+Este "como" descreve uma abordagem para criar um modelo de ameaça para um aplicativo Web. A atividade de modelagem de ameaças ajuda você a modelar seu design de segurança para que você possa expor possíveis falhas de design de segurança e vulnerabilidades antes de investir...
 
-### <a name="forms-authentication"></a>Autenticação de formulários
+### <a name="forms-authentication"></a>Autenticação de Formulários
 
-[Proteger a autenticação de formulários no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998310.aspx)
+[Proteger a autenticação de formulários no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998310.aspx)
 
-Este artigo "como" mostra como configurar e usar a autenticação de formulários com aplicativos ASP.NET 2.0 com segurança. Principais fatores a serem considerados incluem corretamente protegendo o tíquete de autenticação e protegendo o repositório de identidades de usuário e o acesso ao repositório. ...
+Este "como" mostra como configurar com segurança e usar a autenticação de formulários com aplicativos ASP.NET 2,0. Os principais fatores a serem considerados incluem a proteção adequada do tíquete de autenticação e a proteção do armazenamento de identidades do usuário e o acesso a esse armazenamento. ...
 
-[Usar autenticação de formulários com o Active Directory no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998360.aspx)
+[Usar a autenticação de formulários com o Active Directory no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998360.aspx)
 
-Este "como" mostra de que como usar a autenticação de formulários com o serviço de diretório do Microsoft® Active Directory® usando o ActiveDirectoryMembershipProvider. Como mostra como configurar o provedor e criar e autenticar usuários...
+Este "como" mostra como usar a autenticação de formulários com o serviço de diretório® do Microsoft® Active Directory usando o ActiveDirectoryMembershipProvider. O como mostra como configurar o provedor e criar e autenticar usuários....
 
-[Usar autenticação de formulários com o Active Directory em vários domínios no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998345.aspx)
+[Usar a autenticação de formulários com Active Directory em vários domínios no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998345.aspx)
 
-Este "como" mostra de que como usar a autenticação de formulários com o serviço de diretório do Microsoft® Active Directory® usando o ActiveDirectoryMembershipProvider. Como mostra como configurar o provedor e criar e autenticar usuários...
+Este "como" mostra como usar a autenticação de formulários com o serviço de diretório® do Microsoft® Active Directory usando o ActiveDirectoryMembershipProvider. O como mostra como configurar o provedor e criar e autenticar usuários....
 
-[Usar autenticação de formulários com o SQL Server no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998317.aspx)
+[Usar a autenticação de formulários com o SQL Server no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998317.aspx)
 
-Este tópico como fazer mostra como você pode usar a autenticação de formulários com o provedor de associação do SQL Server. Autenticação de formulários com o SQL Server é mais aplicável em situações em que os usuários do seu aplicativo não fazem parte do seu domínio do Windows, e como resultado,...
+Este "como" mostra como você pode usar a autenticação de formulários com o provedor de associação SQL Server. A autenticação de formulários com SQL Server é mais aplicável em situações em que os usuários do seu aplicativo não fazem parte do seu domínio do Windows e, como resultado,,...
 
-[Criar objetos GenericPrincipal usando a autenticação de formulários no ASP.NET 1.1](https://msdn.microsoft.com/library/aa302399.aspx)
+[Criar objetos GenericPrincipal com autenticação de formulários no ASP.NET 1,1](https://msdn.microsoft.com/library/aa302399.aspx)
 
-Este artigo "como" mostra como criar e manipular objetos GenericPrincipal e FormsIdentity ao usar a autenticação de formulários.
+Este "como" mostra como criar e manipular objetos GenericPrincipal e FormsIdentity ao usar a autenticação de formulários.
 
-[Usar autenticação de formulários com o Active Directory no ASP.NET 1.1](https://msdn.microsoft.com/library/aa302397.aspx)
+[Usar a autenticação de formulários com o Active Directory no ASP.NET 1,1](https://msdn.microsoft.com/library/aa302397.aspx)
 
-Este artigo mostra como implementar a autenticação de formulários em relação a um armazenamento de credenciais do Active Directory.
+Este artigo de instruções mostra como implementar a autenticação de formulários em um repositório de credenciais Active Directory.
 
-[Usar autenticação de formulários com o SQL Server no ASP.NET 1.1](https://msdn.microsoft.com/library/aa302398.aspx)
+[Usar a autenticação de formulários com o SQL Server no ASP.NET 1,1](https://msdn.microsoft.com/library/aa302398.aspx)
 
-Este artigo "como" mostra como implementar a autenticação de formulários em relação a um repositório de credenciais do SQL Server. Ele também mostra como armazenar resumos de senha no banco de dados.
+Este "como" mostra como implementar a autenticação de formulários em um repositório de credenciais SQL Server. Ele também mostra como armazenar resumos de senha no banco de dados.
 
 ### <a name="user-input-data-validation"></a>Validação de dados de entrada do usuário
 
-[Solicitação de validação – impedindo ataques de Script](request-validation.md "validação de solicitação")
+[Solicitar validação - evitando ataques de script](request-validation.md "validação de solicitação")
 
-Este documento descreve o recurso de validação de solicitação do ASP.NET, onde, por padrão, o aplicativo será impedido de processamento de conteúdo HTML não codificado enviado ao servidor. Esse recurso de validação de solicitação pode ser desabilitado quando o aplicativo foi...
+Este documento descreve o recurso de validação de solicitação do ASP.NET, em que, por padrão, o aplicativo é impedido de processar o conteúdo HTML não codificado enviado ao servidor. Este recurso de validação de solicitação pode ser desabilitado quando o aplicativo tiver sido...
 
-[Evitar scripts entre sites no ASP.NET](https://msdn.microsoft.com/library/ms998274.aspx)
+[Impedir scripts entre sites no ASP.NET](https://msdn.microsoft.com/library/ms998274.aspx)
 
-Este "como" mostra de que como você pode ajudar a proteger seus aplicativos ASP.NET contra ataques de script entre sites por meio de técnicas de validação de entrada apropriada e pela codificação de saída. Ele também descreve alguns dos outros mecanismos de proteção que você pode usar em...
+Este "como" mostra como você pode ajudar a proteger seus aplicativos ASP.NET de ataques de script entre sites usando técnicas de validação de entrada adequadas e codificando a saída. Ele também descreve vários outros mecanismos de proteção que você pode usar em...
 
 [Proteger contra injeção de SQL no ASP.NET](https://msdn.microsoft.com/library/ms998271.aspx)
 
-Este "como" mostra de que um número de maneiras para ajudar a proteger seu aplicativo ASP.NET contra ataques de injeção de SQL. Injeção de SQL pode ocorrer quando um aplicativo usa a entrada para construir instruções SQL dinâmicas ou quando ele usa procedimentos armazenados para conectar-se para o...
+Este "como" mostra várias maneiras de ajudar a proteger seu aplicativo ASP.NET de ataques de injeção de SQL. A injeção de SQL pode ocorrer quando um aplicativo usa a entrada para construir instruções SQL dinâmicas ou quando usa procedimentos armazenados para se conectar ao...
 
-[Usar expressões regulares para restringir entradas em ASP.NET](https://msdn.microsoft.com/library/ms998267.aspx)
+[Usar expressões regulares para restringir a entrada em ASP.NET](https://msdn.microsoft.com/library/ms998267.aspx)
 
-Este "como" mostra de que como você pode usar expressões regulares em aplicativos ASP.NET para restringir entradas não confiáveis. Expressões regulares são uma boa maneira de validar os campos de texto, como nomes, endereços, números de telefone e outras informações do usuário. Você pode usar...
+Este "como" mostra como você pode usar expressões regulares em aplicativos ASP.NET para restringir a entrada não confiável. As expressões regulares são uma boa maneira de validar campos de texto, como nomes, endereços, números de telefone e outras informações de usuário. Você pode usar...
 
-### <a name="code-access-security"></a>Segurança de acesso do código
+### <a name="code-access-security"></a>Segurança de Acesso do Código
 
-[Use a segurança de acesso do código no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998326.aspx)
+[Usar a segurança de acesso ao código no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998326.aspx)
 
-Este tópico como fazer mostra como selecionar um nível de confiança apropriado para seu aplicativo e, quando necessário, como criar um personalizado ASP.NET código acesso arquivo diretiva de segurança para definir um personalizado nível de confiança. Você pode usar a confiança de segurança de acesso de código diferente...
+Este "como" mostra como selecionar um nível de confiança apropriado para seu aplicativo e, quando necessário, como criar um arquivo personalizado de política de segurança de acesso ao código do ASP.NET para definir um nível de confiança personalizado. Você pode usar a relação de confiança de segurança de acesso a código diferente...
 
 [Criar uma permissão de criptografia personalizada](https://msdn.microsoft.com/library/aa302362.aspx)
 
-Este "como" descreve de que como criar uma permissão de segurança de acesso do código personalizado para controlar o acesso programático à funcionalidade de criptografia não gerenciada que fornece Win32® Data Protection API (DPAPI). Use essa permissão personalizada com o wrapper gerenciado do DPAPI...
+Este "como" descreve como criar uma permissão de segurança de acesso de código personalizada para controlar o acesso programático a uma funcionalidade de criptografia não gerenciada que o Win32® API de proteção de dados (DPAPI) fornece. Use essa permissão personalizada com o wrapper DPAPI gerenciado...
 
-[Use a política de segurança de acesso do código para restringir um Assembly](https://msdn.microsoft.com/library/aa302361.aspx)
+[Usar a política de segurança de acesso ao código para restringir um assembly](https://msdn.microsoft.com/library/aa302361.aspx)
 
-Um administrador pode configurar a política de segurança de acesso do código para restringir as operações de código do .NET Framework (assemblies). Este tópico como fazer, você configurar política de segurança de acesso do código para restringir a capacidade de um assembly para executar a e/s de arquivo e restringir...
+Um administrador pode configurar a política de segurança de acesso ao código para restringir as operações do código de .NET Framework (assemblies). Neste "como", você configura a política de segurança de acesso ao código para restringir a capacidade de um assembly de executar e/s de arquivo e restringir...
 
 ### <a name="communications-security"></a>Segurança de comunicações
 
-[Configurar SSL em um servidor Web](https://msdn.microsoft.com/library/aa302411.aspx)
+[Configurar o SSL em um servidor Web](https://msdn.microsoft.com/library/aa302411.aspx)
 
-Um servidor Web deve ser configurado para SSL para dar suporte a conexões https de aplicativos cliente. Este "como" mostra de que forma configurar SSL em um servidor Web.
+Um servidor Web deve ser configurado para SSL a fim de oferecer suporte a conexões HTTPS de aplicativos cliente. Este "como" mostra como configurar o SSL em um servidor Web.
 
 [Configurar certificados de cliente](https://msdn.microsoft.com/library/aa302412.aspx)
 
-IIS dá suporte à autenticação de certificado de cliente. Este artigo "como" mostra como configurar um aplicativo Web para exigir certificados de cliente. Ele também mostra como instalar um certificado em um computador cliente e usá-lo ao chamar o aplicativo Web.
+O IIS dá suporte à autenticação de certificado do cliente. Este "como" mostra como configurar um aplicativo Web para exigir certificados de cliente. Ele também mostra como instalar um certificado em um computador cliente e usá-lo ao chamar o aplicativo Web.
 
-[Usar IPSec na filtragem de portas e autenticação](https://msdn.microsoft.com/library/aa302366.aspx)
+[Usar IPSec para filtrar portas e autenticação](https://msdn.microsoft.com/library/aa302366.aspx)
 
-Internet Protocol security (IPSec) é um protocolo, não um serviço, que fornece serviços de autenticação para tráfego de rede baseado em IP, integridade e criptografia. Como o IPSec fornece proteção de servidor para servidor, você pode usar IPSec para combater ameaças internas...
+O protocolo IPSec é um protocolo, não um serviço, que fornece criptografia, integridade e serviços de autenticação para o tráfego de rede baseado em IP. Como o IPSec fornece proteção de servidor para servidor, você pode usar o IPSec para combater ameaças internas...
 
-[Usar IPSec para oferecer comunicação segura entre dois servidores](https://msdn.microsoft.com/library/aa302413.aspx)
+[Usar IPSec para fornecer comunicação segura entre dois servidores](https://msdn.microsoft.com/library/aa302413.aspx)
 
-O IPSec é uma tecnologia fornecida pelo Windows 2000 que permite que você crie canais criptografados entre dois servidores. IPSec pode ser usado para filtrar o tráfego de IP e para autenticar servidores. Este "como" mostra de que forma configurar IPSec para fornecer seguro (criptografado)...
+O IPSec é uma tecnologia fornecida pelo Windows 2000 que permite criar canais criptografados entre dois servidores. O IPSec pode ser usado para filtrar o tráfego IP e autenticar servidores. Este "como" mostra como configurar o IPSec para fornecer um seguro (criptografado)...
 
-[Use o SSL para proteger a comunicação com o SQL Server](https://msdn.microsoft.com/library/aa302414.aspx)
+[Usar SSL para proteger a comunicação com o SQL Server](https://msdn.microsoft.com/library/aa302414.aspx)
 
-Costuma ser fundamental para aplicativos que são capazes de proteger os dados passados de e para um servidor de banco de dados do SQL Server. Com o SQL Server, você pode usar o SSL para criar um canal criptografado. Este artigo "como" mostra como instalar um certificado no servidor de banco de dados,...
+Geralmente, é vital que os aplicativos consigam proteger os dados passados para e de um servidor de banco SQL Server. Com SQL Server, você pode usar SSL para criar um canal criptografado. Este "como" mostra como instalar um certificado no servidor de banco de dados,...
 
-[Chamar um Web Service usando certificados de cliente do ASP.NET 1.1](https://msdn.microsoft.com/library/aa302408.aspx)
+[Chamar um serviço Web usando certificados de cliente do ASP.NET 1,1](https://msdn.microsoft.com/library/aa302408.aspx)
 
-Este "como" descreve de que como você pode passar um certificado de cliente para um serviço Web para autenticação de um aplicativo Web ASP.NET ou de um aplicativo do Windows Forms. Você pode instalar o certificado do cliente no repositório do computador local ou no armazenamento do usuário. If...
+Este "como" descreve como você pode passar um certificado de cliente para um serviço Web para autenticação de um aplicativo Web ASP.NET ou de um aplicativo Windows Forms. Você pode instalar o certificado do cliente no repositório do computador local ou no armazenamento do usuário. Se...
 
-[Chamar um serviço Web usando o SSL do ASP.NET 1.1](https://msdn.microsoft.com/library/aa302409.aspx)
+[Chamar um serviço Web usando SSL do ASP.NET 1,1](https://msdn.microsoft.com/library/aa302409.aspx)
 
-A criptografia Secure Sockets Layer (SSL) pode ser usada para garantir a integridade e a confidencialidade das mensagens transmitidas para e de um serviço Web. Este "como" mostra de que como usar SSL com os serviços Web.
+A criptografia de protocolo SSL (SSL) pode ser usada para garantir a integridade e a confidencialidade das mensagens passadas para e de um serviço Web. Este "como" mostra como usar SSL com serviços Web.
 
 ### <a name="cryptography"></a>Criptografia
 
-[Criar uma biblioteca DPAPI no .NET 1.1](https://msdn.microsoft.com/library/aa302402.aspx)
+[Criar uma biblioteca DPAPI no .NET 1,1](https://msdn.microsoft.com/library/aa302402.aspx)
 
-Este artigo "como" mostra como criar uma biblioteca de classes gerenciadas que expõe a funcionalidade DPAPI a aplicativos que desejam criptografar dados, por exemplo, cadeias de conexão de banco de dados e as credenciais da conta.
+Este "como" mostra como criar uma biblioteca de classes gerenciada que expõe a funcionalidade DPAPI para aplicativos que desejam criptografar dados, por exemplo, cadeias de conexão de banco de dado e credenciais de conta.
 
-[Criar uma biblioteca de criptografia no .NET 1.1](https://msdn.microsoft.com/library/aa302405.aspx)
+[Criar uma biblioteca de criptografia no .NET 1,1](https://msdn.microsoft.com/library/aa302405.aspx)
 
-Este artigo "como" mostra como criar uma biblioteca de classes gerenciada para oferecer funcionalidade de criptografia para aplicativos. Ele permite que um aplicativo escolher o algoritmo de criptografia. Algoritmos com suporte incluem DES, Triple DES, RC2 e Rijndael.
+Este "como" mostra como criar uma biblioteca de classes gerenciada para fornecer funcionalidade de criptografia para aplicativos. Ele permite que um aplicativo escolha o algoritmo de criptografia. Os algoritmos com suporte incluem DES, Triple DES, RC2 e Rijndael.
 
-[Uma cadeia de caracteres de Conexão criptografada no registro no ASP.NET 1.1 da Store](https://msdn.microsoft.com/library/aa302406.aspx)
+[Armazenar uma cadeia de conexão criptografada no registro no ASP.NET 1,1](https://msdn.microsoft.com/library/aa302406.aspx)
 
-Aplicativos podem optar por armazenar os dados criptografados, como cadeias de caracteres de conexão e credenciais de conta no registro do Windows. Este artigo "como" mostra como armazenar e recuperar cadeias de caracteres criptografadas no registro.
+Os aplicativos podem optar por armazenar dados criptografados, como cadeias de conexão e credenciais de conta no registro do Windows. Este "como" mostra como armazenar e recuperar cadeias de caracteres criptografadas no registro.
 
-[Usar DPAPI (Store máquina) no ASP.NET 1.1](https://msdn.microsoft.com/library/aa302403.aspx)
+[Usar DPAPI (repositório de máquina) do ASP.NET 1,1](https://msdn.microsoft.com/library/aa302403.aspx)
 
-Este "como" mostra de que forma usar DPAPI de um aplicativo Web ASP.NET ou Web service para criptografar dados confidenciais.
+Este "como" mostra como usar a DPAPI de um aplicativo Web ASP.NET ou serviço Web para criptografar dados confidenciais.
 
-[Usar DPAPI (Store do usuário) no ASP.NET 1.1 com os serviços corporativos](https://msdn.microsoft.com/library/aa302404.aspx)
+[Usar DPAPI (armazenamento do usuário) do ASP.NET 1,1 com os serviços corporativos](https://msdn.microsoft.com/library/aa302404.aspx)
 
-Este "como" mostra de que forma usar DPAPI de um aplicativo Web ASP.NET ou serviço para criptografar dados confidenciais. Este tópico como fazer usa a DPAPI com o armazenamento de usuário, que requer o uso de um fora do processo de componente de serviços corporativos.
+Este "como" mostra como usar a DPAPI de um aplicativo Web ASP.NET ou serviço para criptografar dados confidenciais. Este "como" usa o DPAPI com o armazenamento do usuário, que exige o uso de um componente de serviços corporativos fora do processo.
 
 <a id="setup"></a>
-## <a name="installation-and-setup-whitepapers"></a>Instalação e white papers do programa de instalação
+## <a name="installation-and-setup-whitepapers"></a>White papers de instalação e configuração
 
-Esses white papers fornecem instruções passo a passo para instalar e configurar o ASP.NET no servidor.
+Esses White papers fornecem instruções passo a passo para instalar e configurar o ASP.NET em seu servidor.
 
-[Criar uma conta de serviço para um ASP.NET 2.0 aplicativo](https://msdn.microsoft.com/library/ms998297.aspx)
+[Criar uma conta de serviço para um aplicativo ASP.NET 2,0](https://msdn.microsoft.com/library/ms998297.aspx)
 
-Este artigo "como" mostra como criar e configurar uma conta de serviço personalizado de com menos privilégios para executar um aplicativo Web ASP.NET. Por padrão, um aplicativo ASP.NET no Microsoft Windows Server 2003 e o IIS 6.0 é executado usando o serviço de rede interno...
+Este "como" mostra como criar e configurar uma conta de serviço personalizada com privilégios mínimos para executar um aplicativo Web ASP.NET. Por padrão, um aplicativo ASP.NET no Microsoft Windows Server 2003 e no IIS 6,0 é executado usando o serviço de rede interno...
 
-[Melhorar a segurança ao hospedar vários aplicativos em ASP.NET 2.0](https://msdn.microsoft.com/library/aa480478.aspx)
+[Melhorar a segurança ao hospedar vários aplicativos no ASP.NET 2,0](https://msdn.microsoft.com/library/aa480478.aspx)
 
-Este como mostra como você pode isolar vários aplicativos uns dos outros e de recursos compartilhados do sistema em uma Web ambiente de hospedagem. O ambiente de hospedagem pode ser um servidor Web fornecido pelo provedor de um serviço de Internet (ISP) que hospeda várias...
+Este "como" mostra como você pode isolar vários aplicativos uns dos outros e de recursos compartilhados do sistema em um ambiente de hospedagem na Web. O ambiente de hospedagem pode ser um servidor Web fornecido por um provedor de serviços de Internet (ISP) que hospeda vários...
 
-[Usar confiança média no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998341.aspx)
+[Usar confiança média no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998341.aspx)
 
-Este artigo "como" mostra como configurar aplicativos Web do ASP.NET para ser executado em confiança média. Se você hospedar vários aplicativos no mesmo servidor, você pode usar a segurança de acesso do código e o nível de confiança médio para fornecer isolamento de aplicativos. Configurando...
+Este "como" mostra como configurar aplicativos Web ASP.NET para serem executados em confiança média. Se você hospedar vários aplicativos no mesmo servidor, poderá usar a segurança de acesso ao código e o nível de confiança médio para fornecer isolamento de aplicativo. Definindo...
 
-[Usar a conta de serviço de rede para acessar recursos no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998320.aspx)
+[Use a conta de serviço de rede para acessar recursos no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998320.aspx)
 
-Este tópico como fazer mostra como você pode usar a conta NT AUTHORITY\Network Service da máquina para acessar o local e recursos de rede. Por padrão no Windows Server 2003, os aplicativos ASP.NET são executados usando a identidade desta conta. Ele é uma menos privilegiada...
+Este "como" mostra como você pode usar a conta da máquina NT AUTHORITY\Network Service para acessar recursos locais e de rede. Por padrão, no Windows Server 2003, os aplicativos ASP.NET são executados usando a identidade dessa conta. É um privilégio menos privilegiado...
 
-[Usar a transição de protocolo e delegação restrita no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998355.aspx)
+[Usar a transição de protocolo e a delegação restrita no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998355.aspx)
 
-Este artigo "como" mostra como configurar e usar a transição de protocolo e delegação restrita para permitir que seu aplicativo ASP.NET para acessar os recursos de rede ao representar o chamador original. Sistema de operacional do Microsoft® Windows® 2000...
+Este "como" mostra como configurar e usar a transição de protocolo e a delegação restrita para permitir que seu aplicativo ASP.NET acesse os recursos de rede ao mesmo tempo em que representa o chamador original. O sistema operacional Microsoft® Windows® 2000...
 
-[Execução do ASP.NET lado a lado do .NET Framework 1.0 e 1.1](side-by-side-with-10.md "lado a lado com 1.0")
+[Execução lado a lado do ASP.NET no .NET Framework 1.0 e 1.1](side-by-side-with-10.md "lado a lado com 1,0")
 
-Este white paper descreve como instalar o .NET 1.0 e 1.1 do .NET em seu computador, permitindo que um aplicativo Web ASP.NET seja executado em qualquer versão do framework.
+Este white paper descreve como instalar o .NET 1,0 e o .NET 1,1 em seu computador, permitindo que um aplicativo Web ASP.NET seja executado em qualquer uma das versões do Framework.
 
-[Acesso negado do ASP.NET a diretórios do IIS](denied-access-to-iis-directories.md "negado acesso a diretórios do iis")
+[Acesso negado do ASP.NET a diretórios do IIS](denied-access-to-iis-directories.md "acesso negado aos diretórios do IIS")
 
-Este white paper descreve o que você deve fazer uma solicitação para seu aplicativo ASP.NET retorna o erro "acesso negado ao *Nomedodiretório* directory. Falha ao iniciar o monitoramento de alterações de diretório".
+Este white paper descreve o que você deve fazer se uma solicitação ao aplicativo ASP.NET retornar o erro "acesso negado ao diretório *DirectoryName* . Falha ao iniciar o monitoramento de alterações de diretório. "
 
-[Executando o ASP.NET 1.1 com o IIS 6.0](aspnet-and-iis6.md "aspnet e iis6")
+[Executando o ASP.NET 1.1 com o IIS 6.0](aspnet-and-iis6.md "ASPNET e IIS6")
 
-Embora o Windows Server 2003 inclui o IIS 6.0 e ASP.NET 1.1, esses componentes são desabilitados por padrão. Este white paper descreve como habilitar o IIS 6.0 e ASP.NET 1.1 e recomenda várias definições de configuração para obter o melhor...
+Embora o Windows Server 2003 inclua o IIS 6,0 e o ASP.NET 1,1, esses componentes são desabilitados por padrão. Este white paper descreve como habilitar o IIS 6,0 e o ASP.NET 1,1 e recomenda várias definições de configuração para obter o ideal...
 
-[Correção para o erro de ''servidor aplicativo não está disponível após a aplicação de atualização de segurança para o IE](ms03-32-issue.md "ms03-32-problema")
+[Correção do erro ' servidor indisponível ' após aplicar a atualização de segurança para o IE](ms03-32-issue.md "MS03-32-problema")
 
-Este documento descreve o patch que corrige um problema com a atualização de segurança MS03-32 para o Internet Explorer que afeta os aplicativos do ASP.NET 1.0 em execução no Windows XP Professional.
+Este documento descreve o patch que corrige um problema com a atualização de segurança do MS03-32 para o Internet Explorer que afeta os aplicativos ASP.NET 1,0 em execução no Windows XP Professional.
 
-[Criar uma conta personalizada para executar o ASP.NET 1.1](https://msdn.microsoft.com/library/aa302396.aspx)
+[Criar uma conta personalizada para executar o ASP.NET 1,1](https://msdn.microsoft.com/library/aa302396.aspx)
 
-Aplicativos Web ASP.NET normalmente executar usando a conta ASPNET interna. Às vezes, você talvez queira usar uma conta personalizada em vez disso. Este artigo mostra como criar uma conta local com menos privilégios para executar aplicativos da Web do ASP.NET. ...
+Os aplicativos Web ASP.NET geralmente são executados usando a conta ASPNET interna. Na ocasião, talvez você queira usar uma conta personalizada em vez disso. Este artigo de instruções mostra como criar uma conta local com privilégios mínimos para executar aplicativos Web do ASP.NET. ...
 
 ### <a name="configuration"></a>Configuração
 
-[Configurar a chave do computador no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998288.aspx)
+[Configurar a chave do computador no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998288.aspx)
 
-Esse manual explica a &lt;machineKey&gt; elemento no arquivo Web. config e mostra como configurar o &lt;machineKey&gt; elemento a verificação de adulteração de controle e a criptografia de ViewState, a autenticação de formulários permissões e os cookies de função. ViewState é assinado...
+Este "como" explica o elemento &lt;machineKey&gt; no arquivo Web. config e mostra como configurar o elemento&gt; machineKey &lt;para controlar a prova de adulteração e a criptografia de ViewState, tíquetes de autenticação de formulários e cookies de função. ViewState está assinado...
 
-[Criptografar seções de configuração no ASP.NET 2.0 usando DPAPI](https://msdn.microsoft.com/library/ms998280.aspx)
+[Criptografar seções de configuração no ASP.NET 2,0 usando DPAPI](https://msdn.microsoft.com/library/ms998280.aspx)
 
-Este tópico como fazer mostra como usar o provedor de configuração protegida DPAPI (interface) e o Aspnet de programação de aplicativo de proteção de dados do Windows\_ferramenta regiis.exe para criptografar seções de arquivos de configuração. Você pode usar o Aspnet\_ferramenta regiis.exe para...
+Este "como" mostra como usar o provedor de configuração protegida por DPAPI (interface de programação de aplicativo de proteção de dados) do Windows e o ASPNET\_ferramenta regiis. exe para criptografar seções de seus arquivos de configuração. Você pode usar o ASPNET\_a ferramenta regirias. exe para...
 
-[Criptografar seções de configuração no ASP.NET 2.0 usando o RSA](https://msdn.microsoft.com/library/ms998283.aspx)
+[Criptografar seções de configuração no ASP.NET 2,0 usando RSA](https://msdn.microsoft.com/library/ms998283.aspx)
 
-Este tópico como fazer mostra como usar o provedor de configuração protegida do RSA e o Aspnet\_ferramenta regiis.exe para criptografar seções de arquivos de configuração. Você pode usar Aspnet\_ferramenta regiis.exe para criptografar dados confidenciais, como cadeias de caracteres de conexão, mantidos na...
+Este "como" mostra como usar o provedor de configuração protegida RSA e o ASPNET\_ferramenta regiis. exe para criptografar seções de seus arquivos de configuração. Você pode usar o ASPNET\_ferramenta regiis. exe para criptografar dados confidenciais, como cadeias de conexão, mantidos no...
 
-[Use a representação e delegação no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998351.aspx)
+[Usar representação e delegação no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998351.aspx)
 
-Este tópico como fazer mostra como e quando você deve usar a representação em aplicativos ASP.NET 2.0. Por padrão, representação está desativada e você pode acessar recursos usando a identidade do processo do aplicativo Web do ASP.NET. No entanto, você pode usar...
+Este "como" mostra como e quando você deve usar a representação em aplicativos ASP.NET 2,0. Por padrão, a representação é desativada e você pode acessar recursos usando a identidade do processo do aplicativo Web ASP.NET. No entanto, você pode usar...
 
 <a id="sql"></a>
-## <a name="sql-server-whitepapers"></a>SQL Server Whitepapers
+## <a name="sql-server-whitepapers"></a>White papers do SQL Server
 
-Enquanto o ASP.NET funciona com uma variedade de bancos de dados, estes white papers examinar especificamente a conexão de aplicativos do ASP.NET para o SQL Server.
+Embora o ASP.NET funcione com uma variedade de bancos de dados, esses White papers se parecem especificamente em conectar aplicativos ASP.NET a SQL Server.
 
-[Conectar-se ao SQL Server usando a autenticação do SQL no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998300.aspx)
+[Conectar-se ao SQL Server usando a autenticação do SQL no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998300.aspx)
 
-Este artigo "como" mostra como se conectar a um aplicativo ASP.NET com segurança para Microsoft® SQL Server™ quando a autenticação de acesso de banco de dados usa a autenticação do SQL native. A autenticação do Windows é a maneira recomendada para se conectar ao SQL Server porque você...
+Este "como" mostra como conectar um aplicativo ASP.NET com segurança ao Microsoft® SQL Server™ quando a autenticação de acesso ao banco de dados usa a autenticação nativa do SQL. A autenticação do Windows é a maneira recomendada para se conectar ao SQL Server porque você...
 
-[Conectar-se ao SQL Server usando a autenticação do Windows no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998292.aspx)
+[Conectar-se ao SQL Server usando a autenticação do Windows no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998292.aspx)
 
-Este tópico como fazer mostra como se conectar ao SQL Server 2000 usando uma conta de serviço do Windows de um aplicativo do ASP.NET versão 2.0. Você deve usar a autenticação do Windows em vez da autenticação do SQL sempre que possível, porque você evitar armazenar credenciais em...
+Este "como" mostra como se conectar ao SQL Server 2000 usando uma conta de serviço do Windows de um aplicativo ASP.NET versão 2,0. Você deve usar a autenticação do Windows em vez da autenticação do SQL sempre que possível, porque você evita o armazenamento de credenciais no...
 
-[Use o SSL para proteger a comunicação com o SQL Server 2000](https://msdn.microsoft.com/library/aa302414.aspx)
+[Usar SSL para proteger a comunicação com o SQL Server 2000](https://msdn.microsoft.com/library/aa302414.aspx)
 
-Costuma ser fundamental para aplicativos que são capazes de proteger os dados passados de e para um servidor de banco de dados do SQL Server. Com o SQL Server, você pode usar o SSL para criar um canal criptografado. Este artigo "como" mostra como instalar um certificado no servidor de banco de dados,...
+Geralmente, é vital que os aplicativos consigam proteger os dados passados para e de um servidor de banco SQL Server. Com SQL Server, você pode usar SSL para criar um canal criptografado. Este "como" mostra como instalar um certificado no servidor de banco de dados,...
 
 <a id="general"></a>
-## <a name="general-whitepapers"></a>White papers de geral
+## <a name="general-whitepapers"></a>White papers gerais
 
-O seguinte estudo de caso descreve o processo que foi usado para migrar sites de comunidade do .NET da Microsoft de um ambiente de hospedagem tradicional para o Microsoft Azure.
+O estudo de caso a seguir descreve o processo que foi usado para migrar os sites da Comunidade .NET da Microsoft de um ambiente de hospedagem tradicional para o Microsoft Azure.
 
-[Migrando da Microsoft ASP.NET e sites de comunidade do IIS.NET para o Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=400656)
+[Migrando sites da comunidade ASP.NET e IIS.NET da Microsoft para Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=400656)
 
-Esses white papers abrangem uma variedade de tópicos relacionados a ASP.NET.
+Esses White papers abordam uma variedade de tópicos sobre ASP.NET.
 
-[Usar o monitoramento de integridade no ASP.NET 2.0](https://msdn.microsoft.com/library/ms998306.aspx)
+[Usar o monitoramento de integridade no ASP.NET 2,0](https://msdn.microsoft.com/library/ms998306.aspx)
 
-Este artigo "como" mostra como usar o monitoramento para instrumentar seu aplicativo para um evento personalizado de integridade. Para criar uma evento de monitoramento de integridade personalizada, você pode criar uma classe que deriva de System.Web.Management.WebBaseEvent, configure a &lt;healthMonitoring&gt; ...
+Este "como" mostra como usar o monitoramento de integridade para instrumentar seu aplicativo para um evento personalizado. Para criar um evento de monitoramento de integridade personalizado, você cria uma classe derivada de System. Web. Management. WebBaseEvent, configura o &lt;healthMonitoring&gt;...
 
-[Implementar o gerenciamento de Patch](https://msdn.microsoft.com/library/aa302364.aspx)
+[Implementar o gerenciamento de patches](https://msdn.microsoft.com/library/aa302364.aspx)
 
-Este tópico como fazer explica o gerenciamento de patches, incluindo como manter um único ou vários servidores atualizados. Software adicional não é necessário, exceto para as ferramentas disponíveis para download da Microsoft. Operações e a política de segurança devem adotar um gerenciamento de patches...
+Este "como" explica o gerenciamento de patches, incluindo como manter um ou vários servidores atualizados. Software adicional não é necessário, exceto para as ferramentas disponíveis para download da Microsoft. As operações e a política de segurança devem adotar um gerenciamento de patches...
 
-[Controles de servidor ASP.NET para o Silverlight no Silverlight 3 do SDK](https://go.microsoft.com/fwlink/?LinkId=153377)
+[Controles de servidor ASP.NET para Silverlight no SDK do Silverlight 3](https://go.microsoft.com/fwlink/?LinkId=153377)
 
-Os controles de servidor ASP.NET para o Silverlight ("controles do Silverlight do ASP.NET"), que são os controles do Media Player do ASP.NET e Silverlight, foram removidos do SDK do Silverlight para o Silverlight versão 3. Este documento fornece orientação para desenvolvedores que trabalharam com esses ASP.NET...
+Os controles de servidor ASP.NET para Silverlight ("ASP.NET Silverlight Controls"), que são os controles do ASP.NET MediaPlayer e do Silverlight, foram removidos do SDK do Silverlight para o Silverlight versão 3. Este documento fornece diretrizes para desenvolvedores que trabalharam com esses ASP.NET...
 
-[Criando aplicativos da Web de alto desempenho](https://devexpress.com/act)
+[Criando aplicativos Web de alto desempenho](https://devexpress.com/act)
 
-Saiba como usar os novos recursos na biblioteca do Ajax ASP.NET para criar aplicativos de Web alto desempenho
+Saiba como usar os novos recursos na biblioteca do ASP.NET AJAX para criar aplicativos Web de alto desempenho

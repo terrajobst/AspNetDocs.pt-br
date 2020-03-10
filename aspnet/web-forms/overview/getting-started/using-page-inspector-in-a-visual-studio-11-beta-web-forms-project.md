@@ -1,27 +1,27 @@
 ---
 uid: web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
-title: Usando o Inspetor de página para Visual Studio 2012 no ASP.NET Web Forms | Microsoft Docs
+title: Usando o Inspetor de Página para o Visual Studio 2012 no ASP.NET Web Forms | Microsoft Docs
 author: rick-anderson
-description: O Inspetor de página para Visual Studio 2012 é uma ferramenta de desenvolvimento na web com um navegador integrado. Selecione qualquer elemento no navegador integrado e o Inspetor de página...
+description: O Inspetor de Página para Visual Studio 2012 é uma ferramenta de desenvolvimento para a Web com um navegador integrado. Selecione qualquer elemento no navegador integrado e Inspetor de Página...
 ms.author: riande
 ms.date: 08/15/2012
 ms.assetid: 2ece0bf4-aae5-4ff4-8f62-28e0819d4f86
 msc.legacyurl: /web-forms/overview/getting-started/using-page-inspector-in-a-visual-studio-11-beta-web-forms-project
 msc.type: authoredcontent
 ms.openlocfilehash: c165bbea505b4cb8eae1312cdd587f4ed36541a0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127942"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575918"
 ---
 # <a name="using-page-inspector-for-visual-studio-2012-in-aspnet-web-forms"></a>Uso do Inspetor de Página para Visual Studio 2012 em Web Forms do ASP.NET
 
 por Tim Ammann
 
-> O Inspetor de página para Visual Studio 2012 é uma ferramenta de desenvolvimento na web com um navegador integrado. Selecione qualquer elemento no navegador integrado e Inspetor de página instantaneamente destaca o código-fonte e o CSS do elemento. Você pode procurar qualquer página em seu aplicativo rapidamente encontrar as fontes de marcação renderizada e usar as ferramentas de navegador dentro do ambiente do Visual Studio.
+> O Inspetor de Página para Visual Studio 2012 é uma ferramenta de desenvolvimento para a Web com um navegador integrado. Selecione qualquer elemento no navegador integrado e Inspetor de Página realça instantaneamente a origem e o CSS do elemento. Você pode procurar qualquer página em seu aplicativo, localizar rapidamente as fontes de marcação renderizada e usar as ferramentas de navegador diretamente no ambiente do Visual Studio.
 > 
-> Este tutorial mostra como habilitar o modo de inspeção e, em seguida, rapidamente localizar e editar regras de CSS e texto dentro de seu projeto da web. O tutorial usa um projeto de aplicativo Web Forms, mas você também pode usar o Inspetor de página para projetos de Site e [MVC](https://go.microsoft.com/?linkid=9802002) aplicativos.
+> Este tutorial mostra como habilitar Modo de Inspeção e, em seguida, localizar e editar rapidamente as regras e o texto do CSS em seu projeto Web. O tutorial usa um projeto de aplicativo Web Forms, mas você também pode usar Inspetor de Página para projetos de site e aplicativos [MVC](https://go.microsoft.com/?linkid=9802002) .
 > 
 > O tutorial tem as seguintes seções:
 > 
@@ -29,19 +29,19 @@ por Tim Ammann
 > 
 > [Criar um aplicativo Web](#_2_creating_a)
 > 
-> [Usar o Inspetor de página para exibir o aplicativo](#_3_using_page)
+> [Usar Inspetor de Página para exibir o aplicativo](#_3_using_page)
 > 
-> [Habilitar o modo de inspeção](#_4_inspection_mode)
+> [Habilitar Modo de Inspeção](#_4_inspection_mode)
 > 
-> [Use o Inspetor de página para fazer alterações à marcação](#_5_using_page)
+> [Usar Inspetor de Página para fazer alterações na marcação](#_5_using_page)
 > 
-> [Modo de inspeção e a janela do HTML](#_6_inspection_mode)
+> [Modo de Inspeção e a janela HTML](#_6_inspection_mode)
 > 
-> [Visualizar alterações CSS na janela estilos](#_7_previewing_css)
+> [Visualizar alterações de CSS na janela estilos](#_7_previewing_css)
 > 
-> [CSS Auto Sync](#css_auto_sync)
+> [Sincronização automática de CSS](#css_auto_sync)
 > 
-> [Usando o seletor de cor CSS](#css_color_picker)
+> [Usando o seletor de cores CSS](#css_color_picker)
 
 <a id="_prerequisites"></a><a id="_1_prerequisites"></a>
 
@@ -50,241 +50,241 @@ por Tim Ammann
 - [Visual Studio 2012](https://www.microsoft.com/visualstudio/11) ou [Visual Studio Express 2012 para Web](https://www.microsoft.com/visualstudio/11/downloads#express-web).
 
 > [!NOTE]
-> Para obter a versão mais recente do Inspetor de página, use [Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=255386) para instalar o SDK do Azure para .NET 2.0.
+> Para obter a versão mais recente do Inspetor de Página, use [Web Platform Installer](https://go.microsoft.com/fwlink/?LinkId=255386) para instalar o SDK do Azure para .NET 2,0.
 
-O Page Inspector é fornecido com o Microsoft Web Developer Tools. A versão mais recente é 1.3. Para verificar qual versão você tem, execute o Visual Studio e selecione **sobre o Microsoft Visual Studio** da **ajudar** menu.
+Inspetor de Página é agrupado com Microsoft Web Developer Tools. A versão mais recente é 1,3. Para verificar qual versão você tem, execute o Visual Studio e selecione **sobre Microsoft Visual Studio** no menu **ajuda** .
 
 <a id="_creating_a_web"></a><a id="_2_creating_a"></a>
 
 ## <a name="create-a-web-application"></a>Criar um aplicativo Web
 
-Primeiro, você criará um aplicativo web que você usará com o Inspetor de página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual c#** , selecione **Web**e, em seguida, selecione **aplicativo ASP.NET Web Forms**.
+Primeiro, você criará um aplicativo Web com o qual usará Inspetor de Página. No Visual Studio, escolha **arquivo** &gt; **novo projeto**. À esquerda, expanda **Visual C#** , selecione **Web**e, em seguida, selecione **ASP.NET Web Forms aplicativo**.
 
-![Novo aplicativo de formulários da Web](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image1.png)
+![Novo aplicativo Web Forms](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image1.png)
 
 Clique em **OK**.
 
-O aplicativo é aberto no **origem** modo de exibição.
+O aplicativo é aberto no modo de exibição de **código-fonte** .
 
-![Novo aplicativo de formulários da Web no modo de exibição de fonte](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image2.png)
+![Novo aplicativo Web Forms no modo de exibição de origem](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image2.png)
 
-Agora que você tem um aplicativo para trabalhar com, você pode usar o Inspetor de página para examinar e modificá-lo.
+Agora que você tem um aplicativo com o qual trabalhar, você pode usar Inspetor de Página para examiná-lo e modificá-lo.
 
 <a id="_starting_page_inspector"></a><a id="_3_starting_page"></a><a id="_3_using_page"></a>
 
-## <a name="use-page-inspector-to-view-the-application"></a>Usar o Inspetor de página para exibir o aplicativo
+## <a name="use-page-inspector-to-view-the-application"></a>Usar Inspetor de Página para exibir o aplicativo
 
-Em seguida, você exibirá o aplicativo com o Page Inspector. Na **Gerenciador de soluções**, com o botão direito do mouse no projeto e, em seguida, escolha **exibir no Page Inspector**.
+Em seguida, você exibirá o aplicativo com Inspetor de Página. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto e escolha **Exibir no Inspetor de página**.
 
-![Exibir no Page Inspector](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image3.png)
+![Exibir em inspetor de página](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image3.png)
 
-Por padrão, quando o Inspetor de página é iniciado pela primeira vez, ele é encaixado como uma janela estreita no lado esquerdo do ambiente do Visual Studio. Deixe-encaixada no lado esquerdo e defina-o como uma largura que se sente confortável para você ou encaixá-la em uma das áreas de ferramenta sobre a parte superior, inferior ou direita:
+Por padrão, quando Inspetor de Página é iniciado pela primeira vez, ele é encaixado como uma janela estreita no lado esquerdo do ambiente do Visual Studio. Deixe-o encaixado no lado esquerdo e defina-o com uma largura que seja confortável para você ou encaixe-o em uma das áreas de ferramentas na parte superior, inferior ou direita:
 
-![Posições de encaixe do Inspetor de página](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image4.png)
+![Inspetor de Página posições de encaixe](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image4.png)
 
-Se você desencaixar a janela do Inspetor de página, você pode colocar a ele fora do Visual Studio, ou até mesmo em um segundo monitor se você tiver uma. No entanto, em ordem para ALT + TAB entre o Inspetor de página e o Visual Studio quando a janela do Inspetor de página estiver desencaixada, vá para **ferramentas** &gt; **opções** &gt;  **Ambiente** &gt; **guias e Windows**e, em **guia bem**, desmarque a caixa de seleção chamada **janelas de ferramentas flutuante permanecem sempre na parte superior das janela principal**:
+Se você desencaixar a janela Inspetor de Página, poderá colocá-la fora do Visual Studio ou até mesmo em um segundo monitor, se tiver uma. No entanto, para ALT + TAB entre Inspetor de Página e o Visual Studio quando a janela de Inspetor de Página estiver desencaixada, vá para **ferramentas** &gt; **opções** &gt; **ambiente** &gt; **guias e janelas**e, em bem com a **guia**, desmarque a caixa de seleção chamada **Windows de ferramenta flutuante sempre fique na parte superior da janela principal**:
 
-![Desmarque a caixa de seleção de windows ferramenta flutuante para ALT + TAB entre o Visual Studio e a janela Inspetor de página desencaixada](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image5.png)
+![Desmarque a caixa de seleção janelas de ferramentas flutuantes para ALT + TAB entre o Visual Studio e a janela de Inspetor de Página desencaixada](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image5.png)
 
-O painel superior da janela do Inspetor de página mostra a página atual em uma janela do navegador. O painel inferior mostra a página na marcação HTML à esquerda e algumas guias à direita que permitem que você inspecione os diferentes aspectos da página. O painel inferior é semelhante para o [ferramentas de desenvolvedor F12](https://msdn.microsoft.com/ie/aa740478) no Internet Explorer. (No entanto, diferentemente das ferramentas de desenvolvedor, você pode usar o Inspetor de página dentro do Visual Studio.)
+O painel superior da janela de Inspetor de Página mostra a página atual em uma janela do navegador. O painel inferior mostra a página na marcação HTML à esquerda e algumas guias à direita que permitem inspecionar diferentes aspectos da página. O painel inferior é semelhante ao [ferramentas para desenvolvedores F12](https://msdn.microsoft.com/ie/aa740478) no Internet Explorer. (No entanto, ao contrário das ferramentas de desenvolvedor, você pode usar Inspetor de Página diretamente no Visual Studio.)
 
-![Inspetor de Página](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image6.png)
+![{1&gt;Inspetor de Página&lt;1}](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image6.png)
 
-Neste tutorial, você usará o painel do navegador Inspetor de página e o **HTML** e **estilos** guias para ajudar você a rapidamente navegar e fazer alterações no aplicativo.
+Neste tutorial, você usará o painel navegador Inspetor de Página e as guias **HTML** e **estilos** para ajudá-lo a navegar rapidamente e fazer alterações no aplicativo.
 
 <a id="_4_inspection_mode"></a>
-## <a name="enable-inspection-mode"></a>Habilitar o modo de inspeção
+## <a name="enable-inspection-mode"></a>Habilitar Modo de Inspeção
 
-Em seguida, você verá como funciona o modo de inspeção do Inspetor de página. Na janela do Inspetor de página, clique o **inspecionar** botão.
+Em seguida, você verá como o Modo de Inspeção de Inspetor de Página funciona. Na janela Inspetor de Página, clique no botão **inspecionar** .
 
 ![Inspecionar elemento](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image7.png)
 
-Para ver o modo de inspeção em ação, mova o mouse sobre diferentes partes da página dentro da janela do navegador Inspetor de página. Como você, o ponteiro do mouse muda para um grande sinal de adição e o elemento abaixo é realçado:
+Para ver o modo de inspeção em ação, mova o mouse sobre diferentes partes da página dentro da janela Inspetor de Página navegador. Como você faz, o ponteiro do mouse muda para um sinal de adição grande e o elemento abaixo é realçado:
 
-![Passar o mouse sobre o wrapper div.content](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image8.png)
+![Passando o mouse sobre div. Content-Wrapper](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image8.png)
 
-Observe que, à medida que você move o ponteiro do mouse,
+À medida que você move o ponteiro do mouse, observe que
 
-- O conteúdo no **origem** exibir muda para mostrar a marcação correspondente ao elemento selecionado na página. A marcação relevante é realçada. Se a fonte estiver em outro arquivo, esse arquivo é aberto no modo de exibição de código-fonte com a marcação relevante realçada.
+- O conteúdo no modo de exibição de **origem** é alterado para mostrar a marcação correspondente ao elemento selecionado na página. A marcação relevante é realçada. Se a origem estiver em outro arquivo, esse arquivo será aberto no modo de exibição de origem com a marcação relevante realçada.
 
-- A marcação exibida na **HTML** guia no Inspetor de página também será alterado para corresponder ao elemento selecionado na página. No **HTML** guia, a marcação relevante é descrita.
+- A marcação exibida na guia **HTML** em Inspetor de página também é alterada para corresponder ao elemento selecionado na página. Na guia **HTML** , a marcação relevante é descrita.
 
-- O **estilos** guia mostra as regras de CSS relevantes para a seleção atual.
+- A guia **estilos** mostra as regras de CSS relevantes para a seleção atual.
 
 <a id="_5_using_page"></a>
 
-## <a name="use-page-inspector-to-make-changes-to-markup"></a>Use o Inspetor de página para fazer alterações à marcação
+## <a name="use-page-inspector-to-make-changes-to-markup"></a>Usar Inspetor de Página para fazer alterações na marcação
 
-Agora, você verá como você pode usar o Inspetor de página para encontrar e fazer alterações na marcação ou no texto cujo local pode não ser imediatamente óbvio.
+Agora, você verá como você pode usar Inspetor de Página para localizar e fazer alterações na marcação ou texto cujo local pode não ser imediatamente óbvio.
 
-Colocar o Inspetor de página no modo de inspeção e, em seguida, role até a parte inferior da página inicial.
+Coloque Inspetor de Página em Modo de Inspeção e, em seguida, role até a parte inferior da home page.
 
-Assim que você inserir a área do rodapé, o Inspetor de página abre o *Master* arquivo de layout na **origem** exibição em uma guia temporária para a direita das outras guias e realça a seção do mestre de página que você selecionou. Isso mostra como o Inspetor de página pode localizar e exibir o conteúdo em uma página que, na verdade, pode vir de um arquivo diferente daquele que você tiver aberto originalmente.
+Assim que você inserir a área de rodapé, Inspetor de Página abrirá o arquivo de layout *site. Master* na exibição de **origem** em uma guia temporária à direita das outras guias e destacará a seção da página mestra que você selecionou. Isso mostra como Inspetor de Página pode localizar e exibir conteúdo em uma página que pode realmente vir de um arquivo diferente daquele que você abriu originalmente.
 
-![Destaques de rodapé no modo de inspeção](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image9.png)
+![Realces de rodapé no Modo de Inspeção](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image9.png)
 
-Na janela do navegador Inspetor de página, mova o ponteiro do mouse sobre a linha com os direitos autorais <a id="a"> </a>Observe.
+Na janela do navegador Inspetor de Página, mova o ponteiro do mouse sobre a linha com o <a id="a"> </a>aviso de direitos autorais.
 
-No *Master* página, a linha correspondente é realçada.
+Na página *site. Master* , a linha correspondente é realçada.
 
-![Linha de direitos autorais do rodapé realçada](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image10.png)
+![Linha de copyright de rodapé realçada](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image10.png)
 
-Adicione algum texto ao final da linha na *Master* arquivo.
+Adicione texto ao final da linha no arquivo *site. Master* .
 
-&lt;p&gt;&amp;copy; &lt;%: % DateTime.Now.Year&gt; -é o máximo meu aplicativo ASP.NET!&lt; / p&gt;
+&lt;p&gt;&amp;cópia; &lt;%: DateTime. Now. ano%&gt;-meu aplicativo ASP.NET Rocks!&lt;/p&gt;
 
-Agora, pressione Ctrl + Alt + Enter ou clique na barra de atualização para ver os resultados na janela do navegador Inspetor de página.
+Agora, pressione Ctrl + Alt + Enter ou clique na barra de atualização para ver os resultados na janela do navegador Inspetor de Página.
 
-![É o máximo meu aplicativo ASP.NET!](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image11.png)
+![Meu aplicativo ASP.NET Rocks!](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image11.png)
 
-Você deve ter imaginado se o rodapé foi na *default. aspx* página, mas ela tornou-se na página de layout mestre e o Inspetor de página encontrado-lo para você.
+Talvez você tenha pensado que o rodapé estava na página *Default. aspx* , mas que ele se tornou na página de layout mestre e Inspetor de página encontrá-lo para você.
 
 <a id="_6_inspection_mode"></a>
 
-## <a name="inspection-mode-and-the-html-window"></a>Modo de inspeção e a janela do HTML
+## <a name="inspection-mode-and-the-html-window"></a>Modo de Inspeção e a janela HTML
 
-Em seguida, você terá uma olhada rápida na janela do HTML e como ele mapeia elementos para você.
+Em seguida, você terá uma visão rápida da janela HTML e de como ela mapeia os elementos para você.
 
-Colocar o Inspetor de página no modo de inspeção.
+Coloque Inspetor de Página em Modo de Inspeção.
 
 ![Inspecionar elemento](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image12.png)
 
-Clique na parte superior da página que diz "seu logotipo aqui". Você está examinando um determinado elemento mais detalhadamente, portanto, a exibição na janela do navegador não é alterado à medida que você move o ponteiro do mouse.
+Clique na parte superior da página que diz "seu logotipo aqui". Você está examinando um elemento específico em mais detalhes, portanto, a exibição na janela do navegador não é mais alterada à medida que você move o ponteiro do mouse.
 
-Agora mova o ponteiro do mouse para o **HTML** janela. À medida que você move o ponteiro do mouse, o Inspetor de página descreve o elemento dentro de **HTML** janela e realça o elemento correspondente na janela do navegador.
+Agora, mova o ponteiro do mouse para a janela **HTML** . À medida que você move o ponteiro do mouse, Inspetor de Página descreve o elemento dentro da janela **HTML** e realça o elemento correspondente na janela do navegador.
 
-![Janela do HTML](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image13.png)
+![Janela HTML](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image13.png)
 
-Como antes, o Inspetor de página abre o *Master* arquivo para você em uma guia temporária. Clique na guia Master e a marcação correspondente é realçada na &lt;cabeçalho&gt; seção:
+Como antes, Inspetor de Página abre o arquivo *site. Master* para você em uma guia temporária. Clique na guia site. Master e a marcação correspondente será realçada no cabeçalho &lt;&gt; seção:
 
 ![Marcação realçada](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image14.png)
 
 <a id="_using_page_inspector"></a><a id="_7_previewing_css"></a>
 
-## <a name="preview-css-changes-in-the-styles-window"></a>Visualizar alterações CSS na janela estilos
+## <a name="preview-css-changes-in-the-styles-window"></a>Visualizar alterações de CSS na janela estilos
 
-Em seguida, você verá como é possível usar o Inspetor de página **estilos** janela para visualizar as alterações à CSS.
+Em seguida, você verá como é possível usar a janela **estilos** de Inspetor de página para visualizar alterações no CSS.
 
-Clique o **inspecionar** botão para colocar o Inspetor de página no modo de inspeção.
+Clique no botão **inspecionar** para colocar Inspetor de Página em modo de inspeção.
 
-Na janela do navegador Inspetor de página, mova o ponteiro do mouse sobre a seção de "Home Page" até que o **div.content wrapper** rótulo aparece.
+Na janela do navegador Inspetor de Página, mova o ponteiro do mouse sobre a seção "Home Page" até que o rótulo **div. Content-wrapper** seja exibido.
 
-![Focalizar os elementos](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image15.png)
+![Focalizando elementos](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image15.png)
 
-Clique dentro da seção de wrapper div.content uma vez e, em seguida, mova o ponteiro do mouse para o **estilos** janela. Sob o seletor de classe de wrapper. Content .featured, desmarque e marque a caixa de seleção para a propriedade de cor do plano de fundo.
+Clique na seção div. Content-wrapper uma vez e mova o ponteiro do mouse para a janela **estilos** . No seletor de classe. Content-wrapper, desmarque e marque a caixa de seleção da propriedade Background-Color.
 
-![Cor do plano de fundo clara](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image16.png)
+![Limpar cor da fundo](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image16.png)
 
-Observe como a alteração visualiza instantaneamente na janela do navegador Inspetor de página.
+Observe como as visualizações de alteração são instantaneamente na janela Inspetor de Página navegador.
 
-Selecione a caixa de seleção novamente, em seguida, clique duas vezes o valor da propriedade e alterá-la para `red`. A alteração mostra imediatamente:
+Marque a caixa de seleção novamente, clique duas vezes no valor da propriedade e altere-o para `red`. A alteração mostra imediatamente:
 
-![Cor do plano de fundo vermelho](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image17.png)
+![Cor de fundo vermelha](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image17.png)
 
-O **estilos** torna a janela fácil de testar e visualizar o CSS é alterado antes de confirmar as alterações para o estilo da folha em si.
+A janela **estilos** facilita o teste e a visualização das alterações de CSS antes de você confirmar as alterações na própria folha de estilos.
 
 <a id="css_auto_sync"></a>
-## <a name="css-auto-sync"></a>CSS Auto Sync
+## <a name="css-auto-sync"></a>Sincronização automática de CSS
 
 > [!NOTE]
-> Este recurso requer a versão 1.3 do Inspetor de página.
+> Este recurso requer a versão 1,3 de Inspetor de Página.
 
-O recurso de sincronização automática de CSS permite que você editar um arquivo CSS diretamente e ver as alterações imediatamente no navegador Inspetor de página.
+O recurso de sincronização automática de CSS permite que você edite um arquivo CSS diretamente e veja as alterações imediatamente no navegador Inspetor de Página.
 
-Clique em **inspecionar** para colocar o Inspetor de página no modo de inspeção.
+Clique em **inspecionar** para colocar Inspetor de Página em modo de inspeção.
 
-No navegador Inspetor de página, mova o ponteiro do mouse sobre a seção de "Home Page" até que o **div.content wrapper** rótulo aparece. Clique para selecionar esse elemento.
+No navegador Inspetor de Página, mova o ponteiro do mouse sobre a seção "Home Page" até que o rótulo **div. Content-wrapper** seja exibido. Clique em uma vez para selecionar este elemento.
 
-O **estilos** janela mostra todas as regras CSS para este elemento. Role para baixo até localizar o wrapper de. Content .featured seletor de classe. Clique em .featured. Content-"wrapper". Inspetor de página abre o arquivo CSS que define esse estilo (CSS) e realça o estilo CSS correspondente.
+A janela **estilos** mostra todas as regras de CSS para este elemento. Role para baixo até localizar o seletor de classe. em destaque. Content-wrapper. Clique em ". em destaque. Content-wrapper". Inspetor de Página abre o arquivo CSS que define esse estilo (site. css) e realça o estilo CSS correspondente.
 
 ![Arquivo CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image18.png)
 
-Agora, altere o valor para `background-color` para "vermelho". A alteração aparece imediatamente no navegador Inspetor de página.
+Agora, altere o valor de `background-color` para "vermelho". A alteração aparece imediatamente no navegador Inspetor de Página.
 
-![Navegador Inspetor de página](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image19.png)
+![Inspetor de Página navegador](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image19.png)
 
 <a id="css_color_picker"></a>
 
-## <a name="using-the-css-color-picker"></a>Usando o seletor de cor CSS
+## <a name="using-the-css-color-picker"></a>Usando o seletor de cores CSS
 
-Em seguida, você aprenderá como usar o Inspetor de página para localizar rapidamente e alterar o CSS do texto realçado no aplicativo padrão. Neste exemplo, você decidiu que não deseja que o realce azul e quiser alterá-lo para outra cor.
+Em seguida, você aprenderá a usar Inspetor de Página para localizar e alterar rapidamente o CSS para texto realçado no aplicativo padrão. Neste exemplo, você decidiu que não gosta do realce azul e deseja alterá-lo para outra cor.
 
-Clique o **inspecionar** botão.
+Clique no botão **inspecionar** .
 
 ![Inspecionar elemento](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image20.png)
 
-Na janela do navegador Inspetor de página, mova o ponteiro do mouse sobre o realçado "vídeos, tutoriais e exemplos de" texto para que o CSS "marcar" rótulo é exibido.
+Na janela do navegador Inspetor de Página, mova o ponteiro do mouse sobre o texto realçado "vídeos, tutoriais e amostras" para que o rótulo de "marca" de CSS seja exibido.
 
-![Passar o mouse sobre o elemento de marca](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image21.png)
+![Passando o mouse sobre o elemento Mark](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image21.png)
 
-Clique no texto para selecioná-lo. O seletor de marca de CSS correspondente é exibida na parte inferior a **estilos** janela.
+Clique no texto para selecioná-lo. O seletor de marca CSS correspondente aparece na parte inferior da janela **estilos** .
 
-![seletor de marca na janela estilos](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image22.png)
+![marcar seletor na janela estilos](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image22.png)
 
-Clique no seletor de marca. Isso abre o *CSS* arquivo para o aplicativo web. Clique na guia de CSS, e o CSS correspondente para o seletor é realçado:
+Clique no seletor de marca. Isso abre o arquivo *site. css* para o aplicativo Web. Clique na guia site. css e o CSS correspondente para o seletor será realçado:
 
-![seletor de marca na folha de estilos](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image23.png)
+![marcar seletor na folha de estilos](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image23.png)
 
-Selecione e remova a linha com a propriedade de cor do plano de fundo.
+Selecione e remova a linha com a propriedade Background-Color.
 
-Agora você usará o novo seletor de cor CSS de 2012 do Visual Studio para escolher uma nova cor para o **marcar** propriedade de cor do plano de fundo.
+Agora, você usará o novo seletor de cores CSS do Visual Studio 2012 para escolher uma nova cor para a propriedade **Marcar** cor de segundo plano.
 
 <a id="_using_the_visual"></a>
 
-### <a name="using-the-visual-studio-2012-css-color-picker"></a>Usando o seletor de cor de CSS do Visual Studio 2012
+### <a name="using-the-visual-studio-2012-css-color-picker"></a>Usando o seletor de cores CSS do Visual Studio 2012
 
-O editor de CSS no Visual Studio 2012 tem um seletor de cores que torna mais fácil escolher e inserir as cores. Ele tem uma barra de cores simple e um seletor de "pop-down" que oferece controle mais refinado.
+O editor de CSS no Visual Studio 2012 tem um seletor de cores que torna mais fácil escolher e inserir cores. Ele tem uma barra de cores simples e um seletor "pop-down" que oferece controle mais preciso.
 
-O seletor de cor inclui uma paleta de cores padrão, dá suporte a nomes de cores padrão, os códigos de hash, as cores RGB, RGBA, HSL e HSLA e mantém uma lista das cores usados mais recentemente no documento.
+O seletor de cores inclui uma paleta padrão de cores, dá suporte a nomes de cores padrão, códigos de hash, cores RGB, RGBA, HSL e HSLA e mantém uma lista das cores que você usou mais recentemente no documento.
 
-Na linha em que a propriedade de cor do plano de fundo estava, digite "bc" e pressione a seta para baixo uma vez.
+Na linha em que a propriedade Background-Color era, digite "BC" e pressione a seta para baixo uma vez.
 
-Quando você digita o primeiro caractere de cada palavra em uma propriedade separados por hífen, como "background-color", o IntelliSense filtra a lista para mostrar apenas as propriedades que correspondem a:
+Quando você digita o primeiro caractere de cada palavra em uma propriedade separada por hífen, como "background-color", o IntelliSense filtra a lista para que você mostre apenas as propriedades correspondentes:
 
-![Valores de IntelliSense filtrado](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image24.png)
+![Valores filtrados do IntelliSense](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image24.png)
 
-Agora, digite dois-pontos. Quando você fizer isso, o nome da propriedade de cor de plano de fundo completa é inserido. Tipo de **#** ou **rgb (** , e a barra de seletor de cor é exibida:
+Agora, digite dois-pontos. Quando você fizer isso, o nome completo da propriedade de cor de fundo será inserido. Digite **#** ou **RGB (** e a barra do seletor de cores será exibida:
 
-![A barra de seletor de cores CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image25.png)
+![A barra do seletor de cores CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image25.png)
 
-Para ver como funciona a barra do seletor de cores, clique em suas cores com o ponteiro do mouse, ou pressione a tecla de seta para baixo e, em seguida, use as teclas de seta esquerda e direita para percorrer as cores. Quando você visita uma cor, o valor correspondente para a propriedade de cor do plano de fundo é visualizado:
+Para ver como a barra do seletor de cores funciona, clique em suas cores com o ponteiro do mouse ou pressione a tecla seta para baixo e use as teclas de seta para a esquerda e para a direita para percorrer as cores. Quando você visita uma cor, o valor correspondente para a propriedade Background-Color é visualizado:
 
-![valor da propriedade de cor do plano de fundo visualizado](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image26.png)
+![plano de fundo-valor da propriedade de cor visualizado](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image26.png)
 
-Neste ponto, você pode pressionar Enter para selecionar o valor e, em seguida, um ponto e vírgula (;) para concluir a entrada CSS. Por enquanto, vá para a próxima seção para que você possa ver como funciona o pop-down de seletor de cor.
+Neste ponto, você pode pressionar Enter para selecionar o valor e, em seguida, um ponto-e-vírgula (;) para concluir a entrada CSS. Por enquanto, vá para a próxima seção para que você possa ver como o pop-down seletor de cores funciona.
 
-#### <a name="using-the-color-picker-pop-down"></a>Usando o seletor de cor Pop-Down
+#### <a name="using-the-color-picker-pop-down"></a>Usando o seletor de cores pop-down
 
-Quando a barra de cores não tem a cor exata que você está procurando, você pode usar o seletor de cores pop-down.
+Quando a barra de cores não tem a cor exata que você está procurando, você pode usar o pop-down seletor de cores.
 
-Para abri-lo, clique na divisa dupla na extremidade direita da barra de cores, ou pressione a seta para baixo uma ou duas vezes no teclado.
+Para abri-lo, clique na divisa dupla na extremidade direita da barra de cores ou pressione a seta para baixo uma ou duas vezes no teclado.
 
-![Seletor de cor CSS Pop-Down](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image27.png)
+![Pop-down seletor de cores CSS](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image27.png)
 
-Clique em uma cor da barra de ferramentas vertical no lado direito. Isso mostra uma gradação de cor na janela principal. Escolha uma cor diretamente na barra vertical, pressionando Enter ou clique em qualquer ponto na janela principal, escolha com maior precisão.
+Clique em uma cor na barra vertical à direita. Isso mostra um gradiente para essa cor na janela principal. Escolha uma cor diretamente na barra vertical pressionando ENTER ou clique em qualquer ponto na janela principal para escolher com maior precisão.
 
-Se houver uma cor na tela do computador que você deseja usar (ele não precisa estar dentro da interface de usuário do Visual Studio), você pode capturar o seu valor usando a ferramenta de conta-gotas no canto inferior direito.
+Se houver uma cor na tela do computador que você deseja usar (ela não precisa estar dentro da interface do usuário do Visual Studio), você poderá capturar seu valor usando a ferramenta de conta-gotas no canto inferior direito.
 
-Você também pode alterar a opacidade de uma cor movendo o controle deslizante na parte inferior do seletor de cores. Isso muda a cor valores para os valores RGBA porque o formato de RGBA pode representar a opacidade.
+Você também pode alterar a opacidade de uma cor movendo o controle deslizante na parte inferior do seletor de cores. Isso altera os valores de cor para os valores RGBA porque o formato RGBA pode representar a opacidade.
 
-Depois de escolher uma cor, pressione Enter e, em seguida, digite um ponto e vírgula para concluir a entrada de cor do plano de fundo na *CSS* arquivo.
+Depois de escolher uma cor, pressione Enter e, em seguida, digite um ponto e vírgula para concluir a entrada de cor de fundo no arquivo *site. css* .
 
 <a id="_the_update_bar"></a>
 
-### <a name="the-page-inspector-update-bar"></a>A barra de atualização do Inspetor de página
+### <a name="the-page-inspector-update-bar"></a>A barra de atualização de Inspetor de Página
 
-Inspetor de página imediatamente detecta a alteração para o *CSS* arquivo (ou em qualquer arquivo no aplicativo) e exibe um alerta em uma barra de atualização.
+Inspetor de Página detecta imediatamente a alteração no arquivo *site. css* (ou em qualquer arquivo no aplicativo) e exibe um alerta em uma barra de atualização.
 
 ![Barra de atualização](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image28.png)
 
-Para salvar todos os seus arquivos e atualize o navegador Inspetor de página, pressione Ctrl + Alt + Enter ou clique na barra de atualização. A alteração na cor de realce é exibida no navegador:
+Para salvar todos os arquivos e atualizar o navegador Inspetor de Página, pressione Ctrl + Alt + Enter ou clique na barra de atualização. A alteração na cor de realce aparece no navegador:
 
-![Cor de realce alterado](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image29.png)
+![Cor do realce alterada](using-page-inspector-in-a-visual-studio-11-beta-web-forms-project/_static/image29.png)
 
-<a id="_using_page_inspector_1"></a>Observe que você atualizou convenientemente navegador Inspetor de página à direita de dentro do ambiente do Visual Studio. Usando o Inspetor de página em vez de um navegador externo permite que você fique no editor quando você desenvolve seus aplicativos web.
+<a id="_using_page_inspector_1"></a>Observe que você atualizou convenientemente o Inspetor de Página navegador diretamente de dentro do ambiente do Visual Studio. O uso de Inspetor de Página em vez de um navegador externo permite que você permaneça no editor ao desenvolver seus aplicativos Web.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-[Introdução ao Inspetor de página](https://channel9.msdn.com/posts/visual-studio-vnext-introducing-page-inspector) (vídeo do Channel 9)
+[Introdução ao inspetor de página](https://channel9.msdn.com/posts/visual-studio-vnext-introducing-page-inspector) (vídeo do Channel 9)
 
-[Mensagens de erro do Page Inspector](https://go.microsoft.com/?linkid=9813062) (MSDN)
+[Inspetor de página mensagens de erro](https://go.microsoft.com/?linkid=9813062) (MSDN)

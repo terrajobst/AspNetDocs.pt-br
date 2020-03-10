@@ -9,11 +9,11 @@ ms.assetid: 2e31b60b-8723-4f14-b7ee-37859454dc3b
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview/adding-a-gridview-column-of-radio-buttons-vb
 msc.type: authoredcontent
 ms.openlocfilehash: ee67a4556c65d2c9570bf15b42fc3c8e5f555bda
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74593188"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78590786"
 ---
 # <a name="adding-a-gridview-column-of-radio-buttons-vb"></a>Adicionar uma coluna de GridView de botões de opção (VB)
 
@@ -88,7 +88,7 @@ Na guia atualizar, selecione a opção (nenhum) e clique em Avançar.
 
 **Figura 7**: configurar o ObjectDataSource para usar a classe `SuppliersBLL` ([clique para exibir a imagem em tamanho normal](adding-a-gridview-column-of-radio-buttons-vb/_static/image10.png))
 
-Como o método `GetSuppliersByCountry(country)` aceita um parâmetro, o assistente para configurar fonte de dados nos solicita a origem desse parâmetro. Para especificar um valor embutido em código (EUA, neste exemplo), deixe a lista suspensa origem do parâmetro definida como nenhum e insira o valor padrão na caixa de texto. Clique em Concluir para concluir o assistente.
+Como o método `GetSuppliersByCountry(country)` aceita um parâmetro, o assistente para configurar fonte de dados nos solicita a origem desse parâmetro. Para especificar um valor embutido em código (EUA, neste exemplo), deixe a lista suspensa origem do parâmetro definida como nenhum e insira o valor padrão na caixa de texto. Clique em Concluir para finalizar o assistente.
 
 [![usar os EUA como o valor padrão para o parâmetro Country](adding-a-gridview-column-of-radio-buttons-vb/_static/image8.gif)](adding-a-gridview-column-of-radio-buttons-vb/_static/image11.png)
 

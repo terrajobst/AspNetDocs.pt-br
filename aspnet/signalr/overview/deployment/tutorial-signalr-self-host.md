@@ -9,11 +9,11 @@ ms.assetid: 400db427-27af-4f2f-abf0-5486d5e024b5
 msc.legacyurl: /signalr/overview/deployment/tutorial-signalr-self-host
 msc.type: authoredcontent
 ms.openlocfilehash: 41c8c3803923e76ef238a5c5937cbe7f81e6aa82
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74578573"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558677"
 ---
 # <a name="tutorial-signalr-self-host"></a>Tutorial: auto-host do Signalr
 
@@ -49,7 +49,7 @@ por [Patrick Fletcher](https://github.com/pfletcher)
 >
 > Deixe comentários sobre como você gostou deste tutorial e o que poderíamos melhorar nos comentários na parte inferior da página. Se você tiver dúvidas que não estão diretamente relacionadas ao tutorial, poderá lançá-las no fórum do [signalr ASP.net](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) ou [stackoverflow.com](http://stackoverflow.com/).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Geralmente, um servidor de sinalização é hospedado em um aplicativo ASP.NET no IIS, mas também pode ser hospedado internamente (como em um aplicativo de console ou serviço do Windows) usando a biblioteca de autohost. Essa biblioteca, como todo o Signalr 2, se baseia no OWIN ([Open Web interface para .net](http://owin.org)). OWIN define uma abstração entre os servidores Web e os aplicativos Web do .NET. OWIN dissocia o aplicativo Web do servidor, o que torna o OWIN ideal para hospedar internamente um aplicativo Web em seu próprio processo, fora do IIS.
 
@@ -86,7 +86,7 @@ Neste tutorial, você criará um servidor que está hospedado em um aplicativo d
     [!code-powershell[Main](tutorial-signalr-self-host/samples/sample2.ps1)]
 
     Esse comando adiciona a biblioteca Microsoft. Owin. CORS ao projeto. Essa biblioteca será usada para suporte entre domínios, que é necessário para aplicativos que hospedam o Signalr e um cliente de página da Web em domínios diferentes. Como você hospedará o servidor do Signalr e o cliente Web em portas diferentes, isso significa que o domínio cruzado deve estar habilitado para comunicação entre esses componentes.
-5. Substitua o conteúdo de Program.cs pelo código a seguir.
+5. Substitua os conteúdos do Program.cs pelo código a seguir.
 
     [!code-csharp[Main](tutorial-signalr-self-host/samples/sample3.cs)]
 

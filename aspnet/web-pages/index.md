@@ -1,24 +1,24 @@
 ---
 uid: web-pages/index
-title: Páginas da Web ASP.NET | Microsoft Docs
+title: Páginas da Web do ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Baixe o WebMatrix e aprenda a criar rapidamente páginas da web em uma maneira leve de combinar código de servidor com HTML.
+description: Baixe o WebMatrix & saiba como criar rapidamente páginas da Web de forma leve para combinar o código do servidor com HTML.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 5418ba96-ff49-4a43-9cbb-09dea4949d23
 msc.legacyurl: /web-pages
 msc.type: categoryindex
 ms.openlocfilehash: 56bf82e22b3562893ef842a90d42aa7b6ff5858f
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65114525"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640948"
 ---
 # <a name="aspnet-web-pages"></a>Páginas da Web do ASP.NET
 
 > [!NOTE] 
-> O WebMatrix não é mais recomendado como um ambiente de desenvolvimento integrado para páginas da Web do ASP.NET. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
+> O WebMatrix não é mais recomendado como um ambiente de desenvolvimento integrado para Páginas da Web do ASP.NET. Use o [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou o [Visual Studio Code](https://code.visualstudio.com/).
 
 - [Diretrizes](overview/index.md)
 
@@ -56,7 +56,7 @@ ms.locfileid: "65114525"
         - [Instalação de um auxiliar](overview/ui-layouts-and-themes/installing-helpers.md)
         - [Auxiliar do Twitter com Páginas da Web do ASP.NET](overview/ui-layouts-and-themes/twitter-helper.md)
         - [Exibição de mapas em um site de Páginas da Web do ASP.NET](overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
-    - [Dispositivo móvel](overview/mobile/index.md)
+    - [Móvel](overview/mobile/index.md)
 
         - [Renderização de sites de Páginas da Web do ASP.NET para dispositivos móveis](overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
     - [Trabalhando com os Dados](overview/data/index.md)
@@ -81,7 +81,7 @@ ms.locfileid: "65114525"
     - [Referência de API](overview/api-reference/index.md)
 
         - [Guia de Referência Rápida da API do ASP.NET](overview/api-reference/asp-net-web-pages-api-reference.md)
-    - [Versões](overview/releases/index.md)
+    - [Lançamentos](overview/releases/index.md)
 
         - [Novidades nas Páginas da Web do ASP.NET 3.2](overview/releases/whats-new-in-aspnet-web-pages-32.md)
         - [Novidades nas Páginas da Web do ASP.NET 3.1](overview/releases/whats-new-aspnet-web-pages-31.md)
@@ -102,7 +102,7 @@ ms.locfileid: "65114525"
         - [Criar uma página de edição de dados no WebMatrix](videos/introduction/create-an-edit-data-page-in-webmatrix.md)
         - [Criar uma página de exclusão de dados no WebMatrix](videos/introduction/create-a-delete-data-page-in-webmatrix.md)
         - [Publicar um site na Internet usando o WebMatrix](videos/introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-    - [Páginas do Razor do ASP.NET](videos/aspnet-razor-pages/index.md)
+    - [Razor Pages ASP.NET](videos/aspnet-razor-pages/index.md)
 
         - [Introdução ao WebMatrix e às Páginas da Web do ASP.NET](videos/aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
         - [Introdução à sintaxe Razor de programação da Web do ASP.NET](videos/aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)

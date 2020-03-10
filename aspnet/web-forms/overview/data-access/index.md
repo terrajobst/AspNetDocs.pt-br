@@ -2,22 +2,22 @@
 uid: web-forms/overview/data-access/index
 title: Versões mais antigas – acesso a dados | Microsoft Docs
 author: rick-anderson
-description: Como executar uma variedade de tarefas relacionadas a dados usando controles de dados do Web Forms do ASP.NET.
+description: Como executar uma variedade de tarefas relacionadas a dados usando ASP.NET Web Forms Data Controls.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: cf54a6fb-a362-4481-b967-c158b98092f7
 msc.legacyurl: /web-forms/overview/data-access
 msc.type: chapter
 ms.openlocfilehash: 9bdc5cdb3ef3a2289e2f76ae498544d0584f36f5
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109027"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78605626"
 ---
 # <a name="older-versions---data-access"></a>Versões mais antigas – Acesso a dados
 
-> Como executar uma variedade de tarefas relacionadas a dados usando controles de dados do Web Forms do ASP.NET.
+> Como executar uma variedade de tarefas relacionadas a dados usando ASP.NET Web Forms Data Controls.
 
 - [Introdução](introduction/index.md)
 

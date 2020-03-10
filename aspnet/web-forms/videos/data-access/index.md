@@ -2,22 +2,22 @@
 uid: web-forms/videos/data-access/index
 title: Acesso a dados | Microsoft Docs
 author: rick-anderson
-description: Como criar uma camada de acesso de dados (DAL).
+description: Como criar uma camada de acesso a dados (DAL).
 ms.author: riande
 ms.date: 11/14/2011
 ms.assetid: a923735c-2d34-456c-8327-40aa62a4c1d6
 msc.legacyurl: /web-forms/videos/data-access
 msc.type: chapter
 ms.openlocfilehash: 66c8851d53cef59ea560818a054729115ca62b3b
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106746"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575162"
 ---
-# <a name="data-access"></a>Acesso a dados
+# <a name="data-access"></a>Acesso aos Dados
 
-> Como criar uma camada de acesso de dados (DAL).
+> Como criar uma camada de acesso a dados (DAL).
 
 - [Serviços de dados ADO.NET](adonet-data-services/index.md)
 
@@ -27,14 +27,14 @@ ms.locfileid: "65106746"
 - ["Como fazer?" com o LINQ](how-do-i-with-linq/index.md)
 
     - [LINQ to SQL: visão geral](how-do-i-with-linq/how-do-i-linq-to-sql-overview.md)
-    - [LINQ to SQL: Modelo de dados](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
-    - [LINQ to SQL: Consultando o banco de dados](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
-    - [LINQ to SQL: Atualizando o banco de dados](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
+    - [LINQ to SQL: modelo de dados](how-do-i-with-linq/how-do-i-linq-to-sql-data-model.md)
+    - [LINQ to SQL: consultando o banco de dados](how-do-i-with-linq/how-do-i-linq-to-sql-querying-the-database.md)
+    - [LINQ to SQL: atualização do banco de dados](how-do-i-with-linq/how-do-i-linq-to-sql-updating-the-database.md)
     - [LINQ to SQL: LinqDataSource](how-do-i-with-linq/how-do-i-linq-to-sql-linqdatasource.md)
     - [LINQ to SQL: LinqDataSource personalizado](how-do-i-with-linq/how-do-i-linq-to-sql-custom-linqdatasource.md)
-    - [LINQ to SQL: Usando procedimentos armazenados](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
-    - [LINQ to SQL: Atualizando com procedimentos armazenados](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
-    - [LINQ to SQL: Execução de SQL arbitrário](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
+    - [LINQ to SQL: uso de procedimentos armazenados](how-do-i-with-linq/how-do-i-linq-to-sql-using-stored-procedures.md)
+    - [LINQ to SQL: atualizando com procedimentos armazenados](how-do-i-with-linq/how-do-i-linq-to-sql-updating-with-stored-procedures.md)
+    - [LINQ to SQL: execução de SQL arbitrário](how-do-i-with-linq/how-do-i-linq-to-sql-executing-arbitrary-sql.md)
 - [Vídeos de LINQ da equipe do VB](linq-videos-from-the-vb-team/index.md)
 
     - [Introdução ao LINQ](linq-videos-from-the-vb-team/how-do-i-get-started-with-linq.md)

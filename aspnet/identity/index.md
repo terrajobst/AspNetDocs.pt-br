@@ -1,6 +1,6 @@
 ---
 uid: identity/index
-title: O ASP.NET Identity | Microsoft Docs
+title: ASP.NET Identity | Microsoft Docs
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -9,11 +9,11 @@ ms.assetid: 0c2df5d4-c2dd-486d-b0ed-fe831c6b596c
 msc.legacyurl: /identity
 msc.type: categoryindex
 ms.openlocfilehash: 48e75d6a2a151befe7ea796b149d2d030712d799
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59418346"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78616973"
 ---
 # <a name="aspnet-identity"></a>ASP.NET Identity
 
@@ -25,7 +25,7 @@ ms.locfileid: "59418346"
         - [Recursos recomendados da Identidade do ASP.NET](overview/getting-started/aspnet-identity-recommended-resources.md)
         - [Adição de Identidade do ASP.NET a um projeto vazio ou existente do Web Forms](overview/getting-started/adding-aspnet-identity-to-an-empty-or-existing-web-forms-project.md)
         - [Desenvolvendo aplicativos do ASP.NET com o Azure Active Directory](overview/getting-started/developing-aspnet-apps-with-windows-azure-active-directory.md)
-        - [Identidade do ASP.NET: Usar o armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
+        - [Identidade do ASP.NET: uso de Armazenamento do MySQL com um provedor de MySQL do EntityFramework (C#)](overview/getting-started/aspnet-identity-using-mysql-storage-with-an-entityframework-mysql-provider.md)
     - [Recursos e API](overview/features-api/index.md)
 
         - [Melhores práticas para implantar senhas e outros dados confidenciais no ASP.NET e no Serviço de Aplicativo do Azure](overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)

@@ -1,109 +1,109 @@
 ---
 uid: single-page-application/overview/templates/breezeknockout-template
-title: Modelo Breeze/Knockout | Microsoft Docs
+title: Modelo de Breeze/Knockout | Microsoft Docs
 author: madskristensen
-description: Modelo de aplicativo de página única do Breeze/Knockout
+description: Modelo de aplicativo de página única da Breeze/Knockout
 ms.author: riande
 ms.date: 01/30/2013
 ms.assetid: 3bd94827-3c59-448f-abc3-36e6df4858db
 msc.legacyurl: /single-page-application/overview/templates/breezeknockout-template
 msc.type: authoredcontent
 ms.openlocfilehash: 5bb9ee8f758a25afa6baf3ccbaf7d5864754c7df
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65113364"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78558187"
 ---
 # <a name="breezeknockout-template"></a>Modelo Breeze/Knockout
 
 por [Mads Kristensen](https://github.com/madskristensen)
 
-> Modelo Breeze/Knockout MVC foi escrito por Ward Bell
+> O modelo da Breeze/Knockout MVC foi escrito pela Bell em diante
 > 
-> [Baixe o modelo do MVC Breeze/Knockout](https://go.microsoft.com/fwlink/?LinkId=282649)
+> [Baixar o modelo da Breeze/Knockout MVC](https://go.microsoft.com/fwlink/?LinkId=282649)
 
-Você já ouviu falar do "aplicativo de página única" (SPA) e se perguntou o que é. Enquanto você pode ler sobre isso, você faria em vez disso, a experiência por conta própria. Mas quem tem tempo para baixar um exemplo? Se você tiver o Visual Studio, você terá um SPA de exemplo para cima e em execução em menos de 60 segundos com o ASP.NET MVC 4 modelo de "Breeze/Knockout aplicativo de página única".
+Você já ouviu falar de "aplicativo de página única" (SPA) e se perguntou o que ele é. Embora você possa ler sobre isso, você gostaria de experimentar por conta própria. Mas quem tem tempo para baixar um exemplo? Se você tiver o Visual Studio, terá um exemplo de SPA em execução em menos de 60 segundos com o modelo ASP.NET MVC 4 "Breeze/Knockout single page Application".
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ZephyrRunning.png)
 
-## <a name="what-is-the-breezeknockout-spa-template"></a>O que é o modelo do SPA Breeze/Knockout?
+## <a name="what-is-the-breezeknockout-spa-template"></a>O que é o modelo de SPA da Breeze/Knockout?
 
-A maioria dos modelos de projeto geram um esqueleto do aplicativo. Colocar pele nesses ossos adicionando seu código e, eventualmente, fornecer um aplicativo de trabalho. Modelo Breeze/Knockout SPA é diferente. Ele gera um aplicativo de exemplo para que você possa estudar. Ela demonstra um design de aplicativo do SPA e muitas das técnicas para a criação de um SPA.
+A maioria dos modelos de projeto gera um esqueleto de aplicativo. Você coloca os Bones adicionando seu código e, eventualmente, entrega um aplicativo de trabalho. O modelo de SPA da Breeze/Knockout é diferente. Ele gera um aplicativo de exemplo para você estudar. Ele demonstra um design de aplicativo SPA e muitas das técnicas para a criação de um SPA.
 
-Modelo Breeze/Knockout é uma variação sobre o [modelo KnockoutJS SPA](../introduction/knockoutjs-template.md) incluídas no ASP.NET e Web Tools 2012.2 atualização. O modelo de SPA Breeze gera um aplicativo com a mesma experiência de usuário, mas tem uma implementação diferente, usando a Breeze para gerenciamento de dados.
+O modelo Breeze/Knockout é uma variação no [modelo Spa KnockoutJS](../introduction/knockoutjs-template.md) incluído na atualização do ASP.net and Web Tools 2012,2. O modelo de SPA da Breeze gera um aplicativo com a mesma experiência do usuário, mas tem uma implementação diferente, usando a Breeze para o gerenciamento de dados.
 
-O modelo do SPA KnockoutJS faz solicitações de serviço com o jQuery bruto AJAX, que é adequado para um aplicativo simples. Mas aplicativos mais sofisticados têm requisitos mais exigentes de gerenciamento de dados. Por exemplo, a maioria dos aplicativos:
+O modelo SPA do KnockoutJS faz solicitações de serviço com o AJAX jQuery bruto, que é adequado para um aplicativo simples. Mas aplicativos mais sofisticados têm requisitos de gerenciamento de dados mais exigentes. Por exemplo, a maioria dos aplicativos:
 
-- Consultar e consultar novamente o servidor durante uma sessão de usuário estendido.
-- Adicione filtros de consulta, classificação e paginação.
+- Consultar e consultar novamente o servidor durante uma sessão de usuário estendida.
+- Adicionar filtros de consulta, classificação e paginação.
 - Compartilhe os mesmos dados em várias telas.
-- Acumular alterações a muitos objetos e, em seguida, salvá-los como uma única transação.
-- Valide alterações no cliente, para que o usuário pode corrigir erros antes de confirmar as alterações no banco de dados.
+- Acumule alterações em vários objetos e salve-os como uma única transação.
+- Valide as alterações no cliente, para que o usuário possa corrigir os erros antes de confirmar as alterações no banco de dados.
 
-A biblioteca de BreezeJS trata essas tarefas para você, liberando você para desenvolver a experiência de usuário e a lógica de aplicativo mais importantes.
+A biblioteca BreezeJS lida com essas tarefas para você, liberando-o para desenvolver a lógica do aplicativo e a experiência do usuário mais importantes.
 
-[**Breeze** ](http://www.breezejs.com/?utm_source=ms-spa) é uma biblioteca de software livre para criar aplicativos de dados avançados no JavaScript e HTML, os tipos de aplicativos que tenham sido historicamente entregues como aplicativos de área de trabalho autônomos.
+A [**Breeze**](http://www.breezejs.com/?utm_source=ms-spa) é uma biblioteca de software livre para a criação de aplicativos de dados avançados em JavaScript e HTML, os tipos de aplicativos que historicamente foram fornecidos como aplicativos de área de trabalho autônomos.
 
-Modelo Breeze/Knockout ajuda você a fazer a primeira etapa crucial em direção a uma infra-estrutura mais robusta de gerenciamento de dados. Ele produz um aplicativo de tarefas pendentes de exemplo externamente idêntica ao modelo KnockoutJS SPA. No interior, ela substitui a camada de dados do AJAX com a Breeze, para que você possa comparar as duas abordagens de lado a lado. É claro, mal toca o potencial de um aplicativo muito simples. Mas você verá como a Breeze funciona e como é necessário para tornar essa transição.
+O modelo Breeze/Knockout ajuda você a realizar essa primeira etapa crucial em direção a uma infra-estrutura de gerenciamento de dados mais robusta. Ele produz um aplicativo de exemplo todo que é muito idêntico ao modelo SPA KnockoutJS. No interior, ele substitui a camada de dados AJAX pela Breeze, para que você possa comparar as duas abordagens lado a lado. É claro que ele não atinge o potencial de um aplicativo da Breeze. Mas você verá como a Breeze funciona e quanto pouco é necessário para fazer essa transição.
 
 Vamos começar.
 
-## <a name="create-a-breezeknockout-template-project"></a>Criar um projeto de modelo Breeze/Knockout
+## <a name="create-a-breezeknockout-template-project"></a>Criar um projeto de modelo de Breeze/Knockout
 
-Baixe e instale o modelo clicando no botão de Download acima. O modelo é empacotado como um arquivo de extensão VSIX (Visual Studio). Talvez você precise reiniciar o Visual Studio.
+Baixe e instale o modelo clicando no botão baixar acima. O modelo é empacotado como um arquivo de VSIX (extensão do Visual Studio). Talvez seja necessário reiniciar o Visual Studio.
 
-No painel **Modelos**, selecione **Modelos Instalados** e expanda o nó **Visual C#**. Em **Visual C#**, selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web do ASP.NET MVC 4**. Nomeie o projeto e clique em **Okey**.
+No painel **modelos** , selecione **modelos instalados** e expanda o **nó C# Visual** . Em **Visual C#** , selecione **Web**. Na lista de modelos de projeto, selecione **aplicativo Web ASP.NET MVC 4**. Nomeie o projeto e clique em **OK**.
 
-No **novo projeto** assistente, selecione **Breeze Knockout SPA**.
+No assistente de **novo projeto** , selecione o **Spa de Knockout da Breeze**.
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/SelectBreezeKOSpaTemplate.png)
 
-Pressione Ctrl-F5 para compilar e executar o aplicativo sem depuração ou pressione F5 para executar com depuração.
+Pressione CTRL-F5 para compilar e executar o aplicativo sem depuração ou pressione F5 para executar com a depuração.
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ZephyrRunning.png)
 
-Quando o aplicativo é executado pela primeira vez, ele exibe uma tela de logon. Clique no link de "Inscrição" e uma nova página glides no modo de exibição, onde você pode inserir um nome de usuário e senha. (As páginas de logon e registro são criadas usando o ASP.NET MVC). Quando você envia o formulário de registro, o servidor gera uma lista de tarefas pendentes com dois itens para sua conta. Ele apresenta a você uma nota amarelo.
+Quando o aplicativo é executado pela primeira vez, ele exibe uma tela de logon. Clique no link "inscrever-se" e uma nova página deslizará para a exibição, onde você pode inserir um nome de usuário e uma senha. (As páginas de logon e de registro são criadas usando o ASP.NET MVC.) Quando você envia o formulário de registro, o servidor gera uma lista de tarefas pendentes com dois itens para sua conta. Em seguida, ele os apresenta em uma nota amarela.
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/TodoList.png)
 
-Agora você está no land do SPA. Tudo o que você vê e apresentar enquanto manipular Todos é renderizado e gerenciado no cliente com a Ajuda do Knockout e Breeze. Explore o aplicativo como um usuário... mas com o olho do desenvolvedor. Use as ferramentas de desenvolvedor em seu navegador para capturar o tráfego de rede. (No Internet Explorer: Pressione F12, selecione a **rede** guia e, em seguida, clique em **inicia a captura**.) Agora, tente o seguinte:
+Agora você está no solo do SPA. Tudo o que você vê e experimenta durante a manipulação de todo é renderizado e gerenciado no cliente com a ajuda do Knockout e da Breeze. Explorar o aplicativo como um usuário... Mas com os olhos de um desenvolvedor. Use as ferramentas de desenvolvedor em seu navegador para capturar o tráfego de rede. (No Internet Explorer: pressione F12, selecione a guia **rede** e clique em **Iniciar captura**.) Agora, tente o seguinte:
 
 - Adicione um novo item de tarefas pendentes.
-- Clique no rótulo e editar o título do item de tarefas pendentes
-- Marque uma caixa de seleção para marcar um item concluído. Observe que a caixa de texto está desabilitada, portanto, o título não é mais editável.
-- Clique em 'x' à direita do rótulo. O item desaparece e é excluído do banco de dados.
-- Escolher outro item e limpar seu título. Você obterá um erro de validação que o título é obrigatório. Após uma pequena pausa, o título anterior é restaurado.
-- Digite um título ridiculamente longo. Você obterá um erro de validação diferente que o título é muito longo.
-- Clique no botão "Adicionar a lista de tarefas". Uma nova lista é exibida à esquerda da lista anterior.
-- Brincar com o título de lista de tarefas pendentes, acionar seu necessária e validações de comprimento.
-- Clique na caixa de texto de título para limpar a mensagem de erro.
-- Clique no "x" no círculo no canto superior direito para excluir a lista de tarefas e suas tarefas.
+- Clique no rótulo e edite o título do item todo
+- Marque uma caixa de seleção para marcar o item concluído. Observe que a caixa de texto está desabilitada, portanto o título não é mais editável.
+- Clique no ' x ' à direita do rótulo. O item desaparece e é excluído do banco de dados.
+- Escolha outro item e limpe seu título. Você receberá um erro de validação de que o título é necessário. Após uma breve pausa, o título anterior é restaurado.
+- Digite um título longo de absurdamente. Você obterá um erro de validação diferente de que o título é muito longo.
+- Clique no botão "Adicionar lista de tarefas pendentes". Uma nova lista é exibida à esquerda da lista anterior.
+- Brincar com o título de ToDoList, disparando suas validações necessárias e de comprimento.
+- Clique na caixa de texto título para limpar a mensagem de erro.
+- Clique no "x" no círculo no canto superior direito para excluir o ToDoList e seus respectivos.
 
-A lógica de validação é executada no lado do cliente pelo Breeze. Atributos de validação nas classes de modelo de servidor são propagados para o cliente e executados automaticamente antes do cliente contata o servidor.
+A lógica de validação é executada no lado do cliente pela Breeze. Os atributos de validação nas classes de modelo de servidor são propagados para o cliente e executados automaticamente antes que o cliente entre em contato com o servidor.
 
-Analise o tráfego de rede. Observe que não havia nenhuma chamada para o servidor quando a Breeze detectou um erro. Cada alteração válida resultou em uma solicitação POST para "/ api/Todo/SaveChanges". Breeze agrupa as alterações e envia-os juntos como uma única solicitação para o controlador de API da Web `SaveChanges` método. Isso é diferente do modelo KnockoutJS SPA, o que torna o PUT, POST e excluir solicitações para cada item individualmente.
+Examine o tráfego de rede. Observe que não havia chamadas para o servidor quando a Breeze detectou um erro. Cada alteração válida resultou em uma solicitação POST para "/api/Todo/SaveChanges". A Breeze agrupa as alterações e as envia como uma única solicitação ao método de `SaveChanges` do controlador da API Web. Isso é diferente do modelo SPA KnockoutJS, que faz solicitações PUT, POST e DELETE para cada item individualmente.
 
-## <a name="peek-inside"></a>Olhar dentro
+## <a name="peek-inside"></a>Inspecionar dentro
 
-Este aplicativo tem um cliente e um servidor. A pilha do lado do cliente consiste em HTML uma pequena e uma combinação de módulos de JavaScript do aplicativo (na pasta "aplicativo") além de bibliotecas JavaScript de terceiros (na pasta "Scripts").
+Esse aplicativo tem um lado do cliente e um servidor. A pilha do lado do cliente consiste em um pequeno HTML e uma combinação de módulos JavaScript do aplicativo (na pasta "aplicativo"), além de bibliotecas JavaScript de terceiros (na pasta "scripts").
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ClientArchitecture.png)
 
-Se você investigamos o modelo KnockoutJS SPA, isso deve ser bastante familiar. Focalizar as caixas azuis. A arquitetura de interface do usuário é Model-View-ViewModel (MVVM), na qual os widgets HTML da exibição corretamente são separados do código de apresentação suporte no modelo de exibição. Um sistema de associação de dados (neste caso, o Knockout) coordena a exibição e o modelo de exibição para que cada um pode fazer seu trabalho sem conhecimento profundo das outras.
+Se você investigou o modelo SPA KnockoutJS, isso deve parecer muito familiar. Concentre-se nas caixas azuis. A arquitetura da interface do usuário é Model-View-ViewModel (MVVM), na qual os widgets HTML da exibição são completamente separados do código de apresentação de suporte no modelo de exibição. Um sistema de associação de dados (knockout, neste caso) coordena a exibição e o modelo de exibição para que cada um possa fazer seu trabalho sem conhecimento profundo do outro.
 
-O modelo encapsula os dados de tarefas pendentes. Entidades no modelo são construídas pelo Breeze com propriedades observáveis do Knockout, portanto, eles podem ser associados diretamente a widgets no modo de exibição. O modelo de exibição solicita que o contexto de dados para adquirir e salvar as entidades de modelo. O contexto de dados delega a maior parte do trabalho a Breeze.
+O modelo encapsula os dados de tarefas pendentes. As entidades no modelo são construídas pela Breeze com as propriedades observáveis do knockout, para que possam ser vinculadas diretamente aos widgets na exibição. O View-Model solicita que o contexto de dados adquira e salve as entidades do modelo. O contexto de dados delega a maior parte do trabalho para a Breeze.
 
-A pilha do lado do servidor consiste em um código de desenvolvedor e três bibliotecas .NET de princípio: API da Web, Entity Framework e Breeze.NET:
+A pilha do lado do servidor consiste em um código de desenvolvedor e três bibliotecas .NET de princípio: API Web, Entity Framework e Breeze.NET:
 
 ![](http://www.breezejs.com/sites/all/images/spa-template/ServerArchitecture.png)
 
-A arquitetura básica é o mesmo que o modelo KnockoutJS SPA. No entanto, a implementação é muito mais simples: Os DTOs foram excluídos, e a maioria dos detalhes do Entity Framework foram delegadas a Breeze.NET.
+A arquitetura básica é a mesma do modelo SPA KnockoutJS. No entanto, a implementação é muito mais simples: os DTOs foram excluídos e a maioria dos detalhes de Entity Framework foi delegada para Breeze.NET.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Sugerimos que você explore o código, orientado pela [discussão abrangente](http://www.breezejs.com/spa-template?utm_source=ms-spa) do cliente e as pilhas de servidor no site da Breeze.
+Sugerimos que você explore o código, guiado pela [ampla discussão](http://www.breezejs.com/spa-template?utm_source=ms-spa) do cliente e das pilhas de servidor no site da Breeze.
 
-Você pode experimentar, brincar com consulta do lado do cliente Breeze; Adicione alguns filtros e classificações. Você pode adicionar mais propriedades de modelo e entidades mais para obter uma ideia melhor para desenvolvimento de ponta a ponta do SPA. Quando estiver certo do design, você pode desfazer os recursos de Todo e substitua-os pelos seus próprios.
+Você pode tentar reproduzir com a consulta do lado do cliente da Breeze; Adicione alguns filtros e classificações. Você pode adicionar mais propriedades de modelo e mais entidades para obter uma ideia melhor para o desenvolvimento de SPA de ponta a ponta. Quando você estiver confiante do design, poderá desmontar os recursos de tarefas e substituí-los pelos seus próprios.
 
-Logo você estará pronto para a próxima grande etapa: Adicionando telas do lado do cliente e navegar entre eles. Você deixar este modelo do SPA para trás e ativar a uma pilha SPA mais completa, como [toalha quente do John Papa](https://github.com/johnpapa/HotTowel#readme "Hot Towel"), que adiciona Durandal à combinação de Breeze e Knockout.
+Em breve, você estará pronto para a próxima etapa grande: Adicionar telas do lado do cliente e navegar entre elas. Você deixará esse modelo SPA para trás e passará para uma pilha SPA mais completa, como a [toalha quente de John Papa](https://github.com/johnpapa/HotTowel#readme "Toalha quente"), que adiciona Durandal à Breeze e à mistura de Knockout.

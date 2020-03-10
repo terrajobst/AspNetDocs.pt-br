@@ -9,11 +9,11 @@ ms.assetid: 1a2ed0e8-63da-4110-9896-e2731d86f7c4
 msc.legacyurl: /web-pages/overview
 msc.type: book
 ms.openlocfilehash: b4c9e9eb85f6ba9a1e2b2d0a1bbaf027ee25bc0d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59381842"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640815"
 ---
 # <a name="web-pages-guidance"></a>Diretrizes de páginas da Web
 
@@ -51,7 +51,7 @@ ms.locfileid: "59381842"
     - [Instalação de um auxiliar](ui-layouts-and-themes/installing-helpers.md)
     - [Auxiliar do Twitter com Páginas da Web do ASP.NET](ui-layouts-and-themes/twitter-helper.md)
     - [Exibição de mapas em um site de Páginas da Web do ASP.NET](ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
-- [Dispositivo móvel](mobile/index.md)
+- [Móvel](mobile/index.md)
 
     - [Renderização de sites de Páginas da Web do ASP.NET para dispositivos móveis](mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
 - [Trabalhando com os Dados](data/index.md)
@@ -76,7 +76,7 @@ ms.locfileid: "59381842"
 - [Referência de API](api-reference/index.md)
 
     - [Guia de Referência Rápida da API do ASP.NET](api-reference/asp-net-web-pages-api-reference.md)
-- [Versões](releases/index.md)
+- [Lançamentos](releases/index.md)
 
     - [Novidades nas Páginas da Web do ASP.NET 3.2](releases/whats-new-in-aspnet-web-pages-32.md)
     - [Novidades nas Páginas da Web do ASP.NET 3.1](releases/whats-new-aspnet-web-pages-31.md)

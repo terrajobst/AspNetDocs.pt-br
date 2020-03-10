@@ -1,23 +1,23 @@
 ---
 uid: web-forms/videos/aspnet-dynamic-data/index
-title: Dados dinâmicos do ASP.NET | Microsoft Docs
+title: ASP.NET Dados Dinâmicos | Microsoft Docs
 author: rick-anderson
-description: Como usar dados dinâmicos do ASP.NET para criar aplicativos com Scaffold automaticamente sabem como executar o acesso a dados.
+description: Como usar o ASP.NET Dados Dinâmicos para criar aplicativos com Scaffold que saibam automaticamente como executar o acesso a dados.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: cd51e6c4-6ff9-419d-8ac8-a39b79d63c78
 msc.legacyurl: /web-forms/videos/aspnet-dynamic-data
 msc.type: chapter
 ms.openlocfilehash: 622f4c5243d094d1ab6b58a909795bc5230c62ce
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65116407"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633780"
 ---
 # <a name="aspnet-dynamic-data"></a>Dados dinâmicos do ASP.NET
 
-> Como usar dados dinâmicos do ASP.NET para criar aplicativos com Scaffold automaticamente sabem como executar o acesso a dados.
+> Como usar o ASP.NET Dados Dinâmicos para criar aplicativos com Scaffold que saibam automaticamente como executar o acesso a dados.
 
 - [Seu primeiro Scaffold e o que são Dados Dinâmicos](your-first-scaffold-and-what-is-dynamic-data.md)
 - [Habilitar edição de GridView embutido](how-do-i-enable-inline-gridview-editing.md)

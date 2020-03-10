@@ -9,11 +9,11 @@ ms.assetid: bc937e9d-5c14-4fc4-aec7-440da924dd18
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/user-based-authorization-vb
 msc.type: authoredcontent
 ms.openlocfilehash: dfac0c6fa955e59c6ea996533f2447e89ec8d468
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74587876"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78635936"
 ---
 # <a name="user-based-authorization-vb"></a>Autorização baseada em usuário (VB)
 
@@ -121,7 +121,7 @@ Atualize o arquivo de configuração na pasta `Membership` para que ele proíba 
 
 [!code-xml[Main](user-based-authorization-vb/samples/sample4.xml)]
 
-E isso é tudo!
+Isso é tudo!
 
 Para testar essa alteração, visite a Home Page em um navegador e verifique se você está desconectado. Como o comportamento padrão de um aplicativo ASP.NET é permitir todos os visitantes, e como não fazemos nenhuma modificação de autorização no arquivo de `Web.config` do diretório raiz, podemos visitar os arquivos no diretório raiz como um visitante anônimo.
 

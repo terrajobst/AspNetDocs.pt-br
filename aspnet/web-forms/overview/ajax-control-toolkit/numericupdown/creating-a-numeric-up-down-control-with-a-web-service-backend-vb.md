@@ -9,11 +9,11 @@ ms.assetid: afa59dfa-fef1-43d3-8fdd-aea3be36ed3c
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/numericupdown/creating-a-numeric-up-down-control-with-a-web-service-backend-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 2bf6e1b27180589d39e308de62b5be1f47fa8fe2
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74606350"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78612990"
 ---
 # <a name="creating-a-numeric-updown-control-with-a-web-service-backend-vb"></a>Criação um controle numérico para cima/para baixo com um back-end de serviço Web (VB)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > Em vez de permitir que um usuário digite um valor em uma caixa de seleção, um controle numérico para cima/para baixo (que existe no Windows e em outros sistemas operacionais) pode provar o mais confortável. Por padrão, o controle NumericUpDown sempre aumenta ou diminui um valor em 1, mas um serviço Web comprova mais flexibilidade.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Em vez de permitir que um usuário digite um valor em uma caixa de seleção, um controle numérico para cima/para baixo (que existe no Windows e em outros sistemas operacionais) pode provar o mais confortável. Por padrão, o controle de `NumericUpDown` sempre aumenta ou diminui um valor em 1, mas um serviço Web comprova mais flexibilidade.
 

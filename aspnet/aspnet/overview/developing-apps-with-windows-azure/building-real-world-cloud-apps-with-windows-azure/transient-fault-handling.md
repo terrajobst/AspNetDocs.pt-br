@@ -9,11 +9,11 @@ ms.assetid: 7ead83bc-c08c-4b26-8617-00e07292e35c
 msc.legacyurl: /aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/transient-fault-handling
 msc.type: authoredcontent
 ms.openlocfilehash: e798cb83cfb97db63fef6dc38c8f62804461d01b
-ms.sourcegitcommit: 7709c0a091b8d55b7b33bad8849f7b66b23c3d72
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77456849"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78617323"
 ---
 # <a name="transient-fault-handling-building-real-world-cloud-apps-with-azure"></a>Tratamento de falhas transitórias (criando aplicativos de nuvem do mundo real com o Azure)
 
@@ -80,7 +80,7 @@ No [próximo capítulo](distributed-caching.md), veremos como melhorar o desempe
 
 ## <a name="resources"></a>Recursos
 
-Para obter mais informações, consulte os seguintes recursos:
+Para saber mais, consulte os recursos a seguir:
 
 Documentação
 
@@ -96,7 +96,7 @@ vídeos
 - [FailSafe: criando serviços de nuvem escalonáveis e resilientes](https://channel9.msdn.com/Series/FailSafe). Série de nove partes de Ulrich Homann, Marc Mercuri e de Mark Simms. Apresenta conceitos de alto nível e princípios arquitetônicos de uma maneira muito acessível e interessante, com histórias extraídas da experiência CAT (equipe de consultoria para clientes) da Microsoft com os clientes reais. Consulte a discussão de disjuntores de circuito no episódio 3 a partir de 40:55.
 - [Criando Big: lições aprendidas de clientes do Azure-parte II](https://channel9.msdn.com/Events/Build/2012/3-030). Mark Simms fala sobre o design de falhas, tratamento de falhas transitórias e instrumentação de tudo.
 
-Exemplos de código
+Exemplo de código
 
 - [Conceitos básicos do serviço de nuvem no Azure](https://code.msdn.microsoft.com/Cloud-Service-Fundamentals-4ca72649). Aplicativo de exemplo criado pelo Microsoft Azure equipe de consultoria ao cliente que demonstra como usar o TFH ( [bloco de tratamento de falhas transitórias) da Enterprise Library](http://nuget.org/packages/EnterpriseLibrary.TransientFaultHandling/) . Para saber mais, consulte [Camada de acesso a dados dos conceitos básicos do serviço de nuvem — tratamento de falhas transitórias](https://social.technet.microsoft.com/wiki/contents/articles/18665.cloud-service-fundamentals-data-access-layer-transient-fault-handling.aspx). TFH é recomendado para acesso ao banco de dados usando o ADO.NET diretamente (sem usar Entity Framework).
 

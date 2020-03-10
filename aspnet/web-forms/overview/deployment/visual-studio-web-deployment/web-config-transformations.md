@@ -9,11 +9,11 @@ ms.assetid: 5a2a927b-14cb-40bc-867a-f0680f9febd7
 msc.legacyurl: /web-forms/overview/deployment/visual-studio-web-deployment/web-config-transformations
 msc.type: authoredcontent
 ms.openlocfilehash: a9d39547c94a63003442ba6fe1257693dde24b05
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621783"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632828"
 ---
 # <a name="aspnet-web-deployment-using-visual-studio-webconfig-file-transformations"></a>Implantação da Web do ASP.NET usando o Visual Studio: transformações de arquivo Web. config
 
@@ -23,7 +23,7 @@ por [Tom Dykstra](https://github.com/tdykstra)
 
 > Esta série de tutoriais mostra como implantar (publicar) um aplicativo Web ASP.NET em aplicativos Web do serviço Azure App ou em um provedor de Hospedagem de terceiros usando o Visual Studio 2012 ou o Visual Studio 2010. Para obter informações sobre a série, consulte [o primeiro tutorial da série](introduction.md).
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 Este tutorial mostra como automatizar o processo de alteração do arquivo *Web. config* ao implantá-lo em ambientes de destino diferentes. A maioria dos aplicativos tem configurações no arquivo *Web. config* que devem ser diferentes quando o aplicativo é implantado. Automatizar o processo de fazer essas alterações evita que você precise fazê-las manualmente toda vez que implantar, o que seria entediante e propenso a erros.
 
@@ -47,7 +47,7 @@ Se as configurações do arquivo *Web. config* que você deseja alterar estivere
 
 No **Gerenciador de soluções**, expanda *Web. config* para ver os arquivos de transformação *Web. Debug. config* e *Web. Release. config* que são criados por padrão para as duas configurações de compilação padrão.
 
-![Web. config_transform_files](web-config-transformations/_static/image1.png)
+![Web.config_transform_files](web-config-transformations/_static/image1.png)
 
 Você pode criar arquivos de transformação para configurações de compilação personalizadas clicando com o botão direito do mouse no arquivo Web. config e escolhendo **Adicionar transformações de configuração** no menu de contexto. Para este tutorial, você não precisa fazer isso e a opção de menu está desabilitada, pois você não criou nenhuma configuração de compilação personalizada.
 
@@ -130,7 +130,7 @@ Essa transformação pertence aos arquivos de transformação de perfil de publi
 > [!NOTE]
 > Como essa configuração está no elemento `<appSettings>`, você tem outra alternativa para especificar a transformação quando estiver implantando em aplicativos Web no serviço Azure App consulte [especificando as configurações do Web. config no Azure](#watransforms) , anteriormente neste tópico.
 
-## <a name="setting-connection-strings"></a>Definindo cadeias de conexão
+## <a name="setting-connection-strings"></a>Configurar cadeias de conexão
 
 Embora o arquivo de transformação padrão contenha um exemplo que mostre como atualizar uma cadeia de conexão, na maioria dos casos, não é necessário configurar as transformações de cadeia de conexão, pois você pode especificar cadeias de conexão no perfil de publicação. Você fará isso nos tutoriais [implantar no IIS](deploying-to-iis.md) e [implantar em produção](deploying-to-production.md) .
 
@@ -142,7 +142,7 @@ Agora você tem feito o máximo possível com as transformações de *Web. confi
 
 No tutorial a seguir, você cuidará das tarefas de configuração de implantação que exigem a definição de propriedades do projeto.
 
-## <a name="more-information"></a>Mais Informações
+## <a name="more-information"></a>Mais informações
 
 Para obter mais informações sobre os tópicos abordados por este tutorial, consulte [usando as transformações de Web. config para alterar as configurações no arquivo Web. config de destino ou no arquivo app. config durante a implantação](https://go.microsoft.com/fwlink/p/?LinkId=282413#transforms) no mapa de conteúdo da implantação da Web para Visual Studio e ASP.net.
 

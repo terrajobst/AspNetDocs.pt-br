@@ -9,11 +9,11 @@ ms.assetid: ab68a92b-fc81-40a4-a7dc-406625d2c5d4
 msc.legacyurl: /web-forms/overview/older-versions-security/introduction/security-basics-and-asp-net-support-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 99e986013cb5a923ddb150022013e3a75852ce55
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74621630"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78575337"
 ---
 # <a name="security-basics-and-aspnet-support-vb"></a>Noções básicas sobre segurança e suporte do ASP.NET (VB)
 
@@ -67,7 +67,7 @@ Por padrão, os navegadores enviam solicitações HTTP que não têm qualquer ti
 
 O fluxo de trabalho de autenticação do Windows usa uma das seguintes técnicas de autenticação:
 
-- Autenticação básica
+- Autenticação Básica
 - Autenticação resumida
 - Autenticação Integrada do Windows
 

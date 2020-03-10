@@ -7,11 +7,11 @@ ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: 91a62bfa-ea3a-41f9-a2e1-e90d2c8fc8ca
 ms.openlocfilehash: 8d07848754d9efda9c893b8ba54ac6d0c0214a53
-ms.sourcegitcommit: b95316530fa51087d6c400ff91814fe37e73f7e8
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000710"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78633059"
 ---
 # <a name="aspnet-webhooks-source-code-and-nuget-packages"></a>Código-fonte de WebHooks do ASP.NET e pacotes NuGet
 
@@ -23,8 +23,8 @@ Esta documentação online que você está lendo agora também é hospedada como
 
 Os [pacotes NuGet](https://nuget.org/packages?q=Microsoft.AspNet.WebHooks) são divididos em três partes:
 
-* [Comum](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Common): Um pacote comum que é compartilhado entre remetentes e receptores.
+* [Comum](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Common): um pacote comum que é compartilhado entre remetentes e receptores.
 
-* [Remetente](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Custom): Um conjunto de pacotes que dão suporte ao envio de seus próprios WebHooks para outras pessoas. A funcionalidade para enviar WebHooks é descrita mais detalhadamente no [envio](sending/senders.md)de WebHooks.
+* [Remetente](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Custom): um conjunto de pacotes que dão suporte ao envio de seus próprios WebHooks para outras pessoas. A funcionalidade para enviar WebHooks é descrita mais detalhadamente no [envio de WebHooks](sending/senders.md).
 
-* [Receptores](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Receivers): Um conjunto de pacotes que dão suporte ao recebimento de WebHooks de outros. A funcionalidade para receber WebHooks é descrita mais detalhadamente no [recebimento](receiving/index.md)de WebHooks.
+* [Receptores](https://www.nuget.org/packages?q=Microsoft.AspNet.WebHooks.Receivers): um conjunto de pacotes que dão suporte ao recebimento de WebHooks de outros. A funcionalidade para receber WebHooks é descrita mais detalhadamente no [recebimento de WebHooks](receiving/index.md).

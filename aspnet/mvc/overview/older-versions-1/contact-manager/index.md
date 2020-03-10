@@ -9,11 +9,11 @@ ms.assetid: 6b0f1fd7-6768-4549-ae9c-be9131103c4d
 msc.legacyurl: /mvc/overview/older-versions-1/contact-manager
 msc.type: chapter
 ms.openlocfilehash: 3ec9811be5afc00a126936529480082bf2d620e9
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65124134"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78582183"
 ---
 # <a name="contact-manager"></a>Gerenciador de Contatos
 

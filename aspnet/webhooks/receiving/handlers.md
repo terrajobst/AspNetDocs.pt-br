@@ -2,38 +2,38 @@
 uid: webhooks/receiving/handlers
 title: Manipuladores de WebHooks do ASP.NET | Microsoft Docs
 author: rick-anderson
-description: Como lidar com solicitações de WebHooks do ASP.NET.
+description: Como lidar com solicitações em WebHooks ASP.NET.
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: a55b0d20-9c90-4bd3-a471-20da6f569f0c
 ms.openlocfilehash: 01c9a283d105c4a0973ff88c8de646c5f49a34db
-ms.sourcegitcommit: 24b1f6decbb17bb22a45166e5fdb0845c65af498
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57030093"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78637868"
 ---
 # <a name="aspnet-webhooks-handlers"></a>Manipuladores de WebHooks do ASP.NET
 
-Depois que as solicitações de WebHooks foi validada por um receptor de WebHook, está pronto para ser processado pelo código do usuário. É aí que *manipuladores de* entram. Manipuladores derivam de [IWebHookHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) interface, mas normalmente usa o [WebHookHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) classe em vez de derivar diretamente da interface do.
+Após a validação das solicitações de webhook por um receptor de webhook, ela estará pronta para ser processada pelo código do usuário. É aí que os *manipuladores* entram. Os manipuladores derivam da interface [IWebHookHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) , mas normalmente usam a classe [WebHookHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) em vez de derivar diretamente da interface.
 
-Uma solicitação de WebHook pode ser processada por um ou mais manipuladores. Manipuladores são chamados na ordem com base em suas respectivas *ordem* propriedade indo do mais baixo para o mais alto em que ordem é um inteiro simples (sugerido para ser entre 1 e 100):
+Uma solicitação de webhook pode ser processada por um ou mais manipuladores. Os manipuladores são chamados na ordem com base em sua respectiva propriedade de *ordem* indo do mais baixo para o mais alto, em que a ordem é um inteiro simples (sugerido para estar entre 1 e 100):
 
-![Diagrama de propriedade de ordem do manipulador de WebHook](_static/Handlers.png)
+![Diagrama de propriedades de ordem do manipulador de webhook](_static/Handlers.png)
 
-Um manipulador pode, opcionalmente, defina as *resposta* propriedade sobre a WebHookHandlerContext que levará o processamento a parada e a resposta a ser enviada de volta como a resposta HTTP para o WebHook. No caso acima, não será chamada C de manipulador porque ele tem uma ordem mais alta do que B e B define a resposta.
+Um manipulador pode, opcionalmente, definir a propriedade de *resposta* no WebHookHandlerContext, que levará o processamento a parar e a resposta a ser enviada de volta como a resposta http para o webhook. No caso acima, o manipulador C não será chamado porque ele tem uma ordem superior à B e B define a resposta.
 
-Definição da resposta normalmente só é relevante para WebHooks em que a resposta pode transportar informações de volta para a API de origem. Por exemplo, esse é o caso com os WebHooks do Slack em que a resposta é postada de volta o canal de onde veio o WebHook. Manipuladores podem definir a propriedade de receptor se desejam receber WebHooks de receptor em particular. Se eles não definir o receptor, eles são chamados para todos eles.
+A definição da resposta normalmente é relevante apenas para WebHooks em que a resposta pode transportar informações para a API de origem. Isso é, por exemplo, o caso com WebHooks de margem de atraso onde a resposta é postada para o canal no qual o webhook veio. Os manipuladores podem definir a propriedade Receiver se quiserem apenas receber WebHooks desse receptor específico. Se eles não definirem o receptor, eles serão chamados para todos eles.
 
-Outro uso comum de uma resposta é usar um *410 perdido* resposta para indicar que o WebHook não está ativo e nenhuma solicitação adicional deve ser enviada.
+Um outro uso comum de uma resposta é usar uma resposta *410* , para indicar que o webhook não está mais ativo e que nenhuma solicitação adicional deve ser enviada.
 
-Por padrão, um manipulador será chamado por todos os receptores de WebHook. No entanto, se o *receptor* estiver definida como o nome de um manipulador, em seguida, esse manipulador só receberá solicitações de WebHook do receptor.
+Por padrão, um manipulador será chamado por todos os receptores de webhook. No entanto, se a propriedade *Receiver* for definida como o nome de um manipulador, esse manipulador só receberá solicitações de webhook desse receptor.
 
-## <a name="processing-a-webhook"></a>Processamento de um WebHook
+## <a name="processing-a-webhook"></a>Processando um webhook
 
-Quando um manipulador é chamado, ele obtém uma [WebHookHandlerContext](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandlerContext.cs) que contém informações sobre a solicitação de WebHook. Os dados, normalmente o corpo da solicitação HTTP, estão disponíveis na *dados* propriedade.
+Quando um manipulador é chamado, ele obtém um [WebHookHandlerContext](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandlerContext.cs) que contém informações sobre a solicitação de webhook. Os dados, normalmente o corpo da solicitação HTTP, estão disponíveis na propriedade *Data* .
 
-O tipo de dados é, normalmente, dados de formulário HTML ou JSON, mas é possível converter para um tipo mais específico, se desejado. Por exemplo, os WebHooks personalizados gerados pelo WebHooks do ASP.NET pode ser convertidos no tipo [CustomNotifications](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers.Custom/WebHooks/CustomNotifications.cs) da seguinte maneira:
+O tipo dos dados normalmente são dados de formulário JSON ou HTML, mas é possível convertê-los em um tipo mais específico, se desejado. Por exemplo, os WebHooks personalizados gerados por WebHooks ASP.NET podem ser convertidos no tipo [CustomNotifications](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers.Custom/WebHooks/CustomNotifications.cs) da seguinte maneira:
 
 ```csharp
 public class MyWebHookHandler : WebHookHandler
@@ -57,11 +57,11 @@ public class MyWebHookHandler : WebHookHandler
 
   ## <a name="queued-processing"></a>Processamento em fila
 
-A maioria dos remetentes de WebHook reenviará um WebHook, se uma resposta não é gerada dentro de alguns segundos. Isso significa que seu manipulador deve concluir o processamento dentro desse período, não para que ele seja chamado novamente.
+A maioria dos remetentes de webhook reenviará um webhook se uma resposta não for gerada dentro de alguns segundos. Isso significa que o manipulador deve concluir o processamento dentro desse período de tempo para que ele não seja chamado novamente.
 
-Se o processamento leva mais tempo ou, melhor é tratado separadamente, o [WebHookQueueHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs) pode ser usado para enviar a solicitação de WebHook a uma fila, por exemplo [fila de armazenamento do Azure](https://msdn.microsoft.com/library/azure/dd179353.aspx).
+Se o processamento levar mais tempo ou for melhor manipulado separadamente, o [WebHookQueueHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs) poderá ser usado para enviar a solicitação de webhook para uma fila, por exemplo, [fila de armazenamento do Azure](https://msdn.microsoft.com/library/azure/dd179353.aspx).
 
-Uma estrutura de tópicos de um [WebHookQueueHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs) implementação é fornecida aqui:
+Um contorno de uma implementação de [WebHookQueueHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs) é fornecido aqui:
 
 ```csharp
 public class QueueHandler : WebHookQueueHandler

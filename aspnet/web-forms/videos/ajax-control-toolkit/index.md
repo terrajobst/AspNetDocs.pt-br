@@ -2,22 +2,22 @@
 uid: web-forms/videos/ajax-control-toolkit/index
 title: AJAX Control Toolkit | Microsoft Docs
 author: rick-anderson
-description: Como criar páginas usando o Kit de ferramentas de controle Ajax do ASP.NET muito ágil.
+description: Como criar páginas da Web ASP.NET muito responsivas usando o AJAX Control Toolkit.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 6f7b1c74-cc73-42f9-8ef0-8b3d058dabfa
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit
 msc.type: chapter
 ms.openlocfilehash: c92d686cdb7883efbb5e5b2997e4a490f83607f0
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65131518"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78638925"
 ---
 # <a name="ajax-control-toolkit"></a>Ajax Control Toolkit
 
-> Como criar páginas usando o Kit de ferramentas de controle Ajax do ASP.NET muito ágil.
+> Como criar páginas da Web ASP.NET muito responsivas usando o AJAX Control Toolkit.
 
 - [Introdução ao AJAX Control Toolkit do ASP.NET](how-do-i-get-started-with-the-aspnet-ajax-control-toolkit.md)
 - [Extensor do controle CascadingDropDown do AJAX ASP.NET](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)

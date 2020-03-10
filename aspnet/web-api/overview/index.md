@@ -1,8 +1,8 @@
 ---
 uid: web-api/overview/index
-title: Web API diretriz - ASP.NET 4.x
+title: Diretrizes da API Web-ASP.NET 4. x
 author: rick-anderson
-description: Lista de diretrizes da API Web ASP.NET para ASP.NET 4. x
+description: Lista de diretrizes de ASP.NET Web API para ASP.NET 4. x
 ms.author: riande
 ms.date: 01/17/2012
 ms.custom: seoapril2019
@@ -10,13 +10,13 @@ ms.assetid: daca6735-b5d3-4ef5-af33-ee682926238b
 msc.legacyurl: /web-api/overview
 msc.type: book
 ms.openlocfilehash: 304c0d71e5e18f9d3f0768464fe39d6e6946600d
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59422896"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78556500"
 ---
-# <a name="web-api-guidance"></a>Diretrizes da API da Web
+# <a name="web-api-guidance"></a>Diretrizes da API Web
 
 - [Introdução](getting-started-with-aspnet-web-api/index.md)
 
@@ -24,7 +24,7 @@ ms.locfileid: "59422896"
     - [Resultados da ação na API Web 2](getting-started-with-aspnet-web-api/action-results.md)
     - [Uso da API Web com Web Forms do ASP.NET](getting-started-with-aspnet-web-api/using-web-api-with-aspnet-web-forms.md)
     - [Criação páginas de ajuda da API Web](getting-started-with-aspnet-web-api/creating-api-help-pages.md)
-    - [Laboratório prático: Criar um aplicativo de página única (SPA) com a API Web ASP.NET e angular. js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
+    - [Laboratório prático: criar um SPA (aplicativo de página única) com o ASP.NET Web API e o Angular.js](getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs.md)
 - [Roteamento](web-api-routing-and-actions/index.md)
 
     - [Roteamento na API Web](web-api-routing-and-actions/routing-in-aspnet-web-api.md)
@@ -112,10 +112,10 @@ ms.locfileid: "59422896"
     - [Chamar uma API Web em um cliente .NET (C#)](advanced/calling-a-web-api-from-a-net-client.md)
     - [Manipuladores de mensagens de HTTP na API Web](advanced/http-message-handlers.md)
     - [Manipuladores de mensagens de HttpClient na API Web](advanced/httpclient-message-handlers.md)
-    - [Enviar dados de formulário HTML na API Web: Dados de formulário urlencoded](advanced/sending-html-form-data-part-1.md)
-    - [Enviar dados de formulário HTML na API Web: Upload do arquivo e MIME com diversas partes](advanced/sending-html-form-data-part-2.md)
+    - [Enviar dados de formulário HTML na API Web: dados de formulário urlencoded](advanced/sending-html-form-data-part-1.md)
+    - [Enviar dados de formulário HTML na API Web: upload de arquivo e MIME com diversas partes](advanced/sending-html-form-data-part-2.md)
     - [Cookies HTTP no ASP.NET Web API](advanced/http-cookies.md)
-- [Versões](releases/index.md)
+- [Lançamentos](releases/index.md)
 
     - [Novidades no OData da API Web 5.3](releases/whats-new-in-aspnet-web-api-odata-53.md)
     - [Novidades no ASP.NET Web API 2.2](releases/whats-new-in-aspnet-web-api-22.md)

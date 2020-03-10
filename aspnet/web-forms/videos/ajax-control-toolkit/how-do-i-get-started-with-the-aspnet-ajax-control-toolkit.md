@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/ajax-control-toolkit/how-do-i-get-started-with-the-aspnet-ajax-control-toolkit
-title: '[Como fazer:] Introdução ao ASP.NET AJAX Control Toolkit? | Microsoft Docs'
+title: '[Como faço para:] Introdução ao kit de ferramentas de controle AJAX ASP.NET? | Microsoft Docs'
 author: JoeStagner
-description: Saiba como estender seus aplicativos do ASP.NET AJAX usando o ASP.NET AJAX Control Toolkit. Este vídeo começa com o básico, inclusive o download e...
+description: Saiba como estender seus aplicativos ASP.NET AJAX usando o ASP.NET AJAX Control Toolkit. Este vídeo começa com os fundamentos básicos, incluindo o download e...
 ms.author: riande
 ms.date: 01/23/2007
 ms.assetid: 0ab311fc-154b-4e38-86ce-c6351ff5cabb
 msc.legacyurl: /web-forms/videos/ajax-control-toolkit/how-do-i-get-started-with-the-aspnet-ajax-control-toolkit
 msc.type: video
 ms.openlocfilehash: a9c9de7347dd24046d081a5e9ebbcf91a10fe634
-ms.sourcegitcommit: 0f1119340e4464720cfd16d0ff15764746ea1fea
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59408258"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78641011"
 ---
-# <a name="how-do-i-get-started-with-the-aspnet-ajax-control-toolkit"></a>[Como fazer:] Introdução ao ASP.NET AJAX Control Toolkit?
+# <a name="how-do-i-get-started-with-the-aspnet-ajax-control-toolkit"></a>[Como faço para:] Introdução ao kit de ferramentas de controle AJAX ASP.NET?
 
 por [Joe Stagner](https://github.com/JoeStagner)
 
-Saiba como estender seus aplicativos do ASP.NET AJAX usando o ASP.NET AJAX Control Toolkit. Este vídeo começa com as Noções básicas, incluindo baixando e instalando o Kit de ferramentas e adicionando alguns dos seus controles a uma página da web habilitado para AJAX ASP.NET simples.
+Saiba como estender seus aplicativos ASP.NET AJAX usando o ASP.NET AJAX Control Toolkit. Este vídeo começa com os fundamentos básicos, incluindo o download e a instalação do kit de ferramentas e a adição de alguns de seus controles a uma página da Web simples habilitada para AJAX ASP.NET.
 
-[&#9654;Assista ao vídeo (11 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-the-aspnet-ajax-control-toolkit)
+[&#9654;Assistir ao vídeo (11 minutos)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/how-do-i-get-started-with-the-aspnet-ajax-control-toolkit)
 
 > [!div class="step-by-step"]
-> [Avançar](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)
+> [Próximo](how-do-i-use-the-aspnet-ajax-cascadingdropdown-control-extender.md)

@@ -1,81 +1,81 @@
 ---
 uid: web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8
-title: 'Parte 8: Páginas finais, tratamento de exceção e conclusão | Microsoft Docs'
+title: 'Parte 8: páginas finais, manipulação de exceção e conclusão | Microsoft Docs'
 author: JoeStagner
-description: Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo Tailspin Spyworks. Parte 8 adiciona uma página de contato, sobre a página e a exceção...
+description: Esta série de tutoriais detalha todas as etapas usadas para criar o aplicativo de exemplo Tailspin Spyworks. A parte 8 adiciona uma página de contato, sobre a página e a exceção...
 ms.author: riande
 ms.date: 07/21/2010
 ms.assetid: 5aeadf8f-39f3-4f07-a78f-1c310c64fb23
 msc.legacyurl: /web-forms/overview/older-versions-getting-started/tailspin-spyworks/tailspin-spyworks-part-8
 msc.type: authoredcontent
 ms.openlocfilehash: 707dc9d87ae324a7897c971a451e40bc54c96cb3
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130599"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78586880"
 ---
-# <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: Páginas finais, tratamento de exceção e conclusão
+# <a name="part-8-final-pages-exception-handling-and-conclusion"></a>Parte 8: páginas finais, manipulação de exceção e conclusão
 
 por [Joe Stagner](https://github.com/JoeStagner)
 
-> Tailspin Spyworks demonstra como incrivelmente simples é criar aplicativos avançados e escalonáveis para a plataforma .NET. Ele mostra como usar os novos recursos no ASP.NET 4 para criar uma loja online, incluindo as compras, check-out e administração.
+> A Tailspin Spyworks demonstra como é extremamente simples criar aplicativos poderosos e escalonáveis para a plataforma .NET. Ele mostra como usar os ótimos novos recursos do ASP.NET 4 para criar uma loja online, incluindo compras, check-out e administração.
 > 
-> Esta série de tutoriais fornece detalhes sobre todas as etapas realizadas para compilar o aplicativo de exemplo Tailspin Spyworks. Parte 8 adiciona uma página de contato, sobre a página e manipulação de exceção. Isso é a conclusão da série.
+> Esta série de tutoriais detalha todas as etapas usadas para criar o aplicativo de exemplo Tailspin Spyworks. A parte 8 adiciona uma página de contato, sobre a página e a manipulação de exceções. Esta é a conclusão da série.
 
-## <a id="_Toc260221680"></a>  Entre em contato com a página (enviar e-mail do ASP.NET)
+## <a id="_Toc260221680"></a>Página de contato (enviando email de ASP.NET)
 
-Criar uma nova página chamada ContactUs.aspx
+Crie uma nova página chamada contactus. aspx
 
-Usando o designer, crie o seguinte formulário anotar especial para incluir o ToolkitScriptManager e o controle de Editor do AjaxControlToolkit. .
+Usando o designer, crie o seguinte formulário fazendo uma observação especial para incluir o ToolkitScriptManager e o controle editor do AjaxControlToolkit. .
 
 ![](tailspin-spyworks-part-8/_static/image1.jpg)
 
-Clique duas vezes no botão "Enviar" para gerar um manipulador de eventos no arquivo code-behind e implementar um método para enviar as informações de contato como um email.
+Clique duas vezes no botão "enviar" para gerar um manipulador de eventos de clique no arquivo code-behind e implemente um método para enviar as informações de contato como um email.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample1.cs)]
 
-Esse código requer que seu arquivo Web. config contém uma entrada na seção de configuração que especifica o servidor SMTP a ser usado para enviar um email.
+Esse código requer que o arquivo Web. config contenha uma entrada na seção de configuração que especifica o servidor SMTP a ser usado para enviar email.
 
 [!code-xml[Main](tailspin-spyworks-part-8/samples/sample2.xml)]
 
-## <a id="_Toc260221681"></a>  Sobre a página
+## <a id="_Toc260221681"></a>Página sobre
 
-Crie uma página chamada AboutUs.aspx e adicione qualquer conteúdo que você deseja.
+Crie uma página chamada AboutUs. aspx e adicione qualquer conteúdo que desejar.
 
-## <a id="_Toc260221682"></a>  Manipulador de exceção global
+## <a id="_Toc260221682"></a>Manipulador de exceção global
 
-Por fim, em todo o aplicativo, podemos ter lançada exceções e há circunstâncias imprevistas ou cold também causa sem tratamento de exceções em nosso aplicativo web.
+Por fim, em todo o aplicativo geramos exceções e há circunstâncias imprevistas que frios também causam exceções sem tratamento em nosso aplicativo Web.
 
-Queremos que nunca uma exceção sem tratamento a ser exibida para um visitante de site da web.
+Nunca queremos que uma exceção sem tratamento seja exibida para um visitante de site.
 
 ![](tailspin-spyworks-part-8/_static/image2.jpg)
 
-Além de ser uma experiência de usuário terrível exceções sem tratamento também podem ser um problema de segurança.
+Além de ser uma experiência de usuário terrível, as exceções não tratadas também podem ser um problema de segurança.
 
-Para resolver esse problema, podemos irá implementar um manipulador de exceção global.
+Para resolver esse problema, implementaremos um manipulador de exceção global.
 
-Para fazer isso, abra o arquivo global. asax e observe o seguinte manipulador de eventos gerados previamente.
+Para fazer isso, abra o arquivo global. asax e observe o seguinte manipulador de eventos gerado previamente.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample3.cs)]
 
-Adicione código para implementar o aplicativo\_manipulador de erro da seguinte maneira.
+Adicione o código para implementar o aplicativo\_manipulador de erro da seguinte maneira.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample4.cs)]
 
-Em seguida, adicione uma página chamada Error.aspx à solução e adicione esse trecho de marcação.
+Em seguida, adicione uma página chamada Error. aspx à solução e adicione este trecho de marcação.
 
 [!code-aspx[Main](tailspin-spyworks-part-8/samples/sample5.aspx)]
 
-Agora, na página\_carregar extração de manipulador de eventos, as mensagens de erro do objeto de solicitação.
+Agora, na página\_manipulador de eventos de carregamento, extraia as mensagens de erro do objeto de solicitação.
 
 [!code-csharp[Main](tailspin-spyworks-part-8/samples/sample6.cs)]
 
-## <a id="_Toc260221683"></a>  Conclusão
+## <a id="_Toc260221683"></a>Final
 
-Já vimos que WebForms ASP.NET torna mais fácil para criar um site da Web sofisticado com acesso de banco de dados, associação, AJAX, etc. muito rapidamente.
+Vimos que os WebForms do ASP.NET facilitam a criação de um site sofisticado com acesso ao banco de dados, associação, AJAX, etc. muito rapidamente.
 
-Espero que este tutorial tenha fornecido as ferramentas que você precisa para começar a criar seu próprio ASP.NET WebForms aplicativos!
+Espero que este tutorial tenha lhe dado as ferramentas necessárias para começar a criar seus próprios aplicativos WebForms do ASP.NET!
 
 > [!div class="step-by-step"]
 > [Anterior](tailspin-spyworks-part-7.md)

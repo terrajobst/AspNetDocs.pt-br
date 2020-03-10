@@ -2,22 +2,22 @@
 uid: web-forms/overview/data-access/enhancing-the-gridview/index
 title: Aprimorando o GridView | Microsoft Docs
 author: rick-anderson
-description: Esses tutoriais mostram como adicionar uma coluna de botões de opção em um controle GridView para fornecer uma maneira intuitiva para selecionar uma única linha.
+description: Esses tutoriais mostram como adicionar uma coluna de botões de opção a um controle GridView para fornecer uma maneira intuitiva de selecionar uma única linha.
 ms.author: riande
 ms.date: 10/05/2011
 ms.assetid: 80010898-5cb0-49ae-a678-cc2f3fe3ca6c
 msc.legacyurl: /web-forms/overview/data-access/enhancing-the-gridview
 msc.type: chapter
 ms.openlocfilehash: d4664511d2464ed667e87bb3716aef2000def279
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65109501"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78607285"
 ---
 # <a name="enhancing-the-gridview"></a>Aprimorar o GridView
 
-> Esses tutoriais mostram como adicionar uma coluna de botões de opção em um controle GridView para fornecer uma maneira intuitiva para selecionar uma única linha.
+> Esses tutoriais mostram como adicionar uma coluna de botões de opção a um controle GridView para fornecer uma maneira intuitiva de selecionar uma única linha.
 
 - [Adicionando uma coluna de GridView de botões de opção (C#)](adding-a-gridview-column-of-radio-buttons-cs.md)
 - [Adicionando uma coluna de GridView de caixas de seleção (C#)](adding-a-gridview-column-of-checkboxes-cs.md)

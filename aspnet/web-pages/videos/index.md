@@ -9,16 +9,16 @@ ms.assetid: febf2824-4e3d-4dc6-84c5-f99777ec6144
 msc.legacyurl: /web-pages/videos
 msc.type: book
 ms.openlocfilehash: 4c22b024240740d971740e9f043231ccbcdc47fb
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65127685"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78631743"
 ---
-# <a name="videos"></a>Vídeos
+# <a name="videos"></a>vídeos
 
 > [!NOTE] 
-> O WebMatrix não é mais recomendado como um ambiente de desenvolvimento integrado para páginas da Web do ASP.NET. Use [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou [Visual Studio Code](https://code.visualstudio.com/).
+> O WebMatrix não é mais recomendado como um ambiente de desenvolvimento integrado para Páginas da Web do ASP.NET. Use o [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) ou o [Visual Studio Code](https://code.visualstudio.com/).
 
 - [Introdução](introduction/index.md)
 
@@ -32,7 +32,7 @@ ms.locfileid: "65127685"
     - [Criar uma página de edição de dados no WebMatrix](introduction/create-an-edit-data-page-in-webmatrix.md)
     - [Criar uma página de exclusão de dados no WebMatrix](introduction/create-a-delete-data-page-in-webmatrix.md)
     - [Publicar um site na Internet usando o WebMatrix](introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-- [Páginas do Razor do ASP.NET](aspnet-razor-pages/index.md)
+- [Razor Pages ASP.NET](aspnet-razor-pages/index.md)
 
     - [Introdução ao WebMatrix e às Páginas da Web do ASP.NET](aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
     - [Introdução à sintaxe Razor de programação da Web do ASP.NET](aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)

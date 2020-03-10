@@ -9,11 +9,11 @@ ms.assetid: 2f67d8ef-73ca-447d-a0cc-6e3168431e6a
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/modalpopup/launching-a-modal-popup-window-from-server-code-cs
 msc.type: authoredcontent
 ms.openlocfilehash: fec0ce2cdd24333f65201301718440e1a09d930e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599062"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78613291"
 ---
 # <a name="launching-a-modal-popup-window-from-server-code-c"></a>Inicialização de uma janela ModalPopup por meio de código do servidor (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle ModalPopup no AJAX Control Toolkit oferece uma maneira simples de criar um popup modal usando meios do lado do cliente. No entanto, alguns cenários exigem que a abertura do popup modal seja disparada no lado do servidor.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle ModalPopup no AJAX Control Toolkit oferece uma maneira simples de criar um popup modal usando meios do lado do cliente. No entanto, alguns cenários exigem que a abertura do popup modal seja disparada no lado do servidor.
 
@@ -68,4 +68,4 @@ A função `$find()` está procurando um elemento nomeado na página e espera a 
 O popup modal aparece quando um dos botões é clicado ([clique para exibir a imagem em tamanho normal](launching-a-modal-popup-window-from-server-code-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](using-modalpopup-with-a-repeater-control-cs.md)
+> [Próximo](using-modalpopup-with-a-repeater-control-cs.md)

@@ -9,11 +9,11 @@ ms.assetid: 3ecc21c5-da0e-40ab-abb4-fac1e47398ad
 msc.legacyurl: /web-forms/overview/data-access/editing-and-deleting-data-through-the-datalist/adding-validation-controls-to-the-datalist-s-editing-interface-cs
 msc.type: authoredcontent
 ms.openlocfilehash: e3c14b7098da832bd28f57026e81dcb7f7ba7130
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74640498"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78594482"
 ---
 # <a name="adding-validation-controls-to-the-datalists-editing-interface-c"></a>Adicionar controles de validação à interface de edição do DataList (C#)
 
@@ -29,7 +29,7 @@ Nos tutoriais de edição de DataList até agora, as interfaces de edição de l
 
 Neste tutorial, veremos como é fácil adicionar controles de validação ao `EditItemTemplate` s de DataList para fornecer uma interface de usuário de edição mais infalível. Especificamente, este tutorial usa o exemplo criado no tutorial anterior e aumenta a interface de edição para incluir a validação apropriada.
 
-## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptionshandling-bll-and-dal-level-exceptions-csmd"></a>Etapa 1: replicando o exemplo do[tratamento de exceções de nível de BLL e Dal](handling-bll-and-dal-level-exceptions-cs.md)
+## <a name="step-1-replicating-the-example-fromhandling-bll--and-dal-level-exceptions"></a>Etapa 1: replicando o exemplo do[tratamento de exceções de nível de BLL e Dal](handling-bll-and-dal-level-exceptions-cs.md)
 
 No tutorial [lidando com exceções de nível de BLL e Dal](handling-bll-and-dal-level-exceptions-cs.md) , criamos uma página que listou os nomes e os preços dos produtos em um DataList editável de duas colunas. Nosso objetivo deste tutorial é aumentar a interface de edição de s DataList para incluir controles de validação. Em particular, nossa lógica de validação irá:
 

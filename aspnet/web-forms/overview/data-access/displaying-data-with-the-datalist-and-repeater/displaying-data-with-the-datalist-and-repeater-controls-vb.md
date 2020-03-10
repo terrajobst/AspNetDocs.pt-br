@@ -9,11 +9,11 @@ ms.assetid: 58618954-a9ed-4ca0-8c2d-95a5ffd9c03e
 msc.legacyurl: /web-forms/overview/data-access/displaying-data-with-the-datalist-and-repeater/displaying-data-with-the-datalist-and-repeater-controls-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 4e7aaa1701da67aec61505b64a835ef41031bb13
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74614288"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78626360"
 ---
 # <a name="displaying-data-with-the-datalist-and-repeater-controls-vb"></a>Exibir dados com os controles DataList e o Repeater (VB)
 
@@ -111,7 +111,7 @@ Como o GridView, o DataList oferece várias propriedades relacionadas a estilo, 
 
 Conforme discutido no tutorial [exibindo dados com o ObjectDataSource](../basic-reporting/displaying-data-with-the-objectdatasource-vb.md) , um arquivo de capa especifica as propriedades padrão relacionadas à aparência para um controle da Web; um tema é uma coleção de arquivos de capa, CSS, de imagem e JavaScript que definem uma aparência específica para um site. No tutorial *exibindo dados com o ObjectDataSource* , criamos um `DataWebControls` tema (que é implementado como uma pasta dentro da pasta `App_Themes`) que tem, atualmente, dois arquivos de capa-`GridView.skin` e `DetailsView.skin`. Vamos adicionar um terceiro arquivo de capa para especificar as configurações de estilo predefinidas para DataList.
 
-Para adicionar um arquivo de capa, clique com o botão direito do mouse na pasta `App_Themes/DataWebControls`, escolha Adicionar um novo item e selecione a opção arquivo de capa na lista. Dê o nome `DataList.skin` para o arquivo.
+Para adicionar um arquivo de capa, clique com o botão direito do mouse na pasta `App_Themes/DataWebControls`, escolha Adicionar um novo item e selecione a opção arquivo de capa na lista. Nomeie o arquivo `DataList.skin`.
 
 [![criar um novo arquivo de capa chamado DataList. Skin](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image22.png)](displaying-data-with-the-datalist-and-repeater-controls-vb/_static/image21.png)
 

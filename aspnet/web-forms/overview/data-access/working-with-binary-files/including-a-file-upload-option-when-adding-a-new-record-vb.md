@@ -9,11 +9,11 @@ ms.assetid: 5776281d-4637-4d1e-a65b-2621d2cade44
 msc.legacyurl: /web-forms/overview/data-access/working-with-binary-files/including-a-file-upload-option-when-adding-a-new-record-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 8edaf1754eddd7b03f1c323d1bee13238582fc99
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74596793"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78588049"
 ---
 # <a name="including-a-file-upload-option-when-adding-a-new-record-vb"></a>Incluir uma opção de upload de arquivo ao adicionar um novo registro (VB)
 
@@ -87,7 +87,7 @@ Depois de copiar a sintaxe declarativa e `GenerateBrochureLink` método para a p
 
 O `CategoriesDataSource` ObjectDataSource usado pelo `Categories` GridView atualmente não fornece a capacidade de inserir dados. Para dar suporte à inserção por meio desse controle de fonte de dados, é necessário mapear seu método `Insert` para um método em seu objeto subjacente, `CategoriesBLL`. Em particular, queremos mapeá-lo para o método `CategoriesBLL` que adicionamos de volta na etapa 2, `InsertWithPicture`.
 
-Comece clicando no link configurar fonte de dados da marca inteligente ObjectDataSource s. A primeira tela mostra o objeto com o qual a fonte de dados está configurada para trabalhar, `CategoriesBLL`. Deixe essa configuração como está e clique em avançar para ir para a tela definir métodos de dados. Mova para a guia Inserir e escolha o método `InsertWithPicture` na lista suspensa. Clique em Concluir para concluir o assistente.
+Comece clicando no link configurar fonte de dados da marca inteligente ObjectDataSource s. A primeira tela mostra o objeto com o qual a fonte de dados está configurada para trabalhar, `CategoriesBLL`. Deixe essa configuração como está e clique em avançar para ir para a tela definir métodos de dados. Mova para a guia Inserir e escolha o método `InsertWithPicture` na lista suspensa. Clique em Concluir para finalizar o assistente.
 
 [![configurar o ObjectDataSource para usar o método InsertWithPicture](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image5.gif)](including-a-file-upload-option-when-adding-a-new-record-vb/_static/image9.png)
 

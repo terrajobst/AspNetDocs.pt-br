@@ -9,11 +9,11 @@ ms.assetid: ad0f1014-1eff-465f-bdc6-93058de00e44
 msc.legacyurl: /web-forms/overview/data-access/filtering-scenarios-with-the-datalist-and-repeater/master-detail-filtering-with-a-dropdownlist-datalist-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 537f8e76bc0cbfa759a014b63ae5f68b5d3ca64d
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74630018"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78606417"
 ---
 # <a name="masterdetail-filtering-with-a-dropdownlist-vb"></a>Filtragem mestre/detalhes com uma DropDownList (VB)
 
@@ -115,7 +115,7 @@ Ao visitar pela primeira vez o `FilterByDropDownList.aspx` página, o primeiro i
 
 Para adicionar um novo item de lista à DropDownList, vá para a janela Propriedades e clique nas reticências na propriedade `Items`. Adicione um novo item de lista com o `Text` "--escolha uma categoria--" e o `Value` `0`.
 
-![Adicionar um](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image27.png)
+![Adicionar](master-detail-filtering-with-a-dropdownlist-datalist-vb/_static/image27.png)
 
 **Figura 11**: adicionar um item de lista "--escolher uma categoria--"
 

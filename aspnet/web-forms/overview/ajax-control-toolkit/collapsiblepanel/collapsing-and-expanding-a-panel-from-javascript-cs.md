@@ -9,11 +9,11 @@ ms.assetid: de5500be-75e5-461a-8064-b70ae52ea6a4
 msc.legacyurl: /web-forms/overview/ajax-control-toolkit/collapsiblepanel/collapsing-and-expanding-a-panel-from-javascript-cs
 msc.type: authoredcontent
 ms.openlocfilehash: bed14d82394d28336493bec10e31ddb4d411a192
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74599455"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78614152"
 ---
 # <a name="collapsing-and-expanding-a-panel-from-javascript-c"></a>Recolher e expandir um painel de JavaScript (C#)
 
@@ -23,7 +23,7 @@ por [Christian Wenz](https://github.com/wenz)
 
 > O controle CollapsiblePanel no kit de ferramentas de controle do ASP.NET AJAX estende um painel e fornece a capacidade de recolher seu conteúdo e expandi-lo novamente. Essas duas ações também podem ser disparadas a partir do código JavaScript personalizado.
 
-## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
+## <a name="overview"></a>Visão geral
 
 O controle CollapsiblePanel no kit de ferramentas de controle do ASP.NET AJAX estende um painel e fornece a capacidade de recolher seu conteúdo e expandi-lo novamente. Essas duas ações também podem ser disparadas a partir do código JavaScript personalizado.
 
@@ -68,4 +68,4 @@ O terceiro botão alterna o estado do painel: de recolhido para expandido, e vic
 O terceiro botão altera o estado do painel: de recolhido para expandido e de volta ([clique para exibir a imagem em tamanho normal](collapsing-and-expanding-a-panel-from-javascript-cs/_static/image3.png))
 
 > [!div class="step-by-step"]
-> [Avançar](collapsing-and-expanding-a-panel-from-javascript-vb.md)
+> [Próximo](collapsing-and-expanding-a-panel-from-javascript-vb.md)

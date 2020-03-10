@@ -9,11 +9,11 @@ ms.assetid: cfe2a6a0-1e56-4dc8-9537-c8ec76ba96a4
 msc.legacyurl: /web-forms/overview/data-access/introduction/creating-a-data-access-layer-cs
 msc.type: authoredcontent
 ms.openlocfilehash: 5aaf97dc8448dcb7b94ef2e4e23f34fd37ac4426
-ms.sourcegitcommit: 6f0e10e4ca61a1e5534b09c655fd35cdc6886c8a
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74115301"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78605038"
 ---
 # <a name="creating-a-data-access-layer-c"></a>Criação de uma Camada de acesso a dados (C#)
 
@@ -168,7 +168,7 @@ Esse código não exigia a gravação de um pouco de código específico de aces
 
 Cada objeto usado neste exemplo também é fortemente tipado, permitindo que o Visual Studio forneça verificação de tipo IntelliSense e de tempo de compilação. E o melhor de todas as tabelas de dados retornadas pelo TableAdapter pode ser associado aos controles da Web ASP.NET Data, como GridView, DetailsView, DropDownList, CheckBoxList e vários outros. O exemplo a seguir ilustra a associação da DataTable retornada pelo método **GetProducts ()** a um GridView em apenas uma escassa três linhas de código dentro da **página\_** manipulador de eventos de carregamento.
 
-Todos os Products. aspx
+AllProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample2.aspx)]
 
@@ -422,7 +422,7 @@ Esses dados também podem ser exibidos em qualquer ASP. Controles da Web de dado
 
 Vamos examinar como exibir esses relatórios de detalhes mestres em Tutoriais futuros. Por enquanto, este exemplo foi projetado para ilustrar o uso do método personalizado adicionado à classe **Northwind. SuppliersRow** .
 
-SuppliersAndProducts. aspx
+SuppliersAndProducts.aspx
 
 [!code-aspx[Main](creating-a-data-access-layer-cs/samples/sample24.aspx)]
 
@@ -469,4 +469,4 @@ Para obter mais informações sobre os tópicos discutidos neste tutorial, consu
 Esta série de tutoriais foi revisada por muitos revisores úteis. Os revisores potenciais para este tutorial foram Ron Green, Hilton Giesenow, Dennis Patterson, Liz Shulok, Abel Gomez e Carlos Santos. Está interessado em revisar meus artigos futuros do MSDN? Em caso afirmativo, solte-me uma linha em [mitchell@4GuysFromRolla.com.](mailto:mitchell@4GuysFromRolla.com)
 
 > [!div class="step-by-step"]
-> [Avançar](creating-a-business-logic-layer-cs.md)
+> [Próximo](creating-a-business-logic-layer-cs.md)

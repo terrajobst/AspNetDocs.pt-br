@@ -1,77 +1,77 @@
 ---
 uid: whitepapers/request-validation
-title: Solicitação de validação – impedindo ataques de Script | Microsoft Docs
+title: Validação de solicitação-prevenção de ataques de script | Microsoft Docs
 author: rick-anderson
-description: Este documento descreve o recurso de validação de solicitação do ASP.NET, onde, por padrão, o aplicativo será impedido de processamento submitt conteúdo de HTML não codificado...
+description: Este documento descreve o recurso de validação de solicitação do ASP.NET, em que, por padrão, o aplicativo é impedido de processar o envio de conteúdo HTML não codificado...
 ms.author: riande
 ms.date: 02/10/2010
 ms.assetid: fa429113-5f8f-4ef4-97c5-5c04900a19fa
 msc.legacyurl: /whitepapers/request-validation
 msc.type: content
 ms.openlocfilehash: 807cccd6fe1acdd6359b014387abd3878840d4cd
-ms.sourcegitcommit: 51b01b6ff8edde57d8243e4da28c9f1e7f1962b2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65130489"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78640843"
 ---
 # <a name="request-validation---preventing-script-attacks"></a>Solicitação de validação – Impedir ataques de Script
 
-> Este documento descreve o recurso de validação de solicitação do ASP.NET, onde, por padrão, o aplicativo será impedido de processamento de conteúdo HTML não codificado enviado ao servidor. Esse recurso de validação de solicitação pode ser desabilitado quando o aplicativo foi projetado para processar com segurança dados HTML.
+> Este documento descreve o recurso de validação de solicitação do ASP.NET, em que, por padrão, o aplicativo é impedido de processar o conteúdo HTML não codificado enviado ao servidor. Esse recurso de validação de solicitação pode ser desabilitado quando o aplicativo tiver sido projetado para processar dados HTML com segurança.
 > 
-> Aplica-se para o ASP.NET 1.1 e ASP.NET 2.0.
+> Aplica-se a ASP.NET 1,1 e ASP.NET 2,0.
 
-Validação de solicitação, um recurso do ASP.NET desde a versão 1.1, impede que o servidor aceite conteúdo sem HTML codificado. Esse recurso é criado para ajudar a evitar alguns ataques de injeção de script no qual código de script de cliente ou HTML pode ser enviado inadvertidamente para um servidor, armazenado e, em seguida, apresentado a outros usuários. Ainda recomendamos que você validar a entrada de todos os dados e a codificação HTML quando for apropriado.
+A validação de solicitação, um recurso do ASP.NET oferecido desde a versão 1.1, impede que o servidor aceite conteúdo sem HTML codificado. Esse recurso foi criado para evitar alguns ataques de injeção de script, em que o código de script ou HTML do cliente pode ser enviado inadvertidamente para um servidor, armazenado e, em seguida, apresentado a outros usuários. Ainda recomendamos que você valide todos os dados de entrada e os codifique com HTML quando for apropriado.
 
-Por exemplo, você pode criar uma página da Web que solicita o endereço de email do usuário e, em seguida, armazenamentos de endereços de email em um banco de dados. Se o usuário insere &lt;SCRIPT&gt;("Olá do script") do alerta&lt;/SCRIPT&gt; em vez de um endereço de email válido, quando esses dados são apresentados, esse script pode ser executado se o conteúdo não foi devidamente codificado. O recurso de validação de solicitação do ASP.NET impede que isso ocorra.
+Por exemplo, você cria uma página da Web que solicita o endereço de email de um usuário e, em seguida, armazena esse endereço de email em um banco de dados. Se o usuário inserir &lt;SCRIPT&gt;alerta ("Olá do script")&lt;/SCRIPT&gt; em vez de um endereço de email válido, quando esses dados forem apresentados, esse script poderá ser executado se o conteúdo não tiver sido codificado corretamente. O recurso de validação de solicitação do ASP.NET impede que isso aconteça.
 
 ## <a name="why-this-feature-is-useful"></a>Por que esse recurso é útil
 
-Muitos sites não estão cientes de que eles estão abertos a ataques de injeção de script simples. Se a finalidade desses ataques é distorcer o site exibindo HTML ou para executar o script de cliente para redirecionar o usuário ao site do hacker potencialmente, ataques de injeção de script são um problema que os desenvolvedores da Web devem ser seguidas.
+Muitos sites não sabem que estão abertos para ataques de injeção de script simples. Se a finalidade desses ataques é Deface o site exibindo HTML ou potencialmente executar script de cliente para redirecionar o usuário para o site de um hacker, os ataques de injeção de script são um problema que os desenvolvedores da Web devem enfrentar.
 
-Ataques de injeção de script são uma preocupação de todos os desenvolvedores da web, seja usando ASP.NET, ASP ou outras tecnologias de desenvolvimento da web.
+Ataques de injeção de script são uma preocupação de todos os desenvolvedores da Web, estejam eles usando ASP.NET, ASP ou outras tecnologias de desenvolvimento para a Web.
 
-O recurso de validação de solicitação do ASP.NET proativamente evita esses ataques, não permitindo que o conteúdo HTML não codificado a ser processada pelo servidor, a menos que o desenvolvedor decide permitir que o conteúdo.
+O recurso de validação de solicitação do ASP.NET impede proativamente esses ataques, não permitindo que o conteúdo HTML não codificado seja processado pelo servidor, a menos que o desenvolvedor decida permitir esse conteúdo.
 
-## <a name="what-to-expect-error-page"></a>O que esperar: Página de erro
+## <a name="what-to-expect-error-page"></a>O que esperar: página de erro
 
-Captura de tela abaixo mostra alguns exemplos de código do ASP.NET:
+A captura de tela abaixo mostra alguns exemplos de código ASP.NET:
 
 ![](request-validation/_static/image1.png)
 
-Em execução desse código resulta em uma página simple que permite que você insira algum texto na caixa de texto, clique no botão e exibir o texto no controle de rótulo:
+A execução desse código resulta em uma página simples que permite que você insira algum texto na TextBox, clique no botão e exiba o texto no controle rótulo:
 
 ![](request-validation/_static/image2.png)
 
-No entanto, eram JavaScript, tal como `<script>alert("hello!")</script>` seja inserido e enviado, teríamos uma exceção:
+No entanto, era o JavaScript, como `<script>alert("hello!")</script>` a ser inserido e enviado, obtemos uma exceção:
 
 ![](request-validation/_static/image3.png)
 
-A mensagem de erro informa que um 'potencialmente perigosos Request. Form valor foi detectado' e fornece mais detalhes na descrição de como exatamente o que ocorreu e como alterar o comportamento. Por exemplo:
+A mensagem de erro informa que um valor "possivelmente perigoso de solicitação. Form foi detectado" e fornece mais detalhes na descrição para exatamente o que ocorreu e como alterar o comportamento. Por exemplo:
 
-Validação de solicitação detectou um valor de entrada potencialmente perigosas de cliente e o processamento da solicitação foi anulado. Esse valor pode indicar uma tentativa de comprometer a segurança de seu aplicativo, como um ataque de script entre sites. Você pode desabilitar a validação de solicitação definindo `validateRequest=false` na diretiva de página ou na seção de configuração. No entanto, é altamente recomendável que o aplicativo verifique explicitamente todas as entradas nesse caso.
+A validação da solicitação detectou um valor de entrada de cliente potencialmente perigoso e o processamento da solicitação foi anulado. Esse valor pode indicar uma tentativa de comprometer a segurança do seu aplicativo, como um ataque de script entre sites. Você pode desabilitar a validação de solicitação definindo `validateRequest=false` na diretiva de página ou na seção de configuração. No entanto, é altamente recomendável que seu aplicativo Verifique explicitamente todas as entradas nesse caso.
 
-## <a name="disabling-request-validation-on-a-page"></a>Desabilitar a validação de solicitação em uma página
+## <a name="disabling-request-validation-on-a-page"></a>Desabilitando a validação de solicitação em uma página
 
-Para desabilitar a validação de solicitação em uma página, você deve definir a `validateRequest` atributo da diretiva Page para `false`:
+Para desabilitar a validação de solicitação em uma página, você deve definir o atributo `validateRequest` da diretiva Page como `false`:
 
 [!code-aspx[Main](request-validation/samples/sample1.aspx)]
 
 > [!CAUTION]
-> Quando a validação de solicitação está desabilitada, o conteúdo pode ser enviado para uma página; é responsabilidade do desenvolvedor da página para garantir que o conteúdo é codificada ou processada corretamente.
+> Quando a validação de solicitação está desabilitada, o conteúdo pode ser enviado para uma página; é responsabilidade do desenvolvedor da página garantir que o conteúdo seja codificado ou processado corretamente.
 
-## <a name="disabling-request-validation-for-your-application"></a>Desabilitar a validação de solicitação para o seu aplicativo
+## <a name="disabling-request-validation-for-your-application"></a>Desabilitando a validação de solicitação para seu aplicativo
 
-Para desabilitar a validação de solicitação para seu aplicativo, você deve modificar ou criar um arquivo Web. config para seu aplicativo e defina o atributo validateRequest do `<pages />` seção para `false`:
+Para desabilitar a validação de solicitação para seu aplicativo, você deve modificar ou criar um arquivo Web. config para seu aplicativo e definir o atributo validateRequest da seção `<pages />` como `false`:
 
 [!code-xml[Main](request-validation/samples/sample2.xml)]
 
-Se você quiser desabilitar a validação de solicitação para todos os aplicativos no seu servidor, você pode fazer essa modificação ao arquivo Machine. config.
+Se você quiser desabilitar a validação de solicitação para todos os aplicativos em seu servidor, poderá fazer essa modificação no arquivo Machine. config.
 
 > [!CAUTION]
-> Quando a validação de solicitação está desabilitada, conteúdo possa ser enviado ao seu aplicativo. é responsabilidade do desenvolvedor do aplicativo para garantir que o conteúdo é codificada ou processada corretamente.
+> Quando a validação de solicitação está desabilitada, o conteúdo pode ser enviado para seu aplicativo; é responsabilidade do desenvolvedor do aplicativo garantir que o conteúdo seja codificado ou processado corretamente.
 
-O código a seguir é modificado para desativar a validação de solicitação:
+O código abaixo é modificado para desativar a validação da solicitação:
 
 ![](request-validation/_static/image4.png)
 
@@ -79,13 +79,13 @@ Agora, se o seguinte JavaScript foi inserido na caixa de texto `<script>alert("h
 
 ![](request-validation/_static/image5.png)
 
-Para evitar que isso aconteça, com a validação de solicitação seja desativado, é necessário para HTML codificar o conteúdo.
+Para evitar que isso aconteça, com a validação de solicitação desativada, precisamos codificar o conteúdo em HTML.
 
-## <a name="how-to-html-encode-content"></a>Como a HTML codificar conteúdo
+## <a name="how-to-html-encode-content"></a>Como codificar conteúdo em HTML
 
-Se você tiver desabilitado a validação de solicitação, ele é uma boa prática para o conteúdo a codificação HTML que será armazenada para uso futuro. A codificação HTML automaticamente substituirá qualquer '&lt;'ou'&gt;' (junto com vários outros símbolos) com o HTML correspondente a representação codificada. Por exemplo, '&lt;'é substituída por'&amp;lt;' e '&gt;'é substituída por'&amp;gt;'. Os navegadores usam esses códigos especiais para exibir a '&lt;'ou'&gt;' no navegador.
+Se você tiver desabilitado a validação de solicitação, é uma boa prática para codificar em HTML o conteúdo que será armazenado para uso futuro. A codificação HTML substituirá automaticamente qualquer '&lt;' ou '&gt;' (junto com vários outros símbolos) com a representação codificada HTML correspondente. Por exemplo, '&lt;' é substituído por '&amp;lt; ' e '&gt;' é substituído por '&amp;gt; '. Os navegadores usam esses códigos especiais para exibir o '&lt;' ou '&gt;' no navegador.
 
-O conteúdo pode ser facilmente codificada em HTML no servidor usando o `Server.HtmlEncode(string)` API. Conteúdo também pode ser facilmente decodificado para o HTML, ou seja, revertida ao padrão HTML usando o `Server.HtmlDecode(string)` método.
+O conteúdo pode ser facilmente codificado em HTML no servidor usando a API `Server.HtmlEncode(string)`. O conteúdo também pode ser facilmente decodificado em HTML, ou seja, revertido para HTML padrão usando o método `Server.HtmlDecode(string)`.
 
 ![](request-validation/_static/image6.png)
 
