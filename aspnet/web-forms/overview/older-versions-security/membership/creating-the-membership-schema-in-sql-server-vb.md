@@ -9,11 +9,11 @@ ms.assetid: 112a674d-716f-41a6-99b8-4074d65a54c0
 msc.legacyurl: /web-forms/overview/older-versions-security/membership/creating-the-membership-schema-in-sql-server-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 96fd72d1f368b1f7947ef0a2293161d97aaf7065
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74581005"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78632051"
 ---
 # <a name="creating-the-membership-schema-in-sql-server-vb"></a>Criação do esquema de associação no SQL Server (VB)
 
@@ -206,9 +206,9 @@ A tabela 1 ilustra o que essas três colunas podem parecer para as várias técn
 
 | **Técnica de armazenamento&lt;\_O3A\_p/&gt;** | **&lt;de senha \_O3A\_p/&gt;** | **PasswordFormat&lt;\_O3A\_p/&gt;** | **PasswordSalt&lt;\_O3A\_p/&gt;** |
 | --- | --- | --- | --- |
-| Clear | MySecret! | 0 | tTnkPlesqissc2y2SMEygA = = |
-| Hash | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM = | 1 | wFgjUfhdUFOCKQiI61vtiQ = = |
-| Criptografada | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/AA/oqAXGLHJNBw = = |
+| Liberada | MySecret! | 0 | tTnkPlesqissc2y2SMEygA== |
+| Hash | 2oXm6sZHWbTHFgjgkGQsc2Ec9ZM= | 1 | wFgjUfhdUFOCKQiI61vtiQ== |
+| Criptografado | 62RZgDvhxykkqsMchZ0Yly7HS6onhpaoCYaRxV8g0F4CW56OXUU3e7Inza9j9BKp | 2 | LSRzhGS/aa/oqAXGLHJNBw== |
 
 **Tabela 1**: valores de exemplo para os campos relacionados à senha ao armazenar a senha MySecret!
 
@@ -251,7 +251,7 @@ Além dos atributos `name` e `type`, o elemento `<add>` contém atributos que de
 | `connectionStringName` | O nome da cadeia de conexão no elemento `<connectionStrings>` a ser usado para se conectar ao banco de dados de armazenamento do usuário. Esse valor é necessário. |
 | `description` | Fornece uma descrição amigável do provedor registrado. |
 | `enablePasswordRetrieval` | Especifica se os usuários podem recuperar sua senha esquecida. O valor padrão é `false`. |
-| `enablePasswordReset` | Indica se os usuários têm permissão para redefinir sua senha. Assume o padrão de `true`. |
+| `enablePasswordReset` | Indica se os usuários têm permissão para redefinir sua senha. Usa `true` como padrão. |
 | `maxInvalidPasswordAttempts` | O número máximo de tentativas de logon malsucedidas que podem ocorrer para um determinado usuário durante o `passwordAttemptWindow` especificado antes que o usuário seja bloqueado. O valor padrão é 5. |
 | `minRequiredNonalphanumericCharacters` | O número mínimo de caracteres não alfanuméricos que devem aparecer na senha de um usuário. Esse valor deve estar entre 0 e 128; o padrão é 1. |
 | `minRequiredPasswordLength` | O número mínimo de caracteres necessários em uma senha. Esse valor deve estar entre 0 e 128; o padrão é 7. |

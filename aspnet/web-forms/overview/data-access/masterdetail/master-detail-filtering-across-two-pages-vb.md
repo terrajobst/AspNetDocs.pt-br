@@ -9,11 +9,11 @@ ms.assetid: 361d6a44-3f1f-4daf-85df-d4c2b8bf065d
 msc.legacyurl: /web-forms/overview/data-access/masterdetail/master-detail-filtering-across-two-pages-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 252c6d5e48aff0087e090e3ddc1f58c84a2c030e
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74622505"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78529060"
 ---
 # <a name="masterdetail-filtering-across-two-pages-vb"></a>Filtragem mestre/detalhes em duas páginas (VB)
 
@@ -114,7 +114,7 @@ A etapa final do assistente para configurar fonte de dados nos pede para fornece
 
 **Figura 11**: popular o valor do parâmetro *`supplierID`* do valor de QueryString `SupplierID` ([clique para exibir a imagem em tamanho normal](master-detail-filtering-across-two-pages-vb/_static/image31.png))
 
-E isso é tudo! A Figura 12 mostra a página `ProductsForSupplierDetails.aspx` quando visitada clicando no link Tokyo Traders da `SupplierListMaster.aspx`.
+Isso é tudo! A Figura 12 mostra a página `ProductsForSupplierDetails.aspx` quando visitada clicando no link Tokyo Traders da `SupplierListMaster.aspx`.
 
 [![os produtos fornecidos por Tokyo Traders são mostrados](master-detail-filtering-across-two-pages-vb/_static/image33.png)](master-detail-filtering-across-two-pages-vb/_static/image32.png)
 

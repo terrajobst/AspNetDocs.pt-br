@@ -9,11 +9,11 @@ ms.assetid: 8be9a51b-ea6b-46c7-bfa2-476d9b14c24c
 msc.legacyurl: /web-forms/overview/data-access/advanced-data-access-scenarios/creating-stored-procedures-and-user-defined-functions-with-managed-code-vb
 msc.type: authoredcontent
 ms.openlocfilehash: 0ac5f71d519689a9dc84fb82a04196d520cca6e1
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74610256"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78551299"
 ---
 # <a name="creating-stored-procedures-and-user-defined-functions-with-managed-code-vb"></a>Criar procedimentos armazenados e funções definidas pelo usuário com código gerenciado (VB)
 
@@ -44,7 +44,7 @@ Para este tutorial, no entanto, vamos mover o banco de dados Northwind de `App_D
 
 O download para este tutorial tem os dois arquivos de banco de dados – `NORTHWND.MDF` e `NORTHWND_log.LDF` colocados em uma pasta chamada `DataFiles`. Se você estiver acompanhando sua própria implementação dos tutoriais, feche o Visual Studio e mova o `NORTHWND.MDF` e `NORTHWND_log.LDF` arquivos da pasta `App_Data` do site para uma pasta fora do site. Depois que os arquivos de banco de dados tiverem sido movidos para outra pasta, precisamos registrar o banco de dados Northwind com a instância de banco de dados do SQL Server 2005 Express Edition. Isso pode ser feito em SQL Server Management Studio. Se você tiver uma edição não Express do SQL Server 2005 instalada em seu computador, provavelmente já terá Management Studio instalado. Se você só tiver SQL Server 2005 Express Edition em seu computador, Reserve um momento para baixar e instalar o [Microsoft SQL Server Management Studio Express](https://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=C243A5AE-4BD1-4E3D-94B8-5A0F62BF7796).
 
-Inicie o SQL Server Management Studio. Como mostra a Figura 1, Management Studio começa solicitando a qual servidor se conectar. Digite localhost\SQLExpress para o nome do servidor, escolha autenticação do Windows na lista suspensa autenticação e clique em conectar.
+Inicialização do SQL Server Management Studio. Como mostra a Figura 1, Management Studio começa solicitando a qual servidor se conectar. Digite localhost\SQLExpress para o nome do servidor, escolha autenticação do Windows na lista suspensa autenticação e clique em conectar.
 
 ![Conectar-se à instância de banco de dados apropriada](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/_static/image1.png)
 
@@ -136,7 +136,7 @@ Todos os objetos de banco de dados gerenciado têm acesso a um [objeto`SqlContex
 
 ## <a name="step-4-deploying-the-managed-stored-procedure"></a>Etapa 4: Implantando o procedimento armazenado gerenciado
 
-Com esse código concluído, estamos prontos para implantá-lo no banco de dados Northwind. Implantar um projeto de SQL Server compila o código em um assembly, registra o assembly com o banco de dados e cria os objetos correspondentes no banco de dados, vinculando-os aos métodos apropriados no assembly. O conjunto exato de tarefas executadas pela opção implantar é escrito mais precisamente na etapa 13. Clique com o botão direito do mouse no nome do projeto `ManagedDatabaseConstructs` na Gerenciador de Soluções e escolha a opção implantar. No entanto, a implantação falha com o seguinte erro: sintaxe incorreta próxima a ' EXTERNAL '. Talvez seja necessário definir o nível de compatibilidade do banco de dados atual para um valor mais alto para habilitar esse recurso. Consulte a ajuda para o procedimento armazenado `sp_dbcmptlevel`.
+Com esse código concluído, estamos prontos para implantá-lo no banco de dados Northwind. Implantar um projeto de SQL Server compila o código em um assembly, registra o assembly com o banco de dados e cria os objetos correspondentes no banco de dados, vinculando-os aos métodos apropriados no assembly. O conjunto exato de tarefas executadas pela opção implantar é escrito mais precisamente na etapa 13. Clique com o botão direito do mouse no nome do projeto `ManagedDatabaseConstructs` na Gerenciador de Soluções e escolha a opção implantar. No entanto, a implantação falha com o seguinte erro: sintaxe incorreta próxima a ' EXTERNAL '. Talvez seja necessário definir o nível de compatibilidade do banco de dados atual em um valor mais alto para habilitar este recurso. Consulte a ajuda para o procedimento armazenado `sp_dbcmptlevel`.
 
 Essa mensagem de erro ocorre ao tentar registrar o assembly com o banco de dados Northwind. Para registrar um assembly com um banco de dados SQL Server 2005, o nível de compatibilidade do banco de dados deve ser definido como 90. Por padrão, novos bancos de dados SQL Server 2005 têm um nível de compatibilidade de 90. No entanto, os bancos de dados criados usando Microsoft SQL Server 2000 têm um nível de compatibilidade padrão de 80. Como o banco de dados Northwind era inicialmente um banco de dados Microsoft SQL Server 2000, seu nível de compatibilidade está atualmente definido como 80 e, portanto, precisa ser aumentado para 90 a fim de registrar objetos de banco de dados gerenciados.
 
@@ -190,7 +190,7 @@ Muitas das consultas e procedimentos armazenados que criamos em todos esses tuto
 
 Para criar um procedimento armazenado gerenciado que aceita parâmetros de entrada, basta especificar esses parâmetros na definição do método. Para ilustrar isso, vamos adicionar outro procedimento armazenado gerenciado ao projeto `ManagedDatabaseConstructs` chamado `GetProductsWithPriceLessThan`. Esse procedimento armazenado gerenciado aceitará um parâmetro de entrada especificando um preço e retornará todos os produtos cujo campo `UnitPrice` seja menor que o valor s do parâmetro.
 
-Para adicionar um novo procedimento armazenado ao projeto, clique com o botão direito do mouse no nome do projeto `ManagedDatabaseConstructs` e escolha Adicionar um novo procedimento armazenado. Dê o nome `GetProductsWithPriceLessThan.vb` para o arquivo. Como vimos na etapa 3, isso criará um novo arquivo de classe Visual Basic com um método chamado `GetProductsWithPriceLessThan` colocado dentro do `StoredProcedures`de classe de `Partial`.
+Para adicionar um novo procedimento armazenado ao projeto, clique com o botão direito do mouse no nome do projeto `ManagedDatabaseConstructs` e escolha Adicionar um novo procedimento armazenado. Nomeie o arquivo `GetProductsWithPriceLessThan.vb`. Como vimos na etapa 3, isso criará um novo arquivo de classe Visual Basic com um método chamado `GetProductsWithPriceLessThan` colocado dentro do `StoredProcedures`de classe de `Partial`.
 
 Atualize a definição de `GetProductsWithPriceLessThan` do método para que aceite um parâmetro de entrada de [`SqlMoney`](https://msdn.microsoft.com/library/system.data.sqltypes.sqlmoney.aspx) chamado `price` e escreva o código a ser executado e retorne os resultados da consulta:
 
@@ -231,7 +231,7 @@ Em seguida, solicitamos que especifiquemos se o procedimento armazenado retorna 
 
 **Figura 17**: selecione a opção dados tabulares ([clique para exibir a imagem em tamanho normal](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/_static/image37.png))
 
-A tela final do assistente nos permite especificar os padrões de acesso a dados usados e os nomes dos métodos resultantes. Deixe ambas as caixas de seleção marcadas e nomeie os métodos `FillByDiscontinued` e `GetDiscontinuedProducts`. Clique em Concluir para concluir o assistente.
+A tela final do assistente nos permite especificar os padrões de acesso a dados usados e os nomes dos métodos resultantes. Deixe ambas as caixas de seleção marcadas e nomeie os métodos `FillByDiscontinued` e `GetDiscontinuedProducts`. Clique em Concluir para finalizar o assistente.
 
 [![nomear os métodos FillByDiscontinued e GetDiscontinuedProducts](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/_static/image39.png)](creating-stored-procedures-and-user-defined-functions-with-managed-code-vb/_static/image38.png)
 
@@ -468,7 +468,7 @@ Para obter mais informações sobre os tópicos discutidos neste tutorial, consu
 - [Como: editar o script de `Test.sql` para executar objetos SQL](https://msdn.microsoft.com/library/ms233682(VS.80).aspx)
 - [Introdução às funções definidas pelo usuário](http://www.sqlteam.com/item.asp?ItemID=1955)
 - [Código gerenciado e SQL Server 2005 (vídeo)](https://channel9.msdn.com/Showpost.aspx?postid=142413)
-- [Referência de Transact-SQL](https://msdn.microsoft.com/library/aa299742(SQL.80).aspx)
+- [Referência do Transact-SQL](https://msdn.microsoft.com/library/aa299742(SQL.80).aspx)
 - [Walkthrough: Criando um procedimento armazenado no código gerenciado](https://msdn.microsoft.com/library/zxsa8hkf(VS.80).aspx)
 
 ## <a name="about-the-author"></a>Sobre o autor

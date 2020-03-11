@@ -9,11 +9,11 @@ ms.assetid: 59c01998-9326-4ecb-9392-cb9615962140
 msc.legacyurl: /web-forms/overview/data-access/paging-and-sorting/efficiently-paging-through-large-amounts-of-data-cs
 msc.type: authoredcontent
 ms.openlocfilehash: a3e9562035cb24987b01fcdff5fbfb5fa8a1f894
-ms.sourcegitcommit: 22fbd8863672c4ad6693b8388ad5c8e753fb41a2
+ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74629726"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78589995"
 ---
 # <a name="efficiently-paging-through-large-amounts-of-data-c"></a>Paginação de grandes quantidades de dados com eficiência (C#)
 
@@ -298,12 +298,12 @@ Infelizmente, não há nenhum tamanho que atenda a todas as respostas aqui. O lu
 
 Um artigo de minha, [paginação personalizada no ASP.NET 2,0 com SQL Server 2005](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx), contém alguns testes de desempenho que executei para exibir as diferenças no desempenho entre essas duas técnicas de paginação ao paginar por meio de uma tabela de banco de dados com registros 50.000. Nesses testes, examinei o tempo para executar a consulta no nível de SQL Server (usando o [SQL Profiler](https://msdn.microsoft.com/library/ms173757.aspx)) e na página ASP.NET usando os [recursos de rastreamento de ASP.net](https://msdn.microsoft.com/library/y13fw6we.aspx). Tenha em mente que esses testes foram executados na minha caixa de desenvolvimento com um único usuário ativo e, portanto, não são científicos e não imitam padrões de carga de site típicos. Independentemente disso, os resultados ilustram as diferenças relativas no tempo de execução para a paginação padrão e personalizada ao trabalhar com quantidades de dados suficientemente grandes.
 
-|  | **Duração média (s)** | **Leituras** |
+|  | **Duração média (s)** | **Reads** |
 | --- | --- | --- |
-| **Paginação padrão do SQL Profiler** | 1,411 | 383 |
-| **Paginação personalizada do SQL Profiler** | 0, 2 | 29 |
-| **Rastreamento de ASP.NET de paginação padrão** | 2,379 | *N/A* |
-| **Rastreamento de ASP.NET de paginação personalizada** | 0, 29 | *N/A* |
+| **Paginação padrão do SQL Profiler** | 1.411 | 383 |
+| **Paginação personalizada do SQL Profiler** | 0.002 | 29 |
+| **Rastreamento de ASP.NET de paginação padrão** | 2.379 | *N/A* |
+| **Rastreamento de ASP.NET de paginação personalizada** | 0.029 | *N/A* |
 
 Como você pode ver, a recuperação de uma página específica de dados exigiu 354 menos leituras em média e é concluída em uma fração do tempo. Na página ASP.NET, a página personalizada foi capaz de renderizar perto<sup>de 1/100,</sup> do tempo necessário ao usar a paginação padrão. Consulte [meu artigo](http://aspnet.4guysfromrolla.com/articles/031506-1.aspx) para obter mais informações sobre esses resultados juntamente com o código e um banco de dados que você pode baixar para reproduzir esses testes em seu próprio ambiente.
 
