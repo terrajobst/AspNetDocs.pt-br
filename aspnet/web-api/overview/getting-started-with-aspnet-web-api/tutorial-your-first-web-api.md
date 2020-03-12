@@ -8,12 +8,12 @@ ms.date: 11/28/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/getting-started-with-aspnet-web-api/tutorial-your-first-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: 3e35c2bc0e46dfdb4544b772775eddd533f27be3
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 2717d93f47be9d4a6548731d8deeca312b25f39f
+ms.sourcegitcommit: 9e3ca74997a67c18589729d4b7303799905473eb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78556794"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084046"
 ---
 # <a name="get-started-with-aspnet-web-api-2-c"></a>Introdução ao ASP.NET Web API 2 (C#)
 
@@ -137,7 +137,7 @@ Há várias maneiras de obter o jQuery. Neste exemplo, usei a CDN do [Microsoft 
 
 Para obter uma lista de produtos, envie uma solicitação HTTP GET para &quot;/API/Products&quot;.
 
-A função [getJson](http://api.jquery.com/jQuery.getJSON/) do jQuery envia uma solicitação Ajax. A resposta contém uma matriz de objetos JSON. A função `done` especifica um retorno de chamada que é chamado se a solicitação for realizada com sucesso. No retorno de chamada, atualizamos o DOM com as informações de produto.
+A função [getJson](http://api.jquery.com/jQuery.getJSON/) do jQuery envia uma solicitação Ajax. A resposta contém a matriz de objetos JSON. A função `done` especifica um retorno de chamada que é chamado se a solicitação for realizada com sucesso. No retorno de chamada, atualizamos o DOM com as informações de produto.
 
 [!code-html[Main](tutorial-your-first-web-api/samples/sample4.html)]
 
@@ -165,7 +165,7 @@ Se você inserir uma ID inválida, o servidor retornará um erro HTTP:
 
 ## <a name="using-f12-to-view-the-http-request-and-response"></a>Usando F12 para exibir a solicitação e a resposta HTTP
 
-Quando você está trabalhando com um serviço HTTP, pode ser muito útil ver as mensagens de solicitação e solicitação HTTP. Você pode fazer isso usando as ferramentas de desenvolvedor F12 no Internet Explorer 9. No Internet Explorer 9, pressione **F12** para abrir as ferramentas. Clique na guia **rede** e pressione **Iniciar captura**. Agora, volte para a página da Web e pressione **F5** para recarregar a página da Web. O Internet Explorer capturará o tráfego HTTP entre o navegador e o servidor Web. A exibição de resumo mostra todo o tráfego de rede de uma página:
+Quando você está trabalhando com um serviço HTTP, pode ser muito útil ver as mensagens de solicitação e resposta HTTP. Você pode fazer isso usando as ferramentas de desenvolvedor F12 no Internet Explorer 9. No Internet Explorer 9, pressione **F12** para abrir as ferramentas. Clique na guia **rede** e pressione **Iniciar captura**. Agora, volte para a página da Web e pressione **F5** para recarregar a página da Web. O Internet Explorer capturará o tráfego HTTP entre o navegador e o servidor Web. A exibição de resumo mostra todo o tráfego de rede de uma página:
 
 ![](tutorial-your-first-web-api/_static/image14.png)
 
